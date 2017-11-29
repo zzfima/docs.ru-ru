@@ -1,50 +1,53 @@
 ---
-title: "Автоматический выбор формата | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Автоматический выбор формата"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5c3465611fcf418e194c44815c765f8823d8ad83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Автоматический выбор формата
-Данный образец демонстрирует включение автоматического выбора формата \(XML или JSON\) при использовании программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST, а также явное задание формата в коде операции.  
+# <a name="automatic-format-selection"></a><span data-ttu-id="cdf3c-102">Автоматический выбор формата</span><span class="sxs-lookup"><span data-stu-id="cdf3c-102">Automatic Format Selection</span></span>
+<span data-ttu-id="cdf3c-103">Данный образец демонстрирует включение автоматического выбора формата (XML или JSON) при использовании программной модели [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST, а также явное задание формата в коде операции.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-103">This sample demonstrates how to enable automatic format selection (XML or JSON) with the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST programming model, as well as how to explicitly set the format in the operation code.</span></span>  
   
-## Подробные сведения об образце  
- Образец состоит из службы, а также клиентского кода, производящего запросы к этой службе.  Служба поддерживает единственную операцию HTTP `GET` \(`EchoWithGet`\) и единственную операцию HTTP `POST` \(`EchoWithPost`\).  Обе операции ожидают на входе строку и возвращают в ответе эту же строку.  В случае операции `GET` строка предоставляется в виде параметра строки запроса URI.  В случае операции `POST` строка предоставляется в тексте запроса, сериализованного в XML.  Служба может возвращать ответы в формате XML или JSON, используя новую возможность автоматического выбора формата или старую возможность принудительного выбора формата [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
+## <a name="sample-details"></a><span data-ttu-id="cdf3c-104">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="cdf3c-104">Sample Details</span></span>  
+ <span data-ttu-id="cdf3c-105">Образец состоит из службы, а также клиентского кода, производящего запросы к этой службе.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-105">The sample consists of a service along with client code that makes requests to the service.</span></span> <span data-ttu-id="cdf3c-106">Служба поддерживает единственную операцию HTTP `GET` (`EchoWithGet`) и единственную операцию HTTP `POST` (`EchoWithPost`).</span><span class="sxs-lookup"><span data-stu-id="cdf3c-106">The service supports a single HTTP `GET` operation (`EchoWithGet`) and a single HTTP `POST` operation (`EchoWithPost`).</span></span> <span data-ttu-id="cdf3c-107">Обе операции ожидают на входе строку и возвращают в ответе эту же строку.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-107">Both operations expect a string and then return the string in the response.</span></span> <span data-ttu-id="cdf3c-108">В случае операции `GET` строка предоставляется в виде параметра строки запроса URI.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-108">With the `GET` operation, the string is provided in a URI query-string parameter.</span></span> <span data-ttu-id="cdf3c-109">В случае операции `POST` строка предоставляется в тексте запроса, сериализованного в XML.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-109">With the `POST` operation, the string is provided in the body of the request, serialized in XML.</span></span> <span data-ttu-id="cdf3c-110">Служба может возвращать ответы в формате XML или JSON, используя новую возможность автоматического выбора формата или старую возможность принудительного выбора формата [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cdf3c-110">The service is able to return responses in either XML or JSON, utilizing the new automatic format selection and imperative format selection features in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].</span></span>  
   
- В данном образце включение автоматического выбора формата осуществляется с помощью файла App.config.  Атрибуту `automaticFormatSelectionEnabled` конечной точки HTTP по умолчанию задано значение `true`.  Если автоматический выбор формата включен, то инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выбирает наиболее подходящий формат ответа \(XML или JSON\) на основе заголовков запроса HTTP Accept или Content\-Type.  Для использования этой новой возможности разработчику не требуется предоставлять дополнительный программный код или параметры конфигурации. Необходимо лишь задать атрибуту `automaticFormatSelectionEnabled` значение `true`.  В клиентском коде в файле Program.cs запросы отправляются как к операции `GET`, так и к операции `POST` службы. При этом заголовок HTTP Accept указывает либо «application\/xml», либо «application\/json», и служба возвращает ответ в соответствующем формате.  
+ <span data-ttu-id="cdf3c-111">В данном образце включение автоматического выбора формата осуществляется с помощью файла App.config.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-111">In the sample, automatic format selection is enabled using the App.config file.</span></span> <span data-ttu-id="cdf3c-112">Атрибуту `automaticFormatSelectionEnabled` конечной точки HTTP по умолчанию задано значение `true`.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-112">On the default Web HTTP endpoint, the `automaticFormatSelectionEnabled` attribute has been given a value of `true`.</span></span> <span data-ttu-id="cdf3c-113">Если автоматический выбор формата включен, то инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выбирает наиболее подходящий формат ответа (XML или JSON) на основе заголовков запроса HTTP Accept или Content-Type.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-113">With automatic format selection enabled, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure selects the most appropriate response format (XML or JSON) given the HTTP Accept or Content-Type headers of the request.</span></span> <span data-ttu-id="cdf3c-114">Для использования этой новой возможности разработчику не требуется предоставлять дополнительный программный код или параметры конфигурации. Необходимо лишь задать атрибуту `automaticFormatSelectionEnabled` значение `true`.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-114">The developer is not required to provide any additional code or configuration other than setting the `automaticFormatSelectionEnabled` attribute to `true` to use this new feature.</span></span> <span data-ttu-id="cdf3c-115">В коде клиента в файле Program.cs запросы отправляются как `GET` и `POST` операции службы с заголовком HTTP Accept, указан как «application/xml» или «application/json», а служба возвращает ответ в том, что соответствующий формат.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-115">In the client code in Program.cs, requests are sent to both the `GET` and `POST` operations of the service with the HTTP Accept header specified as either "application/xml" or "application/json" and the service returns a response in that respective format.</span></span>  
   
- Также в операции `GET` можно использовать принудительный выбор формата.  Операция `GET` проверяет наличие необязательного параметра строки запроса `format`, и если он найден, задает формат ответа в свойстве <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>.  Принудительное задание формата ответа в этом случае переопределяет автоматический выбор формата, производимый инфраструктурой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="cdf3c-116">Также в операции `GET` можно использовать принудительный выбор формата.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-116">Also in the `GET` operation, imperative format selection is used.</span></span> <span data-ttu-id="cdf3c-117">Операция `GET` проверяет наличие необязательного параметра строки запроса `format`, и если он найден, задает формат ответа в свойстве <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-117">The `GET` operation checks for an optional `format` query-string parameter and if present, sets the response format on the <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> property.</span></span> <span data-ttu-id="cdf3c-118">Принудительное задание формата ответа в этом случае переопределяет автоматический выбор формата, производимый инфраструктурой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cdf3c-118">Imperatively setting the response format in this way overrides the automatic format selection done by the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure.</span></span>  
   
- Образец состоит из резидентной службы и клиента, который работает в консольном приложении.  Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
+ <span data-ttu-id="cdf3c-119">Образец состоит из резидентной службы и клиента, который работает в консольном приложении.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-119">The sample consists of a self-hosted service and a client that runs within a console application.</span></span> <span data-ttu-id="cdf3c-120">Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-120">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="cdf3c-121">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="cdf3c-121">To use this sample</span></span>  
   
-1.  Откройте решение образца «Automatic Format Selection».  Для успешного выполнения образца среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] необходимо запускать от имени администратора.  Для этого щелкните правой кнопкой мыши значок [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и выберите в контекстном меню команду **Запуск от имени администратора**.  
+1.  <span data-ttu-id="cdf3c-122">Откройте решение образца «Automatic Format Selection».</span><span class="sxs-lookup"><span data-stu-id="cdf3c-122">Open the solution for the Automatic Format Selection Sample.</span></span> <span data-ttu-id="cdf3c-123">Для успешного выполнения образца среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] необходимо запускать от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-123">When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator for the sample to execute successfully.</span></span> <span data-ttu-id="cdf3c-124">Для этого щелкните правой кнопкой мыши [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] значок и выберите **Запуск от имени администратора** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-124">Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and select **Run as Administrator** from the context menu.</span></span>  
   
-2.  Нажмите сочетание клавиш CTRL\+SHIFT\+B для построения решения, затем сочетание клавиш Ctrl\+F5 для запуска консольного приложения проекта AutomaticFormatSelection.  Открывается окно консоли с URI запущенной службы и URI HTML\-страницы справки для запущенной службы.  
+2.  <span data-ttu-id="cdf3c-125">Нажмите сочетание клавиш CTRL+SHIFT+B для построения решения, затем сочетание клавиш Ctrl+F5 для запуска консольного приложения проекта AutomaticFormatSelection.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-125">Press CTRL+SHIFT+B to build the solution and then press Ctrl+F5 to run the console application AutomaticFormatSelection project.</span></span> <span data-ttu-id="cdf3c-126">Открывается окно консоли с URI запущенной службы и URI HTML-страницы справки для запущенной службы.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-126">The console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span>  
   
-3.  Во время выполнения образца клиент отправляет запросы к службе и выводит ответы в окно консоли.  Обратите внимание на различные форматы ответов: XML и JSON.  
+3.  <span data-ttu-id="cdf3c-127">Во время выполнения образца клиент отправляет запросы к службе и выводит ответы в окно консоли.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-127">As the sample runs, the client sends requests to the service and writes the responses to the console window.</span></span> <span data-ttu-id="cdf3c-128">Обратите внимание на различные форматы ответов: XML и JSON.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-128">Notice the different formats of the responses in XML and JSON.</span></span>  
   
-4.  Чтобы завершить образец, нажмите любую клавишу.  
+4.  <span data-ttu-id="cdf3c-129">Чтобы завершить образец, нажмите любую клавишу.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-129">Press any key to terminate the sample.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="cdf3c-130">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cdf3c-131">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="cdf3c-131">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="cdf3c-132">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="cdf3c-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cdf3c-133">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="cdf3c-133">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="cdf3c-134">См. также</span><span class="sxs-lookup"><span data-stu-id="cdf3c-134">See Also</span></span>

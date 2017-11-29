@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,40 +15,39 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
-Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a><span data-ttu-id="147af-102">Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации</span><span class="sxs-lookup"><span data-stu-id="147af-102">How to: Configure .NET Framework-Based COM Components for Registration-Free Activation</span></span>
+<span data-ttu-id="147af-103">Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов.</span><span class="sxs-lookup"><span data-stu-id="147af-103">Registration-free activation for .NET Framework-based components is only slightly more complicated than it is for COM components.</span></span> <span data-ttu-id="147af-104">При установке требуются два манифеста:</span><span class="sxs-lookup"><span data-stu-id="147af-104">The setup requires two manifests:</span></span>  
   
--   Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.  
+-   <span data-ttu-id="147af-105">Для определения управляемого компонента в COM-приложениях используется манифест приложения в стиле Win32.</span><span class="sxs-lookup"><span data-stu-id="147af-105">COM applications must have a Win32-style application manifest to identify the managed component.</span></span>  
   
--   Компоненты на основе платформы .NET Framework используют манифест компонента для получения необходимых для активации сведений во время выполнения.  
+-   <span data-ttu-id="147af-106">Компоненты на основе платформы .NET Framework используют манифест компонента для получения необходимых для активации сведений во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="147af-106">.NET Framework-based components must have a component manifest for activation information needed at run time.</span></span>  
   
- В этом разделе описывается, как связать манифест приложения с приложением, манифест компонента с компонентом и внедрить манифест компонента в сборку.  
+ <span data-ttu-id="147af-107">В этом разделе описывается, как связать манифест приложения с приложением, манифест компонента с компонентом и внедрить манифест компонента в сборку.</span><span class="sxs-lookup"><span data-stu-id="147af-107">This topic describes how to associate an application manifest with an application; associate a component manifest with a component; and embed a component manifest in an assembly.</span></span>  
   
-### <a name="to-create-an-application-manifest"></a>Создание манифеста приложения  
+### <a name="to-create-an-application-manifest"></a><span data-ttu-id="147af-108">Создание манифеста приложения</span><span class="sxs-lookup"><span data-stu-id="147af-108">To create an application manifest</span></span>  
   
-1.  С помощью редактора XML создайте (или измените) манифест приложения, принадлежащий COM-приложению, которое взаимодействует с одним или несколькими управляемыми компонентами.  
+1.  <span data-ttu-id="147af-109">С помощью редактора XML создайте (или измените) манифест приложения, принадлежащий COM-приложению, которое взаимодействует с одним или несколькими управляемыми компонентами.</span><span class="sxs-lookup"><span data-stu-id="147af-109">Using an XML editor, create (or modify) the application manifest owned by the COM application that is interoperating with one or more managed components.</span></span>  
   
-2.  Вставьте следующий стандартный заголовок в начало файла:  
+2.  <span data-ttu-id="147af-110">Вставьте следующий стандартный заголовок в начало файла:</span><span class="sxs-lookup"><span data-stu-id="147af-110">Insert the following standard header at the beginning of the file:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Чтобы получить дополнительные сведения об элементах манифеста и их атрибутах, выполните поиск строки "Справочник по манифестам приложения" в библиотеке MSDN.  
+     <span data-ttu-id="147af-111">Сведения об элементах манифеста и их атрибутов см. в разделе [манифесты приложения](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).</span><span class="sxs-lookup"><span data-stu-id="147af-111">For information about manifest elements and their attributes, see [Application Manifests](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).</span></span>  
   
-3.  Определите владельца манифеста. В следующем примере владельцем файла манифеста является `myComApp` версии 1.  
+3.  <span data-ttu-id="147af-112">Определите владельца манифеста.</span><span class="sxs-lookup"><span data-stu-id="147af-112">Identify the owner of the manifest.</span></span> <span data-ttu-id="147af-113">В следующем примере владельцем файла манифеста является `myComApp` версии 1.</span><span class="sxs-lookup"><span data-stu-id="147af-113">In the following example, `myComApp` version 1 owns the manifest file.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -66,7 +59,7 @@ ms.lasthandoff: 08/21/2017
       />  
     ```  
   
-4.  Определите зависимые сборки. В следующем примере `myComApp` зависит от `myManagedComp`.  
+4.  <span data-ttu-id="147af-114">Определите зависимые сборки.</span><span class="sxs-lookup"><span data-stu-id="147af-114">Identify dependent assemblies.</span></span> <span data-ttu-id="147af-115">В следующем примере `myComApp` зависит от `myManagedComp`.</span><span class="sxs-lookup"><span data-stu-id="147af-115">In the following example, `myComApp` depends on `myManagedComp`.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -90,22 +83,22 @@ ms.lasthandoff: 08/21/2017
     </assembly>  
     ```  
   
-5.  Сохраните файл манифеста под соответствующим именем. Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest. Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.  
+5.  <span data-ttu-id="147af-116">Сохраните файл манифеста под соответствующим именем.</span><span class="sxs-lookup"><span data-stu-id="147af-116">Save and name the manifest file.</span></span> <span data-ttu-id="147af-117">Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest.</span><span class="sxs-lookup"><span data-stu-id="147af-117">The name of an application manifest is the name of the assembly executable followed by the .manifest extension.</span></span> <span data-ttu-id="147af-118">Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.</span><span class="sxs-lookup"><span data-stu-id="147af-118">For example, the application manifest file name for myComApp.exe is myComApp.exe.manifest.</span></span>  
   
- Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в разделах, посвященных использованию параллельных сборок, в библиотеке MSDN.  
+ <span data-ttu-id="147af-119">Манифест приложения можно установить в тот же каталог, что и COM-приложение.</span><span class="sxs-lookup"><span data-stu-id="147af-119">You can install an application manifest in the same directory as the COM application.</span></span> <span data-ttu-id="147af-120">Также его можно добавить в качестве ресурса в EXE-файл приложения.</span><span class="sxs-lookup"><span data-stu-id="147af-120">Alternatively, you can add it as a resource to the application's .exe file.</span></span> <span data-ttu-id="147af-121">За дополнительной информацией, Дополнительные сведения см. в разделе [о сборках Side-by-Side](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).</span><span class="sxs-lookup"><span data-stu-id="147af-121">For additional information, For more information, see [About Side-by-Side Assemblies](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).</span></span>  
   
-#### <a name="to-create-a-component-manifest"></a>Создание манифеста компонента  
+#### <a name="to-create-a-component-manifest"></a><span data-ttu-id="147af-122">Создание манифеста компонента</span><span class="sxs-lookup"><span data-stu-id="147af-122">To create a component manifest</span></span>  
   
-1.  С помощью редактора XML создайте манифест компонента, описывающий управляемую сборку.  
+1.  <span data-ttu-id="147af-123">С помощью редактора XML создайте манифест компонента, описывающий управляемую сборку.</span><span class="sxs-lookup"><span data-stu-id="147af-123">Using an XML editor, create a component manifest to describe the managed assembly.</span></span>  
   
-2.  Вставьте следующий стандартный заголовок в начало файла:  
+2.  <span data-ttu-id="147af-124">Вставьте следующий стандартный заголовок в начало файла:</span><span class="sxs-lookup"><span data-stu-id="147af-124">Insert the following standard header at the beginning of the file:</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Определите владельца файла. Элемент `<assemblyIdentity>` элемента `<dependentAssembly>` в файле манифеста приложения должен соответствовать аналогичному элементу в манифесте компонента. В следующем примере владельцем файла манифеста является `myManagedComp` версии 1.2.3.4.  
+3.  <span data-ttu-id="147af-125">Определите владельца файла.</span><span class="sxs-lookup"><span data-stu-id="147af-125">Identify the owner of the file.</span></span> <span data-ttu-id="147af-126">Элемент `<assemblyIdentity>` элемента `<dependentAssembly>` в файле манифеста приложения должен соответствовать аналогичному элементу в манифесте компонента.</span><span class="sxs-lookup"><span data-stu-id="147af-126">The `<assemblyIdentity>` element of the `<dependentAssembly>` element in application manifest file must match the one in the component manifest.</span></span> <span data-ttu-id="147af-127">В следующем примере владельцем файла манифеста является `myManagedComp` версии 1.2.3.4.</span><span class="sxs-lookup"><span data-stu-id="147af-127">In the following example, `myManagedComp` version 1.2.3.4 owns the manifest file.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -118,21 +111,21 @@ ms.lasthandoff: 08/21/2017
            />  
     ```  
   
-4.  Определите каждый класс в сборке. Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке. Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.  
+4.  <span data-ttu-id="147af-128">Определите каждый класс в сборке.</span><span class="sxs-lookup"><span data-stu-id="147af-128">Identify each class in the assembly.</span></span> <span data-ttu-id="147af-129">Используйте `<clrClass>` элемент для уникальной идентификации каждого класса в управляемой сборке.</span><span class="sxs-lookup"><span data-stu-id="147af-129">Use the `<clrClass>` element to uniquely identify each class in the managed assembly.</span></span> <span data-ttu-id="147af-130">Атрибуты элемента, вложенного в `<assembly>`, определены в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="147af-130">The element, which is a subelement of the `<assembly>` element, has the attributes described in the following table.</span></span>  
   
-    |Атрибут|Описание|Обязательное|  
+    |<span data-ttu-id="147af-131">Атрибут</span><span class="sxs-lookup"><span data-stu-id="147af-131">Attribute</span></span>|<span data-ttu-id="147af-132">Описание</span><span class="sxs-lookup"><span data-stu-id="147af-132">Description</span></span>|<span data-ttu-id="147af-133">Обязательно</span><span class="sxs-lookup"><span data-stu-id="147af-133">Required</span></span>|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Идентификатор, который задает активируемый класс.|Да|  
-    |`description`|Строка, которая сообщает пользователю о компоненте. По умолчанию используется пустая строка.|Нет|  
-    |`name`|Строка, представляющая управляемый класс.|Да|  
-    |`progid`|Идентификатор, который используется для отложенной активации.|Нет|  
-    |`threadingModel`|Потоковая модель COM. По умолчанию используется значение "Both" (Оба).|Нет|  
-    |`runtimeVersion`|Используемая версия среды CLR. Если этот атрибут не задан, а среда CLR еще не загружена, компонент загружает последнюю установленную версию среды CLR, предшествующую версии 4. Если указать v1.0.3705, v1.1.4322 или v2.0.50727, автоматически выполняется накат версии до последней установленной версии среды CLR, предшествующей версии 4 (как правило, v2.0.50727). Если уже загружена другая версия среды CLR и не удается загрузить указанную версию в рамках параллельного процесса, загружается указанная версия. В противном случае используется загруженная версия CLR. Это может привести к сбою загрузки.|Нет|  
-    |`tlbid`|Идентификатор библиотеки типов, содержащей сведения о типе класса.|Нет|  
+    |`clsid`|<span data-ttu-id="147af-134">Идентификатор, который задает активируемый класс.</span><span class="sxs-lookup"><span data-stu-id="147af-134">The identifier that specifies the class to be activated.</span></span>|<span data-ttu-id="147af-135">Да</span><span class="sxs-lookup"><span data-stu-id="147af-135">Yes</span></span>|  
+    |`description`|<span data-ttu-id="147af-136">Строка, которая сообщает пользователю о компоненте.</span><span class="sxs-lookup"><span data-stu-id="147af-136">A string that informs the user about the component.</span></span> <span data-ttu-id="147af-137">По умолчанию используется пустая строка.</span><span class="sxs-lookup"><span data-stu-id="147af-137">An empty string is the default.</span></span>|<span data-ttu-id="147af-138">Нет</span><span class="sxs-lookup"><span data-stu-id="147af-138">No</span></span>|  
+    |`name`|<span data-ttu-id="147af-139">Строка, представляющая управляемый класс.</span><span class="sxs-lookup"><span data-stu-id="147af-139">A string that represents the managed class.</span></span>|<span data-ttu-id="147af-140">Да</span><span class="sxs-lookup"><span data-stu-id="147af-140">Yes</span></span>|  
+    |`progid`|<span data-ttu-id="147af-141">Идентификатор, который используется для отложенной активации.</span><span class="sxs-lookup"><span data-stu-id="147af-141">The identifier to be used for late-bound activation.</span></span>|<span data-ttu-id="147af-142">Нет</span><span class="sxs-lookup"><span data-stu-id="147af-142">No</span></span>|  
+    |`threadingModel`|<span data-ttu-id="147af-143">Потоковая модель COM.</span><span class="sxs-lookup"><span data-stu-id="147af-143">The COM threading model.</span></span> <span data-ttu-id="147af-144">По умолчанию используется значение "Both" (Оба).</span><span class="sxs-lookup"><span data-stu-id="147af-144">"Both" is the default value.</span></span>|<span data-ttu-id="147af-145">Нет</span><span class="sxs-lookup"><span data-stu-id="147af-145">No</span></span>|  
+    |`runtimeVersion`|<span data-ttu-id="147af-146">Используемая версия среды CLR.</span><span class="sxs-lookup"><span data-stu-id="147af-146">Specifies the common language runtime (CLR) version to use.</span></span> <span data-ttu-id="147af-147">Если этот атрибут не задан, а среда CLR еще не загружена, компонент загружает последнюю установленную версию среды CLR, предшествующую версии 4.</span><span class="sxs-lookup"><span data-stu-id="147af-147">If you do not specify this attribute, and the CLR is not already loaded, the component is loaded with the latest installed CLR prior to CLR version 4.</span></span> <span data-ttu-id="147af-148">Если указать v1.0.3705, v1.1.4322 или v2.0.50727, автоматически выполняется накат версии до последней установленной версии среды CLR, предшествующей версии 4 (как правило, v2.0.50727).</span><span class="sxs-lookup"><span data-stu-id="147af-148">If you specify v1.0.3705, v1.1.4322, or v2.0.50727, the version automatically rolls forward to the latest installed CLR version prior to CLR version 4 (usually v2.0.50727).</span></span> <span data-ttu-id="147af-149">Если уже загружена другая версия среды CLR и не удается загрузить указанную версию в рамках параллельного процесса, загружается указанная версия. В противном случае используется загруженная версия CLR.</span><span class="sxs-lookup"><span data-stu-id="147af-149">If another version of the CLR is already loaded and the specified version can be loaded side-by-side in-process, the specified version is loaded; otherwise, the loaded CLR is used.</span></span> <span data-ttu-id="147af-150">Это может привести к сбою загрузки.</span><span class="sxs-lookup"><span data-stu-id="147af-150">This might cause a load failure.</span></span>|<span data-ttu-id="147af-151">Нет</span><span class="sxs-lookup"><span data-stu-id="147af-151">No</span></span>|  
+    |`tlbid`|<span data-ttu-id="147af-152">Идентификатор библиотеки типов, содержащей сведения о типе класса.</span><span class="sxs-lookup"><span data-stu-id="147af-152">The identifier of the type library that contains type information about the class.</span></span>|<span data-ttu-id="147af-153">Нет</span><span class="sxs-lookup"><span data-stu-id="147af-153">No</span></span>|  
   
-     Во всех тегах атрибутов учитывается регистр символов. Просматривая библиотеку типов, экспортированную для сборки с помощью средства ObjectViewer OLE/COM (Oleview.exe), можно получить идентификаторы классов (CLSID), программ (ProgID), потоковые модели и версию среды выполнения.  
+     <span data-ttu-id="147af-154">Во всех тегах атрибутов учитывается регистр символов.</span><span class="sxs-lookup"><span data-stu-id="147af-154">All attribute tags are case-sensitive.</span></span> <span data-ttu-id="147af-155">Просматривая библиотеку типов, экспортированную для сборки с помощью средства ObjectViewer OLE/COM (Oleview.exe), можно получить идентификаторы классов (CLSID), программ (ProgID), потоковые модели и версию среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="147af-155">You can obtain CLSIDs, ProgIDs, threading models, and the runtime version by viewing the exported type library for the assembly with the OLE/COM ObjectViewer (Oleview.exe).</span></span>  
   
-     В следующем манифесте компонента определяются два класса: `testClass1` и `testClass2`.  
+     <span data-ttu-id="147af-156">В следующем манифесте компонента определяются два класса: `testClass1` и `testClass2`.</span><span class="sxs-lookup"><span data-stu-id="147af-156">The following component manifest identifies two classes, `testClass1` and `testClass2`.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -161,35 +154,34 @@ ms.lasthandoff: 08/21/2017
     </assembly>  
     ```  
   
-5.  Сохраните файл манифеста под соответствующим именем. Имя манифеста компонента состоит из имени библиотеки сборки и расширения manifest. Например, манифест для myManagedComp.dll будет носить имя myManagedComp.manifest.  
+5.  <span data-ttu-id="147af-157">Сохраните файл манифеста под соответствующим именем.</span><span class="sxs-lookup"><span data-stu-id="147af-157">Save and name the manifest file.</span></span> <span data-ttu-id="147af-158">Имя манифеста компонента состоит из имени библиотеки сборки и расширения manifest.</span><span class="sxs-lookup"><span data-stu-id="147af-158">The name of a component manifest is the name of the assembly library followed by the .manifest extension.</span></span> <span data-ttu-id="147af-159">Например, манифест для myManagedComp.dll будет носить имя myManagedComp.manifest.</span><span class="sxs-lookup"><span data-stu-id="147af-159">For example, the myManagedComp.dll is myManagedComp.manifest.</span></span>  
   
- Манифест компонента необходимо внедрить в сборку в качестве ресурса.  
+ <span data-ttu-id="147af-160">Манифест компонента необходимо внедрить в сборку в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="147af-160">You must embed the component manifest as a resource in the assembly.</span></span>  
   
-#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Внедрение манифеста компонента в управляемую сборку  
+#### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a><span data-ttu-id="147af-161">Внедрение манифеста компонента в управляемую сборку</span><span class="sxs-lookup"><span data-stu-id="147af-161">To embed a component manifest in a managed assembly</span></span>  
   
-1.  Создайте скрипт ресурсов, содержащий следующую инструкцию:  
+1.  <span data-ttu-id="147af-162">Создайте скрипт ресурсов, содержащий следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="147af-162">Create a resource script that contains the following statement:</span></span>  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     В этой инструкции `myManagedComp.manifest` определяет имя внедряемого манифеста компонента. В этом примере файл скрипта будет носить имя `myresource.rc`.  
+     <span data-ttu-id="147af-163">В этой инструкции `myManagedComp.manifest` определяет имя внедряемого манифеста компонента.</span><span class="sxs-lookup"><span data-stu-id="147af-163">In this statement, `myManagedComp.manifest` is the name of the component manifest being embedded.</span></span> <span data-ttu-id="147af-164">В этом примере файл скрипта будет носить имя `myresource.rc`.</span><span class="sxs-lookup"><span data-stu-id="147af-164">For this example, the script file name is `myresource.rc`.</span></span>  
   
-2.  Скомпилируйте скрипт с помощью средства компиляции ресурсов Microsoft Windows (Rc.exe). В командной строке введите следующую команду:  
+2.  <span data-ttu-id="147af-165">Скомпилируйте скрипт с помощью средства компиляции ресурсов Microsoft Windows (Rc.exe).</span><span class="sxs-lookup"><span data-stu-id="147af-165">Compile the script using the Microsoft Windows Resource Compiler (Rc.exe).</span></span> <span data-ttu-id="147af-166">В командной строке введите следующую команду:</span><span class="sxs-lookup"><span data-stu-id="147af-166">At the command prompt, type the following command:</span></span>  
   
      `rc myresource.rc`  
   
-     Программа Rc.exe создает файл ресурсов `myresource.res`.  
+     <span data-ttu-id="147af-167">Программа Rc.exe создает файл ресурсов `myresource.res`.</span><span class="sxs-lookup"><span data-stu-id="147af-167">Rc.exe produces the `myresource.res` resource file.</span></span>  
   
-3.  Снова скомпилируйте исходный файл сборки и укажите файл ресурсов с помощью параметра **/win32res**:  
+3.  <span data-ttu-id="147af-168">Снова скомпилируйте исходный файл сборки и укажите файл ресурсов с помощью параметра **/win32res**:</span><span class="sxs-lookup"><span data-stu-id="147af-168">Compile the assembly's source file again and specify the resource file by using the **/win32res** option:</span></span>  
   
     ```  
     /win32res:myresource.res  
     ```  
   
-     Файл, содержащий внедренный ресурс, также будет носить имя `myresource.res`.  
+     <span data-ttu-id="147af-169">Файл, содержащий внедренный ресурс, также будет носить имя `myresource.res`.</span><span class="sxs-lookup"><span data-stu-id="147af-169">Again, `myresource.res` is the name of the resource file containing embedded resource.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [COM-взаимодействие без регистрации](../../../docs/framework/interop/registration-free-com-interop.md)   
- [Требования для COM-взаимодействия без регистрации](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [Настройка COM-компонентов для активации без регистрации](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
- [Пошаговое руководство. Активация компонентов на основе платформы .NET без регистрации](http://go.microsoft.com/fwlink/?LinkId=158812)
-
+## <a name="see-also"></a><span data-ttu-id="147af-170">См. также</span><span class="sxs-lookup"><span data-stu-id="147af-170">See Also</span></span>  
+ [<span data-ttu-id="147af-171">COM-взаимодействие без регистрации</span><span class="sxs-lookup"><span data-stu-id="147af-171">Registration-Free COM Interop</span></span>](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [<span data-ttu-id="147af-172">Требования для взаимодействия с COM-Взаимодействия без регистрации</span><span class="sxs-lookup"><span data-stu-id="147af-172">Requirements for Registration-Free COM Interop</span></span>](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [<span data-ttu-id="147af-173">Настройка COM-компонентов для активации без регистрации</span><span class="sxs-lookup"><span data-stu-id="147af-173">Configuring COM Components for Registration-Free Activation</span></span>](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
+ [<span data-ttu-id="147af-174">Пошаговое руководство. Активация компонентов на основе платформы .NET без регистрации</span><span class="sxs-lookup"><span data-stu-id="147af-174">Registration-Free Activation of .NET-Based Components: A Walkthrough</span></span>](http://go.microsoft.com/fwlink/?LinkId=158812)

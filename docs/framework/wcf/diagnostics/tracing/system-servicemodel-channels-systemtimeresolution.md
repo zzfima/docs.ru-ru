@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.SystemTimeResolution | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.SystemTimeResolution
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eaab4ce9-b16a-4fe8-9271-3a1ab1dfa93a
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9bbd5ff79aeed3d26f6a3ce4dac16ba4d0eb8eff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.SystemTimeResolution
-System.ServiceModel.Channels.SystemTimeResolution  
+# <a name="systemservicemodelchannelssystemtimeresolution"></a><span data-ttu-id="de1e0-102">System.ServiceModel.Channels.SystemTimeResolution</span><span class="sxs-lookup"><span data-stu-id="de1e0-102">System.ServiceModel.Channels.SystemTimeResolution</span></span>
+<span data-ttu-id="de1e0-103">System.ServiceModel.Channels.SystemTimeResolution</span><span class="sxs-lookup"><span data-stu-id="de1e0-103">System.ServiceModel.Channels.SystemTimeResolution</span></span>  
   
-## Описание  
- Разрешение таймера операционной системы было определено как *n* тиков, что примерно равно *m* миллисекундам.  Здесь *n* и *m* — числовые значения.  
+## <a name="description"></a><span data-ttu-id="de1e0-104">Описание</span><span class="sxs-lookup"><span data-stu-id="de1e0-104">Description</span></span>  
+ <span data-ttu-id="de1e0-105">Разрешение таймера операционной системы было определено как  *n*  тиков, что примерно равно *m* миллисекунд.</span><span class="sxs-lookup"><span data-stu-id="de1e0-105">The operating system's timer resolution was detected as *n* ticks, which is approximately *m* milliseconds.</span></span> <span data-ttu-id="de1e0-106">Где  *n*  и *m* являются числовыми значениями.</span><span class="sxs-lookup"><span data-stu-id="de1e0-106">Where *n* and *m* are numeric values.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="de1e0-107">См. также</span><span class="sxs-lookup"><span data-stu-id="de1e0-107">See Also</span></span>  
+ [<span data-ttu-id="de1e0-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="de1e0-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="de1e0-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="de1e0-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="de1e0-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="de1e0-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

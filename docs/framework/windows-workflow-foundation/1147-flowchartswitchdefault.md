@@ -1,38 +1,42 @@
 ---
-title: "1147 - FlowchartSwitchDefault | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1147 - FlowchartSwitchDefault
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03bb91f4-bfa4-4420-97fe-8443ee9b03e5
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d2c4e60aef9a7fde91c675415316a7fe4c8c482d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 1147 - FlowchartSwitchDefault
-## Свойства  
+# <a name="1147---flowchartswitchdefault"></a><span data-ttu-id="2fc3d-102">1147 - FlowchartSwitchDefault</span><span class="sxs-lookup"><span data-stu-id="2fc3d-102">1147 - FlowchartSwitchDefault</span></span>
+## <a name="properties"></a><span data-ttu-id="2fc3d-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="2fc3d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|1147|  
-|Ключевые слова|WFActivities|  
-|Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="2fc3d-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="2fc3d-104">ID</span></span>|<span data-ttu-id="2fc3d-105">1147</span><span class="sxs-lookup"><span data-stu-id="2fc3d-105">1147</span></span>|  
+|<span data-ttu-id="2fc3d-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="2fc3d-106">Keywords</span></span>|<span data-ttu-id="2fc3d-107">WFActivities</span><span class="sxs-lookup"><span data-stu-id="2fc3d-107">WFActivities</span></span>|  
+|<span data-ttu-id="2fc3d-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="2fc3d-108">Level</span></span>|<span data-ttu-id="2fc3d-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="2fc3d-109">Information</span></span>|  
+|<span data-ttu-id="2fc3d-110">Канал</span><span class="sxs-lookup"><span data-stu-id="2fc3d-110">Channel</span></span>|<span data-ttu-id="2fc3d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2fc3d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Описание  
- Указывает, что был выбран вариант по умолчанию в параметре блок\-схемы.  
+## <a name="description"></a><span data-ttu-id="2fc3d-112">Описание</span><span class="sxs-lookup"><span data-stu-id="2fc3d-112">Description</span></span>  
+ <span data-ttu-id="2fc3d-113">Указывает, что был выбран вариант по умолчанию в параметре блок-схемы.</span><span class="sxs-lookup"><span data-stu-id="2fc3d-113">Indicates the default case has been selected in a Flowchart switch.</span></span>  
   
-## Сообщение  
- Блок\-схема «%1»\/FlowSwitch: выбрано действие Default Case.  
+## <a name="message"></a><span data-ttu-id="2fc3d-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="2fc3d-114">Message</span></span>  
+ <span data-ttu-id="2fc3d-115">Блок-схема «%1»/FlowSwitch: выбрано действие Default Case.</span><span class="sxs-lookup"><span data-stu-id="2fc3d-115">Flowchart '%1'/FlowSwitch - Default Case was selected.</span></span>  
   
-## Подробные сведения  
+## <a name="details"></a><span data-ttu-id="2fc3d-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="2fc3d-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|Блок\-схема|xs:string|Отображаемое имя блок\-схемы.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="2fc3d-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="2fc3d-117">Data Item Name</span></span>|<span data-ttu-id="2fc3d-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="2fc3d-118">Data Item Type</span></span>|<span data-ttu-id="2fc3d-119">Описание</span><span class="sxs-lookup"><span data-stu-id="2fc3d-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="2fc3d-120">Блок-схема</span><span class="sxs-lookup"><span data-stu-id="2fc3d-120">FlowChart</span></span>|<span data-ttu-id="2fc3d-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="2fc3d-121">xs:string</span></span>|<span data-ttu-id="2fc3d-122">Отображаемое имя блок-схемы.</span><span class="sxs-lookup"><span data-stu-id="2fc3d-122">The display name of the FlowChart.</span></span>|  
+|<span data-ttu-id="2fc3d-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="2fc3d-123">AppDomain</span></span>|<span data-ttu-id="2fc3d-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="2fc3d-124">xs:string</span></span>|<span data-ttu-id="2fc3d-125">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="2fc3d-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

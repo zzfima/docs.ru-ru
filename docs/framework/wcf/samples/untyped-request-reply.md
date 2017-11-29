@@ -1,40 +1,40 @@
 ---
-title: "Нетипизированный запрос/ответ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Нетипизированный запрос ответ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c154fe7c072fc90d616e9788055a45ed66deb0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Нетипизированный запрос/ответ
-В этом образце показано, как определять контракты операций, использующие класс Message.  
+# <a name="untyped-requestreply"></a><span data-ttu-id="1deae-102">Нетипизированный запрос/ответ</span><span class="sxs-lookup"><span data-stu-id="1deae-102">Untyped Request/Reply</span></span>
+<span data-ttu-id="1deae-103">В этом образце показано, как определять контракты операций, использующие класс Message.</span><span class="sxs-lookup"><span data-stu-id="1deae-103">This sample demonstrates how to define operation contracts that use the Message class.</span></span>  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для данного образца расположены в конце этого раздела.  
+>  <span data-ttu-id="1deae-104">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="1deae-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).Контракт службы определяет одну операцию, которая принимает в качестве аргумента тип сообщения и возвращает сообщение.Операция собирает необходимые данные, чтобы вычислять сумму на основе тела сообщения, а затем отправляет эту сумму в виде тела ответного сообщения.  
+ <span data-ttu-id="1deae-105">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="1deae-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="1deae-106">Контракт службы определяет одну операцию, которая принимает в качестве аргумента тип сообщения и возвращает сообщение.</span><span class="sxs-lookup"><span data-stu-id="1deae-106">The service contract defines one operation that takes in a message type as an argument and returns a message.</span></span> <span data-ttu-id="1deae-107">Операция собирает необходимые данные, чтобы вычислять сумму на основе тела сообщения, а затем отправляет эту сумму в виде тела ответного сообщения.</span><span class="sxs-lookup"><span data-stu-id="1deae-107">The operation collects all required data to compute the sum from the message body and then sends the sum as body in the return message.</span></span>  
   
 ```  
-  
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
-  
 ```  
   
- На стороне службы операция извлекает массив целых значений, переданный в качестве входного сообщения, и вычисляет сумму.Чтобы отправить ответное сообщение, образец создает новое сообщение с соответствующей версией сообщения и параметром Action и добавляет в качестве тела сообщения вычисленную сумму.Это показано в следующем образце кода.  
+ <span data-ttu-id="1deae-108">На стороне службы операция извлекает массив целых значений, переданный в качестве входного сообщения, и вычисляет сумму.</span><span class="sxs-lookup"><span data-stu-id="1deae-108">On the service, the operation retrieves the array of integers passed in the input message and then computes the sum.</span></span> <span data-ttu-id="1deae-109">Чтобы отправить ответное сообщение, образец создает новое сообщение с соответствующей версией сообщения и параметром Action и добавляет в качестве тела сообщения вычисленную сумму.</span><span class="sxs-lookup"><span data-stu-id="1deae-109">To send a response message, the sample creates a new message with the appropriate message version and Action and adds the computed sum as its body.</span></span> <span data-ttu-id="1deae-110">Это показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="1deae-110">The following sample code demonstrates this.</span></span>  
   
 ```  
-  
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -51,13 +51,11 @@ public Message ComputeSum(Message request)
                                       ReplyAction, result);  
     return response;  
 }  
-  
 ```  
   
- Клиент использует код, созданный с помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), чтобы создать прокси для удаленной службы.Чтобы отправить сообщение запроса, клиенту требуется версия сообщения, которая зависит от соответствующего канала.Таким образом, он создает новую область <xref:System.ServiceModel.OperationContextScope>, соответствующую созданному каналу прокси и создающую контекст <xref:System.ServiceModel.OperationContext> с правильной версией сообщения, подставленной в свойство `OutgoingMessageHeaders.MessageVersion`.Клиент передает входящий массив в виде тела сообщения запроса, а затем вызывает метод `ComputeSum` прокси.После этого клиент извлекает сумму входных данных через метод `GetBody<T>` ответного сообщения.Это показано в следующем образце кода.  
+ <span data-ttu-id="1deae-111">Клиент использует код, созданный [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси-сервер с удаленной службой.</span><span class="sxs-lookup"><span data-stu-id="1deae-111">The client uses code that is generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to create a proxy to the remote service.</span></span> <span data-ttu-id="1deae-112">Чтобы отправить сообщение запроса, клиенту требуется версия сообщения, которая зависит от соответствующего канала.</span><span class="sxs-lookup"><span data-stu-id="1deae-112">To send a request message, the client must have the message version, which depends on the underlying channel.</span></span> <span data-ttu-id="1deae-113">Таким образом, он создает новую область <xref:System.ServiceModel.OperationContextScope>, соответствующую созданному каналу прокси и создающую контекст <xref:System.ServiceModel.OperationContext> с правильной версией сообщения, подставленной в свойство `OutgoingMessageHeaders.MessageVersion`.</span><span class="sxs-lookup"><span data-stu-id="1deae-113">Thus, it creates a new <xref:System.ServiceModel.OperationContextScope> scoped to the proxy channel it created, which creates an <xref:System.ServiceModel.OperationContext> with the correct message version populated in its `OutgoingMessageHeaders.MessageVersion` property.</span></span> <span data-ttu-id="1deae-114">Клиент передает входящий массив в виде тела сообщения запроса, а затем вызывает метод `ComputeSum` прокси.</span><span class="sxs-lookup"><span data-stu-id="1deae-114">The client passes an input array as the body to the request message and then invokes the `ComputeSum` on the proxy.</span></span> <span data-ttu-id="1deae-115">После этого клиент извлекает сумму входных данных через метод `GetBody<T>` ответного сообщения.</span><span class="sxs-lookup"><span data-stu-id="1deae-115">The client then retrieves the sum of the inputs it passed by accessing the `GetBody<T>` method on the reply message.</span></span> <span data-ttu-id="1deae-116">Это показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="1deae-116">The following sample code demonstrates this.</span></span>  
   
 ```  
-  
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -71,37 +69,34 @@ using (new OperationContextScope(client.InnerChannel))
     Console.WriteLine("Sum of numbers passed (1,2,3,4,5) = {0}",   
                                                        response);  
 }  
-  
 ```  
   
- Этот образец размещается на веб\-сервере, поэтому нужно запускать только клиентский исполняемый файл.Ниже показан образец вывода клиента.  
+ <span data-ttu-id="1deae-117">Этот образец размещается на веб-сервере, поэтому нужно запускать только клиентский исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="1deae-117">This sample is a Web-hosted sample and so only the client executable must be run.</span></span> <span data-ttu-id="1deae-118">Ниже показан образец вывода клиента.</span><span class="sxs-lookup"><span data-stu-id="1deae-118">The following is the sample output on the client.</span></span>  
   
 ```  
-  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- Этот образец размещается на веб\-сервере, поэтому проверьте указанную на шаге 3 ссылку, чтобы узнать, как выполнять построение и запуск образца.  
+ <span data-ttu-id="1deae-119">Этот образец размещается на веб-сервере, поэтому проверьте указанную на шаге 3 ссылку, чтобы узнать, как выполнять построение и запуск образца.</span><span class="sxs-lookup"><span data-stu-id="1deae-119">This sample is a Web-hosted sample and so check the link provided in step 3 to see how to build and run the sample.</span></span>  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="1deae-120">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="1deae-120">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="1deae-121">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1deae-121">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="1deae-122">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1deae-122">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="1deae-123">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="1deae-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="1deae-124">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="1deae-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="1deae-125">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="1deae-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="1deae-126">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="1deae-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="1deae-127">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="1deae-127">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="1deae-128">См. также</span><span class="sxs-lookup"><span data-stu-id="1deae-128">See Also</span></span>

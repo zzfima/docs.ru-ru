@@ -1,48 +1,51 @@
 ---
-title: "Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DoubleBuffered - свойство"
-  - "мерцание, сокращение в Windows Forms"
-  - "графика, снижение мерцания двойной буферизации"
+title: "Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing in Windows Forms
+- graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления
-При двойной буферизации для решения проблем, связанных с многократным повторением операций рисования, используется буфер в памяти.  Если двойная буферизация включена, все операции рисования сначала выполняются в памяти, а лишь затем на экране компьютера.  После завершения всех операций рисования содержимое буфера копируется из памяти непосредственно на связанную с ним область экрана.  Поскольку на экране выполняется лишь одна графическая операция, мерцание, которое часто возникает в сложных операциях рисования, исчезает. Для большинства приложений наилучших результатов можно достичь при использовании двойной буферизации [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] по умолчанию.  Двойная буферизация включена для стандартных элементов управления Windows Forms по умолчанию.  Включить двойную буферизацию в собственных формах и элементах управления можно двумя способами.  Для этого нужно либо присвоить свойству <xref:System.Windows.Forms.Control.DoubleBuffered%2A> значение `true`, либо вызвать метод <xref:System.Windows.Forms.Control.SetStyle%2A>, чтобы сделать флаг <xref:System.Windows.Forms.ControlStyles> равным `true`.  Оба эти способа позволяют включить для создаваемых пользователем форм и элементов управления двойную буферизацию по умолчанию и обеспечить немерцающее отображение графики.  Вызывать метод <xref:System.Windows.Forms.Control.SetStyle%2A> рекомендуется лишь в тех случаях, если пользователем был написан весь код отрисовки элемента управления.  
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a><span data-ttu-id="7c650-102">Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления</span><span class="sxs-lookup"><span data-stu-id="7c650-102">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>
+<span data-ttu-id="7c650-103">Двойная буферизация использует буфер памяти для решения проблем мерцания, связанных с несколькими операциями рисования.</span><span class="sxs-lookup"><span data-stu-id="7c650-103">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="7c650-104">Если двойная буферизация включена, все операции рисования сначала обрабатываются в буфере памяти вместо области рисования на экране.</span><span class="sxs-lookup"><span data-stu-id="7c650-104">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="7c650-105">После завершения всех операций рисования буфер памяти копируется непосредственно в связанную с ним область рисования.</span><span class="sxs-lookup"><span data-stu-id="7c650-105">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="7c650-106">Поскольку на экране выполняется лишь одна графическая операция, мерцание в сложных операциях рисования устраняется. Для большинства приложений по умолчанию двойной буферизации [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает лучшие результаты.</span><span class="sxs-lookup"><span data-stu-id="7c650-106">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.For most applications, the default double buffering provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] will provide the best results.</span></span> <span data-ttu-id="7c650-107">Стандартные элементы управления Windows Forms двойной буферизации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7c650-107">Standard Windows Forms controls are double buffered by default.</span></span> <span data-ttu-id="7c650-108">Вы можете включить двойную буферизацию в формах и элементах управления двумя способами.</span><span class="sxs-lookup"><span data-stu-id="7c650-108">You can enable default double buffering in your forms and authored controls in two ways.</span></span> <span data-ttu-id="7c650-109">Можно либо установить <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true`, может вызвать <xref:System.Windows.Forms.Control.SetStyle%2A> метод, чтобы задать <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> флаг `true`.</span><span class="sxs-lookup"><span data-stu-id="7c650-109">You can either set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`, or you can call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span> <span data-ttu-id="7c650-110">Оба метода включает двойной буферизации по умолчанию для формы или элемента управления и предоставляют отрисовки графики мерцания.</span><span class="sxs-lookup"><span data-stu-id="7c650-110">Both methods will enable default double buffering for your form or control and provide flicker-free graphics rendering.</span></span> <span data-ttu-id="7c650-111">Вызов <xref:System.Windows.Forms.Control.SetStyle%2A> метода рекомендуется только для пользовательских элементов управления, для которых вы написали код отрисовки.</span><span class="sxs-lookup"><span data-stu-id="7c650-111">Calling the <xref:System.Windows.Forms.Control.SetStyle%2A> method is recommended only for custom controls for which you have written all the rendering code.</span></span>  
   
- В более сложных случаях буферизации, например для отображения анимации или при сложном управлении памятью, можно реализовать собственную логику двойной буферизации.  Дополнительные сведения см. в разделе [Практическое руководство. Управление буферизацией графики](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+ <span data-ttu-id="7c650-112">Для более сложных случаях буферизации, например анимации или сложном управлении памятью можно реализовать собственную логику двойной буферизации.</span><span class="sxs-lookup"><span data-stu-id="7c650-112">For more advanced double buffering scenarios, such as animation or advanced memory management, you can implement your own double buffering logic.</span></span> <span data-ttu-id="7c650-113">Дополнительные сведения см. в разделе [как: управление буферизацией графики](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span><span class="sxs-lookup"><span data-stu-id="7c650-113">For more information, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-### Уменьшение эффекта дрожания  
+### <a name="to-reduce-flicker"></a><span data-ttu-id="7c650-114">Чтобы понизить мерцание</span><span class="sxs-lookup"><span data-stu-id="7c650-114">To reduce flicker</span></span>  
   
--   Присвойте свойству <xref:System.Windows.Forms.Control.DoubleBuffered%2A> значение `true`.  
+-   <span data-ttu-id="7c650-115">Задайте для свойства <xref:System.Windows.Forms.Control.DoubleBuffered%2A> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="7c650-115">Set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- или \-  
+ <span data-ttu-id="7c650-116">\- или -</span><span class="sxs-lookup"><span data-stu-id="7c650-116">\- or -</span></span>  
   
--   Вызовите метод <xref:System.Windows.Forms.Control.SetStyle%2A>, чтобы установить флаг <xref:System.Windows.Forms.ControlStyles> равным `true`.  
+-   <span data-ttu-id="7c650-117">Вызовите <xref:System.Windows.Forms.Control.SetStyle%2A> метод, чтобы задать <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> флаг `true`.</span><span class="sxs-lookup"><span data-stu-id="7c650-117">Call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## См. также  
- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>   
- <xref:System.Windows.Forms.Control.SetStyle%2A>   
- [Двойная буферизация графики](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7c650-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7c650-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
+ <xref:System.Windows.Forms.Control.SetStyle%2A>  
+ [<span data-ttu-id="7c650-119">Двойная буферизация графики</span><span class="sxs-lookup"><span data-stu-id="7c650-119">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="7c650-120">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7c650-120">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

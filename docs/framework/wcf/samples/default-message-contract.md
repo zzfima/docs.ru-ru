@@ -1,35 +1,34 @@
 ---
-title: "Контракт сообщения по умолчанию | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Контракт сообщения"
+title: "Контракт сообщения по умолчанию"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 765e531530342af5cf0fccfb759626341103114a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Контракт сообщения по умолчанию
-Образец контракта сообщения по умолчанию демонстрирует службу, в которой пользовательское сообщение, определенное пользователем, передается в операции службы и из операций службы.Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), реализующем интерфейс калькулятора в виде типизированной службы.Вместо отдельных операций службы для сложения, вычитания, умножения и деления, использованных в образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), в этом образце передается пользовательское сообщение, содержащее как операнды, так и оператор, и возвращается результат арифметических вычислений.  
+# <a name="default-message-contract"></a><span data-ttu-id="37446-102">Контракт сообщения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="37446-102">Default Message Contract</span></span>
+<span data-ttu-id="37446-103">Образец контракта сообщения по умолчанию демонстрирует службу, в которой пользовательское сообщение, определенное пользователем, передается в операции службы и из операций службы.</span><span class="sxs-lookup"><span data-stu-id="37446-103">The Default Message Contract sample demonstrates a service where a custom user-defined message is passed to and from service operations.</span></span> <span data-ttu-id="37446-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий интерфейс калькулятора как типизированные службы.</span><span class="sxs-lookup"><span data-stu-id="37446-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator interface as a typed service.</span></span> <span data-ttu-id="37446-105">Вместо отдельные операции служб для сложения, вычитания, умножения и деления, используемых в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), в этом примере передает пользовательское сообщение, содержащее операнды и оператор и возвращает результат арифметические операции.</span><span class="sxs-lookup"><span data-stu-id="37446-105">Instead of the individual service operations for addition, subtraction, multiplication, and division used in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), this sample passes a custom message that contains both the operands and the operator, and returns the result of the arithmetic calculation.</span></span>  
   
- Клиентом является консольное приложение \(EXE\), а библиотека службы \(DLL\) размещается в службах Internet Information Services \(IIS\).Действия клиента отображаются в окне консоли.  
+ <span data-ttu-id="37446-106">Клиентом является консольное приложение (EXE), а библиотека службы (DLL) размещается в службах Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="37446-106">The client is a console program (.exe) and the service library (.dll) is hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="37446-107">Действия клиента отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="37446-107">Client activity is visible in the console window.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="37446-108">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="37446-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- В этой службе определена единственная операция службы, которая принимает и возвращает пользовательские сообщения типа `MyMessage`.Хотя в этом образце сообщения запроса и ответа имеют одинаковый тип, при необходимости они, конечно, могут быть различными контрактами сообщений.  
+ <span data-ttu-id="37446-109">В этой службе определена единственная операция службы, которая принимает и возвращает пользовательские сообщения типа `MyMessage`.</span><span class="sxs-lookup"><span data-stu-id="37446-109">In the service, a single service operation is defined that accepts and returns custom messages of type `MyMessage`.</span></span> <span data-ttu-id="37446-110">Хотя в этом образце сообщения запроса и ответа имеют одинаковый тип, при необходимости они, конечно, могут быть различными контрактами сообщений.</span><span class="sxs-lookup"><span data-stu-id="37446-110">Although in this sample the request and response messages are of the same type, they could of course be different message contracts if necessary.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -39,10 +38,9 @@ public interface ICalculator
                   ReplyAction="http://test/MyMessage_action")]  
     MyMessage Calculate(MyMessage request);  
 }  
-  
 ```  
   
- Пользовательское сообщение `MyMessage` определено в классе, аннотированном атрибутами <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> и <xref:System.ServiceModel.MessageBodyMemberAttribute>.В этом образце используется только третий конструктор.Использование контрактов сообщений обеспечивает полное управление сообщением SOAP.В этом образце атрибут <xref:System.ServiceModel.MessageHeaderAttribute> используется для помещения параметра `Operation` в заголовок SOAP.Операнды `N1`, `N2` и `Result` помещаются в тело сообщения SOAP, так как к ним применен атрибут <xref:System.ServiceModel.MessageBodyMemberAttribute>.  
+ <span data-ttu-id="37446-111">Пользовательское сообщение `MyMessage` определено в классе, аннотированном атрибутами <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> и <xref:System.ServiceModel.MessageBodyMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="37446-111">The custom message `MyMessage` is defined in a class annotated with <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> and <xref:System.ServiceModel.MessageBodyMemberAttribute> attributes.</span></span> <span data-ttu-id="37446-112">В этом образце используется только третий конструктор.</span><span class="sxs-lookup"><span data-stu-id="37446-112">Only the third constructor is used in this sample.</span></span> <span data-ttu-id="37446-113">Использование контрактов сообщений обеспечивает полное управление сообщением SOAP.</span><span class="sxs-lookup"><span data-stu-id="37446-113">Using message contracts allows you to exercise full control over the SOAP message.</span></span> <span data-ttu-id="37446-114">В этом образце атрибут <xref:System.ServiceModel.MessageHeaderAttribute> используется для помещения параметра `Operation` в заголовок SOAP.</span><span class="sxs-lookup"><span data-stu-id="37446-114">In this sample, the <xref:System.ServiceModel.MessageHeaderAttribute> attribute is used to put `Operation` in a SOAP header.</span></span> <span data-ttu-id="37446-115">Операнды `N1`, `N2` и `Result` помещаются в тело сообщения SOAP, так как к ним применен атрибут <xref:System.ServiceModel.MessageBodyMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="37446-115">The operands `N1`, `N2` and the `Result` appear within the SOAP body because they have the <xref:System.ServiceModel.MessageBodyMemberAttribute> attribute applied.</span></span>  
   
 ```  
 [MessageContract]  
@@ -108,7 +106,7 @@ public class MyMessage
 }  
 ```  
   
- Класс реализации содержит код для операции службы `Calculate`.Класс `CalculateService` получает операнды и оператор из сообщения запроса и создает ответное сообщение, содержащее результаты запрошенного вычисления, как показано в следующем образце кода.  
+ <span data-ttu-id="37446-116">Класс реализации содержит код для операции службы `Calculate`.</span><span class="sxs-lookup"><span data-stu-id="37446-116">The implementation class contains the code for the `Calculate` service operation.</span></span> <span data-ttu-id="37446-117">Класс `CalculateService` получает операнды и оператор из сообщения запроса и создает ответное сообщение, содержащее результаты запрошенного вычисления, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="37446-117">The `CalculateService` class obtains the operands and operator from the request message and creates a response message that contains the result of the requested calculation, as shown in the following sample code.</span></span>  
   
 ```  
 // Service class which implements the service contract.  
@@ -142,13 +140,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Созданный код этого клиента был создан средством [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).При необходимости это средство автоматически создает типы контрактов сообщений в создаваемом коде клиента.Можно указать параметр команды `/messageContract`, чтобы принудительно создавать контракты сообщений.  
+ <span data-ttu-id="37446-118">Созданный код клиента для клиента был создан с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средства.</span><span class="sxs-lookup"><span data-stu-id="37446-118">The generated client code for the client was created with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool.</span></span> <span data-ttu-id="37446-119">При необходимости это средство автоматически создает типы контрактов сообщений в создаваемом коде клиента.</span><span class="sxs-lookup"><span data-stu-id="37446-119">The tool automatically creates message contract types in the generated client code if necessary.</span></span> <span data-ttu-id="37446-120">Можно указать параметр команды `/messageContract`, чтобы принудительно создавать контракты сообщений.</span><span class="sxs-lookup"><span data-stu-id="37446-120">The `/messageContract` command option may be specified to force the generation of message contracts.</span></span>  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- В следующем образце кода показан клиент, использующий сообщение `MyMessage`.  
+ <span data-ttu-id="37446-121">В следующем образце кода показан клиент, использующий сообщение `MyMessage`.</span><span class="sxs-lookup"><span data-stu-id="37446-121">The following sample code demonstrates the client using the `MyMessage` message.</span></span>  
   
 ```  
 // Create a client with given client endpoint configuration  
@@ -164,36 +162,34 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- При выполнении образца ход вычислений отображается в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="37446-122">При выполнении образца ход вычислений отображается в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="37446-122">When you run the sample, the calculations are displayed in the client console window.</span></span> <span data-ttu-id="37446-123">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="37446-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
-  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- На этом этапе пользовательские сообщения, определенные пользователем, передаются между клиентом и операцией службы.Контракт сообщений определяет, что операнды и результаты находятся в теле сообщения, а оператор — в заголовке сообщения.Для наблюдения за этой структурой сообщений можно настроить ведение журнала сообщений.  
+ <span data-ttu-id="37446-124">На этом этапе пользовательские сообщения, определенные пользователем, передаются между клиентом и операцией службы.</span><span class="sxs-lookup"><span data-stu-id="37446-124">At this point, custom user-defined messages have passed between the client and the service operation.</span></span> <span data-ttu-id="37446-125">Контракт сообщений определяет, что операнды и результаты находятся в теле сообщения, а оператор - в заголовке сообщения.</span><span class="sxs-lookup"><span data-stu-id="37446-125">The message contract defined that the operands and results were in the message body and that the operator was in a message header.</span></span> <span data-ttu-id="37446-126">Для наблюдения за этой структурой сообщений можно настроить ведение журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="37446-126">Message logging can be configured to observe this message structure.</span></span>  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="37446-127">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="37446-127">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="37446-128">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="37446-128">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="37446-129">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="37446-129">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="37446-130">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="37446-130">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="37446-131">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="37446-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="37446-132">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="37446-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="37446-133">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="37446-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="37446-134">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="37446-134">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="37446-135">См. также</span><span class="sxs-lookup"><span data-stu-id="37446-135">See Also</span></span>

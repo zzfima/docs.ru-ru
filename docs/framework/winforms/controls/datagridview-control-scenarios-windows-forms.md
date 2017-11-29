@@ -1,100 +1,101 @@
 ---
-title: "Сценарии использования элементов управления DataGridView (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], отображения в табличном формате"
-  - "таблицы данных, сведения о таблицах данных"
-  - "DataGridView - элемент управления [Windows Forms], сценарии"
+title: "Сценарии использования элементов управления DataGridView (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], displaying in tabular format
+- data grids [Windows Forms], about data grids
+- DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сценарии использования элементов управления DataGridView (Windows Forms)
-Элемент управления <xref:System.Windows.Forms.DataGridView> позволяет отображать в табличной форме данные из различных источников данных.  В простых случаях можно заполнять <xref:System.Windows.Forms.DataGridView> вручную и управлять данными напрямую через элемент управления.  Однако обычно данные хранятся во внешнем источнике данных, а привязка элемента управления к ним осуществляется через компонент <xref:System.Windows.Forms.BindingSource>.  
+# <a name="datagridview-control-scenarios-windows-forms"></a><span data-ttu-id="45c40-102">Сценарии использования элементов управления DataGridView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="45c40-102">DataGridView Control Scenarios (Windows Forms)</span></span>
+<span data-ttu-id="45c40-103">С <xref:System.Windows.Forms.DataGridView> элемента управления, можно отобразить табличных данных из различных источников данных.</span><span class="sxs-lookup"><span data-stu-id="45c40-103">With the <xref:System.Windows.Forms.DataGridView> control, you can display tabular data from a variety of data sources.</span></span> <span data-ttu-id="45c40-104">В простых случаях можно вручную заполнять <xref:System.Windows.Forms.DataGridView> и манипулировать данными напрямую через элемент управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-104">For simple uses, you can manually populate a <xref:System.Windows.Forms.DataGridView> and manipulate the data directly through the control.</span></span> <span data-ttu-id="45c40-105">Как правило, однако для сохранения данных в внешнему источнику данных и привязать элемент управления к нему через <xref:System.Windows.Forms.BindingSource> компонента.</span><span class="sxs-lookup"><span data-stu-id="45c40-105">Typically, however, you will store your data in an external data source and bind the control to it through a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- В данном разделе описываются наиболее распространенные сценарии, включающие элемент управления <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="45c40-106">В этом разделе описываются некоторые общие сценарии, охватывающие <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-106">This topic describes some of the common scenarios that involve the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-## Сценарий 1. Отображение небольших объемов данных  
- Для отображения в элементе управления <xref:System.Windows.Forms.DataGridView> данные необязательно хранить во внешнем источнике данных.  При работе с небольшими объемами данных можно самостоятельно заполнить элемент управления и управлять данными через элемент управления.  Такой режим называется *несвязанным режимом*.  Дополнительные сведения содержатся в разделе [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+## <a name="scenario-1-displaying-small-amounts-of-data"></a><span data-ttu-id="45c40-107">Сценарий 1: Отображение небольших объемов данных</span><span class="sxs-lookup"><span data-stu-id="45c40-107">Scenario 1: Displaying Small Amounts of Data</span></span>  
+ <span data-ttu-id="45c40-108">Нет необходимости хранить данные в внешнему источнику данных для отображения на <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-108">You do not have to store your data in an external data source to display it in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="45c40-109">Если вы работаете с небольшой объем данных, можно самостоятельно заполнить элемент управления и управлять данными через элемент управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-109">If you are working with a small amount of data, you can populate the control yourself and manipulate the data through the control.</span></span> <span data-ttu-id="45c40-110">Это называется *Несвязанный режим*.</span><span class="sxs-lookup"><span data-stu-id="45c40-110">This is called *unbound mode*.</span></span> <span data-ttu-id="45c40-111">Дополнительные сведения см. в разделе [как: создание свободного элемента управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-111">For more information, see [How to: Create an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-112">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-112">Scenario Key Points</span></span>  
   
--   В несвязанном режиме элемент управления заполняется вручную.  
+-   <span data-ttu-id="45c40-113">В несвязанном режиме заполнить элемент управления вручную.</span><span class="sxs-lookup"><span data-stu-id="45c40-113">In unbound mode, you populate the control manually.</span></span>  
   
--   Несвязанный режим хорошо подходит для работы с небольшими объемами данных, доступных только для чтения.  
+-   <span data-ttu-id="45c40-114">Несвязанный режим хорошо подходит для небольших объемов данных только для чтения.</span><span class="sxs-lookup"><span data-stu-id="45c40-114">Unbound mode is particularly suited for small amounts of read-only data.</span></span>  
   
--   Несвязанный режим также подходит для работы с таблицами с малой степенью заполнения.  
+-   <span data-ttu-id="45c40-115">Несвязанный режим также подходит для табличную или разреженное таблиц.</span><span class="sxs-lookup"><span data-stu-id="45c40-115">Unbound mode is also suited for spreadsheet-like or sparsely populated tables.</span></span>  
   
-## Сценарий 2. Просмотр и обновление данных, которые хранятся во внешнем источнике данных  
- Элемент управления <xref:System.Windows.Forms.DataGridView> можно использовать как пользовательский интерфейс, с помощью которого пользователи осуществляют доступ к данным, хранящимся в источнике данных, таком как таблица базы данных или коллекция бизнес\-объектов.  Дополнительные сведения содержатся в разделе [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a><span data-ttu-id="45c40-116">Сценарий 2: Просмотр и обновление данных, хранящихся в внешнему источнику данных</span><span class="sxs-lookup"><span data-stu-id="45c40-116">Scenario 2: Viewing and Updating Data Stored in an External Data Source</span></span>  
+ <span data-ttu-id="45c40-117">Можно использовать <xref:System.Windows.Forms.DataGridView> управления как пользовательский интерфейс (UI), через какие пользователи могут обращаться к данным, хранящимся в источнике данных как таблицу базы данных или коллекции бизнес-объектов.</span><span class="sxs-lookup"><span data-stu-id="45c40-117">You can use the <xref:System.Windows.Forms.DataGridView> control as a user interface (UI) through which users can access data kept in a data source such as a database table or a collection of business objects.</span></span> <span data-ttu-id="45c40-118">Дополнительные сведения см. в разделе [как: привязка данных к элементу управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-118">For more information, see [How to: Bind Data to the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-119">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-119">Scenario Key Points</span></span>  
   
--   В связанном режиме можно подключаться к источнику данных, автоматически формировать столбцы на основе свойств источника данных или столбцов базы данных, а также автоматически заполнять элемент управления.  
+-   <span data-ttu-id="45c40-120">Связанный режим позволяет соединиться с источником данных, автоматически создавать столбцы на основе свойств источника данных или столбцов базы данных, а также автоматически заполнить элемент управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-120">Bound mode lets you connect to a data source, automatically generate columns based on the data source properties or database columns, and automatically populate the control.</span></span>  
   
--   Cвязанный режим подходит для взаимодействия с большими объемами данных.  Данные можно форматировать для отображения, а синтаксический анализ пользовательских данных может быть выполнен в формате, ожидаемом источником данных.  Ошибки форматирования при вводе данных и ошибки, связанные с ограничением базы данных, могут быть обнаружены, это позволяет предупреждать пользователя и исправлять ошибочные ячейки.  
+-   <span data-ttu-id="45c40-121">Связанный режим подходит для активное взаимодействие с пользователем с данными.</span><span class="sxs-lookup"><span data-stu-id="45c40-121">Bound mode is suited for heavy user interaction with data.</span></span> <span data-ttu-id="45c40-122">Данные можно форматировать для отображения и может быть проанализирован пользовательские данные в формате, ожидаемом источником данных.</span><span class="sxs-lookup"><span data-stu-id="45c40-122">Data can be formatted for display, and user-specified data can be parsed into the format expected by the data source.</span></span> <span data-ttu-id="45c40-123">Ввод данных форматирования и ограничение ошибки базы данных могут быть обнаружены, чтобы пользователи могут получать предупреждения и ошибочные ячейки могут быть исправлены.</span><span class="sxs-lookup"><span data-stu-id="45c40-123">Data entry formatting errors and database constraint errors can be detected so that users can be warned and erroneous cells can be corrected.</span></span>  
   
--   Дополнительные функциональные возможности, такие как сортировка, закрепление и изменение порядка столбцов, дают пользователям возможность просматривать данные наиболее удобным способом.  
+-   <span data-ttu-id="45c40-124">Дополнительные функциональные возможности, такие как сортировка столбца, замораживание и переупорядочивания дают пользователям возможность просматривать данные наиболее удобным образом.</span><span class="sxs-lookup"><span data-stu-id="45c40-124">Additional functionality such as column sorting, freezing, and reordering enable users to view data in the way most convenient for their workflow.</span></span>  
   
--   Поддержка буфера обмена позволяет копировать данные из собственных приложений в другие приложения.  
+-   <span data-ttu-id="45c40-125">Поддержка буфера обмена позволяет копировать данные из приложения в других приложениях.</span><span class="sxs-lookup"><span data-stu-id="45c40-125">Clipboard support enables users to copy data from your application into other applications.</span></span>  
   
-## Сценарий 3. Дополнительные возможности работы с данными  
- В случае особых требований, выходящих за пределы возможностей стандартной модели привязки данных, можно реализовать *виртуальный режим* для управления взаимодействием между элементом управления и данными.  Реализация виртуального режима означает реализацию одного или нескольких обработчиков событий, позволяющих элементу управления запрашивать сведения о ячейках, когда они требуются.  
+## <a name="scenario-3-advanced-data"></a><span data-ttu-id="45c40-126">Сценарий 3: Дополнительные данные</span><span class="sxs-lookup"><span data-stu-id="45c40-126">Scenario 3: Advanced Data</span></span>  
+ <span data-ttu-id="45c40-127">При наличии особых требований, стандартной модели привязки данных не может управлять взаимодействия между элементом управления и данных, реализовав *виртуальный режим*.</span><span class="sxs-lookup"><span data-stu-id="45c40-127">If you have special needs that the standard data binding model does not address, you can manage the interaction between the control and your data by implementing *virtual mode*.</span></span> <span data-ttu-id="45c40-128">Реализация виртуального режима означает реализацию одного или нескольких обработчиков событий, позволяющих элементу управления запрашивать сведения о ячейках данные, которые требуется.</span><span class="sxs-lookup"><span data-stu-id="45c40-128">Implementing virtual mode means implementing one or more event handlers that let the control request information about cells as the information is needed.</span></span>  
   
- Например, чтобы обеспечить оптимальную эффективность при работе с большими объемами данных, можно реализовать виртуальный режим.  Виртуальный режим также удобен для сохранения значений в несвязанных столбцах, которые отображаются вместе со столбцами, извлеченными из другого источника данных.  
+ <span data-ttu-id="45c40-129">Например при работе с большими объемами данных, можно реализовать виртуальный режим, чтобы обеспечить оптимальную эффективность.</span><span class="sxs-lookup"><span data-stu-id="45c40-129">For example, if you work with large amounts of data, you may want to implement virtual mode to ensure optimal efficiency.</span></span> <span data-ttu-id="45c40-130">Виртуальный режим также полезна для сохранения значений в несвязанных столбцов, которые отображаются вместе со столбцами, извлеченными из другого источника данных.</span><span class="sxs-lookup"><span data-stu-id="45c40-130">Virtual mode is also useful for maintaining the values of unbound columns that you display along with columns retrieved from another data source.</span></span>  
   
- Дополнительные сведения о виртуальном режиме содержатся в разделе [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ <span data-ttu-id="45c40-131">Дополнительные сведения о виртуальном режиме см. в разделе [Пошаговое руководство: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-131">For more information about virtual mode, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-132">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-132">Scenario Key Points</span></span>  
   
--   Виртуальный режим подходит для отображения очень больших объемов данных при необходимости точной настройки производительности.  
+-   <span data-ttu-id="45c40-133">Виртуальный режим подходит для отображения очень больших объемов данных, когда необходимо оптимизировать производительность.</span><span class="sxs-lookup"><span data-stu-id="45c40-133">Virtual mode is suited for displaying very large amounts of data when you need to fine-tune performance.</span></span>  
   
-## Сценарий 4. Автоматическое изменение размера столбцов и строк  
- Можно автоматически изменять размер столбцов и строк при отображении данных, которые регулярно обновляются, для обеспечения видимости всего содержимого.  Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет несколько параметров, позволяющих включать и выключать возможность изменения размера вручную, изменять размер программными средствами в указанное время или автоматически изменять размер при изменении содержимого.  Дополнительные сведения см. в разделе [Изменение размеров управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-4-automatically-resizing-rows-and-columns"></a><span data-ttu-id="45c40-134">Сценарий 4: Автоматическое изменение размера строк и столбцов</span><span class="sxs-lookup"><span data-stu-id="45c40-134">Scenario 4: Automatically Resizing Rows and Columns</span></span>  
+ <span data-ttu-id="45c40-135">При отображении данных, которые регулярно обновляются, можно автоматически изменить размеры строк и столбцов, убедитесь, что все содержимое.</span><span class="sxs-lookup"><span data-stu-id="45c40-135">When you display data that is regularly updated, you can automatically resize rows and columns to ensure that all content is visible.</span></span> <span data-ttu-id="45c40-136"><xref:System.Windows.Forms.DataGridView> Элемент управления предоставляет несколько параметров, которые позволяют включить или отключить возможность изменения размера вручную, изменять размер программными средствами в указанное время или изменения размера автоматически при изменении содержимого.</span><span class="sxs-lookup"><span data-stu-id="45c40-136">The <xref:System.Windows.Forms.DataGridView> control provides several options that let you enable or disable manual resizing, resize programmatically at specific times, or resize automatically whenever content changes.</span></span> <span data-ttu-id="45c40-137">Дополнительные сведения см. в разделе [параметры изменения размера в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-137">For more information, see [Sizing Options in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-138">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-138">Scenario Key Points</span></span>  
   
--   Функция изменения размера вручную предоставляет пользователям возможность изменять высоту и ширину ячеек.  
+-   <span data-ttu-id="45c40-139">Возможность изменения размера вручную предоставляет пользователям возможность изменять высоту и ширину ячеек.</span><span class="sxs-lookup"><span data-stu-id="45c40-139">Manual resizing enables users to adjust cell heights and widths.</span></span>  
   
--   Автоматическое изменение размера позволяет поддерживать размеры ячеек таким образом, чтобы содержимое ячеек не обрезалось.  
+-   <span data-ttu-id="45c40-140">Автоматическое изменение размера позволяет поддерживать размеры ячеек, чтобы никогда не обрезается содержимое ячейки.</span><span class="sxs-lookup"><span data-stu-id="45c40-140">Automatic resizing enables you to maintain cell sizes so that cell content is never clipped.</span></span>  
   
--   Программное изменение размера позволяет изменять размеры ячеек в указанное время, чтобы избежать потери производительности при непрерывном автоматическом изменении.  
+-   <span data-ttu-id="45c40-141">Программное изменение размеров позволяет изменять размеры ячеек в указанное время, чтобы избежать потери производительности непрерывного автоматического изменения размера.</span><span class="sxs-lookup"><span data-stu-id="45c40-141">Programmatic resizing enables you to resize cells at specific times to avoid the performance penalty of continuous automatic resizing.</span></span>  
   
-## Сценарий 5. Простая настройка  
- Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет функциональные возможности, которые позволяют изменять его основной внешний вид и поведение.  Дополнительные сведения см. в разделе [Стили ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="scenario-5-simple-customization"></a><span data-ttu-id="45c40-142">Сценарий 5: Настройка простой</span><span class="sxs-lookup"><span data-stu-id="45c40-142">Scenario 5: Simple Customization</span></span>  
+ <span data-ttu-id="45c40-143"><xref:System.Windows.Forms.DataGridView> Управления предоставляет функциональные возможности, которые позволяют изменять его основной внешний вид и поведение.</span><span class="sxs-lookup"><span data-stu-id="45c40-143">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to alter its basic appearance and behavior.</span></span> <span data-ttu-id="45c40-144">Дополнительные сведения см. в разделе [стили ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-144">For more information, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-145">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-145">Scenario Key Points</span></span>  
   
--   Объекты <xref:System.Windows.Forms.DataGridViewCellStyle> позволяют предоставлять информацию о цвете, шрифтах, форматировании и размещении на нескольких уровнях и для отдельных элементов в элементе управления.  
+-   <span data-ttu-id="45c40-146"><xref:System.Windows.Forms.DataGridViewCellStyle>объекты позволяют обеспечить цвета, шрифта, форматирования и позиционирования информации на нескольких уровнях и для отдельных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="45c40-146"><xref:System.Windows.Forms.DataGridViewCellStyle> objects let you provide color, font, formatting, and positioning information at multiple levels and for individual elements of the control.</span></span>  
   
--   Стили ячеек могут размещаться и совместно использоваться несколькими элементами, позволяя повторно использовать код.  
+-   <span data-ttu-id="45c40-147">Стили ячеек можно многоуровневая и совместно использоваться несколькими элементами, позволяя повторно использовать код.</span><span class="sxs-lookup"><span data-stu-id="45c40-147">Cell styles can be layered and shared by multiple elements, letting you reuse code.</span></span>  
   
-## Сценарий 6. Расширенная настройка  
- Элемент управления <xref:System.Windows.Forms.DataGridView> предоставляет функциональные возможности, которые позволяют настраивать его внешний вид и поведение.  
+## <a name="scenario-6-advanced-customization"></a><span data-ttu-id="45c40-148">Сценарий 6: Дополнительная настройка</span><span class="sxs-lookup"><span data-stu-id="45c40-148">Scenario 6: Advanced Customization</span></span>  
+ <span data-ttu-id="45c40-149"><xref:System.Windows.Forms.DataGridView> Управления предоставляет функциональные возможности для настройки внешнего вида и поведения.</span><span class="sxs-lookup"><span data-stu-id="45c40-149">The <xref:System.Windows.Forms.DataGridView> control provides many ways for you to customize its appearance and behavior.</span></span>  
   
-### Ключевые моменты сценария  
+### <a name="scenario-key-points"></a><span data-ttu-id="45c40-150">Ключевые моменты сценария</span><span class="sxs-lookup"><span data-stu-id="45c40-150">Scenario Key Points</span></span>  
   
--   Можно предоставить собственный код окраски ячеек.  Дополнительные сведения содержатся в разделе [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   <span data-ttu-id="45c40-151">Можно предоставить собственный код рисования ячейки.</span><span class="sxs-lookup"><span data-stu-id="45c40-151">You can provide your own cell painting code.</span></span> <span data-ttu-id="45c40-152">Дополнительные сведения см. в разделе [как: Настройка внешнего вида ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-152">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).</span></span>  
   
--   Можно предоставить собственную окраску строк.  Это полезно, например, для создания строк, содержимое которых объединяет несколько столбцов.  Дополнительные сведения содержатся в разделе [Практическое руководство. Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   <span data-ttu-id="45c40-153">Можно предоставить собственную окраску строк.</span><span class="sxs-lookup"><span data-stu-id="45c40-153">You can provide your own row painting.</span></span> <span data-ttu-id="45c40-154">Это полезно, например, для создания строк с содержимым для нескольких столбцов.</span><span class="sxs-lookup"><span data-stu-id="45c40-154">This is useful, for example, to create rows with content that spans multiple columns.</span></span> <span data-ttu-id="45c40-155">Дополнительные сведения см. в разделе [как: Настройка внешнего вида строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-155">For more information, see [How to: Customize the Appearance of Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).</span></span>  
   
--   Можно реализовать собственные классы ячеек и столбцов для настройки внешнего вида ячеек.  Дополнительные сведения содержатся в разделе [Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   <span data-ttu-id="45c40-156">Можно реализовать собственные классы ячеек и столбцов для настройки внешнего вида ячеек.</span><span class="sxs-lookup"><span data-stu-id="45c40-156">You can implement your own cell and column classes to customize cell appearance.</span></span> <span data-ttu-id="45c40-157">Дополнительные сведения см. в разделе [как: Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-157">For more information, see [How to: Customize Cells and Columns in the Windows Forms DataGridView Control by Extending Their Behavior and Appearance](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).</span></span>  
   
--   Можно реализовать собственные классы ячеек и столбцов для размещения элементов управления, отличных от предоставляемых встроенными типами столбцов.  Дополнительные сведения содержатся в разделе [Практическое руководство. Размещение элементов управления в ячейках элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   <span data-ttu-id="45c40-158">Можно реализовать собственные классы ячеек и столбцов для элементов управления ведущего приложения, не поддерживаемые встроенными типами столбцов.</span><span class="sxs-lookup"><span data-stu-id="45c40-158">You can implement your own cell and column classes to host controls other than the ones provided by the built-in column types.</span></span> <span data-ttu-id="45c40-159">Дополнительные сведения см. в разделе [как: элементы управления ведущего приложения в ячеек элемента управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span><span class="sxs-lookup"><span data-stu-id="45c40-159">For more information, see [How to: Host Controls in Windows Forms DataGridView Cells](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- [Общие сведения об элементе управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="45c40-160">См. также</span><span class="sxs-lookup"><span data-stu-id="45c40-160">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="45c40-161">Общие сведения об элементе управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="45c40-161">DataGridView Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

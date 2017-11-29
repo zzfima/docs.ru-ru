@@ -1,58 +1,59 @@
 ---
-title: "Визуальное наследование в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "базовые формы"
-  - "наследование форм"
-  - "наследование"
-  - "наследование, формы"
-  - "наследуемые формы"
-  - "наследуемые формы, Windows Forms"
-  - "Windows Forms, наследование"
+title: "Визуальное наследование в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- base forms
+- inheritance [Windows Forms], forms
+- inherited forms [Windows Forms], Windows Forms
+- inheritance
+- inherited forms
+- form inheritance
+- Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c9d53cf3e54e4a0a0de3207ea59a67f3493f5e88
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Визуальное наследование в Windows Forms
-В некоторых случаях требуется, чтобы проект вызывал форму, аналогичную той, которая была создана в предыдущем проекте.  Может также потребоваться создать основную форму с определенными параметрами, например с водяным знаком, или определенный макет с элементами управления, которые затем будут использоваться в проекте. На каждом последующем шаге в шаблон исходной формы будут вноситься изменения.  Наследование форм позволяет создать базовую форму, а затем наследовать ее и вносить изменения, сохраняя при этом любые исходные параметры.  
+# <a name="windows-forms-visual-inheritance"></a><span data-ttu-id="f4c15-102">Визуальное наследование в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f4c15-102">Windows Forms Visual Inheritance</span></span>
+<span data-ttu-id="f4c15-103">В некоторых случаях вы можете решить, что проект вызывает форму, похожую на форму, созданную в предыдущем проекте.</span><span class="sxs-lookup"><span data-stu-id="f4c15-103">Occasionally, you may decide that a project calls for a form similar to one that you have created in a previous project.</span></span> <span data-ttu-id="f4c15-104">Или можете захотеть создать базовую форму с параметрами, например водяным знаком или определенной структурой элементов управления, которые будут затем повторно использоваться в проекте, с каждой итерацией, содержащей изменения в исходном шаблоне формы.</span><span class="sxs-lookup"><span data-stu-id="f4c15-104">Or, you may want to create a basic form with settings such as a watermark or certain control layout that you will then use again within a project, with each iteration containing modifications to the original form template.</span></span> <span data-ttu-id="f4c15-105">Наследование форм позволяет создать базовую форму, затем наследовать от нее и вносить изменения, сохраняя при этом все необходимые исходные параметры.</span><span class="sxs-lookup"><span data-stu-id="f4c15-105">Form inheritance enables you to create a base form and then inherit from it and make modifications while preserving whatever original settings you need.</span></span>  
   
- Формы производного класса можно создать программными средствами или с помощью наглядного выбора наследования.  
+ <span data-ttu-id="f4c15-106">Формы производного класса можно создавать программно или с помощью выбора компонентов для визуального наследования.</span><span class="sxs-lookup"><span data-stu-id="f4c15-106">You can create derived-class forms programmatically or by using the Visual Inheritance picker.</span></span>  
   
-## В этом подразделе  
- [Практическое руководство. Наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- Указания по созданию наследуемых форм с помощью кода.  
+## <a name="in-this-section"></a><span data-ttu-id="f4c15-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="f4c15-107">In This Section</span></span>  
+ [<span data-ttu-id="f4c15-108">Практическое руководство. Наследование форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f4c15-108">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ <span data-ttu-id="f4c15-109">Указания по созданию наследуемых форм в коде.</span><span class="sxs-lookup"><span data-stu-id="f4c15-109">Gives directions for creating inherited forms in code.</span></span>  
   
- [Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
- Указания по созданию наследуемых форм с помощью диалогового окна "Выбор наследования".  
+ [<span data-ttu-id="f4c15-110">Практическое руководство. Наследование форм с помощью диалогового окна выбора наследования</span><span class="sxs-lookup"><span data-stu-id="f4c15-110">How to: Inherit Forms Using the Inheritance Picker Dialog Box</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ <span data-ttu-id="f4c15-111">Указания по созданию наследуемых форм с помощью окна выбора компонентов для наследования.</span><span class="sxs-lookup"><span data-stu-id="f4c15-111">Gives directions for creating inherited forms with the Inheritance Picker.</span></span>  
   
- [Влияние изменения внешнего вида базовой формы](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- Указания по изменению элементов управления базовой формы и их свойств.  
+ [<span data-ttu-id="f4c15-112">Влияние изменения внешнего вида базовой формы</span><span class="sxs-lookup"><span data-stu-id="f4c15-112">Effects of Modifying a Base Form's Appearance</span></span>](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
+ <span data-ttu-id="f4c15-113">Указания по изменению элементов управления базовой формы и их свойств.</span><span class="sxs-lookup"><span data-stu-id="f4c15-113">Gives directions for changing a base form's controls and their properties.</span></span>  
   
- [Пошаговое руководство. Демонстрация визуального наследования](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- Создание базовой формы Windows Form и компиляция этой формы в библиотеку класса.  После этого библиотека класса импортируется в другой проект, и создается новая форма, унаследованная от базовой формы.  
+ [<span data-ttu-id="f4c15-114">Пошаговое руководство. Демонстрация визуального наследования</span><span class="sxs-lookup"><span data-stu-id="f4c15-114">Walkthrough: Demonstrating Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ <span data-ttu-id="f4c15-115">Создание базовой формы Windows Forms и ее компиляция в библиотеку классов.</span><span class="sxs-lookup"><span data-stu-id="f4c15-115">Describes how to create a base Windows Form and compile it into a class library.</span></span> <span data-ttu-id="f4c15-116">После этого данная библиотека классов импортируется в другой проект и создается новая форма, которая наследуется от базовой формы.</span><span class="sxs-lookup"><span data-stu-id="f4c15-116">You will import this class library into another project, and create a new form that inherits from the base form.</span></span>  
   
- [Практическое руководство. Использование свойств Modifiers и GenerateMember](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
- Инструкции по использованию свойств `GenerateMember` и `Modifiers`, которые имеют значение когда конструктор Windows Forms создает переменную\-элемент для компонента.  
+ [<span data-ttu-id="f4c15-117">Практическое руководство. Использование свойств Modifiers и GenerateMember</span><span class="sxs-lookup"><span data-stu-id="f4c15-117">How to: Use the Modifiers and GenerateMember Properties</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
+ <span data-ttu-id="f4c15-118">Указания по использованию свойств `GenerateMember` и `Modifiers`, актуальных в случае, когда конструктор Windows Forms создает переменную-член для компонента.</span><span class="sxs-lookup"><span data-stu-id="f4c15-118">Gives directions for using the `GenerateMember` and `Modifiers` properties, which are relevant when the Windows Forms Designer generates a member variable for a component.</span></span>  
   
-## Связанные подразделы  
- [NOT IN BUILD: Inheritance in Visual Basic](http://msdn.microsoft.com/ru-ru/e5e6e240-ed31-4657-820c-079b7c79313c)  
- Описание способов определения классов Visual Basic, которые служат основой для остальных классов.  
+## <a name="related-sections"></a><span data-ttu-id="f4c15-119">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f4c15-119">Related Sections</span></span>  
+ [<span data-ttu-id="f4c15-120">Основы наследования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4c15-120">Inheritance basics (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ <span data-ttu-id="f4c15-121">Описание способов определения классов Visual Basic, которые служат основой для других классов.</span><span class="sxs-lookup"><span data-stu-id="f4c15-121">Describes how to define Visual Basic classes that serve as the basis for other classes.</span></span>  
   
- [класс](../Topic/class%20\(C%23%20Reference\).md)  
- Описание принципов работы с классами в языке C\#, в котором разрешено единичное наследование.  
+ [<span data-ttu-id="f4c15-122">class</span><span class="sxs-lookup"><span data-stu-id="f4c15-122">class</span></span>](~/docs/csharp/language-reference/keywords/class.md)  
+ <span data-ttu-id="f4c15-123">Описание принципов особенностей классов в C#, в которых разрешено единичное наследование.</span><span class="sxs-lookup"><span data-stu-id="f4c15-123">Describes the C# approach of classes, in which single inheritance is allowed.</span></span>  
   
- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)  
- Список общих вопросов, связанных с обработчиками событий в унаследованных компонентах.
+ [<span data-ttu-id="f4c15-124">Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f4c15-124">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
+ <span data-ttu-id="f4c15-125">Перечисление распространенных проблем, возникающих в обработчиках событий в наследуемых компонентах.</span><span class="sxs-lookup"><span data-stu-id="f4c15-125">Lists common issues that arise with event handlers in inherited components</span></span>

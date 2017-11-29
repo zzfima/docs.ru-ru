@@ -1,49 +1,55 @@
 ---
-title: "Сериализация | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Serialization2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сериализация
-В этом разделе рассматриваются возможности сериализации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.  
+# <a name="serialization"></a><span data-ttu-id="2bbc8-102">Сериализация</span><span class="sxs-lookup"><span data-stu-id="2bbc8-102">Serialization</span></span>
+<span data-ttu-id="2bbc8-103">В этом разделе описывается [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возможности сериализации.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-103">This topic describes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization capabilities.</span></span> <span data-ttu-id="2bbc8-104">В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-104">The paragraphs that follow provide information about how to add serialization during code generation at design time and the run-time serialization behavior of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] classes.</span></span>  
   
- Код сериализации можно добавить во время разработки одним из перечисленных ниже методов.  
+ <span data-ttu-id="2bbc8-105">Код сериализации можно добавить во время разработки одним из перечисленных ниже методов.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-105">You can add serialization code at design time by either of the following methods:</span></span>  
   
--   В конструкторе [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] установите для свойства **Режим сериализации** значение **в одном направлении**.  
+-   <span data-ttu-id="2bbc8-106">В [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], изменить **режим сериализации** свойства **Unidirectional**.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-106">In the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], change the **Serialization Mode** property to **Unidirectional**.</span></span>  
   
--   В программе командной строки SQLMetal добавьте параметр **\/serialization**.  Дополнительные сведения см. в разделе [SqlMetal.exe \(средство создания кода\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+-   <span data-ttu-id="2bbc8-107">В программе командной строки SQLMetal добавьте **/serialization** параметр.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-107">On the SQLMetal command line, add the **/serialization** option.</span></span> <span data-ttu-id="2bbc8-108">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="2bbc8-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## Обзор  
- Код, созданный с помощью [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], по умолчанию предоставляет возможности отложенной загрузки.  Отложенная загрузка \- очень удобное средство среднего уровня для прозрачной загрузки данных по требованию.  Однако при сериализации с этим средством возникают проблемы, поскольку сериализатор инициирует отложенную загрузку независимо от намерений пользователя.  В действительности, при сериализации объекта также сериализуется его транзитивное замыкание для всех исходящих ссылок с отложенной загрузкой.  
+## <a name="overview"></a><span data-ttu-id="2bbc8-109">Обзор</span><span class="sxs-lookup"><span data-stu-id="2bbc8-109">Overview</span></span>  
+ <span data-ttu-id="2bbc8-110">Код, сгенерированный [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет возможности отложенной загрузки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-110">The code generated by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides deferred loading capabilities by default.</span></span> <span data-ttu-id="2bbc8-111">Отложенная загрузка - очень удобное средство среднего уровня для прозрачной загрузки данных по требованию.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-111">Deferred loading is very convenient on the mid-tier for transparent loading of data on demand.</span></span> <span data-ttu-id="2bbc8-112">Однако при сериализации с этим средством возникают проблемы, поскольку сериализатор инициирует отложенную загрузку независимо от намерений пользователя.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-112">However, it is problematic for serialization, because the serializer triggers deferred loading whether deferred loading is intended or not.</span></span> <span data-ttu-id="2bbc8-113">В действительности, при сериализации объекта также сериализуется его транзитивное замыкание для всех исходящих ссылок с отложенной загрузкой.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-113">In effect, when an object is serialized, its transitive closure under all outbound defer-loaded references is serialized.</span></span>  
   
- Функция сериализации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] устраняет эту проблему, в первую очередь, благодаря двум описанным далее механизмам.  
+ <span data-ttu-id="2bbc8-114">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Возможность сериализации устраняет эту проблему, в первую очередь, благодаря двум описанным далее механизмам:</span><span class="sxs-lookup"><span data-stu-id="2bbc8-114">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization feature addresses this problem, primarily through two mechanisms:</span></span>  
   
--   Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки \(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>\).  Для получения дополнительной информации см. <xref:System.Data.Linq.DataContext>.  
+-   <span data-ttu-id="2bbc8-115">Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>).</span><span class="sxs-lookup"><span data-stu-id="2bbc8-115">A <xref:System.Data.Linq.DataContext> mode for turning off deferred loading (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>).</span></span> <span data-ttu-id="2bbc8-116">Для получения дополнительной информации см. <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-116">For more information, see <xref:System.Data.Linq.DataContext>.</span></span>  
   
--   Переключение создания кода на создания атрибутов <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=fullName> и <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=fullName> в создаваемых классах.  Главной темой этого раздела является именно этот аспект, включая поведение классов с отложенной загрузкой при сериализации.  
+-   <span data-ttu-id="2bbc8-117">Переключение создания кода на создания атрибутов <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> и <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> в создаваемых классах.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-117">A code-generation switch to generate <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> and <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> attributes on generated entities.</span></span> <span data-ttu-id="2bbc8-118">Главной темой этого раздела является именно этот аспект, включая поведение классов с отложенной загрузкой при сериализации.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-118">This aspect, including the behavior of defer-loading classes under serialization, is the major subject of this topic.</span></span>  
   
-### Определения  
+### <a name="definitions"></a><span data-ttu-id="2bbc8-119">Определения</span><span class="sxs-lookup"><span data-stu-id="2bbc8-119">Definitions</span></span>  
   
--   *Сериализатор DataContract*: используется по умолчанию компонентом Windows Communication Framework \(WCF\) на версии платформы .NET Framework 3.0 или выше.  
+-   <span data-ttu-id="2bbc8-120">*Сериализатор DataContract*: по умолчанию сериализатор, используемый компонентом Windows Communication Framework (WCF), .NET Framework 3.0 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-120">*DataContract serializer*: Default serializer used by the Windows Communication Framework (WCF) component of the .NET Framework 3.0 or later versions.</span></span>  
   
--   *Однонаправленная сериализация*: сериализованная версия класса, которая содержит только однонаправленное свойство ассоциации \(во избежание зацикливания\).  По соглашению, для сериализации помечается свойство родительской стороны отношения «первичный ключ \- внешний ключ».  Другая сторона, участвующая в двунаправленном отношении, не сериализуется.  
+-   <span data-ttu-id="2bbc8-121">*Однонаправленная сериализация*: сериализованная версия класса, который содержит только однонаправленное свойство ассоциации (Чтобы избежать зацикливания).</span><span class="sxs-lookup"><span data-stu-id="2bbc8-121">*Unidirectional serialization*: The serialized version of a class that contains only a one-way association property (to avoid a cycle).</span></span> <span data-ttu-id="2bbc8-122">По соглашению, для сериализации помечается свойство родительской стороны отношения «первичный ключ - внешний ключ».</span><span class="sxs-lookup"><span data-stu-id="2bbc8-122">By convention, the property on the parent side of a primary-foreign key relationship is marked for serialization.</span></span> <span data-ttu-id="2bbc8-123">Другая сторона, участвующая в двунаправленном отношении, не сериализуется.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-123">The other side in a bidirectional association is not serialized.</span></span>  
   
-     Однонаправленная сериализация является единственным типом сериализации, поддерживаемым технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+     <span data-ttu-id="2bbc8-124">Однонаправленная сериализация является единственным типом сериализации, поддерживаемым технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2bbc8-124">Unidirectional serialization is the only type of serialization supported by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
-## Пример кода  
- В представленном ниже коде используются традиционные классы `Customer` и `Order` из учебной базы данных « Northwind" и демонстрируется, как добавить к этим классам атрибуты сериализации.  
+## <a name="code-example"></a><span data-ttu-id="2bbc8-125">Пример кода</span><span class="sxs-lookup"><span data-stu-id="2bbc8-125">Code Example</span></span>  
+ <span data-ttu-id="2bbc8-126">В представленном ниже коде используются традиционные классы `Customer` и `Order` из учебной базы данных « Northwind" и демонстрируется, как добавить к этим классам атрибуты сериализации.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-126">The following code uses the traditional `Customer` and `Order` classes from the Northwind sample database, and shows how these classes are decorated with serialization attributes.</span></span>  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]
  [!code-vb[DLinqSerialization#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#1)]  
@@ -54,7 +60,7 @@ caps.handback.revision: 3
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- Для краткости в следующем примере для класса `Order` показано только обратное свойство отношения, соответствующее классу `Customer`.  Этот класс не имеет атрибута `DataMember`, чтобы избежать зацикливания.  
+ <span data-ttu-id="2bbc8-127">Для краткости в следующем примере для класса `Order` показано только обратное свойство отношения, соответствующее классу `Customer`.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-127">For the `Order` class in the following example, only the reverse association property corresponding to the `Customer` class is shown for brevity.</span></span> <span data-ttu-id="2bbc8-128">Этот класс не имеет атрибута `DataMember`, чтобы избежать зацикливания.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-128">It does not have a `DataMember` attribute to avoid a cycle.</span></span>  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -62,21 +68,21 @@ caps.handback.revision: 3
  [!code-csharp[DLinqSerialization#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#5)]
  [!code-vb[DLinqSerialization#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#5)]  
   
-### Сериализация сущностей  
- Сущности в коде, показанном в предыдущих примерах, можно сериализовать следующим образом:  
+### <a name="how-to-serialize-the-entities"></a><span data-ttu-id="2bbc8-129">Сериализация сущностей</span><span class="sxs-lookup"><span data-stu-id="2bbc8-129">How to Serialize the Entities</span></span>  
+ <span data-ttu-id="2bbc8-130">Сущности в коде, показанном в предыдущих примерах, можно сериализовать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="2bbc8-130">You can serialize the entities in the codes shown in the previous section as follows;</span></span>  
   
  [!code-csharp[DLinqSerialization#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/Program.cs#6)]
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
-### Саморекурсивные отношения  
- Саморекурсивные отношения следуют тому же шаблону.  Свойство отношения, соответствующее внешнему ключу, не имеет атрибута `DataMember`, в то время как родительское свойство этот атрибут имеет.  
+### <a name="self-recursive-relationships"></a><span data-ttu-id="2bbc8-131">Саморекурсивные отношения</span><span class="sxs-lookup"><span data-stu-id="2bbc8-131">Self-Recursive Relationships</span></span>  
+ <span data-ttu-id="2bbc8-132">Саморекурсивные отношения следуют тому же шаблону.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-132">Self-recursive relationships follow the same pattern.</span></span> <span data-ttu-id="2bbc8-133">Свойство отношения, соответствующее внешнему ключу, не имеет атрибута `DataMember`, в то время как родительское свойство этот атрибут имеет.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-133">The association property corresponding to the foreign key does not have a `DataMember` attribute, whereas the parent property does.</span></span>  
   
- Рассмотрим следующий класс, содержащий две саморекурсивные связи: Employee.Manager\/Reports и Employee.Mentor\/Mentees.  
+ <span data-ttu-id="2bbc8-134">Рассмотрим следующий класс, содержащий две саморекурсивные связи: Employee.Manager/Reports и Employee.Mentor/Mentees.</span><span class="sxs-lookup"><span data-stu-id="2bbc8-134">Consider the following class that has two self-recursive relationships: Employee.Manager/Reports and Employee.Mentor/Mentees.</span></span>  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## См. также  
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [SqlMetal.exe \(средство создания кода\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)   
- [Как обеспечить сериализацию сущностей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+## <a name="see-also"></a><span data-ttu-id="2bbc8-135">См. также</span><span class="sxs-lookup"><span data-stu-id="2bbc8-135">See Also</span></span>  
+ [<span data-ttu-id="2bbc8-136">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="2bbc8-136">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="2bbc8-137">SqlMetal.exe (средство создания кода)</span><span class="sxs-lookup"><span data-stu-id="2bbc8-137">SqlMetal.exe (Code Generation Tool)</span></span>](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
+ [<span data-ttu-id="2bbc8-138">Как: обеспечения возможности сериализации сущностей</span><span class="sxs-lookup"><span data-stu-id="2bbc8-138">How to: Make Entities Serializable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

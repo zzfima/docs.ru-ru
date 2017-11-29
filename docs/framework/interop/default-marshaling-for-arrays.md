@@ -5,78 +5,74 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-marshaling-for-arrays"></a>Маршалинг по умолчанию для массивов
-Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода. В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.  
+# <a name="default-marshaling-for-arrays"></a><span data-ttu-id="54ec2-102">Маршалинг по умолчанию для массивов</span><span class="sxs-lookup"><span data-stu-id="54ec2-102">Default Marshaling for Arrays</span></span>
+<span data-ttu-id="54ec2-103">Если приложение полностью состоит из управляемого кода, общеязыковая среда выполнения (CLR) передает типы массивов в качестве параметров ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="54ec2-103">In an application consisting entirely of managed code, the common language runtime passes array types as In/Out parameters.</span></span> <span data-ttu-id="54ec2-104">В отличие от этого, маршалер взаимодействия по умолчанию передает массив в качестве параметров ввода.</span><span class="sxs-lookup"><span data-stu-id="54ec2-104">In contrast, the interop marshaler passes an array as In parameters by default.</span></span>  
   
- В рамках [оптимизации закрепления](../../../docs/framework/interop/copying-and-pinning.md) непреобразуемый массив может выступать в качестве параметра ввода-вывода при взаимодействии с объектами в том же подразделении. Тем не менее при последующем экспорте кода в библиотеку типов, используемую для создания учетной записи посредника между компьютерами, если эта библиотека используется для маршалинга вызовов между подразделениями, вызовы могут получать фактические характеристики параметра ввода.  
+ <span data-ttu-id="54ec2-105">В рамках [оптимизации закрепления](../../../docs/framework/interop/copying-and-pinning.md) непреобразуемый массив может выступать в качестве параметра ввода-вывода при взаимодействии с объектами в том же подразделении.</span><span class="sxs-lookup"><span data-stu-id="54ec2-105">With [pinning optimization](../../../docs/framework/interop/copying-and-pinning.md), a blittable array can appear to operate as an In/Out parameter when interacting with objects in the same apartment.</span></span> <span data-ttu-id="54ec2-106">Тем не менее при последующем экспорте кода в библиотеку типов, используемую для создания учетной записи посредника между компьютерами, если эта библиотека используется для маршалинга вызовов между подразделениями, вызовы могут получать фактические характеристики параметра ввода.</span><span class="sxs-lookup"><span data-stu-id="54ec2-106">However, if you later export the code to a type library used to generate the cross-machine proxy, and that library is used to marshal your calls across apartments, the calls can revert to true In parameter behavior.</span></span>  
   
- Массивы имеют сложную структуру, поэтому для проведения различий между управляемыми и неуправляемыми массивами требуется больше информации, чем для других преобразуемых типов. В этом разделе приводятся следующие сведения о маршалинге массивов:  
+ <span data-ttu-id="54ec2-107">Массивы имеют сложную структуру, поэтому для проведения различий между управляемыми и неуправляемыми массивами требуется больше информации, чем для других преобразуемых типов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-107">Arrays are complex by nature, and the distinctions between managed and unmanaged arrays warrant more information than other non-blittable types.</span></span> <span data-ttu-id="54ec2-108">В этом разделе приводятся следующие сведения о маршалинге массивов:</span><span class="sxs-lookup"><span data-stu-id="54ec2-108">This topic provides the following information on marshaling arrays:</span></span>  
   
--   [Управляемые массивы](#cpcondefaultmarshalingforarraysanchor1)  
+-   [<span data-ttu-id="54ec2-109">Управляемые массивы</span><span class="sxs-lookup"><span data-stu-id="54ec2-109">Managed Arrays</span></span>](#cpcondefaultmarshalingforarraysanchor1)  
   
--   [Неуправляемые массивы](#cpcondefaultmarshalingforarraysanchor2)  
+-   [<span data-ttu-id="54ec2-110">Неуправляемые массивы</span><span class="sxs-lookup"><span data-stu-id="54ec2-110">Unmanaged Arrays</span></span>](#cpcondefaultmarshalingforarraysanchor2)  
   
--   [Передача параметров массива в код .NET](#cpcondefaultmarshalingforarraysanchor3)  
+-   [<span data-ttu-id="54ec2-111">Передача параметров массива в код .NET</span><span class="sxs-lookup"><span data-stu-id="54ec2-111">Passing Array Parameters to .NET Code</span></span>](#cpcondefaultmarshalingforarraysanchor3)  
   
--   [Передача массивов в COM](#cpcondefaultmarshalingforarraysanchor4)  
+-   [<span data-ttu-id="54ec2-112">Передача массивов в COM</span><span class="sxs-lookup"><span data-stu-id="54ec2-112">Passing Arrays to COM</span></span>](#cpcondefaultmarshalingforarraysanchor4)  
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
-## <a name="managed-arrays"></a>Управляемые массивы  
- Управляемые массивы могут иметь разные типы, однако базовым для всех этих типов является класс <xref:System.Array?displayProperty=fullName>. Класс **System.Array** имеет свойства, определяющие ранг, длину, нижнюю и верхнюю границы массива, а также методы доступа, сортировки, поиска, копирования и создания массивов.  
+## <a name="managed-arrays"></a><span data-ttu-id="54ec2-113">Управляемые массивы</span><span class="sxs-lookup"><span data-stu-id="54ec2-113">Managed Arrays</span></span>  
+ <span data-ttu-id="54ec2-114">Управляемые массивы могут иметь разные типы, однако базовым для всех этих типов является класс <xref:System.Array?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-114">Managed array types can vary; however, the <xref:System.Array?displayProperty=nameWithType> class is the base class of all array types.</span></span> <span data-ttu-id="54ec2-115">Класс **System.Array** имеет свойства, определяющие ранг, длину, нижнюю и верхнюю границы массива, а также методы доступа, сортировки, поиска, копирования и создания массивов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-115">The **System.Array** class has properties for determining the rank, length, and lower and upper bounds of an array, as well as methods for accessing, sorting, searching, copying, and creating arrays.</span></span>  
   
- Эти типы массивов являются динамическими и не имеют соответствующих статических типов в библиотеке базовых классов. В качестве уникального типа массива удобно рассматривать сочетание типа элементов и ранга. Соответственно, тип одномерного массива целых чисел отличается от типа одномерного массива чисел типа double. Аналогичным образом, его тип будет отличаться от типа двухмерного массива целых чисел. При сравнении типов не учитываются границы массивов.  
+ <span data-ttu-id="54ec2-116">Эти типы массивов являются динамическими и не имеют соответствующих статических типов в библиотеке базовых классов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-116">These array types are dynamic and do not have a corresponding static type defined in the base class library.</span></span> <span data-ttu-id="54ec2-117">В качестве уникального типа массива удобно рассматривать сочетание типа элементов и ранга.</span><span class="sxs-lookup"><span data-stu-id="54ec2-117">It is convenient to think of each combination of element type and rank as a distinct type of array.</span></span> <span data-ttu-id="54ec2-118">Соответственно, тип одномерного массива целых чисел отличается от типа одномерного массива чисел типа double.</span><span class="sxs-lookup"><span data-stu-id="54ec2-118">Therefore, a one-dimensional array of integers is of a different type than a one-dimensional array of double types.</span></span> <span data-ttu-id="54ec2-119">Аналогичным образом, его тип будет отличаться от типа двухмерного массива целых чисел.</span><span class="sxs-lookup"><span data-stu-id="54ec2-119">Similarly a two-dimensional array of integers is different from a one-dimensional array of integers.</span></span> <span data-ttu-id="54ec2-120">При сравнении типов не учитываются границы массивов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-120">The bounds of the array are not considered when comparing types.</span></span>  
   
- Как показано в следующей таблице, любой экземпляр управляемого массива должен иметь заданные тип элементов, ранг и нижнюю границу.  
+ <span data-ttu-id="54ec2-121">Как показано в следующей таблице, любой экземпляр управляемого массива должен иметь заданные тип элементов, ранг и нижнюю границу.</span><span class="sxs-lookup"><span data-stu-id="54ec2-121">As the following table shows, any instance of a managed array must be of a specific element type, rank, and lower bound.</span></span>  
   
-|Тип управляемого массива|Тип элемента|Ранг|Нижняя граница|Нотация сигнатуры|  
+|<span data-ttu-id="54ec2-122">Тип управляемого массива</span><span class="sxs-lookup"><span data-stu-id="54ec2-122">Managed array type</span></span>|<span data-ttu-id="54ec2-123">Тип элемента</span><span class="sxs-lookup"><span data-stu-id="54ec2-123">Element type</span></span>|<span data-ttu-id="54ec2-124">Ранг</span><span class="sxs-lookup"><span data-stu-id="54ec2-124">Rank</span></span>|<span data-ttu-id="54ec2-125">Нижняя граница</span><span class="sxs-lookup"><span data-stu-id="54ec2-125">Lower bound</span></span>|<span data-ttu-id="54ec2-126">Нотация сигнатуры</span><span class="sxs-lookup"><span data-stu-id="54ec2-126">Signature notation</span></span>|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|Задается по типу.|Задается по рангу.|При необходимости задается границами.|*type* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|Неизвестно|Неизвестно|Неизвестно|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|Задается по типу.|1|0|*type* **[** *n* **]**|  
+|<span data-ttu-id="54ec2-127">**ELEMENT_TYPE_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="54ec2-127">**ELEMENT_TYPE_ARRAY**</span></span>|<span data-ttu-id="54ec2-128">Задается по типу.</span><span class="sxs-lookup"><span data-stu-id="54ec2-128">Specified by type.</span></span>|<span data-ttu-id="54ec2-129">Задается по рангу.</span><span class="sxs-lookup"><span data-stu-id="54ec2-129">Specified by rank.</span></span>|<span data-ttu-id="54ec2-130">При необходимости задается границами.</span><span class="sxs-lookup"><span data-stu-id="54ec2-130">Optionally specified by bounds.</span></span>|<span data-ttu-id="54ec2-131">*type* **[** *n*,*m* **]**</span><span class="sxs-lookup"><span data-stu-id="54ec2-131">*type* **[** *n*,*m* **]**</span></span>|  
+|<span data-ttu-id="54ec2-132">**ELEMENT_TYPE_CLASS**</span><span class="sxs-lookup"><span data-stu-id="54ec2-132">**ELEMENT_TYPE_CLASS**</span></span>|<span data-ttu-id="54ec2-133">Неизвестно</span><span class="sxs-lookup"><span data-stu-id="54ec2-133">Unknown</span></span>|<span data-ttu-id="54ec2-134">Неизвестно</span><span class="sxs-lookup"><span data-stu-id="54ec2-134">Unknown</span></span>|<span data-ttu-id="54ec2-135">Неизвестно</span><span class="sxs-lookup"><span data-stu-id="54ec2-135">Unknown</span></span>|<span data-ttu-id="54ec2-136">**System.Array**</span><span class="sxs-lookup"><span data-stu-id="54ec2-136">**System.Array**</span></span>|  
+|<span data-ttu-id="54ec2-137">**ELEMENT_TYPE_SZARRAY**</span><span class="sxs-lookup"><span data-stu-id="54ec2-137">**ELEMENT_TYPE_SZARRAY**</span></span>|<span data-ttu-id="54ec2-138">Задается по типу.</span><span class="sxs-lookup"><span data-stu-id="54ec2-138">Specified by type.</span></span>|<span data-ttu-id="54ec2-139">1</span><span class="sxs-lookup"><span data-stu-id="54ec2-139">1</span></span>|<span data-ttu-id="54ec2-140">0</span><span class="sxs-lookup"><span data-stu-id="54ec2-140">0</span></span>|<span data-ttu-id="54ec2-141">*type* **[** *n* **]**</span><span class="sxs-lookup"><span data-stu-id="54ec2-141">*type* **[** *n* **]**</span></span>|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
-## <a name="unmanaged-arrays"></a>Неуправляемые массивы  
- Неуправляемыми могут быть безопасные массивы в стиле COM или массивы в стиле C фиксированной или переменной длины. Безопасный массив — это описывающий сам себя массив, передающий тип, ранг и границы соответствующего массива данных. Массивы в стиле C — это одномерные типизированные массивы с фиксированной нижней границей, равной 0. Служба маршалинга обеспечивает ограниченную поддержку обоих типов массивов.  
+## <a name="unmanaged-arrays"></a><span data-ttu-id="54ec2-142">Неуправляемые массивы</span><span class="sxs-lookup"><span data-stu-id="54ec2-142">Unmanaged Arrays</span></span>  
+ <span data-ttu-id="54ec2-143">Неуправляемыми могут быть безопасные массивы в стиле COM или массивы в стиле C фиксированной или переменной длины.</span><span class="sxs-lookup"><span data-stu-id="54ec2-143">Unmanaged arrays are either COM-style safe arrays or C-style arrays with fixed or variable length.</span></span> <span data-ttu-id="54ec2-144">Безопасный массив — это описывающий сам себя массив, передающий тип, ранг и границы соответствующего массива данных.</span><span class="sxs-lookup"><span data-stu-id="54ec2-144">Safe arrays are self-describing arrays that carry the type, rank, and bounds of the associated array data.</span></span> <span data-ttu-id="54ec2-145">Массивы в стиле C — это одномерные типизированные массивы с фиксированной нижней границей, равной 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-145">C-style arrays are one-dimensional typed arrays with a fixed lower bound of 0.</span></span> <span data-ttu-id="54ec2-146">Служба маршалинга обеспечивает ограниченную поддержку обоих типов массивов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-146">The marshaling service has limited support for both types of arrays.</span></span>  
   
 <a name="cpcondefaultmarshalingforarraysanchor3"></a>   
-## <a name="passing-array-parameters-to-net-code"></a>Передача параметров массива в код .NET  
- Массивы в стиле языка C и безопасные массивы могут передаваться в код .NET из неуправляемого кода в виде безопасных массивов или массивов в стиле C. В следующей таблице показаны значения неуправляемого типа и соответствующих импортируемых типов.  
+## <a name="passing-array-parameters-to-net-code"></a><span data-ttu-id="54ec2-147">Передача параметров массива в код .NET</span><span class="sxs-lookup"><span data-stu-id="54ec2-147">Passing Array Parameters to .NET Code</span></span>  
+ <span data-ttu-id="54ec2-148">Массивы в стиле языка C и безопасные массивы могут передаваться в код .NET из неуправляемого кода в виде безопасных массивов или массивов в стиле C.</span><span class="sxs-lookup"><span data-stu-id="54ec2-148">Both C-style arrays and safe arrays can be passed to .NET code from unmanaged code as either a safe array or a C-style array.</span></span> <span data-ttu-id="54ec2-149">В следующей таблице показаны значения неуправляемого типа и соответствующих импортируемых типов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-149">The following table shows the unmanaged type value and the imported type.</span></span>  
   
-|Неуправляемый тип|Импортируемый тип|  
+|<span data-ttu-id="54ec2-150">Неуправляемый тип</span><span class="sxs-lookup"><span data-stu-id="54ec2-150">Unmanaged type</span></span>|<span data-ttu-id="54ec2-151">Импортируемый тип</span><span class="sxs-lookup"><span data-stu-id="54ec2-151">Imported type</span></span>|  
 |--------------------|-------------------|  
-|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре. Безопасные массивы, ранг которых не равен 1, а нижняя граница не равна 0, не поддерживают маршалинг в виде **SZARRAY**.|  
-|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Ранг = 1, нижняя граница = 0. Размер известен только в том случае, если он предоставлен в управляемой сигнатуре.|  
+|<span data-ttu-id="54ec2-152">**SafeArray(** *Type* **)**</span><span class="sxs-lookup"><span data-stu-id="54ec2-152">**SafeArray(** *Type* **)**</span></span>|<span data-ttu-id="54ec2-153">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span><span class="sxs-lookup"><span data-stu-id="54ec2-153">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span></span><br /><br /> <span data-ttu-id="54ec2-154">Ранг = 1, нижняя граница = 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-154">Rank = 1, lower bound = 0.</span></span> <span data-ttu-id="54ec2-155">Размер известен только в том случае, если он предоставлен в управляемой сигнатуре.</span><span class="sxs-lookup"><span data-stu-id="54ec2-155">Size is known only if provided in the managed signature.</span></span> <span data-ttu-id="54ec2-156">Безопасные массивы, ранг которых не равен 1, а нижняя граница не равна 0, не поддерживают маршалинг в виде **SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-156">Safe arrays that are not rank = 1 or lower bound = 0 cannot be marshaled as **SZARRAY**.</span></span>|  
+|<span data-ttu-id="54ec2-157">*Type*  **[]**</span><span class="sxs-lookup"><span data-stu-id="54ec2-157">*Type*  **[]**</span></span>|<span data-ttu-id="54ec2-158">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span><span class="sxs-lookup"><span data-stu-id="54ec2-158">**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**</span></span><br /><br /> <span data-ttu-id="54ec2-159">Ранг = 1, нижняя граница = 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-159">Rank = 1, lower bound = 0.</span></span> <span data-ttu-id="54ec2-160">Размер известен только в том случае, если он предоставлен в управляемой сигнатуре.</span><span class="sxs-lookup"><span data-stu-id="54ec2-160">Size is known only if provided in the managed signature.</span></span>|  
   
-### <a name="safe-arrays"></a>Безопасные массивы  
- При импорте безопасного массива из библиотеки типов в сборку .NET он преобразуется в одномерный массив известного типа (например, **int**). К элементам массива применяются те же правила преобразования типов, что и к параметрам. Например, безопасный массив типов **BSTR** преобразуется в управляемый массив строк, а безопасный массив вариантов — в управляемый массив объектов. Тип элементов **SAFEARRAY** получается из библиотеки типов и сохраняется в значении **SAFEARRAY** перечисления <xref:System.Runtime.InteropServices.UnmanagedType>.  
+### <a name="safe-arrays"></a><span data-ttu-id="54ec2-161">Безопасные массивы</span><span class="sxs-lookup"><span data-stu-id="54ec2-161">Safe Arrays</span></span>  
+ <span data-ttu-id="54ec2-162">При импорте безопасного массива из библиотеки типов в сборку .NET он преобразуется в одномерный массив известного типа (например, **int**).</span><span class="sxs-lookup"><span data-stu-id="54ec2-162">When a safe array is imported from a type library to a .NET assembly, the array is converted to a one-dimensional array of a known type (such as **int**).</span></span> <span data-ttu-id="54ec2-163">К элементам массива применяются те же правила преобразования типов, что и к параметрам.</span><span class="sxs-lookup"><span data-stu-id="54ec2-163">The same type conversion rules that apply to parameters also apply to array elements.</span></span> <span data-ttu-id="54ec2-164">Например, безопасный массив типов **BSTR** преобразуется в управляемый массив строк, а безопасный массив вариантов — в управляемый массив объектов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-164">For example, a safe array of **BSTR** types becomes a managed array of strings and a safe array of variants becomes a managed array of objects.</span></span> <span data-ttu-id="54ec2-165">Тип элементов **SAFEARRAY** получается из библиотеки типов и сохраняется в значении **SAFEARRAY** перечисления <xref:System.Runtime.InteropServices.UnmanagedType>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-165">The **SAFEARRAY** element type is captured from the type library and saved in the **SAFEARRAY** value of the <xref:System.Runtime.InteropServices.UnmanagedType> enumeration.</span></span>  
   
- Поскольку ранг и границы безопасного массива нельзя определить из библиотеки типов, предполагается, что ранг равен 1, а нижняя граница — 0. Ранг и границы должны быть определены в управляемой сигнатуре, которая создается с помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Если ранг, переданный в метод во время выполнения, отличается, возникает исключение <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>. Если тип массива, переданный во время выполнения, отличается, возникает исключение <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>. В следующем примере показано применение безопасных массивов в управляемом и неуправляемом коде.  
+ <span data-ttu-id="54ec2-166">Поскольку ранг и границы безопасного массива нельзя определить из библиотеки типов, предполагается, что ранг равен 1, а нижняя граница — 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-166">Because the rank and bounds of the safe array cannot be determined from the type library, the rank is assumed to equal 1 and the lower bound is assumed to equal 0.</span></span> <span data-ttu-id="54ec2-167">Ранг и границы должны быть определены в управляемой сигнатуре, которая создается с помощью [программы импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="54ec2-167">The rank and bounds must be defined in the managed signature produced by the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="54ec2-168">Если ранг, переданный в метод во время выполнения, отличается, возникает исключение <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-168">If the rank passed to the method at run time differs, a <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> is thrown.</span></span> <span data-ttu-id="54ec2-169">Если тип массива, переданный во время выполнения, отличается, возникает исключение <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-169">If the type of the array passed at run time differs, a <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> is thrown.</span></span> <span data-ttu-id="54ec2-170">В следующем примере показано применение безопасных массивов в управляемом и неуправляемом коде.</span><span class="sxs-lookup"><span data-stu-id="54ec2-170">The following example shows safe arrays in managed and unmanaged code.</span></span>  
   
- **Неуправляемая сигнатура**  
+ <span data-ttu-id="54ec2-171">**Неуправляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-171">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1([in] SAFEARRAY( int ) ar);  
@@ -84,7 +80,7 @@ HRESULT New2([in] SAFEARRAY( DATE ) ar);
 HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);  
 ```  
   
- **Управляемая сигнатура**  
+ <span data-ttu-id="54ec2-172">**Управляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-172">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_I4)> _  
@@ -103,20 +99,20 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Многомерные массивы или безопасные массивы с отличной от нуля границей могут маршалироваться в управляемый код, если сигнатура метода, создаваемая с помощью программы Tlbimp.exe, изменяется, указывая на тип элементов **ELEMENT_TYPE_ARRAY** вместо **ELEMENT_TYPE_SZARRAY**. Кроме того, можно использовать параметр **/sysarray** с программой Tlbimp.exe для импорта всех массивов в качестве объектов <xref:System.Array?displayProperty=fullName>. Если передаваемый массив заведомо является многомерным, можно изменить код MSIL, создаваемый программой Tlbimp.exe, а затем повторно скомпилировать его. Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ <span data-ttu-id="54ec2-173">Многомерные массивы или безопасные массивы с отличной от нуля границей могут маршалироваться в управляемый код, если сигнатура метода, создаваемая с помощью программы Tlbimp.exe, изменяется, указывая на тип элементов **ELEMENT_TYPE_ARRAY** вместо **ELEMENT_TYPE_SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-173">Multidimensional, or nonzero-bound safe arrays, can be marshaled into managed code if the method signature produced by Tlbimp.exe is modified to indicate an element type of **ELEMENT_TYPE_ARRAY** instead of **ELEMENT_TYPE_SZARRAY**.</span></span> <span data-ttu-id="54ec2-174">Кроме того, можно использовать параметр **/sysarray** с программой Tlbimp.exe для импорта всех массивов в качестве объектов <xref:System.Array?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-174">Alternatively, you can use the **/sysarray** switch with Tlbimp.exe to import all arrays as <xref:System.Array?displayProperty=nameWithType> objects.</span></span> <span data-ttu-id="54ec2-175">Если передаваемый массив заведомо является многомерным, можно изменить код MSIL, создаваемый программой Tlbimp.exe, а затем повторно скомпилировать его.</span><span class="sxs-lookup"><span data-stu-id="54ec2-175">In cases where the array being passed is known to be multidimensional, you can edit the Microsoft intermediate language (MSIL) code produced by Tlbimp.exe and then recompile it.</span></span> <span data-ttu-id="54ec2-176">Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span><span class="sxs-lookup"><span data-stu-id="54ec2-176">For details about how to modify MSIL code, see [Customizing Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span></span>  
   
-### <a name="c-style-arrays"></a>Массивы в стиле C  
- При импорте массива в стиле C из библиотеки типов в сборку .NET массив преобразуется в **ELEMENT_TYPE_SZARRAY**.  
+### <a name="c-style-arrays"></a><span data-ttu-id="54ec2-177">Массивы в стиле C</span><span class="sxs-lookup"><span data-stu-id="54ec2-177">C-Style Arrays</span></span>  
+ <span data-ttu-id="54ec2-178">При импорте массива в стиле C из библиотеки типов в сборку .NET массив преобразуется в **ELEMENT_TYPE_SZARRAY**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-178">When a C-style array is imported from a type library to a .NET assembly, the array is converted to **ELEMENT_TYPE_SZARRAY**.</span></span>  
   
- Тип элемента массива определяется из библиотеки типов и сохраняется во время импорта. К элементам массива применяются те же правила преобразования, что и к параметрам. Например, массив типов **LPStr** преобразуется в массив типов **String**. Программа Tlbimp.exe получает тип элементов массива и применяет к параметру атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+ <span data-ttu-id="54ec2-179">Тип элемента массива определяется из библиотеки типов и сохраняется во время импорта.</span><span class="sxs-lookup"><span data-stu-id="54ec2-179">The array element type is determined from the type library and preserved during the import.</span></span> <span data-ttu-id="54ec2-180">К элементам массива применяются те же правила преобразования, что и к параметрам.</span><span class="sxs-lookup"><span data-stu-id="54ec2-180">The same conversion rules that apply to parameters also apply to array elements.</span></span> <span data-ttu-id="54ec2-181">Например, массив типов **LPStr** преобразуется в массив типов **String**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-181">For example, an array of **LPStr** types becomes an array of **String** types.</span></span> <span data-ttu-id="54ec2-182">Программа Tlbimp.exe получает тип элементов массива и применяет к параметру атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-182">Tlbimp.exe captures the array element type and applies the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to the parameter.</span></span>  
   
- Ранг массива принимается равным 1. Если ранг больше 1, массив маршалируется как одномерный массив в развертывании по столбцам. Нижняя граница всегда равна 0.  
+ <span data-ttu-id="54ec2-183">Ранг массива принимается равным 1.</span><span class="sxs-lookup"><span data-stu-id="54ec2-183">The array rank is assumed to equal 1.</span></span> <span data-ttu-id="54ec2-184">Если ранг больше 1, массив маршалируется как одномерный массив в развертывании по столбцам.</span><span class="sxs-lookup"><span data-stu-id="54ec2-184">If the rank is greater than 1, the array is marshaled as a one-dimensional array in column-major order.</span></span> <span data-ttu-id="54ec2-185">Нижняя граница всегда равна 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-185">The lower bound always equals 0.</span></span>  
   
- Библиотеки типов могут содержать массивы фиксированной или переменной длины. Поскольку в библиотеках типов содержится недостаточно информации для маршалинга массивов переменной длины, программа Tlbimp.exe может импортировать из них только массивы фиксированной длины. Для массивов фиксированной длины размер импортируется из библиотеки типов и сохраняется в атрибуте **MarshalAsAttribute**, который применяется к параметру.  
+ <span data-ttu-id="54ec2-186">Библиотеки типов могут содержать массивы фиксированной или переменной длины.</span><span class="sxs-lookup"><span data-stu-id="54ec2-186">Type libraries can contain arrays of fixed or variable length.</span></span> <span data-ttu-id="54ec2-187">Поскольку в библиотеках типов содержится недостаточно информации для маршалинга массивов переменной длины, программа Tlbimp.exe может импортировать из них только массивы фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="54ec2-187">Tlbimp.exe can import only fixed-length arrays from type libraries because type libraries lack the information needed to marshal variable-length arrays.</span></span> <span data-ttu-id="54ec2-188">Для массивов фиксированной длины размер импортируется из библиотеки типов и сохраняется в атрибуте **MarshalAsAttribute**, который применяется к параметру.</span><span class="sxs-lookup"><span data-stu-id="54ec2-188">With fixed-length arrays, the size is imported from the type library and captured in the **MarshalAsAttribute** that is applied to the parameter.</span></span>  
   
- Библиотеки типов, содержащие массивы переменной длины, необходимо определять вручную, как показано в следующем примере.  
+ <span data-ttu-id="54ec2-189">Библиотеки типов, содержащие массивы переменной длины, необходимо определять вручную, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="54ec2-189">You must manually define type libraries containing variable-length arrays, as shown in the following example.</span></span>  
   
- **Неуправляемая сигнатура**  
+ <span data-ttu-id="54ec2-190">**Неуправляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-190">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1(int ar[10]);  
@@ -124,7 +120,7 @@ HRESULT New2(double ar[10][20]);
 HRESULT New3(LPWStr ar[10]);  
 ```  
   
- **Управляемая сигнатура**  
+ <span data-ttu-id="54ec2-191">**Управляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-191">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.LPArray, SizeConst=10)> _  
@@ -143,9 +139,9 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Несмотря на то, что с помощью атрибутов **size_is** или **length_is** массива в исходном коде на языке IDL можно передать сведения о размере клиенту, компилятор MIDL не передает эту информацию в библиотеку типов. Не зная размера, служба маршалинга взаимодействия не может маршалировать элементы массива. Таким образом, массивы переменной длины импортируются в виде ссылочных аргументов. Пример:  
+ <span data-ttu-id="54ec2-192">Несмотря на то, что с помощью атрибутов **size_is** или **length_is** массива в исходном коде на языке IDL можно передать сведения о размере клиенту, компилятор MIDL не передает эту информацию в библиотеку типов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-192">Although you can apply the **size_is** or **length_is** attributes to an array in Interface Definition Language (IDL) source to convey the size to a client, the Microsoft Interface Definition Language (MIDL) compiler does not propagate that information to the type library.</span></span> <span data-ttu-id="54ec2-193">Не зная размера, служба маршалинга взаимодействия не может маршалировать элементы массива.</span><span class="sxs-lookup"><span data-stu-id="54ec2-193">Without knowing the size, the interop marshaling service cannot marshal the array elements.</span></span> <span data-ttu-id="54ec2-194">Таким образом, массивы переменной длины импортируются в виде ссылочных аргументов.</span><span class="sxs-lookup"><span data-stu-id="54ec2-194">Consequently, variable-length arrays are imported as reference arguments.</span></span> <span data-ttu-id="54ec2-195">Пример:</span><span class="sxs-lookup"><span data-stu-id="54ec2-195">For example:</span></span>  
   
- **Неуправляемая сигнатура**  
+ <span data-ttu-id="54ec2-196">**Неуправляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-196">**Unmanaged signature**</span></span>  
   
 ```  
 HRESULT New1(int ar[]);  
@@ -153,7 +149,7 @@ HRESULT New2(int ArSize, [size_is(ArSize)] double ar[]);
 HRESULT New3(int ElemCnt, [length_is(ElemCnt)] LPStr ar[]);  
 ```  
   
- **Управляемая сигнатура**  
+ <span data-ttu-id="54ec2-197">**Управляемая сигнатура**</span><span class="sxs-lookup"><span data-stu-id="54ec2-197">**Managed signature**</span></span>  
   
 ```vb  
 Sub New1(ByRef ar As Integer)  
@@ -167,9 +163,9 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Чтобы предоставить размер массива маршалеру, можно изменить код на языке MSIL, создаваемый программой Tlbimp.exe, после чего повторно скомпилировать его. Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be). Чтобы указать число элементов в массиве, примените тип <xref:System.Runtime.InteropServices.MarshalAsAttribute> к параметру массива в определении управляемого метода одним из следующих способов:  
+ <span data-ttu-id="54ec2-198">Чтобы предоставить размер массива маршалеру, можно изменить код на языке MSIL, создаваемый программой Tlbimp.exe, после чего повторно скомпилировать его.</span><span class="sxs-lookup"><span data-stu-id="54ec2-198">You can provide the marshaler with the array size by editing the Microsoft intermediate language (MSIL) code produced by Tlbimp.exe and then recompiling it.</span></span> <span data-ttu-id="54ec2-199">Дополнительные сведения об изменении кода MSIL см. в разделе [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span><span class="sxs-lookup"><span data-stu-id="54ec2-199">For details about how to modify MSIL code, see [Customizing Runtime Callable Wrappers](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).</span></span> <span data-ttu-id="54ec2-200">Чтобы указать число элементов в массиве, примените тип <xref:System.Runtime.InteropServices.MarshalAsAttribute> к параметру массива в определении управляемого метода одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="54ec2-200">To indicate the number of elements in the array, apply the <xref:System.Runtime.InteropServices.MarshalAsAttribute> type to the array parameter of the managed method definition in one of the following ways:</span></span>  
   
--   Определите еще один параметр, который содержит число элементов в массиве. Параметры определяются по позиции, начиная с первого, который получает номер 0.     
+-   <span data-ttu-id="54ec2-201">Определите еще один параметр, который содержит число элементов в массиве.</span><span class="sxs-lookup"><span data-stu-id="54ec2-201">Identify another parameter that contains the number of elements in the array.</span></span> <span data-ttu-id="54ec2-202">Параметры определяются по позиции, начиная с первого, который получает номер 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-202">The parameters are identified by position, starting with the first parameter as number 0.</span></span>     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -183,7 +179,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Определите размер массива в виде константы. Пример:  
+-   <span data-ttu-id="54ec2-203">Определите размер массива в виде константы.</span><span class="sxs-lookup"><span data-stu-id="54ec2-203">Define the size of the array as a constant.</span></span> <span data-ttu-id="54ec2-204">Пример:</span><span class="sxs-lookup"><span data-stu-id="54ec2-204">For example:</span></span>  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -195,29 +191,29 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeConst=128)] int[] ar );  
     ```  
   
- При маршалинге массивов из неуправляемого в управляемый код маршалер проверяет связанный с параметром атрибут **MarshalAsAttribute**, чтобы определить размер массива. Если размер массива не указан, выполняется маршалинг только одного элемента.  
+ <span data-ttu-id="54ec2-205">При маршалинге массивов из неуправляемого в управляемый код маршалер проверяет связанный с параметром атрибут **MarshalAsAttribute**, чтобы определить размер массива.</span><span class="sxs-lookup"><span data-stu-id="54ec2-205">When marshaling arrays from unmanaged code to managed code, the marshaler checks the **MarshalAsAttribute** associated with the parameter to determine the array size.</span></span> <span data-ttu-id="54ec2-206">Если размер массива не указан, выполняется маршалинг только одного элемента.</span><span class="sxs-lookup"><span data-stu-id="54ec2-206">If the array size is not specified, only one element is marshaled.</span></span>  
   
 > [!NOTE]
->  Атрибут **MarshalAsAttribute** не учитывается при маршалинге управляемых массивов в неуправляемый код. В этом направлении размер массива определяется с помощью проверки. Маршалинг подмножества управляемого массива невозможен.  
+>  <span data-ttu-id="54ec2-207">Атрибут **MarshalAsAttribute** не учитывается при маршалинге управляемых массивов в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="54ec2-207">The **MarshalAsAttribute** has no effect on marshaling managed arrays to unmanaged code.</span></span> <span data-ttu-id="54ec2-208">В этом направлении размер массива определяется с помощью проверки.</span><span class="sxs-lookup"><span data-stu-id="54ec2-208">In that direction, the array size is determined by examination.</span></span> <span data-ttu-id="54ec2-209">Маршалинг подмножества управляемого массива невозможен.</span><span class="sxs-lookup"><span data-stu-id="54ec2-209">There is no way to marshal a subset of a managed array.</span></span>  
   
- Маршалер взаимодействия использует методы **CoTaskMemAlloc** и **CoTaskMemFree** для выделения и высвобождения памяти. Эти методы также необходимо использовать при выделении памяти в неуправляемом коде.  
+ <span data-ttu-id="54ec2-210">Маршалер взаимодействия использует методы **CoTaskMemAlloc** и **CoTaskMemFree** для выделения и высвобождения памяти.</span><span class="sxs-lookup"><span data-stu-id="54ec2-210">The interop marshaler uses the **CoTaskMemAlloc** and **CoTaskMemFree** methods to allocate and retrieve memory.</span></span> <span data-ttu-id="54ec2-211">Эти методы также необходимо использовать при выделении памяти в неуправляемом коде.</span><span class="sxs-lookup"><span data-stu-id="54ec2-211">Memory allocation performed by unmanaged code must also use these methods.</span></span>  
   
 <a name="cpcondefaultmarshalingforarraysanchor4"></a>   
-## <a name="passing-arrays-to-com"></a>Передача массивов в COM  
- Все типы управляемых массивов можно передавать в неуправляемый код из управляемого кода. В зависимости от управляемого типа и примененных к нему атрибутов, доступ к массиву осуществляется как к безопасному массиву или как к массиву в стиле C, как показано в следующей таблице.  
+## <a name="passing-arrays-to-com"></a><span data-ttu-id="54ec2-212">Передача массивов в COM</span><span class="sxs-lookup"><span data-stu-id="54ec2-212">Passing Arrays to COM</span></span>  
+ <span data-ttu-id="54ec2-213">Все типы управляемых массивов можно передавать в неуправляемый код из управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="54ec2-213">All managed array types can be passed to unmanaged code from managed code.</span></span> <span data-ttu-id="54ec2-214">В зависимости от управляемого типа и примененных к нему атрибутов, доступ к массиву осуществляется как к безопасному массиву или как к массиву в стиле C, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="54ec2-214">Depending on the managed type and the attributes applied to it, the array can be accessed as a safe array or a C-style array, as shown in the following table.</span></span>  
   
-|Тип управляемого массива|Экспортируется как|  
+|<span data-ttu-id="54ec2-215">Тип управляемого массива</span><span class="sxs-lookup"><span data-stu-id="54ec2-215">Managed array type</span></span>|<span data-ttu-id="54ec2-216">Экспортируется как</span><span class="sxs-lookup"><span data-stu-id="54ec2-216">Exported as</span></span>|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип предоставляется в сигнатуре. Ранг всегда равен 1, а нижняя граница всегда — 0. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Тип, ранг и границы предоставляются в сигнатуре. Размер всегда известен во время выполнения.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=fullName>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Тип, ранг, границы и размер всегда известны во время выполнения.|  
+|<span data-ttu-id="54ec2-217">**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**</span><span class="sxs-lookup"><span data-stu-id="54ec2-217">**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**</span></span>|<span data-ttu-id="54ec2-218"><xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="54ec2-218"><xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="54ec2-219">**UnmanagedType.LPArray**</span><span class="sxs-lookup"><span data-stu-id="54ec2-219">**UnmanagedType.LPArray**</span></span><br /><br /> <span data-ttu-id="54ec2-220">Тип предоставляется в сигнатуре.</span><span class="sxs-lookup"><span data-stu-id="54ec2-220">Type is provided in the signature.</span></span> <span data-ttu-id="54ec2-221">Ранг всегда равен 1, а нижняя граница всегда — 0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-221">Rank is always 1, lower bound is always 0.</span></span> <span data-ttu-id="54ec2-222">Размер всегда известен во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="54ec2-222">Size is always known at run time.</span></span>|  
+|<span data-ttu-id="54ec2-223">**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]</span><span class="sxs-lookup"><span data-stu-id="54ec2-223">**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]</span></span>|<span data-ttu-id="54ec2-224">**UnmanagedType.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="54ec2-224">**UnmanagedType.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="54ec2-225">**UnmanagedType.LPArray**</span><span class="sxs-lookup"><span data-stu-id="54ec2-225">**UnmanagedType.LPArray**</span></span><br /><br /> <span data-ttu-id="54ec2-226">Тип, ранг и границы предоставляются в сигнатуре.</span><span class="sxs-lookup"><span data-stu-id="54ec2-226">Type, rank, bounds are provided in the signature.</span></span> <span data-ttu-id="54ec2-227">Размер всегда известен во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="54ec2-227">Size is always known at run time.</span></span>|  
+|<span data-ttu-id="54ec2-228">**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**</span><span class="sxs-lookup"><span data-stu-id="54ec2-228">**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**</span></span>|<span data-ttu-id="54ec2-229">**UT_Interface**</span><span class="sxs-lookup"><span data-stu-id="54ec2-229">**UT_Interface**</span></span><br /><br /> <span data-ttu-id="54ec2-230">**UnmanagedType.SafeArray(** *type* **)**</span><span class="sxs-lookup"><span data-stu-id="54ec2-230">**UnmanagedType.SafeArray(** *type* **)**</span></span><br /><br /> <span data-ttu-id="54ec2-231">Тип, ранг, границы и размер всегда известны во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="54ec2-231">Type, rank, bounds, and size are always known at run time.</span></span>|  
   
- В OLE-автоматизации существует ограничение в отношении массивов структур, которые содержат LPSTR или LPWSTR.  Таким образом, поля **String** должны маршалироваться как **UnmanagedType.BSTR**. В противном случае будет создаваться исключение.  
+ <span data-ttu-id="54ec2-232">В OLE-автоматизации существует ограничение в отношении массивов структур, которые содержат LPSTR или LPWSTR.</span><span class="sxs-lookup"><span data-stu-id="54ec2-232">There is a limitation in OLE Automation relating to arrays of structures that contain LPSTR or LPWSTR.</span></span>  <span data-ttu-id="54ec2-233">Таким образом, поля **String** должны маршалироваться как **UnmanagedType.BSTR**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-233">Therefore, **String** fields have to be marshaled as **UnmanagedType.BSTR**.</span></span> <span data-ttu-id="54ec2-234">В противном случае будет создаваться исключение.</span><span class="sxs-lookup"><span data-stu-id="54ec2-234">Otherwise, an exception will be thrown.</span></span>  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- При экспорте метода, содержащего параметр **ELEMENT_TYPE_SZARRAY** (одномерный массив), из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа. Те же правила преобразования применяются к типам элементов массива. Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**. Пример:  
+### <a name="elementtypeszarray"></a><span data-ttu-id="54ec2-235">ELEMENT_TYPE_SZARRAY</span><span class="sxs-lookup"><span data-stu-id="54ec2-235">ELEMENT_TYPE_SZARRAY</span></span>  
+ <span data-ttu-id="54ec2-236">При экспорте метода, содержащего параметр **ELEMENT_TYPE_SZARRAY** (одномерный массив), из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа.</span><span class="sxs-lookup"><span data-stu-id="54ec2-236">When a method containing an **ELEMENT_TYPE_SZARRAY** parameter (one-dimensional array) is exported from a .NET assembly to a type library, the array parameter is converted to a **SAFEARRAY** of a given type.</span></span> <span data-ttu-id="54ec2-237">Те же правила преобразования применяются к типам элементов массива.</span><span class="sxs-lookup"><span data-stu-id="54ec2-237">The same conversion rules apply to the array element types.</span></span> <span data-ttu-id="54ec2-238">Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-238">The contents of the managed array are automatically copied from managed memory into the **SAFEARRAY**.</span></span> <span data-ttu-id="54ec2-239">Пример:</span><span class="sxs-lookup"><span data-stu-id="54ec2-239">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-240">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-240">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar() As Long)  
@@ -229,18 +225,18 @@ void New(long[] ar );
 void New(String[] ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="54ec2-241">Неуправляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-241">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] SAFEARRAY( long ) ar);   
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
- Ранг безопасных массивов всегда равен 1, а нижняя граница —0. Размер определяется во время выполнения на основе размера передаваемого управляемого массива.  
+ <span data-ttu-id="54ec2-242">Ранг безопасных массивов всегда равен 1, а нижняя граница —0.</span><span class="sxs-lookup"><span data-stu-id="54ec2-242">The rank of the safe arrays is always 1 and the lower bound is always 0.</span></span> <span data-ttu-id="54ec2-243">Размер определяется во время выполнения на основе размера передаваемого управляемого массива.</span><span class="sxs-lookup"><span data-stu-id="54ec2-243">The size is determined at run time by the size of the managed array being passed.</span></span>  
   
- Массив также может маршалироваться как массив в стиле C с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Например:  
+ <span data-ttu-id="54ec2-244">Массив также может маршалироваться как массив в стиле C с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-244">The array can also be marshaled as a C-style array by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="54ec2-245">Например:</span><span class="sxs-lookup"><span data-stu-id="54ec2-245">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-246">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-246">Managed signature</span></span>  
   
 ```vb  
 Sub [New](<MarshalAs(UnmanagedType.LPArray, SizeParamIndex:=1)> _  
@@ -262,7 +258,7 @@ void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
    String [] ar, int size );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="54ec2-247">Неуправляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-247">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New(long ar[]);   
@@ -270,12 +266,12 @@ HRESULT New(BSTR ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- Несмотря на то, что маршалеру известна длина, необходимая для маршалинга массива, длина массива обычно передается вызываемому объекту в отдельном аргументе.  
+ <span data-ttu-id="54ec2-248">Несмотря на то, что маршалеру известна длина, необходимая для маршалинга массива, длина массива обычно передается вызываемому объекту в отдельном аргументе.</span><span class="sxs-lookup"><span data-stu-id="54ec2-248">Although the marshaler has the length information needed to marshal the array, the array length is usually passed as a separate argument to convey the length to the callee.</span></span>  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- При экспорте метода, содержащего параметр **ELEMENT_TYPE_ARRAY**, из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа. Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**. Пример:  
+### <a name="elementtypearray"></a><span data-ttu-id="54ec2-249">ELEMENT_TYPE_ARRAY</span><span class="sxs-lookup"><span data-stu-id="54ec2-249">ELEMENT_TYPE_ARRAY</span></span>  
+ <span data-ttu-id="54ec2-250">При экспорте метода, содержащего параметр **ELEMENT_TYPE_ARRAY**, из сборки .NET в библиотеку типов параметр массива преобразуется в массив **SAFEARRAY** заданного типа.</span><span class="sxs-lookup"><span data-stu-id="54ec2-250">When a method containing an **ELEMENT_TYPE_ARRAY** parameter is exported from a .NET assembly to a type library, the array parameter is converted to a **SAFEARRAY** of a given type.</span></span> <span data-ttu-id="54ec2-251">Содержимое управляемого массива автоматически копируется из управляемой памяти в **SAFEARRAY**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-251">The contents of the managed array are automatically copied from managed memory into the **SAFEARRAY**.</span></span> <span data-ttu-id="54ec2-252">Пример:</span><span class="sxs-lookup"><span data-stu-id="54ec2-252">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-253">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-253">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar(,) As Long)  
@@ -287,18 +283,18 @@ void New( long [,] ar );
 void New( String [,] ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="54ec2-254">Неуправляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-254">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] SAFEARRAY( long ) ar);   
 HRESULT New([in] SAFEARRAY( BSTR ) ar);  
 ```  
   
- Ранг, размер и границы безопасного массива определяются во время выполнения на основе характеристик управляемого массива.  
+ <span data-ttu-id="54ec2-255">Ранг, размер и границы безопасного массива определяются во время выполнения на основе характеристик управляемого массива.</span><span class="sxs-lookup"><span data-stu-id="54ec2-255">The rank, size, and bounds of the safe arrays are determined at run time by the characteristics of the managed array.</span></span>  
   
- Массив также может маршалироваться как массив в стиле C с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Например:  
+ <span data-ttu-id="54ec2-256">Массив также может маршалироваться как массив в стиле C с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-256">The array can also be marshaled as a C-style array by applying the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="54ec2-257">Например:</span><span class="sxs-lookup"><span data-stu-id="54ec2-257">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-258">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-258">Managed signature</span></span>  
   
 ```vb  
 Sub [New](<MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex:=1)> _  
@@ -316,16 +312,16 @@ void New([MarshalAs(UnmanagedType.LPARRAY,
    String [,] ar, int size );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="54ec2-259">Неуправляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-259">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New(long ar[]);   
 HRESULT New(LPStr ar[]);  
 ```  
   
- Вложенные массивы не поддерживают маршалирование. Например, при экспорте с использованием [программы экспорта библиотеки типов (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) следующая сигнатура приводит к возникновению ошибки.  
+ <span data-ttu-id="54ec2-260">Вложенные массивы не поддерживают маршалирование.</span><span class="sxs-lookup"><span data-stu-id="54ec2-260">Nested arrays cannot be marshaled.</span></span> <span data-ttu-id="54ec2-261">Например, при экспорте с использованием [программы экспорта библиотеки типов (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) следующая сигнатура приводит к возникновению ошибки.</span><span class="sxs-lookup"><span data-stu-id="54ec2-261">For example, the following signature generates an error when exported with the [Type Library Exporter (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-262">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-262">Managed signature</span></span>  
   
 ```vb  
 Sub [New](ar()()() As Long)  
@@ -335,10 +331,10 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- При экспорте метода, содержащего параметр <xref:System.Array?displayProperty=fullName>, из сборки .NET в библиотеку типов параметр массива преобразуется в интерфейс **_Array**. Содержимое этого управляемого массива доступно только через методы и свойства интерфейса **_Array**. Массив **System.Array** также может маршалироваться как **SAFEARRAY** с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>. При маршалинге безопасного массива его элементы маршалируются как варианты. Например:  
+### <a name="elementtypeclass-systemarray"></a><span data-ttu-id="54ec2-263">ELEMENT_TYPE_CLASS \<System.Array></span><span class="sxs-lookup"><span data-stu-id="54ec2-263">ELEMENT_TYPE_CLASS \<System.Array></span></span>  
+ <span data-ttu-id="54ec2-264">При экспорте метода, содержащего параметр <xref:System.Array?displayProperty=nameWithType>, из сборки .NET в библиотеку типов параметр массива преобразуется в интерфейс **_Array**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-264">When a method containing a <xref:System.Array?displayProperty=nameWithType> parameter is exported from a .NET assembly to a type library, the array parameter is converted to an **_Array** interface.</span></span> <span data-ttu-id="54ec2-265">Содержимое этого управляемого массива доступно только через методы и свойства интерфейса **_Array**.</span><span class="sxs-lookup"><span data-stu-id="54ec2-265">The contents of the managed array are accessible only through the methods and properties of the **_Array** interface.</span></span> <span data-ttu-id="54ec2-266">Массив **System.Array** также может маршалироваться как **SAFEARRAY** с помощью атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-266">**System.Array** can also be marshaled as a **SAFEARRAY** by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute.</span></span> <span data-ttu-id="54ec2-267">При маршалинге безопасного массива его элементы маршалируются как варианты.</span><span class="sxs-lookup"><span data-stu-id="54ec2-267">When marshaled as a safe array, the array elements are marshaled as variants.</span></span> <span data-ttu-id="54ec2-268">Например:</span><span class="sxs-lookup"><span data-stu-id="54ec2-268">For example:</span></span>  
   
-#### <a name="managed-signature"></a>Управляемая сигнатура  
+#### <a name="managed-signature"></a><span data-ttu-id="54ec2-269">Управляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-269">Managed signature</span></span>  
   
 ```vb  
 Sub New1( ar As System.Array )  
@@ -350,17 +346,17 @@ void New1( System.Array ar );
 void New2( [MarshalAs(UnmanagedType.Safe array)] System.Array ar );  
 ```  
   
-#### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
+#### <a name="unmanaged-signature"></a><span data-ttu-id="54ec2-270">Неуправляемая сигнатура</span><span class="sxs-lookup"><span data-stu-id="54ec2-270">Unmanaged signature</span></span>  
   
 ```  
 HRESULT New([in] _Array *ar);   
 HRESULT New([in] SAFEARRAY(VARIANT) ar);  
 ```  
   
-### <a name="arrays-within-structures"></a>Массивы внутри структур  
- Неуправляемые структуры могут содержать вложенные массивы. По умолчанию эти вложенные поля массива маршалируются как SAFEARRAY. В следующем примере `s1` — это вложенный массив, который выделяется непосредственно в структуре.  
+### <a name="arrays-within-structures"></a><span data-ttu-id="54ec2-271">Массивы внутри структур</span><span class="sxs-lookup"><span data-stu-id="54ec2-271">Arrays within Structures</span></span>  
+ <span data-ttu-id="54ec2-272">Неуправляемые структуры могут содержать вложенные массивы.</span><span class="sxs-lookup"><span data-stu-id="54ec2-272">Unmanaged structures can contain embedded arrays.</span></span> <span data-ttu-id="54ec2-273">По умолчанию эти вложенные поля массива маршалируются как SAFEARRAY.</span><span class="sxs-lookup"><span data-stu-id="54ec2-273">By default, these embedded array fields are marshaled as a SAFEARRAY.</span></span> <span data-ttu-id="54ec2-274">В следующем примере `s1` — это вложенный массив, который выделяется непосредственно в структуре.</span><span class="sxs-lookup"><span data-stu-id="54ec2-274">In the following example, `s1` is an embedded array that is allocated directly within the structure itself.</span></span>  
   
-#### <a name="unmanaged-representation"></a>Неуправляемое представление  
+#### <a name="unmanaged-representation"></a><span data-ttu-id="54ec2-275">Неуправляемое представление</span><span class="sxs-lookup"><span data-stu-id="54ec2-275">Unmanaged representation</span></span>  
   
 ```  
 struct MyStruct {  
@@ -368,7 +364,7 @@ struct MyStruct {
 }  
 ```  
   
- Массивы могут маршалироваться как <xref:System.Runtime.InteropServices.UnmanagedType>, для чего необходимо установить поле <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Размер может задаваться только в виде константы. В коде ниже показаны соответствующие управляемые определения `MyStruct`.  
+ <span data-ttu-id="54ec2-276">Массивы могут маршалироваться как <xref:System.Runtime.InteropServices.UnmanagedType>, для чего необходимо установить поле <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54ec2-276">Arrays can be marshaled as <xref:System.Runtime.InteropServices.UnmanagedType>, which requires you to set the <xref:System.Runtime.InteropServices.MarshalAsAttribute> field.</span></span> <span data-ttu-id="54ec2-277">Размер может задаваться только в виде константы.</span><span class="sxs-lookup"><span data-stu-id="54ec2-277">The size can be set only as a constant.</span></span> <span data-ttu-id="54ec2-278">В коде ниже показаны соответствующие управляемые определения `MyStruct`.</span><span class="sxs-lookup"><span data-stu-id="54ec2-278">The following code shows the corresponding managed definition of `MyStruct`.</span></span>  
   
 ```vb  
 Public Structure <StructLayout(LayoutKind.Sequential)> MyStruct  
@@ -384,9 +380,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)
-
+## <a name="see-also"></a><span data-ttu-id="54ec2-279">См. также</span><span class="sxs-lookup"><span data-stu-id="54ec2-279">See Also</span></span>  
+ [<span data-ttu-id="54ec2-280">Характеристики маршалинга по умолчанию</span><span class="sxs-lookup"><span data-stu-id="54ec2-280">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [<span data-ttu-id="54ec2-281">Преобразуемые и непреобразуемые типы</span><span class="sxs-lookup"><span data-stu-id="54ec2-281">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [<span data-ttu-id="54ec2-282">Атрибуты направления</span><span class="sxs-lookup"><span data-stu-id="54ec2-282">Directional Attributes</span></span>](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [<span data-ttu-id="54ec2-283">Копирование и закрепление</span><span class="sxs-lookup"><span data-stu-id="54ec2-283">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)

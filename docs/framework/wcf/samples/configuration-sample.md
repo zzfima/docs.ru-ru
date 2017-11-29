@@ -1,52 +1,55 @@
 ---
-title: "Образец конфигурации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образец конфигурации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3c73fd8501d5209a87564caa810997476357f3e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец конфигурации
-Этот образец демонстрирует, как при помощи файла конфигурации можно сделать службу доступной для обнаружения.  
+# <a name="configuration-sample"></a><span data-ttu-id="dc910-102">Образец конфигурации</span><span class="sxs-lookup"><span data-stu-id="dc910-102">Configuration Sample</span></span>
+<span data-ttu-id="dc910-103">Этот образец демонстрирует, как при помощи файла конфигурации можно сделать службу доступной для обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-103">This sample demonstrates the use of a configuration file to make a service discoverable.</span></span>  
   
 > [!NOTE]
->  Данный образец реализует возможность обнаружения в конфигурации.Образец реализации возможности обнаружения в коде см. в разделе [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).  
+>  <span data-ttu-id="dc910-104">Данный образец реализует возможность обнаружения в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="dc910-104">This sample implements discovery in configuration.</span></span> <span data-ttu-id="dc910-105">Образец реализует возможность обнаружения в коде см [основные](../../../../docs/framework/wcf/samples/basic-sample.md).</span><span class="sxs-lookup"><span data-stu-id="dc910-105">For a sample that implements discovery in code, see [Basic](../../../../docs/framework/wcf/samples/basic-sample.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="dc910-106">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="dc910-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="dc910-107">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="dc910-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="dc910-108">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="dc910-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="dc910-109">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="dc910-109">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## Конфигурация службы  
- Файл конфигурации в данном образце иллюстрирует две возможности.  
+## <a name="service-configuration"></a><span data-ttu-id="dc910-110">Конфигурация службы</span><span class="sxs-lookup"><span data-stu-id="dc910-110">Service Configuration</span></span>  
+ <span data-ttu-id="dc910-111">Файл конфигурации в данном образце иллюстрирует две возможности.</span><span class="sxs-lookup"><span data-stu-id="dc910-111">The configuration file in this sample demonstrates two features:</span></span>  
   
--   Обеспечение доступности обнаружения службы через стандартную конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+-   <span data-ttu-id="dc910-112">Обеспечение доступности обнаружения службы через стандартную конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="dc910-112">Making the service discoverable over a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span></span>  
   
--   Настройка информации, связанной с обнаружением, для конечной точки приложения службы, а также настройка некоторых параметров, связанных с обнаружением, для стандартной конечной точки.  
+-   <span data-ttu-id="dc910-113">Настройка информации, связанной с обнаружением, для конечной точки приложения службы, а также настройка некоторых параметров, связанных с обнаружением, для стандартной конечной точки.</span><span class="sxs-lookup"><span data-stu-id="dc910-113">Adjusting discovery-related information for the service’s application endpoint and adjusting some of the discovery-related settings on the standard endpoint.</span></span>  
   
- Чтобы включить функцию обнаружения, в файле конфигурации приложения службы необходимо произвести следующие изменения.  
+ <span data-ttu-id="dc910-114">Чтобы включить функцию обнаружения, в файле конфигурации приложения службы необходимо произвести следующие изменения.</span><span class="sxs-lookup"><span data-stu-id="dc910-114">To enable discovery, a few changes must be made in the application configuration file for the service:</span></span>  
   
--   Необходимо добавить конечную точку обнаружения к элементу `<service>`.Это стандартная конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.Это системная конечная точка, которую среда выполнения связывает со службой обнаружения.Служба обнаружения использует эту конечную точку для прослушивания сообщений.  
+-   <span data-ttu-id="dc910-115">Необходимо добавить конечную точку обнаружения к элементу `<service>`.</span><span class="sxs-lookup"><span data-stu-id="dc910-115">A discovery endpoint must be added to the `<service>` element.</span></span> <span data-ttu-id="dc910-116">Это стандартная конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="dc910-116">This is a standard <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span> <span data-ttu-id="dc910-117">Это системная конечная точка, которую среда выполнения связывает со службой обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-117">This is a system endpoint that the runtime associates with the discovery service.</span></span> <span data-ttu-id="dc910-118">Служба обнаружения использует эту конечную точку для прослушивания сообщений.</span><span class="sxs-lookup"><span data-stu-id="dc910-118">The discovery service listens for messages on this endpoint.</span></span>  
   
--   Добавим поведение `<serviceDiscovery>` в раздел `<serviceBehaviors>`.Это позволит обнаруживать службу во время выполнения, используя ранее упомянутую конечную точку обнаружения для прослушивания сообщений `Probe` и `Resolve`.После выполнения этих двух добавлений служба доступна для обнаружения на указанной конечной точке обнаружения.  
+-   <span data-ttu-id="dc910-119">Добавим поведение `<serviceDiscovery>` в раздел `<serviceBehaviors>`.</span><span class="sxs-lookup"><span data-stu-id="dc910-119">A `<serviceDiscovery>` behavior is added to the `<serviceBehaviors>` section.</span></span> <span data-ttu-id="dc910-120">Это позволит обнаруживать службу во время выполнения, используя ранее упомянутую конечную точку обнаружения для прослушивания сообщений `Probe` и `Resolve`.</span><span class="sxs-lookup"><span data-stu-id="dc910-120">This enables the service to be discovered at runtime and uses the discovery endpoint mentioned previously to listen for discovery `Probe` and `Resolve` messages.</span></span> <span data-ttu-id="dc910-121">После выполнения этих двух добавлений служба доступна для обнаружения на указанной конечной точке обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-121">With these two additions, the service is discoverable at the discovery endpoint specified.</span></span>  
   
- В следующем фрагменте конфигурации показана служба с указанной конечной точкой приложения и конечной точкой обнаружения.  
+ <span data-ttu-id="dc910-122">В следующем фрагменте конфигурации показана служба с указанной конечной точкой приложения и конечной точкой обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-122">The following config snippet shows a service with an application endpoint and a discovery endpoint defined:</span></span>  
   
-```vb  
+```xml
 <services>  
         <service name="Microsoft.Samples.Discovery.CalculatorService"  
                  behaviorConfiguration="calculatorServiceBehavior">  
@@ -58,30 +61,27 @@ caps.handback.revision: 21
                     kind="udpDiscoveryEndpoint"   
                 endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
-  
 ```  
   
- Чтобы воспользоваться объявлениями, необходимо добавить конечную точку объявления.Для этого нужно изменить файл конфигурации, как показано в следующем коде.  
+ <span data-ttu-id="dc910-123">Чтобы воспользоваться объявлениями, необходимо добавить конечную точку объявления.</span><span class="sxs-lookup"><span data-stu-id="dc910-123">To take advantage of announcements, you will need to add an announcement endpoint.</span></span> <span data-ttu-id="dc910-124">Для этого нужно изменить файл конфигурации, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="dc910-124">To do this, modify the configuration file as shown in the following code.</span></span>  
   
-```  
-  
+```xml  
 <serviceDiscovery>  
             <announcementEndpoints>  
               <endpoint kind="udpAnnouncementEndpoint"/>  
             </announcementEndpoints>  
           </serviceDiscovery>  
-  
 ```  
   
- При добавлении конечной точки объявления к службе обнаружения создается клиент объявления по умолчанию для службы.Это гарантирует, что служба отправит объявление о режиме «в сети» или «не в сети» соответственно при открытии и закрытии службы.  
+ <span data-ttu-id="dc910-125">При добавлении конечной точки объявления к службе обнаружения создается клиент объявления по умолчанию для службы.</span><span class="sxs-lookup"><span data-stu-id="dc910-125">Adding an announcement endpoint to the discovery service behavior creates a default announcement client for the service.</span></span> <span data-ttu-id="dc910-126">Это гарантирует, что служба отправит объявление о режиме «в сети» или «не в сети» соответственно при открытии и закрытии службы.</span><span class="sxs-lookup"><span data-stu-id="dc910-126">This guarantees that the service will send an online and offline announcement when the service is opened and closed respectively.</span></span>  
   
- Можно не ограничиваться приведенными простыми шагами и изменить в файле конфигурации дополнительные поведения.Информацией, относящейся к обнаружению, можно управлять с использованием определенных конечных точек.Таким образом пользователь может указать, доступна ли конечная точка для обнаружения, а также пометить ее атрибутом <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> и добавить пользовательские XML\-метаданные.Для этого необходимо добавить в конечную точку приложения свойство `behaviorConfiguration`.В этом случае в конечную точку приложения добавляется следующее свойство.  
+ <span data-ttu-id="dc910-127">Можно не ограничиваться приведенными простыми шагами и изменить в файле конфигурации дополнительные поведения.</span><span class="sxs-lookup"><span data-stu-id="dc910-127">This configuration file goes beyond just those simple steps by modifying additional behaviors.</span></span> <span data-ttu-id="dc910-128">Информацией, относящейся к обнаружению, можно управлять с использованием определенных конечных точек.</span><span class="sxs-lookup"><span data-stu-id="dc910-128">It is possible to control discovery-related information by using specific endpoints.</span></span> <span data-ttu-id="dc910-129">Таким образом пользователь может указать, доступна ли конечная точка для обнаружения, а также пометить ее атрибутом <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> и добавить пользовательские XML-метаданные.</span><span class="sxs-lookup"><span data-stu-id="dc910-129">That is, a user can control whether an endpoint can be discovered and the user can also mark that endpoint with <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> and custom XML metadata.</span></span> <span data-ttu-id="dc910-130">Для этого необходимо добавить в конечную точку приложения свойство `behaviorConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="dc910-130">To do this, the user must add a `behaviorConfiguration` property to the application endpoint.</span></span> <span data-ttu-id="dc910-131">В этом случае в конечную точку приложения добавляется следующее свойство.</span><span class="sxs-lookup"><span data-stu-id="dc910-131">In this case, the following property is added to the application endpoint.</span></span>  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
 ```  
   
- Теперь с помощью элемента конфигурации поведения можно управлять атрибутами, связанными с обнаружением.В этом случае в конечную точку приложения добавляются две области.  
+ <span data-ttu-id="dc910-132">Теперь с помощью элемента конфигурации поведения можно управлять атрибутами, связанными с обнаружением.</span><span class="sxs-lookup"><span data-stu-id="dc910-132">Now, through the behavior configuration element, you can control discovery-related attributes.</span></span> <span data-ttu-id="dc910-133">В этом случае в конечную точку приложения добавляются две области.</span><span class="sxs-lookup"><span data-stu-id="dc910-133">In this case, two scopes are added to the application endpoint.</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -95,25 +95,23 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
           </behavior>            
         </endpointBehaviors>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] областях см. в разделе [Объекты обнаружения Find и FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="dc910-134">области см. в разделе [найти обнаружения и FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span><span class="sxs-lookup"><span data-stu-id="dc910-134"> scopes, see [Discovery Find and FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).</span></span>  
   
- Можно также управлять определенными сведениями о конечной точке обнаружения.Это выполняется с помощью объекта <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.В данном образце изменяется версия используемого протокола, а также добавляется атрибут `maxResponseDelay`, как показано в следующем примере кода.  
+ <span data-ttu-id="dc910-135">Можно также управлять определенными сведениями о конечной точке обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-135">You can also control specific details of the discovery endpoint.</span></span> <span data-ttu-id="dc910-136">Это выполняется с помощью объекта <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span><span class="sxs-lookup"><span data-stu-id="dc910-136">This is done through the <xref:System.ServiceModel.Configuration.StandardEndpointsSection>.</span></span> <span data-ttu-id="dc910-137">В данном образце изменяется версия используемого протокола, а также добавляется атрибут `maxResponseDelay`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="dc910-137">In this sample, the version of the protocol used is modified as well as adding a `maxResponseDelay` attribute as shown in the following code example.</span></span>  
   
-```  
+```xml  
 <standardEndpoints>  
    <udpDiscoveryEndpoint>  
       <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
    </udpDiscoveryEndpoint>  
 </standardEndpoints>  
-  
 ```  
   
- Далее приведен полный листинг файла конфигурации, используемого в этом примере.  
+ <span data-ttu-id="dc910-138">Далее приведен полный листинг файла конфигурации, используемого в этом примере.</span><span class="sxs-lookup"><span data-stu-id="dc910-138">The following is the complete configuration file used in this example:</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.serviceModel>  
   
@@ -166,11 +164,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Конфигурация клиента  
- Для включения функции обнаружения в конфигурации приложения для клиента используется конечная точка `standardEndpoint` типа `dynamicEndpoint`, как показано в следующем фрагменте.  
+## <a name="client-configuration"></a><span data-ttu-id="dc910-139">Конфигурация клиента</span><span class="sxs-lookup"><span data-stu-id="dc910-139">Client Configuration</span></span>  
+ <span data-ttu-id="dc910-140">Для включения функции обнаружения в конфигурации приложения для клиента используется конечная точка `standardEndpoint` типа `dynamicEndpoint`, как показано в следующем фрагменте.</span><span class="sxs-lookup"><span data-stu-id="dc910-140">In the application configuration file for the client, a `standardEndpoint` of type `dynamicEndpoint` is used to utilize discovery as shown in the following config snippet.</span></span>  
   
 ```xml  
 <client>  
@@ -182,17 +179,15 @@ behaviorConfiguration="endpointBehaviorConfiguration"
              endpointConfiguration="dynamicEndpointConfiguration">  
    </endpoint>  
 </client>  
-  
 ```  
   
- Если клиент использует конечную точку типа `dynamicEndpoint`, обнаружение осуществляется средой выполнения автоматически.При обнаружении используются различные параметры, например те, которые определены в разделе `discoveryClientSettings`, задающем тип используемой конечной точки обнаружения.  
+ <span data-ttu-id="dc910-141">Если клиент использует конечную точку типа `dynamicEndpoint`, обнаружение осуществляется средой выполнения автоматически.</span><span class="sxs-lookup"><span data-stu-id="dc910-141">When a client is using a `dynamicEndpoint`, the runtime performs discovery automatically.</span></span> <span data-ttu-id="dc910-142">При обнаружении используются различные параметры, например те, которые определены в разделе `discoveryClientSettings`, задающем тип используемой конечной точки обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-142">Various settings are used during discovery, such as those defined in the  `discoveryClientSettings` section, which specifies the type of discovery endpoint to use:</span></span>  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
-  
 ```  
   
- Критерии поиска, используемые для поиска служб:  
+ <span data-ttu-id="dc910-143">Критерии поиска, используемые для поиска служб:</span><span class="sxs-lookup"><span data-stu-id="dc910-143">The find criteria used to search for services:</span></span>  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -205,10 +200,9 @@ behaviorConfiguration="endpointBehaviorConfiguration"
       <CustomMetadata>This is custom metadata that is sent to the service along with the client's find request.</CustomMetadata>  
    </extensions>  
 </findCriteria>  
-  
 ```  
   
- Данный образец расширяет эту возможность и изменяет используемый клиентом объект <xref:System.ServiceModel.Discovery.FindCriteria>, а также некоторые свойства стандартной конечной точки `updDiscoveryEndpoint`, применяемой для обнаружения.Измененный объект <xref:System.ServiceModel.Discovery.FindCriteria> использует область и указанный алгоритм `scopeMatchBy`, а также пользовательские критерии завершения.Кроме того, образец также показывает, как клиент может отправлять XML\-элементы с помощью сообщений `Probe`.Наконец, вносятся некоторые изменения в конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. В частности, меняется версия используемого протокола и параметры UDP, как показано в приведенном далее файле конфигурации.  
+ <span data-ttu-id="dc910-144">Данный образец расширяет эту возможность и изменяет используемый клиентом объект <xref:System.ServiceModel.Discovery.FindCriteria>, а также некоторые свойства стандартной конечной точки `updDiscoveryEndpoint`, применяемой для обнаружения.</span><span class="sxs-lookup"><span data-stu-id="dc910-144">This sample extends this feature and modifies the <xref:System.ServiceModel.Discovery.FindCriteria> used by the client, as well as some properties of the standard `updDiscoveryEndpoint` used for discovery.</span></span> <span data-ttu-id="dc910-145">Измененный объект <xref:System.ServiceModel.Discovery.FindCriteria> использует область и указанный алгоритм `scopeMatchBy`, а также пользовательские критерии завершения.</span><span class="sxs-lookup"><span data-stu-id="dc910-145">The <xref:System.ServiceModel.Discovery.FindCriteria> are modified to use a scope and a specific `scopeMatchBy` algorithm, as well as custom termination criteria.</span></span> <span data-ttu-id="dc910-146">Кроме того, образец также показывает, как клиент может отправлять XML-элементы с помощью сообщений `Probe`.</span><span class="sxs-lookup"><span data-stu-id="dc910-146">Furthermore, the sample also shows how a client can send XML elements using `Probe` messages.</span></span> <span data-ttu-id="dc910-147">Наконец, вносятся некоторые изменения в конечную точку <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>. В частности, меняется версия используемого протокола и параметры UDP, как показано в приведенном далее файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="dc910-147">Lastly, some changes are made to the <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, such as the version of the protocol used and UDP-specific settings as shown in the following configuration file.</span></span>  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -220,12 +214,11 @@ behaviorConfiguration="endpointBehaviorConfiguration"
                              maxBufferPoolSize="262144"/>  
         </standardEndpoint>        
       </udpDiscoveryEndpoint>  
-  
 ```  
   
- Далее приведен полный листинг конфигурации клиента для этого образца.  
+ <span data-ttu-id="dc910-148">Далее приведен полный листинг конфигурации клиента для этого образца.</span><span class="sxs-lookup"><span data-stu-id="dc910-148">The following is the complete client configuration used in the sample.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
   
@@ -274,17 +267,16 @@ behaviorConfiguration="endpointBehaviorConfiguration"
     </standardEndpoints>  
   
   </system.serviceModel>  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="dc910-149">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="dc910-149">To use this sample</span></span>  
   
-1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL\-адресу. Дополнительные сведения см. в разделе [Настройка HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353).Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями.Если команда не работает, следует указать домен и имя пользователя в следующих аргументах.`netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  <span data-ttu-id="dc910-150">В этом образце используются конечные точки HTTP, и для запуска этого примера, соответствующие URL ACL, необходимо добавить см. в разделе [Настройка протоколов HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения.</span><span class="sxs-lookup"><span data-stu-id="dc910-150">This sample uses HTTP endpoints and to run this sample, proper URL ACLs must be added see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details.</span></span> <span data-ttu-id="dc910-151">Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями.</span><span class="sxs-lookup"><span data-stu-id="dc910-151">Executing the following command at an elevated privilege should add the appropriate ACLs.</span></span> <span data-ttu-id="dc910-152">Если команда не работает, следует указать домен и имя пользователя в следующих аргументах.</span><span class="sxs-lookup"><span data-stu-id="dc910-152">You may want to substitute your Domain and Username for the following arguments if the command does not work as is.</span></span> `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Постройте решение.  
+2.  <span data-ttu-id="dc910-153">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="dc910-153">Build the solution.</span></span>  
   
-3.  Выполните исполняемый файл службы из каталога сборки.  
+3.  <span data-ttu-id="dc910-154">Выполните исполняемый файл службы из каталога сборки.</span><span class="sxs-lookup"><span data-stu-id="dc910-154">Run the service executable from the build directory.</span></span>  
   
-4.  Выполните исполняемый файл клиента.Учтите, что клиент может определить расположение службы.  
+4.  <span data-ttu-id="dc910-155">Выполните исполняемый файл клиента.</span><span class="sxs-lookup"><span data-stu-id="dc910-155">Run the client executable.</span></span> <span data-ttu-id="dc910-156">Учтите, что клиент может определить расположение службы.</span><span class="sxs-lookup"><span data-stu-id="dc910-156">Note that the client is able to locate the service.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="dc910-157">См. также</span><span class="sxs-lookup"><span data-stu-id="dc910-157">See Also</span></span>

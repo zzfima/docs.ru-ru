@@ -1,51 +1,52 @@
 ---
-title: "Элемент управления CheckedListBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "флажки"
-  - "помеченные элементы списка, элементы управления Windows Forms"
-  - "CheckedListBox - элемент управления [Windows Forms]"
-  - "CheckedListBox - элемент управления [Windows Forms], справочник"
-  - "элементы управления "список""
-  - "списки"
-  - "списки, отображение флажков"
-  - "списки, элементы управления Windows Forms"
-  - "Список - элементы управления, Windows Forms"
-  - "элементы списка, элементы управления Windows Forms, которые отображают"
+title: "Элемент управления CheckedListBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], reference
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- CheckedListBox control [Windows Forms]
+- list box controls [Windows Forms]
+- check marks
+- list boxes [Windows Forms], displaying check marks
+- list boxes [Windows Forms], Windows Forms controls
+- list items [Windows Forms], Windows Forms controls that display
+- list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Элемент управления CheckedListBox (Windows Forms)
-В элементе управления Windows Forms `CheckedListBox` отображается список элементов, как и в элементе управления <xref:System.Windows.Forms.ListBox>, а также может отображаться флажок рядом с элементами списка.  
+# <a name="checkedlistbox-control-windows-forms"></a><span data-ttu-id="147f3-102">Элемент управления CheckedListBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="147f3-102">CheckedListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="147f3-103">Windows Forms `CheckedListBox` элемент управления отображает список элементов, таких как <xref:System.Windows.Forms.ListBox> управления, а также может отображаться флажок рядом с элементами списка.</span><span class="sxs-lookup"><span data-stu-id="147f3-103">The Windows Forms `CheckedListBox` control displays a list of items, like the <xref:System.Windows.Forms.ListBox> control, and also can display a check mark next to items in the list.</span></span>  
   
-## В этом подразделе  
- [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Описание данного элемента управления и его основных характеристик и свойств.  
+## <a name="in-this-section"></a><span data-ttu-id="147f3-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="147f3-104">In This Section</span></span>  
+ [<span data-ttu-id="147f3-105">Общие сведения об элементе управления CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="147f3-105">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="147f3-106">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="147f3-106">Explains what this control is and its key features and properties.</span></span>  
   
- [Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- Описание перехода по списку для определения помеченных элементов.  
+ [<span data-ttu-id="147f3-107">Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="147f3-107">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ <span data-ttu-id="147f3-108">Описывает, как осуществлять пошаговое выполнение, список, чтобы определить, какие элементы помечены.</span><span class="sxs-lookup"><span data-stu-id="147f3-108">Describes how to step through a list to determine which items are checked.</span></span>  
   
-## Ссылка  
- Класс <xref:System.Windows.Forms.CheckedListBox>  
- Описание класса и ссылки на все его члены.  
+## <a name="reference"></a><span data-ttu-id="147f3-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="147f3-109">Reference</span></span>  
+ <span data-ttu-id="147f3-110">Класс <xref:System.Windows.Forms.CheckedListBox></span><span class="sxs-lookup"><span data-stu-id="147f3-110"><xref:System.Windows.Forms.CheckedListBox> class</span></span>  
+ <span data-ttu-id="147f3-111">Описание класса и ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="147f3-111">Describes this class and has links to all its members.</span></span>  
   
-## Связанные подразделы  
- [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Список действий, выполняемых со списками, полями со списками и списками с помеченными элементами.  
+## <a name="related-sections"></a><span data-ttu-id="147f3-112">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="147f3-112">Related Sections</span></span>  
+ [<span data-ttu-id="147f3-113">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="147f3-113">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="147f3-114">Предоставляет список вещей, которые можно сделать с списки, поля со списком и списки.</span><span class="sxs-lookup"><span data-stu-id="147f3-114">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+ [<span data-ttu-id="147f3-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="147f3-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="147f3-116">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="147f3-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

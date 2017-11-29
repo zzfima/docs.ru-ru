@@ -1,28 +1,33 @@
 ---
-title: "&lt;certificateReference&gt; для &lt;идентификатора&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;certificateReference&gt; для &lt;идентификатора&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 883ae318e32493013f009f3580ef102e4d39b3e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;certificateReference&gt; для &lt;идентификатора&gt;
-Задает параметры для проверки сертификата X.509.  Защищенный клиент [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], подключающийся к конечной точке с использованием этого удостоверения, проверяет, что утверждения, представленные сервером, содержат идентификационное утверждение, используемое для конструирования этого удостоверения.  
+# <a name="ltcertificatereferencegt-for-ltidentitygt"></a><span data-ttu-id="2fedd-102">&lt;certificateReference&gt; для &lt;идентификатора&gt;</span><span class="sxs-lookup"><span data-stu-id="2fedd-102">&lt;certificateReference&gt; for &lt;identity&gt;</span></span>
+<span data-ttu-id="2fedd-103">Задает параметры для проверки сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="2fedd-103">Specifies settings for X.509 certificate validation.</span></span> <span data-ttu-id="2fedd-104">Защищенный клиент [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], подключающийся к конечной точке с использованием этого удостоверения, проверяет, что утверждения, представленные сервером, содержат идентификационное утверждение, используемое для конструирования этого удостоверения.</span><span class="sxs-lookup"><span data-stu-id="2fedd-104">A secure [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] client that connects to an endpoint with this identity verifies that the claims presented by the server contain the identity claim used to construct this identity.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="2fedd-105">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="2fedd-105">\<identity></span></span>  
+<span data-ttu-id="2fedd-106">\<certificateReference ></span><span class="sxs-lookup"><span data-stu-id="2fedd-106">\<certificateReference></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2fedd-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2fedd-107">Syntax</span></span>  
   
+```xml  
 <certificateReference   
         findValue="String"   
     isChainIncluded="Boolean"  
@@ -34,30 +39,30 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </certificateReference>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2fedd-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="2fedd-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2fedd-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="2fedd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="2fedd-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2fedd-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|findValue|Задает значение для поиска в хранилище сертификатов X.509.  Тип, указанный в этом атрибуте, должен отвечать требованиям заданного значения `X509FindType`.  Значение по умолчанию \- пустая строка.|  
-|isChainIncluded|Логическое значение, определяющее, выполнена ли проверка с использованием цепочки сертификатов.|  
-|storeLocation|Задает расположение хранилища сертификатов, которое клиент может использовать для проверки сертификата сервера.<br /><br /> Допустимы следующие значения:<br /><br /> -   LocalMachine: хранилище сертификатов, назначенное локальному компьютеру.<br />-   CurrentUser: хранилище сертификатов, назначенное текущему пользователю.<br /><br /> Значение по умолчанию \- LocalMachine.<br /><br /> Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
-|storeName|Задает имя открываемого хранилища сертификатов X.509.<br /><br /> Допустимы следующие значения:<br /><br /> -   AddressBook: хранилище сертификатов для других пользователей.<br />-   AuthRoot: хранилище сертификатов для сторонних центров сертификации.<br />-   CertificateAuthority: хранилище сертификатов для промежуточных центров сертификации \(ЦС\).<br />-   Disallowed: хранилище сертификатов для отозванных сертификатов.<br />-   My: хранилище сертификатов для личных сертификатов.<br />-   Root: хранилище сертификатов для доверенных корневых центров сертификации.<br />-   TrustedPeople: хранилище сертификатов для непосредственно доверенных лиц и ресурсов.<br />-   TrustedPublisher: хранилище сертификатов для непосредственно доверенных издателей.<br /><br /> Значение по умолчанию \- «My».<br /><br /> Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.|  
-|X509FindType|Определяет тип выполняемого поиска X.509.  Тип, указанный в атрибуте `findValue`, должен отвечать требованиям заданного значения X509FindType.<br /><br /> Допустимы следующие значения:<br /><br /> -   FindByThumbPrint<br />-   FindBySubjectName<br />-   FindBySubjectDistinguishedName<br />-   FindByIssuerName<br />-   FindByIssuerDistinguishedName<br />-   FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-   FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Значение по умолчанию \- FindBySubjectDistinguishedName.<br /><br /> Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
+|<span data-ttu-id="2fedd-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="2fedd-111">Attribute</span></span>|<span data-ttu-id="2fedd-112">Описание</span><span class="sxs-lookup"><span data-stu-id="2fedd-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="2fedd-113">findValue</span><span class="sxs-lookup"><span data-stu-id="2fedd-113">findValue</span></span>|<span data-ttu-id="2fedd-114">Задает значение для поиска в хранилище сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="2fedd-114">Specifies the value to search for in the X.509 certificate store.</span></span> <span data-ttu-id="2fedd-115">Тип, указанный в этом атрибуте, должен отвечать требованиям заданного значения `X509FindType`.</span><span class="sxs-lookup"><span data-stu-id="2fedd-115">The type contained in this attribute must satisfy the requirements of the specified `X509FindType` value.</span></span> <span data-ttu-id="2fedd-116">Значение по умолчанию - пустая строка.</span><span class="sxs-lookup"><span data-stu-id="2fedd-116">The default is an empty string.</span></span>|  
+|<span data-ttu-id="2fedd-117">isChainIncluded</span><span class="sxs-lookup"><span data-stu-id="2fedd-117">isChainIncluded</span></span>|<span data-ttu-id="2fedd-118">Логическое значение, определяющее, выполнена ли проверка с использованием цепочки сертификатов.</span><span class="sxs-lookup"><span data-stu-id="2fedd-118">A Boolean value that specifies if the validation is done using a certificate chain.</span></span>|  
+|<span data-ttu-id="2fedd-119">storeLocation</span><span class="sxs-lookup"><span data-stu-id="2fedd-119">storeLocation</span></span>|<span data-ttu-id="2fedd-120">Задает расположение хранилища сертификатов, которое клиент может использовать для проверки сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="2fedd-120">Specifies the location of the certificate store that the client can use to validate the server’s certificate.</span></span><br /><br /> <span data-ttu-id="2fedd-121">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="2fedd-121">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="2fedd-122">-LocalMachine: Хранилище сертификатов, назначенные на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="2fedd-122">-   LocalMachine: The cert store assigned to the local machine.</span></span><br /><span data-ttu-id="2fedd-123">-CurrentUser: Хранилище сертификатов, назначенные текущему пользователю.</span><span class="sxs-lookup"><span data-stu-id="2fedd-123">-   CurrentUser: The cert store assigned to the current user.</span></span><br /><br /> <span data-ttu-id="2fedd-124">Значение по умолчанию - LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="2fedd-124">The default value is LocalMachine.</span></span><br /><br /> <span data-ttu-id="2fedd-125">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span><span class="sxs-lookup"><span data-stu-id="2fedd-125">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
+|<span data-ttu-id="2fedd-126">storeName</span><span class="sxs-lookup"><span data-stu-id="2fedd-126">storeName</span></span>|<span data-ttu-id="2fedd-127">Задает имя открываемого хранилища сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="2fedd-127">Specifies the name of the X.509 certificate store to open.</span></span><br /><br /> <span data-ttu-id="2fedd-128">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="2fedd-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="2fedd-129">-AddressBook: Хранилище сертификатов для других пользователей.</span><span class="sxs-lookup"><span data-stu-id="2fedd-129">-   AddressBook: Certificate store for other users.</span></span><br /><span data-ttu-id="2fedd-130">-AuthRoot: Хранилище сертификатов для сторонних центров сертификации (ЦС).</span><span class="sxs-lookup"><span data-stu-id="2fedd-130">-   AuthRoot: Certificate store for third-party certification authorities (CAs).</span></span><br /><span data-ttu-id="2fedd-131">-CertificateAuthority: Хранилище сертификатов для промежуточных центров сертификации.</span><span class="sxs-lookup"><span data-stu-id="2fedd-131">-   CertificateAuthority: Certificate store for intermediate CAs.</span></span><br /><span data-ttu-id="2fedd-132">-Disallowed: Хранилище сертификатов для отозванных сертификатов.</span><span class="sxs-lookup"><span data-stu-id="2fedd-132">-   Disallowed: Certificate store for revoked certificates.</span></span><br /><span data-ttu-id="2fedd-133">-My: Хранилище сертификатов для личных сертификатов.</span><span class="sxs-lookup"><span data-stu-id="2fedd-133">-   My: Certificate store for personal certificates.</span></span><br /><span data-ttu-id="2fedd-134">-Root: Хранилище сертификатов для доверенных корневых центров сертификации.</span><span class="sxs-lookup"><span data-stu-id="2fedd-134">-   Root: Certificate store for trusted root CAs.</span></span><br /><span data-ttu-id="2fedd-135">-TrustedPeople: Хранилище сертификатов для непосредственно доверенных лиц и ресурсов.</span><span class="sxs-lookup"><span data-stu-id="2fedd-135">-   TrustedPeople: Certificate store for directly trusted people and resources.</span></span><br /><span data-ttu-id="2fedd-136">-TrustedPublisher: Хранилище сертификатов для непосредственно доверенных издателей.</span><span class="sxs-lookup"><span data-stu-id="2fedd-136">-   TrustedPublisher: Certificate store for directly trusted publishers.</span></span><br /><br /> <span data-ttu-id="2fedd-137">Значение по умолчанию - «My».</span><span class="sxs-lookup"><span data-stu-id="2fedd-137">The default value is My.</span></span><br /><br /> <span data-ttu-id="2fedd-138">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span><span class="sxs-lookup"><span data-stu-id="2fedd-138">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreName>.</span></span>|  
+|<span data-ttu-id="2fedd-139">X509FindType</span><span class="sxs-lookup"><span data-stu-id="2fedd-139">X509FindType</span></span>|<span data-ttu-id="2fedd-140">Определяет тип выполняемого поиска X.509.</span><span class="sxs-lookup"><span data-stu-id="2fedd-140">Specifies the type of X.509 search to be executed.</span></span> <span data-ttu-id="2fedd-141">Тип, указанный в атрибуте `findValue`, должен отвечать требованиям заданного значения X509FindType.</span><span class="sxs-lookup"><span data-stu-id="2fedd-141">The type contained in the `findValue` attribute must satisfy the requirements of the specified X509FindType.</span></span><br /><br /> <span data-ttu-id="2fedd-142">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="2fedd-142">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="2fedd-143">-FindByThumbPrint</span><span class="sxs-lookup"><span data-stu-id="2fedd-143">-   FindByThumbPrint</span></span><br /><span data-ttu-id="2fedd-144">-FindBySubjectName</span><span class="sxs-lookup"><span data-stu-id="2fedd-144">-   FindBySubjectName</span></span><br /><span data-ttu-id="2fedd-145">-FindBySubjectDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="2fedd-145">-   FindBySubjectDistinguishedName</span></span><br /><span data-ttu-id="2fedd-146">-FindByIssuerName</span><span class="sxs-lookup"><span data-stu-id="2fedd-146">-   FindByIssuerName</span></span><br /><span data-ttu-id="2fedd-147">-FindByIssuerDistinguishedName</span><span class="sxs-lookup"><span data-stu-id="2fedd-147">-   FindByIssuerDistinguishedName</span></span><br /><span data-ttu-id="2fedd-148">-FindBySerialNumber</span><span class="sxs-lookup"><span data-stu-id="2fedd-148">-   FindBySerialNumber</span></span><br /><span data-ttu-id="2fedd-149">-FindByTimeValid</span><span class="sxs-lookup"><span data-stu-id="2fedd-149">-   FindByTimeValid</span></span><br /><span data-ttu-id="2fedd-150">-FindByTimeNotYetValid</span><span class="sxs-lookup"><span data-stu-id="2fedd-150">-   FindByTimeNotYetValid</span></span><br /><span data-ttu-id="2fedd-151">-FindByTemplateName</span><span class="sxs-lookup"><span data-stu-id="2fedd-151">-   FindByTemplateName</span></span><br /><span data-ttu-id="2fedd-152">-FindByApplicationPolicy</span><span class="sxs-lookup"><span data-stu-id="2fedd-152">-   FindByApplicationPolicy</span></span><br /><span data-ttu-id="2fedd-153">-FindByCertificatePolicy</span><span class="sxs-lookup"><span data-stu-id="2fedd-153">-   FindByCertificatePolicy</span></span><br /><span data-ttu-id="2fedd-154">-FindByExtension</span><span class="sxs-lookup"><span data-stu-id="2fedd-154">-   FindByExtension</span></span><br /><span data-ttu-id="2fedd-155">-FindByKeyUsage</span><span class="sxs-lookup"><span data-stu-id="2fedd-155">-   FindByKeyUsage</span></span><br /><span data-ttu-id="2fedd-156">-FindBySubjectKeyIdentifier</span><span class="sxs-lookup"><span data-stu-id="2fedd-156">-   FindBySubjectKeyIdentifier</span></span><br /><br /> <span data-ttu-id="2fedd-157">Значение по умолчанию - FindBySubjectDistinguishedName.</span><span class="sxs-lookup"><span data-stu-id="2fedd-157">The default value is FindBySubjectDistinguishedName.</span></span><br /><br /> <span data-ttu-id="2fedd-158">Это атрибут типа <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span><span class="sxs-lookup"><span data-stu-id="2fedd-158">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509FindType>.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="2fedd-159">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="2fedd-159">Child Elements</span></span>  
+ <span data-ttu-id="2fedd-160">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2fedd-160">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="2fedd-161">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="2fedd-161">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<удостоверение\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает параметры, которые обеспечивают проверку подлинности конечной точки другими конечными точками, с которыми происходит обмен сообщениями.|  
+|<span data-ttu-id="2fedd-162">Элемент</span><span class="sxs-lookup"><span data-stu-id="2fedd-162">Element</span></span>|<span data-ttu-id="2fedd-163">Описание</span><span class="sxs-lookup"><span data-stu-id="2fedd-163">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2fedd-164">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="2fedd-164">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="2fedd-165">Задает параметры, которые обеспечивают проверку подлинности конечной точки другими конечными точками, с которыми происходит обмен сообщениями.</span><span class="sxs-lookup"><span data-stu-id="2fedd-165">Specifies settings that enable the authentication of an endpoint by other endpoints exchanging messages with it.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.CertificateReferenceElement>   
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
+## <a name="see-also"></a><span data-ttu-id="2fedd-166">См. также</span><span class="sxs-lookup"><span data-stu-id="2fedd-166">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - platform invoke, identifying functions
 - COM interop, DLL functions
@@ -24,46 +18,44 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b96ef668a8a11794b87d3cbe7c2ba864f8a75e2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b5aa725d30e280d672724c7b7f4fd11a848a3ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="identifying-functions-in-dlls"></a>Идентификация функций в библиотеках DLL
-Идентификатор функции DLL состоит из следующих элементов:  
+# <a name="identifying-functions-in-dlls"></a><span data-ttu-id="04bfe-102">Идентификация функций в библиотеках DLL</span><span class="sxs-lookup"><span data-stu-id="04bfe-102">Identifying Functions in DLLs</span></span>
+<span data-ttu-id="04bfe-103">Идентификатор функции DLL состоит из следующих элементов:</span><span class="sxs-lookup"><span data-stu-id="04bfe-103">The identity of a DLL function consists of the following elements:</span></span>  
   
--   Имя функции или порядковый номер  
+-   <span data-ttu-id="04bfe-104">Имя функции или порядковый номер</span><span class="sxs-lookup"><span data-stu-id="04bfe-104">Function name or ordinal</span></span>  
   
--   Имя файла DLL, в котором находится реализация  
+-   <span data-ttu-id="04bfe-105">Имя файла DLL, в котором находится реализация</span><span class="sxs-lookup"><span data-stu-id="04bfe-105">Name of the DLL file in which the implementation can be found</span></span>  
   
- Например, при указании функции **MessageBox** в библиотеке User32.dll определяется функция (**MessageBox**) и ее расположение (User32.dll, User32 или user32). Прикладной программный интерфейс приложений Microsoft Windows (API Win32) может содержать две версии для каждой функции, обрабатывающей символы и строки: версию ANSI для однобайтовых символов и версию Юникода для двухбайтовых символов. Если кодировка не указана, она определяется полем <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> (по умолчанию ANSI). Некоторые функции могут иметь более двух версий.  
+ <span data-ttu-id="04bfe-106">Например, при указании функции **MessageBox** в библиотеке User32.dll определяется функция (**MessageBox**) и ее расположение (User32.dll, User32 или user32).</span><span class="sxs-lookup"><span data-stu-id="04bfe-106">For example, specifying the **MessageBox** function in the User32.dll identifies the function (**MessageBox**) and its location (User32.dll, User32, or user32).</span></span> <span data-ttu-id="04bfe-107">Прикладной программный интерфейс приложений Microsoft Windows (API Win32) может содержать две версии для каждой функции, обрабатывающей символы и строки: версию ANSI для однобайтовых символов и версию Юникода для двухбайтовых символов.</span><span class="sxs-lookup"><span data-stu-id="04bfe-107">The Microsoft Windows application programming interface (Win32 API) can contain two versions of each function that handles characters and strings: a 1-byte character ANSI version and a 2-byte character Unicode version.</span></span> <span data-ttu-id="04bfe-108">Если кодировка не указана, она определяется полем <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> (по умолчанию ANSI).</span><span class="sxs-lookup"><span data-stu-id="04bfe-108">When unspecified, the character set, represented by the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> field, defaults to ANSI.</span></span> <span data-ttu-id="04bfe-109">Некоторые функции могут иметь более двух версий.</span><span class="sxs-lookup"><span data-stu-id="04bfe-109">Some functions can have more than two versions.</span></span>  
   
- **MessageBoxA** — это точка входа ANSI для функции **MessageBox**; **MessageBoxW** — версия для Юникода. Чтобы получить список имен функций в конкретной библиотеке DLL, например user32.dll, можно воспользоваться различными средствами командной строки. Например, для получения имен функций можно воспользоваться `dumpbin /exports user32.dll` или `link /dump /exports user32.dll`.  
+ <span data-ttu-id="04bfe-110">**MessageBoxA** — это точка входа ANSI для функции **MessageBox**; **MessageBoxW** — версия для Юникода.</span><span class="sxs-lookup"><span data-stu-id="04bfe-110">**MessageBoxA** is the ANSI entry point for the **MessageBox** function; **MessageBoxW** is the Unicode version.</span></span> <span data-ttu-id="04bfe-111">Чтобы получить список имен функций в конкретной библиотеке DLL, например user32.dll, можно воспользоваться различными средствами командной строки.</span><span class="sxs-lookup"><span data-stu-id="04bfe-111">You can list function names for a specific DLL, such as user32.dll, by running a variety of command-line tools.</span></span> <span data-ttu-id="04bfe-112">Например, для получения имен функций можно воспользоваться `dumpbin /exports user32.dll` или `link /dump /exports user32.dll`.</span><span class="sxs-lookup"><span data-stu-id="04bfe-112">For example, you can use `dumpbin /exports user32.dll` or `link /dump /exports user32.dll` to obtain function names.</span></span>  
   
- Неуправляемую функцию в коде можно переименовать, при условии что новое имя функции соответствует исходной точке входа в библиотеке DLL. Инструкции по переименованию неуправляемой функции DLL в управляемом исходном коде см. в разделе [Указание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md).  
+ <span data-ttu-id="04bfe-113">Неуправляемую функцию в коде можно переименовать, при условии что новое имя функции соответствует исходной точке входа в библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="04bfe-113">You can rename an unmanaged function to whatever you like within your code as long as you map the new name to the original entry point in the DLL.</span></span> <span data-ttu-id="04bfe-114">Инструкции по переименованию неуправляемой функции DLL в управляемом исходном коде см. в разделе [Указание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md).</span><span class="sxs-lookup"><span data-stu-id="04bfe-114">For instructions on renaming an unmanaged DLL function in managed source code, see the [Specifying an Entry Point](../../../docs/framework/interop/specifying-an-entry-point.md).</span></span>  
   
- Вызов неуправляемого кода позволяет управлять значительной частью операционной системы с помощью вызова функций в API Win32 и других библиотеках DLL. Наряду с API Win32 существует несколько других API-интерфейсов и библиотек DLL, для которых доступен вызов неуправляемого кода.  
+ <span data-ttu-id="04bfe-115">Вызов неуправляемого кода позволяет управлять значительной частью операционной системы с помощью вызова функций в API Win32 и других библиотеках DLL.</span><span class="sxs-lookup"><span data-stu-id="04bfe-115">Platform invoke enables you to control a significant portion of the operating system by calling functions in the Win32 API and other DLLs.</span></span> <span data-ttu-id="04bfe-116">Наряду с API Win32 существует несколько других API-интерфейсов и библиотек DLL, для которых доступен вызов неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="04bfe-116">In addition to the Win32 API, there are numerous other APIs and DLLs available to you through platform invoke.</span></span>  
   
- В следующей таблице описаны несколько распространенных библиотек DLL в API Win32.  
+ <span data-ttu-id="04bfe-117">В следующей таблице описаны несколько распространенных библиотек DLL в API Win32.</span><span class="sxs-lookup"><span data-stu-id="04bfe-117">The following table describes several commonly used DLLs in the Win32 API.</span></span>  
   
-|DLL|Описание содержимого|  
+|<span data-ttu-id="04bfe-118">DLL</span><span class="sxs-lookup"><span data-stu-id="04bfe-118">DLL</span></span>|<span data-ttu-id="04bfe-119">Описание содержимого</span><span class="sxs-lookup"><span data-stu-id="04bfe-119">Description of Contents</span></span>|  
 |---------|-----------------------------|  
-|GDI32.dll|Функции интерфейса графических устройств (GDI) для вывода информации на устройство, например функции для рисования и управления шрифтами.|  
-|Kernel32.dll|Низкоуровневые функции операционной системы для управления памятью и обработки ресурсов.|  
-|User32.dll|Функции управления Windows для обработки сообщений, таймеров, меню и обмена данными.|  
+|<span data-ttu-id="04bfe-120">GDI32.dll</span><span class="sxs-lookup"><span data-stu-id="04bfe-120">GDI32.dll</span></span>|<span data-ttu-id="04bfe-121">Функции интерфейса графических устройств (GDI) для вывода информации на устройство, например функции для рисования и управления шрифтами.</span><span class="sxs-lookup"><span data-stu-id="04bfe-121">Graphics Device Interface (GDI) functions for device output, such as those for drawing and font management.</span></span>|  
+|<span data-ttu-id="04bfe-122">Kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="04bfe-122">Kernel32.dll</span></span>|<span data-ttu-id="04bfe-123">Низкоуровневые функции операционной системы для управления памятью и обработки ресурсов.</span><span class="sxs-lookup"><span data-stu-id="04bfe-123">Low-level operating system functions for memory management and resource handling.</span></span>|  
+|<span data-ttu-id="04bfe-124">User32.dll</span><span class="sxs-lookup"><span data-stu-id="04bfe-124">User32.dll</span></span>|<span data-ttu-id="04bfe-125">Функции управления Windows для обработки сообщений, таймеров, меню и обмена данными.</span><span class="sxs-lookup"><span data-stu-id="04bfe-125">Windows management functions for message handling, timers, menus, and communications.</span></span>|  
   
- Полную документацию по API Win32 см. в разделе "Пакет SDK платформы". Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ <span data-ttu-id="04bfe-126">Полную документацию по API Win32 см. в разделе "Пакет SDK платформы".</span><span class="sxs-lookup"><span data-stu-id="04bfe-126">For complete documentation on the Win32 API, see the Platform SDK.</span></span> <span data-ttu-id="04bfe-127">Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="04bfe-127">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
- [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-
+## <a name="see-also"></a><span data-ttu-id="04bfe-128">См. также</span><span class="sxs-lookup"><span data-stu-id="04bfe-128">See Also</span></span>  
+ [<span data-ttu-id="04bfe-129">Использование неуправляемых функций DLL</span><span class="sxs-lookup"><span data-stu-id="04bfe-129">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [<span data-ttu-id="04bfe-130">Задание точки входа</span><span class="sxs-lookup"><span data-stu-id="04bfe-130">Specifying an Entry Point</span></span>](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [<span data-ttu-id="04bfe-131">Создание класса, содержащего функции DLL</span><span class="sxs-lookup"><span data-stu-id="04bfe-131">Creating a Class to Hold DLL Functions</span></span>](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
+ [<span data-ttu-id="04bfe-132">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="04bfe-132">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="04bfe-133">Вызов функции DLL</span><span class="sxs-lookup"><span data-stu-id="04bfe-133">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)

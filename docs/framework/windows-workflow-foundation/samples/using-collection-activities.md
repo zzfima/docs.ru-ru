@@ -1,56 +1,59 @@
 ---
-title: "Использование действий с коллекциями | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование действий с коллекциями"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: aa7b3b6815adfba9367585174b242aa7410d578e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование действий с коллекциями
-В этом образце демонстрируется использование действий коллекции \(<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> и <xref:System.Activities.Statements.RemoveFromCollection%601>\) с классом, реализующим интерфейс <xref:System.Collections.ICollection>, и создание пользовательского действия, которое выполняет итерацию по коллекции для распечатки содержания каждого из элементов коллекции.Пользовательское действие, называемое `PrintCollection`, выводит на консоль элементы коллекции с названием `Numbers`.  
+# <a name="using-collection-activities"></a><span data-ttu-id="50ef4-102">Использование действий с коллекциями</span><span class="sxs-lookup"><span data-stu-id="50ef4-102">Using Collection Activities</span></span>
+<span data-ttu-id="50ef4-103">В этом образце демонстрируется использование действий коллекции (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> и <xref:System.Activities.Statements.RemoveFromCollection%601>) с классом, реализующим интерфейс <xref:System.Collections.ICollection>, и создание пользовательского действия, которое выполняет итерацию по коллекции для распечатки содержания каждого из элементов коллекции.</span><span class="sxs-lookup"><span data-stu-id="50ef4-103">This sample demonstrates how to use the collection activities (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, and <xref:System.Activities.Statements.RemoveFromCollection%601>) with a class that implements the <xref:System.Collections.ICollection> interface and how to create a custom activity that iterates over a collection to print out the contents of each element in the collection.</span></span> <span data-ttu-id="50ef4-104">Пользовательское действие, называемое `PrintCollection`, выводит на консоль элементы коллекции с названием `Numbers`.</span><span class="sxs-lookup"><span data-stu-id="50ef4-104">The custom activity, which is named `PrintCollection`, prints to the console the item members of a collection named `Numbers`.</span></span>  
   
- В следующей таблице представлены четыре действия, посредством которых осуществляется управление коллекциями в рабочих процессах.  
+ <span data-ttu-id="50ef4-105">В следующей таблице представлены четыре действия, посредством которых осуществляется управление коллекциями в рабочих процессах.</span><span class="sxs-lookup"><span data-stu-id="50ef4-105">The following table describes the four activities that provide collection manipulation for workflows.</span></span>  
   
-|Название действия|Описание|  
-|-----------------------|--------------|  
-|<xref:System.Activities.Statements.AddToCollection%601>|Добавляет элемент в коллекцию.|  
-|<xref:System.Activities.Statements.ClearCollection%601>|Очищает коллекцию, удаляя все элементы.|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|Если элемент присутствует в коллекции, возвращает `true`.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Удаляет элемент из коллекции.|  
+|<span data-ttu-id="50ef4-106">Название действия</span><span class="sxs-lookup"><span data-stu-id="50ef4-106">Activity name</span></span>|<span data-ttu-id="50ef4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="50ef4-107">Description</span></span>|  
+|-------------------|-----------------|  
+|<xref:System.Activities.Statements.AddToCollection%601>|<span data-ttu-id="50ef4-108">Добавляет элемент в коллекцию.</span><span class="sxs-lookup"><span data-stu-id="50ef4-108">Adds an item to a collection.</span></span>|  
+|<xref:System.Activities.Statements.ClearCollection%601>|<span data-ttu-id="50ef4-109">Очищает коллекцию, удаляя все элементы.</span><span class="sxs-lookup"><span data-stu-id="50ef4-109">Clears all items in a collection</span></span>|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|<span data-ttu-id="50ef4-110">Если элемент присутствует в коллекции, возвращает `true`.</span><span class="sxs-lookup"><span data-stu-id="50ef4-110">Returns `true` if specified item exists in collection.</span></span>|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|<span data-ttu-id="50ef4-111">Удаляет элемент из коллекции.</span><span class="sxs-lookup"><span data-stu-id="50ef4-111">Removes an item from a collection.</span></span>|  
   
- Образец состоит из двух решений, одно из которых находится в каталоге CodedWorkflow, а другое — в каталоге DesignerWorkflow.Они демонстрируют два разных способа использования действий для выполнения одинаковых задач.  
+ <span data-ttu-id="50ef4-112">Образец состоит из двух решений, одно из которых находится в каталоге CodedWorkflow, а другое - в каталоге DesignerWorkflow.</span><span class="sxs-lookup"><span data-stu-id="50ef4-112">The sample consists of two solutions, one under the CodedWorkflow directory and the other under the DesignerWorkflow directory.</span></span> <span data-ttu-id="50ef4-113">Они демонстрируют два разных способа использования действий для выполнения одинаковых задач.</span><span class="sxs-lookup"><span data-stu-id="50ef4-113">They demonstrate two different ways of using the activities for the same purposes.</span></span>  
   
-||||  
+|<span data-ttu-id="50ef4-114">Решение</span><span class="sxs-lookup"><span data-stu-id="50ef4-114">Solution</span></span>|<span data-ttu-id="50ef4-115">Описание</span><span class="sxs-lookup"><span data-stu-id="50ef4-115">Description</span></span>|<span data-ttu-id="50ef4-116">Основные файлы</span><span class="sxs-lookup"><span data-stu-id="50ef4-116">Main Files</span></span>|  
 |-|-|-|  
-|Решение|Описание|Основные файлы|  
-|CodedWorkflow|Образец клиентского приложения, демонстрирующий, как вызывать действия коллекции программным образом.|**PrintCollection.cs**: Вспомогательное действие для вывода каждого элемента коллекции на консоль.<br /><br /> **Program.cs**: программным образом создает последовательное действие, содержащее ряд действий коллекции, и выполняет это действие.|  
-|DesignerWorkflow|Образец клиентского приложения, демонстрирующий, как декларативно использовать действия коллекции в конструкторе рабочего процесса.|**CollectionWorkflow.xaml**: рабочий процесс, созданный декларативно с конструктором, использующим действия коллекции.<br /><br /> **PrintCollection.cs**: Вспомогательное действие для вывода каждого элемента коллекции на консоль.<br /><br /> **Program.cs**: вызывает рабочий процесс, описанный в CollectionWorkflow.xaml.|  
+|<span data-ttu-id="50ef4-117">CodedWorkflow</span><span class="sxs-lookup"><span data-stu-id="50ef4-117">CodedWorkflow</span></span>|<span data-ttu-id="50ef4-118">Образец клиентского приложения, демонстрирующий, как вызывать действия коллекции программным образом.</span><span class="sxs-lookup"><span data-stu-id="50ef4-118">Sample client application that demonstrates how to invoke the collection activities programmatically.</span></span>|<span data-ttu-id="50ef4-119">**PrintCollection.cs**: вспомогательное действие для вывода каждого элемента в коллекции на консоль.</span><span class="sxs-lookup"><span data-stu-id="50ef4-119">**PrintCollection.cs**: helper activity to print out to the console every item in a collection.</span></span><br /><br /> <span data-ttu-id="50ef4-120">**Program.cs**: программным образом создает последовательное действие, содержащее ряд действий коллекции и выполняет его.</span><span class="sxs-lookup"><span data-stu-id="50ef4-120">**Program.cs**: programmatically builds a sequence activity that contains a series of collection activities, and executes it.</span></span>|  
+|<span data-ttu-id="50ef4-121">DesignerWorkflow</span><span class="sxs-lookup"><span data-stu-id="50ef4-121">DesignerWorkflow</span></span>|<span data-ttu-id="50ef4-122">Образец клиентского приложения, демонстрирующий, как декларативно использовать действия коллекции в конструкторе рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="50ef4-122">Sample client application that demonstrates how to use the collection activities declaratively in the workflow designer.</span></span>|<span data-ttu-id="50ef4-123">**CollectionWorkflow.xaml**: рабочий процесс, созданный декларативно с конструктором, использующим действия коллекции.</span><span class="sxs-lookup"><span data-stu-id="50ef4-123">**CollectionWorkflow.xaml**: a workflow created declaratively with the designer that uses the collection activities.</span></span><br /><br /> <span data-ttu-id="50ef4-124">**PrintCollection.cs**: вспомогательное действие для вывода каждого элемента в коллекции на консоль.</span><span class="sxs-lookup"><span data-stu-id="50ef4-124">**PrintCollection.cs**: helper activity to print out to the console every item in a collection.</span></span><br /><br /> <span data-ttu-id="50ef4-125">**Program.cs**: вызывает рабочий процесс, описанный в CollectionWorkflow.xaml.</span><span class="sxs-lookup"><span data-stu-id="50ef4-125">**Program.cs**: invokes the workflow described in CollectionWorkflow.xaml.</span></span>|  
   
- При демонстрации элементы коллекции `Numbers` выводятся на консоль с использованием определенного пользователем действия под названием `PrintCollection`.  
+ <span data-ttu-id="50ef4-126">При демонстрации элементы коллекции `Numbers` выводятся на консоль с использованием определенного пользователем действия под названием `PrintCollection`.</span><span class="sxs-lookup"><span data-stu-id="50ef4-126">In the demonstration, the item members of collection `Numbers` are printed on the console using a custom-defined activity called `PrintCollection`.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="50ef4-127">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="50ef4-127">To use this sample</span></span>  
   
-1.  Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения Collection.sln.  
+1.  <span data-ttu-id="50ef4-128">Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения Collection.sln.</span><span class="sxs-lookup"><span data-stu-id="50ef4-128">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the Collection.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="50ef4-129">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="50ef4-129">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="50ef4-130">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="50ef4-130">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="50ef4-131">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="50ef4-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="50ef4-132">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="50ef4-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="50ef4-133">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="50ef4-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="50ef4-134">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="50ef4-134">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="50ef4-135">См. также</span><span class="sxs-lookup"><span data-stu-id="50ef4-135">See Also</span></span>

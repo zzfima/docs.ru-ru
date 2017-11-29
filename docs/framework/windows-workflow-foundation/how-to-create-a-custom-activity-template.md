@@ -1,68 +1,69 @@
 ---
-title: "Как создать шаблон настраиваемого действия | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать шаблон настраиваемого действия"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90c92295bbccc7cf7e50a9da5bd52110d9d26a3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать шаблон настраиваемого действия
-Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную.Эти настраиваемые шаблоны могут быть сделаны доступными в **области элементов** в [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в предварительно настроенную область конструктора.[!INCLUDE[wfd2](../../../includes/wfd2-md.md)] поставляется с хорошими примерами таких шаблонов: [Конструктор шаблона SendAndReceiveReply](../Topic/SendAndReceiveReply%20Template%20Designer.md) и [Конструктор шаблона ReceiveAndSendReply](../Topic/ReceiveAndSendReply%20Template%20Designer.md) в категории [Конструкторы действий обмена сообщениями](../Topic/Messaging%20Activity%20Designers.md).  
+# <a name="how-to-create-a-custom-activity-template"></a><span data-ttu-id="1b165-102">Как создать шаблон настраиваемого действия</span><span class="sxs-lookup"><span data-stu-id="1b165-102">How to: Create a Custom Activity Template</span></span>
+<span data-ttu-id="1b165-103">Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную.</span><span class="sxs-lookup"><span data-stu-id="1b165-103">Custom activity templates are used to customize the configuration of activities, including custom composite activities, so that users do not have to create each activity individually and configure their properties and other settings manually.</span></span> <span data-ttu-id="1b165-104">Эти настраиваемые шаблоны доступны в **элементов** на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в область конструктора предварительно настроенных.</span><span class="sxs-lookup"><span data-stu-id="1b165-104">These custom templates can be made available in the **Toolbox** on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] or from a rehosted designer, from which users can drag them onto the preconfigured design surface.</span></span> [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]<span data-ttu-id="1b165-105">поставляется с хорошими примерами такие шаблоны: [конструктора шаблонов SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) и [конструктора шаблонов ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) в [конструкторы действий обмена сообщениями](/visualstudio/workflow-designer/messaging-activity-designers) категории.</span><span class="sxs-lookup"><span data-stu-id="1b165-105"> ships with good examples of such templates: the [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) and the [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) in the [Messaging Activity Designers](/visualstudio/workflow-designer/messaging-activity-designers) category.</span></span>  
   
- Первая процедура в этом подразделе описывает способ создания настраиваемого шаблона действий для действия **Delay**, а вторая процедура кратко описывает, как сделать его доступным в объекте [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] для проверки, что настраиваемый шаблон работает.  
+ <span data-ttu-id="1b165-106">В первой процедуре в этом разделе описывается создание настраиваемого шаблона действий для **задержки** действия и вторая процедура кратко описывает, как сделать его доступным в [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] для проверки работы пользовательского шаблона.</span><span class="sxs-lookup"><span data-stu-id="1b165-106">The first procedure in this topic describes how to create a custom activity template for a **Delay** activity and the second procedure describes briefly how to make it available in a [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] to verify that the custom template works.</span></span>  
   
- В шаблонах настраиваемых действий должен быть реализован интерфейс <xref:System.Activities.Presentation.IActivityTemplateFactory>.Интерфейс имеет один метод <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A>, с помощью которого можно создать и настроить экземпляры действий, используемые в шаблоны.  
+ <span data-ttu-id="1b165-107">В шаблонах настраиваемых действий должен быть реализован интерфейс <xref:System.Activities.Presentation.IActivityTemplateFactory>.</span><span class="sxs-lookup"><span data-stu-id="1b165-107">Custom activity templates must implement the <xref:System.Activities.Presentation.IActivityTemplateFactory>.</span></span> <span data-ttu-id="1b165-108">Интерфейс имеет один метод <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A>, с помощью которого можно создать и настроить экземпляры действий, используемые в шаблоны.</span><span class="sxs-lookup"><span data-stu-id="1b165-108">The interface has a single <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> method with which you can create and configure the activity instances used in the template.</span></span>  
   
-### Создание шаблона для действия Delay  
+### <a name="to-create-a-template-for-the-delay-activity"></a><span data-ttu-id="1b165-109">Создание шаблона для действия Delay</span><span class="sxs-lookup"><span data-stu-id="1b165-109">To create a template for the Delay activity</span></span>  
   
-1.  Запустите среду [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="1b165-110">Запустите [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1b165-110">Start [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  В меню **Файл** последовательно выберите команды **Создать** и **Проект**.  
+2.  <span data-ttu-id="1b165-111">На **файл** последовательно выберите пункты **New**, а затем выберите **проекта**.</span><span class="sxs-lookup"><span data-stu-id="1b165-111">On the **File** menu, point to **New**, and then select **Project**.</span></span>  
   
-     Откроется диалоговое окно **Новый проект**.  
+     <span data-ttu-id="1b165-112">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="1b165-112">The **New Project** dialog box opens.</span></span>  
   
-3.  В области **Типы проектов** выберите категорию **Рабочий процесс** из групп проектов **Visual C\#** или **Visual Basic** \(в зависимости от языка программирования\).  
+3.  <span data-ttu-id="1b165-113">В **типы проектов** выберите **рабочего процесса** либо из **Visual C#** проектов или **Visual Basic** группирований, в зависимости от вашей Выбор языка.</span><span class="sxs-lookup"><span data-stu-id="1b165-113">In the **Project Types** pane, select **Workflow** from either the **Visual C#** projects or **Visual Basic** groupings depending on your language preference.</span></span>  
   
-4.  В области **Шаблоны** выберите **Библиотека действий**.  
+4.  <span data-ttu-id="1b165-114">В **шаблоны** выберите **библиотеки действий**.</span><span class="sxs-lookup"><span data-stu-id="1b165-114">In the **Templates** pane, select **Activity Library**.</span></span>  
   
-5.  В поле **Имя** введите `DelayActivityTemplate`.  
+5.  <span data-ttu-id="1b165-115">В **имя** введите `DelayActivityTemplate`.</span><span class="sxs-lookup"><span data-stu-id="1b165-115">In the **Name** box, enter `DelayActivityTemplate`.</span></span>  
   
-6.  Оставьте значения по умолчанию текстовых полей **Расположение** и **Имя решения**, затем нажмите кнопку **ОК**.  
+6.  <span data-ttu-id="1b165-116">Примите значения по умолчанию в **расположение** и **имя решения** текстовые поля и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="1b165-116">Accept the defaults in the **Location** and **Solution name** text boxes, and then click **OK**.</span></span>  
   
-7.  В **обозревателе решений** щелкните правой кнопкой мыши папку References проекта DelayActivityTemplate и выберите команду **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.  
+7.  <span data-ttu-id="1b165-117">Щелкните правой кнопкой мыши каталог ссылки на проект в окне **обозревателе решений** и выберите **добавить ссылку** Открытие **добавить ссылку** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="1b165-117">Right-click the References directory of the DelayActivityTemplate project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-8.  Перейдите на вкладку **.NET** и выберите **PresentationFramework** из столбца **Имя компонента** слева, затем нажмите кнопку **ОК**, чтобы добавить ссылку на файл PresentationFramework.dll.  
+8.  <span data-ttu-id="1b165-118">Последовательно выберите пункты **.NET** и выберите **PresentationFramework** из **имя компонента** столбец слева, затем щелкните **ОК** Добавление ссылки файл PresentationFramework.dll.</span><span class="sxs-lookup"><span data-stu-id="1b165-118">Go to the **.NET** tab and select **PresentationFramework** from the **Component Name** column on the left and click **OK** to add a reference to the PresentationFramework.dll file.</span></span>  
   
-9. Повторите процедуру для добавления ссылок на файлы System.Activities.Presentation.dll and the WindowsBase.dll.  
+9. <span data-ttu-id="1b165-119">Повторите процедуру для добавления ссылок на файлы System.Activities.Presentation.dll and the WindowsBase.dll.</span><span class="sxs-lookup"><span data-stu-id="1b165-119">Repeat this procedure to add references to the System.Activities.Presentation.dll and the WindowsBase.dll files.</span></span>  
   
-10. Щелкните правой кнопкой мыши проект в окне **Обозреватель решений**, укажите пункт **Добавить** и выберите пункт **Новый элемент**, чтобы открыть диалоговое окно **Добавление нового элемента**.  
+10. <span data-ttu-id="1b165-120">Щелкните правой кнопкой мыши проект в окне **обозревателе решений** и выберите **добавить** и затем **новый элемент** Открытие **Добавление нового элемента**диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="1b165-120">Right-click the DelayActivityTemplate project in **Solution Explorer** and choose **Add** and then **New Item** to open the **Add New Item** dialog box.</span></span>  
   
-11. Выберите шаблон **Class**, назовите его MyDelayTemplate, затем нажмите кнопку **ОК**.  
+11. <span data-ttu-id="1b165-121">Выберите **класса** шаблона, назовите его MyDelayTemplate, затем щелкните **ОК**.</span><span class="sxs-lookup"><span data-stu-id="1b165-121">Select the **Class** template, name it MyDelayTemplate, and then click **OK**.</span></span>  
   
-12. Откройте файл MyDelayTemplate.cs и добавьте следующие инструкции.  
+12. <span data-ttu-id="1b165-122">Откройте файл MyDelayTemplate.cs и добавьте следующие инструкции.</span><span class="sxs-lookup"><span data-stu-id="1b165-122">Open the MyDelayTemplate.cs file and add the following statements.</span></span>  
   
     ```  
-  
     //Namespaces added  
     using System.Activities;  
     using System.Activities.Statements;  
     using System.Activities.Presentation;  
     using System.Windows;  
-  
     ```  
   
-13. Реализуйте метод <xref:System.Activities.Presentation.IActivityTemplateFactory> с помощью класса `MyDelayActivity` со следующим кодом.Это настраивает задержку на длительность 10 секунд.  
+13. <span data-ttu-id="1b165-123">Реализуйте метод <xref:System.Activities.Presentation.IActivityTemplateFactory> с помощью класса `MyDelayActivity` со следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="1b165-123">Implement the <xref:System.Activities.Presentation.IActivityTemplateFactory> with the `MyDelayActivity` class with the following code.</span></span> <span data-ttu-id="1b165-124">Это настраивает задержку на длительность 10 секунд.</span><span class="sxs-lookup"><span data-stu-id="1b165-124">This configures the delay to have a duration of 10 seconds.</span></span>  
   
     ```  
-  
     public sealed class MyDelayActivity : IActivityTemplateFactory  
     {  
         public Activity Create(System.Windows.DependencyObject target)  
@@ -75,36 +76,34 @@ caps.handback.revision: 4
             };  
         }  
     }  
-  
     ```  
   
-14. Чтобы создать файл DelayActivityTemplate.dll, выберите команду **Построить решение** в меню **Построение**.  
+14. <span data-ttu-id="1b165-125">Выберите **построить решение** из **построения** меню, чтобы создать файл DelayActivityTemplate.dll.</span><span class="sxs-lookup"><span data-stu-id="1b165-125">Select **Build Solution** from the **Build** menu to generate the DelayActivityTemplate.dll file.</span></span>  
   
-### Обеспечение доступности шаблона в конструкторе рабочего процесса  
+### <a name="to-make-the-template-available-in-a-workflow-designer"></a><span data-ttu-id="1b165-126">Обеспечение доступности шаблона в конструкторе рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="1b165-126">To make the template available in a Workflow Designer</span></span>  
   
-1.  Щелкните правой кнопкой мыши решение DelayActivityTemplate в окне **Обозреватель решений**, укажите пункт **Добавить** и выберите пункт **Новый проект**, чтобы открыть диалоговое окно **Добавление нового проекта**.  
+1.  <span data-ttu-id="1b165-127">Щелкните правой кнопкой мыши решение DelayActivityTemplate **обозревателе решений** и выберите **добавить** и затем **новый проект** открыть **Добавление нового проекта** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="1b165-127">Right-click the DelayActivityTemplate solution in **Solution Explorer** and choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
   
-2.  Выберите шаблон **Workflow Console Application**, назовите его `CustomActivityTemplateApp`, затем нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="1b165-128">Выберите **консольное приложение рабочего процесса** шаблона, назовите его `CustomActivityTemplateApp`, а затем нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="1b165-128">Select the **Workflow Console Application** template, name it `CustomActivityTemplateApp`, and then click **OK**.</span></span>  
   
-3.  В **обозревателе решений** щелкните правой кнопкой мыши папку References проекта CustomActivityTemplateApp и выберите команду **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.  
+3.  <span data-ttu-id="1b165-129">Щелкните правой кнопкой мыши каталог References проекта CustomActivityTemplateApp в **обозревателе решений** и выберите **добавить ссылку** Открытие **добавить ссылку** диалоговое окно поле.</span><span class="sxs-lookup"><span data-stu-id="1b165-129">Right-click the References directory of the CustomActivityTemplateApp project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-4.  Перейдите на вкладку **Проекты** и выберите **DelayActivityTemplate** из столбца **Имя проекта** слева, затем нажмите кнопку **ОК**, чтобы добавить ссылку на файл DelayActivityTemplate.dll.  
+4.  <span data-ttu-id="1b165-130">Последовательно выберите пункты **проекты** и выберите **DelayActivityTemplate** из **имя проекта** столбец слева, затем щелкните **ОК** для добавления ссылка на файл DelayActivityTemplate.dll, созданный в первой процедуре.</span><span class="sxs-lookup"><span data-stu-id="1b165-130">Go to the **Projects** tab and select **DelayActivityTemplate** from the **Project Name** column on the left and click **OK** to add a reference to the DelayActivityTemplate.dll file that you created in the first procedure.</span></span>  
   
-5.  В окне **Обозреватель решений** щелкните правой кнопкой мыши проект CustomActivityTemplateApp и выберите команду **Построить**, чтобы выполнить компиляцию приложения.  
+5.  <span data-ttu-id="1b165-131">Щелкните правой кнопкой мыши проект CustomActivityTemplateApp **обозревателе решений** и выберите **построения** для компиляции приложения.</span><span class="sxs-lookup"><span data-stu-id="1b165-131">Right-click the CustomActivityTemplateApp project in **Solution Explorer** and choose **Build** to compile the application.</span></span>  
   
-6.  В **обозревателе решений** щелкните правой кнопкой мыши проект CustomActivityTemplateApp и выберите команду **Установить как запускаемый проект**.  
+6.  <span data-ttu-id="1b165-132">Щелкните правой кнопкой мыши проект CustomActivityTemplateApp **обозревателе решений** и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="1b165-132">Right-click the CustomActivityTemplateApp project in **Solution Explorer** and choose **Set as Startup Project**.</span></span>  
   
-7.  Выберите команду **Запустить без отладки** из меню **Отладка** и нажмите любую клавишу для продолжения, когда появится запрос в окне cmd.exe.  
+7.  <span data-ttu-id="1b165-133">Выберите **Запуск без отладки** из **отладки** меню и нажмите любую клавишу для продолжения при появлении запроса в окне cmd.exe.</span><span class="sxs-lookup"><span data-stu-id="1b165-133">Select **Start Without Debugging** from the **Debug** menu and press any key to continue when prompted from the cmd.exe window.</span></span>  
   
-8.  Откройте файл Workflow1.xaml и откройте **область инструментов**.  
+8.  <span data-ttu-id="1b165-134">Откройте файл Workflow1.xaml и откройте **элементов**.</span><span class="sxs-lookup"><span data-stu-id="1b165-134">Open the Workflow1.xaml file and open the **Toolbox**.</span></span>  
   
-9. Перейдите к шаблону **MyDelayActivity** в категории **DelayActivityTemplate**.Перетащите его в область конструктора.В окне **Свойства** подтвердите, что для свойства `Duration` установлено значение 10 секунд.  
+9. <span data-ttu-id="1b165-135">Найдите **MyDelayActivity** шаблона в **DelayActivityTemplate** категории.</span><span class="sxs-lookup"><span data-stu-id="1b165-135">Locate the **MyDelayActivity** template in the **DelayActivityTemplate** category.</span></span> <span data-ttu-id="1b165-136">Перетащите его в область конструктора.</span><span class="sxs-lookup"><span data-stu-id="1b165-136">Drag it onto the design surface.</span></span> <span data-ttu-id="1b165-137">Убедитесь в **свойства** окна, `Duration` свойство значение 10 секунд.</span><span class="sxs-lookup"><span data-stu-id="1b165-137">Confirm in the **Properties** window that the `Duration` property has been set to 10 seconds.</span></span>  
   
-## Пример  
- Теперь файл MyDelayActivity.cs должен содержать следующий код.  
+## <a name="example"></a><span data-ttu-id="1b165-138">Пример</span><span class="sxs-lookup"><span data-stu-id="1b165-138">Example</span></span>  
+ <span data-ttu-id="1b165-139">Теперь файл MyDelayActivity.cs должен содержать следующий код.</span><span class="sxs-lookup"><span data-stu-id="1b165-139">The MyDelayActivity.cs file should contain the following code.</span></span>  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -131,9 +130,8 @@ namespace DelayActivityTemplate
         }  
     }  
 }  
-  
 ```  
   
-## См. также  
- <xref:System.Activities.Presentation.IActivityTemplateFactory>   
- [Рекомендации по настройке конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//customizing-the-workflow-design-experience.md)
+## <a name="see-also"></a><span data-ttu-id="1b165-140">См. также</span><span class="sxs-lookup"><span data-stu-id="1b165-140">See Also</span></span>  
+ <xref:System.Activities.Presentation.IActivityTemplateFactory>  
+ [<span data-ttu-id="1b165-141">Настройка конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="1b165-141">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

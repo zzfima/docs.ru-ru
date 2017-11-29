@@ -1,94 +1,97 @@
 ---
-title: "Элемент &lt;defaultHttpCachePolicy&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<defaultHttpCachePolicy> - элемент"
-  - "defaultHttpCachePolicy - элемент"
+title: "&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultHttpCachePolicy
+helpviewer_keywords:
+- defaultHttpCachePolicy element
+- <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-caps.latest.revision: 19
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f2db2fd10ca20209c21c8add71d8ee4f26951ca6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;defaultHttpCachePolicy&gt; (параметры сети)
-Указывает, активна ли функция HTTP\-кэширования, и описывает политику кэширования по умолчанию.  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a><span data-ttu-id="00c1c-102">&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="00c1c-102">&lt;defaultHttpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="00c1c-103">Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="00c1c-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="00c1c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="00c1c-104">\<configuration></span></span>  
+<span data-ttu-id="00c1c-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="00c1c-105">\<system.net></span></span>  
+<span data-ttu-id="00c1c-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="00c1c-106">\<requestCaching></span></span>  
+<span data-ttu-id="00c1c-107">\<defaultHttpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="00c1c-107">\<defaultHttpCachePolicy></span></span>  
   
-```  
-< defaultHttpCachePolicy  
+## <a name="syntax"></a><span data-ttu-id="00c1c-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="00c1c-108">Syntax</span></span>  
+  
+```xml  
+<defaultHttpCachePolicy  
   policyLevel="BypassCache|Default"  
-  minimumFresh="d.hh:mm:ss"|"minValue"  
-  maximumAge  ="d.hh:mm:ss"|"maxValue"  
-  maximumStale="d.hh:mm:ss"|"maxValue"  
+  minimumFresh="d.hh:mm:ss|minValue|maxValue"  
+  maximumAge="d.hh:mm:ss|minValue|maxValue"  
+  maximumStale="d.hh:mm:ss|minValue|maxValue"  
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00c1c-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="00c1c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="00c1c-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="00c1c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="00c1c-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="00c1c-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`maximumAge`|Задает максимальный интервал времени до присвоения кэшированному объекту пометки об истечении срока действия.|  
-|`maximumStale`|Задает максимальный интервал времени после запрограммированного обновления до присвоения кэшированному объекту пометки об истечении срока действия.|  
-|`minimumFresh`|Задает минимальное время актуальности кэшированного объекта.|  
-|`policyLevel`|Указывает, является ли политика кэширования автоматической или кэш пропускается.  Значение по умолчанию — `BypassCache`.|  
+|<span data-ttu-id="00c1c-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="00c1c-112">Attribute</span></span>|<span data-ttu-id="00c1c-113">Описание</span><span class="sxs-lookup"><span data-stu-id="00c1c-113">Description</span></span>|  
+|---------------|-----------------|  
+|`maximumAge`|<span data-ttu-id="00c1c-114">Указывает максимальный интервал времени перед кэшированный объект помечается как устаревшая.</span><span class="sxs-lookup"><span data-stu-id="00c1c-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="00c1c-115">Указывает максимальный интервал времени после запрограммированного обновления время ожидания до кэшированный объект помечается как устаревшая.</span><span class="sxs-lookup"><span data-stu-id="00c1c-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="00c1c-116">Указывает минимальное время актуальности кэшированного объекта.</span><span class="sxs-lookup"><span data-stu-id="00c1c-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="00c1c-117">Указывает, является ли политика кэширования автоматической или кэш пропускается.</span><span class="sxs-lookup"><span data-stu-id="00c1c-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="00c1c-118">Значение по умолчанию — `BypassCache`.</span><span class="sxs-lookup"><span data-stu-id="00c1c-118">The default value is `BypassCache`.</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="00c1c-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="00c1c-119">Child Elements</span></span>  
+ <span data-ttu-id="00c1c-120">Нет</span><span class="sxs-lookup"><span data-stu-id="00c1c-120">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="00c1c-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="00c1c-121">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Управляет механизмом кэширования сетевых запросов.|  
+|<span data-ttu-id="00c1c-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="00c1c-122">Element</span></span>|<span data-ttu-id="00c1c-123">Описание</span><span class="sxs-lookup"><span data-stu-id="00c1c-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="00c1c-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="00c1c-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="00c1c-125">Определяет механизм кэширования для сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="00c1c-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## Заметки  
- Значение атрибута `policyLevel` равно `BypassCache` или `Default`.  
+## <a name="remarks"></a><span data-ttu-id="00c1c-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="00c1c-126">Remarks</span></span>  
+ <span data-ttu-id="00c1c-127">Значение для `policyLevel` атрибут является либо `BypassCache` или `Default`.</span><span class="sxs-lookup"><span data-stu-id="00c1c-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- Значения элементов `maximumAge`, `maximumStale` и `minimumFresh` задаются либо как явные временные интервалы в формате *d*.*hh*:*mm*:*ss* \(дни, часы, минуты и секунды\), либо константами `minValue` или `maxValue`, в зависимости от ситуации.  
+ <span data-ttu-id="00c1c-128">Значения для `maximumAge`, `maximumStale`, и `minimumFresh` элементы, либо явные временной интервал, в формате *d*. *hh*:*мм*:*ss* (дней, часов, минут и секунд), или константы `minValue` или `maxValue`соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="00c1c-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="00c1c-129">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="00c1c-129">Configuration Files</span></span>  
+ <span data-ttu-id="00c1c-130">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="00c1c-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- Следующий пример кода задает минимальное время актуальности равное шести часам, максимальный срок жизни равный двум дням и максимальное время устаревания равное четырем часам.  
+## <a name="example"></a><span data-ttu-id="00c1c-131">Пример</span><span class="sxs-lookup"><span data-stu-id="00c1c-131">Example</span></span>  
+ <span data-ttu-id="00c1c-132">Приведенный ниже показано, как указать минимальное время актуальности шести часов, максимальный срок жизни двух дней и максимальное время устаревания, равной четырем часам.</span><span class="sxs-lookup"><span data-stu-id="00c1c-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <requestCaching>  
-      <defaultHttpCachePolicy>  
-        <set minimumFresh="0.06:00:00" />  
-        <set maximumAge  ="2.00:00:00" />  
-        <set maximumStale="0.04:00:00" />  
-      </defaultHttpCachePolicy>  
+      <defaultHttpCachePolicy  
+        minimumFresh="0.06:00:00"  
+        maximumAge="2.00:00:00"  
+        maximumStale="0.04:00:00"
+      />  
     </requestCaching>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.Cache>   
- <xref:System.Net.WebRequest>   
- <xref:System.Net.Cache.RequestCacheLevel>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="00c1c-133">См. также</span><span class="sxs-lookup"><span data-stu-id="00c1c-133">See Also</span></span>  
+ <xref:System.Net.Cache>  
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.Cache.RequestCacheLevel>  
+ [<span data-ttu-id="00c1c-134">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="00c1c-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

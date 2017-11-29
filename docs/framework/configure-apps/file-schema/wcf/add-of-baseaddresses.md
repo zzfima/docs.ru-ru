@@ -1,54 +1,63 @@
 ---
-title: "&lt;add&gt; для &lt;baseAddresses&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;add&gt; для &lt;baseAddresses&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e941b63e42af9237388df6be8223acbad8db745
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; для &lt;baseAddresses&gt;
-Представляет элемент конфигурации, который задает базовые адреса, используемые узлом службы.  
+# <a name="ltaddgt-of-ltbaseaddressesgt"></a><span data-ttu-id="4e645-102">&lt;add&gt; для &lt;baseAddresses&gt;</span><span class="sxs-lookup"><span data-stu-id="4e645-102">&lt;add&gt; of &lt;baseAddresses&gt;</span></span>
+<span data-ttu-id="4e645-103">Представляет элемент конфигурации, который задает базовые адреса, используемые узлом службы.</span><span class="sxs-lookup"><span data-stu-id="4e645-103">Represents a configuration element that specifies the base addresses used by the service host.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="4e645-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4e645-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="4e645-105">\<Клиент ></span><span class="sxs-lookup"><span data-stu-id="4e645-105">\<client></span></span>  
+<span data-ttu-id="4e645-106">\<Конечная точка ></span><span class="sxs-lookup"><span data-stu-id="4e645-106">\<endpoint></span></span>  
+<span data-ttu-id="4e645-107">\<узел ></span><span class="sxs-lookup"><span data-stu-id="4e645-107">\<host></span></span>  
+<span data-ttu-id="4e645-108">\<baseAddresses ></span><span class="sxs-lookup"><span data-stu-id="4e645-108">\<baseAddresses></span></span>  
+<span data-ttu-id="4e645-109">\<baseAddress ></span><span class="sxs-lookup"><span data-stu-id="4e645-109">\<baseAddress></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4e645-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4e645-110">Syntax</span></span>  
   
+```xml  
 <add baseAddress="string" />  
 ```  
   
-## Тип  
+## <a name="type"></a><span data-ttu-id="4e645-111">Тип</span><span class="sxs-lookup"><span data-stu-id="4e645-111">Type</span></span>  
  `Type`  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4e645-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="4e645-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="4e645-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="4e645-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="4e645-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="4e645-114">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`baseAddress`|Строка, которая задает базовый адрес, используемый узлом службы.|  
+|<span data-ttu-id="4e645-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="4e645-115">Attribute</span></span>|<span data-ttu-id="4e645-116">Описание</span><span class="sxs-lookup"><span data-stu-id="4e645-116">Description</span></span>|  
+|---------------|-----------------|  
+|`baseAddress`|<span data-ttu-id="4e645-117">Строка, которая задает базовый адрес, используемый узлом службы.</span><span class="sxs-lookup"><span data-stu-id="4e645-117">A string that specifies a base address used by the service host.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="4e645-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="4e645-118">Child Elements</span></span>  
+ <span data-ttu-id="4e645-119">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="4e645-119">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="4e645-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="4e645-120">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<baseAddresses\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Коллекция элементов `baseAddress`.|  
+|<span data-ttu-id="4e645-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="4e645-121">Element</span></span>|<span data-ttu-id="4e645-122">Описание</span><span class="sxs-lookup"><span data-stu-id="4e645-122">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4e645-123">\<baseAddresses ></span><span class="sxs-lookup"><span data-stu-id="4e645-123">\<baseAddresses></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|<span data-ttu-id="4e645-124">Коллекция элементов `baseAddress`.</span><span class="sxs-lookup"><span data-stu-id="4e645-124">A collection of `baseAddress` elements.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.HostElement>   
- <xref:System.ServiceModel.ServiceHost>   
- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>   
- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a><span data-ttu-id="4e645-125">См. также</span><span class="sxs-lookup"><span data-stu-id="4e645-125">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.HostElement>  
+ <xref:System.ServiceModel.ServiceHost>  
+ <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
+ [<span data-ttu-id="4e645-126">Размещение</span><span class="sxs-lookup"><span data-stu-id="4e645-126">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

@@ -1,96 +1,92 @@
 ---
-title: "Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], панели инструментов"
-  - "панели инструментов [Windows Forms], внешний вид"
-  - "панели инструментов [Windows Forms], изображения"
-  - "панели инструментов [Windows Forms], текст"
-  - "ToolStrip - элемент управления [Windows Forms], внешний вид"
-  - "ToolStrip - элемент управления [Windows Forms], изображения"
-  - "ToolStrip - элемент управления [Windows Forms], текст"
+title: "Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], appearance
+- toolbars [Windows Forms], images
+- examples [Windows Forms], toolbars
+- toolbars [Windows Forms], appearance
+- ToolStrip control [Windows Forms], images
+- ToolStrip control [Windows Forms], text
+- toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d926ce74db9723b6248dbb123513ca38d4adb1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms
-Можно управлять отображением текста и рисунков в <xref:System.Windows.Forms.ToolStripItem> и их выравниванием относительно друг друга в <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="b379f-102">Практическое руководство. Изменение внешнего вида текста и изображений элемента управления ToolStrip в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b379f-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
+<span data-ttu-id="b379f-103">Можно управлять отображением текста и изображений на <xref:System.Windows.Forms.ToolStripItem> и их выравниванием относительно друг друга и <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="b379f-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### Чтобы определить, что отображается в элементе управления ToolStripItem  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="b379f-104">Для определения отображаемых на элемент ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="b379f-104">To define what is displayed on a ToolStripItem</span></span>  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> нужное значение.  Возможные значения — `Image`, `ImageAndText`, `None` и `Text`.  Значение по умолчанию — `ImageAndText`.  
+-   <span data-ttu-id="b379f-105">Задать <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> свойства нужное значение.</span><span class="sxs-lookup"><span data-stu-id="b379f-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="b379f-106">Возможные значения — `Image`, `ImageAndText`, `None`, и `Text`.</span><span class="sxs-lookup"><span data-stu-id="b379f-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="b379f-107">Значение по умолчанию — `ImageAndText`.</span><span class="sxs-lookup"><span data-stu-id="b379f-107">The default is `ImageAndText`.</span></span>  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
         System.Windows.Forms.ToolStripItemDisplayStyle.Image  
-  
     ```  
   
     ```csharp  
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
-  
     ```  
   
-### Чтобы выровнять текст в элементе управления ToolStripItem  
+### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="b379f-108">Для выравнивания текста в элементе управления ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="b379f-108">To align text on a ToolStripItem</span></span>  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> нужное значение.  Возможные значения — любые сочетания значений top \(сверху\), middle \(в середине по вертикали\) и bottom \(снизу\) с left \(слева\), center \(в середине по горизонтали\) и right \(справа\).  Значение по умолчанию — `MiddleCenter`.  
+-   <span data-ttu-id="b379f-109">Задать <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> свойства нужное значение.</span><span class="sxs-lookup"><span data-stu-id="b379f-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="b379f-110">Возможные значения — любое сочетание верхней, среднего и нижнего с left, center и right.</span><span class="sxs-lookup"><span data-stu-id="b379f-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="b379f-111">Значение по умолчанию — `MiddleCenter`.</span><span class="sxs-lookup"><span data-stu-id="b379f-111">The default is `MiddleCenter`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
         System.Drawing.ContentAlignment.MiddleRight  
-  
     ```  
   
     ```csharp  
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
-  
     ```  
   
-### Чтобы выровнять рисунок в элементе управления ToolStripItem  
+### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="b379f-112">Для выравнивания изображения на элемент ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="b379f-112">To align an image on a ToolStripItem</span></span>  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> нужное значение.  Возможные значения — любые сочетания значений top \(сверху\), middle \(в середине по вертикали\) и bottom \(снизу\) с left \(слева\), center \(в середине по горизонтали\) и right \(справа\).  Значение по умолчанию — `MiddleLeft`.  
+-   <span data-ttu-id="b379f-113">Задать <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> свойства нужное значение.</span><span class="sxs-lookup"><span data-stu-id="b379f-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="b379f-114">Возможные значения — любое сочетание верхней, среднего и нижнего с left, center и right.</span><span class="sxs-lookup"><span data-stu-id="b379f-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="b379f-115">Значение по умолчанию — `MiddleLeft`.</span><span class="sxs-lookup"><span data-stu-id="b379f-115">The default is `MiddleLeft`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
         System.Drawing.ContentAlignment.MiddleRight  
-  
     ```  
   
     ```csharp  
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
-  
     ```  
   
-### Чтобы управлять выравниванием текста и рисунков относительно друг друга  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="b379f-116">Чтобы настроить отображение выравниванием текста и изображения относительно друг друга</span><span class="sxs-lookup"><span data-stu-id="b379f-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
   
--   Установите свойству <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> нужное значение.  Возможные значения — `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` и `TextBeforeImage`.  По умолчанию используется значение `ImageBeforeText`.  
+-   <span data-ttu-id="b379f-117">Задать <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> свойства нужное значение.</span><span class="sxs-lookup"><span data-stu-id="b379f-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="b379f-118">Возможные значения — `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, и `TextBeforeImage`.</span><span class="sxs-lookup"><span data-stu-id="b379f-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="b379f-119">Значение по умолчанию — `ImageBeforeText`.</span><span class="sxs-lookup"><span data-stu-id="b379f-119">The default is `ImageBeforeText`.</span></span>  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
         System.Windows.Forms.TextImageRelation.ImageAboveText  
-  
     ```  
   
     ```csharp  
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
-  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStrip>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a><span data-ttu-id="b379f-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b379f-120">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ [<span data-ttu-id="b379f-121">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b379f-121">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b379f-122">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b379f-122">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="b379f-123">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="b379f-123">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,61 +14,59 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# протокол IP версии 6
-Протокол IP версии 6 (IPv6) — это новый набор стандартных протоколов для сетевого уровня Интернета. IPv6 позволяет устранить множество проблем текущей версии набора интернет-протоколов (известного как IPv4), связанных с нехваткой адресов, безопасностью, автоматической настройкой, расширяемостью и т. д. IPv6 расширяет возможности Интернета для активации новых видов приложений, включая приложения для одноранговой сети и мобильных устройств. Ниже приведены основные проблемы текущего протокола IPv4.  
+# <a name="internet-protocol-version-6"></a><span data-ttu-id="7cd07-102">протокол IP версии 6</span><span class="sxs-lookup"><span data-stu-id="7cd07-102">Internet Protocol Version 6</span></span>
+<span data-ttu-id="7cd07-103">Протокол IP версии 6 (IPv6) — это новый набор стандартных протоколов для сетевого уровня Интернета.</span><span class="sxs-lookup"><span data-stu-id="7cd07-103">The Internet Protocol version 6 (IPv6) is a new suite of standard protocols for the network layer of the Internet.</span></span> <span data-ttu-id="7cd07-104">IPv6 позволяет устранить множество проблем текущей версии набора интернет-протоколов (известного как IPv4), связанных с нехваткой адресов, безопасностью, автоматической настройкой, расширяемостью и т. д.</span><span class="sxs-lookup"><span data-stu-id="7cd07-104">IPv6 is designed to solve many of the problems of the current version of the Internet Protocol suite (known as IPv4) with regard to address depletion, security, auto-configuration, extensibility, and so on.</span></span> <span data-ttu-id="7cd07-105">IPv6 расширяет возможности Интернета для активации новых видов приложений, включая приложения для одноранговой сети и мобильных устройств.</span><span class="sxs-lookup"><span data-stu-id="7cd07-105">IPv6 expands the capabilities of the Internet to enable new kinds of applications, including peer-to-peer and mobile applications.</span></span> <span data-ttu-id="7cd07-106">Ниже приведены основные проблемы текущего протокола IPv4.</span><span class="sxs-lookup"><span data-stu-id="7cd07-106">The following are the main issues of the current IPv4 protocol:</span></span>  
   
--   Быстрое исчерпание диапазона адресов.  
+-   <span data-ttu-id="7cd07-107">Быстрое исчерпание диапазона адресов.</span><span class="sxs-lookup"><span data-stu-id="7cd07-107">Rapid depletion of the address space.</span></span>  
   
-     Это привело к использованию трансляторов сетевых адресов (NAT), которые сопоставляют несколько частных адресов с одним общедоступным IP-адресом. Основными проблемами, создаваемыми этим механизмом, являются затраты на обработку и отсутствие сквозной связи.  
+     <span data-ttu-id="7cd07-108">Это привело к использованию трансляторов сетевых адресов (NAT), которые сопоставляют несколько частных адресов с одним общедоступным IP-адресом.</span><span class="sxs-lookup"><span data-stu-id="7cd07-108">This has led to the use of Network Address Translators (NATs) that map multiple private addresses to a single public IP address.</span></span> <span data-ttu-id="7cd07-109">Основными проблемами, создаваемыми этим механизмом, являются затраты на обработку и отсутствие сквозной связи.</span><span class="sxs-lookup"><span data-stu-id="7cd07-109">The main problems created by this mechanism are processing overhead and lack of end-to-end connectivity.</span></span>  
   
--   Отсутствие поддержки иерархии.  
+-   <span data-ttu-id="7cd07-110">Отсутствие поддержки иерархии.</span><span class="sxs-lookup"><span data-stu-id="7cd07-110">Lack of hierarchy support.</span></span>  
   
-     Из-за своей изначально предопределенной организации классов в IPv4 отсутствует настоящая иерархическая поддержка. Невозможно структурировать IP-адреса таким образом, который действительно сопоставляет топологию сети. Этот ключевой недостаток приводит к необходимости использования больших таблиц маршрутизации для доставки пакетов IPv4 в любое место в Интернете.  
+     <span data-ttu-id="7cd07-111">Из-за своей изначально предопределенной организации классов в IPv4 отсутствует настоящая иерархическая поддержка.</span><span class="sxs-lookup"><span data-stu-id="7cd07-111">Because of its inherent predefined class organization, IPv4 lacks true hierarchical support.</span></span> <span data-ttu-id="7cd07-112">Невозможно структурировать IP-адреса таким образом, который действительно сопоставляет топологию сети.</span><span class="sxs-lookup"><span data-stu-id="7cd07-112">It is impossible to structure the IP addresses in a way that truly maps the network topology.</span></span> <span data-ttu-id="7cd07-113">Этот ключевой недостаток приводит к необходимости использования больших таблиц маршрутизации для доставки пакетов IPv4 в любое место в Интернете.</span><span class="sxs-lookup"><span data-stu-id="7cd07-113">This crucial design flaw creates the need for large routing tables to deliver IPv4 packets to any location on the Internet.</span></span>  
   
--   Сложная конфигурация сети.  
+-   <span data-ttu-id="7cd07-114">Сложная конфигурация сети.</span><span class="sxs-lookup"><span data-stu-id="7cd07-114">Complex network configuration.</span></span>  
   
-     При использовании протокола IPv4 адреса должны назначаться статически или с помощью протокола конфигурации, например DHCP. В идеальном случае узлам не придется зависеть от администрирования инфраструктуры DHCP. Вместо этого они смогут выполнять самостоятельную настройку с учетом сегмента сети, в котором они расположены.  
+     <span data-ttu-id="7cd07-115">При использовании протокола IPv4 адреса должны назначаться статически или с помощью протокола конфигурации, например DHCP.</span><span class="sxs-lookup"><span data-stu-id="7cd07-115">With IPv4, addresses must be assigned statically or using a configuration protocol such as DHCP.</span></span> <span data-ttu-id="7cd07-116">В идеальном случае узлам не придется зависеть от администрирования инфраструктуры DHCP.</span><span class="sxs-lookup"><span data-stu-id="7cd07-116">In an ideal situation, hosts would not have to rely on the administration of a DHCP infrastructure.</span></span> <span data-ttu-id="7cd07-117">Вместо этого они смогут выполнять самостоятельную настройку с учетом сегмента сети, в котором они расположены.</span><span class="sxs-lookup"><span data-stu-id="7cd07-117">Instead, they would be able to configure themselves based on the network segment in which they are located.</span></span>  
   
--   Отсутствие встроенной проверки подлинности и конфиденциальности.  
+-   <span data-ttu-id="7cd07-118">Отсутствие встроенной проверки подлинности и конфиденциальности.</span><span class="sxs-lookup"><span data-stu-id="7cd07-118">Lack of built-in authentication and confidentiality.</span></span>  
   
-     Для IPv4 не требуется поддержка какого-либо механизма, обеспечивающего проверку подлинности или шифрование передаваемых данных. Этот момент меняется при использовании IPv6. IPSec является требованием поддержки IPv6.  
+     <span data-ttu-id="7cd07-119">Для IPv4 не требуется поддержка какого-либо механизма, обеспечивающего проверку подлинности или шифрование передаваемых данных.</span><span class="sxs-lookup"><span data-stu-id="7cd07-119">IPv4 does not require the support for any mechanism that provides authentication or encryption of the exchanged data.</span></span> <span data-ttu-id="7cd07-120">Этот момент меняется при использовании IPv6.</span><span class="sxs-lookup"><span data-stu-id="7cd07-120">This changes with IPv6.</span></span> <span data-ttu-id="7cd07-121">IPSec является требованием поддержки IPv6.</span><span class="sxs-lookup"><span data-stu-id="7cd07-121">Internet Protocol security (IPSec) is an IPv6 support requirement.</span></span>  
   
- Новый набор протоколов должен удовлетворять следующим базовым требованиям:  
+ <span data-ttu-id="7cd07-122">Новый набор протоколов должен удовлетворять следующим базовым требованиям:</span><span class="sxs-lookup"><span data-stu-id="7cd07-122">A new protocol suite must satisfy the following basic requirements:</span></span>  
   
--   Широкомасштабная маршрутизация и адресация с низкими издержками.  
+-   <span data-ttu-id="7cd07-123">Широкомасштабная маршрутизация и адресация с низкими издержками.</span><span class="sxs-lookup"><span data-stu-id="7cd07-123">Large-scale routing and addressing with low overhead.</span></span>  
   
--   Автоматическая настройка для различных ситуаций подключения.  
+-   <span data-ttu-id="7cd07-124">Автоматическая настройка для различных ситуаций подключения.</span><span class="sxs-lookup"><span data-stu-id="7cd07-124">Auto-configuration for various connecting situations.</span></span>  
   
--   Встроенная проверка подлинности и конфиденциальность.  
+-   <span data-ttu-id="7cd07-125">Встроенная проверка подлинности и конфиденциальность.</span><span class="sxs-lookup"><span data-stu-id="7cd07-125">Built-in authentication and confidentiality.</span></span>  
   
- Дополнительные сведения см. в разделах [Адресация IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Маршрутизация IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Автоматическая настройка IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Включение и отключение IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) и [Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
+ <span data-ttu-id="7cd07-126">Дополнительные сведения см. в разделах [Адресация IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Маршрутизация IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Автоматическая настройка IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Включение и отключение IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) и [Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).</span><span class="sxs-lookup"><span data-stu-id="7cd07-126">For more information, see [IPv6 Addressing](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 Routing](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 Auto-Configuration](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Enabling and Disabling IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md), and [How to: Modify the Computer Configuration File to Enable IPv6 Support](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).</span></span>  
   
-## Ссылки  
- Ниже перечислен ряд документов RFC, которые можно найти на сайте Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
+## <a name="references"></a><span data-ttu-id="7cd07-127">Ссылки</span><span class="sxs-lookup"><span data-stu-id="7cd07-127">References</span></span>  
+ <span data-ttu-id="7cd07-128">Ниже перечислен ряд документов RFC, которые можно найти на сайте Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):</span><span class="sxs-lookup"><span data-stu-id="7cd07-128">The following are selected RFC documents that you can find at the Internet Engineering Task Force site ([http://www.ietf.org](http://www.ietf.org/)):</span></span>  
   
--   RFC 1287, Towards the Future Internet Architecture.  
+-   <span data-ttu-id="7cd07-129">RFC 1287, Towards the Future Internet Architecture.</span><span class="sxs-lookup"><span data-stu-id="7cd07-129">RFC 1287, Towards the Future Internet Architecture.</span></span>  
   
--   RFC 1454, Comparison of Proposals for Next Version of IP.  
+-   <span data-ttu-id="7cd07-130">RFC 1454, Comparison of Proposals for Next Version of IP.</span><span class="sxs-lookup"><span data-stu-id="7cd07-130">RFC 1454, Comparison of Proposals for Next Version of IP.</span></span>  
   
--   RFC 2373, IP Version 6 Addressing Architecture.  
+-   <span data-ttu-id="7cd07-131">RFC 2373, IP Version 6 Addressing Architecture.</span><span class="sxs-lookup"><span data-stu-id="7cd07-131">RFC 2373, IP Version 6 Addressing Architecture.</span></span>  
   
--   RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.  
+-   <span data-ttu-id="7cd07-132">RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.</span><span class="sxs-lookup"><span data-stu-id="7cd07-132">RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.</span></span>  
   
- Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
+ <span data-ttu-id="7cd07-133">Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](http://go.microsoft.com/fwlink/?LinkID=179658).</span><span class="sxs-lookup"><span data-stu-id="7cd07-133">You can also find IPv6-related information on the [IPv6 area on Technet](http://go.microsoft.com/fwlink/?LinkID=179658).</span></span>  
   
-## См. также  
- [Пример сокетов IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)   
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Сокеты](../../../docs/framework/network-programming/sockets.md)
-
+## <a name="see-also"></a><span data-ttu-id="7cd07-134">См. также</span><span class="sxs-lookup"><span data-stu-id="7cd07-134">See Also</span></span>  
+ [<span data-ttu-id="7cd07-135">Пример сокетов IPv6</span><span class="sxs-lookup"><span data-stu-id="7cd07-135">IPv6 Sockets Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [<span data-ttu-id="7cd07-136">Примеры сетевого программирования</span><span class="sxs-lookup"><span data-stu-id="7cd07-136">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="7cd07-137">Сокеты</span><span class="sxs-lookup"><span data-stu-id="7cd07-137">Sockets</span></span>](../../../docs/framework/network-programming/sockets.md)

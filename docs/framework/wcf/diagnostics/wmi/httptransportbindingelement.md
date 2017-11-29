@@ -1,25 +1,28 @@
 ---
-title: "HttpTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: HttpTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b1542406caf9bb3684ccf2d97ed441f1dc3d0db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# HttpTransportBindingElement
-HttpTransportBindingElement  
+# <a name="httptransportbindingelement"></a><span data-ttu-id="0e29b-102">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="0e29b-102">HttpTransportBindingElement</span></span>
+<span data-ttu-id="0e29b-103">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="0e29b-103">HttpTransportBindingElement</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="0e29b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0e29b-104">Syntax</span></span>  
   
 ```  
 class HttpTransportBindingElement : TransportBindingElement  
@@ -39,101 +42,101 @@ class HttpTransportBindingElement : TransportBindingElement
 };  
 ```  
   
-## Методы  
- Класс HttpTransportBindingElement не определяет никаких методов.  
+## <a name="methods"></a><span data-ttu-id="0e29b-105">Методы</span><span class="sxs-lookup"><span data-stu-id="0e29b-105">Methods</span></span>  
+ <span data-ttu-id="0e29b-106">Класс HttpTransportBindingElement не определяет никаких методов.</span><span class="sxs-lookup"><span data-stu-id="0e29b-106">The HttpTransportBindingElement class does not define any methods.</span></span>  
   
-## Свойства  
- Класс HttpTransportBindingElement имеет следующие свойства.  
+## <a name="properties"></a><span data-ttu-id="0e29b-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="0e29b-107">Properties</span></span>  
+ <span data-ttu-id="0e29b-108">Класс HttpTransportBindingElement имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="0e29b-108">The HttpTransportBindingElement class has the following properties:</span></span>  
   
-### AllowCookies  
- Тип данных: boolean  
+### <a name="allowcookies"></a><span data-ttu-id="0e29b-109">AllowCookies</span><span class="sxs-lookup"><span data-stu-id="0e29b-109">AllowCookies</span></span>  
+ <span data-ttu-id="0e29b-110">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="0e29b-110">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-111">Access type: Read-only</span></span>  
   
- Значение, указывающее, принимает ли клиент файлы cookie, и распространяет ли он их по запросу.  
+ <span data-ttu-id="0e29b-112">Значение, определяющее, принимает ли клиент файлы Cookie и распространяет ли он их на будущие запросы.</span><span class="sxs-lookup"><span data-stu-id="0e29b-112">A value that indicates whether the client accepts cookies and propagates them on future requests.</span></span>  
   
-### AuthenticationScheme  
- Тип данных: string  
+### <a name="authenticationscheme"></a><span data-ttu-id="0e29b-113">AuthenticationScheme</span><span class="sxs-lookup"><span data-stu-id="0e29b-113">AuthenticationScheme</span></span>  
+ <span data-ttu-id="0e29b-114">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-114">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-115">Access type: Read-only</span></span>  
   
- Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых HTTP\-прослушивателем.  
+ <span data-ttu-id="0e29b-116">Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых HTTP-прослушивателем.</span><span class="sxs-lookup"><span data-stu-id="0e29b-116">The authentication scheme used to authenticate client requests being processed by an HTTP listener.</span></span>  
   
-### BypassProxyOnLocal  
- Тип данных: boolean  
+### <a name="bypassproxyonlocal"></a><span data-ttu-id="0e29b-117">BypassProxyOnLocal</span><span class="sxs-lookup"><span data-stu-id="0e29b-117">BypassProxyOnLocal</span></span>  
+ <span data-ttu-id="0e29b-118">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="0e29b-118">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-119">Access type: Read-only</span></span>  
   
- Значение, указывающее, игнорируются ли прокси\-серверы для локальных адресов.  
+ <span data-ttu-id="0e29b-120">Значение, указывающее, игнорируются ли прокси-серверы для локальных адресов.</span><span class="sxs-lookup"><span data-stu-id="0e29b-120">A value that indicates whether proxies are ignored for local addresses.</span></span>  
   
-### HostNameComparisonMode  
- Тип данных: string  
+### <a name="hostnamecomparisonmode"></a><span data-ttu-id="0e29b-121">HostNameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="0e29b-121">HostNameComparisonMode</span></span>  
+ <span data-ttu-id="0e29b-122">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-122">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-123">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-123">Access type: Read-only</span></span>  
   
- Значение, указывающее, используется ли имя узла для доступа к службе при сопоставлении по универсальному коду ресурса \(URI\).  
+ <span data-ttu-id="0e29b-124">Значение, указывающее, используется ли имя узла для доступа к службе при сопоставлении по универсальному коду ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="0e29b-124">A value that indicates whether the hostname is used to reach the service when matching on the URI.</span></span>  
   
-### KeepAliveEnabled  
- Тип данных: boolean  
+### <a name="keepaliveenabled"></a><span data-ttu-id="0e29b-125">KeepAliveEnabled</span><span class="sxs-lookup"><span data-stu-id="0e29b-125">KeepAliveEnabled</span></span>  
+ <span data-ttu-id="0e29b-126">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="0e29b-126">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-127">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-127">Access type: Read-only</span></span>  
   
- Когда включено, соединения HTTP остаются в активном состоянии независимо от уровня активности.  
+ <span data-ttu-id="0e29b-128">Когда включено, соединения HTTP остаются в активном состоянии независимо от уровня активности.</span><span class="sxs-lookup"><span data-stu-id="0e29b-128">When enabled, HTTP connections are kept alive regardless of activity level.</span></span>  
   
-### MaxBufferSize  
- Тип данных: sint32  
+### <a name="maxbuffersize"></a><span data-ttu-id="0e29b-129">MaxBufferSize</span><span class="sxs-lookup"><span data-stu-id="0e29b-129">MaxBufferSize</span></span>  
+ <span data-ttu-id="0e29b-130">Тип данных: sint32</span><span class="sxs-lookup"><span data-stu-id="0e29b-130">Data type: sint32</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-131">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-131">Access type: Read-only</span></span>  
   
- Максимальный размер буферного пула.  
+ <span data-ttu-id="0e29b-132">Максимальный размер буферного пула.</span><span class="sxs-lookup"><span data-stu-id="0e29b-132">The maximum size of the buffer pool.</span></span>  
   
-### ProxyAddress  
- Тип данных: string  
+### <a name="proxyaddress"></a><span data-ttu-id="0e29b-133">ProxyAddress</span><span class="sxs-lookup"><span data-stu-id="0e29b-133">ProxyAddress</span></span>  
+ <span data-ttu-id="0e29b-134">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-134">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-135">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-135">Access type: Read-only</span></span>  
   
- Универсальный код ресурса \(URI\), который содержит адрес прокси\-сервера, используемого для выполнения HTTP\-запросов.  
+ <span data-ttu-id="0e29b-136">Универсальный код ресурса (URI), который содержит адрес прокси-сервера, используемого для выполнения HTTP-запросов.</span><span class="sxs-lookup"><span data-stu-id="0e29b-136">A URI that contains the address of the proxy to use for HTTP requests.</span></span>  
   
-### ProxyAuthenticationScheme  
- Тип данных: string  
+### <a name="proxyauthenticationscheme"></a><span data-ttu-id="0e29b-137">ProxyAuthenticationScheme</span><span class="sxs-lookup"><span data-stu-id="0e29b-137">ProxyAuthenticationScheme</span></span>  
+ <span data-ttu-id="0e29b-138">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-138">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-139">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-139">Access type: Read-only</span></span>  
   
- Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых прокси\-сервером HTTP.  
+ <span data-ttu-id="0e29b-140">Схема проверки подлинности, используемая для проверки подлинности клиентских запросов, обрабатываемых прокси-сервером HTTP.</span><span class="sxs-lookup"><span data-stu-id="0e29b-140">The authentication scheme used to authenticate client requests being processed by an HTTP proxy.</span></span>  
   
-### Realm  
- Тип данных: string  
+### <a name="realm"></a><span data-ttu-id="0e29b-141">Realm</span><span class="sxs-lookup"><span data-stu-id="0e29b-141">Realm</span></span>  
+ <span data-ttu-id="0e29b-142">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-142">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-143">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-143">Access type: Read-only</span></span>  
   
- Область проверки подлинности.  
+ <span data-ttu-id="0e29b-144">Область проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="0e29b-144">The authentication realm.</span></span>  
   
-### TransferMode  
- Тип данных: string  
+### <a name="transfermode"></a><span data-ttu-id="0e29b-145">TransferMode</span><span class="sxs-lookup"><span data-stu-id="0e29b-145">TransferMode</span></span>  
+ <span data-ttu-id="0e29b-146">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="0e29b-146">Data type: string</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-147">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-147">Access type: Read-only</span></span>  
   
- Значение, указывающее статус сообщения: помещено в буфер или поток, запрос или ответ.  
+ <span data-ttu-id="0e29b-148">Значение, указывающее статус сообщения: помещено в буфер или поток, запрос или ответ.</span><span class="sxs-lookup"><span data-stu-id="0e29b-148">A value that specifies whether messages are buffered or streamed or a request or response.</span></span>  
   
-### UnsafeConnectionNtlmAuthentication  
- Тип данных: boolean  
+### <a name="unsafeconnectionntlmauthentication"></a><span data-ttu-id="0e29b-149">UnsafeConnectionNtlmAuthentication</span><span class="sxs-lookup"><span data-stu-id="0e29b-149">UnsafeConnectionNtlmAuthentication</span></span>  
+ <span data-ttu-id="0e29b-150">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="0e29b-150">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-151">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-151">Access type: Read-only</span></span>  
   
- Значение, указывающее, разрешено ли на сервере совместное использование небезопасных подключений.  
+ <span data-ttu-id="0e29b-152">Значение, указывающее, разрешено ли на сервере совместное использование небезопасных подключений.</span><span class="sxs-lookup"><span data-stu-id="0e29b-152">A value that indicates whether Unsafe Connection Sharing is enabled on the server.</span></span>  
   
-### UseDefaultWebProxy  
- Тип данных: boolean  
+### <a name="usedefaultwebproxy"></a><span data-ttu-id="0e29b-153">UseDefaultWebProxy</span><span class="sxs-lookup"><span data-stu-id="0e29b-153">UseDefaultWebProxy</span></span>  
+ <span data-ttu-id="0e29b-154">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="0e29b-154">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="0e29b-155">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="0e29b-155">Access type: Read-only</span></span>  
   
- Значение, указывающее, используются ли параметры прокси\-сервера компьютера или пользователя.  
+ <span data-ttu-id="0e29b-156">Значение, указывающее, используются ли параметры прокси-сервера компьютера или пользователя.</span><span class="sxs-lookup"><span data-stu-id="0e29b-156">A value that indicates whether the machine-wide proxy settings are used rather than the user specific settings.</span></span>  
   
-## Требования  
+## <a name="requirements"></a><span data-ttu-id="0e29b-157">Требования</span><span class="sxs-lookup"><span data-stu-id="0e29b-157">Requirements</span></span>  
   
-|MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|<span data-ttu-id="0e29b-158">MOF</span><span class="sxs-lookup"><span data-stu-id="0e29b-158">MOF</span></span>|<span data-ttu-id="0e29b-159">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="0e29b-159">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="0e29b-160">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="0e29b-160">Namespace</span></span>|<span data-ttu-id="0e29b-161">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="0e29b-161">Defined in root\ServiceModel</span></span>|  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="0e29b-162">См. также</span><span class="sxs-lookup"><span data-stu-id="0e29b-162">See Also</span></span>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

@@ -1,37 +1,38 @@
 ---
-title: "Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], перемещение между"
-  - "TAB - клавиша, включение"
-  - "ToolStrip - элемент управления [Windows Forms], перемещение от"
+title: "Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], moving between
+- TAB key [Windows Forms], enabling
+- ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5f4583a0381af6f0f85f9c2e2aea1d122f5174ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB
-Следующая процедура позволяет пользователю переходить от <xref:System.Windows.Forms.ToolStrip> к следующему элементу управления в порядке перехода с помощью клавиши TAB.  
+# <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a><span data-ttu-id="8d8bf-102">Практическое руководство. Выход из элемента управления ToolStrip с помощью клавиши TAB</span><span class="sxs-lookup"><span data-stu-id="8d8bf-102">How to: Enable the TAB Key to Move Out of a ToolStrip Control</span></span>
+<span data-ttu-id="8d8bf-103">Используйте следующую процедуру, чтобы пользователь мог нажать клавишу TAB для перемещения из <xref:System.Windows.Forms.ToolStrip> к следующему элементу управления в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="8d8bf-103">Use the following procedure to enable the user to press the TAB key to move out of a <xref:System.Windows.Forms.ToolStrip> to the next control in the tab order.</span></span>  
   
- Элемент управления <xref:System.Windows.Forms.ToolStrip> принимает первое нажатие клавиши TAB, а клавиши со стрелками используются для выбора элементов, включенных в <xref:System.Windows.Forms.ToolStrip>.  При повторном нажатии клавиши TAB фокус перемещается к следующему элементу управления в порядке перехода.  
+ <span data-ttu-id="8d8bf-104"><xref:System.Windows.Forms.ToolStrip> Принимает первое нажатие клавиши TAB и клавиш Стрелка выбора элементов в <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="8d8bf-104">The <xref:System.Windows.Forms.ToolStrip> accepts the first press of the TAB key, and the arrow keys select items within the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="8d8bf-105">При нажатии клавиши TAB во второй раз, он направляет пользователя на следующий элемент управления в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="8d8bf-105">When the user presses the TAB key a second time, it takes the user to the next control in the tab order.</span></span>  
   
-### Переход от элемента управления ToolStrip к следующему элементу управления путем нажатия пользователем клавиши TAB  
+### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a><span data-ttu-id="8d8bf-106">Чтобы пользователь мог нажать клавишу TAB для перемещения от элемента управления ToolStrip к следующему элементу управления</span><span class="sxs-lookup"><span data-stu-id="8d8bf-106">To enable the user to press the TAB key to move out of a ToolStrip to the next control</span></span>  
   
--   Присвойте свойству <xref:System.Windows.Forms.ToolStrip.TabStop%2A> элемента <xref:System.Windows.Forms.ToolStrip> значение `true`.  
+-   <span data-ttu-id="8d8bf-107">Задать <xref:System.Windows.Forms.ToolStrip.TabStop%2A> свойство <xref:System.Windows.Forms.ToolStrip> для `true`.</span><span class="sxs-lookup"><span data-stu-id="8d8bf-107">Set the <xref:System.Windows.Forms.ToolStrip.TabStop%2A> property of the <xref:System.Windows.Forms.ToolStrip> to `true`.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.TabStop%2A>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8d8bf-108">См. также</span><span class="sxs-lookup"><span data-stu-id="8d8bf-108">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.TabStop%2A>  
+ [<span data-ttu-id="8d8bf-109">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="8d8bf-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

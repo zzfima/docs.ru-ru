@@ -1,48 +1,49 @@
 ---
-title: "Автоматическое изменение размеров элемента управления TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "автоматическое изменение размеров"
-  - "AutoSize - свойство, TableLayoutPanel - элемент управления"
-  - "AutoSizeMode - свойство"
-  - "элементы управления [Windows Forms], установка размеров"
-  - "макет [Windows Forms], AutoSize"
-  - "локализация форм"
-  - "установка размеров, автоматическая"
-  - "TableLayoutPanel - элемент управления [Windows Forms], поведение AutoSize"
+title: "Автоматическое изменение размеров элемента управления TableLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- localizing forms
+- layout [Windows Forms], AutoSize
+- sizing [Windows Forms], automatic
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Автоматическое изменение размеров элемента управления TableLayoutPanel
-## Различные поведения AutoSize  
- Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> поддерживает автоматическое изменение размеров посредством следующих способов.  
+# <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a><span data-ttu-id="7cfba-102">Автоматическое изменение размеров элемента управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="7cfba-102">AutoSize Behavior in the TableLayoutPanel Control</span></span>
+## <a name="distinct-autosize-behaviors"></a><span data-ttu-id="7cfba-103">Поведение различных AutoSize</span><span class="sxs-lookup"><span data-stu-id="7cfba-103">Distinct AutoSize Behaviors</span></span>  
+ <span data-ttu-id="7cfba-104"><xref:System.Windows.Forms.TableLayoutPanel> Элемент управления поддерживает автоматическое изменение размеров одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="7cfba-104">The <xref:System.Windows.Forms.TableLayoutPanel> control supports automatic sizing behavior in the following ways:</span></span>  
   
--   С помощью свойства <xref:System.Windows.Forms.Control.AutoSize%2A>;  
+-   <span data-ttu-id="7cfba-105">Через <xref:System.Windows.Forms.Control.AutoSize%2A> свойства;</span><span class="sxs-lookup"><span data-stu-id="7cfba-105">Through the <xref:System.Windows.Forms.Control.AutoSize%2A> property;</span></span>  
   
--   С помощью свойства <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> стилей столбцов и строк элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+-   <span data-ttu-id="7cfba-106">Через <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойство <xref:System.Windows.Forms.TableLayoutPanel> стили столбцов и строк элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7cfba-106">Through the <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> property on the <xref:System.Windows.Forms.TableLayoutPanel> control’s column and row styles.</span></span>  
   
-### Свойство AutoSize со стилями столбцов и строк  
- В следующей таблице описано взаимодействие между свойством <xref:System.Windows.Forms.Control.AutoSize%2A> и стилями столбцов и строк элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+### <a name="the-autosize-property-with-row-and-column-styles"></a><span data-ttu-id="7cfba-107">Свойство AutoSize со стилями столбцов и строк</span><span class="sxs-lookup"><span data-stu-id="7cfba-107">The AutoSize Property with Row and Column Styles</span></span>  
+ <span data-ttu-id="7cfba-108">В следующей таблице описаны взаимодействие между <xref:System.Windows.Forms.Control.AutoSize%2A> свойство и <xref:System.Windows.Forms.TableLayoutPanel> стили столбцов и строк элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7cfba-108">The following table describes the interaction between the <xref:System.Windows.Forms.Control.AutoSize%2A> property and the <xref:System.Windows.Forms.TableLayoutPanel> control’s column and row styles.</span></span>  
   
-|Значение свойства AutoSize|Взаимодействие со стилем|  
-|--------------------------------|------------------------------|  
-|`false`|Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> располагается слева направо и выделяет место для столбцов и строк или в следующем порядке.<br /><br /> 1.  Если свойство <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> имеет значение <xref:System.Windows.Forms.SizeType>, выделяется количество пикселей, заданное <xref:System.Windows.Forms.ColumnStyle.Width%2A> или <xref:System.Windows.Forms.RowStyle.Height%2A>.<br />2.  Если свойство <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> имеет значение <xref:System.Windows.Forms.SizeType>, выделяется количество пикселей, возвращенное методом <xref:System.Windows.Forms.Control.GetPreferredSize%2A> дочернего элемента управления.<br />3.  После выделения места для всех столбцов или строк <xref:System.Windows.Forms.SizeType> и <xref:System.Windows.Forms.SizeType>, любые столбцы или строки со свойством <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> равным <xref:System.Windows.Forms.SizeType> используются для пропорционального выделения оставшегося свободного пространства.|  
-|`true`|Подобно описанному взаимодействию, но с тем исключением, что столбцы или строки <xref:System.Windows.Forms.SizeType> приобретают возможность автоматического изменения размеров.<br /><br /> Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> расширяет столбец или строку для создания достаточного свободного пространства, так чтобы содержимое в какой\-либо строке или столбце со стилями <xref:System.Windows.Forms.SizeType> не перекрывалось.  Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> выделяет новое пространство пропорционально в зависимости от свойства <xref:System.Windows.Forms.ColumnStyle.Width%2A> или <xref:System.Windows.Forms.RowStyle.Height%2A>.|  
+|<span data-ttu-id="7cfba-109">Параметр AutoSize</span><span class="sxs-lookup"><span data-stu-id="7cfba-109">AutoSize setting</span></span>|<span data-ttu-id="7cfba-110">Взаимодействие со стилем</span><span class="sxs-lookup"><span data-stu-id="7cfba-110">Style interaction</span></span>|  
+|----------------------|-----------------------|  
+|`false`|<span data-ttu-id="7cfba-111"><xref:System.Windows.Forms.TableLayoutPanel> Управления выполняется слева направо и выделяет место для столбца или строки или в следующем порядке.</span><span class="sxs-lookup"><span data-stu-id="7cfba-111">The <xref:System.Windows.Forms.TableLayoutPanel> control proceeds from left to right, and allocates space for the column or row or in the following order.</span></span><br /><br /> <span data-ttu-id="7cfba-112">1.  Если <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойству <xref:System.Windows.Forms.SizeType.Absolute>, количество пикселей, заданное <xref:System.Windows.Forms.ColumnStyle.Width%2A> или <xref:System.Windows.Forms.RowStyle.Height%2A> выделяется.</span><span class="sxs-lookup"><span data-stu-id="7cfba-112">1.  If the <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> property is set to <xref:System.Windows.Forms.SizeType.Absolute>, the number of pixels specified by <xref:System.Windows.Forms.ColumnStyle.Width%2A> or <xref:System.Windows.Forms.RowStyle.Height%2A> is allocated.</span></span><br /><span data-ttu-id="7cfba-113">2.  Если <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> свойству <xref:System.Windows.Forms.SizeType.AutoSize>, возвращенных дочернего элемента управления в точках <xref:System.Windows.Forms.Control.GetPreferredSize%2A> метод выделяется.</span><span class="sxs-lookup"><span data-stu-id="7cfba-113">2.  If the <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> property is set to <xref:System.Windows.Forms.SizeType.AutoSize>, the number of pixels returned by the child control’s <xref:System.Windows.Forms.Control.GetPreferredSize%2A> method is allocated.</span></span><br /><span data-ttu-id="7cfba-114">3.  После ввода всех <xref:System.Windows.Forms.SizeType.Absolute> и <xref:System.Windows.Forms.SizeType.AutoSize> столбцы или строки выделяется, любые столбцы или строки с <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> значение <xref:System.Windows.Forms.SizeType.Percent> используются для пропорционального выделения оставшегося свободного пространства</span><span class="sxs-lookup"><span data-stu-id="7cfba-114">3.  After space for all <xref:System.Windows.Forms.SizeType.Absolute> and <xref:System.Windows.Forms.SizeType.AutoSize> columns or rows is allocated, any columns or rows with <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> set to <xref:System.Windows.Forms.SizeType.Percent> are used to proportionally allocate the remaining free space</span></span>|  
+|`true`|<span data-ttu-id="7cfba-115">Аналогично описанному взаимодействию, за исключением того, <xref:System.Windows.Forms.SizeType.Percent> столбцы или строки получения автоматического изменения размеров.</span><span class="sxs-lookup"><span data-stu-id="7cfba-115">Similar to the previous interaction, with the exception that <xref:System.Windows.Forms.SizeType.Percent> columns or rows acquire an automatic sizing aspect.</span></span><br /><br /> <span data-ttu-id="7cfba-116"><xref:System.Windows.Forms.TableLayoutPanel> Управления расширяет столбец или строку для создания достаточного свободного пространства, чтобы не столбца или строки с <xref:System.Windows.Forms.SizeType.Percent> перекрывалось его содержимое.</span><span class="sxs-lookup"><span data-stu-id="7cfba-116">The <xref:System.Windows.Forms.TableLayoutPanel> control expands the column or row to create adequate free space, so that no column or row with <xref:System.Windows.Forms.SizeType.Percent> styling clips its contents.</span></span> <span data-ttu-id="7cfba-117"><xref:System.Windows.Forms.TableLayoutPanel> Управления выделяет новое пространство пропорционально в зависимости <xref:System.Windows.Forms.ColumnStyle.Width%2A> или <xref:System.Windows.Forms.RowStyle.Height%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="7cfba-117">The <xref:System.Windows.Forms.TableLayoutPanel> control allocates the new space proportionally according to the <xref:System.Windows.Forms.ColumnStyle.Width%2A> or <xref:System.Windows.Forms.RowStyle.Height%2A> property.</span></span>|  
   
-## См. также  
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [Общие сведения об элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+## <a name="see-also"></a><span data-ttu-id="7cfba-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7cfba-118">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="7cfba-119">Общие сведения об элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="7cfba-119">TableLayoutPanel Control Overview</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

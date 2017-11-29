@@ -1,28 +1,35 @@
 ---
-title: "&lt;add&gt; для &lt;baseAddressPrefixFilter&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;add&gt; для &lt;baseAddressPrefixFilter&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d4c509a710637e335f80257fb3984f164d83a51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; для &lt;baseAddressPrefixFilter&gt;
-Представляет собой элемент конфигурации, который задает проходной фильтр, выбирающий соответствующие привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.  
+# <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a><span data-ttu-id="79728-102">&lt;add&gt; для &lt;baseAddressPrefixFilter&gt;</span><span class="sxs-lookup"><span data-stu-id="79728-102">&lt;add&gt; of &lt;baseAddressPrefixFilter&gt;</span></span>
+<span data-ttu-id="79728-103">Представляет собой элемент конфигурации, который задает проходной фильтр, выбирающий соответствующие привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.</span><span class="sxs-lookup"><span data-stu-id="79728-103">Represents a configuration element that specifies a pass-through filter, which provides a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] application in IIS.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="79728-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="79728-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="79728-105">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="79728-105">\<ServiceHostingEnvironment></span></span>  
+<span data-ttu-id="79728-106">\<baseAddressPrefixFilters ></span><span class="sxs-lookup"><span data-stu-id="79728-106">\<baseAddressPrefixFilters></span></span>  
+<span data-ttu-id="79728-107">\<add></span><span class="sxs-lookup"><span data-stu-id="79728-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="79728-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="79728-108">Syntax</span></span>  
   
+```xml  
 <serviceHostingEnvironment>  
      <baseAddressPrefixFilters>  
         <add prefix="string"/>  
@@ -30,60 +37,60 @@ caps.handback.revision: 10
 </serviceHostingEnvironment>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="79728-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="79728-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="79728-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="79728-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="79728-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="79728-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|prefix|Универсальный код ресурса \(URI\), совпадающий с частью базового адреса.|  
+|<span data-ttu-id="79728-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="79728-112">Attribute</span></span>|<span data-ttu-id="79728-113">Описание</span><span class="sxs-lookup"><span data-stu-id="79728-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="79728-114">prefix</span><span class="sxs-lookup"><span data-stu-id="79728-114">prefix</span></span>|<span data-ttu-id="79728-115">Универсальный код ресурса (URI), совпадающий с частью базового адреса.</span><span class="sxs-lookup"><span data-stu-id="79728-115">A URI that is used to match a part of a base address.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="79728-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="79728-116">Child Elements</span></span>  
+ <span data-ttu-id="79728-117">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="79728-117">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="79728-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="79728-118">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<baseAddressPrefixFilters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают проходные фильтры, выбирающие нужные привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.|  
+|<span data-ttu-id="79728-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="79728-119">Element</span></span>|<span data-ttu-id="79728-120">Описание</span><span class="sxs-lookup"><span data-stu-id="79728-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="79728-121">\<baseAddressPrefixFilters ></span><span class="sxs-lookup"><span data-stu-id="79728-121">\<baseAddressPrefixFilters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|<span data-ttu-id="79728-122">Коллекция элементов конфигурации, которые задают проходные фильтры, выбирающие нужные привязки IIS при размещении приложения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] в IIS.</span><span class="sxs-lookup"><span data-stu-id="79728-122">A collection of configuration elements that specify pass-through filters, which provide a mechanism to pick the appropriate IIS bindings when hosting a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] application in IIS.</span></span>|  
   
-## Заметки  
- Префиксный фильтр предоставляет способ для общих поставщиков услуг размещения задать, какие URI должны использоваться службой.  Это дает возможность общим узлам размещать несколько приложений с разными базовыми адресами для одной схемы на одном узле.  
+## <a name="remarks"></a><span data-ttu-id="79728-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="79728-123">Remarks</span></span>  
+ <span data-ttu-id="79728-124">Префиксный фильтр предоставляет способ для общих поставщиков услуг размещения задать, какие URI должны использоваться службой.</span><span class="sxs-lookup"><span data-stu-id="79728-124">A prefix filter provides a way for shared hosting providers to specify which URIs are to be used by the service.</span></span> <span data-ttu-id="79728-125">Это дает возможность общим узлам размещать несколько приложений с разными базовыми адресами для одной схемы на одном узле.</span><span class="sxs-lookup"><span data-stu-id="79728-125">It enables shared hosts to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- Веб\-узлы IIS являются контейнерами виртуальных приложений, содержащими виртуальные каталоги.  Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS.  Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки.  Протокол привязки \(например, HTTP\) определяет схему, посредством которой осуществляется связь, а данные привязки \(например, IP\-адрес, порт, заголовок узла\) содержат сведения, используемые для доступа к узлу.  
+ <span data-ttu-id="79728-126">Веб-узлы IIS являются контейнерами виртуальных приложений, содержащими виртуальные каталоги.</span><span class="sxs-lookup"><span data-stu-id="79728-126">IIS Web sites are containers for virtual applications which contain virtual directories.</span></span> <span data-ttu-id="79728-127">Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS.</span><span class="sxs-lookup"><span data-stu-id="79728-127">The application in a site can be accessed through one or more IIS binding.</span></span> <span data-ttu-id="79728-128">Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки.</span><span class="sxs-lookup"><span data-stu-id="79728-128">IIS bindings provide two pieces of information: binding protocol and binding information.</span></span> <span data-ttu-id="79728-129">Протокол привязки (например, HTTP) определяет схему, посредством которой осуществляется связь, а данные привязки (например, IP-адрес, порт, заголовок узла) содержат сведения, используемые для доступа к узлу.</span><span class="sxs-lookup"><span data-stu-id="79728-129">Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.</span></span>  
   
- IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы.  Поскольку размещаемая на узле служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] разрешает привязку только к одному базовому адресу для каждой схемы, можно использовать функцию префиксного фильтра, чтобы выбирать необходимый базовый адрес размещенной службы.  Входящие базовые адреса, предоставляемые IIS, фильтруются с использованием дополнительного фильтра списка префиксов.  
+ <span data-ttu-id="79728-130">IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы.</span><span class="sxs-lookup"><span data-stu-id="79728-130">IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="79728-131">Поскольку размещаемая на узле служба [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] разрешает привязку только к одному базовому адресу для каждой схемы, можно использовать функцию префиксного фильтра, чтобы выбирать необходимый базовый адрес размещенной службы.</span><span class="sxs-lookup"><span data-stu-id="79728-131">Because a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service.</span></span> <span data-ttu-id="79728-132">Входящие базовые адреса, предоставляемые IIS, фильтруются с использованием дополнительного фильтра списка префиксов.</span><span class="sxs-lookup"><span data-stu-id="79728-132">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.</span></span>  
   
- Например, узел может содержать следующие базовые адреса.  
+ <span data-ttu-id="79728-133">Например, узел может содержать следующие базовые адреса.</span><span class="sxs-lookup"><span data-stu-id="79728-133">For example, your site can contain the following base addresses.</span></span>  
   
 ```  
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
   
- Для задания префиксного фильтра на уровне домена приложений можно использовать следующий файл конфигурации.  
+ <span data-ttu-id="79728-134">Для задания префиксного фильтра на уровне домена приложений можно использовать следующий файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="79728-134">You can use the following configuration file to specify a prefix filter at the appdomain level.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <serviceHostingEnvironment>  
      <baseAddressPrefixFilters>  
-        <add prefix=”net.tcp://test1.fabrikam.com:8000”/>  
-        <add prefix=”http://test2.fabrikam.com:9000”/>  
-    </baseAddressPrefixFilters>  
+        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
+        <add prefix="http://test2.fabrikam.com:9000"/>  
+    </baseAddressPrefixFilters>  
   </serviceHostingEnvironment>  
 </system.serviceModel>  
 ```  
   
- В этом примере `net.tcp://test1.fabrikam.com:8000` и `http://test2.fabrikam.com:9000` являются единственными базовыми адресами соответствующих схем, для которых разрешено прохождение данных.  
+ <span data-ttu-id="79728-135">В этом примере `net.tcp://test1.fabrikam.com:8000` и `http://test2.fabrikam.com:9000` являются единственными базовыми адресами соответствующих схем, для которых разрешено прохождение данных.</span><span class="sxs-lookup"><span data-stu-id="79728-135">In this example, `net.tcp://test1.fabrikam.com:8000` and `http://test2.fabrikam.com:9000` are the only base addresses for their respective schemes which are allowed to be passed through.</span></span>  
   
- Если префикс не задан, по умолчанию пропускаются все адреса.  При задании префикса разрешается прохождение данных только с соответствующего базового адреса для данной схемы.  
+ <span data-ttu-id="79728-136">Если префикс не задан, по умолчанию пропускаются все адреса.</span><span class="sxs-lookup"><span data-stu-id="79728-136">By default, when prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="79728-137">При задании префикса разрешается прохождение данных только с соответствующего базового адреса для данной схемы.</span><span class="sxs-lookup"><span data-stu-id="79728-137">Specifying the prefix only allows the matching base address for that scheme to be passed through.</span></span>  
   
 > [!NOTE]
->  Фильтр не поддерживает какие\-либо подстановочные знаки.  Кроме того, среди базовых адресов, предоставляемых IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`.  Эти адреса не фильтруются.  
+>  <span data-ttu-id="79728-138">Фильтр не поддерживает какие-либо подстановочные знаки.</span><span class="sxs-lookup"><span data-stu-id="79728-138">The filter does not support any wildcards.</span></span> <span data-ttu-id="79728-139">Кроме того, среди базовых адресов, предоставляемых IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`.</span><span class="sxs-lookup"><span data-stu-id="79728-139">In addition, the baseAddresses supplied by IIS may have addresses bound to other schemes not present in the `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="79728-140">Эти адреса не фильтруются.</span><span class="sxs-lookup"><span data-stu-id="79728-140">These addresses are not filtered out.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>   
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
- <xref:System.ServiceModel.ServiceHostingEnvironment>   
- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a><span data-ttu-id="79728-141">См. также</span><span class="sxs-lookup"><span data-stu-id="79728-141">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
+ <xref:System.ServiceModel.ServiceHostingEnvironment>  
+ [<span data-ttu-id="79728-142">Размещение</span><span class="sxs-lookup"><span data-stu-id="79728-142">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

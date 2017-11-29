@@ -1,83 +1,83 @@
 ---
-title: "Расположение элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VisualSelection"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Размещение элементов управления [Windows Forms]"
-  - "Элементы управления Windows Forms, размещение в формах"
+title: "Расположение элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VisualSelection
+helpviewer_keywords:
+- controls [Windows Forms], positioning
+- Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расположение элементов управления в формах Windows Forms
-Размещение и управление элементами управления в формах различными способами, можно создать пользовательские интерфейсы, интуитивно понятный и функциональные возможности для пользователей.  
+# <a name="arranging-controls-on-windows-forms"></a><span data-ttu-id="b4b1f-102">Расположение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-102">Arranging Controls on Windows Forms</span></span>
+<span data-ttu-id="b4b1f-103">Размещая элементы управления в формах и управляя ими различными способами, можно создать пользовательские интерфейсы, которые будут удобны и понятны пользователям.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-103">By placing and manipulating controls on forms in different ways, you can create user interfaces that are both intuitive and functional for users.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Практическое руководство: выравнивание нескольких элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
- Указания по настройке положения нескольких элементов управления формы Windows Forms.  
+## <a name="in-this-section"></a><span data-ttu-id="b4b1f-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="b4b1f-104">In This Section</span></span>  
+ [<span data-ttu-id="b4b1f-105">Практическое руководство. Выравнивание нескольких элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-105">How to: Align Multiple Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-multiple-controls-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-106">Инструкции по настройке положения нескольких элементов управления в форме Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-106">Gives directions for lining up the position of a number of controls on your Windows Form.</span></span>  
   
- [Практическое руководство: привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- Указания по настройке динамического масштабирования во время выполнения элементов управления.  
+ [<span data-ttu-id="b4b1f-107">Практическое руководство. Привязка элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-107">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-108">Инструкции по настройке динамического масштабирования элементов управления во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-108">Gives directions for setting controls to resize dynamically at run time.</span></span>  
   
- [Практическое руководство: копирование элементов управления между формами Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
- Указания по копированию элементов управления между формами.  
+ [<span data-ttu-id="b4b1f-109">Практическое руководство. Копирование элементов управления между формами Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-109">How to: Copy Controls Between Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ <span data-ttu-id="b4b1f-110">Инструкции по копированию элементов управления между формами.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-110">Gives directions for duplicating controls between forms.</span></span>  
   
- [Практическое руководство: закрепление элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- Инструкции для создания элементов управления «палочка» обтекающий формы.  
+ [<span data-ttu-id="b4b1f-111">Практическое руководство. Закрепление элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-111">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-112">Инструкции по закреплению элементов управления в боковых областях формы.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-112">Gives directions for making controls "stick" to the side(s) of a form.</span></span>  
   
- [Практическое руководство: многоуровневое расположение объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
- Указания по определению элементов управления, которые должны находиться сверху относительно оси z (z порядок).  
+ [<span data-ttu-id="b4b1f-113">Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-113">How to: Layer Objects on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-114">Инструкции по заданию элементов управления, которые должны находиться сверху относительно оси Z (z-порядок).</span><span class="sxs-lookup"><span data-stu-id="b4b1f-114">Gives directions for establishing which controls are on top relative to the z-axis (z-order).</span></span>  
   
- [Практическое руководство: блокирование элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
- Указания по закреплению элементов управления формы.  
+ [<span data-ttu-id="b4b1f-115">Практическое руководство. Блокирование элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-115">How to: Lock Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md)  
+ <span data-ttu-id="b4b1f-116">Инструкции по закреплению элементов управления в форме на постоянной основе.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-116">Gives directions for fastening controls permanently to the form.</span></span>  
   
- [Практическое руководство: размещения элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
- Указания по заданию координат элементов управления в форме.  
+ [<span data-ttu-id="b4b1f-117">Практическое руководство. Размещение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-117">How to: Position Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-position-controls-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-118">Инструкции по заданию координат элементов управления в форме.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-118">Gives directions for setting the coordinates of the controls on a form.</span></span>  
   
- [Практическое руководство: изменение размера элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- Инструкции по заданию размера элементов управления на форме.  
+ [<span data-ttu-id="b4b1f-119">Практическое руководство. Изменение размера элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-119">How to: Resize Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-120">Инструкции по заданию размеров элементов управления в форме.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-120">Gives directions for setting the size of controls on a form.</span></span>  
   
- [Практическое руководство: Установка параметров сетки для всех форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
- Указания по настройке размера сетки, охватывающей форму.  
+ [<span data-ttu-id="b4b1f-121">Практическое руководство. Установка параметров сетки для всех форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-121">How to: Set Grid Options for All Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-grid-options-for-all-windows-forms.md)  
+ <span data-ttu-id="b4b1f-122">Инструкции по настройке размера сетки, охватывающей форму.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-122">Gives directions for calibrating the size of the grid that covers a form.</span></span>  
   
- [Практическое руководство: Установка последовательности переходов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- Указания по созданию порядка, в котором элементы управления будут иметь фокус, когда пользователь нажимает клавишу TAB.  
+ [<span data-ttu-id="b4b1f-123">Практическое руководство. Установка последовательности переходов в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-123">How to: Set the Tab Order on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ <span data-ttu-id="b4b1f-124">Инструкции по определению порядка, в котором элементы управления будут получать фокус, когда пользователь нажимает клавишу TAB.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-124">Gives directions for regulating the order in which controls will have focus when the user presses TAB.</span></span>  
   
- [Практическое руководство: упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
- Указания по привязке элементов управления к сетке в форме.  
+ [<span data-ttu-id="b4b1f-125">Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-125">How to: Arrange Controls with Snaplines and the Grid in Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md)  
+ <span data-ttu-id="b4b1f-126">Инструкции по привязке элементов управления к сетке в форме.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-126">Gives directions for affixing controls to the grid on a form.</span></span>  
   
- [Практическое руководство: Переназначение существующих элементов управления другому родительскому элементу](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
- Указания по назначению существующих элементов управления в новый родительский контейнер.  
+ [<span data-ttu-id="b4b1f-127">Практическое руководство. Переназначение существующих элементов управления другим родительским элементам</span><span class="sxs-lookup"><span data-stu-id="b4b1f-127">How to: Reassign Existing Controls to a Different Parent</span></span>](../../../../docs/framework/winforms/controls/how-to-reassign-existing-controls-to-a-different-parent.md)  
+ <span data-ttu-id="b4b1f-128">Инструкции по назначению существующих элементов управления новому родительскому контейнеру.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-128">Gives directions for assigning existing controls to a new parent container.</span></span>  
   
- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с заполнения, поля и свойства AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- Описывает, как можно поместить элементы управления в формах с помощью <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства в **конструктора**.  
+ [<span data-ttu-id="b4b1f-129">Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize</span><span class="sxs-lookup"><span data-stu-id="b4b1f-129">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
+ <span data-ttu-id="b4b1f-130">Описывает, как можно поместить элементы управления в формах с помощью <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства в **конструктор форм**.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-130">Describes how you can place controls on your forms by using the <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, and <xref:System.Windows.Forms.Control.AutoSize%2A> properties within the **Forms Designer**.</span></span>  
   
- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- Демонстрирует различных ролей макета, выполняемых линиями привязки.  
+ [<span data-ttu-id="b4b1f-131">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="b4b1f-131">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ <span data-ttu-id="b4b1f-132">Демонстрация различных ролей макета, выполняемых линиями привязки.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-132">Demonstrates the various layout roles fulfilled by snaplines.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Практическое руководство: создание Windows Forms с помощью конструктора кнопки отмены](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- Указания по настройке кнопки в качестве элемента управления для отмены формы.  
+## <a name="related-sections"></a><span data-ttu-id="b4b1f-133">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b4b1f-133">Related Sections</span></span>  
+ [<span data-ttu-id="b4b1f-134">Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="b4b1f-134">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ <span data-ttu-id="b4b1f-135">Инструкции по настройке кнопки в качестве элемента управления для отмены формы.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-135">Gives directions for establishing a button as the control to cancel the form.</span></span>  
   
- [Практическое руководство: создание Windows Forms кнопки "Принять", с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- Указания по настройке кнопки (часто кнопка «ОК») в качестве кнопки «принять ввод» после нажатия клавиши ВВОД независимо от того, когда фокус ввода находится на время в диалоговом окне.  
+ [<span data-ttu-id="b4b1f-136">Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="b4b1f-136">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ <span data-ttu-id="b4b1f-137">Инструкции по настройке кнопки (часто кнопки ОК) в качестве кнопки "принятия входных данных" после нажатия клавиши ВВОД независимо от того, где в этот момент находится фокус ввода в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-137">Gives directions for establishing a button (often an "OK" button) as the "accept input" button when ENTER is pressed regardless of where focus is at the time in the dialog box.</span></span>  
   
- [Практическое руководство: функции, как набор элементов управления RadioButton форм Windows](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Указания по настройке набора `RadioButton` все элементы управления, связанных друг с другом.  
+ [<span data-ttu-id="b4b1f-138">Практическое руководство. Создание переключателя для выбора одной из нескольких установок на базе элементов управления RadioButton в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-138">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ <span data-ttu-id="b4b1f-139">Инструкции по настройке набора элементов управления `RadioButton`, связанных друг с другом.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-139">Gives directions for establishing a set of `RadioButton` controls as being related to one another.</span></span>  
   
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Содержит общие сведения об элементах управления.
+ [<span data-ttu-id="b4b1f-140">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4b1f-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="b4b1f-141">Общие сведения об элементах управления.</span><span class="sxs-lookup"><span data-stu-id="b4b1f-141">Provides general information about controls.</span></span>

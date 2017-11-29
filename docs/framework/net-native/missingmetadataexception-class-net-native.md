@@ -5,96 +5,93 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 42f47b1cc184dcd789dbf38b1e5d9f03608daa04
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 607204081c71a4489a1a67ced24af12b150632e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="missingmetadataexception-class-net-native"></a>Класс MissingMetadataException (машинный код .NET)
-**Приложения .NET для Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] только**   
+# <a name="missingmetadataexception-class-net-native"></a><span data-ttu-id="aa31b-102">Класс MissingMetadataException (машинный код .NET)</span><span class="sxs-lookup"><span data-stu-id="aa31b-102">MissingMetadataException Class (.NET Native)</span></span>
+<span data-ttu-id="aa31b-103">**Приложения .NET для Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] только** </span><span class="sxs-lookup"><span data-stu-id="aa31b-103">**.NET for Windows apps for Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] only**</span></span>  
   
- Исключение, возникающее при использовании отражения для извлечения метаданных, которые не существуют.  
+ <span data-ttu-id="aa31b-104">Исключение, возникающее при использовании отражения для извлечения метаданных, которые не существуют.</span><span class="sxs-lookup"><span data-stu-id="aa31b-104">The exception that is thrown when reflection is used to retrieve metadata that isn't present.</span></span>  
   
- **Пространство имен:** System.Reflection  
+ <span data-ttu-id="aa31b-105">**Пространство имен:** System.Reflection</span><span class="sxs-lookup"><span data-stu-id="aa31b-105">**Namespace:** System.Reflection</span></span>  
   
 > [!IMPORTANT]
->  Класс `MissingMetadataException` предназначен исключительно для внутреннего использования цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения. Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Дополнительные сведения см. в разделе "Примечания".  
+>  <span data-ttu-id="aa31b-106">Класс `MissingMetadataException` предназначен исключительно для внутреннего использования цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa31b-106">The `MissingMetadataException` class is intended solely for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="aa31b-107">Он не предназначен для использования в стороннем коде. Вам также не следует обрабатывать исключение в коде своего приложения.</span><span class="sxs-lookup"><span data-stu-id="aa31b-107">It is not intended for use in third-party code, nor should you handle the exception in your application code.</span></span> <span data-ttu-id="aa31b-108">Вместо этого вы устраняете исключение, добавляя записи в [файл директив среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span><span class="sxs-lookup"><span data-stu-id="aa31b-108">Instead, you eliminate the exception by adding entries to your [runtime directives file](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="aa31b-109">Дополнительные сведения см. в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="aa31b-109">For more information, see the Remarks section.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="aa31b-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="aa31b-110">Syntax</span></span>  
  [!code-csharp[ProjectN#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingmetadataexception_syntax1.cs#4)]  
   
- Обратите внимание на то, что класс `MissingMetadataException` является производным от <xref:System.TypeAccessException>.  
+ <span data-ttu-id="aa31b-111">Обратите внимание на то, что класс `MissingMetadataException` является производным от <xref:System.TypeAccessException>.</span><span class="sxs-lookup"><span data-stu-id="aa31b-111">Note that the `MissingMetadataException` class derives from <xref:System.TypeAccessException>.</span></span>  
   
- В классе `MissingMetadataException`представлены следующие члены:  
+ <span data-ttu-id="aa31b-112">В классе `MissingMetadataException`представлены следующие члены:</span><span class="sxs-lookup"><span data-stu-id="aa31b-112">The `MissingMetadataException` class has the following members:</span></span>  
   
-## <a name="constructors"></a>Конструкторы  
+## <a name="constructors"></a><span data-ttu-id="aa31b-113">Конструкторы</span><span class="sxs-lookup"><span data-stu-id="aa31b-113">Constructors</span></span>  
   
-|Конструктор|Описание|  
+|<span data-ttu-id="aa31b-114">Конструктор</span><span class="sxs-lookup"><span data-stu-id="aa31b-114">Constructor</span></span>|<span data-ttu-id="aa31b-115">Описание</span><span class="sxs-lookup"><span data-stu-id="aa31b-115">Description</span></span>|  
 |-----------------|-----------------|  
-|`public MissingMetadataException()`|Инициализирует новый экземпляр класса `MissingMetadataException`, используя системное сообщение, содержащее описание ошибки.<br /><br /> Этот конструктор предназначен только для внутреннего использования цепочки инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].|  
-|`public MissingMetadataException(String message)`|Инициализирует новый экземпляр класса `MissingMetadataException` с указанным сообщением об ошибке.<br /><br /> Этот конструктор предназначен только для внутреннего использования цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].|  
+|`public MissingMetadataException()`|<span data-ttu-id="aa31b-116">Инициализирует новый экземпляр класса `MissingMetadataException`, используя системное сообщение, содержащее описание ошибки.</span><span class="sxs-lookup"><span data-stu-id="aa31b-116">Initializes a new instance of the `MissingMetadataException` class by using a system-supplied message that describes the error.</span></span><br /><br /> <span data-ttu-id="aa31b-117">Этот конструктор предназначен только для внутреннего использования цепочки инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa31b-117">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
+|`public MissingMetadataException(String message)`|<span data-ttu-id="aa31b-118">Инициализирует новый экземпляр класса `MissingMetadataException` с указанным сообщением об ошибке.</span><span class="sxs-lookup"><span data-stu-id="aa31b-118">Initializes a new instance of the `MissingMetadataException` class with a specified error message.</span></span><br /><br /> <span data-ttu-id="aa31b-119">Этот конструктор предназначен только для внутреннего использования цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa31b-119">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] torol chain only.</span></span>|  
   
-## <a name="properties"></a>Свойства  
+## <a name="properties"></a><span data-ttu-id="aa31b-120">Свойства</span><span class="sxs-lookup"><span data-stu-id="aa31b-120">Properties</span></span>  
   
-|Свойство|Описание|  
+|<span data-ttu-id="aa31b-121">Свойство</span><span class="sxs-lookup"><span data-stu-id="aa31b-121">Property</span></span>|<span data-ttu-id="aa31b-122">Описание</span><span class="sxs-lookup"><span data-stu-id="aa31b-122">Description</span></span>|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Возвращает коллекцию пар ключ/значение, предоставляющие дополнительные сведения об исключении, определяемые пользователем. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public string HelpLink { get; set; }`|Получает или задает ссылку на файл справки, связанный с этим исключением. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public int HResult { get; protected set; }`|Получает или задает `HRESULT`, закодированное числовое значение, присвоенное определенному исключению. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public Exception InnerException { get; }`|Получает исключение, которое вызвало текущее исключение. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public string Message { get; }`|Получает сообщение, описывающее текущее исключение. (Является наследником <xref:System.TypeLoadException>)|  
-|`public string Source { get; set; }`|Возвращает или задает имя приложения или объекта, вызвавшего ошибку. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public string StackTrace { get; }`|Получает строковое представление непосредственных кадров в стеке вызова. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public MethodBase TargetSite { get; }`|Возвращает метод, который вызвал текущее исключение. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public string TypeName { get; ]`|Получает полное имя типа, метаданные которого отсутствует. (Является наследником <xref:System.TypeLoadException>)|  
+|`public IDictionary Data { get; }`|<span data-ttu-id="aa31b-123">Возвращает коллекцию пар ключ/значение, предоставляющие дополнительные сведения об исключении, определяемые пользователем.</span><span class="sxs-lookup"><span data-stu-id="aa31b-123">Gets a collection of key/value pairs that provide additional user-defined information about the exception.</span></span> <span data-ttu-id="aa31b-124">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-124">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string HelpLink { get; set; }`|<span data-ttu-id="aa31b-125">Получает или задает ссылку на файл справки, связанный с этим исключением.</span><span class="sxs-lookup"><span data-stu-id="aa31b-125">Gets or sets a link to the help file associated with this exception.</span></span> <span data-ttu-id="aa31b-126">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-126">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int HResult { get; protected set; }`|<span data-ttu-id="aa31b-127">Получает или задает `HRESULT`, закодированное числовое значение, присвоенное определенному исключению.</span><span class="sxs-lookup"><span data-stu-id="aa31b-127">Gets or sets the `HRESULT`, a coded numeric value that is assigned to a specific exception.</span></span> <span data-ttu-id="aa31b-128">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-128">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public Exception InnerException { get; }`|<span data-ttu-id="aa31b-129">Получает исключение, которое вызвало текущее исключение.</span><span class="sxs-lookup"><span data-stu-id="aa31b-129">Gets the exception that caused the current exception.</span></span> <span data-ttu-id="aa31b-130">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-130">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string Message { get; }`|<span data-ttu-id="aa31b-131">Получает сообщение, описывающее текущее исключение.</span><span class="sxs-lookup"><span data-stu-id="aa31b-131">Gets a message that describes the current exception.</span></span> <span data-ttu-id="aa31b-132">(Является наследником <xref:System.TypeLoadException>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-132">(Inherited from <xref:System.TypeLoadException>.)</span></span>|  
+|`public string Source { get; set; }`|<span data-ttu-id="aa31b-133">Возвращает или задает имя приложения или объекта, вызвавшего ошибку.</span><span class="sxs-lookup"><span data-stu-id="aa31b-133">Gets or sets the name of the application or object that caused the error.</span></span> <span data-ttu-id="aa31b-134">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-134">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string StackTrace { get; }`|<span data-ttu-id="aa31b-135">Получает строковое представление непосредственных кадров в стеке вызова.</span><span class="sxs-lookup"><span data-stu-id="aa31b-135">Gets a string representation of the immediate frames on the call stack.</span></span> <span data-ttu-id="aa31b-136">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-136">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public MethodBase TargetSite { get; }`|<span data-ttu-id="aa31b-137">Возвращает метод, который вызвал текущее исключение.</span><span class="sxs-lookup"><span data-stu-id="aa31b-137">Gets the method that threw the current exception.</span></span> <span data-ttu-id="aa31b-138">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-138">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string TypeName { get; ]`|<span data-ttu-id="aa31b-139">Получает полное имя типа, метаданные которого отсутствует.</span><span class="sxs-lookup"><span data-stu-id="aa31b-139">Gets the fully qualified name of the type whose metadata is missing.</span></span> <span data-ttu-id="aa31b-140">(Является наследником <xref:System.TypeLoadException>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-140">(Inherited from <xref:System.TypeLoadException>.)</span></span>|  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="aa31b-141">Методы</span><span class="sxs-lookup"><span data-stu-id="aa31b-141">Methods</span></span>  
   
-|Метод|Описание|  
+|<span data-ttu-id="aa31b-142">Метод</span><span class="sxs-lookup"><span data-stu-id="aa31b-142">Method</span></span>|<span data-ttu-id="aa31b-143">Описание</span><span class="sxs-lookup"><span data-stu-id="aa31b-143">Description</span></span>|  
 |------------|-----------------|  
-|`public bool Equals(Object obj)`|Определяет, равен ли заданный объект текущему объекту.  (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`protected void Finalize()`|Позволяет объекту попытаться освободить ресурсы и выполнить другие операции очистки, перед тем как он будет уничтожен во время сборки мусора. (Является наследником <xref:System.Object>)|  
-|`public Exception GetBaseException()`|Возвращает исключение, которое является корневой причиной одного или нескольких исключений. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`public int GetHashCode()`|Возвращает хэш-код для экземпляра`MissingMetadataException`.   (Является наследником <xref:System.Object>)|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Задает объект <xref:System.Runtime.Serialization.SerializationInfo>, содержащий информацию об исключении.  (Является наследником <xref:System.TypeLoadException>)|  
-|`public Type GetType()`|Возвращает тип среды выполнения текущего экземпляра. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
-|`protected Object MemberwiseClone()`|Создает неполную копию текущего объекта. (Является наследником <xref:System.Object>)|  
-|`public string ToString()`|Возвращает строковое представление текущего исключения. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
+|`public bool Equals(Object obj)`|<span data-ttu-id="aa31b-144">Определяет, равен ли заданный объект текущему объекту.</span><span class="sxs-lookup"><span data-stu-id="aa31b-144">Determines whether the specified object is equal to the current object.</span></span>  <span data-ttu-id="aa31b-145">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-145">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`protected void Finalize()`|<span data-ttu-id="aa31b-146">Позволяет объекту попытаться освободить ресурсы и выполнить другие операции очистки, перед тем как он будет уничтожен во время сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="aa31b-146">Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</span></span> <span data-ttu-id="aa31b-147">(Является наследником <xref:System.Object>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-147">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public Exception GetBaseException()`|<span data-ttu-id="aa31b-148">Возвращает исключение, которое является корневой причиной одного или нескольких исключений.</span><span class="sxs-lookup"><span data-stu-id="aa31b-148">Returns the exception that is the root cause of one or more subsequent exceptions.</span></span> <span data-ttu-id="aa31b-149">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-149">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int GetHashCode()`|<span data-ttu-id="aa31b-150">Возвращает хэш-код для экземпляра`MissingMetadataException`.</span><span class="sxs-lookup"><span data-stu-id="aa31b-150">Returns a hash code for a `MissingMetadataException` instance.</span></span>   <span data-ttu-id="aa31b-151">(Является наследником <xref:System.Object>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-151">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|<span data-ttu-id="aa31b-152">Задает объект <xref:System.Runtime.Serialization.SerializationInfo>, содержащий информацию об исключении.</span><span class="sxs-lookup"><span data-stu-id="aa31b-152">Sets a <xref:System.Runtime.Serialization.SerializationInfo> object with information about the exception.</span></span>  <span data-ttu-id="aa31b-153">(Является наследником <xref:System.TypeLoadException>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-153">(Inherited from <xref:System.TypeLoadException>.)</span></span>|  
+|`public Type GetType()`|<span data-ttu-id="aa31b-154">Возвращает тип среды выполнения текущего экземпляра.</span><span class="sxs-lookup"><span data-stu-id="aa31b-154">Gets the runtime type of the current instance.</span></span> <span data-ttu-id="aa31b-155">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-155">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`protected Object MemberwiseClone()`|<span data-ttu-id="aa31b-156">Создает неполную копию текущего объекта.</span><span class="sxs-lookup"><span data-stu-id="aa31b-156">Creates a shallow copy of the current object.</span></span> <span data-ttu-id="aa31b-157">(Является наследником <xref:System.Object>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-157">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public string ToString()`|<span data-ttu-id="aa31b-158">Возвращает строковое представление текущего исключения.</span><span class="sxs-lookup"><span data-stu-id="aa31b-158">Returns the string representation of the current exception.</span></span> <span data-ttu-id="aa31b-159">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-159">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="events"></a>События  
+## <a name="events"></a><span data-ttu-id="aa31b-160">События</span><span class="sxs-lookup"><span data-stu-id="aa31b-160">Events</span></span>  
   
-|Событие|Описание|  
+|<span data-ttu-id="aa31b-161">Событие</span><span class="sxs-lookup"><span data-stu-id="aa31b-161">Event</span></span>|<span data-ttu-id="aa31b-162">Описание</span><span class="sxs-lookup"><span data-stu-id="aa31b-162">Description</span></span>|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Возникает, когда исключение сериализовано для создания объекта состояния исключения, содержащего сериализованные данные об исключении. (Является наследником <xref:System.Exception?displayProperty=fullName>)|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|<span data-ttu-id="aa31b-163">Возникает, когда исключение сериализовано для создания объекта состояния исключения, содержащего сериализованные данные об исключении.</span><span class="sxs-lookup"><span data-stu-id="aa31b-163">Occurs when an exception is serialized to create an exception state object that contains serialized data about the exception.</span></span> <span data-ttu-id="aa31b-164">(Является наследником <xref:System.Exception?displayProperty=nameWithType>)</span><span class="sxs-lookup"><span data-stu-id="aa31b-164">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="usage-details"></a>Сведения об использовании  
- Исключение`MissingMetadataException` возникает, если использовать отражение для доступа к метаданным, которые не доступны в сборке.  
+## <a name="usage-details"></a><span data-ttu-id="aa31b-165">Сведения об использовании</span><span class="sxs-lookup"><span data-stu-id="aa31b-165">Usage Details</span></span>  
+ <span data-ttu-id="aa31b-166">Исключение`MissingMetadataException` возникает, если использовать отражение для доступа к метаданным, которые не доступны в сборке.</span><span class="sxs-lookup"><span data-stu-id="aa31b-166">The `MissingMetadataException` exception is thrown when reflection is used to access metadata that isn’t available in an assembly.</span></span>  
   
- Метаданные, доступные для приложения во время выполнения определяются файлом директив среды выполнения (XML-файл конфигурации), *. rd.xml. Чтобы избежать возникновения этого исключения в приложении, необходимо изменить файл \*.rd.xml, чтобы определить метаданные, которые должны быть доступны во время выполнения. Сведения о формате файла rd.xml \* см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ <span data-ttu-id="aa31b-167">Метаданные, доступные для приложения во время выполнения определяются файлом директив среды выполнения (XML-файл конфигурации), *. rd.xml.</span><span class="sxs-lookup"><span data-stu-id="aa31b-167">The metadata that is available to an app at run time is defined by the runtime directives (XML configuration) file, *.rd.xml.</span></span> <span data-ttu-id="aa31b-168">Чтобы избежать возникновения этого исключения в приложении, необходимо изменить файл \*.rd.xml, чтобы определить метаданные, которые должны быть доступны во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa31b-168">To prevent your app from throwing this exception, you must modify \*.rd.xml to define the metadata that must be present at run time.</span></span> <span data-ttu-id="aa31b-169">Сведения о формате файла rd.xml \* см. в разделе [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span><span class="sxs-lookup"><span data-stu-id="aa31b-169">For information about the format of the \*.rd.xml file, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>  
   
 > [!IMPORTANT]
->  Так как это исключение указывает, что метаданные, необходимые для приложения, недоступны во время выполнения, не следует обрабатывать это исключение в блоке `try`/`catch`. Вместо этого следует выяснить причины возникновения исключения и устранить ее с помощью файла директив среды выполнения. Чтобы получить запись, которую можно добавить в файл директив среды выполнения, устраняющий исключение, можно использовать одно из двух средств устранения неполадок.  
+>  <span data-ttu-id="aa31b-170">Так как это исключение указывает, что метаданные, необходимые для приложения, недоступны во время выполнения, не следует обрабатывать это исключение в блоке `try`/`catch`.</span><span class="sxs-lookup"><span data-stu-id="aa31b-170">Because this exception indicates that metadata needed by your application isn’t available at run time, you shouldn’t handle this exception in a `try`/`catch` block.</span></span> <span data-ttu-id="aa31b-171">Вместо этого следует выяснить причины возникновения исключения и устранить ее с помощью файла директив среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="aa31b-171">Instead, you should diagnose the cause of the exception and eliminate it by using a runtime directives file.</span></span> <span data-ttu-id="aa31b-172">Чтобы получить запись, которую можно добавить в файл директив среды выполнения, устраняющий исключение, можно использовать одно из двух средств устранения неполадок.</span><span class="sxs-lookup"><span data-stu-id="aa31b-172">To get the entry that you can add to your runtime directives file that eliminates the exception, you can use one of two troubleshooters:</span></span>  
 >   
->  -   [Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) для типов.  
-> -   [Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) для методов.  
+>  -   <span data-ttu-id="aa31b-173">[Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) для типов.</span><span class="sxs-lookup"><span data-stu-id="aa31b-173">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
+> -   <span data-ttu-id="aa31b-174">[Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) для методов.</span><span class="sxs-lookup"><span data-stu-id="aa31b-174">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
- Класс `MissingMetadataException` не содержит уникальных членов; все его члены наследуются от базового класса, <xref:System.TypeAccessException>.  
+ <span data-ttu-id="aa31b-175">Класс `MissingMetadataException` не содержит уникальных членов; все его члены наследуются от базового класса, <xref:System.TypeAccessException>.</span><span class="sxs-lookup"><span data-stu-id="aa31b-175">The `MissingMetadataException` class contains no unique members; all of its members are inherited from its base class, <xref:System.TypeAccessException>.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Exception?displayProperty=fullName>   
- <xref:System.TypeAccessException>   
- [Класс MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)   
- [Класс MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)   
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-
+## <a name="see-also"></a><span data-ttu-id="aa31b-176">См. также</span><span class="sxs-lookup"><span data-stu-id="aa31b-176">See Also</span></span>  
+ <xref:System.Exception?displayProperty=nameWithType>  
+ <xref:System.TypeAccessException>  
+ [<span data-ttu-id="aa31b-177">Класс MissingInteropDataException</span><span class="sxs-lookup"><span data-stu-id="aa31b-177">MissingInteropDataException Class</span></span>](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
+ [<span data-ttu-id="aa31b-178">Класс MissingRuntimeArtifactException</span><span class="sxs-lookup"><span data-stu-id="aa31b-178">MissingRuntimeArtifactException Class</span></span>](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
+ [<span data-ttu-id="aa31b-179">Справочник по конфигурационному файлу директив среды выполнения (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="aa31b-179">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

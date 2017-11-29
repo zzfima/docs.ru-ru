@@ -1,35 +1,36 @@
 ---
-title: "Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel1_LinkClicked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], LinkLabel - элемент управления"
-  - "связывание, к веб-страницам от форм"
-  - "LinkLabel - элемент управления [Windows Forms], примеры"
-  - "веб-страницы, отображение"
-  - "Windows Forms, создание связи с веб-страницей"
+title: "Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: LinkLabel1_LinkClicked
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Web pages [Windows Forms], displaying
+- linking [Windows Forms], to Web pages from forms
+- Windows Forms, linking to Web pages
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)
-Этот пример отображает веб\-страницу в браузере по умолчанию, если пользователь нажимает элемент управления Windows Forms <xref:System.Windows.Forms.LinkLabel>.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="8834a-102">Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8834a-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="8834a-103">Этот пример выводит на веб-страницу в браузере по умолчанию, когда пользователь щелкает Windows Forms <xref:System.Windows.Forms.LinkLabel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8834a-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="8834a-104">Пример</span><span class="sxs-lookup"><span data-stu-id="8834a-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -44,18 +45,18 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a><span data-ttu-id="8834a-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="8834a-105">Compiling the Code</span></span>  
+ <span data-ttu-id="8834a-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="8834a-106">This example requires:</span></span>  
   
--   Форма Windows Forms с именем `Form1`.  
+-   <span data-ttu-id="8834a-107">Формы Windows Forms с именем `Form1`.</span><span class="sxs-lookup"><span data-stu-id="8834a-107">A Windows Form named `Form1`.</span></span>  
   
--   Элемент управления <xref:System.Windows.Forms.LinkLabel> с именем `LinkLabel1`.  
+-   <span data-ttu-id="8834a-108">элемент управления <xref:System.Windows.Forms.LinkLabel> с именем `LinkLabel1`;</span><span class="sxs-lookup"><span data-stu-id="8834a-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
--   Активное подключение к Интернету.  
+-   <span data-ttu-id="8834a-109">Активное подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="8834a-109">An active Internet connection.</span></span>  
   
-## Безопасность платформы .NET Framework  
- Обращение к методу <xref:System.Diagnostics.Process.Start%2A> требует полного доверия.  Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a><span data-ttu-id="8834a-110">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8834a-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="8834a-111">Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия.</span><span class="sxs-lookup"><span data-stu-id="8834a-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="8834a-112">Для получения дополнительной информации см. <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="8834a-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.LinkLabel>   
- [Элемент управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="8834a-113">См. также</span><span class="sxs-lookup"><span data-stu-id="8834a-113">See Also</span></span>  
+ <xref:System.Windows.Forms.LinkLabel>  
+ [<span data-ttu-id="8834a-114">Элемент управления LinkLabel</span><span class="sxs-lookup"><span data-stu-id="8834a-114">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

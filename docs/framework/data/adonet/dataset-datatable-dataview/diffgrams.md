@@ -1,60 +1,63 @@
 ---
-title: "Объекты DiffGram | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DiffGrams
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Объекты DiffGram
-DiffGram \- это формат XML, определяющий текущую и первоначальную версию элементов данных.  Набор данных <xref:System.Data.DataSet> использует формат DiffGram для загрузки и хранения своего содержимого, а также для сериализации содержимого перед отправкой его по сетевому подключению.  Если набор <xref:System.Data.DataSet> записан в формате DiffGram, то он заполняет DiffGram всеми необходимыми данными, чтобы точно воссоздать содержимое \(но не схему\) набора данных <xref:System.Data.DataSet>, включая значения столбцов, как из **первоначальной**, так и из **текущей** версий строк, сведения об ошибках строк и порядке строк.  
+# <a name="diffgrams"></a><span data-ttu-id="6a90a-102">DiffGrams</span><span class="sxs-lookup"><span data-stu-id="6a90a-102">DiffGrams</span></span>
+<span data-ttu-id="6a90a-103">DiffGram - это формат XML, определяющий текущую и первоначальную версию элементов данных.</span><span class="sxs-lookup"><span data-stu-id="6a90a-103">A DiffGram is an XML format that identifies current and original versions of data elements.</span></span> <span data-ttu-id="6a90a-104">Набор данных <xref:System.Data.DataSet> использует формат DiffGram для загрузки и хранения своего содержимого, а также для сериализации содержимого перед отправкой его по сетевому подключению.</span><span class="sxs-lookup"><span data-stu-id="6a90a-104">The <xref:System.Data.DataSet> uses the DiffGram format to load and persist its contents, and to serialize its contents for transport across a network connection.</span></span> <span data-ttu-id="6a90a-105">Когда <xref:System.Data.DataSet> записан как DiffGram, он заполняет DiffGram всеми необходимыми данными, чтобы точно воссоздать содержимое, но не схему набора <xref:System.Data.DataSet>, включая значения столбцов из обоих **исходный** и **текущей** версий строк, сведения об ошибках строк и порядке строк.</span><span class="sxs-lookup"><span data-stu-id="6a90a-105">When a <xref:System.Data.DataSet> is written as a DiffGram, it populates the DiffGram with all the necessary information to accurately recreate the contents, though not the schema, of the <xref:System.Data.DataSet>, including column values from both the **Original** and **Current** row versions, row error information, and row order.</span></span>  
   
- При отправке и получении набора данных <xref:System.Data.DataSet> из веб\-службы XML формат DiffGram используется неявно.  Кроме того, при загрузке содержимого <xref:System.Data.DataSet> из XML с помощью метода **ReadXml** или при записи содержимого <xref:System.Data.DataSet> в XML с помощью метода **WriteXml** можно указывать, что содержимое должно считываться или записываться в формате DiffGram.  Дополнительные сведения см. в разделах [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) и [Запись содержимого DataSet в виде XML\-данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ <span data-ttu-id="6a90a-106">При отправке и получении набора данных <xref:System.Data.DataSet> из веб-службы XML формат DiffGram используется неявно.</span><span class="sxs-lookup"><span data-stu-id="6a90a-106">When sending and retrieving a <xref:System.Data.DataSet> from an XML Web service, the DiffGram format is implicitly used.</span></span> <span data-ttu-id="6a90a-107">Кроме того при загрузке содержимого <xref:System.Data.DataSet> из XML с помощью **ReadXml** метод, или при записи содержимого <xref:System.Data.DataSet> в XML с помощью **WriteXml** метод, можно указать что содержимое чтения или записи в формате DiffGram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-107">Additionally, when loading the contents of a <xref:System.Data.DataSet> from XML using the **ReadXml** method, or when writing the contents of a <xref:System.Data.DataSet> in XML using the **WriteXml** method, you can specify that the contents be read or written as a DiffGram.</span></span> <span data-ttu-id="6a90a-108">Дополнительные сведения см. в разделе [загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) и [запись содержимого набора данных как XML-данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).</span><span class="sxs-lookup"><span data-stu-id="6a90a-108">For more information, see [Loading a DataSet from XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) and [Writing DataSet Contents as XML Data](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).</span></span>  
   
- Хотя формат DiffGram в основном используется платформой .NET Framework как формат сериализации для содержимого набора данных <xref:System.Data.DataSet>, его можно также применять для изменения данных в таблицах базы данных Microsoft SQL Server.  
+ <span data-ttu-id="6a90a-109">Хотя формат DiffGram в основном используется платформой .NET Framework как формат сериализации для содержимого набора данных <xref:System.Data.DataSet>, его можно также применять для изменения данных в таблицах базы данных Microsoft SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6a90a-109">While the DiffGram format is primarily used by the .NET Framework as a serialization format for the contents of a <xref:System.Data.DataSet>, you can also use DiffGrams to modify data in tables in a Microsoft SQL Server database.</span></span>  
   
- Diffgram формируется путем записи содержимого всех таблиц в элемент **\<diffgram\>**.  
+ <span data-ttu-id="6a90a-110">Diffgram формируется путем записи содержимого всех таблиц в  **\<diffgram >** элемента.</span><span class="sxs-lookup"><span data-stu-id="6a90a-110">A Diffgram is generated by writing the contents of all tables to a **\<diffgram>** element.</span></span>  
   
-### Создание Diffgram  
+### <a name="to-generate-a-diffgram"></a><span data-ttu-id="6a90a-111">Создание Diffgram</span><span class="sxs-lookup"><span data-stu-id="6a90a-111">To generate a Diffgram</span></span>  
   
-1.  Создайте список корневых таблиц \(таблиц, не имеющих родителей\).  
+1.  <span data-ttu-id="6a90a-112">Создайте список корневых таблиц (таблиц, не имеющих родителей).</span><span class="sxs-lookup"><span data-stu-id="6a90a-112">Generate a list of Root tables (that is, tables without any parent).</span></span>  
   
-2.  Для каждой таблицы и ее потомков в списке запишите текущую версию всех строк в первом разделе Diffgram.  
+2.  <span data-ttu-id="6a90a-113">Для каждой таблицы и ее потомков в списке запишите текущую версию всех строк в первом разделе Diffgram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-113">For each table and its descendants in the list, write out the current version of all rows in the first Diffgram section.</span></span>  
   
-3.  Для каждой таблицы в наборе данных <xref:System.Data.DataSet> запишите первоначальную версию всех строк, если она есть, в разделе **\<before\>** Diffgram.  
+3.  <span data-ttu-id="6a90a-114">Для каждой таблицы в <xref:System.Data.DataSet>, запишите первоначальную версию всех строк, если все в  **\<перед >** раздел Diffgram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-114">For each table in the <xref:System.Data.DataSet>, write out the original version of all rows, if any, in the **\<before>** section of the Diffgram.</span></span>  
   
-4.  Для строк, имеющих ошибки, запишите содержимое ошибок в разделе **\<errors\>** Diffgram.  
+4.  <span data-ttu-id="6a90a-115">Для строк с ошибками, запишите содержимое ошибок в  **\<ошибки >** раздел Diffgram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-115">For rows that have errors, write the error content in the **\<errors>** section of the Diffgram.</span></span>  
   
- Diffgram обрабатывается в последовательном порядке от начала XML\-файла до его конца.  
+ <span data-ttu-id="6a90a-116">Diffgram обрабатывается в последовательном порядке от начала XML-файла до его конца.</span><span class="sxs-lookup"><span data-stu-id="6a90a-116">A Diffgram is processed in order from beginning of the XML file to the end.</span></span>  
   
-### Обработка Diffgram  
+### <a name="to-process-a-diffgram"></a><span data-ttu-id="6a90a-117">Обработка Diffgram</span><span class="sxs-lookup"><span data-stu-id="6a90a-117">To process a Diffgram</span></span>  
   
-1.  Обработайте первый раздел Diffgram, содержащий текущую версию строк.  
+1.  <span data-ttu-id="6a90a-118">Обработайте первый раздел Diffgram, содержащий текущую версию строк.</span><span class="sxs-lookup"><span data-stu-id="6a90a-118">Process the first section of the Diffgram that contains the current version of the rows.</span></span>  
   
-2.  Обработайте второй раздел, или раздел **\<before\>**, содержащий первоначальную версию измененных или удаленных строк.  
+2.  <span data-ttu-id="6a90a-119">Обработайте второй или  **\<перед >** раздел, содержащий первоначальную версию измененных или удаленных строк.</span><span class="sxs-lookup"><span data-stu-id="6a90a-119">Process the second or the **\<before>** section that contains the original row version of modified and deleted rows.</span></span>  
   
     > [!NOTE]
-    >  Если строка помечена как удаленная, то операция удаления может удалить потомков этой строки в зависимости от свойства `Cascade` текущего набора данных <xref:System.Data.DataSet>.  
+    >  <span data-ttu-id="6a90a-120">Если строка помечена как удаленная, то операция удаления может удалить потомков этой строки в зависимости от свойства `Cascade` текущего набора данных <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="6a90a-120">If a row is marked deleted, the delete operation can delete the row's descendants as well, depending on the `Cascade` property of the current <xref:System.Data.DataSet>.</span></span>  
   
-3.  Обработайте раздел **\<errors\>**.  Установите сведения об ошибках для всех заданных строк и столбцов каждого элемента в этом разделе.  
+3.  <span data-ttu-id="6a90a-121">Процесс  **\<ошибки >** раздела.</span><span class="sxs-lookup"><span data-stu-id="6a90a-121">Process the **\<errors>** section.</span></span> <span data-ttu-id="6a90a-122">Установите сведения об ошибках для всех заданных строк и столбцов каждого элемента в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="6a90a-122">Set the error information for the specified row and column for each item in this section.</span></span>  
   
 > [!NOTE]
->  Если в Diffgram задан режим <xref:System.Data.XmlWriteMode>, то содержимое целевого набора <xref:System.Data.DataSet> и исходного набора <xref:System.Data.DataSet> могут различаться.  
+>  <span data-ttu-id="6a90a-123">Если в Diffgram задан режим <xref:System.Data.XmlWriteMode>, то содержимое целевого набора <xref:System.Data.DataSet> и исходного набора <xref:System.Data.DataSet> могут различаться.</span><span class="sxs-lookup"><span data-stu-id="6a90a-123">If you set the <xref:System.Data.XmlWriteMode> to Diffgram, the content of the target <xref:System.Data.DataSet> and the original <xref:System.Data.DataSet> may differ.</span></span>  
   
-## Формат DiffGram  
- Формат дельты содержит три раздела: текущие данные, исходные данные и раздел ошибок, как показано в следующем примере.  
+## <a name="diffgram-format"></a><span data-ttu-id="6a90a-124">Формат DiffGram</span><span class="sxs-lookup"><span data-stu-id="6a90a-124">DiffGram Format</span></span>  
+ <span data-ttu-id="6a90a-125">Формат дельты содержит три раздела: текущие данные, исходные данные и раздел ошибок, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="6a90a-125">The DiffGram format is divided into three sections: the current data, the original (or "before") data, and an errors section, as shown in the following example.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
@@ -72,41 +75,41 @@ DiffGram \- это формат XML, определяющий текущую и 
 </diffgr:diffgram>  
 ```  
   
- Формат DiffGram состоит из следующих блоков данных:  
+ <span data-ttu-id="6a90a-126">Формат DiffGram состоит из следующих блоков данных:</span><span class="sxs-lookup"><span data-stu-id="6a90a-126">The DiffGram format consists of the following blocks of data:</span></span>  
   
- **\<**  ***DataInstance***  **\>**  
- Имя этого элемента, ***DataInstance***, используется в этом документе для примера.  Элемент ***DataInstance*** представляет набор данных <xref:System.Data.DataSet> или строку таблицы <xref:System.Data.DataTable>.  Вместо *DataInstance* элемент будет носить имя набора данных <xref:System.Data.DataSet> или таблицы <xref:System.Data.DataTable>.  Этот блок формата DiffGram содержит текущие данные, независимо от изменений в этих данных.  Измененный элемент или строка определяется заметкой **diffgr:hasChanges**.  
+ <span data-ttu-id="6a90a-127">**\<**  ***DataInstance***  **>**</span><span class="sxs-lookup"><span data-stu-id="6a90a-127">**\<**  ***DataInstance***  **>**</span></span>  
+ <span data-ttu-id="6a90a-128">Имя элемента, ***DataInstance***, используемые в этой документации для примера.</span><span class="sxs-lookup"><span data-stu-id="6a90a-128">The name of this element, ***DataInstance***, is used for explanation purposes in this documentation.</span></span> <span data-ttu-id="6a90a-129">Объект ***DataInstance*** элемент представляет <xref:System.Data.DataSet> или строку <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="6a90a-129">A ***DataInstance*** element represents a <xref:System.Data.DataSet> or a row of a <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="6a90a-130">Вместо *DataInstance*, элемент будет носить имя <xref:System.Data.DataSet> или <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="6a90a-130">Instead of *DataInstance*, the element would contain the name of the <xref:System.Data.DataSet> or <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="6a90a-131">Этот блок формата DiffGram содержит текущие данные, независимо от изменений в этих данных.</span><span class="sxs-lookup"><span data-stu-id="6a90a-131">This block of the DiffGram format contains the current data, whether it has been modified or not.</span></span> <span data-ttu-id="6a90a-132">Элемент, или строку, которая была изменена обозначена **diffgr:** заметки.</span><span class="sxs-lookup"><span data-stu-id="6a90a-132">An element, or row, that has been modified is identified with the **diffgr:hasChanges** annotation.</span></span>  
   
- **Блок \<diffgr:before\>**  
- Этот блок формата DiffGram содержит первоначальную версию строки.  Элементы в этом блоке сопоставляются с элементами блока ***DataInstance*** с помощью заметки **diffgr:id**.  
+ <span data-ttu-id="6a90a-133">**\<diffgr: перед >**</span><span class="sxs-lookup"><span data-stu-id="6a90a-133">**\<diffgr:before>**</span></span>  
+ <span data-ttu-id="6a90a-134">Этот блок формата DiffGram содержит первоначальную версию строки.</span><span class="sxs-lookup"><span data-stu-id="6a90a-134">This block of the DiffGram format contains the original version of a row.</span></span> <span data-ttu-id="6a90a-135">Элементы в этом блоке сопоставляются с элементами в ***DataInstance*** с помощью **diffgr: ID** заметки.</span><span class="sxs-lookup"><span data-stu-id="6a90a-135">Elements in this block are matched to elements in the ***DataInstance*** block using the **diffgr:id** annotation.</span></span>  
   
- **Блок \<diffgr:errors\>**  
- Этот блок формата DiffGram содержит сведения об ошибках конкретной строки в блоке ***DataInstance***.  Элементы в этом блоке сопоставляются с элементами блока ***DataInstance*** с помощью заметки **diffgr:id**.  
+ <span data-ttu-id="6a90a-136">**\<diffgr: Errors >**</span><span class="sxs-lookup"><span data-stu-id="6a90a-136">**\<diffgr:errors>**</span></span>  
+ <span data-ttu-id="6a90a-137">Этот блок формата DiffGram содержит сведения об ошибке для конкретной строки в ***DataInstance*** блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-137">This block of the DiffGram format contains error information for a particular row in the ***DataInstance*** block.</span></span> <span data-ttu-id="6a90a-138">Элементы в этом блоке сопоставляются с элементами в ***DataInstance*** с помощью **diffgr: ID** заметки.</span><span class="sxs-lookup"><span data-stu-id="6a90a-138">Elements in this block are matched to elements in the ***DataInstance*** block using the **diffgr:id** annotation.</span></span>  
   
-## Заметки DiffGram  
- В формате DiffGrams используется несколько заметок для связывания элементов из разных блоков DiffGram, представляющих разные версии строк или сведения об ошибках в <xref:System.Data.DataSet>.  
+## <a name="diffgram-annotations"></a><span data-ttu-id="6a90a-139">Заметки DiffGram</span><span class="sxs-lookup"><span data-stu-id="6a90a-139">DiffGram Annotations</span></span>  
+ <span data-ttu-id="6a90a-140">В формате DiffGrams используется несколько заметок для связывания элементов из разных блоков DiffGram, представляющих разные версии строк или сведения об ошибках в <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="6a90a-140">DiffGrams use several annotations to relate elements from the different DiffGram blocks that represent different row versions or error information in the <xref:System.Data.DataSet>.</span></span>  
   
- В следующей таблице представлены заметки DiffGram, которые определяются в пространстве имен DiffGram **urn:schemas\-microsoft\-com:xml\-diffgram\-v1**.  
+ <span data-ttu-id="6a90a-141">В следующей таблице описаны заметки DiffGram, которые определены в пространстве имен DiffGram **urn: schemas-microsoft-com: XML-diffgram-v1**.</span><span class="sxs-lookup"><span data-stu-id="6a90a-141">The following table describes the DiffGram annotations that are defined in the DiffGram namespace **urn:schemas-microsoft-com:xml-diffgram-v1**.</span></span>  
   
-|Комментарий|Описание|  
-|-----------------|--------------|  
-|**id**|Используется для сопоставления элементов в блоках **\<diffgr:before\>** и **\<diffgr:errors\>** с элементами в блоке **\<** ***DataInstance*** **\>**.  Значения заметки **diffgr:id** имеют вид *\[ИмяТаблицы\]\[ИдентификаторСтроки\]*.  Например, `<Customers diffgr:id="Customers1">`.|  
-|**parentId**|Определяет, какой элемент из блока **\<** ***DataInstance*** **\>** является родительским для текущего элемента.  Значения заметки **diffgr:parentId** имеют вид *\[ИмяТаблицы\]\[ИдентификаторСтроки\]*.  Например, `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Определяет строку в блоке **\<** ***DataInstance*** **\>** как измененную.  Заметка **hasChanges** может принимать одно из следующих значений.<br /><br /> **inserted**<br /> Определяет **добавленную** строку.<br /><br /> **modified**<br /> Определяет **измененную** строку, содержащую **первоначальную** версию строки в блоке **\<diffgr:before\>**.  Обратите внимание, что **удаленные** строки будут иметь **первоначальную** версию строки в блоке **diffgr:before**, но в блоке **\<** ***DataInstance*** **\>** элемент с заметкой будет отсутствовать.|  
-|**hasErrors**|Определяет строку в блоке **\<** ***DataInstance*** **\>** с элементом **RowError**.  Элемент ошибки помещается в блок **\<diffgr:errors\>**.|  
-|**Ошибка**|Содержит текст **RowError** для конкретного элемента в блоке **\<diffgr:errors\>**.|  
+|<span data-ttu-id="6a90a-142">Комментарий</span><span class="sxs-lookup"><span data-stu-id="6a90a-142">Annotation</span></span>|<span data-ttu-id="6a90a-143">Описание</span><span class="sxs-lookup"><span data-stu-id="6a90a-143">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="6a90a-144">**id**</span><span class="sxs-lookup"><span data-stu-id="6a90a-144">**id**</span></span>|<span data-ttu-id="6a90a-145">Используется для сопоставления элементов в  **\<diffgr: перед >** и  **\<diffgr: Errors >** блоки на элементы в  **\<**  ***DataInstance***  **>**  блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-145">Used to pair the elements in the **\<diffgr:before>** and **\<diffgr:errors>** blocks to elements in the **\<** ***DataInstance*** **>** block.</span></span> <span data-ttu-id="6a90a-146">Значения с **diffgr: ID** заметки хранятся в виде *[имяТаблицы] [Идентификаторстроки]*.</span><span class="sxs-lookup"><span data-stu-id="6a90a-146">Values with the **diffgr:id** annotation are in the form *[TableName][RowIdentifier]*.</span></span> <span data-ttu-id="6a90a-147">Например, `<Customers diffgr:id="Customers1">`.</span><span class="sxs-lookup"><span data-stu-id="6a90a-147">For example: `<Customers diffgr:id="Customers1">`.</span></span>|  
+|<span data-ttu-id="6a90a-148">**parentId**</span><span class="sxs-lookup"><span data-stu-id="6a90a-148">**parentId**</span></span>|<span data-ttu-id="6a90a-149">Определяет, какой элемент из  **\<**  ***DataInstance***  **>**  блок — родительский элемент текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="6a90a-149">Identifies which element from the **\<** ***DataInstance*** **>** block is the parent element of the current element.</span></span> <span data-ttu-id="6a90a-150">Значения с **diffgr: parentID** заметки хранятся в виде *[имяТаблицы] [Идентификаторстроки]*.</span><span class="sxs-lookup"><span data-stu-id="6a90a-150">Values with the **diffgr:parentId** annotation are in the form *[TableName][RowIdentifier]*.</span></span> <span data-ttu-id="6a90a-151">Например, `<Orders diffgr:parentId="Customers1">`.</span><span class="sxs-lookup"><span data-stu-id="6a90a-151">For example: `<Orders diffgr:parentId="Customers1">`.</span></span>|  
+|<span data-ttu-id="6a90a-152">**hasChanges**</span><span class="sxs-lookup"><span data-stu-id="6a90a-152">**hasChanges**</span></span>|<span data-ttu-id="6a90a-153">Определяет строку в  **\<**  ***DataInstance***  **>**  блокировать как измененный.</span><span class="sxs-lookup"><span data-stu-id="6a90a-153">Identifies a row in the **\<** ***DataInstance*** **>** block as modified.</span></span> <span data-ttu-id="6a90a-154">**HasChanges** заметка может иметь одно из следующих двух значений:</span><span class="sxs-lookup"><span data-stu-id="6a90a-154">The **hasChanges** annotation can have one of the following two values:</span></span><br /><br /> <span data-ttu-id="6a90a-155">**Вставить**</span><span class="sxs-lookup"><span data-stu-id="6a90a-155">**inserted**</span></span><br /> <span data-ttu-id="6a90a-156">Идентифицирует **Added** строки.</span><span class="sxs-lookup"><span data-stu-id="6a90a-156">Identifies an **Added** row.</span></span><br /><br /> <span data-ttu-id="6a90a-157">**изменено**</span><span class="sxs-lookup"><span data-stu-id="6a90a-157">**modified**</span></span><br /> <span data-ttu-id="6a90a-158">Идентифицирует **Modified** строку, содержащую **исходного** версию строки в  **\<diffgr: перед >** блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-158">Identifies a **Modified** row that contains an **Original** row version in the **\<diffgr:before>** block.</span></span> <span data-ttu-id="6a90a-159">Обратите внимание, что **Deleted** строки будут иметь **исходного** версию строки в  **\<diffgr: перед >** блок, но будет нет элемент с заметкой в  **\<**  ***DataInstance***  **>**  блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-159">Note that **Deleted** rows will have an **Original** row version in the **\<diffgr:before>** block, but there will be no annotated element in the **\<** ***DataInstance*** **>** block.</span></span>|  
+|<span data-ttu-id="6a90a-160">**hasErrors**</span><span class="sxs-lookup"><span data-stu-id="6a90a-160">**hasErrors**</span></span>|<span data-ttu-id="6a90a-161">Определяет строку в  **\<**  ***DataInstance***  **>**  блоке с **RowError**.</span><span class="sxs-lookup"><span data-stu-id="6a90a-161">Identifies a row in the **\<** ***DataInstance*** **>** block with a **RowError**.</span></span> <span data-ttu-id="6a90a-162">Элемент ошибки помещается в  **\<diffgr: Errors >** блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-162">The error element is placed in the **\<diffgr:errors>** block.</span></span>|  
+|<span data-ttu-id="6a90a-163">**Ошибка**</span><span class="sxs-lookup"><span data-stu-id="6a90a-163">**Error**</span></span>|<span data-ttu-id="6a90a-164">Содержит текст **RowError** для конкретного элемента в  **\<diffgr: Errors >** блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-164">Contains the text of the **RowError** for a particular element in the **\<diffgr:errors>** block.</span></span>|  
   
- Набор данных <xref:System.Data.DataSet> содержит дополнительные заметки при считывании или записи содержимого в формате DiffGram.  В следующей таблице представлены дополнительные заметки, которые определены в пространстве имен DiffGram **urn:schemas\-microsoft\-com:xml\-msdata**.  
+ <span data-ttu-id="6a90a-165">Набор данных <xref:System.Data.DataSet> содержит дополнительные заметки при считывании или записи содержимого в формате DiffGram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-165">The <xref:System.Data.DataSet> includes additional annotations when reading or writing its contents as a DiffGram.</span></span> <span data-ttu-id="6a90a-166">В следующей таблице описаны эти дополнительные заметки, которые определены в пространстве имен **urn: schemas-microsoft-com: XML-msdata**.</span><span class="sxs-lookup"><span data-stu-id="6a90a-166">The following table describes these additional annotations, which are defined in the namespace **urn:schemas-microsoft-com:xml-msdata**.</span></span>  
   
-|Комментарий|Описание|  
-|-----------------|--------------|  
-|**RowOrder**|Сохраняет порядок строк исходных данных и определяет индекс строки в конкретной таблице <xref:System.Data.DataTable>.|  
-|**Hidden**|Определяет столбец, свойство которого **ColumnMapping** имеет значение **MappingType.Hidden**.  Этот атрибут записывается в формате **msdata:hidden** *\[ИмяСтолбца\]*\="*значение*".  Например, `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Обратите внимание, что скрытые столбцы записываются как атрибут DiffGram только если они содержат данные.  В противном случае они пропускаются.|  
+|<span data-ttu-id="6a90a-167">Комментарий</span><span class="sxs-lookup"><span data-stu-id="6a90a-167">Annotation</span></span>|<span data-ttu-id="6a90a-168">Описание</span><span class="sxs-lookup"><span data-stu-id="6a90a-168">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="6a90a-169">**RowOrder**</span><span class="sxs-lookup"><span data-stu-id="6a90a-169">**RowOrder**</span></span>|<span data-ttu-id="6a90a-170">Сохраняет порядок строк исходных данных и определяет индекс строки в конкретной таблице <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="6a90a-170">Preserves the row order of the original data and identifies the index of a row in a particular <xref:System.Data.DataTable>.</span></span>|  
+|<span data-ttu-id="6a90a-171">**Скрытые**</span><span class="sxs-lookup"><span data-stu-id="6a90a-171">**Hidden**</span></span>|<span data-ttu-id="6a90a-172">Определяет столбец, как будто **ColumnMapping** свойство **MappingType.Hidden**.</span><span class="sxs-lookup"><span data-stu-id="6a90a-172">Identifies a column as having a **ColumnMapping** property set to **MappingType.Hidden**.</span></span> <span data-ttu-id="6a90a-173">Этот атрибут записывается в формате **msdata: Скрытый** *[Имя_столбца]*=»*значение*».</span><span class="sxs-lookup"><span data-stu-id="6a90a-173">The attribute is written in the format **msdata:hidden** *[ColumnName]*="*value*".</span></span> <span data-ttu-id="6a90a-174">Например, `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.</span><span class="sxs-lookup"><span data-stu-id="6a90a-174">For example: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.</span></span><br /><br /> <span data-ttu-id="6a90a-175">Обратите внимание, что скрытые столбцы записываются как атрибут DiffGram только если они содержат данные.</span><span class="sxs-lookup"><span data-stu-id="6a90a-175">Note that hidden columns are only written as a DiffGram attribute if they contain data.</span></span> <span data-ttu-id="6a90a-176">В противном случае они пропускаются.</span><span class="sxs-lookup"><span data-stu-id="6a90a-176">Otherwise, they are ignored.</span></span>|  
   
-## Образец DiffGram  
- Ниже показан пример формата DiffGram.  На нем показан результат обновления строки в таблице перед фиксацией изменений.  Строка с идентификатором пользователя «ALFKI» была изменена, но не обновлена.  В результате есть **текущая** строка с идентификатором **diffgr:id** «Customers1» в блоке **\<** ***DataInstance*** **\>** и **первоначальная** строка с идентификатором **diffgr:id** «Customers1» в блоке **\<diffgr:before\>**.  Строка с идентификатором пользователя «ANATR» содержит элемент ошибки **RowError**, поэтому к ней в качестве заметки добавляется значение `diffgr:hasErrors="true"`, а в блоке **\<diffgr:errors\>** будет связанный элемент.  
+## <a name="sample-diffgram"></a><span data-ttu-id="6a90a-177">Образец DiffGram</span><span class="sxs-lookup"><span data-stu-id="6a90a-177">Sample DiffGram</span></span>  
+ <span data-ttu-id="6a90a-178">Ниже показан пример формата DiffGram.</span><span class="sxs-lookup"><span data-stu-id="6a90a-178">An example of the DiffGram format is shown below.</span></span> <span data-ttu-id="6a90a-179">На нем показан результат обновления строки в таблице перед фиксацией изменений.</span><span class="sxs-lookup"><span data-stu-id="6a90a-179">This example shows the result of an update to a row in a table before the changes have been committed.</span></span> <span data-ttu-id="6a90a-180">Строка с идентификатором пользователя «ALFKI» была изменена, но не обновлена.</span><span class="sxs-lookup"><span data-stu-id="6a90a-180">The row with a CustomerID of "ALFKI" has been modified, but not updated.</span></span> <span data-ttu-id="6a90a-181">В результате нет **текущей** строк с **diffgr: ID** из «Customers1» в  **\<**  ***DataInstance***  **>**  блока и **исходного** строк с **diffgr: ID** из «Customers1» в  **\<diffgr: перед >**блок.</span><span class="sxs-lookup"><span data-stu-id="6a90a-181">As a result, there is a **Current** row with a **diffgr:id** of "Customers1" in the **\<** ***DataInstance*** **>** block, and an **Original** row with a **diffgr:id** of "Customers1" in the **\<diffgr:before>** block.</span></span> <span data-ttu-id="6a90a-182">В строке со значением CustomerID «ANATR» содержит **RowError**, поэтому он помечается с помощью `diffgr:hasErrors="true"` и связанным элементом в  **\<diffgr: Errors >** блока.</span><span class="sxs-lookup"><span data-stu-id="6a90a-182">The row with a CustomerID of "ANATR" includes a **RowError**, so it is annotated with `diffgr:hasErrors="true"` and there is a related element in the **\<diffgr:errors>** block.</span></span>  
   
-```  
+```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  
   <CustomerDataSet>  
     <Customers diffgr:id="Customers1" msdata:rowOrder="0" diffgr:hasChanges="modified">  
@@ -138,9 +141,9 @@ DiffGram \- это формат XML, определяющий текущую и 
 </diffgr:diffgram>  
 ```  
   
-## См. также  
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Запись содержимого DataSet в виде XML\-данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6a90a-183">См. также</span><span class="sxs-lookup"><span data-stu-id="6a90a-183">See Also</span></span>  
+ [<span data-ttu-id="6a90a-184">Использование XML в наборах данных</span><span class="sxs-lookup"><span data-stu-id="6a90a-184">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="6a90a-185">Загрузка набора данных из XML</span><span class="sxs-lookup"><span data-stu-id="6a90a-185">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="6a90a-186">Запись содержимого набора как XML-данных</span><span class="sxs-lookup"><span data-stu-id="6a90a-186">Writing DataSet Contents as XML Data</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [<span data-ttu-id="6a90a-187">Наборы данных, таблицы данных и объекты DataView</span><span class="sxs-lookup"><span data-stu-id="6a90a-187">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="6a90a-188">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6a90a-188">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

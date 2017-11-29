@@ -1,40 +1,38 @@
 ---
-title: "Элемент &lt;MemoryCache&gt; (параметры кэша) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "элемент <memoryCache>"
-  - "кэширование [.NET Framework], конфигурация"
-  - "memoryCache - элемент"
+title: "&lt;memoryCache&gt; элемент (параметры кэша)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <memoryCache> element
+- caching [.NET Framework], configuration
+- memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ded74486fd9a5687a9f5cdeee6061d4d58234e37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;MemoryCache&gt; (параметры кэша)
-Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache>. Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md), который можно использовать для настройки кэша. В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache>. Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache>.  
+# <a name="ltmemorycachegt-element-cache-settings"></a><span data-ttu-id="685e0-102">&lt;memoryCache&gt; элемент (параметры кэша)</span><span class="sxs-lookup"><span data-stu-id="685e0-102">&lt;memoryCache&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="685e0-103">Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-103">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="685e0-104">Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) , который можно использовать для настройки кэша.</span><span class="sxs-lookup"><span data-stu-id="685e0-104">The <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> class defines a [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) element that you can use to configure the cache.</span></span> <span data-ttu-id="685e0-105">В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-105">Multiple instances of the <xref:System.Runtime.Caching.MemoryCache> class can be used in a single application.</span></span> <span data-ttu-id="685e0-106">Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-106">Each `memoryCache` element in the configuration file can contain settings for a named <xref:System.Runtime.Caching.MemoryCache> instance.</span></span>  
   
- \<configuration\>  
-\<system.runtime.caching\>  
-\<memoryCache\>  
+ <span data-ttu-id="685e0-107">\<configuration></span><span class="sxs-lookup"><span data-stu-id="685e0-107">\<configuration></span></span>  
+<span data-ttu-id="685e0-108">\<System.Runtime.Caching ></span><span class="sxs-lookup"><span data-stu-id="685e0-108">\<system.runtime.caching></span></span>  
+<span data-ttu-id="685e0-109">\<memoryCache ></span><span class="sxs-lookup"><span data-stu-id="685e0-109">\<memoryCache></span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="685e0-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="685e0-110">Syntax</span></span>  
   
-```  
+```xml  
 <memoryCache   
     <namedCaches>  
         <!-- child elements -->  
@@ -42,39 +40,39 @@ caps.handback.revision: 12
 < memoryCache />  
 ```  
   
-## Тип  
- Класс <xref:System.Runtime.Caching.MemoryCache>.  
+## <a name="type"></a><span data-ttu-id="685e0-111">Тип</span><span class="sxs-lookup"><span data-stu-id="685e0-111">Type</span></span>  
+ <span data-ttu-id="685e0-112">Класс<xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-112"><xref:System.Runtime.Caching.MemoryCache> class.</span></span>  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="685e0-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="685e0-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="685e0-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="685e0-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="685e0-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="685e0-115">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`CacheMemoryLimitMegabytes`|Максимальный объем памяти в мегабайтах, который может занимать экземпляр объекта <xref:System.Runtime.Caching.MemoryCache>. Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.|  
-|`Name`|Имя конфигурации кэша.|  
-|`PhysicalMemoryLimitPercentage`|Процент физической памяти, который может использоваться кэшем. Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.|  
-|`PollingInterval`|Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша. Значение вводится в формате "ЧЧ:ММ:СС".|  
+|<span data-ttu-id="685e0-116">Атрибут</span><span class="sxs-lookup"><span data-stu-id="685e0-116">Attribute</span></span>|<span data-ttu-id="685e0-117">Описание</span><span class="sxs-lookup"><span data-stu-id="685e0-117">Description</span></span>|  
+|---------------|-----------------|  
+|`CacheMemoryLimitMegabytes`|<span data-ttu-id="685e0-118">Максимальный объем памяти в мегабайтах, который может занимать экземпляр объекта <xref:System.Runtime.Caching.MemoryCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-118">The maximum memory size, in megabytes, that an instance of a <xref:System.Runtime.Caching.MemoryCache> object can grow to.</span></span> <span data-ttu-id="685e0-119">Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="685e0-119">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosize heuristics are used by default.</span></span>|  
+|`Name`|<span data-ttu-id="685e0-120">Имя конфигурации кэша.</span><span class="sxs-lookup"><span data-stu-id="685e0-120">The name of the cache configuration.</span></span>|  
+|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="685e0-121">Процент физической памяти, который может использоваться кэшем.</span><span class="sxs-lookup"><span data-stu-id="685e0-121">The percentage of physical memory that can be used by the cache.</span></span> <span data-ttu-id="685e0-122">Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="685e0-122">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosize heuristics are used by default.</span></span>|  
+|`PollingInterval`|<span data-ttu-id="685e0-123">Значение, указывающее интервал, по истечении которого реализация кэша сравнивает текущую загрузку памяти с абсолютными и процентными ограничениями по памяти, заданными для данного экземпляра кэша.</span><span class="sxs-lookup"><span data-stu-id="685e0-123">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="685e0-124">Значение вводится в формате "ЧЧ:ММ:СС".</span><span class="sxs-lookup"><span data-stu-id="685e0-124">The value is entered in "HH:MM:SS" format.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="685e0-125">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="685e0-125">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<namedCaches\>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для экземпляра `namedCache`.|  
+|<span data-ttu-id="685e0-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="685e0-126">Element</span></span>|<span data-ttu-id="685e0-127">Описание</span><span class="sxs-lookup"><span data-stu-id="685e0-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="685e0-128">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="685e0-128">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="685e0-129">Содержит коллекцию параметров конфигурации для экземпляра `namedCache` .</span><span class="sxs-lookup"><span data-stu-id="685e0-129">Contains a collection of configuration settings for the `namedCache` instance.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="685e0-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="685e0-130">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<system.runtime.caching\>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Содержит типы, которые позволяют реализовать кэширование выводимых данных в приложениях, встроенных в [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|<span data-ttu-id="685e0-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="685e0-131">Element</span></span>|<span data-ttu-id="685e0-132">Описание</span><span class="sxs-lookup"><span data-stu-id="685e0-132">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="685e0-133">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="685e0-133">\<system.runtime.caching></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|<span data-ttu-id="685e0-134">Содержит типы, которые позволяют реализовать кэширование выводимых данных в приложениях, встроенных в [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="685e0-134">Contains types that let you implement output caching in applications that are built into the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span></span>|  
   
-## Заметки  
- Класс <xref:System.Runtime.Caching.MemoryCache> — это конкретная реализация абстрактного класса <xref:System.Runtime.Caching.ObjectCache>. Экземпляры класса <xref:System.Runtime.Caching.MemoryCache> можно снабдить сведениями о конфигурации из файлов конфигурации приложения. Раздел конфигурации [MemoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) содержит коллекцию конфигураций `namedCaches`.  
+## <a name="remarks"></a><span data-ttu-id="685e0-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="685e0-135">Remarks</span></span>  
+ <span data-ttu-id="685e0-136">Класс <xref:System.Runtime.Caching.MemoryCache> — это конкретная реализация абстрактного класса <xref:System.Runtime.Caching.ObjectCache> .</span><span class="sxs-lookup"><span data-stu-id="685e0-136">The <xref:System.Runtime.Caching.MemoryCache> class is a concrete implementation of the abstract <xref:System.Runtime.Caching.ObjectCache> class.</span></span> <span data-ttu-id="685e0-137">Экземпляры класса <xref:System.Runtime.Caching.MemoryCache> можно снабдить сведениями о конфигурации из файлов конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="685e0-137">Instances of the <xref:System.Runtime.Caching.MemoryCache> class can be supplied with configuration information from application configuration files.</span></span> <span data-ttu-id="685e0-138">Раздел конфигурации [MemoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) содержит коллекцию конфигураций `namedCaches` .</span><span class="sxs-lookup"><span data-stu-id="685e0-138">The [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) configuration section contains a `namedCaches` configuration collection.</span></span>  
   
- При инициализации объекта кэша на базе памяти он сначала пытается найти запись `namedCaches`, которая соответствует имени в параметре, передаваемом конструктору кэша памяти. Если запись `namedCaches` найдена, из файла конфигурации извлекаются сведения об опросах и управлении памятью.  
+ <span data-ttu-id="685e0-139">При инициализации объекта кэша на базе памяти он сначала пытается найти запись `namedCaches` , которая соответствует имени в параметре, передаваемом конструктору кэша памяти.</span><span class="sxs-lookup"><span data-stu-id="685e0-139">When a memory-based cache object is initialized, it first tries to find a `namedCaches` entry that matches the name in the parameter that is passed to the memory cache constructor.</span></span> <span data-ttu-id="685e0-140">Если запись `namedCaches` найдена, из файла конфигурации извлекаются сведения об опросах и управлении памятью.</span><span class="sxs-lookup"><span data-stu-id="685e0-140">If a `namedCaches` entry is found, the polling and memory-management information are retrieved from the configuration file.</span></span>  
   
- После этого процесс инициализации определяет, были ли переопределены какие\-либо записи конфигурации, с помощью дополнительной коллекцию пар имя\-значение для сведений о конфигурации в конструкторе. Если передать в коллекцию пар имя\-значение любое из следующих значений, оно переопределит сведения, полученные из файла конфигурации:  
+ <span data-ttu-id="685e0-141">После этого процесс инициализации определяет, были ли переопределены какие-либо записи конфигурации, с помощью дополнительной коллекцию пар имя-значение для сведений о конфигурации в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="685e0-141">The initialization process then determines whether any configuration entries were overridden, by using the optional collection of name/value pairs of configuration information in the constructor.</span></span> <span data-ttu-id="685e0-142">Если передать в коллекцию пар имя-значение любое из следующих значений, оно переопределит сведения, полученные из файла конфигурации:</span><span class="sxs-lookup"><span data-stu-id="685e0-142">If you pass any one of the following values in the name/value pair collection, these values override information obtained from the configuration file:</span></span>  
   
 -   <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes%2A>  
   
@@ -82,19 +80,19 @@ caps.handback.revision: 12
   
 -   <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
-## Пример  
- В следующем примере показано, как задать в качестве имени объекта <xref:System.Runtime.Caching.MemoryCache> имя объекта кэша по умолчанию, задав для атрибута `name` значение "default".  
+## <a name="example"></a><span data-ttu-id="685e0-143">Пример</span><span class="sxs-lookup"><span data-stu-id="685e0-143">Example</span></span>  
+ <span data-ttu-id="685e0-144">В следующем примере показано, как задать в качестве имени объекта <xref:System.Runtime.Caching.MemoryCache> имя объекта кэша по умолчанию, задав для атрибута `name` значение "default".</span><span class="sxs-lookup"><span data-stu-id="685e0-144">The following example shows how to set the name of the <xref:System.Runtime.Caching.MemoryCache> object to the default cache object name by setting the `name` attribute to "default".</span></span>  
   
- Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryPercentage` присваивается нулевое значение. Это означает, что эвристика автомасштабирования <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию. Реализация кэша должна каждые две минуты сравнивать текущую загрузку памяти с абсолютными и процентными ограничениями по памяти.  
+ <span data-ttu-id="685e0-145">Атрибутам `cacheMemoryLimitMegabytes` и `physicalMemoryLimitPercentage` присваивается нулевое значение.</span><span class="sxs-lookup"><span data-stu-id="685e0-145">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryLimitPercentage` attribute are set to zero.</span></span> <span data-ttu-id="685e0-146">Это означает, что эвристика автомасштабирования <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="685e0-146">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="685e0-147">Реализация кэша должна каждые две минуты сравнивать текущую загрузку памяти с абсолютными и процентными ограничениями по памяти.</span><span class="sxs-lookup"><span data-stu-id="685e0-147">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
           <add name="default"   
                cacheMemoryLimitMegabytes="0"   
-               physicalMemoryPercentage="0"  
+               physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
     </memoryCache>  
@@ -102,7 +100,7 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Runtime.Caching.MemoryCache>   
- [Элемент \<system.runtime.caching\> \(параметры кэша\)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)   
- [Элемент \<namedCaches\> \(параметры кэша\)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="685e0-148">См. также</span><span class="sxs-lookup"><span data-stu-id="685e0-148">See Also</span></span>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ [<span data-ttu-id="685e0-149">\<System.Runtime.Caching > элемент (параметры кэша)</span><span class="sxs-lookup"><span data-stu-id="685e0-149">\<system.runtime.caching> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
+ [<span data-ttu-id="685e0-150">\<namedCaches > элемент (параметры кэша)</span><span class="sxs-lookup"><span data-stu-id="685e0-150">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

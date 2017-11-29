@@ -1,24 +1,28 @@
 ---
-title: "Период обновления блокировки узла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Период обновления блокировки узла"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd93e2672851cc0111af6610ade70aebab14442d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Период обновления блокировки узла
-Свойство **Период обновления блокировки узла** хранилища экземпляров рабочих процессов SQL позволяет задать период времени, в течение которого узел обновляет блокировку экземпляра рабочего процесса.Блокировка действует в течение периода обновления блокировки узла \+ 30 секунд.Если узел не обновляет блокировку в течение этого периода времени \(иными словами, не продлевает аренду\), срок действия блокировки прекращается и поставщик сохраняемости разблокирует экземпляр.Это свойство имеет значение типа TimeSpan в формате «чч:мм:сс».Минимальное допустимое значение: «00:00:01» \(1 секунда\).По умолчанию значение этого свойства равно «00:00:30» \(30 секунд\).  
+# <a name="host-lock-renewal-period"></a><span data-ttu-id="111cd-102">Период обновления блокировки узла</span><span class="sxs-lookup"><span data-stu-id="111cd-102">Host Lock Renewal Period</span></span>
+<span data-ttu-id="111cd-103">**Период обновления блокировки узла** хранилища экземпляров рабочих процессов SQL позволяет задать период времени, в течение которого узел обновляет блокировку экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="111cd-103">The **Host Lock Renewal Period** property of the SQL Workflow Instance Store lets you specify the time period within which the host renews its lock on a workflow instance.</span></span> <span data-ttu-id="111cd-104">Блокировка действует в течение периода обновления блокировки узла + 30 секунд.</span><span class="sxs-lookup"><span data-stu-id="111cd-104">The lock remains valid for Host Lock Renewal Period + 30 seconds.</span></span> <span data-ttu-id="111cd-105">Если узел не обновляет блокировку в течение этого периода времени (иными словами, не продлевает аренду), срок действия блокировки прекращается и поставщик сохраняемости разблокирует экземпляр.</span><span class="sxs-lookup"><span data-stu-id="111cd-105">If the host fails to renew the lock (in other words, extend the lease) within this time period, the lock expires and the persistence provider unlocks the instance.</span></span> <span data-ttu-id="111cd-106">Значение этого свойства имеет тип TimeSpan в формате «чч».</span><span class="sxs-lookup"><span data-stu-id="111cd-106">The value for this property is of type TimeSpan of the form "hh:mm:ss".</span></span> <span data-ttu-id="111cd-107">Минимальное допустимое значение равно «00: 00:01» (1 секунда).</span><span class="sxs-lookup"><span data-stu-id="111cd-107">The minimum permitted value is "00:00:01" (1 second).</span></span> <span data-ttu-id="111cd-108">Значение по умолчанию этого свойства равно «00: 00:30» (30 секунд).</span><span class="sxs-lookup"><span data-stu-id="111cd-108">The default value of this property is "00:00:30" (30 seconds).</span></span>  
   
- Это свойство важно в сценариях с отказом узла службы рабочего процесса, прежде чем он разблокирует принадлежащий ему экземпляр службы рабочего процесса.В этом сценарии блокировка экземпляра службы рабочего процесса в базе данных сохраняемости удаляется поставщиком сохраняемости, когда заканчивается срок действия блокировки. Другой узел службы рабочего процесса, работающий на том же самом или на другом компьютере фермы серверов, может получить блокировку и загрузить экземпляр службы рабочего процесса в память, чтобы возобновить его выполнение из последнего сохраненного состояния.  
+ <span data-ttu-id="111cd-109">Это свойство важно в сценариях с отказом узла службы рабочего процесса, прежде чем он разблокирует принадлежащий ему экземпляр службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="111cd-109">This property is significant in scenarios where a workflow service host fails before it can unlock a workflow service instance that it owns.</span></span> <span data-ttu-id="111cd-110">В этом сценарии блокировка экземпляра службы рабочего процесса в базе данных сохраняемости удаляется поставщиком сохраняемости, когда заканчивается срок действия блокировки. Другой узел службы рабочего процесса, работающий на том же самом или на другом компьютере фермы серверов, может получить блокировку и загрузить экземпляр службы рабочего процесса в память, чтобы возобновить его выполнение из последнего сохраненного состояния.</span><span class="sxs-lookup"><span data-stu-id="111cd-110">In this scenario, the lock on the workflow service instance in the persistence database is removed by the persistence provider after the lock expires so that another workflow service host running on the same computer or another computer in a server farm can acquire the lock and load the workflow service instance into memory to resume its execution from its last persisted state.</span></span>  
   
- Если задать этому свойству большее значение, экземпляр службы рабочего процесса будет заблокирован в базе данных сохраняемости на более длительный срок, что задержит восстановление экземпляра из последнего сохраненного состояния.Если задать в этом свойстве более короткий интервал, новый экземпляр узла службы рабочего процесса быстро получит отказавший экземпляр службы рабочего процесса, но возрастет нагрузка на узел службы рабочего процесса и базу данных SQL Server.  
+ <span data-ttu-id="111cd-111">Если задать этому свойству большее значение, экземпляр службы рабочего процесса будет заблокирован в базе данных сохраняемости на более длительный срок, что задержит восстановление экземпляра из последнего сохраненного состояния.</span><span class="sxs-lookup"><span data-stu-id="111cd-111">Setting a higher value for this property causes the workflow service instances to be locked in the persistence database for a longer time and therefore delays the recovery of the instance from the last persistence point.</span></span> <span data-ttu-id="111cd-112">Если задать в этом свойстве более короткий интервал, новый экземпляр узла службы рабочего процесса быстро получит отказавший экземпляр службы рабочего процесса, но возрастет нагрузка на узел службы рабочего процесса и базу данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="111cd-112">Setting a short interval for this property causes the new instance of the workflow service host to pick up the failed workflow service instance quickly, but causes an increase in workload for the workflow service host and the SQL Server database.</span></span>  
   
- В хранилище экземпляров рабочих процессов SQL есть внутренняя задача, которая периодически запускается и выявляет экземпляры с истекшей блокировкой.Обнаружив такие экземпляры, она помещает их в таблицу RunnableInstances, чтобы узел рабочего процесса мог получить их и запустить.
+ <span data-ttu-id="111cd-113">В хранилище экземпляров рабочих процессов SQL есть внутренняя задача, которая периодически запускается и выявляет экземпляры с истекшей блокировкой.</span><span class="sxs-lookup"><span data-stu-id="111cd-113">The SQL Workflow Instance Store runs an internal task that periodically wakes up and detects instances with expired locks on them.</span></span> <span data-ttu-id="111cd-114">Обнаружив такие экземпляры, она помещает их в таблицу RunnableInstances, чтобы узел рабочего процесса мог получить их и запустить.</span><span class="sxs-lookup"><span data-stu-id="111cd-114">When it finds instances with expired locks, it places the instances in the RunnableInstances table so that a workflow host can pick up and run these instances.</span></span>

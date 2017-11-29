@@ -1,36 +1,39 @@
 ---
-title: "Службы маршрутизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Службы маршрутизации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 25a3aab2e9470b9d9e96e882b90ed154c4e89558
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Службы маршрутизации
-В этом разделе содержатся образцы, демонстрирующие использование маршрутизатора [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="routing-services"></a><span data-ttu-id="b76f8-102">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="b76f8-102">Routing Services</span></span>
+<span data-ttu-id="b76f8-103">В этом разделе содержатся образцы, демонстрирующие использование маршрутизатора [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b76f8-103">This section includes samples that demonstrate how to use the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Router.</span></span>  
   
-## В этом подразделе  
- [Приветствие средствами служб маршрутизации.](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
- Демонстрирует, как использовать маршрутизатор [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="b76f8-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="b76f8-104">In This Section</span></span>  
+ [<span data-ttu-id="b76f8-105">Здравствуй, мир! со службой маршрутизации</span><span class="sxs-lookup"><span data-stu-id="b76f8-105">Hello World with the Routing Service</span></span>](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
+ <span data-ttu-id="b76f8-106">Демонстрирует, как использовать маршрутизатор [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b76f8-106">Demonstrates how to use the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Router.</span></span>  
   
- [Использование моста и обработка ошибок](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
- Показано использование службы маршрутизации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для обеспечения связи между клиентом и службой, которые используют разные привязки.  
+ [<span data-ttu-id="b76f8-107">Использование моста и обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="b76f8-107">Bridging and Error Handling</span></span>](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  
+ <span data-ttu-id="b76f8-108">Показано использование службы маршрутизации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для обеспечения связи между клиентом и службой, которые используют разные привязки.</span><span class="sxs-lookup"><span data-stu-id="b76f8-108">Demonstrates how the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] routing service is used for bridging communication between a client and a service that use different bindings.</span></span>  
   
- [Дополнительные фильтры](../../../../docs/framework/wcf/samples/advanced-filters.md)  
- Показано, как адаптировать стандартный образец калькулятора [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для связи с использованием службы маршрутизации.  
+ [<span data-ttu-id="b76f8-109">Расширенные фильтры</span><span class="sxs-lookup"><span data-stu-id="b76f8-109">Advanced Filters</span></span>](../../../../docs/framework/wcf/samples/advanced-filters.md)  
+ <span data-ttu-id="b76f8-110">Показано, как адаптировать стандартный образец калькулятора [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для связи с использованием службы маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="b76f8-110">Demonstrates how to adapt the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator sample to communicate using the routing service.</span></span>  
   
- [Динамическая реконфигурация](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)  
- Показано, как можно динамически переконфигурировать службу маршрутизации во время выполнения.  
+ [<span data-ttu-id="b76f8-111">Динамические изменения конфигурации</span><span class="sxs-lookup"><span data-stu-id="b76f8-111">Dynamic Reconfiguration</span></span>](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md)  
+ <span data-ttu-id="b76f8-112">Показано, как можно динамически переконфигурировать службу маршрутизации во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b76f8-112">Demonstrates how the routing service can be dynamically reconfigured during runtime.</span></span>  
   
- [Расширенная обработка ошибок](../../../../docs/framework/wcf/samples/advanced-error-handling.md)  
- Также показано, как служба маршрутизации выполняет интеллектуальное восстановление работы после ошибок с использованием транзакций и более сложных понятий обмена сообщениями, таких как многоадресная рассылка.
+ [<span data-ttu-id="b76f8-113">Расширенная обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="b76f8-113">Advanced Error Handling</span></span>](../../../../docs/framework/wcf/samples/advanced-error-handling.md)  
+ <span data-ttu-id="b76f8-114">Также показано, как служба маршрутизации выполняет интеллектуальное восстановление работы после ошибок с использованием транзакций и более сложных понятий обмена сообщениями, таких как многоадресная рассылка.</span><span class="sxs-lookup"><span data-stu-id="b76f8-114">Demonstrates how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>

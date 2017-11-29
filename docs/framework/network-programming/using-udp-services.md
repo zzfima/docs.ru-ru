@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - protocols, UDP
 - network resources, UDP
@@ -25,33 +23,32 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2986feda76b035e3651712609364b4194378a64c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c535710175423ebd0d163edc9bce78cfb2e18168
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-udp-services"></a>Использование служб UDP
-Класс <xref:System.Net.Sockets.UdpClient> взаимодействует с сетевыми службами по протоколу UDP. Методы и свойства класса <xref:System.Net.Sockets.UdpClient> абстрагируют сведения о создании <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу UDP.  
+# <a name="using-udp-services"></a><span data-ttu-id="eb894-102">Использование служб UDP</span><span class="sxs-lookup"><span data-stu-id="eb894-102">Using UDP Services</span></span>
+<span data-ttu-id="eb894-103">Класс <xref:System.Net.Sockets.UdpClient> взаимодействует с сетевыми службами по протоколу UDP.</span><span class="sxs-lookup"><span data-stu-id="eb894-103">The <xref:System.Net.Sockets.UdpClient> class communicates with network services using UDP.</span></span> <span data-ttu-id="eb894-104">Методы и свойства класса <xref:System.Net.Sockets.UdpClient> абстрагируют сведения о создании <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу UDP.</span><span class="sxs-lookup"><span data-stu-id="eb894-104">The properties and methods of the <xref:System.Net.Sockets.UdpClient> class abstract the details of creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using UDP.</span></span>  
   
- UDP — это простой протокол для максимально эффективной передачи данных в удаленный узел. Однако поскольку протокол UDP не предусматривает установление соединений, доставка датаграмм UDP, отправляемых в удаленную конечную точку, не гарантируется. Кроме того, не гарантируется их доставка в той же очередности, в которой они отправлялись. Приложения, использующие протокол UDP, должны быть готовы обрабатывать отсутствующие, повторяющиеся и идущие не по порядку датаграммы.  
+ <span data-ttu-id="eb894-105">UDP — это простой протокол для максимально эффективной передачи данных в удаленный узел.</span><span class="sxs-lookup"><span data-stu-id="eb894-105">User Datagram Protocol (UDP) is a simple protocol that makes a best effort to deliver data to a remote host.</span></span> <span data-ttu-id="eb894-106">Однако поскольку протокол UDP не предусматривает установление соединений, доставка датаграмм UDP, отправляемых в удаленную конечную точку, не гарантируется. Кроме того, не гарантируется их доставка в той же очередности, в которой они отправлялись.</span><span class="sxs-lookup"><span data-stu-id="eb894-106">However, because the UDP protocol is a connectionless protocol, UDP datagrams sent to the remote endpoint are not guaranteed to arrive, nor are they guaranteed to arrive in the same sequence in which they are sent.</span></span> <span data-ttu-id="eb894-107">Приложения, использующие протокол UDP, должны быть готовы обрабатывать отсутствующие, повторяющиеся и идущие не по порядку датаграммы.</span><span class="sxs-lookup"><span data-stu-id="eb894-107">Applications that use UDP must be prepared to handle missing, duplicate, and out-of-sequence datagrams.</span></span>  
   
- Чтобы отправить датаграмму по протоколу UDP, необходимо знать адрес сетевого устройства, в котором размещается нужная служба, и номер порта UDP, который служба использует для обмена данными. Номера портов для основных служб определяются организацией IANA (Администрация адресного пространства Интернет). См. страницу www.iana.org/assignments/port-numbers. Службы, отсутствующие в списке IANA, могут иметь номера портов в диапазоне от 1024 до 65535.  
+ <span data-ttu-id="eb894-108">Чтобы отправить датаграмму по протоколу UDP, необходимо знать адрес сетевого устройства, в котором размещается нужная служба, и номер порта UDP, который служба использует для обмена данными.</span><span class="sxs-lookup"><span data-stu-id="eb894-108">To send a datagram using UDP, you must know the network address of the network device hosting the service you need and the UDP port number that the service uses to communicate.</span></span> <span data-ttu-id="eb894-109">Номера портов для основных служб определяются организацией IANA (Администрация адресного пространства Интернет). См. страницу www.iana.org/assignments/port-numbers.</span><span class="sxs-lookup"><span data-stu-id="eb894-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="eb894-110">Службы, отсутствующие в списке IANA, могут иметь номера портов в диапазоне от 1024 до 65535.</span><span class="sxs-lookup"><span data-stu-id="eb894-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- Для поддержки широковещательных сообщений UDP в IP-сетях используются специальные сетевые адреса. Далее в качестве примера используется семейство адресов IP версии 4.  
+ <span data-ttu-id="eb894-111">Для поддержки широковещательных сообщений UDP в IP-сетях используются специальные сетевые адреса.</span><span class="sxs-lookup"><span data-stu-id="eb894-111">Special network addresses are used to support UDP broadcast messages on IP-based networks.</span></span> <span data-ttu-id="eb894-112">Далее в качестве примера используется семейство адресов IP версии 4.</span><span class="sxs-lookup"><span data-stu-id="eb894-112">The following discussion uses the IP version 4 address family used on the Internet as an example.</span></span>  
   
- В IP версии 4 для указания сетевых адресов используются 32 бита. Для адресов класса C с маской сети 255.255.255.0 эти биты разделяются на четыре октета. В десятичной форме эти четыре октета образуют знакомую нотацию с использованием четырех чисел, разделенных точками, например 192.168.100.2. Первые два октета (192.168 в этом примере) — это номер сети, третий октет (100) — это подсеть, а последний октет (2) — идентификатор узла.  
+ <span data-ttu-id="eb894-113">В IP версии 4 для указания сетевых адресов используются 32 бита.</span><span class="sxs-lookup"><span data-stu-id="eb894-113">IP version 4 addresses use 32 bits to specify a network address.</span></span> <span data-ttu-id="eb894-114">Для адресов класса C с маской сети 255.255.255.0 эти биты разделяются на четыре октета.</span><span class="sxs-lookup"><span data-stu-id="eb894-114">For class C addresses using a netmask of 255.255.255.0, these bits are separated into four octets.</span></span> <span data-ttu-id="eb894-115">В десятичной форме эти четыре октета образуют знакомую нотацию с использованием четырех чисел, разделенных точками, например 192.168.100.2.</span><span class="sxs-lookup"><span data-stu-id="eb894-115">When expressed in decimal, the four octets form the familiar dotted-quad notation, such as 192.168.100.2.</span></span> <span data-ttu-id="eb894-116">Первые два октета (192.168 в этом примере) — это номер сети, третий октет (100) — это подсеть, а последний октет (2) — идентификатор узла.</span><span class="sxs-lookup"><span data-stu-id="eb894-116">The first two octets (192.168 in this example) form the network number, the third octet (100) defines the subnet, and the final octet (2) is the host identifier.</span></span>  
   
- Если задать все биты IP-адреса равными единице (то есть 255.255.255.255 в десятичной форме), получится ограниченный широковещательный адрес. При отправке датаграммы UDP на этот адрес сообщение доставляется всем узлам в сегменте локальной сети. Так как маршрутизаторы никогда не перенаправляют сообщения, отправляемые на этот адрес, широковещательное сообщение получают только узлы в этом сегменте сети.  
+ <span data-ttu-id="eb894-117">Если задать все биты IP-адреса равными единице (то есть 255.255.255.255 в десятичной форме), получится ограниченный широковещательный адрес.</span><span class="sxs-lookup"><span data-stu-id="eb894-117">Setting all the bits of an IP address to one, or 255.255.255.255, forms the limited broadcast address.</span></span> <span data-ttu-id="eb894-118">При отправке датаграммы UDP на этот адрес сообщение доставляется всем узлам в сегменте локальной сети.</span><span class="sxs-lookup"><span data-stu-id="eb894-118">Sending a UDP datagram to this address delivers the message to any host on the local network segment.</span></span> <span data-ttu-id="eb894-119">Так как маршрутизаторы никогда не перенаправляют сообщения, отправляемые на этот адрес, широковещательное сообщение получают только узлы в этом сегменте сети.</span><span class="sxs-lookup"><span data-stu-id="eb894-119">Because routers never forward messages sent to this address, only hosts on the network segment receive the broadcast message.</span></span>  
   
- Для направления широковещательных сообщений в определенные части сети можно задать все биты идентификатора узла. Например, для отправки широковещательного сообщения всем узлам в сети, которая определяется IP-адресами, начинающимися с 192.168.1, используйте адрес 192.168.1.255.  
+ <span data-ttu-id="eb894-120">Для направления широковещательных сообщений в определенные части сети можно задать все биты идентификатора узла.</span><span class="sxs-lookup"><span data-stu-id="eb894-120">Broadcasts can be directed to specific portions of a network by setting all bits of the host identifier.</span></span> <span data-ttu-id="eb894-121">Например, для отправки широковещательного сообщения всем узлам в сети, которая определяется IP-адресами, начинающимися с 192.168.1, используйте адрес 192.168.1.255.</span><span class="sxs-lookup"><span data-stu-id="eb894-121">For example, to send a broadcast to all hosts on the network identified by IP addresses starting with 192.168.1, use the address 192.168.1.255.</span></span>  
   
- В приведенном ниже примере кода используется объект <xref:System.Net.Sockets.UdpClient> для прослушивания датаграмм UDP, отправляемых на направленный широковещательный адрес 192.168.1.255 через порт 11000. Клиент получает строку сообщения и выводит сообщение в консоли.  
+ <span data-ttu-id="eb894-122">В приведенном ниже примере кода используется объект <xref:System.Net.Sockets.UdpClient> для прослушивания датаграмм UDP, отправляемых на направленный широковещательный адрес 192.168.1.255 через порт 11000.</span><span class="sxs-lookup"><span data-stu-id="eb894-122">The following code example uses a <xref:System.Net.Sockets.UdpClient> to listen for UDP datagrams sent to the directed broadcast address 192.168.1.255 on port 11,000.</span></span> <span data-ttu-id="eb894-123">Клиент получает строку сообщения и выводит сообщение в консоли.</span><span class="sxs-lookup"><span data-stu-id="eb894-123">The client receives a message string and writes the message to the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -139,7 +136,7 @@ public class UDPListener
 }  
 ```  
   
- В приведенном ниже примере кода используется объект <xref:System.Net.Sockets.UdpClient> для отправки датаграмм UDP на направленный широковещательный адрес 192.168.1.255 через порт 11000. Клиент отправляет строку сообщения, указанную в командной строке.  
+ <span data-ttu-id="eb894-124">В приведенном ниже примере кода используется объект <xref:System.Net.Sockets.UdpClient> для отправки датаграмм UDP на направленный широковещательный адрес 192.168.1.255 через порт 11000.</span><span class="sxs-lookup"><span data-stu-id="eb894-124">The following code example uses a <xref:System.Net.Sockets.UdpClient> to send UDP datagrams to the directed broadcast address 192.168.1.255, using port 11,000.</span></span> <span data-ttu-id="eb894-125">Клиент отправляет строку сообщения, указанную в командной строке.</span><span class="sxs-lookup"><span data-stu-id="eb894-125">The client sends the message string specified on the command line.</span></span>  
   
 ```vb  
 Imports System  
@@ -186,8 +183,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.Sockets.UdpClient>   
- <xref:System.Net.IPAddress>   
+## <a name="see-also"></a><span data-ttu-id="eb894-126">См. также</span><span class="sxs-lookup"><span data-stu-id="eb894-126">See Also</span></span>  
+ <xref:System.Net.Sockets.UdpClient>  
+ <xref:System.Net.IPAddress>  
  
-

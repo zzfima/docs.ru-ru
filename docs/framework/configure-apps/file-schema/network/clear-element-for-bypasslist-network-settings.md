@@ -1,70 +1,72 @@
 ---
-title: "Элемент &lt;clear&gt; для bypasslist (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, clear - элемент"
-  - "<clear> - элемент, bypasslist"
-  - "bypasslist, clear - элемент"
-  - "clear - элемент, bypasslist"
+title: "&lt;Очистить&gt; элемент для bypasslist (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, bypasslist
+- <clear> element, bypasslist
+- <bypasslist>, clear element
+- bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 5ee20b9177d519010c40351e335973dce10256f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для bypasslist (параметры сети)
-Удаляет список пропускаемых адресов.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a><span data-ttu-id="08a91-102">&lt;Очистить&gt; элемент для bypasslist (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="08a91-102">&lt;clear&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="08a91-103">Очищает список обхода прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="08a91-103">Clears the proxy bypass list.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="08a91-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="08a91-104">\<configuration></span></span>  
+<span data-ttu-id="08a91-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="08a91-105">\<system.net></span></span>  
+<span data-ttu-id="08a91-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="08a91-106">\<defaultProxy></span></span>  
+<span data-ttu-id="08a91-107">\<bypasslist ></span><span class="sxs-lookup"><span data-stu-id="08a91-107">\<bypasslist></span></span>  
+<span data-ttu-id="08a91-108">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="08a91-108">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="08a91-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="08a91-109">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="08a91-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="08a91-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="08a91-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="08a91-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="08a91-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="08a91-112">Attributes</span></span>  
+ <span data-ttu-id="08a91-113">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="08a91-113">None.</span></span>  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="08a91-114">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="08a91-114">Child Elements</span></span>  
+ <span data-ttu-id="08a91-115">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="08a91-115">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="08a91-116">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="08a91-116">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Набор регулярных выражений, описывающих адреса, пропускаемые прокси\-сервером.|  
+|<span data-ttu-id="08a91-117">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="08a91-117">**Element**</span></span>|<span data-ttu-id="08a91-118">**Описание**</span><span class="sxs-lookup"><span data-stu-id="08a91-118">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="08a91-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="08a91-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="08a91-120">Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="08a91-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## Заметки  
- Элемент `clear` удаляет все записи из списка пропускаемых адресов.  
+## <a name="remarks"></a><span data-ttu-id="08a91-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="08a91-121">Remarks</span></span>  
+ <span data-ttu-id="08a91-122">`clear` Элемент удаляет все записи из списка обхода.</span><span class="sxs-lookup"><span data-stu-id="08a91-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="08a91-123">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="08a91-123">Configuration Files</span></span>  
+ <span data-ttu-id="08a91-124">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="08a91-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода сначала выполняется очистка списка пропускаемых адресов, а затем – добавление в него двух адресов.  Первая запись отменяет использование прокси\-сервера для всех серверов домена contoso.com, а вторая — для всех серверов, IP\-адреса которых начинаются с 192.168.  
+## <a name="example"></a><span data-ttu-id="08a91-125">Пример</span><span class="sxs-lookup"><span data-stu-id="08a91-125">Example</span></span>  
+ <span data-ttu-id="08a91-126">В следующем примере очищает список обхода и затем добавляет два адреса в список обхода.</span><span class="sxs-lookup"><span data-stu-id="08a91-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="08a91-127">Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адрес начинается с 192.168.</span><span class="sxs-lookup"><span data-stu-id="08a91-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -78,6 +80,6 @@ caps.handback.revision: 14
 </configuration>   
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="08a91-128">См. также</span><span class="sxs-lookup"><span data-stu-id="08a91-128">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="08a91-129">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="08a91-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

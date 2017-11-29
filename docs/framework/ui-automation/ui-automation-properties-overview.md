@@ -1,96 +1,99 @@
 ---
-title: "UI Automation Properties Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, properties"
-  - "properties, UI Automation"
+title: "Общие сведения о свойствах автоматизированного пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, properties
+- properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-caps.latest.revision: 17
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: a6fec422e235413bd76d86cdcb5a72a351bb3f97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Properties Overview
+# <a name="ui-automation-properties-overview"></a><span data-ttu-id="fcbcc-102">Общие сведения о свойствах автоматизированного пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="fcbcc-102">UI Automation Properties Overview</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="fcbcc-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="fcbcc-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="fcbcc-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="fcbcc-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- Поставщики автоматизации пользовательского интерфейса предоставляют свойства в элементах [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Эти свойства позволяют клиентским приложениям модели автоматизации пользовательского интерфейса обнаруживать сведения о частях [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], особенно элементах управления, включая статические и динамические данные.  
+ <span data-ttu-id="fcbcc-105">Поставщики автоматизации пользовательского интерфейса предоставляют свойства в элементах [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="fcbcc-105">UI Automation providers expose properties on [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] elements.</span></span> <span data-ttu-id="fcbcc-106">Эти свойства позволяют клиентским приложениям модели автоматизации пользовательского интерфейса обнаруживать сведения о частях [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], особенно элементах управления, включая статические и динамические данные.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-106">These properties enable UI Automation client applications to discover information about pieces of the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especially controls, including both static and dynamic data.</span></span>  
   
- В этом разделе приводится расширенный обзор свойств [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Более конкретные сведения даются в следующих разделах:  
+ <span data-ttu-id="fcbcc-107">В этом разделе приводится расширенный обзор свойств [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="fcbcc-107">This section gives a broad overview of [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] properties.</span></span> <span data-ttu-id="fcbcc-108">Более конкретные сведения даются в следующих разделах:</span><span class="sxs-lookup"><span data-stu-id="fcbcc-108">More specific information is given in the following topics:</span></span>  
   
--   [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+-   [<span data-ttu-id="fcbcc-109">UI Automation Properties for Clients</span><span class="sxs-lookup"><span data-stu-id="fcbcc-109">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+-   [<span data-ttu-id="fcbcc-110">Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера</span><span class="sxs-lookup"><span data-stu-id="fcbcc-110">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
-## Идентификаторы свойств  
- Каждое свойство определяется номером и именем. Имена свойств используются только для отладки и диагностики. Поставщики используют числовые [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] для идентификации входящих запросов свойств. Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.  
+## <a name="property-identifiers"></a><span data-ttu-id="fcbcc-111">Идентификаторы свойств</span><span class="sxs-lookup"><span data-stu-id="fcbcc-111">Property Identifiers</span></span>  
+ <span data-ttu-id="fcbcc-112">Каждое свойство определяется номером и именем.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-112">Every property is identified by a number and a name.</span></span> <span data-ttu-id="fcbcc-113">Имена свойств используются только для отладки и диагностики.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-113">The names of properties are used only for debugging and diagnosis.</span></span> <span data-ttu-id="fcbcc-114">Поставщики используют числовые [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] для идентификации входящих запросов свойств.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-114">Providers use the numeric [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] to identify incoming property requests.</span></span> <span data-ttu-id="fcbcc-115">Однако клиентские приложения используют для идентификации свойств, которые им требуется получить, только ссылку <xref:System.Windows.Automation.AutomationProperty>, которая включает номер и имя.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-115">Client applications, however, only use <xref:System.Windows.Automation.AutomationProperty>, which encapsulates the number and name, to identify properties they wish to retrieve.</span></span>  
   
- Объекты <xref:System.Windows.Automation.AutomationProperty>, представляющие конкретные свойства, доступны как поля в различных классах. По соображениям безопасности поставщики автоматизации пользовательского интерфейса получают эти объекты из отдельного набора классов, содержащихся в Uiautomationtypes.dll.  
+ <span data-ttu-id="fcbcc-116">Объекты<xref:System.Windows.Automation.AutomationProperty> , представляющие конкретные свойства, доступны как поля в различных классах.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-116"><xref:System.Windows.Automation.AutomationProperty> objects representing particular properties are available as fields in various classes.</span></span> <span data-ttu-id="fcbcc-117">По соображениям безопасности поставщики автоматизации пользовательского интерфейса получают эти объекты из отдельного набора классов, содержащихся в Uiautomationtypes.dll.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-117">For security reasons, UI Automation providers obtain these objects from a separate set of classes that are contained in Uiautomationtypes.dll.</span></span>  
   
- В следующей таблице свойства распределены по классам, содержащим <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ <span data-ttu-id="fcbcc-118">В следующей таблице свойства распределены по классам, содержащим <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fcbcc-118">The following table categorizes properties by the classes that contain the <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].</span></span>  
   
-|Виды свойств|Клиенты получают идентификаторы из|Поставщики получают идентификаторы из|  
-|------------------|----------------------------------------|-------------------------------------------|  
-|Свойства, общие для всех элементов \(см. следующие таблицы\)|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
-|Положение закрепленного окна|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
-|Состояние элемента, который можно разворачивать и сворачивать|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
-|Свойства элемента в сетке|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.GridItemPatternIdentifiers>|  
-|Свойства сетки|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.GridPatternIdentifiers>|  
-|Текущее и поддерживаемое представление элемента, который имеет несколько представлений|<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers>|  
-|Свойства элемента, который перемещается по диапазону значений, такого как ползунок|<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.RangeValuePatternIdentifiers>|  
-|Свойства прокручиваемого окна|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
-|Состояние и контейнер элемента, который может быть выбран, например в списке|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
-|Свойства элемента управления, содержащего элементы выделения|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
-|Заголовки столбцов и строк элемента в таблице|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
-|Заголовки столбцов и строк, а также ориентация таблицы|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
-|Состояние элемента управления "Переключатель"|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
-|Возможности элемента, который поддерживает перемещение, поворот или изменение размера|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
-|Значение и возможности чтения\/записи элемента, который имеет значение|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
-|Возможности и состояние окна|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-119">Виды свойств</span><span class="sxs-lookup"><span data-stu-id="fcbcc-119">Kinds of properties</span></span>|<span data-ttu-id="fcbcc-120">Клиенты получают идентификаторы из</span><span class="sxs-lookup"><span data-stu-id="fcbcc-120">Clients get IDs from</span></span>|<span data-ttu-id="fcbcc-121">Поставщики получают идентификаторы из</span><span class="sxs-lookup"><span data-stu-id="fcbcc-121">Providers get IDs from</span></span>|  
+|-------------------------|--------------------------|----------------------------|  
+|<span data-ttu-id="fcbcc-122">Свойства, общие для всех элементов (см. следующие таблицы)</span><span class="sxs-lookup"><span data-stu-id="fcbcc-122">Properties common to all elements (see following tables)</span></span>|<xref:System.Windows.Automation.AutomationElement>|<xref:System.Windows.Automation.AutomationElementIdentifiers>|  
+|<span data-ttu-id="fcbcc-123">Положение закрепленного окна</span><span class="sxs-lookup"><span data-stu-id="fcbcc-123">Position of a docking window</span></span>|<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.DockPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-124">Состояние элемента, который можно разворачивать и сворачивать</span><span class="sxs-lookup"><span data-stu-id="fcbcc-124">State of an element that can expand and collapse</span></span>|<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-125">Свойства элемента в сетке</span><span class="sxs-lookup"><span data-stu-id="fcbcc-125">Properties of an item in a grid</span></span>|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.GridItemPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-126">Свойства сетки</span><span class="sxs-lookup"><span data-stu-id="fcbcc-126">Properties of a grid</span></span>|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.GridPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-127">Текущее и поддерживаемое представление элемента, который имеет несколько представлений</span><span class="sxs-lookup"><span data-stu-id="fcbcc-127">Current and supported view of an element that has multiple views</span></span>|<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-128">Свойства элемента, который перемещается по диапазону значений, такого как ползунок</span><span class="sxs-lookup"><span data-stu-id="fcbcc-128">Properties of an element that moves over a range of values, such as a slider</span></span>|<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.RangeValuePatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-129">Свойства прокручиваемого окна</span><span class="sxs-lookup"><span data-stu-id="fcbcc-129">Properties of a scrolling window</span></span>|<xref:System.Windows.Automation.ScrollPattern>|<xref:System.Windows.Automation.ScrollPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-130">Состояние и контейнер элемента, который может быть выбран, например в списке</span><span class="sxs-lookup"><span data-stu-id="fcbcc-130">Status and container of an item that can be selected, as in a list</span></span>|<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-131">Свойства элемента управления, содержащего элементы выделения</span><span class="sxs-lookup"><span data-stu-id="fcbcc-131">Properties of a control that contains selection items</span></span>|<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.SelectionPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-132">Заголовки столбцов и строк элемента в таблице</span><span class="sxs-lookup"><span data-stu-id="fcbcc-132">Column and row headers of an item in a table</span></span>|<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.TableItemPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-133">Заголовки столбцов и строк, а также ориентация таблицы</span><span class="sxs-lookup"><span data-stu-id="fcbcc-133">Column and row headers, and orientation, of a table</span></span>|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.TablePatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-134">Состояние элемента управления "Переключатель"</span><span class="sxs-lookup"><span data-stu-id="fcbcc-134">State of a toggle control</span></span>|<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.TogglePatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-135">Возможности элемента, который поддерживает перемещение, поворот или изменение размера</span><span class="sxs-lookup"><span data-stu-id="fcbcc-135">Capabilities of an element that can be moved, rotated, or resized</span></span>|<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.TransformPatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-136">Значение и возможности чтения/записи элемента, который имеет значение</span><span class="sxs-lookup"><span data-stu-id="fcbcc-136">Value and read/write capabilities of an element that has a value</span></span>|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
+|<span data-ttu-id="fcbcc-137">Возможности и состояние окна</span><span class="sxs-lookup"><span data-stu-id="fcbcc-137">Capabilities and state of a window</span></span>|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>   
-## Свойства по категориям  
- В следующей таблице перечислены свойства, чьи [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] находятся в <xref:System.Windows.Automation.AutomationElement> и <xref:System.Windows.Automation.AutomationElementIdentifiers>, упорядоченные по категориям. Эти свойства являются общими для всех элементов управления. Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.  
+## <a name="properties-by-category"></a><span data-ttu-id="fcbcc-138">Свойства по категориям</span><span class="sxs-lookup"><span data-stu-id="fcbcc-138">Properties by Category</span></span>  
+ <span data-ttu-id="fcbcc-139">В следующей таблице перечислены свойства, чьи [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] находятся в <xref:System.Windows.Automation.AutomationElement> и <xref:System.Windows.Automation.AutomationElementIdentifiers>, упорядоченные по категориям.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-139">The following tables categorize the properties whose [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] are found in <xref:System.Windows.Automation.AutomationElement> and <xref:System.Windows.Automation.AutomationElementIdentifiers>.</span></span> <span data-ttu-id="fcbcc-140">Эти свойства являются общими для всех элементов управления.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-140">These properties are common to all controls.</span></span> <span data-ttu-id="fcbcc-141">Почти все из них, скорее всего, будут статическими во время существования приложения поставщика; большинство динамических свойств связано с шаблонами элементов управления.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-141">All but a few of them are likely to be static over the lifetime of the provider application; most dynamic properties are associated with control patterns.</span></span>  
   
- В столбце **Доступ к свойству** перечислены другие методы доступа для каждого свойства, в дополнение к <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Дополнительные сведения о получении свойств в клиентском приложении см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ <span data-ttu-id="fcbcc-142">В столбце **Доступ к свойству** перечислены другие методы доступа для каждого свойства, в дополнение к <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> и <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-142">The **Property Access** column lists any other accessors for each property, in addition to <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> and <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>.</span></span> <span data-ttu-id="fcbcc-143">Дополнительные сведения о получении свойств в клиентском приложении см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span><span class="sxs-lookup"><span data-stu-id="fcbcc-143">For more information on getting properties in a client application, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
 > [!NOTE]
->  Чтобы получить сведения о конкретном свойстве, используйте ссылку в столбце **Доступ к свойству**.  
+>  <span data-ttu-id="fcbcc-144">Чтобы получить сведения о конкретном свойстве, используйте ссылку в столбце **Доступ к свойству** .</span><span class="sxs-lookup"><span data-stu-id="fcbcc-144">For specific information about each property, follow the link in the **Property Access** column.</span></span>  
   
-### Характеристики отображения  
+### <a name="display-characteristics"></a><span data-ttu-id="fcbcc-145">Характеристики отображения</span><span class="sxs-lookup"><span data-stu-id="fcbcc-145">Display Characteristics</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-146">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-146">Property identifier</span></span>|<span data-ttu-id="fcbcc-147">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-147">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
-|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|Н\/Д|  
+|<xref:System.Windows.Automation.AutomationElement.CultureProperty>|<span data-ttu-id="fcbcc-148">Н/Д</span><span class="sxs-lookup"><span data-stu-id="fcbcc-148">n/a</span></span>|  
 |<xref:System.Windows.Automation.AutomationElement.HelpTextProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### Тип элемента  
+### <a name="element-type"></a><span data-ttu-id="fcbcc-149">Тип элемента</span><span class="sxs-lookup"><span data-stu-id="fcbcc-149">Element Type</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-150">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-150">Property identifier</span></span>|<span data-ttu-id="fcbcc-151">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-151">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsControlElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.LocalizedControlType%2A>|  
   
-### Идентификация  
+### <a name="identification"></a><span data-ttu-id="fcbcc-152">Идентификация</span><span class="sxs-lookup"><span data-stu-id="fcbcc-152">Identification</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-153">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-153">Property identifier</span></span>|<span data-ttu-id="fcbcc-154">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-154">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.FrameworkIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.FrameworkId%2A>|  
@@ -100,10 +103,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.RuntimeIdProperty>|<xref:System.Windows.Automation.AutomationElement.GetRuntimeId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.NativeWindowHandleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.NativeWindowHandle%2A>|  
   
-### Взаимодействие  
+### <a name="interaction"></a><span data-ttu-id="fcbcc-155">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="fcbcc-155">Interaction</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-156">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-156">Property identifier</span></span>|<span data-ttu-id="fcbcc-157">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-157">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>|<xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>|  
@@ -111,10 +114,10 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsEnabled%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsKeyboardFocusable%2A>|  
   
-### Поддержка шаблонов  
+### <a name="support-for-patterns"></a><span data-ttu-id="fcbcc-158">Поддержка шаблонов</span><span class="sxs-lookup"><span data-stu-id="fcbcc-158">Support for Patterns</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-159">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-159">Property identifier</span></span>|<span data-ttu-id="fcbcc-160">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-160">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsExpandCollapsePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsGridItemPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
@@ -134,17 +137,17 @@ caps.handback.revision: 17
 |<xref:System.Windows.Automation.AutomationElement.IsValuePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsWindowPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
   
-### Прочее  
+### <a name="miscellaneous"></a><span data-ttu-id="fcbcc-161">Прочее</span><span class="sxs-lookup"><span data-stu-id="fcbcc-161">Miscellaneous</span></span>  
   
-|Идентификатор свойства|Доступ к свойству|  
-|----------------------------|-----------------------|  
+|<span data-ttu-id="fcbcc-162">Идентификатор свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-162">Property identifier</span></span>|<span data-ttu-id="fcbcc-163">Доступ к свойству</span><span class="sxs-lookup"><span data-stu-id="fcbcc-163">Property access</span></span>|  
+|-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>   
-## Локализация  
- Поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны представлять следующие свойства на языке операционной системы.  
+## <a name="localization"></a><span data-ttu-id="fcbcc-164">Локализация</span><span class="sxs-lookup"><span data-stu-id="fcbcc-164">Localization</span></span>  
+ <span data-ttu-id="fcbcc-165">Поставщики[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны представлять следующие свойства на языке операционной системы.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-165">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] providers should present the following properties in the language of the operating system:</span></span>  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -157,19 +160,19 @@ caps.handback.revision: 17
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
-## Свойства и события  
- Тесная связь со свойствами в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это концепция событий изменения свойств. Для динамических свойств клиентскому приложению требуется способ узнать об изменении значения свойства, чтобы оно могло обновить свой кэш данных или отреагировать на новые сведения другим способом.  
+## <a name="properties-and-events"></a><span data-ttu-id="fcbcc-166">Свойства и события</span><span class="sxs-lookup"><span data-stu-id="fcbcc-166">Properties and Events</span></span>  
+ <span data-ttu-id="fcbcc-167">Тесная связь со свойствами в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это концепция событий изменения свойств.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-167">Closely tied in with the properties in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] is the concept of property-changed events.</span></span> <span data-ttu-id="fcbcc-168">Для динамических свойств клиентскому приложению требуется способ узнать об изменении значения свойства, чтобы оно могло обновить свой кэш данных или отреагировать на новые сведения другим способом.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-168">For dynamic properties, the client application needs a way to know that a property value has changed, so that it can update its cache of information or react to the new information in some other way.</span></span>  
   
- Поставщики вызывают события, когда что\-нибудь в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] изменяется. Например, если флажок устанавливается или снимается, реализация поставщика шаблона Toggle вызывает событие изменения свойства. Поставщики могут вызывать события выборочно, в зависимости от наличия клиентов, прослушивающих события или прослушивающих определенные события.  
+ <span data-ttu-id="fcbcc-169">Поставщики вызывают события, когда что-нибудь в [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] изменяется.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-169">Providers raise events when something in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] changes.</span></span> <span data-ttu-id="fcbcc-170">Например, если флажок устанавливается или снимается, реализация поставщика шаблона Toggle вызывает событие изменения свойства.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-170">For example, if a check box is selected or cleared, a property-changed event is raised by the provider's implementation of the Toggle pattern.</span></span> <span data-ttu-id="fcbcc-171">Поставщики могут вызывать события выборочно, в зависимости от наличия клиентов, прослушивающих события или прослушивающих определенные события.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-171">Providers can raise events selectively, depending on whether any clients are listening for events, or listening for specific events.</span></span>  
   
- Не все изменения свойств порождают события; это полностью зависит от реализации поставщика автоматизации пользовательского интерфейса для элемента. Например, поставщики стандартных прокси для списков не вызывают событие, когда изменяется <xref:System.Windows.Automation.SelectionPattern.SelectionProperty>. В этом случае приложение должно прослушивать <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.  
+ <span data-ttu-id="fcbcc-172">Не все изменения свойств порождают события; это полностью зависит от реализации поставщика автоматизации пользовательского интерфейса для элемента.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-172">Not all property changes raise events; that is entirely up to the implementation of the UI Automation provider for the element.</span></span> <span data-ttu-id="fcbcc-173">Например, поставщики стандартных прокси для списков не вызывают событие, когда изменяется <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> .</span><span class="sxs-lookup"><span data-stu-id="fcbcc-173">For example, the standard proxy providers for list boxes do not raise an event when the <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> changes.</span></span> <span data-ttu-id="fcbcc-174">В этом случае приложение должно прослушивать <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-174">In this case, the application instead must listen for an <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>.</span></span>  
   
- Клиенты прослушивают события, подписавшись на их. Подписка на события означает создание методов делегата, могущих обрабатывать эти события, и затем передачу этих методов в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вместе с конкретными событиями, которые будут обработаны в этих методах. В частности, для событий изменения свойств клиенты должны реализовать <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
+ <span data-ttu-id="fcbcc-175">Клиенты прослушивают события, подписавшись на их.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-175">Clients listen for events by subscribing to them.</span></span> <span data-ttu-id="fcbcc-176">Подписка на события означает создание методов делегата, могущих обрабатывать эти события, и затем передачу этих методов в [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вместе с конкретными событиями, которые будут обработаны в этих методах.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-176">Subscribing to events means creating delegate methods that can handle the events, and then passing the methods to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] along with the specific events that will be dealt with in those methods.</span></span> <span data-ttu-id="fcbcc-177">В частности, для событий изменения свойств клиенты должны реализовать <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="fcbcc-177">For property-changed events in particular, clients must implement <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.</span></span>  
   
-## См. также  
- [Caching in UI Automation Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)   
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)   
- [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)   
- [Find a UI Automation Element Based on a Property Condition](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)   
- [Return Properties from a UI Automation Provider](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)   
- [Raise Events from a UI Automation Provider](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a><span data-ttu-id="fcbcc-178">См. также</span><span class="sxs-lookup"><span data-stu-id="fcbcc-178">See Also</span></span>  
+ [<span data-ttu-id="fcbcc-179">Кэширование в клиентах автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="fcbcc-179">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="fcbcc-180">UI Automation Properties for Clients</span><span class="sxs-lookup"><span data-stu-id="fcbcc-180">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="fcbcc-181">Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера</span><span class="sxs-lookup"><span data-stu-id="fcbcc-181">Server-Side UI Automation Provider Implementation</span></span>](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="fcbcc-182">Нахождение элемента автоматизации пользовательского интерфейса, в зависимости от состояния свойства</span><span class="sxs-lookup"><span data-stu-id="fcbcc-182">Find a UI Automation Element Based on a Property Condition</span></span>](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [<span data-ttu-id="fcbcc-183">Возврат свойств от поставщика автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="fcbcc-183">Return Properties from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
+ [<span data-ttu-id="fcbcc-184">Вызов событий из поставщика автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="fcbcc-184">Raise Events from a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

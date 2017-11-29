@@ -1,35 +1,38 @@
 ---
-title: "Сценарии одноранговых каналов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сценарии одноранговых каналов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c19370a8fe38231ca3a125ae1a3a92a57bc74cac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сценарии одноранговых каналов
-Поддержка интерфейсов API одноранговых каналов для следующих сценариев разработки.  
+# <a name="peer-channel-scenarios"></a><span data-ttu-id="bc1cd-102">Сценарии одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="bc1cd-102">Peer Channel Scenarios</span></span>
+<span data-ttu-id="bc1cd-103">Поддержка интерфейсов API одноранговых каналов для следующих сценариев разработки.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-103">The Peer Channel APIs support the following development scenarios.</span></span>  
   
-## Обмен сообщениями с публикацией и подпиской  
- Компании, создающие приложения с публикацией и подпиской \(например, программы для публикации биржевых котировок, заголовков новостей, спортивных результатов и прогноза погоды\), могут использовать одноранговые каналы в бессерверных приложениях.  Например, пользователи могут получать самые свежие результаты спортивных соревнований, присоединясь к общей сетке \(или группе клиентов\), и распространять большие объемы самых свежих данных об игре, не увеличивая нагрузку на сервер.  Это позволяет поставщику данных повысить качество обслуживания практически без увеличения расходов на серверные технологии.  
+## <a name="publicationsubscription-messaging"></a><span data-ttu-id="bc1cd-104">Обмен сообщениями с публикацией и подпиской</span><span class="sxs-lookup"><span data-stu-id="bc1cd-104">Publication/Subscription Messaging</span></span>  
+ <span data-ttu-id="bc1cd-105">Компании, создающие приложения с публикацией и подпиской (например, программы для публикации биржевых котировок, заголовков новостей, спортивных результатов и прогноза погоды), могут использовать одноранговые каналы в бессерверных приложениях.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-105">Companies that build publication/subscription applications (for example, stock tickers, and publishers of news headlines, sports scores, and weather reports) can use Peer Channel to server-less applications.</span></span> <span data-ttu-id="bc1cd-106">Например, пользователи могут получать самые свежие результаты спортивных соревнований, присоединясь к общей сетке (или группе клиентов), и распространять большие объемы самых свежих данных об игре, не увеличивая нагрузку на сервер.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-106">For example, users can obtain the latest sports scores by joining a common mesh (or group of clients) and propagate the large amount of up-to-date game data without increasing the server load.</span></span> <span data-ttu-id="bc1cd-107">Это позволяет поставщику данных повысить качество обслуживания практически без увеличения расходов на серверные технологии.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-107">This helps the data provider to give higher quality of service without substantially increasing the investment in server-based technologies.</span></span>  
   
-## Совместная работа  
- Независимые поставщики программного обеспечения могут создавать приложения, которые позволяют пользователям объединяться в тесные группы для выполнения одноранговых операций.  Например, это может быть совместная работа над проектами, обмен фотографиями с друзьями, планирование развлекательных мероприятий и т. д.  Обычно в таких случаях используется сервер; однако одноранговые каналы предлагают более экономичное решение этой задачи за счет сценариев автономного доступа, которые достаточно сложно реализовать в традиционной модели "клиент\-сервер".  
+## <a name="collaboration"></a><span data-ttu-id="bc1cd-108">Совместная работа</span><span class="sxs-lookup"><span data-stu-id="bc1cd-108">Collaboration</span></span>  
+ <span data-ttu-id="bc1cd-109">Независимые поставщики программного обеспечения могут создавать приложения, которые позволяют пользователям объединяться в тесные группы для выполнения одноранговых операций.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-109">Independent software vendors (ISVs) can create applications that let people create tight groups for participation in peer-to-peer activities.</span></span> <span data-ttu-id="bc1cd-110">Например, это может быть совместная работа над проектами, обмен фотографиями с друзьями, планирование развлекательных мероприятий и т. д.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-110">For example, this can include teams working on collaborative projects, picture-sharing between friends, party-planning activities, and more.</span></span> <span data-ttu-id="bc1cd-111">Обычно в таких случаях используется сервер; однако одноранговые каналы предлагают более экономичное решение этой задачи за счет сценариев автономного доступа, которые достаточно сложно реализовать в традиционной модели "клиент-сервер".</span><span class="sxs-lookup"><span data-stu-id="bc1cd-111">Traditionally, these activities always involve servers; however, Peer Channel provides a way of doing this in a more cost-efficient way by enabling offline access scenarios that are not as easily implemented under a traditional server-client model.</span></span>  
   
-## Распределенная обработка и вычислительные кластеры  
- Вычислительные кластеры и распределенная обработка обычно используются для масштабных расчетов, например для моделирования финансовых рынков, прогнозирования погоды или расшифровки ДНК человека.  В большинстве случаев для решения подобных проблем серверы назначают отдельные задачи всем клиентам, входящим в вычислительный кластер.  Такие серверы обычно устанавливают дополнительные требования; например, все задачи должны быть завершены в течение определенного интервала времени, для чего требуется выделять более одного компьютера под каждую задачу.  Кроме того, если один из клиентов, выполняющих задачу, выйдет из строя, другой клиент должен подхватить эту задачу и завершить ее.  Возможно также, что одна и та же задача должна выполняться на нескольких клиентах, чтобы можно было сравнить результаты.  Хотя подобная координация работы клиентов может выполняться сервером, можно создать одноранговое решение, где клиенты, получающие задачи независимо, определяют требования сервера к этой задаче и с помощью вычислительной сетки определяют, как именно следует выполнять эту задачу.  
+## <a name="distributed-processing-and-compute-clusters"></a><span data-ttu-id="bc1cd-112">Распределенная обработка и вычислительные кластеры</span><span class="sxs-lookup"><span data-stu-id="bc1cd-112">Distributed Processing and Compute Clusters</span></span>  
+ <span data-ttu-id="bc1cd-113">Вычислительные кластеры и распределенная обработка обычно используются для масштабных расчетов, например для моделирования финансовых рынков, прогнозирования погоды или расшифровки ДНК человека.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-113">Compute clusters and distributed processing are typically used for large-scale computations, such as financial/weather modeling and decoding human DNA.</span></span> <span data-ttu-id="bc1cd-114">В большинстве случаев для решения подобных проблем серверы назначают отдельные задачи всем клиентам, входящим в вычислительный кластер.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-114">Typically, this is done by having servers individually assign tasks to all clients participating in the computation cluster.</span></span> <span data-ttu-id="bc1cd-115">Такие серверы обычно устанавливают дополнительные требования; например, все задачи должны быть завершены в течение определенного интервала времени, для чего требуется выделять более одного компьютера под каждую задачу.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-115">These servers may also have additional demands; for example, all tasks may need to be completed within a certain duration, requiring more than one machine for each task.</span></span> <span data-ttu-id="bc1cd-116">Кроме того, если один из клиентов, выполняющих задачу, выйдет из строя, другой клиент должен подхватить эту задачу и завершить ее.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-116">Additionally, if any client running a task goes down, another client must be able to take over that task and perform work on it.</span></span> <span data-ttu-id="bc1cd-117">Возможно также, что одна и та же задача должна выполняться на нескольких клиентах, чтобы можно было сравнить результаты.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-117">Likewise, more than one client may have to run the same task to ensure consistent results.</span></span> <span data-ttu-id="bc1cd-118">Хотя подобная координация работы клиентов может выполняться сервером, можно создать одноранговое решение, где клиенты, получающие задачи независимо, определяют требования сервера к этой задаче и с помощью вычислительной сетки определяют, как именно следует выполнять эту задачу.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-118">Although servers can run this type of client coordination, you can create a peer-to-peer solution where the clients receiving a task independently determine the server requirements around the task and use a compute mesh to determine how to complete that task.</span></span>  
   
-## Игры  
- С помощью приложений на базе одноранговых каналов разработчики могут реализовывать бессерверные версии игр, где игровые действия синхронизируются между игроками при помощи однорангового механизма, а не через центральный сервер.  Для небольших разработчиков такой подход позволяет избавиться от операционных издержек, связанных с развертыванием, поддержкой и обслуживанием центральных серверов.  В игры, написанные с использованием одноранговой архитектуры, можно играть через Интернет, а также через проводные и беспроводные сети.  Кроме того, на базе одноранговых сетей можно реализовывать вспомогательные игровые процессы, например общение между участниками игры.  
+## <a name="gaming"></a><span data-ttu-id="bc1cd-119">Игры</span><span class="sxs-lookup"><span data-stu-id="bc1cd-119">Gaming</span></span>  
+ <span data-ttu-id="bc1cd-120">С помощью приложений на базе одноранговых каналов разработчики могут реализовывать бессерверные версии игр, где игровые действия синхронизируются между игроками при помощи однорангового механизма, а не через центральный сервер.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-120">Using Peer Channel, application developers can create server-less versions of their games where game moves get transmitted to and synchronized with other players by a peer-to-peer mechanism rather than through a central server.</span></span> <span data-ttu-id="bc1cd-121">Для небольших разработчиков такой подход позволяет избавиться от операционных издержек, связанных с развертыванием, поддержкой и обслуживанием центральных серверов.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-121">For small ISVs, this helps remove operational costs associated with deploying, maintaining, and servicing central servers.</span></span> <span data-ttu-id="bc1cd-122">В игры, написанные с использованием одноранговой архитектуры, можно играть через Интернет, а также через проводные и беспроводные сети.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-122">Games written using a peer-to-peer architecture can be played across the Internet, or in wired or wireless local networks.</span></span> <span data-ttu-id="bc1cd-123">Кроме того, на базе одноранговых сетей можно реализовывать вспомогательные игровые процессы, например общение между участниками игры.</span><span class="sxs-lookup"><span data-stu-id="bc1cd-123">Secondary gaming activities, such as lobby and in-game chat can be developed using a peer-to-peer network.</span></span>  
   
-## См. также  
- [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="bc1cd-124">См. также</span><span class="sxs-lookup"><span data-stu-id="bc1cd-124">See Also</span></span>  
+ [<span data-ttu-id="bc1cd-125">Основные понятия одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="bc1cd-125">Peer Channel Concepts</span></span>](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

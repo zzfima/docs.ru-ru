@@ -1,33 +1,35 @@
 ---
-title: "Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "поля со списком, рисование текста"
-  - "ComboBox - элемент управления [Windows Forms], рисование пользовательского текста"
-  - "ComboBox - элемент управления [Windows Forms], примеры [C#]"
-  - "примеры [Windows Forms], ComboBox - элемент управления"
-  - "текст, рисование в полях со списками"
+title: "Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- text [Windows Forms], drawing in combo boxes
+- examples [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], drawing text
+- ComboBox control [Windows Forms], examples [C#]
+- ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox
-Этот пример демонстрирует пользовательскую прорисовку текста в элементе управления <xref:System.Windows.Forms.ComboBox>.  Если элемент отвечает определенному условию, он прорисовывается шрифтом большего размер и красным цветом.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="6a135-102">Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="6a135-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="6a135-103">В этом примере показано пользовательское рисование текста в <xref:System.Windows.Forms.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6a135-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="6a135-104">Если элемент удовлетворяет определенным критериям, он рисуется более крупным шрифтом и красным.</span><span class="sxs-lookup"><span data-stu-id="6a135-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="6a135-105">Пример</span><span class="sxs-lookup"><span data-stu-id="6a135-105">Example</span></span>  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -62,22 +64,22 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a><span data-ttu-id="6a135-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="6a135-106">Compiling the Code</span></span>  
+ <span data-ttu-id="6a135-107">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="6a135-107">This example requires:</span></span>  
   
--   Форма Windows Forms.  
+-   <span data-ttu-id="6a135-108">В Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6a135-108">A Windows form.</span></span>  
   
--   Элемент управления <xref:System.Windows.Forms.ComboBox> с именем `ListBox1` с тремя элементами в свойстве <xref:System.Windows.Forms.ComboBox.Items%2A>.  В этом примере три элемента имеют имя `"One", Two", and Three"`.  Свойство <xref:System.Windows.Forms.ComboBox.DrawMode%2A> `ComboBox1` должно иметь значение <xref:System.Windows.Forms.DrawMode>.  
+-   <span data-ttu-id="6a135-109">Объект <xref:System.Windows.Forms.ComboBox> управления с именем `ListBox1` с тремя элементами в <xref:System.Windows.Forms.ComboBox.Items%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="6a135-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="6a135-110">В этом примере имена трех элементов `"One", Two", and Three"`.</span><span class="sxs-lookup"><span data-stu-id="6a135-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="6a135-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A> Свойство `ComboBox1` должно быть присвоено <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span><span class="sxs-lookup"><span data-stu-id="6a135-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
   
     > [!NOTE]
-    >  Этот метод также применяется к элементу управления <xref:System.Windows.Forms.ListBox> – <xref:System.Windows.Forms.ListBox> можно заменить на <xref:System.Windows.Forms.ComboBox>.  
+    >  <span data-ttu-id="6a135-112">Этот метод также применяется к <xref:System.Windows.Forms.ListBox> управления, можно заменить <xref:System.Windows.Forms.ListBox> для <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="6a135-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
   
--   Ссылки на пространства имен <xref:System.Windows.Forms?displayProperty=fullName> и <xref:System.Drawing?displayProperty=fullName>.  
+-   <span data-ttu-id="6a135-113">Ссылки на пространства имен <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6a135-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ComboBox.DrawItem>   
- <xref:System.Windows.Forms.DrawItemEventArgs>   
- <xref:System.Windows.Forms.ComboBox.MeasureItem>   
- [Элементы управления Windows Forms со встроенной поддержки рисования владельцем](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)   
- [Элемент управления ListBox](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)   
- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6a135-114">См. также</span><span class="sxs-lookup"><span data-stu-id="6a135-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox.DrawItem>  
+ <xref:System.Windows.Forms.DrawItemEventArgs>  
+ <xref:System.Windows.Forms.ComboBox.MeasureItem>  
+ [<span data-ttu-id="6a135-115">Элементы управления со встроенной поддержкой рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="6a135-115">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [<span data-ttu-id="6a135-116">Элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="6a135-116">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [<span data-ttu-id="6a135-117">Элемент управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="6a135-117">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

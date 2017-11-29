@@ -1,42 +1,45 @@
 ---
-title: "Практическое руководство. Сокрытие элемента управления во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], обеспечение невидимости во время выполнения"
-  - "пользовательские элементы управления [Windows Forms], невидимые"
-  - "невидимые элементы управления"
-  - "время выполнения, обеспечение невидимости элементов управления"
-  - "пользовательские элементы управления [Windows Forms], невидимые"
+title: "Практическое руководство. Сокрытие элемента управления во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], making invisible at run time
+- invisible controls
+- user controls [Windows Forms], invisible
+- custom controls [Windows Forms], invisible
+- run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 310750df0786eb07158909eb5e322369d157d1cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сокрытие элемента управления во время выполнения
-В некоторых случаях требуется создать пользовательский элемент управления, который не должен быть виден во время выполнения.  Например, элемент управления, выполняющий функции будильника, должен отображаться только в момент звукового сигнала, оставаясь невидимым все остальное время.  Такой режим можно реализовать с помощью свойства <xref:System.Windows.Forms.Control.Visible%2A>.  Если свойство <xref:System.Windows.Forms.Control.Visible%2A> имеет значение `true`, элемент управления отображается как обычно.  Если свойство имеет значение `false`, элемент управления будет скрыт.  Несмотря на то, что при скрытии элемента управления его код все равно может выполняться, взаимодействие с элементом через пользовательский интерфейс становится невозможным.  Если требуется создать невидимый элемент управления, который реагирует на ввод данных пользователем \(например, на щелчок мышью\), следует создать прозрачный элемент управления.  Дополнительные сведения см. в разделе ["Задание прозрачного фона для элемента управления"](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="ea9c5-102">Практическое руководство. Сокрытие элемента управления во время выполнения</span><span class="sxs-lookup"><span data-stu-id="ea9c5-102">How to: Make Your Control Invisible at Run Time</span></span>
+<span data-ttu-id="ea9c5-103">Бывают случаи, когда может потребоваться создать пользовательский элемент управления, который остается невидимым во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-103">There are times when you might want to create a user control that is invisible at run time.</span></span> <span data-ttu-id="ea9c5-104">Например элемент управления, выполняющий функции будильника может быть невидимой, за исключением случаев, когда будильника.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-104">For example, a control that is an alarm clock might be invisible except when the alarm was sounding.</span></span> <span data-ttu-id="ea9c5-105">Это делается путем присвоения свойству легко <xref:System.Windows.Forms.Control.Visible%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-105">This is easily accomplished by setting the <xref:System.Windows.Forms.Control.Visible%2A> property.</span></span> <span data-ttu-id="ea9c5-106">Если <xref:System.Windows.Forms.Control.Visible%2A> свойство `true`, элемент управления отображается в обычном режиме.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-106">If the <xref:System.Windows.Forms.Control.Visible%2A> property is `true`, your control will appear as normal.</span></span> <span data-ttu-id="ea9c5-107">Если `false`, элемент управления будет скрыт.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-107">If `false`, your control will be hidden.</span></span> <span data-ttu-id="ea9c5-108">Несмотря на то, что код в элемент управления может выполняться при скрытии, вы не сможете взаимодействовать с элементом управления через пользовательский интерфейс.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-108">Although code in your control may still run while invisible, you will not be able to interact with the control through the user interface.</span></span> <span data-ttu-id="ea9c5-109">Если вы хотите создать невидимом элементе управления, который реагирует на пользовательский ввод (например, щелчки мышью), следует создать прозрачный элемент управления.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-109">If you want to create an invisible control that still responds to user input (for example, mouse clicks), you should create a transparent control.</span></span> <span data-ttu-id="ea9c5-110">Дополнительные сведения см. в разделе [предоставления элемента управления прозрачный фон](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).</span><span class="sxs-lookup"><span data-stu-id="ea9c5-110">For more information, see [Giving Your Control a Transparent Background](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).</span></span>  
   
-### Скрытие элемента управления во время выполнения  
+### <a name="to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="ea9c5-111">Чтобы скрыть элемент управления во время выполнения</span><span class="sxs-lookup"><span data-stu-id="ea9c5-111">To make your control invisible at run time</span></span>  
   
-1.  Установите для свойства <xref:System.Windows.Forms.Control.Visible%2A> значение `false`.  
+1.  <span data-ttu-id="ea9c5-112">Задайте для свойства <xref:System.Windows.Forms.Control.Visible%2A> значение `false`.</span><span class="sxs-lookup"><span data-stu-id="ea9c5-112">Set the <xref:System.Windows.Forms.Control.Visible%2A> property to `false`.</span></span>  
   
     ```vb  
     ' To set the Visible property from within your object's own code.  
     Me.Visible = False  
     ' To set the Visible property from another object.  
     myControl1.Visible = False  
-  
     ```  
   
     ```csharp  
@@ -44,10 +47,9 @@ caps.handback.revision: 13
     this.Visible = false;  
     // To set the Visible property from another object.  
     myControl1.Visible = false;  
-  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.Control.Visible%2A>   
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Практическое руководство. Установка степени прозрачности фона элемента управления](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a><span data-ttu-id="ea9c5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ea9c5-113">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Visible%2A>  
+ [<span data-ttu-id="ea9c5-114">Разработка пользовательских элементов управления Windows Forms в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ea9c5-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="ea9c5-115">Практическое руководство. Установка степени прозрачности фона элемента управления</span><span class="sxs-lookup"><span data-stu-id="ea9c5-115">How to: Give Your Control a Transparent Background</span></span>](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)

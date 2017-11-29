@@ -1,81 +1,87 @@
 ---
-title: "Как создавать пользовательский диспетчер авторизации для службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "класс OperationRequirement"
-  - "Windows Communication Foundation, расширение"
+title: "Практическое руководство. Создание пользовательского диспетчера авторизации для службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Communication Foundation, extending
+- OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b8d934509940bf712ccb7463156c88540027407
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создавать пользовательский диспетчер авторизации для службы
-Инфраструктура модели удостоверения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает расширяемую модель авторизации, основанную на утверждениях.Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>.Диспетчер авторизации проверяет утверждения в контексте <xref:System.IdentityModel.Policy.AuthorizationContext> для принятия решений об авторизации.  
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a><span data-ttu-id="8f266-102">Практическое руководство. Создание пользовательского диспетчера авторизации для службы</span><span class="sxs-lookup"><span data-stu-id="8f266-102">How to: Create a Custom Authorization Manager for a Service</span></span>
+<span data-ttu-id="8f266-103">Инфраструктура модели удостоверения в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддерживает расширяемую модель авторизации, основанную на утверждениях.</span><span class="sxs-lookup"><span data-stu-id="8f266-103">The Identity Model infrastructure in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] supports an extensible claims-based authorization model.</span></span> <span data-ttu-id="8f266-104">Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>.</span><span class="sxs-lookup"><span data-stu-id="8f266-104">Claims are extracted from tokens and optionally processed by custom authorization policies and then placed into an <xref:System.IdentityModel.Policy.AuthorizationContext>.</span></span> <span data-ttu-id="8f266-105">Диспетчер авторизации проверяет утверждения в контексте <xref:System.IdentityModel.Policy.AuthorizationContext> для принятия решений об авторизации.</span><span class="sxs-lookup"><span data-stu-id="8f266-105">An authorization manager examines the claims in the <xref:System.IdentityModel.Policy.AuthorizationContext> to make authorization decisions.</span></span>  
   
- По умолчанию решения об авторизации принимаются классом <xref:System.ServiceModel.ServiceAuthorizationManager>; однако эти решения можно переопределить, создав пользовательский диспетчер авторизации.Чтобы создать пользовательский диспетчер авторизации, создайте класс, наследующий от класса <xref:System.ServiceModel.ServiceAuthorizationManager>, и реализуйте метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.Решения об авторизации принимаются в методе <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, который возвращает `true`, если доступ предоставлен, и `false`, если в доступе отказано.  
+ <span data-ttu-id="8f266-106">По умолчанию решения об авторизации принимаются классом <xref:System.ServiceModel.ServiceAuthorizationManager>; однако эти решения можно переопределить, создав пользовательский диспетчер авторизации.</span><span class="sxs-lookup"><span data-stu-id="8f266-106">By default, authorization decisions are made by the <xref:System.ServiceModel.ServiceAuthorizationManager> class; however these decisions can be overridden by creating a custom authorization manager.</span></span> <span data-ttu-id="8f266-107">Чтобы создать пользовательский диспетчер авторизации, создайте класс, наследующий от класса <xref:System.ServiceModel.ServiceAuthorizationManager>, и реализуйте метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f266-107">To create a custom authorization manager, create a class that derives from <xref:System.ServiceModel.ServiceAuthorizationManager> and implement <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span> <span data-ttu-id="8f266-108">Решения об авторизации принимаются в методе <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, который возвращает `true`, если доступ предоставлен, и `false`, если в доступе отказано.</span><span class="sxs-lookup"><span data-stu-id="8f266-108">Authorization decisions are made in the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method, which returns `true` when access is granted and `false` when access is denied.</span></span>  
   
- Если решение об авторизации зависит от содержимого тела сообщения, используйте метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>.  
+ <span data-ttu-id="8f266-109">Если решение об авторизации зависит от содержимого тела сообщения, используйте метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f266-109">If the authorization decision depends on the contents of the message body, use the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> method.</span></span>  
   
- В связи с вопросами производительности при возможности следует внести изменения в приложение, чтобы решение об авторизации не требовало доступа к телу сообщения.  
+ <span data-ttu-id="8f266-110">В связи с вопросами производительности при возможности следует внести изменения в приложение, чтобы решение об авторизации не требовало доступа к телу сообщения.</span><span class="sxs-lookup"><span data-stu-id="8f266-110">Because of performance issues, if possible you should redesign your application so that the authorization decision does not require access to the message body.</span></span>  
   
- Пользовательский диспетчер авторизации для службы можно зарегистрировать в коде или конфигурации.  
+ <span data-ttu-id="8f266-111">Пользовательский диспетчер авторизации для службы можно зарегистрировать в коде или конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8f266-111">Registration of the custom authorization manager for a service can be done in code or configuration.</span></span>  
   
-### Создание пользовательского диспетчера авторизации  
+### <a name="to-create-a-custom-authorization-manager"></a><span data-ttu-id="8f266-112">Создание пользовательского диспетчера авторизации</span><span class="sxs-lookup"><span data-stu-id="8f266-112">To create a custom authorization manager</span></span>  
   
-1.  Создайте класс, производный от класса <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1.  <span data-ttu-id="8f266-113">Создайте класс, производный от класса <xref:System.ServiceModel.ServiceAuthorizationManager>.</span><span class="sxs-lookup"><span data-stu-id="8f266-113">Derive a class from the <xref:System.ServiceModel.ServiceAuthorizationManager> class.</span></span>  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.  
+2.  <span data-ttu-id="8f266-114">Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.</span><span class="sxs-lookup"><span data-stu-id="8f266-114">Override the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> method.</span></span>  
   
-     Для принятия решения об авторизации используйте метод <xref:System.ServiceModel.OperationContext>, передаваемый в метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.  
+     <span data-ttu-id="8f266-115">Для принятия решения об авторизации используйте метод <xref:System.ServiceModel.OperationContext>, передаваемый в метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.</span><span class="sxs-lookup"><span data-stu-id="8f266-115">Use the <xref:System.ServiceModel.OperationContext> that is passed to the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> method to make authorization decisions.</span></span>  
   
-     В следующем примере кода метод <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29> используется для поиска пользовательского утверждения `http://www.contoso.com/claims/allowedoperation` и принятия решения об авторизации.  
+     <span data-ttu-id="8f266-116">В следующем примере кода метод <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29> используется для поиска пользовательского утверждения `http://www.contoso.com/claims/allowedoperation` и принятия решения об авторизации.</span><span class="sxs-lookup"><span data-stu-id="8f266-116">The following code example uses the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%28System.String%2CSystem.String%29> method to find the custom claim `http://www.contoso.com/claims/allowedoperation` to make an authorization decision.</span></span>  
   
      [!code-csharp[c_CustomAuthMgr#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#6)]
      [!code-vb[c_CustomAuthMgr#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#6)]  
   
-### Регистрация пользовательского диспетчера авторизации с помощью кода  
+### <a name="to-register-a-custom-authorization-manager-using-code"></a><span data-ttu-id="8f266-117">Регистрация пользовательского диспетчера авторизации с помощью кода</span><span class="sxs-lookup"><span data-stu-id="8f266-117">To register a custom authorization manager using code</span></span>  
   
-1.  Создайте экземпляр пользовательского диспетчера авторизации и назначьте его свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
+1.  <span data-ttu-id="8f266-118">Создайте экземпляр пользовательского диспетчера авторизации и назначьте его свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f266-118">Create an instance of the custom authorization manager and assign it to the <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> property.</span></span>  
   
-     Доступ к поведению <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> возможен с помощью свойства <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>.  
+     <span data-ttu-id="8f266-119">Доступ к поведению <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> возможен с помощью свойства <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f266-119">The <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> can be accessed using <xref:System.ServiceModel.ServiceHostBase.Authorization%2A> property.</span></span>  
   
-     В следующем примере кода регистрируется пользовательский диспетчер авторизации `MyServiceAuthorizationManager`.  
+     <span data-ttu-id="8f266-120">В следующем примере кода регистрируется пользовательский диспетчер авторизации `MyServiceAuthorizationManager`.</span><span class="sxs-lookup"><span data-stu-id="8f266-120">The following code example registers the `MyServiceAuthorizationManager` custom authorization manager.</span></span>  
   
      [!code-csharp[c_CustomAuthMgr#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#4)]
      [!code-vb[c_CustomAuthMgr#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#4)]  
   
-### Регистрация пользовательского диспетчера авторизации с помощью конфигурации  
+### <a name="to-register-a-custom-authorization-manager-using-configuration"></a><span data-ttu-id="8f266-121">Регистрация пользовательского диспетчера авторизации с помощью конфигурации</span><span class="sxs-lookup"><span data-stu-id="8f266-121">To register a custom authorization manager using configuration</span></span>  
   
-1.  Откройте файл конфигурации службы.  
+1.  <span data-ttu-id="8f266-122">Откройте файл конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="8f266-122">Open the configuration file for the service.</span></span>  
   
-2.  Добавьте элемент [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) в элемент [\<поведения\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2.  <span data-ttu-id="8f266-123">Добавить [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) для [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="8f266-123">Add a [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) to the [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).</span></span>  
   
-     Добавьте в элемент [\<serviceAuthorization\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) атрибут `serviceAuthorizationManagerType` и установите для него значение типа, представляющего пользовательский диспетчер авторизации.  
+     <span data-ttu-id="8f266-124">Чтобы [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), добавьте `serviceAuthorizationManagerType` атрибут и присвойте ему значение тип, представляющий пользовательский диспетчер авторизации.</span><span class="sxs-lookup"><span data-stu-id="8f266-124">To the [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), add a `serviceAuthorizationManagerType` attribute and set its value to the type that represents the custom authorization manager.</span></span>  
   
-3.  Добавьте привязку, обеспечивающую безопасность связи между клиентом и службой.  
+3.  <span data-ttu-id="8f266-125">Добавьте привязку, обеспечивающую безопасность связи между клиентом и службой.</span><span class="sxs-lookup"><span data-stu-id="8f266-125">Add a binding that secures the communication between the client and service.</span></span>  
   
-     Привязка, выбранная для этой связи, определяет утверждения, добавляемые в контекст <xref:System.IdentityModel.Policy.AuthorizationContext> и используемые пользовательским диспетчером авторизации для принятия решений об авторизации.Дополнительные сведения о привязках, предоставляемых системой, см. в разделе [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     <span data-ttu-id="8f266-126">Привязка, выбранная для этой связи, определяет утверждения, добавляемые в контекст <xref:System.IdentityModel.Policy.AuthorizationContext> и используемые пользовательским диспетчером авторизации для принятия решений об авторизации.</span><span class="sxs-lookup"><span data-stu-id="8f266-126">The binding that is chosen for this communication determines the claims that are added to the <xref:System.IdentityModel.Policy.AuthorizationContext>, which the custom authorization manager uses to make authorization decisions.</span></span> <span data-ttu-id="8f266-127">Дополнительные сведения о предоставляемых системой привязок см. в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="8f266-127">For more details about the system-provided bindings, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
-4.  Свяжите поведение с конечной точкой службы, добавив элемент [\<service\>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) и задав для атрибута `behaviorConfiguration` значение атрибута name элемента [\<поведение\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md).  
+4.  <span data-ttu-id="8f266-128">Связать поведение конечной точки службы, путем добавления [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент со значением `behaviorConfiguration` равным значению атрибута "name" для [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="8f266-128">Associate the behavior to a service endpoint, by adding a [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element and set the value of the `behaviorConfiguration` attribute to the value of the name attribute for the [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) element.</span></span>  
   
-     Дополнительные сведения о настройке конечной точки службы см. в разделе [Практическое руководство. Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+     <span data-ttu-id="8f266-129">Дополнительные сведения о настройке конечной точки службы см. в разделе [как: создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="8f266-129">For more information about configuring a service endpoint, see [How to: Create a Service Endpoint in Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span></span>  
   
-     В следующем примере кода регистрируется пользовательский диспетчер авторизации `Samples.MyServiceAuthorizationManager`.  
+     <span data-ttu-id="8f266-130">В следующем примере кода регистрируется пользовательский диспетчер авторизации `Samples.MyServiceAuthorizationManager`.</span><span class="sxs-lookup"><span data-stu-id="8f266-130">The following code example registers the custom authorization manager `Samples.MyServiceAuthorizationManager`.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.serviceModel>  
         <services>  
@@ -113,15 +119,15 @@ caps.handback.revision: 15
     ```  
   
     > [!WARNING]
-    >  Обратите внимание, что при указании serviceAuthorizationManagerType строка должна содержать полное имя типа.запятую и имя сборки, в которой определен тип.Если опустить имя сборки, WCF попытается загрузить тип из System.ServiceModel.dll.  
+    >  <span data-ttu-id="8f266-131">Обратите внимание, что при указании serviceAuthorizationManagerType строка должна содержать полное имя типа.</span><span class="sxs-lookup"><span data-stu-id="8f266-131">Note that when you specify the serviceAuthorizationManagerType, the string must contain the fully qualified type name.</span></span> <span data-ttu-id="8f266-132">запятая и имя сборки, в которой определен тип.</span><span class="sxs-lookup"><span data-stu-id="8f266-132">a comma, and the name of the assembly in which the type is defined.</span></span> <span data-ttu-id="8f266-133">Если опустить имя сборки, WCF попытается загрузить тип из System.ServiceModel.dll.</span><span class="sxs-lookup"><span data-stu-id="8f266-133">If you leave out the assembly name, WCF will attempt to load the type from System.ServiceModel.dll.</span></span>  
   
-## Пример  
- В следующем образце кода показана базовая реализация класса <xref:System.ServiceModel.ServiceAuthorizationManager>, которая содержит переопределение метода <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.В этом примере кода производится проверка <xref:System.IdentityModel.Policy.AuthorizationContext> на наличие пользовательского утверждения и возвращается `true`, если ресурс для этого пользовательского утверждения соответствует значению действия из контекста <xref:System.ServiceModel.OperationContext>.Более полная реализация класса <xref:System.ServiceModel.ServiceAuthorizationManager> содержится в разделе [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md).  
+## <a name="example"></a><span data-ttu-id="8f266-134">Пример</span><span class="sxs-lookup"><span data-stu-id="8f266-134">Example</span></span>  
+ <span data-ttu-id="8f266-135">В следующем образце кода показана базовая реализация класса <xref:System.ServiceModel.ServiceAuthorizationManager>, которая содержит переопределение метода <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f266-135">The following code example demonstrates a basic implementation of a <xref:System.ServiceModel.ServiceAuthorizationManager> class that includes overriding the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method.</span></span> <span data-ttu-id="8f266-136">В этом примере кода производится проверка <xref:System.IdentityModel.Policy.AuthorizationContext> на наличие пользовательского утверждения и возвращается `true`, если ресурс для этого пользовательского утверждения соответствует значению действия из контекста <xref:System.ServiceModel.OperationContext>.</span><span class="sxs-lookup"><span data-stu-id="8f266-136">The example code examines the <xref:System.IdentityModel.Policy.AuthorizationContext> for a custom claim and returns `true` when the resource for that custom claim matches the action value from the <xref:System.ServiceModel.OperationContext>.</span></span> <span data-ttu-id="8f266-137">Более полную реализацию <xref:System.ServiceModel.ServiceAuthorizationManager> см. в описании [политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md).</span><span class="sxs-lookup"><span data-stu-id="8f266-137">For a more complete implementation of a <xref:System.ServiceModel.ServiceAuthorizationManager> class, see [Authorization Policy](../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
   
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## См. также  
- <xref:System.ServiceModel.ServiceAuthorizationManager>   
- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)   
- [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a><span data-ttu-id="8f266-138">См. также</span><span class="sxs-lookup"><span data-stu-id="8f266-138">See Also</span></span>  
+ <xref:System.ServiceModel.ServiceAuthorizationManager>  
+ [<span data-ttu-id="8f266-139">Политика авторизации</span><span class="sxs-lookup"><span data-stu-id="8f266-139">Authorization Policy</span></span>](../../../../docs/framework/wcf/samples/authorization-policy.md)  
+ [<span data-ttu-id="8f266-140">Политика авторизации</span><span class="sxs-lookup"><span data-stu-id="8f266-140">Authorization Policy</span></span>](../../../../docs/framework/wcf/samples/authorization-policy.md)

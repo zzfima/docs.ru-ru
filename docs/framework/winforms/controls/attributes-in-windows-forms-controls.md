@@ -1,76 +1,77 @@
 ---
-title: "Атрибуты в элементах управления Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "атрибуты [Windows Forms]"
-  - "атрибуты [Windows Forms], классы"
-  - "атрибуты [Windows Forms], свойства элемента управления"
-  - "атрибуты [Windows Forms], свойства привязки данных"
+title: "Атрибуты в элементах управления Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [Windows Forms]
+- attributes [Windows Forms], data binding properties
+- attributes [Windows Forms], control properties
+- attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 21f39aa1f85e06f1967d278e07731b73dcf7cb10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Атрибуты в элементах управления Windows Forms
-В библиотеке .NET Framework содержатся различные атрибуты, которые можно применять к членам собственных элементов управления и компонентам.  Некоторые из этих атрибутов влияют на поведение класса во время выполнения, в то время как другие определяют поведение во время разработки.  
+# <a name="attributes-in-windows-forms-controls"></a><span data-ttu-id="4931b-102">Атрибуты в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4931b-102">Attributes in Windows Forms Controls</span></span>
+<span data-ttu-id="4931b-103">.NET Framework предоставляет широкий набор атрибутов, которые можно применять к членам пользовательских элементов управления и компонентов.</span><span class="sxs-lookup"><span data-stu-id="4931b-103">The .NET Framework provides a variety of attributes you can apply to the members of your custom controls and components.</span></span> <span data-ttu-id="4931b-104">Некоторые из этих атрибутов влияют на поведение класса во время выполнения, а другие – на поведение во время разработки.</span><span class="sxs-lookup"><span data-stu-id="4931b-104">Some of these attributes affect the run-time behavior of a class, and others affect the design-time behavior.</span></span>  
   
-## Атрибуты свойств элемента управления и компонента  
- В следующей таблице содержатся атрибуты, которые можно применять к свойствам или другим членам собственных элементов управления и компонентов.  Пример использования большинства из этих атрибутов см. в разделе [Практическое руководство. Применение атрибутов к элементам управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+## <a name="attributes-for-control-and-component-properties"></a><span data-ttu-id="4931b-105">Атрибуты для свойств элементов управления и компонентов</span><span class="sxs-lookup"><span data-stu-id="4931b-105">Attributes for Control and Component Properties</span></span>  
+ <span data-ttu-id="4931b-106">В следующей таблице представлены атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов.</span><span class="sxs-lookup"><span data-stu-id="4931b-106">The following table shows the attributes you can apply to properties or other members of your custom controls and components.</span></span> <span data-ttu-id="4931b-107">Пример использования этих атрибутов см. в разделе [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="4931b-107">For an example that uses many of these attributes, see [How to: Apply Attributes in Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|<xref:System.ComponentModel.AmbientValueAttribute>|Задает значение, которое нужно передать свойству, чтобы это свойство получило значение из другого источника.  Это называется *окружением*.|  
-|<xref:System.ComponentModel.BrowsableAttribute>|Указывает, следует ли отображать свойство или событие в окне **Свойства**.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Задает имя категории, в которой при отображении в элементе управления <xref:System.Windows.Forms.PropertyGrid> для группировки свойства или события устанавливается режим <xref:System.Windows.Forms.PropertySort>.|  
-|<xref:System.ComponentModel.DefaultValueAttribute>|Задает для свойства значение по умолчанию.|  
-|<xref:System.ComponentModel.DescriptionAttribute>|Задает описание свойства или события.|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|Задает отображаемое имя для свойства, события или метода `public` `void`, не принимающего аргументов.|  
-|<xref:System.ComponentModel.EditorAttribute>|Задает редактор, используемый для изменения свойства.|  
-|<xref:System.ComponentModel.EditorBrowsableAttribute>|Указывает на то, что свойство или метод отображаются в редакторе.|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Указывает зарезервированное ключевое слово контекста для класса или элемента.|  
-|<xref:System.ComponentModel.LocalizableAttribute>|Определяет, должно ли быть локализовано свойство.|  
-|<xref:System.ComponentModel.PasswordPropertyTextAttribute>|Показывает, что текстовое представление объекта скрывается такими символами, как звездочка.|  
-|<xref:System.ComponentModel.ReadOnlyAttribute>|Указывает, доступно ли свойство, с которым связан данный атрибут, только для чтения или для чтения и записи во время разработки.|  
-|<xref:System.ComponentModel.RefreshPropertiesAttribute>|Показывает, что следует обновить таблицу свойств, когда изменяется значение связанного свойства.|  
-|<xref:System.ComponentModel.TypeConverterAttribute>|Указывает, какой тип использовать в качестве преобразователя для объекта, с которым связан этот атрибут.|  
+|<span data-ttu-id="4931b-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="4931b-108">Attribute</span></span>|<span data-ttu-id="4931b-109">Описание</span><span class="sxs-lookup"><span data-stu-id="4931b-109">Description</span></span>|  
+|---------------|-----------------|  
+|<xref:System.ComponentModel.AmbientValueAttribute>|<span data-ttu-id="4931b-110">Указывает значение, которое нужно передать в свойство, чтобы свойство получило свое значение из другого источника.</span><span class="sxs-lookup"><span data-stu-id="4931b-110">Specifies the value to pass to a property to cause the property to get its value from another source.</span></span> <span data-ttu-id="4931b-111">Это называется *окружением*.</span><span class="sxs-lookup"><span data-stu-id="4931b-111">This is known as *ambience*.</span></span>|  
+|<xref:System.ComponentModel.BrowsableAttribute>|<span data-ttu-id="4931b-112">Указывает, должно ли отображаться свойство в окне **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="4931b-112">Specifies whether a property or event should be displayed in a **Properties** window.</span></span>|  
+|<xref:System.ComponentModel.CategoryAttribute>|<span data-ttu-id="4931b-113">Задает имя категории, в которой для группировки свойств или событий, при отображении в <xref:System.Windows.Forms.PropertyGrid> задано для элемента управления <xref:System.Windows.Forms.PropertySort.Categorized> режим.</span><span class="sxs-lookup"><span data-stu-id="4931b-113">Specifies the name of the category in which to group the property or event when displayed in a <xref:System.Windows.Forms.PropertyGrid> control set to <xref:System.Windows.Forms.PropertySort.Categorized> mode.</span></span>|  
+|<xref:System.ComponentModel.DefaultValueAttribute>|<span data-ttu-id="4931b-114">Указывает значение свойства по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4931b-114">Specifies the default value for a property.</span></span>|  
+|<xref:System.ComponentModel.DescriptionAttribute>|<span data-ttu-id="4931b-115">Задает описание для свойства или события.</span><span class="sxs-lookup"><span data-stu-id="4931b-115">Specifies a description for a property or event.</span></span>|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|<span data-ttu-id="4931b-116">Указывает отображаемое имя для свойства, события или метода `public``void`, у которого нет аргументов.</span><span class="sxs-lookup"><span data-stu-id="4931b-116">Specifies the display name for a property, event, or `public``void` method that takes no arguments.</span></span>|  
+|<xref:System.ComponentModel.EditorAttribute>|<span data-ttu-id="4931b-117">Указывает редактор, используемый для изменения свойства.</span><span class="sxs-lookup"><span data-stu-id="4931b-117">Specifies the editor to use to change a property.</span></span>|  
+|<xref:System.ComponentModel.EditorBrowsableAttribute>|<span data-ttu-id="4931b-118">Указывает, что свойство или метод можно просматривать в редакторе.</span><span class="sxs-lookup"><span data-stu-id="4931b-118">Specifies that a property or method is viewable in an editor.</span></span>|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|<span data-ttu-id="4931b-119">Указывает ключевое слово контекста для класса или члена.</span><span class="sxs-lookup"><span data-stu-id="4931b-119">Specifies the context keyword for a class or member.</span></span>|  
+|<xref:System.ComponentModel.LocalizableAttribute>|<span data-ttu-id="4931b-120">Указывает, должно ли быть локализовано свойство.</span><span class="sxs-lookup"><span data-stu-id="4931b-120">Specifies whether a property should be localized.</span></span>|  
+|<xref:System.ComponentModel.PasswordPropertyTextAttribute>|<span data-ttu-id="4931b-121">Указывает, что текстовое представление объекта скрыто символами, например звездочками.</span><span class="sxs-lookup"><span data-stu-id="4931b-121">Indicates that an object's text representation is obscured by characters such as asterisks.</span></span>|  
+|<xref:System.ComponentModel.ReadOnlyAttribute>|<span data-ttu-id="4931b-122">Указывает, предназначено ли свойство, к которому привязан этот атрибут, только для чтения или для чтения и записи во время разработки.</span><span class="sxs-lookup"><span data-stu-id="4931b-122">Specifies whether the property this attribute is bound to is read-only or read/write at design time.</span></span>|  
+|<xref:System.ComponentModel.RefreshPropertiesAttribute>|<span data-ttu-id="4931b-123">Указывает, что таблица свойств должна обновляться при изменении значения связанного свойства.</span><span class="sxs-lookup"><span data-stu-id="4931b-123">Indicates that the property grid should refresh when the associated property value changes.</span></span>|  
+|<xref:System.ComponentModel.TypeConverterAttribute>|<span data-ttu-id="4931b-124">Указывает, какой тип использовать в качестве преобразователя для объекта, с которым связан этот атрибут.</span><span class="sxs-lookup"><span data-stu-id="4931b-124">Specifies what type to use as a converter for the object this attribute is bound to.</span></span>|  
   
-## Атрибуты для свойств привязки данных  
- В следующей таблице содержатся атрибуты, которые можно применять для определения способа взаимодействия собственных элементов управления и компонентов с привязкой данных.  
+## <a name="attributes-for-data-binding-properties"></a><span data-ttu-id="4931b-125">Атрибуты для свойств привязки данных</span><span class="sxs-lookup"><span data-stu-id="4931b-125">Attributes for Data Binding Properties</span></span>  
+ <span data-ttu-id="4931b-126">В следующей таблице представлены атрибуты, с помощью которых можно указывать, как пользовательские элементы управления и компоненты взаимодействуют с привязкой данных.</span><span class="sxs-lookup"><span data-stu-id="4931b-126">The following table shows the attributes you can apply to specify how your custom controls and components interact with data binding.</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|<xref:System.ComponentModel.BindableAttribute>|Указывает, предназначено ли свойство для привязки данных.|  
-|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Указывает свойства источника данных и члена данных для компонента.|  
-|<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|Задает для компонента свойство привязки по умолчанию.|  
-|<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|Указывает свойства источника данных и члена данных для компонента.|  
-|<xref:System.ComponentModel.AttributeProviderAttribute>|Включает перенаправление атрибутов.|  
+|<span data-ttu-id="4931b-127">Атрибут</span><span class="sxs-lookup"><span data-stu-id="4931b-127">Attribute</span></span>|<span data-ttu-id="4931b-128">Описание</span><span class="sxs-lookup"><span data-stu-id="4931b-128">Description</span></span>|  
+|---------------|-----------------|  
+|<xref:System.ComponentModel.BindableAttribute>|<span data-ttu-id="4931b-129">Указывает, используется ли обычно свойство для привязки.</span><span class="sxs-lookup"><span data-stu-id="4931b-129">Specifies whether a property is typically used for binding.</span></span>|  
+|<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|<span data-ttu-id="4931b-130">Указывает источник данных и свойства элемента данных для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-130">Specifies the data source and data member properties for a component.</span></span>|  
+|<xref:System.ComponentModel.DefaultBindingPropertyAttribute>|<span data-ttu-id="4931b-131">Задает свойство привязки по умолчанию для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-131">Specifies the default binding property for a component.</span></span>|  
+|<xref:System.ComponentModel.LookupBindingPropertiesAttribute>|<span data-ttu-id="4931b-132">Указывает источник данных и свойства элемента данных для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-132">Specifies the data source and data member properties for a component.</span></span>|  
+|<xref:System.ComponentModel.AttributeProviderAttribute>|<span data-ttu-id="4931b-133">Включает перенаправление атрибутов.</span><span class="sxs-lookup"><span data-stu-id="4931b-133">Enables attribute redirection.</span></span>|  
   
-## Атрибуты для классов  
- В следующей таблице содержатся атрибуты, которые можно применять для определения поведения взаимодействия собственных элементов управления и компонентов во время разработки.  
+## <a name="attributes-for-classes"></a><span data-ttu-id="4931b-134">Атрибуты для классов</span><span class="sxs-lookup"><span data-stu-id="4931b-134">Attributes for Classes</span></span>  
+ <span data-ttu-id="4931b-135">В следующей таблице представлены атрибуты, с помощью которых можно указать поведение пользовательских элементов управления и компонентов во время разработки.</span><span class="sxs-lookup"><span data-stu-id="4931b-135">The following table shows the attributes you can apply to specify the behavior of your custom controls and components at design time.</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|<xref:System.ComponentModel.DefaultEventAttribute>|Задает для компонента событие по умолчанию.|  
-|<xref:System.ComponentModel.DefaultPropertyAttribute>|Задает для компонента свойство по умолчанию.|  
-|<xref:System.ComponentModel.DesignerAttribute>|Задает класс, используемый для реализации служб времени разработки для компонента.|  
-|<xref:System.ComponentModel.DesignerCategoryAttribute>|Указывает, что конструктор для класса принадлежит к определенной категории.|  
-|<xref:System.ComponentModel.ToolboxItemAttribute>|Представляет атрибут элемента панели элемента.|  
-|<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Задает строку фильтра и тип фильтра для использования в качестве элемента панели инструментов.|  
+|<span data-ttu-id="4931b-136">Атрибут</span><span class="sxs-lookup"><span data-stu-id="4931b-136">Attribute</span></span>|<span data-ttu-id="4931b-137">Описание</span><span class="sxs-lookup"><span data-stu-id="4931b-137">Description</span></span>|  
+|---------------|-----------------|  
+|<xref:System.ComponentModel.DefaultEventAttribute>|<span data-ttu-id="4931b-138">Задает событие по умолчанию для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-138">Specifies the default event for a component.</span></span>|  
+|<xref:System.ComponentModel.DefaultPropertyAttribute>|<span data-ttu-id="4931b-139">Задает свойство по умолчанию для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-139">Specifies the default property for a component.</span></span>|  
+|<xref:System.ComponentModel.DesignerAttribute>|<span data-ttu-id="4931b-140">Указывает класс, используемый для реализации служб времени разработки для компонента.</span><span class="sxs-lookup"><span data-stu-id="4931b-140">Specifies the class used to implement design-time services for a component.</span></span>|  
+|<xref:System.ComponentModel.DesignerCategoryAttribute>|<span data-ttu-id="4931b-141">Указывает, что конструктор для класса относится к определенной категории.</span><span class="sxs-lookup"><span data-stu-id="4931b-141">Specifies that the designer for a class belongs to a certain category.</span></span>|  
+|<xref:System.ComponentModel.ToolboxItemAttribute>|<span data-ttu-id="4931b-142">Представляет атрибут элемента панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="4931b-142">Represents an attribute of a toolbox item.</span></span>|  
+|<xref:System.ComponentModel.ToolboxItemFilterAttribute>|<span data-ttu-id="4931b-143">Задает строку фильтра и тип фильтра для элемента панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="4931b-143">Specifies the filter string and filter type to use for a Toolbox item.</span></span>|  
   
-## См. также  
- <xref:System.Attribute>   
- [Практическое руководство. Применение атрибутов к элементам управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="4931b-144">См. также</span><span class="sxs-lookup"><span data-stu-id="4931b-144">See Also</span></span>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="4931b-145">Практическое руководство. Применение атрибутов к элементам управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4931b-145">How to: Apply Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
+ [<span data-ttu-id="4931b-146">Расширения поддержки времени разработки</span><span class="sxs-lookup"><span data-stu-id="4931b-146">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [<span data-ttu-id="4931b-147">Разработка пользовательских элементов управления Windows Forms в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4931b-147">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

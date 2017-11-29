@@ -1,91 +1,86 @@
 ---
-title: "Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF [WCF]"
-  - "Windows Communication Foundation [WCF]"
-ms.assetid: 96aad289-58bc-4389-89d0-b09dfc4d5c58
-caps.latest.revision: 2
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+title: Windows Communication Foundation
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF]
+- WCF [WCF]
+ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] является единой моделью программирования \(Майкрософт\) для построения ориентированных на службы приложений.  Она позволяет разработчикам построить безопасные надежные решения с поддержкой транзакций и возможностью кроссплатформенной интеграции и взаимодействия с существующими инвестициями.  
+# <a name="developing-service-oriented-applications-with-wcf"></a><span data-ttu-id="5d222-102">Разработка сервисноориентированных приложений с помощью WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-102">Developing Service-Oriented Applications with WCF</span></span>
+<span data-ttu-id="5d222-103">В этом разделе документации приводятся сведения о Windows Communication Foundation (WCF) — унифицированной модели программирования для сборки сервисноориентированных приложений.</span><span class="sxs-lookup"><span data-stu-id="5d222-103">This section of the documentation provides information about Windows Communication Foundation (WCF), which is a unified programming model for building service-oriented applications.</span></span> <span data-ttu-id="5d222-104">Она позволяет разработчикам построить безопасные надежные решения с поддержкой транзакций и возможностью межплатформенной интеграции и взаимодействия с существующими инвестициями.</span><span class="sxs-lookup"><span data-stu-id="5d222-104">It enables developers to build secure, reliable, transacted solutions that integrate across platforms and interoperate with existing investments.</span></span>
+ 
+## <a name="in-this-section"></a><span data-ttu-id="5d222-105">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="5d222-105">In this section</span></span>  
+ [<span data-ttu-id="5d222-106">Новые возможности в Windows Communication Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="5d222-106">What's New in Windows Communication Foundation 4.5</span></span>](../../../docs/framework/wcf/whats-new.md)  
+ <span data-ttu-id="5d222-107">Описывает новые возможности в Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="5d222-107">Discusses features new to Windows Communication Foundation.</span></span>  
   
-## В этом подразделе  
- [Новые возможности в Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
- Описывает новые функции в Windows Communication Foundation.  
+ [<span data-ttu-id="5d222-108">Возможности для упрощения работы с WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-108">WCF Simplification Features</span></span>](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ <span data-ttu-id="5d222-109">Описывает новые возможности, которые упрощают написание приложений WCF.</span><span class="sxs-lookup"><span data-stu-id="5d222-109">Discusses new features that make writing WCF applications simpler.</span></span>  
   
- [Функции упрощения WCF](../../../docs/framework/wcf/wcf-simplification-features.md)  
- Описывает новые функции, которые упрощают написание приложений WCF.  
+ [<span data-ttu-id="5d222-110">Руководство по работе с документацией</span><span class="sxs-lookup"><span data-stu-id="5d222-110">Guide to the Documentation</span></span>](../../../docs/framework/wcf/guide-to-the-documentation.md)  
+ <span data-ttu-id="5d222-111">Описание документации WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-111">A description of the WCF documentation</span></span>  
   
- [Руководство по работе с документацией](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- Описание документации WCF  
+ [<span data-ttu-id="5d222-112">Концептуальный обзор</span><span class="sxs-lookup"><span data-stu-id="5d222-112">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ <span data-ttu-id="5d222-113">В этом разделе собраны сведения о системе обмена сообщениями Windows Communication Foundation (WCF) и классах, поддерживающих ее использование.</span><span class="sxs-lookup"><span data-stu-id="5d222-113">Summarizes information about the Windows Communication Foundation (WCF) messaging system and the classes that support its use.</span></span>  
   
- [Общие сведения об основных понятиях](../../../docs/framework/wcf/conceptual-overview.md)  
- В этом разделе собраны сведения о системе обмена сообщениями Windows Communication Foundation \(WCF\) и классах, поддерживающих ее использование.  
+ [<span data-ttu-id="5d222-114">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="5d222-114">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ <span data-ttu-id="5d222-115">Пошаговый учебник, рассказывающий о создании WCF-службы и соответствующего клиента</span><span class="sxs-lookup"><span data-stu-id="5d222-115">A step by step tutorial to create a WCF service and client</span></span>  
   
- [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
- Пошаговый учебник, рассказывающий о создании WCF\-службы и соответствующего клиента  
+ [<span data-ttu-id="5d222-116">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-116">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ <span data-ttu-id="5d222-117">Описывает основные принципы создания приложений Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="5d222-117">Describes the fundamentals for creating Windows Communication Foundation applications.</span></span>  
   
- [Базовое программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
- Описывает основные принципы создания приложений Windows Communication Foundation.  
+ [<span data-ttu-id="5d222-118">Подробные сведения о возможностях WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-118">WCF Feature Details</span></span>](../../../docs/framework/wcf/feature-details/index.md)  
+ <span data-ttu-id="5d222-119">Содержит список разделов, которые помогут определить, какие функции [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] следует использовать.</span><span class="sxs-lookup"><span data-stu-id="5d222-119">Shows topics that let you choose which [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] feature or features you need to employ.</span></span>  
   
- [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)  
- Содержит список разделов, которые помогут определить, какие функции [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] следует использовать.  
+ [<span data-ttu-id="5d222-120">Расширение WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-120">Extending WCF</span></span>](../../../docs/framework/wcf/extending/extending-wcf.md)  
+ <span data-ttu-id="5d222-121">Описывает, как изменять и расширять WCF-компоненты времени выполнения</span><span class="sxs-lookup"><span data-stu-id="5d222-121">Describes how to modify and extend WCF runtime components</span></span>  
   
- [Расширение WCF](../../../docs/framework/wcf/extending/extending-wcf.md)  
- Описывает, как изменять и расширять WCF\-компоненты времени выполнения  
+ [<span data-ttu-id="5d222-122">Правила и рекомендации</span><span class="sxs-lookup"><span data-stu-id="5d222-122">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ <span data-ttu-id="5d222-123">Содержит рекомендации по созданию приложений Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5d222-123">Provides guidelines for creating Windows Communication Foundation (WCF) applications.</span></span>  
   
- [Правила и рекомендации](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- Содержит рекомендации по созданию приложений Windows Communication Foundation \(WCF\).  
+ [<span data-ttu-id="5d222-124">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5d222-124">Administration and Diagnostics</span></span>](../../../docs/framework/wcf/diagnostics/index.md)  
+ <span data-ttu-id="5d222-125">Описание возможностей отладки библиотеки WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-125">Describes the diagnostic features of WCF</span></span>  
   
- [Администрирование и диагностика](../../../docs/framework/wcf/diagnostics/index.md)  
- Описание возможностей отладки библиотеки WCF  
+ [<span data-ttu-id="5d222-126">Требования к системе</span><span class="sxs-lookup"><span data-stu-id="5d222-126">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ <span data-ttu-id="5d222-127">Описывает требования к системе, необходимые для запуска WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-127">Describes system requirements needed to run WCF</span></span>  
   
- [Требования к системе](../../../docs/framework/wcf/wcf-system-requirements.md)  
- Описывает требования к системе, необходимые для запуска WCF  
+ [<span data-ttu-id="5d222-128">Ресурсы операционной системы, необходимые WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-128">Operating System Resources Required by WCF</span></span>](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
+ <span data-ttu-id="5d222-129">Описывает ресурсы операционной системы, необходимые для библиотеки WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-129">Describes operating system resources required by WCF</span></span>  
   
- [Ресурсы операционной системы, необходимые WCF](../../../docs/framework/wcf/operating-system-resources-required-by-wcf.md)  
- Описывает ресурсы операционной системы, необходимые для библиотеки WCF  
+ [<span data-ttu-id="5d222-130">Устранение неполадок с установкой</span><span class="sxs-lookup"><span data-stu-id="5d222-130">Troubleshooting Setup Issues</span></span>](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
+ <span data-ttu-id="5d222-131">Содержит рекомендации по устранению проблем, возникающих при установке WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-131">Provides guidance for fixing WCF setup issues</span></span>  
   
- [Устранение неполадок, связанных с установкой](../../../docs/framework/wcf/troubleshooting-setup-issues.md)  
- Содержит рекомендации по устранению проблем, возникающих при установке WCF  
+ [<span data-ttu-id="5d222-132">Перенос из .NET Remoting на платформу WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-132">Migrating from .NET Remoting to WCF</span></span>](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
+ <span data-ttu-id="5d222-133">Сравнивает удаленное взаимодействие .NET с WCF и предоставляет инструкции по миграции для использования в рамках стандартных сценариев.</span><span class="sxs-lookup"><span data-stu-id="5d222-133">Compares .NET Remoting to WCF and provides migration guidance for common scenarios.</span></span>  
   
- [Перенос из .NET на платформу WCF](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
- Сравнивает удаленное взаимодействие .NET с WCF и предоставляет инструкции по миграции для использования в рамках стандартных сценариев.  
+ [<span data-ttu-id="5d222-134">Использование средств разработки WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-134">Using the WCF Development Tools</span></span>](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
+ <span data-ttu-id="5d222-135">Описание средств разработки Visual Studio Windows Communication Foundation, которые могут помочь при разработке служб WCF.</span><span class="sxs-lookup"><span data-stu-id="5d222-135">Describes the Visual Studio Windows Communication Foundation development tools that can assist you in developing your WCFservice.</span></span>  
   
- [Использование средств разработки WCF](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
- Описание средств разработки Visual Studio Windows Communication Foundation, которые могут помочь при разработке служб WCF.  
+ [<span data-ttu-id="5d222-136">Средства Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5d222-136">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ <span data-ttu-id="5d222-137">Описание средств WCF, разработанных с целью упрощения создания, развертывания приложений WCF и управления ими.</span><span class="sxs-lookup"><span data-stu-id="5d222-137">Describes WCF tools designed to make it easier to create, deploy, and manage WCF applications</span></span>  
   
- [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
- Описание средств WCF, разработанных с целью упрощения создания, развертывания приложений WCF и управления ими.  
+ [<span data-ttu-id="5d222-138">Примеры Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5d222-138">Windows Communication Foundation Samples</span></span>](../../../docs/framework/wcf/samples/index.md)  
+ <span data-ttu-id="5d222-139">Образцы с инструкциями по различным аспектам использования Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5d222-139">Samples that provide instruction on various aspects of Windows Communication Foundation</span></span>  
   
- [Образцы Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)  
- Образцы с инструкциями по различным аспектам использования Windows Communication Foundation  
+ [<span data-ttu-id="5d222-140">Глоссарий по Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5d222-140">Windows Communication Foundation Glossary</span></span>](../../../docs/framework/wcf/glossary.md)  
+ <span data-ttu-id="5d222-141">Содержит перечень терминов, относящихся к [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d222-141">Shows a list of terms specific to [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]</span></span>  
   
- [Глоссарий по Windows Communication Foundation](../../../docs/framework/wcf/glossary.md)  
- Содержит перечень терминов, относящихся к [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
+ [<span data-ttu-id="5d222-142">Общие справочные сведения</span><span class="sxs-lookup"><span data-stu-id="5d222-142">General Reference</span></span>](../../../docs/framework/wcf/general-reference.md)  
+ <span data-ttu-id="5d222-143">В разделе описаны элементы, используемые для настройки клиентов и служб Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="5d222-143">The section describes the elements that are used to configure Windows Communication Foundation clients and services.</span></span>  
   
- [Общие справочные сведения](../../../docs/framework/wcf/general-reference.md)  
- В разделе описаны элементы, используемые для настройки клиентов и служб Windows Communication Foundation.  
+ [<span data-ttu-id="5d222-144">Обратная связь и сообщество</span><span class="sxs-lookup"><span data-stu-id="5d222-144">Feedback and Community</span></span>](../../../docs/framework/wcf/feedback-and-community.md)  
+ <span data-ttu-id="5d222-145">Сведения о том, как оставлять отзывы и комментарии о библиотеке Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5d222-145">Information about how to provide feedback about Windows Communication Foundation</span></span>  
   
- [Отзывы и предложения и сообщество](../../../docs/framework/wcf/feedback-and-community.md)  
- Сведения о том, как оставлять отзывы и комментарии о библиотеке Windows Communication Foundation  
-  
- [Сведения о политике конфиденциальности](../../../docs/framework/wcf/privacy-information.md)  
- Сведения о конфиденциальности, касающиеся использования WCF  
-  
-## Ссылка  
-  
-## Связанные подразделы
+ [<span data-ttu-id="5d222-146">Сведения о конфиденциальности</span><span class="sxs-lookup"><span data-stu-id="5d222-146">Privacy Information</span></span>](../../../docs/framework/wcf/privacy-information.md)  
+ <span data-ttu-id="5d222-147">Сведения о конфиденциальности, касающиеся использования WCF</span><span class="sxs-lookup"><span data-stu-id="5d222-147">Information regarding WCF and Privacy</span></span>  

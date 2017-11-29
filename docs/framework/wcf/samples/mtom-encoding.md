@@ -1,42 +1,45 @@
 ---
-title: "Кодирование MTOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Кодирование MTOM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 46984ea1ac08aa1128a4f32144285f590eafb6c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Кодирование MTOM
-В данном образце демонстрируется использование кодирования сообщений с помощью механизма оптимизации передачи сообщений \(MTOM\) с WSHttpBinding.MTOM — это механизм передачи больших вложений в двоичном формате с сообщениями протокола SOAP как необработанных байтов, допустимых для меньших сообщений.  
+# <a name="mtom-encoding"></a><span data-ttu-id="8aed0-102">Кодирование MTOM</span><span class="sxs-lookup"><span data-stu-id="8aed0-102">MTOM Encoding</span></span>
+<span data-ttu-id="8aed0-103">В данном образце демонстрируется использование кодирования сообщений с помощью механизма оптимизации передачи сообщений (MTOM) с WSHttpBinding.</span><span class="sxs-lookup"><span data-stu-id="8aed0-103">This sample demonstrates the use of the Message Transmission Optimization Mechanism (MTOM) message encoding with a WSHttpBinding.</span></span> <span data-ttu-id="8aed0-104">MTOM — это механизм передачи больших вложений в двоичном формате с сообщениями SOAP как необработанных байтов, допустимых для меньших сообщений.</span><span class="sxs-lookup"><span data-stu-id="8aed0-104">MTOM is a mechanism for transmitting large binary attachments with SOAP messages as raw bytes, allowing for smaller messages.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="8aed0-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="8aed0-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8aed0-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="8aed0-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="8aed0-107">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8aed0-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8aed0-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="8aed0-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- По умолчанию WSHttpBinding отправляет и принимает сообщения как нормальный XML\-текст.Для включения отправки и получения MTOM\-сообщений задайте атрибут `messageEncoding` в конфигурации привязки \(как в следующем примере кода\) или непосредственно в привязке с помощью свойства `MessageEncoding`.Теперь служба или клиент могут отправлять или получать MTOM\-сообщения.  
+ <span data-ttu-id="8aed0-109">По умолчанию WSHttpBinding отправляет и принимает сообщения как нормальный XML-текст.</span><span class="sxs-lookup"><span data-stu-id="8aed0-109">By default, the WSHttpBinding sends and received messages as normal text XML.</span></span> <span data-ttu-id="8aed0-110">Для включения отправки и получения MTOM-сообщений задайте атрибут `messageEncoding` в конфигурации привязки (как в следующем примере кода) или непосредственно в привязке с помощью свойства `MessageEncoding`.</span><span class="sxs-lookup"><span data-stu-id="8aed0-110">To enable sending and receiving MTOM messages, set the `messageEncoding` attribute on the binding's configuration (as in the following example code), or directly on the binding using the `MessageEncoding` property.</span></span> <span data-ttu-id="8aed0-111">Теперь служба или клиент могут отправлять или получать MTOM-сообщения.</span><span class="sxs-lookup"><span data-stu-id="8aed0-111">The service or client can now send and receive MTOM messages.</span></span>  
   
-```  
+```xml  
 <wsHttpBinding>  
-    <binding name="WSHttpBinding_IUpload" messageEncoding="Mtom"/>  
+  <binding name="WSHttpBinding_IUpload" messageEncoding="Mtom" />  
 </wsHttpBinding>  
 ```  
   
- Кодировщик MTOM может оптимизировать массивы байтов и потоки.В данном образце операция использует параметр `Stream` и, следовательно, может быть оптимизирована.  
+ <span data-ttu-id="8aed0-112">Кодировщик MTOM может оптимизировать массивы байтов и потоки.</span><span class="sxs-lookup"><span data-stu-id="8aed0-112">The MTOM encoder can optimize arrays of bytes and streams.</span></span> <span data-ttu-id="8aed0-113">В данном образце операция использует параметр `Stream` и, следовательно, может быть оптимизирована.</span><span class="sxs-lookup"><span data-stu-id="8aed0-113">In this sample, the operation uses a `Stream` parameter and can therefore be optimized.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -47,7 +50,7 @@ caps.handback.revision: 14
   }  
 ```  
   
- Контракт, выбранный для данного образца, передает двоичные данные службе и в качестве возвращаемого значения получает число загруженных байтов.Если служба установлена и запущен клиент, он выводит на печать число 1000, указывающее, что было получено 1000 байт.В напоминании вывода приводятся списки размеров оптимизированных и неоптимизированных сообщений для различных нагрузок.  
+ <span data-ttu-id="8aed0-114">Контракт, выбранный для данного образца, передает двоичные данные службе и в качестве возвращаемого значения получает число загруженных байтов.</span><span class="sxs-lookup"><span data-stu-id="8aed0-114">The contract chosen for this sample transmits binary data to the service and receives the number of bytes uploaded as the return value.</span></span> <span data-ttu-id="8aed0-115">Если служба установлена и запущен клиент, он выводит на печать число 1000, указывающее, что было получено 1000 байт.</span><span class="sxs-lookup"><span data-stu-id="8aed0-115">When the service is installed and the client is run, it prints out the number 1000, which indicates that all 1000 bytes were received.</span></span> <span data-ttu-id="8aed0-116">В напоминании вывода приводятся списки размеров оптимизированных и неоптимизированных сообщений для различных нагрузок.</span><span class="sxs-lookup"><span data-stu-id="8aed0-116">The remainder of the output lists optimized and non-optimized message sizes for various payloads.</span></span>  
   
 ```  
 Output:  
@@ -71,21 +74,20 @@ MTOM encoding with a 1000000 byte payload: 1001080
 Press <ENTER> to terminate client.  
 ```  
   
- Цель использования MTOM — оптимизация передачи больших двоичных нагрузок.Отправка SOAP\-сообщения с помощью MTOM имеет значительные издержки для небольших двоичных нагрузок, но позволяет значительно сэкономить, когда нагрузка превышает несколько тысяч байт.Причина заключается в том, что нормальный XML\-текст кодирует двоичные данные с помощью Base64, который требует четыре символа на каждые три байта и увеличивает размер данных на одну треть.Механизм MTOM способен передавать двоичные данные в виде необработанных байтов, позволяя тем самым сэкономить время на кодирование\/декодирование и способствуя уменьшению размера сообщений.Порог в несколько тысяч байт мал по сравнению с размером современных деловых документов и цифровых фотографий.  
+ <span data-ttu-id="8aed0-117">Цель использования MTOM - оптимизация передачи больших двоичных нагрузок.</span><span class="sxs-lookup"><span data-stu-id="8aed0-117">The purpose for using MTOM is to optimize the transmission of large binary payloads.</span></span> <span data-ttu-id="8aed0-118">Отправка SOAP-сообщения с помощью MTOM имеет значительные издержки для небольших двоичных нагрузок, но позволяет значительно сэкономить, когда нагрузка превышает несколько тысяч байт.</span><span class="sxs-lookup"><span data-stu-id="8aed0-118">Sending a SOAP message using MTOM has a noticeable overhead for small binary payloads, but becomes a great savings when they grow over a few thousand bytes.</span></span> <span data-ttu-id="8aed0-119">Причина заключается в том, что нормальный XML-текст кодирует двоичные данные с помощью Base64, который требует четыре символа на каждые три байта и увеличивает размер данных на одну треть.</span><span class="sxs-lookup"><span data-stu-id="8aed0-119">The reason for this is that normal text XML encodes binary data using Base64, which requires four characters for every three bytes, and increases the size of the data by one third.</span></span> <span data-ttu-id="8aed0-120">Механизм MTOM способен передавать двоичные данные в виде необработанных байтов, позволяя тем самым сэкономить время на кодирование/декодирование и способствуя уменьшению размера сообщений.</span><span class="sxs-lookup"><span data-stu-id="8aed0-120">MTOM is able to transmit binary data as raw bytes, saving the encoding/decoding time and resulting is smaller messages.</span></span> <span data-ttu-id="8aed0-121">Порог в несколько тысяч байт мал по сравнению с размером современных деловых документов и цифровых фотографий.</span><span class="sxs-lookup"><span data-stu-id="8aed0-121">The threshold of a few thousand bytes is small when compared to today's business documents and digital photographs.</span></span>  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="8aed0-122">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="8aed0-122">To set up, build, and run the sample</span></span>  
   
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
+1.  <span data-ttu-id="8aed0-123">Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="8aed0-123">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Убедитесь, что выполнена процедура, описанная в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  <span data-ttu-id="8aed0-124">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8aed0-124">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Чтобы создать версию решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="8aed0-125">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8aed0-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="8aed0-126">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="8aed0-126">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="8aed0-127">См. также</span><span class="sxs-lookup"><span data-stu-id="8aed0-127">See Also</span></span>

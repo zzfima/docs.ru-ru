@@ -1,68 +1,69 @@
 ---
-title: "Ошибки во время разработки в конструкторе Windows Forms Designer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DTELErrorList"
-  - "WhyDTELPage"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ошибки во время разработки [конструктор Windows Forms Designer]"
-  - "ошибки [конструктор Windows Forms Designer]"
+title: "Ошибки во время разработки в конструкторе Windows Forms Designer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DTELErrorList
+- WhyDTELPage
+helpviewer_keywords:
+- errors [Windows Forms Designer]
+- design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 819b624e2abac09aea804311d661f78e2a1f5a7c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ошибки во время разработки в конструкторе Windows Forms Designer
-В этой теме разъясняется значение и использование списка ошибок времени разработки, отображаемого в Microsoft Visual Studio в случае, если невозможно загрузить конструктор Windows Forms.  При появлении этого списка ошибок его следует расценивать не как ошибку конструктора, а как средство исправления ошибки кода.  
+# <a name="design-time-errors-in-the-windows-forms-designer"></a><span data-ttu-id="3ab1a-102">Ошибки во время разработки в конструкторе Windows Forms Designer</span><span class="sxs-lookup"><span data-stu-id="3ab1a-102">Design-Time Errors in the Windows Forms Designer</span></span>
+<span data-ttu-id="3ab1a-103">В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-103">This topic explains the meaning and use of the design-time error list that appears in Microsoft Visual Studio when the Windows Forms Designer fails to load.</span></span> <span data-ttu-id="3ab1a-104">При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-104">If this error list appears, you should not interpret it as a bug in the designer, but as an aid to correcting errors in your code.</span></span>  
   
- Базовое представление об этом списке ошибок помогает отлаживать приложения, предоставляя подробные сведения об ошибках и предлагая возможные решения.  
+ <span data-ttu-id="3ab1a-105">Базовые знания об этом списке ошибок должны помочь при отладке приложений, так как вы получите подробные сведения об ошибках и будете знать возможные решения.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-105">A basic understanding of this error list will help you debug your applications by providing detailed information about the errors and suggesting possible solutions.</span></span>  
   
-## Интерфейс списка ошибок во время разработки  
- При невозможности загрузить конструктор Windows Forms в нем отображается список ошибок.  Ошибки группируются в категории.  Например, при наличии четырех необъявленных переменных, эти ошибки группируются в одну и то же категорию ошибок.  В каждой категории ошибок содержится краткое описание ошибки.  
+## <a name="the-design-time-error-list-interface"></a><span data-ttu-id="3ab1a-106">Интерфейс списка ошибок во время разработки</span><span class="sxs-lookup"><span data-stu-id="3ab1a-106">The Design-Time Error List Interface</span></span>  
+ <span data-ttu-id="3ab1a-107">Если не удается загрузить конструктор Windows Forms, в конструкторе появляется список ошибок.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-107">If the Windows Forms Designer fails to load, an error list will appear in the designer.</span></span> <span data-ttu-id="3ab1a-108">Ошибки группируются по категориям.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-108">The errors are grouped into categories.</span></span> <span data-ttu-id="3ab1a-109">Например, при наличии четырех экземпляров необъявленных переменных они будут сгруппированы в одной категории ошибок.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-109">For example, if you have four instances of undeclared variables, these will be grouped into the same error category.</span></span> <span data-ttu-id="3ab1a-110">Каждая категория ошибок содержит краткое описание ошибки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-110">Each error category includes a brief description that summarizes the error.</span></span>  
   
- Можно развернуть или свернуть категорию, щелкнув по заголовки категории ошибок или щелкнув шеврон развертывания\/свертывания.  При развертывании категории ошибок отображается следующая дополнительная справка.  
+ <span data-ttu-id="3ab1a-111">Категорию можно развернуть или свернуть, щелкнув заголовок категории ошибок либо шеврон развертывания или свертывания.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-111">You can expand or collapse an error category by either clicking on the error category heading or by clicking the expand/collapse chevron.</span></span> <span data-ttu-id="3ab1a-112">При развертывании категории ошибок отображается следующая дополнительная справка:</span><span class="sxs-lookup"><span data-stu-id="3ab1a-112">When you expand an error category, the following additional help is displayed:</span></span>  
   
--   Экземпляры этой ошибки.  
+-   <span data-ttu-id="3ab1a-113">Экземпляры ошибки;</span><span class="sxs-lookup"><span data-stu-id="3ab1a-113">Instances of this error.</span></span>  
   
--   Справка по ошибке.  
+-   <span data-ttu-id="3ab1a-114">Справка по ошибке;</span><span class="sxs-lookup"><span data-stu-id="3ab1a-114">Help with this error.</span></span>  
   
--   Сообщения форумов об этой ошибке.  
+-   <span data-ttu-id="3ab1a-115">Сообщения об этой ошибке в форуме.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-115">Forum posts about this error.</span></span>  
   
-### Экземпляры этой ошибки  
- В дополнительной справке перечислены все случаи этой ошибки в текущем проекте.  Многие ошибки содержат ее точное местоположение в следующем формате: *\[имя проекта\]* *\[имя формы\]* Строка:*\[номер строки\]* Столбец:*\[номер столбца\]*.  По ссылке **Перейти к коду** можно перейти в то место кода, где произошла ошибка.  
+### <a name="instances-of-this-error"></a><span data-ttu-id="3ab1a-116">Экземпляры ошибки</span><span class="sxs-lookup"><span data-stu-id="3ab1a-116">Instances of This Error</span></span>  
+ <span data-ttu-id="3ab1a-117">В дополнительной справке перечисляются все экземпляры ошибки в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-117">The additional help list all instances of the error in your current project.</span></span> <span data-ttu-id="3ab1a-118">Многие ошибки содержат точное местоположение в следующем формате: *[имя_проекта]* *[имя формы]* строка:*[номер строки]* столбец:*[номер столбца]*.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-118">Many errors include an exact location in the following format: *[Project Name]* *[Form Name]* Line:*[Line Number]* Column:*[Column Number]*.</span></span> <span data-ttu-id="3ab1a-119">По ссылке **Перейти к коду** можно перейти в расположение в коде, где произошла ошибка.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-119">The **Go to code** link takes you to the location in your code where the error occurs.</span></span>  
   
- Если с этой ошибкой связан стек вызова, можно щелкнуть ссылку **Показать стек вызовов**. В результате этого ошибка разворачивается дальше, и для нее отображается стек вызовов.  Изучив стек, можно получить ценную отладочную информацию.  Например, можно проследить функции, вызванные до возникновения ошибки.  Стек вызовов можно выделить, скопировать и сохранить.  
+ <span data-ttu-id="3ab1a-120">Если с ошибкой связан стек вызовов, можно щелкнуть ссылку **Показать стек вызовов**, чтобы развернуть ошибку и показать стек вызовов.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-120">If a call stack is associated with the error, you can click the **Show Call Stack** link, which further expands the error to show the call stack.</span></span> <span data-ttu-id="3ab1a-121">Благодаря анализу стека можно получить ценные отладочные сведения.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-121">Examining the stack can provide valuable debugging information.</span></span> <span data-ttu-id="3ab1a-122">Например, можно отследить функции, которые были вызваны до возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-122">For example, you can track the functions that were called before the error occurred.</span></span> <span data-ttu-id="3ab1a-123">Стек вызовов можно выбрать, чтобы скопировать его и сохранить.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-123">The call stack is selectable so that you can copy and save it.</span></span>  
   
 > [!NOTE]
->  В Visual Basic список ошибок во время ошибок не может содержать более одной ошибки, но в нем могут отображаться несколько экземпляров одной и той же ошибки.  В Visual C\+\+ ошибки не содержат ссылки для перехода к коду и к номеру строки.  
+>  <span data-ttu-id="3ab1a-124">В Visual Basic в списке ошибок во время разработки отображается только одна ошибка, но в нем может отображаться несколько экземпляров одной и той же ошибки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-124">In Visual Basic, the design-time error list does not display more than one error, but it may display multiple instances of the same error.</span></span> <span data-ttu-id="3ab1a-125">В Visual C++ ошибки не содержат ссылки для перехода к коду или к номеру строки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-125">In Visual C++, the errors do not have goto code links/line number links.</span></span>  
   
-### Справка по ошибке  
- Если ошибка содержит ссылку на соответствующую тему справки MSDN, в дополнительной справке отображается ссылка на эту тему справки.  При щелчке по этой ссылке в Visual Studio отображается соответствующая тема справки.  
+### <a name="help-with-this-error"></a><span data-ttu-id="3ab1a-126">Справка по ошибке</span><span class="sxs-lookup"><span data-stu-id="3ab1a-126">Help with This Error</span></span>  
+ <span data-ttu-id="3ab1a-127">Если ошибка содержит ссылку на соответствующий раздел справки MSDN, то дополнительная справка будет включать ссылку на этот раздел справки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-127">If the error contains a link to an associated MSDN help topic, the additional help will include a link to the help topic.</span></span> <span data-ttu-id="3ab1a-128">При щелчке данной ссылки в Visual Studio отображается соответствующий раздел справки.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-128">When you click the link, the associated help topic appears in Visual Studio.</span></span>  
   
-### Сообщения форумов об этой ошибке  
- Дополнительная справка содержит ссылку на сообщения форума MSDN, связанные с этой ошибкой.  Поиск по форумам выполняется на основе строки сообщения об ошибке.  Интересующие сведения также можно поискать на следующих форумах.  
+### <a name="forum-posts-about-this-error"></a><span data-ttu-id="3ab1a-129">Сообщения об этой ошибке в форуме</span><span class="sxs-lookup"><span data-stu-id="3ab1a-129">Forum posts about this error</span></span>  
+ <span data-ttu-id="3ab1a-130">Дополнительная справка будет содержать ссылку на сообщения в форуме MSDN, связанные с данной ошибкой.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-130">The additional help will include a link to MSDN forum posts related to the error.</span></span> <span data-ttu-id="3ab1a-131">Поиск по форумам выполняется на основе строки сообщения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-131">The forums are searched based on the string of the error message.</span></span> <span data-ttu-id="3ab1a-132">Поиск можно также выполнять в следующих форумах:</span><span class="sxs-lookup"><span data-stu-id="3ab1a-132">You can also try searching the following forums:</span></span>  
   
--   [Windows Forms Designer Forum](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [<span data-ttu-id="3ab1a-133">Форум по конструктору Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ab1a-133">Windows Forms Designer Forum</span></span>](http://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms Forums](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [<span data-ttu-id="3ab1a-134">Форумы по Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ab1a-134">Windows Forms Forums</span></span>](http://go.microsoft.com/fwlink/?LinkId=203523)  
   
-### Пропуск ошибки и продолжение загрузки  
- Можно решить пропустить ошибку и продолжить загрузку конструктора.  Такое решение может привести к неожиданным результатам.  Например, элементы управления могут не отобразиться на поверхности разработки.  
+### <a name="ignore-and-continue"></a><span data-ttu-id="3ab1a-135">Игнорировать и продолжить</span><span class="sxs-lookup"><span data-stu-id="3ab1a-135">Ignore and Continue</span></span>  
+ <span data-ttu-id="3ab1a-136">Условие ошибки можно проигнорировать и продолжить загрузку конструктора.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-136">You can choose to ignore the error condition and continue loading the designer.</span></span> <span data-ttu-id="3ab1a-137">Такое решение может привести к непредвиденному поведению.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-137">Choosing this action may result in unexpected behavior.</span></span> <span data-ttu-id="3ab1a-138">Например, на поверхности разработки могут отсутствовать элементы управления.</span><span class="sxs-lookup"><span data-stu-id="3ab1a-138">For example, controls may not appear on the design surface.</span></span>  
   
-## См. также  
- [Troubleshooting Design\-Time Development](../Topic/Troubleshooting%20Design-Time%20Development.md)   
- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)   
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Windows Forms Designer Error Messages](http://msdn.microsoft.com/ru-ru/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a><span data-ttu-id="3ab1a-139">См. также</span><span class="sxs-lookup"><span data-stu-id="3ab1a-139">See Also</span></span>  
+ [<span data-ttu-id="3ab1a-140">Устранение неполадок при разработке во время разработки</span><span class="sxs-lookup"><span data-stu-id="3ab1a-140">Troubleshooting Design-Time Development</span></span>](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [<span data-ttu-id="3ab1a-141">Разрешение вопросов, связанных с созданием элементов управления и компонентов</span><span class="sxs-lookup"><span data-stu-id="3ab1a-141">Troubleshooting Control and Component Authoring</span></span>](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [<span data-ttu-id="3ab1a-142">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="3ab1a-142">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [<span data-ttu-id="3ab1a-143">Сообщения об ошибках конструктора Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3ab1a-143">Windows Forms Designer Error Messages</span></span>](http://msdn.microsoft.com/en-us/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

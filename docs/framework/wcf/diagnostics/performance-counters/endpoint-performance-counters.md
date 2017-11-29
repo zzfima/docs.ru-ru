@@ -1,32 +1,35 @@
 ---
-title: "Счетчики производительности конечных точек | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Счетчики производительности конечных точек"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8d34df7c70e0edeef831843d9afcb2db32422ebe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Счетчики производительности конечных точек
-Счетчики производительности конечных точек собирают данные о том, как именно конечные точки принимают сообщения.Их можно просмотреть с помощью системного монитора, выбрав объект производительности `ServiceModelEndpoint 4.0.0.0`.Экземплярам присваиваются имена согласно следующему шаблону:  
+# <a name="endpoint-performance-counters"></a><span data-ttu-id="a7219-102">Счетчики производительности конечных точек</span><span class="sxs-lookup"><span data-stu-id="a7219-102">Endpoint Performance Counters</span></span>
+<span data-ttu-id="a7219-103">Счетчики производительности конечных точек собирают данные о том, как именно конечные точки принимают сообщения.</span><span class="sxs-lookup"><span data-stu-id="a7219-103">Endpoint performance counters capture data that reveals how an endpoint is accepting messages.</span></span> <span data-ttu-id="a7219-104">Их можно просмотреть с помощью системного монитора, выбрав объект производительности `ServiceModelEndpoint 4.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="a7219-104">They can be found under the `ServiceModelEndpoint 4.0.0.0` performance object when viewing with the Performance Monitor.</span></span> <span data-ttu-id="a7219-105">Экземплярам присваиваются имена согласно следующему шаблону:</span><span class="sxs-lookup"><span data-stu-id="a7219-105">The instances are named using this pattern:</span></span>  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- Данные аналогичны собираемым для отдельных операций, но агрегируются только на конечной точке.  
+ <span data-ttu-id="a7219-106">Данные аналогичны собираемым для отдельных операций, но агрегируются только на конечной точке.</span><span class="sxs-lookup"><span data-stu-id="a7219-106">The data is similar to that collected for individual operations, but is only aggregated across the endpoint.</span></span>  
   
 > [!CAUTION]
->  Длина имени экземпляра счетчика производительности ограничена.Если длина имени экземпляра счетчика [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] превышает максимально допустимое значение, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] заменяет часть имени экземпляра значением хэша.  
+>  <span data-ttu-id="a7219-107">Длина имени экземпляра счетчика производительности ограничена.</span><span class="sxs-lookup"><span data-stu-id="a7219-107">There is a limit on the length of a performance counter instance's name.</span></span> <span data-ttu-id="a7219-108">Если длина имени экземпляра счетчика [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] превышает максимально допустимое значение, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] заменяет часть имени экземпляра значением хэша.</span><span class="sxs-lookup"><span data-stu-id="a7219-108">When a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] counter instance name exceeds the maximum length, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] replaces a portion of the instance name with a hash value.</span></span>  
   
-## См. также  
- [Счетчики производительности](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+## <a name="see-also"></a><span data-ttu-id="a7219-109">См. также</span><span class="sxs-lookup"><span data-stu-id="a7219-109">See Also</span></span>  
+ [<span data-ttu-id="a7219-110">Счетчики производительности</span><span class="sxs-lookup"><span data-stu-id="a7219-110">Performance Counters</span></span>](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

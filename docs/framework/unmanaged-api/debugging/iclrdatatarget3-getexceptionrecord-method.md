@@ -1,0 +1,76 @@
+---
+title: "Метод ICLRDataTarget3::GetExceptionRecord"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: cpp
+api_name: ICLRDataTarget3.GetExceptionRecord
+api_location: mscordbi.dll
+api_type: COM
+ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
+topic_type: apiref
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: f8c9ac4ecc0cffda4038129b1244b81501e9a1f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
+# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="6c5ba-102">Метод ICLRDataTarget3::GetExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="6c5ba-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
+<span data-ttu-id="6c5ba-103">Вызывается службами доступа к данным среды CLR для извлечения записи исключения, связанной с целевым процессом.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="6c5ba-104">Например, для целевого объекта дампа это бы эквивалентно записи исключения, переданной через `ExceptionParam` аргумент [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360.aspx) функции отладки справки библиотеки Windows (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="6c5ba-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360.aspx) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+  
+## <a name="syntax"></a><span data-ttu-id="6c5ba-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c5ba-105">Syntax</span></span>  
+  
+```cpp  
+HRESULT GetExceptionRecord(  
+    [in] ULONG32 bufferSize,  
+    [out] ULONG32* bufferUsed,  
+    [out, size_is(bufferSize] BYTE* buffer  
+);  
+```  
+  
+#### <a name="parameters"></a><span data-ttu-id="6c5ba-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c5ba-106">Parameters</span></span>  
+ `bufferSize`  
+ <span data-ttu-id="6c5ba-107">[в] Размер входного буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="6c5ba-108">Это должен быть равен `sizeof(` [MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx)`)`.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx)`)`.</span></span>  
+  
+ `bufferUsed`  
+ <span data-ttu-id="6c5ba-109">[из] Указатель на тип `ULONG32`, который получает количество байтов, фактически записанных в буфер.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+  
+ `buffer`  
+ <span data-ttu-id="6c5ba-110">[из] Указатель на буфер памяти, который получает копию записи исключения.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="6c5ba-111">Запись исключения возвращается в виде [MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx) типа.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-111">The exception record is returned as a [MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx) type.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="6c5ba-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6c5ba-112">Return Value</span></span>  
+ <span data-ttu-id="6c5ba-113">Возвращается значение `S_OK` при успешном выполнении или код ошибки `HRESULT` при сбое.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="6c5ba-114">Коды `HRESULT` могут включать значения, приведенные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+  
+|<span data-ttu-id="6c5ba-115">Код возврата</span><span class="sxs-lookup"><span data-stu-id="6c5ba-115">Return code</span></span>|<span data-ttu-id="6c5ba-116">Описание</span><span class="sxs-lookup"><span data-stu-id="6c5ba-116">Description</span></span>|  
+|-----------------|-----------------|  
+|`S_OK`|<span data-ttu-id="6c5ba-117">Метод успешно выполнен.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-117">Method succeeded.</span></span> <span data-ttu-id="6c5ba-118">Запись исключения скопирована в буфер вывода.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-118">The exception record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="6c5ba-119">Нет записей исключения, связанных с целевым объектом.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-119">No exception record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="6c5ba-120">Размер входного буфера не равен `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="6c5ba-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c5ba-121">Remarks</span></span>  
+ <span data-ttu-id="6c5ba-122">[MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx) — это структура, определенные в файлах dbghelp.h и IMAGEHLP.h, входящих в состав Windows SDK пакета.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-122">[MINIDUMP_EXCEPTION](http://msdn.microsoft.com/library/windows/desktop/ms680367.aspx) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
+  
+ <span data-ttu-id="6c5ba-123">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="6c5ba-123">This method is implemented by the writer of the debugging application.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="6c5ba-124">Требования</span><span class="sxs-lookup"><span data-stu-id="6c5ba-124">Requirements</span></span>  
+ <span data-ttu-id="6c5ba-125">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c5ba-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="6c5ba-126">**Заголовок:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6c5ba-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+  
+ <span data-ttu-id="6c5ba-127">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c5ba-127">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="6c5ba-128">**Версии платформы .NET framework:**[!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c5ba-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="6c5ba-129">См. также</span><span class="sxs-lookup"><span data-stu-id="6c5ba-129">See Also</span></span>  
+ [<span data-ttu-id="6c5ba-130">Интерфейс ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="6c5ba-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
+ [<span data-ttu-id="6c5ba-131">Метод GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="6c5ba-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)  
+ [<span data-ttu-id="6c5ba-132">Метод GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="6c5ba-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

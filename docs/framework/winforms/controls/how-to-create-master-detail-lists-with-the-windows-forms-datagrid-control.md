@@ -1,48 +1,53 @@
 ---
-title: "Практическое руководство. Создание основных или подробных списков с помощью элемента управления DataGrid в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGrid - элемент управления [Windows Forms], списки типа "основной-подробности""
-  - "списки типа "основной-подробности""
-  - "связанные таблицы, отображение данных в элементе управления DataGrid"
+title: "Как: Создание основной подробности списков с элемента управления DataGrid в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- master-details lists
+- DataGrid control [Windows Forms], master-details lists
+- related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 63cb647e2ed6dcbc97fab15db3166b55c52f635a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание основных или подробных списков с помощью элемента управления DataGrid в Windows Forms
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="ec598-102">Практическое руководство. Создание основных или подробных списков с помощью элемента управления DataGrid в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ec598-102">How to: Create Master/Detail Lists with the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="ec598-103">Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="ec598-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="ec598-104">Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="ec598-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Если объект <xref:System.Data.DataSet> содержит набор связанных таблиц, для представления данных в формате сводки\/основных сведений можно использовать два элемента управления <xref:System.Windows.Forms.DataGrid>.  В этом случае один элемент управления <xref:System.Windows.Forms.DataGrid> является основной сеткой, а второй — сеткой сведений.  При выборе записи в основном списке все связанные дочерние записи отображаются в списке сведений.  Например, если в объекте <xref:System.Data.DataSet> находятся таблица "Customers" и связанная таблица "Orders", таблицу "Customers" можно указать в качестве основной сетки, а таблицу "Orders" — в качестве сетки сведений.  При выборе заказчика в основной сетке все заказы, связанные с ним в таблице "Orders", отобразятся в сетке сведений.  
+ <span data-ttu-id="ec598-105">Если ваш <xref:System.Data.DataSet> содержит набор связанных таблиц, можно использовать два <xref:System.Windows.Forms.DataGrid> элементы управления для отображения данных в формате иерархического.</span><span class="sxs-lookup"><span data-stu-id="ec598-105">If your <xref:System.Data.DataSet> contains a series of related tables, you can use two <xref:System.Windows.Forms.DataGrid> controls to display the data in a master/detail format.</span></span> <span data-ttu-id="ec598-106">Один <xref:System.Windows.Forms.DataGrid> назначен в качестве основной сетки, а второй для сетки сведений.</span><span class="sxs-lookup"><span data-stu-id="ec598-106">One <xref:System.Windows.Forms.DataGrid> is designated to be the master grid, and the second is designated to be the details grid.</span></span> <span data-ttu-id="ec598-107">При выборе элемента в главном списке все связанные дочерние записи отображаются в списке сведений.</span><span class="sxs-lookup"><span data-stu-id="ec598-107">When you select an entry in the master list, all of the related child entries are shown in the details list.</span></span> <span data-ttu-id="ec598-108">Например если ваш <xref:System.Data.DataSet> содержит таблицу Customers и связанную таблицу Orders, можно указать таблицу Customers основной сетки, а таблицу Orders, чтобы быть в таблице сведений.</span><span class="sxs-lookup"><span data-stu-id="ec598-108">For example, if your <xref:System.Data.DataSet> contains a Customers table and a related Orders table, you would specify the Customers table to be the master grid and the Orders table to be the details grid.</span></span> <span data-ttu-id="ec598-109">При выборе клиента в основной сетке все заказы, относящиеся к этому клиенту в таблице Orders будет отображаться в таблице сведений.</span><span class="sxs-lookup"><span data-stu-id="ec598-109">When a customer is selected from the master grid, all of the orders associated with that customer in the Orders table would be displayed in the details grid.</span></span>  
   
-### Чтобы настроить связь сводки с основными сведениями программным образом  
+### <a name="to-set-a-masterdetail-relationship-programmatically"></a><span data-ttu-id="ec598-110">Чтобы установить отношение главный/подчиненный программными средствами</span><span class="sxs-lookup"><span data-stu-id="ec598-110">To set a master/detail relationship programmatically</span></span>  
   
-1.  Создайте два новых элемента управления <xref:System.Windows.Forms.DataGrid> и задайте их свойства.  
+1.  <span data-ttu-id="ec598-111">Создайте два новых <xref:System.Windows.Forms.DataGrid> элементов управления и задавать их свойства.</span><span class="sxs-lookup"><span data-stu-id="ec598-111">Create two new <xref:System.Windows.Forms.DataGrid> controls and set their properties.</span></span>  
   
-2.  Добавьте таблицы в набор данных.  
+2.  <span data-ttu-id="ec598-112">Добавление таблиц в наборе данных.</span><span class="sxs-lookup"><span data-stu-id="ec598-112">Add tables to the dataset.</span></span>  
   
-3.  Объявите переменную типа <xref:System.Data.DataRelation> для представления создаваемой связи.  
+3.  <span data-ttu-id="ec598-113">Объявите переменную типа <xref:System.Data.DataRelation> для представления связи, необходимо создать.</span><span class="sxs-lookup"><span data-stu-id="ec598-113">Declare a variable of type <xref:System.Data.DataRelation> to represent the relation you want to create.</span></span>  
   
-4.  Создайте экземпляр связи, указав ее имя и задав таблицу, столбец и элемент, который будет связывать обе таблицы.  
+4.  <span data-ttu-id="ec598-114">Создайте экземпляр связи, задав имя для связи и указав таблицу, столбец и элемент, который будет связывать обе таблицы.</span><span class="sxs-lookup"><span data-stu-id="ec598-114">Instantiate the relationship by specifying a name for the relationship and specifying the table, column, and item that will tie the two tables.</span></span>  
   
-5.  Добавьте связь в коллекцию <xref:System.Data.DataSet.Relations%2A> объекта <xref:System.Data.DataSet>.  
+5.  <span data-ttu-id="ec598-115">Добавить отношение к <xref:System.Data.DataSet> объекта <xref:System.Data.DataSet.Relations%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="ec598-115">Add the relationship to the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Relations%2A> collection.</span></span>  
   
-6.  Используйте метод <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> у <xref:System.Windows.Forms.DataGrid> для привязки каждой сетки к <xref:System.Data.DataSet>.  
+6.  <span data-ttu-id="ec598-116">Используйте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод <xref:System.Windows.Forms.DataGrid> для привязки каждой сетки к <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="ec598-116">Use the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method of the <xref:System.Windows.Forms.DataGrid> to bind each of the grids to the <xref:System.Data.DataSet>.</span></span>  
   
-     В следующем примере показано, как настроить связь основных сведений\/сводки между таблицами Customers и Orders в ранее созданном объекте <xref:System.Data.DataSet> \(`ds`\).  
+     <span data-ttu-id="ec598-117">Приведенный ниже показано, как задать связь между таблицами Customers и Orders в ранее созданные иерархического <xref:System.Data.DataSet> (`ds`).</span><span class="sxs-lookup"><span data-stu-id="ec598-117">The following example shows how to set a master/detail relationship between the Customers and Orders tables in a previously generated <xref:System.Data.DataSet> (`ds`).</span></span>  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -53,7 +58,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation)  
     GridOrders.SetDataBinding(ds, "Customers")  
     GridDetails.SetDataBinding(ds, "Customers.CustOrd")  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ caps.handback.revision: 15
     ds.Relations.Add(myDataRelation);  
     GridOrders.SetDataBinding(ds,"Customers");  
     GridDetails.SetDataBinding(ds,"Customers.CustOrd");  
-  
     ```  
   
     ```cpp  
@@ -77,7 +80,7 @@ caps.handback.revision: 15
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## См. также  
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Общие сведения об элементе управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a><span data-ttu-id="ec598-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ec598-118">See Also</span></span>  
+ [<span data-ttu-id="ec598-119">Элемент управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="ec598-119">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="ec598-120">Общие сведения об элементе управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="ec598-120">DataGrid Control Overview</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [<span data-ttu-id="ec598-121">Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных</span><span class="sxs-lookup"><span data-stu-id="ec598-121">How to: Bind the Windows Forms DataGrid Control to a Data Source</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

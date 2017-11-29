@@ -1,54 +1,55 @@
 ---
-title: "Три категории графических служб | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "двумерная векторная графика"
-  - "графика, категории"
-  - "графика"
-  - "оформление"
-  - "векторная графика"
+title: "Три категории графических служб"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- imaging
+- graphics [Windows Forms], categories
+- 2-D vector graphics
+- vector graphics
+- typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53429513426d3b197da4740e5e92d44d8b3a5533
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Три категории графических служб
-Графические элементы Windows Forms можно разделить на три основные категории:  
+# <a name="three-categories-of-graphics-services"></a><span data-ttu-id="491ec-102">Три категории графических служб</span><span class="sxs-lookup"><span data-stu-id="491ec-102">Three Categories of Graphics Services</span></span>
+<span data-ttu-id="491ec-103">Графические элементы Windows Forms делятся на три основные категории:</span><span class="sxs-lookup"><span data-stu-id="491ec-103">The graphics offerings in Windows Forms fall into the following three broad categories:</span></span>  
   
--   Двухмерная \(2\-D\) векторная графика  
+-   <span data-ttu-id="491ec-104">Двумерные (2-D) векторная графика</span><span class="sxs-lookup"><span data-stu-id="491ec-104">Two-dimensional (2-D) vector graphics</span></span>  
   
--   Рисунки  
+-   <span data-ttu-id="491ec-105">Создание образа</span><span class="sxs-lookup"><span data-stu-id="491ec-105">Imaging</span></span>  
   
--   Типографская разметка  
+-   <span data-ttu-id="491ec-106">Типографская разметка</span><span class="sxs-lookup"><span data-stu-id="491ec-106">Typography</span></span>  
   
-## Двухмерная векторная графика  
- Двухмерная векторная графика включает в себя примитивы \(прямые и кривые линии, геометрические фигуры\), заданные набором точек в системе координат.  Например, прямую линию \(отрезок\), можно задать двумя крайними точками, а прямоугольник можно задать положением его верхнего левого угла и парой чисел, определяющих высоту и ширину прямоугольника.  Простейший контур можно задать массивом точек, которые должны быть соединены отрезками прямых.  Сложная кривая сплайна Безье может быть задана четырьмя контрольными точками.  
+## <a name="2-d-vector-graphics"></a><span data-ttu-id="491ec-107">Двумерная векторная графика</span><span class="sxs-lookup"><span data-stu-id="491ec-107">2-D Vector Graphics</span></span>  
+ <span data-ttu-id="491ec-108">Создания векторных изображений являются примитивами; Например, линии, кривые линии и фигуры; которые заданы в набором точек в системе координат.</span><span class="sxs-lookup"><span data-stu-id="491ec-108">Two-dimensional vector graphics are primitives; such as lines, curves, and figures; that are specified by sets of points on a coordinate system.</span></span> <span data-ttu-id="491ec-109">Например прямой линии определяется его две конечные точки, а прямоугольник, задаваемый крайними расположение его верхнего левого угла и парой чисел, определяющих высоту и ширину.</span><span class="sxs-lookup"><span data-stu-id="491ec-109">For example, a straight line is specified by its two endpoints, and a rectangle is specified by a point giving the location of its upper-left corner and a pair of numbers giving its width and height.</span></span> <span data-ttu-id="491ec-110">Простой путь определяется массивом точек, соединенных прямых линий.</span><span class="sxs-lookup"><span data-stu-id="491ec-110">A simple path is specified by an array of points that are connected by straight lines.</span></span> <span data-ttu-id="491ec-111">Сплайн Безье — сложная кривая задана четырьмя контрольными точками.</span><span class="sxs-lookup"><span data-stu-id="491ec-111">A Bézier spline is a sophisticated curve specified by four control points.</span></span>  
   
- В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеются классы и структуры, хранящие данные о самих примитивах, классы, хранящие данные о способе рисования примитивов, и классы, непосредственно рисующие примитивы.  Например, в структуре <xref:System.Drawing.Rectangle> хранятся расположение и размер прямоугольника, в классе <xref:System.Drawing.Pen> хранятся данные о цвете, толщине и стиле линии, а класс <xref:System.Drawing.Graphics> содержит методы для рисования линий, прямоугольников, траекторий и других фигур.  Существуют также несколько классов <xref:System.Drawing.Brush>, в которых хранятся данные о способах заливки замкнутых фигур и контуров цветом или рисунком.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="491ec-112">предоставляет классы и структуры, хранящие данные о самих примитивах, классы, хранящие данные о способе рисования примитивов и классы, которые фактически не.</span><span class="sxs-lookup"><span data-stu-id="491ec-112"> provides classes and structures that store information about the primitives themselves, classes that store information about how the primitives will be drawn, and classes that actually do the drawing.</span></span> <span data-ttu-id="491ec-113">Например <xref:System.Drawing.Rectangle> структура сохраняет расположение и размер прямоугольника; <xref:System.Drawing.Pen> класс хранит сведения о цвет линий, толщина линии и стиль линии и <xref:System.Drawing.Graphics> класс содержит методы для рисования линии, прямоугольники, путей и другие рисунки.</span><span class="sxs-lookup"><span data-stu-id="491ec-113">For example, the <xref:System.Drawing.Rectangle> structure stores the location and size of a rectangle; the <xref:System.Drawing.Pen> class stores information about line color, line width, and line style; and the <xref:System.Drawing.Graphics> class has methods for drawing lines, rectangles, paths, and other figures.</span></span> <span data-ttu-id="491ec-114">Есть также несколько <xref:System.Drawing.Brush> классы, которые хранят сведения о том, как замкнутых фигур и контуров цветом или рисунком.</span><span class="sxs-lookup"><span data-stu-id="491ec-114">There are also several <xref:System.Drawing.Brush> classes that store information about how closed figures and paths will be filled with colors or patterns.</span></span>  
   
- Векторный рисунок \(последовательность графических команд\) можно записать в метафайл.  Для записи, отображения и сохранения метафайлов в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеется класс <xref:System.Drawing.Imaging.Metafile>.  Для проверки данных в заголовке метафайла служат классы <xref:System.Drawing.Imaging.MetafileHeader> и <xref:System.Drawing.Imaging.MetaHeader>.  
+ <span data-ttu-id="491ec-115">Образ вектор, который представляет последовательность графических команд, можно записать в метафайл.</span><span class="sxs-lookup"><span data-stu-id="491ec-115">You can record a vector image, which is a sequence of graphics commands, in a metafile.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="491ec-116">предоставляет <xref:System.Drawing.Imaging.Metafile> класс для записи, отображения и сохранения метафайлов.</span><span class="sxs-lookup"><span data-stu-id="491ec-116"> provides the <xref:System.Drawing.Imaging.Metafile> class for recording, displaying, and saving metafiles.</span></span> <span data-ttu-id="491ec-117">С <xref:System.Drawing.Imaging.MetafileHeader> и <xref:System.Drawing.Imaging.MetaHeader> классов, можно изучить данные, хранимые в заголовке метафайла.</span><span class="sxs-lookup"><span data-stu-id="491ec-117">With the <xref:System.Drawing.Imaging.MetafileHeader> and <xref:System.Drawing.Imaging.MetaHeader> classes, you can inspect the data stored in a metafile header.</span></span>  
   
-## Рисунки  
- Некоторые рисунки сложно или невозможно отображать с использованием векторной графики.  Например, рисунки на кнопках панели инструментов или рисунки, отображаемые как значки, довольно сложно задать как последовательность прямых и кривых линий.  Сохранить с помощью векторной графики высококачественную фотографию переполненного стадиона будет еще сложнее.  Рисунки такого типа хранятся в виде точечных рисунков — массивов чисел, каждое из которых представляет цвет определенной точки на рисунке.  Для отображения и сохранения растровых рисунков, а также для работы с ними, в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеется класс <xref:System.Drawing.Bitmap>.  
+## <a name="imaging"></a><span data-ttu-id="491ec-118">Создание образа</span><span class="sxs-lookup"><span data-stu-id="491ec-118">Imaging</span></span>  
+ <span data-ttu-id="491ec-119">Некоторые рисунки сложно или невозможно отображать с использованием векторной графики.</span><span class="sxs-lookup"><span data-stu-id="491ec-119">Certain kinds of pictures are difficult or impossible to display with the techniques of vector graphics.</span></span> <span data-ttu-id="491ec-120">Например рисунки на кнопках панели инструментов и изображения, которые отображаются в виде значков сложно указать как коллекции, линий и кривых.</span><span class="sxs-lookup"><span data-stu-id="491ec-120">For example, the pictures on toolbar buttons and the pictures that appear as icons are difficult to specify as collections of lines and curves.</span></span> <span data-ttu-id="491ec-121">С высоким разрешением цифровой фотографии переполненного стадиона еще сложнее помощью векторной.</span><span class="sxs-lookup"><span data-stu-id="491ec-121">A high-resolution digital photograph of a crowded baseball stadium is even more difficult to create with vector techniques.</span></span> <span data-ttu-id="491ec-122">Рисунки такого типа хранятся в виде точечных рисунков — массивов чисел, представляющих цвета точек на экране.</span><span class="sxs-lookup"><span data-stu-id="491ec-122">Images of this type are stored as bitmaps, which are arrays of numbers that represent the colors of individual dots on the screen.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="491ec-123">предоставляет <xref:System.Drawing.Bitmap> класса для отображения, управления и сохранение растровых изображений.</span><span class="sxs-lookup"><span data-stu-id="491ec-123"> provides the <xref:System.Drawing.Bitmap> class for displaying, manipulating, and saving bitmaps.</span></span>  
   
-## Типографская разметка  
- Типографская разметка связана с отображением текста на экране путем использования различных шрифтов, размеров и стилей.  В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеются широкие возможности для решения этой сложной задачи.  Одним из новых средств [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] является субточечное сглаживание, позволяющее отображать на жидкокристаллических дисплеях текст с более гладкими краями, чем обычно.  
+## <a name="typography"></a><span data-ttu-id="491ec-124">Типографская разметка</span><span class="sxs-lookup"><span data-stu-id="491ec-124">Typography</span></span>  
+ <span data-ttu-id="491ec-125">Типографская разметка является отображение текста в разнообразных шрифты, размеры и стили.</span><span class="sxs-lookup"><span data-stu-id="491ec-125">Typography is the display of text in a variety of fonts, sizes, and styles.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="491ec-126">предоставляет расширенную поддержку для этого сложной задачей.</span><span class="sxs-lookup"><span data-stu-id="491ec-126"> provides extensive support for this complex task.</span></span> <span data-ttu-id="491ec-127">Одна из новых функций в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] субточечное сглаживание, позволяющее текст выводится на ЖКИ гладкую внешний.</span><span class="sxs-lookup"><span data-stu-id="491ec-127">One of the new features in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is subpixel antialiasing, which gives text rendered on an LCD screen a smoother appearance.</span></span>  
   
- Кроме того, в Windows Forms поддерживается вывод текста с возможностями [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в классе <xref:System.Windows.Forms.TextRenderer>.  
+ <span data-ttu-id="491ec-128">Кроме того, Windows Forms предоставляет возможность рисования текста с [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] возможности его <xref:System.Windows.Forms.TextRenderer> класса.</span><span class="sxs-lookup"><span data-stu-id="491ec-128">In addition, Windows Forms offers the option to draw text with [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] capabilities in its <xref:System.Windows.Forms.TextRenderer> class.</span></span>  
   
-## См. также  
- [Общие сведения о графике](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [Управляемый код GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
- [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a><span data-ttu-id="491ec-129">См. также</span><span class="sxs-lookup"><span data-stu-id="491ec-129">See Also</span></span>  
+ [<span data-ttu-id="491ec-130">Общие сведения о графике</span><span class="sxs-lookup"><span data-stu-id="491ec-130">Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [<span data-ttu-id="491ec-131">Управляемый код GDI+</span><span class="sxs-lookup"><span data-stu-id="491ec-131">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [<span data-ttu-id="491ec-132">Использование управляемых графических классов</span><span class="sxs-lookup"><span data-stu-id="491ec-132">Using Managed Graphics Classes</span></span>](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

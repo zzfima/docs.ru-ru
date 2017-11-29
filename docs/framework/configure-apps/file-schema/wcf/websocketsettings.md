@@ -1,77 +1,83 @@
 ---
-title: "&lt;webSocketSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;webSocketSettings&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2714b27916a47ae8e002ea857c93377736c4eff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;webSocketSettings&gt;
-Элемент конфигурации, который служит для задания параметров веб\-сокета.  
+# <a name="ltwebsocketsettingsgt"></a><span data-ttu-id="7f35f-102">&lt;webSocketSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="7f35f-102">&lt;webSocketSettings&gt;</span></span>
+<span data-ttu-id="7f35f-103">Элемент конфигурации, который служит для задания параметров веб-сокета.</span><span class="sxs-lookup"><span data-stu-id="7f35f-103">A configuration element used to specify Web Socket settings.</span></span>  
   
-## Синтаксис  
+<span data-ttu-id="7f35f-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="7f35f-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="7f35f-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="7f35f-105">\<bindings></span></span>  
+<span data-ttu-id="7f35f-106">\<Привязка netHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="7f35f-106">\<netHttpBinding></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7f35f-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f35f-107">Syntax</span></span>  
   
+```xml  
 <netHttpBinding>  
-   <binding>   
-       <webSocketSettings createNotificationOnConnection="boolean"  
-                              disablePayloadMasking="boolean"  
-                              keepAliveInterval="TimeSpan"  
-                              maxPendingConnections="Integer"  
-                              receiveBufferSize="Integer"  
-                              sendBufferSize="Integer"  
-                              subProtocol="String"  
-                              transportUsage="WhenDuplex/Always/Never"/>  
-   </binding>  
+  <binding>   
+    <webSocketSettings createNotificationOnConnection="boolean" 
+                       disablePayloadMasking="boolean" 
+                       keepAliveInterval="TimeSpan" 
+                       maxPendingConnections="Integer" 
+                       receiveBufferSize="Integer" 
+                       sendBufferSize="Integer" 
+                       subProtocol="String" 
+                       transportUsage="WhenDuplex/Always/Never"/>
+  </binding>  
 </netHttpBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7f35f-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7f35f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="7f35f-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7f35f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="7f35f-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7f35f-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|createNotificationOnConnection|Определяет, следует ли отправлять уведомления при соединении.|  
-|disablePayloadMasking|Определяет, отключено ли маскирование веб\-сокета.|  
-|keepAliveInterval|Определяет интервал поддержки активности канала.|  
-|maxPendingConnections|Определяет максимальное число подключений, ожидающих распределения в службе.|  
-|receiveBufferSize|Определяет размер буфера приема.|  
-|sendBufferSize|Определяет размер буфера отправки.|  
-|subProtocol|Определяет подпротокол веб\-сокета.|  
-|transportUsage|Указывает, когда использовать веб\-сокеты.|  
+|<span data-ttu-id="7f35f-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="7f35f-111">Attribute</span></span>|<span data-ttu-id="7f35f-112">Описание</span><span class="sxs-lookup"><span data-stu-id="7f35f-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="7f35f-113">createNotificationOnConnection</span><span class="sxs-lookup"><span data-stu-id="7f35f-113">createNotificationOnConnection</span></span>|<span data-ttu-id="7f35f-114">Определяет, следует ли отправлять уведомления при соединении.</span><span class="sxs-lookup"><span data-stu-id="7f35f-114">Specifies whether a notification is sent upon connection.</span></span>|  
+|<span data-ttu-id="7f35f-115">disablePayloadMasking</span><span class="sxs-lookup"><span data-stu-id="7f35f-115">disablePayloadMasking</span></span>|<span data-ttu-id="7f35f-116">Определяет, отключено ли маскирование веб-сокета.</span><span class="sxs-lookup"><span data-stu-id="7f35f-116">Specifies whether Web Socket masking is disabled.</span></span>|  
+|<span data-ttu-id="7f35f-117">keepAliveInterval</span><span class="sxs-lookup"><span data-stu-id="7f35f-117">keepAliveInterval</span></span>|<span data-ttu-id="7f35f-118">Определяет интервал поддержки активности канала.</span><span class="sxs-lookup"><span data-stu-id="7f35f-118">Specifies the keep alive interval.</span></span>|  
+|<span data-ttu-id="7f35f-119">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="7f35f-119">maxPendingConnections</span></span>|<span data-ttu-id="7f35f-120">Определяет максимальное число подключений, ожидающих распределения в службе.</span><span class="sxs-lookup"><span data-stu-id="7f35f-120">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
+|<span data-ttu-id="7f35f-121">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="7f35f-121">receiveBufferSize</span></span>|<span data-ttu-id="7f35f-122">Определяет размер буфера приема.</span><span class="sxs-lookup"><span data-stu-id="7f35f-122">Specifies the size of the receive buffer.</span></span>|  
+|<span data-ttu-id="7f35f-123">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="7f35f-123">sendBufferSize</span></span>|<span data-ttu-id="7f35f-124">Определяет размер буфера отправки.</span><span class="sxs-lookup"><span data-stu-id="7f35f-124">Specifies the size of the send buffer.</span></span>|  
+|<span data-ttu-id="7f35f-125">subProtocol</span><span class="sxs-lookup"><span data-stu-id="7f35f-125">subProtocol</span></span>|<span data-ttu-id="7f35f-126">Определяет подпротокол веб-сокета.</span><span class="sxs-lookup"><span data-stu-id="7f35f-126">Specifies the Web Socket subprotocol.</span></span>|  
+|<span data-ttu-id="7f35f-127">transportUsage</span><span class="sxs-lookup"><span data-stu-id="7f35f-127">transportUsage</span></span>|<span data-ttu-id="7f35f-128">Указывает, когда использовать веб-сокеты.</span><span class="sxs-lookup"><span data-stu-id="7f35f-128">Specifies when to use Web Sockets.</span></span>|  
   
-## Атрибут transportUsage  
+## <a name="transportusage-attribute"></a><span data-ttu-id="7f35f-129">Атрибут transportUsage</span><span class="sxs-lookup"><span data-stu-id="7f35f-129">transportUsage Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|WhenDuplex|Использовать протокол веб\-сокета, если контракт является дуплексным.|  
-|Всегда|Всегда использовать протокол веб\-сокетов независимо от контракта.|  
-|Никогда|Никогда не использовать протокол веб\-сокетов.|  
+|<span data-ttu-id="7f35f-130">Значение</span><span class="sxs-lookup"><span data-stu-id="7f35f-130">Value</span></span>|<span data-ttu-id="7f35f-131">Описание</span><span class="sxs-lookup"><span data-stu-id="7f35f-131">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="7f35f-132">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="7f35f-132">WhenDuplex</span></span>|<span data-ttu-id="7f35f-133">Использовать протокол веб-сокета, если контракт является дуплексным.</span><span class="sxs-lookup"><span data-stu-id="7f35f-133">Use the Web Socket protocol when the contract is duplex.</span></span>|  
+|<span data-ttu-id="7f35f-134">Всегда</span><span class="sxs-lookup"><span data-stu-id="7f35f-134">Always</span></span>|<span data-ttu-id="7f35f-135">Всегда использовать протокол веб-сокетов независимо от контракта.</span><span class="sxs-lookup"><span data-stu-id="7f35f-135">Always use the Web Socket protocol regardless of the contract.</span></span>|  
+|<span data-ttu-id="7f35f-136">Никогда</span><span class="sxs-lookup"><span data-stu-id="7f35f-136">Never</span></span>|<span data-ttu-id="7f35f-137">Никогда не использовать протокол веб-сокетов.</span><span class="sxs-lookup"><span data-stu-id="7f35f-137">Never use the Web Socket protocol.</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="7f35f-138">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7f35f-138">Child Elements</span></span>  
+ <span data-ttu-id="7f35f-139">Нет</span><span class="sxs-lookup"><span data-stu-id="7f35f-139">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="7f35f-140">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7f35f-140">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|\<netHttpBinding\>|Определяет привязку NetHttpBinding|  
+|<span data-ttu-id="7f35f-141">Элемент</span><span class="sxs-lookup"><span data-stu-id="7f35f-141">Element</span></span>|<span data-ttu-id="7f35f-142">Описание</span><span class="sxs-lookup"><span data-stu-id="7f35f-142">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="7f35f-143">\<Привязка netHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="7f35f-143">\<netHttpBinding></span></span>|<span data-ttu-id="7f35f-144">Определяет привязку NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="7f35f-144">Specifies the NetHttpBinding</span></span>|  
   
-## Пример  
- В следующем примере показано использование элемента \<webSocketSettings\>.  
+## <a name="example"></a><span data-ttu-id="7f35f-145">Пример</span><span class="sxs-lookup"><span data-stu-id="7f35f-145">Example</span></span>  
+ <span data-ttu-id="7f35f-146">В следующем примере показано, как использовать \<webSocketSettings > элемент.</span><span class="sxs-lookup"><span data-stu-id="7f35f-146">The following example shows how to use the \<webSocketSettings> element.</span></span>  
   
 ```xml  
 <netHttpBinding>  
@@ -89,12 +95,12 @@ caps.handback.revision: 3
       </netHttpBinding>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="7f35f-147">См. также</span><span class="sxs-lookup"><span data-stu-id="7f35f-147">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [<span data-ttu-id="7f35f-148">Привязки</span><span class="sxs-lookup"><span data-stu-id="7f35f-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="7f35f-149">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="7f35f-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="7f35f-150">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="7f35f-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="7f35f-151">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="7f35f-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

@@ -1,73 +1,77 @@
 ---
-title: "Элемент &lt;remove&gt; для &lt;listeners&gt; для &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> - элемент для <listeners> для <source>"
-  - "элемент remove для элемента <listeners> для элемента <source>"
+title: "&lt;Удалить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
+helpviewer_keywords:
+- remove element for <listeners> for <source>
+- <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6170c02296859d9c47e5288f287a4371d7cb0c56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;remove&gt; для &lt;listeners&gt; для &lt;source&gt;
-Удаляет прослушиватель из коллекции `Listeners` для источника трассировки.  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="7c699-102">&lt;Удалить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;</span><span class="sxs-lookup"><span data-stu-id="7c699-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="7c699-103">Удаляет прослушиватель из коллекции `Listeners` для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="7c699-103">Removes a listener from the `Listeners` collection for a trace source.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="7c699-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7c699-104">\<configuration></span></span>  
+<span data-ttu-id="7c699-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="7c699-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="7c699-106">\<источники ></span><span class="sxs-lookup"><span data-stu-id="7c699-106">\<sources></span></span>  
+<span data-ttu-id="7c699-107">\<Источник ></span><span class="sxs-lookup"><span data-stu-id="7c699-107">\<source></span></span>  
+<span data-ttu-id="7c699-108">\<прослушиватели ></span><span class="sxs-lookup"><span data-stu-id="7c699-108">\<listeners></span></span>  
+<span data-ttu-id="7c699-109">\<Удалите ></span><span class="sxs-lookup"><span data-stu-id="7c699-109">\<remove></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7c699-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7c699-110">Syntax</span></span>  
+  
+```xml  
 <remove name="listenerName" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7c699-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7c699-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="7c699-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7c699-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="7c699-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7c699-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`name`|Обязательный атрибут.<br /><br /> Имя прослушивателя для удаления из коллекции `Listeners`.|  
+|<span data-ttu-id="7c699-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="7c699-114">Attribute</span></span>|<span data-ttu-id="7c699-115">Описание</span><span class="sxs-lookup"><span data-stu-id="7c699-115">Description</span></span>|  
+|---------------|-----------------|  
+|`name`|<span data-ttu-id="7c699-116">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="7c699-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="7c699-117">Имя прослушивателя для удаления из `Listeners` коллекции.</span><span class="sxs-lookup"><span data-stu-id="7c699-117">The name of the listener to remove from the `Listeners` collection.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="7c699-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7c699-118">Child Elements</span></span>  
+ <span data-ttu-id="7c699-119">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="7c699-119">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="7c699-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7c699-120">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sources`|Элемент, содержащий источники трассировки, инициирующие трассировочные сообщения.|  
-|`source`|Источник трассировки, инициирующий сообщения трассировки.|  
-|`listeners`|Задает прослушиватели, предназначенные для сбора, хранения и маршрутизации сообщений.|  
+|<span data-ttu-id="7c699-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="7c699-121">Element</span></span>|<span data-ttu-id="7c699-122">Описание</span><span class="sxs-lookup"><span data-stu-id="7c699-122">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="7c699-123">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7c699-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="7c699-124">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="7c699-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="7c699-125">Содержит источники трассировки, которые инициируют сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="7c699-125">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="7c699-126">Содержит источник трассировки, который инициирует сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="7c699-126">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="7c699-127">Задает прослушиватели для сбора, хранения и маршрутизации сообщений.</span><span class="sxs-lookup"><span data-stu-id="7c699-127">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## Заметки  
- Элемент `<remove>` удаляет указанный прослушиватель из коллекции `Listeners` для источника трассировки.  
+## <a name="remarks"></a><span data-ttu-id="7c699-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="7c699-128">Remarks</span></span>  
+ <span data-ttu-id="7c699-129">`<remove>` Элемент Удаляет заданный прослушиватель из `Listeners` коллекции для источника трассировки.</span><span class="sxs-lookup"><span data-stu-id="7c699-129">The `<remove>` element removes a specified listener from the `Listeners` collection for a trace source.</span></span>  
   
- Можно удалить элемент из коллекции `Listeners` для источника трассировки программными средствами, вызвав метод <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> для свойства <xref:System.Diagnostics.TraceSource.Listeners%2A> экземпляра <xref:System.Diagnostics.TraceSource>.  
+ <span data-ttu-id="7c699-130">Можно удалить элемент из `Listeners` коллекции для источника трассировки программно, вызвав <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> метод <xref:System.Diagnostics.TraceSource.Listeners%2A> свойство <xref:System.Diagnostics.TraceSource> экземпляра.</span><span class="sxs-lookup"><span data-stu-id="7c699-130">You can remove an element from the `Listeners` collection for a trace source programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> method on the <xref:System.Diagnostics.TraceSource.Listeners%2A> property of the <xref:System.Diagnostics.TraceSource> instance.</span></span>  
   
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+ <span data-ttu-id="7c699-131">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="7c699-131">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показано использование элемента `<remove>` перед использованием элемента `<add>` для добавления прослушивателя `console` в коллекцию `Listeners` для источника трассировки `TraceSourceApp`.  
+## <a name="example"></a><span data-ttu-id="7c699-132">Пример</span><span class="sxs-lookup"><span data-stu-id="7c699-132">Example</span></span>  
+ <span data-ttu-id="7c699-133">В следующем примере показано, как использовать `<remove>` элемент перед использованием `<add>` элемент для добавления прослушивателя `console` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="7c699-133">The following example shows how to use the `<remove>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -84,9 +88,9 @@ caps.handback.revision: 6
 </configuration>   
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceSource.Listeners%2A>   
- <xref:System.Diagnostics.TraceSource>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="7c699-134">См. также</span><span class="sxs-lookup"><span data-stu-id="7c699-134">See Also</span></span>  
+ <xref:System.Diagnostics.TraceSource.Listeners%2A>  
+ <xref:System.Diagnostics.TraceSource>  
+ [<span data-ttu-id="7c699-135">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="7c699-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="7c699-136">\<clear></span><span class="sxs-lookup"><span data-stu-id="7c699-136">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
+ [<span data-ttu-id="7c699-137">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="7c699-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

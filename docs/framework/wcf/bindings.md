@@ -1,46 +1,48 @@
 ---
-title: "Привязки Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязки [WCF]"
+title: "Привязки Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b458c0491ec91cd528b40fb19e93b7948f8c059a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Привязки Windows Communication Foundation
-Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками.В привязке должен быть указан как минимум используемый транспорт \(например, HTTP или TCP\).Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транспорта.  
+# <a name="windows-communication-foundation-bindings"></a><span data-ttu-id="4f940-102">Привязки Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="4f940-102">Windows Communication Foundation Bindings</span></span>
+<span data-ttu-id="4f940-103">Привязки указывают способ взаимодействия конечных точек службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] с другими конечными точками.</span><span class="sxs-lookup"><span data-stu-id="4f940-103">Bindings specify how a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service endpoint communicates with other endpoints.</span></span> <span data-ttu-id="4f940-104">В привязке должен быть указан как минимум используемый транспорт (например, HTTP или TCP).</span><span class="sxs-lookup"><span data-stu-id="4f940-104">At its most basic, a binding must specify the transport (for example, HTTP or TCP) to use.</span></span> <span data-ttu-id="4f940-105">Через привязки также можно задать другие характеристики, такие как поддержка безопасности и транспорта.</span><span class="sxs-lookup"><span data-stu-id="4f940-105">You can also set other characteristics, such as security and transaction support, through bindings.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о привязках WCF](../../../docs/framework/wcf/bindings-overview.md)  
- Общие сведения о функциях привязок [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], список предоставляемых системой привязок и способы их определения и изменения.  
+## <a name="in-this-section"></a><span data-ttu-id="4f940-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="4f940-106">In This Section</span></span>  
+ [<span data-ttu-id="4f940-107">Общие сведения о привязках WCF</span><span class="sxs-lookup"><span data-stu-id="4f940-107">WCF Bindings Overview</span></span>](../../../docs/framework/wcf/bindings-overview.md)  
+ <span data-ttu-id="4f940-108">Общие сведения о функциях привязок [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], список предоставляемых системой привязок и способы их определения и изменения.</span><span class="sxs-lookup"><span data-stu-id="4f940-108">Overview of what [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] bindings do, what bindings the system provides, and how you can define or modify them.</span></span>  
   
- [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md)  
- Список привязок, включенных в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].Эти привязки охватывают большую часть требований по безопасности и шаблонам сообщений.  
+ [<span data-ttu-id="4f940-109">Привязки, предоставляемые системой</span><span class="sxs-lookup"><span data-stu-id="4f940-109">System-Provided Bindings</span></span>](../../../docs/framework/wcf/system-provided-bindings.md)  
+ <span data-ttu-id="4f940-110">Список привязок, включенных в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4f940-110">A list of bindings included with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="4f940-111">Эти привязки охватывают большую часть требований по безопасности и шаблонам сообщений.</span><span class="sxs-lookup"><span data-stu-id="4f940-111">These bindings cover the majority of security and message pattern requirements.</span></span>  
   
- [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- Привязка [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] содержит важную информацию, которую клиенты должны использовать для подключения к конечным точкам службы.  
+ [<span data-ttu-id="4f940-112">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="4f940-112">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ <span data-ttu-id="4f940-113">Привязка [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] содержит важную информацию, которую клиенты должны использовать для подключения к конечным точкам службы.</span><span class="sxs-lookup"><span data-stu-id="4f940-113">A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] binding contains important information that clients must use to connect to service endpoints.</span></span>  
   
- [Настройка привязок для служб](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- С помощью конфигурации администраторы и установщики могут настраивать привязки для конечных точек службы.  
+ [<span data-ttu-id="4f940-114">Настройка привязок для служб</span><span class="sxs-lookup"><span data-stu-id="4f940-114">Configuring Bindings for Services</span></span>](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ <span data-ttu-id="4f940-115">С помощью конфигурации администраторы и установщики могут настраивать привязки для конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="4f940-115">Configuration enables administrators and installers to customize the bindings for service endpoints.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="4f940-116">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4f940-116">Reference</span></span>  
  <xref:System.ServiceModel.Channels>  
   
-## Связанные подразделы  
- [Конечные точки: адреса, привязки и контракты](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="related-sections"></a><span data-ttu-id="4f940-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4f940-117">Related Sections</span></span>  
+ [<span data-ttu-id="4f940-118">Конечные точки: Адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="4f940-118">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
- [Привязки](../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="4f940-119">Привязки</span><span class="sxs-lookup"><span data-stu-id="4f940-119">Bindings</span></span>](../../../docs/framework/wcf/feature-details/bindings.md)  
   
-## См. также  
- [Пользовательские привязки](../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="4f940-120">См. также</span><span class="sxs-lookup"><span data-stu-id="4f940-120">See Also</span></span>  
+ [<span data-ttu-id="4f940-121">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="4f940-121">Custom Bindings</span></span>](../../../docs/framework/wcf/extending/custom-bindings.md)

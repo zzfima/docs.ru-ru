@@ -1,64 +1,66 @@
 ---
-title: "Настраиваемый диспетчер каналов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настраиваемый диспетчер каналов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5814850b3d5a25f5f3c118e732930168f9489d9d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Настраиваемый диспетчер каналов
-Этот образец демонстрирует построение пользовательского стека каналов путем непосредственной реализации <xref:System.ServiceModel.ServiceHostBase>, а также создание пользовательского диспетчера каналов в среде веб\-узла.Диспетчер каналов взаимодействует с <xref:System.ServiceModel.Channels.IChannelListener> для принятия каналов и получения сообщений из стека каналов.В рамках этого образца также представлен базовый образец, показывающий, как построить стек каналов в среде веб\-узла с помощью <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
+# <a name="custom-channel-dispatcher"></a><span data-ttu-id="48224-102">Настраиваемый диспетчер каналов</span><span class="sxs-lookup"><span data-stu-id="48224-102">Custom Channel Dispatcher</span></span>
+<span data-ttu-id="48224-103">Этот образец демонстрирует построение пользовательского стека каналов путем непосредственной реализации <xref:System.ServiceModel.ServiceHostBase>, а также создание пользовательского диспетчера каналов в среде веб-узла.</span><span class="sxs-lookup"><span data-stu-id="48224-103">This sample demonstrates how to build the channel stack in a custom way by implementing <xref:System.ServiceModel.ServiceHostBase> directly and how to create a custom channel dispatcher in Web host environment.</span></span> <span data-ttu-id="48224-104">Диспетчер каналов взаимодействует с <xref:System.ServiceModel.Channels.IChannelListener> для принятия каналов и получения сообщений из стека каналов.</span><span class="sxs-lookup"><span data-stu-id="48224-104">The channel dispatcher interacts with <xref:System.ServiceModel.Channels.IChannelListener> to accept channels and retrieves messages from the channel stack.</span></span> <span data-ttu-id="48224-105">В рамках этого образца также представлен базовый образец, показывающий, как построить стек каналов в среде веб-узла с помощью <xref:System.ServiceModel.Activation.VirtualPathExtension>.</span><span class="sxs-lookup"><span data-stu-id="48224-105">This sample also provides a basic sample to show how to build a channel stack in a Web host environment by using <xref:System.ServiceModel.Activation.VirtualPathExtension>.</span></span>  
   
-## Пользовательский ServiceHostBase  
- Вместо <xref:System.ServiceModel.ServiceHost> этот образец реализует базовый тип <xref:System.ServiceModel.ServiceHostBase> для демонстрации замены реализации стека [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] пользовательским уровнем обработки сообщений поверх стека каналов.Для построения прослушивателей и диспетчера каналов переопределяется виртуальный метод <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>.  
+## <a name="custom-servicehostbase"></a><span data-ttu-id="48224-106">Пользовательский ServiceHostBase</span><span class="sxs-lookup"><span data-stu-id="48224-106">Custom ServiceHostBase</span></span>  
+ <span data-ttu-id="48224-107">Вместо <xref:System.ServiceModel.ServiceHostBase> этот образец реализует базовый тип <xref:System.ServiceModel.ServiceHost> для демонстрации замены реализации стека [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] пользовательским уровнем обработки сообщений поверх стека каналов.</span><span class="sxs-lookup"><span data-stu-id="48224-107">This sample implements the base type <xref:System.ServiceModel.ServiceHostBase> instead of <xref:System.ServiceModel.ServiceHost> to demonstrate how to replace the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] stack implementation with a custom message handling layer on top of the channel stack.</span></span> <span data-ttu-id="48224-108">Для построения прослушивателей и диспетчера каналов переопределяется виртуальный метод <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A>.</span><span class="sxs-lookup"><span data-stu-id="48224-108">You override the virtual method <xref:System.ServiceModel.ServiceHostBase.InitializeRuntime%2A> to build channel listeners and the channel dispatcher.</span></span>  
   
- Чтобы реализовать службу, размещенную на веб\-сервере, возвратите расширение службы <xref:System.ServiceModel.Activation.VirtualPathExtension> из коллекции <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> и добавьте его в коллекцию <xref:System.ServiceModel.Channels.BindingParameterCollection>, чтобы транспортному слою было известно, как настроить прослушиватель канала на основе параметров среды размещения, то есть параметров служб IIS\/службы активации Windows \(WAS\).  
+ <span data-ttu-id="48224-109">Чтобы реализовать службу, размещенную на веб-сервере, возвратите расширение службы <xref:System.ServiceModel.Activation.VirtualPathExtension> из коллекции <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> и добавьте его в коллекцию <xref:System.ServiceModel.Channels.BindingParameterCollection>, чтобы транспортному слою было известно, как настроить прослушиватель канала на основе параметров среды размещения, то есть параметров служб IIS/службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="48224-109">To implement a Web-hosted service, get the service extension <xref:System.ServiceModel.Activation.VirtualPathExtension> from the <xref:System.ServiceModel.ServiceHostBase.Extensions%2A> collection and add it to the <xref:System.ServiceModel.Channels.BindingParameterCollection> so that the transport layer knows how to configure the channel listener based on the hosting environment settings, that is, the Internet Information Services (IIS)/Windows Process Activation Service (WAS) settings.</span></span>  
   
-## Настраиваемый диспетчер каналов  
- Пользовательский диспетчер каналов расширяет тип <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.Этот тип реализует логику программирования уровня канала.В этом образце для шаблона обмена сообщениями «запрос\-ответ» поддерживается только <xref:System.ServiceModel.Channels.IReplyChannel>, при этом пользовательский диспетчер каналов можно легко расширить, добавив другие типы каналов.  
+## <a name="custom-channel-dispatcher"></a><span data-ttu-id="48224-110">Настраиваемый диспетчер каналов</span><span class="sxs-lookup"><span data-stu-id="48224-110">Custom Channel Dispatcher</span></span>  
+ <span data-ttu-id="48224-111">Пользовательский диспетчер каналов расширяет тип <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.</span><span class="sxs-lookup"><span data-stu-id="48224-111">The custom channel dispatcher extends the type <xref:System.ServiceModel.Dispatcher.ChannelDispatcherBase>.</span></span> <span data-ttu-id="48224-112">Этот тип реализует логику программирования уровня канала.</span><span class="sxs-lookup"><span data-stu-id="48224-112">This type implements the channel-layer programming logic.</span></span> <span data-ttu-id="48224-113">В этом образце для шаблона обмена сообщениями «запрос-ответ» поддерживается только <xref:System.ServiceModel.Channels.IReplyChannel>, при этом пользовательский диспетчер каналов можно легко расширить, добавив другие типы каналов.</span><span class="sxs-lookup"><span data-stu-id="48224-113">In this sample, only <xref:System.ServiceModel.Channels.IReplyChannel> is supported for request-reply message exchange pattern, but the custom channel dispatcher can be easily extended to other channel types.</span></span>  
   
- Сначала диспетчер открывает прослушиватель каналов, а затем принимает одноэлементный канал ответа.По этому каналу он запускает бесконечный цикл отправки сообщений \(запросов\).По каждому запросу он создает ответное сообщение и отправляет его назад клиенту.  
+ <span data-ttu-id="48224-114">Сначала диспетчер открывает прослушиватель каналов, а затем принимает одноэлементный канал ответа.</span><span class="sxs-lookup"><span data-stu-id="48224-114">The dispatcher first opens the channel listener and then accepts the singleton reply channel.</span></span> <span data-ttu-id="48224-115">По этому каналу он запускает бесконечный цикл отправки сообщений (запросов).</span><span class="sxs-lookup"><span data-stu-id="48224-115">With the channel, it starts to send messages (requests) in an infinite loop.</span></span> <span data-ttu-id="48224-116">По каждому запросу он создает ответное сообщение и отправляет его назад клиенту.</span><span class="sxs-lookup"><span data-stu-id="48224-116">For each request, it creates a reply message and sends it back to the client.</span></span>  
   
-## Создание ответного сообщения  
- Обработка сообщений реализуется в типе `MyServiceManager`.В методе `HandleRequest` сначала проверяется заголовок `Action` сообщения, чтобы выяснить, поддерживается ли запрос.Стандартное действие протокола SOAP «http:\/\/tempuri.org\/HelloWorld\/Hello» определено для выполнения фильтрации сообщений.Это похоже на концепцию контракта службы из реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] объекта <xref:System.ServiceModel.ServiceHost>.  
+## <a name="creating-a-response-message"></a><span data-ttu-id="48224-117">Создание ответного сообщения</span><span class="sxs-lookup"><span data-stu-id="48224-117">Creating a Response Message</span></span>  
+ <span data-ttu-id="48224-118">Обработка сообщений реализуется в типе `MyServiceManager`.</span><span class="sxs-lookup"><span data-stu-id="48224-118">The message processing is implemented in the type `MyServiceManager`.</span></span> <span data-ttu-id="48224-119">В методе `HandleRequest` сначала проверяется заголовок `Action` сообщения, чтобы выяснить, поддерживается ли запрос.</span><span class="sxs-lookup"><span data-stu-id="48224-119">In the `HandleRequest` method, the `Action` header of the message is first checked to see whether the request is supported.</span></span> <span data-ttu-id="48224-120">Стандартное действие протокола SOAP «http://tempuri.org/HelloWorld/Hello» определено для выполнения фильтрации сообщений.</span><span class="sxs-lookup"><span data-stu-id="48224-120">A predefined SOAP action "http://tempuri.org/HelloWorld/Hello" is defined to provide message filtering.</span></span> <span data-ttu-id="48224-121">Это похоже на концепцию контракта службы из реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] объекта <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="48224-121">This is similar to the service contract concept in the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementation of <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- Для выбора правильного действия протокола SOAP образец получает запрошенные данные сообщения и формирует соответствующий ответ на запрос, аналогично случаю <xref:System.ServiceModel.ServiceHost>.  
+ <span data-ttu-id="48224-122">Для выбора правильного действия протокола SOAP образец получает запрошенные данные сообщения и формирует соответствующий ответ на запрос, аналогично случаю <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="48224-122">For the correct SOAP action case, the sample retrieves the requested message data and generates a corresponding response to the request similar to what is seen in the <xref:System.ServiceModel.ServiceHost> case.</span></span>  
   
- В этом случае команда HTTP\-GET была специально обработана путем возврата пользовательского сообщения HTTP с тем, чтобы можно было открыть службу в браузере, чтобы удостовериться, что она правильно скомпилирована.Если действие протокола SOAP не совпадает, отправьте сообщение об ошибке, чтобы указать, что запрос не поддерживается.  
+ <span data-ttu-id="48224-123">В этом случае команда HTTP-GET была специально обработана путем возврата пользовательского сообщения HTTP с тем, чтобы можно было открыть службу в браузере, чтобы удостовериться, что она правильно скомпилирована.</span><span class="sxs-lookup"><span data-stu-id="48224-123">You specially handled the HTTP-GET verb by returning a custom HTML message, in this, case so that you can browse the service from a browser to see that it is compiled correctly.</span></span> <span data-ttu-id="48224-124">Если действие протокола SOAP не совпадает, отправьте сообщение об ошибке, чтобы указать, что запрос не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="48224-124">If the SOAP action does not match, send a fault message back to indicate that the request is not supported.</span></span>  
   
- В этом образце используется обычный клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в котором не сделано никаких предположений относительно службы.Поэтому служба создана специально с учетом соответствия результатам нормальной для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализации <xref:System.ServiceModel.ServiceHost>.В результате этого в клиенте требуется наличие только контракта службы.  
+ <span data-ttu-id="48224-125">В этом образце используется обычный клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в котором не сделано никаких предположений относительно службы.</span><span class="sxs-lookup"><span data-stu-id="48224-125">The client of this sample is a normal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that does not assume anything from the service.</span></span> <span data-ttu-id="48224-126">Поэтому служба создана с учетом соответствия результатам стандартной реализации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="48224-126">So, the service is specially designed to match what you get from a normal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> implementation.</span></span> <span data-ttu-id="48224-127">В результате этого в клиенте требуется наличие только контракта службы.</span><span class="sxs-lookup"><span data-stu-id="48224-127">As a result, only a service contract is required on the client.</span></span>  
   
-## Использование образца  
- При прямом запуске клиентского приложения формируется следующий результат.  
+## <a name="using-the-sample"></a><span data-ttu-id="48224-128">Использование образца</span><span class="sxs-lookup"><span data-stu-id="48224-128">Using the sample</span></span>  
+ <span data-ttu-id="48224-129">При прямом запуске клиентского приложения формируется следующий результат.</span><span class="sxs-lookup"><span data-stu-id="48224-129">Running the client application directly produces the following output.</span></span>  
   
 ```Output  
-Клиент разговаривает со службой WCF типа «запрос-ответ».   
-Введите приветствие серверу: «Привет»  
-Ответ сервера: «Вы сказали: привет».Идентификатор сообщения: 1  
-Ответ сервера: «Вы сказали: привет».Идентификатор сообщения: 2  
-Ответ сервера: «Вы сказали: привет».Идентификатор сообщения: 3  
-Ответ сервера: «Вы сказали: привет».Идентификатор сообщения: 4  
-Ответ сервера: «Вы сказали: привет».Идентификатор сообщения: 5  
-  
+Client is talking to a request/reply WCF service.   
+Type what you want to say to the server: Howdy  
+Server replied: You said: Howdy. Message id: 1  
+Server replied: You said: Howdy. Message id: 2  
+Server replied: You said: Howdy. Message id: 3  
+Server replied: You said: Howdy. Message id: 4  
+Server replied: You said: Howdy. Message id: 5  
 ```  
   
- Службу также можно открыть в браузере с тем, чтобы сообщение HTTP\-GET было обработано на сервере.При этом возвращается хорошо отформатированный текст в формате HTML.  
+ <span data-ttu-id="48224-130">Службу также можно открыть в браузере с тем, чтобы сообщение HTTP-GET было обработано на сервере.</span><span class="sxs-lookup"><span data-stu-id="48224-130">You can also browse the service from a browser so that an HTTP-GET message gets processed on the server.</span></span> <span data-ttu-id="48224-131">При этом возвращается хорошо отформатированный текст в формате HTML.</span><span class="sxs-lookup"><span data-stu-id="48224-131">This gets you well-formatted HTML text back.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="48224-132">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="48224-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="48224-133">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="48224-133">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="48224-134">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="48224-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="48224-135">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="48224-135">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

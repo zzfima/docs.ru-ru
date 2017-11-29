@@ -1,94 +1,97 @@
 ---
-title: "Шаблоны WCF в Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Шаблоны WCF в Visual Studio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a659fa3801d52da4fa4837b7df4fea9e4ac6cf5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Шаблоны WCF в Visual Studio
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблоны представляют собой предопределенные шаблоны проектов и элементов можно использовать в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] служб и окружающих приложений.  
+# <a name="wcf-visual-studio-templates"></a><span data-ttu-id="d9d48-102">Шаблоны WCF в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d9d48-102">WCF Visual Studio Templates</span></span>
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]<span data-ttu-id="d9d48-103">[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблоны представляют собой предопределенные шаблоны проектов и элементов можно использовать в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для быстрого создания [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] службы и окружающих приложений.</span><span class="sxs-lookup"><span data-stu-id="d9d48-103"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates are predefined project and item templates you can use in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] to quickly build [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services and surrounding applications.</span></span>  
   
-## <a name="using-the-wcf-templates"></a>Использование шаблонов WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблоны предоставляют базовую структуру класса для разработки службы. В частности, эти шаблоны предоставляет основные определения для контракта службы, контракта данных, реализации службы и конфигурации. Эти шаблоны можно использовать для создания простой службы, которая потребует минимального программирования, и которая может служить как стандартный блок для более сложных служб.  
+## <a name="using-the-wcf-templates"></a><span data-ttu-id="d9d48-104">Использование шаблонов WCF</span><span class="sxs-lookup"><span data-stu-id="d9d48-104">Using the WCF Templates</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="d9d48-105">[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] шаблонов предоставляют базовую структуру класса для разработки службы.</span><span class="sxs-lookup"><span data-stu-id="d9d48-105"> [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] templates provide a basic class structure for service development.</span></span> <span data-ttu-id="d9d48-106">В частности, эти шаблоны предоставляет основные определения для контракта службы, контракта данных, реализации службы и конфигурации.</span><span class="sxs-lookup"><span data-stu-id="d9d48-106">Specifically, these templates provide the basic definitions for service contract, data contract, service implementation, and configuration.</span></span> <span data-ttu-id="d9d48-107">Эти шаблоны можно использовать для создания простой службы, которая потребует минимального программирования, и которая может служить как стандартный блок для более сложных служб.</span><span class="sxs-lookup"><span data-stu-id="d9d48-107">You can use these templates to create a simple service with minimal code interaction, as well as a building block for more advanced services.</span></span>  
   
-### <a name="wcf-service-library-project-template"></a>Шаблон проекта библиотеки служб WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Доступен шаблон проекта библиотеки служб в поле диалогового окна нового проекта под **Visual C# \WCF** и **Visual Basic\WCF**.  
+### <a name="wcf-service-library-project-template"></a><span data-ttu-id="d9d48-108">Шаблон проекта библиотеки служб WCF</span><span class="sxs-lookup"><span data-stu-id="d9d48-108">WCF Service Library Project Template</span></span>  
+ <span data-ttu-id="d9d48-109">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблон проекта библиотеки службы доступен в диалоговое окно создания проекта в разделе **Visual C# \WCF** и **Visual Basic\WCF**.</span><span class="sxs-lookup"><span data-stu-id="d9d48-109">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Library project template is available in the new project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
   
- При создании нового проекта с помощью **службы WCF** шаблон, новый проект автоматически включает следующие три файла:  
+ <span data-ttu-id="d9d48-110">При создании нового проекта с использованием **службы WCF** шаблон, новый проект автоматически включает в себя следующие три файла:</span><span class="sxs-lookup"><span data-stu-id="d9d48-110">When you create a new project using the **WCF Service** template, the new project automatically includes the following three files:</span></span>  
   
--   файл контракта службы (IService1.cs или IService1.vb); Файл контракта службы - это интерфейс, к которому применены атрибуты службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Этот файл предоставляет определение простой службы, чтобы показать как определяются пользовательские службы, он включает параметризованные операции и простой образец контракта данных. Этот файл по умолчанию отображается в редакторе кода после создания проекта службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="d9d48-111">файл контракта службы (IService1.cs или IService1.vb);</span><span class="sxs-lookup"><span data-stu-id="d9d48-111">Service contract file (IService1.cs or IService1.vb).</span></span> <span data-ttu-id="d9d48-112">Файл контракта службы - это интерфейс, к которому применены атрибуты службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9d48-112">The service contract file is an interface that has [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service attributes applied.</span></span> <span data-ttu-id="d9d48-113">Этот файл предоставляет определение простой службы, чтобы показать как определяются пользовательские службы, он включает параметризованные операции и простой образец контракта данных.</span><span class="sxs-lookup"><span data-stu-id="d9d48-113">This file provides a definition of a simple service to show you how to define your services, and includes parameter-based operations and a simple data contract sample.</span></span> <span data-ttu-id="d9d48-114">Этот файл по умолчанию отображается в редакторе кода после создания проекта службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9d48-114">This is the default file displayed in the code editor after creating a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service project.</span></span>  
   
--   Файл реализации службы (Service1.cs или Service1.vb). Файл реализации службы реализует контракт, определенный в файле контракта службы.  
+-   <span data-ttu-id="d9d48-115">Файл реализации службы (Service1.cs или Service1.vb).</span><span class="sxs-lookup"><span data-stu-id="d9d48-115">Service implementation file (Service1.cs or Service1.vb).</span></span> <span data-ttu-id="d9d48-116">Файл реализации службы реализует контракт, определенный в файле контракта службы.</span><span class="sxs-lookup"><span data-stu-id="d9d48-116">The service implementation file implements the contract defined in the service contract file.</span></span>  
   
--   Файл конфигурации приложения (App.config). Файл конфигурации предоставляет основные элементы модели службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с безопасной привязкой HTTP. Также включает конечную точку для службы и позволяет осуществлять обмен метаданными.  
-  
-> [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]настраивается для распознавания файла App.config файлом конфигурации проекта при запуске с помощью [узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), что является конфигурацией по умолчанию. Если размещать библиотеку службы в исполняемом файле, то необходимо переместить код конфигурации в файл конфигурации исполняемого файла, так как файлы конфигурации для DLL-библиотек являются недопустимыми.  
-  
-### <a name="wcf-service-application-template"></a>Шаблон веб-приложения службы WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблон приложения службы доступен в диалоговом окне Новый проект в **Visual C# \WCF** и **Visual Basic\WCF**.  
-  
- При создании нового проекта с помощью **веб-приложение службы WCF** шаблон проекта включает следующие четыре файла:  
-  
--   файл ведущего приложения службы (service1.svc);  
-  
--   файл контракта службы (IService1.cs или IService1.vb);  
-  
--   файл реализации службы (Service1.svc.cs или Service1.svc.vb);  
-  
--   файл веб-конфигурации (Web.config).  
-  
- Шаблон автоматически создает веб-сайт (развертывается в виртуальном каталоге) и размещает в нем службу.  
-  
-### <a name="wcf-web-site-template"></a>Шаблон веб-сайта WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблон веб-сайт доступен в диалоговом окне Новый проект в **Visual C# \Web Site\WCF** и **Visual basic\веб-Сайт\служба**. Создаются те же файлы, что и с шаблоном приложения службы WCF, но при этом шаблон организуется так, как если бы он представлял собой веб-сайт ASP.NET. Создаются папки App_Code и App_Data.  
-  
-### <a name="wcf-service-item-template"></a>Шаблон элемента службы WCF  
- Шаблон элемента службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] - это пользовательский шаблон, который предоставляет быстрый способ для добавления служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в существующие проекты [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
-  
- Чтобы использовать этот шаблон, перейдите в **обозревателе решений** панели, щелкните правой кнопкой мыши имя проекта, выберите пункт **добавить**и нажмите кнопку **новый элемент** для запуска **добавить новый элемент** диалоговое окно.  
-  
- Интерфейс службы и файлы реализации размещаются в корневой папке проекта.  
-  
- Шаблон попытается включить раздел конфигурации новой службы в существующий файл конфигурации, при условии что у них совместимые типы.  
-  
- Если существующий проект является веб-проектом, то также создается файл узла службы (service1.svc).  
-  
-### <a name="wcf-wf-service-project-and-item-template"></a>Шаблон элемента и проект службы WF WCF.  
- Эти шаблоны создают службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которые содержат службу рабочего процесса, с помощью которой к рабочему процессу можно получить доступ как к веб-службе. Для моделей императивного программирования и XAML существуют отдельные шаблоны. Используя эти шаблоны, можно создать последовательный рабочий процесс или рабочий процесс конечного автомата. Дополнительные сведения об этих типах рабочих процессов см. в разделе [Windows Workflow Foundation учебники](http://msdn.microsoft.com/ru-ru/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Создание проектов рабочих процессов, в разделе [Создание проектов рабочих процессов прежних версий](../Topic/Creating%20Legacy%20Workflow%20Projects.md).  
-  
- Время отклика конструктора [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] сокращается при использовании рабочих процессов с типом XOML, вместо рабочих процессов, использующих код. Рабочий процесс XOML - это создаваемый по умолчанию тип рабочего процесса.  
-  
-### <a name="wcf-syndication-service-library-template"></a>Шаблон библиотеки служб синдикации WCF.  
- Этот шаблон позволяет отобразить веб-канал формата RSS или ATOM как службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Дополнительные сведения см. в разделе [синдикации WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
-  
-#### <a name="changing-the-address-of-the-feed"></a>Изменение адреса веб-канала  
- Шаблон синдикации при выполнении использует Internet Explorer. При щелчке правой кнопкой мыши проект в **обозревателя решений** в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]выберите **свойства**, а затем выберите **отладки** вкладку, чтобы узнать адрес по умолчанию шаблона. Internet Explorer пытается открыть веб-канал по этому адресу.  
-  
- При изменении адреса веб-канала, необходимо также изменить адрес в **отладки** вкладки. Если этого не сделать, то Internet Explorer будет пытаться открыть веб-канал по адресу, используемому по умолчанию, и произойдет ошибка.  
-  
-### <a name="ajax-enabled-wcf-service-item-template"></a>Шаблон элемента службы WCF с поддержкой AJAX  
- Этот шаблон предоставляет элемент управления AJAX как службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Дополнительные сведения об элементах управления AJAX в разделе [документации AJAX control](http://go.microsoft.com/fwlink/?LinkId=96717).  
-  
-### <a name="silverlight-enabled-wcf-service-item-template"></a>Шаблон элемента службы WCF с поддержкой Silverlight  
- Этот шаблон создает веб-службу, которая предоставляет данные клиенту Silverlight или внешнему интерфейсу. Шаблон может быть добавлен на веб-сайт или в проект веб-приложения для создания службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которая включает код и конфигурацию службы, поддерживающей взаимодействие с клиентом Silverlight. Затем можно использовать **Add Service Reference** для добавления клиентского прокси службы для клиента и обмена данными между клиентом Silverlight и службой WCF с поддержкой Silverlight.  
-  
- Для доступа к этому шаблону, щелкните правой кнопкой мыши проект веб-сайта или веб-приложения в **обозревателе решений**, нажмите кнопку **добавить новый элемент**и нажмите кнопку **служба WCF с поддержкой Silverlight**.  
+-   <span data-ttu-id="d9d48-117">Файл конфигурации приложения (App.config).</span><span class="sxs-lookup"><span data-stu-id="d9d48-117">Application configuration file (App.config).</span></span> <span data-ttu-id="d9d48-118">Файл конфигурации предоставляет основные элементы модели службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] с безопасной привязкой HTTP.</span><span class="sxs-lookup"><span data-stu-id="d9d48-118">The configuration file provides the basic elements of a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service model with a secure HTTP binding.</span></span> <span data-ttu-id="d9d48-119">Также включает конечную точку для службы и позволяет осуществлять обмен метаданными.</span><span class="sxs-lookup"><span data-stu-id="d9d48-119">It also includes an endpoint for the service and enables metadata exchange.</span></span>  
   
 > [!NOTE]
->  Служба WCF с поддержкой Silverlight предоставляет доступ к конечной точке `basicHttpBinding` без применения параметров безопасности. Поэтому сведения о службе могут быть получены всеми клиентами, которые подключены к этой службе. Сообщения, которыми обмениваются служба и клиент, также не подписываются и не шифруются. Для защиты конечной точки необходимо использовать проверку подлинности ASP.NET, протокол HTTPS или другие механизмы.  
+>  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]<span data-ttu-id="d9d48-120">настроено на распознавание файл App.config файлом конфигурации для проекта при запуске с помощью [узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), которая является конфигурацией по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d9d48-120"> is configured to recognize the App.config file as the configuration file for the project when it is run using the [WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), which is the default configuration.</span></span> <span data-ttu-id="d9d48-121">Если размещать библиотеку службы в исполняемом файле, то необходимо переместить код конфигурации в файл конфигурации исполняемого файла, так как файлы конфигурации для DLL-библиотек являются недопустимыми.</span><span class="sxs-lookup"><span data-stu-id="d9d48-121">If you host the service library in an executable, you have to move the configuration code to the configuration file of the executable, as configuration files for DLLs are not valid.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)   
- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+### <a name="wcf-service-application-template"></a><span data-ttu-id="d9d48-122">Шаблон веб-приложения службы WCF</span><span class="sxs-lookup"><span data-stu-id="d9d48-122">WCF Service Application Template</span></span>  
+ <span data-ttu-id="d9d48-123">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблон приложения службы доступен в диалоговом окне нового проекта в **Visual C# \WCF** и **Visual Basic\WCF**.</span><span class="sxs-lookup"><span data-stu-id="d9d48-123">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Application template is available in the New Project dialog box under **Visual C#\WCF** and **Visual Basic\WCF**.</span></span>  
+  
+ <span data-ttu-id="d9d48-124">При создании нового проекта с использованием **службы веб-приложения WCF** шаблона проекта включает следующие четыре файла:</span><span class="sxs-lookup"><span data-stu-id="d9d48-124">When you create a new project using the **WCF Web Application Service** template, the project includes the following four files:</span></span>  
+  
+-   <span data-ttu-id="d9d48-125">файл ведущего приложения службы (service1.svc);</span><span class="sxs-lookup"><span data-stu-id="d9d48-125">Service host file (service1.svc).</span></span>  
+  
+-   <span data-ttu-id="d9d48-126">файл контракта службы (IService1.cs или IService1.vb);</span><span class="sxs-lookup"><span data-stu-id="d9d48-126">Service contract file (IService1.cs or IService1.vb).</span></span>  
+  
+-   <span data-ttu-id="d9d48-127">файл реализации службы (Service1.svc.cs или Service1.svc.vb);</span><span class="sxs-lookup"><span data-stu-id="d9d48-127">Service implementation file (Service1.svc.cs or Service1.svc.vb).</span></span>  
+  
+-   <span data-ttu-id="d9d48-128">файл веб-конфигурации (Web.config).</span><span class="sxs-lookup"><span data-stu-id="d9d48-128">Web configuration file (Web.config).</span></span>  
+  
+ <span data-ttu-id="d9d48-129">Шаблон автоматически создает веб-сайт (развертывается в виртуальном каталоге) и размещает в нем службу.</span><span class="sxs-lookup"><span data-stu-id="d9d48-129">The template automatically creates a Web site (to be deployed to a virtual directory) and hosts a service in it.</span></span>  
+  
+### <a name="wcf-web-site-template"></a><span data-ttu-id="d9d48-130">Шаблон веб-сайта WCF</span><span class="sxs-lookup"><span data-stu-id="d9d48-130">WCF Web Site Template</span></span>  
+ <span data-ttu-id="d9d48-131">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Шаблон веб-сайт доступен в диалоговом окне нового проекта в **Visual C# \Web Site\WCF** и **Visual basic\веб-Сайт\служба**.</span><span class="sxs-lookup"><span data-stu-id="d9d48-131">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web Site template is available in the New Project dialog box under **Visual C#\Web Site\WCF Service** and **Visual Basic\Web Site\WCF Service**.</span></span> <span data-ttu-id="d9d48-132">Создаются те же файлы, что и с шаблоном приложения службы WCF, но при этом шаблон организуется так, как если бы он представлял собой веб-сайт ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="d9d48-132">This creates the same files as the WCF Service Application template but organizes it as if it were a ASP.NET web site.</span></span> <span data-ttu-id="d9d48-133">Создаются папки App_Code и App_Data.</span><span class="sxs-lookup"><span data-stu-id="d9d48-133">App_Code and App_Data folders are created.</span></span>  
+  
+### <a name="wcf-service-item-template"></a><span data-ttu-id="d9d48-134">Шаблон элемента службы WCF</span><span class="sxs-lookup"><span data-stu-id="d9d48-134">WCF Service Item Template</span></span>  
+ <span data-ttu-id="d9d48-135">Шаблон элемента службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] - это пользовательский шаблон, который предоставляет быстрый способ для добавления служб [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] в существующие проекты [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9d48-135">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service Item template is a custom template that provides a quick way to add [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services to your existing [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projects.</span></span>  
+  
+ <span data-ttu-id="d9d48-136">Чтобы использовать этот шаблон, перейдите к **обозревателе решений** щелкните правой кнопкой мыши имя проекта, выберите пункт **добавить**и нажмите кнопку **новый элемент** для запуска **добавить новое Элемент** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="d9d48-136">To use this template, go to the **Solution Explorer** pane, right-click your project name, point to **Add**, and then click **New Item** to launch the **Add New Item** dialog box.</span></span>  
+  
+ <span data-ttu-id="d9d48-137">Интерфейс службы и файлы реализации размещаются в корневой папке проекта.</span><span class="sxs-lookup"><span data-stu-id="d9d48-137">The service interface and implementation files are placed in the root project folder.</span></span>  
+  
+ <span data-ttu-id="d9d48-138">Шаблон попытается включить раздел конфигурации новой службы в существующий файл конфигурации, при условии что у них совместимые типы.</span><span class="sxs-lookup"><span data-stu-id="d9d48-138">The template attempts to merge the configuration section of the new service to the existing configuration file, if they are compatible types.</span></span>  
+  
+ <span data-ttu-id="d9d48-139">Если существующий проект является веб-проектом, то также создается файл узла службы (service1.svc).</span><span class="sxs-lookup"><span data-stu-id="d9d48-139">A service host file (service1.svc) is also created if the existing project is a Web project.</span></span>  
+  
+### <a name="wcf-wf-service-project-and-item-template"></a><span data-ttu-id="d9d48-140">Шаблон элемента и проект службы WF WCF.</span><span class="sxs-lookup"><span data-stu-id="d9d48-140">WCF WF Service Project and Item Template.</span></span>  
+ <span data-ttu-id="d9d48-141">Эти шаблоны создают службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которые содержат службу рабочего процесса, с помощью которой к рабочему процессу можно получить доступ как к веб-службе.</span><span class="sxs-lookup"><span data-stu-id="d9d48-141">These templates create [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services that host a Workflow Service, which is a workflow that can be accessed like a web service.</span></span> <span data-ttu-id="d9d48-142">Для моделей императивного программирования и XAML существуют отдельные шаблоны.</span><span class="sxs-lookup"><span data-stu-id="d9d48-142">Separate templates exist for XAML or imperative programming models.</span></span> <span data-ttu-id="d9d48-143">Используя эти шаблоны, можно создать последовательный рабочий процесс или рабочий процесс конечного автомата.</span><span class="sxs-lookup"><span data-stu-id="d9d48-143">Using the templates, you can create sequential or state machine workflow.</span></span> <span data-ttu-id="d9d48-144">Дополнительные сведения об этих типах рабочих процессов см. в разделе [Windows Workflow Foundation учебники](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97).</span><span class="sxs-lookup"><span data-stu-id="d9d48-144">For more information on these types of workflow, see [Windows Workflow Foundation Tutorials](http://msdn.microsoft.com/en-us/e9705654-bd96-4b56-8d98-f1f118112d97).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="d9d48-145">Создание проектов рабочих процессов, в разделе [Создание проектов рабочих процессов прежних версий](/visualstudio/workflow-designer/creating-legacy-workflow-projects).</span><span class="sxs-lookup"><span data-stu-id="d9d48-145"> creating workflow projects, see [Creating Legacy Workflow Projects](/visualstudio/workflow-designer/creating-legacy-workflow-projects).</span></span>  
+  
+ <span data-ttu-id="d9d48-146">Время отклика конструктора [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] сокращается при использовании рабочих процессов с типом XOML, вместо рабочих процессов, использующих код.</span><span class="sxs-lookup"><span data-stu-id="d9d48-146">[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] designer is more responsive when XOML type workflows are used instead of code based ones.</span></span> <span data-ttu-id="d9d48-147">Рабочий процесс XOML - это создаваемый по умолчанию тип рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="d9d48-147">XOML workflow is the default workflow type to be created.</span></span>  
+  
+### <a name="wcf-syndication-service-library-template"></a><span data-ttu-id="d9d48-148">Шаблон библиотеки служб синдикации WCF.</span><span class="sxs-lookup"><span data-stu-id="d9d48-148">WCF Syndication Service Library Template</span></span>  
+ <span data-ttu-id="d9d48-149">Этот шаблон позволяет отобразить веб-канал формата RSS или ATOM как службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9d48-149">This template enables you to expose your feed in the RSS or ATOM format as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="d9d48-150">Дополнительные сведения см. в разделе [синдикации WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).</span><span class="sxs-lookup"><span data-stu-id="d9d48-150">For more information, see [WCF Syndication](../../../docs/framework/wcf/feature-details/wcf-syndication.md).</span></span>  
+  
+#### <a name="changing-the-address-of-the-feed"></a><span data-ttu-id="d9d48-151">Изменение адреса веб-канала</span><span class="sxs-lookup"><span data-stu-id="d9d48-151">Changing the Address of the Feed</span></span>  
+ <span data-ttu-id="d9d48-152">Шаблон синдикации при выполнении использует Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="d9d48-152">The syndication template uses Internet Explorer during execution.</span></span> <span data-ttu-id="d9d48-153">При щелчке правой кнопкой мыши проект в **обозревателя решений** в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]выберите **свойства**, а затем выберите **отладки** вкладку, чтобы узнать адрес по умолчанию шаблон.</span><span class="sxs-lookup"><span data-stu-id="d9d48-153">When you right-click your project in **Solutions Explorer** in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], select **Properties**, then select the **Debug** tab and you can see the default address of the template.</span></span> <span data-ttu-id="d9d48-154">Internet Explorer пытается открыть веб-канал по этому адресу.</span><span class="sxs-lookup"><span data-stu-id="d9d48-154">Internet Explorer attempts to open the feed at this address.</span></span>  
+  
+ <span data-ttu-id="d9d48-155">При изменении адреса веб-канала, необходимо также изменить адрес в **отладки** вкладки. Если этого не сделать, то Internet Explorer будет пытаться открыть веб-канал по адресу, используемому по умолчанию, и произойдет ошибка.</span><span class="sxs-lookup"><span data-stu-id="d9d48-155">If you change the address of your feed, you must also change the address in the **Debug** tab. If you do not do this, Internet Explorer attempts to open the feed at the default address and fail.</span></span>  
+  
+### <a name="ajax-enabled-wcf-service-item-template"></a><span data-ttu-id="d9d48-156">Шаблон элемента службы WCF с поддержкой AJAX</span><span class="sxs-lookup"><span data-stu-id="d9d48-156">AJAX enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="d9d48-157">Этот шаблон предоставляет элемент управления AJAX как службу [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9d48-157">This template exposes an AJAX control as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="d9d48-158">Дополнительные сведения в элементе управления AJAX см. в разделе [документации управления AJAX](http://go.microsoft.com/fwlink/?LinkId=96717).</span><span class="sxs-lookup"><span data-stu-id="d9d48-158">For more information on AJAX controls, see the [AJAX control documentation](http://go.microsoft.com/fwlink/?LinkId=96717).</span></span>  
+  
+### <a name="silverlight-enabled-wcf-service-item-template"></a><span data-ttu-id="d9d48-159">Шаблон элемента службы WCF с поддержкой Silverlight</span><span class="sxs-lookup"><span data-stu-id="d9d48-159">Silverlight-enabled WCF Service Item Template</span></span>  
+ <span data-ttu-id="d9d48-160">Этот шаблон создает веб-службу, которая предоставляет данные клиенту Silverlight или внешнему интерфейсу.</span><span class="sxs-lookup"><span data-stu-id="d9d48-160">This template creates a Web service that provides data to a Silverlight client or front-end.</span></span> <span data-ttu-id="d9d48-161">Шаблон может быть добавлен на веб-сайт или в проект веб-приложения для создания службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], которая включает код и конфигурацию службы, поддерживающей взаимодействие с клиентом Silverlight.</span><span class="sxs-lookup"><span data-stu-id="d9d48-161">The template can be added to a Web site or Web application project to create a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service, which includes service code and configuration that support communicating with a Silverlight client.</span></span> <span data-ttu-id="d9d48-162">Затем можно использовать **добавить ссылку на службу** для добавления клиентского прокси службы для клиента и обмена данными между клиентом Silverlight и службой WCF с поддержкой Silverlight.</span><span class="sxs-lookup"><span data-stu-id="d9d48-162">You can then use **Add Service Reference** to add a client proxy of the service to the client, and exchange data between the Silverlight client and the Silverlight-enabled WCF service.</span></span>  
+  
+ <span data-ttu-id="d9d48-163">Чтобы открыть этот шаблон, щелкните правой кнопкой мыши проект веб-сайта или веб-приложения в **обозревателе решений**, нажмите кнопку **добавить новый элемент**и нажмите кнопку **служба WCF с поддержкой Silverlight**.</span><span class="sxs-lookup"><span data-stu-id="d9d48-163">To access this template, right-click a Web site or Web application project in **Solution Explorer**, click **Add a new item**, and click **Silverlight-enabled WCF Service**.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="d9d48-164">Служба WCF с поддержкой Silverlight предоставляет доступ к конечной точке `basicHttpBinding` без применения параметров безопасности.</span><span class="sxs-lookup"><span data-stu-id="d9d48-164">The Silverlight-enabled WCF Service exposes a `basicHttpBinding` endpoint without enabling any security settings.</span></span> <span data-ttu-id="d9d48-165">Поэтому сведения о службе могут быть получены всеми клиентами, которые подключены к этой службе.</span><span class="sxs-lookup"><span data-stu-id="d9d48-165">Therefore, information about the service can be obtained by all clients that connect to this service.</span></span> <span data-ttu-id="d9d48-166">Сообщения, которыми обмениваются служба и клиент, также не подписываются и не шифруются.</span><span class="sxs-lookup"><span data-stu-id="d9d48-166">Messages exchanged between the service and the client are also not signed or encrypted.</span></span> <span data-ttu-id="d9d48-167">Для защиты конечной точки необходимо использовать проверку подлинности ASP.NET, протокол HTTPS или другие механизмы.</span><span class="sxs-lookup"><span data-stu-id="d9d48-167">To secure the endpoint properly, you should use ASP.NET authentication, HTTPS or other mechanisms.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="d9d48-168">См. также</span><span class="sxs-lookup"><span data-stu-id="d9d48-168">See Also</span></span>  
+ [<span data-ttu-id="d9d48-169">Узел службы WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="d9d48-169">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [<span data-ttu-id="d9d48-170">Тестовый клиент WCF (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="d9d48-170">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

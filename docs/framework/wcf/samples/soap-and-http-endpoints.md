@@ -1,73 +1,76 @@
 ---
-title: "Конечные точки SOAP и HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Конечные точки SOAP и HTTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9404d304302360b2be590c814d1f94cb46bd5f84
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Конечные точки SOAP и HTTP
-Данный образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP или формате "Plain Old XML" \(POX\) с помощью модели веб\-программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Дополнительные сведения о привязке HTTP для этой службы см. в образце [Базовая служба HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md).  В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.  
+# <a name="soap-and-http-endpoints"></a><span data-ttu-id="bee74-102">Конечные точки SOAP и HTTP</span><span class="sxs-lookup"><span data-stu-id="bee74-102">SOAP and HTTP Endpoints</span></span>
+<span data-ttu-id="bee74-103">Этот образец демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и форматировать «Plain Old XML» (POX) с помощью [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] модели веб-программирования.</span><span class="sxs-lookup"><span data-stu-id="bee74-103">This sample demonstrates how to implement an RPC-based service and expose it in the SOAP format and the "Plain Old XML" (POX) format using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web Programming model.</span></span> <span data-ttu-id="bee74-104">В разделе [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец Дополнительные сведения о привязке HTTP для службы.</span><span class="sxs-lookup"><span data-stu-id="bee74-104">See the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample for more details about the HTTP binding for the service.</span></span> <span data-ttu-id="bee74-105">В данном образце акцент сделан на особенностях предоставления одной и той же службы через протокол SOAP и HTTP с использованием разных привязок.</span><span class="sxs-lookup"><span data-stu-id="bee74-105">This sample focuses on the details that pertain to exposing the same service over SOAP and HTTP using different bindings.</span></span>  
   
-## Демонстрации  
- Предоставление службы RPC через протокол SOAP и HTTP с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="demonstrates"></a><span data-ttu-id="bee74-106">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="bee74-106">Demonstrates</span></span>  
+ <span data-ttu-id="bee74-107">Предоставление службы RPC через протокол SOAP и HTTP с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bee74-107">Exposing an RPC service over SOAP and HTTP using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## Обсуждение  
- Данный образец состоит из двух компонентов: проекта веб\-приложения \(служба\), который содержит службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и консольного приложения \(клиент\), которое вызывает операции службы с использованием привязок протокола SOAP и HTTP.  
+## <a name="discussion"></a><span data-ttu-id="bee74-108">Обсуждение</span><span class="sxs-lookup"><span data-stu-id="bee74-108">Discussion</span></span>  
+ <span data-ttu-id="bee74-109">Данный образец состоит из двух компонентов: проекта веб-приложения (служба), который содержит службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и консольного приложения (клиент), которое вызывает операции службы с использованием привязок протокола SOAP и HTTP.</span><span class="sxs-lookup"><span data-stu-id="bee74-109">This sample consists of two components: a Web Application project (Service) that contains a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service and a console application (Client) that invokes service operations using SOAP and HTTP bindings.</span></span>  
   
- Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет 2 операции \- `GetData` и `PutData`, которые повторяют строку, переданную им на входе.  Операции службы помечены атрибутами <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>.  Эти атрибуты управляют HTTP\-проекцией операций.  Кроме того, они помечены атрибутом <xref:System.ServiceModel.OperationContractAttribute>, который позволяет предоставлять их через привязки протокола SOAP.  Метод службы `PutData` вызывает исключение <xref:System.ServiceModel.Web.WebFaultException>, которое отправляется обратно через HTTP с использованием кода состояния HTTP, а через SOAP как ошибка SOAP.  
+ <span data-ttu-id="bee74-110">Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предоставляет 2 операции - `GetData` и `PutData`, которые повторяют строку, переданную им на входе.</span><span class="sxs-lookup"><span data-stu-id="bee74-110">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service exposes 2 operations –`GetData` and `PutData` – that echo the string that was passed as input.</span></span> <span data-ttu-id="bee74-111">Операции службы помечены атрибутами <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="bee74-111">The service operations are annotated with <xref:System.ServiceModel.Web.WebGetAttribute> and <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="bee74-112">Эти атрибуты управляют HTTP-проекцией операций.</span><span class="sxs-lookup"><span data-stu-id="bee74-112">These attributes control the HTTP projection of these operations.</span></span> <span data-ttu-id="bee74-113">Кроме того, они помечены атрибутом <xref:System.ServiceModel.OperationContractAttribute>, который позволяет предоставлять их через привязки протокола SOAP.</span><span class="sxs-lookup"><span data-stu-id="bee74-113">In addition, they are annotated with <xref:System.ServiceModel.OperationContractAttribute>, which enables them to be exposed over SOAP bindings.</span></span> <span data-ttu-id="bee74-114">Метод службы `PutData` вызывает исключение <xref:System.ServiceModel.Web.WebFaultException>, которое отправляется обратно через HTTP с использованием кода состояния HTTP, а через SOAP как ошибка SOAP.</span><span class="sxs-lookup"><span data-stu-id="bee74-114">The service’s `PutData` method throws a <xref:System.ServiceModel.Web.WebFaultException>, which gets sent back over HTTP using the HTTP status code and gets sent back over SOAP as a SOAP fault.</span></span>  
   
- Файл Web.config конфигурирует для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следующие 3 конечные точки.  
+ <span data-ttu-id="bee74-115">Файл Web.config конфигурирует для службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] следующие 3 конечные точки.</span><span class="sxs-lookup"><span data-stu-id="bee74-115">The Web.config file configures the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service with 3 endpoints:</span></span>  
   
--   Конечная точка ~\/service.svc\/mex предоставляет доступ к метаданным службы клиентам на основе SOAP.  
+-   <span data-ttu-id="bee74-116">Конечная точка ~/service.svc/mex предоставляет доступ к метаданным службы клиентам на основе SOAP.</span><span class="sxs-lookup"><span data-stu-id="bee74-116">The ~/service.svc/mex endpoint that exposes the service metadata for access by SOAP-based clients.</span></span>  
   
--   Конечная точка ~\/service.svc\/http позволяет клиентам получать доступ к службе с использованием привязки HTTP.  
+-   <span data-ttu-id="bee74-117">Конечная точка ~/service.svc/http позволяет клиентам получать доступ к службе с использованием привязки HTTP.</span><span class="sxs-lookup"><span data-stu-id="bee74-117">The ~/service.svc/http endpoint that enables clients to access the service using the HTTP binding.</span></span>  
   
--   Конечная точка ~\/service.svc\/soap позволяет клиентам получать доступ к службе с использованием привязки протокола SOAP.  
+-   <span data-ttu-id="bee74-118">Конечная точка ~/service.svc/soap позволяет клиентам получать доступ к службе с использованием привязки протокола SOAP.</span><span class="sxs-lookup"><span data-stu-id="bee74-118">The ~/service.svc/soap endpoint that allows the clients to access the service using the SOAP over HTTP binding.</span></span>  
   
- Конечная точка HTTP настроена как стандартная конечная точка \<`webHttp`\> с атрибутом `helpEnabled`, имеющим значение `true`.  В результате этого служба предоставляет справочную страницу на основе XHTML по адресу ~\/service.svc\/http\/help, которую клиенты на основе HTTP могут использовать для доступа к службе.  
+ <span data-ttu-id="bee74-119">Конечная точка HTTP настроена как стандартная конечная точка <`webHttp`> с атрибутом `helpEnabled`, имеющим значение `true`.</span><span class="sxs-lookup"><span data-stu-id="bee74-119">The HTTP endpoint is configured with a <`webHttp`> standard endpoint which has `helpEnabled` set to `true`.</span></span> <span data-ttu-id="bee74-120">В результате этого служба предоставляет справочную страницу на основе XHTML по адресу ~/service.svc/http/help, которую клиенты на основе HTTP могут использовать для доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="bee74-120">As a result, the service exposes an XHTML based help page at ~/service.svc/http/help that HTTP-based clients can use to access the service.</span></span>  
   
- Клиентский проект демонстрирует доступ к службе с использованием прокси протокола SOAP \(сформированного с помощью команды **Добавить ссылку на службу**\) и доступ к службе с использованием клиента <xref:System.Net.WebClient>.  
+ <span data-ttu-id="bee74-121">Клиентский проект демонстрирует доступ к службе с помощью учетной записи-посредника SOAP (созданный с помощью **добавить ссылку на службу**) и доступ к службе с помощью <xref:System.Net.WebClient>.</span><span class="sxs-lookup"><span data-stu-id="bee74-121">The client project demonstrates accessing the service using a SOAP proxy (generated through **Add Service Reference**) and accessing the service using <xref:System.Net.WebClient>.</span></span>  
   
- Образец состоит из службы, размещенной на веб\-сервере, и консольного приложения.  Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
+ <span data-ttu-id="bee74-122">Образец состоит из службы, размещенной на веб-сервере, и консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="bee74-122">The sample consists of a Web-hosted service and a console application.</span></span> <span data-ttu-id="bee74-123">Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.</span><span class="sxs-lookup"><span data-stu-id="bee74-123">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### Выполнение образца  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="bee74-124">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="bee74-124">To run the sample</span></span>  
   
-1.  Откройте решение для образца «SOAP and HTTP Endpoints».  
+1.  <span data-ttu-id="bee74-125">Откройте решение для образца «SOAP and HTTP Endpoints».</span><span class="sxs-lookup"><span data-stu-id="bee74-125">Open the solution for the SOAP and HTTP Endpoints Sample.</span></span>  
   
-2.  Чтобы построить решение, нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="bee74-126">Чтобы построить решение, нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="bee74-126">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  Если окно **Обозреватель решений** не открыто, нажмите клавиши CTRL\+W, S, чтобы открыть его.  
+3.  <span data-ttu-id="bee74-127">Если он не открыт, нажмите клавиши CTRL + W, S, чтобы открыть **обозревателе решений** окна.</span><span class="sxs-lookup"><span data-stu-id="bee74-127">If it is not already open, press CTRL+W, S to open the **Solution Explorer** window.</span></span>  
   
-4.  В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **Service** и поместите курсор над пунктом контекстного меню **Отладка**, чтобы отобразить контекстное меню **Запустить новый экземпляр**.  Нажмите кнопку **Запустить новый экземпляр**.  Запускается сервер разработки ASP.NET, на котором размещается служба.  
+4.  <span data-ttu-id="bee74-128">Из **обозревателе решений** окно, щелкните правой кнопкой мыши **службы** проект и поместите курсор над **отладки** контекстного меню, чтобы **запуск нового Экземпляр** отобразить контекстное меню.</span><span class="sxs-lookup"><span data-stu-id="bee74-128">From the **Solution Explorer** window, right-click the **Service** project and place the cursor over the **Debug** context menu option so that the **Start New Instance** context menu appears.</span></span> <span data-ttu-id="bee74-129">Нажмите кнопку **запустить новый экземпляр**.</span><span class="sxs-lookup"><span data-stu-id="bee74-129">Click **Start New Instance**.</span></span> <span data-ttu-id="bee74-130">Запускается сервер разработки ASP.NET, на котором размещается служба.</span><span class="sxs-lookup"><span data-stu-id="bee74-130">This launches the ASP.NET development server, which hosts the service.</span></span>  
   
-5.  В окне обозревателя решений щелкните правой кнопкой мыши проект Client и поместите курсор над пунктом контекстного меню **Отладка**, чтобы отобразить контекстное меню **Запустить новый экземпляр**.  Нажмите кнопку **Запустить новый экземпляр**.  
+5.  <span data-ttu-id="bee74-131">Из обозревателя решений щелкните правой кнопкой мыши проект клиента и поместите курсор над **отладки** контекстного меню, чтобы **запустить новый экземпляр** отобразить контекстное меню.</span><span class="sxs-lookup"><span data-stu-id="bee74-131">From the Solution Explorer windows, right-click the Client project and place the cursor over the **Debug** context menu option so that the **Start New Instance** context menu appears.</span></span> <span data-ttu-id="bee74-132">Нажмите кнопку **запустить новый экземпляр**.</span><span class="sxs-lookup"><span data-stu-id="bee74-132">Click **Start New Instance**.</span></span>  
   
-6.  На клиенте открывается окно консоли с URI запущенной службы и URI HTML\-страницы справки для запущенной службы.  HTML\-страницу справки можно просмотреть в любой момент времени, введя URI этой страницы в браузере.  
+6.  <span data-ttu-id="bee74-133">На клиенте открывается окно консоли с URI запущенной службы и URI HTML-страницы справки для запущенной службы.</span><span class="sxs-lookup"><span data-stu-id="bee74-133">The client console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span> <span data-ttu-id="bee74-134">HTML-страницу справки можно просмотреть в любой момент времени, введя URI этой страницы в браузере.</span><span class="sxs-lookup"><span data-stu-id="bee74-134">At any point in time you can view the HTML help page by typing the URI of the help page in a browser.</span></span>  
   
-7.  Во время работы образца клиент записывает состояние текущего действия.  
+7.  <span data-ttu-id="bee74-135">Во время работы образца клиент записывает состояние текущего действия.</span><span class="sxs-lookup"><span data-stu-id="bee74-135">As the sample runs, the client writes the status of the current activity.</span></span>  
   
-8.  Чтобы завершить клиентское консольное приложение, нажмите любую клавишу.  
+8.  <span data-ttu-id="bee74-136">Чтобы завершить клиентское консольное приложение, нажмите любую клавишу.</span><span class="sxs-lookup"><span data-stu-id="bee74-136">Press any key to terminate the client console application.</span></span>  
   
-9. Чтобы прекратить отладку службы, нажмите клавиши SHIFT\+F5.  
+9. <span data-ttu-id="bee74-137">Чтобы прекратить отладку службы, нажмите клавиши SHIFT+F5.</span><span class="sxs-lookup"><span data-stu-id="bee74-137">Press SHIFT+F5 to stop debugging the service.</span></span>  
   
-10. В области уведомлений Windows щелкните правой кнопкой мыши значок сервера разработчика ASP.NET и выберите в контекстном меню пункт **Остановить**.  
+10. <span data-ttu-id="bee74-138">В области уведомлений Windows щелкните правой кнопкой мыши значок сервера разработки ASP.NET и выберите **остановить** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="bee74-138">In the Windows Notification Area, right-click the ASP.NET development server icon and select **Stop** from the context menu.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="bee74-139">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="bee74-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bee74-140">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="bee74-140">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="bee74-141">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="bee74-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bee74-142">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="bee74-142">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

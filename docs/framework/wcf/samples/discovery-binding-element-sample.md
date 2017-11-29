@@ -1,45 +1,48 @@
 ---
-title: "Образец элемента привязки для обнаружения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образец элемента привязки для обнаружения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 821f629a7f39869975af19c793fe26188a40d7d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец элемента привязки для обнаружения
-Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы.Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее.Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения.Данный образец состоит из следующих проектов.  
+# <a name="discovery-binding-element-sample"></a><span data-ttu-id="84e9a-102">Образец элемента привязки для обнаружения</span><span class="sxs-lookup"><span data-stu-id="84e9a-102">Discovery Binding Element Sample</span></span>
+<span data-ttu-id="84e9a-103">Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы.</span><span class="sxs-lookup"><span data-stu-id="84e9a-103">This sample demonstrates how to use the discovery client binding element to discover a service.</span></span> <span data-ttu-id="84e9a-104">Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее.</span><span class="sxs-lookup"><span data-stu-id="84e9a-104">This feature enables developers to add a discovery client channel to their existing client channel stack, making the programming model very intuitive.</span></span> <span data-ttu-id="84e9a-105">Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения.</span><span class="sxs-lookup"><span data-stu-id="84e9a-105">When the associated channel is opened, the address of the service is resolved using discovery.</span></span> <span data-ttu-id="84e9a-106">Данный образец состоит из следующих проектов.</span><span class="sxs-lookup"><span data-stu-id="84e9a-106">This sample consists of the following projects:</span></span>  
   
--   **CalculatorService**: доступная для обнаружения служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="84e9a-107">**CalculatorService**: доступная для обнаружения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.</span><span class="sxs-lookup"><span data-stu-id="84e9a-107">**CalculatorService**: A discoverable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
--   **CalculatorClient**: клиентское приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которое использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.  
+-   <span data-ttu-id="84e9a-108">**CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентское приложение, которое использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="84e9a-108">**CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses the discovery client channel to search for and call the CalculatorService.</span></span>  
   
--   **DynamicCalculatorClient**: клиентское приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которое использует динамическую конечную точку для поиска и вызова службы CalculatorService.  
+-   <span data-ttu-id="84e9a-109">**DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиентское приложение, использующее динамическую конечную точку для поиска и вызова службы CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="84e9a-109">**DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application that uses a dynamic endpoint to search for and call the CalculatorService.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="84e9a-110">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="84e9a-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="84e9a-111">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="84e9a-111">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="84e9a-112">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="84e9a-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="84e9a-113">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="84e9a-113">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
-## CalculatorService  
- Данный проект содержит простую службу калькулятора, которая реализует контракт `ICalculatorService`.  
+## <a name="calculatorservice"></a><span data-ttu-id="84e9a-114">CalculatorService</span><span class="sxs-lookup"><span data-stu-id="84e9a-114">CalculatorService</span></span>  
+ <span data-ttu-id="84e9a-115">Данный проект содержит простую службу калькулятора, которая реализует контракт `ICalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="84e9a-115">This project contains a simple calculator service that implements the `ICalculatorService` contract.</span></span>  
   
- Следующий файл App.config используется для добавления поведения `<serviceDiscovery>` в набор поведений службы, а также конечной точки обнаружения.  
+ <span data-ttu-id="84e9a-116">Следующий файл App.config используется для добавления поведения `<serviceDiscovery>` в набор поведений службы, а также конечной точки обнаружения.</span><span class="sxs-lookup"><span data-stu-id="84e9a-116">The following App.config file is used to add a `<serviceDiscovery>` behavior in the service behaviors as well as the discovery endpoint.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service behaviorConfiguration="CalculatorBehavior" name="Microsoft.Samples.Discovery.CalculatorService">  
@@ -58,7 +61,7 @@ caps.handback.revision: 12
   </system.serviceModel>  
 ```  
   
- При этом служба и ее конечные точки становятся доступными для обнаружения.Служба CalculatorService представляет собой саморазмещаемую службу, которая добавляет одну конечную точку с использованием привязки NetTcpBinding.Кроме того, она добавляет в конечную точку поведение `EndpointDiscoveryBehavior` и указывает область, как показано в следующем примере кода.  
+ <span data-ttu-id="84e9a-117">При этом служба и ее конечные точки становятся доступными для обнаружения.</span><span class="sxs-lookup"><span data-stu-id="84e9a-117">This makes the service and its endpoints discoverable.</span></span> <span data-ttu-id="84e9a-118">Служба CalculatorService представляет собой саморазмещаемую службу, которая добавляет одну конечную точку с использованием привязки NetTcpBinding.</span><span class="sxs-lookup"><span data-stu-id="84e9a-118">The CalculatorService is a self-hosted service that adds one endpoint using the NetTcpBinding binding.</span></span> <span data-ttu-id="84e9a-119">Кроме того, она добавляет в конечную точку поведение `EndpointDiscoveryBehavior` и указывает область, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="84e9a-119">It also adds an `EndpointDiscoveryBehavior` to the endpoint and specifies a scope as shown in the following code.</span></span>  
   
 ```  
 // Add a NET.TCP endpoint and add a scope to that endpoint.  
@@ -69,8 +72,8 @@ netTcpEndpoint.Behaviors.Add(netTctEndpointBehavior);
 serviceHost.Open();  
 ```  
   
-## CalculatorClient  
- Данный проект содержит реализацию клиента, которая отправляет сообщения службе CalculatorService.Эта программа использует метод `CreateCustomBindingWithDiscoveryElement()` для создания пользовательской привязки, которая использует клиентский канал обнаружения.  
+## <a name="calculatorclient"></a><span data-ttu-id="84e9a-120">CalculatorClient</span><span class="sxs-lookup"><span data-stu-id="84e9a-120">CalculatorClient</span></span>  
+ <span data-ttu-id="84e9a-121">Данный проект содержит реализацию клиента, которая отправляет сообщения службе CalculatorService.</span><span class="sxs-lookup"><span data-stu-id="84e9a-121">This project contains a client implementation that sends messages to the CalculatorService.</span></span> <span data-ttu-id="84e9a-122">Эта программа использует метод `CreateCustomBindingWithDiscoveryElement()` для создания пользовательской привязки, которая использует клиентский канал обнаружения.</span><span class="sxs-lookup"><span data-stu-id="84e9a-122">This program uses the `CreateCustomBindingWithDiscoveryElement()` method to create a custom binding that uses the Discovery Client Channel.</span></span>  
   
 ```  
 static CustomBinding CreateCustomBindingWithDiscoveryElement()  
@@ -89,7 +92,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы.В данном случае критерием обнаружения является тип `ICalculatorService`.Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб.Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Использование пользовательской привязки для клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ <span data-ttu-id="84e9a-123">После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы.</span><span class="sxs-lookup"><span data-stu-id="84e9a-123">After the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> is instantiated, the developer specifies the criteria to use when searching for a service.</span></span> <span data-ttu-id="84e9a-124">В данном случае критерием обнаружения является тип `ICalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="84e9a-124">In this case, the discovery find criterion is the `ICalculatorService` type.</span></span> <span data-ttu-id="84e9a-125">Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб.</span><span class="sxs-lookup"><span data-stu-id="84e9a-125">Additionally, the developer specifies a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> which returns a <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> that specifies where to look for the services.</span></span> <span data-ttu-id="84e9a-126">Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="84e9a-126">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> returns a new <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instance.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="84e9a-127">[Использование пользовательской привязки для клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span><span class="sxs-lookup"><span data-stu-id="84e9a-127"> [Using a Custom Binding with the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).</span></span>  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -104,27 +107,27 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
     }  
 ```  
   
- В данном случае клиент использует многоадресный механизм UDP, определенный в протоколе обнаружения, для поиска служб в локальной подсети.В оставшейся части метода создается пользовательская привязка, и элемент привязки обнаружения вставляется в верхушку стека.  
+ <span data-ttu-id="84e9a-128">В данном случае клиент использует многоадресный механизм UDP, определенный в протоколе обнаружения, для поиска служб в локальной подсети.</span><span class="sxs-lookup"><span data-stu-id="84e9a-128">In this case, the client uses the UDP multicast mechanism defined by the Discovery protocol to search for services on the local subnet.</span></span> <span data-ttu-id="84e9a-129">В оставшейся части метода создается пользовательская привязка, и элемент привязки обнаружения вставляется в верхушку стека.</span><span class="sxs-lookup"><span data-stu-id="84e9a-129">The remainder of the method creates a custom binding and inserts the Discovery binding element at the top of the stack.</span></span>  
   
 > [!NOTE]
->  Элемент <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> должен быть помещен в верхушку стека привязок.Любой элемент <xref:System.ServiceModel.Channels.BindingElement>, расположенный выше элемента <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, должен удостовериться, что создаваемые им фабрики каналов и каналы не используют свойства `EndpointAddress` и `Via`, поскольку фактический адрес становится известным только на уровне клиентского канала обнаружения.  
+>  <span data-ttu-id="84e9a-130">Элемент <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> должен быть помещен в верхушку стека привязок.</span><span class="sxs-lookup"><span data-stu-id="84e9a-130">The <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must be placed on the top of the binding stack.</span></span> <span data-ttu-id="84e9a-131">Любой элемент <xref:System.ServiceModel.Channels.BindingElement>, расположенный выше элемента <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, должен удостовериться, что создаваемые им фабрики каналов и каналы не используют свойства `EndpointAddress` и `Via`, поскольку фактический адрес становится известным только на уровне клиентского канала обнаружения.</span><span class="sxs-lookup"><span data-stu-id="84e9a-131">Any <xref:System.ServiceModel.Channels.BindingElement> on top of <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> must make sure that the channel factory or channel it creates does not use the `EndpointAddress` or `Via` properties, because the actual address is found only at the Discovery client channel.</span></span>  
   
- После этого можно создать экземпляр `CalculatorClient`, передав ему эту пользовательскую привязку и адрес конечной точки.  
+ <span data-ttu-id="84e9a-132">После этого можно создать экземпляр `CalculatorClient`, передав ему эту пользовательскую привязку и адрес конечной точки.</span><span class="sxs-lookup"><span data-stu-id="84e9a-132">Next, the `CalculatorClient` can be instantiated by passing in this custom binding as well as an endpoint address.</span></span>  
   
 ```  
 CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBindingWithDiscoveryElement(), DiscoveryClientBindingElement.DiscoveryEndpointAddress);  
 ```  
   
- При использовании клиентского канала обнаружения передается постоянный адрес конечной точки, заданный ранее.Во время выполнения клиентский канал обнаружения находит службу, указываемую критерием поиска, и подключается к ней.Для установления соединения между службой и клиентом они также должны иметь один и тот же базовый стек привязок.  
+ <span data-ttu-id="84e9a-133">При использовании клиентского канала обнаружения передается константный адрес конечной точки, заданный ранее.</span><span class="sxs-lookup"><span data-stu-id="84e9a-133">When using the Discovery Client Channel, the constant endpoint address specified previously is passed in.</span></span> <span data-ttu-id="84e9a-134">Во время выполнения клиентский канал обнаружения находит службу, указываемую критерием поиска, и подключается к ней.</span><span class="sxs-lookup"><span data-stu-id="84e9a-134">Now at runtime, the Discovery Client Channel finds the service specified by the find criteria and connects to it.</span></span> <span data-ttu-id="84e9a-135">Для установления соединения между службой и клиентом они также должны иметь один и тот же базовый стек привязок.</span><span class="sxs-lookup"><span data-stu-id="84e9a-135">For the service and the client to establish a connection, they must also have the same underlying binding stack.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="84e9a-136">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="84e9a-136">To use this sample</span></span>  
   
-1.  Откройте решение в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="84e9a-137">Откройте решение в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="84e9a-137">Open the solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  Постройте решение.  
+2.  <span data-ttu-id="84e9a-138">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="84e9a-138">Build the solution.</span></span>  
   
-3.  Запустите приложение службы и каждое из клиентских приложений.  
+3.  <span data-ttu-id="84e9a-139">Запустите приложение службы и каждое из клиентских приложений.</span><span class="sxs-lookup"><span data-stu-id="84e9a-139">Run the service application and each of the client applications.</span></span>  
   
-4.  Заметьте, что клиенту удалось найти службу, не зная ее адреса.  
+4.  <span data-ttu-id="84e9a-140">Заметьте, что клиенту удалось найти службу, не зная ее адреса.</span><span class="sxs-lookup"><span data-stu-id="84e9a-140">Observe that the client was able to find the service without knowing its address.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="84e9a-141">См. также</span><span class="sxs-lookup"><span data-stu-id="84e9a-141">See Also</span></span>

@@ -1,34 +1,38 @@
 ---
-title: "Варианты размещения рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Варианты размещения рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 06d39fc37d40747eef323d83f65426e015099913
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Варианты размещения рабочего процесса
-Большинство образцов [!INCLUDE[wf](../../../includes/wf-md.md)] используют рабочие процессы, размещенные в консольном приложении, но это не является реалистичным сценарием для реальных рабочих процессов.Рабочие процессы в реальных бизнес\-приложениях будут задействованы в постоянных процессах: службе Windows, созданной разработчиком, или серверном приложении, например [!INCLUDE[iisver](../../../includes/iisver-md.md)] или AppFabric.Между этими подходами имеются следующие различия.  
+# <a name="workflow-hosting-options"></a><span data-ttu-id="70788-102">Варианты размещения рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="70788-102">Workflow Hosting Options</span></span>
+<span data-ttu-id="70788-103">Большинство образцов [!INCLUDE[wf](../../../includes/wf-md.md)] используют рабочие процессы, размещенные в консольном приложении, но это не является реалистичным сценарием для реальных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="70788-103">Most of the [!INCLUDE[wf](../../../includes/wf-md.md)] samples use workflows that are hosted in a console application, but this isn't a realistic scenario for real-world workflows.</span></span> <span data-ttu-id="70788-104">Рабочие процессы в реальных бизнес-приложениях будут задействованы в постоянных процессах: службе Windows, созданной разработчиком, или серверном приложении, например [!INCLUDE[iisver](../../../includes/iisver-md.md)] или AppFabric.</span><span class="sxs-lookup"><span data-stu-id="70788-104">Workflows in actual business applications will be hosted in persistent processes- either a Windows service authored by the developer, or a server application such as [!INCLUDE[iisver](../../../includes/iisver-md.md)] or AppFabric.</span></span> <span data-ttu-id="70788-105">Между этими подходами имеются следующие различия.</span><span class="sxs-lookup"><span data-stu-id="70788-105">The differences between these approaches are as follows.</span></span>  
   
-## Размещение рабочих процессов в службах IIS с Windows AppFabric  
- IIS с AppFabric является предпочитаемым расположением для рабочих процессов.Ведущее приложение для рабочих процессов с помощью AppFabric — служба активации Windows, которая устраняет зависимость от HTTP только по IIS.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a><span data-ttu-id="70788-106">Размещение рабочих процессов в службах IIS с Windows AppFabric</span><span class="sxs-lookup"><span data-stu-id="70788-106">Hosting workflows in IIS with Windows AppFabric</span></span>  
+ <span data-ttu-id="70788-107">IIS с AppFabric является предпочитаемым расположением для рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="70788-107">Using IIS with AppFabric is the preferred host for workflows.</span></span> <span data-ttu-id="70788-108">Ведущее приложение для рабочих процессов с помощью AppFabric - служба активации Windows, которая устраняет зависимость от HTTP только по IIS.</span><span class="sxs-lookup"><span data-stu-id="70788-108">The host application for workflows using AppFabric is Windows Activation Service, which removes the dependency on HTTP over IIS alone.</span></span>  
   
-## Размещение рабочих процессов только в службах IIS  
- Использование одного [!INCLUDE[iisver](../../../includes/iisver-md.md)] не рекомендуется, поскольку в AppFabric имеются средства управления и наблюдения, которые облегчают обслуживание выполняющихся приложений.Рабочие процессы должны размещаться только лишь в [!INCLUDE[iisver](../../../includes/iisver-md.md)] при наличии проблем инфраструктуры, связанных с перемещением в AppFabric.  
+## <a name="hosting-workflows-in-iis-alone"></a><span data-ttu-id="70788-109">Размещение рабочих процессов только в службах IIS</span><span class="sxs-lookup"><span data-stu-id="70788-109">Hosting workflows in IIS alone</span></span>  
+ <span data-ttu-id="70788-110">Использование одного [!INCLUDE[iisver](../../../includes/iisver-md.md)] не рекомендуется, поскольку в AppFabric имеются средства управления и наблюдения, которые облегчают обслуживание выполняющихся приложений.</span><span class="sxs-lookup"><span data-stu-id="70788-110">Using [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone is not recommended, as there are management and monitoring tools available with AppFabric that facilitate maintenance of running applications.</span></span> <span data-ttu-id="70788-111">Рабочие процессы должны размещаться только лишь в [!INCLUDE[iisver](../../../includes/iisver-md.md)] при наличии проблем инфраструктуры, связанных с перемещением в AppFabric.</span><span class="sxs-lookup"><span data-stu-id="70788-111">Workflows should only be hosted in [!INCLUDE[iisver](../../../includes/iisver-md.md)] alone if there are infrastructure concerns with moving to AppFabric.</span></span>  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] периодически перезапускает пулы приложений по различным причинам.При перезапуске пула приложений IIS прекращает прием сообщений старым пулом и создает новый пул приложений, чтобы принимать новые запросы.Если рабочий процесс продолжает работу после отправки ответа, [!INCLUDE[iisver](../../../includes/iisver-md.md)] не будет знать о выполняемой работе и может перезапустить размещение пула приложений.В этом случае рабочий процесс прервется и службы отслеживания зарегистрируют сообщение [1004 \- WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation//1004-workflowinstanceaborted.md) с пустым полем причины.  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)]<span data-ttu-id="70788-112"> периодически перезапускает пулы приложений по различным причинам.</span><span class="sxs-lookup"><span data-stu-id="70788-112"> recycles application pools periodically for various reasons.</span></span> <span data-ttu-id="70788-113">При перезапуске пула приложений IIS прекращает прием сообщений старым пулом и создает новый пул приложений, чтобы принимать новые запросы.</span><span class="sxs-lookup"><span data-stu-id="70788-113">When an application pool is recycled, IIS stops accepting messages to the old pool, and instantiates a new application pool to accept new requests.</span></span> <span data-ttu-id="70788-114">Если рабочий процесс продолжает работу после отправки ответа, [!INCLUDE[iisver](../../../includes/iisver-md.md)] не будет знать о выполняемой работе и может перезапустить размещение пула приложений.</span><span class="sxs-lookup"><span data-stu-id="70788-114">If a workflow continues working after sending a response, [!INCLUDE[iisver](../../../includes/iisver-md.md)] will not be aware of the work being done, and may recycle the hosting application pool.</span></span> <span data-ttu-id="70788-115">Если это происходит, рабочий процесс будет прерван и отслеживание служб будет записывать [1004 — WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) сообщение с пустым полем причины.</span><span class="sxs-lookup"><span data-stu-id="70788-115">If this happens, the workflow will abort, and tracking services will record a [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) message with an empty Reason field.</span></span>  
 >   
->  Если используется сохраняемость, узел должен явно перезапустить прерванные экземпляры с последней точки сохраняемости.  
+>  <span data-ttu-id="70788-116">Если используется сохраняемость, узел должен явно перезапустить прерванные экземпляры с последней точки сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="70788-116">If persistence is used, the host must explicitly restart aborted instances from the last persistence point.</span></span>  
 >   
->  Если используется AppFabric и сохраняемость, служба управления рабочими процессами в конечном счете возобновит рабочий процесс с последней успешной точки сохраняемости.Если сохраняемость не используется и рабочий процесс выполняет операции вне шаблона «запрос\-ответ», то данные будут потеряны при отмене рабочего процесса.  
+>  <span data-ttu-id="70788-117">Если используется AppFabric и сохраняемость, служба управления рабочими процессами в конечном счете возобновит рабочий процесс с последней успешной точки сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="70788-117">If AppFabric is used, the workflow management service will eventually resume the workflow from the last successful persistence point if persistence is used.</span></span> <span data-ttu-id="70788-118">Если сохраняемость не используется и рабочий процесс выполняет операции вне шаблона «запрос-ответ», то данные будут потеряны при отмене рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="70788-118">If no persistence is used, and the workflow performs operations outside a Request/Response pattern, data will be lost when the workflow aborts.</span></span>  
   
-## Размещение рабочего процесса в пользовательской службе Windows  
- Создание пользовательской службы рабочего процесса для его размещения потребует от разработчика дублирования многих функциональных возможностей, предоставляемых готовым AppFabric, однако обеспечит большую гибкость за счет дополнительных функций.Этот вариант следует рассматривать, только если AppFabric не является дополнительным средством.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a><span data-ttu-id="70788-119">Размещение рабочего процесса в пользовательской службе Windows</span><span class="sxs-lookup"><span data-stu-id="70788-119">Hosting a workflow in a custom Windows Service</span></span>  
+ <span data-ttu-id="70788-120">Создание пользовательской службы рабочего процесса для его размещения потребует от разработчика дублирования многих функциональных возможностей, предоставляемых готовым AppFabric, однако обеспечит большую гибкость за счет дополнительных функций.</span><span class="sxs-lookup"><span data-stu-id="70788-120">Creating a custom workflow service to host the workflow will require the developer to duplicate a lot of the functionality provided out-of-box by AppFabric, but will allow for more flexibility with custom functionality.</span></span> <span data-ttu-id="70788-121">Этот вариант следует рассматривать, только если AppFabric не является дополнительным средством.</span><span class="sxs-lookup"><span data-stu-id="70788-121">This option should only be considered if AppFabric proves to not be an option.</span></span>

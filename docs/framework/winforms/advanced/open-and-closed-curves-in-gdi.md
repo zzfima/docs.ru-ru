@@ -1,63 +1,67 @@
 ---
-title: "Замкнутые и незамкнутые кривые в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "кривые"
-  - "кривые, рисование"
-  - "кривые, заполнение"
-  - "GDI+, кривые"
+title: "Замкнутые и незамкнутые кривые в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- curves [Windows Forms], filling
+- GDI+, curves
+- curves [Windows Forms], drawing
+- curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14da32848978299a0d0651596bbfbfe17c2e0d53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Замкнутые и незамкнутые кривые в GDI+
-На приведенном ниже рисунке изображены две кривые: открытая и замкнутая.  
+# <a name="open-and-closed-curves-in-gdi"></a><span data-ttu-id="21475-102">Замкнутые и незамкнутые кривые в GDI+</span><span class="sxs-lookup"><span data-stu-id="21475-102">Open and Closed Curves in GDI+</span></span>
+<span data-ttu-id="21475-103">На следующем рисунке показано две кривые: открытая и закрытая.</span><span class="sxs-lookup"><span data-stu-id="21475-103">The following illustration shows two curves: one open and one closed.</span></span>  
   
- ![Замкнутые и незамкнутые кривые](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.png "Aboutgdip02\_art24")  
+ <span data-ttu-id="21475-104">![Замкнутые и незамкнутые кривые](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.gif "Aboutgdip02_art24")</span><span class="sxs-lookup"><span data-stu-id="21475-104">![Open & Closed curves](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.gif "Aboutgdip02_art24")</span></span>  
   
-## Управляемый интерфейс для кривых  
- У замкнутых кривых есть внутренняя область, которую можно залить с использованием кисти.  Класс <xref:System.Drawing.Graphics> интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит следующие методы для заливки замкнутых фигур и кривых: <xref:System.Drawing.Graphics.FillRectangle%2A> \(прямые линии\), <xref:System.Drawing.Graphics.FillEllipse%2A> \(прямоугольники\), <xref:System.Drawing.Graphics.FillPie%2A> \(эллипсы\), <xref:System.Drawing.Graphics.FillPolygon%2A> \(многоугольники\), <xref:System.Drawing.Graphics.FillClosedCurve%2A> \(дуги\), <xref:System.Drawing.Graphics.FillPath%2A> \(фундаментальные сплайны\) и <xref:System.Drawing.Graphics.FillRegion%2A> \(сплайны Безье\).  При вызове одного из этих методов необходимо передавать им в качестве аргумента тип кисти \(<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush> или <xref:System.Drawing.Drawing2D.PathGradientBrush>\).  
+## <a name="managed-interface-for-curves"></a><span data-ttu-id="21475-105">Управляемый интерфейс для кривых</span><span class="sxs-lookup"><span data-stu-id="21475-105">Managed Interface for Curves</span></span>  
+ <span data-ttu-id="21475-106">Замкнутых кривых есть внутренняя область, поэтому можно заполнить кисти.</span><span class="sxs-lookup"><span data-stu-id="21475-106">Closed curves have an interior and therefore can be filled with a brush.</span></span> <span data-ttu-id="21475-107"><xref:System.Drawing.Graphics> Класса в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет следующие методы для заполнения замкнутые фигуры и кривых: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, и <xref:System.Drawing.Graphics.FillRegion%2A>.</span><span class="sxs-lookup"><span data-stu-id="21475-107">The <xref:System.Drawing.Graphics> class in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] provides the following methods for filling closed shapes and curves: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, and <xref:System.Drawing.Graphics.FillRegion%2A>.</span></span> <span data-ttu-id="21475-108">При вызове одного из этих методов, необходимо передать тип кисти (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, или <xref:System.Drawing.Drawing2D.PathGradientBrush>) в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="21475-108">Whenever you call one of these methods, you must pass one of the specific brush types (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, or <xref:System.Drawing.Drawing2D.PathGradientBrush>) as an argument.</span></span>  
   
- Метод <xref:System.Drawing.Graphics.FillPie%2A> является дополнением к методу <xref:System.Drawing.Graphics.DrawArc%2A>.  Метод <xref:System.Drawing.Graphics.DrawArc%2A> служит для рисования части контура эллипса, а метод <xref:System.Drawing.Graphics.FillPie%2A> — для заливки части внутренней области эллипса.  В приведенном ниже примере демонстрируется рисование дуги и заливка соответствующей части внутренней области эллипса.  
+ <span data-ttu-id="21475-109"><xref:System.Drawing.Graphics.FillPie%2A> Метод является вспомогательным для <xref:System.Drawing.Graphics.DrawArc%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="21475-109">The <xref:System.Drawing.Graphics.FillPie%2A> method is a companion to the <xref:System.Drawing.Graphics.DrawArc%2A> method.</span></span> <span data-ttu-id="21475-110">Так же, как <xref:System.Drawing.Graphics.DrawArc%2A> метод формирует части контура эллипса, <xref:System.Drawing.Graphics.FillPie%2A> метод заполняет внутреннюю часть эллипса часть.</span><span class="sxs-lookup"><span data-stu-id="21475-110">Just as the <xref:System.Drawing.Graphics.DrawArc%2A> method draws a portion of the outline of an ellipse, the <xref:System.Drawing.Graphics.FillPie%2A> method fills a portion of the interior of an ellipse.</span></span> <span data-ttu-id="21475-111">В следующем примере рисуется дуга и заполняет внутреннюю часть эллипса соответствующей части:</span><span class="sxs-lookup"><span data-stu-id="21475-111">The following example draws an arc and fills the corresponding portion of the interior of the ellipse:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#21)]
  [!code-vb[LinesCurvesAndShapes#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#21)]  
   
- На приведенном ниже рисунке изображена полученная дуга и залитый сектор.  
+ <span data-ttu-id="21475-112">На следующем рисунке дуга и закрашенный сектор.</span><span class="sxs-lookup"><span data-stu-id="21475-112">The following illustration shows the arc and the filled pie.</span></span>  
   
- ![Замкнутые и незамкнутые кривые](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.png "Aboutgdip02\_art25")  
+ <span data-ttu-id="21475-113">![Замкнутые и незамкнутые кривые](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.gif "Aboutgdip02_art25")</span><span class="sxs-lookup"><span data-stu-id="21475-113">![Open & Closed curves](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.gif "Aboutgdip02_art25")</span></span>  
   
- Метод <xref:System.Drawing.Graphics.FillClosedCurve%2A> является дополнением к методу <xref:System.Drawing.Graphics.DrawClosedCurve%2A>.  Оба метода автоматически замыкают кривую путем соединения конечной и начальной точки.  В приведенном ниже примере демонстрируется рисование кривой через точки с координатами \(0, 0\), \(60, 20\) и \(40, 50\).  Затем кривая автоматически замыкается путем соединения точки с координатами \(40, 50\) с начальной точкой с координатами \(0, 0\), а внутренняя область закрашивается сплошным цветом.  
+ <span data-ttu-id="21475-114"><xref:System.Drawing.Graphics.FillClosedCurve%2A> Метод является вспомогательным для <xref:System.Drawing.Graphics.DrawClosedCurve%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="21475-114">The <xref:System.Drawing.Graphics.FillClosedCurve%2A> method is a companion to the <xref:System.Drawing.Graphics.DrawClosedCurve%2A> method.</span></span> <span data-ttu-id="21475-115">Оба метода автоматически закрывать кривой, подключившись к начальной точке конечной точки.</span><span class="sxs-lookup"><span data-stu-id="21475-115">Both methods automatically close the curve by connecting the ending point to the starting point.</span></span> <span data-ttu-id="21475-116">В следующем примере рисуется кривой, проходящей через (0, 0), (60, 20) и (40, 50).</span><span class="sxs-lookup"><span data-stu-id="21475-116">The following example draws a curve that passes through (0, 0), (60, 20), and (40, 50).</span></span> <span data-ttu-id="21475-117">Затем кривая автоматически закрывается путем подключения (40, 50) до начальной точки (0, 0), а внутренняя область заполняется сплошным цветом.</span><span class="sxs-lookup"><span data-stu-id="21475-117">Then, the curve is automatically closed by connecting (40, 50) to the starting point (0, 0), and the interior is filled with a solid color.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#22)]
  [!code-vb[LinesCurvesAndShapes#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#22)]  
   
- Метод <xref:System.Drawing.Graphics.FillPath%2A> заливает внутренние области различных частей контура.  Если часть контура не образует замкнутую кривую, метод <xref:System.Drawing.Graphics.FillPath%2A> автоматически замыкает эту часть контура перед началом заливки.  В приведенном ниже примере демонстрируются рисование и заливка контура, состоящего из дуги, фундаментального сплайна, строки и сектора.  
+ <span data-ttu-id="21475-118"><xref:System.Drawing.Graphics.FillPath%2A> Метод заполняет внутреннюю часть различных частей пути.</span><span class="sxs-lookup"><span data-stu-id="21475-118">The <xref:System.Drawing.Graphics.FillPath%2A> method fills the interiors of the separate pieces of a path.</span></span> <span data-ttu-id="21475-119">Если часть контура не образует замкнутую кривую, <xref:System.Drawing.Graphics.FillPath%2A> метод автоматически замыкает эту часть пути до его заполнения.</span><span class="sxs-lookup"><span data-stu-id="21475-119">If a piece of a path doesn't form a closed curve or shape, the <xref:System.Drawing.Graphics.FillPath%2A> method automatically closes that piece of the path before filling it.</span></span> <span data-ttu-id="21475-120">В следующем примере рисование и Заливка контура, состоит из дуги, фундаментальный сплайн, строка и сектора:</span><span class="sxs-lookup"><span data-stu-id="21475-120">The following example draws and fills a path that consists of an arc, a cardinal spline, a string, and a pie:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#23)]
  [!code-vb[LinesCurvesAndShapes#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#23)]  
   
- На приведенном ниже рисунке изображен контур, залитый с использованием сплошного цвета, и вариант такого контура без заливки.  Обратите внимание, что метод <xref:System.Drawing.Graphics.DrawPath%2A> отображает текст строки в виде контуров символов, но не закрашивает эти контуры.  Внутренние области знаков строки закрашиваются методом <xref:System.Drawing.Graphics.FillPath%2A>.  
+ <span data-ttu-id="21475-121">Ниже показан путь с и без сплошной заливки.</span><span class="sxs-lookup"><span data-stu-id="21475-121">The following illustration shows the path with and without the solid fill.</span></span> <span data-ttu-id="21475-122">Обратите внимание, что текст в строке описанные, но не заданы, <xref:System.Drawing.Graphics.DrawPath%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="21475-122">Note that the text in the string is outlined, but not filled, by the <xref:System.Drawing.Graphics.DrawPath%2A> method.</span></span> <span data-ttu-id="21475-123">Это <xref:System.Drawing.Graphics.FillPath%2A> метод закрашиваются символов в строке.</span><span class="sxs-lookup"><span data-stu-id="21475-123">It is the <xref:System.Drawing.Graphics.FillPath%2A> method that paints the interiors of the characters in the string.</span></span>  
   
- ![Строка в пути](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.png "Aboutgdip02\_art26")  
+ <span data-ttu-id="21475-124">![Строка в пути](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")</span><span class="sxs-lookup"><span data-stu-id="21475-124">![String in a path](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")</span></span>  
   
-## См. также  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Point?displayProperty=fullName>   
- [Прямые и кривые линии и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Построение и рисование контуров](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+## <a name="see-also"></a><span data-ttu-id="21475-125">См. также</span><span class="sxs-lookup"><span data-stu-id="21475-125">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Point?displayProperty=nameWithType>  
+ [<span data-ttu-id="21475-126">Линии, кривые и фигуры</span><span class="sxs-lookup"><span data-stu-id="21475-126">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="21475-127">Практическое руководство. Создание графических объектов для рисования</span><span class="sxs-lookup"><span data-stu-id="21475-127">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="21475-128">Построение и рисование контуров</span><span class="sxs-lookup"><span data-stu-id="21475-128">Constructing and Drawing Paths</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

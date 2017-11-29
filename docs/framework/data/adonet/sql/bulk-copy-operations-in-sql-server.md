@@ -1,50 +1,53 @@
 ---
-title: "Операции массового копирования в SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Операции массового копирования в SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31da2fbc7dca4c0c2c077991ddec39e8979b08b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Операции массового копирования в SQL Server
-Microsoft SQL Server включает в себя распространенную программу командной строки **bcp**, обеспечивающую быстрое массовое копирование файлов большого объема в таблицы или представления баз данных SQL Server.  Класс <xref:System.Data.SqlClient.SqlBulkCopy> позволяет разрабатывать решения на управляемом коде, обеспечивающие аналогичную функциональность.  Существуют другие способы загрузки данных в таблицу SQL Server \(например, инструкция INSERT\), но класс <xref:System.Data.SqlClient.SqlBulkCopy> существенно превосходит их по производительности.  
+# <a name="bulk-copy-operations-in-sql-server"></a><span data-ttu-id="42e88-102">Операции массового копирования в SQL Server</span><span class="sxs-lookup"><span data-stu-id="42e88-102">Bulk Copy Operations in SQL Server</span></span>
+<span data-ttu-id="42e88-103">Microsoft SQL Server включает популярную программу командной строки **bcp** обеспечивающую быстрое массовое копирование больших файлов в таблицы или представления в базах данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="42e88-103">Microsoft SQL Server includes a popular command-line utility named **bcp** for quickly bulk copying large files into tables or views in SQL Server databases.</span></span> <span data-ttu-id="42e88-104">Класс <xref:System.Data.SqlClient.SqlBulkCopy> позволяет разрабатывать решения на управляемом коде, обеспечивающие аналогичную функциональность.</span><span class="sxs-lookup"><span data-stu-id="42e88-104">The <xref:System.Data.SqlClient.SqlBulkCopy> class allows you to write managed code solutions that provide similar functionality.</span></span> <span data-ttu-id="42e88-105">Существуют другие способы загрузки данных в таблицу SQL Server (например, инструкция INSERT), но класс <xref:System.Data.SqlClient.SqlBulkCopy> существенно превосходит их по производительности.</span><span class="sxs-lookup"><span data-stu-id="42e88-105">There are other ways to load data into a SQL Server table (INSERT statements, for example) but <xref:System.Data.SqlClient.SqlBulkCopy> offers a significant performance advantage over them.</span></span>  
   
- Класс <xref:System.Data.SqlClient.SqlBulkCopy> может использоваться для записи данных только в таблицы SQL Server.  SQL Server не является единственным источником данных. Можно использовать любой источник данных при условии, что данные можно будет загрузить в экземпляр <xref:System.Data.DataTable> или считать экземпляром <xref:System.Data.IDataReader>.  
+ <span data-ttu-id="42e88-106">Класс <xref:System.Data.SqlClient.SqlBulkCopy> может использоваться для записи данных только в таблицы SQL Server.</span><span class="sxs-lookup"><span data-stu-id="42e88-106">The <xref:System.Data.SqlClient.SqlBulkCopy> class can be used to write data only to SQL Server tables.</span></span> <span data-ttu-id="42e88-107">SQL Server не является единственным источником данных. Можно использовать любой источник данных при условии, что данные можно будет загрузить в экземпляр <xref:System.Data.DataTable> или считать экземпляром <xref:System.Data.IDataReader>.</span><span class="sxs-lookup"><span data-stu-id="42e88-107">But the data source is not limited to SQL Server; any data source can be used, as long as the data can be loaded to a <xref:System.Data.DataTable> instance or read with a <xref:System.Data.IDataReader> instance.</span></span>  
   
- При помощи класса <xref:System.Data.SqlClient.SqlBulkCopy> можно выполнить следующие операции.  
+ <span data-ttu-id="42e88-108">При помощи класса <xref:System.Data.SqlClient.SqlBulkCopy> можно выполнить следующие операции.</span><span class="sxs-lookup"><span data-stu-id="42e88-108">Using the <xref:System.Data.SqlClient.SqlBulkCopy> class, you can perform:</span></span>  
   
--   Отдельную операцию массового копирования.  
+-   <span data-ttu-id="42e88-109">Отдельную операцию массового копирования.</span><span class="sxs-lookup"><span data-stu-id="42e88-109">A single bulk copy operation</span></span>  
   
--   Несколько операций массового копирования.  
+-   <span data-ttu-id="42e88-110">Несколько операций массового копирования.</span><span class="sxs-lookup"><span data-stu-id="42e88-110">Multiple bulk copy operations</span></span>  
   
--   Операцию массового копирования внутри транзакции.  
+-   <span data-ttu-id="42e88-111">Операцию массового копирования внутри транзакции.</span><span class="sxs-lookup"><span data-stu-id="42e88-111">A bulk copy operation within a transaction</span></span>  
   
 > [!NOTE]
->  При использовании платформы .NET Framework 1.1 или более ранней версии \(не поддерживающей класс <xref:System.Data.SqlClient.SqlBulkCopy>\) инструкцию SQL Server Transact\-SQL **BULK INSERT** можно выполнить при помощи объекта <xref:System.Data.SqlClient.SqlCommand>.  
+>  <span data-ttu-id="42e88-112">При использовании .NET Framework версии 1.1 или более ранней версии (который не поддерживает <xref:System.Data.SqlClient.SqlBulkCopy> класса), можно выполнить SQL Server Transact-SQL **BULK INSERT** инструкции с помощью <xref:System.Data.SqlClient.SqlCommand> объекта.</span><span class="sxs-lookup"><span data-stu-id="42e88-112">When using .NET Framework version 1.1 or earlier (which does not support the <xref:System.Data.SqlClient.SqlBulkCopy> class), you can execute the SQL Server Transact-SQL **BULK INSERT** statement using the <xref:System.Data.SqlClient.SqlCommand> object.</span></span>  
   
-## В этом подразделе  
- [Подготовка к выполнению примера массового копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
- Описывает таблицы, используемые в примерах массового копирования, и содержит скрипты SQL для создания таблиц в базе данных AdventureWorks.  
+## <a name="in-this-section"></a><span data-ttu-id="42e88-113">Содержание</span><span class="sxs-lookup"><span data-stu-id="42e88-113">In This Section</span></span>  
+ [<span data-ttu-id="42e88-114">Пример настройки массового копирования</span><span class="sxs-lookup"><span data-stu-id="42e88-114">Bulk Copy Example Setup</span></span>](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
+ <span data-ttu-id="42e88-115">Описывает таблицы, используемые в примерах массового копирования, и содержит скрипты SQL для создания таблиц в базе данных AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="42e88-115">Describes the tables used in the bulk copy examples and provides SQL scripts for creating the tables in the AdventureWorks database.</span></span>  
   
- [Отдельные операции массового копирования](../../../../../docs/framework/data/adonet/sql/single-bulk-copy-operations.md)  
- Описывает выполнение отдельной операции массового копирования данных в экземпляр SQL Server с помощью класса <xref:System.Data.SqlClient.SqlBulkCopy> и операции массового копирования с помощью инструкций Transact\-SQL и класса <xref:System.Data.SqlClient.SqlCommand>.  
+ [<span data-ttu-id="42e88-116">Отдельные операции массового копирования</span><span class="sxs-lookup"><span data-stu-id="42e88-116">Single Bulk Copy Operations</span></span>](../../../../../docs/framework/data/adonet/sql/single-bulk-copy-operations.md)  
+ <span data-ttu-id="42e88-117">Описывает выполнение отдельной операции массового копирования данных в экземпляр SQL Server с помощью класса <xref:System.Data.SqlClient.SqlBulkCopy> и операции массового копирования с помощью инструкций Transact-SQL и класса <xref:System.Data.SqlClient.SqlCommand>.</span><span class="sxs-lookup"><span data-stu-id="42e88-117">Describes how to do a single bulk copy of data into an instance of SQL Server using the <xref:System.Data.SqlClient.SqlBulkCopy> class, and how to perform the bulk copy operation using Transact-SQL statements and the <xref:System.Data.SqlClient.SqlCommand> class.</span></span>  
   
- [Проведение нескольких операций массового копирования](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
- Описывает выполнение нескольких операций массового копирования данных в экземпляр SQL Server с помощью класса <xref:System.Data.SqlClient.SqlBulkCopy>.  
+ [<span data-ttu-id="42e88-118">Несколько операций массового копирования</span><span class="sxs-lookup"><span data-stu-id="42e88-118">Multiple Bulk Copy Operations</span></span>](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
+ <span data-ttu-id="42e88-119">Описывает выполнение нескольких операций массового копирования данных в экземпляр SQL Server с помощью класса <xref:System.Data.SqlClient.SqlBulkCopy>.</span><span class="sxs-lookup"><span data-stu-id="42e88-119">Describes how to do multiple bulk copy operations of data into an instance of SQL Server using the <xref:System.Data.SqlClient.SqlBulkCopy> class.</span></span>  
   
- [Операции транзакций и массового копирования](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
- Описывает выполнение операции массового копирования внутри транзакции, включая фиксацию или откат транзакции.  
+ [<span data-ttu-id="42e88-120">Транзакции и операции массового копирования</span><span class="sxs-lookup"><span data-stu-id="42e88-120">Transaction and Bulk Copy Operations</span></span>](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
+ <span data-ttu-id="42e88-121">Описывает выполнение операции массового копирования внутри транзакции, включая фиксацию или откат транзакции.</span><span class="sxs-lookup"><span data-stu-id="42e88-121">Describes how to perform a bulk copy operation within a transaction, including how to commit or rollback the transaction.</span></span>  
   
-## См. также  
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="42e88-122">См. также</span><span class="sxs-lookup"><span data-stu-id="42e88-122">See Also</span></span>  
+ [<span data-ttu-id="42e88-123">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="42e88-123">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="42e88-124">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="42e88-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

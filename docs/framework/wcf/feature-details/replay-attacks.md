@@ -1,52 +1,55 @@
 ---
-title: "Атаки с повторением | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Атаки с повторением"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81bca4572b6c4845674c63284f93c86fe5925bdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Атаки с повторением
-*Атака воспроизведения* заключается в том, что злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одной или нескольких сторон.Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как допустимые сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
+# <a name="replay-attacks"></a><span data-ttu-id="ed894-102">Атаки с повторением</span><span class="sxs-lookup"><span data-stu-id="ed894-102">Replay Attacks</span></span>
+<span data-ttu-id="ed894-103">Объект *атака воспроизведения* возникает, когда злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одного или нескольких сторон.</span><span class="sxs-lookup"><span data-stu-id="ed894-103">A *replay attack* occurs when an attacker copies a stream of messages between two parties and replays the stream to one or more of the parties.</span></span> <span data-ttu-id="ed894-104">Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как допустимые сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.</span><span class="sxs-lookup"><span data-stu-id="ed894-104">Unless mitigated, the computers subject to the attack process the stream as legitimate messages, resulting in a range of bad consequences, such as redundant orders of an item.</span></span>  
   
-## Привязки могут подвергаться атакам отражения  
- *Атаки отражения* представляют собой воспроизведение сообщений обратно отправителю так, как будто они поступают в виде ответа от получателя.Стандартный механизм *обнаружения воспроизведения*[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] не обрабатывает такие атаки автоматически.  
+## <a name="bindings-may-be-subject-to-reflection-attacks"></a><span data-ttu-id="ed894-105">Привязки могут подвергаться атакам отражения</span><span class="sxs-lookup"><span data-stu-id="ed894-105">Bindings May Be Subject to Reflection Attacks</span></span>  
+ <span data-ttu-id="ed894-106">*Атаки отражения* представляют собой воспроизведение сообщений обратно отправителю, как будто они поступают от получателя в качестве ответа.</span><span class="sxs-lookup"><span data-stu-id="ed894-106">*Reflection attacks* are replays of messages back to a sender as if they came from the receiver as the reply.</span></span> <span data-ttu-id="ed894-107">Стандартные *обнаружения воспроизведения* в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] механизм не автоматически обрабатывать такие ошибки.</span><span class="sxs-lookup"><span data-stu-id="ed894-107">The standard *replay detection* in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mechanism does not automatically handle this.</span></span>  
   
- Атаки отражения предотвращаются по умолчанию, поскольку модель службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавляет в сообщения запроса подписанный идентификатор сообщения и ожидает получить в сообщениях ответов подписанный заголовок `relates-to`.В результате сообщение запроса не может быть воспроизведено в качестве ответа.В сценариях защищенного надежного обмена сообщениями \(RM\) для предотвращения атак отражения принимаются следующие меры.  
+ <span data-ttu-id="ed894-108">Атаки отражения предотвращаются по умолчанию, поскольку модель службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавляет в сообщения запроса подписанный идентификатор сообщения и ожидает получить в сообщениях ответов подписанный заголовок `relates-to`.</span><span class="sxs-lookup"><span data-stu-id="ed894-108">Reflection attacks are mitigated by default because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service model adds a signed message ID to request messages and expects a signed `relates-to` header on response messages.</span></span> <span data-ttu-id="ed894-109">В результате сообщение запроса не может быть воспроизведено в качестве ответа.</span><span class="sxs-lookup"><span data-stu-id="ed894-109">Consequently, the request message cannot be replayed as a response.</span></span> <span data-ttu-id="ed894-110">В сценариях защищенного надежного обмена сообщениями (RM) для предотвращения атак отражения принимаются следующие меры.</span><span class="sxs-lookup"><span data-stu-id="ed894-110">In secure reliable message (RM) scenarios, reflection attacks are mitigated because:</span></span>  
   
--   Схемы сообщения о создании последовательности и ответного сообщения о создании последовательности должны быть различными.  
+-   <span data-ttu-id="ed894-111">Схемы сообщения о создании последовательности и ответного сообщения о создании последовательности должны быть различными.</span><span class="sxs-lookup"><span data-stu-id="ed894-111">The create sequence and create sequence response message schemas are different.</span></span>  
   
--   В симплексных последовательностях сообщения о последовательности, отправляемые клиентом, не могут быть воспроизведены обратно клиенту, поскольку клиент не распознает такие сообщения.  
+-   <span data-ttu-id="ed894-112">В симплексных последовательностях сообщения о последовательности, отправляемые клиентом, не могут быть воспроизведены обратно клиенту, поскольку клиент не распознает такие сообщения.</span><span class="sxs-lookup"><span data-stu-id="ed894-112">For simplex sequences, sequence messages the client sends cannot be replayed back to it because the client cannot understand such messages.</span></span>  
   
--   В дуплексных последовательностях два идентификатора последовательности должны быть уникальными.Таким образом, исходящее сообщение последовательности не может быть воспроизведено в качестве входящего сообщения последовательности \(все заголовки последовательности и тела сообщений также являются подписанными\).  
+-   <span data-ttu-id="ed894-113">В дуплексных последовательностях два идентификатора последовательности должны быть уникальными.</span><span class="sxs-lookup"><span data-stu-id="ed894-113">For duplex sequences, the two sequence IDs must be unique.</span></span> <span data-ttu-id="ed894-114">Таким образом, исходящее сообщение последовательности не может быть воспроизведено в качестве входящего сообщения последовательности (все заголовки последовательности и тела сообщений также являются подписанными).</span><span class="sxs-lookup"><span data-stu-id="ed894-114">Thus, an outgoing sequence message cannot be replayed back as an incoming sequence message (all sequence headers and bodies are signed, too).</span></span>  
   
- Единственным типом привязок, чувствительных к атакам отражения, являются специальные привязки, в которых отключен протокол WS\-Addressing и в которых используется защита на основе симметричного ключа.В привязке <xref:System.ServiceModel.BasicHttpBinding> по умолчанию не используется протокол WS\-Addressing, однако защита на основе симметричных ключей используется таким образом, что привязка не является уязвимой для атаки такого типа.  
+ <span data-ttu-id="ed894-115">Единственным типом привязок, чувствительных к атакам отражения, являются специальные привязки, в которых отключен протокол WS-Addressing и в которых используется защита на основе симметричного ключа.</span><span class="sxs-lookup"><span data-stu-id="ed894-115">The only bindings that are susceptible to reflection attacks are those without WS-Addressing: custom bindings that have WS-Addressing disabled and use the symmetric key-based security.</span></span> <span data-ttu-id="ed894-116">В привязке <xref:System.ServiceModel.BasicHttpBinding> по умолчанию не используется протокол WS-Addressing, однако защита на основе симметричных ключей используется таким образом, что привязка не является уязвимой для атаки такого типа.</span><span class="sxs-lookup"><span data-stu-id="ed894-116">The <xref:System.ServiceModel.BasicHttpBinding> does not use WS-Addressing by default, but it does not use symmetric key-based security in a way that allows it to be vulnerable to this attack.</span></span>  
   
- Для защиты специальных привязок следует не устанавливать контекст безопасности или требовать использования заголовков WS\-Addressing.  
+ <span data-ttu-id="ed894-117">Для защиты специальных привязок следует не устанавливать контекст безопасности или требовать использования заголовков WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="ed894-117">The mitigation for custom bindings is to not establish security context or to require WS-Addressing headers.</span></span>  
   
-## Веб\-ферма: злоумышленник воспроизводит запрос на нескольких узлах  
- Клиент использует службу, которая реализована на веб\-ферме.Злоумышленник воспроизводит запрос, отправленный на один узел фермы, на другом узле фермы.Кроме того, в случае перезапуска службы кэш воспроизведения очищается, что позволяет злоумышленнику воспроизвести запрос.\(В кэше содержатся использованные ранее значения подписи сообщения. Кэш не позволяет воспроизводить их, так что такие подписи могут использоваться только один раз.Кэш воспроизведения не является общим в масштабах веб\-фермы.\)  
+## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a><span data-ttu-id="ed894-118">Веб-ферма: злоумышленник воспроизводит запрос на нескольких узлах</span><span class="sxs-lookup"><span data-stu-id="ed894-118">Web Farm: Attacker Replays Request to Multiple Nodes</span></span>  
+ <span data-ttu-id="ed894-119">Клиент использует службу, которая реализована на веб-ферме.</span><span class="sxs-lookup"><span data-stu-id="ed894-119">A client uses a service that is implemented on a Web farm.</span></span> <span data-ttu-id="ed894-120">Злоумышленник воспроизводит запрос, отправленный на один узел фермы, на другом узле фермы.</span><span class="sxs-lookup"><span data-stu-id="ed894-120">An attacker replays a request that was sent to one node in the farm to another node in the farm.</span></span> <span data-ttu-id="ed894-121">Кроме того, в случае перезапуска службы кэш воспроизведения очищается, что позволяет злоумышленнику воспроизвести запрос.</span><span class="sxs-lookup"><span data-stu-id="ed894-121">In addition, if a service is restarted, the replay cache is flushed, allowing an attacker to replay the request.</span></span> <span data-ttu-id="ed894-122">(В кэше содержатся использованные ранее значения подписи сообщения. Кэш не позволяет воспроизводить их, так что такие подписи могут использоваться только один раз.</span><span class="sxs-lookup"><span data-stu-id="ed894-122">(The cache contains used, previously seen message signature values and prevents replays so those signatures can be used only once.</span></span> <span data-ttu-id="ed894-123">Кэш воспроизведения не является общим в масштабах веб-фермы.)</span><span class="sxs-lookup"><span data-stu-id="ed894-123">Replay caches are not shared across a Web farm.)</span></span>  
   
- Возможные способы борьбы с этими угрозами  
+ <span data-ttu-id="ed894-124">Возможные способы борьбы с этими угрозами</span><span class="sxs-lookup"><span data-stu-id="ed894-124">Mitigations include:</span></span>  
   
--   Использование безопасности режима сообщений с маркерами контекста безопасности с отслеживанием состояния \(как с включенным, так и с отключенным безопасным диалогом\).[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+-   <span data-ttu-id="ed894-125">Использование безопасности режима сообщений с маркерами контекста безопасности с отслеживанием состояния (как с включенным, так и с отключенным безопасным диалогом).</span><span class="sxs-lookup"><span data-stu-id="ed894-125">Use message mode security with stateful security context tokens (with or without secure conversation enabled).</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="ed894-126">[Как: создать контекст безопасности для безопасного сеанса маркера](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="ed894-126"> [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
--   Настройка службы для использования безопасности уровня транспорта.  
+-   <span data-ttu-id="ed894-127">Настройка службы для использования безопасности уровня транспорта.</span><span class="sxs-lookup"><span data-stu-id="ed894-127">Configure the service to use transport-level security.</span></span>  
   
-## См. также  
- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)   
- [Повышение прав доступа](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)   
- [Отказ в обслуживании](../../../../docs/framework/wcf/feature-details/denial-of-service.md)   
- [Подделка](../../../../docs/framework/wcf/feature-details/tampering.md)   
- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a><span data-ttu-id="ed894-128">См. также</span><span class="sxs-lookup"><span data-stu-id="ed894-128">See Also</span></span>  
+ [<span data-ttu-id="ed894-129">Вопросы безопасности</span><span class="sxs-lookup"><span data-stu-id="ed894-129">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="ed894-130">Раскрытие информации</span><span class="sxs-lookup"><span data-stu-id="ed894-130">Information Disclosure</span></span>](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [<span data-ttu-id="ed894-131">Повышение прав доступа</span><span class="sxs-lookup"><span data-stu-id="ed894-131">Elevation of Privilege</span></span>](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [<span data-ttu-id="ed894-132">Отказ в обслуживании</span><span class="sxs-lookup"><span data-stu-id="ed894-132">Denial of Service</span></span>](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [<span data-ttu-id="ed894-133">Изменение данных</span><span class="sxs-lookup"><span data-stu-id="ed894-133">Tampering</span></span>](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [<span data-ttu-id="ed894-134">Неподдерживаемые сценарии</span><span class="sxs-lookup"><span data-stu-id="ed894-134">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

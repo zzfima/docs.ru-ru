@@ -1,105 +1,112 @@
 ---
-title: "&lt;wsFederation&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;wsFederation&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsFederation&gt;
-Содержит настройки для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\).  
+# <a name="ltwsfederationgt"></a><span data-ttu-id="81c2d-102">&lt;wsFederation&gt;</span><span class="sxs-lookup"><span data-stu-id="81c2d-102">&lt;wsFederation&gt;</span></span>
+<span data-ttu-id="81c2d-103">Обеспечивает настройку для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).</span><span class="sxs-lookup"><span data-stu-id="81c2d-103">Provides configuration for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).</span></span>  
   
-## Синтаксис  
+<span data-ttu-id="81c2d-104">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="81c2d-104">\<system.identityModel.services></span></span>  
+<span data-ttu-id="81c2d-105">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="81c2d-105">\<federationConfiguration></span></span>  
+<span data-ttu-id="81c2d-106">\<wsFederation ></span><span class="sxs-lookup"><span data-stu-id="81c2d-106">\<wsFederation></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="81c2d-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="81c2d-107">Syntax</span></span>  
+  
+```xml
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <wsFederation authenticationType=xs:string (URI)  
-        freshness=xs:decimal  
-        homerealm=xs:string (URI)  
-        issuer=xs:string (URI)  
-        persistentCookiesOnPassiveRedirects=xs:boolean  
-        passiveRedirectEnabled=xs:boolean  
-        policy=xs:string (URI)  
-        realm=xs:string (URI)  
-        reply=xs:string (URI)  
-        request=xs:string (URI)  
-        requestPtr=xs:string (URI)  
-        requireHttps=xs:boolean  
-        resource=xs:string (URI)  
-        signInQueryString=xs:string  
-        signOutQueryString=xs:string  
-        signOutReply=xs:string (URL)  
-    </wsFederation>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <wsFederation authenticationType=xs:string (URI)  
+                  freshness=xs:decimal  
+                  homerealm=xs:string (URI)  
+                  issuer=xs:string (URI)  
+                  persistentCookiesOnPassiveRedirects=xs:boolean  
+                  passiveRedirectEnabled=xs:boolean  
+                  policy=xs:string (URI)  
+                  realm=xs:string (URI)  
+                  reply=xs:string (URI)  
+                  request=xs:string (URI)  
+                  requestPtr=xs:string (URI)  
+                  requireHttps=xs:boolean  
+                  resource=xs:string (URI)  
+                  signInQueryString=xs:string  
+                  signOutQueryString=xs:string  
+                  signOutReply=xs:string (URL)  
+    </wsFederation>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="81c2d-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="81c2d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="81c2d-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="81c2d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="81c2d-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="81c2d-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|authenticationType|URI, который указывает тип проверки подлинности.  Задает для параметра wauth WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр wauth не включаются в запрос.|  
-|актуальности|Требуемый максимальный срок хранения запросов проверки подлинности в минутах.  Задает для параметра wfresh WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется значение ноль.  Необязательный. **Warning:**  В следующем выпуске.NET Framework 4.5 `freshness` будет иметь атрибут типа `xs:string` , и его значение по умолчанию будет `null`.|  
-|homeRealm|Домашней сфере поставщика удостоверений \(IP\) для проверки подлинности.  Задает параметр whr WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр whr не включаются в запрос.|  
-|issuer|URI предполагаемого поставщика маркера.  Устанавливает базовый URL\-адрес из WS\-Federation вход запросов и необходимости выхода из системы запросов.|  
-|persistentCookiesOnPassiveRedirects|Указывает, выдаются ли постоянные файлы cookie для проверки подлинности.  Необязательный.  Значение по умолчанию — «false», "cookie" не выдаются.|  
-|passiveRedirectEnabled|Указывает, включена ли WSFAM автоматически перенаправлять запросы на несанкционированный STS.  Необязательный.  По умолчанию используется значение «true», автоматически перенаправляются несанкционированных запросов.|  
-|политика|URL\-адрес, указывающий на местоположение соответствующей политики на запросы на вход.  Значение по умолчанию — пустая строка.  Задает для параметра ВЧ WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр ВЧ не включаются в запрос.|  
-|realm|URI запроса сферы.  \(URI, определяющий доверяющей стороне \(RP\) службы маркеров безопасности \(STS\).\) Задает для параметра запроса wtrealm вход WS\-Federation запрос.  Обязательный.|  
-|reply|URL\-адрес, который определяет адрес, по которому приложение доверяющей стороной \(RP\) хотели бы получать ответы от маркеров безопасности службы \(STS\).  Задает для параметра wreply WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр wreply не включаются в запрос.|  
-|request|Запрос маркера.  Задает для параметра wreq WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр wreq не включаются в запрос.  Не включая в запрос параметр wreqptr или wreq означает, что STS знает, какой тип маркера для выдачи.|  
-|requestPtr|URL\-адрес, указывающий на местоположение запрос маркера.  Задает для параметра wreqptr запроса.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр wreqptr не включаются в запрос.  Не включая в запрос параметр wreqptr или wreq означает, что STS знает, какой тип маркера для выдачи.|  
-|requireHttps|Указывает, будет ли связь со службой маркеров безопасности \(STS\) необходимо использовать протокол HTTPS.  Необязательный.  По умолчанию используется значение «true», необходимо использовать HTTPS.|  
-|ресурс|URI, который идентифицирует ресурс, к которому обращается, доверяющей стороне \(RP\) для службы маркеров безопасности \(STS\).  Необязательный.  Задает для параметра wres WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что параметр wres не включаются в запрос. **Note:**  wres — устаревший параметр.  Укажите `realm` атрибут, используйте параметр wtrealm.|  
-|signInQueryString|Предоставляет точку расширения среды для указания приложения определены параметры запроса в URL\-АДРЕСЕ WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что дополнительные параметры должны быть включены в запрос.  Параметры задаются как фрагмент строки запроса, используя следующую форму: `“param1=value1&param2=value2&param3=value3”` и т. д. **Note:**  В файле конфигурации "&" символа в строке запроса должен быть указан с помощью ссылки на сущность его `&`.|  
-|signOutQueryString|Предоставляет точку расширения среды для указания приложения определены параметры запроса в URL\-АДРЕСЕ WS\-Federation запрос на вход.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что дополнительные параметры должны быть включены в запрос.  Параметры задаются как фрагмент строки запроса, используя следующую форму: `“param1=value1&param2=value2&param3=value3”` и т. д. **Note:**  В файле конфигурации "&" символа в строке запроса должен быть указан с помощью ссылки на сущность его `&`.|  
-|signOutReply|Задает URL\-адрес, к которому следует перенаправлять клиента, служба маркеров безопасности \(STS\) во время выхода из системы через протокол WS\-Federation пассивный.  Задает для параметра wreply на запрос WS\-Federation выхода из системы.  Необязательный.  По умолчанию используется пустая строка, которая указывает, что дополнительные параметры должны быть включены в запрос.|  
+|<span data-ttu-id="81c2d-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="81c2d-111">Attribute</span></span>|<span data-ttu-id="81c2d-112">Описание</span><span class="sxs-lookup"><span data-stu-id="81c2d-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="81c2d-113">authenticationType</span><span class="sxs-lookup"><span data-stu-id="81c2d-113">authenticationType</span></span>|<span data-ttu-id="81c2d-114">URI, указывающий тип проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="81c2d-114">A URI that specifies the authentication type.</span></span> <span data-ttu-id="81c2d-115">Задает для параметра wauth запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-115">Sets the WS-Federation sign-in request wauth parameter.</span></span> <span data-ttu-id="81c2d-116">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-116">Optional.</span></span> <span data-ttu-id="81c2d-117">Значение по умолчанию — пустая строка, которая указывает, что параметр wauth не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-117">The default is an empty string, which specifies that the wauth parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="81c2d-118">актуальность</span><span class="sxs-lookup"><span data-stu-id="81c2d-118">freshness</span></span>|<span data-ttu-id="81c2d-119">Требуемый максимальный срок действия запросов проверки подлинности в минутах.</span><span class="sxs-lookup"><span data-stu-id="81c2d-119">The desired maximum age of authentication requests, in minutes.</span></span> <span data-ttu-id="81c2d-120">Задает для параметра wfresh запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-120">Sets the WS-Federation sign-in request wfresh parameter.</span></span> <span data-ttu-id="81c2d-121">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-121">Optional.</span></span> <span data-ttu-id="81c2d-122">По умолчанию используется значение ноль.</span><span class="sxs-lookup"><span data-stu-id="81c2d-122">The default is zero.</span></span> <span data-ttu-id="81c2d-123">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-123">Optional.</span></span> <span data-ttu-id="81c2d-124">**Предупреждение:** в следующей версии .NET Framework 4.5 `freshness` атрибута будет иметь тип `xs:string` будет иметь значение по умолчанию `null`.</span><span class="sxs-lookup"><span data-stu-id="81c2d-124">**Warning:**  In the next release of .NET Framework 4.5, the `freshness` attribute will be of type `xs:string` and its default value will be `null`.</span></span>|  
+|<span data-ttu-id="81c2d-125">homeRealm</span><span class="sxs-lookup"><span data-stu-id="81c2d-125">homeRealm</span></span>|<span data-ttu-id="81c2d-126">Домашней области поставщика удостоверений (IP), используемый для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="81c2d-126">The home realm of the identity provider (IP) to use for authentication.</span></span> <span data-ttu-id="81c2d-127">Задает параметр whr запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-127">Sets the WS-Federation sign-in request whr parameter.</span></span> <span data-ttu-id="81c2d-128">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-128">Optional.</span></span> <span data-ttu-id="81c2d-129">Значение по умолчанию — пустая строка, которая указывает, что параметр whr не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-129">The default is an empty string, which specifies that the whr parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="81c2d-130">issuer</span><span class="sxs-lookup"><span data-stu-id="81c2d-130">issuer</span></span>|<span data-ttu-id="81c2d-131">URI предполагаемого издателя маркера.</span><span class="sxs-lookup"><span data-stu-id="81c2d-131">The URI of the intended token issuer.</span></span> <span data-ttu-id="81c2d-132">Задает базовый URL-адрес для WS-Federation запросов на вход в и необходимые запросах на выход.</span><span class="sxs-lookup"><span data-stu-id="81c2d-132">Sets the base URL of WS-Federation sign-in requests and sign-out requests Required.</span></span>|  
+|<span data-ttu-id="81c2d-133">persistentCookiesOnPassiveRedirects</span><span class="sxs-lookup"><span data-stu-id="81c2d-133">persistentCookiesOnPassiveRedirects</span></span>|<span data-ttu-id="81c2d-134">Указывает, выполняется ли сохраняемые файлы cookie для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="81c2d-134">Specifies whether persistent cookies are issued on authentication.</span></span> <span data-ttu-id="81c2d-135">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-135">Optional.</span></span> <span data-ttu-id="81c2d-136">Значение по умолчанию — «false», файлы cookie не выдаются.</span><span class="sxs-lookup"><span data-stu-id="81c2d-136">The default is "false", cookies are not issued.</span></span>|  
+|<span data-ttu-id="81c2d-137">passiveRedirectEnabled</span><span class="sxs-lookup"><span data-stu-id="81c2d-137">passiveRedirectEnabled</span></span>|<span data-ttu-id="81c2d-138">Указывает, включен ли WSFAM автоматического перенаправления неавторизованных запросов маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="81c2d-138">Specifies whether the WSFAM is enabled to automatically redirect unauthorized requests to an STS.</span></span> <span data-ttu-id="81c2d-139">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-139">Optional.</span></span> <span data-ttu-id="81c2d-140">Значение по умолчанию — «true», автоматически перенаправляются неавторизованных запросов.</span><span class="sxs-lookup"><span data-stu-id="81c2d-140">The default is "true", unauthorized requests are automatically redirected.</span></span>|  
+|<span data-ttu-id="81c2d-141">policy</span><span class="sxs-lookup"><span data-stu-id="81c2d-141">policy</span></span>|<span data-ttu-id="81c2d-142">URL-адрес, который указывает расположение для использования на запросов на вход в нужную политику.</span><span class="sxs-lookup"><span data-stu-id="81c2d-142">A URL that specifies the location of the relevant policy to use on sign-in requests.</span></span> <span data-ttu-id="81c2d-143">Значение по умолчанию - пустая строка.</span><span class="sxs-lookup"><span data-stu-id="81c2d-143">The default is an empty string.</span></span> <span data-ttu-id="81c2d-144">Задает параметр wp запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-144">Sets the WS-Federation sign-in request wp parameter.</span></span> <span data-ttu-id="81c2d-145">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-145">Optional.</span></span> <span data-ttu-id="81c2d-146">Значение по умолчанию — пустая строка, которая указывает, что параметр wp не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-146">The default is an empty string, which specifies that the wp parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="81c2d-147">realm</span><span class="sxs-lookup"><span data-stu-id="81c2d-147">realm</span></span>|<span data-ttu-id="81c2d-148">URI области запроса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-148">The URI of the requesting realm.</span></span> <span data-ttu-id="81c2d-149">(URI, определяющий проверяющей стороны (RP) для службы маркеров безопасности (STS).) Задает для параметра запроса wtrealm вход WS-Federation запроса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-149">(A URI that identifies the relying party (RP) to the security token service (STS).) Sets the request wtrealm WS-Federation sign-in request parameter.</span></span> <span data-ttu-id="81c2d-150">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="81c2d-150">Required.</span></span>|  
+|<span data-ttu-id="81c2d-151">reply</span><span class="sxs-lookup"><span data-stu-id="81c2d-151">reply</span></span>|<span data-ttu-id="81c2d-152">URL-адрес, который определяет адрес, по которому приложение проверяющей стороны (RP) вы хотите получать ответы из маркеров безопасности службы (STS).</span><span class="sxs-lookup"><span data-stu-id="81c2d-152">A URL that identifies the address at which the relying party (RP) application would like to receive replies from the Security Token Service (STS).</span></span> <span data-ttu-id="81c2d-153">Задает для параметра wreply запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-153">Sets the WS-Federation sign-in request wreply parameter.</span></span> <span data-ttu-id="81c2d-154">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-154">Optional.</span></span> <span data-ttu-id="81c2d-155">Значение по умолчанию — пустая строка, которая указывает, что параметр wreply не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-155">The default is an empty string, which specifies that the wreply parameter is not included in the request.</span></span>|  
+|<span data-ttu-id="81c2d-156">Запрос</span><span class="sxs-lookup"><span data-stu-id="81c2d-156">request</span></span>|<span data-ttu-id="81c2d-157">Запрос на выпуск маркера.</span><span class="sxs-lookup"><span data-stu-id="81c2d-157">The token issuance request.</span></span> <span data-ttu-id="81c2d-158">Задает для параметра wreq запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-158">Sets the WS-Federation sign-in request wreq parameter.</span></span> <span data-ttu-id="81c2d-159">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-159">Optional.</span></span> <span data-ttu-id="81c2d-160">Значение по умолчанию — пустая строка, которая указывает, что параметр wreq не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-160">The default is an empty string, which specifies that the wreq parameter is not included in the request.</span></span> <span data-ttu-id="81c2d-161">Не включая wreq или wreqptr параметр в запросе, это означает, что STS знает тип маркера для выдачи.</span><span class="sxs-lookup"><span data-stu-id="81c2d-161">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="81c2d-162">requestPtr</span><span class="sxs-lookup"><span data-stu-id="81c2d-162">requestPtr</span></span>|<span data-ttu-id="81c2d-163">URL-адрес, указывающий расположение запроса маркера.</span><span class="sxs-lookup"><span data-stu-id="81c2d-163">A URL that specifies the location of the token issuance request.</span></span> <span data-ttu-id="81c2d-164">Задает параметр wreqptr запроса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-164">Sets the request wreqptr parameter.</span></span> <span data-ttu-id="81c2d-165">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-165">Optional.</span></span> <span data-ttu-id="81c2d-166">Значение по умолчанию — пустая строка, которая указывает, что параметр wreqptr не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-166">The default is an empty string, which specifies that the wreqptr parameter is not included in the request.</span></span> <span data-ttu-id="81c2d-167">Не включая wreq или wreqptr параметр в запросе, это означает, что STS знает тип маркера для выдачи.</span><span class="sxs-lookup"><span data-stu-id="81c2d-167">Not including the wreq or the wreqptr parameter in the request implies that the STS knows what kind of token to issue.</span></span>|  
+|<span data-ttu-id="81c2d-168">requireHttps</span><span class="sxs-lookup"><span data-stu-id="81c2d-168">requireHttps</span></span>|<span data-ttu-id="81c2d-169">Указывает, является ли обмен данными со службой маркеров безопасности (STS) необходимо использовать протокол HTTPS.</span><span class="sxs-lookup"><span data-stu-id="81c2d-169">Specifies whether communication with the security token service (STS) must use HTTPS protocol.</span></span> <span data-ttu-id="81c2d-170">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-170">Optional.</span></span> <span data-ttu-id="81c2d-171">Значение по умолчанию — «true», необходимо использовать протокол HTTPS.</span><span class="sxs-lookup"><span data-stu-id="81c2d-171">The default is "true", HTTPS must be used.</span></span>|  
+|<span data-ttu-id="81c2d-172">ресурс</span><span class="sxs-lookup"><span data-stu-id="81c2d-172">resource</span></span>|<span data-ttu-id="81c2d-173">URI, идентифицирующий ресурс, к которому выполняется доступ, проверяющей стороны (RP) к службе маркеров безопасности (STS).</span><span class="sxs-lookup"><span data-stu-id="81c2d-173">A URI that identifies the resource being accessed, the relying party (RP), to the to the security token service (STS).</span></span> <span data-ttu-id="81c2d-174">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-174">Optional.</span></span> <span data-ttu-id="81c2d-175">Задает для параметра wres запрос входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-175">Sets the WS-Federation sign-in request wres parameter.</span></span> <span data-ttu-id="81c2d-176">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-176">Optional.</span></span> <span data-ttu-id="81c2d-177">Значение по умолчанию — пустая строка, которая указывает, что параметр wres не включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-177">The default is an empty string, which specifies that the wres parameter is not included in the request.</span></span> <span data-ttu-id="81c2d-178">**Примечание:** wres — это устаревший параметр.</span><span class="sxs-lookup"><span data-stu-id="81c2d-178">**Note:**  wres is a legacy parameter.</span></span> <span data-ttu-id="81c2d-179">Укажите `realm` атрибут для использования вместо параметра wtrealm.</span><span class="sxs-lookup"><span data-stu-id="81c2d-179">Specify the `realm` attribute to use the wtrealm parameter instead.</span></span>|  
+|<span data-ttu-id="81c2d-180">signInQueryString</span><span class="sxs-lookup"><span data-stu-id="81c2d-180">signInQueryString</span></span>|<span data-ttu-id="81c2d-181">Предоставляет точку расширения для указания параметров запроса в приложение, определенное в URL-АДРЕСЕ запроса входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-181">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="81c2d-182">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-182">Optional.</span></span> <span data-ttu-id="81c2d-183">Значение по умолчанию — пустая строка, которая указывает, что никаких дополнительных параметров должны быть включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-183">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="81c2d-184">Параметры задаются в виде фрагмента строки запроса, в следующем формате: `"param1=value1&param2=value2&param3=value3"` и т. д.</span><span class="sxs-lookup"><span data-stu-id="81c2d-184">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="81c2d-185">**Примечание:** в файле конфигурации "&» символа в строке запроса должен быть указан с помощью его ссылки сущности `&`.</span><span class="sxs-lookup"><span data-stu-id="81c2d-185">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="81c2d-186">signOutQueryString</span><span class="sxs-lookup"><span data-stu-id="81c2d-186">signOutQueryString</span></span>|<span data-ttu-id="81c2d-187">Предоставляет точку расширения для указания параметров запроса в приложение, определенное в URL-АДРЕСЕ запроса входа WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-187">Provides an extensibility point to specify application defined query parameters in the WS-Federation sign-in request URL.</span></span> <span data-ttu-id="81c2d-188">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-188">Optional.</span></span> <span data-ttu-id="81c2d-189">Значение по умолчанию — пустая строка, которая указывает, что никаких дополнительных параметров должны быть включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-189">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span> <span data-ttu-id="81c2d-190">Параметры задаются в виде фрагмента строки запроса, в следующем формате: `"param1=value1&param2=value2&param3=value3"` и т. д.</span><span class="sxs-lookup"><span data-stu-id="81c2d-190">The parameters are specified as a query string fragment using the following form: `"param1=value1&param2=value2&param3=value3"` and so on.</span></span> <span data-ttu-id="81c2d-191">**Примечание:** в файле конфигурации "&» символа в строке запроса должен быть указан с помощью его ссылки сущности `&`.</span><span class="sxs-lookup"><span data-stu-id="81c2d-191">**Note:**  In a configuration file the ‘&" character in the query string must be specified using its entity reference, `&`.</span></span>|  
+|<span data-ttu-id="81c2d-192">signOutReply</span><span class="sxs-lookup"><span data-stu-id="81c2d-192">signOutReply</span></span>|<span data-ttu-id="81c2d-193">Указывает URL-адрес, к которому следует перенаправлять клиента службой маркеров безопасности (STS) во время выхода по протоколу WS-Federation пассивный.</span><span class="sxs-lookup"><span data-stu-id="81c2d-193">Specifies the URL to which the client should be redirected by the security token service (STS) during passive sign-out through the WS-Federation protocol.</span></span> <span data-ttu-id="81c2d-194">Задает параметр wreply запроса выхода в WS-Federation.</span><span class="sxs-lookup"><span data-stu-id="81c2d-194">Sets the wreply parameter on a WS-Federation sign-out request.</span></span> <span data-ttu-id="81c2d-195">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="81c2d-195">Optional.</span></span> <span data-ttu-id="81c2d-196">Значение по умолчанию — пустая строка, которая указывает, что никаких дополнительных параметров должны быть включены в запрос.</span><span class="sxs-lookup"><span data-stu-id="81c2d-196">The default is an empty string, which specifies that no additional parameters should be included in the request.</span></span>|  
   
-### Дочерние элементы  
- None  
+### <a name="child-elements"></a><span data-ttu-id="81c2d-197">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="81c2d-197">Child Elements</span></span>  
+ <span data-ttu-id="81c2d-198">Нет</span><span class="sxs-lookup"><span data-stu-id="81c2d-198">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="81c2d-199">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="81c2d-199">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\).|  
+|<span data-ttu-id="81c2d-200">Элемент</span><span class="sxs-lookup"><span data-stu-id="81c2d-200">Element</span></span>|<span data-ttu-id="81c2d-201">Описание</span><span class="sxs-lookup"><span data-stu-id="81c2d-201">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="81c2d-202">\<federationConfiguration></span><span class="sxs-lookup"><span data-stu-id="81c2d-202">\<federationConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|<span data-ttu-id="81c2d-203">Содержит параметры, настроенные <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span><span class="sxs-lookup"><span data-stu-id="81c2d-203">Contains the settings that configure the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) and the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).</span></span>|  
   
-## Заметки  
- Можно использовать `<wsFederation>` элемент настройки WS\-Federation параметр параметры по умолчанию и поведение по умолчанию для WSFAM.  WS\-Federation параметров, определенных в разделе `<wsFederation>` элемента набор эквивалентных свойств, предоставленных <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> класса.  Эти свойства будут одинаковыми для всех запросов, выданных WSFAM.  Динамическое изменение параметров WS\-Federation во время обработки путем добавления обработчиков событий для событий, предоставленных WSFAM; например <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> событий.  Дополнительные сведения см. в документации по классу <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>.  
+## <a name="remarks"></a><span data-ttu-id="81c2d-204">Примечания</span><span class="sxs-lookup"><span data-stu-id="81c2d-204">Remarks</span></span>  
+ <span data-ttu-id="81c2d-205">Можно использовать `<wsFederation>` элемента для настройки параметров WS-Federation по умолчанию и поведение по умолчанию для WSFAM.</span><span class="sxs-lookup"><span data-stu-id="81c2d-205">You can use the `<wsFederation>` element to configure default WS-Federation parameter settings and default behavior for the WSFAM.</span></span> <span data-ttu-id="81c2d-206">Настройки параметров WS-Federation, определенный в `<wsFederation>` элемента задано эквивалентные свойства, предоставляемые <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> класса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-206">WS-Federation parameter settings defined under the `<wsFederation>` element set equivalent properties exposed by the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span> <span data-ttu-id="81c2d-207">Эти свойства остаются неизменными для всех запросов, выданных WSFAM.</span><span class="sxs-lookup"><span data-stu-id="81c2d-207">These properties remain the same for every request issued by the WSFAM.</span></span> <span data-ttu-id="81c2d-208">Можно изменять параметры WS-Federation динамически во время обработки путем добавления обработчиков событий для события, представляемые WSFAM; запроса например <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> событие.</span><span class="sxs-lookup"><span data-stu-id="81c2d-208">You can change the WS-Federation parameters dynamically during request processing by adding event handlers for the events exposed by WSFAM; for example, the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> event.</span></span> <span data-ttu-id="81c2d-209">Дополнительные сведения см. в документации для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> класса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-209">For more information, see the documentation for the <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> class.</span></span>  
   
- `<wsFederation>` Представленного элементом <xref:System.IdentityModel.Services.Configuration.WSFederationElement> класса.  Представленный самого объекта конфигурации <xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration> класса.  Один <xref:System.IdentityModel.Services.Configuration.WSFederationConfiguration> экземпляр устанавливается на <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объекта, к которому осуществляется через <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> свойства, а также настройки для WSFAM.  
+ <span data-ttu-id="81c2d-210">`<wsFederation>` Представлен <xref:System.IdentityModel.Services.Configuration.WSFederationElement> класса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-210">The `<wsFederation>` element is represented by the <xref:System.IdentityModel.Services.Configuration.WSFederationElement> class.</span></span> <span data-ttu-id="81c2d-211">Сам объект конфигурации представленного <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> класса.</span><span class="sxs-lookup"><span data-stu-id="81c2d-211">The configuration object itself is represented by the <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> class.</span></span> <span data-ttu-id="81c2d-212">Один <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> набор экземпляров на <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект, который доступен через <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойства и обеспечивает настройку для WSFAM.</span><span class="sxs-lookup"><span data-stu-id="81c2d-212">A single <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> instance is set on the <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> object that is accessed through the <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> property and provides configuration for the WSFAM.</span></span>  
   
-## Пример  
- Это показано в следующем XML `<wsFederation>` элемент, который определяет параметры для WSFAM.  
+## <a name="example"></a><span data-ttu-id="81c2d-213">Пример</span><span class="sxs-lookup"><span data-stu-id="81c2d-213">Example</span></span>  
+ <span data-ttu-id="81c2d-214">Следующий XML-КОДЕ показано `<wsFederation>` элемент, который задает параметры для WSFAM.</span><span class="sxs-lookup"><span data-stu-id="81c2d-214">The following XML shows a `<wsFederation>` element that specifies settings for the WSFAM.</span></span>  
   
 > [!WARNING]
->  В этом примере WSFAM не требуется использовать протокол HTTPS.  Это происходит потому, что `requireHttps` атрибут на `<wsFederation>` элемента `false`.  Этот параметр не рекомендуется для большинства рабочих средах, как он может представлять угрозу безопасности.  
+>  <span data-ttu-id="81c2d-215">В этом примере WSFAM не требуется для использования протокола HTTPS.</span><span class="sxs-lookup"><span data-stu-id="81c2d-215">In this example, the WSFAM is not required to use HTTPS.</span></span> <span data-ttu-id="81c2d-216">Это вызвано `requireHttps` атрибут `<wsFederation>` задать элемент `false`.</span><span class="sxs-lookup"><span data-stu-id="81c2d-216">This is because the `requireHttps` attribute on the `<wsFederation>` element is set `false`.</span></span> <span data-ttu-id="81c2d-217">Этот параметр не рекомендуется для большинства рабочих сред, как он может представлять угрозу безопасности.</span><span class="sxs-lookup"><span data-stu-id="81c2d-217">This setting is not recommended for most production environments as it may present a security risk.</span></span>  
   
-```  
+```xml
 <wsFederation passiveRedirectEnabled="true"   
-  issuer="http://localhost:15839/wsFederationSTS/Issue"   
-  realm="http://localhost:50969/"   
-  reply="http://localhost:50969/"   
-  requireHttps="false"   
-  signOutReply="http://localhost:50969/SignedOutPage.html"   
-  signOutQueryString="Param1=value2&Param2=value2"   
-  persistentCookiesOnPassiveRedirects="true" />  
-  
+              issuer="http://localhost:15839/wsFederationSTS/Issue"   
+              realm="http://localhost:50969/"   
+              reply="http://localhost:50969/"   
+              requireHttps="false"   
+              signOutReply="http://localhost:50969/SignedOutPage.html"   
+              signOutQueryString="Param1=value2&Param2=value2"   
+              persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## См. также  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>
+## <a name="see-also"></a><span data-ttu-id="81c2d-218">См. также</span><span class="sxs-lookup"><span data-stu-id="81c2d-218">See Also</span></span>  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
+ <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

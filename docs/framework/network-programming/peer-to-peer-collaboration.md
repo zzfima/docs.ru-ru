@@ -7,55 +7,48 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="peer-to-peer-collaboration"></a>Одноранговая совместная работа
-Одноранговая сеть предусматривает использование относительно производительных компьютеров (ПК), которые размещаются на границе Интернета, для выполнения других вычислительных задач, помимо клиентских. Современные ПК имеют высокопроизводительный процессор, большой объем памяти и вместительный жесткий диск, ресурсы которых никогда не используются в полной мере при решении типовых вычислительных задач, таких как работа с электронной почтой или просмотр веб-страниц. В большинстве случаев современные ПК могут с легкостью выступать в качестве как клиента, так и сервера (одноранговый узел).  
+# <a name="peer-to-peer-collaboration"></a><span data-ttu-id="90a05-102">Одноранговая совместная работа</span><span class="sxs-lookup"><span data-stu-id="90a05-102">Peer-to-Peer Collaboration</span></span>
+<span data-ttu-id="90a05-103">Одноранговая сеть предусматривает использование относительно производительных компьютеров (ПК), которые размещаются на границе Интернета, для выполнения других вычислительных задач, помимо клиентских.</span><span class="sxs-lookup"><span data-stu-id="90a05-103">Peer-to-peer networking is the utilization of the relatively powerful computers (personal computers) that exist at the edge of the Internet for more than just client-based computing tasks.</span></span> <span data-ttu-id="90a05-104">Современные ПК имеют высокопроизводительный процессор, большой объем памяти и вместительный жесткий диск, ресурсы которых никогда не используются в полной мере при решении типовых вычислительных задач, таких как работа с электронной почтой или просмотр веб-страниц.</span><span class="sxs-lookup"><span data-stu-id="90a05-104">The modern personal computer (PC) has a very fast processor, vast memory, and a large hard disk, none of which are being fully utilized when performing common computing tasks such as e-mail and Web browsing.</span></span> <span data-ttu-id="90a05-105">В большинстве случаев современные ПК могут с легкостью выступать в качестве как клиента, так и сервера (одноранговый узел).</span><span class="sxs-lookup"><span data-stu-id="90a05-105">The modern PC can easily act as both a client and server (a peer) for many types of applications.</span></span>  
   
--   Инфраструктура одноранговой совместной работы представляет собой упрощенную реализацию инфраструктуры одноранговой сети Microsoft Windows, в которой используется служба соседних пользователей из ОС Windows Vista и более поздних платформ. Она оптимально подходит для приложений с поддержкой однорангового взаимодействия в подсети, в которой работает служба соседних пользователей, однако также может применяться для работы с конечными точками или контактами. В ее состав входит общий диспетчер контактов, который используется в Live Messenger и других программах на основе технологии Live для определения конечных точек контакта, а также сведений о доступности и присутствии.  
-  
--  
-  
-## <a name="collaboration-applications"></a>Приложения для совместной работы  
- Типовое приложение для одноранговой совместной работы выполняет следующие шаги:  
-  
--   Одноранговый узел определяет удостоверение однорангового узла, которому требуется разместить сеанс совместной работы.  
-  
--   Соответствующим способом отправляется запрос на размещение сеанса, и одноранговый узел ведущего приложения принимает запрос на управление совместной работой.  
-  
--   Ведущее приложение приглашает в сеанс контакты, входящие в подсеть, включая запрашивающую сторону.  
-  
--   Все одноранговые узлы, которые будут участвовать в сеансе совместной работы, добавляют ведущее приложение в свои диспетчеры контактов.  
-  
--   Большинство одноранговых узлов в установленное время отправляют на одноранговый узел ведущего приложения ответы на приглашения, в которых принимают и отклоняют его.  
-  
--   Все одноранговые узлы, которые будут участвовать в сеансе совместной работы, подписываются на одноранговый узел ведущего приложения.  
-  
--   В ходе сеанса совместной работы одноранговый узел ведущего приложения может добавлять в диспетчер контактов другие удаленные одноранговые узлы. Также он обрабатывает все ответы на приглашения, определяя узлы, которые приняли, отклонили приглашение или не ответили на него.  Если узел не принял приглашение, оно может быть отменено. Также могут предприниматься другие действия.  
-  
--   В этот момент времени одноранговый узел ведущего приложения может начать сеанс совместной работы со всеми приглашенными одноранговыми узлами или зарегистрировать приложение в инфраструктуре совместной работы.  P2P-приложения используют инфраструктуру одноранговой совместной работы и пространство имен <xref:System.Net.PeerToPeer.Collaboration> для координации взаимодействия в играх, досках объявлений, конференциях и других приложениях управления присутствием без использования сервера.  
+-   <span data-ttu-id="90a05-106">Инфраструктура одноранговой совместной работы представляет собой упрощенную реализацию инфраструктуры одноранговой сети Microsoft Windows, в которой используется служба соседних пользователей из ОС Windows Vista и более поздних платформ.</span><span class="sxs-lookup"><span data-stu-id="90a05-106">The Peer-to-Peer Collaboration Infrastructure is a simplified implementation of the Microsoft Windows Peer-to-Peer Infrastructure that leverages the People Near Me service in Windows Vista and later platforms.</span></span> <span data-ttu-id="90a05-107">Она оптимально подходит для приложений с поддержкой однорангового взаимодействия в подсети, в которой работает служба соседних пользователей, однако также может применяться для работы с конечными точками или контактами.</span><span class="sxs-lookup"><span data-stu-id="90a05-107">It is best used for peer-enabled applications within a subnet for which the People Near Me service operates, although it can service internet endpoints or contacts as well.</span></span> <span data-ttu-id="90a05-108">В ее состав входит общий диспетчер контактов, который используется в Live Messenger и других программах на основе технологии Live для определения конечных точек контакта, а также сведений о доступности и присутствии.</span><span class="sxs-lookup"><span data-stu-id="90a05-108">It incorporates the common Contact Manager that is used by Live Messenger and other Live-aware applications to determine contact endpoints, availability, and presence.</span></span>  
   
 -  
   
-## <a name="peer-to-peer-networking-security"></a>Безопасность одноранговой сети  
- В домене Active Directory контроллеры домена реализуют службы проверки подлинности на основе Kerberos. В одноранговой среде без серверов одноранговые узлы должны использовать собственные функции проверки подлинности. В одноранговой сети в роли центра сертификации может выступать любой узел, благодаря чему не требуется наличие корневого сертификата в доверенном корневом хранилище каждого однорангового узла. Проверка подлинности реализуется с использованием самозаверяющих сертификатов формата X.509. Эти сертификаты создаются каждым одноранговым узлом, который создает пару открытого и закрытого ключа и сертификат, подписанный закрытым ключом. Самозаверяющий сертификат используется для проверки подлинности и предоставления сведений о сущности однорангового узла. Как и в случае с проверкой подлинности X.509, в одноранговой сети проверка подлинности реализуется с использованием цепочки сертификатов, которая может прослеживаться обратно к доверенному открытому ключу.  
+## <a name="collaboration-applications"></a><span data-ttu-id="90a05-109">Приложения для совместной работы</span><span class="sxs-lookup"><span data-stu-id="90a05-109">Collaboration Applications</span></span>  
+ <span data-ttu-id="90a05-110">Типовое приложение для одноранговой совместной работы выполняет следующие шаги:</span><span class="sxs-lookup"><span data-stu-id="90a05-110">A typical peer-to-peer collaboration application is comprised of the following steps:</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Net.PeerToPeer.Collaboration>   
- [О пространстве имен System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-
+-   <span data-ttu-id="90a05-111">Одноранговый узел определяет удостоверение однорангового узла, которому требуется разместить сеанс совместной работы.</span><span class="sxs-lookup"><span data-stu-id="90a05-111">Peer determines the identity of a peer who is interested in hosting a collaboration session</span></span>  
+  
+-   <span data-ttu-id="90a05-112">Соответствующим способом отправляется запрос на размещение сеанса, и одноранговый узел ведущего приложения принимает запрос на управление совместной работой.</span><span class="sxs-lookup"><span data-stu-id="90a05-112">A request to host a session is sent, somehow, and the host peer agrees to manage collaboration activity.</span></span>  
+  
+-   <span data-ttu-id="90a05-113">Ведущее приложение приглашает в сеанс контакты, входящие в подсеть, включая запрашивающую сторону.</span><span class="sxs-lookup"><span data-stu-id="90a05-113">The host invites contacts on the subnet (including the requestor) to a session.</span></span>  
+  
+-   <span data-ttu-id="90a05-114">Все одноранговые узлы, которые будут участвовать в сеансе совместной работы, добавляют ведущее приложение в свои диспетчеры контактов.</span><span class="sxs-lookup"><span data-stu-id="90a05-114">All peers who want to collaborate may add the host to their contact managers.</span></span>  
+  
+-   <span data-ttu-id="90a05-115">Большинство одноранговых узлов в установленное время отправляют на одноранговый узел ведущего приложения ответы на приглашения, в которых принимают и отклоняют его.</span><span class="sxs-lookup"><span data-stu-id="90a05-115">Most peers will send invitation responses, whether accepted or declined, back to the host peer in a timely fashion.</span></span>  
+  
+-   <span data-ttu-id="90a05-116">Все одноранговые узлы, которые будут участвовать в сеансе совместной работы, подписываются на одноранговый узел ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="90a05-116">All peers who want to collaborate will subscribe to the host peer.</span></span>  
+  
+-   <span data-ttu-id="90a05-117">В ходе сеанса совместной работы одноранговый узел ведущего приложения может добавлять в диспетчер контактов другие удаленные одноранговые узлы.</span><span class="sxs-lookup"><span data-stu-id="90a05-117">While the peers are performing their initial collaboration activity, the host peer may add remote peers to its contact manager.</span></span> <span data-ttu-id="90a05-118">Также он обрабатывает все ответы на приглашения, определяя узлы, которые приняли, отклонили приглашение или не ответили на него.</span><span class="sxs-lookup"><span data-stu-id="90a05-118">It also processes all invitation responses to determine who has accepted, who has declined, and who has not answered.</span></span>  <span data-ttu-id="90a05-119">Если узел не принял приглашение, оно может быть отменено. Также могут предприниматься другие действия.</span><span class="sxs-lookup"><span data-stu-id="90a05-119">It may cancel invitations to those who have not answered, or perform some other activity.</span></span>  
+  
+-   <span data-ttu-id="90a05-120">В этот момент времени одноранговый узел ведущего приложения может начать сеанс совместной работы со всеми приглашенными одноранговыми узлами или зарегистрировать приложение в инфраструктуре совместной работы.</span><span class="sxs-lookup"><span data-stu-id="90a05-120">At this point, the host peer can start a collaboration session with all invited peers, or register an application with the collaboration infrastructure.</span></span>  <span data-ttu-id="90a05-121">P2P-приложения используют инфраструктуру одноранговой совместной работы и пространство имен <xref:System.Net.PeerToPeer.Collaboration> для координации взаимодействия в играх, досках объявлений, конференциях и других приложениях управления присутствием без использования сервера.</span><span class="sxs-lookup"><span data-stu-id="90a05-121">P2P applications use the Peer-to-Peer Collaboration Infrastructure and the <xref:System.Net.PeerToPeer.Collaboration> namespace to coordinate communications for games, bulletin boards, conferencing, and other serverless presence applications.</span></span>  
+  
+-  
+  
+## <a name="peer-to-peer-networking-security"></a><span data-ttu-id="90a05-122">Безопасность одноранговой сети</span><span class="sxs-lookup"><span data-stu-id="90a05-122">Peer-to-Peer Networking Security</span></span>  
+ <span data-ttu-id="90a05-123">В домене Active Directory контроллеры домена реализуют службы проверки подлинности на основе Kerberos.</span><span class="sxs-lookup"><span data-stu-id="90a05-123">In an Active Directory domain, domain controllers provide authentication services using Kerberos.</span></span> <span data-ttu-id="90a05-124">В одноранговой среде без серверов одноранговые узлы должны использовать собственные функции проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="90a05-124">In a serverless peer environment, the peers must provide their own authentication.</span></span> <span data-ttu-id="90a05-125">В одноранговой сети в роли центра сертификации может выступать любой узел, благодаря чему не требуется наличие корневого сертификата в доверенном корневом хранилище каждого однорангового узла.</span><span class="sxs-lookup"><span data-stu-id="90a05-125">For Peer-to-Peer Networking, any node can act as a CA, removing the requirement of a root certificate in each peer's trusted root store.</span></span> <span data-ttu-id="90a05-126">Проверка подлинности реализуется с использованием самозаверяющих сертификатов формата X.509.</span><span class="sxs-lookup"><span data-stu-id="90a05-126">Authentication is provided using self-signed certificates, formatted as X.509 certificates.</span></span> <span data-ttu-id="90a05-127">Эти сертификаты создаются каждым одноранговым узлом, который создает пару открытого и закрытого ключа и сертификат, подписанный закрытым ключом.</span><span class="sxs-lookup"><span data-stu-id="90a05-127">These are certificates that are created by each peer, which generates the public key/private key pair and the certificate that is signed using the private key.</span></span> <span data-ttu-id="90a05-128">Самозаверяющий сертификат используется для проверки подлинности и предоставления сведений о сущности однорангового узла.</span><span class="sxs-lookup"><span data-stu-id="90a05-128">The self-signed certificate is used for authentication and to provide information about the peer entity.</span></span> <span data-ttu-id="90a05-129">Как и в случае с проверкой подлинности X.509, в одноранговой сети проверка подлинности реализуется с использованием цепочки сертификатов, которая может прослеживаться обратно к доверенному открытому ключу.</span><span class="sxs-lookup"><span data-stu-id="90a05-129">Like X.509 authentication, peer networking authentication relies upon a chain of certificates tracing back to a public key that is trusted.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="90a05-130">См. также</span><span class="sxs-lookup"><span data-stu-id="90a05-130">See Also</span></span>  
+ <xref:System.Net.PeerToPeer.Collaboration>  
+ [<span data-ttu-id="90a05-131">О пространстве имен System.Net.PeerToPeer.Collaboration</span><span class="sxs-lookup"><span data-stu-id="90a05-131">About the System.Net.PeerToPeer.Collaboration Namespace</span></span>](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

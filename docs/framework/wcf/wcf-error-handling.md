@@ -1,57 +1,60 @@
 ---
-title: "Обработка ошибок WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка ошибок WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c5fa1aea718f3904eab38927d24a851043bbd896
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обработка ошибок WCF
-Ошибки, с которыми столкнулось приложение WCF, относится к одной из трех групп:  
+# <a name="wcf-error-handling"></a><span data-ttu-id="37f08-102">Обработка ошибок WCF</span><span class="sxs-lookup"><span data-stu-id="37f08-102">WCF Error Handling</span></span>
+<span data-ttu-id="37f08-103">Ошибки, с которыми столкнулось приложение WCF, относится к одной из трех групп:</span><span class="sxs-lookup"><span data-stu-id="37f08-103">The errors encountered by a WCF application belong to one of three groups:</span></span>  
   
-1.  Ошибки обмена данными  
+1.  <span data-ttu-id="37f08-104">Ошибки обмена данными</span><span class="sxs-lookup"><span data-stu-id="37f08-104">Communication Errors</span></span>  
   
-2.  Ошибки прокси\-сервера\/канала  
+2.  <span data-ttu-id="37f08-105">Ошибки прокси-сервера/канала</span><span class="sxs-lookup"><span data-stu-id="37f08-105">Proxy/Channel Errors</span></span>  
   
-3.  Ошибки приложения  
+3.  <span data-ttu-id="37f08-106">Ошибки приложения</span><span class="sxs-lookup"><span data-stu-id="37f08-106">Application Errors</span></span>  
   
- Ошибки обмена данными возникают, когда сеть недоступна, клиент использует неверный адрес или узел службы не прослушивает входящие сообщения.Ошибки данного типа возвращаются клиенту в виде производных классов <xref:System.ServiceModel.CommunicationException> или <xref:System.ServiceModel.CommunicationException>.  
+ <span data-ttu-id="37f08-107">Ошибки обмена данными возникают, когда сеть недоступна, клиент использует неверный адрес или узел службы не прослушивает входящие сообщения.</span><span class="sxs-lookup"><span data-stu-id="37f08-107">Communication errors occur when a network is unavailable, a client uses an incorrect address, or the service host is not listening for incoming messages.</span></span> <span data-ttu-id="37f08-108">Ошибки данного типа возвращаются клиенту в виде производных классов <xref:System.ServiceModel.CommunicationException> или <xref:System.ServiceModel.CommunicationException>.</span><span class="sxs-lookup"><span data-stu-id="37f08-108">Errors of this type are returned to the client as <xref:System.ServiceModel.CommunicationException> or <xref:System.ServiceModel.CommunicationException>-derived classes.</span></span>  
   
- Ошибки прокси\-сервера\/канала — это ошибки, возникающие непосредственно в канале или на прокси\-сервере.К ошибкам этого типа относятся попытка использовать прокси\-сервер или канал, который был закрыт, несоответствие контракта между клиентом и службой или отклонение службой учетных данных клиента.Относящихся к этой категории ошибок различных типов настолько много, что их невозможно здесь перечислить.Ошибки этого типа возвращаются клиенту в исходном виде \(какие\-либо преобразования над объектами исключений не выполняются\).  
+ <span data-ttu-id="37f08-109">Ошибки прокси-сервера/канала - это ошибки, возникающие непосредственно в канале или на прокси-сервере.</span><span class="sxs-lookup"><span data-stu-id="37f08-109">Proxy/Channel errors are errors that occur within the channel or proxy itself.</span></span> <span data-ttu-id="37f08-110">К ошибкам этого типа относятся попытка использовать прокси-сервер или канал, который был закрыт, несоответствие контракта между клиентом и службой или отклонение службой учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="37f08-110">Errors of this type include: attempting to use a proxy or channel that has been closed, a contract mismatch exists between the client and service, or the client’s credentials are rejected by the service.</span></span> <span data-ttu-id="37f08-111">Относящихся к этой категории ошибок различных типов настолько много, что их невозможно здесь перечислить.</span><span class="sxs-lookup"><span data-stu-id="37f08-111">There are many different types of errors in this category, too many to list here.</span></span> <span data-ttu-id="37f08-112">Ошибки этого типа возвращаются клиенту в исходном виде (какие-либо преобразования над объектами исключений не выполняются).</span><span class="sxs-lookup"><span data-stu-id="37f08-112">Errors of this type are returned to the client as-is (no transformation is performed on the exception objects).</span></span>  
   
- Ошибки приложения возникают во время выполнения одной из операций службы.Ошибки такого рода передаются клиенту как <xref:System.ServiceModel.FaultException> или <xref:System.ServiceModel.FaultException%601>.  
+ <span data-ttu-id="37f08-113">Ошибки приложения возникают во время выполнения одной из операций службы.</span><span class="sxs-lookup"><span data-stu-id="37f08-113">Application errors occur during the execution of a service operation.</span></span> <span data-ttu-id="37f08-114">Ошибки такого рода передаются клиенту как <xref:System.ServiceModel.FaultException> или <xref:System.ServiceModel.FaultException%601>.</span><span class="sxs-lookup"><span data-stu-id="37f08-114">Errors of this kind are sent to the client as <xref:System.ServiceModel.FaultException> or <xref:System.ServiceModel.FaultException%601>.</span></span>  
   
- Обработка ошибок в WCF выполняется одним или несколькими методами из следующих:  
+ <span data-ttu-id="37f08-115">Обработка ошибок в WCF выполняется одним или несколькими методами из следующих:</span><span class="sxs-lookup"><span data-stu-id="37f08-115">Error handling in WCF is performed by one or more of the following:</span></span>  
   
--   Непосредственная обработка возникшего исключения.Этот метод применяется только для ошибок обмена данными и ошибок прокси\-сервера\/канала.  
+-   <span data-ttu-id="37f08-116">Непосредственная обработка возникшего исключения.</span><span class="sxs-lookup"><span data-stu-id="37f08-116">Directly handling the exception thrown.</span></span> <span data-ttu-id="37f08-117">Этот метод применяется только для ошибок обмена данными и ошибок прокси-сервера/канала.</span><span class="sxs-lookup"><span data-stu-id="37f08-117">This is only done for communication and proxy/channel errors.</span></span>  
   
--   Использование контрактов сбоя  
+-   <span data-ttu-id="37f08-118">Использование контрактов сбоя</span><span class="sxs-lookup"><span data-stu-id="37f08-118">Using fault contracts</span></span>  
   
--   Реализация интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
+-   <span data-ttu-id="37f08-119">Реализация интерфейса <xref:System.ServiceModel.Dispatcher.IErrorHandler></span><span class="sxs-lookup"><span data-stu-id="37f08-119">Implementing the <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface</span></span>  
   
--   Обработка событий <xref:System.ServiceModel.ServiceHost>  
+-   <span data-ttu-id="37f08-120">Обработка событий <xref:System.ServiceModel.ServiceHost></span><span class="sxs-lookup"><span data-stu-id="37f08-120">Handling <xref:System.ServiceModel.ServiceHost> events</span></span>  
   
-## Контракты сбоя  
- Контракты сбоев позволяют определять ошибки, которые могут возникать во время выполнения работы службы, независимо от платформы.По умолчанию все ошибки, возникающие при работе службы, возвращаются клиенту в виде объекта <xref:System.ServiceModel.FaultException>.Объект <xref:System.ServiceModel.FaultException> содержит очень мало сведений.Для управления тем, какие сведения передаются клиенту, можно определить контракт сбоя и возвращать ошибки в виде исключения <xref:System.ServiceModel.FaultException%601>.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+## <a name="fault-contracts"></a><span data-ttu-id="37f08-121">Контракты сбоя</span><span class="sxs-lookup"><span data-stu-id="37f08-121">Fault Contracts</span></span>  
+ <span data-ttu-id="37f08-122">Контракты сбоев позволяют определять ошибки, которые могут возникать во время выполнения работы службы, независимо от платформы.</span><span class="sxs-lookup"><span data-stu-id="37f08-122">Fault contracts allow you to define the errors that can occur during service operation in a platform independent way.</span></span> <span data-ttu-id="37f08-123">По умолчанию все ошибки, возникающие при работе службы, возвращаются клиенту в виде объекта <xref:System.ServiceModel.FaultException>.</span><span class="sxs-lookup"><span data-stu-id="37f08-123">By default all exceptions thrown from within a service operation will be returned to the client as a <xref:System.ServiceModel.FaultException> object.</span></span> <span data-ttu-id="37f08-124">Объект <xref:System.ServiceModel.FaultException> содержит очень мало сведений.</span><span class="sxs-lookup"><span data-stu-id="37f08-124">The <xref:System.ServiceModel.FaultException> object will contain very little information.</span></span> <span data-ttu-id="37f08-125">Для управления тем, какие сведения передаются клиенту, можно определить контракт сбоя и возвращать ошибки в виде исключения <xref:System.ServiceModel.FaultException%601>.</span><span class="sxs-lookup"><span data-stu-id="37f08-125">You can control the information sent to the client by defining a fault contract and returning the error as a <xref:System.ServiceModel.FaultException%601>.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="37f08-126">[Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span><span class="sxs-lookup"><span data-stu-id="37f08-126"> [Specifying and Handling Faults in Contracts and Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).</span></span>  
   
-## IErrorHandler  
- Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> обеспечивает больший контроль над тем, как приложение WCF будет реагировать на ошибки.Он предоставляет разработчику полный доступ к содержанию сообщений об ошибках, которые возвращаются клиенту, и позволяет выполнять нестандартную обработку ошибок, например ведение журнала.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler> и [Повышение управляемости обработки ошибок и формирования сообщений об ошибках](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+## <a name="ierrorhandler"></a><span data-ttu-id="37f08-127">IErrorHandler</span><span class="sxs-lookup"><span data-stu-id="37f08-127">IErrorHandler</span></span>  
+ <span data-ttu-id="37f08-128">Интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler> обеспечивает больший контроль над тем, как приложение WCF будет реагировать на ошибки.</span><span class="sxs-lookup"><span data-stu-id="37f08-128">The <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface allows you more control over how your WCF application responds to errors.</span></span>  <span data-ttu-id="37f08-129">Он предоставляет разработчику полный доступ над содержанием сообщений об ошибках, которые возвращаются клиенту, и позволяет выполнять пользовательскую обработку ошибок, например ведение журнала.</span><span class="sxs-lookup"><span data-stu-id="37f08-129">It gives you full control over the fault message that is returned to the client and allows you to perform custom error processing such as logging.</span></span>  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<span data-ttu-id="37f08-130"><xref:System.ServiceModel.Dispatcher.IErrorHandler> и [повышение управляемости обработки ошибок и отчетов](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)</span><span class="sxs-lookup"><span data-stu-id="37f08-130"> <xref:System.ServiceModel.Dispatcher.IErrorHandler> and [Extending Control Over Error Handling and Reporting](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)</span></span>  
   
-## События ServiceHost  
- Класс <xref:System.ServiceModel.ServiceHost> применяется для размещения служб и определяет несколько событий, которые могут потребоваться для обработки ошибок.Пример.  
+## <a name="servicehost-events"></a><span data-ttu-id="37f08-131">События ServiceHost</span><span class="sxs-lookup"><span data-stu-id="37f08-131">ServiceHost Events</span></span>  
+ <span data-ttu-id="37f08-132">Класс <xref:System.ServiceModel.ServiceHost> применяется для размещения служб и определяет несколько событий, которые могут потребоваться для обработки ошибок.</span><span class="sxs-lookup"><span data-stu-id="37f08-132">The <xref:System.ServiceModel.ServiceHost> class hosts services and defines several events that may be needed for handling errors.</span></span> <span data-ttu-id="37f08-133">Пример:</span><span class="sxs-lookup"><span data-stu-id="37f08-133">For example:</span></span>  
   
-1.  <xref:System.ServiceModel.ServiceHost.Faulted>  
+1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
   
-2.  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  
+2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceHost>
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="37f08-134"> <xref:System.ServiceModel.ServiceHost></span><span class="sxs-lookup"><span data-stu-id="37f08-134"> <xref:System.ServiceModel.ServiceHost></span></span>

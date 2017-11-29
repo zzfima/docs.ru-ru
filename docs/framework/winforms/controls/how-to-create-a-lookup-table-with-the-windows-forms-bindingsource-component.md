@@ -1,107 +1,108 @@
 ---
-title: "Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource - компонент [Windows Forms], создание таблицы подстановок"
-  - "BindingSource - компонент [Windows Forms], примеры"
-  - "таблицы подстановок"
-  - "таблицы [Windows Forms], создание таблицы подстановок"
+title: "Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lookup tables
+- tables [Windows Forms], creating lookup tables
+- BindingSource component [Windows Forms], creating a lookup table
+- BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 27c1c6cd0e617c0940a734e7e16a3ec5d12f920d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms
-Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице.  В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.  
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a><span data-ttu-id="61f71-102">Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="61f71-102">How to: Create a Lookup Table with the Windows Forms BindingSource Component</span></span>
+<span data-ttu-id="61f71-103">Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице.</span><span class="sxs-lookup"><span data-stu-id="61f71-103">A lookup table is a table of data that has a column that displays data from records in a related table.</span></span> <span data-ttu-id="61f71-104">В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="61f71-104">In the following procedures, a <xref:System.Windows.Forms.ComboBox> control is used to display the field with the foreign-key relationship from the parent to the child table.</span></span>  
   
- Чтобы вы могли представить это отношение, приведем пример родительской и дочерней таблицы.  
+ <span data-ttu-id="61f71-105">Чтобы вы могли представить это отношение, приведем пример родительской и дочерней таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-105">To help visualize these two tables and this relationship, here is an example of a parent and child table:</span></span>  
   
- CustomersTable \(родительская таблица\)  
+ <span data-ttu-id="61f71-106">CustomersTable (родительская таблица)</span><span class="sxs-lookup"><span data-stu-id="61f71-106">CustomersTable (parent table)</span></span>  
   
-|CustomerID|CustomerName|  
+|<span data-ttu-id="61f71-107">CustomerID</span><span class="sxs-lookup"><span data-stu-id="61f71-107">CustomerID</span></span>|<span data-ttu-id="61f71-108">CustomerName</span><span class="sxs-lookup"><span data-stu-id="61f71-108">CustomerName</span></span>|  
 |----------------|------------------|  
-|712|Павел Кох|  
-|713|Тамара Иванова|  
+|<span data-ttu-id="61f71-109">712</span><span class="sxs-lookup"><span data-stu-id="61f71-109">712</span></span>|<span data-ttu-id="61f71-110">Павел Кох</span><span class="sxs-lookup"><span data-stu-id="61f71-110">Paul Koch</span></span>|  
+|<span data-ttu-id="61f71-111">713</span><span class="sxs-lookup"><span data-stu-id="61f71-111">713</span></span>|<span data-ttu-id="61f71-112">Тамара Иванова</span><span class="sxs-lookup"><span data-stu-id="61f71-112">Tamara Johnston</span></span>|  
   
- OrdersTable \(дочерняя таблица\)  
+ <span data-ttu-id="61f71-113">OrdersTable (дочерняя таблица)</span><span class="sxs-lookup"><span data-stu-id="61f71-113">OrdersTable (child table)</span></span>  
   
-|OrderID|OrderDate|CustomerID|  
+|<span data-ttu-id="61f71-114">OrderID</span><span class="sxs-lookup"><span data-stu-id="61f71-114">OrderID</span></span>|<span data-ttu-id="61f71-115">OrderDate</span><span class="sxs-lookup"><span data-stu-id="61f71-115">OrderDate</span></span>|<span data-ttu-id="61f71-116">CustomerID</span><span class="sxs-lookup"><span data-stu-id="61f71-116">CustomerID</span></span>|  
 |-------------|---------------|----------------|  
-|903|12 февраля 2004 г.|712|  
-|904|13 февраля 2004 г.|713|  
+|<span data-ttu-id="61f71-117">903</span><span class="sxs-lookup"><span data-stu-id="61f71-117">903</span></span>|<span data-ttu-id="61f71-118">12 февраля 2004 г.</span><span class="sxs-lookup"><span data-stu-id="61f71-118">February 12, 2004</span></span>|<span data-ttu-id="61f71-119">712</span><span class="sxs-lookup"><span data-stu-id="61f71-119">712</span></span>|  
+|<span data-ttu-id="61f71-120">904</span><span class="sxs-lookup"><span data-stu-id="61f71-120">904</span></span>|<span data-ttu-id="61f71-121">13 февраля 2004 г.</span><span class="sxs-lookup"><span data-stu-id="61f71-121">February 13, 2004</span></span>|<span data-ttu-id="61f71-122">713</span><span class="sxs-lookup"><span data-stu-id="61f71-122">713</span></span>|  
   
- В данном случае одна таблица, CustomersTable, содержит актуальную информацию, которую необходимо отобразить и сохранить.  Для экономии места в таблице опущены пояснения.  Другая таблица, OrdersTable, содержит только внешнюю информацию о том, какой номер идентификатора клиента соответствует тем или иным данным и идентификатору заказа.  При этом имена клиентов не указываются.  
+ <span data-ttu-id="61f71-123">В данном случае одна таблица, CustomersTable, содержит актуальную информацию, которую необходимо отобразить и сохранить.</span><span class="sxs-lookup"><span data-stu-id="61f71-123">In this scenario, one table, CustomersTable, stores the actual information you want to display and save.</span></span> <span data-ttu-id="61f71-124">Для экономии места в таблице опущены пояснения.</span><span class="sxs-lookup"><span data-stu-id="61f71-124">But to save space, the table leaves out data that adds clarity.</span></span> <span data-ttu-id="61f71-125">Другая таблица, OrdersTable, содержит только внешнюю информацию о том, какой номер идентификатора клиента соответствует тем или иным данным и идентификатору заказа.</span><span class="sxs-lookup"><span data-stu-id="61f71-125">The other table, OrdersTable, contains only appearance-related information about which customer ID number is equivalent to which order date and order ID.</span></span> <span data-ttu-id="61f71-126">При этом имена клиентов не указываются.</span><span class="sxs-lookup"><span data-stu-id="61f71-126">There is no mention of the customers' names.</span></span>  
   
- Чтобы создать таблицу подстановки, в элементе управления [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) устанавливаются четыре важных свойства.  
+ <span data-ttu-id="61f71-127">Чтобы создать таблицу подстановки, в элементе управления [ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) устанавливаются четыре важных свойства.</span><span class="sxs-lookup"><span data-stu-id="61f71-127">Four important properties are set on the [ComboBox Control](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) control to create the lookup table.</span></span>  
   
--   Свойство <xref:System.Windows.Forms.ComboBox.DataSource%2A> содержит имя таблицы.  
+-   <span data-ttu-id="61f71-128">Свойство <xref:System.Windows.Forms.ComboBox.DataSource%2A> содержит имя таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-128">The <xref:System.Windows.Forms.ComboBox.DataSource%2A> property contains the name of the table.</span></span>  
   
--   Свойство <xref:System.Windows.Forms.ListControl.DisplayMember%2A> содержит столбец данных таблицы, из которого нужно взять текст для элемента управления \(имя клиента\).  
+-   <span data-ttu-id="61f71-129">Свойство <xref:System.Windows.Forms.ListControl.DisplayMember%2A> содержит столбец данных таблицы, из которого нужно взять текст для элемента управления (имя клиента).</span><span class="sxs-lookup"><span data-stu-id="61f71-129">The <xref:System.Windows.Forms.ListControl.DisplayMember%2A> property contains the data column of that table that you want to display for the control text (the customer's name).</span></span>  
   
--   Свойство <xref:System.Windows.Forms.ListControl.ValueMember%2A> содержит столбец данных таблицы, в которой хранится информация \(номер идентификатора в родительской таблице\).  
+-   <span data-ttu-id="61f71-130">Свойство <xref:System.Windows.Forms.ListControl.ValueMember%2A> содержит столбец данных таблицы, в которой хранится информация (номер идентификатора в родительской таблице).</span><span class="sxs-lookup"><span data-stu-id="61f71-130">The <xref:System.Windows.Forms.ListControl.ValueMember%2A> property contains the data column of that table with the stored information (the ID number in the parent table).</span></span>  
   
--   Свойство <xref:System.Windows.Forms.ListControl.SelectedValue%2A> предоставляет значение подстановки для дочерней таблицы на основании свойства <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+-   <span data-ttu-id="61f71-131">Свойство <xref:System.Windows.Forms.ListControl.SelectedValue%2A> предоставляет значение подстановки для дочерней таблицы на основании свойства <xref:System.Windows.Forms.ListControl.ValueMember%2A>.</span><span class="sxs-lookup"><span data-stu-id="61f71-131">The <xref:System.Windows.Forms.ListControl.SelectedValue%2A> property provides the lookup value for the child table, based on the <xref:System.Windows.Forms.ListControl.ValueMember%2A>.</span></span>  
   
- Представленные ниже процедуры показывают, как разместить форму в виде таблицы подстановки и привязать данные к ее элементам управления.  Для успешного завершения процедур необходим источник данных с родительской и дочерней таблицами, связанными по внешнему ключу, как это уже говорилось выше.  
+ <span data-ttu-id="61f71-132">Представленные ниже процедуры показывают, как разместить форму в виде таблицы подстановки и привязать данные к ее элементам управления.</span><span class="sxs-lookup"><span data-stu-id="61f71-132">The procedures below show you how to lay out your form as a lookup table and bind data to the controls on it.</span></span> <span data-ttu-id="61f71-133">Для успешного завершения процедур необходим источник данных с родительской и дочерней таблицами, связанными по внешнему ключу, как это уже говорилось выше.</span><span class="sxs-lookup"><span data-stu-id="61f71-133">To successfully complete the procedures, you must have a data source with parent and child tables that have a foreign-key relationship, as mentioned previously.</span></span>  
   
-### Создание пользовательского интерфейса  
+### <a name="to-create-the-user-interface"></a><span data-ttu-id="61f71-134">Создание пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="61f71-134">To create the user interface</span></span>  
   
-1.  Перетащите из области **Панель элементов** в форму элемент управления <xref:System.Windows.Forms.ComboBox>.  
+1.  <span data-ttu-id="61f71-135">Из **элементов**, перетащите <xref:System.Windows.Forms.ComboBox> в форму элемент управления.</span><span class="sxs-lookup"><span data-stu-id="61f71-135">From the **ToolBox**, drag a <xref:System.Windows.Forms.ComboBox> control onto the form.</span></span>  
   
-     Этот элемент управления будет отображать столбец из родительской таблицы.  
+     <span data-ttu-id="61f71-136">Этот элемент управления будет отображать столбец из родительской таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-136">This control will display the column from parent table.</span></span>  
   
-2.  Перетащите другие элементы управления для отображения сведений из дочерней таблицы.  Формат данных в таблице следует определить, исходя из выбранных элементов управления.  Для получения дополнительной информации см. [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  <span data-ttu-id="61f71-137">Перетащите другие элементы управления для отображения сведений из дочерней таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-137">Drag other controls to display details from the child table.</span></span> <span data-ttu-id="61f71-138">Формат данных в таблице следует определить, исходя из выбранных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="61f71-138">The format of the data in the table should determine which controls you choose.</span></span> <span data-ttu-id="61f71-139">Дополнительные сведения см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span><span class="sxs-lookup"><span data-stu-id="61f71-139">For more information, see [Windows Forms Controls by Function](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span></span>  
   
-3.  Перетащите в форму элемент управления <xref:System.Windows.Forms.BindingNavigator>. Это позволит перемещаться по данным в дочерней таблице.  
+3.  <span data-ttu-id="61f71-140">Перетащите в форму элемент управления <xref:System.Windows.Forms.BindingNavigator>. Это позволит перемещаться по данным в дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="61f71-140">Drag a <xref:System.Windows.Forms.BindingNavigator> control onto the form; this will allow you to navigate the data in the child table.</span></span>  
   
-### Подключение к данным и их привязка к элементам управления  
+### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a><span data-ttu-id="61f71-141">Подключение к данным и их привязка к элементам управления</span><span class="sxs-lookup"><span data-stu-id="61f71-141">To connect to the data and bind it to controls</span></span>  
   
-1.  Выберите элемент управления <xref:System.Windows.Forms.ComboBox> и нажмите на глиф "Быстрые действия", чтобы открыть одноименное диалоговое окно.  
+1.  <span data-ttu-id="61f71-142">Выберите элемент управления <xref:System.Windows.Forms.ComboBox> и нажмите на глиф "Быстрые действия", чтобы открыть одноименное диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="61f71-142">Select the <xref:System.Windows.Forms.ComboBox> and click the Smart Task glyph to display the Smart Task dialog box.</span></span>  
   
-2.  Выберите элемент **Использовать элементы, привязанные к данным**.  
+2.  <span data-ttu-id="61f71-143">Выберите элемент **Использовать элементы, привязанные к данным**.</span><span class="sxs-lookup"><span data-stu-id="61f71-143">Select **Use data bound items**.</span></span>  
   
-3.  Щелкните стрелку рядом с раскрывающимся списком **Источник данных**.  Если источник данных ранее был настроен для проекта или формы, он отобразится. В противном случае выполните следующие действия \(в этом примере используются таблицы Customers и Orders учебной базы данных Борей, а ссылки на них приводятся в круглых скобках\).  
+3.  <span data-ttu-id="61f71-144">Щелкните стрелку рядом с раскрывающимся списком **Источник данных**.</span><span class="sxs-lookup"><span data-stu-id="61f71-144">Click the arrow next to the **Data Source** drop-down box.</span></span> <span data-ttu-id="61f71-145">Если источник данных ранее был настроен для проекта или формы, он отобразится. В противном случае выполните следующие действия (в этом примере используются таблицы Customers и Orders учебной базы данных Борей, а ссылки на них приводятся в круглых скобках).</span><span class="sxs-lookup"><span data-stu-id="61f71-145">If a data source has previously been configured for the project or form, it will appear; otherwise, complete the following steps (This example uses the Customers and Orders tables of the Northwind sample database and refers to them in parentheses).</span></span>  
   
-    1.  Щелкните элемент **Добавить источник данных проекта**, чтобы подключиться к данным и создать источник данных.  
+    1.  <span data-ttu-id="61f71-146">Щелкните элемент **Добавить источник данных проекта**, чтобы подключиться к данным и создать источник данных.</span><span class="sxs-lookup"><span data-stu-id="61f71-146">Click **Add Project Data Source** to connect to data and create a data source.</span></span>  
   
-    2.  На странице приветствия **Мастер настройки источника данных** нажмите кнопку **Далее**.  
+    2.  <span data-ttu-id="61f71-147">На странице приветствия **Мастер настройки источника данных** нажмите кнопку **Далее**.</span><span class="sxs-lookup"><span data-stu-id="61f71-147">On the **Data Source Configuration Wizard** welcome page, click **Next**.</span></span>  
   
-    3.  На странице **Выбор типа источника данных** выберите элемент **База данных**.  
+    3.  <span data-ttu-id="61f71-148">На странице **Выбор типа источника данных** выберите элемент **База данных**.</span><span class="sxs-lookup"><span data-stu-id="61f71-148">Select **Database** on the **Choose a Data Source Type** page.</span></span>  
   
-    4.  На странице **Выбор подключения к базе данных** выберите тип подключения данных из списка доступных подключений.  Если необходимое подключение данных недоступно, выберите элемент **Создать подключение**, чтобы создать новое подключение данных.  
+    4.  <span data-ttu-id="61f71-149">На странице **Выбор подключения к базе данных** выберите тип подключения данных из списка доступных подключений.</span><span class="sxs-lookup"><span data-stu-id="61f71-149">Select a data connection from the list of available connections on the **Choose Your Data Connection** page.</span></span> <span data-ttu-id="61f71-150">Если необходимое подключение данных недоступно, выберите элемент **Создать подключение**, чтобы создать новое подключение данных.</span><span class="sxs-lookup"><span data-stu-id="61f71-150">If your desired data connection is not available, select **New Connection** to create a new data connection.</span></span>  
   
-    5.  Нажмите кнопку **Да, сохранить подключение**, чтобы сохранить строку подключения в файле конфигурации приложения.  
+    5.  <span data-ttu-id="61f71-151">Нажмите кнопку **Да, сохранить подключение**, чтобы сохранить строку подключения в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="61f71-151">Click **Yes, save the connection** to save the connection string in the application configuration file.</span></span>  
   
-    6.  Выберите объекты базы данных, чтобы перенести их в приложение.  В данном случае выберите родительскую и дочернюю таблицы \(например, таблицы Customers и Orders\) с отношением по внешнему ключу.  
+    6.  <span data-ttu-id="61f71-152">Выберите объекты базы данных, чтобы перенести их в приложение.</span><span class="sxs-lookup"><span data-stu-id="61f71-152">Select the database objects to bring into your application.</span></span> <span data-ttu-id="61f71-153">В данном случае выберите родительскую и дочернюю таблицы (например, таблицы Customers и Orders) с отношением по внешнему ключу.</span><span class="sxs-lookup"><span data-stu-id="61f71-153">In this case, select a parent table and child table (for example, Customers and Orders) with a foreign key relationship.</span></span>  
   
-    7.  Если необходимо, замените имя набора данных по умолчанию.  
+    7.  <span data-ttu-id="61f71-154">Если необходимо, замените имя набора данных по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="61f71-154">Replace the default dataset name if you want.</span></span>  
   
-    8.  Нажмите кнопку **Готово**.  
+    8.  <span data-ttu-id="61f71-155">Нажмите кнопку **Готово**.</span><span class="sxs-lookup"><span data-stu-id="61f71-155">Click **Finish**.</span></span>  
   
-4.  В раскрывающемся списке **Отобразить участника** выберите имя столбца \(например, ContactName\) для его отображения в поле со списком.  
+4.  <span data-ttu-id="61f71-156">В раскрывающемся списке **Отобразить участника** выберите имя столбца (например, ContactName) для его отображения в поле со списком.</span><span class="sxs-lookup"><span data-stu-id="61f71-156">In the **Display Member** drop-down box, select the column name (for example, ContactName) to be displayed in the combo box.</span></span>  
   
-5.  В раскрывающемся списке **Значение участника** выберите столбец \(например, CustomerID\), чтобы выполнить операции подстановки в дочерней таблице.  
+5.  <span data-ttu-id="61f71-157">В раскрывающемся списке **Значение участника** выберите столбец (например, CustomerID), чтобы выполнить операции подстановки в дочерней таблице.</span><span class="sxs-lookup"><span data-stu-id="61f71-157">In the **Value Member** drop-down box, select the column (for example, CustomerID) to perform the lookup operation in the child table.</span></span>  
   
-6.  В раскрывающемся списке **Выбранное значение** перейдите к элементу **Источники данных проекта** и только что созданному набору данных, который содержит родительскую и дочернюю таблицы.  Выберите такое же свойство дочерней таблицы, которое является значением участника родительской таблицы \(например, Orders.CustomerID\).  Будут созданы и добавлены в форму соответствующие <xref:System.Windows.Forms.BindingSource>, набор данных и компоненты адаптера таблицы.  
+6.  <span data-ttu-id="61f71-158">В раскрывающемся списке **Выбранное значение** перейдите к элементу **Источники данных проекта** и только что созданному набору данных, который содержит родительскую и дочернюю таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-158">In the **Selected Value** drop-down box, navigate to **Project Data Sources** and the dataset you just created that contains the parent and child tables.</span></span> <span data-ttu-id="61f71-159">Выберите такое же свойство дочерней таблицы, которое является значением участника родительской таблицы (например, Orders.CustomerID).</span><span class="sxs-lookup"><span data-stu-id="61f71-159">Select the same property of the child table that is the Value Member of the parent table (for example, Orders.CustomerID).</span></span> <span data-ttu-id="61f71-160">Будут созданы и добавлены в форму соответствующие <xref:System.Windows.Forms.BindingSource>, набор данных и компоненты адаптера таблицы.</span><span class="sxs-lookup"><span data-stu-id="61f71-160">The appropriate <xref:System.Windows.Forms.BindingSource> , data set, and table adapter components will be created and added to the form.</span></span>  
   
-7.  Свяжите элемент управления <xref:System.Windows.Forms.BindingNavigator> с элементом <xref:System.Windows.Forms.BindingSource> дочерней таблицы \(например, `OrdersBindingSource`\).  
+7.  <span data-ttu-id="61f71-161">Свяжите элемент управления <xref:System.Windows.Forms.BindingNavigator> с элементом <xref:System.Windows.Forms.BindingSource> дочерней таблицы (например, `OrdersBindingSource`).</span><span class="sxs-lookup"><span data-stu-id="61f71-161">Bind the <xref:System.Windows.Forms.BindingNavigator> control to the <xref:System.Windows.Forms.BindingSource> of the child table (for example, `OrdersBindingSource`).</span></span>  
   
-8.  Свяжите элементы управления, кроме <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.BindingNavigator>, с полями сведений из элемента <xref:System.Windows.Forms.BindingSource> дочерней таблицы \(например, `OrdersBindingSource`\), которые необходимо отобразить.  
+8.  <span data-ttu-id="61f71-162">Свяжите элементы управления, кроме <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.BindingNavigator>, с полями сведений из элемента <xref:System.Windows.Forms.BindingSource> дочерней таблицы (например, `OrdersBindingSource`), которые необходимо отобразить.</span><span class="sxs-lookup"><span data-stu-id="61f71-162">Bind the controls other than the <xref:System.Windows.Forms.ComboBox> and <xref:System.Windows.Forms.BindingNavigator> control to the details fields from the child table's <xref:System.Windows.Forms.BindingSource> (for example, `OrdersBindingSource`) that you want to display.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.BindingSource>   
- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)   
- [Привязка элементов управления к данным в Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="see-also"></a><span data-ttu-id="61f71-163">См. также</span><span class="sxs-lookup"><span data-stu-id="61f71-163">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="61f71-164">Компонент BindingSource</span><span class="sxs-lookup"><span data-stu-id="61f71-164">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="61f71-165">Элемент управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="61f71-165">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
+ [<span data-ttu-id="61f71-166">Привязка элементов управления к данным в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="61f71-166">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

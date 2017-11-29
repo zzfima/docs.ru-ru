@@ -1,47 +1,51 @@
 ---
-title: "119 - WorkflowInstanceUpdatedRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "119 ― WorkflowInstanceUpdatedRecord"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 32485d0a-dcdb-45bc-b1e3-79fa9ad9439b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b838f764b1f86b0477dc797620dca5f99bb13d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 119 - WorkflowInstanceUpdatedRecord
-## Свойства  
+# <a name="119---workflowinstanceupdatedrecord"></a><span data-ttu-id="0f461-102">119 ― WorkflowInstanceUpdatedRecord</span><span class="sxs-lookup"><span data-stu-id="0f461-102">119 - WorkflowInstanceUpdatedRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="0f461-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="0f461-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|119|  
-|Ключевые слова|HealthMonitoring, WFTracking|  
-|Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="0f461-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="0f461-104">ID</span></span>|<span data-ttu-id="0f461-105">119</span><span class="sxs-lookup"><span data-stu-id="0f461-105">119</span></span>|  
+|<span data-ttu-id="0f461-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="0f461-106">Keywords</span></span>|<span data-ttu-id="0f461-107">HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="0f461-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="0f461-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="0f461-108">Level</span></span>|<span data-ttu-id="0f461-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="0f461-109">Information</span></span>|  
+|<span data-ttu-id="0f461-110">Канал</span><span class="sxs-lookup"><span data-stu-id="0f461-110">Channel</span></span>|<span data-ttu-id="0f461-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="0f461-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие создается участником трассировки событий Windows, когда обновляется экземпляр рабочего процесса.  
+## <a name="description"></a><span data-ttu-id="0f461-112">Описание</span><span class="sxs-lookup"><span data-stu-id="0f461-112">Description</span></span>  
+ <span data-ttu-id="0f461-113">Это событие создается участником трассировки событий Windows, когда обновляется экземпляр рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0f461-113">This event is emitted by the ETW tracking participant when a workflow instance is updated.</span></span>  
   
-## Сообщение  
- TrackRecord\= WorkflowInstanceUpdatedRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, State \= %5, OriginalDefinitionIdentity \= %6, UpdatedDefinitionIdentity \= %7, Annotations \= %8, ProfileName \= %9  
+## <a name="message"></a><span data-ttu-id="0f461-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="0f461-114">Message</span></span>  
+ <span data-ttu-id="0f461-115">TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9</span><span class="sxs-lookup"><span data-stu-id="0f461-115">TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9</span></span>  
   
-## Подробные сведения  
+## <a name="details"></a><span data-ttu-id="0f461-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="0f461-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|InstanceId|xs:GUID|Идентификатор экземпляра для рабочего процесса.|  
-|RecordNumber|xs:long|Порядковый номер созданной записи.|  
-|EventTime|xs:dateTime|Время в формате UTC, когда было создано событие.|  
-|ActivityDefinitionId|xs:string|Имя корневого действия в рабочем процессе.|  
-|Состояние|xs:string|Текущее состояние рабочего процесса.|  
-|OriginalDefinitionIdentity|xs:string|Исходный идентификатор определения рабочего процесса|  
-|UpdatedDefinitionIdentity|xs:string|Обновленный идентификатор определения рабочего процесса.|  
-|Заметки|xs:string|Заметки, добавленные к этому событию.  Значения хранятся в XML\-элементе в формате \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\>.  Если ни одной заметки не указано, строка содержит \<items\/\>.  Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.  Если размер события превышает пределы трассировки событий Windows, событие усекается путем отбрасывания заметок и замены значения заметок значением \<items\>...\<\/items\>.|  
-|ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
-|WorkflowDefinitionIdentity|xs:string|Идентификатор определения рабочего процесса|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="0f461-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="0f461-117">Data Item Name</span></span>|<span data-ttu-id="0f461-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="0f461-118">Data Item Type</span></span>|<span data-ttu-id="0f461-119">Описание</span><span class="sxs-lookup"><span data-stu-id="0f461-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="0f461-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="0f461-120">InstanceId</span></span>|<span data-ttu-id="0f461-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="0f461-121">xs:GUID</span></span>|<span data-ttu-id="0f461-122">Идентификатор экземпляра для рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0f461-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="0f461-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="0f461-123">RecordNumber</span></span>|<span data-ttu-id="0f461-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="0f461-124">xs:long</span></span>|<span data-ttu-id="0f461-125">Порядковый номер созданной записи.</span><span class="sxs-lookup"><span data-stu-id="0f461-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="0f461-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="0f461-126">EventTime</span></span>|<span data-ttu-id="0f461-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="0f461-127">xs:dateTime</span></span>|<span data-ttu-id="0f461-128">Время в формате UTC, когда было создано событие.</span><span class="sxs-lookup"><span data-stu-id="0f461-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="0f461-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="0f461-129">ActivityDefinitionId</span></span>|<span data-ttu-id="0f461-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-130">xs:string</span></span>|<span data-ttu-id="0f461-131">Имя корневого действия в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="0f461-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="0f461-132">Состояние</span><span class="sxs-lookup"><span data-stu-id="0f461-132">State</span></span>|<span data-ttu-id="0f461-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-133">xs:string</span></span>|<span data-ttu-id="0f461-134">Текущее состояние рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0f461-134">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="0f461-135">OriginalDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="0f461-135">OriginalDefinitionIdentity</span></span>|<span data-ttu-id="0f461-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-136">xs:string</span></span>|<span data-ttu-id="0f461-137">Исходный идентификатор определения рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="0f461-137">The original workflow definition id</span></span>|  
+|<span data-ttu-id="0f461-138">UpdatedDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="0f461-138">UpdatedDefinitionIdentity</span></span>|<span data-ttu-id="0f461-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-139">xs:string</span></span>|<span data-ttu-id="0f461-140">Обновленный идентификатор определения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0f461-140">The updated workflow definition id</span></span>|  
+|<span data-ttu-id="0f461-141">Заметки</span><span class="sxs-lookup"><span data-stu-id="0f461-141">Annotations</span></span>|<span data-ttu-id="0f461-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-142">xs:string</span></span>|<span data-ttu-id="0f461-143">Заметки, добавленные к этому событию.</span><span class="sxs-lookup"><span data-stu-id="0f461-143">The annotations that were added to this event.</span></span> <span data-ttu-id="0f461-144">Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="0f461-144">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="0f461-145">Если не задано никаких заметок, строка содержит \<элементы / >.</span><span class="sxs-lookup"><span data-stu-id="0f461-145">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="0f461-146">Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.</span><span class="sxs-lookup"><span data-stu-id="0f461-146">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="0f461-147">Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="0f461-147">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="0f461-148">ProfileName</span><span class="sxs-lookup"><span data-stu-id="0f461-148">ProfileName</span></span>|<span data-ttu-id="0f461-149">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-149">xs:string</span></span>|<span data-ttu-id="0f461-150">Имя или профиль отслеживания, который привел к созданию этого события.</span><span class="sxs-lookup"><span data-stu-id="0f461-150">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="0f461-151">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="0f461-151">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="0f461-152">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-152">xs:string</span></span>|<span data-ttu-id="0f461-153">Идентификатор определения рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="0f461-153">The workflow definition id</span></span>|  
+|<span data-ttu-id="0f461-154">AppDomain</span><span class="sxs-lookup"><span data-stu-id="0f461-154">AppDomain</span></span>|<span data-ttu-id="0f461-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="0f461-155">xs:string</span></span>|<span data-ttu-id="0f461-156">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="0f461-156">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

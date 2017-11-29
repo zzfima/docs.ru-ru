@@ -1,45 +1,47 @@
 ---
-title: "Сериализация в Json с помощью программирования на уровне сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сериализация в Json с помощью программирования на уровне сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 33337f75032031ccfc81173f188f4ff7695ffd40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сериализация в Json с помощью программирования на уровне сообщений
-WCF поддерживает сериализацию данных в формате JSON.В этом разделе описывается, как в WCF выполнить сериализацию типов с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+# <a name="serializing-in-json-with-message-level-programming"></a><span data-ttu-id="54f38-102">Сериализация в Json с помощью программирования на уровне сообщений</span><span class="sxs-lookup"><span data-stu-id="54f38-102">Serializing in Json with Message Level Programming</span></span>
+<span data-ttu-id="54f38-103">WCF поддерживает сериализацию данных в формате JSON.</span><span class="sxs-lookup"><span data-stu-id="54f38-103">WCF supports serializing data in JSON format.</span></span> <span data-ttu-id="54f38-104">В этом разделе описывается, как в WCF выполнить сериализацию типов с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span><span class="sxs-lookup"><span data-stu-id="54f38-104">This topic describes how to tell WCF to serialize your types using the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.</span></span>  
   
-## Программирование типизированных сообщений  
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используется, когда к операции службы применяется атрибут <xref:System.ServiceModel.Web.WebGetAttribute> или атрибут <xref:System.ServiceModel.Web.WebInvokeAttribute>.Оба атрибута позволяют задать формат запроса `RequestFormat` и формат ответа `ResponseFormat`.Для использования формата JSON для запросов и ответов установите для обоих атрибутов значение `WebMessageFormat.Json`.Для применения формата JSON необходимо использовать привязку <xref:System.ServiceModel.WebHttpBinding>, которая автоматически настраивает поведение <xref:System.ServiceModel.Description.WebHttpBehavior>.Дополнительные сведения о сериализации WCF см. в разделе [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md), [Сериализация в Windows Communication Foundation](http://msdn.microsoft.com/magazine/cc163569.aspx).Дополнительные сведения о JSON и WCF см. в разделе [Введение в RESTfull\-службы в WCF](http://msdn.microsoft.com/magazine/dd315413.aspx), [Создание служб WCF, использующих формат JSON, в .NET 3.5](http://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx) и [Обзор применения технологии REST в WCF](http://msdn.microsoft.com/netframework/dd547388).  
+## <a name="typed-message-programming"></a><span data-ttu-id="54f38-105">Программирование типизированных сообщений</span><span class="sxs-lookup"><span data-stu-id="54f38-105">Typed Message Programming</span></span>  
+ <span data-ttu-id="54f38-106"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используется, когда к операции службы применяется атрибут <xref:System.ServiceModel.Web.WebGetAttribute> или атрибут <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="54f38-106">The <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> is used when the <xref:System.ServiceModel.Web.WebGetAttribute> or the <xref:System.ServiceModel.Web.WebInvokeAttribute> is applied to a service operation.</span></span> <span data-ttu-id="54f38-107">Оба атрибута позволяют задать формат запроса `RequestFormat` и формат ответа `ResponseFormat`.</span><span class="sxs-lookup"><span data-stu-id="54f38-107">Both of these attributes allow you to specify the `RequestFormat` and `ResponseFormat`.</span></span> <span data-ttu-id="54f38-108">Для использования формата JSON для запросов и ответов установите для обоих атрибутов значение `WebMessageFormat.Json`.</span><span class="sxs-lookup"><span data-stu-id="54f38-108">To use JSON for requests and responses set both of these to `WebMessageFormat.Json`.</span></span>  <span data-ttu-id="54f38-109">Для применения формата JSON необходимо использовать привязку <xref:System.ServiceModel.WebHttpBinding>, которая автоматически настраивает <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="54f38-109">In order to use JSON you must use the <xref:System.ServiceModel.WebHttpBinding> which automatically configures the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span> <span data-ttu-id="54f38-110">Дополнительные сведения о сериализации WCF см. в разделе: [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md), [сериализация в Windows Communication Foundation](http://msdn.microsoft.com/magazine/cc163569.aspx).</span><span class="sxs-lookup"><span data-stu-id="54f38-110">For more information about WCF serialization, see: [Serialization and Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md), [Serialization in Windows Communication Foundation](http://msdn.microsoft.com/magazine/cc163569.aspx).</span></span> <span data-ttu-id="54f38-111">Дополнительные сведения о JSON и WCF см [введение в службы RESTfull с WCF](http://msdn.microsoft.com/magazine/dd315413.aspx), [Создание JSON-совместимых служб WCF в .NET 3.5](http://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx), и [Обзор REST в WCF](http://msdn.microsoft.com/netframework/dd547388).</span><span class="sxs-lookup"><span data-stu-id="54f38-111">For more information about JSON and WCF see [An Introduction to RESTfull Services with WCF](http://msdn.microsoft.com/magazine/dd315413.aspx), [Creating JSON-enabled WCF Services in .NET 3.5](http://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx), and [Overview of REST in WCF](http://msdn.microsoft.com/netframework/dd547388).</span></span>  
   
 > [!IMPORTANT]
->  Для использования с JSON требуется привязка <xref:System.ServiceModel.WebHttpBinding> и поведение <xref:System.ServiceModel.Description.WebHttpBehavior>, которые не поддерживают связь по протоколу SOAP.В службах, взаимодействующих с поведением <xref:System.ServiceModel.WebHttpBinding>, не поддерживается предоставление метаданных службы, таким образом, для создания клиентского прокси\-объекта вы не сможете использовать функцию Visual Studio «Добавить ссылку на службу» или программу командной строки svcutil.Дополнительные сведения о программном способе вызова служб, использующих привязку <xref:System.ServiceModel.WebHttpBinding>, см. в разделе [Как использовать REST\-службы в WCF](http://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).  
+>  <span data-ttu-id="54f38-112">Для использования с JSON требуется привязка <xref:System.ServiceModel.WebHttpBinding> и поведение <xref:System.ServiceModel.Description.WebHttpBehavior>, которые не поддерживают связь по протоколу SOAP.</span><span class="sxs-lookup"><span data-stu-id="54f38-112">Using JSON requires use of <xref:System.ServiceModel.WebHttpBinding> and <xref:System.ServiceModel.Description.WebHttpBehavior> which do not support SOAP communication.</span></span> <span data-ttu-id="54f38-113">Службы, которые взаимодействуют с <xref:System.ServiceModel.WebHttpBinding> не поддерживают предоставление метаданных службы, поэтому вы не сможете использовать функции добавления служебной ссылки Visual Studio или средство командной строки svcutil для создания клиентского прокси.</span><span class="sxs-lookup"><span data-stu-id="54f38-113">Services that communicate with the <xref:System.ServiceModel.WebHttpBinding> do not support exposing service metadata so you will not be able to use Visual Studio’s Add Service Reference functionality or the svcutil command-line tool to generate a client-side proxy.</span></span> <span data-ttu-id="54f38-114">Дополнительные сведения, как можно программным путем вызова служб, использующих <xref:System.ServiceModel.WebHttpBinding>, в разделе [как использовать службы REST с WCF](http://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).</span><span class="sxs-lookup"><span data-stu-id="54f38-114">For more information how you can programmatically call services that use <xref:System.ServiceModel.WebHttpBinding>, see [How to Consume REST Services with WCF](http://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).</span></span>  
   
-## Программирование нетипизированных сообщений  
- При работе напрямую с объектами нетипизированного сообщения следует явно задать свойства нетипизированного сообщения для его сериализации в виде JSON.В следующем фрагменте кода показано, как это сделать.  
+## <a name="untyped-message-programming"></a><span data-ttu-id="54f38-115">Программирование нетипизированных сообщений</span><span class="sxs-lookup"><span data-stu-id="54f38-115">Untyped Message Programming</span></span>  
+ <span data-ttu-id="54f38-116">При работе напрямую с объектами нетипизированного сообщения следует явно задать свойства нетипизированного сообщения для его сериализации в виде JSON.</span><span class="sxs-lookup"><span data-stu-id="54f38-116">When working directly with untyped Message objects, you must explicitly set the properties on the untyped message to serialize it as JSON.</span></span> <span data-ttu-id="54f38-117">В следующем фрагменте кода показано, как это сделать.</span><span class="sxs-lookup"><span data-stu-id="54f38-117">The following code snippet shows how to do this.</span></span>  
   
 ```  
- Message response = Message.CreateMessage(  
+ Message response = Message.CreateMessage(  
                   MessageVersion.None,    // No SOAP message version  
-                             "*",                     // SOAP action, ignored since this is JSON  
-                             "Response string: JSON format specified", // Message body  
-                             new DataContractJsonSerializer(typeof(string))); // Specify DataContractJsonSerializer  
+                             "*",                     // SOAP action, ignored since this is JSON  
+                             "Response string: JSON format specified", // Message body  
+                             new DataContractJsonSerializer(typeof(string))); // Specify DataContractJsonSerializer  
       response.Properties.Add( WebBodyFormatMessageProperty.Name,   
-                    new WebBodyFormatMessageProperty(WebContentFormat.Json)); // Use JSON format  
-  
+                    new WebBodyFormatMessageProperty(WebContentFormat.Json)); // Use JSON format  
 ```  
   
-## См. также  
- [Интеграция с AJAX и поддержка JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)   
- [Изолированная сериализация JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)   
- [Сериализация JSON](../../../../docs/framework/wcf/samples/json-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="54f38-118">См. также</span><span class="sxs-lookup"><span data-stu-id="54f38-118">See Also</span></span>  
+ [<span data-ttu-id="54f38-119">Интеграция с AJAX и поддержка JSON</span><span class="sxs-lookup"><span data-stu-id="54f38-119">AJAX Integration and JSON Support</span></span>](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [<span data-ttu-id="54f38-120">Автономная сериализация JSON</span><span class="sxs-lookup"><span data-stu-id="54f38-120">Stand-Alone JSON Serialization</span></span>](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
+ [<span data-ttu-id="54f38-121">Сериализация JSON</span><span class="sxs-lookup"><span data-stu-id="54f38-121">JSON Serialization</span></span>](../../../../docs/framework/wcf/samples/json-serialization.md)

@@ -1,37 +1,40 @@
 ---
-title: "Пользовательская публикация WSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательская публикация WSDL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e390bf728cde703a967fcea954583f6e5f84002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательская публикация WSDL
-В данном образце демонстрируются указанные ниже возможности.  
+# <a name="custom-wsdl-publication"></a><span data-ttu-id="ff4f2-102">Пользовательская публикация WSDL</span><span class="sxs-lookup"><span data-stu-id="ff4f2-102">Custom WSDL Publication</span></span>
+<span data-ttu-id="ff4f2-103">В данном образце демонстрируются указанные ниже возможности.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-103">This sample demonstrates how to:</span></span>  
   
--   Реализация <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=fullName> пользовательского атрибута <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> для экспорта свойств атрибута в виде заметок WSDL.  
+-   <span data-ttu-id="ff4f2-104">реализации <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> пользовательского атрибута <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> для экспорта свойств атрибута в виде заметок WSDL;</span><span class="sxs-lookup"><span data-stu-id="ff4f2-104">Implement a <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> on a custom <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> attribute to export attribute properties as WSDL annotations.</span></span>  
   
--   Реализация <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=fullName> для импорта пользовательских заметок WSDL.  
+-   <span data-ttu-id="ff4f2-105">Реализация <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> для импорта пользовательских заметок WSDL.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-105">Implement <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> to import the custom WSDL annotations.</span></span>  
   
--   Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=fullName> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=fullName> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.  
+-   <span data-ttu-id="ff4f2-106">Реализация <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> в пользовательском поведении контракта и пользовательском поведении операции соответственно для записи импортированных заметок в виде комментариев в CodeDom для импортированных контракта и операции.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-106">Implement <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> on a custom contract behavior and a custom operation behavior, respectively, to write imported annotations as comments in the CodeDom for the imported contract and operation.</span></span>  
   
--   Использование <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> для загрузки WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> для импорта WSDL с помощью пользовательского импортера WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=fullName> для создания кода клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с заметками WSDL в виде комментариев \/\/\/ и ''' в C\# и Visual Basic.  
+-   <span data-ttu-id="ff4f2-107">Использование <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки WSDL, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> для импорта WSDL с помощью пользовательского импортера WSDL и <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> для создания кода клиента [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с заметками WSDL в виде комментариев /// и ''' в C# и Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-107">Use the <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> to download the WSDL, a <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> to import the WSDL using the custom WSDL importer, and the <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> to generate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client code with the WSDL annotations as /// and ''' comments in C# and Visual Basic.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="ff4f2-108">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## Служба  
- В этом образце служба помечена двумя пользовательскими атрибутами.Первый атрибут, `WsdlDocumentationAttribute`, принимает строку в конструкторе и может применяться для предоставления интерфейса контракта или операции со строкой, описывающей их использование.Второй атрибут, `WsdlParamOrReturnDocumentationAttribute`, может применяться для возврата значений или параметров, описывающих эти значения в операции.В следующем примере показан контракт службы `ICalculator`, описанный с помощью этих атрибутов.  
+## <a name="service"></a><span data-ttu-id="ff4f2-109">Служба</span><span class="sxs-lookup"><span data-stu-id="ff4f2-109">Service</span></span>  
+ <span data-ttu-id="ff4f2-110">В этом образце служба помечена двумя пользовательскими атрибутами.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-110">The service in this sample is marked with two custom attributes.</span></span> <span data-ttu-id="ff4f2-111">Первый атрибут, `WsdlDocumentationAttribute`, принимает строку в конструкторе и может применяться для предоставления интерфейса контракта или операции со строкой, описывающей их использование.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-111">The first, the `WsdlDocumentationAttribute`, accepts a string in the constructor and can be applied to provide a contract interface or operation with a string that describes its usage.</span></span> <span data-ttu-id="ff4f2-112">Второй атрибут, `WsdlParamOrReturnDocumentationAttribute`, может применяться для возврата значений или параметров, описывающих эти значения в операции.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-112">The second, `WsdlParamOrReturnDocumentationAttribute`, can be applied to return values or parameters to describe those values in the operation.</span></span> <span data-ttu-id="ff4f2-113">В следующем примере показан контракт службы `ICalculator`, описанный с помощью этих атрибутов.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-113">The following example shows a service contract, `ICalculator`, described using these attributes.</span></span>  
   
 ```  
 // Define a service contract.      
@@ -72,12 +75,11 @@ public interface ICalculator
       [WsdlParamOrReturnDocumentation("The denominator.")]double n2  
     );  
 }  
-  
 ```  
   
- Атрибут `WsdlDocumentationAttribute` реализует интерфейсы <xref:System.ServiceModel.Description.IContractBehavior> и <xref:System.ServiceModel.Description.IOperationBehavior>, поэтому экземпляры атрибута при открытии службы добавляются к соответствующему описанию <xref:System.ServiceModel.Description.ContractDescription> или <xref:System.ServiceModel.Description.OperationDescription>.Кроме того, атрибут реализует интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension>.При вызове метода <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> объект <xref:System.ServiceModel.Description.WsdlExporter>, который служит для экспорта метаданных, и объект <xref:System.ServiceModel.Description.WsdlContractConversionContext>, который содержит объекты описания службы, передаются в качестве параметров, что позволяет изменить экспортированные метаданные.  
+ <span data-ttu-id="ff4f2-114">Атрибут `WsdlDocumentationAttribute` реализует интерфейсы <xref:System.ServiceModel.Description.IContractBehavior> и <xref:System.ServiceModel.Description.IOperationBehavior>, поэтому экземпляры атрибута при открытии службы добавляются к соответствующему описанию <xref:System.ServiceModel.Description.ContractDescription> или <xref:System.ServiceModel.Description.OperationDescription>.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-114">The `WsdlDocumentationAttribute` implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior>, so the attribute instances are added to the corresponding <xref:System.ServiceModel.Description.ContractDescription> or <xref:System.ServiceModel.Description.OperationDescription> when the service is opened.</span></span> <span data-ttu-id="ff4f2-115">Кроме того, атрибут реализует интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension>.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-115">The attribute also implements <xref:System.ServiceModel.Description.IWsdlExportExtension>.</span></span> <span data-ttu-id="ff4f2-116">При вызове метода <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> объект <xref:System.ServiceModel.Description.WsdlExporter>, который служит для экспорта метаданных, и объект <xref:System.ServiceModel.Description.WsdlContractConversionContext>, который содержит объекты описания службы, передаются в качестве параметров, что позволяет изменить экспортированные метаданные.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-116">When <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> is called, the <xref:System.ServiceModel.Description.WsdlExporter> that is used to export the metadata and the <xref:System.ServiceModel.Description.WsdlContractConversionContext> that contains the service description objects are passed in as parameters enabling the modification of the exported metadata.</span></span>  
   
- В этом образце в зависимости от того, какое описание \(<xref:System.ServiceModel.Description.ContractDescription> или <xref:System.ServiceModel.Description.OperationDescription>\) имеется у объекта контекста экспорта, комментарий извлекается из атрибута с помощью текстового свойства и добавляется в элемент заметки WSDL, как показано в следующем образце кода.  
+ <span data-ttu-id="ff4f2-117">В этом образце в зависимости от того, какое описание (<xref:System.ServiceModel.Description.ContractDescription> или <xref:System.ServiceModel.Description.OperationDescription>) имеется у объекта контекста экспорта, комментарий извлекается из атрибута с помощью текстового свойства и добавляется в элемент заметки WSDL, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-117">In this sample, depending upon whether the export context object has a <xref:System.ServiceModel.Description.ContractDescription> or an <xref:System.ServiceModel.Description.OperationDescription>, a comment is extracted from the attribute using the text property and is added to the WSDL annotation element as shown in the following code.</span></span>  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -113,7 +115,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
             operation.DocumentationElement.AppendChild(newSummaryElement);  
 ```  
   
- Если экспортируется операция, в образце используется отражение, чтобы получить все значения `WsdlParamOrReturnDocumentationAttribute` параметров и возвращаемые значения, после чего эти значения добавляются в элементы заметки WSDL этой операции, как показано ниже.  
+ <span data-ttu-id="ff4f2-118">Если экспортируется операция, в образце используется отражение, чтобы получить все значения `WsdlParamOrReturnDocumentationAttribute` параметров и возвращаемые значения, после чего эти значения добавляются в элементы заметки WSDL этой операции, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-118">If an operation is being exported, the sample uses reflection to obtain any `WsdlParamOrReturnDocumentationAttribute` values for parameters and return values and adds them to the WSDL annotation elements for that operation as follows.</span></span>  
   
 ```  
 // Get returns information  
@@ -143,12 +145,11 @@ for (int i = 0; i < args.Length; i++)
         operation.DocumentationElement.AppendChild(newParamElement);  
     }  
 }  
-  
 ```  
   
- После этого образец обычным образом публикует метаданные с использованием следующего файла конфигурации.  
+ <span data-ttu-id="ff4f2-119">После этого образец обычным образом публикует метаданные с использованием следующего файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-119">The sample then publishes metadata in the standard way, using the following configuration file.</span></span>  
   
-```  
+```xml  
 <services>  
   <service   
       name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -173,16 +174,15 @@ for (int i = 0; i < args.Length; i++)
     </behavior>  
   </serviceBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Клиент Svcutil  
- В этом образце средство Svcutil.exe не используется.Контракт предоставляется в файле generatedClient.cs, поэтому службу можно вызывать после того, как образец продемонстрирует пользовательский импорт WSDL и создание кода.Чтобы использовать в этом примере приведенный ниже пользовательский импортер WSDL, можно запустить средство Svcutil.exe с параметром `/svcutilConfig`, задав путь к используемому в этом примере файлу конфигурации клиента, в котором содержится ссылка на библиотеку `WsdlDocumentation.dll`.Но для загрузки `WsdlDocumentationImporter` средство Svuctil.exe должно иметь возможность находить и загружать библиотеку `WsdlDocumentation.dll`, что означает, что она либо должна быть зарегистрирована в глобальном кэше сборок, либо располагаться в одном каталоге с файлом Svcutil.exe.Для простых образцах, таких как этот, удобнее всего скопировать программу Svcutil.exe и файл конфигурации в один каталог с файлом `WsdlDocumentation.dll` и запускать ее оттуда.  
+## <a name="svcutil-client"></a><span data-ttu-id="ff4f2-120">Клиент Svcutil</span><span class="sxs-lookup"><span data-stu-id="ff4f2-120">Svcutil client</span></span>  
+ <span data-ttu-id="ff4f2-121">В этом образце средство Svcutil.exe не используется.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-121">This sample does not use Svcutil.exe.</span></span> <span data-ttu-id="ff4f2-122">Контракт предоставляется в файле generatedClient.cs, поэтому службу можно вызывать после того, как образец продемонстрирует пользовательский импорт WSDL и создание кода.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-122">The contract is provided in the generatedClient.cs file so that after the sample demonstrates custom WSDL import and code generation, the service can be invoked.</span></span> <span data-ttu-id="ff4f2-123">Чтобы использовать в этом примере приведенный ниже пользовательский импортер WSDL, можно запустить средство Svcutil.exe с параметром `/svcutilConfig`, задав путь к используемому в этом примере файлу конфигурации клиента, в котором содержится ссылка на библиотеку `WsdlDocumentation.dll`.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-123">To use the following custom WSDL importer for this example, you can run Svcutil.exe and specify the `/svcutilConfig` option, giving the path to the client configuration file used in this sample, which references the `WsdlDocumentation.dll` library.</span></span> <span data-ttu-id="ff4f2-124">Но для загрузки `WsdlDocumentationImporter` средство Svuctil.exe должно иметь возможность находить и загружать библиотеку `WsdlDocumentation.dll`, что означает, что она либо должна быть зарегистрирована в глобальном кэше сборок, либо располагаться в одном каталоге с файлом Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-124">To load the `WsdlDocumentationImporter`, however, Svuctil.exe must be able to locate and load the `WsdlDocumentation.dll` library, which means either that it is registered in the global assembly cache, in the path, or is in the same directory as Svcutil.exe.</span></span> <span data-ttu-id="ff4f2-125">Для простых образцах, таких как этот, удобнее всего скопировать программу Svcutil.exe и файл конфигурации в один каталог с файлом `WsdlDocumentation.dll` и запускать ее оттуда.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-125">For a basic sample such as this, the easiest thing to do is to copy Svcutil.exe and the client configuration file into the same directory as `WsdlDocumentation.dll` and run it from there.</span></span>  
   
-## Пользовательский импортер WSDL  
- Пользовательский импортер `WsdlDocumentationImporter` объекта <xref:System.ServiceModel.Description.IWsdlImportExtension> также реализует интерфейсы <xref:System.ServiceModel.Description.IContractBehavior> и <xref:System.ServiceModel.Description.IOperationBehavior>, добавляемые в импортированные конечные точки службы, и интерфейсы<xref:System.ServiceModel.Description.IServiceContractGenerationExtension> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>, вызываемые для изменения создания кода контракта или операции.  
+## <a name="the-custom-wsdl-importer"></a><span data-ttu-id="ff4f2-126">Пользовательский импортер WSDL</span><span class="sxs-lookup"><span data-stu-id="ff4f2-126">The Custom WSDL Importer</span></span>  
+ <span data-ttu-id="ff4f2-127">Пользовательский импортер <xref:System.ServiceModel.Description.IWsdlImportExtension> объекта `WsdlDocumentationImporter` также реализует интерфейсы <xref:System.ServiceModel.Description.IContractBehavior> и <xref:System.ServiceModel.Description.IOperationBehavior>, добавляемые в импортированные конечные точки службы, и интерфейсы<xref:System.ServiceModel.Description.IServiceContractGenerationExtension> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>, вызываемые для изменения создания кода контракта или операции.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-127">The custom <xref:System.ServiceModel.Description.IWsdlImportExtension> object `WsdlDocumentationImporter` also implements <xref:System.ServiceModel.Description.IContractBehavior> and <xref:System.ServiceModel.Description.IOperationBehavior> to be added to the imported ServiceEndpoints and <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> to be invoked to modify the code generation when the contract or operation code is being created.</span></span>  
   
- Сначала в методе <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> образец определяет, относится ли заметка WSDL к уровню контракта или службы, после чего он добавляет себя в качестве поведения в соответствующую область, передавая импортированный текст заметки в конструктор.  
+ <span data-ttu-id="ff4f2-128">Сначала в методе <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> образец определяет, относится ли заметка WSDL к уровню контракта или службы, после чего он добавляет себя в качестве поведения в соответствующую область, передавая импортированный текст заметки в конструктор.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-128">First, in the <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> method, the sample determines whether the WSDL annotation is at the contract or operation level, and adds itself as a behavior at the appropriate scope, passing the imported annotation text to its constructor.</span></span>  
   
 ```  
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -207,10 +207,9 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
         }  
     }  
 }  
-  
 ```  
   
- Затем, при создании кода, система вызывает методы <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>, передавая им сведения о соответствующем контексте.Образец форматирует пользовательские заметки WSDL и вставляет их в CodeDom в виде комментариев.  
+ <span data-ttu-id="ff4f2-129">Затем, при создании кода, система вызывает методы <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> и <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>, передавая им сведения о соответствующем контексте.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-129">Then, when the code is generated, the system invokes the <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> and <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> methods, passing the appropriate context information.</span></span> <span data-ttu-id="ff4f2-130">Образец форматирует пользовательские заметки WSDL и вставляет их в CodeDom в виде комментариев.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-130">The sample formats the custom WSDL annotations and inserts them as comments into the CodeDom.</span></span>  
   
 ```  
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -224,13 +223,12 @@ public void GenerateOperation(OperationContractGenerationContext context)
     context.SyncMethod.Comments.AddRange(FormatComments(text));  
     Debug.WriteLine("In generate operation.");  
 }  
-  
 ```  
   
-## Клиентское приложение  
- Клиентское приложение загружает пользовательский импортер WSDL путем указания его в файле конфигурации приложения.  
+## <a name="the-client-application"></a><span data-ttu-id="ff4f2-131">Клиентское приложение</span><span class="sxs-lookup"><span data-stu-id="ff4f2-131">The Client Application</span></span>  
+ <span data-ttu-id="ff4f2-132">Клиентское приложение загружает пользовательский импортер WSDL путем указания его в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-132">The client application loads the custom WSDL importer by specifying it in the application configuration file.</span></span>  
   
-```  
+```xml  
 <client>  
   <endpoint address="http://localhost/servicemodelsamples/service.svc"   
   binding="wsHttpBinding"   
@@ -241,10 +239,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
     </wsdlImporters>  
   </metadata>  
 </client>  
-  
 ```  
   
- После указания пользовательского импортера система метаданных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] загружает пользовательский импортер в любой созданный для этого объект <xref:System.ServiceModel.Description.WsdlImporter>.В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C\#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML\-документацию.  
+ <span data-ttu-id="ff4f2-133">После указания пользовательского импортера система метаданных [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] загружает пользовательский импортер в любой созданный для этого объект <xref:System.ServiceModel.Description.WsdlImporter>.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-133">Once the custom importer has been specified, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] metadata system loads the custom importer into any <xref:System.ServiceModel.Description.WsdlImporter> created for that purpose.</span></span> <span data-ttu-id="ff4f2-134">В этом образце используется <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных, правильно настроенный <xref:System.ServiceModel.Description.WsdlImporter> для импорта метаданных с помощью создаваемого образецом пользовательского импортера и <xref:System.ServiceModel.Description.ServiceContractGenerator> для компиляции измененных сведений контракта в клиентский код Visual Basic и C#, который можно использовать в Visual Studio для поддержки Intellisense или скомпилировать в XML-документацию.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-134">This sample uses the <xref:System.ServiceModel.Description.MetadataExchangeClient> to download the metadata, the <xref:System.ServiceModel.Description.WsdlImporter> properly configured to import the metadata using the custom importer the sample creates, and the <xref:System.ServiceModel.Description.ServiceContractGenerator> to compile the modified contract information into both Visual Basic and C# client code that can be used in Visual Studio to support Intellisense or compiled into XML documentation.</span></span>  
   
 ```  
 /// From WSDL Documentation:  
@@ -300,21 +297,21 @@ public interface ICalculator
 }  
 ```  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ff4f2-135">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="ff4f2-135">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="ff4f2-136">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ff4f2-136">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="ff4f2-137">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ff4f2-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="ff4f2-138">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ff4f2-138">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="ff4f2-139">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-139">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ff4f2-140">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="ff4f2-140">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="ff4f2-141">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ff4f2-141">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ff4f2-142">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="ff4f2-142">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="ff4f2-143">См. также</span><span class="sxs-lookup"><span data-stu-id="ff4f2-143">See Also</span></span>

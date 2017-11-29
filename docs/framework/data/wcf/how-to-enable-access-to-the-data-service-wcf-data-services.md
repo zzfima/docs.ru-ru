@@ -1,38 +1,43 @@
 ---
-title: "Как включить доступ к службе данных (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, настройка"
+title: "Как включить доступ к службе данных (службы WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 98584405b0c6a86f424f4bf82e29ea33197dfbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как включить доступ к службе данных (службы WCF Data Services)
-В службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] требуется явно предоставлять доступ к ресурсам, предоставляемым службой данных.  Это значит, что после создания новой службы данных все равно требуется явно предоставлять доступ к отдельным ресурсам в виде набора сущностей.  В этом разделе показано, как включить доступ на чтение и запись к пяти наборам сущностей в службе данных Борей, созданной при выполнении раздела [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Перечисление <xref:System.Data.Services.EntitySetRights> определено с помощью <xref:System.FlagsAttribute>, поэтому можно использовать логический оператор ИЛИ в целях задания нескольких разрешений для одного набора сущностей.  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a><span data-ttu-id="866c9-102">Как включить доступ к службе данных (службы WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="866c9-102">How to: Enable Access to the Data Service (WCF Data Services)</span></span>
+<span data-ttu-id="866c9-103">В службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] требуется явно предоставлять доступ к ресурсам, предоставляемым службой данных.</span><span class="sxs-lookup"><span data-stu-id="866c9-103">In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you must explicitly grant access to the resources that are exposed by a data service.</span></span> <span data-ttu-id="866c9-104">Это значит, что после создания новой службы данных все равно требуется явно предоставлять доступ к отдельным ресурсам в виде набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="866c9-104">This means that after you create a new data service, you must still explicitly provide access to individual resources as entity sets.</span></span> <span data-ttu-id="866c9-105">В этом разделе показано, как включить чтения и задает доступ на запись к пяти сущности в службе данных Northwind, которая создается при завершении [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="866c9-105">This topic shows how to enable read and write access to five of the entity sets in the Northwind data service that is created when you complete the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="866c9-106">Поскольку перечисление <xref:System.Data.Services.EntitySetRights> определяется с помощью <xref:System.FlagsAttribute>, для указания нескольких разрешений для одного набора сущностей или операции можно использовать логический оператор OR.</span><span class="sxs-lookup"><span data-stu-id="866c9-106">Because the <xref:System.Data.Services.EntitySetRights> enumeration is defined by using the <xref:System.FlagsAttribute>, you can use a logical OR operator to specify multiple permissions for a single entity set.</span></span>  
   
 > [!NOTE]
->  Любой клиент, имеющий доступ к приложению ASP.NET, имеет также доступ к ресурсам, предоставляемым службой данных.  Для предотвращения несанкционированного доступа к ресурсам производственной службы данных необходимо также установить защиту самого приложения.  Для получения дополнительной информации см. [NIB: ASP.NET Security](http://msdn.microsoft.com/ru-ru/04b37532-18d9-40b4-8e5f-ee09a70b311d).  
+>  <span data-ttu-id="866c9-107">Любой клиент, имеющий доступ к приложению ASP.NET, имеет также доступ к ресурсам, предоставляемым службой данных.</span><span class="sxs-lookup"><span data-stu-id="866c9-107">Any client that can access the ASP.NET application can also access the resources exposed by the data service.</span></span> <span data-ttu-id="866c9-108">Для предотвращения несанкционированного доступа к ресурсам производственной службы данных необходимо также установить защиту самого приложения.</span><span class="sxs-lookup"><span data-stu-id="866c9-108">In a production data service, to prevent unauthorized access to resources, you should also secure the application itself.</span></span> <span data-ttu-id="866c9-109">Дополнительные сведения см. в разделе [NIB: безопасность ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span><span class="sxs-lookup"><span data-stu-id="866c9-109">For more information, see [NIB: ASP.NET Security](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span></span>  
   
-### Включение доступа к службе данных  
+### <a name="to-enable-access-to-the-data-service"></a><span data-ttu-id="866c9-110">Включение доступа к службе данных</span><span class="sxs-lookup"><span data-stu-id="866c9-110">To enable access to the data service</span></span>  
   
--   В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:  
+-   <span data-ttu-id="866c9-111">В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:</span><span class="sxs-lookup"><span data-stu-id="866c9-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
   
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]  
   
-     Это обеспечивает клиентам доступ для чтения и записи к наборам сущностей `Orders` и `Order_Details` и доступ только для чтения к наборам сущностей `Customers`.  
+     <span data-ttu-id="866c9-112">Это обеспечивает клиентам доступ для чтения и записи к наборам сущностей `Orders` и `Order_Details` и доступ только для чтения к наборам сущностей `Customers`.</span><span class="sxs-lookup"><span data-stu-id="866c9-112">This enables clients to have read and write access to the `Orders` and `Order_Details` entity sets and read-only access to the `Customers` entity sets.</span></span>  
   
-## См. также  
- [Как разработать службу данных WCF Data Service, работающую на IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)   
- [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="866c9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="866c9-113">See Also</span></span>  
+ [<span data-ttu-id="866c9-114">Как: разработке службы данных WCF, на сервере IIS</span><span class="sxs-lookup"><span data-stu-id="866c9-114">How to: Develop a WCF Data Service Running on IIS</span></span>](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
+ [<span data-ttu-id="866c9-115">Настройка службы данных</span><span class="sxs-lookup"><span data-stu-id="866c9-115">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

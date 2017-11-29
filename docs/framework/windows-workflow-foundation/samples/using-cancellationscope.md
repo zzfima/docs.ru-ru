@@ -1,47 +1,51 @@
 ---
-title: "Использование CancellationScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование CancellationScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d621991c1250c073e485193059d426e7cd4682f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование CancellationScope
-В данном образце показывается, как с помощью действия <xref:System.Activities.Statements.CancellationScope> отменять работу в приложении.  
+# <a name="using-cancellationscope"></a><span data-ttu-id="659dd-102">Использование CancellationScope</span><span class="sxs-lookup"><span data-stu-id="659dd-102">Using CancellationScope</span></span>
+<span data-ttu-id="659dd-103">В данном образце показывается, как с помощью действия <xref:System.Activities.Statements.CancellationScope> отменять работу в приложении.</span><span class="sxs-lookup"><span data-stu-id="659dd-103">This sample demonstrates how to use the <xref:System.Activities.Statements.CancellationScope> activity to cancel work in an application.</span></span>  
   
- Во многих компонентах и службах среднего уровня отмена работ зависит от хорошо известных программных конструкций транзакций, которые непосредственно и отрабатывают отмену.  Тем не менее, во многих случаях требуется отменить работу, которую нельзя совершить в транзакции.  Отменой пользоваться сложнее, чем транзакциями, поскольку отменяемую работу необходимо сначала отследить.  [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] облегчает это, предоставляя действие <xref:System.Activities.Statements.CancellationScope>.  
+ <span data-ttu-id="659dd-104">Во многих компонентах и службах среднего уровня отмена работ зависит от хорошо известных программных конструкций транзакций, которые непосредственно и отрабатывают отмену.</span><span class="sxs-lookup"><span data-stu-id="659dd-104">Many middle tier components and services rely on the well-known programming construct of transactions to handle cancellation for them.</span></span>  <span data-ttu-id="659dd-105">Тем не менее, во многих случаях требуется отменить работу, которую нельзя совершить в транзакции.</span><span class="sxs-lookup"><span data-stu-id="659dd-105">However, there are many situations in which work that cannot be done in a transaction must be canceled.</span></span>  <span data-ttu-id="659dd-106">Отменой пользоваться сложнее, чем транзакциями, поскольку отменяемую работу необходимо сначала отследить.</span><span class="sxs-lookup"><span data-stu-id="659dd-106">Using cancellation is more difficult than using transactions, because work that must be canceled must first be tracked.</span></span> [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]<span data-ttu-id="659dd-107"> облегчает это, предоставляя действие <xref:System.Activities.Statements.CancellationScope>.</span><span class="sxs-lookup"><span data-stu-id="659dd-107"> helps you with this by providing a <xref:System.Activities.Statements.CancellationScope> activity.</span></span>  
   
- Отмену можно запустить как изнутри действия, так и из его родительского элемента.  Дочерние действия планируются своим родительским действием \(например, <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.Flowchart> или пользовательским составным действием\).  Родительское действие может отменить дочерние действия по любой причине.  Например, действие <xref:System.Activities.Statements.Parallel> с тремя дочерними ветвями отменяет остающиеся дочерние ветви, как только хоть одна ветвь будет выполнена и при вычислении выражения <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> будет получено значение `true`.  Рабочий процесс можно отменить и извне, вызвав из ведущего приложения метод <xref:System.Activities.WorkflowApplication.Cancel%2A>.  
+ <span data-ttu-id="659dd-108">Отмену можно запустить как изнутри действия, так и из его родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="659dd-108">Cancellation can be triggered either from within an activity or from the activity's parent.</span></span>  <span data-ttu-id="659dd-109">Дочерние действия планируются своим родительским действием (например, <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.Flowchart> или пользовательским составным действием).</span><span class="sxs-lookup"><span data-stu-id="659dd-109">Child activities are scheduled by their parent activity (such as a <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.Flowchart>, or a custom composite activity).</span></span>  <span data-ttu-id="659dd-110">Родительское действие может отменить дочерние действия по любой причине.</span><span class="sxs-lookup"><span data-stu-id="659dd-110">The parent activity can cancel child activities for any reason.</span></span>  <span data-ttu-id="659dd-111">Например, действие <xref:System.Activities.Statements.Parallel> с тремя дочерними ветвями отменяет остающиеся дочерние ветви, как только хоть одна ветвь будет выполнена и при вычислении выражения <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> будет получено значение `true`.</span><span class="sxs-lookup"><span data-stu-id="659dd-111">For example, a <xref:System.Activities.Statements.Parallel> activity with three child branches will cancel the remaining child branches whenever it completes a branch and the <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> expression evaluates to `true`.</span></span> <span data-ttu-id="659dd-112">Рабочий процесс можно отменить и извне, вызвав из ведущего приложения метод <xref:System.Activities.WorkflowApplication.Cancel%2A>.</span><span class="sxs-lookup"><span data-stu-id="659dd-112">The workflow can also be canceled externally by the host application by calling <xref:System.Activities.WorkflowApplication.Cancel%2A>.</span></span>  
   
- Чтобы использовать действие <xref:System.Activities.Statements.CancellationScope>, поместите отменяемую работу в <xref:System.Activities.Statements.CancellationScope.Body%2A>, а работу, выполняемую после отмены, в <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>.  
+ <span data-ttu-id="659dd-113">Чтобы использовать действие <xref:System.Activities.Statements.CancellationScope>, поместите отменяемую работу в <xref:System.Activities.Statements.CancellationScope.Body%2A>, а работу, выполняемую после отмены, в <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>.</span><span class="sxs-lookup"><span data-stu-id="659dd-113">To use the <xref:System.Activities.Statements.CancellationScope> activity, put the work that needs to be canceled into the <xref:System.Activities.Statements.CancellationScope.Body%2A> property, and put the work that is performed after cancellation into the <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> property.</span></span>  
   
- В образце показана отмена действия из самого действия.  
+ <span data-ttu-id="659dd-114">В образце показана отмена действия из самого действия.</span><span class="sxs-lookup"><span data-stu-id="659dd-114">This sample demonstrates cancelling an activity from within the activity itself.</span></span>  
   
- В сценарии, с помощью которого образец демонстрирует действие <xref:System.Activities.Statements.CancellationScope>, клиенту необходимо как можно быстрее купить билет до Майами.  Свои услуги ему предлагают два туристических агентства.  Чтобы смоделировать бизнес\-логику процесса, в образце используется две области <xref:System.Activities.Statements.CancellationScope> в действии <xref:System.Activities.Statements.Parallel>.  Параметр <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> действия <xref:System.Activities.Statements.Parallel> установлен в значение `true`; поскольку <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> проверяется после выполнения любой из ветвей, оставшаяся ветвь будет отменена после выполнения первой.  Клиентское приложение запрашивает оба бюро о покупке билетов, и когда одно из них подтверждает покупку билета, заказ во втором бюро отменяется.  
+ <span data-ttu-id="659dd-115">В сценарии, с помощью которого образец демонстрирует действие <xref:System.Activities.Statements.CancellationScope>, клиенту необходимо как можно быстрее купить билет до Майами.</span><span class="sxs-lookup"><span data-stu-id="659dd-115">The scenario that the sample uses to demonstrate the <xref:System.Activities.Statements.CancellationScope> activity is a client wanting to buy a ticket to Miami as soon as possible.</span></span> <span data-ttu-id="659dd-116">Свои услуги ему предлагают два туристических агентства.</span><span class="sxs-lookup"><span data-stu-id="659dd-116">There are two travel agencies that want the business.</span></span> <span data-ttu-id="659dd-117">Чтобы смоделировать бизнес-логику процесса, в образце используется две области <xref:System.Activities.Statements.CancellationScope> в действии <xref:System.Activities.Statements.Parallel>.</span><span class="sxs-lookup"><span data-stu-id="659dd-117">The sample uses two <xref:System.Activities.Statements.CancellationScope> within a <xref:System.Activities.Statements.Parallel> activity to model this business logic.</span></span> <span data-ttu-id="659dd-118">Параметр <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> действия <xref:System.Activities.Statements.Parallel> установлен в значение `true`; поскольку <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> проверяется после выполнения любой из ветвей, оставшаяся ветвь будет отменена после выполнения первой.</span><span class="sxs-lookup"><span data-stu-id="659dd-118">The <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> of the <xref:System.Activities.Statements.Parallel> activity is set to `true`; since the <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> is checked after any branch completes, this will cause the remaining branch to be canceled after the first branch completes.</span></span> <span data-ttu-id="659dd-119">Клиентское приложение запрашивает оба бюро о покупке билетов, и когда одно из них подтверждает покупку билета, заказ во втором бюро отменяется.</span><span class="sxs-lookup"><span data-stu-id="659dd-119">The client application asks both agencies to buy the ticket, and when the first one confirms that the ticket has been bought, the application cancels the order at the other agency.</span></span>  
   
-## Использование этого образца  
+## <a name="to-use-this-sample"></a><span data-ttu-id="659dd-120">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="659dd-120">To use this sample</span></span>  
   
-1.  Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения CancelationScopeXAML.sln.  
+1.  <span data-ttu-id="659dd-121">Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения CancelationScopeXAML.sln.</span><span class="sxs-lookup"><span data-stu-id="659dd-121">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the CancelationScopeXAML.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="659dd-122">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="659dd-122">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="659dd-123">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="659dd-123">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="659dd-124">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="659dd-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="659dd-125">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="659dd-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="659dd-126">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="659dd-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="659dd-127">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="659dd-127">This sample is located in the following directory.</span></span>  
 >   
->  `<ДискУстановки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\CancellationScope`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\CancellationScope`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="659dd-128">См. также</span><span class="sxs-lookup"><span data-stu-id="659dd-128">See Also</span></span>

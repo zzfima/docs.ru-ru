@@ -1,37 +1,40 @@
 ---
-title: "Сбои при проверке безопасности и проверке подлинности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сбои при проверке безопасности и проверке подлинности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d4e3666-dfc6-421c-baf8-9479c22f7050
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c1d448d709c7ad20e9d08a291f5a38546cd93ce4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сбои при проверке безопасности и проверке подлинности
-Имя счетчика: Security Validation and Authentication Failures  
+# <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="90027-102">Сбои при проверке безопасности и проверке подлинности</span><span class="sxs-lookup"><span data-stu-id="90027-102">Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="90027-103">Имя счетчика: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="90027-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## Описание  
- Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из\-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized".К таким проблемам относятся следующие.  
+## <a name="description"></a><span data-ttu-id="90027-104">Описание</span><span class="sxs-lookup"><span data-stu-id="90027-104">Description</span></span>  
+ <span data-ttu-id="90027-105">Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized".</span><span class="sxs-lookup"><span data-stu-id="90027-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="90027-106">К таким проблемам относятся следующие.</span><span class="sxs-lookup"><span data-stu-id="90027-106">Such problems include:</span></span>  
   
--   Невозможно прочесть в этом сообщении маркер клиента.  
+-   <span data-ttu-id="90027-107">Невозможно прочесть в этом сообщении маркер клиента.</span><span class="sxs-lookup"><span data-stu-id="90027-107">Client token cannot be read from the message.</span></span>  
   
--   Маркер клиента не прошел проверку подлинности \(например, неправильный пароль\).  
+-   <span data-ttu-id="90027-108">Маркер клиента не прошел проверку подлинности (например, неправильный пароль).</span><span class="sxs-lookup"><span data-stu-id="90027-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   Сбой при проверке подписи \(например, сообщение было искажено\).  
+-   <span data-ttu-id="90027-109">Сбой при проверке подписи (например, сообщение было искажено).</span><span class="sxs-lookup"><span data-stu-id="90027-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   Сообщение является копией предыдущего, что может свидетельствовать об атаке воспроизведения.  
+-   <span data-ttu-id="90027-110">Сообщение является копией предыдущего, что может свидетельствовать об атаке воспроизведения.</span><span class="sxs-lookup"><span data-stu-id="90027-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   Произошел сбой при расшифровке.  
+-   <span data-ttu-id="90027-111">Произошел сбой при расшифровке.</span><span class="sxs-lookup"><span data-stu-id="90027-111">A decryption failure has occurred.</span></span>  
   
--   В сообщении отсутствуют некоторые обязательные элементы \(например, отсутствует отметка времени или зашифрованный блок данных\).  
+-   <span data-ttu-id="90027-112">В сообщении отсутствуют некоторые обязательные элементы (например, отсутствует отметка времени или зашифрованный блок данных).</span><span class="sxs-lookup"><span data-stu-id="90027-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   Во время подтверждения TLSNEGO\/SPNEGO произошли ошибки.
+-   <span data-ttu-id="90027-113">Во время подтверждения TLSNEGO/SPNEGO произошли ошибки.</span><span class="sxs-lookup"><span data-stu-id="90027-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

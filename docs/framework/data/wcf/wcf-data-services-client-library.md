@@ -1,68 +1,66 @@
 ---
-title: "Клиентская библиотека служб WCF Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "HTML"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "DataServiceContext, класс, о классе DataServiceContext"
-  - "DataServiceQuery, класс, о классе DataServiceQuery"
-  - "Службы WCF Data Services, клиентская библиотека"
+title: "Библиотека клиентов служб данных WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, client library
+- DataServiceQuery class, about DataServiceQuery class
+- DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1e321200ce4b3582d154c5a188584c9e0b12c10d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Клиентская библиотека служб WCF Data Services
-Любое приложение сможет взаимодействовать со службами данных на основе [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], если оно может отправить HTTP\-запрос и обработать канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], возвращенный службой данных. Эта совместимость позволяет получить доступ к службам [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] из многих типов приложений на основе веб\-технологий.  Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включают в себя клиентские библиотеки, предоставляющие более широкие программные возможности для доступа к каналам [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] из приложений на базе .NET Framework или Silverlight.  
+# <a name="wcf-data-services-client-library"></a><span data-ttu-id="b9fd3-102">Библиотека клиентов служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="b9fd3-102">WCF Data Services Client Library</span></span>
+<span data-ttu-id="b9fd3-103">Со службами данных, основанными на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], возвращаемый службой данных.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-103">Any application can interact with an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-based data service if it can send an HTTP request and process the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed that a data service returns.</span></span> <span data-ttu-id="b9fd3-104">Эта возможность взаимодействия позволяет обращаться к службам, основанным на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], из широкого спектра веб-приложений.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-104">This interoperability enables you to access [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based services from a broad range of Web-enabled applications.</span></span> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="b9fd3-105">включает в себя клиентские библиотеки, которые предоставляют более широкие возможности программирования при использовании [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] каналов из .NET Framework или приложений на основе Silverlight.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-105"> includes client libraries that provide a richer programming experience when you consume [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds from .NET Framework or Silverlight-based applications.</span></span>  
   
- Клиентская библиотека содержит два основных класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>.  Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных.  Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не сохраняют состояние, контекст его сохраняет.  В связи с этим класс <xref:System.Data.Services.Client.DataServiceContext> можно использовать для поддержки состояния клиента между операциями со службой данных, что позволяет реализовать такие стратегии, как управление изменениями.  Этот класс также управляет идентификаторами и отслеживает изменения.  Класс <xref:System.Data.Services.Client.DataServiceQuery%601> представляет запрос к определенному набору сущностей.  
+ <span data-ttu-id="b9fd3-106">Клиентская библиотека содержит два основных класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-106">The two main classes of the client library are the <xref:System.Data.Services.Client.DataServiceContext> class and the <xref:System.Data.Services.Client.DataServiceQuery%601> class.</span></span> <span data-ttu-id="b9fd3-107">Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-107">The <xref:System.Data.Services.Client.DataServiceContext> class encapsulates operations that are supported against a specified data service.</span></span> <span data-ttu-id="b9fd3-108">Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не сохраняют состояние, контекст его сохраняет.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-108">Although [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] services are stateless, the context is not.</span></span> <span data-ttu-id="b9fd3-109">Таким образом, можно использовать <xref:System.Data.Services.Client.DataServiceContext> класс для поддержки состояния клиента между операциями со службой данных для поддержки таких функций, как управление изменениями.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-109">Therefore, you can use the <xref:System.Data.Services.Client.DataServiceContext> class to maintain state on the client between interactions with the data service in order to support features such as change management.</span></span> <span data-ttu-id="b9fd3-110">Этот класс также управляет идентификаторами и отслеживает изменения.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-110">This class also manages identities and tracks changes.</span></span> <span data-ttu-id="b9fd3-111">Класс <xref:System.Data.Services.Client.DataServiceQuery%601> представляет запрос к определенному набору сущностей.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-111">The <xref:System.Data.Services.Client.DataServiceQuery%601> class represents a query against a specific entity set.</span></span>  
   
- Этот раздел описывает использование клиентских библиотек для доступа и изменения данных из клиентского приложения .NET Framework.  Дополнительные сведения об использовании клиентской библиотеки [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] с приложением на основе Silverlight см. в разделе [Службы WCF Data Services \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=186016).  Для использования канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в приложениях других видов имеются другие клиентские библиотеки.  Дополнительные сведения см. в разделе [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).  
+ <span data-ttu-id="b9fd3-112">Этот раздел описывает использование клиентских библиотек для доступа и изменения данных из клиентского приложения .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-112">This section describes how to use client libraries to access and change data from a .NET Framework client application.</span></span> <span data-ttu-id="b9fd3-113">Дополнительные сведения об использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентская библиотека с приложением на базе Silverlight, в разделе [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016).</span><span class="sxs-lookup"><span data-stu-id="b9fd3-113">For more information about how to use the [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client library with a Silverlight-based application, see [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=186016).</span></span> <span data-ttu-id="b9fd3-114">Имеются другие клиентские библиотеки, позволяющие использовать [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в приложениях других видов.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-114">Other client libraries are available that enable you to consume an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in other kinds of applications.</span></span> <span data-ttu-id="b9fd3-115">Дополнительные сведения см. в разделе [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).</span><span class="sxs-lookup"><span data-stu-id="b9fd3-115">For more information, see the [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796).</span></span>  
   
-## В этом подразделе  
- [Формирование клиентской библиотеки службы данных](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- Описывает создание клиентской библиотеки и клиентских классов службы данных, основанных на каналах [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="b9fd3-116">Содержание</span><span class="sxs-lookup"><span data-stu-id="b9fd3-116">In This Section</span></span>  
+ [<span data-ttu-id="b9fd3-117">Создание библиотеки клиентов службы данных</span><span class="sxs-lookup"><span data-stu-id="b9fd3-117">Generating the Data Service Client Library</span></span>](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-118">Содержит описание способов создания клиентской библиотеки и клиентские классы службы данных, основанных на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-118">Describes how to generate a client library and client data service classes that are based on [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds.</span></span>  
   
- [Запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- Описывает выполнение запросов к службе данных из приложения на основе .NET Framework с помощью клиентских библиотек.  
+ [<span data-ttu-id="b9fd3-119">Выполнение запросов к службе данных</span><span class="sxs-lookup"><span data-stu-id="b9fd3-119">Querying the Data Service</span></span>](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-120">Описывает выполнение запросов к службе данных из приложения на основе .NET Framework с помощью клиентских библиотек.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-120">Describes how to query a data service from a .NET Framework-based application by using client libraries.</span></span>  
   
- [Загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- Описывает загрузку дополнительного содержимого, не включенного в первоначальный ответ на запрос.  
+ [<span data-ttu-id="b9fd3-121">Загрузка отложенного содержимого</span><span class="sxs-lookup"><span data-stu-id="b9fd3-121">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-122">Описывает загрузку дополнительного содержимого, не включенного в первоначальный ответ на запрос.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-122">Describes how to load additional content not included in the initial query response.</span></span>  
   
- [Обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
- Описывает создание, изменение и удаление сущностей и отношений с помощью клиентских библиотек.  
+ [<span data-ttu-id="b9fd3-123">Обновление службы данных</span><span class="sxs-lookup"><span data-stu-id="b9fd3-123">Updating the Data Service</span></span>](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-124">Описывает создание, изменение и удаление сущностей и отношений с помощью клиентских библиотек.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-124">Describes how to create, modify, and delete entities and relationships by using the client libraries.</span></span>  
   
- [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
- Описывает возможности, предоставляемые клиентскими библиотеками для асинхронной работы со службой данных.  
+ [<span data-ttu-id="b9fd3-125">Асинхронные операции</span><span class="sxs-lookup"><span data-stu-id="b9fd3-125">Asynchronous Operations</span></span>](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-126">Описывает возможности, предоставляемые клиентскими библиотеками для асинхронной работы со службой данных.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-126">Describes the facilities provided by the client libraries for working with a data service in an asynchronous manner.</span></span>  
   
- [Пакетные операции](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
- Описывает отправку нескольких запросов к службе данных в одном пакете с помощью клиентских библиотек.  
+ [<span data-ttu-id="b9fd3-127">Пакетные операции</span><span class="sxs-lookup"><span data-stu-id="b9fd3-127">Batching Operations</span></span>](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-128">Описывает отправку нескольких запросов к службе данных в одном пакете с помощью клиентских библиотек.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-128">Describes how to send multiple requests to the data service in a single batch by using the client libraries.</span></span>  
   
- [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
- Описывает привязку элементов управления к каналу [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], возвращенному службой данных.  
+ [<span data-ttu-id="b9fd3-129">Привязка данных к элементам управления</span><span class="sxs-lookup"><span data-stu-id="b9fd3-129">Binding Data to Controls</span></span>](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-130">Описывает, как привязать элементы управления к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] канале, возвращаемых службой данных.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-130">Describes how to bind controls to a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed returned by a data service.</span></span>  
   
- [Вызов операций служб](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
- Описывает, как использовать клиентскую библиотеку для вызова операций службы.  
+ [<span data-ttu-id="b9fd3-131">Вызов операций службы</span><span class="sxs-lookup"><span data-stu-id="b9fd3-131">Calling Service Operations</span></span>](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-132">Описывает, как использовать клиентскую библиотеку для вызова операций службы.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-132">Describes how to use the client library to call service operations.</span></span>  
   
- [Управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
- Описывает параметры управления режимом работы клиентской библиотеки.  
+ [<span data-ttu-id="b9fd3-133">Управление контекстом службы данных</span><span class="sxs-lookup"><span data-stu-id="b9fd3-133">Managing the Data Service Context</span></span>](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-134">Описывает параметры управления режимом работы клиентской библиотеки.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-134">Describes options for managing the behavior of the client library.</span></span>  
   
- [Работа с двоичными данными](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
- Описывает доступ к двоичным данным, возвращенным службой данных в виде потока данных, и их изменение.  
+ [<span data-ttu-id="b9fd3-135">Работа с двоичными данными</span><span class="sxs-lookup"><span data-stu-id="b9fd3-135">Working with Binary Data</span></span>](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ <span data-ttu-id="b9fd3-136">Описывает доступ к двоичным данным, возвращенным службой данных в виде потока данных, и их изменение.</span><span class="sxs-lookup"><span data-stu-id="b9fd3-136">Describes how to access and change binary data returned by the data service as a data stream.</span></span>  
   
-## См. также  
- [Определение службы WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
- [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="b9fd3-137">См. также</span><span class="sxs-lookup"><span data-stu-id="b9fd3-137">See Also</span></span>  
+ [<span data-ttu-id="b9fd3-138">Определение служб данных WCF</span><span class="sxs-lookup"><span data-stu-id="b9fd3-138">Defining WCF Data Services</span></span>](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [<span data-ttu-id="b9fd3-139">Начало работы</span><span class="sxs-lookup"><span data-stu-id="b9fd3-139">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

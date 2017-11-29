@@ -1,24 +1,28 @@
 ---
-title: "Приостановление и восстановление рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Приостановление и восстановление рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 31e3bdf501a88e78c5ae251499baf2512f73579d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Приостановление и восстановление рабочего процесса
-Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="58675-102">Приостановление и восстановление рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="58675-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="58675-103">Выполнение рабочих процессов будет приостанавливаться и возобновляться при выполнении действий с закладками и блокировками, такими как <xref:System.Activities.Statements.Delay>. Кроме того, рабочие потоки можно будет явным образом приостановить, выгрузить и возобновить с использованием механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="58675-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## Приостановка рабочего процесса  
- Чтобы приостановить рабочий процесс, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Unload%2A>.Этот метод отправляет запрос на сохранение и выгрузку рабочего процесса. При этом, если рабочий процесс не будет выгружен в течение 30 секунд, будет вызвано исключение <xref:System.TimeoutException>.  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="58675-104">Приостановка рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="58675-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="58675-105">Чтобы приостановить рабочий процесс, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Unload%2A>.</span><span class="sxs-lookup"><span data-stu-id="58675-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="58675-106">Этот метод отправляет запрос на сохранение и выгрузку рабочего процесса. При этом, если рабочий процесс не будет выгружен в течение 30 секунд, будет вызвано исключение <xref:System.TimeoutException>.</span><span class="sxs-lookup"><span data-stu-id="58675-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -30,21 +34,19 @@ catch (TimeoutException e)
 {  
     Console.WriteLine(e.Message);  
 }  
-  
 ```  
   
-## Возобновление рабочих процессов  
- Чтобы возобновить выполнение ранее приостановленного и выгруженного рабочего процесса, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Load%2A>.Этот метод загружает рабочий процесс из хранилища сохраняемости в память.  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="58675-107">Возобновление рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="58675-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="58675-108">Чтобы возобновить выполнение ранее приостановленного и выгруженного рабочего процесса, пользуйтесь вызовом <xref:System.Activities.WorkflowApplication.Load%2A>.</span><span class="sxs-lookup"><span data-stu-id="58675-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="58675-109">Этот метод загружает рабочий процесс из хранилища сохраняемости в память.</span><span class="sxs-lookup"><span data-stu-id="58675-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
 application.InstanceStore = instanceStore;  
 application.Load(id);  
-  
 ```  
   
-## Пример  
- В следующем образце кода описывается приостановка и возобновление выполнения рабочего процесса с помощью механизма сохраняемости.  
+## <a name="example"></a><span data-ttu-id="58675-110">Пример</span><span class="sxs-lookup"><span data-stu-id="58675-110">Example</span></span>  
+ <span data-ttu-id="58675-111">В следующем образце кода описывается приостановка и возобновление выполнения рабочего процесса с помощью механизма сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="58675-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  
@@ -60,7 +62,7 @@ static void StartAndUnloadInstance()
     SqlWorkflowInstanceStore instanceStore = SetupSqlpersistenceStore();  
     wfApp.InstanceStore = instanceStore;  
     wfApp.Extensions.Add(SetupMyFileTrackingParticipant);  
-    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory   
+    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory   
     return PersistableIdleAction.Unload;  
     };  
     wfApp.Unloaded = (e) => {  
@@ -73,7 +75,7 @@ static void StartAndUnloadInstance()
 }  
   
 static void LoadAndCompleteInstance(Guid id)   
-{            
+{            
     Console.WriteLine("Press <enter> to load the persisted workflow");  
     Console.ReadLine();  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
@@ -106,7 +108,7 @@ public static Activity GetDelayedWF()
   
 private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()   
 {   
-     string connectionString = ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString();  
+     string connectionString = ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString();  
     SqlWorkflowInstanceStore sqlWFInstanceStore = new SqlWorkflowInstanceStore(connectionString);  
     sqlWFInstanceStore.InstanceCompletionAction = InstanceCompletionAction.DeleteAll;  
     InstanceHandle handle = sqlWFInstanceStore.CreateInstanceHandle();  
@@ -115,5 +117,4 @@ private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()
     sqlWFInstanceStore.DefaultInstanceOwner = view.InstanceOwner;  
     return sqlWFInstanceStore;  
 }  
-  
 ```

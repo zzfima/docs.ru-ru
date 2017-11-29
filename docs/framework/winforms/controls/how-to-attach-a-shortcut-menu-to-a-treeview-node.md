@@ -1,46 +1,51 @@
 ---
-title: "Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "контекстные меню, добавление к элементам управления TreeView"
-  - "узлы дерева в элементе управления TreeView, контекстные меню"
-  - "TreeView - элемент управления [Windows Forms], добавление контекстного меню"
+title: "Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- shortcut menus [Windows Forms], adding to TreeView controls
+- TreeView control [Windows Forms], adding shortcut menus
+- tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3814e95ad2d91157181682984fc9b53254ba813
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView
-Элемент управления Windows Forms <xref:System.Windows.Forms.TreeView> отображает иерархию узлов аналогично функции отображения файлов и папок в левой области окна проводника Windows.  Настроив свойство <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>, можно дать пользователям возможность выполнять контекстно\-зависимые операции при нажатии правой кнопкой мыши элемента управления <xref:System.Windows.Forms.TreeView>.  Путем сопоставления компонента <xref:System.Windows.Forms.ContextMenuStrip> с отдельными элементами <xref:System.Windows.Forms.TreeNode> можно добавить к элементам управления <xref:System.Windows.Forms.TreeView> контекстное меню нужного уровня.  
+# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a><span data-ttu-id="b5f17-102">Практическое руководство. Подключение контекстного меню к узлу элемента управления TreeView</span><span class="sxs-lookup"><span data-stu-id="b5f17-102">How to: Attach a ShortCut Menu to a TreeView Node</span></span>
+<span data-ttu-id="b5f17-103">Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления выводит на экран иерархию узлов аналогично отображения файлов и папок в левой области окна проводника.</span><span class="sxs-lookup"><span data-stu-id="b5f17-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control displays a hierarchy of nodes, similar to the files and folders displayed in the left pane of Windows Explorer.</span></span> <span data-ttu-id="b5f17-104">Установив <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> свойства, можно предоставить контекстно-зависимые операции для пользователя при их правой кнопкой мыши <xref:System.Windows.Forms.TreeView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b5f17-104">By setting the <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property, you can provide context-sensitive operations to the user when they right-click the <xref:System.Windows.Forms.TreeView> control.</span></span> <span data-ttu-id="b5f17-105">Связав <xref:System.Windows.Forms.ContextMenuStrip> компонента с отдельными <xref:System.Windows.Forms.TreeNode> элементы, можно добавить настраиваемый уровень функциональности контекстное меню для вашего <xref:System.Windows.Forms.TreeView> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="b5f17-105">By associating a <xref:System.Windows.Forms.ContextMenuStrip> component with individual <xref:System.Windows.Forms.TreeNode> items, you can add a customized level of shortcut menu functionality to your <xref:System.Windows.Forms.TreeView> controls.</span></span>  
   
-### Чтобы сопоставить контекстное меню элементу TreeNode программно, выполните следующие действия:  
+### <a name="to-associate-a-shortcut-menu-with-a-treenode-programmatically"></a><span data-ttu-id="b5f17-106">Чтобы связать контекстное меню с TreeNode программным способом</span><span class="sxs-lookup"><span data-stu-id="b5f17-106">To associate a shortcut menu with a TreeNode programmatically</span></span>  
   
-1.  Создайте элемент управления <xref:System.Windows.Forms.TreeView> с соответствующими параметрами свойств, создайте корневой <xref:System.Windows.Forms.TreeNode> и добавьте подузлы.  
+1.  <span data-ttu-id="b5f17-107">Создать экземпляр <xref:System.Windows.Forms.TreeView> управления с соответствующими параметрами свойств, создайте корневой <xref:System.Windows.Forms.TreeNode>, а затем добавьте вложенные узлы.</span><span class="sxs-lookup"><span data-stu-id="b5f17-107">Instantiate a <xref:System.Windows.Forms.TreeView> control with the appropriate property settings, create a root <xref:System.Windows.Forms.TreeNode>, and then add subnodes.</span></span>  
   
-2.  Создайте компонент <xref:System.Windows.Forms.ContextMenuStrip>, а затем добавьте <xref:System.Windows.Forms.ToolStripMenuItem> для каждой операции, которая должна быть доступна во время выполнения.  
+2.  <span data-ttu-id="b5f17-108">Создать экземпляр <xref:System.Windows.Forms.ContextMenuStrip> компонента, а затем добавьте <xref:System.Windows.Forms.ToolStripMenuItem> для каждой операции, которую нужно сделать доступными во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b5f17-108">Instantiate a <xref:System.Windows.Forms.ContextMenuStrip> component, and then add a <xref:System.Windows.Forms.ToolStripMenuItem> for each operation you want to make available at run time.</span></span>  
   
-3.  Присвойте свойству <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> соответствующего <xref:System.Windows.Forms.TreeNode> создаваемое контекстное меню.  
+3.  <span data-ttu-id="b5f17-109">Задать <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> свойства соответствующего <xref:System.Windows.Forms.TreeNode> в контекстное меню создания.</span><span class="sxs-lookup"><span data-stu-id="b5f17-109">Set the <xref:System.Windows.Forms.TreeNode.ContextMenuStrip%2A> property of the appropriate <xref:System.Windows.Forms.TreeNode> to the shortcut menu you create.</span></span>  
   
-4.  После установки свойства контекстное меню будет отображаться в ответ на нажатие правой кнопки мыши на данном узле.  
+4.  <span data-ttu-id="b5f17-110">Если это свойство имеет значение, в контекстном меню отображается при щелчке правой кнопкой мыши узел.</span><span class="sxs-lookup"><span data-stu-id="b5f17-110">When this property is set, the shortcut menu will be displayed when you right-click the node.</span></span>  
   
- Следующий пример кода создает базовый <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ContextMenuStrip>, связанный с корневым <xref:System.Windows.Forms.TreeNode> элемента управления <xref:System.Windows.Forms.TreeView>.  В нее необходимо будет подставить те пункты меню, которые требуются для разрабатываемого <xref:System.Windows.Forms.TreeView>.  Кроме того, необходимо написать код для обработки событий <xref:System.Windows.Forms.ToolStripItem.Click> для этих пунктов меню.  
+ <span data-ttu-id="b5f17-111">В следующем примере кода создается простой <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ContextMenuStrip> связанную с корневым <xref:System.Windows.Forms.TreeNode> из <xref:System.Windows.Forms.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="b5f17-111">The following code example creates a basic <xref:System.Windows.Forms.TreeView> and <xref:System.Windows.Forms.ContextMenuStrip> associated with the root <xref:System.Windows.Forms.TreeNode> of the <xref:System.Windows.Forms.TreeView>.</span></span> <span data-ttu-id="b5f17-112">Необходимо будет подставить те пункты меню, которые соответствуют <xref:System.Windows.Forms.TreeView> вы разрабатываете.</span><span class="sxs-lookup"><span data-stu-id="b5f17-112">You will need to customize the menu choices to those that fit the <xref:System.Windows.Forms.TreeView> you are developing.</span></span> <span data-ttu-id="b5f17-113">Кроме того, необходимо написать код для обработки <xref:System.Windows.Forms.ToolStripItem.Click> событий для этих пунктов меню.</span><span class="sxs-lookup"><span data-stu-id="b5f17-113">Additionally, you will want to write code to handle the <xref:System.Windows.Forms.ToolStripItem.Click> events for these menu items.</span></span>  
   
  [!code-cpp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/cpp/Form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
   
-## См. также  
- <xref:System.Windows.Forms.ContextMenuStrip>   
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b5f17-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b5f17-114">See Also</span></span>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ [<span data-ttu-id="b5f17-115">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="b5f17-115">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

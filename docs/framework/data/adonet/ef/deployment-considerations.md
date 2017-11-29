@@ -1,44 +1,43 @@
 ---
-title: "Вопросы развертывания (платформа Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Сведения о развертывании (Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вопросы развертывания (платформа Entity Framework)
-В этом разделе представлены сведения о развертывании приложений, использующих для доступа к данным платформу ADO.NET Entity Framework.  Дополнительные сведения о платформе Entity Framework см. в разделе [Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="3eeae-102">Сведения о развертывании (Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="3eeae-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="3eeae-103">В этом разделе представлены сведения о развертывании приложений, использующих для доступа к данным платформу ADO.NET Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="3eeae-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="3eeae-104">Дополнительные сведения о платформе Entity Framework см. в разделе [Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span><span class="sxs-lookup"><span data-stu-id="3eeae-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- Платформа Entity Framework предоставляет набор средств, интегрирующихся в среду Visual Studio и облегчающих разработку в ней.  Для получения дополнительной информации см. [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/ru-ru/91076853-0881-421b-837a-f582f36be527).  В этом разделе не описано использование специальных технологий для развертывания приложений, созданных на базе Entity Framework.  
+ <span data-ttu-id="3eeae-105">Платформа Entity Framework предоставляет набор средств, интегрирующихся в среду Visual Studio и облегчающих разработку в ней.</span><span class="sxs-lookup"><span data-stu-id="3eeae-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="3eeae-106">Дополнительные сведения см. в разделе [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span><span class="sxs-lookup"><span data-stu-id="3eeae-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="3eeae-107">В этом разделе не описано использование специальных технологий для развертывания приложений, созданных на базе Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="3eeae-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Среда Visual Studio предоставляет функции распространения и развертывания приложений, например функцию развертывания ClickOnce.  Дополнительные сведения см. в разделе [Развертывание приложений и компонентов](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md) в документации к среде Visual Studio.  
+ <span data-ttu-id="3eeae-108">Среда Visual Studio предоставляет функции распространения и развертывания приложений, например функцию развертывания ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="3eeae-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="3eeae-109">Дополнительные сведения см. в разделе [развертывание приложений и компонентов](https://msdn.microsoft.com/library/wtzawcsz) в документации по Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3eeae-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- При развертывании приложения, использующего платформу Entity Framework, следует принимать во внимание следующие соображения.  
+ <span data-ttu-id="3eeae-110">При развертывании приложения, использующего платформу Entity Framework, следует принимать во внимание следующие соображения.</span><span class="sxs-lookup"><span data-stu-id="3eeae-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   Entity Framework является компонентом платформы .NET Framework, начиная с .NET Framework 3.5 с пакетом обновления 1 \(SP1\).  При развертывании приложения, использующего платформу Entity Framework, необходимо убедиться, что установлена платформа .NET Framework 3.5 с пакетом обновления 1 \(SP1\) или более поздняя версия.  
+-   <span data-ttu-id="3eeae-111">Entity Framework является компонентом платформы .NET Framework, начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1).</span><span class="sxs-lookup"><span data-stu-id="3eeae-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="3eeae-112">При развертывании приложения, использующего платформу Entity Framework, необходимо убедиться, что установлена платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздняя версия.</span><span class="sxs-lookup"><span data-stu-id="3eeae-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   При создании концептуальной модели с использованием мастера модели EDM в файле конфигурации приложения создается строка подключения.  Файлы модели и сопоставления могут быть внедрены в качестве ресурсов приложения или скопированы в выходной каталог.  По умолчанию эти файлы развертываются в качестве внедренных ресурсов приложения.  Свойство `Metadata Artifact Processing` файла конструктора сущностей используется для выбора одного из этих параметров.  Для получения дополнительной информации см. [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/ru-ru/e2c9820f-1705-457e-9fdb-8b289f3179b4).  
+-   <span data-ttu-id="3eeae-113">При создании концептуальной модели с использованием мастера модели EDM в файле конфигурации приложения создается строка подключения.</span><span class="sxs-lookup"><span data-stu-id="3eeae-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="3eeae-114">Файлы модели и сопоставления могут быть внедрены в качестве ресурсов приложения или скопированы в выходной каталог.</span><span class="sxs-lookup"><span data-stu-id="3eeae-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="3eeae-115">По умолчанию эти файлы развертываются в качестве внедренных ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="3eeae-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="3eeae-116">Свойство `Metadata Artifact Processing` файла конструктора сущностей используется для выбора одного из этих параметров.</span><span class="sxs-lookup"><span data-stu-id="3eeae-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="3eeae-117">Дополнительные сведения см. в разделе [как: копирование модели и сопоставления файлов в выходной каталог](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span><span class="sxs-lookup"><span data-stu-id="3eeae-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   Убедитесь, что сведения о модели и сопоставлениях, выраженные на языке определения концептуальных схем \(язык CSDL\), языке определения схемы хранения \(язык SSDL\) и языке определения сопоставлений \(язык MSL\) развернуты совместно с приложением и находятся в каталоге, заданном в строке соединения.  Для получения дополнительной информации см. [Строки соединения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+-   <span data-ttu-id="3eeae-118">Убедитесь, что сведения о модели и сопоставлениях, выраженные на языке определения концептуальных схем (язык CSDL), языке определения схемы хранения (язык SSDL) и языке определения сопоставлений (язык MSL) развернуты совместно с приложением и находятся в каталоге, заданном в строке соединения.</span><span class="sxs-lookup"><span data-stu-id="3eeae-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="3eeae-119">Дополнительные сведения см. в разделе [строки подключения](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="3eeae-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   Если производится внедрение сведений о модели и сопоставлениях в качестве ресурсов приложения, то приложение нужно перекомпилировать и повторно разворачивать каждый раз при обновлении концептуальной модели.  
+-   <span data-ttu-id="3eeae-120">Если производится внедрение сведений о модели и сопоставлениях в качестве ресурсов приложения, то приложение нужно перекомпилировать и повторно разворачивать каждый раз при обновлении концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="3eeae-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   Поскольку Entity Framework является компонентом платформы .NET Framework, она может распространяться вместе с приложением в соответствии с условиями лицензионного соглашения для платформы .NET Framework.  
+-   <span data-ttu-id="3eeae-121">Поскольку Entity Framework является компонентом платформы .NET Framework, она может распространяться вместе с приложением в соответствии с условиями лицензионного соглашения для платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3eeae-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## См. также  
- [Платформа ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [Вопросы разработки и развертывания](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="3eeae-122">См. также</span><span class="sxs-lookup"><span data-stu-id="3eeae-122">See Also</span></span>  
+ [<span data-ttu-id="3eeae-123">Платформа ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="3eeae-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="3eeae-124">Вопросы разработки и развертывания</span><span class="sxs-lookup"><span data-stu-id="3eeae-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

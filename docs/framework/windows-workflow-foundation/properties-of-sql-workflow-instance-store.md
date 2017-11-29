@@ -1,36 +1,40 @@
 ---
-title: "Свойства хранилища экземпляров рабочего процесса SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства хранилища экземпляров рабочего процесса SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91a2711fae91c09df0a62759edaa41483eb4ea28
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Свойства хранилища экземпляров рабочего процесса SQL
-В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.  
+# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="7da29-102">Свойства хранилища экземпляров рабочего процесса SQL</span><span class="sxs-lookup"><span data-stu-id="7da29-102">Properties of SQL Workflow Instance Store</span></span>
+<span data-ttu-id="7da29-103">В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.</span><span class="sxs-lookup"><span data-stu-id="7da29-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
   
-## В этом подразделе  
+## <a name="in-this-section"></a><span data-ttu-id="7da29-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="7da29-104">In This Section</span></span>  
   
--   [Параметр кодировки экземпляров](../../../docs/framework/windows-workflow-foundation//instance-encoding-option.md)  
+-   [<span data-ttu-id="7da29-105">Возможность кодирования экземпляров</span><span class="sxs-lookup"><span data-stu-id="7da29-105">Instance Encoding Option</span></span>](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
--   [Действие завершения экземпляра](../../../docs/framework/windows-workflow-foundation//instance-completion-action.md)  
+-   [<span data-ttu-id="7da29-106">Действие при завершении экземпляра</span><span class="sxs-lookup"><span data-stu-id="7da29-106">Instance Completion Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
   
--   [Действие в случае исключения «Экземпляр заблокирован»](../../../docs/framework/windows-workflow-foundation//instance-locked-exception-action.md)  
+-   [<span data-ttu-id="7da29-107">Действие при исключении "Экземпляр заблокирован"</span><span class="sxs-lookup"><span data-stu-id="7da29-107">Instance Locked Exception Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
   
--   [Период обновления блокировки узла](../../../docs/framework/windows-workflow-foundation//host-lock-renewal-period.md)  
+-   [<span data-ttu-id="7da29-108">Период возобновления блокировки узла</span><span class="sxs-lookup"><span data-stu-id="7da29-108">Host Lock Renewal Period</span></span>](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
   
--   [Период обнаружения запускаемых экземпляров](../../../docs/framework/windows-workflow-foundation//runnable-instances-detection-period.md)  
+-   [<span data-ttu-id="7da29-109">Период обнаружения запускаемых экземпляров</span><span class="sxs-lookup"><span data-stu-id="7da29-109">Runnable Instances Detection Period</span></span>](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
   
--   [Строка соединения и имя строки соединения](../../../docs/framework/windows-workflow-foundation//connection-string-and-connection-string-name.md)  
+-   [<span data-ttu-id="7da29-110">Строка подключения и ее имя</span><span class="sxs-lookup"><span data-stu-id="7da29-110">Connection String and Connection String Name</span></span>](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
-## См. также  
- [Хранилище экземпляров Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201)   
- [База данных постоянного хранения SQL Server для App Fabric](http://go.microsoft.com/fwlink/?LinkId=201202)
+## <a name="see-also"></a><span data-ttu-id="7da29-111">См. также</span><span class="sxs-lookup"><span data-stu-id="7da29-111">See Also</span></span>  
+ [<span data-ttu-id="7da29-112">Windows Server хранилище экземпляров</span><span class="sxs-lookup"><span data-stu-id="7da29-112">Windows Server App Fabric Instance Store</span></span>](http://go.microsoft.com/fwlink/?LinkId=201201)  
+ [<span data-ttu-id="7da29-113">База данных сохраняемости фабрики приложений SQL Server</span><span class="sxs-lookup"><span data-stu-id="7da29-113">App Fabric SQL Server Persistence Database</span></span>](http://go.microsoft.com/fwlink/?LinkId=201202)

@@ -1,51 +1,54 @@
 ---
-title: "Как разместить не являющийся службой рабочий процесс в службах IIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как разместить не являющийся службой рабочий процесс в службах IIS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как разместить не являющийся службой рабочий процесс в службах IIS
-Рабочие процессы, которые не являются службами рабочих процессов, должны быть размещены в службах IIS\/WAS.  Это может оказаться полезным, если нужно разместить рабочий процесс, разработанный кем\-то другим.  Например, если необходимо повторно разместить конструктор рабочих процессов и разрешить пользователям создавать собственные рабочие процессы.  Размещение не являющихся службами рабочих процессов в службах IIS обеспечивает поддержку таких функций, как перезапуск процессов, завершение работы при ожидании, наблюдение за работоспособностью процессов и активация на основе сообщений.  Службы рабочих процессов, размещенные в службах IIS, содержат действия <xref:System.ServiceModel.Activities.Receive> и активируются в момент получения сообщения службами IIS.  Не являющиеся службами рабочие процессы не содержат действий обмена сообщениями и по умолчанию не могут быть активированы отправкой сообщения.  Чтобы создать экземпляр рабочего процесса, необходимо создать класс, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, и определить контракт службы, содержащий операции.  В этом разделе подробно рассматривается создание простого рабочего процесса, определение контракта службы, который может быть использован клиентом для активации рабочего процесса, а затем создание класса, производного от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, использующего контракт службы для прослушивания запросов на создание рабочего процесса.  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="0075c-102">Как разместить не являющийся службой рабочий процесс в службах IIS</span><span class="sxs-lookup"><span data-stu-id="0075c-102">How to: Host a non-service workflow in IIS</span></span>
+<span data-ttu-id="0075c-103">Рабочие процессы, которые не являются службами рабочих процессов, должны быть размещены в службах IIS/WAS.</span><span class="sxs-lookup"><span data-stu-id="0075c-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="0075c-104">Это может оказаться полезным, если нужно разместить рабочий процесс, разработанный кем-то другим.</span><span class="sxs-lookup"><span data-stu-id="0075c-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="0075c-105">Например, если необходимо повторно разместить конструктор рабочих процессов и разрешить пользователям создавать собственные рабочие процессы.</span><span class="sxs-lookup"><span data-stu-id="0075c-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="0075c-106">Размещение не являющихся службами рабочих процессов в службах IIS обеспечивает поддержку таких функций, как перезапуск процессов, завершение работы при ожидании, наблюдение за работоспособностью процессов и активация на основе сообщений.</span><span class="sxs-lookup"><span data-stu-id="0075c-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="0075c-107">Службы рабочих процессов, размещенные в службах IIS, содержат действия <xref:System.ServiceModel.Activities.Receive> и активируются в момент получения сообщения службами IIS.</span><span class="sxs-lookup"><span data-stu-id="0075c-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="0075c-108">Не являющиеся службами рабочие процессы не содержат действий обмена сообщениями и по умолчанию не могут быть активированы отправкой сообщения.</span><span class="sxs-lookup"><span data-stu-id="0075c-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="0075c-109">Чтобы создать экземпляр рабочего процесса, необходимо создать класс, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, и определить контракт службы, содержащий операции.</span><span class="sxs-lookup"><span data-stu-id="0075c-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="0075c-110">Этот раздел содержит пошаговое руководство по созданию простого рабочего процесса, определение контракта службы, клиент может использовать для активации рабочего процесса и создания класса, производного от класса <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для прослушивания запросов на создание рабочего процесса, которая использует контракт службы.</span><span class="sxs-lookup"><span data-stu-id="0075c-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
   
-### Создание простого рабочего процесса  
+### <a name="create-a-simple-workflow"></a><span data-ttu-id="0075c-111">Создание простого рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="0075c-111">Create a simple workflow</span></span>  
   
-1.  Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с именем `CreationEndpointTest`.  
+1.  <span data-ttu-id="0075c-112">Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с именем `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0075c-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
   
-2.  Добавьте в него новый проект служебного приложения рабочего процесса WCF под названием `SimpleWorkflow`.  Откроется конструктор рабочих процессов.  
+2.  <span data-ttu-id="0075c-113">Добавьте в него новый проект служебного приложения рабочего процесса WCF под названием `SimpleWorkflow`.</span><span class="sxs-lookup"><span data-stu-id="0075c-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="0075c-114">Откроется конструктор рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="0075c-114">The workflow designer will open.</span></span>  
   
-3.  Удалите действия ReceiveRequest и SendResponse.  Это как раз те действия, которые делают рабочий процесс службой.  Поскольку мы не работаем со службами рабочих процессов, они нам не нужны.  
+3.  <span data-ttu-id="0075c-115">Удалите действия ReceiveRequest и SendResponse.</span><span class="sxs-lookup"><span data-stu-id="0075c-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="0075c-116">Это как раз те действия, которые делают рабочий процесс службой.</span><span class="sxs-lookup"><span data-stu-id="0075c-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="0075c-117">Поскольку мы не работаем со службами рабочих процессов, они нам не нужны.</span><span class="sxs-lookup"><span data-stu-id="0075c-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
   
-4.  Установите свойство DisplayName действия последовательности в значение «Sequential Workflow».  
+4.  <span data-ttu-id="0075c-118">Установите свойство DisplayName действия последовательности в значение «Sequential Workflow».</span><span class="sxs-lookup"><span data-stu-id="0075c-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
   
-5.  Переименуйте файл Service1.xamlx в Workflow1.xamlx.  
+5.  <span data-ttu-id="0075c-119">Переименуйте файл Service1.xamlx в Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0075c-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
   
-6.  Щелкните конструктор за пределами действия последовательности и задайте для свойств Name и ConfigurationName значение «Workflow1».  
+6.  <span data-ttu-id="0075c-120">Щелкните конструктор за пределами действия последовательности и задайте свойства Name и ConfigurationName для «Workflow1».</span><span class="sxs-lookup"><span data-stu-id="0075c-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
   
-7.  Перетащите действие <xref:System.Activities.Statements.WriteLine> в раздел <xref:System.Activities.Statements.Sequence>.  Действие <xref:System.Activities.Statements.WriteLine> можно найти в разделе **Базовые функции** области элементов.  Задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> действия <xref:System.Activities.Statements.WriteLine> значение «Hello, world».  
+7.  <span data-ttu-id="0075c-121">Перетащите действие <xref:System.Activities.Statements.WriteLine> в раздел <xref:System.Activities.Statements.Sequence>.</span><span class="sxs-lookup"><span data-stu-id="0075c-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="0075c-122"><xref:System.Activities.Statements.WriteLine> Действия можно найти в **примитивы** области элементов.</span><span class="sxs-lookup"><span data-stu-id="0075c-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="0075c-123">Задать <xref:System.Activities.Statements.WriteLine.Text%2A> свойство <xref:System.Activities.Statements.WriteLine> действие «Hello, world».</span><span class="sxs-lookup"><span data-stu-id="0075c-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
   
-     После этого рабочий процесс должен выглядеть так, как показано на следующей схеме.  
+     <span data-ttu-id="0075c-124">После этого рабочий процесс должен выглядеть так, как показано на следующей схеме.</span><span class="sxs-lookup"><span data-stu-id="0075c-124">The workflow should now look like the following diagram.</span></span>  
   
-     ![Простой рабочий процесс](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")  
+     <span data-ttu-id="0075c-125">![Простой рабочий процесс](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="0075c-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
   
-### Создайте контракт службы создания рабочего процесса  
+### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="0075c-126">Создайте контракт службы создания рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="0075c-126">Create the workflow creation service contract</span></span>  
   
-1.  Добавьте новый проект библиотеки классов с названием `Shared` в решение `CreationEndpointTest`.  
+1.  <span data-ttu-id="0075c-127">Добавьте новый проект библиотеки классов с названием `Shared` в решение `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0075c-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
   
-2.  Добавьте в проект `Shared` ссылки на сборки System.ServiceModel.dll, System.Configuration и System.ServiceModel.Activities.  
+2.  <span data-ttu-id="0075c-128">Добавьте в проект `Shared` ссылки на сборки System.ServiceModel.dll, System.Configuration и System.ServiceModel.Activities.</span><span class="sxs-lookup"><span data-stu-id="0075c-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
   
-3.  Переименуйте файл Class1.cs в IWorkflowCreation.cs и вставьте в него следующий код.  
+3.  <span data-ttu-id="0075c-129">Переименуйте файл Class1.cs в IWorkflowCreation.cs и вставьте в него следующий код.</span><span class="sxs-lookup"><span data-stu-id="0075c-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
   
     ```  
     using System;  
@@ -69,11 +72,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-     Данный контракт определяет две операции, обе из которых служат для создания нового экземпляра вновь созданного рабочего процесса, не являющегося службой.  Один из них создает новый экземпляр с созданием идентификатора экземпляра, а второй позволяет указать идентификатор для нового экземпляра рабочего процесса.  Оба метода позволяют передавать параметры новому экземпляру рабочего процесса.  Этот контракт будет доступен через <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, что позволяет клиентам создавать новые экземпляры рабочих процессов, не являющихся службами.  
+     <span data-ttu-id="0075c-130">Данный контракт определяет две операции, обе из которых служат для создания нового экземпляра вновь созданного рабочего процесса, не являющегося службой.</span><span class="sxs-lookup"><span data-stu-id="0075c-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="0075c-131">Один из них создает новый экземпляр с созданием идентификатора экземпляра, а второй позволяет указать идентификатор для нового экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0075c-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="0075c-132">Оба метода позволяют передавать параметры новому экземпляру рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0075c-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="0075c-133">Этот контракт будет доступен через <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> разрешить клиентам для создания новых экземпляров рабочего процесса, не относящиеся к службе.</span><span class="sxs-lookup"><span data-stu-id="0075c-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
   
-### Создайте класс, производный от WorkflowHostingEndpoint  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="0075c-134">Создайте класс, производный от WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="0075c-134">Derive a class from WorkflowHostingEndpoint</span></span>  
   
-1.  Добавьте новый класс с названием `CreationEndpoint`, производный от <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, в проект `Shared`.  
+1.  <span data-ttu-id="0075c-135">Добавьте новый класс с именем `CreationEndpoint` производными <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> для `Shared` проекта.</span><span class="sxs-lookup"><span data-stu-id="0075c-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
   
     ```  
     using System;  
@@ -92,7 +95,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-2.  Добавьте локальную статическую переменную типа <xref:System.Uri> с именем `defaultBaseUri` в класс `CreationEndpoint`.  
+2.  <span data-ttu-id="0075c-136">Добавьте локальную статическую переменную типа <xref:System.Uri> с именем `defaultBaseUri` в класс `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -101,7 +104,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-3.  Добавьте следующий конструктор в класс `CreationEndpoint`.  Обратите внимание, что в вызове конструктора базового класса указан контракт службы `IWorkflowCreation`.  
+3.  <span data-ttu-id="0075c-137">Добавьте следующий конструктор в класс `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="0075c-138">Обратите внимание, что в вызове конструктора базового класса указан контракт службы `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="0075c-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -110,7 +113,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-4.  Добавьте следующий конструктор по умолчанию в класс `CreationEndpoint`.  
+4.  <span data-ttu-id="0075c-139">Добавьте следующий конструктор по умолчанию в класс `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public CreationEndpoint()  
@@ -120,7 +123,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-5.  Добавьте статическое свойство `DefaultBaseUri` в класс `CreationEndpoint`.  Это свойство будет использоваться для хранения базового URI по умолчанию, если он не указан.  
+5.  <span data-ttu-id="0075c-140">Добавьте статическое свойство `DefaultBaseUri` в класс `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="0075c-141">Это свойство будет использоваться для хранения базового URI по умолчанию, если он не указан.</span><span class="sxs-lookup"><span data-stu-id="0075c-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
   
     ```  
     static Uri DefaultBaseUri  
@@ -138,7 +141,7 @@ caps.handback.revision: 7
      }  
     ```  
   
-6.  Создайте следующий метод для получения привязки по умолчанию, используемой для конечной точки создания.  
+6.  <span data-ttu-id="0075c-142">Создайте следующий метод для получения привязки по умолчанию, используемой для конечной точки создания.</span><span class="sxs-lookup"><span data-stu-id="0075c-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
   
     ```  
     //defaults to NetNamedPipeBinding  
@@ -148,7 +151,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-7.  Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>, чтобы он возвращал идентификатор экземпляра рабочего процесса.  Если заголовок `Action` заканчивается на «Create», возвращается пустой идентификатор GUID; если заголовок `Action` заканчивается на «CreateWithInstanceId», возвращается идентификатор GUID, переданный в метод.  В противном случае формируется исключение <xref:System.InvalidOperationException>.  Эти заголовки `Action` соответствуют двум операциям, определенным в контракте службы `IWorkflowCreation`.  
+7.  <span data-ttu-id="0075c-143">Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A>, чтобы он возвращал идентификатор экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="0075c-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="0075c-144">Если `Action` заголовок заканчивается на «Создать» возвращают пустой идентификатор GUID, если `Action` заголовок заканчивается на «CreateWithInstanceId» возвращают идентификатор GUID, переданный в метод.</span><span class="sxs-lookup"><span data-stu-id="0075c-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="0075c-145">В противном случае формируется исключение <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="0075c-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="0075c-146">Эти заголовки `Action` соответствуют двум операциям, определенным в контракте службы `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="0075c-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -170,7 +173,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-8.  Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>, чтобы создать <xref:System.ServiceModel.Activities.WorkflowCreationContext> и добавить аргументы для рабочего процесса, отправить клиенту идентификатор экземпляра, а затем вернуть <xref:System.ServiceModel.Activities.WorkflowCreationContext>.  
+8.  <span data-ttu-id="0075c-147">Переопределите метод <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A>, чтобы создать <xref:System.ServiceModel.Activities.WorkflowCreationContext> и добавить аргументы для рабочего процесса, отправить клиенту идентификатор экземпляра, а затем вернуть <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span><span class="sxs-lookup"><span data-stu-id="0075c-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -198,11 +201,11 @@ caps.handback.revision: 7
     }  
     ```  
   
-### Создайте элемент стандартной конечной точки, чтобы получить возможность настройки WorkflowCreationEndpoint.  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="0075c-148">Создайте элемент стандартной конечной точки, чтобы получить возможность настройки WorkflowCreationEndpoint.</span><span class="sxs-lookup"><span data-stu-id="0075c-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
   
-1.  Добавьте ссылку на класс Shared в проект `CreationEndpoint`.  
+1.  <span data-ttu-id="0075c-149">Добавьте ссылку на класс Shared в проект `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
   
-2.  Добавьте новый класс с именем `CreationEndpointElement`, производный от <xref:System.ServiceModel.Configuration.StandardEndpointElement>, в проект `CreationEndpoint`.  Этот класс будет представлять `CreationEndpoint` в файле web.config.  
+2.  <span data-ttu-id="0075c-150">Добавьте новый класс с именем `CreationEndpointElement`, производный от <xref:System.ServiceModel.Configuration.StandardEndpointElement>, в проект `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="0075c-151">Этот класс будет представлять `CreationEndpoint` в файле web.config.</span><span class="sxs-lookup"><span data-stu-id="0075c-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
   
     ```  
     using System;  
@@ -220,7 +223,7 @@ caps.handback.revision: 7
        }  
     ```  
   
-3.  Добавьте свойство `EndpointType`, возвращающее тип конечной точки.  
+3.  <span data-ttu-id="0075c-152">Добавьте свойство `EndpointType`, возвращающее тип конечной точки.</span><span class="sxs-lookup"><span data-stu-id="0075c-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
   
     ```  
     protected override Type EndpointType  
@@ -229,17 +232,16 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  Переопределите метод <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> для возврата нового `CreationEndpoint`.  
+4.  <span data-ttu-id="0075c-153">Переопределите метод <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> для возврата нового `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
     {  
        return new CreationEndpoint();  
     }  
-  
     ```  
   
-5.  Переопределите методы <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> и <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.  Эти методы нужно просто определить, не нужно заполнять их каким\-либо кодом.  
+5.  <span data-ttu-id="0075c-154">Переопределите методы <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> и <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>.</span><span class="sxs-lookup"><span data-stu-id="0075c-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="0075c-155">Эти методы нужно просто определить, не нужно заполнять их каким-либо кодом.</span><span class="sxs-lookup"><span data-stu-id="0075c-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -259,7 +261,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-6.  Добавьте класс коллекции для `CreationEndpoint` в файл CreationEndpointElement.cs в проекте `CreationEndpoint`.  Этот класс используется конфигурацией для хранения числа экземпляров `CreationEndpoint` в файле web.config.  
+6.  <span data-ttu-id="0075c-156">Добавьте класс коллекции для `CreationEndpoint` в файл CreationEndpointElement.cs в проекте `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="0075c-157">Этот класс используется конфигурацией для хранения числа экземпляров `CreationEndpoint` в файле web.config.</span><span class="sxs-lookup"><span data-stu-id="0075c-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -267,17 +269,17 @@ caps.handback.revision: 7
     }  
     ```  
   
-7.  Постройте решение.  
+7.  <span data-ttu-id="0075c-158">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="0075c-158">Build the solution.</span></span>  
   
-### Размещение рабочего процесса в службах IIS  
+### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="0075c-159">Размещение рабочего процесса в службах IIS</span><span class="sxs-lookup"><span data-stu-id="0075c-159">Host the workflow in IIS</span></span>  
   
-1.  Создайте в службах IIS новое приложение с именем `MyCreationEndpoint`.  
+1.  <span data-ttu-id="0075c-160">Создайте в службах IIS новое приложение с именем `MyCreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
   
-2.  Скопируйте файл workflow1.xaml, созданный конструктором рабочих процессов, в каталог приложения и переименуйте его в workflow1.xamlx.  
+2.  <span data-ttu-id="0075c-161">Скопируйте файл workflow1.xaml, созданный конструктором рабочих процессов, в каталог приложения и переименуйте его в workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0075c-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
   
-3.  Скопируйте файлы shared.dll и CreationEndpoint.dll в каталог bin приложения \(создайте этот каталог, если он отсутствует\).  
+3.  <span data-ttu-id="0075c-162">Скопируйте файлы shared.dll и CreationEndpoint.dll в каталог bin приложения (создайте этот каталог, если он отсутствует).</span><span class="sxs-lookup"><span data-stu-id="0075c-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
   
-4.  Замените содержимое файла Web.config в проекте `CreationEndpoint` следующим кодом.  
+4.  <span data-ttu-id="0075c-163">Замените содержимое файла Web.config в проекте `CreationEndpoint` следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="0075c-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -288,9 +290,9 @@ caps.handback.revision: 7
     </configuration>  
     ```  
   
-5.  После элемента `<system.web>` зарегистрируйте `CreationEndpoint`, добавив следующий код конфигурации.  
+5.  <span data-ttu-id="0075c-164">После элемента `<system.web>` зарегистрируйте `CreationEndpoint`, добавив следующий код конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0075c-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <!--register CreationEndpoint-->  
         <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
@@ -300,24 +302,22 @@ caps.handback.revision: 7
           </endpointExtensions>  
         </extensions>  
     </system.serviceModel>  
-  
     ```  
   
-     Этот код зарегистрирует класс `CreationEndpointCollection`, чтобы можно было настроить `CreationEndpoint` в файле web.config.  
+     <span data-ttu-id="0075c-165">Этот код зарегистрирует класс `CreationEndpointCollection`, чтобы можно было настроить `CreationEndpoint` в файле web.config.</span><span class="sxs-lookup"><span data-stu-id="0075c-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
   
-6.  Добавьте элемент `<service>` \(после тега \<\/extensions\>\) с атрибутом `CreationEndpoint`, который будет прослушивать входящие сообщения.  
+6.  <span data-ttu-id="0075c-166">Добавить `<service>` элемент (после \</extensions > тег) с `CreationEndpoint` который будет прослушивать входящие сообщения.</span><span class="sxs-lookup"><span data-stu-id="0075c-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
   
-    ```  
+    ```xml  
     <services>  
           <!-- add endpoint to service-->  
           <service name="Workflow1" behaviorConfiguration="basicConfig" >  
             <endpoint kind="creationEndpoint" binding="basicHttpBinding" address=""/>  
           </service>  
         </services>  
-  
     ```  
   
-7.  Добавьте элемент \<behaviors\> \(после тега \<\/services\>\), чтобы включить метаданные службы.  
+7.  <span data-ttu-id="0075c-167">Добавить \<поведения > элемент (после  \< /services > тег) чтобы включить метаданные службы.</span><span class="sxs-lookup"><span data-stu-id="0075c-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -327,22 +327,21 @@ caps.handback.revision: 7
             </behavior>  
           </serviceBehaviors>  
         </behaviors>  
-  
     ```  
   
-8.  Скопируйте файл web.config в каталог приложения IIS.  
+8.  <span data-ttu-id="0075c-168">Скопируйте файл web.config в каталог приложения IIS.</span><span class="sxs-lookup"><span data-stu-id="0075c-168">Copy the web.config to your IIS application directory.</span></span>  
   
-9. Проверьте, работает ли создание конечной точки, запустив Internet Explorer и прейдя по адресу http:\/\/localhost\/MyCreationEndpoint\/Workflow1.xamlx.  Internet Explorer должен отобразить следующий экран.  
+9. <span data-ttu-id="0075c-169">Проверьте, работает ли создание конечной точки, запустив Internet Explorer и прейдя по адресу http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="0075c-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="0075c-170">Internet Explorer должен отобразить следующий экран.</span><span class="sxs-lookup"><span data-stu-id="0075c-170">Internet Explorer should display the following screen:</span></span>  
   
-     ![Тестирование службы](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
+     <span data-ttu-id="0075c-171">![Тестирование службы](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="0075c-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
   
-### Создайте клиента, который будет вызывать CreationEndpoint.  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="0075c-172">Создайте клиента, который будет вызывать CreationEndpoint.</span><span class="sxs-lookup"><span data-stu-id="0075c-172">Create a client that will call the CreationEndpoint.</span></span>  
   
-1.  Добавьте новое консольное приложение в решение `CreationEndpointTest`.  
+1.  <span data-ttu-id="0075c-173">Добавьте новое консольное приложение в решение `CreationEndpointTest`.</span><span class="sxs-lookup"><span data-stu-id="0075c-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
   
-2.  Добавьте ссылки на сборки System.ServiceModel.dll, System.ServiceModel.Activities и проект `Shared`.  
+2.  <span data-ttu-id="0075c-174">Добавьте ссылки на сборки System.ServiceModel.dll, System.ServiceModel.Activities и проект `Shared`.</span><span class="sxs-lookup"><span data-stu-id="0075c-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
   
-3.  В методе `Main` создайте <xref:System.ServiceModel.ChannelFactory%601> типа `IWorkflowCreation` и вызовите метод <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.  Будет возвращена учетная запись\-посредник.  Затем можно вызвать метод `Create` этой учетной записи\-посредника, чтобы создать экземпляр рабочего процесса, размещенного в службах IIS:  
+3.  <span data-ttu-id="0075c-175">В `Main` создать метод <xref:System.ServiceModel.ChannelFactory%601> типа `IWorkflowCreation` и вызвать <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span><span class="sxs-lookup"><span data-stu-id="0075c-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="0075c-176">Будет возвращена учетная запись-посредник.</span><span class="sxs-lookup"><span data-stu-id="0075c-176">This will return a proxy.</span></span> <span data-ttu-id="0075c-177">Затем можно вызвать метод `Create` этой учетной записи-посредника, чтобы создать экземпляр рабочего процесса, размещенного в службах IIS:</span><span class="sxs-lookup"><span data-stu-id="0075c-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
   
     ```  
     using System.Text;  
@@ -374,19 +373,17 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  Запустите приложение CreationEndpointClient.  Этот вывод должен выглядеть так:  
+4.  <span data-ttu-id="0075c-178">Запустите приложение CreationEndpointClient.</span><span class="sxs-lookup"><span data-stu-id="0075c-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="0075c-179">Этот вывод должен выглядеть так:</span><span class="sxs-lookup"><span data-stu-id="0075c-179">The output should look like the following:</span></span>  
   
     ```Output  
-  
-                Workflow Instance created using CreationEndpoint added in config.  Идентификатор экземпляра: 0875dac0-2b8b-473e-b3cc-abcb235e9693  
-    Нажмите ввод, чтобы выйти…    
+    Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
-    >  Вывод рабочего процесса не будет отображаться, поскольку он выполняется в службах IIS, не осуществляющих вывода на консоль.  
+    >  <span data-ttu-id="0075c-180">Вывод рабочего процесса не будет отображаться, поскольку он выполняется в службах IIS, не осуществляющих вывода на консоль.</span><span class="sxs-lookup"><span data-stu-id="0075c-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
   
-## Пример  
- Ниже приведен полный код для этого образца.  
+## <a name="example"></a><span data-ttu-id="0075c-181">Пример</span><span class="sxs-lookup"><span data-stu-id="0075c-181">Example</span></span>  
+ <span data-ttu-id="0075c-182">Ниже приведен полный код для этого образца.</span><span class="sxs-lookup"><span data-stu-id="0075c-182">The following is the complete code for this sample.</span></span>  
   
 ```xaml  
 <!-— workflow1.xamlx -->  
@@ -430,7 +427,6 @@ caps.handback.revision: 7
     <p:WriteLine sap:VirtualizedContainerService.HintSize="211,61" Text="Hello, world" />  
   </p:Sequence>  
 </WorkflowService>  
-  
 ```  
   
 ```csharp  
@@ -488,7 +484,6 @@ namespace CreationEndpointTest
     {  
     }  
 }  
-  
 ```  
   
 ```xml  
@@ -521,7 +516,6 @@ namespace CreationEndpointTest
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
 ```csharp  
@@ -545,7 +539,6 @@ namespace Shared
         void CreateWithInstanceId(IDictionary<string, object> inputs, Guid instanceId);  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -649,7 +642,6 @@ namespace Shared
         }  
     }  
 }  
-  
 ```  
   
 ```csharp  
@@ -686,17 +678,16 @@ namespace CreationClient
     }  
   
 }  
-  
 ```  
   
- Данный пример может показаться неправильным, потому что в нем не реализована служба, реализующая интерфейс `IWorkflowCreation`.  Это было автоматически сделано в методе `CreationEndpoint`.  
+ <span data-ttu-id="0075c-183">Данный пример может показаться неправильным, потому что в нем не реализована служба, реализующая интерфейс `IWorkflowCreation`.</span><span class="sxs-lookup"><span data-stu-id="0075c-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="0075c-184">Это было автоматически сделано в методе `CreationEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="0075c-184">This is because the `CreationEndpoint` does this for you.</span></span>  
   
-## См. также  
- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [Архитектура рабочих процессов Windows](../../../../docs/framework/windows-workflow-foundation//architecture.md)   
- [Закладка возобновления для конечной точки WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)   
- [Повторное размещение конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Общие сведения о Windows Workflow](../../../../docs/framework/windows-workflow-foundation//overview.md)
+## <a name="see-also"></a><span data-ttu-id="0075c-185">См. также</span><span class="sxs-lookup"><span data-stu-id="0075c-185">See Also</span></span>  
+ [<span data-ttu-id="0075c-186">Службы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="0075c-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="0075c-187">Размещение в службах IIS</span><span class="sxs-lookup"><span data-stu-id="0075c-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="0075c-188">Рекомендации по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="0075c-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="0075c-189">Инструкции по размещению IIS службы Интернета</span><span class="sxs-lookup"><span data-stu-id="0075c-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="0075c-190">Архитектура Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="0075c-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [<span data-ttu-id="0075c-191">Закладка возобновления для конечной точки WorkflowHostingEndpoint</span><span class="sxs-lookup"><span data-stu-id="0075c-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [<span data-ttu-id="0075c-192">Отдельное размещение конструктора рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="0075c-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="0075c-193">Обзор Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="0075c-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)

@@ -1,50 +1,56 @@
 ---
-title: "Идентификация объекта | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Идентификация объектов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 97c07ce351de5b7939bdcaf441bc46dac50a8c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Идентификация объекта
-Во время выполнения объекты получают уникальные идентификаторы.  Две переменные, которые ссылаются на один объект, в действительности ссылаются на один экземпляр этого объекта.  По этой причине изменения, произведенные посредством одной переменной, немедленно отображаются через вторую.  
+# <a name="object-identity"></a><span data-ttu-id="b8bef-102">Идентификация объектов</span><span class="sxs-lookup"><span data-stu-id="b8bef-102">Object Identity</span></span>
+<span data-ttu-id="b8bef-103">Во время выполнения объекты получают уникальные идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="b8bef-103">Objects in the runtime have unique identities.</span></span> <span data-ttu-id="b8bef-104">Две переменные, которые ссылаются на один объект, в действительности ссылаются на один экземпляр этого объекта.</span><span class="sxs-lookup"><span data-stu-id="b8bef-104">Two variables that refer to the same object actually refer to the same instance of the object.</span></span> <span data-ttu-id="b8bef-105">По этой причине изменения, произведенные посредством одной переменной, немедленно отображаются через вторую.</span><span class="sxs-lookup"><span data-stu-id="b8bef-105">Because of this fact, changes that you make by way of a path through one variable are immediately visible through the other.</span></span>  
   
- Строки в таблице реляционной базы данных не имеют уникальных идентификаторов.  Поэтому каждой строке присвоен уникальный первичный ключ, который не совпадает с ключами других строк.  Однако этот факт применим только к содержимому таблицы базы данных.  
+ <span data-ttu-id="b8bef-106">Строки в таблице реляционной базы данных не имеют уникальных идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="b8bef-106">Rows in a relational database table do not have unique identities.</span></span> <span data-ttu-id="b8bef-107">Поэтому каждой строке присвоен уникальный первичный ключ, который не совпадает с ключами других строк.</span><span class="sxs-lookup"><span data-stu-id="b8bef-107">Because each row has a unique primary key, no two rows share the same key value.</span></span> <span data-ttu-id="b8bef-108">Однако этот факт применим только к содержимому таблицы базы данных.</span><span class="sxs-lookup"><span data-stu-id="b8bef-108">However, this fact constrains only the contents of the database table.</span></span>  
   
- В действительности данные зачастую извлекаются из базы данных и отправляются на другой уровень, на котором с ними работает приложение.  Именно такая модель поддерживается технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  Когда данные извлекаются из базы данных в виде строк, пользователь не может сделать никаких предположений относительного того, что две строки, представляющие идентичные данные, в действительности соответствуют одному экземпляру строки.  Если дважды запросить определенный клиент, будут получены две строки данных. Сведения в этих строках будут идентичны.  
+ <span data-ttu-id="b8bef-109">В действительности данные зачастую извлекаются из базы данных и отправляются на другой уровень, на котором с ними работает приложение.</span><span class="sxs-lookup"><span data-stu-id="b8bef-109">In reality, data is most often brought out of the database and into a different tier, where an application works with it.</span></span> <span data-ttu-id="b8bef-110">Именно такая модель поддерживается технологией [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8bef-110">This is the model that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supports.</span></span> <span data-ttu-id="b8bef-111">Когда данные извлекаются из базы данных в виде строк, пользователь не может сделать никаких предположений относительного того, что две строки, представляющие идентичные данные, в действительности соответствуют одному экземпляру строки.</span><span class="sxs-lookup"><span data-stu-id="b8bef-111">When data is brought out of the database as rows, you have no expectation that two rows that represent the same data actually correspond to the same row instances.</span></span> <span data-ttu-id="b8bef-112">Если дважды выполнить запрос на получение одного определенного клиента, будут извлечены две строки данных.</span><span class="sxs-lookup"><span data-stu-id="b8bef-112">If you query for a specific customer two times, you get two rows of data.</span></span> <span data-ttu-id="b8bef-113">Каждая строка содержит идентичные сведения.</span><span class="sxs-lookup"><span data-stu-id="b8bef-113">Each row contains the same information.</span></span>  
   
- В случае объектов процесс осуществляется совершенно иначе.  Можно ожидать, что, несколько раз отправляя классу <xref:System.Data.Linq.DataContext> запрос на получений одной и той же информации, в действительности будет получен один и тот же экземпляр объекта.  Это поведение реализуется по той причине, что объекты имеют особое значение для приложения и полученные данные ведут себя как объекты.  Объекты создаются как иерархии или графы.  Пользователь может быть уверен, что объекты будут извлечены именно в этом качестве. Он не получит множество реплицированных экземпляров только потому, что отправил несколько запросов на одни и те же сведения.  
+ <span data-ttu-id="b8bef-114">В случае объектов процесс осуществляется совершенно иначе.</span><span class="sxs-lookup"><span data-stu-id="b8bef-114">With objects you expect something very different.</span></span> <span data-ttu-id="b8bef-115">Можно ожидать, что, несколько раз отправляя классу <xref:System.Data.Linq.DataContext> запрос на получений одной и той же информации, в действительности будет получен один и тот же экземпляр объекта.</span><span class="sxs-lookup"><span data-stu-id="b8bef-115">You expect that if you ask the <xref:System.Data.Linq.DataContext> for the same information repeatedly, it will in fact give you the same object instance.</span></span> <span data-ttu-id="b8bef-116">Это поведение реализуется по той причине, что объекты имеют особое значение для приложения и полученные данные ведут себя как объекты.</span><span class="sxs-lookup"><span data-stu-id="b8bef-116">You expect this behavior because objects have special meaning for your application and you expect them to behave like objects.</span></span> <span data-ttu-id="b8bef-117">Объекты создаются как иерархии или графы.</span><span class="sxs-lookup"><span data-stu-id="b8bef-117">You designed them as hierarchies or graphs.</span></span> <span data-ttu-id="b8bef-118">Пользователь может быть уверен, что объекты будут извлечены именно в этом качестве. Он не получит множество реплицированных экземпляров только потому, что отправил несколько запросов на одни и те же сведения.</span><span class="sxs-lookup"><span data-stu-id="b8bef-118">You expect to retrieve them as such and not to receive multitudes of replicated instances just because you asked for the same thing more than one time.</span></span>  
   
- В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] идентификациями объектов управляет класс <xref:System.Data.Linq.DataContext>.  При получении новой строки из базы данных строка регистрируется в таблице идентификаций по своему первичному ключу и создается новый объект.  При извлечении той же строки приложение отправляется исходный экземпляр объекта.  Таким образом, класс <xref:System.Data.Linq.DataContext> преобразует понятие идентификации в контексте базы данных \(то есть первичные ключи\) в понятие идентификации в контексте языка программирования \(то есть экземпляры\).  Объект представляется приложению только в состоянии, в котором он находился при первом получении.  Если новые данные оказываются другими, они удаляются.  Для получения дополнительной информации см. [Получение объектов из кэша идентификации](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+ <span data-ttu-id="b8bef-119">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] идентификациями объектов управляет класс <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="b8bef-119">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the <xref:System.Data.Linq.DataContext> manages object identity.</span></span> <span data-ttu-id="b8bef-120">При получении новой строки из базы данных строка регистрируется в таблице идентификаций по своему первичному ключу и создается новый объект.</span><span class="sxs-lookup"><span data-stu-id="b8bef-120">Whenever you retrieve a new row from the database, the row is logged in an identity table by its primary key, and a new object is created.</span></span> <span data-ttu-id="b8bef-121">При извлечении той же строки приложение отправляется исходный экземпляр объекта.</span><span class="sxs-lookup"><span data-stu-id="b8bef-121">Whenever you retrieve that same row, the original object instance is handed back to the application.</span></span> <span data-ttu-id="b8bef-122">Таким образом, класс <xref:System.Data.Linq.DataContext> преобразует понятие идентификации в контексте базы данных (то есть первичные ключи) в понятие идентификации в контексте языка программирования (то есть экземпляры).</span><span class="sxs-lookup"><span data-stu-id="b8bef-122">In this manner the <xref:System.Data.Linq.DataContext> translates the concept of identity as seen by the database (that is, primary keys) into the concept of identity seen by the language (that is, instances).</span></span> <span data-ttu-id="b8bef-123">Объект представляется приложению только в состоянии, в котором он находился при первом получении.</span><span class="sxs-lookup"><span data-stu-id="b8bef-123">The application only sees the object in the state that it was first retrieved.</span></span> <span data-ttu-id="b8bef-124">Если новые данные оказываются другими, они удаляются.</span><span class="sxs-lookup"><span data-stu-id="b8bef-124">The new data, if different, is discarded.</span></span> <span data-ttu-id="b8bef-125">Дополнительные сведения см. в разделе [извлечения объектов из кэша идентификаторов](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).</span><span class="sxs-lookup"><span data-stu-id="b8bef-125">For more information, see [Retrieving Objects from the Identity Cache](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует этот подход, чтобы обеспечивать целостность локальных объектов в целях поддержки обновлений оптимистичного параллелизма.  Поскольку все изменения, происходящие после первого создания объекта, выполняются приложением, действия приложения строго определены.  Если во время работы приложения изменения производятся из\-за пределов его области действия, эти изменения определяются в момент вызова метода `SubmitChanges()`.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b8bef-126">использует этот подход, чтобы обеспечивать целостность локальных объектов для поддержки обновлений оптимистичного параллелизма.</span><span class="sxs-lookup"><span data-stu-id="b8bef-126"> uses this approach to manage the integrity of local objects in order to support optimistic updates.</span></span> <span data-ttu-id="b8bef-127">Поскольку все изменения, происходящие после первого создания объекта, выполняются приложением, действия приложения строго определены.</span><span class="sxs-lookup"><span data-stu-id="b8bef-127">Because the only changes that occur after the object is at first created are those made by the application, the intent of the application is clear.</span></span> <span data-ttu-id="b8bef-128">Если во время работы приложения изменения производятся из-за пределов его области действия, эти изменения определяются в момент вызова метода `SubmitChanges()`.</span><span class="sxs-lookup"><span data-stu-id="b8bef-128">If changes by an outside party have occurred in the interim, they are identified at the time `SubmitChanges()` is called.</span></span>  
   
 > [!NOTE]
->  Если запрашиваемый объект легко определить как уже извлеченный, то запрос не выполняется.  Таблица идентификаций действует как кэш всех ранее извлеченных объектов.  
+>  <span data-ttu-id="b8bef-129">Если запрашиваемый объект легко определить как уже извлеченный, то запрос не выполняется.</span><span class="sxs-lookup"><span data-stu-id="b8bef-129">If the object requested by the query is easily identifiable as one already retrieved, no query is executed.</span></span> <span data-ttu-id="b8bef-130">Таблица идентификаций действует как кэш всех ранее извлеченных объектов.</span><span class="sxs-lookup"><span data-stu-id="b8bef-130">The identity table acts as a cache of all previously retrieved objects.</span></span>  
   
-## Примеры  
+## <a name="examples"></a><span data-ttu-id="b8bef-131">Примеры</span><span class="sxs-lookup"><span data-stu-id="b8bef-131">Examples</span></span>  
   
-### Пример кэширования объекта 1  
- В данном примере, если дважды выполнить один и тот же запрос, каждый раз будет получена ссылка на один и тот же объект в памяти.  
+### <a name="object-caching-example-1"></a><span data-ttu-id="b8bef-132">Пример кэширования объекта 1</span><span class="sxs-lookup"><span data-stu-id="b8bef-132">Object Caching Example 1</span></span>  
+ <span data-ttu-id="b8bef-133">В данном примере, если дважды выполнить один и тот же запрос, каждый раз будет получена ссылка на один и тот же объект в памяти.</span><span class="sxs-lookup"><span data-stu-id="b8bef-133">In this example, if you execute the same query two times, you receive a reference to the same object in memory every time.</span></span>  
   
  [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
  [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
   
-### Пример кэширования объекта 2  
- В данном примере, если дважды выполнить разные запросы, которые возвращают одну и ту же строку базы данных, каждый раз будет получена ссылка на один и тот же объект в памяти.  
+### <a name="object-caching-example-2"></a><span data-ttu-id="b8bef-134">Пример кэширования объекта 2</span><span class="sxs-lookup"><span data-stu-id="b8bef-134">Object Caching Example 2</span></span>  
+ <span data-ttu-id="b8bef-135">В данном примере, если дважды выполнить разные запросы, которые возвращают одну и ту же строку базы данных, каждый раз будет получена ссылка на один и тот же объект в памяти.</span><span class="sxs-lookup"><span data-stu-id="b8bef-135">In this example, if you execute different queries that return the same row from the database, you receive a reference to the same object in memory every time.</span></span>  
   
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## См. также  
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="b8bef-136">См. также</span><span class="sxs-lookup"><span data-stu-id="b8bef-136">See Also</span></span>  
+ [<span data-ttu-id="b8bef-137">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="b8bef-137">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

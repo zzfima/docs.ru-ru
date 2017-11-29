@@ -1,33 +1,32 @@
 ---
-title: "Выражения запросов (язык Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Выражения запросов (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8b30deea78efe275ccaf6beabafb16a84357ba26
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выражения запросов (язык Entity SQL)
-Выражение запроса объединяет в едином синтаксисе множество разных операторов запросов.  В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предусмотрены различные типы выражений, в том числе: [литералы](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [параметры](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [переменные](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), операторы, [функции](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), операторы работы с наборами и т. д.  Для получения дополнительной информации см. [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  
+# <a name="query-expressions-entity-sql"></a><span data-ttu-id="deae1-102">Выражения запросов (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="deae1-102">Query Expressions (Entity SQL)</span></span>
+<span data-ttu-id="deae1-103">Выражение запроса объединяет в едином синтаксисе множество разных операторов запросов.</span><span class="sxs-lookup"><span data-stu-id="deae1-103">A query expression combines many different query operators into a single syntax.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="deae1-104">предоставляет различные типы выражений, включая следующие: [литералы](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [параметры](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [переменных](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), операторы, [функции](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)операторов работы с наборами и т. д.</span><span class="sxs-lookup"><span data-stu-id="deae1-104"> provides various kinds of expressions, including the following: [literals](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parameters](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [variables](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operators, [functions](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), set operators, and so on.</span></span> <span data-ttu-id="deae1-105">Дополнительные сведения см. в разделе [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).</span><span class="sxs-lookup"><span data-stu-id="deae1-105">For more information, see [Entity SQL Reference](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).</span></span>  
   
-## Предложения  
- Выражение запроса состоит из предложений, которые последовательно применяют операции к набору объектов.  Они основаны на тех же предложениях, которые можно найти в стандартной инструкции SELECT языка SQL: [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) и [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).  
+## <a name="clauses"></a><span data-ttu-id="deae1-106">Предложения</span><span class="sxs-lookup"><span data-stu-id="deae1-106">Clauses</span></span>  
+ <span data-ttu-id="deae1-107">Выражение запроса состоит из предложений, которые последовательно применяют операции к коллекции объектов.</span><span class="sxs-lookup"><span data-stu-id="deae1-107">A query expression is composed of a series of clauses that apply successive operations to a collection of objects.</span></span> <span data-ttu-id="deae1-108">Они основаны на тех же предложениях, найти в стандартной инструкции SQL select: [ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [ГДЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [НАЛИЧИЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), и [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="deae1-108">They are based on the same clauses found in standard a SQL select statement: [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md), [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md), and [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md).</span></span>  
   
-## Область  
- Имена, определенные в предложении FROM, появляются в области FROM в порядке перечисления, слева направо.  В списке JOIN выражения могут ссылаться на имена, которые определены в списке ранее.  Открытые свойства элементов, указанные в предложении FROM, не добавляются в область FROM. На них всегда следует ссылаться через имя с псевдонимом.  Но обычно все части выражения выбора находятся в области FROM.  
+## <a name="scope"></a><span data-ttu-id="deae1-109">Область</span><span class="sxs-lookup"><span data-stu-id="deae1-109">Scope</span></span>  
+ <span data-ttu-id="deae1-110">Имена, определенные в предложении FROM, появляются в области FROM в порядке перечисления, слева направо.</span><span class="sxs-lookup"><span data-stu-id="deae1-110">Names defined in the FROM clause are introduced into the FROM scope in order of appearance, left to right.</span></span> <span data-ttu-id="deae1-111">В списке JOIN выражения могут ссылаться на имена, которые определены в списке ранее.</span><span class="sxs-lookup"><span data-stu-id="deae1-111">In the JOIN list, expressions can refer to names defined earlier in the list.</span></span> <span data-ttu-id="deae1-112">Открытые свойства элементов, указанные в предложении FROM, не добавляются в область FROM. На них всегда следует ссылаться через имя с псевдонимом.</span><span class="sxs-lookup"><span data-stu-id="deae1-112">Public properties of elements identified in the FROM clause are not added to the FROM scope: They must be always referenced through the alias-qualified name.</span></span> <span data-ttu-id="deae1-113">Но обычно все части выражения выбора находятся в области FROM.</span><span class="sxs-lookup"><span data-stu-id="deae1-113">Normally, all parts of the select expression are considered within the FROM scope.</span></span>  
   
-## См. также  
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="deae1-114">См. также</span><span class="sxs-lookup"><span data-stu-id="deae1-114">See Also</span></span>  
+ [<span data-ttu-id="deae1-115">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="deae1-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,44 +1,47 @@
 ---
-title: "Пользовательские учетные данные и проверка учетных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка учетных данных [WCF]"
-  - "учетные данные [WCF]"
-  - "учетные данные [WCF], пользовательский"
-  - "учетные данные [WCF], проверка"
-  - "пользовательские учетные данные [WCF]"
+title: "Пользовательские учетные данные и проверка учетных данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- credentials [WCF], custom
+- credentials [WCF]
+- custom credentials [WCF]
+- credential validation [WCF]
+- credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3ca7726f3a6a0c5faaab1cbbd0b31125ce0c1d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательские учетные данные и проверка учетных данных
-В основе обеспечения безопасности в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] лежит обмен учетными данными между службами и клиентами.  Большинство сценариев обеспечения безопасности можно реализовать с использованием стандартных типов учетных данных, например Windows \(Kerberos\), имен пользователей и паролей, а также сертификатов.  Если требуются учетные данные новых типов, в приведенных ниже разделах можно найти сведения о том, как обрабатывать и проверять эти типы.  
+# <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="f001f-102">Пользовательские учетные данные и проверка учетных данных</span><span class="sxs-lookup"><span data-stu-id="f001f-102">Custom Credential and Credential Validation</span></span>
+<span data-ttu-id="f001f-103">В основе обеспечения безопасности в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] лежит обмен учетными данными между службами и клиентами.</span><span class="sxs-lookup"><span data-stu-id="f001f-103">Security in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="f001f-104">Большинство сценариев обеспечения безопасности можно реализовать с использованием стандартных типов учетных данных, например Windows (Kerberos), имен пользователей и паролей, а также сертификатов.</span><span class="sxs-lookup"><span data-stu-id="f001f-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="f001f-105">Если требуются учетные данные новых типов, в приведенных ниже разделах можно найти сведения о том, как обрабатывать и проверять эти типы.</span><span class="sxs-lookup"><span data-stu-id="f001f-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  
   
-## В этом подразделе  
- [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- Настройка проверки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] путем наследования от класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
+## <a name="in-this-section"></a><span data-ttu-id="f001f-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="f001f-106">In This Section</span></span>  
+ [<span data-ttu-id="f001f-107">Как: создание службы, использующей пользовательский сертификат проверяющий элемент управления</span><span class="sxs-lookup"><span data-stu-id="f001f-107">How to: Create a Service that Employs a Custom Certificate Validator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ <span data-ttu-id="f001f-108">Настройка проверки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] путем наследования от класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="f001f-108">Explains how to customize [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] validation by inheriting from the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class.</span></span>  
   
- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- Пример расширения классов <xref:System.ServiceModel.Description.ClientCredentials> и <xref:System.ServiceModel.Description.ServiceCredentials> для работы с новыми типами учетных данных.  Это первый раздел в серии, посвященной созданию пользовательских типов учетных данных.  
+ [<span data-ttu-id="f001f-109">Пошаговое руководство: Создание пользовательского клиента и учетные данные службы</span><span class="sxs-lookup"><span data-stu-id="f001f-109">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ <span data-ttu-id="f001f-110">Демонстрирует расширение <xref:System.ServiceModel.Description.ClientCredentials> и <xref:System.ServiceModel.Description.ServiceCredentials> классы для работы с новыми типами учетных данных.</span><span class="sxs-lookup"><span data-stu-id="f001f-110">Demonstrates how to extend the <xref:System.ServiceModel.Description.ClientCredentials> and <xref:System.ServiceModel.Description.ServiceCredentials> classes to accommodate new credential types.</span></span> <span data-ttu-id="f001f-111">Это первый раздел в серии, посвященной созданию пользовательских типов учетных данных.</span><span class="sxs-lookup"><span data-stu-id="f001f-111">This is first in a series of topics that enable creation of custom credential types.</span></span>  
   
- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- Создание поставщика маркеров безопасности для обработки новых типов учетных данных и возврата новых маркеров для учетных данных.  Это второй раздел в данной серии.  
+ [<span data-ttu-id="f001f-112">Как: Создание поставщика пользовательских маркеров безопасности</span><span class="sxs-lookup"><span data-stu-id="f001f-112">How to: Create a Custom Security Token Provider</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ <span data-ttu-id="f001f-113">Создание поставщика маркеров безопасности для обработки новых типов учетных данных и возврата новых маркеров для учетных данных.</span><span class="sxs-lookup"><span data-stu-id="f001f-113">Explains how to create a security token provider to handle new credential types and return new tokens for the credential.</span></span> <span data-ttu-id="f001f-114">Это второй раздел в данной серии.</span><span class="sxs-lookup"><span data-stu-id="f001f-114">This is the second topic in the series.</span></span>  
   
- [Как создавать пользовательскую структуру проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- Создание пользовательских структур проверки подлинности для проверки подлинности учетных данных новых типов.  Это третий раздел в данной серии.  
+ [<span data-ttu-id="f001f-115">Как: создать средство проверки подлинности маркеров безопасности</span><span class="sxs-lookup"><span data-stu-id="f001f-115">How to: Create a Custom Security Token Authenticator</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ <span data-ttu-id="f001f-116">Создание пользовательских структур проверки подлинности для проверки подлинности учетных данных новых типов.</span><span class="sxs-lookup"><span data-stu-id="f001f-116">Explains how to create a custom authenticator to authenticate a new credential type.</span></span> <span data-ttu-id="f001f-117">Это третий раздел в данной серии.</span><span class="sxs-lookup"><span data-stu-id="f001f-117">This is the third topic in the series.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="f001f-118">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f001f-118">Reference</span></span>  
  <xref:System.ServiceModel.Security>  
   
  <xref:System.IdentityModel.Claims>  
@@ -55,12 +58,12 @@ caps.handback.revision: 8
   
  <xref:System.ServiceModel.Description.ServiceCredentials>  
   
-## Связанные подразделы  
- [Аутентификация](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+## <a name="related-sections"></a><span data-ttu-id="f001f-119">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f001f-119">Related Sections</span></span>  
+ [<span data-ttu-id="f001f-120">Проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="f001f-120">Authentication</span></span>](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="f001f-121">Федерация и выданные маркеры</span><span class="sxs-lookup"><span data-stu-id="f001f-121">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
- [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="f001f-122">Авторизация</span><span class="sxs-lookup"><span data-stu-id="f001f-122">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## См. также  
- [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="f001f-123">См. также</span><span class="sxs-lookup"><span data-stu-id="f001f-123">See Also</span></span>  
+ [<span data-ttu-id="f001f-124">Безопасность</span><span class="sxs-lookup"><span data-stu-id="f001f-124">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

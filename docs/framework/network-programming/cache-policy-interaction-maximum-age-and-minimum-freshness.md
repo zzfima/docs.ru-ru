@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - Revalidate policy
@@ -21,33 +16,31 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29bc33db40e396d28347d1fc491b94541eb75f33
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 75729fc92c6a4bfa0f5ad73b8bbd4b28456f21e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность
-Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований к повторной проверке сервера всегда применяется наиболее консервативная политика кэша. Все примеры в этом разделе иллюстрируют политику кэша для ресурса, который кэшируется 1 января и срок действия которого истекает 4 января.  
+# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a><span data-ttu-id="f698f-102">Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность</span><span class="sxs-lookup"><span data-stu-id="f698f-102">Cache Policy Interaction—Maximum Age and Minimum Freshness</span></span>
+<span data-ttu-id="f698f-103">Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований к повторной проверке сервера всегда применяется наиболее консервативная политика кэша.</span><span class="sxs-lookup"><span data-stu-id="f698f-103">To help ensure that the freshest content is returned to the client application, the interaction of client cache policy and server revalidation requirements always results in the most conservative cache policy.</span></span> <span data-ttu-id="f698f-104">Все примеры в этом разделе иллюстрируют политику кэша для ресурса, который кэшируется 1 января и срок действия которого истекает 4 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-104">All the examples in this topic illustrate the cache policy for a resource that is cached on January 1 and expires on January 4.</span></span>  
   
- В приведенных ниже примерах показана политика кэша, полученная в результате сочетания значений максимального возраста (`maxAge`) и минимальной актуальности (`minFresh`).  
+ <span data-ttu-id="f698f-105">В приведенных ниже примерах показана политика кэша, полученная в результате сочетания значений максимального возраста (`maxAge`) и минимальной актуальности (`minFresh`).</span><span class="sxs-lookup"><span data-stu-id="f698f-105">The following examples illustrate the cache policy that results from the interaction of the maximum age (`maxAge`) and minimum freshness (`minFresh`) values.</span></span>  
   
--   Если политика кэша задает значение `maxAge` равным 2 дням, а значение `minFresh` не указано, содержимое повторно проверяется 3 января.  
+-   <span data-ttu-id="f698f-106">Если политика кэша задает значение `maxAge` равным 2 дням, а значение `minFresh` не указано, содержимое повторно проверяется 3 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-106">If the cache policy sets `maxAge` = 2 days and `minFresh` is not specified, the content is revalidated on January 3.</span></span>  
   
--   Если политика кэша задает значение `maxAge` равным 2 дням, а значение `minFresh` равным 1 дню, то в соответствии с `maxAge` содержимое будет актуальным до 3 января. Согласно `minFresh` содержимое будет актуально до 3 января. Поэтому его необходимо будет проверить повторно 3 января.  
+-   <span data-ttu-id="f698f-107">Если политика кэша задает значение `maxAge` равным 2 дням, а значение `minFresh` равным 1 дню, то в соответствии с `maxAge` содержимое будет актуальным до 3 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-107">If the cache policy sets `maxAge` = 2 days and `minFresh` = 1 day, according to `maxAge`, the content is fresh until January 3.</span></span> <span data-ttu-id="f698f-108">Согласно `minFresh` содержимое будет актуально до 3 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-108">According to `minFresh`, the content is fresh until January 3.</span></span> <span data-ttu-id="f698f-109">Поэтому его необходимо будет проверить повторно 3 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-109">Therefore, the content must be revalidated on January 3.</span></span>  
   
--   Если политика кэша задает значение `maxAge` равным 2 дням и значение `minFresh` равным 2 дням, то в соответствии с `maxAge` содержимое будет актуальным до 3 января. Согласно `minFresh` содержимое будет актуально до 2 января. Поэтому его необходимо будет проверить повторно 2 января.  
+-   <span data-ttu-id="f698f-110">Если политика кэша задает значение `maxAge` равным 2 дням и значение `minFresh` равным 2 дням, то в соответствии с `maxAge` содержимое будет актуальным до 3 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-110">If the cache policy sets `maxAge` = 2 days and `minFresh` = 2 days, according to `maxAge`, the content is fresh until January 3.</span></span> <span data-ttu-id="f698f-111">Согласно `minFresh` содержимое будет актуально до 2 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-111">According to `minFresh` the content is fresh until January 2.</span></span> <span data-ttu-id="f698f-112">Поэтому его необходимо будет проверить повторно 2 января.</span><span class="sxs-lookup"><span data-stu-id="f698f-112">Therefore, the content must be revalidated on January 2.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [Взаимодействие с политикой кэша: максимальный возраст и устаревание](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
-
+## <a name="see-also"></a><span data-ttu-id="f698f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f698f-113">See Also</span></span>  
+ [<span data-ttu-id="f698f-114">Управление кэшем для сетевых приложений</span><span class="sxs-lookup"><span data-stu-id="f698f-114">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="f698f-115">Политика кэша</span><span class="sxs-lookup"><span data-stu-id="f698f-115">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="f698f-116">Политики кэша на основе расположения</span><span class="sxs-lookup"><span data-stu-id="f698f-116">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="f698f-117">Политики кэша на основе времени</span><span class="sxs-lookup"><span data-stu-id="f698f-117">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="f698f-118">Настройка кэширования в сетевых приложениях</span><span class="sxs-lookup"><span data-stu-id="f698f-118">Configuring Caching in Network Applications</span></span>](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [<span data-ttu-id="f698f-119">Взаимодействие с политикой кэша: максимальный возраст и устаревание</span><span class="sxs-lookup"><span data-stu-id="f698f-119">Cache Policy Interaction—Maximum Age and Maximum Staleness</span></span>](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)

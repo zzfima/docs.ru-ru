@@ -1,33 +1,35 @@
 ---
-title: "&lt;диагностика&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;Диагностика&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: df86d364d75f62cbe8be5f72e0b3b120784c35a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;диагностика&gt;
-Элемент `diagnostics` определяет параметры, которые могут быть использованы администратором для проверки и контроля времени выполнения.  
+# <a name="ltdiagnosticsgt"></a><span data-ttu-id="2d7a9-102">&lt;Диагностика&gt;</span><span class="sxs-lookup"><span data-stu-id="2d7a9-102">&lt;diagnostics&gt;</span></span>
+<span data-ttu-id="2d7a9-103">Элемент `diagnostics` определяет параметры, которые могут быть использованы администратором для проверки и контроля времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-103">The `diagnostics` element defines settings that can be used by an administrator for run-time inspection and control.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="2d7a9-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2d7a9-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2d7a9-105">\<Диагностика ></span><span class="sxs-lookup"><span data-stu-id="2d7a9-105">\<diagnostics></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="2d7a9-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2d7a9-106">Syntax</span></span>  
   
+```xml  
 <system.serviceModel>  
-   <diagnostics etwProviderId=”String”  
-       performanceCounters="Off/ServiceOnly/All/Default"         
-       wmiProviderEnabled="Boolean" >  
-       <endToEndTracing activityTracing="Boolean"  
+   <diagnostics etwProviderId="String"       performanceCounters="Off/ServiceOnly/All/Default"              wmiProviderEnabled="Boolean" >       <endToEndTracing activityTracing="Boolean"  
           messageFlowTracing="Boolean"  
           propagateActivity="Boolean" />  
        <messageLogging logEntireMessage="Boolean"  
@@ -44,36 +46,36 @@ caps.handback.revision: 20
 </system.serviceModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2d7a9-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="2d7a9-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="2d7a9-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="2d7a9-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2d7a9-109">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|etwProviderId|Строка, которая задает идентификатор для поставщика отслеживания событий, который записывает события в сеансы ETW.|  
-|performanceCounters|Указывает, включены ли счетчики производительности для сборки.  Допустимы следующие значения:<br /><br /> -   Off \- счетчики производительности отключены;<br />-   ServiceOnly \- включены только счетчики производительности, относящиеся к данной службе;<br />-   All \- счетчики производительности можно просматривать во время выполнения;<br />-   Default \- создается единичный экземпляр счетчика производительности \_WCF\_Admin.  Данный экземпляр используется, чтобы включить коллекцию данных SQM для использования инфраструктурой.  Значения счетчика для данного экземпляра не обновляются и, соответственно, остаются нулевыми.  Если для WCF не задана конфигурация, это значение используется по умолчанию.|  
-|wmiProviderEnabled|Логическое значение, определяющее, включен ли поставщик WMI для сборки.  Данный поставщик WMI требуется пользователю, чтобы на время выполнения получить доступ к функциональным возможностям проверки и контроля Windows Communication Foundation \(WCF\).  Значение по умолчанию — `false`.|  
+|<span data-ttu-id="2d7a9-110">Атрибут</span><span class="sxs-lookup"><span data-stu-id="2d7a9-110">Attribute</span></span>|<span data-ttu-id="2d7a9-111">Описание</span><span class="sxs-lookup"><span data-stu-id="2d7a9-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="2d7a9-112">etwProviderId</span><span class="sxs-lookup"><span data-stu-id="2d7a9-112">etwProviderId</span></span>|<span data-ttu-id="2d7a9-113">Строка, которая задает идентификатор для поставщика отслеживания событий, который записывает события в сеансы ETW.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-113">A string that specifies the identifier for the Event-Tracing provider, which writes events to ETW sessions.</span></span>|  
+|<span data-ttu-id="2d7a9-114">performanceCounters</span><span class="sxs-lookup"><span data-stu-id="2d7a9-114">performanceCounters</span></span>|<span data-ttu-id="2d7a9-115">Указывает, включены ли счетчики производительности для сборки.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-115">Specifies whether performance counters for the assembly are enabled.</span></span> <span data-ttu-id="2d7a9-116">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="2d7a9-116">Valid values are</span></span><br /><br /> <span data-ttu-id="2d7a9-117">-Off: Счетчики производительности отключены.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-117">-   Off: Performance counters are disabled.</span></span><br /><span data-ttu-id="2d7a9-118">-ServiceOnly: Включены только те счетчики производительности, относящиеся к данной службе.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-118">-   ServiceOnly: Only performance counters relevant to this service is enabled.</span></span><br /><span data-ttu-id="2d7a9-119">— Все: Производительности счетчики можно просматривать во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-119">-   All: Performance counters can be viewed at runtime.</span></span><br /><span data-ttu-id="2d7a9-120">-По умолчанию: Один производительности счетчика экземпляра _wcf_admin.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-120">-   Default: A single performance counter instance _WCF_Admin is created.</span></span> <span data-ttu-id="2d7a9-121">Данный экземпляр используется, чтобы включить коллекцию данных SQM для использования инфраструктурой.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-121">This instance is used to enable the collection of SQM data for used by the infrastructure.</span></span> <span data-ttu-id="2d7a9-122">Значения счетчика для данного экземпляра не обновляются и, соответственно, остаются нулевыми.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-122">None of the counter values for this instance are updated and therefore will remain at zero.</span></span> <span data-ttu-id="2d7a9-123">Если для WCF не задана конфигурация, это значение используется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-123">This is the default value if no configuration is present for WCF.</span></span>|  
+|<span data-ttu-id="2d7a9-124">wmiProviderEnabled</span><span class="sxs-lookup"><span data-stu-id="2d7a9-124">wmiProviderEnabled</span></span>|<span data-ttu-id="2d7a9-125">Логическое значение, определяющее, включен ли поставщик WMI для сборки.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-125">A Boolean value that specifies whether the WMI provider for the assembly is enabled.</span></span> <span data-ttu-id="2d7a9-126">Данный поставщик WMI требуется пользователю, чтобы на время выполнения получить доступ к функциональным возможностям проверки и контроля Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2d7a9-126">The WMI provider is required for user to gain run-time access to the inspection and control features of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="2d7a9-127">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-127">The default is `false`.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="2d7a9-128">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="2d7a9-128">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<endToEndTracing\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Элемент конфигурации, который позволяет включать и отключать различные аспекты сквозной отслеживания во время выполнения приложения службы.|  
-|[\<messageLogging\>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Описывает параметры ведения журнала сообщений WCF.|  
+|<span data-ttu-id="2d7a9-129">Элемент</span><span class="sxs-lookup"><span data-stu-id="2d7a9-129">Element</span></span>|<span data-ttu-id="2d7a9-130">Описание</span><span class="sxs-lookup"><span data-stu-id="2d7a9-130">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2d7a9-131">\<endToEndTracing ></span><span class="sxs-lookup"><span data-stu-id="2d7a9-131">\<endToEndTracing></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|<span data-ttu-id="2d7a9-132">Элемент конфигурации, который позволяет включать и отключать различные аспекты сквозной отслеживания во время выполнения приложения службы.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-132">A configuration element that allows you to enable and disable different aspects of end-to-end tracing during the running of a service application.</span></span>|  
+|[<span data-ttu-id="2d7a9-133">\<messageLogging ></span><span class="sxs-lookup"><span data-stu-id="2d7a9-133">\<messageLogging></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|<span data-ttu-id="2d7a9-134">Описывает параметры ведения журнала сообщений WCF.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-134">Describes the settings for WCF message logging.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="2d7a9-135">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="2d7a9-135">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|serviceModel|Корневой элемент всех элементов конфигурации WCF.|  
+|<span data-ttu-id="2d7a9-136">Элемент</span><span class="sxs-lookup"><span data-stu-id="2d7a9-136">Element</span></span>|<span data-ttu-id="2d7a9-137">Описание</span><span class="sxs-lookup"><span data-stu-id="2d7a9-137">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="2d7a9-138">serviceModel</span><span class="sxs-lookup"><span data-stu-id="2d7a9-138">serviceModel</span></span>|<span data-ttu-id="2d7a9-139">Корневой элемент всех элементов конфигурации WCF.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-139">The root element of all WCF configuration elements.</span></span>|  
   
-## Заметки  
- В разделе `diagnostics` определяются параметры диагностики для всех служб, содержащихся в сборке.  Отдельные параметры диагностики можно определить на уровне службы, только если сборка содержит одну службу.  Атрибуты заданы в соответствии с требованиями раздела.  
+## <a name="remarks"></a><span data-ttu-id="2d7a9-140">Примечания</span><span class="sxs-lookup"><span data-stu-id="2d7a9-140">Remarks</span></span>  
+ <span data-ttu-id="2d7a9-141">В разделе `diagnostics` определяются параметры диагностики для всех служб, содержащихся в сборке.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-141">The `diagnostics` section defines the diagnostics settings for all services located in an assembly.</span></span> <span data-ttu-id="2d7a9-142">Отдельные параметры диагностики можно определить на уровне службы, только если сборка содержит одну службу.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-142">It is not possible to define separate diagnostics settings at the service level unless there is only one service in the assembly.</span></span> <span data-ttu-id="2d7a9-143">Атрибуты заданы в соответствии с требованиями раздела.</span><span class="sxs-lookup"><span data-stu-id="2d7a9-143">Attributes are set according to the requirements of the section.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="2d7a9-144">Пример</span><span class="sxs-lookup"><span data-stu-id="2d7a9-144">Example</span></span>  
   
-```  
+```xml  
 <diagnostics wmiProviderEnabled="false"  
        performanceCounters="all">  
        <messageLogging logEntireMessage="true"  
@@ -89,6 +91,6 @@ caps.handback.revision: 20
 </diagnostics>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
+## <a name="see-also"></a><span data-ttu-id="2d7a9-145">См. также</span><span class="sxs-lookup"><span data-stu-id="2d7a9-145">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
  <xref:System.ServiceModel.Diagnostics>

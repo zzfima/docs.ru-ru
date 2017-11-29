@@ -1,46 +1,51 @@
 ---
-title: "Практическое руководство. Создание сеанса безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "безопасность [WCF], создание сеанса"
+title: "Практическое руководство. Создание сеанса безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Создание сеанса безопасности
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] все предоставляемые системой привязки, за исключением привязки [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), автоматически используют безопасные сеансы при включенной безопасности сообщений.  
+# <a name="how-to-create-a-secure-session"></a><span data-ttu-id="96aed-102">Практическое руководство. Создание сеанса безопасности</span><span class="sxs-lookup"><span data-stu-id="96aed-102">How to: Create a Secure Session</span></span>
+<span data-ttu-id="96aed-103">За исключением элемента [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) привязки, предоставляемые системой привязки в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] автоматически использовать безопасные сеансы, если включена безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="96aed-103">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, the system-provided bindings in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] automatically use secure sessions when message security is enabled.</span></span>  
   
- По умолчанию безопасные сеансы не сохраняются на перезапускаемом веб\-сервере.  После установления безопасного сеанса клиент и служба кэшируют ключ, связанный с безопасным сеансом.  При обмене сообщениями происходит только обмен идентификатором кэшированного ключа.  При перезапуске веб\-сервера кэш также перезапускается, следовательно, веб\-сервер не может извлечь кэшированный ключ для идентификатора.  В этом случае исключение передается назад клиенту.  Безопасные сеансы, использующие токен контекста безопасности с отслеживанием состояния \(SCT\), сохраняются при перезапуске веб\-сервера.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании токенов SCT с отслеживанием состояния в безопасном сеансе см. в разделе [Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ <span data-ttu-id="96aed-104">По умолчанию безопасные сеансы не сохраняются на перезапускаемом веб-сервере.</span><span class="sxs-lookup"><span data-stu-id="96aed-104">By default, secure sessions do not survive a Web server that is recycled.</span></span> <span data-ttu-id="96aed-105">После установления безопасного сеанса клиент и служба кэшируют ключ, связанный с безопасным сеансом.</span><span class="sxs-lookup"><span data-stu-id="96aed-105">When a secure session is established, the client and the service cache the key that is associated with the secure session.</span></span> <span data-ttu-id="96aed-106">При обмене сообщениями происходит только обмен идентификатором кэшированного ключа.</span><span class="sxs-lookup"><span data-stu-id="96aed-106">As the messages are exchanged, only an identifier to the cached key is exchanged.</span></span> <span data-ttu-id="96aed-107">При перезапуске веб-сервера кэш также перезапускается, следовательно, веб-сервер не может извлечь кэшированный ключ для идентификатора.</span><span class="sxs-lookup"><span data-stu-id="96aed-107">If the Web server is recycled, the cache is also recycled, such that the Web server cannot retrieve the cached key for the identifier.</span></span> <span data-ttu-id="96aed-108">В этом случае исключение передается назад клиенту.</span><span class="sxs-lookup"><span data-stu-id="96aed-108">If this happens, an exception is thrown back to the client.</span></span> <span data-ttu-id="96aed-109">Безопасные сеансы, использующие токен контекста безопасности с отслеживанием состояния (SCT), сохраняются при перезапуске веб-сервера.</span><span class="sxs-lookup"><span data-stu-id="96aed-109">Secure sessions that use a stateful security context token (SCT) can survive a Web server being recycled.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="96aed-110">с помощью SCT с отслеживанием состояния в безопасном сеансе, в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="96aed-110"> using a stateful SCT in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### Задание использования службой безопасных сеансов с помощью одной из предоставляемых системой привязок  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a><span data-ttu-id="96aed-111">Задание использования службой безопасных сеансов с помощью одной из предоставляемых системой привязок</span><span class="sxs-lookup"><span data-stu-id="96aed-111">To specify that a service uses secure sessions by using one of the system-provided bindings</span></span>  
   
--   Настройте службу на использование предоставляемой системой привязки, поддерживающей безопасность сообщений.  
+-   <span data-ttu-id="96aed-112">Настройте службу на использование предоставляемой системой привязки, поддерживающей безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="96aed-112">Configure a service to use a system-provided binding that supports message security.</span></span>  
   
-     Если предоставляемые системой привязки настроены на использование безопасности сообщений \(за исключением привязки [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)\), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] автоматически использует безопасные сеансы.  В следующей таблице перечислены предоставляемые системой привязки, поддерживающие безопасность сообщений, и указано, является ли безопасность сообщений механизмом безопасности по умолчанию для данной привязки.  
+     <span data-ttu-id="96aed-113">За исключением элемента [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) привязки, предоставляемые системой привязки настроены для использования безопасности сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] автоматически использует безопасные сеансы.</span><span class="sxs-lookup"><span data-stu-id="96aed-113">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, when the system-provided bindings are configured to use message security, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically uses secure sessions.</span></span> <span data-ttu-id="96aed-114">В следующей таблице перечислены предоставляемые системой привязки, поддерживающие безопасность сообщений, и указано, является ли безопасность сообщений механизмом безопасности по умолчанию для данной привязки.</span><span class="sxs-lookup"><span data-stu-id="96aed-114">The following table lists the system-provided bindings that support message security and whether message security is the default security mechanism.</span></span>  
   
-    |Предоставляемая системой привязка|Элемент конфигурации|Безопасность сообщений включена по умолчанию|  
-    |---------------------------------------|--------------------------|--------------------------------------------------|  
-    |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Нет|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Да|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Да|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Да|  
-    |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Нет|  
-    |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Нет|  
+    |<span data-ttu-id="96aed-115">Предоставляемая системой привязка</span><span class="sxs-lookup"><span data-stu-id="96aed-115">System-provided binding</span></span>|<span data-ttu-id="96aed-116">Элемент конфигурации</span><span class="sxs-lookup"><span data-stu-id="96aed-116">Configuration element</span></span>|<span data-ttu-id="96aed-117">Безопасность сообщений включена по умолчанию</span><span class="sxs-lookup"><span data-stu-id="96aed-117">Message security on by default</span></span>|  
+    |------------------------------|---------------------------|------------------------------------|  
+    |<xref:System.ServiceModel.BasicHttpBinding>|[<span data-ttu-id="96aed-118">\<basicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-118">\<basicHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|<span data-ttu-id="96aed-119">Нет</span><span class="sxs-lookup"><span data-stu-id="96aed-119">No</span></span>|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[<span data-ttu-id="96aed-120">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-120">\<wsHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="96aed-121">Да</span><span class="sxs-lookup"><span data-stu-id="96aed-121">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[<span data-ttu-id="96aed-122">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-122">\<wsDualHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|<span data-ttu-id="96aed-123">Да</span><span class="sxs-lookup"><span data-stu-id="96aed-123">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[<span data-ttu-id="96aed-124">\<wsFederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-124">\<wsFederationHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|<span data-ttu-id="96aed-125">Да</span><span class="sxs-lookup"><span data-stu-id="96aed-125">Yes</span></span>|  
+    |<xref:System.ServiceModel.NetTcpBinding>|[<span data-ttu-id="96aed-126">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-126">\<netTcpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|<span data-ttu-id="96aed-127">Нет</span><span class="sxs-lookup"><span data-stu-id="96aed-127">No</span></span>|  
+    |<xref:System.ServiceModel.NetMsmqBinding>|[<span data-ttu-id="96aed-128">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="96aed-128">\<netMsmqBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|<span data-ttu-id="96aed-129">Нет</span><span class="sxs-lookup"><span data-stu-id="96aed-129">No</span></span>|  
   
-     В следующем примере кода с помощью конфигурации задается привязка с именем `wsHttpBinding_Calculator`, использующая элемент [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), безопасность сообщений и безопасные сеансы.  
+     <span data-ttu-id="96aed-130">В следующем примере кода с помощью конфигурации задается привязка с именем `wsHttpBinding_Calculator` , использующий [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), безопасность сообщений и защиту сеансов.</span><span class="sxs-lookup"><span data-stu-id="96aed-130">The following code example uses configuration to specify a binding named `wsHttpBinding_Calculator` that uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <WSHttpBinding>  
        <binding name = "wsHttpBinding_Calculator">  
@@ -52,23 +57,23 @@ caps.handback.revision: 10
     </bindings>  
     ```  
   
-     В следующем примере кода задается, что для обеспечения безопасности службы `secureCalculator` используются элемент [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), безопасность сообщений и безопасные сеансы.  
+     <span data-ttu-id="96aed-131">В следующем примере кода указывает, что [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), безопасность сообщений и защиту сеансов используются для защиты `secureCalculator` службы.</span><span class="sxs-lookup"><span data-stu-id="96aed-131">The following code example specifies that the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions are used to secure the `secureCalculator` service.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#1)]
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  Безопасные сеансы для элемента [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) можно отключить, задав атрибуту `establishSecurityContext` значение `false`.  Безопасные сеансы для других предоставляемых системой привязок можно отключить, только создав пользовательскую привязку.  
+    >  <span data-ttu-id="96aed-132">Можно отключить безопасные сеансы для [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) , установив `establishSecurityContext` атрибут `false`.</span><span class="sxs-lookup"><span data-stu-id="96aed-132">Secure sessions can be turned off for the [<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) by setting the `establishSecurityContext` attribute to `false`.</span></span> <span data-ttu-id="96aed-133">Безопасные сеансы для других предоставляемых системой привязок можно отключить, только создав пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="96aed-133">For the other system-provided bindings, secure sessions can only be turned off by creating a custom binding.</span></span>  
   
-### Задание использования службой безопасных сеансов с помощью пользовательской привязки  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a><span data-ttu-id="96aed-134">Задание использования службой безопасных сеансов с помощью пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="96aed-134">To specify that a service uses secure sessions by using a custom binding</span></span>  
   
--   Создайте пользовательскую привязку, которая задает, что сообщения SOAP защищаются безопасным сеансом.  
+-   <span data-ttu-id="96aed-135">Создайте пользовательскую привязку, которая задает, что сообщения SOAP защищаются безопасным сеансом.</span><span class="sxs-lookup"><span data-stu-id="96aed-135">Create a custom binding that specifies that SOAP messages are protected by a secure session.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании пользовательской привязки см. в разделе [Практическое руководство. Изменение привязки, предоставляемой системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="96aed-136">Создание пользовательской привязки, в разделе [как: изменение привязки, предоставляемые системой](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span><span class="sxs-lookup"><span data-stu-id="96aed-136"> creating a custom binding, see [How to: Customize a System-Provided Binding](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
   
-     В следующем примере кода с помощью конфигурации задается пользовательская привязка для обмена сообщениями с использованием безопасного сеанса.  
+     <span data-ttu-id="96aed-137">В следующем примере кода с помощью конфигурации задается пользовательская привязка для обмена сообщениями с использованием безопасного сеанса.</span><span class="sxs-lookup"><span data-stu-id="96aed-137">The following code example uses configuration to specify a custom binding that messages using a secure session.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <!-- configure a custom binding -->  
       <customBinding>  
@@ -82,10 +87,10 @@ caps.handback.revision: 10
     </bindings>  
     ```  
   
-     В следующем примере кода создается пользовательская привязка, которая использует режим проверки подлинности <xref:System.ServiceModel.Configuration.AuthenticationMode> для начальной загрузки безопасного сеанса.  
+     <span data-ttu-id="96aed-138">В следующем примере кода создается пользовательская привязка, которая использует режим проверки подлинности <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> для начальной загрузки безопасного сеанса.</span><span class="sxs-lookup"><span data-stu-id="96aed-138">The following code example creates a custom binding that uses the <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> authentication mode to bootstrap a secure session.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## См. также  
- [Общие сведения о привязках WCF](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="96aed-139">См. также</span><span class="sxs-lookup"><span data-stu-id="96aed-139">See Also</span></span>  
+ [<span data-ttu-id="96aed-140">Общие сведения о привязках WCF</span><span class="sxs-lookup"><span data-stu-id="96aed-140">WCF Bindings Overview</span></span>](../../../../docs/framework/wcf/bindings-overview.md)

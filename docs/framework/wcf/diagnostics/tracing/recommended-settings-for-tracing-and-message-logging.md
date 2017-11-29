@@ -1,28 +1,31 @@
 ---
-title: "Рекомендуемые параметры для трассировки и ведения журналов сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Рекомендуемые параметры для трассировки и ведения журналов сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b6986c775db50ea5b763288f8f3b9bdcf1bf7e67
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Рекомендуемые параметры для трассировки и ведения журналов сообщений
-Этот раздел содержит описание рекомендуемых параметров трассировки и регистрации сообщений для различных операционных сред.  
+# <a name="recommended-settings-for-tracing-and-message-logging"></a><span data-ttu-id="ed6ac-102">Рекомендуемые параметры для трассировки и ведения журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="ed6ac-102">Recommended Settings for Tracing and Message Logging</span></span>
+<span data-ttu-id="ed6ac-103">Этот раздел содержит описание рекомендуемых параметров трассировки и регистрации сообщений для различных операционных сред.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-103">This topic describes recommended tracing and message logging settings for different operating environments.</span></span>  
   
-## Параметры, рекомендуемые для рабочей среды  
- В рабочей среде, если используются источники трассировки WCF, рекомендуется в `switchValue` задать значение Warning.  При использовании источника трассировки WCF `System.ServiceModel` рекомендуется задать в атрибуте `switchValue` значение `Warning`, а в атрибуте `propagateActivity` \- значение `true`.  При использовании источника трассировки, определенного пользователем, рекомендуется присвоить атрибуту `switchValue` значение `Warning, ActivityTracing`.  Это можно сделать вручную с помощью объекта [Средство редактирования конфигурации \(SvcConfigEditor.exe\)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  Если в работе не ожидается резкого подъема производительности, во всех перечисленных выше случаях атрибуту `switchValue` можно присвоить значение `Information`, при котором генерируется достаточно большое количество данных трассировки.  Следующий пример иллюстрирует задание описанных рекомендуемых параметров.  
+## <a name="recommended-settings-for-a-production-environment"></a><span data-ttu-id="ed6ac-104">Параметры, рекомендуемые для рабочей среды</span><span class="sxs-lookup"><span data-stu-id="ed6ac-104">Recommended Settings for a Production Environment</span></span>  
+ <span data-ttu-id="ed6ac-105">В рабочей среде, если используются источники трассировки WCF, рекомендуется в `switchValue` задать значение Warning.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-105">For a production environment, if you are using WCF trace sources, set the `switchValue` to Warning.</span></span> <span data-ttu-id="ed6ac-106">При использовании источника трассировки WCF `System.ServiceModel` рекомендуется задать в атрибуте `switchValue` значение `Warning`, а в атрибуте `propagateActivity` - значение `true`.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-106">If you are using the WCF `System.ServiceModel` trace source, set the `switchValue` attribute to `Warning` and the `propagateActivity` attribute to `true`.</span></span> <span data-ttu-id="ed6ac-107">При использовании источника трассировки, определенного пользователем, рекомендуется присвоить атрибуту `switchValue` значение `Warning, ActivityTracing`.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-107">If you are using a user-defined trace source, set the `switchValue` attribute to `Warning, ActivityTracing`.</span></span> <span data-ttu-id="ed6ac-108">Это можно сделать вручную с помощью [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span><span class="sxs-lookup"><span data-stu-id="ed6ac-108">This can be done manually using the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).</span></span> <span data-ttu-id="ed6ac-109">Если в работе не ожидается резкого подъема производительности, во всех перечисленных выше случаях атрибуту `switchValue` можно присвоить значение `Information`, при котором генерируется достаточно большое количество данных трассировки.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-109">If you do not anticipate a hit in performance, you can set the `switchValue` attribute to `Information` in all the previously mentioned cases, which generates a fairly large amount of trace data.</span></span> <span data-ttu-id="ed6ac-110">Следующий пример иллюстрирует задание описанных рекомендуемых параметров.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-110">The following example demonstrates these recommended settings.</span></span>  
   
-```  
+```xml  
 <configuration>  
  <system.diagnostics>  
   <sources>  
@@ -54,12 +57,12 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## Параметры, рекомендуемые для развертывания или отладки  
- При работе в среде развертывания или отладки рекомендуется выбирать значения `Information` или `Verbose` наряду с `ActivityTracing` как для определенных пользователем, так и для заданных `System.ServiceModel` источников трассировки.  Чтобы улучшить процесс отладки, к конфигурации необходимо добавить дополнительный источник трассировки \(`System.ServiceModel.MessageLogging`\) для активации функции регистрации сообщений.  Обратите внимание, что атрибут `switchValue` не влияет на этот источник трассировки.  
+## <a name="recommended-settings-for-deployment-or-debugging"></a><span data-ttu-id="ed6ac-111">Параметры, рекомендуемые для развертывания или отладки</span><span class="sxs-lookup"><span data-stu-id="ed6ac-111">Recommended Settings for Deployment or Debugging</span></span>  
+ <span data-ttu-id="ed6ac-112">При работе в среде развертывания или отладки рекомендуется выбирать значения `Information` или `Verbose` наряду с `ActivityTracing` как для определенных пользователем, так и для заданных `System.ServiceModel` источников трассировки.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-112">For deployment or debugging environment, choose `Information` or `Verbose`, along with `ActivityTracing` for either a user-defined or `System.ServiceModel` trace source.</span></span> <span data-ttu-id="ed6ac-113">Чтобы улучшить процесс отладки, к конфигурации необходимо добавить дополнительный источник трассировки (`System.ServiceModel.MessageLogging`) для активации функции регистрации сообщений.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-113">To enhance debugging, you should also add an additional trace source (`System.ServiceModel.MessageLogging`) to the configuration to enable message logging.</span></span> <span data-ttu-id="ed6ac-114">Обратите внимание, что атрибут `switchValue` не влияет на этот источник трассировки.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-114">Notice that the `switchValue` attribute has no impact on this trace source.</span></span>  
   
- Следующий пример иллюстрирует задание рекомендуемых параметров с помощью общего прослушивателя, использующего `XmlWriterTraceListener`.  
+ <span data-ttu-id="ed6ac-115">Следующий пример иллюстрирует задание рекомендуемых параметров с помощью общего прослушивателя, использующего `XmlWriterTraceListener`.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-115">The following example demonstrates the recommended settings, using a shared listener that utilizes the `XmlWriterTraceListener`.</span></span>  
   
-```  
+```xml  
 <configuration>  
  <system.diagnostics>  
   <sources>  
@@ -103,21 +106,21 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## Изменение параметров с помощью инструментария WMI  
- Для изменения параметров конфигурации во время работы можно использовать инструментарий WMI \(выполняется путем включения атрибута `wmiProviderEnabled` в конфигурации, как показано в предыдущем примере конфигурации\).  Например, для изменения во время работы уровней источника трассировки с Warning на Information можно использовать инструментарий WMI в CIM Studio.  Следует помнить о том, что такой способ отладки может значительно снизить производительность.  Дополнительные сведения об использовании инструментария WMI см. в разделе [Использование Windows Management Instrumentation для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+## <a name="using-wmi-to-modify-settings"></a><span data-ttu-id="ed6ac-116">Изменение параметров с помощью инструментария WMI</span><span class="sxs-lookup"><span data-stu-id="ed6ac-116">Using WMI to Modify Settings</span></span>  
+ <span data-ttu-id="ed6ac-117">Для изменения параметров конфигурации во время работы можно использовать инструментарий WMI (выполняется путем включения атрибута `wmiProviderEnabled` в конфигурации, как показано в предыдущем примере конфигурации).</span><span class="sxs-lookup"><span data-stu-id="ed6ac-117">You can use WMI to change configuration settings at runtime (by enabling the `wmiProviderEnabled` attribute in the configuration, as demonstrated in the previously configuration example).</span></span> <span data-ttu-id="ed6ac-118">Например, для изменения во время работы уровней источника трассировки с Warning на Information можно использовать инструментарий WMI в CIM Studio.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-118">For example, you can use WMI within the CIM Studio to change the trace source levels from Warning to Information at runtime.</span></span> <span data-ttu-id="ed6ac-119">Следует помнить о том, что такой способ отладки может значительно снизить производительность.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-119">You should be aware that the performance cost of live debugging in this way can be very high.</span></span> <span data-ttu-id="ed6ac-120">Дополнительные сведения об использовании WMI см. в разделе [с помощью Windows Management Instrumentation для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-120">For more information about using WMI, see the [Using Windows Management Instrumentation for Diagnostics](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) topic.</span></span>  
   
-## Использование корреляции событий в трассировке ASP.NET  
- События ASP.NET не получают корреляционный идентификатор \(ActivityID\), если не включена функция трассировки событий ASP.NET.  Чтобы просматривать корреляционные события, необходимо активировать трассировку событий ASP.NET с помощью следующей команды в командной консоли, которая вызывается путем нажатия **Пуск**, **Выполнить** и ввода **cmd**.  
+## <a name="enable-correlated-events-in-aspnet-tracing"></a><span data-ttu-id="ed6ac-121">Использование корреляции событий в трассировке ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ed6ac-121">Enable Correlated Events in ASP.NET Tracing</span></span>  
+ <span data-ttu-id="ed6ac-122">События ASP.NET не получают корреляционный идентификатор (ActivityID), если не включена функция трассировки событий ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-122">ASP.NET events do not set the correlation ID (ActivityID) unless ASP.NET event tracing is turned on.</span></span> <span data-ttu-id="ed6ac-123">Чтобы просматривать корреляционные события, необходимо включить события ASP.NET трассировку следующую команду в окне командной строки, которая вызывается последовательно выбрав пункты **запустить**, **запуска** и тип **cmd** ,</span><span class="sxs-lookup"><span data-stu-id="ed6ac-123">To see correlated events properly, you have to turn on ASP.NET events tracing using the following command in the command console, which can be invoked by going to **Start**, **Run** and type **cmd**,</span></span>  
   
 ```  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
- Для отключения трассировки событий ASP.NET используйте следующую команду.  
+ <span data-ttu-id="ed6ac-124">Для отключения трассировки событий ASP.NET используйте следующую команду.</span><span class="sxs-lookup"><span data-stu-id="ed6ac-124">To turn off tracing of ASP.NET events, use the following command,</span></span>  
   
 ```  
 logman stop mytrace -ets  
 ```  
   
-## См. также  
- [Использование Windows Management Instrumentation для диагностики](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+## <a name="see-also"></a><span data-ttu-id="ed6ac-125">См. также</span><span class="sxs-lookup"><span data-stu-id="ed6ac-125">See Also</span></span>  
+ [<span data-ttu-id="ed6ac-126">С помощью инструментария WMI для диагностики</span><span class="sxs-lookup"><span data-stu-id="ed6ac-126">Using Windows Management Instrumentation for Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

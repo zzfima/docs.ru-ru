@@ -1,54 +1,58 @@
 ---
-title: "Практическое руководство. Рисование линии или контурной фигуры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Graphics.DrawEllipse"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "круги"
-  - "круги, рисование"
-  - "круглые формы"
-  - "рисование, круглые формы"
-  - "рисование, фигуры"
-  - "эллипсы, рисование"
-  - "формы, рисование круглых фигур"
-  - "контурные фигуры, рисование"
-  - "контурные фигуры, примеры"
-  - "фигуры, рисование"
+title: "Практическое руководство. Рисование линии или контурной фигуры"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: Graphics.DrawEllipse
+helpviewer_keywords:
+- ellipses [Windows Forms], drawing
+- circles [Windows Forms], drawing
+- drawing [Windows Forms], shapes
+- circular shapes
+- forms [Windows Forms], drawing circular shapes
+- circles
+- outlined shapes [Windows Forms], examples
+- outlined shapes [Windows Forms], drawing
+- drawing [Windows Forms], circular shapes
+- shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 05247d24f3db95d042cb4ac34ec6ed648ec1d997
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование линии или контурной фигуры
-В этом примере на форме рисуются контуры эллипса и прямоугольника.  
+# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="0c768-102">Практическое руководство. Рисование линии или контурной фигуры</span><span class="sxs-lookup"><span data-stu-id="0c768-102">How to: Draw an Outlined Shape</span></span>
+<span data-ttu-id="0c768-103">В этом примере рисование контуров эллипса и прямоугольника в форме.</span><span class="sxs-lookup"><span data-stu-id="0c768-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="0c768-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0c768-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
  [!code-csharp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
  [!code-vb[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
-## Компиляция кода  
- Этот метод нельзя вызывать в обработчике события <xref:System.Windows.Forms.Form.Load>.  Если размер формы был изменен или форма была скрыта другой формой, рисунок перерисовываться не будет.  Чтобы выполнять перерисовку автоматически, нужно переопределить метод <xref:System.Windows.Forms.Control.OnPaint%2A>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="0c768-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="0c768-105">Compiling the Code</span></span>  
+ <span data-ttu-id="0c768-106">Этот метод нельзя вызывать <xref:System.Windows.Forms.Form.Load> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="0c768-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="0c768-107">Если формы был изменен или скрыта другой формой, рисунок перерисовываться не будет.</span><span class="sxs-lookup"><span data-stu-id="0c768-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="0c768-108">Чтобы сделать перерисовку автоматически, нужно переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0c768-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## Отказоустойчивость  
- Для любого объекта, потребляющего системные ресурсы \(например для объектов <xref:System.Drawing.Pen> и <xref:System.Drawing.Graphics>\), всегда нужно вызывать метод <xref:System.IDisposable.Dispose%2A>.  
+## <a name="robust-programming"></a><span data-ttu-id="0c768-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="0c768-109">Robust Programming</span></span>  
+ <span data-ttu-id="0c768-110">Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на все объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Pen> и <xref:System.Drawing.Graphics> объектов.</span><span class="sxs-lookup"><span data-stu-id="0c768-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Graphics.DrawEllipse%2A>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- <xref:System.Drawing.Graphics.DrawRectangle%2A>   
- [Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="0c768-111">См. также</span><span class="sxs-lookup"><span data-stu-id="0c768-111">See Also</span></span>  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ <xref:System.Drawing.Graphics.DrawRectangle%2A>  
+ [<span data-ttu-id="0c768-112">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="0c768-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="0c768-113">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="0c768-113">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="0c768-114">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0c768-114">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

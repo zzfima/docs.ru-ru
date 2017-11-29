@@ -1,54 +1,60 @@
 ---
-title: "Как асинхронно реализовывать операции службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Асинхронная реализация операции службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 65cd45a2510aa43c3f0c58a7cbf78c13e47d821e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как асинхронно реализовывать операции службы
-В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом.Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно.Пример, в котором показана реализация асинхронной операции в службе, см. в разделе [Как асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] о синхронных и асинхронных операциях см. в разделе [Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md) и [Синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).В этом разделе описывается базовая структура асинхронной операции службы, код не завершен.Полный образец стороны службы и клиента приведен в разделе [Asynchronous](http://msdn.microsoft.com/ru-ru/833db946-f511-4f64-a26f-2759a11217c7).  
+# <a name="how-to-implement-an-asynchronous-service-operation"></a><span data-ttu-id="9f80d-102">Практическое руководство. Асинхронная реализация операции службы</span><span class="sxs-lookup"><span data-stu-id="9f80d-102">How to: Implement an Asynchronous Service Operation</span></span>
+<span data-ttu-id="9f80d-103">В приложениях [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] операция службы может быть реализована асинхронно или синхронно без жесткого задания способа вызова клиентом.</span><span class="sxs-lookup"><span data-stu-id="9f80d-103">In [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications, a service operation can be implemented asynchronously or synchronously without dictating to the client how to call it.</span></span> <span data-ttu-id="9f80d-104">Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно.</span><span class="sxs-lookup"><span data-stu-id="9f80d-104">For example, asynchronous service operations can be calling synchronously, and synchronous service operations can be called asynchronously.</span></span> <span data-ttu-id="9f80d-105">Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).</span><span class="sxs-lookup"><span data-stu-id="9f80d-105">For an example that shows how to call an operation asynchronously in a client application, see [How to: Call Service Operations Asynchronously](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="9f80d-106">синхронные и асинхронные операции в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).</span><span class="sxs-lookup"><span data-stu-id="9f80d-106"> synchronous and asynchronous operations, see [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) and [Synchronous and Asynchronous Operations](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).</span></span> <span data-ttu-id="9f80d-107">В этом разделе описывается базовая структура асинхронной операции службы, код не завершен.</span><span class="sxs-lookup"><span data-stu-id="9f80d-107">This topic describes the basic structure of an asynchronous service operation, the code is not complete.</span></span> <span data-ttu-id="9f80d-108">Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).</span><span class="sxs-lookup"><span data-stu-id="9f80d-108">For a complete example of both the service and client sides see [Asynchronous](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7).</span></span>  
   
-### Асинхронная реализация операции службы  
+### <a name="implement-a-service-operation-asynchronously"></a><span data-ttu-id="9f80d-109">Асинхронная реализация операции службы</span><span class="sxs-lookup"><span data-stu-id="9f80d-109">Implement a service operation asynchronously</span></span>  
   
-1.  В контракте службы объявите пару асинхронных методов в соответствии с рекомендациями по асинхронной разработке для платформы .NET.Метод `Begin` принимает параметр, объект обратного вызова и объект состояния, а возвращает <xref:System.IAsyncResult?displayProperty=fullName>; соответствующий метод `End` принимает <xref:System.IAsyncResult?displayProperty=fullName> и возвращает возвращаемое значение.Дополнительные сведения об асинхронных вызовах см. в разделе [Асинхронные шаблоны разработки](http://go.microsoft.com/fwlink/?LinkId=248221).  
+1.  <span data-ttu-id="9f80d-110">В контракте службы объявите пару асинхронных методов в соответствии с рекомендациями по асинхронной разработке для платформы .NET.</span><span class="sxs-lookup"><span data-stu-id="9f80d-110">In your service contract, declare an asynchronous method pair according to the .NET asynchronous design guidelines.</span></span> <span data-ttu-id="9f80d-111">Метод `Begin` принимает параметр, объект обратного вызова и объект состояния, а возвращает <xref:System.IAsyncResult?displayProperty=nameWithType>; соответствующий метод `End` принимает <xref:System.IAsyncResult?displayProperty=nameWithType> и возвращает возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="9f80d-111">The `Begin` method takes a parameter, a callback object, and a state object, and returns a <xref:System.IAsyncResult?displayProperty=nameWithType> and a matching `End` method that takes a <xref:System.IAsyncResult?displayProperty=nameWithType> and returns the return value.</span></span> <span data-ttu-id="9f80d-112">Дополнительные сведения об асинхронных вызовов см. в разделе [проектные шаблоны асинхронного программирования](http://go.microsoft.com/fwlink/?LinkId=248221).</span><span class="sxs-lookup"><span data-stu-id="9f80d-112">For more information about asynchronous calls, see [Asynchronous Programming Design Patterns](http://go.microsoft.com/fwlink/?LinkId=248221).</span></span>  
   
-2.  Пометьте метод `Begin` пары асинхронных методов атрибутом <xref:System.ServiceModel.OperationContractAttribute?displayProperty=fullName> и задайте для свойства <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=fullName> значение `true`.Например, приведенный ниже код выполняет шаги 1 и 2.  
+2.  <span data-ttu-id="9f80d-113">Пометьте метод `Begin` пары асинхронных методов атрибутом <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> и задайте для свойства <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="9f80d-113">Mark the `Begin` method of the asynchronous method pair with the <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> attribute and set the <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="9f80d-114">Например, приведенный ниже код выполняет шаги 1 и 2.</span><span class="sxs-lookup"><span data-stu-id="9f80d-114">For example, the following code performs steps 1 and 2.</span></span>  
   
      [!code-csharp[C_SyncAsyncClient#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#6)]
      [!code-vb[C_SyncAsyncClient#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#6)]  
   
-3.  Реализуйте пару методов `Begin/End` в классе своей службы в соответствии с рекомендациями по асинхронной разработке.Например, в следующем примере кода показана реализация, в которой строка записывается в консоль как в части `Begin`, так и в части `End` асинхронной операции службы, и возвращаемое значение операции `End` возвращается клиенту.Полный пример кода см. в подразделе "Пример".  
+3.  <span data-ttu-id="9f80d-115">Реализуйте пару методов `Begin/End` в классе своей службы в соответствии с рекомендациями по асинхронной разработке.</span><span class="sxs-lookup"><span data-stu-id="9f80d-115">Implement the `Begin/End` method pair in your service class according to the asynchronous design guidelines.</span></span> <span data-ttu-id="9f80d-116">Например, в следующем примере кода показана реализация, в которой строка записывается в консоль как в части `Begin`, так и в части `End` асинхронной операции службы, и возвращаемое значение операции `End` возвращается клиенту.</span><span class="sxs-lookup"><span data-stu-id="9f80d-116">For example, the following code example shows an implementation in which a string is written to the console in both the `Begin` and `End` portions of the asynchronous service operation, and the return value of the `End` operation is returned to the client.</span></span> <span data-ttu-id="9f80d-117">Полный пример кода см. в подразделе "Пример".</span><span class="sxs-lookup"><span data-stu-id="9f80d-117">For the complete code example, see the Example section.</span></span>  
   
      [!code-csharp[C_SyncAsyncClient#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#3)]
      [!code-vb[C_SyncAsyncClient#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#3)]  
   
-## Пример  
- В следующих примерах кода показаны:  
+## <a name="example"></a><span data-ttu-id="9f80d-118">Пример</span><span class="sxs-lookup"><span data-stu-id="9f80d-118">Example</span></span>  
+ <span data-ttu-id="9f80d-119">В следующих примерах кода показаны:</span><span class="sxs-lookup"><span data-stu-id="9f80d-119">The following code examples show:</span></span>  
   
-1.  Интерфейс контракта службы с:  
+1.  <span data-ttu-id="9f80d-120">Интерфейс контракта службы с:</span><span class="sxs-lookup"><span data-stu-id="9f80d-120">A service contract interface with:</span></span>  
   
-    1.  Синхронной операцией `SampleMethod`.  
+    1.  <span data-ttu-id="9f80d-121">Синхронной операцией `SampleMethod`.</span><span class="sxs-lookup"><span data-stu-id="9f80d-121">A synchronous `SampleMethod` operation.</span></span>  
   
-    2.  Асинхронной операцией `BeginSampleMethod`.  
+    2.  <span data-ttu-id="9f80d-122">Асинхронной операцией `BeginSampleMethod`.</span><span class="sxs-lookup"><span data-stu-id="9f80d-122">An asynchronous `BeginSampleMethod` operation.</span></span>  
   
-    3.  Парой асинхронных операций `BeginServiceAsyncMethod`\/`EndServiceAsyncMethod`.  
+    3.  <span data-ttu-id="9f80d-123">Асинхронную `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` пары операции.</span><span class="sxs-lookup"><span data-stu-id="9f80d-123">An asynchronous `BeginServiceAsyncMethod`/`EndServiceAsyncMethod` operation pair.</span></span>  
   
-2.  Реализацией службы с использованием объекта <xref:System.IAsyncResult?displayProperty=fullName>.  
+2.  <span data-ttu-id="9f80d-124">Реализацией службы с использованием объекта <xref:System.IAsyncResult?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9f80d-124">A service implementation using a <xref:System.IAsyncResult?displayProperty=nameWithType> object.</span></span>  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## См. также  
- [Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md)   
- [Синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+## <a name="see-also"></a><span data-ttu-id="9f80d-125">См. также</span><span class="sxs-lookup"><span data-stu-id="9f80d-125">See Also</span></span>  
+ [<span data-ttu-id="9f80d-126">Разработка контрактов службы</span><span class="sxs-lookup"><span data-stu-id="9f80d-126">Designing Service Contracts</span></span>](../../../docs/framework/wcf/designing-service-contracts.md)  
+ [<span data-ttu-id="9f80d-127">Синхронные и асинхронные операции</span><span class="sxs-lookup"><span data-stu-id="9f80d-127">Synchronous and Asynchronous Operations</span></span>](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

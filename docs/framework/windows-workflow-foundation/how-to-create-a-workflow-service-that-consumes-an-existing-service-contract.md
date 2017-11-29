@@ -1,42 +1,46 @@
 ---
-title: "Как создать службу рабочего процесса, которая использует существующий контракт службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать службу рабочего процесса, которая использует существующий контракт службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a811609f601e844d55d4173eb94df24701fcc7d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как создать службу рабочего процесса, которая использует существующий контракт службы
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] отличается улучшенной интеграцией между веб\-службами и рабочими процессами в форме разработки рабочего процесса на основе контракта.Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First.Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a><span data-ttu-id="f82c5-102">Как создать службу рабочего процесса, которая использует существующий контракт службы</span><span class="sxs-lookup"><span data-stu-id="f82c5-102">How to: Create a workflow service that consumes an existing service contract</span></span>
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<span data-ttu-id="f82c5-103"> отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса на основе контракта.</span><span class="sxs-lookup"><span data-stu-id="f82c5-103"> features better integration between web services and workflows in the form of contract-first workflow development.</span></span> <span data-ttu-id="f82c5-104">Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First.</span><span class="sxs-lookup"><span data-stu-id="f82c5-104">The contract-first workflow development tool allows you to design the contract in code first.</span></span> <span data-ttu-id="f82c5-105">Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте.</span><span class="sxs-lookup"><span data-stu-id="f82c5-105">The tool then automatically generates an activity template in the toolbox for the operations in the contract.</span></span>  
   
 > [!NOTE]
->  Этот раздел содержит пошаговые инструкции по созданию службы рабочих процессов на основе контракта.[!INCLUDE[crabout](../../../includes/crabout-md.md)] разработке службы рабочих процессов на основе контракта см. [Разработка службы рабочих процессов на основе контракта](../../../docs/framework/windows-workflow-foundation//contract-first-workflow-service-development.md).  
+>  <span data-ttu-id="f82c5-106">Этот раздел содержит пошаговые инструкции по созданию службы рабочих процессов на основе контракта.</span><span class="sxs-lookup"><span data-stu-id="f82c5-106">This topic provides step-by-step guidance on creating a contract-first workflow service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="f82c5-107">Разработка рабочих процессов на основе контракта службы, в разделе [контракта первого разработка служб рабочего процесса](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).</span><span class="sxs-lookup"><span data-stu-id="f82c5-107"> contract-first workflow service development, see [Contract First Workflow Service Development](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).</span></span>  
   
-### Создание проекта рабочего процесса  
+### <a name="creating-the-workflow-project"></a><span data-ttu-id="f82c5-108">Создание проекта рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="f82c5-108">Creating the workflow project</span></span>  
   
-1.  В [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] выберите **Файл**, **Создать проект**.Выберите узел **WCF** в узле **На языке C\#** в дереве **Шаблоны** и выберите шаблон **Приложение службы рабочего процесса WCF**.  
+1.  <span data-ttu-id="f82c5-109">В [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]выберите **файл**, **новый проект**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-109">In [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], select **File**, **New Project**.</span></span> <span data-ttu-id="f82c5-110">Выберите **WCF** узле **C#** узел в **шаблоны** дерева, а затем выберите **приложение службы рабочего процесса WCF** шаблона.</span><span class="sxs-lookup"><span data-stu-id="f82c5-110">Select the **WCF** node under the **C#** node in the **Templates** tree, and select the **WCF Workflow Service Application** template.</span></span>  
   
-2.  Задайте имя проекта `ContractFirst` и нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="f82c5-111">Имя для нового проекта `ContractFirst` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-111">Name the new project `ContractFirst` and click **Ok**.</span></span>  
   
-### Создание контракта службы  
+### <a name="creating-the-service-contract"></a><span data-ttu-id="f82c5-112">Создание контракта службы</span><span class="sxs-lookup"><span data-stu-id="f82c5-112">Creating the service contract</span></span>  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши проект и выберите команду **Добавить**, **Новый элемент…**Выберите слева узел **Код**, а справа шаблон **Класс**.Задайте для нового класса имя `IBookService` и нажмите кнопку **ОК**.  
+1.  <span data-ttu-id="f82c5-113">Щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **добавить**, **новый элемент...** .</span><span class="sxs-lookup"><span data-stu-id="f82c5-113">Right-click the project in **Solution Explorer** and select **Add**, **New Item…**.</span></span> <span data-ttu-id="f82c5-114">Выберите **кода** слева, узел и **класса** справа шаблон.</span><span class="sxs-lookup"><span data-stu-id="f82c5-114">Select the **Code** node on the left, and the **Class** template on the right.</span></span> <span data-ttu-id="f82c5-115">Имя для нового класса `IBookService` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-115">Name the new class `IBookService` and click **Ok**.</span></span>  
   
-2.  В верхней части появившегося окна кода добавьте в `System.Servicemodel` инструкцию Using.  
+2.  <span data-ttu-id="f82c5-116">В верхней части появившегося окна кода добавьте в `System.Servicemodel` инструкцию Using.</span><span class="sxs-lookup"><span data-stu-id="f82c5-116">In the top of the code window that appears, add a Using statement to `System.Servicemodel`.</span></span>  
   
     ```  
     using System.ServiceModel;  
     ```  
   
-3.  Измените образец определения класса на следующее определение интерфейса.  
+3.  <span data-ttu-id="f82c5-117">Измените образец определения класса на следующее определение интерфейса.</span><span class="sxs-lookup"><span data-stu-id="f82c5-117">Change the sample class definition to the following interface definition.</span></span>  
   
     ```  
     [ServiceContract]  
@@ -50,20 +54,20 @@ caps.handback.revision: 5
         }  
     ```  
   
-4.  Постройте проект, нажав клавиши **CTRL\+SHIFT\+B**.  
+4.  <span data-ttu-id="f82c5-118">Постройте проект, нажав клавишу **Ctrl + Shift + B**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-118">Build the project by pressing **Ctrl+Shift+B**.</span></span>  
   
-### Импорт контракта службы  
+### <a name="importing-the-service-contract"></a><span data-ttu-id="f82c5-119">Импорт контракта службы</span><span class="sxs-lookup"><span data-stu-id="f82c5-119">Importing the service contract</span></span>  
   
-1.  Щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Импорт контракта службы**.В разделе **\<Текущий проект\>** откройте все дочерние узлы и выберите **IBookService**.Нажмите кнопку **ОК**.  
+1.  <span data-ttu-id="f82c5-120">Щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Импорт контракта службы**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-120">Right-click the project in **Solution Explorer** and select **Import Service Contract**.</span></span> <span data-ttu-id="f82c5-121">В разделе  **\<текущий проект >**откройте все подузлы и выберите **IBookService**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-121">Under **\<Current Project>**, open all sub-nodes and select **IBookService**.</span></span> <span data-ttu-id="f82c5-122">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-122">Click **OK**.</span></span>  
   
-2.  Откроется диалоговое окно с сообщением, что операция была завершена успешно, а созданные действия появятся в области элементов после сборки проекта.Нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="f82c5-123">Откроется диалоговое окно с сообщением, что операция была завершена успешно, а созданные действия появятся в области элементов после сборки проекта.</span><span class="sxs-lookup"><span data-stu-id="f82c5-123">A dialog will open, alerting you that the operation completed successfully, and that the generated activities will appear in the toolbox after you build the project.</span></span> <span data-ttu-id="f82c5-124">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-124">Click **OK**.</span></span>  
   
-3.  Постройте проект, нажав сочетание клавиш **CTRL\+SHIFT\+B**, чтобы импортированные действия отобразились в области элементов.  
+3.  <span data-ttu-id="f82c5-125">Постройте проект, нажав клавишу **Ctrl + Shift + B**таким образом, чтобы импортированные действия будет отображаться на панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="f82c5-125">Build the project by pressing **Ctrl+Shift+B**, so that the imported activities will appear in the toolbox.</span></span>  
   
-4.  В **обозревателе решений** откройте файл Service1.xamlx.Служба рабочего процесса появится в конструкторе.  
+4.  <span data-ttu-id="f82c5-126">В **обозревателе решений**, откройте файл Service1.xamlx.</span><span class="sxs-lookup"><span data-stu-id="f82c5-126">In **Solution Explorer**, open Service1.xamlx.</span></span> <span data-ttu-id="f82c5-127">Служба рабочего процесса появится в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="f82c5-127">The workflow service will appear in the designer.</span></span>  
   
-5.  Выберите действие **Последовательность**.В окне «Свойства» нажмите кнопку с многоточием **…** рядом со свойством **ImplementedContract**.В появившемся окне **Редактор коллекций типов** щелкните раскрывающийся список **Тип** и выберите пункт **Обзор типов…**В диалоговом окне **Обзор и выбор типа .NET** в разделе **\<Текущий проект\>** откройте все дочерние узлы и выберите **IBookService**.Нажмите кнопку **ОК**.В диалоговом окне **Редактор коллекции типов** нажмите кнопку **ОК**.  
+5.  <span data-ttu-id="f82c5-128">Выберите **последовательности** действия.</span><span class="sxs-lookup"><span data-stu-id="f82c5-128">Select the **Sequence** activity.</span></span> <span data-ttu-id="f82c5-129">В окне «Свойства» щелкните **...**</span><span class="sxs-lookup"><span data-stu-id="f82c5-129">In the Properties window, click the **…**</span></span> <span data-ttu-id="f82c5-130">кнопки в **ImplementedContract** свойство.</span><span class="sxs-lookup"><span data-stu-id="f82c5-130">button in the **ImplementedContract** property.</span></span> <span data-ttu-id="f82c5-131">В **редактор коллекции типов** пункт в появившемся окне **тип** раскрывающийся список и выберите **поиск типов...**</span><span class="sxs-lookup"><span data-stu-id="f82c5-131">In the **Type Collection Editor** window that appears, click the **Type** dropdown, and select the **Browse for Types…**</span></span> <span data-ttu-id="f82c5-132">запись.</span><span class="sxs-lookup"><span data-stu-id="f82c5-132">entry.</span></span> <span data-ttu-id="f82c5-133">В **Обзор и Выбор типа .net тип** диалогового окна в разделе  **\<текущий проект >**откройте все подузлы и выберите **IBookService**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-133">In the **Browse and Select a .Net Type** dialog, under **\<Current Project>**, open all sub-nodes and select **IBookService**.</span></span> <span data-ttu-id="f82c5-134">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-134">Click **OK**.</span></span> <span data-ttu-id="f82c5-135">В **редактор коллекции типов** диалоговое окно, нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f82c5-135">In the **Type Collection Editor** dialog, click **OK**.</span></span>  
   
-6.  Выберите и удалите действия **ReceiveRequest** и **SendResponse**.  
+6.  <span data-ttu-id="f82c5-136">Выберите и удалите **ReceiveRequest** и **SendResponse** действия.</span><span class="sxs-lookup"><span data-stu-id="f82c5-136">Select and delete the **ReceiveRequest** and **SendResponse** activities.</span></span>  
   
-7.  Из области элементов перетащите действия **Buy\_ReceiveAndSendReply** и **Checkout\_Receive** на действие **Последовательная служба**.
+7.  <span data-ttu-id="f82c5-137">Из панели элементов перетащите **Buy_ReceiveAndSendReply** и **Checkout_Receive** действия на **последовательная служба** действия.</span><span class="sxs-lookup"><span data-stu-id="f82c5-137">From the toolbox, drag a **Buy_ReceiveAndSendReply** and a **Checkout_Receive** activity onto the **Sequential Service** activity.</span></span>

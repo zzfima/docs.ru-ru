@@ -1,37 +1,43 @@
 ---
-title: "Как вызывать встроенные определяемые пользователем функции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Встроенный вызов пользовательских функций"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b39d71cd0f9aee855133c646fbec6a7f4f6f3c40
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как вызывать встроенные определяемые пользователем функции
-Пользовательские функции можно вызывать из строки кода, однако функции, включенные в запрос, выполнение которого отложено, выполняются только одновременно с запросом.  Для получения дополнительной информации см. [Introduction to LINQ Queries \(C\#\)](../Topic/Introduction%20to%20LINQ%20Queries%20\(C%23\).md).  
+# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="209ed-102">Практическое руководство. Встроенный вызов пользовательских функций</span><span class="sxs-lookup"><span data-stu-id="209ed-102">How to: Call User-Defined Functions Inline</span></span>
+<span data-ttu-id="209ed-103">Пользовательские функции можно вызывать из строки кода, однако функции, включенные в запрос, выполнение которого отложено, выполняются только одновременно с запросом.</span><span class="sxs-lookup"><span data-stu-id="209ed-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="209ed-104">Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="209ed-104">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- Если та же функция вызывается за пределами запроса, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает простой запрос из выражения вызова метода.  Ниже показан синтаксис SQL \(параметр `@p0` привязан к передаваемой константе\).  
+ <span data-ttu-id="209ed-105">Если та же функция вызывается за пределами запроса, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает простой запрос из выражения вызова метода.</span><span class="sxs-lookup"><span data-stu-id="209ed-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="209ed-106">Ниже показан синтаксис SQL (параметр `@p0` привязан к передаваемой константе).</span><span class="sxs-lookup"><span data-stu-id="209ed-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
   
 ```  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает следующий код:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="209ed-107"> создает следующий код:</span><span class="sxs-lookup"><span data-stu-id="209ed-107"> creates the following:</span></span>  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
-## Пример  
- В следующем запросе [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] показан вызов созданной пользовательской функции `ReverseCustName`, осуществляемый из строки кода.  Функция не выполняется немедленно, поскольку выполнение запроса отложено.  Код SQL, созданный для этого запроса, преобразуется в вызов пользовательской функции в базе данных \(см. код SQL, расположенный после запроса\).  
+## <a name="example"></a><span data-ttu-id="209ed-108">Пример</span><span class="sxs-lookup"><span data-stu-id="209ed-108">Example</span></span>  
+ <span data-ttu-id="209ed-109">В следующем [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запроса, можно увидеть вызов метода созданный определяемая пользователем функция `ReverseCustName`.</span><span class="sxs-lookup"><span data-stu-id="209ed-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="209ed-110">Функция не выполняется немедленно, поскольку выполнение запроса отложено.</span><span class="sxs-lookup"><span data-stu-id="209ed-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="209ed-111">Код SQL, созданный для этого запроса, преобразуется в вызов пользовательской функции в базе данных (см. код SQL, расположенный после запроса).</span><span class="sxs-lookup"><span data-stu-id="209ed-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -42,5 +48,5 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## См. также  
- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a><span data-ttu-id="209ed-112">См. также</span><span class="sxs-lookup"><span data-stu-id="209ed-112">See Also</span></span>  
+ [<span data-ttu-id="209ed-113">Определяемые пользователем функции</span><span class="sxs-lookup"><span data-stu-id="209ed-113">User-Defined Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

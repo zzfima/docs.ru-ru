@@ -1,0 +1,66 @@
+---
+title: "Функция StrongNameHashSize"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: StrongNameHashSize
+api_location: mscoree.dll
+api_type: DLLExport
+f1_keywords: StrongNameHashSize
+helpviewer_keywords: StrongNameHashSize function [.NET Framework strong naming]
+ms.assetid: 738c98d7-a60c-45fe-a296-220af05e6991
+topic_type: apiref
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: baf9c9b2219ff3fb784972b1f54a2b50dcd8657d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
+# <a name="strongnamehashsize-function"></a><span data-ttu-id="5d052-102">Функция StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="5d052-102">StrongNameHashSize Function</span></span>
+<span data-ttu-id="5d052-103">Возвращает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="5d052-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+  
+ <span data-ttu-id="5d052-104">Эта функция устарела.</span><span class="sxs-lookup"><span data-stu-id="5d052-104">This function has been deprecated.</span></span> <span data-ttu-id="5d052-105">Используйте [ICLRStrongName::StrongNameHashSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md) метод вместо него.</span><span class="sxs-lookup"><span data-stu-id="5d052-105">Use the [ICLRStrongName::StrongNameHashSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md) method instead.</span></span>  
+  
+## <a name="syntax"></a><span data-ttu-id="5d052-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5d052-106">Syntax</span></span>  
+  
+```  
+BOOLEAN StrongNameHashSize (  
+    [in]  ULONG   ulHashAlg,  
+    [out] DWORD   *pcbSize  
+);  
+```  
+  
+#### <a name="parameters"></a><span data-ttu-id="5d052-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="5d052-107">Parameters</span></span>  
+ `ulHashAlg`  
+ <span data-ttu-id="5d052-108">[in] Хэш-алгоритм, используемый для вычисления размера буфера.</span><span class="sxs-lookup"><span data-stu-id="5d052-108">[in] The hash algorithm used to compute the buffer size.</span></span>  
+  
+ `pcbSize`  
+ <span data-ttu-id="5d052-109">[out] Размер возвращаемого буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="5d052-109">[out] The returned buffer size, in bytes.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="5d052-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5d052-110">Return Value</span></span>  
+ <span data-ttu-id="5d052-111">`true`При успешном завершении; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="5d052-111">`true` on successful completion; otherwise, `false`.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="5d052-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="5d052-112">Remarks</span></span>  
+ <span data-ttu-id="5d052-113">Если `StrongNameHashSize` функция не завершена, вызовите [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.</span><span class="sxs-lookup"><span data-stu-id="5d052-113">If the `StrongNameHashSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="5d052-114">Требования</span><span class="sxs-lookup"><span data-stu-id="5d052-114">Requirements</span></span>  
+ <span data-ttu-id="5d052-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d052-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="5d052-116">**Заголовок:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="5d052-116">**Header:** StrongName.h</span></span>  
+  
+ <span data-ttu-id="5d052-117">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5d052-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="5d052-118">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d052-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="5d052-119">См. также</span><span class="sxs-lookup"><span data-stu-id="5d052-119">See Also</span></span>  
+ [<span data-ttu-id="5d052-120">Метод StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="5d052-120">StrongNameHashSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)  
+ [<span data-ttu-id="5d052-121">Iclrstrongname-интерфейс</span><span class="sxs-lookup"><span data-stu-id="5d052-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

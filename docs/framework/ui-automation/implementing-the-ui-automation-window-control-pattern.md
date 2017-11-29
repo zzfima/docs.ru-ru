@@ -1,78 +1,81 @@
 ---
-title: "Implementing the UI Automation Window Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, Window"
-  - "UI Automation, Window control pattern"
-  - "Window control pattern"
+title: "Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, Window
+- UI Automation, Window control pattern
+- Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: 21
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9e8d83c3ef40ccc6e97ba3128cab5d88a5af5305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Window Control Pattern
+# <a name="implementing-the-ui-automation-window-control-pattern"></a><span data-ttu-id="7b0d9-102">Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="7b0d9-102">Implementing the UI Automation Window Control Pattern</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="7b0d9-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="7b0d9-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="7b0d9-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="7b0d9-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern>. Ссылки на дополнительные материалы перечислены в конце раздела.  
+ <span data-ttu-id="7b0d9-105">В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IWindowProvider>, включая сведения о свойствах, методах и событиях <xref:System.Windows.Automation.WindowPattern> .</span><span class="sxs-lookup"><span data-stu-id="7b0d9-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IWindowProvider>, including information about <xref:System.Windows.Automation.WindowPattern> properties, methods, and events.</span></span> <span data-ttu-id="7b0d9-106">Ссылки на дополнительные материалы перечислены в конце раздела.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-106">Links to additional references are listed at the end of the topic.</span></span>  
   
- Шаблон элемента управления <xref:System.Windows.Automation.WindowPattern> используется для поддержки элементов управления, обеспечивающих фундаментальные функциональные возможности на основе окон в традиционном [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]. В качестве примеров элементов управления, которые должны реализовывать этот шаблон элемента управления, можно назвать окна приложения верхнего уровня, дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)], элементы управления "Область разделения с возможностью изменения размера", модальные диалоговые окна и окна всплывающей справки.  
+ <span data-ttu-id="7b0d9-107">Шаблон элемента управления <xref:System.Windows.Automation.WindowPattern> используется для поддержки элементов управления, обеспечивающих фундаментальные функциональные возможности на основе окон в традиционном [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b0d9-107">The <xref:System.Windows.Automation.WindowPattern> control pattern is used to support controls that provide fundamental window-based functionality within a traditional [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)].</span></span> <span data-ttu-id="7b0d9-108">В качестве примеров элементов управления, которые должны реализовывать этот шаблон элемента управления, можно назвать окна приложения верхнего уровня, дочерние окна [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] , элементы управления "Область разделения с возможностью изменения размера", модальные диалоговые окна и окна всплывающей справки.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-108">Examples of controls that must implement this control pattern include top-level application windows, [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] child windows, resizable split pane controls, modal dialogs and balloon help windows.</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Правила и соглашения реализации  
- При реализации шаблона элемента управления Window обратите внимание на следующие правила и соглашения.  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="7b0d9-109">Правила и соглашения реализации</span><span class="sxs-lookup"><span data-stu-id="7b0d9-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="7b0d9-110">При реализации шаблона элемента управления Window обратите внимание на следующие правила и соглашения.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-110">When implementing the Window control pattern, note the following guidelines and conventions:</span></span>  
   
--   Для поддержки возможности изменения размера окна и его положения на экране с помощью модели автоматизации пользовательского интерфейса элемент управления должен реализовать <xref:System.Windows.Automation.Provider.ITransformProvider> в дополнение к <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="7b0d9-111">Для поддержки возможности изменения размера окна и его положения на экране с помощью модели автоматизации пользовательского интерфейса элемент управления должен реализовать <xref:System.Windows.Automation.Provider.ITransformProvider> в дополнение к <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-111">To support the ability to modify both window size and screen position using UI Automation, a control must implement <xref:System.Windows.Automation.Provider.ITransformProvider> in addition to <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   Элементы управления, содержащие заголовки окон и элементы этих заголовков, позволяющие перемещать, разворачивать, сворачивать, закрывать элемент управления или изменять его размер, обычно должны реализовывать <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="7b0d9-112">Элементы управления, содержащие заголовки окон и элементы этих заголовков, позволяющие перемещать, разворачивать, сворачивать, закрывать элемент управления или изменять его размер, обычно должны реализовывать <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-112">Controls that contain title bars and title bar elements that enable the control to be moved, resized, maximized, minimized, or closed are typically required to implement <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   Такие элементы управления, как всплывающие подсказки, поля со списком или раскрывающиеся меню, обычно не реализуют <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+-   <span data-ttu-id="7b0d9-113">Такие элементы управления, как всплывающие подсказки, поля со списком или раскрывающиеся меню, обычно не реализуют <xref:System.Windows.Automation.Provider.IWindowProvider>.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-113">Controls such as tooltip pop-ups and combo box or menu drop-downs do not typically implement <xref:System.Windows.Automation.Provider.IWindowProvider>.</span></span>  
   
--   Окна всплывающей справки отличаются от обычных всплывающих подсказок тем, что предоставляют кнопку закрытия окна.  
+-   <span data-ttu-id="7b0d9-114">Окна всплывающей справки отличаются от обычных всплывающих подсказок тем, что предоставляют кнопку закрытия окна.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-114">Balloon help windows are differentiated from basic tooltip pop-ups by the provision of a window-like Close button.</span></span>  
   
--   IWindowProvider не поддерживает полноэкранный режим, так как он зависит от компонентов в приложении и не является типичным поведением окна.  
+-   <span data-ttu-id="7b0d9-115">IWindowProvider не поддерживает полноэкранный режим, так как он зависит от компонентов в приложении и не является типичным поведением окна.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-115">Full-screen mode is not supported by IWindowProvider as it is feature-specific to an application and is not typical window behavior.</span></span>  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
-## Обязательные члены для IWindowProvider  
- Следующие свойства, методы и события обязательны для реализации интерфейса IWindowProvider.  
+## <a name="required-members-for-iwindowprovider"></a><span data-ttu-id="7b0d9-116">Обязательные члены для IWindowProvider</span><span class="sxs-lookup"><span data-stu-id="7b0d9-116">Required Members for IWindowProvider</span></span>  
+ <span data-ttu-id="7b0d9-117">Следующие свойства, методы и события обязательны для реализации интерфейса IWindowProvider.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-117">The following properties, methods, and events are required for the IWindowProvider interface.</span></span>  
   
-|Обязательный член|Тип члена|Примечания|  
-|-----------------------|---------------|----------------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Событие|Нет|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Событие|Нет|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState>|  
+|<span data-ttu-id="7b0d9-118">Обязательный член</span><span class="sxs-lookup"><span data-stu-id="7b0d9-118">Required member</span></span>|<span data-ttu-id="7b0d9-119">Тип члена</span><span class="sxs-lookup"><span data-stu-id="7b0d9-119">Member type</span></span>|<span data-ttu-id="7b0d9-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="7b0d9-120">Notes</span></span>|  
+|---------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|<span data-ttu-id="7b0d9-121">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-121">Property</span></span>|<span data-ttu-id="7b0d9-122">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-122">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|<span data-ttu-id="7b0d9-123">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-123">Property</span></span>|<span data-ttu-id="7b0d9-124">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-124">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|<span data-ttu-id="7b0d9-125">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-125">Property</span></span>|<span data-ttu-id="7b0d9-126">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-126">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|<span data-ttu-id="7b0d9-127">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-127">Property</span></span>|<span data-ttu-id="7b0d9-128">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-128">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|<span data-ttu-id="7b0d9-129">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-129">Property</span></span>|<span data-ttu-id="7b0d9-130">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-130">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|<span data-ttu-id="7b0d9-131">Свойство</span><span class="sxs-lookup"><span data-stu-id="7b0d9-131">Property</span></span>|<span data-ttu-id="7b0d9-132">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-132">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|<span data-ttu-id="7b0d9-133">Метод</span><span class="sxs-lookup"><span data-stu-id="7b0d9-133">Method</span></span>|<span data-ttu-id="7b0d9-134">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-134">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|<span data-ttu-id="7b0d9-135">Метод</span><span class="sxs-lookup"><span data-stu-id="7b0d9-135">Method</span></span>|<span data-ttu-id="7b0d9-136">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-136">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|<span data-ttu-id="7b0d9-137">Метод</span><span class="sxs-lookup"><span data-stu-id="7b0d9-137">Method</span></span>|<span data-ttu-id="7b0d9-138">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-138">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|<span data-ttu-id="7b0d9-139">Событие</span><span class="sxs-lookup"><span data-stu-id="7b0d9-139">Event</span></span>|<span data-ttu-id="7b0d9-140">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-140">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|<span data-ttu-id="7b0d9-141">Событие</span><span class="sxs-lookup"><span data-stu-id="7b0d9-141">Event</span></span>|<span data-ttu-id="7b0d9-142">Нет</span><span class="sxs-lookup"><span data-stu-id="7b0d9-142">None</span></span>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|<span data-ttu-id="7b0d9-143">Событие</span><span class="sxs-lookup"><span data-stu-id="7b0d9-143">Event</span></span>|<span data-ttu-id="7b0d9-144">Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction></span><span class="sxs-lookup"><span data-stu-id="7b0d9-144">Is not guaranteed to be <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction></span></span>|  
   
 <a name="Exceptions"></a>   
-## Исключения  
- Поставщики должны вызывать следующие исключения.  
+## <a name="exceptions"></a><span data-ttu-id="7b0d9-145">Исключения</span><span class="sxs-lookup"><span data-stu-id="7b0d9-145">Exceptions</span></span>  
+ <span data-ttu-id="7b0d9-146">Поставщики должны вызывать следующие исключения.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-146">Providers must throw the following exceptions.</span></span>  
   
-|Тип исключения|Условие|  
-|--------------------|-------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -   Если элемент управления не поддерживает запрошенное поведение.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -   Если параметр не является допустимым числом.|  
+|<span data-ttu-id="7b0d9-147">Тип исключения</span><span class="sxs-lookup"><span data-stu-id="7b0d9-147">Exception type</span></span>|<span data-ttu-id="7b0d9-148">Условие</span><span class="sxs-lookup"><span data-stu-id="7b0d9-148">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> <span data-ttu-id="7b0d9-149">-Если элемент управления не поддерживает запрошенное поведение.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-149">-   When a control does not support a requested behavior.</span></span>|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> <span data-ttu-id="7b0d9-150">-Если параметр не является допустимым числом.</span><span class="sxs-lookup"><span data-stu-id="7b0d9-150">-   When the parameter is not a valid number.</span></span>|  
   
-## См. также  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="7b0d9-151">См. также</span><span class="sxs-lookup"><span data-stu-id="7b0d9-151">See Also</span></span>  
+ [<span data-ttu-id="7b0d9-152">Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="7b0d9-152">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="7b0d9-153">Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="7b0d9-153">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="7b0d9-154">Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов</span><span class="sxs-lookup"><span data-stu-id="7b0d9-154">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="7b0d9-155">Общие сведения о дереве модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="7b0d9-155">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="7b0d9-156">Использование кэширования в модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="7b0d9-156">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

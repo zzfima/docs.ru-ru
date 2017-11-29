@@ -1,63 +1,66 @@
 ---
-title: "Введение в расширяемость | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "расширяемость [WCF]"
-  - "WCF [WCF], расширяемость"
-  - "Windows Communication Foundation [WCF], расширяемость"
+title: "Введение в расширяемость"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], extensibility
+- Windows Communication Foundation [WCF], extensibility
+- extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0b53ec29f973760237133003c2f582e1a33a9f83
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Введение в расширяемость
-Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения.  Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают.  Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком.  В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.  
+# <a name="introduction-to-extensibility"></a><span data-ttu-id="af6ec-102">Введение в расширяемость</span><span class="sxs-lookup"><span data-stu-id="af6ec-102">Introduction to Extensibility</span></span>
+<span data-ttu-id="af6ec-103">Модель приложений [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] предусматривает удовлетворение большей части связанных с обменом данных потребностей любого распределенного приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-103">The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application model is designed to solve the greater part of the communication requirements of any distributed application.</span></span> <span data-ttu-id="af6ec-104">Однако всегда существуют сценарии, которые модель приложений по умолчанию и предоставленные системой реализации не поддерживают.</span><span class="sxs-lookup"><span data-stu-id="af6ec-104">But there are always scenarios that the default application model and system-provided implementations do not support.</span></span> <span data-ttu-id="af6ec-105">Модель расширяемости [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предназначена для поддержки пользовательских сценариев и позволяет изменять поведение системы на всех уровнях, вплоть до замены модели приложений целиком.</span><span class="sxs-lookup"><span data-stu-id="af6ec-105">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] extensibility model is intended to support custom scenarios by enabling you to modify system behavior at every level, even to the point of replacing the entire application model.</span></span> <span data-ttu-id="af6ec-106">В этом разделе кратко рассматриваются различные области расширения и даются ссылки на дополнительные сведения о каждой из них.</span><span class="sxs-lookup"><span data-stu-id="af6ec-106">This topic outlines the various areas of extension and points to more information about each.</span></span>  
   
-## Области расширения  
- Можно расширять следующее.  
+## <a name="areas-to-extend"></a><span data-ttu-id="af6ec-107">Области расширения</span><span class="sxs-lookup"><span data-stu-id="af6ec-107">Areas to Extend</span></span>  
+ <span data-ttu-id="af6ec-108">Можно расширять следующее.</span><span class="sxs-lookup"><span data-stu-id="af6ec-108">You can extend:</span></span>  
   
--   Среду выполнения приложения.  При этом расширяются диспетчеризация и обработка сообщений для приложения.  Сюда входит также расширение системы безопасности, системы метаданных, системы сериализации, а также привязок и элементов привязки, соединяющих приложение с системой базовых каналов.  
+-   <span data-ttu-id="af6ec-109">Среду выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-109">The application runtime.</span></span> <span data-ttu-id="af6ec-110">При этом расширяются диспетчеризация и обработка сообщений для приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-110">This extends the dispatching and the processing of messages for the application.</span></span> <span data-ttu-id="af6ec-111">Сюда входит также расширение системы безопасности, системы метаданных, системы сериализации, а также привязок и элементов привязки, соединяющих приложение с системой базовых каналов.</span><span class="sxs-lookup"><span data-stu-id="af6ec-111">This area also includes extending the security system, the metadata system, the serialization system, and the bindings and binding elements that connect the application with the underlying channel system.</span></span>  
   
--   Канал и среду выполнения канала.  При этом расширяется система, функционирующая на уровне сообщения, и обеспечивается поддержка протоколов, транспорта и кодирования.  
+-   <span data-ttu-id="af6ec-112">Канал и среду выполнения канала.</span><span class="sxs-lookup"><span data-stu-id="af6ec-112">The channel and channel runtime.</span></span> <span data-ttu-id="af6ec-113">При этом расширяется система, функционирующая на уровне сообщения, и обеспечивается поддержка протоколов, транспорта и кодирования.</span><span class="sxs-lookup"><span data-stu-id="af6ec-113">This extends the system that functions at the message level, providing protocol, transport, and encoding support.</span></span>  
   
--   Среду выполнения узла.  При этом расширяется связь домена приложения размещения с каналом и средой выполнения приложения.  
+-   <span data-ttu-id="af6ec-114">Среду выполнения узла.</span><span class="sxs-lookup"><span data-stu-id="af6ec-114">The host runtime.</span></span> <span data-ttu-id="af6ec-115">При этом расширяется связь домена приложения размещения с каналом и средой выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-115">This extends the relationship of the hosting application domain to the channel and application runtime.</span></span>  
   
-### Расширение среды выполнения приложения  
- В приложениях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] существует различие между сообщениями, предназначенными для соответствующего канала, и сообщениями, предназначенными для самого приложения.  Сообщения канала поддерживают некоторую связанную с каналами функциональность, такую как установление защищенного взаимодействия или установление безопасного сеанса.  Эти сообщения недоступны среде выполнения приложения; они обрабатываются до задействования уровня приложения.  
+### <a name="extending-the-application-runtime"></a><span data-ttu-id="af6ec-116">Расширение среды выполнения приложения</span><span class="sxs-lookup"><span data-stu-id="af6ec-116">Extending the Application Runtime</span></span>  
+ <span data-ttu-id="af6ec-117">В приложениях [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] существует различие между сообщениями, предназначенными для соответствующего канала, и сообщениями, предназначенными для самого приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-117">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications, there is a distinction between messages that are destined for a corresponding channel and messages that are destined for the application itself.</span></span> <span data-ttu-id="af6ec-118">Сообщения канала поддерживают некоторую связанную с каналами функциональность, такую как установление защищенного взаимодействия или установление безопасного сеанса.</span><span class="sxs-lookup"><span data-stu-id="af6ec-118">Channel messages support some channel-related functionality, such as establishing a secure conversation or establishing a reliable session.</span></span> <span data-ttu-id="af6ec-119">Эти сообщения недоступны среде выполнения приложения; они обрабатываются до задействования уровня приложения.</span><span class="sxs-lookup"><span data-stu-id="af6ec-119">These messages are not available to the application runtime; they are processed before the application layer is involved.</span></span>  
   
- Сообщения приложения содержат данные, предназначенные для операции службы или клиента, созданной разработчиком или его заказчиком.  Эти сообщения доступны системе расширения уровня приложения в виде сообщений или в виде объектов, в зависимости от конкретных потребностей.  
+ <span data-ttu-id="af6ec-120">Сообщения приложения содержат данные, предназначенные для операции службы или клиента, созданной разработчиком или его заказчиком.</span><span class="sxs-lookup"><span data-stu-id="af6ec-120">Application messages contain data that is destined for a client or service operation that you or your customer has created.</span></span> <span data-ttu-id="af6ec-121">Эти сообщения доступны системе расширения уровня приложения в виде сообщений или в виде объектов, в зависимости от конкретных потребностей.</span><span class="sxs-lookup"><span data-stu-id="af6ec-121">These messages are available to the application-level extension system in message or object form, depending upon your needs.</span></span>  
   
- Все сообщения проходят через систему каналов; только сообщения приложения передаются из системы каналов в приложение.  Для создания новой функциональности уровня канала необходимо расширить систему каналов.  Для создания новой функциональности уровня приложения необходимо расширить среду выполнения службы или клиента \(соответственно диспетчеры и фабрики каналов\).  [!INCLUDE[crabout](../../../includes/crabout-md.md)] расширении среды выполнения приложения см. в разделе [Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ <span data-ttu-id="af6ec-122">Все сообщения проходят через систему каналов; только сообщения приложения передаются из системы каналов в приложение.</span><span class="sxs-lookup"><span data-stu-id="af6ec-122">All messages pass through the channel system; only application messages are passed from the channel system into the application.</span></span> <span data-ttu-id="af6ec-123">Для создания новой функциональности уровня канала необходимо расширить систему каналов.</span><span class="sxs-lookup"><span data-stu-id="af6ec-123">To create new channel-level functionality, you must extend the channel system.</span></span> <span data-ttu-id="af6ec-124">Для создания новой функциональности уровня приложения необходимо расширить среду выполнения службы или клиента (соответственно диспетчеры и фабрики каналов).</span><span class="sxs-lookup"><span data-stu-id="af6ec-124">To create new application-level functionality, you must extend the service or client runtime (dispatchers and channel factories, respectively).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="af6ec-125">расширение среды выполнения приложения в разделе [расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-125"> extending the application runtime, see [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
-#### Расширение безопасности  
- Для построения пользовательских механизмов безопасности, таких как маркеры и учетные данные, необходимо расширить систему безопасности.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение системы безопасности](../../../docs/framework/wcf/extending/extending-security.md).  
+#### <a name="extending-security"></a><span data-ttu-id="af6ec-126">Расширение безопасности</span><span class="sxs-lookup"><span data-stu-id="af6ec-126">Extending Security</span></span>  
+ <span data-ttu-id="af6ec-127">Для построения пользовательских механизмов безопасности, таких как маркеры и учетные данные, необходимо расширить систему безопасности.</span><span class="sxs-lookup"><span data-stu-id="af6ec-127">To build custom security mechanisms such as tokens and credentials, you must extend the security system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-128">[Расширение безопасности](../../../docs/framework/wcf/extending/extending-security.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-128"> [Extending Security](../../../docs/framework/wcf/extending/extending-security.md).</span></span>  
   
-#### Расширение системы метаданных  
- Чтобы предоставлять метаданные способом, отличным от предусмотренного по умолчанию, необходимо расширить систему метаданных.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение системы метаданных](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+#### <a name="extending-metadata"></a><span data-ttu-id="af6ec-129">Расширение системы метаданных</span><span class="sxs-lookup"><span data-stu-id="af6ec-129">Extending Metadata</span></span>  
+ <span data-ttu-id="af6ec-130">Чтобы предоставлять метаданные способом, отличным от предусмотренного по умолчанию, необходимо расширить систему метаданных.</span><span class="sxs-lookup"><span data-stu-id="af6ec-130">To expose your metadata in differently than the default, you must extend the metadata system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-131">[Расширение системы метаданных](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-131"> [Extending the Metadata System](../../../docs/framework/wcf/extending/extending-the-metadata-system.md).</span></span>  
   
-#### Расширение системы сериализации  
- Для построения пользовательских кодировщиков, создания суррогатов данных или выполнения какой\-либо иной обработки, подразумевающей настройку передаваемых данных, необходимо расширить систему сериализации.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение кодировщиков и сериализаторов](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).  
+#### <a name="extending-serialization"></a><span data-ttu-id="af6ec-132">Расширение системы сериализации</span><span class="sxs-lookup"><span data-stu-id="af6ec-132">Extending Serialization</span></span>  
+ <span data-ttu-id="af6ec-133">Для построения пользовательских кодировщиков, создания суррогатов данных или выполнения какой-либо иной обработки, подразумевающей настройку передаваемых данных, необходимо расширить систему сериализации.</span><span class="sxs-lookup"><span data-stu-id="af6ec-133">To build custom encoders, provide data surrogates, or other work involving the customization of transferred data, you must extend the serialization system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-134">[Расширение кодировщиков и сериализаторов](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-134"> [Extending Encoders and Serializers](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md).</span></span>  
   
-#### Расширение привязок  
- Для связывания каналов транспорта или протокола с уровнем приложения необходимо расширить систему привязок.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение привязок](../../../docs/framework/wcf/extending/extending-bindings.md).  
+#### <a name="extending-bindings"></a><span data-ttu-id="af6ec-135">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="af6ec-135">Extending Bindings</span></span>  
+ <span data-ttu-id="af6ec-136">Для связывания каналов транспорта или протокола с уровнем приложения необходимо расширить систему привязок.</span><span class="sxs-lookup"><span data-stu-id="af6ec-136">To associate transport or protocol channels with the application layer, you must extend the binding system.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-137">[Расширение привязок](../../../docs/framework/wcf/extending/extending-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-137"> [Extending Bindings](../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
-### Расширение системы каналов  
- О том, как создавать каналы с поддержкой пользовательского транспорта или пользовательской функциональности протокола, см. в разделе [Расширение уровня каналов](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
+### <a name="extending-the-channel-system"></a><span data-ttu-id="af6ec-138">Расширение системы каналов</span><span class="sxs-lookup"><span data-stu-id="af6ec-138">Extending the Channel System</span></span>  
+ <span data-ttu-id="af6ec-139">Для создания каналов, которые поддерживают пользовательский транспорт или функциональные возможности протокола, в разделе [расширение уровня каналов](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-139">To create channels that support custom transports or protocol functionality, see [Extending the Channel Layer](../../../docs/framework/wcf/extending/extending-the-channel-layer.md).</span></span>  
   
-### Расширение системы размещения службы  
- Для изменения модели приложений в масштабе всей службы необходимо расширить класс <xref:System.ServiceModel.ServiceHostBase?displayProperty=fullName>.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+### <a name="extending-the-service-hosting-system"></a><span data-ttu-id="af6ec-140">Расширение системы размещения службы</span><span class="sxs-lookup"><span data-stu-id="af6ec-140">Extending the Service Hosting System</span></span>  
+ <span data-ttu-id="af6ec-141">Для изменения модели приложений в масштабе всей службы необходимо расширить класс <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="af6ec-141">To modify the service-wide application model, you must extend <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-142">[Расширение ServiceHost и уровень модели службы](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-142"> [Extending ServiceHost and the Service Model Layer](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).</span></span>  
   
- Для изменения связи между доменом приложения размещения и узлом службы необходимо расширить класс <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=fullName>.  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Расширение размещения с использованием ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
+ <span data-ttu-id="af6ec-143">Для изменения связи между доменом приложения размещения и узлом службы необходимо расширить класс <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="af6ec-143">To modify the relationship between the hosting application domain and the service host, you must extend the <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> class.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="af6ec-144">[Расширение размещения с использованием ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).</span><span class="sxs-lookup"><span data-stu-id="af6ec-144"> [Extending Hosting Using ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).</span></span>  
   
-## См. также  
- [Расширение WCF](../../../docs/framework/wcf/extending/extending-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="af6ec-145">См. также</span><span class="sxs-lookup"><span data-stu-id="af6ec-145">See Also</span></span>  
+ [<span data-ttu-id="af6ec-146">Расширение WCF</span><span class="sxs-lookup"><span data-stu-id="af6ec-146">Extending WCF</span></span>](../../../docs/framework/wcf/extending/extending-wcf.md)

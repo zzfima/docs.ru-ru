@@ -1,43 +1,48 @@
 ---
-title: "Практическое руководство. Использование класса отрисовки элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "профессиональный вид, отрисовка элементов управления Windows Forms"
-  - "визуальные стили, отрисовка элементов управления Windows Forms"
-  - "визуальные темы, применение к элементам управления Windows Forms"
+title: "Практическое руководство. Использование класса отрисовки элемента управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- professional appearance [Windows Forms], rendering Windows Forms controls
+- visual themes [Windows Forms], applying to Windows Forms controls
+- visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ff10cd12889750e3d32fcfce080d472f40bb9c2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Использование класса отрисовки элемента управления
-В следующем примере кода показывается, как использовать класс <xref:System.Windows.Forms.ComboBoxRenderer> для визуализации стрелки поля с раскрывающимся списком  Этот пример включает метод <xref:System.Windows.Forms.Control.OnPaint%2A> простого пользовательского элемента управления.  Свойство <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=fullName> определяют, будут ли включены визуальные стили в клиентской области окон приложения.  Если визуальные стили включены, метод <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=fullName> визуализирует стрелку поля с раскрывающимся списком в применением визуальных стилей; в противном случае, метод <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=fullName> визуализирует эту стрелку в классическом стиле Windows.  
+# <a name="how-to-use-a-control-rendering-class"></a><span data-ttu-id="c80c3-102">Практическое руководство. Использование класса отрисовки элемента управления</span><span class="sxs-lookup"><span data-stu-id="c80c3-102">How to: Use a Control Rendering Class</span></span>
+<span data-ttu-id="c80c3-103">В этом примере демонстрируется использование <xref:System.Windows.Forms.ComboBoxRenderer> класса для отображения стрелку раскрывающегося списка поля со списком поле элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c80c3-103">This example demonstrates how to use the <xref:System.Windows.Forms.ComboBoxRenderer> class to render the drop-down arrow of a combo box control.</span></span> <span data-ttu-id="c80c3-104">Пример состоит из <xref:System.Windows.Forms.Control.OnPaint%2A> метод простого пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c80c3-104">The example consists of the <xref:System.Windows.Forms.Control.OnPaint%2A> method of a simple custom control.</span></span> <span data-ttu-id="c80c3-105"><xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Свойство используется для определения, включены ли визуальные стили в клиентской области окна приложения.</span><span class="sxs-lookup"><span data-stu-id="c80c3-105">The <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> property is used to determine whether visual styles are enabled in the client area of application windows.</span></span> <span data-ttu-id="c80c3-106">Если визуальные стили включены, то <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> метода сделает стрелку раскрывающегося списка с применением визуальных стилей; в противном случае <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> метода сделает стрелку раскрывающегося списка в классическом стиле Windows.</span><span class="sxs-lookup"><span data-stu-id="c80c3-106">If visual styles are active, then the <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> method will render the drop-down arrow with visual styles; otherwise, the <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> method will render the drop-down arrow in the classic Windows style.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="c80c3-107">Пример</span><span class="sxs-lookup"><span data-stu-id="c80c3-107">Example</span></span>  
  [!code-cpp[System.Windows.Forms_ControlRenderer#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/cpp/form1.cpp#10)]
  [!code-csharp[System.Windows.Forms_ControlRenderer#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms_ControlRenderer#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms_ControlRenderer/VB/form1.vb#10)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a><span data-ttu-id="c80c3-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="c80c3-108">Compiling the Code</span></span>  
+ <span data-ttu-id="c80c3-109">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="c80c3-109">This example requires:</span></span>  
   
--   Пользовательский элемент управления, производный от класса <xref:System.Windows.Forms.Control>.  
+-   <span data-ttu-id="c80c3-110">Пользовательский элемент управления на основе <xref:System.Windows.Forms.Control> класса.</span><span class="sxs-lookup"><span data-stu-id="c80c3-110">A custom control derived from the <xref:System.Windows.Forms.Control> class.</span></span>  
   
--   <xref:System.Windows.Forms.Form> с элементом управления.  
+-   <span data-ttu-id="c80c3-111">Объект <xref:System.Windows.Forms.Form> , на котором размещается пользовательский элемент управления.</span><span class="sxs-lookup"><span data-stu-id="c80c3-111">A <xref:System.Windows.Forms.Form> that hosts the custom control.</span></span>  
   
--   Ссылки на пространства имен <xref:System?displayProperty=fullName>, <xref:System.Drawing?displayProperty=fullName>, <xref:System.Windows.Forms?displayProperty=fullName> и <xref:System.Windows.Forms.VisualStyles?displayProperty=fullName>.  
+-   <span data-ttu-id="c80c3-112">Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="c80c3-112">References to the <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, and <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> namespaces.</span></span>  
   
-## См. также  
- [Отрисовка элементов управления с применением визуальных стилей](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+## <a name="see-also"></a><span data-ttu-id="c80c3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="c80c3-113">See Also</span></span>  
+ [<span data-ttu-id="c80c3-114">Отрисовка элементов управления с применением визуальных стилей</span><span class="sxs-lookup"><span data-stu-id="c80c3-114">Rendering Controls with Visual Styles</span></span>](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)

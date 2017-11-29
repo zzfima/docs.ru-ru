@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
 - dispatch-only mode
@@ -23,38 +17,37 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 838348b3af485025ee196931237527333be73235
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eebbf48f084a0c0125bf40e5e14b8c71c1b0a6ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="dirtycastandcalloninterface-mda"></a>Помощник по отладке управляемого кода dirtyCastAndCallOnInterface
-Помощник по отладке управляемого кода (MDA) `dirtyCastAndCallOnInterface` активируется при попытке выполнения вызова с ранним связыванием посредством виртуальной таблицы в интерфейсе класса, который был отмечен как интерфейс только позднего связывания.  
+# <a name="dirtycastandcalloninterface-mda"></a><span data-ttu-id="c5a76-102">Помощник по отладке управляемого кода dirtyCastAndCallOnInterface</span><span class="sxs-lookup"><span data-stu-id="c5a76-102">dirtyCastAndCallOnInterface MDA</span></span>
+<span data-ttu-id="c5a76-103">Помощник по отладке управляемого кода (MDA) `dirtyCastAndCallOnInterface` активируется при попытке выполнения вызова с ранним связыванием посредством виртуальной таблицы в интерфейсе класса, который был отмечен как интерфейс только позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="c5a76-103">The `dirtyCastAndCallOnInterface` managed debugging assistant (MDA) is activated when an early-bound call through a vtable is attempted on a class interface that has been marked late-bound only.</span></span>  
   
-## <a name="symptoms"></a>Признаки  
- Приложение вызывает нарушение прав доступа или проявляет непредвиденное поведение при размещении вызова с ранним связыванием посредством СОМ в среде CLR.  
+## <a name="symptoms"></a><span data-ttu-id="c5a76-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="c5a76-104">Symptoms</span></span>  
+ <span data-ttu-id="c5a76-105">Приложение вызывает нарушение прав доступа или проявляет непредвиденное поведение при размещении вызова с ранним связыванием посредством СОМ в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="c5a76-105">An application throws an access violation or has unexpected behavior when placing an early-bound call via COM into the CLR.</span></span>  
   
-## <a name="cause"></a>Причина  
- Код пытается выполнить вызов с ранним связыванием с помощью виртуальной таблицы через интерфейс класса, отмеченный как интерфейс только позднего связывания. Обратите внимание, что по умолчанию интерфейсы класса определяются как интерфейсы только позднего связывания. Они также могут быть идентифицированы как интерфейсы позднего связывания с помощью атрибута <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> со значением <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).  
+## <a name="cause"></a><span data-ttu-id="c5a76-106">Причина</span><span class="sxs-lookup"><span data-stu-id="c5a76-106">Cause</span></span>  
+ <span data-ttu-id="c5a76-107">Код пытается выполнить вызов с ранним связыванием с помощью виртуальной таблицы через интерфейс класса, отмеченный как интерфейс только позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="c5a76-107">Code is attempting an early-bound call through a vtable via a class interface that is late-bound only.</span></span> <span data-ttu-id="c5a76-108">Обратите внимание, что по умолчанию интерфейсы класса определяются как интерфейсы только позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="c5a76-108">Note that by default class interfaces are identified as being late-bound only.</span></span> <span data-ttu-id="c5a76-109">Они также могут быть идентифицированы как интерфейсы позднего связывания с помощью атрибута <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> со значением <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).</span><span class="sxs-lookup"><span data-stu-id="c5a76-109">They can also be identified as late-bound with the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute with an <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> value (`[ClassInterface(ClassInterfaceType.AutoDispatch)]`).</span></span>  
   
-## <a name="resolution"></a>Решение  
- Рекомендуемое решение состоит в определении явного интерфейса для использования в COM и выполнении вызова клиентов COM через этот интерфейс вместо автоматически созданного интерфейса класса. Кроме того, вызов из COM можно преобразовать в вызов с поздним связыванием посредством `IDispatch`.  
+## <a name="resolution"></a><span data-ttu-id="c5a76-110">Решение</span><span class="sxs-lookup"><span data-stu-id="c5a76-110">Resolution</span></span>  
+ <span data-ttu-id="c5a76-111">Рекомендуемое решение состоит в определении явного интерфейса для использования в COM и выполнении вызова клиентов COM через этот интерфейс вместо автоматически созданного интерфейса класса.</span><span class="sxs-lookup"><span data-stu-id="c5a76-111">The recommended resolution is to define an explicit interface for use by COM and have the COM clients call through this interface instead of through the automatically generated class interface.</span></span> <span data-ttu-id="c5a76-112">Кроме того, вызов из COM можно преобразовать в вызов с поздним связыванием посредством `IDispatch`.</span><span class="sxs-lookup"><span data-stu-id="c5a76-112">Alternatively, the call from COM can be transformed into a late-bound call via `IDispatch`.</span></span>  
   
- Наконец, возможно идентифицировать класс как <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`), чтобы разрешить размещение вызовов с ранним связыванием из COM; однако использование <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> категорически не рекомендуется из-за ограничений управления версиями, описанных в <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+ <span data-ttu-id="c5a76-113">Наконец, возможно идентифицировать класс как <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`), чтобы разрешить размещение вызовов с ранним связыванием из COM; однако использование <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> категорически не рекомендуется из-за ограничений управления версиями, описанных в <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span><span class="sxs-lookup"><span data-stu-id="c5a76-113">Finally, it is possible to identify the class as <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) to allow early bound calls to be placed from COM; however, using <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> is strongly discouraged because of the versioning limitations described in <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
- Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR. Он только сообщает данные о вызовах с ранним связыванием в интерфейсах позднего связывания.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="c5a76-114">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="c5a76-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="c5a76-115">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="c5a76-115">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="c5a76-116">Он только сообщает данные о вызовах с ранним связыванием в интерфейсах позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="c5a76-116">It only reports data about early-bound calls on late-bound interfaces.</span></span>  
   
-## <a name="output"></a>Вывод  
- Имя метода или имя поля, доступного для вызова с ранним связыванием.  
+## <a name="output"></a><span data-ttu-id="c5a76-117">Вывод</span><span class="sxs-lookup"><span data-stu-id="c5a76-117">Output</span></span>  
+ <span data-ttu-id="c5a76-118">Имя метода или имя поля, доступного для вызова с ранним связыванием.</span><span class="sxs-lookup"><span data-stu-id="c5a76-118">The name of the method or name of the field being accessed early-bound.</span></span>  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a><span data-ttu-id="c5a76-119">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="c5a76-119">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -64,7 +57,6 @@ ms.lasthandoff: 08/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="c5a76-120">См. также</span><span class="sxs-lookup"><span data-stu-id="c5a76-120">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [<span data-ttu-id="c5a76-121">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="c5a76-121">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,52 +1,53 @@
 ---
-title: "Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [Windows Forms], добавление"
-  - "формы, добавление элементов управления ActiveX"
-  - "элементы управления Windows Forms, элементы управления ActiveX"
+title: "Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms."
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- forms [Windows Forms], adding ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.
-Хотя конструктор Windows Forms оптимизирован для размещения элементов управления Windows Forms, в Windows Forms можно также помещать элементы управления ActiveX.  
+# <a name="how-to-add-activex-controls-to-windows-forms"></a><span data-ttu-id="b88b7-102">Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b88b7-102">How to: Add ActiveX Controls to Windows Forms</span></span>
+<span data-ttu-id="b88b7-103">Хотя конструктор Windows Forms оптимизирован для размещения элементов управления Windows Forms, можно также поместить элементы управления ActiveX в формах Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b88b7-103">While the Windows Forms Designer is optimized to host Windows Forms controls, you can also put ActiveX controls on Windows Forms.</span></span>  
   
 > [!CAUTION]
->  Для Windows Forms существуют ограничения производительности, когда к ним добавляются элементы управления ActiveX.  
+>  <span data-ttu-id="b88b7-104">Существуют ограничения производительности для форм Windows Forms, когда к ним добавляются элементы управления ActiveX.</span><span class="sxs-lookup"><span data-stu-id="b88b7-104">There are performance limitations for Windows Forms when ActiveX controls are added to them.</span></span>  
   
- Перед добавлением элементов управления ActiveX в форму необходимо добавить их в панель элементов.  Дополнительные сведения см. в разделе [Компоненты COM, диалоговое окно настройки панели элементов](http://msdn.microsoft.com/ru-ru/171333f3-f207-4e02-bbdc-17862556212c).  
+ <span data-ttu-id="b88b7-105">Прежде чем добавлять элементы управления ActiveX в форму, необходимо добавить их в область элементов.</span><span class="sxs-lookup"><span data-stu-id="b88b7-105">Before you add ActiveX controls to your form, you must add them to the Toolbox.</span></span> <span data-ttu-id="b88b7-106">Дополнительные сведения см. в разделе [COM-компонентов, Настройка области элементов диалоговое окно](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span><span class="sxs-lookup"><span data-stu-id="b88b7-106">For more information, see [COM Components, Customize Toolbox Dialog Box](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, выберите **Параметры импорта и экспорта** в меню **Сервис**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="b88b7-107">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="b88b7-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b88b7-108">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="b88b7-108">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b88b7-109">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="b88b7-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы добавить элемент управления ActiveX в форму Windows Forms, выполните следующие действия.  
+### <a name="to-add-an-activex-control-to-your-windows-form"></a><span data-ttu-id="b88b7-110">Добавление элемента управления ActiveX в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-110">To add an ActiveX control to your Windows Form</span></span>  
   
--   Дважды щелкните элемент управления на панели элементов.  
+-   <span data-ttu-id="b88b7-111">Дважды щелкните элемент управления на панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="b88b7-111">Double-click the control on the Toolbox.</span></span>  
   
-     Все ссылки на проект будут добавлены к элементу управления с помощью [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  Дополнительные сведения о том, что нужно помнить при использовании элементов управления ActiveX в Windows Forms см. в разделе [Соображения по размещению элемента управления ActiveX в форме Windows Forms](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
+     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="b88b7-112">Добавляет все ссылки на элемент управления в проекте.</span><span class="sxs-lookup"><span data-stu-id="b88b7-112"> adds all references to the control in your project.</span></span> <span data-ttu-id="b88b7-113">Дополнительные сведения о том, что следует учитывать при использовании элементов управления ActiveX в формах Windows Forms см. в разделе [вопросы размещения элемента управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span><span class="sxs-lookup"><span data-stu-id="b88b7-113">For more information about things to keep in mind when using ActiveX controls on Windows Forms, see [Considerations When Hosting an ActiveX Control on a Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span></span>  
   
     > [!NOTE]
-    >  Средство импорта элементов управления ActiveX в Windows Forms — программа AxImp.exe — создает аргументы события другого типа, чем требуется при импортировании библиотек динамической компоновки ActiveX.  Аргументы, создаваемые с помощью AxImp.exe, аналогичны следующим: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, когда ожидается `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`.  Следует помнить, что подобное нарушение правил не мешает нормальной работе кода.  Подробности см. в разделе [Средство импорта элементов управления ActiveX в Windows Forms \(Aximp.exe\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    >  <span data-ttu-id="b88b7-114">Импорта элемента управления ActiveX Windows Forms (AxImp.exe) создает аргументы события другого типа, чем требуется при импортировании библиотек динамической компоновки ActiveX.</span><span class="sxs-lookup"><span data-stu-id="b88b7-114">The Windows Forms ActiveX Control Importer (AxImp.exe) creates event arguments of a different type than expected upon importation of ActiveX dynamic link libraries.</span></span> <span data-ttu-id="b88b7-115">Аргументы, создаваемые с AxImp.exe примерно следующего содержания: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, когда `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` ожидается.</span><span class="sxs-lookup"><span data-stu-id="b88b7-115">The arguments created by AxImp.exe are similar to the following: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, when `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` is expected.</span></span> <span data-ttu-id="b88b7-116">Имейте в виду, что подобное нарушение правил не мешает кода правильной работе.</span><span class="sxs-lookup"><span data-stu-id="b88b7-116">Be aware that this irregularity does not prevent code from functioning normally.</span></span> <span data-ttu-id="b88b7-117">Дополнительные сведения см. в разделе [импорта элемента управления ActiveX Windows Forms (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="b88b7-117">For details, see [Windows Forms ActiveX Control Importer (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](http://msdn.microsoft.com/ru-ru/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Практическое руководство. Добавление элементов управления в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="b88b7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="b88b7-118">See Also</span></span>  
+ [<span data-ttu-id="b88b7-119">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-119">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="b88b7-120">Сравнение элементов управления и программируемых объектов в разных языках и библиотеках</span><span class="sxs-lookup"><span data-stu-id="b88b7-120">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="b88b7-121">Практическое руководство. Добавление элементов управления в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-121">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="b88b7-122">Упорядочение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-122">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="b88b7-123">Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-123">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="b88b7-124">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-124">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="b88b7-125">Функциональная классификация элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b88b7-125">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -1,52 +1,55 @@
 ---
-title: "Модель веб-программирования HTTP WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "POX"
-  - "REST"
-  - "модель программирования веб-служб [WCF]"
+title: "Модель веб-программирования HTTP WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- web services programming model [WCF]
+- POX
+- REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f51ad4a228de0a4a2fae0fb325d045bb09263b3d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Модель веб-программирования HTTP WCF
-Модель веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет разработчикам обрабатывать операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для конечных точек, не являющихся конечными точками SOAP.Эта возможность подробно описана в следующих подразделах.  
+# <a name="wcf-web-http-programming-model"></a><span data-ttu-id="fa41a-102">Модель веб-программирования HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="fa41a-102">WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="fa41a-103">Модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет разработчикам обрабатывать операции службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для конечных точек, не являющихся конечными точками SOAP.</span><span class="sxs-lookup"><span data-stu-id="fa41a-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model allows developers to expose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service operations to non-SOAP endpoints.</span></span> <span data-ttu-id="fa41a-104">Эта возможность подробно описана в следующих подразделах.</span><span class="sxs-lookup"><span data-stu-id="fa41a-104">The topics in this section examine the feature in detail.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Содержит общие сведения о модели веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="fa41a-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="fa41a-105">In This Section</span></span>  
+ [<span data-ttu-id="fa41a-106">Общие сведения о модели программирования WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="fa41a-106">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ <span data-ttu-id="fa41a-107">Содержит общие сведения о модели веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fa41a-107">Provides an overview of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model.</span></span>  
   
- [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Описывает модель веб\-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и принципы ее работы.  
+ [<span data-ttu-id="fa41a-108">Объектная модель программирования WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="fa41a-108">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ <span data-ttu-id="fa41a-109">Описывает модель веб-программирования HTTP [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и принципы ее работы.</span><span class="sxs-lookup"><span data-stu-id="fa41a-109">Discusses the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model and how it works.</span></span>  
   
- [Как создать простую веб\-службу WCF HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- Порядок написания простой службы, предоставляющей конечную точку, не являющуюся конечной точкой SOAP.  
+ [<span data-ttu-id="fa41a-110">Как: Создание веб-службы HTTP Basic WCF</span><span class="sxs-lookup"><span data-stu-id="fa41a-110">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ <span data-ttu-id="fa41a-111">Порядок написания простой службы, предоставляющей конечную точку, не являющуюся конечной точкой SOAP.</span><span class="sxs-lookup"><span data-stu-id="fa41a-111">Describes how to write a basic service that exposes a non-SOAP endpoint.</span></span>  
   
- [Практическое руководство. Предоставление контрактов SOAP\- и веб\-клиентам](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
- Порядок написания простой службы, предоставляющей один и тот же контракт клиентам SOAP и клиентам, не работающим по протоколу SOAP.  
+ [<span data-ttu-id="fa41a-112">Как: предоставление контрактов SOAP и веб-клиентов</span><span class="sxs-lookup"><span data-stu-id="fa41a-112">How to: Expose a Contract to SOAP and Web Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ <span data-ttu-id="fa41a-113">Порядок написания простой службы, предоставляющей один и тот же контракт клиентам SOAP и клиентам, не работающим по протоколу SOAP.</span><span class="sxs-lookup"><span data-stu-id="fa41a-113">Describes how to write a basic service that exposes the same contract to both SOAP and non-SOAP clients.</span></span>  
   
- [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- Описание управления универсальными кодами ресурсов \(URI\) с помощью классов <xref:System.UriTemplate> и <xref:System.UriTemplateTable>.  
+ [<span data-ttu-id="fa41a-114">UriTemplate и UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="fa41a-114">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ <span data-ttu-id="fa41a-115">Описание управления универсальными кодами ресурсов (URI) с помощью классов <xref:System.UriTemplate> и <xref:System.UriTemplateTable>.</span><span class="sxs-lookup"><span data-stu-id="fa41a-115">Describes how to control URIs using <xref:System.UriTemplate> and <xref:System.UriTemplateTable>.</span></span>  
   
- [Поддержка кэширования для веб\-служб HTTP WCF](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- Описывает, как указать порядок кэширования для веб\-службы HTTP WCF.  
+ [<span data-ttu-id="fa41a-116">Поддержка кэширования для веб-службы HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="fa41a-116">Caching Support for WCF Web HTTP Services</span></span>](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ <span data-ttu-id="fa41a-117">Описывает, как указать порядок кэширования для веб-службы HTTP WCF.</span><span class="sxs-lookup"><span data-stu-id="fa41a-117">Describes how to specify caching behavior for a WCF Web HTTP service.</span></span>  
   
- [Форматирование веб\-объектов HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- Описывает, как указать формат ответа от веб\-службы HTTP WCF.  
+ [<span data-ttu-id="fa41a-118">Форматирование WCF Web HTTP</span><span class="sxs-lookup"><span data-stu-id="fa41a-118">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ <span data-ttu-id="fa41a-119">Описывает, как указать формат ответа от веб-службы HTTP WCF.</span><span class="sxs-lookup"><span data-stu-id="fa41a-119">Describes how to specify the format of the response from a WCF Web HTTP service.</span></span>  
   
- [Обработка ошибок веб\-протокола HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- Описывает, как возвращать ошибки веб\-клиентам WCF, включающие коды состояния HTTP и дополнительные, определяемые пользователями данные ошибок.  
+ [<span data-ttu-id="fa41a-120">Обработка ошибок HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="fa41a-120">WCF Web HTTP Error Handling</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
+ <span data-ttu-id="fa41a-121">Описывает, как возвращать ошибки веб-клиентам WCF, включающие коды состояния HTTP и дополнительные, определяемые пользователями данные ошибок.</span><span class="sxs-lookup"><span data-stu-id="fa41a-121">Describes how to return errors to WCF Web clients including HTTP status codes and additional user-defined error data.</span></span>  
   
- [Вызов службы в стиле REST из службы WCF](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- Описывает, как вызвать REST\-службу из службы WCF.
+ [<span data-ttu-id="fa41a-122">Вызов REST-службы из службы WCF</span><span class="sxs-lookup"><span data-stu-id="fa41a-122">Calling a REST-style service from a WCF service</span></span>](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
+ <span data-ttu-id="fa41a-123">Описывает, как вызвать REST-службу из службы WCF.</span><span class="sxs-lookup"><span data-stu-id="fa41a-123">Describes how to call a REST-style service from inside a WCF service.</span></span>

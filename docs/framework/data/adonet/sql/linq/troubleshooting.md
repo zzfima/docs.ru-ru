@@ -1,81 +1,84 @@
 ---
-title: "Устранение неполадок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Устранение неполадок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c4674acd6d097eb1cb03d5dd07b0c686404d1145
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Устранение неполадок
-В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
+# <a name="troubleshooting"></a><span data-ttu-id="26658-102">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="26658-102">Troubleshooting</span></span>
+<span data-ttu-id="26658-103">В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.</span><span class="sxs-lookup"><span data-stu-id="26658-103">The following information exposes some issues you might encounter in your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] applications, and provides suggestions to avoid or otherwise reduce the effect of these issues.</span></span>  
   
- Решение других проблем рассматривается в разделе [Часто задаваемые вопросы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
+ <span data-ttu-id="26658-104">Дополнительные проблемы рассматриваются в [вопросы и ответы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).</span><span class="sxs-lookup"><span data-stu-id="26658-104">Additional issues are addressed in [Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).</span></span>  
   
-## Неподдерживаемые стандартные операторы запросов  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает никакие методы стандартных операторов запросов \(например, <xref:System.Linq.Enumerable.ElementAt%2A>\).  В результате компилируемых проектов могут по\-прежнему возникать ошибки во время выполнения.  Для получения дополнительной информации см. [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="unsupported-standard-query-operators"></a><span data-ttu-id="26658-105">Неподдерживаемые стандартные операторы запросов</span><span class="sxs-lookup"><span data-stu-id="26658-105">Unsupported Standard Query Operators</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="26658-106"> не поддерживает никакие методы стандартных операторов запросов (например, <xref:System.Linq.Enumerable.ElementAt%2A>).</span><span class="sxs-lookup"><span data-stu-id="26658-106"> does not support all standard query operator methods (for example, <xref:System.Linq.Enumerable.ElementAt%2A>).</span></span> <span data-ttu-id="26658-107">В результате компилируемых проектов могут по-прежнему возникать ошибки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="26658-107">As a result, projects that compile can still produce run-time errors.</span></span> <span data-ttu-id="26658-108">Дополнительные сведения см. в разделе [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).</span><span class="sxs-lookup"><span data-stu-id="26658-108">For more information, see [Standard Query Operator Translation](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).</span></span>  
   
-## Проблемы с использованием памяти  
- Если запрос использует находящуюся в памяти коллекцию и <xref:System.Data.Linq.Table%601> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], он может быть выполнен в памяти с учетом порядка указания двух коллекций.  Если запрос следует выполнить в памяти, извлекать данные из таблицы базы данных нет необходимости.  
+## <a name="memory-issues"></a><span data-ttu-id="26658-109">Проблемы с использованием памяти</span><span class="sxs-lookup"><span data-stu-id="26658-109">Memory Issues</span></span>  
+ <span data-ttu-id="26658-110">Если запрос использует находящуюся в памяти коллекцию и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, запрос может быть выполнен в памяти, в зависимости от порядка, в котором указаны двух коллекций.</span><span class="sxs-lookup"><span data-stu-id="26658-110">If a query involves an in-memory collection and [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, the query might be executed in memory, depending on the order in which the two collections are specified.</span></span> <span data-ttu-id="26658-111">Если запрос следует выполнить в памяти, извлекать данные из таблицы базы данных нет необходимости.</span><span class="sxs-lookup"><span data-stu-id="26658-111">If the query must be executed in memory, then the data from the database table will need to be retrieved.</span></span>  
   
- Этот способ неэффективен и может привести к потреблению значительных ресурсов памяти и процессора.  Попытайтесь исключить подобные мультидоменные запросы.  
+ <span data-ttu-id="26658-112">Этот способ неэффективен и может привести к потреблению значительных ресурсов памяти и процессора.</span><span class="sxs-lookup"><span data-stu-id="26658-112">This approach is inefficient and could result in significant memory and processor usage.</span></span> <span data-ttu-id="26658-113">Попытайтесь исключить подобные мультидоменные запросы.</span><span class="sxs-lookup"><span data-stu-id="26658-113">Try to avoid such multi-domain queries.</span></span>  
   
-## Имена файлов и средство SQLMetal  
- Чтобы указать имя входного файла, добавьте имя в командную строку в качестве входного файла.  Включение имени файла в строку подключения \(параметром **\/conn**\) не поддерживается.  Для получения дополнительной информации см. [SqlMetal.exe \(средство создания кода\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+## <a name="file-names-and-sqlmetal"></a><span data-ttu-id="26658-114">Имена файлов и средство SQLMetal</span><span class="sxs-lookup"><span data-stu-id="26658-114">File Names and SQLMetal</span></span>  
+ <span data-ttu-id="26658-115">Чтобы указать имя входного файла, добавьте имя в командную строку в качестве входного файла.</span><span class="sxs-lookup"><span data-stu-id="26658-115">To specify an input file name, add the name to the command line as the input file.</span></span> <span data-ttu-id="26658-116">Включение имени файла в строку подключения (параметром **/conn** ) не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="26658-116">Including the file name in the connection string (using the **/conn** option) is not supported.</span></span> <span data-ttu-id="26658-117">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="26658-117">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
-## Проекты библиотеки классов  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] создает строку подключения в файле `app.config` проекта.  Файл `app.config` не используется в проектах библиотек классов.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения, заданную в файлах, созданных во время разработки.  Изменение значения в `app.config` не приводит к изменениям базы данных, к которой подключается приложение.  
+## <a name="class-library-projects"></a><span data-ttu-id="26658-118">Проекты библиотеки классов</span><span class="sxs-lookup"><span data-stu-id="26658-118">Class Library Projects</span></span>  
+ <span data-ttu-id="26658-119">[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] создает строку подключения в файле `app.config` проекта.</span><span class="sxs-lookup"><span data-stu-id="26658-119">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] creates a connection string in the `app.config` file of the project.</span></span> <span data-ttu-id="26658-120">Файл `app.config` не используется в проектах библиотек классов.</span><span class="sxs-lookup"><span data-stu-id="26658-120">In class library projects, the `app.config` file is not used.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="26658-121"> использует строку соединения, заданную в файлах, созданных во время разработки.</span><span class="sxs-lookup"><span data-stu-id="26658-121"> uses the Connection String provided in the design-time files.</span></span> <span data-ttu-id="26658-122">Изменение значения в `app.config` не приводит к изменениям базы данных, к которой подключается приложение.</span><span class="sxs-lookup"><span data-stu-id="26658-122">Changing the value in `app.config` does not change the database to which your application connects.</span></span>  
   
-## Каскадное удаление  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает или не распознает операции каскадного удаления.  Если требуется удалить строку в таблице, имеющей ограничения, необходимо выполнить любое из следующих действий.  
+## <a name="cascade-delete"></a><span data-ttu-id="26658-123">Каскадное удаление</span><span class="sxs-lookup"><span data-stu-id="26658-123">Cascade Delete</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="26658-124"> не поддерживает или не распознает операции каскадного удаления.</span><span class="sxs-lookup"><span data-stu-id="26658-124"> does not support or recognize cascade-delete operations.</span></span> <span data-ttu-id="26658-125">Если требуется удалить строку в таблице, имеющей ограничения, необходимо выполнить любое из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="26658-125">If you want to delete a row in a table that has constraints against it, you must do either of the following:</span></span>  
   
--   Установите правило `ON DELETE CASCADE` в ограничении внешнего ключа в базе данных.  
+-   <span data-ttu-id="26658-126">Установите правило `ON DELETE CASCADE` в ограничении внешнего ключа в базе данных.</span><span class="sxs-lookup"><span data-stu-id="26658-126">Set the `ON DELETE CASCADE` rule in the foreign-key constraint in the database.</span></span>  
   
--   Используйте собственный код, чтобы сначала удалить дочерние объекты, не допускающие удаление родительского объекта.  
+-   <span data-ttu-id="26658-127">Используйте собственный код, чтобы сначала удалить дочерние объекты, не допускающие удаление родительского объекта.</span><span class="sxs-lookup"><span data-stu-id="26658-127">Use your own code to first delete the child objects that prevent the parent object from being deleted.</span></span>  
   
- В противном случае возникнет исключение <xref:System.Data.SqlClient.SqlException>.  
+ <span data-ttu-id="26658-128">В противном случае возникнет исключение <xref:System.Data.SqlClient.SqlException>.</span><span class="sxs-lookup"><span data-stu-id="26658-128">Otherwise, a <xref:System.Data.SqlClient.SqlException> exception is thrown.</span></span>  
   
- Для получения дополнительной информации см. [Как удалять строки из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ <span data-ttu-id="26658-129">Дополнительные сведения см. в разделе [как: удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span><span class="sxs-lookup"><span data-stu-id="26658-129">For more information, see [How to: Delete Rows From the Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span></span>  
   
-## Выражение, не подходящее для запроса  
- При получении ошибки «Выражение \[выражение\] незапрашиваемое; пропущена ссылка на сборку?» проверьте следующие условия.  
+## <a name="expression-not-queryable"></a><span data-ttu-id="26658-130">Выражение, не подходящее для запроса</span><span class="sxs-lookup"><span data-stu-id="26658-130">Expression Not Queryable</span></span>  
+ <span data-ttu-id="26658-131">Если вы получаете «выражение [выражение] незапрашиваемое; Возможно, отсутствует ссылка на сборку?»</span><span class="sxs-lookup"><span data-stu-id="26658-131">If you get the "Expression [expression] is not queryable; are you missing an assembly reference?"</span></span> <span data-ttu-id="26658-132">Ошибка, убедитесь, что из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="26658-132">error, make sure of the following:</span></span>  
   
--   Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
+-   <span data-ttu-id="26658-133">Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="26658-133">Your application is targeting [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].</span></span>  
   
--   Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
+-   <span data-ttu-id="26658-134">Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.</span><span class="sxs-lookup"><span data-stu-id="26658-134">You have a reference to `System.Core.dll` and `System.Data.Linq.dll`.</span></span>  
   
--   Наличие директивы `Imports` \([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]\) или `using` \(C\#\) для <xref:System.Linq> и <xref:System.Data.Linq>.  
+-   <span data-ttu-id="26658-135">Наличие директивы `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) или `using` (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.</span><span class="sxs-lookup"><span data-stu-id="26658-135">You have an `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) or `using` (C#) directive for <xref:System.Linq> and <xref:System.Data.Linq>.</span></span>  
   
-## DuplicateKeyException  
- Во время отладки проекта [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно переходить через отношения сущности.  При этом элементы попадают в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет их наличие.  Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.  
+## <a name="duplicatekeyexception"></a><span data-ttu-id="26658-136">DuplicateKeyException</span><span class="sxs-lookup"><span data-stu-id="26658-136">DuplicateKeyException</span></span>  
+ <span data-ttu-id="26658-137">Во время отладки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта, можно переходить через отношения сущности.</span><span class="sxs-lookup"><span data-stu-id="26658-137">In the course of debugging a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project, you might traverse an entity's relations.</span></span> <span data-ttu-id="26658-138">Таким образом этом элементы попадают в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] становится их наличие.</span><span class="sxs-lookup"><span data-stu-id="26658-138">Doing so brings these items into the cache, and [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] becomes aware of their presence.</span></span> <span data-ttu-id="26658-139">Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.</span><span class="sxs-lookup"><span data-stu-id="26658-139">If you then try to execute <xref:System.Data.Linq.Table%601.Attach%2A> or <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> or a similar method that produces multiple rows that have the same key, a <xref:System.Data.Linq.DuplicateKeyException> is thrown.</span></span>  
   
-## Исключения при объединении строк  
- Объединение в операндах, сопоставленных с `[n]text` и другими `[n][var]char`, не поддерживается.  При объединении строк, сопоставленных двум разным наборам типов, возникает исключение.  Для получения дополнительной информации см. [Методы System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
+## <a name="string-concatenation-exceptions"></a><span data-ttu-id="26658-140">Исключения при объединении строк</span><span class="sxs-lookup"><span data-stu-id="26658-140">String Concatenation Exceptions</span></span>  
+ <span data-ttu-id="26658-141">Объединение в операндах, сопоставленных с `[n]text` и другими `[n][var]char`, не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="26658-141">Concatenation on operands mapped to `[n]text` and other `[n][var]char` is not supported.</span></span> <span data-ttu-id="26658-142">При объединении строк, сопоставленных двум разным наборам типов, возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="26658-142">An exception is thrown for concatenation of strings mapped to the two different sets of types.</span></span> <span data-ttu-id="26658-143">Дополнительные сведения см. в разделе [методы System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).</span><span class="sxs-lookup"><span data-stu-id="26658-143">For more information, see [System.String Methods](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).</span></span>  
   
-## Исключения методов "Skip" и "Take" в SQL Server 2000  
- При использовании <xref:System.Linq.Queryable.Take%2A> или <xref:System.Linq.Queryable.Skip%2A> в базе данных SQL Server 2000 необходимо применять члены идентификации \(<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>\)  Запрос должен быть выполнен в одной таблице \(без объединения\) либо он должен представлять операцию <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> или <xref:System.Linq.Queryable.Union%2A> и не включать операцию <xref:System.Linq.Queryable.Concat%2A> operation.  Дополнительные сведения см. в подразделе "Поддержка SQL Server 2000" раздела [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="skip-and-take-exceptions-in-sql-server-2000"></a><span data-ttu-id="26658-144">Исключения методов "Skip" и "Take" в SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="26658-144">Skip and Take Exceptions in SQL Server 2000</span></span>  
+ <span data-ttu-id="26658-145">При использовании <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> или <xref:System.Linq.Queryable.Take%2A> в базе данных SQL Server 2000 необходимо применять члены идентификации (<xref:System.Linq.Queryable.Skip%2A>)</span><span class="sxs-lookup"><span data-stu-id="26658-145">You must use identity members (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) when you use <xref:System.Linq.Queryable.Take%2A> or <xref:System.Linq.Queryable.Skip%2A> against a SQL Server 2000 database.</span></span> <span data-ttu-id="26658-146">Запрос должен быть выполнен в одной таблице (без объединения) либо он должен представлять операцию <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> или <xref:System.Linq.Queryable.Union%2A> и не включать операцию <xref:System.Linq.Queryable.Concat%2A> operation.</span><span class="sxs-lookup"><span data-stu-id="26658-146">The query must be against a single table (that is, not a join), or be a <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A>, or <xref:System.Linq.Queryable.Union%2A> operation, and must not include a <xref:System.Linq.Queryable.Concat%2A> operation.</span></span> <span data-ttu-id="26658-147">Дополнительные сведения см. в подразделе «Поддержка SQL Server 2000» [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).</span><span class="sxs-lookup"><span data-stu-id="26658-147">For more information, see the "SQL Server 2000 Support" section in [Standard Query Operator Translation](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).</span></span>  
   
- Это требование не относится к [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+ <span data-ttu-id="26658-148">Это требование не относится к [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="26658-148">This requirement does not apply to [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].</span></span>  
   
-## GroupBy InvalidOperationException  
- Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL.  Поскольку выражение имеет тип `boolean`, ключ определяется как `boolean`, а не как `nullable` `boolean`.  Если в результате преобразованного сравнения выводится значение NULL, предпринимается попытка назначить `nullable` `boolean` для `boolean` и вызывается исключение.  
+## <a name="groupby-invalidoperationexception"></a><span data-ttu-id="26658-149">GroupBy InvalidOperationException</span><span class="sxs-lookup"><span data-stu-id="26658-149">GroupBy InvalidOperationException</span></span>  
+ <span data-ttu-id="26658-150">Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL.</span><span class="sxs-lookup"><span data-stu-id="26658-150">This exception is thrown when a column value is null in a <xref:System.Linq.Enumerable.GroupBy%2A> query that groups by a `boolean` expression, such as `group x by (Phone==@phone)`.</span></span> <span data-ttu-id="26658-151">Поскольку выражение является `boolean`, ключ определяется как `boolean`, а не `nullable``boolean`.</span><span class="sxs-lookup"><span data-stu-id="26658-151">Because the expression is a `boolean`, the key is inferred to be `boolean`, not `nullable``boolean`.</span></span> <span data-ttu-id="26658-152">Если в результате преобразованного сравнения выводится значение null, предпринимается попытка назначить `nullable``boolean` для `boolean`, и исключение создается.</span><span class="sxs-lookup"><span data-stu-id="26658-152">When the translated comparison produces a null, an attempt is made to assign a `nullable``boolean` to a `boolean`, and the exception is thrown.</span></span>  
   
- Чтобы избежать такой ситуации \(предполагается, что значения NULL оцениваются как ложные\), воспользуйтесь следующим способом.  
+ <span data-ttu-id="26658-153">Чтобы избежать такой ситуации (предполагается, что значения NULL оцениваются как ложные), воспользуйтесь следующим способом.</span><span class="sxs-lookup"><span data-stu-id="26658-153">To avoid this situation (assuming you want to treat nulls as false), use an approach such as the following:</span></span>  
   
  `GroupBy="(Phone != null) && (Phone=@Phone)"`  
   
-## Разделяемый метод OnCreated\(\)  
- Созданный метод `OnCreated()` вызывается при каждом вызове конструктора объектов, включая моменты, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вызывает его для копирования исходных значений.  При реализации метода `OnCreated()` в собственном разделяемом классе данное поведение следует принять во внимание.  
+## <a name="oncreated-partial-method"></a><span data-ttu-id="26658-154">Разделяемый метод OnCreated()</span><span class="sxs-lookup"><span data-stu-id="26658-154">OnCreated() Partial Method</span></span>  
+ <span data-ttu-id="26658-155">Созданный метод `OnCreated()` вызывается при каждом вызове конструктора объектов, включая моменты, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вызывает его для копирования исходных значений.</span><span class="sxs-lookup"><span data-stu-id="26658-155">The generated method `OnCreated()` is called each time the object constructor is called, including the scenario in which [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] calls the constructor to make a copy for original values.</span></span> <span data-ttu-id="26658-156">При реализации метода `OnCreated()` в собственном разделяемом классе данное поведение следует принять во внимание.</span><span class="sxs-lookup"><span data-stu-id="26658-156">Take this behavior into account if you implement the `OnCreated()` method in your own partial class.</span></span>  
   
-## См. также  
- [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)   
- [Часто задаваемые вопросы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a><span data-ttu-id="26658-157">См. также</span><span class="sxs-lookup"><span data-stu-id="26658-157">See Also</span></span>  
+ [<span data-ttu-id="26658-158">Поддержка отладки</span><span class="sxs-lookup"><span data-stu-id="26658-158">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
+ [<span data-ttu-id="26658-159">Часто задаваемые вопросы</span><span class="sxs-lookup"><span data-stu-id="26658-159">Frequently Asked Questions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

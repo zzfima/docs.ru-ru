@@ -1,134 +1,141 @@
 ---
-title: "How to: Create and Run a Long Running Workflow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'How to: Create and Run a Long Running Workflow'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 40
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a266613b975065b37c176ec07ae404b5b17ddd7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Create and Run a Long Running Workflow
-Одной из основных особенностей [!INCLUDE[wf](../../../includes/wf-md.md)] является поддержка средой выполнения сохранения и выгрузки бездействующих рабочих процессов в базу данных. Действия, описанные в [Практическое руководство: выполнение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) показаны основы размещения рабочих процессов с помощью консольного приложения. Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок. Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса. На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.  
+# <a name="how-to-create-and-run-a-long-running-workflow"></a><span data-ttu-id="414bd-102">How to: Create and Run a Long Running Workflow</span><span class="sxs-lookup"><span data-stu-id="414bd-102">How to: Create and Run a Long Running Workflow</span></span>
+<span data-ttu-id="414bd-103">Одной из основных особенностей [!INCLUDE[wf](../../../includes/wf-md.md)] является поддержка средой выполнения сохранения и выгрузки бездействующих рабочих процессов в базу данных.</span><span class="sxs-lookup"><span data-stu-id="414bd-103">One of the central features of [!INCLUDE[wf](../../../includes/wf-md.md)] is the runtime’s ability to persist and unload idle workflows to a database.</span></span> <span data-ttu-id="414bd-104">Действия, описанные в [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) демонстрируются основные принципы размещение рабочих процессов с помощью консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="414bd-104">The steps in [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application.</span></span> <span data-ttu-id="414bd-105">Приведены примеры запуска рабочих процессов, обработчиков жизненного цикла рабочего процесса и возобновления закладок.</span><span class="sxs-lookup"><span data-stu-id="414bd-105">Examples were shown of starting workflows, workflow lifecycle handlers, and resuming bookmarks.</span></span> <span data-ttu-id="414bd-106">Для эффективной демонстрации сохранения рабочего процесса требуется более сложный узел рабочих процессов, обеспечивающий запуск и возобновление нескольких экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-106">In order to demonstrate workflow persistence effectively, a more complex workflow host is required that supports starting and resuming multiple workflow instances.</span></span> <span data-ttu-id="414bd-107">На этом шаге учебника показано, как создать ведущее приложение форм Windows Form, которое обеспечивает запуск и возобновление нескольких экземпляров рабочих процессов, сохранение рабочего процесса и основу для таких дополнительных возможностей, как отслеживание версий, которые показаны в последующих шагах учебника, и управление ими.</span><span class="sxs-lookup"><span data-stu-id="414bd-107">This step in the tutorial demonstrates how to create a Windows form host application that supports starting and resuming multiple workflow instances, workflow persistence, and provides a basis for the advanced features such as tracking and versioning that are demonstrated in subsequent tutorial steps.</span></span>  
   
 > [!NOTE]
->  Этот шаг руководства и последующие шаги использовать все три типа рабочего процесса из [Практическое руководство: Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow.md). Если вы не использовали все три типа можно загрузить полную версию шагов из [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="414bd-108">Этот шаг руководства и последующие шаги использовать все три типа рабочего процесса из [как: Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="414bd-108">This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).</span></span> <span data-ttu-id="414bd-109">Если вы не использовали все три типа можно загрузить полную версию шагов из [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="414bd-109">If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
 > [!NOTE]
->  Чтобы загрузить полную версию или просмотреть пошаговое видео учебника, см. раздел [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="414bd-110">Чтобы загрузить полную версию или просмотреть пошаговое видео учебника, см. [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="414bd-110">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a>Содержание раздела  
+## <a name="in-this-topic"></a><span data-ttu-id="414bd-111">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="414bd-111">In this topic</span></span>  
   
--   [Чтобы создать базу данных сохранения состояния](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [<span data-ttu-id="414bd-112">Чтобы создать базу данных сохраняемости</span><span class="sxs-lookup"><span data-stu-id="414bd-112">To create the persistence database</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [Добавление ссылки на сборки DurableInstancing](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [<span data-ttu-id="414bd-113">Добавление ссылки на сборки DurableInstancing</span><span class="sxs-lookup"><span data-stu-id="414bd-113">To add the reference to the DurableInstancing assemblies</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [Создание ведущей формы рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [<span data-ttu-id="414bd-114">Создание ведущей формы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-114">To create the workflow host form</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [<span data-ttu-id="414bd-115">Для добавления свойств и вспомогательных методов формы</span><span class="sxs-lookup"><span data-stu-id="414bd-115">To add the properties and helper methods of the form</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [<span data-ttu-id="414bd-116">Чтобы настроить хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения</span><span class="sxs-lookup"><span data-stu-id="414bd-116">To configure the instance store, workflow lifecycle handlers, and extensions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Разрешение запуска и возобновления нескольких типов рабочих процессов](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [<span data-ttu-id="414bd-117">Чтобы включить запуск и возобновление нескольких типов рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="414bd-117">To enable starting and resuming multiple workflow types</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [Запуск нового рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [<span data-ttu-id="414bd-118">Чтобы запустить новый рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="414bd-118">To start a new workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [Возобновление рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [<span data-ttu-id="414bd-119">Чтобы возобновить рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="414bd-119">To resume a workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [Завершение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [<span data-ttu-id="414bd-120">Завершение рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-120">To terminate a workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [Построение и запуск приложения](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="414bd-121">Построение и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="414bd-121">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <a name="a-namebkmkcreatepersistencedatabasea-to-create-the-persistence-database"></a><a name="BKMK_CreatePersistenceDatabase"></a> Чтобы создать базу данных сохранения состояния  
+###  <span data-ttu-id="414bd-122"><a name="BKMK_CreatePersistenceDatabase"></a>Чтобы создать базу данных сохраняемости</span><span class="sxs-lookup"><span data-stu-id="414bd-122"><a name="BKMK_CreatePersistenceDatabase"></a> To create the persistence database</span></span>  
   
-1.  Откройте SQL Server Management Studio и подключитесь к локальному серверу, например **. \SQLEXPRESS**. Щелкните правой кнопкой мыши **баз данных** узла на локальный сервер и выберите **новую базу данных**. Имя новой базы данных **WF45GettingStartedTutorial**, примите все остальные значения и выберите **ОК**.  
+1.  <span data-ttu-id="414bd-123">Откройте SQL Server Management Studio и подключитесь к локальному серверу, например **. \SQLEXPRESS**.</span><span class="sxs-lookup"><span data-stu-id="414bd-123">Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**.</span></span> <span data-ttu-id="414bd-124">Щелкните правой кнопкой мыши **баз данных** узел локального сервера и выберите пункт **новой базы данных**.</span><span class="sxs-lookup"><span data-stu-id="414bd-124">Right-click the **Databases** node on the local server, and select **New Database**.</span></span> <span data-ttu-id="414bd-125">Имя новой базы данных **WF45GettingStartedTutorial**, примите все значения, а затем выберите **ОК**.</span><span class="sxs-lookup"><span data-stu-id="414bd-125">Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.</span></span>  
   
     > [!NOTE]
-    >  Убедитесь, что **Create Database** разрешение на локальном сервере, прежде чем создавать базу данных.  
+    >  <span data-ttu-id="414bd-126">Убедитесь, что **Create Database** разрешение на локальном сервере, прежде чем создавать базу данных.</span><span class="sxs-lookup"><span data-stu-id="414bd-126">Ensure that you have **Create Database** permission on the local server before creating the database.</span></span>  
   
-2.  Выберите **Откройте**, **файл** из **файла** меню. Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2.  <span data-ttu-id="414bd-127">Выберите **откройте**, **файл** из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="414bd-127">Choose **Open**, **File** from the **File** menu.</span></span> <span data-ttu-id="414bd-128">Перейдите в следующую папку: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span><span class="sxs-lookup"><span data-stu-id="414bd-128">Browse to the following folder: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`</span></span>  
   
-     Выберите следующие два файла и нажмите кнопку **Open**.  
+     <span data-ttu-id="414bd-129">Выберите следующие два файла и нажмите кнопку **откройте**.</span><span class="sxs-lookup"><span data-stu-id="414bd-129">Select the following two files and click **Open**.</span></span>  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    -   <span data-ttu-id="414bd-130">SqlWorkflowInstanceStoreLogic.sql</span><span class="sxs-lookup"><span data-stu-id="414bd-130">SqlWorkflowInstanceStoreLogic.sql</span></span>  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    -   <span data-ttu-id="414bd-131">SqlWorkflowInstanceStoreSchema.sql</span><span class="sxs-lookup"><span data-stu-id="414bd-131">SqlWorkflowInstanceStoreSchema.sql</span></span>  
   
-3.  Выберите **SqlWorkflowInstanceStoreSchema.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** установлен в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса** меню.  
+3.  <span data-ttu-id="414bd-132">Выберите **SqlWorkflowInstanceStoreSchema.sql** из **окна** меню.</span><span class="sxs-lookup"><span data-stu-id="414bd-132">Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu.</span></span> <span data-ttu-id="414bd-133">Убедитесь, что **WF45GettingStartedTutorial** выбран в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса**меню.</span><span class="sxs-lookup"><span data-stu-id="414bd-133">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
   
-4.  Выберите **SqlWorkflowInstanceStoreLogic.sql** из **окна** меню. Убедитесь, что **WF45GettingStartedTutorial** установлен в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса** меню.  
+4.  <span data-ttu-id="414bd-134">Выберите **SqlWorkflowInstanceStoreLogic.sql** из **окна** меню.</span><span class="sxs-lookup"><span data-stu-id="414bd-134">Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu.</span></span> <span data-ttu-id="414bd-135">Убедитесь, что **WF45GettingStartedTutorial** выбран в **доступных баз данных** раскрывающийся список и выберите **Execute** из **запроса**меню.</span><span class="sxs-lookup"><span data-stu-id="414bd-135">Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.</span></span>  
   
     > [!WARNING]
-    >  Важно выполнить предыдущие два шага в правильном порядке. Если выполнить запросы в неправильном порядке, произойдет ошибка и база данных сохраняемости не будет правильно настроена.  
+    >  <span data-ttu-id="414bd-136">Важно выполнить предыдущие два шага в правильном порядке.</span><span class="sxs-lookup"><span data-stu-id="414bd-136">It is important to perform the previous two steps in the correct order.</span></span> <span data-ttu-id="414bd-137">Если выполнить запросы в неправильном порядке, произойдет ошибка и база данных сохраняемости не будет правильно настроена.</span><span class="sxs-lookup"><span data-stu-id="414bd-137">If the queries are executed out of order, errors occur and the persistence database is not configured correctly.</span></span>  
   
-###  <a name="a-namebkmkaddreferencea-to-add-the-reference-to-the-durableinstancing-assemblies"></a><a name="BKMK_AddReference"></a> Добавление ссылки на сборки DurableInstancing  
+###  <span data-ttu-id="414bd-138"><a name="BKMK_AddReference"></a>Добавление ссылки на сборки DurableInstancing</span><span class="sxs-lookup"><span data-stu-id="414bd-138"><a name="BKMK_AddReference"></a> To add the reference to the DurableInstancing assemblies</span></span>  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить ссылку**.  
+1.  <span data-ttu-id="414bd-139">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="414bd-139">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.</span></span>  
   
-2.  Выберите **сборки** из **Добавить ссылку** и введите `DurableInstancing` в **Поиск сборок** поле. Сборки отфильтруются, и будет легче выбрать необходимые ссылки.  
+2.  <span data-ttu-id="414bd-140">Выберите **сборки** из **добавить ссылку** и введите `DurableInstancing` в **поиск сборок** поле.</span><span class="sxs-lookup"><span data-stu-id="414bd-140">Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box.</span></span> <span data-ttu-id="414bd-141">Сборки отфильтруются, и будет легче выбрать необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="414bd-141">This filters the assemblies and makes the desired references easier to select.</span></span>  
   
-3.  Установите флажок рядом с **System.Activities.DurableInstancing** и **System.Runtime.DurableInstancing** из **Результаты поиска** списке и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="414bd-142">Установите флажок рядом с **System.Activities.DurableInstancing** и **System.Runtime.DurableInstancing** из **результатов поиска** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="414bd-142">Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.</span></span>  
   
-###  <a name="a-namebkmkcreateforma-to-create-the-workflow-host-form"></a><a name="BKMK_CreateForm"></a> Создание ведущей формы рабочего процесса  
+###  <span data-ttu-id="414bd-143"><a name="BKMK_CreateForm"></a>Создание ведущей формы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-143"><a name="BKMK_CreateForm"></a> To create the workflow host form</span></span>  
   
 > [!NOTE]
->  В шагах этой процедуры показано, как добавить и настроить форму вручную. При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект. Чтобы загрузить файлы учебника, см. раздел [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976). После загрузки файлов, щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите **Добавить ссылку**. Добавьте ссылку на **System.Windows.Forms** и **System.Drawing**. Эти ссылки добавляются автоматически при добавлении новой формы из **Добавить**, **новый элемент** меню, но должны быть добавлены вручную, при импорте формы. После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **существующий элемент**. Перейдите к `Form` папки в файлах проекта, выберите **WorkflowHostForm.cs** (или **WorkflowHostForm.vb**) и нажмите кнопку **Добавить**. Если вы решили импортировать форму, а затем перейти к следующему разделу, можно пропустить [для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
+>  <span data-ttu-id="414bd-144">В шагах этой процедуры показано, как добавить и настроить форму вручную.</span><span class="sxs-lookup"><span data-stu-id="414bd-144">The steps in this procedure describe how to add and configure the form manually.</span></span> <span data-ttu-id="414bd-145">При необходимости можно загрузить файлы решений для учебника и добавить готовую форму в проект.</span><span class="sxs-lookup"><span data-stu-id="414bd-145">If desired, you can download the solution files for the tutorial and add the completed form to the project.</span></span> <span data-ttu-id="414bd-146">Чтобы загрузить файлы учебника, см. [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="414bd-146">To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span> <span data-ttu-id="414bd-147">Когда файлы загрузятся, щелкните правой кнопкой мыши **NumberGuessWorkflowHost** и выберите **добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="414bd-147">Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**.</span></span> <span data-ttu-id="414bd-148">Добавьте ссылку на **System.Windows.Forms** и **System.Drawing**.</span><span class="sxs-lookup"><span data-stu-id="414bd-148">Add a reference to **System.Windows.Forms** and **System.Drawing**.</span></span> <span data-ttu-id="414bd-149">Эти ссылки добавляются автоматически при добавлении новой формы из **добавить**, **новый элемент** меню, но необходимо добавить вручную при импорте в форму.</span><span class="sxs-lookup"><span data-stu-id="414bd-149">These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form.</span></span> <span data-ttu-id="414bd-150">После добавления ссылок щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **существующий элемент**.</span><span class="sxs-lookup"><span data-stu-id="414bd-150">Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**.</span></span> <span data-ttu-id="414bd-151">Перейдите к `Form` папки в файлах проекта, выберите **WorkflowHostForm.cs** (или **WorkflowHostForm.vb**) и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="414bd-151">Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**.</span></span> <span data-ttu-id="414bd-152">Если вы решили импортировать форму, а затем можно перейти к следующему разделу [для добавления свойств и вспомогательных методов формы](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span><span class="sxs-lookup"><span data-stu-id="414bd-152">If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).</span></span>  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **новый элемент**.  
+1.  <span data-ttu-id="414bd-153">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="414bd-153">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.</span></span>  
   
-2.  В **установленные** шаблонов выберите **формы Windows Forms**, тип `WorkflowHostForm` в **имя** и нажмите кнопку **Добавить**.  
+2.  <span data-ttu-id="414bd-154">В **установленные** шаблонов выберите **формы Windows Forms**, тип `WorkflowHostForm` в **имя** и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="414bd-154">In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.</span></span>  
   
-3.  Задайте следующие свойства формы.  
+3.  <span data-ttu-id="414bd-155">Задайте следующие свойства формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-155">Configure the following properties on the form.</span></span>  
   
-    |Свойство|Значение|  
+    |<span data-ttu-id="414bd-156">Свойство</span><span class="sxs-lookup"><span data-stu-id="414bd-156">Property</span></span>|<span data-ttu-id="414bd-157">Значение</span><span class="sxs-lookup"><span data-stu-id="414bd-157">Value</span></span>|  
     |--------------|-----------|  
-    |FormBorderStyle|FixedSingle|  
-    |MaximizeBox|False|  
-    |Размер|400, 420|  
+    |<span data-ttu-id="414bd-158">FormBorderStyle</span><span class="sxs-lookup"><span data-stu-id="414bd-158">FormBorderStyle</span></span>|<span data-ttu-id="414bd-159">FixedSingle</span><span class="sxs-lookup"><span data-stu-id="414bd-159">FixedSingle</span></span>|  
+    |<span data-ttu-id="414bd-160">MaximizeBox</span><span class="sxs-lookup"><span data-stu-id="414bd-160">MaximizeBox</span></span>|<span data-ttu-id="414bd-161">False</span><span class="sxs-lookup"><span data-stu-id="414bd-161">False</span></span>|  
+    |<span data-ttu-id="414bd-162">Размер</span><span class="sxs-lookup"><span data-stu-id="414bd-162">Size</span></span>|<span data-ttu-id="414bd-163">400, 420</span><span class="sxs-lookup"><span data-stu-id="414bd-163">400, 420</span></span>|  
   
-4.  Добавьте в форму следующие элементы управления в указанном порядке и задайте значения свойств.  
+4.  <span data-ttu-id="414bd-164">Добавьте в форму следующие элементы управления в указанном порядке и задайте значения свойств.</span><span class="sxs-lookup"><span data-stu-id="414bd-164">Add the following controls to the form in the order specified and configure the properties as directed.</span></span>  
   
-    |Control|Свойство: значение|  
+    |<span data-ttu-id="414bd-165">Control</span><span class="sxs-lookup"><span data-stu-id="414bd-165">Control</span></span>|<span data-ttu-id="414bd-166">Свойство: значение</span><span class="sxs-lookup"><span data-stu-id="414bd-166">Property: Value</span></span>|  
     |-------------|---------------------|  
-    |**Кнопка**|Имя: NewGame<br /><br /> Расположение: 13, 13<br /><br /> Размер: 75, 23<br /><br /> Текст: Новая игра|  
-    |**Метка**|Расположение: 94, 18<br /><br /> Текст: Угадать число от 1 до|  
-    |**Поле со списком**|Имя: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементов: 10, 100, 1000<br /><br /> Расположение: 228, 12<br /><br /> Размер: 143, 21|  
-    |**Метка**|Расположение: 13, 43<br /><br /> Текст: Тип рабочего процесса|  
-    |**Поле со списком**|Имя: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Элементы: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow FlowchartNumberGuessWorkflow,<br /><br /> Расположение: 94, 40<br /><br /> Размер: 277, 21|  
-    |**Метка**|Имя: WorkflowVersion<br /><br /> Расположение: 13, 362<br /><br /> Текст: Версия рабочего процесса|  
-    |**GroupBox**|Расположение: 13, 67<br /><br /> Размер: 358, 287<br /><br /> Текст: игра|  
+    |<span data-ttu-id="414bd-167">**Button**</span><span class="sxs-lookup"><span data-stu-id="414bd-167">**Button**</span></span>|<span data-ttu-id="414bd-168">Имя: NewGame</span><span class="sxs-lookup"><span data-stu-id="414bd-168">Name: NewGame</span></span><br /><br /> <span data-ttu-id="414bd-169">Расположение: 13, 13</span><span class="sxs-lookup"><span data-stu-id="414bd-169">Location: 13, 13</span></span><br /><br /> <span data-ttu-id="414bd-170">Размер: 75, 23</span><span class="sxs-lookup"><span data-stu-id="414bd-170">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="414bd-171">Текст: Новая игра</span><span class="sxs-lookup"><span data-stu-id="414bd-171">Text: New Game</span></span>|  
+    |<span data-ttu-id="414bd-172">**Label**</span><span class="sxs-lookup"><span data-stu-id="414bd-172">**Label**</span></span>|<span data-ttu-id="414bd-173">Расположение: 94, 18</span><span class="sxs-lookup"><span data-stu-id="414bd-173">Location: 94, 18</span></span><br /><br /> <span data-ttu-id="414bd-174">Текст: Угадайте число от 1 до</span><span class="sxs-lookup"><span data-stu-id="414bd-174">Text: Guess a number from 1 to</span></span>|  
+    |<span data-ttu-id="414bd-175">**ComboBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-175">**ComboBox**</span></span>|<span data-ttu-id="414bd-176">Имя: NumberRange</span><span class="sxs-lookup"><span data-stu-id="414bd-176">Name: NumberRange</span></span><br /><br /> <span data-ttu-id="414bd-177">DropDownStyle: DropDownList</span><span class="sxs-lookup"><span data-stu-id="414bd-177">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="414bd-178">Элементов: 10, 100, 1000</span><span class="sxs-lookup"><span data-stu-id="414bd-178">Items: 10, 100, 1000</span></span><br /><br /> <span data-ttu-id="414bd-179">Расположение: 228, 12</span><span class="sxs-lookup"><span data-stu-id="414bd-179">Location: 228, 12</span></span><br /><br /> <span data-ttu-id="414bd-180">Размер: 143, 21</span><span class="sxs-lookup"><span data-stu-id="414bd-180">Size: 143, 21</span></span>|  
+    |<span data-ttu-id="414bd-181">**Label**</span><span class="sxs-lookup"><span data-stu-id="414bd-181">**Label**</span></span>|<span data-ttu-id="414bd-182">Расположение: 13, 43</span><span class="sxs-lookup"><span data-stu-id="414bd-182">Location: 13, 43</span></span><br /><br /> <span data-ttu-id="414bd-183">Текст: Тип рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-183">Text: Workflow type</span></span>|  
+    |<span data-ttu-id="414bd-184">**ComboBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-184">**ComboBox**</span></span>|<span data-ttu-id="414bd-185">Имя: WorkflowType</span><span class="sxs-lookup"><span data-stu-id="414bd-185">Name: WorkflowType</span></span><br /><br /> <span data-ttu-id="414bd-186">DropDownStyle: DropDownList</span><span class="sxs-lookup"><span data-stu-id="414bd-186">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="414bd-187">Элементы: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow FlowchartNumberGuessWorkflow,</span><span class="sxs-lookup"><span data-stu-id="414bd-187">Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow</span></span><br /><br /> <span data-ttu-id="414bd-188">Расположение: 94, 40</span><span class="sxs-lookup"><span data-stu-id="414bd-188">Location: 94, 40</span></span><br /><br /> <span data-ttu-id="414bd-189">Размер: 277, 21</span><span class="sxs-lookup"><span data-stu-id="414bd-189">Size: 277, 21</span></span>|  
+    |<span data-ttu-id="414bd-190">**Label**</span><span class="sxs-lookup"><span data-stu-id="414bd-190">**Label**</span></span>|<span data-ttu-id="414bd-191">Имя: WorkflowVersion</span><span class="sxs-lookup"><span data-stu-id="414bd-191">Name: WorkflowVersion</span></span><br /><br /> <span data-ttu-id="414bd-192">Расположение: 13, 362</span><span class="sxs-lookup"><span data-stu-id="414bd-192">Location: 13, 362</span></span><br /><br /> <span data-ttu-id="414bd-193">Текст: Версия рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-193">Text: Workflow version</span></span>|  
+    |<span data-ttu-id="414bd-194">**GroupBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-194">**GroupBox**</span></span>|<span data-ttu-id="414bd-195">Расположение: 13, 67</span><span class="sxs-lookup"><span data-stu-id="414bd-195">Location: 13, 67</span></span><br /><br /> <span data-ttu-id="414bd-196">Размер: 358, 287</span><span class="sxs-lookup"><span data-stu-id="414bd-196">Size: 358, 287</span></span><br /><br /> <span data-ttu-id="414bd-197">Текст: игры</span><span class="sxs-lookup"><span data-stu-id="414bd-197">Text: Game</span></span>|  
   
     > [!NOTE]
-    >  При добавлении следующих элементов управления, их следует поместите в GroupBox.  
+    >  <span data-ttu-id="414bd-198">При добавлении следующих элементов управления, их необходимо поместите в GroupBox.</span><span class="sxs-lookup"><span data-stu-id="414bd-198">When adding the following controls, put them into the GroupBox.</span></span>  
   
-    |Control|Свойство: значение|  
+    |<span data-ttu-id="414bd-199">Control</span><span class="sxs-lookup"><span data-stu-id="414bd-199">Control</span></span>|<span data-ttu-id="414bd-200">Свойство: значение</span><span class="sxs-lookup"><span data-stu-id="414bd-200">Property: Value</span></span>|  
     |-------------|---------------------|  
-    |**Метка**|Расположение: 7, 20<br /><br /> Текст: Идентификатор экземпляра рабочего процесса|  
-    |**Поле со списком**|Имя: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Расположение: 121, 17<br /><br /> Размер: 227, 21|  
-    |**Метка**|Расположение: 7, 47<br /><br /> Текст: угадать|  
-    |**Текстовое поле**|Имя: угадать<br /><br /> Расположение: 50, 44<br /><br /> Размер: 65, 20|  
-    |**Кнопка**|Имя: EnterGuess<br /><br /> Расположение: 121, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: Ввод догадки|  
-    |**Кнопка**|Имя: QuitGame<br /><br /> Расположение: 274, 42<br /><br /> Размер: 75, 23<br /><br /> Текст: закройте|  
-    |**Текстовое поле**|Имя: WorkflowStatus<br /><br /> Расположение: 10, 73<br /><br /> Multiline: True<br /><br /> Только для чтения: True<br /><br /> Полосы прокрутки: вертикальные<br /><br /> Размер: 338, 208|  
+    |<span data-ttu-id="414bd-201">**Label**</span><span class="sxs-lookup"><span data-stu-id="414bd-201">**Label**</span></span>|<span data-ttu-id="414bd-202">Расположение: 7, 20</span><span class="sxs-lookup"><span data-stu-id="414bd-202">Location: 7, 20</span></span><br /><br /> <span data-ttu-id="414bd-203">Текст: Идентификатор экземпляра рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-203">Text: Workflow Instance Id</span></span>|  
+    |<span data-ttu-id="414bd-204">**ComboBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-204">**ComboBox**</span></span>|<span data-ttu-id="414bd-205">Имя: InstanceId</span><span class="sxs-lookup"><span data-stu-id="414bd-205">Name: InstanceId</span></span><br /><br /> <span data-ttu-id="414bd-206">DropDownStyle: DropDownList</span><span class="sxs-lookup"><span data-stu-id="414bd-206">DropDownStyle: DropDownList</span></span><br /><br /> <span data-ttu-id="414bd-207">Расположение: 121, 17</span><span class="sxs-lookup"><span data-stu-id="414bd-207">Location: 121, 17</span></span><br /><br /> <span data-ttu-id="414bd-208">Размер: 227, 21</span><span class="sxs-lookup"><span data-stu-id="414bd-208">Size: 227, 21</span></span>|  
+    |<span data-ttu-id="414bd-209">**Label**</span><span class="sxs-lookup"><span data-stu-id="414bd-209">**Label**</span></span>|<span data-ttu-id="414bd-210">Расположение: 7, 47</span><span class="sxs-lookup"><span data-stu-id="414bd-210">Location: 7, 47</span></span><br /><br /> <span data-ttu-id="414bd-211">Текст: угадать</span><span class="sxs-lookup"><span data-stu-id="414bd-211">Text: Guess</span></span>|  
+    |<span data-ttu-id="414bd-212">**TextBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-212">**TextBox**</span></span>|<span data-ttu-id="414bd-213">Имя: угадать</span><span class="sxs-lookup"><span data-stu-id="414bd-213">Name: Guess</span></span><br /><br /> <span data-ttu-id="414bd-214">Расположение: 50, 44</span><span class="sxs-lookup"><span data-stu-id="414bd-214">Location: 50, 44</span></span><br /><br /> <span data-ttu-id="414bd-215">Размер: 65, 20</span><span class="sxs-lookup"><span data-stu-id="414bd-215">Size: 65, 20</span></span>|  
+    |<span data-ttu-id="414bd-216">**Button**</span><span class="sxs-lookup"><span data-stu-id="414bd-216">**Button**</span></span>|<span data-ttu-id="414bd-217">Имя: EnterGuess</span><span class="sxs-lookup"><span data-stu-id="414bd-217">Name: EnterGuess</span></span><br /><br /> <span data-ttu-id="414bd-218">Расположение: 121, 42</span><span class="sxs-lookup"><span data-stu-id="414bd-218">Location: 121, 42</span></span><br /><br /> <span data-ttu-id="414bd-219">Размер: 75, 23</span><span class="sxs-lookup"><span data-stu-id="414bd-219">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="414bd-220">Текст: Ввод догадки</span><span class="sxs-lookup"><span data-stu-id="414bd-220">Text: Enter Guess</span></span>|  
+    |<span data-ttu-id="414bd-221">**Button**</span><span class="sxs-lookup"><span data-stu-id="414bd-221">**Button**</span></span>|<span data-ttu-id="414bd-222">Имя: QuitGame</span><span class="sxs-lookup"><span data-stu-id="414bd-222">Name: QuitGame</span></span><br /><br /> <span data-ttu-id="414bd-223">Расположение: 274, 42</span><span class="sxs-lookup"><span data-stu-id="414bd-223">Location: 274, 42</span></span><br /><br /> <span data-ttu-id="414bd-224">Размер: 75, 23</span><span class="sxs-lookup"><span data-stu-id="414bd-224">Size: 75, 23</span></span><br /><br /> <span data-ttu-id="414bd-225">Текст: закрыть</span><span class="sxs-lookup"><span data-stu-id="414bd-225">Text: Quit</span></span>|  
+    |<span data-ttu-id="414bd-226">**TextBox**</span><span class="sxs-lookup"><span data-stu-id="414bd-226">**TextBox**</span></span>|<span data-ttu-id="414bd-227">Имя: WorkflowStatus</span><span class="sxs-lookup"><span data-stu-id="414bd-227">Name: WorkflowStatus</span></span><br /><br /> <span data-ttu-id="414bd-228">Расположение: 10, 73</span><span class="sxs-lookup"><span data-stu-id="414bd-228">Location: 10, 73</span></span><br /><br /> <span data-ttu-id="414bd-229">Многострочный: True</span><span class="sxs-lookup"><span data-stu-id="414bd-229">Multiline: True</span></span><br /><br /> <span data-ttu-id="414bd-230">Только для чтения: True</span><span class="sxs-lookup"><span data-stu-id="414bd-230">ReadOnly: True</span></span><br /><br /> <span data-ttu-id="414bd-231">Полосы прокрутки: вертикальная</span><span class="sxs-lookup"><span data-stu-id="414bd-231">ScrollBars: Vertical</span></span><br /><br /> <span data-ttu-id="414bd-232">Размер: 338, 208</span><span class="sxs-lookup"><span data-stu-id="414bd-232">Size: 338, 208</span></span>|  
   
-5.  Задайте **AcceptButton** формы для **EnterGuess**.  
+5.  <span data-ttu-id="414bd-233">Задать **AcceptButton** свойства формы для **EnterGuess**.</span><span class="sxs-lookup"><span data-stu-id="414bd-233">Set the **AcceptButton** property of the form to **EnterGuess**.</span></span>  
   
- В следующем примере показана заполненная форма.  
+ <span data-ttu-id="414bd-234">В следующем примере показана заполненная форма.</span><span class="sxs-lookup"><span data-stu-id="414bd-234">The following example illustrates the completed form.</span></span>  
   
- ![WorkflowHostForm из учебника Getting Started по WF45](../../../docs/framework/windows-workflow-foundation//media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ <span data-ttu-id="414bd-235">![WF45 Приступая к работе по](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span><span class="sxs-lookup"><span data-stu-id="414bd-235">![WF45 Getting Started Tutorial Workflow Host Form](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")</span></span>  
   
-###  <a name="a-namebkmkaddhelpermethodsa-to-add-the-properties-and-helper-methods-of-the-form"></a><a name="BKMK_AddHelperMethods"></a> Для добавления свойств и вспомогательных методов формы  
- В этом разделе показано, как добавить в класс формы свойства и вспомогательные методы, которые настраивают пользовательский интерфейс формы для запуска и возобновления рабочих процессов угадывания числа.  
+###  <span data-ttu-id="414bd-236"><a name="BKMK_AddHelperMethods"></a>Для добавления свойств и вспомогательных методов формы</span><span class="sxs-lookup"><span data-stu-id="414bd-236"><a name="BKMK_AddHelperMethods"></a> To add the properties and helper methods of the form</span></span>  
+ <span data-ttu-id="414bd-237">В этом разделе показано, как добавить в класс формы свойства и вспомогательные методы, которые настраивают пользовательский интерфейс формы для запуска и возобновления рабочих процессов угадывания числа.</span><span class="sxs-lookup"><span data-stu-id="414bd-237">The steps in this section add properties and helper methods to the form class that configure the UI of the form to support running and resuming number guess workflows.</span></span>  
   
-1.  Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите **Просмотр кода**.  
+1.  <span data-ttu-id="414bd-238">Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="414bd-238">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2.  Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).  
+2.  <span data-ttu-id="414bd-239">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="414bd-239">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -146,7 +153,7 @@ caps.handback.revision: 40
     using System.IO;  
     ```  
   
-3.  Добавьте следующие объявления элементов в **WorkflowHostForm** класса.  
+3.  <span data-ttu-id="414bd-240">Добавьте следующие объявления элементов в **WorkflowHostForm** класса.</span><span class="sxs-lookup"><span data-stu-id="414bd-240">Add the following member declarations to the **WorkflowHostForm** class.</span></span>  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -161,9 +168,9 @@ caps.handback.revision: 40
     ```  
   
     > [!NOTE]
-    >  Если у вас другая строка подключения, обновите строку `connectionString` так, чтобы она указывала на вашу базу данных.  
+    >  <span data-ttu-id="414bd-241">Если у вас другая строка подключения, обновите строку `connectionString` так, чтобы она указывала на вашу базу данных.</span><span class="sxs-lookup"><span data-stu-id="414bd-241">If your connection string is different, update `connectionString` to refer to your database.</span></span>  
   
-4.  Добавьте свойство `WorkflowInstanceId` в класс `WorkflowFormHost`.  
+4.  <span data-ttu-id="414bd-242">Добавьте свойство `WorkflowInstanceId` в класс `WorkflowFormHost`.</span><span class="sxs-lookup"><span data-stu-id="414bd-242">Add a `WorkflowInstanceId` property to the `WorkflowFormHost` class.</span></span>  
   
     ```vb  
     Public ReadOnly Property WorkflowInstanceId() As Guid  
@@ -187,9 +194,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-      `InstanceId` Поле со списком Список идентификаторов экземпляров рабочего процесса, а `WorkflowInstanceId` возвращает текущий выбранный рабочий процесс.  
+     <span data-ttu-id="414bd-243">`InstanceId` Со списком отображает список идентификаторов экземпляров рабочего процесса и `WorkflowInstanceId` свойство возвращает выбранного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-243">The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.</span></span>  
   
-5.  Добавьте обработчик события `Load` формы. Чтобы добавить обработчик, перейдите в **режиме конструктора** формы, щелкните **события** значок в верхней части **Свойства** окна и дважды щелкните **нагрузки**.  
+5.  <span data-ttu-id="414bd-244">Добавьте обработчик события `Load` формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-244">Add a handler for the form `Load` event.</span></span> <span data-ttu-id="414bd-245">Чтобы добавить обработчик, перейдите в **конструкторе** формы, щелкните **событий** значок в верхней части **свойства** окна и дважды щелкните **нагрузки**.</span><span class="sxs-lookup"><span data-stu-id="414bd-245">To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.</span></span>  
   
     ```vb  
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load  
@@ -204,7 +211,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-6.  Добавьте следующий код к `WorkflowHostForm_Load`.  
+6.  <span data-ttu-id="414bd-246">Добавьте следующий код к `WorkflowHostForm_Load`.</span><span class="sxs-lookup"><span data-stu-id="414bd-246">Add the following code to `WorkflowHostForm_Load`.</span></span>  
   
     ```vb  
     'Initialize the store and configure it so that it can be used for  
@@ -232,9 +239,9 @@ caps.handback.revision: 40
     ListPersistedWorkflows();  
     ```  
   
-     Когда форма загружена, настраивается класс `SqlWorkflowInstanceStore`, для полей со списком диапазонов и типов рабочего процесса устанавливаются значения по умолчанию, а сохраненные экземпляры рабочих процессов добавляются в поле `InstanceId`.  
+     <span data-ttu-id="414bd-247">Когда форма загружена, настраивается класс `SqlWorkflowInstanceStore`, для полей со списком диапазонов и типов рабочего процесса устанавливаются значения по умолчанию, а сохраненные экземпляры рабочих процессов добавляются в поле `InstanceId`.</span><span class="sxs-lookup"><span data-stu-id="414bd-247">When the form loads, the `SqlWorkflowInstanceStore` is configured, the range and workflow type combo boxes are set to default values, and the persisted workflow instances are added to the `InstanceId` combo box.</span></span>  
   
-7.  Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`. Чтобы добавить обработчик, перейдите в **режиме конструктора** формы, выберите `InstanceId` со списком, нажмите кнопку **события** значок в верхней части **Свойства** окна и дважды щелкните **SelectedIndexChanged**.  
+7.  <span data-ttu-id="414bd-248">Добавьте обработчик событий `SelectedIndexChanged` для `InstanceId`.</span><span class="sxs-lookup"><span data-stu-id="414bd-248">Add a `SelectedIndexChanged` handler for `InstanceId`.</span></span> <span data-ttu-id="414bd-249">Чтобы добавить обработчик, перейдите в **конструкторе** формы, выберите `InstanceId` со списком, нажмите кнопку **событий** значок в верхней части **свойства** окна, и Дважды щелкните **SelectedIndexChanged**.</span><span class="sxs-lookup"><span data-stu-id="414bd-249">To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.</span></span>  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -249,7 +256,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-8.  Добавьте следующий код к `InstanceId_SelectedIndexChanged`. Каждый раз, когда пользователь выбирает рабочий процесс с помощью поля со списком, этот обработчик обновляет окно состояния.  
+8.  <span data-ttu-id="414bd-250">Добавьте следующий код к `InstanceId_SelectedIndexChanged`.</span><span class="sxs-lookup"><span data-stu-id="414bd-250">Add the following code to `InstanceId_SelectedIndexChanged`.</span></span> <span data-ttu-id="414bd-251">Каждый раз, когда пользователь выбирает рабочий процесс с помощью поля со списком, этот обработчик обновляет окно состояния.</span><span class="sxs-lookup"><span data-stu-id="414bd-251">Whenever the user selects a workflow by using the combo box this handler updates the status window.</span></span>  
   
     ```vb  
     If InstanceId.SelectedIndex = -1 Then  
@@ -299,7 +306,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-9. Добавьте следующий метод `ListPersistedWorkflows` в класс формы.  
+9. <span data-ttu-id="414bd-252">Добавьте следующий метод `ListPersistedWorkflows` в класс формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-252">Add the following `ListPersistedWorkflows` method to the form class.</span></span>  
   
     ```vb  
     Private Sub ListPersistedWorkflows()  
@@ -343,9 +350,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-     `ListPersistedWorkflows` запрашивает у хранилища экземпляров сохраненные экземпляры рабочих процессов и добавляет их идентификаторы в поле со списком `cboInstanceId`.  
+     <span data-ttu-id="414bd-253">`ListPersistedWorkflows` запрашивает у хранилища экземпляров сохраненные экземпляры рабочих процессов и добавляет их идентификаторы в поле со списком `cboInstanceId`.</span><span class="sxs-lookup"><span data-stu-id="414bd-253">`ListPersistedWorkflows` queries the instance store for persisted workflow instances, and adds the instance ids to the `cboInstanceId` combo box.</span></span>  
   
-10. Добавьте следующий метод `UpdateStatus` и соответствующий делегат в класс формы. Этот метод обновляет окно состояния в форме с данными о состоянии рабочего процесса, выполняемого в данный момент.  
+10. <span data-ttu-id="414bd-254">Добавьте следующий метод `UpdateStatus` и соответствующий делегат в класс формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-254">Add the following `UpdateStatus` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="414bd-255">Этот метод обновляет окно состояния в форме с данными о состоянии рабочего процесса, выполняемого в данный момент.</span><span class="sxs-lookup"><span data-stu-id="414bd-255">This method updates the status window on the form with the status of the currently running workflow.</span></span>  
   
     ```vb  
     Private Delegate Sub UpdateStatusDelegate(msg As String)  
@@ -392,7 +399,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-11. Добавьте следующий метод `GameOver` и соответствующий делегат в класс формы. После завершения рабочего процесса, этот метод обновляет пользовательский Интерфейс формы, удаляя идентификатор экземпляра завершенного рабочего процесса из **InstanceId** поле со списком.  
+11. <span data-ttu-id="414bd-256">Добавьте следующий метод `GameOver` и соответствующий делегат в класс формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-256">Add the following `GameOver` method and corresponding delegate to the form class.</span></span> <span data-ttu-id="414bd-257">После завершения рабочего процесса, этот метод обновляет пользовательский Интерфейс формы, удаляя идентификатор экземпляра завершенного рабочего процесса из **InstanceId** поле со списком.</span><span class="sxs-lookup"><span data-stu-id="414bd-257">When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.</span></span>  
   
     ```vb  
     Private Delegate Sub GameOverDelegate()  
@@ -424,9 +431,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkconfigureworkflowapplicationa-to-configure-the-instance-store-workflow-lifecycle-handlers-and-extensions"></a><a name="BKMK_ConfigureWorkflowApplication"></a> Чтобы настроить хранилище экземпляров, обработчиков жизненного цикла рабочего процесса и расширения  
+###  <span data-ttu-id="414bd-258"><a name="BKMK_ConfigureWorkflowApplication"></a>Чтобы настроить хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения</span><span class="sxs-lookup"><span data-stu-id="414bd-258"><a name="BKMK_ConfigureWorkflowApplication"></a> To configure the instance store, workflow lifecycle handlers, and extensions</span></span>  
   
-1.  Добавьте метод `ConfigureWorkflowApplication` в класс формы.  
+1.  <span data-ttu-id="414bd-259">Добавьте метод `ConfigureWorkflowApplication` в класс формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-259">Add a `ConfigureWorkflowApplication` method to the form class.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -440,9 +447,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-     Этот метод задает `WorkflowApplication`, добавляет необходимые расширения и обработчики событий жизненного цикла рабочего процесса.  
+     <span data-ttu-id="414bd-260">Этот метод задает `WorkflowApplication`, добавляет необходимые расширения и обработчики событий жизненного цикла рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-260">This method configures the `WorkflowApplication`, adds the desired extensions, and adds handlers for the workflow lifecycle events.</span></span>  
   
-2.  В `ConfigureWorkflowApplication` укажите `SqlWorkflowInstanceStore` для `WorkflowApplication`.  
+2.  <span data-ttu-id="414bd-261">В `ConfigureWorkflowApplication` укажите `SqlWorkflowInstanceStore` для `WorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-261">In `ConfigureWorkflowApplication`, specify the `SqlWorkflowInstanceStore` for the `WorkflowApplication`.</span></span>  
   
     ```vb  
     'Configure the persistence store.  
@@ -454,7 +461,7 @@ caps.handback.revision: 40
     wfApp.InstanceStore = store;  
     ```  
   
-3.  Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`. Когда `StringWriter` добавляется к расширениям, он записывает все `WriteLine` Выходные данные действия. Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.  
+3.  <span data-ttu-id="414bd-262">Затем создайте экземпляр класса `StringWriter` и добавьте его в коллекцию `Extensions` приложения `WorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-262">Next, create a `StringWriter` instance and add it to the `Extensions` collection of the `WorkflowApplication`.</span></span> <span data-ttu-id="414bd-263">Когда `StringWriter` добавляется к расширениям, он получает все `WriteLine` выходными данными действий.</span><span class="sxs-lookup"><span data-stu-id="414bd-263">When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output.</span></span> <span data-ttu-id="414bd-264">Когда рабочий процесс становится неактивным, выходные данные `WriteLine` можно извлечь из `StringWriter` и показать на форме.</span><span class="sxs-lookup"><span data-stu-id="414bd-264">When the workflow becomes idle, the `WriteLine` output can be extracted from the `StringWriter` and displayed on the form.</span></span>  
   
     ```vb  
     'Add a StringWriter to the extensions. This captures the output  
@@ -470,7 +477,7 @@ caps.handback.revision: 40
     wfApp.Extensions.Add(sw);  
     ```  
   
-4.  Добавьте следующий обработчик события `Completed`. После успешного завершения рабочего процесса число ходов, которое потребовалось для угадывания числа, отображается в окне состояния. Если рабочий процесс завершается, выдаются сведения об исключении, которое явилось причиной. В конце обработчика вызывается метод `GameOver`, который удаляет завершенный рабочий процесс из списка рабочих процессов.  
+4.  <span data-ttu-id="414bd-265">Добавьте следующий обработчик события `Completed`.</span><span class="sxs-lookup"><span data-stu-id="414bd-265">Add the following handler for the `Completed` event.</span></span> <span data-ttu-id="414bd-266">После успешного завершения рабочего процесса число ходов, которое потребовалось для угадывания числа, отображается в окне состояния.</span><span class="sxs-lookup"><span data-stu-id="414bd-266">When a workflow successfully completes, the number of turns taken to guess the number is displayed to the status window.</span></span> <span data-ttu-id="414bd-267">Если рабочий процесс завершается, выдаются сведения об исключении, которое явилось причиной.</span><span class="sxs-lookup"><span data-stu-id="414bd-267">If the workflow terminates, the exception information that caused the termination is displayed.</span></span> <span data-ttu-id="414bd-268">В конце обработчика вызывается метод `GameOver`, который удаляет завершенный рабочий процесс из списка рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="414bd-268">At the end of the handler the `GameOver` method is called, which removes the completed workflow from the workflow list.</span></span>  
   
     ```vb  
     wfApp.Completed = _  
@@ -511,7 +518,7 @@ caps.handback.revision: 40
     };  
     ```  
   
-5.  Добавьте следующие обработчики `Aborted` и `OnUnhandledException`. Метод `GameOver` не вызывается из обработчика `Aborted`, поскольку в случае аварийного завершения выполнения экземпляра рабочего процесса работа экземпляра не прекращается окончательно, позже можно перезапустить экземпляр.  
+5.  <span data-ttu-id="414bd-269">Добавьте следующие обработчики `Aborted` и `OnUnhandledException`.</span><span class="sxs-lookup"><span data-stu-id="414bd-269">Add the following `Aborted` and `OnUnhandledException` handlers.</span></span> <span data-ttu-id="414bd-270">Метод `GameOver` не вызывается из обработчика `Aborted`, поскольку в случае аварийного завершения выполнения экземпляра рабочего процесса работа экземпляра не прекращается окончательно, позже можно перезапустить экземпляр.</span><span class="sxs-lookup"><span data-stu-id="414bd-270">The `GameOver` method is not called from the `Aborted` handler because when a workflow instance is aborted, it does not terminate, and it is possible to resume the instance at a later time.</span></span>  
   
     ```vb  
     wfApp.Aborted = _  
@@ -549,7 +556,7 @@ caps.handback.revision: 40
     };  
     ```  
   
-6.  Добавьте следующий обработчик `PersistableIdle`. Этот обработчик получает расширение `StringWriter`, которое было добавлено, извлекает данные из действий `WriteLine` и отображает их в окне состояния.  
+6.  <span data-ttu-id="414bd-271">Добавьте следующий обработчик `PersistableIdle`.</span><span class="sxs-lookup"><span data-stu-id="414bd-271">Add the following `PersistableIdle` handler.</span></span> <span data-ttu-id="414bd-272">Этот обработчик получает расширение `StringWriter`, которое было добавлено, извлекает данные из действий `WriteLine` и отображает их в окне состояния.</span><span class="sxs-lookup"><span data-stu-id="414bd-272">This handler retrieves the `StringWriter` extension that was added, extracts the output from the `WriteLine` activities, and displays it in the status window.</span></span>  
   
     ```vb  
     wfApp.PersistableIdle = _  
@@ -576,9 +583,9 @@ caps.handback.revision: 40
     };  
     ```  
   
-      <xref:System.Activities.PersistableIdleAction> перечисление имеет три значения: <xref:System.Activities.PersistableIdleAction>, <xref:System.Activities.PersistableIdleAction>, и <xref:System.Activities.PersistableIdleAction>. <xref:System.Activities.PersistableIdleAction> вызывает сохранение рабочего процесса, но не приводит к выгрузке рабочего процесса. <xref:System.Activities.PersistableIdleAction> вызывает сохранение и выгрузку рабочего процесса.  
+     <span data-ttu-id="414bd-273">Для перечисления <xref:System.Activities.PersistableIdleAction> существует три значения: <xref:System.Activities.PersistableIdleAction.None>,<xref:System.Activities.PersistableIdleAction.Persist> и <xref:System.Activities.PersistableIdleAction.Unload>.</span><span class="sxs-lookup"><span data-stu-id="414bd-273">The <xref:System.Activities.PersistableIdleAction> enumeration has three values: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, and <xref:System.Activities.PersistableIdleAction.Unload>.</span></span> <span data-ttu-id="414bd-274">Значение <xref:System.Activities.PersistableIdleAction.Persist> вызывает сохранение рабочего процесса, но не его выгрузку.</span><span class="sxs-lookup"><span data-stu-id="414bd-274"><xref:System.Activities.PersistableIdleAction.Persist> causes the workflow to persist but it does not cause the workflow to unload.</span></span> <span data-ttu-id="414bd-275">Значение <xref:System.Activities.PersistableIdleAction.Unload> вызывает сохранение и выгрузку рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-275"><xref:System.Activities.PersistableIdleAction.Unload> causes the workflow to persist and be unloaded.</span></span>  
   
-     Ниже приведен полный пример метода `ConfigureWorkflowApplication`.  
+     <span data-ttu-id="414bd-276">Ниже приведен полный пример метода `ConfigureWorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-276">The following example is the completed `ConfigureWorkflowApplication` method.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -693,12 +700,12 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkworkflowversionmapa-to-enable-starting-and-resuming-multiple-workflow-types"></a><a name="BKMK_WorkflowVersionMap"></a> Разрешение запуска и возобновления нескольких типов рабочих процессов  
- Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса. В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов. `WorkflowIdentity` позволяет ведущему приложению связать идентификационные данные с сохраненным экземпляром рабочего процесса. В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`WorkflowIdentity` и управлении версиями см. в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation//using-workflowidentity-and-versioning.md).  
+###  <span data-ttu-id="414bd-277"><a name="BKMK_WorkflowVersionMap"></a>Чтобы включить запуск и возобновление нескольких типов рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="414bd-277"><a name="BKMK_WorkflowVersionMap"></a> To enable starting and resuming multiple workflow types</span></span>  
+ <span data-ttu-id="414bd-278">Чтобы возобновить экземпляр рабочего процесса, ведущее приложение должно предоставить определение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-278">In order to resume a workflow instance, the host has to provide the workflow definition.</span></span> <span data-ttu-id="414bd-279">В этом учебнике описано 3 типа рабочих процессов и далее предоставлено несколько версий этих типов.</span><span class="sxs-lookup"><span data-stu-id="414bd-279">In this tutorial there are three workflow types, and subsequent tutorial steps introduce multiple versions of these types.</span></span> <span data-ttu-id="414bd-280">`WorkflowIdentity` позволяет ведущему приложению связать идентификационные данные с сохраненным экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-280">`WorkflowIdentity` provides a way for a host application to associate identifying information with a persisted workflow instance.</span></span> <span data-ttu-id="414bd-281">В этом разделе показано, как создать служебный класс, который поможет сопоставить идентификационные данные из сохраненного экземпляра рабочего процесса с соответствующим определением рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-281">The steps in this section demonstrate how to create a utility class to assist with mapping the workflow identity from a persisted workflow instance to the corresponding workflow definition.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="414bd-282">`WorkflowIdentity` и управление версиями, в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).</span><span class="sxs-lookup"><span data-stu-id="414bd-282"> `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).</span></span>  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Добавить**, **класса**. Тип `WorkflowVersionMap` в **имя** и нажмите кнопку **Добавить**.  
+1.  <span data-ttu-id="414bd-283">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **класса**.</span><span class="sxs-lookup"><span data-stu-id="414bd-283">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="414bd-284">Тип `WorkflowVersionMap` в **имя** и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="414bd-284">Type `WorkflowVersionMap` into the **Name** box and click **Add**.</span></span>  
   
-2.  Добавьте следующие инструкции `using` или `Imports` в начало файла с другими инструкциями `using` или `Imports`.  
+2.  <span data-ttu-id="414bd-285">Добавьте следующие инструкции `using` или `Imports` в начало файла с другими инструкциями `using` или `Imports`.</span><span class="sxs-lookup"><span data-stu-id="414bd-285">Add the following `using` or `Imports` statements at the top of the file with the other `using` or `Imports` statements.</span></span>  
   
     ```vb  
     Imports NumberGuessWorkflowActivities  
@@ -710,7 +717,7 @@ caps.handback.revision: 40
     using System.Activities;  
     ```  
   
-3.  Замените объявление класса `WorkflowVersionMap` следующим объявлением.  
+3.  <span data-ttu-id="414bd-286">Замените объявление класса `WorkflowVersionMap` следующим объявлением.</span><span class="sxs-lookup"><span data-stu-id="414bd-286">Replace the `WorkflowVersionMap` class declaration with the following declaration.</span></span>  
   
     ```vb  
     Public Module WorkflowVersionMap  
@@ -808,11 +815,11 @@ caps.handback.revision: 40
     }  
     ```  
   
-     `WorkflowVersionMap` содержит три удостоверения рабочего процесса, которые сопоставляются с тремя определениями рабочих процессов из этого учебника и используются в следующих разделах при запуске и возобновлении рабочих процессов.  
+     <span data-ttu-id="414bd-287">`WorkflowVersionMap` содержит три удостоверения рабочего процесса, которые сопоставляются с тремя определениями рабочих процессов из этого учебника и используются в следующих разделах при запуске и возобновлении рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="414bd-287">`WorkflowVersionMap` contains three workflow identities that map to the three workflow definitions from this tutorial and is used in the following sections when workflows are started and resumed.</span></span>  
   
-###  <a name="a-namebkmkstartworkflowa-to-start-a-new-workflow"></a><a name="BKMK_StartWorkflow"></a> Запуск нового рабочего процесса  
+###  <span data-ttu-id="414bd-288"><a name="BKMK_StartWorkflow"></a>Чтобы запустить новый рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="414bd-288"><a name="BKMK_StartWorkflow"></a> To start a new workflow</span></span>  
   
-1.  Добавьте обработчик событий `Click` для `NewGame`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `NewGame`. Добавляется обработчик `NewGame_Click`, и активируется представление кода формы. Когда пользователь нажимает эту кнопку, запускается новый рабочий процесс.  
+1.  <span data-ttu-id="414bd-289">Добавьте обработчик событий `Click` для `NewGame`.</span><span class="sxs-lookup"><span data-stu-id="414bd-289">Add a `Click` handler for `NewGame`.</span></span> <span data-ttu-id="414bd-290">Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `NewGame`.</span><span class="sxs-lookup"><span data-stu-id="414bd-290">To add the handler, switch to **Design View** for the form, and double-click `NewGame`.</span></span> <span data-ttu-id="414bd-291">Добавляется обработчик `NewGame_Click`, и активируется представление кода формы.</span><span class="sxs-lookup"><span data-stu-id="414bd-291">A `NewGame_Click` handler is added and the view switches to code view for the form.</span></span> <span data-ttu-id="414bd-292">Когда пользователь нажимает эту кнопку, запускается новый рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="414bd-292">Whenever the user clicks this button a new workflow is started.</span></span>  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -827,7 +834,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-2.  Добавьте следующий код в обработчик события щелчка. Этот код создает словарь входных аргументов для рабочего процесса, различаемых по имени аргумента. Этот словарь содержит одну запись с диапазоном случайного созданных чисел, полученных из поля со списком диапазонов.  
+2.  <span data-ttu-id="414bd-293">Добавьте следующий код в обработчик события щелчка.</span><span class="sxs-lookup"><span data-stu-id="414bd-293">Add the following code to the click handler.</span></span> <span data-ttu-id="414bd-294">Этот код создает словарь входных аргументов для рабочего процесса, различаемых по имени аргумента.</span><span class="sxs-lookup"><span data-stu-id="414bd-294">This code creates a dictionary of input arguments for the workflow, keyed by argument name.</span></span> <span data-ttu-id="414bd-295">Этот словарь содержит одну запись с диапазоном случайного созданных чисел, полученных из поля со списком диапазонов.</span><span class="sxs-lookup"><span data-stu-id="414bd-295">This dictionary has one entry that contains the range of the randomly generated number retrieved from the range combo box.</span></span>  
   
     ```vb  
     Dim inputs As New Dictionary(Of String, Object)()  
@@ -839,7 +846,7 @@ caps.handback.revision: 40
     inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem));  
     ```  
   
-3.  Затем добавьте следующий код, который запускает рабочий процесс. `WorkflowIdentity` и определение рабочего процесса, соответствующие выбранному типу рабочего процесса, извлекаются с помощью вспомогательного класса `WorkflowVersionMap`. Затем создается новый экземпляр `WorkflowApplication` с помощью определения рабочего процесса, `WorkflowIdentity` и словаря входных аргументов.  
+3.  <span data-ttu-id="414bd-296">Затем добавьте следующий код, который запускает рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="414bd-296">Next, add the following code that starts the workflow.</span></span> <span data-ttu-id="414bd-297">`WorkflowIdentity` и определение рабочего процесса, соответствующие выбранному типу рабочего процесса, извлекаются с помощью вспомогательного класса `WorkflowVersionMap`.</span><span class="sxs-lookup"><span data-stu-id="414bd-297">The `WorkflowIdentity` and workflow definition corresponding to the type of workflow selected are retrieved using the `WorkflowVersionMap` helper class.</span></span> <span data-ttu-id="414bd-298">Затем создается новый экземпляр `WorkflowApplication` с помощью определения рабочего процесса, `WorkflowIdentity` и словаря входных аргументов.</span><span class="sxs-lookup"><span data-stu-id="414bd-298">Next, a new `WorkflowApplication` instance is created using the workflow definition, `WorkflowIdentity`, and dictionary of input arguments.</span></span>  
   
     ```vb  
     Dim identity As WorkflowIdentity = Nothing  
@@ -881,7 +888,7 @@ caps.handback.revision: 40
     WorkflowApplication wfApp = new WorkflowApplication(wf, inputs, identity);  
     ```  
   
-4.  Затем необходимо добавить следующий код, который добавляет рабочий процесс в список рабочих процессов и отображает сведения о версии рабочего процесса на форме.  
+4.  <span data-ttu-id="414bd-299">Затем необходимо добавить следующий код, который добавляет рабочий процесс в список рабочих процессов и отображает сведения о версии рабочего процесса на форме.</span><span class="sxs-lookup"><span data-stu-id="414bd-299">Next, add the following code which adds the workflow to the workflow list and displays the workflow's version information on the form.</span></span>  
   
     ```vb  
     'Add the workflow to the list and display the version information.  
@@ -899,7 +906,7 @@ caps.handback.revision: 40
     WorkflowStarting = false;  
     ```  
   
-5.  Вызовите `ConfigureWorkflowApplication` для настройки хранилища экземпляров, расширений и обработчиков жизненного цикла рабочего процесса для экземпляра `WorkflowApplication`.  
+5.  <span data-ttu-id="414bd-300">Вызовите `ConfigureWorkflowApplication` для настройки хранилища экземпляров, расширений и обработчиков жизненного цикла рабочего процесса для экземпляра `WorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-300">Call `ConfigureWorkflowApplication` to configure the instance store, extensions, and workflow lifecycle handlers for this `WorkflowApplication` instance.</span></span>  
   
     ```vb  
     'Configure the instance store, extensions, and   
@@ -913,7 +920,7 @@ caps.handback.revision: 40
     ConfigureWorkflowApplication(wfApp);  
     ```  
   
-6.  Теперь вызовите `Run`.  
+6.  <span data-ttu-id="414bd-301">Теперь вызовите `Run`.</span><span class="sxs-lookup"><span data-stu-id="414bd-301">Finally, call `Run`.</span></span>  
   
     ```vb  
     'Start the workflow.  
@@ -925,7 +932,7 @@ caps.handback.revision: 40
     wfApp.Run();  
     ```  
   
-     Ниже приведен полный пример обработчика `NewGame_Click`.  
+     <span data-ttu-id="414bd-302">Ниже приведен полный пример обработчика `NewGame_Click`.</span><span class="sxs-lookup"><span data-stu-id="414bd-302">The following example is the completed `NewGame_Click` handler.</span></span>  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1005,9 +1012,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkresumeworkflowa-to-resume-a-workflow"></a><a name="BKMK_ResumeWorkflow"></a> Возобновление рабочего процесса  
+###  <span data-ttu-id="414bd-303"><a name="BKMK_ResumeWorkflow"></a>Чтобы возобновить рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="414bd-303"><a name="BKMK_ResumeWorkflow"></a> To resume a workflow</span></span>  
   
-1.  Добавьте обработчик событий `Click` для `EnterGuess`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `EnterGuess`. Когда пользователь нажимает эту кнопку, возобновляется рабочий процесс.  
+1.  <span data-ttu-id="414bd-304">Добавьте обработчик событий `Click` для `EnterGuess`.</span><span class="sxs-lookup"><span data-stu-id="414bd-304">Add a `Click` handler for `EnterGuess`.</span></span> <span data-ttu-id="414bd-305">Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `EnterGuess`.</span><span class="sxs-lookup"><span data-stu-id="414bd-305">To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`.</span></span> <span data-ttu-id="414bd-306">Когда пользователь нажимает эту кнопку, возобновляется рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="414bd-306">Whenever the user clicks this button a workflow is resumed.</span></span>  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1022,7 +1029,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-2.  Добавьте следующий код, чтобы убедиться в том, что рабочий процесс выбран в списке рабочих процессов и догадка пользователя верна.  
+2.  <span data-ttu-id="414bd-307">Добавьте следующий код, чтобы убедиться в том, что рабочий процесс выбран в списке рабочих процессов и догадка пользователя верна.</span><span class="sxs-lookup"><span data-stu-id="414bd-307">Add the following code to ensure that a workflow is selected in the workflow list, and that the user's guess is valid.</span></span>  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1056,7 +1063,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-3.  Затем извлеките `WorkflowApplicationInstance` сохраненного экземпляра рабочего процесса. `WorkflowApplicationInstance` представляет экземпляр сохраненного рабочего процесса, который еще не был связан с определением рабочего процесса. `DefinitionIdentity` экземпляра `WorkflowApplicationInstance` содержит `WorkflowIdentity` экземпляра сохраненного рабочего процесса. В этом учебнике служебный класс `WorkflowVersionMap` используется для сопоставления `WorkflowIdentity` с соответствующим определением рабочего процесса. Когда определение рабочего процесса получено, создается приложение `WorkflowApplication` на основе правильного определения.  
+3.  <span data-ttu-id="414bd-308">Затем извлеките `WorkflowApplicationInstance` сохраненного экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-308">Next, retrieve the `WorkflowApplicationInstance` of the persisted workflow instance.</span></span> <span data-ttu-id="414bd-309">`WorkflowApplicationInstance` представляет экземпляр сохраненного рабочего процесса, который еще не был связан с определением рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-309">A `WorkflowApplicationInstance` represents a persisted workflow instance that has not yet been associated with a workflow definition.</span></span> <span data-ttu-id="414bd-310">`DefinitionIdentity` экземпляра `WorkflowApplicationInstance` содержит `WorkflowIdentity` экземпляра сохраненного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-310">The `DefinitionIdentity` of the `WorkflowApplicationInstance` contains the `WorkflowIdentity` of the persisted workflow instance.</span></span> <span data-ttu-id="414bd-311">В этом учебнике служебный класс `WorkflowVersionMap` используется для сопоставления `WorkflowIdentity` с соответствующим определением рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="414bd-311">In this tutorial, the `WorkflowVersionMap` utility class is used to map the `WorkflowIdentity` to the correct workflow definition.</span></span> <span data-ttu-id="414bd-312">Когда определение рабочего процесса получено, создается приложение `WorkflowApplication` на основе правильного определения.</span><span class="sxs-lookup"><span data-stu-id="414bd-312">Once the workflow definition is retrieved, a `WorkflowApplication` is created, using the correct workflow definition.</span></span>  
   
     ```vb  
     Dim instance As WorkflowApplicationInstance = _  
@@ -1086,7 +1093,7 @@ caps.handback.revision: 40
         new WorkflowApplication(wf, instance.DefinitionIdentity);  
     ```  
   
-4.  После создания `WorkflowApplication` настройте хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения, вызвав `ConfigureWorkflowApplication`. Эти шаги требуются каждый раз, когда создается новое приложение `WorkflowApplication`, и должны быть выполнены до того, как экземпляр рабочего процесса будет загружен в `WorkflowApplication`. После загрузки рабочего процесса он возобновляется с догадкой пользователя.  
+4.  <span data-ttu-id="414bd-313">После создания `WorkflowApplication` настройте хранилище экземпляров, обработчики жизненного цикла рабочего процесса и расширения, вызвав `ConfigureWorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-313">Once the `WorkflowApplication` is created, configure the instance store, workflow lifecycle handlers, and extensions by calling `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="414bd-314">Эти шаги требуются каждый раз, когда создается новое приложение `WorkflowApplication`, и должны быть выполнены до того, как экземпляр рабочего процесса будет загружен в `WorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-314">These steps must be done every time a new `WorkflowApplication` is created, and they must be done before the workflow instance is loaded into the `WorkflowApplication`.</span></span> <span data-ttu-id="414bd-315">После загрузки рабочего процесса он возобновляется с догадкой пользователя.</span><span class="sxs-lookup"><span data-stu-id="414bd-315">After the workflow is loaded, it is resumed with the user's guess.</span></span>  
   
     ```vb  
     'Configure the extensions and lifecycle handlers.  
@@ -1114,7 +1121,7 @@ caps.handback.revision: 40
     wfApp.ResumeBookmark("EnterGuess", guess);  
     ```  
   
-5.  И наконец, очистите текстовое поле с догадкой и подготовьте форму для ввода другой догадки.  
+5.  <span data-ttu-id="414bd-316">И наконец, очистите текстовое поле с догадкой и подготовьте форму для ввода другой догадки.</span><span class="sxs-lookup"><span data-stu-id="414bd-316">Finally, clear the guess textbox and prepare the form to accept another guess.</span></span>  
   
     ```vb  
     'Clear the Guess textbox.  
@@ -1128,7 +1135,7 @@ caps.handback.revision: 40
     Guess.Focus();  
     ```  
   
-     Ниже приведен полный пример обработчика `EnterGuess_Click`.  
+     <span data-ttu-id="414bd-317">Ниже приведен полный пример обработчика `EnterGuess_Click`.</span><span class="sxs-lookup"><span data-stu-id="414bd-317">The following example is the completed `EnterGuess_Click` handler.</span></span>  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1221,9 +1228,9 @@ caps.handback.revision: 40
     }  
     ```  
   
-###  <a name="a-namebkmkterminateworkflowa-to-terminate-a-workflow"></a><a name="BKMK_TerminateWorkflow"></a> Завершение рабочего процесса  
+###  <span data-ttu-id="414bd-318"><a name="BKMK_TerminateWorkflow"></a>Завершение рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="414bd-318"><a name="BKMK_TerminateWorkflow"></a> To terminate a workflow</span></span>  
   
-1.  Добавьте обработчик событий `Click` для `QuitGame`. Чтобы добавить обработчик, перейдите в **режиме конструктора** для формы и дважды щелкните `QuitGame`. Когда пользователь нажимает эту кнопку, рабочий процесс, выбранный на данный момент, завершается.  
+1.  <span data-ttu-id="414bd-319">Добавьте обработчик событий `Click` для `QuitGame`.</span><span class="sxs-lookup"><span data-stu-id="414bd-319">Add a `Click` handler for `QuitGame`.</span></span> <span data-ttu-id="414bd-320">Чтобы добавить обработчик, перейдите в **конструкторе** для формы и дважды щелкните `QuitGame`.</span><span class="sxs-lookup"><span data-stu-id="414bd-320">To add the handler, switch to **Design View** for the form, and double-click `QuitGame`.</span></span> <span data-ttu-id="414bd-321">Когда пользователь нажимает эту кнопку, рабочий процесс, выбранный на данный момент, завершается.</span><span class="sxs-lookup"><span data-stu-id="414bd-321">Whenever the user clicks this button the currently selected workflow is terminated.</span></span>  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1238,7 +1245,7 @@ caps.handback.revision: 40
     }  
     ```  
   
-2.  Добавьте следующий код в обработчик `QuitGame_Click`: Code First проверяет, что рабочий процесс выбран в списке рабочих процессов. Затем он загружает сохраненный экземпляр в `WorkflowApplicationInstance`, использует `DefinitionIdentity` для получения правильного определения рабочего процесса и инициализирует `WorkflowApplication`. После этого настраиваются расширения и обработчики жизненного цикла рабочего процесса с помощью метода `ConfigureWorkflowApplication`. После настройки `WorkflowApplication` приложение загружается и вызывается метод `Terminate`.  
+2.  <span data-ttu-id="414bd-322">Добавьте следующий код в обработчик `QuitGame_Click`:</span><span class="sxs-lookup"><span data-stu-id="414bd-322">Add the following code to the `QuitGame_Click` handler.</span></span> <span data-ttu-id="414bd-323">Code First проверяет, что рабочий процесс выбран в списке рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="414bd-323">This code first checks to ensure that a workflow is selected in the workflow list.</span></span> <span data-ttu-id="414bd-324">Затем он загружает сохраненный экземпляр в `WorkflowApplicationInstance`, использует `DefinitionIdentity` для получения правильного определения рабочего процесса и инициализирует `WorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-324">Then it loads the persisted instance into a `WorkflowApplicationInstance`, uses the `DefinitionIdentity` to determine the correct workflow definition, and then initializes the `WorkflowApplication`.</span></span> <span data-ttu-id="414bd-325">После этого настраиваются расширения и обработчики жизненного цикла рабочего процесса с помощью метода `ConfigureWorkflowApplication`.</span><span class="sxs-lookup"><span data-stu-id="414bd-325">Next the extensions and workflow lifecycle handlers are configured with a call to `ConfigureWorkflowApplication`.</span></span> <span data-ttu-id="414bd-326">После настройки `WorkflowApplication` приложение загружается и вызывается метод `Terminate`.</span><span class="sxs-lookup"><span data-stu-id="414bd-326">Once the `WorkflowApplication` is configured, it is loaded, and then `Terminate` is called.</span></span>  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1295,11 +1302,11 @@ caps.handback.revision: 40
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <a name="a-namebkmkbuildandruna-to-build-and-run-the-application"></a><a name="BKMK_BuildAndRun"></a> Построение и запуск приложения  
+###  <span data-ttu-id="414bd-327"><a name="BKMK_BuildAndRun"></a>Построение и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="414bd-327"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
   
-1.  Дважды щелкните **Program.cs** (или **Module1.vb**) в **обозревателе решений** для отображения кода.  
+1.  <span data-ttu-id="414bd-328">Дважды щелкните **Program.cs** (или **Module1.vb**) в **обозревателе решений** для вывода кода.</span><span class="sxs-lookup"><span data-stu-id="414bd-328">Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.</span></span>  
   
-2.  Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).  
+2.  <span data-ttu-id="414bd-329">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="414bd-329">Add the following `using` (or `Imports`) statement at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -1309,7 +1316,7 @@ caps.handback.revision: 40
     using System.Windows.Forms;  
     ```  
   
-3.  Удалите или закомментируйте размещения кода из существующего рабочего процесса [Практическое руководство: выполнение рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md), и замените его следующим кодом.  
+3.  <span data-ttu-id="414bd-330">Удалите или закомментируйте размещения кода из существующего рабочего процесса [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)и замените его следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="414bd-330">Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), and replace it with the following code.</span></span>  
   
     ```vb  
     Sub Main()  
@@ -1326,14 +1333,14 @@ caps.handback.revision: 40
     }  
     ```  
   
-4.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **Свойства**. В **приложения** Укажите **приложения Windows** для **выходной тип**. Этот шаг не обязателен, но, если его не выполнить, вместе с формой отображается окно консоли.  
+4.  <span data-ttu-id="414bd-331">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **свойства**.</span><span class="sxs-lookup"><span data-stu-id="414bd-331">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**.</span></span> <span data-ttu-id="414bd-332">В **приложения** укажите **приложение Windows** для **тип вывода**.</span><span class="sxs-lookup"><span data-stu-id="414bd-332">In the **Application** tab, specify **Windows Application** for the **Output type**.</span></span> <span data-ttu-id="414bd-333">Этот шаг не обязателен, но, если его не выполнить, вместе с формой отображается окно консоли.</span><span class="sxs-lookup"><span data-stu-id="414bd-333">This step is optional, but if it is not followed the console window is displayed in addition to the form.</span></span>  
   
-5.  Нажмите клавиши Ctrl+Shift+B, чтобы создать приложение.  
+5.  <span data-ttu-id="414bd-334">Нажмите клавиши Ctrl+Shift+B, чтобы создать приложение.</span><span class="sxs-lookup"><span data-stu-id="414bd-334">Press Ctrl+Shift+B to build the application.</span></span>  
   
-6.  Убедитесь, что **NumberGuessWorkflowHost** задать в качестве запускаемого приложения, и нажмите сочетание клавиш Ctrl + F5 для запуска приложения.  
+6.  <span data-ttu-id="414bd-335">Убедитесь, что **NumberGuessWorkflowHost** присвоено значение при запуске приложения, и нажмите клавиши Ctrl + F5 для запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="414bd-335">Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.</span></span>  
   
-7.  Выберите диапазон для игры на угадывание и тип рабочего процесса для запуска и нажмите кнопку **Новая игра**. Введите догадку в **догадка** и нажмите кнопку **Go** Чтобы отправить догадку. Обратите внимание, что выходные данные действий `WriteLine` отображаются на форме.  
+7.  <span data-ttu-id="414bd-336">Выберите диапазон для игры на угадывание и тип рабочего процесса для запуска и нажмите кнопку **новая игра**.</span><span class="sxs-lookup"><span data-stu-id="414bd-336">Select a range for the guessing game and the type of workflow to start, and click **New Game**.</span></span> <span data-ttu-id="414bd-337">Введите догадку в **предположение** и нажмите кнопку **Go** Чтобы отправить догадку.</span><span class="sxs-lookup"><span data-stu-id="414bd-337">Enter a guess in the **Guess** box and click **Go** to submit your guess.</span></span> <span data-ttu-id="414bd-338">Обратите внимание, что выходные данные действий `WriteLine` отображаются на форме.</span><span class="sxs-lookup"><span data-stu-id="414bd-338">Note that the output from the `WriteLine` activities is displayed on the form.</span></span>  
   
-8.  Запустите несколько рабочих процессов, с помощью разных типов рабочих процессов и диапазонов чисел, введите некоторые догадки и переключаться между рабочими процессами, выбирая из **идентификатор экземпляра рабочего процесса** списка.  
+8.  <span data-ttu-id="414bd-339">Запустите несколько рабочих процессов с помощью разных типов рабочих процессов и диапазонов чисел, введите некоторые догадки и переключайтесь между рабочими процессами, выбирая из **идентификатор экземпляра рабочего процесса** списка.</span><span class="sxs-lookup"><span data-stu-id="414bd-339">Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.</span></span>  
   
-     Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния. Состояние недоступно, так как оно не перехвачено и не сохранено. В следующем шаге руководства [как: создать настраиваемый участник отслеживания](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md), создание настраиваемого участника отслеживания, сохраняет эти сведения.
+     <span data-ttu-id="414bd-340">Обратите внимание, что, если перейти к новому рабочему процессу, предыдущие догадки и ход выполнения рабочего процесса не отображаются в окне состояния.</span><span class="sxs-lookup"><span data-stu-id="414bd-340">Note that when you switch to a new workflow, the previous guesses and progress of the workflow are not displayed in the status window.</span></span> <span data-ttu-id="414bd-341">Состояние недоступно, так как оно не перехвачено и не сохранено.</span><span class="sxs-lookup"><span data-stu-id="414bd-341">The reason the status is not available is because it is not captured and saved anywhere.</span></span> <span data-ttu-id="414bd-342">В следующем шаге руководства [как: создать настраиваемый участник отслеживания](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), создать настраиваемого участника отслеживания, сохраняет эти сведения.</span><span class="sxs-lookup"><span data-stu-id="414bd-342">In the next step of the tutorial, [How to: Create a Custom Tracking Participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.</span></span>

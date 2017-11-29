@@ -1,94 +1,97 @@
 ---
-title: "Типичные действия по использованию LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Стандартная последовательность действий при использовании LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5115fce1d5060d258ae5feeefd99aaaf5123a123
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Типичные действия по использованию LINQ to SQL
-Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе.  Обратите внимание, что многие их этих действий являются необязательными.  В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.  
+# <a name="typical-steps-for-using-linq-to-sql"></a><span data-ttu-id="d7e83-102">Стандартная последовательность действий при использовании LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d7e83-102">Typical Steps for Using LINQ to SQL</span></span>
+<span data-ttu-id="d7e83-103">Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="d7e83-103">To implement a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] application, you follow the steps described later in this topic.</span></span> <span data-ttu-id="d7e83-104">Обратите внимание, что многие их этих действий являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="d7e83-104">Note that many steps are optional.</span></span> <span data-ttu-id="d7e83-105">В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d7e83-105">It is very possible that you can use your object model in its default state.</span></span>  
   
- Чтобы ускорить начало работы, создайте объектную модель с помощью среды [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] и начните кодирование запросов.  
+ <span data-ttu-id="d7e83-106">Чтобы ускорить начало работы, создайте объектную модель с помощью среды [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] и начните кодирование запросов.</span><span class="sxs-lookup"><span data-stu-id="d7e83-106">For a really fast start, use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create your object model and start coding your queries.</span></span>  
   
-## Создание модели объектов  
- Первый шаг состоит в создании модели объектов на основе метаданных существующей реляционной базы данных.  Объектная модель представляет базу данных в соответствии с языком программирования, выбранным разработчиком.  Дополнительные сведения см. в разделе [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+## <a name="creating-the-object-model"></a><span data-ttu-id="d7e83-107">Создание модели объектов</span><span class="sxs-lookup"><span data-stu-id="d7e83-107">Creating the Object Model</span></span>  
+ <span data-ttu-id="d7e83-108">Первый шаг состоит в создании модели объектов на основе метаданных существующей реляционной базы данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-108">The first step is to create an object model from the metadata of an existing relational database.</span></span> <span data-ttu-id="d7e83-109">Объектная модель представляет базу данных в соответствии с языком программирования, выбранным разработчиком.</span><span class="sxs-lookup"><span data-stu-id="d7e83-109">The object model represents the database according to the programming language of the developer.</span></span> <span data-ttu-id="d7e83-110">Дополнительные сведения см. в разделе [LINQ to SQL модель объектов](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-110">For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).</span></span>  
   
-### 1.Выбор средства для создания модели.  
- Для создания модели предусмотрено три средства.  
+### <a name="1-select-a-tool-to-create-the-model"></a><span data-ttu-id="d7e83-111">1. Выбор средства для создания модели.</span><span class="sxs-lookup"><span data-stu-id="d7e83-111">1. Select a tool to create the model.</span></span>  
+ <span data-ttu-id="d7e83-112">Для создания модели предусмотрено три средства.</span><span class="sxs-lookup"><span data-stu-id="d7e83-112">Three tools are available for creating the model.</span></span>  
   
--   Конструктор [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   <span data-ttu-id="d7e83-113">Конструктор [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7e83-113">The [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]</span></span>  
   
-     Этот конструктор предоставляет многофункциональный пользовательский интерфейс для создания объектной модели из существующей базы данных.  Данное средство, являющееся частью интегрированной среды разработки [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], лучше всего подходит для баз данных небольшого или среднего размера.  
+     <span data-ttu-id="d7e83-114">Этот конструктор предоставляет многофункциональный пользовательский интерфейс для создания объектной модели из существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-114">This designer provides a rich user interface for creating an object model from an existing database.</span></span> <span data-ttu-id="d7e83-115">Данное средство, являющееся частью интегрированной среды разработки [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], лучше всего подходит для баз данных небольшого или среднего размера.</span><span class="sxs-lookup"><span data-stu-id="d7e83-115">This tool is part of the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE, and is best suited to small or medium databases.</span></span>  
   
--   Средство создания кода SQLMetal  
+-   <span data-ttu-id="d7e83-116">Средство создания кода SQLMetal</span><span class="sxs-lookup"><span data-stu-id="d7e83-116">The SQLMetal code-generation tool</span></span>  
   
-     По своему набору параметров эта программа командной строки несколько отличается от конструктора [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)].  Данное средство лучше всего подходит для моделирования больших баз данных.  Дополнительные сведения см. в разделе [SqlMetal.exe \(средство создания кода\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     <span data-ttu-id="d7e83-117">По своему набору параметров эта программа командной строки несколько отличается от конструктора [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7e83-117">This command-line utility provides a slightly different set of options from the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)].</span></span> <span data-ttu-id="d7e83-118">Данное средство лучше всего подходит для моделирования больших баз данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-118">Modeling large databases is best done by using this tool.</span></span> <span data-ttu-id="d7e83-119">Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-119">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
--   Редактор кода  
+-   <span data-ttu-id="d7e83-120">Редактор кода</span><span class="sxs-lookup"><span data-stu-id="d7e83-120">A code editor</span></span>  
   
-     Можно написать собственный код с помощью редактора кода [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] или другого редактора кода.  Этот подход может привести к большому числу ошибок, поэтому при наличии существующей базы данных, которую можно использовать для создания модели с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или программы SQLMetal, использовать его не рекомендуется.  Однако редактор кода становится ценным инструментом, когда требуется уточнить или изменить код, уже созданный с помощью других средств.  Дополнительные сведения см. в разделе [Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     <span data-ttu-id="d7e83-121">Можно написать собственный код с помощью редактора кода [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] или другого редактора кода.</span><span class="sxs-lookup"><span data-stu-id="d7e83-121">You can write your own code by using either the [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] code editor or another editor.</span></span> <span data-ttu-id="d7e83-122">Этот подход может привести к большому числу ошибок, поэтому при наличии существующей базы данных, которую можно использовать для создания модели с помощью [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или программы SQLMetal, использовать его не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="d7e83-122">We do not recommend this approach, which can be prone to errors, when you have an existing database and can use either the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] or the SQLMetal tool.</span></span> <span data-ttu-id="d7e83-123">Однако редактор кода становится ценным инструментом, когда требуется уточнить или изменить код, уже созданный с помощью других средств.</span><span class="sxs-lookup"><span data-stu-id="d7e83-123">However, the code editor can be valuable for refining or modifying code you have already generated by using other tools.</span></span> <span data-ttu-id="d7e83-124">Дополнительные сведения см. в разделе [как: Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-124">For more information, see [How to: Customize Entity Classes by Using the Code Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).</span></span>  
   
-### 2.Выбор типа кода, который требуется создать.  
+### <a name="2-select-the-kind-of-code-you-want-to-generate"></a><span data-ttu-id="d7e83-125">2. Выбор типа кода, который требуется создать.</span><span class="sxs-lookup"><span data-stu-id="d7e83-125">2. Select the kind of code you want to generate.</span></span>  
   
--   Файл с исходным кодом на языке C\# или [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] для сопоставления на основе атрибутов.  
+-   <span data-ttu-id="d7e83-126">Файл с исходным кодом на языке C# или [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] для сопоставления на основе атрибутов.</span><span class="sxs-lookup"><span data-stu-id="d7e83-126">A C# or [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] source code file for attribute-based mapping.</span></span>  
   
-     Затем этот файл с исходным кодом необходимо включить в проект [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]. Дополнительные сведения см. в разделе [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     <span data-ttu-id="d7e83-127">Затем этот файл с исходным кодом необходимо включить в проект [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d7e83-127">You then include this code file in your [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] project.</span></span> <span data-ttu-id="d7e83-128">Дополнительные сведения см. в разделе [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-128">For more information, see [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
--   XML\-файл для внешнего сопоставления.  
+-   <span data-ttu-id="d7e83-129">XML-файл для внешнего сопоставления.</span><span class="sxs-lookup"><span data-stu-id="d7e83-129">An XML file for external mapping.</span></span>  
   
-     С помощью этого метода метаданные для сопоставления можно хранить на пределами кода приложения.  Дополнительные сведения см. в разделе [Внешние сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+     <span data-ttu-id="d7e83-130">С помощью этого метода метаданные для сопоставления можно хранить на пределами кода приложения.</span><span class="sxs-lookup"><span data-stu-id="d7e83-130">By using this approach, you can keep the mapping metadata out of your application code.</span></span> <span data-ttu-id="d7e83-131">Дополнительные сведения см. в разделе [внешнего сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-131">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).</span></span>  
   
     > [!NOTE]
-    >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] не поддерживает создание файлов для внешнего сопоставления.  Для реализации этой возможности необходимо использовать программу SQLMetal.  
+    >  <span data-ttu-id="d7e83-132">[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] не поддерживает создание файлов для внешнего сопоставления.</span><span class="sxs-lookup"><span data-stu-id="d7e83-132">The [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] does not support the generation of external mapping files.</span></span> <span data-ttu-id="d7e83-133">Для реализации этой возможности необходимо использовать программу SQLMetal.</span><span class="sxs-lookup"><span data-stu-id="d7e83-133">You must use the SQLMetal tool to implement this feature.</span></span>  
   
--   Файл DBML, который можно изменить перед созданием окончательного файла с исходным кодом.  
+-   <span data-ttu-id="d7e83-134">Файл DBML, который можно изменить перед созданием окончательного файла с исходным кодом.</span><span class="sxs-lookup"><span data-stu-id="d7e83-134">A DBML file, which you can modify before generating a final code file.</span></span>  
   
-     Данная возможность является дополнительной.  
+     <span data-ttu-id="d7e83-135">Данная возможность является дополнительной.</span><span class="sxs-lookup"><span data-stu-id="d7e83-135">This is an advanced feature.</span></span>  
   
-### 3.Уточнение файла с исходным кодом в соответствии с потребностями приложения.  
- Для этой цели можно использовать [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или редактор кода.  
+### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a><span data-ttu-id="d7e83-136">3. Уточнение файла с исходным кодом в соответствии с потребностями приложения.</span><span class="sxs-lookup"><span data-stu-id="d7e83-136">3. Refine the code file to reflect the needs of your application.</span></span>  
+ <span data-ttu-id="d7e83-137">Для этой цели можно использовать [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] или редактор кода.</span><span class="sxs-lookup"><span data-stu-id="d7e83-137">For this purpose, you can use either the [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] or the code editor.</span></span>  
   
-## Использование модели объектов  
- На следующем рисунке показана связь между разработчиком и данными в двухуровневом сценарии.  Другие сценарии см. в разделе [Многоуровневые и удаленные приложения с LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
+## <a name="using-the-object-model"></a><span data-ttu-id="d7e83-138">Использование модели объектов</span><span class="sxs-lookup"><span data-stu-id="d7e83-138">Using the Object Model</span></span>  
+ <span data-ttu-id="d7e83-139">На следующем рисунке показана связь между разработчиком и данными в двухуровневом сценарии.</span><span class="sxs-lookup"><span data-stu-id="d7e83-139">The following illustration shows the relationship between the developer and the data in a two-tier scenario.</span></span> <span data-ttu-id="d7e83-140">Другие сценарии см. в разделе [N-уровневые и удаленные приложения и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-140">For other scenarios, see [N-Tier and Remote Applications with LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).</span></span>  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ <span data-ttu-id="d7e83-141">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span><span class="sxs-lookup"><span data-stu-id="d7e83-141">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span></span>  
   
- После создания объектной модели описание запросов на получение сведений и управление данными осуществляется в рамках этой модели.  Все операции выполняются в терминах объектов и свойство объектной модели, а не в терминах строк и столбцов базы данных.  Работа непосредственно с базой данных не осуществляется.  
+ <span data-ttu-id="d7e83-142">После создания объектной модели описание запросов на получение сведений и управление данными осуществляется в рамках этой модели.</span><span class="sxs-lookup"><span data-stu-id="d7e83-142">Now that you have the object model, you describe information requests and manipulate data within that model.</span></span> <span data-ttu-id="d7e83-143">Все операции выполняются в терминах объектов и свойство объектной модели, а не в терминах строк и столбцов базы данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-143">You think in terms of the objects and properties in your object model and not in terms of the rows and columns of the database.</span></span> <span data-ttu-id="d7e83-144">Работа непосредственно с базой данных не осуществляется.</span><span class="sxs-lookup"><span data-stu-id="d7e83-144">You do not deal directly with the database.</span></span>  
   
- Когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] получает указание выполнить описанный запрос или вызвать метод `SubmitChanges()` для обработанных данных, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] взаимодействует с базой данных на языке базы данных.  
+ <span data-ttu-id="d7e83-145">Если вы указываете [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] выполнить описанный запрос или вызов `SubmitChanges()` на данных, обработанных, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] взаимодействует с базой данных на языке базы данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-145">When you instruct [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] to either execute a query that you have described or call `SubmitChanges()` on data that you have manipulated, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] communicates with the database in the language of the database.</span></span>  
   
- Ниже представлены типичные действия, выполняемые при использовании созданной объектной модели.  
+ <span data-ttu-id="d7e83-146">Ниже представлены типичные действия, выполняемые при использовании созданной объектной модели.</span><span class="sxs-lookup"><span data-stu-id="d7e83-146">The following represents typical steps for using the object model that you have created.</span></span>  
   
-### 1.Создание запросов для извлечения сведений из базы данных.  
- Дополнительные сведения см. в разделах [Основные понятия о запросах](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md) и [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md).  
+### <a name="1-create-queries-to-retrieve-information-from-the-database"></a><span data-ttu-id="d7e83-147">1. Создание запросов для извлечения сведений из базы данных.</span><span class="sxs-lookup"><span data-stu-id="d7e83-147">1. Create queries to retrieve information from the database.</span></span>  
+ <span data-ttu-id="d7e83-148">Дополнительные сведения см. в разделе [основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md) и [примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-148">For more information, see [Query Concepts](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md) and [Query Examples](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md).</span></span>  
   
-### 2.Переопределение поведения по умолчанию для операций "Insert", "Update" и "Delete".  
- Этот этап является необязательным.  Дополнительные сведения см. в разделе [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+### <a name="2-override-default-behaviors-for-insert-update-and-delete"></a><span data-ttu-id="d7e83-149">2. Переопределение поведения по умолчанию для операций "Insert", "Update" и "Delete".</span><span class="sxs-lookup"><span data-stu-id="d7e83-149">2. Override default behaviors for Insert, Update, and Delete.</span></span>  
+ <span data-ttu-id="d7e83-150">Этот этап является необязательным.</span><span class="sxs-lookup"><span data-stu-id="d7e83-150">This step is optional.</span></span> <span data-ttu-id="d7e83-151">Дополнительные сведения см. в разделе [Настройка операций вставки, обновления и удалить](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-151">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
   
-### 3.Установка соответствующих параметров для обнаружения конфликтов параллелизма и сообщения о них.  
- Можно использовать параметры обработки конфликтов параллелизма, установленные в модели по умолчанию, или изменить их в соответствии с текущими потребностями.  Дополнительные сведения см. в разделах [Как указать, для каких элементов тестируется возникновение конфликтов параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) и [Как указать, когда возникают исключения параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
+### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a><span data-ttu-id="d7e83-152">3. Установка соответствующих параметров для обнаружения конфликтов параллелизма и сообщения о них.</span><span class="sxs-lookup"><span data-stu-id="d7e83-152">3. Set appropriate options to detect and report concurrency conflicts.</span></span>  
+ <span data-ttu-id="d7e83-153">Можно использовать параметры обработки конфликтов параллелизма, установленные в модели по умолчанию, или изменить их в соответствии с текущими потребностями.</span><span class="sxs-lookup"><span data-stu-id="d7e83-153">You can leave your model with its default values for handling concurrency conflicts, or you can change it to suit your purposes.</span></span> <span data-ttu-id="d7e83-154">Дополнительные сведения см. в разделе [как: укажите каких элементов проверяются на наличие конфликтов параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) и [как: указать, когда возникают исключения параллелизма](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-154">For more information, see [How to: Specify Which Members are Tested for Concurrency Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) and [How to: Specify When Concurrency Exceptions are Thrown](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).</span></span>  
   
-### 4.Создание иерархии наследования.  
- Этот этап является необязательным.  Дополнительные сведения см. в разделе [Поддержка наследования](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
+### <a name="4-establish-an-inheritance-hierarchy"></a><span data-ttu-id="d7e83-155">4. Создание иерархии наследования.</span><span class="sxs-lookup"><span data-stu-id="d7e83-155">4. Establish an inheritance hierarchy.</span></span>  
+ <span data-ttu-id="d7e83-156">Этот этап является необязательным.</span><span class="sxs-lookup"><span data-stu-id="d7e83-156">This step is optional.</span></span> <span data-ttu-id="d7e83-157">Дополнительные сведения см. в разделе [Поддержка наследования](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-157">For more information, see [Inheritance Support](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).</span></span>  
   
-### 5.Предоставление соответствующего пользовательского интерфейса.  
- Этот шаг необязателен. Его выполнение зависит от способа использования приложения.  
+### <a name="5-provide-an-appropriate-user-interface"></a><span data-ttu-id="d7e83-158">5. Предоставление соответствующего пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="d7e83-158">5. Provide an appropriate user interface.</span></span>  
+ <span data-ttu-id="d7e83-159">Этот шаг необязателен. Его выполнение зависит от способа использования приложения.</span><span class="sxs-lookup"><span data-stu-id="d7e83-159">This step is optional, and depends on how your application will be used.</span></span>  
   
-### 6.Отладка и тестирование приложения  
- Дополнительные сведения см. в разделе [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+### <a name="6-debug-and-test-your-application"></a><span data-ttu-id="d7e83-160">6. Отладка и тестирование приложения</span><span class="sxs-lookup"><span data-stu-id="d7e83-160">6. Debug and test your application.</span></span>  
+ <span data-ttu-id="d7e83-161">Дополнительные сведения см. в разделе [поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).</span><span class="sxs-lookup"><span data-stu-id="d7e83-161">For more information, see [Debugging Support](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).</span></span>  
   
-## См. также  
- [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)   
- [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)   
- [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="d7e83-162">См. также</span><span class="sxs-lookup"><span data-stu-id="d7e83-162">See Also</span></span>  
+ [<span data-ttu-id="d7e83-163">Начало работы</span><span class="sxs-lookup"><span data-stu-id="d7e83-163">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
+ [<span data-ttu-id="d7e83-164">Создание модели объектов</span><span class="sxs-lookup"><span data-stu-id="d7e83-164">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [<span data-ttu-id="d7e83-165">Хранимые процедуры</span><span class="sxs-lookup"><span data-stu-id="d7e83-165">Stored Procedures</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

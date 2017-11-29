@@ -1,42 +1,46 @@
 ---
-title: "Практическое руководство. Применение гамма-коррекции к градиенту | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "градиентные кисти, гамма-коррекция"
-  - "градиенты, гамма-коррекция"
+title: "Практическое руководство. Применение гамма-коррекции к градиенту"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gradient brushes [Windows Forms], gamma correction
+- gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2721a45381f2d0befe82d6d0db2630f3eae08d51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение гамма-коррекции к градиенту
-Для кисти линейного градиента можно включить гамма\-коррекцию, присвоив свойству <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> этой кисти значение `true`.  Чтобы отключить гамма\-коррекцию, необходимо присвоить свойству <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> значение `false`.  По умолчанию гамма\-коррекция отключена.  
+# <a name="how-to-apply-gamma-correction-to-a-gradient"></a><span data-ttu-id="7d695-102">Практическое руководство. Применение гамма-коррекции к градиенту</span><span class="sxs-lookup"><span data-stu-id="7d695-102">How to: Apply Gamma Correction to a Gradient</span></span>
+<span data-ttu-id="7d695-103">Гамма-коррекцию для кисти линейного градиента можно включить, установив кисти <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="7d695-103">You can enable gamma correction for a linear gradient brush by setting the brush's <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `true`.</span></span> <span data-ttu-id="7d695-104">Гамма-коррекцию можно отключить, установив <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> свойства `false`.</span><span class="sxs-lookup"><span data-stu-id="7d695-104">You can disable gamma correction by setting the <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> property to `false`.</span></span> <span data-ttu-id="7d695-105">Гамма-коррекция отключена по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7d695-105">Gamma correction is disabled by default.</span></span>  
   
-## Пример  
- В следующем примере создается кисть линейного градиента, которая затем используется для заливки двух прямоугольников.  При заливке первого прямоугольника гамма\-коррекция отключена, а при заливке второго включена.  
+## <a name="example"></a><span data-ttu-id="7d695-106">Пример</span><span class="sxs-lookup"><span data-stu-id="7d695-106">Example</span></span>  
+ <span data-ttu-id="7d695-107">В примере создается кисти линейного градиента и используется, для заливки двух прямоугольников.</span><span class="sxs-lookup"><span data-stu-id="7d695-107">The example creates a linear gradient brush and uses that brush to fill two rectangles.</span></span> <span data-ttu-id="7d695-108">Первый прямоугольник заполняется без гамма-коррекцию, и второй прямоугольник заполняется с гамма-коррекцией.</span><span class="sxs-lookup"><span data-stu-id="7d695-108">The first rectangle is filled without gamma correction, and the second rectangle is filled with gamma correction.</span></span>  
   
- Два нарисованных прямоугольника представлены на следующем рисунке.  Верхний прямоугольник, для которого не использовалась гамма\-коррекция, в середине кажется темным.  На поверхности нижнего прямоугольника, для которого гамма\-коррекция была включена, интенсивность цветов распределена более равномерно.  
+ <span data-ttu-id="7d695-109">На следующем рисунке двух заполненных прямоугольников.</span><span class="sxs-lookup"><span data-stu-id="7d695-109">The following illustration shows the two filled rectangles.</span></span> <span data-ttu-id="7d695-110">Верхний прямоугольник, который не имеет гамма-коррекцию, кажется темным в середине.</span><span class="sxs-lookup"><span data-stu-id="7d695-110">The top rectangle, which does not have gamma correction, appears dark in the middle.</span></span> <span data-ttu-id="7d695-111">Дополнительные интенсивность унифицированного появится нижний прямоугольник, имеющая гамма-коррекцию.</span><span class="sxs-lookup"><span data-stu-id="7d695-111">The bottom rectangle, which has gamma correction, appears to have more uniform intensity.</span></span>  
   
- ![Градиент](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
+ <span data-ttu-id="7d695-112">![Градиент](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")</span><span class="sxs-lookup"><span data-stu-id="7d695-112">![Gradient](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")</span></span>  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="7d695-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="7d695-113">Compiling the Code</span></span>  
+ <span data-ttu-id="7d695-114">Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="7d695-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush>   
- [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="7d695-115">См. также</span><span class="sxs-lookup"><span data-stu-id="7d695-115">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush>  
+ [<span data-ttu-id="7d695-116">Заливка фигур с помощью градиентной кисти</span><span class="sxs-lookup"><span data-stu-id="7d695-116">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

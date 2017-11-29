@@ -1,29 +1,32 @@
 ---
-title: "Корреляция сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Корреляция сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 54b7b7d9ba247f329fbf3c9040c641e3194d3bfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Корреляция сообщений
-В этом образце показано, каким образом приложение очереди сообщений \(MSMQ\) может отправлять сообщения MSMQ службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и каким образом можно согласовывать сообщения между приложениями отправителя и получателя в сценарии "запрос\-ответ".В этом образце используется привязка msmqIntegrationBinding.В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за службой, получающей сообщения из очереди.k  
+# <a name="message-correlation"></a><span data-ttu-id="76587-102">Корреляция сообщений</span><span class="sxs-lookup"><span data-stu-id="76587-102">Message Correlation</span></span>
+<span data-ttu-id="76587-103">В этом образце показано, каким образом приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и каким образом можно согласовывать сообщения между приложениями отправителя и получателя в сценарии "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="76587-103">This sample demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and how messages can be correlated between sender and receiver applications in a request/response scenario.</span></span> <span data-ttu-id="76587-104">В этом образце используется привязка msmqIntegrationBinding.</span><span class="sxs-lookup"><span data-stu-id="76587-104">This sample uses the msmqIntegrationBinding binding.</span></span> <span data-ttu-id="76587-105">В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="76587-105">The service in this case is a self-hosted console application to allow you to observe the service that receives queued messages.</span></span> <span data-ttu-id="76587-106">k</span><span class="sxs-lookup"><span data-stu-id="76587-106">k</span></span>  
   
- Служба обрабатывает полученное от отправителя сообщение и отправляет отправителю ответное сообщение.Отправитель согласует полученный ответ с изначально отправленным запросом.Свойства `MessageID` и `CorrelationID` сообщения служат для согласования сообщений запроса и ответа.  
+ <span data-ttu-id="76587-107">Служба обрабатывает полученное от отправителя сообщение и отправляет отправителю ответное сообщение.</span><span class="sxs-lookup"><span data-stu-id="76587-107">The service processes the message received from the sender and sends a response message back to the sender.</span></span> <span data-ttu-id="76587-108">Отправитель согласует полученный ответ с изначально отправленным запросом.</span><span class="sxs-lookup"><span data-stu-id="76587-108">The sender correlates the response it received to the request it sent originally.</span></span> <span data-ttu-id="76587-109">Свойства `MessageID` и `CorrelationID` сообщения служат для согласования сообщений запроса и ответа.</span><span class="sxs-lookup"><span data-stu-id="76587-109">The `MessageID` and `CorrelationID` properties of the message are used to correlate the request and response messages.</span></span>  
   
- Контракт службы `IOrderProcessor` определяет одностороннюю операцию службы, которую можно использовать с очередями.Сообщение MSMQ не содержит заголовка Action, поэтому автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно.Поэтому в данном случае может существовать только один контракт операции.Если нужно определить для службы несколько контрактов операций, приложение должно сообщать, какой заголовок сообщения MSMQ \(например, метку или correlationID\) можно использовать для выбора контракта операции.Это показано в разделе [Пользовательское демультиплексирование](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ <span data-ttu-id="76587-110">Контракт службы `IOrderProcessor` определяет одностороннюю операцию службы, которую можно использовать с очередями.</span><span class="sxs-lookup"><span data-stu-id="76587-110">The `IOrderProcessor` service contract defines a one-way service operation that is suitable for use with queuing.</span></span> <span data-ttu-id="76587-111">Сообщение MSMQ не содержит заголовка Action, поэтому автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно.</span><span class="sxs-lookup"><span data-stu-id="76587-111">An MSMQ message does not have an Action header, so it is not possible to map different MSMQ messages to operation contracts automatically.</span></span> <span data-ttu-id="76587-112">Поэтому в данном случае может существовать только один контракт операции.</span><span class="sxs-lookup"><span data-stu-id="76587-112">Therefore, there can be only one operation contract in this case.</span></span> <span data-ttu-id="76587-113">Если нужно определить для службы несколько контрактов операций, приложение должно сообщать, какой заголовок сообщения MSMQ (например, метку или correlationID) можно использовать для выбора контракта операции.</span><span class="sxs-lookup"><span data-stu-id="76587-113">If you want to define more operation contracts in the service, the application must provide information as to which header in the MSMQ message (for example, the label, or correlationID) can be used to decide which operation contract to dispatch.</span></span> <span data-ttu-id="76587-114">Это показано в [демультиплексирование настраиваемый](../../../../docs/framework/wcf/samples/custom-demux.md).</span><span class="sxs-lookup"><span data-stu-id="76587-114">This is demonstrated in the [Custom Demux](../../../../docs/framework/wcf/samples/custom-demux.md).</span></span>  
   
- Кроме того, сообщение MSMQ не содержит сведений о том, какие заголовки соответствуют различным параметрам контракта операции.Поэтому в данном случае в контракте операции может существовать только один параметр.Параметр имеет тип <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`, содержащий сообщение MSMQ.Тип "T" в классе `MsmqMessage<T>` представляет данные, сериализованные в тело сообщения MSMQ.В этом образце тип `PurchaseOrder` сериализован в тело сообщения MSMQ.  
+ <span data-ttu-id="76587-115">Кроме того, сообщение MSMQ не содержит сведений о том, какие заголовки соответствуют различным параметрам контракта операции.</span><span class="sxs-lookup"><span data-stu-id="76587-115">The MSMQ message also does not contain information as to which headers are mapped to the different parameters of the operation contract.</span></span> <span data-ttu-id="76587-116">Поэтому в данном случае в контракте операции может существовать только один параметр.</span><span class="sxs-lookup"><span data-stu-id="76587-116">Therefore, there can be only one parameter in the operation contract.</span></span> <span data-ttu-id="76587-117">Параметр имеет тип <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` , содержащее сообщение MSMQ.</span><span class="sxs-lookup"><span data-stu-id="76587-117">The parameter is of type <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` which contains the underlying MSMQ message.</span></span> <span data-ttu-id="76587-118">Тип "T" в классе `MsmqMessage<T>` представляет данные, сериализованные в тело сообщения MSMQ.</span><span class="sxs-lookup"><span data-stu-id="76587-118">The type "T" in the `MsmqMessage<T>` class represents the data that is serialized into the MSMQ message body.</span></span> <span data-ttu-id="76587-119">В этом образце тип `PurchaseOrder` сериализован в основную часть сообщения MSMQ.</span><span class="sxs-lookup"><span data-stu-id="76587-119">In this sample, the `PurchaseOrder` type is serialized into the MSMQ message body.</span></span>  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,10 +36,9 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-  
 ```  
   
- Операция службы обрабатывает заказ на закупку и отображает содержимое заказа и его статус в окне консоли службы.Атрибут <xref:System.ServiceModel.OperationBehaviorAttribute> настраивает операцию для включения в список в транзакции с очередью и для пометки транзакции как завершенной после завершения операции.`PurchaseOrder` содержит сведения о заказе, которые необходимо обработать службе.  
+ <span data-ttu-id="76587-120">Операция службы обрабатывает заказ на закупку и отображает содержимое заказа и его статус в окне консоли службы.</span><span class="sxs-lookup"><span data-stu-id="76587-120">The service operation processes the purchase order and displays the contents of the purchase order and its status in the service console window.</span></span> <span data-ttu-id="76587-121">Атрибут <xref:System.ServiceModel.OperationBehaviorAttribute> настраивает операцию для включения в список в транзакции с очередью и для пометки транзакции как завершенной после завершения операции.</span><span class="sxs-lookup"><span data-stu-id="76587-121">The <xref:System.ServiceModel.OperationBehaviorAttribute> configures the operation to enlist in a transaction with the queue and to mark the transaction complete when the operation returns.</span></span> <span data-ttu-id="76587-122">`PurchaseOrder` содержит сведения о заказе, которые необходимо обработать службе.</span><span class="sxs-lookup"><span data-stu-id="76587-122">The `PurchaseOrder` contains the order details that must be processed by the service.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -71,15 +73,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-  
 ```  
   
- Служба использует пользовательский клиентский метод `OrderResponseClient` для отправки сообщения MSMQ в очередь.Поскольку приложение, получающее и обрабатывающее сообщение, является приложением MSMQ, а не приложением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], между двумя приложениями отсутствует неявный контракт службы.То есть в данном сценарии нельзя создать прокси\-класс с помощью средства Svcutil.exe.  
+ <span data-ttu-id="76587-123">Служба использует пользовательский клиентский метод `OrderResponseClient` для отправки сообщения MSMQ в очередь.</span><span class="sxs-lookup"><span data-stu-id="76587-123">The service uses a custom client `OrderResponseClient` to send the MSMQ message to the queue.</span></span> <span data-ttu-id="76587-124">Поскольку приложение, получающее и обрабатывающее сообщение, является приложением MSMQ, а не приложением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], между двумя приложениями отсутствует неявный контракт службы.</span><span class="sxs-lookup"><span data-stu-id="76587-124">Because the application that receives and processes the message is an MSMQ application and not a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, there is no implicit service contract between the two applications.</span></span> <span data-ttu-id="76587-125">То есть в данном сценарии нельзя создать прокси-класс с помощью средства Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="76587-125">So we cannot create a proxy using the Svcutil.exe tool in this scenario.</span></span>  
   
- Пользовательский прокси в целом одинаков для всех приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые используют для отправки сообщений привязку `msmqIntegrationBinding`.В отличии от других прокси, он не включает ряда операций службы.В него входит только операция отправки сообщения.  
+ <span data-ttu-id="76587-126">Пользовательский прокси в целом одинаков для всех приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые используют для отправки сообщений привязку `msmqIntegrationBinding`.</span><span class="sxs-lookup"><span data-stu-id="76587-126">The custom proxy is essentially the same for all [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications that use the `msmqIntegrationBinding` binding to send messages.</span></span> <span data-ttu-id="76587-127">В отличии от других прокси, он не включает ряда операций службы.</span><span class="sxs-lookup"><span data-stu-id="76587-127">Unlike other proxies, it does not include a range of service operations.</span></span> <span data-ttu-id="76587-128">В него входит только операция отправки сообщения.</span><span class="sxs-lookup"><span data-stu-id="76587-128">It is a submit message operation only.</span></span>  
   
 ```  
-  
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -107,10 +107,9 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-  
 ```  
   
- Служба является резидентной.При работе с транспортом интеграции MSMQ используемую очередь следует создавать заранее.Это можно сделать вручную или с помощью кода.В данном образце служба содержит код <xref:System.Messaging> для проверки наличия очереди и ее создания, если требуется.Имя очереди считывается из файла конфигурации.  
+ <span data-ttu-id="76587-129">Служба является резидентной.</span><span class="sxs-lookup"><span data-stu-id="76587-129">The service is self hosted.</span></span> <span data-ttu-id="76587-130">При работе с транспортом интеграции MSMQ используемую очередь следует создавать заранее.</span><span class="sxs-lookup"><span data-stu-id="76587-130">When using the MSMQ integration transport, the queue used must be created in advance.</span></span> <span data-ttu-id="76587-131">Это можно сделать вручную или с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="76587-131">This can be done manually or through code.</span></span> <span data-ttu-id="76587-132">В данном образце служба содержит код <xref:System.Messaging> для проверки наличия очереди и ее создания, если требуется.</span><span class="sxs-lookup"><span data-stu-id="76587-132">In this sample, the service contains <xref:System.Messaging> code to check for the existence of the queue and create it if necessary.</span></span> <span data-ttu-id="76587-133">Имя очереди считывается из файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="76587-133">The queue name is read from the configuration file.</span></span>  
   
 ```  
 public static void Main()  
@@ -134,12 +133,11 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-  
 ```  
   
- Очередь MSMQ, в которую отправляются запросы заказов, задается в разделе appSettings файла конфигурации.Конечные точки клиента и службы задаются в разделе system.serviceModel файла конфигурации.Обе конечные точки задают привязку `msmqIntegrationbinding`.  
+ <span data-ttu-id="76587-134">Очередь MSMQ, в которую отправляются запросы заказов, задается в разделе appSettings файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="76587-134">The MSMQ queue to which the order requests are sent is specified in the appSettings section of the configuration file.</span></span> <span data-ttu-id="76587-135">Конечные точки клиента и службы задаются в разделе system.serviceModel файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="76587-135">The client and service endpoints are defined in the system.serviceModel section of the configuration file.</span></span> <span data-ttu-id="76587-136">Обе конечные точки задают привязку `msmqIntegrationbinding`.</span><span class="sxs-lookup"><span data-stu-id="76587-136">Both specify the `msmqIntegrationbinding` binding.</span></span>  
   
-```  
+```xml  
 <appSettings>  
   <add key="orderQueueName" value=".\private$\Orders" />  
 </appSettings>  
@@ -174,10 +172,9 @@ public static void Main()
   </bindings>  
   
 </system.serviceModel>  
-  
 ```  
   
- Клиентское приложение использует для отправки в очередь устойчивых и транзакционных сообщений пространство имен <xref:System.Messaging>.Заказ на закупку содержится в теле сообщения.  
+ <span data-ttu-id="76587-137">Клиентское приложение использует для отправки в очередь устойчивых и транзакционных сообщений пространство имен <xref:System.Messaging>.</span><span class="sxs-lookup"><span data-stu-id="76587-137">The client application uses <xref:System.Messaging> to send a durable and transactional message to the queue.</span></span> <span data-ttu-id="76587-138">Заказ на закупку содержится в теле сообщения.</span><span class="sxs-lookup"><span data-stu-id="76587-138">The message's body contains the purchase order.</span></span>  
   
 ```  
 static void PlaceOrder()  
@@ -221,21 +218,20 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-  
 ```  
   
- Очередь MSMQ, из которой получаются ответы о заказах, задается в разделе appSettings файла конфигурации, как показано в следующем образце конфигурации.  
+ <span data-ttu-id="76587-139">Очередь MSMQ, из которой получаются ответы о заказах, задается в разделе appSettings файла конфигурации, как показано в следующем образце конфигурации.</span><span class="sxs-lookup"><span data-stu-id="76587-139">The MSMQ queue from which the order responses are received is specified in an appSettings section of the configuration file, as shown in the following sample configuration.</span></span>  
   
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка \(.\), а в пути в качестве разделителей используются символы обратной косой черты.В адресе конечной точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] задается схема msmq.formatname, для обозначения локального компьютера используется имя localhost.Правильно составленное имя формата соответствует шаблону msmq.имя\_формата к коде URI в соответствии с указаниями MSMQ.  
+>  <span data-ttu-id="76587-140">В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты.</span><span class="sxs-lookup"><span data-stu-id="76587-140">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="76587-141">В адресе конечной точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] задается схема msmq.formatname, для обозначения локального компьютера используется имя localhost.</span><span class="sxs-lookup"><span data-stu-id="76587-141">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint address specifies a msmq.formatname scheme, and uses "localhost" for the local computer.</span></span> <span data-ttu-id="76587-142">Правильно составленное имя формата соответствует шаблону msmq.имя_формата к коде URI в соответствии с указаниями MSMQ.</span><span class="sxs-lookup"><span data-stu-id="76587-142">A properly formed format name follows msmq.formatname in the URI according to MSMQ guidelines.</span></span>  
   
-```  
+```xml  
 <appSettings>  
     <add key=" orderResponseQueueName" value=".\private$\Orders" />  
 </appSettings>  
 ```  
   
- Клиентское приложение сохраняет `messageID` сообщения запроса заказа, которое было отправлено службе, и ждет от службы ответа.После получения ответа в очереди клиент согласовывает его с отправленным сообщением заказа с помощью свойства `correlationID` сообщения, которое содержит значение `messageID` сообщения заказа, которое клиент изначально отправил службе.  
+ <span data-ttu-id="76587-143">Клиентское приложение сохраняет `messageID` сообщения запроса заказа, которое было отправлено службе, и ждет от службы ответа.</span><span class="sxs-lookup"><span data-stu-id="76587-143">The client application saves the `messageID` of the order request message that it sends to the service and waits for a response from the service.</span></span> <span data-ttu-id="76587-144">После получения ответа в очереди клиент согласовывает его с отправленным сообщением заказа с помощью свойства `correlationID` сообщения, которое содержит значение `messageID` сообщения заказа, которое клиент изначально отправил службе.</span><span class="sxs-lookup"><span data-stu-id="76587-144">Once a response arrives in the queue the client correlates it with the order message it sent using the `correlationID` property of the message, which contains the `messageID` of the order message that the client sent to the service originally.</span></span>  
   
 ```  
 static void DisplayOrderStatus()  
@@ -276,57 +272,56 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-  
 ```  
   
- При выполнении образц действия клиента и службы отображаются в окнах консоли как службы, так и клиента.Можно видеть, как служба получает сообщения от клиента и отправляет ему ответные сообщения.Клиент отображает запросы, получаемые от службы.Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
+ <span data-ttu-id="76587-145">При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента.</span><span class="sxs-lookup"><span data-stu-id="76587-145">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="76587-146">Можно видеть, как служба получает сообщения от клиента и отправляет ему ответные сообщения.</span><span class="sxs-lookup"><span data-stu-id="76587-146">You can see the service receive messages from the client and sends a response back to the client.</span></span> <span data-ttu-id="76587-147">Клиент отображает запросы, получаемые от службы.</span><span class="sxs-lookup"><span data-stu-id="76587-147">The client displays the response received from the service.</span></span> <span data-ttu-id="76587-148">Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.</span><span class="sxs-lookup"><span data-stu-id="76587-148">Press ENTER in each console window to shut down the service and client.</span></span>  
   
 > [!NOTE]
->  Данный образец требует установки очереди сообщений \(MSMQ\).Инструкции по установке MSMQ см. в разделе "См. также".  
+>  <span data-ttu-id="76587-149">Данный образец требует установки очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="76587-149">This sample requires the installation of Message Queuing (MSMQ).</span></span> <span data-ttu-id="76587-150">Инструкции по установке MSMQ см. в разделе "См. также".</span><span class="sxs-lookup"><span data-stu-id="76587-150">See the MSMQ installation instructions in the See Also section.</span></span>  
   
-### Настройка, построение и запуск образца  
+### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="76587-151">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="76587-151">To setup, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнена процедура, описанная в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="76587-152">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76587-152">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  При первом запуске служба проверит наличие очереди.Если очередь отсутствует, служба ее создаст.Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
+2.  <span data-ttu-id="76587-153">При первом запуске служба проверит наличие очереди.</span><span class="sxs-lookup"><span data-stu-id="76587-153">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="76587-154">Если очередь отсутствует, служба ее создаст.</span><span class="sxs-lookup"><span data-stu-id="76587-154">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="76587-155">Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.</span><span class="sxs-lookup"><span data-stu-id="76587-155">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="76587-156">Чтобы создать очередь в Windows 2008, выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="76587-156">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="76587-157">Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="76587-157">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Разверните вкладку **Функции**.  
+    2.  <span data-ttu-id="76587-158">Разверните **функции** вкладки.</span><span class="sxs-lookup"><span data-stu-id="76587-158">Expand the **Features** tab.</span></span>  
   
-    3.  Щелкните правой кнопкой мыши узел **Очереди личных сообщений** и выберите пункты **Создать**, **Частная очередь**.  
+    3.  <span data-ttu-id="76587-159">Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.</span><span class="sxs-lookup"><span data-stu-id="76587-159">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Установите флажок **Транзакционная**.  
+    4.  <span data-ttu-id="76587-160">Проверьте **транзакций** поле.</span><span class="sxs-lookup"><span data-stu-id="76587-160">Check the **Transactional** box.</span></span>  
   
-    5.  В качестве имени новой очереди укажите `ServiceModelSamplesTransacted`.  
+    5.  <span data-ttu-id="76587-161">Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.</span><span class="sxs-lookup"><span data-stu-id="76587-161">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="76587-162">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76587-162">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Чтобы запустить образец на одном компьютере, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="76587-163">Для запуска образца в конфигурации с одним компьютером, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="76587-163">To run the sample in a single-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### Запуск образца на нескольких компьютерах  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="76587-164">Запуск образца на нескольких компьютерах</span><span class="sxs-lookup"><span data-stu-id="76587-164">To run the sample across computers</span></span>  
   
-1.  Скопируйте на компьютер службы файлы служебной программы из папки \\service\\bin\\ в папку языка.  
+1.  <span data-ttu-id="76587-165">Скопируйте на компьютер службы файлы служебной программы из папки \service\bin\ в папку языка.</span><span class="sxs-lookup"><span data-stu-id="76587-165">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
   
-2.  Скопируйте на клиентские компьютеры файлы из папки \\client\\bin\\ в папке языка.  
+2.  <span data-ttu-id="76587-166">Скопируйте на клиентские компьютеры файлы из папки \client\bin\ в папку языка.</span><span class="sxs-lookup"><span data-stu-id="76587-166">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-3.  В файле Client.exe.config измените orderQueueName, указав имя компьютера службы вместо «.».  
+3.  <span data-ttu-id="76587-167">В файле Client.exe.config измените orderQueueName, указав имя компьютера службы вместо «.».</span><span class="sxs-lookup"><span data-stu-id="76587-167">In the Client.exe.config file, change the orderQueueName to specify the service computer name instead of ".".</span></span>  
   
-4.  В файле Service.exe.config измените адрес конечной точки клиента, указав имя клиентского компьютера вместо «.».  
+4.  <span data-ttu-id="76587-168">В файле Service.exe.config измените адрес конечной точки клиента, указав имя клиентского компьютера вместо «.».</span><span class="sxs-lookup"><span data-stu-id="76587-168">In the Service.exe.config file, change the client endpoint address to specify the client computer name instead of ".".</span></span>  
   
-5.  На компьютере службы запустите из командной строки программу Service.exe.  
+5.  <span data-ttu-id="76587-169">На компьютере службы запустите из командной строки программу Service.exe.</span><span class="sxs-lookup"><span data-stu-id="76587-169">On the service computer, launch Service.exe from a command prompt.</span></span>  
   
-6.  На клиентском компьютере из командной строки запустите программу Client.exe.  
+6.  <span data-ttu-id="76587-170">На клиентском компьютере из командной строки запустите программу Client.exe.</span><span class="sxs-lookup"><span data-stu-id="76587-170">On the client computer, launch Client.exe from a command prompt.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="76587-171">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="76587-171">The samples may already be installed on your computer.</span></span> <span data-ttu-id="76587-172">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="76587-172">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="76587-173">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="76587-173">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="76587-174">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="76587-174">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## См. также  
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [Очередь сообщений](http://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a><span data-ttu-id="76587-175">См. также</span><span class="sxs-lookup"><span data-stu-id="76587-175">See Also</span></span>  
+ [<span data-ttu-id="76587-176">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="76587-176">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [<span data-ttu-id="76587-177">Очереди сообщений</span><span class="sxs-lookup"><span data-stu-id="76587-177">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=94968)

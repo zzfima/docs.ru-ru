@@ -1,60 +1,64 @@
 ---
-title: "Пользовательское действие Hello World | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательское действие Hello World"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b05608ca0704483f4318342a733ce363c0a66fc9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательское действие Hello World
-В этом образце показано несколько ключевых возможностей [!INCLUDE[wf](../../../../includes/wf-md.md)], включая создание простого настраиваемого действия.Некоторые возможности, демонстрируемые в этом образце, создают пользовательское действие в C\# и используют аргументы `in` и `out` \(<xref:System.Activities.InArgument> и <xref:System.Activities.OutArgument>\).  
+# <a name="hello-world-custom-activity"></a><span data-ttu-id="3635f-102">Пользовательское действие Hello World</span><span class="sxs-lookup"><span data-stu-id="3635f-102">Hello World Custom Activity</span></span>
+<span data-ttu-id="3635f-103">В этом образце показано несколько ключевых возможностей [!INCLUDE[wf](../../../../includes/wf-md.md)], включая создание простого настраиваемого действия.</span><span class="sxs-lookup"><span data-stu-id="3635f-103">This sample demonstrates several key features of [!INCLUDE[wf](../../../../includes/wf-md.md)], including how to create a simple custom activity.</span></span> <span data-ttu-id="3635f-104">Некоторые возможности, демонстрируемые в этом образце, создают пользовательское действие в C# и используют аргументы `in` и `out` (<xref:System.Activities.InArgument> и <xref:System.Activities.OutArgument>).</span><span class="sxs-lookup"><span data-stu-id="3635f-104">Some of the features demonstrated in this sample are creating a custom activity in C# and using `in` and `out` arguments (<xref:System.Activities.InArgument> and <xref:System.Activities.OutArgument>).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="3635f-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3635f-105">The samples may already be installed on your computer.</span></span> <span data-ttu-id="3635f-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="3635f-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="3635f-107">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3635f-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3635f-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="3635f-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   
-## Создание рабочего процесса в коде  
- В этом образце создаются два пользовательских действия с использованием кода C\#.Оба пользовательских действия наследуют непосредственно или косвенно от <xref:System.Activities.Activity%601> для возвращения одного значения.Преимуществом использования универсального возвращаемого значения вместо наследования от неуниверсального класса <xref:System.Activities.Activity> является то, что некоторые действия \(такие как <xref:System.Activities.Statements.Assign>\) могут обращаться к возвращаемому значению, если они используются как часть составного действия.  
+## <a name="creating-a-workflow-in-code"></a><span data-ttu-id="3635f-109">Создание рабочего процесса в коде</span><span class="sxs-lookup"><span data-stu-id="3635f-109">Creating a Workflow in Code</span></span>  
+ <span data-ttu-id="3635f-110">В этом образце создаются два пользовательских действия с использованием кода C#.</span><span class="sxs-lookup"><span data-stu-id="3635f-110">In this sample, two custom activities are created using C# code.</span></span> <span data-ttu-id="3635f-111">Оба пользовательских действия наследуют непосредственно или косвенно от <xref:System.Activities.Activity%601> для возвращения одного значения.</span><span class="sxs-lookup"><span data-stu-id="3635f-111">Both custom activities inherit directly or indirectly from <xref:System.Activities.Activity%601> to return a single value.</span></span> <span data-ttu-id="3635f-112">Преимуществом использования универсального возвращаемого значения вместо наследования от неуниверсального класса <xref:System.Activities.Activity> является то, что некоторые действия (такие как <xref:System.Activities.Statements.Assign>) могут обращаться к возвращаемому значению, если они используются как часть составного действия.</span><span class="sxs-lookup"><span data-stu-id="3635f-112">The advantage of using the generic return value, instead of inheriting from the non-generic <xref:System.Activities.Activity> class, is that some activities (such as <xref:System.Activities.Statements.Assign>) are able to access the return value when used as part of a composed activity.</span></span>  
   
- AppendString  
- Это действие наследует от класса <xref:System.Activities.Activity%601> и использует действие <xref:System.Activities.Statements.Assign>, которое объединяет две строки.  
+ <span data-ttu-id="3635f-113">AppendString</span><span class="sxs-lookup"><span data-stu-id="3635f-113">AppendString</span></span>  
+ <span data-ttu-id="3635f-114">Это действие наследует от класса <xref:System.Activities.Activity%601> и использует действие <xref:System.Activities.Statements.Assign>, которое объединяет две строки.</span><span class="sxs-lookup"><span data-stu-id="3635f-114">This activity inherits from <xref:System.Activities.Activity%601>, and uses an <xref:System.Activities.Statements.Assign> activity that concatenates two strings together.</span></span>  
   
- Prepend String  
- Это действие наследует непосредственно от <xref:System.Activities.CodeActivity%601> и создает аналогичные функциональные возможности для действия `AppendString`, которое использует логику, реализуемую в коде, а не уже имеющееся действие.  
+ <span data-ttu-id="3635f-115">Prepend String</span><span class="sxs-lookup"><span data-stu-id="3635f-115">Prepend String</span></span>  
+ <span data-ttu-id="3635f-116">Это действие наследует непосредственно от <xref:System.Activities.CodeActivity%601> и создает аналогичные функциональные возможности для действия `AppendString`, которое использует логику, реализуемую в коде, а не уже имеющееся действие.</span><span class="sxs-lookup"><span data-stu-id="3635f-116">This activity inherits directly from <xref:System.Activities.CodeActivity%601>, and creates similar functionality to the `AppendString` activity, which uses logic implemented in code rather than being composed of a pre-existing activity.</span></span>  
   
- В этот проект включены следующие файлы.  
+ <span data-ttu-id="3635f-117">В этот проект включены следующие файлы.</span><span class="sxs-lookup"><span data-stu-id="3635f-117">The following files are included in this project.</span></span>  
   
- AppendString.cs  
- Пользовательское действие, которое присоединяет строки друг к другу.Оно берет строку и объединяет ее с текстовой строкой «Здравствуй, мир\!» для образования на выходе полного сообщения.  
+ <span data-ttu-id="3635f-118">AppendString.cs</span><span class="sxs-lookup"><span data-stu-id="3635f-118">AppendString.cs</span></span>  
+ <span data-ttu-id="3635f-119">Пользовательское действие, которое присоединяет строки друг к другу.</span><span class="sxs-lookup"><span data-stu-id="3635f-119">The custom activity that appends strings together.</span></span> <span data-ttu-id="3635f-120">Он принимает строку и объединяет их с текстовой строкой «говорит Здравствуй, мир!» в форму выходе полного сообщения.</span><span class="sxs-lookup"><span data-stu-id="3635f-120">It takes in a string and combines it with a literal text string " says hello world" to form a complete message as output.</span></span>  
   
- PrependString.cs  
- Это действие вставляет заранее определенную строку в начало входной строки.  
+ <span data-ttu-id="3635f-121">PrependString.cs</span><span class="sxs-lookup"><span data-stu-id="3635f-121">PrependString.cs</span></span>  
+ <span data-ttu-id="3635f-122">Это действие вставляет заранее определенную строку в начало входной строки.</span><span class="sxs-lookup"><span data-stu-id="3635f-122">This activity prefixes a predefined string to an input string.</span></span>  
   
- Sequence1.xaml  
- Рабочий процесс, который использует пользовательские действия `AppendString` и `PrependString`.  
+ <span data-ttu-id="3635f-123">Sequence1.xaml</span><span class="sxs-lookup"><span data-stu-id="3635f-123">Sequence1.xaml</span></span>  
+ <span data-ttu-id="3635f-124">Рабочий процесс, который использует пользовательские действия `AppendString` и `PrependString`.</span><span class="sxs-lookup"><span data-stu-id="3635f-124">A workflow that uses the `AppendString` and `PrependString` custom activities.</span></span>  
   
- Program.cs  
- Программа, которая выполняет рабочий процесс.  
+ <span data-ttu-id="3635f-125">Program.cs</span><span class="sxs-lookup"><span data-stu-id="3635f-125">Program.cs</span></span>  
+ <span data-ttu-id="3635f-126">Программа, которая выполняет рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="3635f-126">A program that runs the workflow.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="3635f-127">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="3635f-127">To use this sample</span></span>  
   
-1.  Откройте в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] файл решения HelloWorld.sln.  
+1.  <span data-ttu-id="3635f-128">Откройте в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] файл решения HelloWorld.sln.</span><span class="sxs-lookup"><span data-stu-id="3635f-128">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the HelloWorld.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="3635f-129">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="3635f-129">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавишу F5.  
+3.  <span data-ttu-id="3635f-130">Чтобы запустить решение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="3635f-130">To run the solution, press F5.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="3635f-131">См. также</span><span class="sxs-lookup"><span data-stu-id="3635f-131">See Also</span></span>

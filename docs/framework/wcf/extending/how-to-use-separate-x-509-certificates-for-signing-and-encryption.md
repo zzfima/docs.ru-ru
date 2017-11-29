@@ -1,102 +1,108 @@
 ---
-title: "Как использовать отдельные сертификаты X.509 для подписывания и шифрования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "класс ClientCredentials"
-  - "класс ClientCredentialsSecurityTokenManager"
-  - "WCF, расширяемость"
+title: "Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, extensibility
+- ClientCredentials class
+- ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 51ee500b048bbd8ba2b26fdd993a18663bd433c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать отдельные сертификаты X.509 для подписывания и шифрования
-В этом разделе показывается настройка [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] на использование различных сертификатов для подписывания и шифрования сообщений на клиенте и в службе.  
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a><span data-ttu-id="c9aee-102">Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования</span><span class="sxs-lookup"><span data-stu-id="c9aee-102">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>
+<span data-ttu-id="c9aee-103">В этом разделе показывается настройка [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] на использование различных сертификатов для подписывания и шифрования сообщений на клиенте и в службе.</span><span class="sxs-lookup"><span data-stu-id="c9aee-103">This topic shows how to configure [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to use different certificates for message signing and encryption on both the client and service.</span></span>  
   
- Чтобы разрешить использование отдельных сертификатов для подписывания и шифрования, необходимо создать пользовательские учетные данные клиента или службы \(либо клиента и службы\), поскольку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не предоставляет API для задания сертификатов клиента или службы.Кроме того, необходимо предоставить диспетчер маркеров безопасности для применения данных нескольких сертификатов и создания соответствующего поставщика маркеров безопасности для заданного использования ключа и указанного направления сообщения.  
+ <span data-ttu-id="c9aee-104">Чтобы разрешить использование отдельных сертификатов для подписывания и шифрования, необходимо создать пользовательские учетные данные клиента или службы (либо клиента и службы), поскольку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не предоставляет API для задания сертификатов клиента или службы.</span><span class="sxs-lookup"><span data-stu-id="c9aee-104">To enable separate certificates to be used for signing and encryption, a custom client or service credentials (or both) must be created because [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not provide an API to set multiple client or service certificates.</span></span> <span data-ttu-id="c9aee-105">Кроме того, необходимо предоставить диспетчер маркеров безопасности для применения данных нескольких сертификатов и создания соответствующего поставщика маркеров безопасности для заданного использования ключа и указанного направления сообщения.</span><span class="sxs-lookup"><span data-stu-id="c9aee-105">Additionally, a security token manager must be provided to leverage the multiple certificates' information and to create an appropriate security token provider for specified key usage and message direction.</span></span>  
   
- На представленном ниже рисунке показаны основные используемые классы, классы, от которых они наследуются \(показаны стрелкой вверх\), и возвращаемые типы некоторых методов и свойств.  
+ <span data-ttu-id="c9aee-106">На представленном ниже рисунке показаны основные используемые классы, классы, от которых они наследуются (показаны стрелкой вверх), и возвращаемые типы некоторых методов и свойств.</span><span class="sxs-lookup"><span data-stu-id="c9aee-106">The following diagram shows the main classes used, the classes they inherit from (shown by an upward-pointing arrow), and the return types of certain methods and properties.</span></span>  
   
--   `MyClientCredentials` — это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.  
+-   <span data-ttu-id="c9aee-107">`MyClientCredentials` - это пользовательская реализация <xref:System.ServiceModel.Description.ClientCredentials>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-107">`MyClientCredentials` is a custom implementation of <xref:System.ServiceModel.Description.ClientCredentials>.</span></span>  
   
-    -   Все показанные на рисунке свойства этой реализации возвращают экземпляры <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
+    -   <span data-ttu-id="c9aee-108">Все показанные на рисунке свойства этой реализации возвращают экземпляры <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-108">Its properties shown in the diagram all return instances of <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.</span></span>  
   
-    -   Метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> этой реализации возвращает экземпляр `MyClientCredentialsSecurityTokenManager`.  
+    -   <span data-ttu-id="c9aee-109">Метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> этой реализации возвращает экземпляр `MyClientCredentialsSecurityTokenManager`.</span><span class="sxs-lookup"><span data-stu-id="c9aee-109">Its method <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> returns an instance of `MyClientCredentialsSecurityTokenManager`.</span></span>  
   
--   `MyClientCredentialsSecurityTokenManager` — это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+-   <span data-ttu-id="c9aee-110">`MyClientCredentialsSecurityTokenManager` - это пользовательская реализация <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-110">`MyClientCredentialsSecurityTokenManager` is a custom implementation of <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.</span></span>  
   
-    -   Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
+    -   <span data-ttu-id="c9aee-111">Метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> этой реализации возвращает экземпляр <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-111">Its method <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> returns an instance of <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.</span></span>  
   
- ![Схема использования учетных данных клиента](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd\-a59f\-4571\-b36f\-7e6b2f0d610f")  
+ <span data-ttu-id="c9aee-112">![Диаграмма, показывающая, как используются учетные данные клиента](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")</span><span class="sxs-lookup"><span data-stu-id="c9aee-112">![Chart showing how client credentials are used](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] пользовательских учетных данных см. в разделе [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c9aee-113">пользовательские учетные данные в разделе [Пошаговое руководство: Создание настраиваемых клиентских учетных данных и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="c9aee-113"> custom credentials, see [Walkthrough: Creating Custom Client and Service Credentials](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).</span></span>  
   
- Кроме того, необходимо создать пользовательское средство проверки идентификации и связать его с элементом привязки безопасности в специальной привязке.Следует также вместо учетных данных по умолчанию использовать пользовательские учетные данные.  
+ <span data-ttu-id="c9aee-114">Кроме того, необходимо создать пользовательское средство проверки идентификации и связать его с элементом привязки безопасности в специальной привязке.</span><span class="sxs-lookup"><span data-stu-id="c9aee-114">In addition, you must create a custom identity verifier, and link it to a security binding element in a custom binding.</span></span> <span data-ttu-id="c9aee-115">Следует также вместо учетных данных по умолчанию использовать пользовательские учетные данные.</span><span class="sxs-lookup"><span data-stu-id="c9aee-115">You must also use the custom credentials instead of the default credentials.</span></span>  
   
- На представленном ниже рисунке показаны классы, включенные в специальную привязку, и то, как осуществляется привязка пользовательского средства проверки идентификации.Существует несколько включенных элементов привязки, которые наследуются от <xref:System.ServiceModel.Channels.BindingElement>.<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> имеет свойство <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>, возвращающее экземпляр <xref:System.ServiceModel.Security.IdentityVerifier>, на основе которого настраивается `MyIdentityVerifier`.  
+ <span data-ttu-id="c9aee-116">На представленном ниже рисунке показаны классы, включенные в специальную привязку, и то, как осуществляется привязка пользовательского средства проверки идентификации.</span><span class="sxs-lookup"><span data-stu-id="c9aee-116">The following diagram shows the classes involved in the custom binding, and how the custom identity verifier is linked.</span></span> <span data-ttu-id="c9aee-117">Существует несколько включенных элементов привязки, которые наследуются от <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-117">There are several binding elements involved, all of which inherit from <xref:System.ServiceModel.Channels.BindingElement>.</span></span> <span data-ttu-id="c9aee-118"><xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> имеет свойство <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>, возвращающее экземпляр <xref:System.ServiceModel.Security.IdentityVerifier>, на основе которого настраивается `MyIdentityVerifier`.</span><span class="sxs-lookup"><span data-stu-id="c9aee-118">The <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> has the <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> property, which returns an instance of <xref:System.ServiceModel.Security.IdentityVerifier>, from which `MyIdentityVerifier` is customized.</span></span>  
   
- ![Диаграмма с элементом пользовательской привязки](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2\-0bb4\-4921\-9bf4\-20d4d82c3da5")  
+ <span data-ttu-id="c9aee-119">![Диаграмма с элементом пользовательской привязки](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")</span><span class="sxs-lookup"><span data-stu-id="c9aee-119">![Chart showing a custom binding element](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании пользовательского средства проверки идентификации см. в разделе [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c9aee-120">Создание пользовательского средства проверки идентификации, в разделе как: [как: Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).</span><span class="sxs-lookup"><span data-stu-id="c9aee-120"> creating a custom identity verifier, see How to: [How to: Create a Custom Client Identity Verifier](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).</span></span>  
   
-### Использование отдельных сертификатов для подписывания и шифрования  
+### <a name="to-use-separate-certificates-for-signing-and-encryption"></a><span data-ttu-id="c9aee-121">Использование отдельных сертификатов для подписывания и шифрования</span><span class="sxs-lookup"><span data-stu-id="c9aee-121">To use separate certificates for signing and encryption</span></span>  
   
-1.  Определите новый класс учетных данных клиента, который наследуется от класса <xref:System.ServiceModel.Description.ClientCredentials>.Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`.Кроме того, переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
+1.  <span data-ttu-id="c9aee-122">Определите новый класс учетных данных клиента, который наследуется от класса <xref:System.ServiceModel.Description.ClientCredentials>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-122">Define a new client credentials class that inherits from the <xref:System.ServiceModel.Description.ClientCredentials> class.</span></span> <span data-ttu-id="c9aee-123">Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`.</span><span class="sxs-lookup"><span data-stu-id="c9aee-123">Implement four new properties to allow multiple certificates specification: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, and `ServiceEncryptingCertificate`.</span></span> <span data-ttu-id="c9aee-124">Кроме того, переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, который определяется на следующем шаге.</span><span class="sxs-lookup"><span data-stu-id="c9aee-124">Also override the <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> method to return an instance of the customized <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> class that is defined in the next step.</span></span>  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Определите новый диспетчер маркеров безопасности клиента, который наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.Переопределите метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>, чтобы создать соответствующий поставщик маркеров безопасности.Параметр `requirement` \(<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>\) обеспечивает направление сообщения и использование ключа.  
+2.  <span data-ttu-id="c9aee-125">Определите новый диспетчер маркеров безопасности клиента, который наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-125">Define a new client security token manager that inherits from the <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> class.</span></span> <span data-ttu-id="c9aee-126">Переопределите метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>, чтобы создать соответствующий поставщик маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="c9aee-126">Override the <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> method to create an appropriate security token provider.</span></span> <span data-ttu-id="c9aee-127">Параметр `requirement` (<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) обеспечивает направление сообщения и использование ключа.</span><span class="sxs-lookup"><span data-stu-id="c9aee-127">The `requirement` parameter (a <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) provides the message direction and key usage.</span></span>  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Определите новый класс учетных данных службы, который наследуется от класса <xref:System.ServiceModel.Description.ServiceCredentials>.Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`.Кроме того, переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
+3.  <span data-ttu-id="c9aee-128">Определите новый класс учетных данных службы, который наследуется от класса <xref:System.ServiceModel.Description.ServiceCredentials>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-128">Define a new service credentials class that inherits from the <xref:System.ServiceModel.Description.ServiceCredentials> class.</span></span> <span data-ttu-id="c9aee-129">Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`.</span><span class="sxs-lookup"><span data-stu-id="c9aee-129">Implement four new properties to allow multiple certificates specification: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, and `ServiceEncryptingCertificate`.</span></span> <span data-ttu-id="c9aee-130">Кроме того, переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>, который определяется на следующем шаге.</span><span class="sxs-lookup"><span data-stu-id="c9aee-130">Also override the <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> method to return an instance of the customized <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> class that is defined in the next step.</span></span>  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Определите новый диспетчер маркеров безопасности службы, который наследуется от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.Переопределите метод <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> для создания соответствующего поставщика маркеров безопасности при условии переданных в него направления сообщения и использования ключа.  
+4.  <span data-ttu-id="c9aee-131">Определите новый диспетчер маркеров безопасности службы, который наследуется от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-131">Define a new service security token manager that inherits from the <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> class.</span></span> <span data-ttu-id="c9aee-132">Переопределите метод <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> для создания соответствующего поставщика маркеров безопасности при условии переданных в него направления сообщения и использования ключа.</span><span class="sxs-lookup"><span data-stu-id="c9aee-132">Override the <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> method to create an appropriate security token provider given the passed-in message direction and key usage.</span></span>  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
-### Использование нескольких сертификатов на клиенте  
+### <a name="to-use-multiple-certificates-on-the-client"></a><span data-ttu-id="c9aee-133">Использование нескольких сертификатов на клиенте</span><span class="sxs-lookup"><span data-stu-id="c9aee-133">To use multiple certificates on the client</span></span>  
   
-1.  Создайте специальную привязку.Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов.Это можно реализовать, например, посредством использования дуплексного транспорта или применения элемента <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде.Свяжите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>, которое определяется на следующем шаге, с элементом привязки безопасности.Замените учетные данные клиента по умолчанию на ранее созданные пользовательские учетные данные клиента.  
+1.  <span data-ttu-id="c9aee-134">Создайте специальную привязку.</span><span class="sxs-lookup"><span data-stu-id="c9aee-134">Create a custom binding.</span></span> <span data-ttu-id="c9aee-135">Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов.</span><span class="sxs-lookup"><span data-stu-id="c9aee-135">The security binding element must operate in duplex mode to allow different security token providers to be present for requests and responses.</span></span> <span data-ttu-id="c9aee-136">Это можно реализовать, например, посредством использования дуплексного транспорта или применения элемента <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="c9aee-136">One way to do this is to use a duplex-capable transport or to use the <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> as shown in the following code.</span></span> <span data-ttu-id="c9aee-137">Свяжите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>, которое определяется на следующем шаге, с элементом привязки безопасности.</span><span class="sxs-lookup"><span data-stu-id="c9aee-137">Link the customized <xref:System.ServiceModel.Security.IdentityVerifier> which is defined in the next step to the security binding element.</span></span> <span data-ttu-id="c9aee-138">Замените учетные данные клиента по умолчанию на ранее созданные пользовательские учетные данные клиента.</span><span class="sxs-lookup"><span data-stu-id="c9aee-138">Replace the default client credentials with the customized client credentials previously created.</span></span>  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Определите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>.Служба имеет несколько идентификаторов, поскольку для шифрования запроса и подписывания ответа используются разные сертификаты.  
+2.  <span data-ttu-id="c9aee-139">Определите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>.</span><span class="sxs-lookup"><span data-stu-id="c9aee-139">Define a custom <xref:System.ServiceModel.Security.IdentityVerifier>.</span></span> <span data-ttu-id="c9aee-140">Служба имеет несколько идентификаторов, поскольку для шифрования запроса и подписывания ответа используются разные сертификаты.</span><span class="sxs-lookup"><span data-stu-id="c9aee-140">The service has multiple identities because different certificates are used to encrypt the request and to sign the response.</span></span>  
   
     > [!NOTE]
-    >  В следующем примере предоставленное пользовательское средство проверки идентификации в демонстрационных целях не выполняет никакой проверки идентификации конечных точек.Для рабочего кода так делать не рекомендуется.  
+    >  <span data-ttu-id="c9aee-141">В следующем примере предоставленное пользовательское средство проверки идентификации в демонстрационных целях не выполняет никакой проверки идентификации конечных точек.</span><span class="sxs-lookup"><span data-stu-id="c9aee-141">In the following sample, the provided custom identity verifier does not perform any endpoint identity checking for demonstration purposes.</span></span> <span data-ttu-id="c9aee-142">Для рабочего кода так делать не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="c9aee-142">This is not recommended practice for production code.</span></span>  
   
      [!code-csharp[c_FourCerts#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#6)]
      [!code-vb[c_FourCerts#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#6)]  
   
-### Использование нескольких сертификатов в службе  
+### <a name="to-use-multiple-certificates-on-the-service"></a><span data-ttu-id="c9aee-143">Использование нескольких сертификатов в службе</span><span class="sxs-lookup"><span data-stu-id="c9aee-143">To use multiple certificates on the service</span></span>  
   
-1.  Создайте специальную привязку.Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов.Так же как для клиента, используйте дуплексный транспорт или элемент <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде.Замените учетные данные службы по умолчанию на ранее созданные пользовательские учетные данные службы.  
+1.  <span data-ttu-id="c9aee-144">Создайте специальную привязку.</span><span class="sxs-lookup"><span data-stu-id="c9aee-144">Create a custom binding.</span></span> <span data-ttu-id="c9aee-145">Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов.</span><span class="sxs-lookup"><span data-stu-id="c9aee-145">The security binding element must operate in a duplex mode to allow different security token providers to be present for requests and responses.</span></span> <span data-ttu-id="c9aee-146">Так же как для клиента, используйте дуплексный транспорт или элемент <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="c9aee-146">As with the client, use a duplex-capable transport or use <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> as shown in the following code.</span></span> <span data-ttu-id="c9aee-147">Замените учетные данные службы по умолчанию на ранее созданные пользовательские учетные данные службы.</span><span class="sxs-lookup"><span data-stu-id="c9aee-147">Replace the default service credentials with the customized service credentials previously created.</span></span>  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## См. также  
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ServiceCredentials>   
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>   
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>   
- <xref:System.ServiceModel.Security.IdentityVerifier>   
- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a><span data-ttu-id="c9aee-148">См. также</span><span class="sxs-lookup"><span data-stu-id="c9aee-148">See Also</span></span>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ServiceCredentials>  
+ <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
+ <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
+ <xref:System.ServiceModel.Security.IdentityVerifier>  
+ [<span data-ttu-id="c9aee-149">Пошаговое руководство: Создание пользовательского клиента и учетные данные службы</span><span class="sxs-lookup"><span data-stu-id="c9aee-149">Walkthrough: Creating Custom Client and Service Credentials</span></span>](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

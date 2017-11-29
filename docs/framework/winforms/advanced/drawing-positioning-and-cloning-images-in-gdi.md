@@ -1,63 +1,67 @@
 ---
-title: "Отрисовка, позиционирование и клонирование изображений в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование, изображения"
-  - "рисование, растровые изображения"
-  - "GDI+, клонирование изображений"
-  - "GDI+, создание изображений"
-  - "GDI+, размещение изображений"
-  - "изображения [Windows Forms], клонирование"
-  - "изображения [Windows Forms], рисование"
-  - "изображения [Windows Forms], размещение"
-  - "растровые изображения"
+title: "Отрисовка, позиционирование и клонирование изображений в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- raster images [Windows Forms]
+- images [Windows Forms], positioning
+- drawing [Windows Forms], images
+- drawing [Windows Forms], raster images
+- images [Windows Forms], cloning
+- images [Windows Forms], drawing
+- GDI+, drawing images
+- GDI+, cloning images
+- GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Отрисовка, позиционирование и клонирование изображений в GDI+
-Класс <xref:System.Drawing.Bitmap> позволяет загружать и отображать растровые изображения, а класс <xref:System.Drawing.Imaging.Metafile> служит для загрузки и отображения векторных изображений.  Классы <xref:System.Drawing.Bitmap> и <xref:System.Drawing.Imaging.Metafile> наследуются от класса <xref:System.Drawing.Image>.  Для вывода векторного изображения необходим экземпляр класса <xref:System.Drawing.Graphics> и объект <xref:System.Drawing.Imaging.Metafile>.  Для вывода растрового изображения необходим экземпляр класса <xref:System.Drawing.Graphics> и объект <xref:System.Drawing.Bitmap>.  У экземпляра класса <xref:System.Drawing.Graphics> имеется метод <xref:System.Drawing.Graphics.DrawImage%2A>, который в качестве аргумента принимает объект <xref:System.Drawing.Imaging.Metafile> или <xref:System.Drawing.Bitmap>.  
+# <a name="drawing-positioning-and-cloning-images-in-gdi"></a><span data-ttu-id="cf890-102">Отрисовка, позиционирование и клонирование изображений в GDI+</span><span class="sxs-lookup"><span data-stu-id="cf890-102">Drawing, Positioning, and Cloning Images in GDI+</span></span>
+<span data-ttu-id="cf890-103">Можно использовать <xref:System.Drawing.Bitmap> класс для загрузки и отображения растровых изображений и может использовать <xref:System.Drawing.Imaging.Metafile> класса для загрузки и отображения векторных изображений.</span><span class="sxs-lookup"><span data-stu-id="cf890-103">You can use the <xref:System.Drawing.Bitmap> class to load and display raster images, and you can use the <xref:System.Drawing.Imaging.Metafile> class to load and display vector images.</span></span> <span data-ttu-id="cf890-104"><xref:System.Drawing.Bitmap> И <xref:System.Drawing.Imaging.Metafile> классы наследуют от <xref:System.Drawing.Image> класса.</span><span class="sxs-lookup"><span data-stu-id="cf890-104">The <xref:System.Drawing.Bitmap> and <xref:System.Drawing.Imaging.Metafile> classes inherit from the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="cf890-105">Для отображения векторного изображения, требуется экземпляр <xref:System.Drawing.Graphics> класса и <xref:System.Drawing.Imaging.Metafile>.</span><span class="sxs-lookup"><span data-stu-id="cf890-105">To display a vector image, you need an instance of the <xref:System.Drawing.Graphics> class and a <xref:System.Drawing.Imaging.Metafile>.</span></span> <span data-ttu-id="cf890-106">Чтобы отобразить растровое изображение, требуется экземпляр <xref:System.Drawing.Graphics> класса и <xref:System.Drawing.Bitmap>.</span><span class="sxs-lookup"><span data-stu-id="cf890-106">To display a raster image, you need an instance of the <xref:System.Drawing.Graphics> class and a <xref:System.Drawing.Bitmap>.</span></span> <span data-ttu-id="cf890-107">Экземпляр <xref:System.Drawing.Graphics> класс предоставляет <xref:System.Drawing.Graphics.DrawImage%2A> метод, который получает <xref:System.Drawing.Imaging.Metafile> или <xref:System.Drawing.Bitmap> в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="cf890-107">The instance of the <xref:System.Drawing.Graphics> class provides the <xref:System.Drawing.Graphics.DrawImage%2A> method, which receives the <xref:System.Drawing.Imaging.Metafile> or <xref:System.Drawing.Bitmap> as an argument.</span></span>  
   
-## Типы файлов и клонирование  
- Приведенный ниже пример кода демонстрирует создание объекта <xref:System.Drawing.Bitmap> из файла Climber.jpg и отображение извлеченного из этого файла растрового рисунка.  Верхний левый угол изображения совмещается с точкой с координатами \(10, 10\), которые задаются вторым и третьим параметром.  
+## <a name="file-types-and-cloning"></a><span data-ttu-id="cf890-108">Типы файлов и клонирование</span><span class="sxs-lookup"><span data-stu-id="cf890-108">File Types and Cloning</span></span>  
+ <span data-ttu-id="cf890-109">В следующем примере кода показано создание <xref:System.Drawing.Bitmap> из файла Climber.jpg и отображает растровое изображение.</span><span class="sxs-lookup"><span data-stu-id="cf890-109">The following code example shows how to construct a <xref:System.Drawing.Bitmap> from the file Climber.jpg and displays the bitmap.</span></span> <span data-ttu-id="cf890-110">Конечная точка верхнего левого угла изображения, (10, 10), указанный в второй и третий параметры.</span><span class="sxs-lookup"><span data-stu-id="cf890-110">The destination point for the upper-left corner of the image, (10, 10), is specified in the second and third parameters.</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#11)]  
   
- На приведенном ниже рисунке показано полученное изображение.  
+ <span data-ttu-id="cf890-111">На следующем рисунке изображения.</span><span class="sxs-lookup"><span data-stu-id="cf890-111">The following illustration shows the image.</span></span>  
   
- ![Пример работы с изображением](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.png "AboutGdip03\_Art04")  
+ <span data-ttu-id="cf890-112">![Пример изображения](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.gif "AboutGdip03_Art04")</span><span class="sxs-lookup"><span data-stu-id="cf890-112">![Image Sample](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.gif "AboutGdip03_Art04")</span></span>  
   
- Объект <xref:System.Drawing.Bitmap> можно создавать из файлов различных графических форматов, таких как BMP, GIF, JPEG, EXIF, PNG, TIFF или ICON.  
+ <span data-ttu-id="cf890-113">Можно создать <xref:System.Drawing.Bitmap> объекты из различных графических форматов файлов: BMP, GIF, JPEG, EXIF, PNG, TIFF и значок.</span><span class="sxs-lookup"><span data-stu-id="cf890-113">You can construct <xref:System.Drawing.Bitmap> objects from a variety of graphics file formats: BMP, GIF, JPEG, EXIF, PNG, TIFF, and ICON.</span></span>  
   
- Приведенный ниже пример кода демонстрирует создание объекта <xref:System.Drawing.Bitmap> из файлов различных типов и отображение извлеченных из этих файлов растровых рисунков.  
+ <span data-ttu-id="cf890-114">В следующем примере кода показано создание <xref:System.Drawing.Bitmap> объекты из различных типов файлов и отображение точечных рисунков.</span><span class="sxs-lookup"><span data-stu-id="cf890-114">The following code example shows how to construct <xref:System.Drawing.Bitmap> objects from a variety of file types and then displays the bitmaps.</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#12)]  
   
- У класса <xref:System.Drawing.Bitmap> имеется метод <xref:System.Drawing.Bitmap.Clone%2A>, который можно использовать для создания копии существующего объекта <xref:System.Drawing.Bitmap>.  Метод <xref:System.Drawing.Bitmap.Clone%2A> получает в качестве аргумента исходный прямоугольник, который определяет часть исходного растрового рисунка, которую нужно скопировать.  Следующий пример кода показывает, как создать новый объект <xref:System.Drawing.Bitmap> путем копирования верхней половины существующего объекта <xref:System.Drawing.Bitmap>.  После этого оба изображения будут выведены на экран.  
+ <span data-ttu-id="cf890-115"><xref:System.Drawing.Bitmap> Класс предоставляет <xref:System.Drawing.Bitmap.Clone%2A> метод, который можно использовать для создания копии существующего <xref:System.Drawing.Bitmap>.</span><span class="sxs-lookup"><span data-stu-id="cf890-115">The <xref:System.Drawing.Bitmap> class provides a <xref:System.Drawing.Bitmap.Clone%2A> method that you can use to make a copy of an existing <xref:System.Drawing.Bitmap>.</span></span> <span data-ttu-id="cf890-116"><xref:System.Drawing.Bitmap.Clone%2A> Метод имеет параметр исходный прямоугольник, можно использовать для указания часть исходного точечного рисунка, который требуется скопировать.</span><span class="sxs-lookup"><span data-stu-id="cf890-116">The <xref:System.Drawing.Bitmap.Clone%2A> method has a source rectangle parameter that you can use to specify the portion of the original bitmap that you want to copy.</span></span> <span data-ttu-id="cf890-117">В следующем примере кода показано, как создать <xref:System.Drawing.Bitmap> путем клонирования в верхней части существующей <xref:System.Drawing.Bitmap>.</span><span class="sxs-lookup"><span data-stu-id="cf890-117">The following code example shows how to create a <xref:System.Drawing.Bitmap> by cloning the top half of an existing <xref:System.Drawing.Bitmap>.</span></span> <span data-ttu-id="cf890-118">Затем оба изображения отображаются.</span><span class="sxs-lookup"><span data-stu-id="cf890-118">Then both images are drawn.</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#13)]  
   
- На приведенном ниже рисунке показаны полученные изображения.  
+ <span data-ttu-id="cf890-119">На следующем рисунке два изображения.</span><span class="sxs-lookup"><span data-stu-id="cf890-119">The following illustration shows the two images.</span></span>  
   
- ![Обрезка](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.png "AboutGdip03\_Art05")  
+ <span data-ttu-id="cf890-120">![Обрезка](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")</span><span class="sxs-lookup"><span data-stu-id="cf890-120">![Cropping](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")</span></span>  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="cf890-121">См. также</span><span class="sxs-lookup"><span data-stu-id="cf890-121">See Also</span></span>  
+ [<span data-ttu-id="cf890-122">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="cf890-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="cf890-123">Практическое руководство. Создание графических объектов для рисования</span><span class="sxs-lookup"><span data-stu-id="cf890-123">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="cf890-124">Работа с растровыми и векторными изображениями, значками и метафайлами</span><span class="sxs-lookup"><span data-stu-id="cf890-124">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

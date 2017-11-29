@@ -1,45 +1,49 @@
 ---
-title: "100 ― WorkflowInstanceRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "100 ― WorkflowInstanceRecord"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed4d1851-b378-489b-a22d-c1db09571fb4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b22ccea1130b4f2c9a1d60d8e4e0218fecaf7afb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 100 ― WorkflowInstanceRecord
-## Свойства  
+# <a name="100---workflowinstancerecord"></a><span data-ttu-id="93fda-102">100 ― WorkflowInstanceRecord</span><span class="sxs-lookup"><span data-stu-id="93fda-102">100 - WorkflowInstanceRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="93fda-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="93fda-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|100|  
-|Keywords|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Level|Information|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="93fda-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="93fda-104">Id</span></span>|<span data-ttu-id="93fda-105">100</span><span class="sxs-lookup"><span data-stu-id="93fda-105">100</span></span>|  
+|<span data-ttu-id="93fda-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="93fda-106">Keywords</span></span>|<span data-ttu-id="93fda-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="93fda-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="93fda-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="93fda-108">Level</span></span>|<span data-ttu-id="93fda-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="93fda-109">Information</span></span>|  
+|<span data-ttu-id="93fda-110">Канал</span><span class="sxs-lookup"><span data-stu-id="93fda-110">Channel</span></span>|<span data-ttu-id="93fda-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="93fda-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие формируется участником отслеживания ETW, когда экземпляр рабочего процесса формирует запись WorkflowInstanceRecord для следующих состояний рабочего процесса: «Started», «Resumed», «Persisted», «Idle», «Deleted», «Completed», «Canceled», «Unloaded», «Unsuspended».  
+## <a name="description"></a><span data-ttu-id="93fda-112">Описание</span><span class="sxs-lookup"><span data-stu-id="93fda-112">Description</span></span>  
+ <span data-ttu-id="93fda-113">Это событие формируется участником отслеживания ETW, когда экземпляр рабочего процесса формирует запись WorkflowInstanceRecord для следующих состояний рабочего процесса: «Started», «Resumed», «Persisted», «Idle», «Deleted», «Completed», «Canceled», «Unloaded», «Unsuspended».</span><span class="sxs-lookup"><span data-stu-id="93fda-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceRecord for workflow states : Started, Resumed, Persisted, Idle, Deleted, Completed, Canceled, Unloaded, Unsuspended.</span></span>  
   
-## Message  
- TrackRecord\=WorkflowInstanceRecord, InstanceId\=%1, RecordNumber\=%2, EventTime\=%3, ActivityDefinitionId\=%4, State\=%5, Annotations\=%6, ProfileName\=%7  
+## <a name="message"></a><span data-ttu-id="93fda-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="93fda-114">Message</span></span>  
+ <span data-ttu-id="93fda-115">TrackRecord=WorkflowInstanceRecord, InstanceId=%1, RecordNumber=%2, EventTime=%3, ActivityDefinitionId=%4, State=%5, Annotations=%6, ProfileName=%7</span><span class="sxs-lookup"><span data-stu-id="93fda-115">TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7</span></span>  
   
-## Подробности  
+## <a name="details"></a><span data-ttu-id="93fda-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="93fda-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|InstanceId|xs:GUID|Идентификатор экземпляра для рабочего процесса.|  
-|RecordNumber|xs:long|Порядковый номер созданной записи.|  
-|EventTime|xs:dateTime|Время в формате UTC, когда было создано событие.|  
-|ActivityDefinitionId|xs:string|Имя корневого действия в рабочем процессе.|  
-|State|xs:string|Текущее состояние рабочего процесса.|  
-|Annotations|xs:string|Заметки, добавленные к этому событию.Значения хранятся в xml\-элементе в формате \<элементы\>\< имя элемента \= "annotationName" тип\="System.String"\>annotationValue\<\/элемент\>\<\/элементы\>.Если ни одной заметки не указано, строка содержит \<элементы\/\>.Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.Если размер события превышает пределы ETW, событие усекается путем отбрасывания заметок и замены значения заметок значением \<элементы\>...\<\/элементы\>.|  
-|ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
-|HostReference|xs:string|Для служб, размещенных на веб\-сайтах, это поле служит уникальным идентификатором службы в веб\-иерархии.Формат определяется следующим образом: «имя\_веб\-сайта виртуальный\_путь\_приложения&#124;виртуальный\_путь\_службы&#124;имя\_службы». Пример: «веб\-сайт по умолчанию\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService»|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="93fda-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="93fda-117">Data Item Name</span></span>|<span data-ttu-id="93fda-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="93fda-118">Data Item Type</span></span>|<span data-ttu-id="93fda-119">Описание</span><span class="sxs-lookup"><span data-stu-id="93fda-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="93fda-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="93fda-120">InstanceId</span></span>|<span data-ttu-id="93fda-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="93fda-121">xs:GUID</span></span>|<span data-ttu-id="93fda-122">Идентификатор экземпляра для рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="93fda-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="93fda-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="93fda-123">RecordNumber</span></span>|<span data-ttu-id="93fda-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="93fda-124">xs:long</span></span>|<span data-ttu-id="93fda-125">Порядковый номер созданной записи.</span><span class="sxs-lookup"><span data-stu-id="93fda-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="93fda-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="93fda-126">EventTime</span></span>|<span data-ttu-id="93fda-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="93fda-127">xs:dateTime</span></span>|<span data-ttu-id="93fda-128">Время в формате UTC, когда было создано событие.</span><span class="sxs-lookup"><span data-stu-id="93fda-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="93fda-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="93fda-129">ActivityDefinitionId</span></span>|<span data-ttu-id="93fda-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-130">xs:string</span></span>|<span data-ttu-id="93fda-131">Имя корневого действия в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="93fda-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="93fda-132">Состояние</span><span class="sxs-lookup"><span data-stu-id="93fda-132">State</span></span>|<span data-ttu-id="93fda-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-133">xs:string</span></span>|<span data-ttu-id="93fda-134">Текущее состояние рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="93fda-134">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="93fda-135">Заметки</span><span class="sxs-lookup"><span data-stu-id="93fda-135">Annotations</span></span>|<span data-ttu-id="93fda-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-136">xs:string</span></span>|<span data-ttu-id="93fda-137">Заметки, добавленные к этому событию.</span><span class="sxs-lookup"><span data-stu-id="93fda-137">The annotations that were added to this event.</span></span>  <span data-ttu-id="93fda-138">Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="93fda-138">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="93fda-139">Если не задано никаких заметок, строка содержит \<элементы / >.</span><span class="sxs-lookup"><span data-stu-id="93fda-139">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="93fda-140">Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.</span><span class="sxs-lookup"><span data-stu-id="93fda-140">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="93fda-141">Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="93fda-141">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="93fda-142">ProfileName</span><span class="sxs-lookup"><span data-stu-id="93fda-142">ProfileName</span></span>|<span data-ttu-id="93fda-143">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-143">xs:string</span></span>|<span data-ttu-id="93fda-144">Имя или профиль отслеживания, который привел к созданию этого события.</span><span class="sxs-lookup"><span data-stu-id="93fda-144">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="93fda-145">HostReference</span><span class="sxs-lookup"><span data-stu-id="93fda-145">HostReference</span></span>|<span data-ttu-id="93fda-146">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-146">xs:string</span></span>|<span data-ttu-id="93fda-147">Для служб, размещенных на веб-сайтах, это поле служит уникальным идентификатором службы в веб-иерархии.</span><span class="sxs-lookup"><span data-stu-id="93fda-147">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="93fda-148">Ее формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName "Пример:" по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService "</span><span class="sxs-lookup"><span data-stu-id="93fda-148">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="93fda-149">AppDomain</span><span class="sxs-lookup"><span data-stu-id="93fda-149">AppDomain</span></span>|<span data-ttu-id="93fda-150">xs:string</span><span class="sxs-lookup"><span data-stu-id="93fda-150">xs:string</span></span>|<span data-ttu-id="93fda-151">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="93fda-151">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

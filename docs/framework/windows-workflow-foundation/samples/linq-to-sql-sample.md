@@ -1,100 +1,102 @@
 ---
-title: "LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL образца"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c05520dccdbf0677569d7fc64f55795e0ddb79b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL
-В этом образце показано создание действий, использующих запросы к сущностям LINQ to SQL из таблиц в базах данных SQL Server.  
+# <a name="linq-to-sql-sample"></a><span data-ttu-id="37045-102">LINQ to SQL образца</span><span class="sxs-lookup"><span data-stu-id="37045-102">LINQ to SQL Sample</span></span>
+<span data-ttu-id="37045-103">В этом образце показано создание действий, использующих запросы к сущностям LINQ to SQL из таблиц в базах данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="37045-103">This sample demonstrates how to create an activity to use LINQ to SQL query entities from tables in SQL Server databases.</span></span>  
   
 > [!IMPORTANT]
->  Образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="37045-104">Образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="37045-104">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples may already be installed on your machine.</span></span> <span data-ttu-id="37045-105">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="37045-105">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\Samples\WCFWFCardspace`  
+>  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Если этот каталог не существует, щелкните ссылку Загрузить образец в верхней части страницы.Обратите внимание, что по этой ссылке происходит загрузка и установка всех [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] образцов.Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="37045-106">Если этот каталог не существует, щелкните ссылку "Загрузить образец" в верхней части страницы.</span><span class="sxs-lookup"><span data-stu-id="37045-106">If this directory does not exist, click the download sample link at the top of this page.</span></span> <span data-ttu-id="37045-107">Обратите внимание, что по этой ссылке происходит загрузка и установка всех [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] образцов.</span><span class="sxs-lookup"><span data-stu-id="37045-107">Note that this link downloads and installs all of the [!INCLUDE[wf1](../../../../includes/wf1-md.md)], [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], and [!INCLUDE[infocard](../../../../includes/infocard-md.md)] samples.</span></span> <span data-ttu-id="37045-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="37045-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
+>  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
-## Сведения о действии FindInSqlTable  
- Это действие позволяет пользователям создавать запросы к сущностям из таблиц в базе данных, используя LINQ to SQL.Пользователи действия могут также указать предикат LINQ в форме лямбда\-выражения для фильтрации результатов.Если не указан предикат, вся таблица возвращается.В следующих сведениях о таблице подробно описаны свойства и возвращаемые значения для действия.  
+## <a name="activity-details-for-findinsqltable"></a><span data-ttu-id="37045-109">Сведения о действии FindInSqlTable</span><span class="sxs-lookup"><span data-stu-id="37045-109">Activity details for FindInSqlTable</span></span>  
+ <span data-ttu-id="37045-110">Это действие позволяет пользователям создавать запросы к сущностям из таблиц в базе данных, используя LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="37045-110">This activity allows users to query entities from tables in a database using LINQ to SQL.</span></span> <span data-ttu-id="37045-111">Пользователи действия могут также указать предикат LINQ в форме лямбда-выражения для фильтрации результатов.</span><span class="sxs-lookup"><span data-stu-id="37045-111">Users of the activity can also provide a LINQ predicate in the form of a lambda expression to filter the results.</span></span> <span data-ttu-id="37045-112">Если не указан предикат, вся таблица возвращается.</span><span class="sxs-lookup"><span data-stu-id="37045-112">If no predicate is provided, the entire table is returned.</span></span> <span data-ttu-id="37045-113">В следующих сведениях о таблице подробно описаны свойства и возвращаемые значения для действия.</span><span class="sxs-lookup"><span data-stu-id="37045-113">The following table details the property and return values for the activity.</span></span>  
   
-|Свойство или возвращаемое значение|Описание|  
-|----------------------------------------|--------------|  
-|`Collection`Свойство|Обязательное свойство, в котором указывается исходная коллекция.|  
-|`Predicate`Свойство|Обязательное свойство, в котором указывается фильтр для коллекции в виде лямбда\-выражения.|  
-|Возвращаемое значение|Фильтруемая коллекция.|  
+|<span data-ttu-id="37045-114">Свойство или возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="37045-114">Property or Return Value</span></span>|<span data-ttu-id="37045-115">Описание</span><span class="sxs-lookup"><span data-stu-id="37045-115">Description</span></span>|  
+|------------------------------|-----------------|  
+|<span data-ttu-id="37045-116">Свойство `Collection`</span><span class="sxs-lookup"><span data-stu-id="37045-116">`Collection` property</span></span>|<span data-ttu-id="37045-117">Обязательное свойство, в котором указывается исходная коллекция.</span><span class="sxs-lookup"><span data-stu-id="37045-117">A required property that specifies the source collection.</span></span>|  
+|<span data-ttu-id="37045-118">Свойство `Predicate`</span><span class="sxs-lookup"><span data-stu-id="37045-118">`Predicate` property</span></span>|<span data-ttu-id="37045-119">Обязательное свойство, в котором указывается фильтр для коллекции в виде лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="37045-119">A required property that specifies the filter for the collection in the form of a lambda expression.</span></span>|  
+|<span data-ttu-id="37045-120">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="37045-120">Return Value</span></span>|<span data-ttu-id="37045-121">Фильтруемая коллекция.</span><span class="sxs-lookup"><span data-stu-id="37045-121">The filtered collection.</span></span>|  
   
-## Образец кода, использующий настраиваемое действие  
- В следующем примере кода пользовательское действие `FindInSqlTable` применяется для нахождения всех строк в таблице SQL Server, имеющей название `Employee`, где значение столбца `Role` равно `SDE`.  
+## <a name="code-sample-that-uses-the-custom-activity"></a><span data-ttu-id="37045-122">Образец кода, использующий настраиваемое действие</span><span class="sxs-lookup"><span data-stu-id="37045-122">Code Sample that uses the Custom Activity</span></span>  
+ <span data-ttu-id="37045-123">В следующем примере кода пользовательское действие `FindInSqlTable` применяется для нахождения всех строк в таблице SQL Server, имеющей название `Employee`, где значение столбца `Role` равно `SDE`.</span><span class="sxs-lookup"><span data-stu-id="37045-123">The following code example uses the `FindInSqlTable` custom activity to find all rows in a SQL Server table named `Employee` where the `Role` column is equal to `SDE`.</span></span>  
   
 ```csharp  
-  
 new FindInSqlTable<Employee>   
 {  
     ConnectionString = @"Data Source=.\SQLExpress;Initial Catalog=LinqToSqlSample;Integrated Security=True",                          
     Predicate = new LambdaValue<Func<Employee, bool>>(c => new Func<Employee, bool>(emp => emp.Role.Equals("SDE"))),  
     Result = new OutArgument<IList<Employee>>(employees)  
 },  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="37045-124">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="37045-124">To use this sample</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="37045-125">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="37045-125">Open a command prompt.</span></span>  
   
-2.  Перейдите в папку, содержащую этот образец.  
+2.  <span data-ttu-id="37045-126">Перейдите в папку, содержащую этот образец.</span><span class="sxs-lookup"><span data-stu-id="37045-126">Navigate to the folder that contains this sample.</span></span>  
   
-3.  Запустите командный файл Setup.cmd.  
+3.  <span data-ttu-id="37045-127">Запустите командный файл Setup.cmd.</span><span class="sxs-lookup"><span data-stu-id="37045-127">Run the Setup.cmd command file.</span></span>  
   
     > [!NOTE]
-    >  Скрипт Setup.cmd пытается установить образец базы данных в SQL Server Express на локальном компьютере.Для установки данного образца на другом экземпляре SQL Server отредактируйте Setup.cmd.  
+    >  <span data-ttu-id="37045-128">Скрипт Setup.cmd пытается установить образец базы данных в SQL Server Express на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="37045-128">The Setup.cmd script attempts to install the sample database in your local machine SQL Server Express.</span></span> <span data-ttu-id="37045-129">Для установки данного образца на другом экземпляре SQL Server отредактируйте Setup.cmd.</span><span class="sxs-lookup"><span data-stu-id="37045-129">If you want to install it in other SQL server instance, edit Setup.cmd.</span></span>  
   
-     Скрипт Setup.cmd выполняет следующие действия:  
+     <span data-ttu-id="37045-130">Скрипт Setup.cmd выполняет следующие действия:</span><span class="sxs-lookup"><span data-stu-id="37045-130">The Setup.cmd script does the following actions.:</span></span>  
   
-    -   Создает базу данных c именем LinqToSqlSample.  
+    -   <span data-ttu-id="37045-131">Создает базу данных c именем LinqToSqlSample.</span><span class="sxs-lookup"><span data-stu-id="37045-131">Creates a database called LinqToSqlSample.</span></span>  
   
-    -   Создает таблицу Roles.  
+    -   <span data-ttu-id="37045-132">Создает таблицу Roles.</span><span class="sxs-lookup"><span data-stu-id="37045-132">Creates a Roles table.</span></span>  
   
-    -   Создает таблицу Employees.  
+    -   <span data-ttu-id="37045-133">Создает таблицу Employees.</span><span class="sxs-lookup"><span data-stu-id="37045-133">Creates an Employees table.</span></span>  
   
-    -   Вставляет 3 записи в таблицу Roles.  
+    -   <span data-ttu-id="37045-134">Вставляет 3 записи в таблицу Roles.</span><span class="sxs-lookup"><span data-stu-id="37045-134">Inserts 3 records into the Roles table.</span></span>  
   
-    -   Вставляет 12 записей в таблицу Employees.  
+    -   <span data-ttu-id="37045-135">Вставляет 12 записей в таблицу Employees.</span><span class="sxs-lookup"><span data-stu-id="37045-135">Inserts 12 records into the Employees table.</span></span>  
   
-4.  Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения LinqToSQL.sln.  
+4.  <span data-ttu-id="37045-136">Используя [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], откройте файл решения LinqToSQL.sln.</span><span class="sxs-lookup"><span data-stu-id="37045-136">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the LinqToSQL.sln solution file.</span></span>  
   
-5.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+5.  <span data-ttu-id="37045-137">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="37045-137">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-6.  Чтобы запустить решение, нажмите клавишу F5.  
+6.  <span data-ttu-id="37045-138">Чтобы запустить решение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="37045-138">To run the solution, press F5.</span></span>  
   
-#### Удаление образца базы данных LinqToSql  
+#### <a name="to-uninstall-the-linqtosql-sample-database"></a><span data-ttu-id="37045-139">Удаление образца базы данных LinqToSql</span><span class="sxs-lookup"><span data-stu-id="37045-139">To uninstall the LinqToSql sample database</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="37045-140">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="37045-140">Open a command prompt.</span></span>  
   
-2.  Перейдите в папку, содержащую этот образец.  
+2.  <span data-ttu-id="37045-141">Перейдите в папку, содержащую этот образец.</span><span class="sxs-lookup"><span data-stu-id="37045-141">Navigate to the folder that contains this sample.</span></span>  
   
-3.  Запустите командный файл Cleanup.cmd.  
+3.  <span data-ttu-id="37045-142">Запустите командный файл Cleanup.cmd.</span><span class="sxs-lookup"><span data-stu-id="37045-142">Run the Cleanup.cmd command file.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="37045-143">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="37045-143">The samples may already be installed on your machine.</span></span> <span data-ttu-id="37045-144">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="37045-144">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="37045-145">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="37045-145">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="37045-146">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="37045-146">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
-## См. также  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)   
- [Приступая к работе \(LINQ to SQL\)](http://go.microsoft.com/fwlink/?LinkId=150377)
+## <a name="see-also"></a><span data-ttu-id="37045-147">См. также</span><span class="sxs-lookup"><span data-stu-id="37045-147">See Also</span></span>  
+ [<span data-ttu-id="37045-148">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="37045-148">LINQ to SQL</span></span>](http://go.microsoft.com/fwlink/?LinkId=150376)  
+ [<span data-ttu-id="37045-149">Начало работы (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="37045-149">Getting Started (LINQ to SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=150377)

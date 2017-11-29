@@ -1,49 +1,53 @@
 ---
-title: "101 ― WorkflowInstanceUnhandledExceptionRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "101 ― WorkflowInstanceUnhandledExceptionRecord"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab7d50a0-5347-4390-8445-1def4dfdff6a
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0347bf20b17c964763fc2a9a8e1094cdb01586de
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 101 ― WorkflowInstanceUnhandledExceptionRecord
-## Свойства  
+# <a name="101---workflowinstanceunhandledexceptionrecord"></a><span data-ttu-id="8c4ad-102">101 ― WorkflowInstanceUnhandledExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="8c4ad-102">101 - WorkflowInstanceUnhandledExceptionRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="8c4ad-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="8c4ad-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id|101|  
-|Keywords|EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking|  
-|Level|Error|  
-|Channel|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="8c4ad-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="8c4ad-104">Id</span></span>|<span data-ttu-id="8c4ad-105">101</span><span class="sxs-lookup"><span data-stu-id="8c4ad-105">101</span></span>|  
+|<span data-ttu-id="8c4ad-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="8c4ad-106">Keywords</span></span>|<span data-ttu-id="8c4ad-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="8c4ad-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="8c4ad-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="8c4ad-108">Level</span></span>|<span data-ttu-id="8c4ad-109">Ошибка</span><span class="sxs-lookup"><span data-stu-id="8c4ad-109">Error</span></span>|  
+|<span data-ttu-id="8c4ad-110">Канал</span><span class="sxs-lookup"><span data-stu-id="8c4ad-110">Channel</span></span>|<span data-ttu-id="8c4ad-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="8c4ad-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие создается участником отслеживания ETW, когда экземпляр рабочего процесса создает запись WorkflowInstanceUnhandledExceptionRecord.  
+## <a name="description"></a><span data-ttu-id="8c4ad-112">Описание</span><span class="sxs-lookup"><span data-stu-id="8c4ad-112">Description</span></span>  
+ <span data-ttu-id="8c4ad-113">Это событие создается участником отслеживания ETW, когда экземпляр рабочего процесса создает запись WorkflowInstanceUnhandledExceptionRecord.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## Message  
- TrackRecord\=WorkflowInstanceUnhandledExceptionRecord, InstanceId\=%1, RecordNumber\=%2, EventTime\=%3, ActivityDefinitionId\=%4, SourceName\=%5, SourceId\=%6, SourceInstanceId\=%7, SourceTypeName\=%8, Exception\=%9, Annotations\=%10, ProfileName\=%11  
+## <a name="message"></a><span data-ttu-id="8c4ad-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="8c4ad-114">Message</span></span>  
+ <span data-ttu-id="8c4ad-115">TrackRecord=WorkflowInstanceUnhandledExceptionRecord, InstanceId=%1, RecordNumber=%2, EventTime=%3, ActivityDefinitionId=%4, SourceName=%5, SourceId=%6, SourceInstanceId=%7, SourceTypeName=%8, Exception=%9, Annotations=%10, ProfileName=%11</span><span class="sxs-lookup"><span data-stu-id="8c4ad-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11</span></span>  
   
-## Подробности  
+## <a name="details"></a><span data-ttu-id="8c4ad-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="8c4ad-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|InstanceId|xs:GUID|Идентификатор экземпляра для рабочего процесса.|  
-|RecordNumber|xs:long|Порядковый номер созданной записи.|  
-|EventTime|xs:dateTime|Время в формате UTC, когда было создано событие.|  
-|ActivityDefinitionId|xs:string|Имя корневого действия в рабочем процессе.|  
-|SourceName|xs:string|Имя исходного действия, в котором произошла ошибка, что привело к созданию исключения unhandledException.|  
-|SourceId|xs:string|Идентификатор исходного действия, в котором произошла ошибка.|  
-|SourceInstanceId|xs:string|Идентификатор экземпляра исходного действия, в котором произошла ошибка.|  
-|SourceTypeName|xs:string|Имя типа исходного действия, в котором произошла ошибка, что привело к созданию исключения unhandledException.|  
-|Exception|xs:string|Данные необработанного исключения.|  
-|Annotations|xs:string|Заметки, добавленные к этому событию.Значения хранятся в xml\-элементе в формате \<элементы\>\< имя элемента \= "annotationName" тип\="System.String"\>annotationValue\<\/элемент\>\<\/элементы\>.Если ни одной заметки не указано, строка содержит \<элементы\/\>.Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.Если размер события превышает пределы ETW, событие усекается путем отбрасывания заметок и замены значения заметок значением \<элементы\>...\<\/элементы\>.|  
-|ProfileName|xs:string|Имя или профиль отслеживания, который привел к созданию этого события.|  
-|HostReference|xs:string|Для служб, размещенных на веб\-сайтах, это поле служит уникальным идентификатором службы в веб\-иерархии.Формат службы определяется следующим образом: имя веб\-сайта виртуальный путь приложения&#124;виртуальный путь службы&#124;имя службы. Например: Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="8c4ad-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="8c4ad-117">Data Item Name</span></span>|<span data-ttu-id="8c4ad-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="8c4ad-118">Data Item Type</span></span>|<span data-ttu-id="8c4ad-119">Описание</span><span class="sxs-lookup"><span data-stu-id="8c4ad-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="8c4ad-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="8c4ad-120">InstanceId</span></span>|<span data-ttu-id="8c4ad-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="8c4ad-121">xs:GUID</span></span>|<span data-ttu-id="8c4ad-122">Идентификатор экземпляра для рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="8c4ad-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="8c4ad-123">RecordNumber</span></span>|<span data-ttu-id="8c4ad-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="8c4ad-124">xs:long</span></span>|<span data-ttu-id="8c4ad-125">Порядковый номер созданной записи.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="8c4ad-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="8c4ad-126">EventTime</span></span>|<span data-ttu-id="8c4ad-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="8c4ad-127">xs:dateTime</span></span>|<span data-ttu-id="8c4ad-128">Время в формате UTC, когда было создано событие.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="8c4ad-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="8c4ad-129">ActivityDefinitionId</span></span>|<span data-ttu-id="8c4ad-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-130">xs:string</span></span>|<span data-ttu-id="8c4ad-131">Имя корневого действия в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="8c4ad-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="8c4ad-132">SourceName</span></span>|<span data-ttu-id="8c4ad-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-133">xs:string</span></span>|<span data-ttu-id="8c4ad-134">Имя исходного действия, в котором произошла ошибка, что привело к созданию исключения unhandledException.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="8c4ad-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="8c4ad-135">SourceId</span></span>|<span data-ttu-id="8c4ad-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-136">xs:string</span></span>|<span data-ttu-id="8c4ad-137">Идентификатор исходного действия, в котором произошла ошибка.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="8c4ad-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="8c4ad-138">SourceInstanceId</span></span>|<span data-ttu-id="8c4ad-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-139">xs:string</span></span>|<span data-ttu-id="8c4ad-140">Идентификатор экземпляра исходного действия, в котором произошла ошибка.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="8c4ad-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="8c4ad-141">SourceTypeName</span></span>|<span data-ttu-id="8c4ad-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-142">xs:string</span></span>|<span data-ttu-id="8c4ad-143">Имя типа исходного действия, в котором произошла ошибка, что привело к созданию исключения unhandledException.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="8c4ad-144">Исключение</span><span class="sxs-lookup"><span data-stu-id="8c4ad-144">Exception</span></span>|<span data-ttu-id="8c4ad-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-145">xs:string</span></span>|<span data-ttu-id="8c4ad-146">Данные необработанного исключения.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="8c4ad-147">Заметки</span><span class="sxs-lookup"><span data-stu-id="8c4ad-147">Annotations</span></span>|<span data-ttu-id="8c4ad-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-148">xs:string</span></span>|<span data-ttu-id="8c4ad-149">Заметки, добавленные к этому событию.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-149">The annotations that were added to this event.</span></span>  <span data-ttu-id="8c4ad-150">Значения хранятся в виде элемента xml в формате \<элементы >\< имя элемента = «annotationName» type="System.String" > annotationValue\</товар > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-150">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="8c4ad-151">Если не задано никаких заметок, строка содержит \<элементы / >.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-151">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="8c4ad-152">Размер событий ETW ограничен размером буфера ETW или максимальным размером полезных данных для события ETW.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-152">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="8c4ad-153">Если размер события превышает пределы трассировки событий Windows, то событие усекается путем отбрасывания заметок и замены значения заметок значением с \<элементы >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-153">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="8c4ad-154">ProfileName</span><span class="sxs-lookup"><span data-stu-id="8c4ad-154">ProfileName</span></span>|<span data-ttu-id="8c4ad-155">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-155">xs:string</span></span>|<span data-ttu-id="8c4ad-156">Имя или профиль отслеживания, который привел к созданию этого события.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-156">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="8c4ad-157">HostReference</span><span class="sxs-lookup"><span data-stu-id="8c4ad-157">HostReference</span></span>|<span data-ttu-id="8c4ad-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-158">xs:string</span></span>|<span data-ttu-id="8c4ad-159">Для служб, размещенных на веб-сайтах, это поле служит уникальным идентификатором службы в веб-иерархии.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-159">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="8c4ad-160">Формат определяется как "веб-сайт имя виртуальный путь приложения &#124; Виртуальный путь службы &#124; ServiceName "Пример:" по умолчанию веб-сайта или CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService "</span><span class="sxs-lookup"><span data-stu-id="8c4ad-160">It's format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="8c4ad-161">AppDomain</span><span class="sxs-lookup"><span data-stu-id="8c4ad-161">AppDomain</span></span>|<span data-ttu-id="8c4ad-162">xs:string</span><span class="sxs-lookup"><span data-stu-id="8c4ad-162">xs:string</span></span>|<span data-ttu-id="8c4ad-163">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="8c4ad-163">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

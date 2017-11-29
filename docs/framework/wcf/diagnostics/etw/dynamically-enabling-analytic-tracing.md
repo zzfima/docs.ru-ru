@@ -1,51 +1,54 @@
 ---
-title: "Динамическое включение аналитического отслеживания | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Динамическое включение аналитического отслеживания"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d86186d3f979d4ec02cb728befb7127edfd07aaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Динамическое включение аналитического отслеживания
-Средства, поставляемые в составе ОС Windows, позволяют включать или отключать динамическую трассировку с использованием трассировки событий Windows \(ETW\). Аналитическая трассировка может быть включена и отключена динамически, без изменения файла Web.config приложения или перезапуска службы для всех служб [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Это дает возможность не останавливать работу приложения, создающего события трассировки.  
+# <a name="dynamically-enabling-analytic-tracing"></a><span data-ttu-id="dca1a-102">Динамическое включение аналитического отслеживания</span><span class="sxs-lookup"><span data-stu-id="dca1a-102">Dynamically Enabling Analytic Tracing</span></span>
+<span data-ttu-id="dca1a-103">Средства, поставляемые в составе ОС Windows, позволяют включать или отключать динамическую трассировку с использованием трассировки событий Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="dca1a-103">Using tools that ship with the Windows operating system, you can enable or disable tracing dynamically using Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="dca1a-104">Аналитическая трассировка может быть включена и отключена динамически, без изменения файла Web.config приложения или перезапуска службы для всех служб [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="dca1a-104">For all [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services, analytic tracing can be enabled and disabled dynamically without modifying the application’s Web.config file or restarting the service.</span></span> <span data-ttu-id="dca1a-105">Это дает возможность не останавливать работу приложения, создающего события трассировки.</span><span class="sxs-lookup"><span data-stu-id="dca1a-105">This allows the application that emits the trace events to remain undisturbed.</span></span>  
   
- Параметры трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] могут быть настроены таким же способом. Например, можно, не останавливая приложение, изменить степень серьезности со значения **Ошибки** на **Сведения**. Это можно сделать с помощью следующих средств.  
+ <span data-ttu-id="dca1a-106">Параметры трассировки[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] могут быть настроены таким же способом.</span><span class="sxs-lookup"><span data-stu-id="dca1a-106">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tracing options can be configured in a similar way.</span></span> <span data-ttu-id="dca1a-107">Например, можно, не останавливая приложение, изменить степень серьезности со значения **Ошибки** на **Сведения** .</span><span class="sxs-lookup"><span data-stu-id="dca1a-107">For example, you can change the severity level from **Error** to **Information** without disturbing the application.</span></span> <span data-ttu-id="dca1a-108">Это можно сделать с помощью следующих средств.</span><span class="sxs-lookup"><span data-stu-id="dca1a-108">This can be done using the following tools:</span></span>  
   
--   **Logman** \- средство командной строки, предназначенное для настройки, управления и запроса данных трассировки.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) и [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   <span data-ttu-id="dca1a-109">**Logman** - средство командной строки, предназначенное для настройки, управления и запроса данных трассировки.</span><span class="sxs-lookup"><span data-stu-id="dca1a-109">**Logman** – A command line tool for configuring, controlling, and querying tracing data.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="dca1a-110">[Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) и [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span><span class="sxs-lookup"><span data-stu-id="dca1a-110"> [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) and [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span></span>  
   
--   **EventViewer** \- графическое средство Windows для просмотра результатов трассировки.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Службы WCF и средство отслеживания событий для Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) и [Просмотр событий](http://go.microsoft.com/fwlink/?LinkId=165428)  
+-   <span data-ttu-id="dca1a-111">**EventViewer** - графическое средство Windows для просмотра результатов трассировки.</span><span class="sxs-lookup"><span data-stu-id="dca1a-111">**EventViewer** - Windows graphical management tool for viewing the results of tracing.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="dca1a-112">[Службы WCF и трассировки событий Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) и [средство просмотра событий](http://go.microsoft.com/fwlink/?LinkId=165428).</span><span class="sxs-lookup"><span data-stu-id="dca1a-112"> [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) and [Event Viewer](http://go.microsoft.com/fwlink/?LinkId=165428).</span></span>  
   
--   **Системный монитор** \- графическое средство управления Windows, которое использует счетчики для наблюдения за счетчиками трассировки и ее влиянием на производительность.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Создание набора сборщиков данных вручную](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   <span data-ttu-id="dca1a-113">**Системный монитор** - графическое средство управления Windows, которое использует счетчики для наблюдения за счетчиками трассировки и ее влиянием на производительность.</span><span class="sxs-lookup"><span data-stu-id="dca1a-113">**Perfmon** – Windows graphical management tool that uses counters to monitor tracing counters and the effects of tracing on performance.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="dca1a-114">[Создание группы сборщиков данных вручную](http://go.microsoft.com/fwlink/?LinkId=165429).</span><span class="sxs-lookup"><span data-stu-id="dca1a-114"> [Create a Data Collector Set Manually](http://go.microsoft.com/fwlink/?LinkId=165429).</span></span>  
   
-### Ключевые слова  
- С использованием класса <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> трассировка сообщений платформы .NET Framework в общем случае подлежит фильтрации по степени серьезности \(«Ошибки», «Предупреждения», «Сведения»\). Трассировка событий Windows поддерживает концепцию уровня серьезности, а также вводит новый, более гибкий механизм фильтрации по ключевым словам. Ключевые слова \- это произвольные текстовые значения, которые позволяют событиям трассировки предоставлять дополнительный контекст о значении события.  
+### <a name="keywords"></a><span data-ttu-id="dca1a-115">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="dca1a-115">Keywords</span></span>  
+ <span data-ttu-id="dca1a-116">С использованием класса <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> трассировка сообщений платформы .NET Framework в общем случае подлежит фильтрации по степени серьезности («Ошибки», «Предупреждения», «Сведения»).</span><span class="sxs-lookup"><span data-stu-id="dca1a-116">When using the <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> class, .NET Framework trace messages are generally filtered by the severity level (for example, Error, Warning, and Information).</span></span> <span data-ttu-id="dca1a-117">Трассировка событий Windows поддерживает концепцию уровня серьезности, а также вводит новый, более гибкий механизм фильтрации по ключевым словам.</span><span class="sxs-lookup"><span data-stu-id="dca1a-117">ETW supports the severity level concept, but introduces a new, flexible filter mechanism using keywords.</span></span> <span data-ttu-id="dca1a-118">Ключевые слова - это произвольные текстовые значения, которые позволяют событиям трассировки предоставлять дополнительный контекст о значении события.</span><span class="sxs-lookup"><span data-stu-id="dca1a-118">Keywords are arbitrary textual values that let tracing events provide additional context about what that event means.</span></span>  
   
- Для аналитической трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] каждый из уровней трассировки содержит два типа ключевых слов. Во\-первых, каждое событие имеет одно или несколько ключевых слов сценариев. Они указывают на сценарий, для которого предназначено данное событие. Существует три ключевых слова сценариев. Каждое из них предназначено для определенной цели, как показано в следующей таблице. Фильтрация по ключевым словам может быть изменена динамически, без нарушения работы службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Это означает, что можно динамически изменить текущий сценарий трассировки и количество собираемых сведений. Например, можно установить `HealthMonitoring` в значение `Troubleshooting` и увеличить частоту событий трассировки.  
+ <span data-ttu-id="dca1a-119">Для аналитической трассировки [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] каждый из уровней трассировки содержит два типа ключевых слов.</span><span class="sxs-lookup"><span data-stu-id="dca1a-119">For [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing, each trace event has two types of keywords.</span></span> <span data-ttu-id="dca1a-120">Во-первых, каждое событие имеет одно или несколько ключевых слов сценариев.</span><span class="sxs-lookup"><span data-stu-id="dca1a-120">First, each event has one or more scenario keywords.</span></span> <span data-ttu-id="dca1a-121">Они указывают на сценарий, для которого предназначено данное событие.</span><span class="sxs-lookup"><span data-stu-id="dca1a-121">These keywords denote the scenarios that this event is intended to support.</span></span> <span data-ttu-id="dca1a-122">Существует три ключевых слова сценариев. Каждое из них предназначено для определенной цели, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="dca1a-122">There are three scenario keywords, each designed for a specific purpose as shown in the following table.</span></span> <span data-ttu-id="dca1a-123">Фильтрация по ключевым словам может быть изменена динамически, без нарушения работы службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="dca1a-123">Filtering using keywords can be changed dynamically without disturbing the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="dca1a-124">Это означает, что можно динамически изменить текущий сценарий трассировки и количество собираемых сведений.</span><span class="sxs-lookup"><span data-stu-id="dca1a-124">That means that you can dynamically change your current tracing scenario and the amount of tracing information you gather.</span></span> <span data-ttu-id="dca1a-125">Например, можно установить `HealthMonitoring` в значение `Troubleshooting` и увеличить частоту событий трассировки.</span><span class="sxs-lookup"><span data-stu-id="dca1a-125">For example, you can change `HealthMonitoring` to `Troubleshooting` and increase Tracing Event granularity.</span></span>  
   
-|Ключевое слово|Описание|  
-|--------------------|--------------|  
-|`HealthMonitoring`|Очень простая минимальная трассировка, которая позволяет наблюдать за активностью службы.|  
-|`EndToEndMonitoring`|Для поддержки трассировки потока сообщений используются события.|  
-|`Troubleshooting`|Более частые события о точках расширяемости [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
+|<span data-ttu-id="dca1a-126">Ключевое слово</span><span class="sxs-lookup"><span data-stu-id="dca1a-126">Keyword</span></span>|<span data-ttu-id="dca1a-127">Описание</span><span class="sxs-lookup"><span data-stu-id="dca1a-127">Description</span></span>|  
+|-------------|-----------------|  
+|`HealthMonitoring`|<span data-ttu-id="dca1a-128">Очень простая минимальная трассировка, которая позволяет наблюдать за активностью службы.</span><span class="sxs-lookup"><span data-stu-id="dca1a-128">Very lightweight, minimal tracing that lets you monitor your service’s activity.</span></span>|  
+|`EndToEndMonitoring`|<span data-ttu-id="dca1a-129">Для поддержки трассировки потока сообщений используются события.</span><span class="sxs-lookup"><span data-stu-id="dca1a-129">Events used to support message flow tracing.</span></span>|  
+|`Troubleshooting`|<span data-ttu-id="dca1a-130">Более частые события о точках расширяемости [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dca1a-130">More granular events around the extensibility points of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>|  
   
- Вторая группа ключевых слов определяет, каким из компонентов [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создано данное событие.  
+ <span data-ttu-id="dca1a-131">Вторая группа ключевых слов определяет, каким из компонентов [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] создано данное событие.</span><span class="sxs-lookup"><span data-stu-id="dca1a-131">The second group of keywords define which component of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitted the event.</span></span>  
   
-|Ключевое слово|Описание|  
-|--------------------|--------------|  
-|`UserEvents`|События, которые созданы пользовательским кодом, а не [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
-|`ServiceModel`|События, которые созданы средой выполнения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
-|`ServiceHost`|События, которые созданы узлом службы.|  
-|`WCFMessageLogging`|События ведения журнала сообщений [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
+|<span data-ttu-id="dca1a-132">Ключевое слово</span><span class="sxs-lookup"><span data-stu-id="dca1a-132">Keyword</span></span>|<span data-ttu-id="dca1a-133">Описание</span><span class="sxs-lookup"><span data-stu-id="dca1a-133">Description</span></span>|  
+|-------------|-----------------|  
+|`UserEvents`|<span data-ttu-id="dca1a-134">События, которые созданы пользовательским кодом, а не [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dca1a-134">Events emitted by the user code and not the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|`ServiceModel`|<span data-ttu-id="dca1a-135">События, которые созданы средой выполнения [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="dca1a-135">Events emitted by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] runtime.</span></span>|  
+|`ServiceHost`|<span data-ttu-id="dca1a-136">События, которые созданы узлом службы.</span><span class="sxs-lookup"><span data-stu-id="dca1a-136">Events emitted by the service host.</span></span>|  
+|`WCFMessageLogging`|<span data-ttu-id="dca1a-137">События ведения журнала сообщений[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="dca1a-137">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message logging events.</span></span>|  
   
-## См. также  
- [Службы WCF и средство отслеживания событий для Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a><span data-ttu-id="dca1a-138">См. также</span><span class="sxs-lookup"><span data-stu-id="dca1a-138">See Also</span></span>  
+ [<span data-ttu-id="dca1a-139">WCF Services and Event Tracing for Windows</span><span class="sxs-lookup"><span data-stu-id="dca1a-139">WCF Services and Event Tracing for Windows</span></span>](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

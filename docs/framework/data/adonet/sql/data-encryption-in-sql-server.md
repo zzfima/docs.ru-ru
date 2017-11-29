@@ -1,46 +1,49 @@
 ---
-title: "Шифрование данных в SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Шифрование данных в SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4428cf8fbfcaa853ca2c877a8cc4902f585b6754
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Шифрование данных в SQL Server
-SQL Server содержит функции шифрования и расшифровки данных с помощью сертификата и асимметричного или симметричного ключа.  Все они содержатся во внутреннем хранилище сертификатов.  Хранилище использует иерархию шифрования, обеспечивающую безопасность сертификатов и ключей на уровне, находящемся выше в иерархии.  Эта область функций SQL Server называется секретным хранилищем.  
+# <a name="data-encryption-in-sql-server"></a><span data-ttu-id="f3fff-102">Шифрование данных в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-102">Data Encryption in SQL Server</span></span>
+<span data-ttu-id="f3fff-103">SQL Server содержит функции шифрования и расшифровки данных с помощью сертификата и асимметричного или симметричного ключа.</span><span class="sxs-lookup"><span data-stu-id="f3fff-103">SQL Server provides functions to encrypt and decrypt data using a certificate, asymmetric key, or symmetric key.</span></span> <span data-ttu-id="f3fff-104">Все они содержатся во внутреннем хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="f3fff-104">It manages all of these in an internal certificate store.</span></span> <span data-ttu-id="f3fff-105">Хранилище использует иерархию шифрования, обеспечивающую безопасность сертификатов и ключей на уровне, находящемся выше в иерархии.</span><span class="sxs-lookup"><span data-stu-id="f3fff-105">The store uses an encryption hierarchy that secures certificates and keys at one level with the layer above it in the hierarchy.</span></span> <span data-ttu-id="f3fff-106">Эта область функций SQL Server называется секретным хранилищем.</span><span class="sxs-lookup"><span data-stu-id="f3fff-106">This feature area of SQL Server is called Secret Storage.</span></span>  
   
- Самым быстрым режимом шифрования, поддерживаемым функциями шифрования, является шифрование с помощью симметричного ключа.  Этот режим подходит для управления большими томами данных.  Симметричные ключи могут быть зашифрованы сертификатами, паролями или другими симметричными ключами.  
+ <span data-ttu-id="f3fff-107">Самым быстрым режимом шифрования, поддерживаемым функциями шифрования, является шифрование с помощью симметричного ключа.</span><span class="sxs-lookup"><span data-stu-id="f3fff-107">The fastest mode of encryption supported by the encryption functions is symmetric key encryption.</span></span> <span data-ttu-id="f3fff-108">Этот режим подходит для управления большими томами данных.</span><span class="sxs-lookup"><span data-stu-id="f3fff-108">This mode is suitable for handling large volumes of data.</span></span> <span data-ttu-id="f3fff-109">Симметричные ключи могут быть зашифрованы сертификатами, паролями или другими симметричными ключами.</span><span class="sxs-lookup"><span data-stu-id="f3fff-109">The symmetric keys can be encrypted by certificates, passwords or other symmetric keys.</span></span>  
   
-## Ключи и алгоритмы  
- SQL Server поддерживает несколько алгоритмов шифрования симметричным ключом, включая DES, Triple DES, RC2, RC4, 128\-разрядный RC4, DESX, 128\-разрядный AES, 192\-разрядный AES и 256\-разрядный AES.  Алгоритмы реализуются с помощью API\-интерфейса Windows Crypto.  
+## <a name="keys-and-algorithms"></a><span data-ttu-id="f3fff-110">Ключи и алгоритмы</span><span class="sxs-lookup"><span data-stu-id="f3fff-110">Keys and Algorithms</span></span>  
+ <span data-ttu-id="f3fff-111">SQL Server поддерживает несколько алгоритмов шифрования симметричным ключом, включая DES, Triple DES, RC2, RC4, 128-разрядный RC4, DESX, 128-разрядный AES, 192-разрядный AES и 256-разрядный AES.</span><span class="sxs-lookup"><span data-stu-id="f3fff-111">SQL Server supports several symmetric key encryption algorithms, including DES, Triple DES, RC2, RC4, 128-bit RC4, DESX, 128-bit AES, 192-bit AES, and 256-bit AES.</span></span> <span data-ttu-id="f3fff-112">Алгоритмы реализуются с помощью API-интерфейса Windows Crypto.</span><span class="sxs-lookup"><span data-stu-id="f3fff-112">The algorithms are implemented using the Windows Crypto API.</span></span>  
   
- В пределах соединения с базой данных SQL Server может поддерживать несколько открытых симметричных ключей.  Открытый ключ получается из хранилища и доступен для расшифровки данных.  Не нужно указывать, какой симметричный ключ будет использоваться для расшифровки фрагмента данных.  Каждое зашифрованное значение содержит идентификатор ключа \(идентификатор GUID ключа\), использованного для его шифрования.  Если расшифрован и открыт верный ключ, то ядро сопоставляет зашифрованный поток байтов с открытым симметричным ключом.  Этот ключ затем используется для выполнения расшифровки и возвращения данных.  Если верный ключ не открыт, возвращается значение NULL.  
+ <span data-ttu-id="f3fff-113">В пределах соединения с базой данных SQL Server может поддерживать несколько открытых симметричных ключей.</span><span class="sxs-lookup"><span data-stu-id="f3fff-113">Within the scope of a database connection, SQL Server can maintain multiple open symmetric keys.</span></span> <span data-ttu-id="f3fff-114">Открытый ключ получается из хранилища и доступен для расшифровки данных.</span><span class="sxs-lookup"><span data-stu-id="f3fff-114">An open key is retrieved from the store and is available for decrypting data.</span></span> <span data-ttu-id="f3fff-115">Не нужно указывать, какой симметричный ключ будет использоваться для расшифровки фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="f3fff-115">When a piece of data is decrypted, there is no need to specify the symmetric key to use.</span></span> <span data-ttu-id="f3fff-116">Каждое зашифрованное значение содержит идентификатор ключа (идентификатор GUID ключа), использованного для его шифрования.</span><span class="sxs-lookup"><span data-stu-id="f3fff-116">Each encrypted value contains the key identifier (key GUID) of the key used to encrypt it.</span></span> <span data-ttu-id="f3fff-117">Если расшифрован и открыт верный ключ, то ядро сопоставляет зашифрованный поток байтов с открытым симметричным ключом.</span><span class="sxs-lookup"><span data-stu-id="f3fff-117">The engine matches the encrypted byte stream to an open symmetric key, if the correct key has been decrypted and is open.</span></span> <span data-ttu-id="f3fff-118">Этот ключ затем используется для выполнения расшифровки и возвращения данных.</span><span class="sxs-lookup"><span data-stu-id="f3fff-118">This key is then used to perform decryption and return the data.</span></span> <span data-ttu-id="f3fff-119">Если верный ключ не открыт, возвращается значение NULL.</span><span class="sxs-lookup"><span data-stu-id="f3fff-119">If the correct key is not open, NULL is returned.</span></span>  
   
- Пример работы с зашифрованными данными в базе данных см. в разделе [Практическое руководство. Шифрование столбца данных](http://go.microsoft.com/fwlink/?LinkID=128559) в электронной документации по SQL Server.  
+ <span data-ttu-id="f3fff-120">Пример, демонстрирующий способы работы с зашифрованными данными в базе данных см. в разделе [как: шифрование столбца данных](http://go.microsoft.com/fwlink/?LinkID=128559) в электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f3fff-120">For an example that shows how to work with encrypted data in a database, see [How to: Encrypt a Column of Data](http://go.microsoft.com/fwlink/?LinkID=128559) in SQL Server Books Online.</span></span>  
   
-## Внешние ресурсы  
- Дополнительные сведения о шифровании см. в одном из следующих источников.  
+## <a name="external-resources"></a><span data-ttu-id="f3fff-121">Внешние ресурсы</span><span class="sxs-lookup"><span data-stu-id="f3fff-121">External Resources</span></span>  
+ <span data-ttu-id="f3fff-122">Дополнительные сведения о шифровании см. в одном из следующих источников.</span><span class="sxs-lookup"><span data-stu-id="f3fff-122">For more information on data encryption, see the following resources.</span></span>  
   
 |||  
 |-|-|  
-|[Шифрование SQL Server](http://msdn.microsoft.com/library/bb510663.aspx) в электронной документации по SQL Server.|Содержит общие сведения о шифровании в SQL Server.  Этот раздел включает ссылки на дополнительные разделы и инструкции.|  
-|[Иерархия шифрования](http://msdn.microsoft.com/library/ms189586.aspx) и [Инструкции по шифрованию](http://msdn.microsoft.com/library/aa337557.aspx) в электронной документации по SQL Server|Содержит общие сведения о шифровании в SQL Server.  В этом разделе даны ссылки на дополнительные разделы и инструкции.|  
+|<span data-ttu-id="f3fff-123">[Шифрование SQL Server](http://msdn.microsoft.com/library/bb510663.aspx) в электронной документации по SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-123">[SQL Server Encryption](http://msdn.microsoft.com/library/bb510663.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="f3fff-124">Содержит общие сведения о шифровании в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f3fff-124">Provides an overview of encryption in SQL Serve.</span></span> <span data-ttu-id="f3fff-125">Этот раздел включает ссылки на дополнительные разделы и инструкции.</span><span class="sxs-lookup"><span data-stu-id="f3fff-125">This topic includes links to additional topics and how-to's.</span></span>|  
+|<span data-ttu-id="f3fff-126">[Иерархия средств шифрования](http://msdn.microsoft.com/library/ms189586.aspx) и [инструкции по шифрованию](http://msdn.microsoft.com/library/aa337557.aspx) в электронной документации по SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-126">[Encryption Hierarchy](http://msdn.microsoft.com/library/ms189586.aspx) and [Encryption How-to Topics](http://msdn.microsoft.com/library/aa337557.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="f3fff-127">Содержит общие сведения о шифровании в SQL Server.</span><span class="sxs-lookup"><span data-stu-id="f3fff-127">Provides an overview of encryption in SQL Server.</span></span> <span data-ttu-id="f3fff-128">В этом разделе даны ссылки на дополнительные разделы и инструкции.</span><span class="sxs-lookup"><span data-stu-id="f3fff-128">This topic provides links to additional topics and how-to's.</span></span>|  
   
-## См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Сценарии защиты приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)   
- [Роли сервера и роли базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)   
- [Владение и разделение пользовательских схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)   
- [Проверка прав доступа и разрешений в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f3fff-129">См. также</span><span class="sxs-lookup"><span data-stu-id="f3fff-129">See Also</span></span>  
+ [<span data-ttu-id="f3fff-130">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f3fff-130">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="f3fff-131">Сценарии безопасности приложений в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-131">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="f3fff-132">Проверка подлинности в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-132">Authentication in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [<span data-ttu-id="f3fff-133">Сервер и роли базы данных в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-133">Server and Database Roles in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [<span data-ttu-id="f3fff-134">Владение и отделение пользователей от схем в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-134">Ownership and User-Schema Separation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [<span data-ttu-id="f3fff-135">Авторизация и разрешения в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f3fff-135">Authorization and Permissions in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [<span data-ttu-id="f3fff-136">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f3fff-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

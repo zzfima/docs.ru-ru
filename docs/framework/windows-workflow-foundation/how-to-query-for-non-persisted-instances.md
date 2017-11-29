@@ -1,69 +1,67 @@
 ---
-title: "Как обращаться с запросом к несохраняемым экземплярам | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как обращаться с запросом к несохраняемым экземплярам"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как обращаться с запросом к несохраняемым экземплярам
-Когда новый экземпляр службы создан и для службы определено поведение хранилища экземпляров рабочих процессов SQL, узел службы создает начальную запись для экземпляра службы в хранилище экземпляров.Позднее, когда экземпляр службы материализуется в первый раз, поведение хранилища экземпляров рабочих процессов SQL сохраняет текущее состояние экземпляра вместе с дополнительными данными, необходимыми для его активации, восстановления и управления.  
+# <a name="how-to-query-for-non-persisted-instances"></a><span data-ttu-id="8c954-102">Как обращаться с запросом к несохраняемым экземплярам</span><span class="sxs-lookup"><span data-stu-id="8c954-102">How to: Query for Non-persisted Instances</span></span>
+<span data-ttu-id="8c954-103">Когда новый экземпляр службы создан и для службы определено поведение хранилища экземпляров рабочих процессов SQL, узел службы создает начальную запись для экземпляра службы в хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="8c954-103">When a new instance of a service is created and the service has the SQL Workflow Instance Store behavior defined, the service host creates a initial entry for that service instance in the instance store.</span></span> <span data-ttu-id="8c954-104">Позднее, когда экземпляр службы материализуется в первый раз, поведение хранилища экземпляров рабочих процессов SQL сохраняет текущее состояние экземпляра вместе с дополнительными данными, необходимыми для его активации, восстановления и управления.</span><span class="sxs-lookup"><span data-stu-id="8c954-104">Subsequently when the service instance persists for the first time, the SQL Workflow Instance Store behavior stores the current instance state together with additional data that is required for activation, recovery, and control.</span></span>  
   
- Если экземпляр не материализован после создания начальной записи для экземпляра, считается, что экземпляр службы находится в нематериализованном состоянии.Ко всем материализованным экземплярам службы можно выполнять запросы и управлять ими.К нематериализованным экземплярам службы нельзя выполнять запросы, управление ими также невозможно.Если нематериализованный экземпляр приостановлен из\-за необработанного исключения, к нему можно выполнять запросы, но им нельзя управлять.  
+ <span data-ttu-id="8c954-105">Если экземпляр не материализован после создания начальной записи для экземпляра, считается, что экземпляр службы находится в нематериализованном состоянии.</span><span class="sxs-lookup"><span data-stu-id="8c954-105">If an instance is not persisted after the initial entry for the instance is created, the service instance is said to be in the non-persisted state.</span></span> <span data-ttu-id="8c954-106">Ко всем материализованным экземплярам службы можно выполнять запросы и управлять ими.</span><span class="sxs-lookup"><span data-stu-id="8c954-106">All the persisted service instances can be queried and controlled.</span></span> <span data-ttu-id="8c954-107">К нематериализованным экземплярам службы нельзя выполнять запросы, управление ими также невозможно.</span><span class="sxs-lookup"><span data-stu-id="8c954-107">Non-persisted service instances can neither be queried nor controlled.</span></span> <span data-ttu-id="8c954-108">Если нематериализованный экземпляр приостановлен из-за необработанного исключения, к нему можно выполнять запросы, но им нельзя управлять.</span><span class="sxs-lookup"><span data-stu-id="8c954-108">If a non-persisted instance is suspended due to an unhandled exception it can be queried but not controlled.</span></span>  
   
- Экземпляры устойчивой службы, которые еще не материализованы, остаются в нематериализованном состоянии в следующих ситуациях.  
+ <span data-ttu-id="8c954-109">Экземпляры устойчивой службы, которые еще не материализованы, остаются в нематериализованном состоянии в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="8c954-109">Durable service instances that are not yet persisted remain in a non-persisted state in the following scenarios:</span></span>  
   
--   Сбой узла службы происходит до первой материализации экземпляра.Начальная запись для экземпляра остается в хранилище экземпляров.Экземпляр не может быть восстановлен.Если поступает коррелированное сообщение, экземпляр вновь становится активным.  
+-   <span data-ttu-id="8c954-110">Сбой узла службы происходит до первой материализации экземпляра.</span><span class="sxs-lookup"><span data-stu-id="8c954-110">The service host crashes before the instance persisted for the first time.</span></span> <span data-ttu-id="8c954-111">Начальная запись для экземпляра остается в хранилище экземпляров.</span><span class="sxs-lookup"><span data-stu-id="8c954-111">The initial entry for the instance remains in the instance store.</span></span> <span data-ttu-id="8c954-112">Экземпляр не может быть восстановлен.</span><span class="sxs-lookup"><span data-stu-id="8c954-112">The instance is not recoverable.</span></span> <span data-ttu-id="8c954-113">Если поступает коррелированное сообщение, экземпляр вновь становится активным.</span><span class="sxs-lookup"><span data-stu-id="8c954-113">If a correlated message arrives, the instance becomes active again.</span></span>  
   
--   Необработанное исключение для экземпляра происходит до первой материализации экземпляра.Возникают следующие ситуации.  
+-   <span data-ttu-id="8c954-114">Необработанное исключение для экземпляра происходит до первой материализации экземпляра.</span><span class="sxs-lookup"><span data-stu-id="8c954-114">The instance experiences an unhandled exception before it persisted for the first time.</span></span> <span data-ttu-id="8c954-115">Возникают следующие ситуации.</span><span class="sxs-lookup"><span data-stu-id="8c954-115">The following scenarios arise</span></span>  
   
-    -   Если свойству **UnhandledExceptionAction** присваивается значение **Abandon**, сведения о развертывании службы записываются в хранилище экземпляров и экземпляр выгружается из памяти.Экземпляр остается в нематериализованном состоянии в базе данных сохраняемости.  
+    -   <span data-ttu-id="8c954-116">Если значение **UnhandledExceptionAction** свойству **прервать**, сведения о развертывании службы записываются в хранилище экземпляров и экземпляр выгружается из памяти.</span><span class="sxs-lookup"><span data-stu-id="8c954-116">If the value of the **UnhandledExceptionAction** property is set to **Abandon**, the service deployment information is written to the instance store and the instance is unloaded from memory.</span></span> <span data-ttu-id="8c954-117">Экземпляр остается в нематериализованном состоянии в базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="8c954-117">The instance remains in non-persisted state in the persistence database.</span></span>  
   
-    -   Если свойству **UnhandledExceptionAction** присваивается значение **AbandonAndSuspsend**, то сведения о развертывании службы записываются в базу данных сохраняемости и состояние экземпляров устанавливается в значение **Suspended**.Экземпляр нельзя возобновить, отменить или завершить.Узел службы не может загрузить экземпляр, так как экземпляр еще не материализован, поэтому запись в базе данных для экземпляра не завершена \(не полна\).  
+    -   <span data-ttu-id="8c954-118">Если значение **UnhandledExceptionAction** свойству **AbandonAndSuspsend**, сведения о развертывании службы записываются в базу данных сохраняемости и состояние экземпляра равно  **Приостановить**.</span><span class="sxs-lookup"><span data-stu-id="8c954-118">If the value of the **UnhandledExceptionAction** property is set to **AbandonAndSuspsend**, the service deployment information is written to the persistence database and the instance state is set to **Suspended**.</span></span> <span data-ttu-id="8c954-119">Экземпляр нельзя возобновить, отменить или завершить.</span><span class="sxs-lookup"><span data-stu-id="8c954-119">The instance cannot be resumed, canceled, or terminated.</span></span> <span data-ttu-id="8c954-120">Узел службы не может загрузить экземпляр, так как экземпляр еще не материализован, поэтому запись в базе данных для экземпляра не завершена (не полна).</span><span class="sxs-lookup"><span data-stu-id="8c954-120">The service host cannot load the instance because the instance hasn't persisted yet and, hence the database entry for the instance is not complete.</span></span>  
   
-    -   Если свойству **UnhandledExceptionAction** присваивается значение **Cancel** или **Terminate**, сведения о развертывании службы записываются в хранилище экземпляров, а состояние экземпляра устанавливается в значение **Completed**.  
+    -   <span data-ttu-id="8c954-121">Если значение **UnhandledExceptionAction** свойству **отменить** или **Terminate**, сведения о развертывании службы записываются в хранилище экземпляров и состояние экземпляра равно **завершено**.</span><span class="sxs-lookup"><span data-stu-id="8c954-121">If the value of the **UnhandledExceptionAction** property is set to **Cancel** or **Terminate**, the service deployment information is written to the instance store and the instance state is set to **Completed**.</span></span>  
   
- В следующих разделах представлены образцы запросов для поиска нематериализованных экземпляров в базе данных сохраняемости SQL и удаления этих экземпляров из базы данных.  
+ <span data-ttu-id="8c954-122">В следующих разделах представлены образцы запросов для поиска нематериализованных экземпляров в базе данных сохраняемости SQL и удаления этих экземпляров из базы данных.</span><span class="sxs-lookup"><span data-stu-id="8c954-122">The following sections provide sample queries to find non-persisted instances in the SQL persistence database and to delete these instances from the database.</span></span>  
   
-## Обнаружение всех еще не материализованных экземпляров  
- Следующий SQL\-запрос возвращает идентификатор \(ID\) и время создания для всех экземпляров, которые еще не материализованы в базе данных сохраняемости.  
+## <a name="to-find-all-instances-not-persisted-yet"></a><span data-ttu-id="8c954-123">Обнаружение всех еще не материализованных экземпляров</span><span class="sxs-lookup"><span data-stu-id="8c954-123">To find all instances not persisted yet</span></span>  
+ <span data-ttu-id="8c954-124">Следующий SQL-запрос возвращает идентификатор (ID) и время создания для всех экземпляров, которые еще не материализованы в базе данных сохраняемости.</span><span class="sxs-lookup"><span data-stu-id="8c954-124">The following SQL query returns the ID and creation time for all instances that are not persisted in to the persistence database yet.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0;  
-  
 ```  
   
-## Обнаружение всех экземпляров, которые еще не материализованы и не загружены  
- Следующий SQL\-запрос возвращает идентификатор \(ID\) и время создания для всех экземпляров, которые не материализованы и не загружены.  
+## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a><span data-ttu-id="8c954-125">Обнаружение всех экземпляров, которые еще не материализованы и не загружены</span><span class="sxs-lookup"><span data-stu-id="8c954-125">To find all instances not persisted yet and also not loaded</span></span>  
+ <span data-ttu-id="8c954-126">Следующий SQL-запрос возвращает идентификатор (ID) и время создания для всех экземпляров, которые не материализованы и не загружены.</span><span class="sxs-lookup"><span data-stu-id="8c954-126">The following SQL query returns ID and creation time for all instances that are not persisted and also are not loaded.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and CurrentMachine is NULL;  
-  
 ```  
   
-## Обнаружение всех приостановленных, но еще не материализованных экземпляров  
- Следующий SQL\-запрос возвращает идентификатор \(ID\), время создания, причину приостановки и имя исключения приостановки для всех экземпляров, которые не материализованы и находятся в приостановленном состоянии.  
+## <a name="to-find-all-suspended-instances-not-persisted-yet"></a><span data-ttu-id="8c954-127">Обнаружение всех приостановленных, но еще не материализованных экземпляров</span><span class="sxs-lookup"><span data-stu-id="8c954-127">To find all suspended instances not persisted yet</span></span>  
+ <span data-ttu-id="8c954-128">Следующий SQL-запрос возвращает идентификатор (ID), время создания, причину приостановки и имя исключения приостановки для всех экземпляров, которые не материализованы и находятся в приостановленном состоянии.</span><span class="sxs-lookup"><span data-stu-id="8c954-128">The following SQL query returns ID, creation time, suspension reason, and suspension exception name for all instances that are not persisted and also in a suspended state.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and IsSuspended = 1;  
-  
 ```  
   
-## Удаление нематериализованных экземпляров из базы данных сохраняемости  
- Необходимо периодически проверять хранилище экземпляров на наличие нематериализованных экземпляров и удалять экземпляры из хранилища экземпляров, если можно быть уверенным, что экземпляр не получит коррелированного сообщения.Например, если экземпляр находился в базе данных в течение нескольких месяцев, а известно, что обычная продолжительность существования рабочего процесса составляет несколько дней, можно с уверенностью предположить, что это неинициализированный экземпляр, в котором произошел сбой.  
+## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a><span data-ttu-id="8c954-129">Удаление нематериализованных экземпляров из базы данных сохраняемости</span><span class="sxs-lookup"><span data-stu-id="8c954-129">To delete non-persisted instances from the persistence database</span></span>  
+ <span data-ttu-id="8c954-130">Необходимо периодически проверять хранилище экземпляров на наличие нематериализованных экземпляров и удалять экземпляры из хранилища экземпляров, если можно быть уверенным, что экземпляр не получит коррелированного сообщения.</span><span class="sxs-lookup"><span data-stu-id="8c954-130">You should periodically check the instance store for non-persisted instances and remove instances from the instance store if you are sure that the instance will not receive a correlated message.</span></span> <span data-ttu-id="8c954-131">Например, если экземпляр находился в базе данных в течение нескольких месяцев, а известно, что обычная продолжительность существования рабочего процесса составляет несколько дней, можно с уверенностью предположить, что это неинициализированный экземпляр, в котором произошел сбой.</span><span class="sxs-lookup"><span data-stu-id="8c954-131">For example, if the instance has been in the database for several months and you know that the workflow typically has a lifetime of a few days, it would be safe to assume that this is an uninitialized instance that had crashed.</span></span>  
   
- Как правило, нематериализованные экземпляры, которые не приостановлены или не загружены, можно удалять без осложнений.Не следует удалять нематериализованные экземпляры **all**, так как этот набор экземпляров содержит и только что созданные, но еще не материализованные экземпляры.Следует удалять только нематериализованные экземпляры, которые остались неиспользованными, так как в самом экземпляре или в узле службы рабочего процесса, в котором был загружен экземпляр, произошло исключение.  
+ <span data-ttu-id="8c954-132">Как правило, нематериализованные экземпляры, которые не приостановлены или не загружены, можно удалять без осложнений.</span><span class="sxs-lookup"><span data-stu-id="8c954-132">In general, it is safe to delete non-persisted instances that are not suspended or not loaded.</span></span> <span data-ttu-id="8c954-133">Не следует удалять **все** несохраняемым экземплярам так как этот набор экземпляров, которые только что созданные, но не содержит еще материализованные.</span><span class="sxs-lookup"><span data-stu-id="8c954-133">You should not delete **all** the non-persisted instances because this instance set includes instances that are just created but are not persisted yet.</span></span> <span data-ttu-id="8c954-134">Следует удалять только нематериализованные экземпляры, которые остались неиспользованными, так как в самом экземпляре или в узле службы рабочего процесса, в котором был загружен экземпляр, произошло исключение.</span><span class="sxs-lookup"><span data-stu-id="8c954-134">You should only delete non-persisted instances that are left over because the workflow service host that had the instance loaded caused an exception or the instance itself caused an exception.</span></span>  
   
 > [!WARNING]
->  Удаление нематериализованных экземпляров из хранилища экземпляров уменьшает размер хранилища и может повысить производительность операций с хранилищем.
+>  <span data-ttu-id="8c954-135">Удаление нематериализованных экземпляров из хранилища экземпляров уменьшает размер хранилища и может повысить производительность операций с хранилищем.</span><span class="sxs-lookup"><span data-stu-id="8c954-135">Deleting non-persisted instances from the instance store decreases the size of the store and may improve the performance of store operations.</span></span>

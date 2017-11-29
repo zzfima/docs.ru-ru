@@ -1,35 +1,38 @@
 ---
-title: "4013 - MessageQueueUnregisterSucceeded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4013 - MessageQueueUnregisterSucceeded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16ed96c1-9f8d-4f08-b57c-5cba3b88b475
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b46a303ffdd10589c56b551c827efd119151ab10
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 4013 - MessageQueueUnregisterSucceeded
-## Свойства  
+# <a name="4013---messagequeueunregistersucceeded"></a><span data-ttu-id="0f34c-102">4013 - MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="0f34c-102">4013 - MessageQueueUnregisterSucceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="0f34c-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="0f34c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|4013|  
-|Ключевые слова|Службы активации|  
-|Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="0f34c-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="0f34c-104">ID</span></span>|<span data-ttu-id="0f34c-105">4013</span><span class="sxs-lookup"><span data-stu-id="0f34c-105">4013</span></span>|  
+|<span data-ttu-id="0f34c-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="0f34c-106">Keywords</span></span>|<span data-ttu-id="0f34c-107">Службы активации</span><span class="sxs-lookup"><span data-stu-id="0f34c-107">ActivationServices</span></span>|  
+|<span data-ttu-id="0f34c-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="0f34c-108">Level</span></span>|<span data-ttu-id="0f34c-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="0f34c-109">Verbose</span></span>|  
+|<span data-ttu-id="0f34c-110">Канал</span><span class="sxs-lookup"><span data-stu-id="0f34c-110">Channel</span></span>|<span data-ttu-id="0f34c-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="0f34c-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Описание  
- Это событие создается при успешной отмене регистрации очереди сообщений.  
+## <a name="description"></a><span data-ttu-id="0f34c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="0f34c-112">Description</span></span>  
+ <span data-ttu-id="0f34c-113">Это событие создается при успешной отмене регистрации очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="0f34c-113">This event is emitted when the message queue unregister has succeeded.</span></span>  
   
-## Сообщение  
- Отмена регистрации очереди сообщений успешно выполнена для URI: «%1».  
+## <a name="message"></a><span data-ttu-id="0f34c-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="0f34c-114">Message</span></span>  
+ <span data-ttu-id="0f34c-115">Отмена регистрации очереди сообщений успешно выполнена для URI: «%1».</span><span class="sxs-lookup"><span data-stu-id="0f34c-115">Message queue unregister succeeded for uri:'%1'.</span></span>  
   
-## Подробные сведения
+## <a name="details"></a><span data-ttu-id="0f34c-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="0f34c-116">Details</span></span>

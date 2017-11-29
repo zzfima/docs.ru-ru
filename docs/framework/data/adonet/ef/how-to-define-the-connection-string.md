@@ -1,42 +1,39 @@
 ---
-title: "Как определить строки соединения. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: "Практическое руководство. Определение строки подключения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 757b70d99a7f2b499d4ad5aab2be2bb61b28af0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как определить строки соединения.
-В этом разделе показано, как определить строку соединения, используемую при подключении к концептуальной модели.  Описание в этом разделе построено на основе концептуальной модели [AdventureWorks Sales](http://msdn.microsoft.com/ru-ru/f16cd988-673f-4376-b034-129ca93c7832).  Модель AdventureWorks Sales используется во всех разделах документации платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], связанных с выполнением задач.  Материал этого раздела подразумевает, что настроена платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и определена модель AdventureWorks Sales.  Для получения дополнительной информации см. [How to: Manually Define the Model and Mapping Files](http://msdn.microsoft.com/ru-ru/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  Процедуры этого раздела также включены в раздел [How to: Manually Configure an Entity Framework Project](http://msdn.microsoft.com/ru-ru/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+# <a name="how-to-define-the-connection-string"></a><span data-ttu-id="974f5-102">Практическое руководство. Определение строки подключения</span><span class="sxs-lookup"><span data-stu-id="974f5-102">How to: Define the Connection String</span></span>
+<span data-ttu-id="974f5-103">В этом разделе показано, как определить строку соединения, используемую при подключении к концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="974f5-103">This topic shows how to define the connection string that is used when connecting to a conceptual model.</span></span> <span data-ttu-id="974f5-104">В этом разделе основан на [AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="974f5-104">This topic is based on the [AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) conceptual model.</span></span> <span data-ttu-id="974f5-105">Модель AdventureWorks Sales используется во всех разделах документации платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], связанных с выполнением задач.</span><span class="sxs-lookup"><span data-stu-id="974f5-105">The AdventureWorks Sales Model is used throughout the task-related topics in the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation.</span></span> <span data-ttu-id="974f5-106">В этом разделе предполагается, что вы уже настроили [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и определенные модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="974f5-106">This topic assumes that you have already configured the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] and defined the AdventureWorks Sales Model.</span></span> <span data-ttu-id="974f5-107">Дополнительные сведения см. в разделе [как: определение модели и сопоставления файлов вручную](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).</span><span class="sxs-lookup"><span data-stu-id="974f5-107">For more information, see [How to: Manually Define the Model and Mapping Files](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).</span></span> <span data-ttu-id="974f5-108">Процедуры, описанные в этом разделе также включаются в [как: вручную настроить проект Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).</span><span class="sxs-lookup"><span data-stu-id="974f5-108">The procedures in this topic are also included in [How to: Manually Configure an Entity Framework Project](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).</span></span>  
   
 > [!NOTE]
->  При использовании мастера [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] в проекте [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] он автоматически сформирует EDMX\-файл и настроит проект для использования платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Дополнительные сведения см. в разделе [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/ru-ru/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  <span data-ttu-id="974f5-109">При использовании мастера [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] в проекте [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] он автоматически сформирует EDMX-файл и настроит проект для использования платформы [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="974f5-109">If you use the [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Wizard in a [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] project, it automatically generates an .edmx file and configures the project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="974f5-110">Дополнительные сведения см. в разделе [как: использовать мастер моделей EDM](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)</span><span class="sxs-lookup"><span data-stu-id="974f5-110">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)</span></span>  
   
-### Определение строки соединения Entity Framework  
+### <a name="to-define-the-entity-framework-connection-string"></a><span data-ttu-id="974f5-111">Определение строки соединения Entity Framework</span><span class="sxs-lookup"><span data-stu-id="974f5-111">To define the Entity Framework connection string</span></span>  
   
--   Откройте файл конфигурации приложения \(app.config\) и добавьте следующую строку соединения:  
+-   <span data-ttu-id="974f5-112">Откройте файл конфигурации приложения (app.config) и добавьте следующую строку соединения:</span><span class="sxs-lookup"><span data-stu-id="974f5-112">Open the project's application configuration file (app.config) and add the following connection string:</span></span>  
   
   
   
-     Если проект не содержит файла конфигурации приложения, его можно добавить, выбрав в меню **Проект** команду **Добавить новый элемент**, затем в категории **Общие** выбрать **Файл конфигурации приложения** и нажать кнопку **Добавить**.  
+     <span data-ttu-id="974f5-113">Если проект не имеет файла конфигурации приложения, можно добавить его, выбрав **Добавление нового элемента** из **проекта** меню, при выборе **Общие** категории При выборе **файла конфигурации приложения**и выбрав **добавить**.</span><span class="sxs-lookup"><span data-stu-id="974f5-113">If your project does not have an application configuration file, you can add one by selecting **Add New Item** from the **Project** menu, selecting the **General** category, selecting **Application Configuration File**, and then clicking **Add**.</span></span>  
   
-## См. также  
- [Quickstart](http://msdn.microsoft.com/ru-ru/0bc534be-789f-4819-b9f6-76e51d961675)   
- [How to: Create a New .edmx File](http://msdn.microsoft.com/ru-ru/beb8189e-e51c-4051-839c-9902c224abf2)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/ru-ru/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="974f5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="974f5-114">See Also</span></span>  
+ [<span data-ttu-id="974f5-115">Краткое руководство</span><span class="sxs-lookup"><span data-stu-id="974f5-115">Quickstart</span></span>](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)  
+ [<span data-ttu-id="974f5-116">Как: Создание нового EDMX-файла</span><span class="sxs-lookup"><span data-stu-id="974f5-116">How to: Create a New .edmx File</span></span>](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)  
+ [<span data-ttu-id="974f5-117">Средства работы с моделью EDM ADO.NET</span><span class="sxs-lookup"><span data-stu-id="974f5-117">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

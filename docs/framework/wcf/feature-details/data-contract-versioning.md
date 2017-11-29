@@ -1,138 +1,141 @@
 ---
-title: "Управление версиями контракта данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "контракты данных [WCF], управление версиями"
-  - "управление версиями [WCF]"
-  - "управление версиями [WCF], контракты данных"
+title: "Управление версиями контракта данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- versioning [WCF], data contracts
+- versioning [WCF]
+- data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 58e88e319da6d78071293ce92bb7e9ebb33224bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Управление версиями контракта данных
-По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами.  В данном разделе описано, как создавать версии контрактов данных.  В этом разделе описываются механизмы создания версий контрактов данных.  Полный обзор и руководство по управлению версиями см. в разделе [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+# <a name="data-contract-versioning"></a><span data-ttu-id="37c66-102">Управление версиями контракта данных</span><span class="sxs-lookup"><span data-stu-id="37c66-102">Data Contract Versioning</span></span>
+<span data-ttu-id="37c66-103">По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами.</span><span class="sxs-lookup"><span data-stu-id="37c66-103">As applications evolve, you may also have to change the data contracts the services use.</span></span> <span data-ttu-id="37c66-104">В данном разделе описано, как создавать версии контрактов данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-104">This topic explains how to version data contracts.</span></span> <span data-ttu-id="37c66-105">В этом разделе описываются механизмы создания версий контрактов данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-105">This topic describes the data contract versioning mechanisms.</span></span> <span data-ttu-id="37c66-106">Полный обзор и руководство по управлению версиями см. в разделе [рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-106">For a complete overview and prescriptive versioning guidance, see [Best Practices: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).</span></span>  
   
-## Сравнение критических инекритических изменений  
- Изменения в контрактах данных могут быть критическими и некритическими.  Когда изменение контракта данных не является критическим, приложение, использующее старую версию контракта, может взаимодействовать с приложением, использующим новую версию, и приложение, использующее новую версию контракта, может взаимодействовать с приложением, использующим старую версию.  Напротив, критическое изменение исключает взаимодействие в одном или обоих направлениях.  
+## <a name="breaking-vs-nonbreaking-changes"></a><span data-ttu-id="37c66-107">Сравнение критических и некритических изменений</span><span class="sxs-lookup"><span data-stu-id="37c66-107">Breaking vs. Nonbreaking Changes</span></span>  
+ <span data-ttu-id="37c66-108">Изменения в контрактах данных могут быть критическими и некритическими.</span><span class="sxs-lookup"><span data-stu-id="37c66-108">Changes to a data contract can be breaking or nonbreaking.</span></span> <span data-ttu-id="37c66-109">Когда изменение контракта данных не является критическим, приложение, использующее старую версию контракта, может взаимодействовать с приложением, использующим новую версию, и приложение, использующее новую версию контракта, может взаимодействовать с приложением, использующим старую версию.</span><span class="sxs-lookup"><span data-stu-id="37c66-109">When a data contract is changed in a nonbreaking way, an application using the older version of the contract can communicate with an application using the newer version, and an application using the newer version of the contract can communicate with an application using the older version.</span></span> <span data-ttu-id="37c66-110">Напротив, критическое изменение исключает взаимодействие в одном или обоих направлениях.</span><span class="sxs-lookup"><span data-stu-id="37c66-110">On the other hand, a breaking change prevents communication in one or both directions.</span></span>  
   
- Любые изменения типа, не влияющие на способ его передачи и приема, являются некритическими.  Такие изменения не изменяют контракт данных, они изменяют только базовый тип.  Например, изменение имени поля будет некритическим, если затем задать для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> имя из старой версии.  В следующем коде показана версия 1 контракта данных.  
+ <span data-ttu-id="37c66-111">Любые изменения типа, не влияющие на способ его передачи и приема, являются некритическими.</span><span class="sxs-lookup"><span data-stu-id="37c66-111">Any changes to a type that do not affect how it is transmitted and received are nonbreaking.</span></span> <span data-ttu-id="37c66-112">Такие изменения не изменяют контракт данных, они изменяют только базовый тип.</span><span class="sxs-lookup"><span data-stu-id="37c66-112">Such changes do not change the data contract, only the underlying type.</span></span> <span data-ttu-id="37c66-113">Например, изменение имени поля будет некритическим, если затем задать для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> имя из старой версии.</span><span class="sxs-lookup"><span data-stu-id="37c66-113">For example, you can change the name of a field in a nonbreaking way if you then set the <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to the older version name.</span></span> <span data-ttu-id="37c66-114">В следующем коде показана версия 1 контракта данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-114">The following code shows version 1 of a data contract.</span></span>  
   
  [!code-csharp[C_DataContractVersioning#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#1)]
  [!code-vb[C_DataContractVersioning#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#1)]  
   
- В следующем коде показано некритическое изменение.  
+ <span data-ttu-id="37c66-115">В следующем коде показано некритическое изменение.</span><span class="sxs-lookup"><span data-stu-id="37c66-115">The following code shows a nonbreaking change.</span></span>  
   
  [!code-csharp[C_DataContractVersioning#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#2)]
  [!code-vb[C_DataContractVersioning#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#2)]  
   
- Некоторые изменения влияют на передаваемые данные, но могут быть как критическими, так и некритическими.  Указанные ниже изменения всегда критические.  
+ <span data-ttu-id="37c66-116">Некоторые изменения влияют на передаваемые данные, но могут быть как критическими, так и некритическими.</span><span class="sxs-lookup"><span data-stu-id="37c66-116">Some changes do modify the transmitted data, but may or may not be breaking.</span></span> <span data-ttu-id="37c66-117">Указанные ниже изменения всегда критические.</span><span class="sxs-lookup"><span data-stu-id="37c66-117">The following changes are always breaking:</span></span>  
   
--   Изменение значения <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> или <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> контракта данных.  
+-   <span data-ttu-id="37c66-118">Изменение значения <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> или <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> контракта данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-118">Changing the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> or <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> value of a data contract.</span></span>  
   
--   Изменение порядка членов данных с помощью свойства <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+-   <span data-ttu-id="37c66-119">Изменение порядка членов данных с помощью свойства <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="37c66-119">Changing the order of data members by using the <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute>.</span></span>  
   
--   Переименование члена данных.  
+-   <span data-ttu-id="37c66-120">Переименование члена данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-120">Renaming a data member.</span></span>  
   
--   Изменение контракта данных члена данных.  Например, изменение типа члена данных с целого числа на строку или с типа, имеющего контракт данных с именем "Заказчик" на тип, имеющий контракт данных с именем "Личность".  
+-   <span data-ttu-id="37c66-121">Изменение контракта данных члена данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-121">Changing the data contract of a data member.</span></span> <span data-ttu-id="37c66-122">Например, изменение типа члена данных с целого числа на строку или с типа, имеющего контракт данных с именем "Заказчик" на тип, имеющий контракт данных с именем "Личность".</span><span class="sxs-lookup"><span data-stu-id="37c66-122">For example, changing the type of data member from an integer to a string, or from a type with a data contract named "Customer" to a type with a data contract named "Person".</span></span>  
   
- Возможны также указанные ниже изменения.  
+ <span data-ttu-id="37c66-123">Возможны также указанные ниже изменения.</span><span class="sxs-lookup"><span data-stu-id="37c66-123">The following changes are also possible.</span></span>  
   
-## Добавление и удаление членов данных  
- В большинстве случаев добавление или удаление члена данных не является критическим изменением, если только не требуется строгая достоверность схемы \(новые экземпляры проверяются по старой схеме\).  
+## <a name="adding-and-removing-data-members"></a><span data-ttu-id="37c66-124">Добавление и удаление членов данных</span><span class="sxs-lookup"><span data-stu-id="37c66-124">Adding and Removing Data Members</span></span>  
+ <span data-ttu-id="37c66-125">В большинстве случаев добавление или удаление члена данных не является критическим изменением, если только не требуется строгая достоверность схемы (новые экземпляры проверяются по старой схеме).</span><span class="sxs-lookup"><span data-stu-id="37c66-125">In most cases, adding or removing a data member is not a breaking change, unless you require strict schema validity (new instances validating against the old schema).</span></span>  
   
- Когда тип с дополнительным полем десериализуется в тип с отсутствующим полем, дополнительная информация игнорируется.  \(Она может также сохраняться для целей кругового обращения; дополнительные сведения см. в разделе [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)\).  
+ <span data-ttu-id="37c66-126">Когда тип с дополнительным полем десериализуется в тип с отсутствующим полем, дополнительная информация игнорируется.</span><span class="sxs-lookup"><span data-stu-id="37c66-126">When a type with an extra field is deserialized into a type with a missing field, the extra information is ignored.</span></span> <span data-ttu-id="37c66-127">(Может быть также сохранены для целей кругового обращения; Дополнительные сведения, см. [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).</span><span class="sxs-lookup"><span data-stu-id="37c66-127">(It may also be stored for round-tripping purposes; for more information, see [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).</span></span>  
   
- Когда тип с отсутствующим полем десериализуется в тип с дополнительным полем, для дополнительного поля сохраняется значение по умолчанию, обычно ноль или `null`.  \(Значение по умолчанию может быть изменено; дополнительные сведения см. в разделе [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).\)  
+ <span data-ttu-id="37c66-128">Когда тип с отсутствующим полем десериализуется в тип с дополнительным полем, для дополнительного поля сохраняется значение по умолчанию, обычно ноль или `null`.</span><span class="sxs-lookup"><span data-stu-id="37c66-128">When a type with a missing field is deserialized into a type with an extra field, the extra field is left at its default value, usually zero or `null`.</span></span> <span data-ttu-id="37c66-129">(Значение по умолчанию может быть изменено; Дополнительные сведения см. в разделе [обратных вызовов независимой от версий сериализации](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)</span><span class="sxs-lookup"><span data-stu-id="37c66-129">(The default value may be changed; for more information, see [Version-Tolerant Serialization Callbacks](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)</span></span>  
   
- Например, можно использовать класс `CarV1` в клиенте и класс `CarV2` в службе или можно использовать класс `CarV1` в службе и класс `CarV2` в клиенте.  
+ <span data-ttu-id="37c66-130">Например, можно использовать класс `CarV1` в клиенте и класс `CarV2` в службе или можно использовать класс `CarV1` в службе и класс `CarV2` в клиенте.</span><span class="sxs-lookup"><span data-stu-id="37c66-130">For example, you can use the `CarV1` class on a client and the `CarV2` class on a service, or you can use the `CarV1` class on a service and the `CarV2` class on a client.</span></span>  
   
  [!code-csharp[C_DataContractVersioning#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#3)]
  [!code-vb[C_DataContractVersioning#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#3)]  
   
- Конечная точка версии 2 успешно передала данные конечной точке версии 1.  В результате сериализации версии 2 контракта данных `Car` получается код XML, аналогичный приведенному ниже.  
+ <span data-ttu-id="37c66-131">Конечная точка версии 2 успешно передала данные конечной точке версии 1.</span><span class="sxs-lookup"><span data-stu-id="37c66-131">The version 2 endpoint can successfully send data to the version 1 endpoint.</span></span> <span data-ttu-id="37c66-132">В результате сериализации версии 2 контракта данных `Car` получается код XML, аналогичный приведенному ниже.</span><span class="sxs-lookup"><span data-stu-id="37c66-132">Serializing version 2 of the `Car` data contract yields XML similar to the following.</span></span>  
   
-```  
+```xml  
 <Car>  
     <Model>Porsche</Model>  
     <HorsePower>300</HorsePower>  
 </Car>  
 ```  
   
- Механизм десериализации в V1 не находит соответствующего члена данных для поля `HorsePower` и отбрасывает эти данные.  
+ <span data-ttu-id="37c66-133">Механизм десериализации в V1 не находит соответствующего члена данных для поля `HorsePower` и отбрасывает эти данные.</span><span class="sxs-lookup"><span data-stu-id="37c66-133">The deserialization engine on V1 does not find a matching data member for the `HorsePower` field, and discards that data.</span></span>  
   
- Конечная точка версии 1 также может передать данные конечной точке версии 2.  В результате сериализации версии 1 контракта данных `Car` получается код XML, аналогичный приведенному ниже.  
+ <span data-ttu-id="37c66-134">Конечная точка версии 1 также может передать данные конечной точке версии 2.</span><span class="sxs-lookup"><span data-stu-id="37c66-134">Also, the version 1 endpoint can send data to the version 2 endpoint.</span></span> <span data-ttu-id="37c66-135">В результате сериализации версии 1 контракта данных `Car` получается код XML, аналогичный приведенному ниже.</span><span class="sxs-lookup"><span data-stu-id="37c66-135">Serializing version 1 of the `Car` data contract yields XML similar to the following.</span></span>  
   
-```  
+```xml  
 <Car>  
     <Model>Porsche</Model>  
 </Car>  
 ```  
   
- Десериализатор версии 2 не знает, какое значение следует присвоить полю `HorsePower`, поскольку во входящем коде XML нет соответствующих данных.  В результате этому полю присваивается значение по умолчанию "0".  
+ <span data-ttu-id="37c66-136">Десериализатор версии 2 не знает, какое значение следует присвоить полю `HorsePower`, поскольку во входящем коде XML нет соответствующих данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-136">The version 2 deserializer does not know what to set the `HorsePower` field to, because there is no matching data in the incoming XML.</span></span> <span data-ttu-id="37c66-137">В результате этому полю присваивается значение по умолчанию "0".</span><span class="sxs-lookup"><span data-stu-id="37c66-137">Instead, the field is set to the default value of 0.</span></span>  
   
-## Обязательные члены данных  
- Член данных можно пометить как обязательный, задав для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> значение `true`.  В случае отсутствия во время десериализации обязательных данных вместо присваивания этому члену данных значения по умолчанию генерируется исключение.  
+## <a name="required-data-members"></a><span data-ttu-id="37c66-138">Обязательные члены данных</span><span class="sxs-lookup"><span data-stu-id="37c66-138">Required Data Members</span></span>  
+ <span data-ttu-id="37c66-139">Член данных можно пометить как обязательный, задав для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="37c66-139">A data member may be marked as being required by setting the <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to `true`.</span></span> <span data-ttu-id="37c66-140">В случае отсутствия во время десериализации обязательных данных вместо присваивания этому члену данных значения по умолчанию генерируется исключение.</span><span class="sxs-lookup"><span data-stu-id="37c66-140">If required data is missing while deserializing, an exception is thrown instead of setting the data member to its default value.</span></span>  
   
- Добавление обязательного члена данных \- это критическое изменение.  То есть, новый тип можно передавать на конечные точки старого типа, но не наоборот.  Удаление члена данных, помеченного в старой версии как обязательный, также является критическим изменением.  
+ <span data-ttu-id="37c66-141">Добавление обязательного члена данных - это критическое изменение.</span><span class="sxs-lookup"><span data-stu-id="37c66-141">Adding a required data member is a breaking change.</span></span> <span data-ttu-id="37c66-142">То есть, новый тип можно передавать на конечные точки старого типа, но не наоборот.</span><span class="sxs-lookup"><span data-stu-id="37c66-142">That is, the newer type can still be sent to endpoints with the older type, but not the other way around.</span></span> <span data-ttu-id="37c66-143">Удаление члена данных, помеченного в старой версии как обязательный, также является критическим изменением.</span><span class="sxs-lookup"><span data-stu-id="37c66-143">Removing a data member that was marked as required in any prior version is also a breaking change.</span></span>  
   
- Изменение значения свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> с `true` на `false` не является критическим изменением, а изменение со значения `false` на значение `true` может быть критическим, если в какой\-либо предыдущей версии этого типа соответствующий член данных отсутствует.  
+ <span data-ttu-id="37c66-144">Изменение значения свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> с `true` на `false` не является критическим изменением, а изменение со значения `false` на значение `true` может быть критическим, если в какой-либо предыдущей версии этого типа соответствующий член данных отсутствует.</span><span class="sxs-lookup"><span data-stu-id="37c66-144">Changing the <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property value from `true` to `false` is not breaking, but changing it from `false` to `true` may be breaking if any prior versions of the type do not have the data member in question.</span></span>  
   
 > [!NOTE]
->  Даже если для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> задано значение `true`, входящие данные могут иметь значение "null" или ноль, и тип должен быть готов к обработке такой ситуации.  Не используйте значение <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> в качестве механизма защиты от неправильных входных данных.  
+>  <span data-ttu-id="37c66-145">Даже если для свойства <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> задано значение `true`, входящие данные могут иметь значение "null" или ноль, и тип должен быть готов к обработке такой ситуации.</span><span class="sxs-lookup"><span data-stu-id="37c66-145">Although the <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> property is set to `true`, the incoming data may be null or zero, and a type must be prepared to handle this possibility.</span></span> <span data-ttu-id="37c66-146">Не используйте значение <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> в качестве механизма защиты от неправильных входных данных.</span><span class="sxs-lookup"><span data-stu-id="37c66-146">Do not use <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> as a security mechanism to protect against bad incoming data.</span></span>  
   
-## Опущенные значения по умолчанию  
- Можно \(хотя и не рекомендуется\) задать для свойства `EmitDefaultValue` атрибута DataMemberAttribute значение `false`, как описано в разделе [Значения элементов данных по умолчанию](../../../../docs/framework/wcf/feature-details/data-member-default-values.md).  Если задано значение `false`, член данных не передается, если для него установлено значение по умолчанию \(обычно "null" или ноль\).  Это не совместимо с обязательными членами данных в различных версиях по двум причинам.  
+## <a name="omitted-default-values"></a><span data-ttu-id="37c66-147">Опущенные значения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="37c66-147">Omitted Default Values</span></span>  
+ <span data-ttu-id="37c66-148">Это возможно (хотя и не рекомендуется) для установки `EmitDefaultValue` атрибута DataMemberAttribute на `false`, как описано в [значения по умолчанию членов данных](../../../../docs/framework/wcf/feature-details/data-member-default-values.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-148">It is possible (although not recommended) to set the `EmitDefaultValue` property on the DataMemberAttribute attribute to `false`, as described in [Data Member Default Values](../../../../docs/framework/wcf/feature-details/data-member-default-values.md).</span></span> <span data-ttu-id="37c66-149">Если задано значение `false`, член данных не передается, если для него установлено значение по умолчанию (обычно "null" или ноль).</span><span class="sxs-lookup"><span data-stu-id="37c66-149">If this setting is `false`, the data member will not be emitted if it is set to its default value (usually null or zero).</span></span> <span data-ttu-id="37c66-150">Это не совместимо с обязательными членами данных в различных версиях по двум причинам.</span><span class="sxs-lookup"><span data-stu-id="37c66-150">This is not compatible with required data members in different versions in two ways:</span></span>  
   
--   Контракт данных, содержащий член данных, обязательный в одной версии, не может принимать данные по умолчанию \("null" или ноль\) из другой версии, в которой для свойства `EmitDefaultValue` этого члена данных задано значение `false`.  
+-   <span data-ttu-id="37c66-151">Контракт данных, содержащий член данных, обязательный в одной версии, не может принимать данные по умолчанию ("null" или ноль) из другой версии, в которой для свойства `EmitDefaultValue` этого члена данных задано значение `false`.</span><span class="sxs-lookup"><span data-stu-id="37c66-151">A data contract with a data member that is required in one version cannot receive default (null or zero) data from a different version in which the data member has `EmitDefaultValue` set to `false`.</span></span>  
   
--   Обязательный член данных, для свойства `EmitDefaultValue` которого задано значение `false`, не может использоваться для сериализации его значения по умолчанию \("null" или ноль\), но может получить такое значение при десериализации.  Это создает проблему при круговой передаче \(данные можно считать, но эти же данные невозможно потом записать\).  Поэтому если в одной версии для свойства `IsRequired` задано значение `true` и для свойства `EmitDefaultValue` задано значение `false`, это же сочетание должно применяться во всех остальных версиях, чтобы ни одна из версий контракта данных не могла создать значение, которое не сможет пройти круговую передачу.  
+-   <span data-ttu-id="37c66-152">Обязательный член данных, для свойства `EmitDefaultValue` которого задано значение `false`, не может использоваться для сериализации его значения по умолчанию ("null" или ноль), но может получить такое значение при десериализации.</span><span class="sxs-lookup"><span data-stu-id="37c66-152">A required data member that has `EmitDefaultValue` set to `false` cannot be used to serialize its default (null or zero) value, but can receive such a value on deserialization.</span></span> <span data-ttu-id="37c66-153">Это создает проблему при круговой передаче (данные можно считать, но эти же данные невозможно потом записать).</span><span class="sxs-lookup"><span data-stu-id="37c66-153">This creates a round-tripping problem (data can be read in but the same data cannot then be written out).</span></span> <span data-ttu-id="37c66-154">Поэтому если в одной версии для свойства `IsRequired` задано значение `true` и для свойства `EmitDefaultValue` задано значение `false`, это же сочетание должно применяться во всех остальных версиях, чтобы ни одна из версий контракта данных не могла создать значение, которое не сможет пройти круговую передачу.</span><span class="sxs-lookup"><span data-stu-id="37c66-154">Therefore, if `IsRequired` is `true` and `EmitDefaultValue` is `false` in one version, the same combination should apply to all other versions such that no version of the data contract would be able to produce a value that does not result in a round trip.</span></span>  
   
-## Замечания по схемам  
- Описание схемы, создаваемой для типов контрактов данных, см. в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+## <a name="schema-considerations"></a><span data-ttu-id="37c66-155">Замечания по схемам</span><span class="sxs-lookup"><span data-stu-id="37c66-155">Schema Considerations</span></span>  
+ <span data-ttu-id="37c66-156">Описание схемы, создаваемой для типов контрактов данных см. в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-156">For an explanation of what schema is produced for data contract types, see [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).</span></span>  
   
- Схема, которую [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает для типов контракта данных, не поддерживает управление версиями.  Это означает, что схема, экспортированная из определенной версии типа, содержит только те члены данных, которые присутствуют в этой версии.  Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> не изменяет схему для типа.  
+ <span data-ttu-id="37c66-157">Схема, которую [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] создает для типов контракта данных, не поддерживает управление версиями.</span><span class="sxs-lookup"><span data-stu-id="37c66-157">The schema [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] produces for data contract types makes no provisions for versioning.</span></span> <span data-ttu-id="37c66-158">Это означает, что схема, экспортированная из определенной версии типа, содержит только те члены данных, которые присутствуют в этой версии.</span><span class="sxs-lookup"><span data-stu-id="37c66-158">That is, the schema exported from a certain version of a type contains only those data members present in that version.</span></span> <span data-ttu-id="37c66-159">Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> не изменяет схему для типа.</span><span class="sxs-lookup"><span data-stu-id="37c66-159">Implementing the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface does not change the schema for a type.</span></span>  
   
- По умолчанию члены данных экспортируются в схему как необязательные элементы.  То есть значение `minOccurs` \(XML\-атрибут\) равно 0.  Необходимые члены данных экспортируются, если параметр `minOccurs` имеет значение 1.  
+ <span data-ttu-id="37c66-160">По умолчанию члены данных экспортируются в схему как необязательные элементы.</span><span class="sxs-lookup"><span data-stu-id="37c66-160">Data members are exported to the schema as optional elements by default.</span></span> <span data-ttu-id="37c66-161">То есть значение `minOccurs` (XML-атрибут) равно 0.</span><span class="sxs-lookup"><span data-stu-id="37c66-161">That is, the `minOccurs` (XML attribute) value is set to 0.</span></span> <span data-ttu-id="37c66-162">Необходимые члены данных экспортируются, если параметр `minOccurs` имеет значение 1.</span><span class="sxs-lookup"><span data-stu-id="37c66-162">Required data members are exported with `minOccurs` set to 1.</span></span>  
   
- Многие изменения, считающиеся некритическими, на самом деле являются критическими, если требуется строгое соответствие схеме.  В предыдущем примере экземпляр `CarV1`, содержащий только элемент `Model`, пройдет проверку по схеме `CarV2` \(содержащую элементы `Model` и `Horsepower`, оба необязательные\).  Однако обратное неверно: экземпляр `CarV2` не пройдет проверку по схеме `CarV1`.  
+ <span data-ttu-id="37c66-163">Многие изменения, считающиеся некритическими, на самом деле являются критическими, если требуется строгое соответствие схеме.</span><span class="sxs-lookup"><span data-stu-id="37c66-163">Many of the changes considered to be nonbreaking are actually breaking if strict adherence to the schema is required.</span></span> <span data-ttu-id="37c66-164">В предыдущем примере экземпляр `CarV1`, содержащий только элемент `Model`, пройдет проверку по схеме `CarV2` (содержащую элементы `Model` и `Horsepower`, оба необязательные).</span><span class="sxs-lookup"><span data-stu-id="37c66-164">In the preceding example, a `CarV1` instance with just the `Model` element would validate against the `CarV2` schema (which has both `Model` and `Horsepower`, but both are optional).</span></span> <span data-ttu-id="37c66-165">Однако обратное неверно: экземпляр `CarV2` не пройдет проверку по схеме `CarV1`.</span><span class="sxs-lookup"><span data-stu-id="37c66-165">However, the reverse is not true: a `CarV2` instance would fail validation against the `CarV1` schema.</span></span>  
   
- Следует учитывать возможность круговой передачи.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] подраздел «Замечания по схемам» раздела [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ <span data-ttu-id="37c66-166">Следует учитывать возможность круговой передачи.</span><span class="sxs-lookup"><span data-stu-id="37c66-166">Round-tripping also entails some additional considerations.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37c66-167">«Замечания по схемам» раздела [прямой совместимостью контракты данных](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-167"> the "Schema Considerations" section in [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span></span>  
   
-### Другие разрешенные изменения  
- Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> является некритическим изменением.  Однако для версий типа, предшествующих версии, в которой был реализован интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, поддержка кругового пути отсутствует.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+### <a name="other-permitted-changes"></a><span data-ttu-id="37c66-168">Другие разрешенные изменения</span><span class="sxs-lookup"><span data-stu-id="37c66-168">Other Permitted Changes</span></span>  
+ <span data-ttu-id="37c66-169">Реализация интерфейса <xref:System.Runtime.Serialization.IExtensibleDataObject> является некритическим изменением.</span><span class="sxs-lookup"><span data-stu-id="37c66-169">Implementing the <xref:System.Runtime.Serialization.IExtensibleDataObject> interface is a nonbreaking change.</span></span> <span data-ttu-id="37c66-170">Однако для версий типа, предшествующих версии, в которой был реализован интерфейс <xref:System.Runtime.Serialization.IExtensibleDataObject>, поддержка кругового пути отсутствует.</span><span class="sxs-lookup"><span data-stu-id="37c66-170">However, round-tripping support does not exist for versions of the type prior to the version in which <xref:System.Runtime.Serialization.IExtensibleDataObject> was implemented.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37c66-171">[Контракты данных, совместимые с любыми будущими](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-171"> [Forward-Compatible Data Contracts](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).</span></span>  
   
-## Перечисления  
- Добавление или удаление члена перечисления \- это критическое изменение.  Изменение имени члена перечисления также является критическим изменением, за исключением случая, когда с помощью атрибута `EnumMemberAtttribute` имя контракта оставлено таким же, как и в старой версии.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+## <a name="enumerations"></a><span data-ttu-id="37c66-172">Перечисления</span><span class="sxs-lookup"><span data-stu-id="37c66-172">Enumerations</span></span>  
+ <span data-ttu-id="37c66-173">Добавление или удаление члена перечисления - это критическое изменение.</span><span class="sxs-lookup"><span data-stu-id="37c66-173">Adding or removing an enumeration member is a breaking change.</span></span> <span data-ttu-id="37c66-174">Изменение имени члена перечисления также является критическим изменением, за исключением случая, когда с помощью атрибута `EnumMemberAtttribute` имя контракта оставлено таким же, как и в старой версии.</span><span class="sxs-lookup"><span data-stu-id="37c66-174">Changing the name of an enumeration member is breaking, unless its contract name is kept the same as in the old version by using the `EnumMemberAtttribute` attribute.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="37c66-175">[Типы перечислений в контрактах данных](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-175"> [Enumeration Types in Data Contracts](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).</span></span>  
   
-## Коллекции  
- Большинство изменений коллекций являются некритическими, так как в модели контракта данных большинство типов коллекции взаимозаменяемы.  Однако преобразование стандартной коллекции в настраиваемую или наоборот является критическим изменением.  Итак, изменение параметров настройки коллекции является весьма важным. Сюда относится изменение ее имени контракта данных и пространства имен, имени повторяющегося элемента, имени ключевого элемента и имени элемента значения.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] настройке коллекции см. в разделе [Типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).    
-Конечно, изменение контракта данных содержимого коллекции \(например, переход со списка целых чисел на список строк\) является важным изменением.  
+## <a name="collections"></a><span data-ttu-id="37c66-176">Коллекции</span><span class="sxs-lookup"><span data-stu-id="37c66-176">Collections</span></span>  
+ <span data-ttu-id="37c66-177">Большинство изменений коллекций являются некритическими, так как в модели контракта данных большинство типов коллекции взаимозаменяемы.</span><span class="sxs-lookup"><span data-stu-id="37c66-177">Most collection changes are nonbreaking because most collection types are interchangeable with each other in the data contract model.</span></span> <span data-ttu-id="37c66-178">Однако преобразование стандартной коллекции в настраиваемую или наоборот является критическим изменением.</span><span class="sxs-lookup"><span data-stu-id="37c66-178">However, making a noncustomized collection customized or vice versa is a breaking change.</span></span> <span data-ttu-id="37c66-179">Итак, изменение параметров настройки коллекции является весьма важным. Сюда относится изменение ее имени контракта данных и пространства имен, имени повторяющегося элемента, имени ключевого элемента и имени элемента значения.</span><span class="sxs-lookup"><span data-stu-id="37c66-179">Also, changing the collection's customization settings is a breaking change; that is, changing its data contract name and namespace, repeating element name, key element name, and value element name.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="37c66-180">настройке коллекции см. в разделе [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="37c66-180"> collection customization, see [Collection Types in Data Contracts](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).</span></span>  
+<span data-ttu-id="37c66-181">Конечно, изменение контракта данных содержимого коллекции (например, переход со списка целых чисел на список строк) является важным изменением.</span><span class="sxs-lookup"><span data-stu-id="37c66-181">Naturally, changing the data contract of contents of a collection (for example, changing from a list of integers to a list of strings) is a breaking change.</span></span>  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>   
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>   
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>   
- <xref:System.Runtime.Serialization.SerializationException>   
- <xref:System.Runtime.Serialization.IExtensibleDataObject>   
- [Обратные вызовы сериализации, независимые от версий](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)   
- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)   
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
- [Контракты данных, совместимые с любыми будущими изменениями](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a><span data-ttu-id="37c66-182">См. также</span><span class="sxs-lookup"><span data-stu-id="37c66-182">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
+ <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
+ <xref:System.Runtime.Serialization.SerializationException>  
+ <xref:System.Runtime.Serialization.IExtensibleDataObject>  
+ [<span data-ttu-id="37c66-183">Обратных вызовов независимой от версий сериализации</span><span class="sxs-lookup"><span data-stu-id="37c66-183">Version-Tolerant Serialization Callbacks</span></span>](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
+ [<span data-ttu-id="37c66-184">Рекомендации. Управление версиями контракта данных</span><span class="sxs-lookup"><span data-stu-id="37c66-184">Best Practices: Data Contract Versioning</span></span>](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [<span data-ttu-id="37c66-185">Использование контрактов данных</span><span class="sxs-lookup"><span data-stu-id="37c66-185">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="37c66-186">Эквивалентность контрактов данных</span><span class="sxs-lookup"><span data-stu-id="37c66-186">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="37c66-187">Контракты данных с прямой совместимостью</span><span class="sxs-lookup"><span data-stu-id="37c66-187">Forward-Compatible Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

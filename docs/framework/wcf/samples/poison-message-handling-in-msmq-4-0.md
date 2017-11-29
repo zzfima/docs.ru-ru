@@ -1,50 +1,53 @@
 ---
-title: "Обработка подозрительных сообщений в MSMQ 4.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка подозрительных сообщений в MSMQ 4.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 910ebf0952d4a2399447de7442046eb0fe90060e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обработка подозрительных сообщений в MSMQ 4.0
-В этом образце демонстрируется обработка подозрительных сообщений в службе.  Этот образец основан на примере [Привязка MSMQ с поддержкой транзакций](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  В этом образце используется привязка `netMsmqBinding`.  Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.  
+# <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="0b655-102">Обработка подозрительных сообщений в MSMQ 4.0</span><span class="sxs-lookup"><span data-stu-id="0b655-102">Poison Message Handling in MSMQ 4.0</span></span>
+<span data-ttu-id="0b655-103">В этом образце демонстрируется обработка подозрительных сообщений в службе.</span><span class="sxs-lookup"><span data-stu-id="0b655-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="0b655-104">Этот пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца.</span><span class="sxs-lookup"><span data-stu-id="0b655-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="0b655-105">В этом образце используется привязка `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="0b655-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="0b655-106">Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
- При использовании очередей клиент взаимодействует со службой посредством очереди.  Конкретно, клиент отправляет сообщения в очередь.  Служба получает сообщения из очереди.  Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.  
+ <span data-ttu-id="0b655-107">При использовании очередей клиент взаимодействует со службой посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-107">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="0b655-108">Конкретно, клиент отправляет сообщения в очередь.</span><span class="sxs-lookup"><span data-stu-id="0b655-108">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="0b655-109">Служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-109">The service receives messages from the queue.</span></span> <span data-ttu-id="0b655-110">Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-110">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- Подозрительное сообщение \- это сообщение, которое повторно считывается из очереди, если служба, читающая сообщение, не может его обработать и завершает транзакцию, в рамках которой считывается сообщение.  В таких случаях предпринимается еще одна попытка считывания сообщения.  Теоретически этот процесс может продолжаться бесконечно, если существует проблема с сообщением.  Обратите внимание, что это происходит только при использовании транзакций для чтения сообщений из очереди и вызове операции службы.  
+ <span data-ttu-id="0b655-111">Подозрительное сообщение - это сообщение, которое повторно считывается из очереди, если служба, читающая сообщение, не может его обработать и завершает транзакцию, в рамках которой считывается сообщение.</span><span class="sxs-lookup"><span data-stu-id="0b655-111">A poison message is a message that is repeatedly read from a queue when the service reading the message cannot process the message and therefore terminates the transaction under which the message is read.</span></span> <span data-ttu-id="0b655-112">В таких случаях предпринимается еще одна попытка считывания сообщения.</span><span class="sxs-lookup"><span data-stu-id="0b655-112">In such cases, the message is retried again.</span></span> <span data-ttu-id="0b655-113">Теоретически этот процесс может продолжаться бесконечно, если существует проблема с сообщением.</span><span class="sxs-lookup"><span data-stu-id="0b655-113">This can theoretically go on forever if there is a problem with the message.</span></span> <span data-ttu-id="0b655-114">Обратите внимание, что это происходит только при использовании транзакций для чтения сообщений из очереди и вызове операции службы.</span><span class="sxs-lookup"><span data-stu-id="0b655-114">Note that this can only occur when you use transactions to read from the queue and invoke the service operation.</span></span>  
   
- Возможность поддержки обнаружения подозрительных сообщений \(от ограниченного до полного\) привязкой NetMsmqBinding зависит от версии MSMQ.  После того как сообщение было распознано как подозрительное, оно может обрабатываться несколькими способами.  Поддержка обработки подозрительных сообщений \(от ограниченной до полной\) привязкой NetMsmqBinding зависит от версии MSMQ.  
+ <span data-ttu-id="0b655-115">Возможность поддержки обнаружения подозрительных сообщений (от ограниченного до полного) привязкой NetMsmqBinding зависит от версии MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b655-115">Based on the version of MSMQ, the NetMsmqBinding supports limited detection to full detection of poison messages.</span></span> <span data-ttu-id="0b655-116">После того как сообщение было распознано как подозрительное, оно может обрабатываться несколькими способами.</span><span class="sxs-lookup"><span data-stu-id="0b655-116">After the message has been detected as poisoned, then it can be handled in several ways.</span></span> <span data-ttu-id="0b655-117">Поддержка обработки подозрительных сообщений (от ограниченной до полной) привязкой NetMsmqBinding зависит от версии MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b655-117">Again, based on the version of MSMQ, the NetMsmqBinding supports limited handling to full handling of poison messages.</span></span>  
   
- В этом образце демонстрируются ограниченные возможности обработки подозрительных сообщений, предоставляемые платформами [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../../includes/wxp-md.md)], и полные возможности обработки подозрительных сообщений, предоставляемые [!INCLUDE[wv](../../../../includes/wv-md.md)].  В обоих образцах целью является перемещение подозрительного сообщения из одной очереди в другую, которая затем может быть обслужена службой подозрительных сообщений.  
+ <span data-ttu-id="0b655-118">В этом образце демонстрируются ограниченные возможности обработки подозрительных сообщений, предоставляемые платформами [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] и [!INCLUDE[wxp](../../../../includes/wxp-md.md)], и полные возможности обработки подозрительных сообщений, предоставляемые [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b655-118">This sample illustrates the limited poison facilities provided on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platform and the full poison facilities provided on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="0b655-119">В обоих образцах целью является перемещение подозрительного сообщения из одной очереди в другую, которая затем может быть обслужена службой подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-119">In both samples, the objective is move the poison message out of the queue to another queue which then can be serviced by a poison message service.</span></span>  
   
-## Образец обработки подозрительных сообщений в MSMQ v4.0.  
- В [!INCLUDE[wv](../../../../includes/wv-md.md)] MSMQ предоставляет возможность помещения сообщений во вложенную очередь подозрительных сообщений, которая может использоваться для хранения подозрительных сообщений.  В этом образце приводятся рекомендации по обработке подозрительных сообщений с использованием [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+## <a name="msmq-v40-poison-handling-sample"></a><span data-ttu-id="0b655-120">Образец обработки подозрительных сообщений в MSMQ v4.0.</span><span class="sxs-lookup"><span data-stu-id="0b655-120">MSMQ v4.0 Poison Handling Sample</span></span>  
+ <span data-ttu-id="0b655-121">В [!INCLUDE[wv](../../../../includes/wv-md.md)] MSMQ предоставляет возможность помещения сообщений во вложенную очередь подозрительных сообщений, которая может использоваться для хранения подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-121">In [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ provides a poison sub-queue facility that can be used to store poison messages.</span></span> <span data-ttu-id="0b655-122">В этом образце приводятся рекомендации по обработке подозрительных сообщений с использованием [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b655-122">This sample demonstrates the best practice of dealing with poison messages using [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
- Процедура обнаружения подозрительных сообщений в [!INCLUDE[wv](../../../../includes/wv-md.md)] достаточно сложная.  Обнаружению таких сообщений способствуют три свойства.  Свойство <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> обозначает, сколько раз заданное сообщение перечитывается из очереди и передается приложению для обработки.  Сообщение повторно считывается из очереди, если оно повторно помещено в очередь, потому что его не удается передать приложению, или приложение выполняет откат транзакции в операции службы.  Свойство <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> указывает, сколько раз сообщение перемещается в очередь повторных попыток.  При достижении <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> сообщение перемещается в очередь повторных попыток.  Свойство <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> \- это промежуток времени, по истечении которого сообщение перемещается из очереди повторных попыток в основную очередь.  Счетчик <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> обнуляется.  Делается еще одна попытка прочесть сообщение.  Если все попытки прочтения сообщения оказываются неудачными, сообщение помечается как подозрительное.  
+ <span data-ttu-id="0b655-123">Процедура обнаружения подозрительных сообщений в [!INCLUDE[wv](../../../../includes/wv-md.md)] достаточно сложная.</span><span class="sxs-lookup"><span data-stu-id="0b655-123">The poison message detection in [!INCLUDE[wv](../../../../includes/wv-md.md)] is quite sophisticated.</span></span> <span data-ttu-id="0b655-124">Обнаружению таких сообщений способствуют три свойства.</span><span class="sxs-lookup"><span data-stu-id="0b655-124">There are 3 properties that help with detection.</span></span> <span data-ttu-id="0b655-125">Свойство <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> обозначает, сколько раз заданное сообщение перечитывается из очереди и передается приложению для обработки.</span><span class="sxs-lookup"><span data-stu-id="0b655-125">The <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> is number of times a given message is re-read from the queue and dispatched to the application for processing.</span></span> <span data-ttu-id="0b655-126">Сообщение повторно считывается из очереди, если оно повторно помещено в очередь, потому что его не удается передать приложению, или приложение выполняет откат транзакции в операции службы.</span><span class="sxs-lookup"><span data-stu-id="0b655-126">A message is re-read from the queue when it is put back into the queue because the message cannot be dispatched to the application or the application rolls back the transaction in the service operation.</span></span> <span data-ttu-id="0b655-127">Свойство <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> указывает, сколько раз сообщение перемещается в очередь повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="0b655-127"><xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> is the number of times the message is moved to the retry queue.</span></span> <span data-ttu-id="0b655-128">При достижении <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> сообщение перемещается в очередь повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="0b655-128">When <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> is reached, the message is moved to the retry queue.</span></span> <span data-ttu-id="0b655-129">Свойство <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> - это промежуток времени, по истечении которого сообщение перемещается из очереди повторных попыток в основную очередь.</span><span class="sxs-lookup"><span data-stu-id="0b655-129">The property <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> is the time delay after which the message is moved from the retry queue back to the main queue.</span></span> <span data-ttu-id="0b655-130">Счетчик <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> обнуляется.</span><span class="sxs-lookup"><span data-stu-id="0b655-130">The <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> is reset to 0.</span></span> <span data-ttu-id="0b655-131">Делается еще одна попытка прочесть сообщение.</span><span class="sxs-lookup"><span data-stu-id="0b655-131">The message is tried again.</span></span> <span data-ttu-id="0b655-132">Если все попытки прочтения сообщения оказываются неудачными, сообщение помечается как подозрительное.</span><span class="sxs-lookup"><span data-stu-id="0b655-132">If all attempts to read the message have failed, then the message is marked as poisoned.</span></span>  
   
- После этого сообщение обрабатывается в соответствии с параметрами, заданными в перечислении <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>.  Ниже еще раз перечислены возможные значения.  
+ <span data-ttu-id="0b655-133">После этого сообщение обрабатывается в соответствии с параметрами, заданными в перечислении <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>.</span><span class="sxs-lookup"><span data-stu-id="0b655-133">Once the message is marked as poisoned, the message is dealt with according to the settings in the <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> enumeration.</span></span> <span data-ttu-id="0b655-134">Ниже еще раз перечислены возможные значения.</span><span class="sxs-lookup"><span data-stu-id="0b655-134">To reiterate the possible values:</span></span>  
   
--   Fault \(по умолчанию\): происходит сбой прослушивателя и узла службы.  
+-   <span data-ttu-id="0b655-135">Fault (по умолчанию): происходит сбой прослушивателя и узла службы.</span><span class="sxs-lookup"><span data-stu-id="0b655-135">Fault (default): To fault the listener and also the service host.</span></span>  
   
--   Drop: сообщение отбрасывается.  
+-   <span data-ttu-id="0b655-136">Drop: сообщение отбрасывается.</span><span class="sxs-lookup"><span data-stu-id="0b655-136">Drop: To drop the message.</span></span>  
   
--   Move: сообщение перемещается во вложенную очередь подозрительных сообщений.  Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <span data-ttu-id="0b655-137">Move: сообщение перемещается во вложенную очередь подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-137">Move: To move the message to the poison message sub-queue.</span></span> <span data-ttu-id="0b655-138">Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b655-138">This value is available only on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
--   Reject: сообщение отклоняется и возвращается в очередь недоставленных сообщений отправителя.  Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <span data-ttu-id="0b655-139">Reject: сообщение отклоняется и возвращается в очередь недоставленных сообщений отправителя.</span><span class="sxs-lookup"><span data-stu-id="0b655-139">Reject: To reject the message, sending the message back to the sender's dead-letter queue.</span></span> <span data-ttu-id="0b655-140">Это значение доступно только в [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b655-140">This value is available only on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
- В этом образце демонстрируется использование команды `Move` для перемещения опасного сообщения о сбое.  Команда `Move` перемещает сообщение во вложенную очередь подозрительных сообщений.  
+ <span data-ttu-id="0b655-141">В этом образце демонстрируется использование команды `Move` для перемещения опасного сообщения о сбое.</span><span class="sxs-lookup"><span data-stu-id="0b655-141">The sample demonstrates using the `Move` disposition for the poison message.</span></span> <span data-ttu-id="0b655-142">Команда `Move` перемещает сообщение во вложенную очередь подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-142">`Move` causes the message to move to the poison sub-queue.</span></span>  
   
- Контракт службы `IOrderProcessor` определяет одностороннюю службу, которую можно использовать с очередями.  
+ <span data-ttu-id="0b655-143">Контракт службы `IOrderProcessor` определяет одностороннюю службу, которую можно использовать с очередями.</span><span class="sxs-lookup"><span data-stu-id="0b655-143">The service contract is `IOrderProcessor`, which defines a one-way service that is suitable for use with queues.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -53,13 +56,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-  
 ```  
   
- Операция службы отображает сообщение о том, что она обрабатывает заказ.  Чтобы продемонстрировать возможность обработки подозрительных сообщений, операция службы `SubmitPurchaseOrder` создает исключение для отката транзакции в случайно выбранном вызове службы.  В результате сообщение помещается обратно в очередь.  В конечном счете это сообщение помечается как подозрительное.  Конфигурация настроена для перемещения подозрительного сообщения во вложенную очередь подозрительных сообщений.  
+ <span data-ttu-id="0b655-144">Операция службы отображает сообщение о том, что она обрабатывает заказ.</span><span class="sxs-lookup"><span data-stu-id="0b655-144">The service operation displays a message stating it is processing the order.</span></span> <span data-ttu-id="0b655-145">Чтобы продемонстрировать возможность обработки подозрительных сообщений, операция службы `SubmitPurchaseOrder` создает исключение для отката транзакции в случайно выбранном вызове службы.</span><span class="sxs-lookup"><span data-stu-id="0b655-145">To demonstrate the poison message functionality, the `SubmitPurchaseOrder` service operation throws an exception to rollback the transaction on a random invocation of the service.</span></span> <span data-ttu-id="0b655-146">В результате сообщение помещается обратно в очередь.</span><span class="sxs-lookup"><span data-stu-id="0b655-146">This causes the message to be put back in the queue.</span></span> <span data-ttu-id="0b655-147">В конечном счете это сообщение помечается как подозрительное.</span><span class="sxs-lookup"><span data-stu-id="0b655-147">Eventually the message is marked as poison.</span></span> <span data-ttu-id="0b655-148">Конфигурация настроена для перемещения подозрительного сообщения во вложенную очередь подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-148">The configuration is set to move the poison message to the poison sub-queue.</span></span>  
   
 ```  
-  
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,9 +128,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```  
   
- Конфигурация службы включает следующие свойства подозрительных сообщений: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` и `receiveErrorHandling`, как показано в следующем файле конфигурации.  
+ <span data-ttu-id="0b655-149">Конфигурация службы включает следующие свойства подозрительных сообщений: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` и `receiveErrorHandling`, как показано в следующем файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0b655-149">The service configuration includes the following poison message properties: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, and `receiveErrorHandling` as shown in the following configuration file.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -163,12 +164,12 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>  
 ```  
   
-## Обработка сообщений из очереди подозрительных сообщений  
- Служба подозрительных сообщений считывает сообщения из конечной очереди подозрительных сообщений и обрабатывает их.  
+## <a name="processing-messages-from-the-poison-message-queue"></a><span data-ttu-id="0b655-150">Обработка сообщений из очереди подозрительных сообщений</span><span class="sxs-lookup"><span data-stu-id="0b655-150">Processing messages from the poison message queue</span></span>  
+ <span data-ttu-id="0b655-151">Служба подозрительных сообщений считывает сообщения из конечной очереди подозрительных сообщений и обрабатывает их.</span><span class="sxs-lookup"><span data-stu-id="0b655-151">The poison message service reads messages from the final poison message queue and processes them.</span></span>  
   
- Сообщения в очереди подозрительных сообщений \- это сообщения, адресованные обрабатывающей сообщение службе, которая может отличаться от конечной точки службы подозрительных сообщений.  Поэтому при выполнении службой подозрительных сообщений считывания сообщений из очереди уровень канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] находит несоответствие конечных точек и не отправляет сообщение.  В этом случае сообщение адресуется службе, обрабатывающей заказы, но получает его служба подозрительных сообщений.  Чтобы продолжать получать сообщение, даже если оно адресовано другой конечной точке, необходимо добавить поведение `ServiceBehavior` для фильтрации адресов, в котором критерием соответствия будет соответствие любой конечной точке службы, которой адресовано сообщение.  Это необходимо для успешной обработки сообщений, считываемых из очереди подозрительных сообщений.  
+ <span data-ttu-id="0b655-152">Сообщения в очереди подозрительных сообщений - это сообщения, адресованные обрабатывающей сообщение службе, которая может отличаться от конечной точки службы подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-152">Messages in the poison message queue are messages that are addressed to the service that is processing the message, which could be different from the poison message service endpoint.</span></span> <span data-ttu-id="0b655-153">Поэтому при выполнении службой подозрительных сообщений считывания сообщений из очереди уровень канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] находит несоответствие конечных точек и не отправляет сообщение.</span><span class="sxs-lookup"><span data-stu-id="0b655-153">Therefore, when the poison message service reads messages from the queue, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message.</span></span> <span data-ttu-id="0b655-154">В этом случае сообщение адресуется службе, обрабатывающей заказы, но получает его служба подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-154">In this case, the message is addressed to the order processing service but is being received by the poison message service.</span></span> <span data-ttu-id="0b655-155">Чтобы продолжать получать сообщение, даже если оно адресовано другой конечной точке, необходимо добавить поведение `ServiceBehavior` для фильтрации адресов, в котором критерием соответствия будет соответствие любой конечной точке службы, которой адресовано сообщение.</span><span class="sxs-lookup"><span data-stu-id="0b655-155">To continue to receive the message even if the message is addressed to a different endpoint, we must add a `ServiceBehavior` to filter addresses where the match criterion is to match any service endpoint the message is addressed to.</span></span> <span data-ttu-id="0b655-156">Это необходимо для успешной обработки сообщений, считываемых из очереди подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-156">This is required to successfully process messages that you read from the poison message queue.</span></span>  
   
- Реализация самой службы подозрительных сообщений очень похожа на реализацию службы.  Она реализует контракт и обрабатывает заказы.  Ниже приведен пример кода.  
+ <span data-ttu-id="0b655-157">Реализация самой службы подозрительных сообщений очень похожа на реализацию службы.</span><span class="sxs-lookup"><span data-stu-id="0b655-157">The poison message service implementation itself is very similar to the service implementation.</span></span> <span data-ttu-id="0b655-158">Она реализует контракт и обрабатывает заказы.</span><span class="sxs-lookup"><span data-stu-id="0b655-158">It implements the contract and processes the orders.</span></span> <span data-ttu-id="0b655-159">Ниже приведен пример кода.</span><span class="sxs-lookup"><span data-stu-id="0b655-159">The code example is as follows.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -213,16 +214,14 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-  
 ```  
   
- В отличие от службы обработки заказов, которая считывает сообщения из очереди заказов, служба подозрительных сообщений считывает сообщения из вложенной очереди подозрительных сообщений.  Очередь подозрительных сообщений вложена в основную очередь, называется "poison" и автоматически создается MSMQ.  Для доступа к этой очереди следует указать имя основной очереди, ввести символ ";", а затем имя вложенной очереди, в данном случае \- "poison", как показано в следующем образце конфигурации.  
+ <span data-ttu-id="0b655-160">В отличие от службы обработки заказов, которая считывает сообщения из очереди заказов, служба подозрительных сообщений считывает сообщения из вложенной очереди подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-160">Unlike the order processing service that reads messages from the order queue, the poison message service reads messages from the poison sub-queue.</span></span> <span data-ttu-id="0b655-161">Очередь подозрительных сообщений вложена в основную очередь, называется "poison" и автоматически создается MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b655-161">The poison queue is a sub-queue of the main queue, is named "poison" and is automatically generated by MSMQ.</span></span> <span data-ttu-id="0b655-162">Для доступа к этой очереди следует указать имя основной очереди, ввести символ ";", а затем имя вложенной очереди, в данном случае - "poison", как показано в следующем образце конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0b655-162">To access it, provide the main queue name followed by a ";" and the sub-queue name, in this case -"poison", as shown in the following sample configuration.</span></span>  
   
 > [!NOTE]
->  В образце для MSMQ v3.0 очередь подозрительных сообщений является не вложенной очередью, а очередью, в которую было перемещено сообщение.  
+>  <span data-ttu-id="0b655-163">В образце для MSMQ v3.0 очередь подозрительных сообщений является не вложенной очередью, а очередью, в которую было перемещено сообщение.</span><span class="sxs-lookup"><span data-stu-id="0b655-163">In the sample for MSMQ v3.0, the poison queue name is not a sub-queue, rather the queue that we moved the message to.</span></span>  
   
-```  
-  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -238,15 +237,13 @@ public class OrderProcessorService : IOrderProcessor
   
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
- При выполнении образца действия клиента, службы и службы подозрительных сообщений отображаются в окнах консоли.  Можно видеть, как служба получает сообщения от клиента.  Нажмите клавишу ВВОД в каждом окне консоли, чтобы завершить работу служб.  
+ <span data-ttu-id="0b655-164">При выполнении образца действия клиента, службы и службы подозрительных сообщений отображаются в окнах консоли.</span><span class="sxs-lookup"><span data-stu-id="0b655-164">When you run the sample, the client, service, and poison message service activities are displayed in console windows.</span></span> <span data-ttu-id="0b655-165">Можно видеть, как служба получает сообщения от клиента.</span><span class="sxs-lookup"><span data-stu-id="0b655-165">You can see the service receive messages from the client.</span></span> <span data-ttu-id="0b655-166">Нажмите клавишу ВВОД в каждом окне консоли, чтобы завершить работу служб.</span><span class="sxs-lookup"><span data-stu-id="0b655-166">Press ENTER in each console window to shut down the services.</span></span>  
   
- Служба начинает работать, обрабатывать заказы и в произвольном порядке завершать обработку.  Если появляется сообщение о том, что заказ обработан, можно снова запустить клиент для отправки другого сообщения, пока не будет видно, что служба действительно завершила обработку сообщения.  В зависимости от заданных параметров подозрительных сообщений перед помещением сообщения в конечную очередь подозрительных сообщений предпринимается одна попытка его обработки.  
+ <span data-ttu-id="0b655-167">Служба начинает работать, обрабатывать заказы и в произвольном порядке завершать обработку.</span><span class="sxs-lookup"><span data-stu-id="0b655-167">The service starts running, processing orders and at random starts to terminate processing.</span></span> <span data-ttu-id="0b655-168">Если появляется сообщение о том, что заказ обработан, можно снова запустить клиент для отправки другого сообщения, пока не будет видно, что служба действительно завершила обработку сообщения.</span><span class="sxs-lookup"><span data-stu-id="0b655-168">If the message indicates it has processed the order, you can run the client again to send another message until you see the service has actually terminated a message.</span></span> <span data-ttu-id="0b655-169">В зависимости от заданных параметров подозрительных сообщений перед помещением сообщения в конечную очередь подозрительных сообщений предпринимается одна попытка его обработки.</span><span class="sxs-lookup"><span data-stu-id="0b655-169">Based on the configured poison settings, the message is tried once for processing before moving it to the final poison queue.</span></span>  
   
 ```  
-  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -269,7 +266,7 @@ Processing Purchase Order: 5ef9a4fa-5a30-4175-b455-2fb1396095fa
 Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89  
 ```  
   
- Запустите службу подозрительных сообщений, чтобы считать подозрительное сообщение из очереди подозрительных сообщений.  В этом примере служба подозрительных сообщений считывает сообщение и обрабатывает его.  Можно видеть, что заказ на покупку, обработка которого была завершена и который был помечен как подозрительный, считывается службой подозрительных сообщений.  
+ <span data-ttu-id="0b655-170">Запустите службу подозрительных сообщений, чтобы считать подозрительное сообщение из очереди подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-170">Start up the poison message service to read the poisoned message from the poison queue.</span></span> <span data-ttu-id="0b655-171">В этом примере служба подозрительных сообщений считывает сообщение и обрабатывает его.</span><span class="sxs-lookup"><span data-stu-id="0b655-171">In this example, the poison message service reads the message and processes it.</span></span> <span data-ttu-id="0b655-172">Можно видеть, что заказ на покупку, обработка которого была завершена и который был помечен как подозрительный, считывается службой подозрительных сообщений.</span><span class="sxs-lookup"><span data-stu-id="0b655-172">You could see that the purchase order that was terminated and poisoned is read by the poison message service.</span></span>  
   
 ```  
 The service is ready.  
@@ -282,36 +279,35 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
                 Order LineItem: 890 of Red Widget @unit price: $45.89  
         Total cost of this order: $42461.56  
         Order status: Pending  
-  
 ```  
   
-#### Настройка, сборка и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="0b655-173">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="0b655-173">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="0b655-174">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0b655-174">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  При первом запуске служба проверит наличие очереди.  Если очередь отсутствует, служба ее создаст.  Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.  Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
+2.  <span data-ttu-id="0b655-175">При первом запуске служба проверит наличие очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-175">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="0b655-176">Если очередь отсутствует, служба ее создаст.</span><span class="sxs-lookup"><span data-stu-id="0b655-176">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="0b655-177">Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.</span><span class="sxs-lookup"><span data-stu-id="0b655-177">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="0b655-178">Чтобы создать очередь в Windows 2008, выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="0b655-178">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="0b655-179">Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b655-179">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Разверните вкладку **Функции**.  
+    2.  <span data-ttu-id="0b655-180">Разверните **функции** вкладки.</span><span class="sxs-lookup"><span data-stu-id="0b655-180">Expand the **Features** tab.</span></span>  
   
-    3.  Щелкните правой кнопкой мыши узел **Очереди личных сообщений** и выберите пункты **Создать**, **Частная очередь**.  
+    3.  <span data-ttu-id="0b655-181">Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.</span><span class="sxs-lookup"><span data-stu-id="0b655-181">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Установите флажок **Транзакционная**.  
+    4.  <span data-ttu-id="0b655-182">Проверьте **транзакций** поле.</span><span class="sxs-lookup"><span data-stu-id="0b655-182">Check the **Transactional** box.</span></span>  
   
-    5.  В качестве имени новой очереди укажите `ServiceModelSamplesTransacted`.  
+    5.  <span data-ttu-id="0b655-183">Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.</span><span class="sxs-lookup"><span data-stu-id="0b655-183">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="0b655-184">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0b655-184">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, измените имена очередей, заменив «localhost» фактическим именем узла, и выполните инструкции в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="0b655-185">Для запуска образца в конфигурации с одним или несколькими компьютерами, измените имена очередей, чтобы отразить фактическое имя узла вместо localhost и следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="0b655-185">To run the sample in a single- or cross-computer configuration, change the queue names to reflect the actual hostname instead of localhost and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
- По умолчанию с транспортом привязки `netMsmqBinding` безопасность включена.  Тип безопасности транспорта определяется двумя свойствами: `MsmqAuthenticationMode` и `MsmqProtectionLevel`.  По умолчанию задан режим проверки подлинности `Windows` и уровень защиты `Sign`.  Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен.  При выполнении этого примера на компьютере, не входящем в домен, возникает следующая ошибка: "User's internal message queuing certificate does not exist" \(не существует внутреннего сертификата очереди сообщений пользователя\).  
+ <span data-ttu-id="0b655-186">По умолчанию с транспортом привязки `netMsmqBinding` безопасность включена.</span><span class="sxs-lookup"><span data-stu-id="0b655-186">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="0b655-187">Тип безопасности транспорта определяется двумя свойствами: `MsmqAuthenticationMode` и `MsmqProtectionLevel`.</span><span class="sxs-lookup"><span data-stu-id="0b655-187">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="0b655-188">По умолчанию задан режим проверки подлинности `Windows` и уровень защиты `Sign`.</span><span class="sxs-lookup"><span data-stu-id="0b655-188">By default, the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="0b655-189">Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен.</span><span class="sxs-lookup"><span data-stu-id="0b655-189">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="0b655-190">При выполнении этого примера на компьютере, не входящем в домен, возникает следующая ошибка: "User's internal message queuing certificate does not exist" (не существует внутреннего сертификата очереди сообщений пользователя).</span><span class="sxs-lookup"><span data-stu-id="0b655-190">If you run this sample on a computer that is not part of a domain, you receive the following error: "User's internal message queuing certificate does not exist".</span></span>  
   
-#### Выполнение образца на компьютере, входящем в рабочую группу  
+#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="0b655-191">Выполнение образца на компьютере, входящем в рабочую группу</span><span class="sxs-lookup"><span data-stu-id="0b655-191">To run the sample on a computer joined to a workgroup</span></span>  
   
-1.  Если компьютер не входит в домен, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значение `None`, как показано в следующем образце конфигурации.  
+1.  <span data-ttu-id="0b655-192">Если компьютер не входит в домен, отключите безопасность транспорта, задав для режима проверки подлинности и уровня защиты значение `None`, как показано в следующем образце конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0b655-192">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
         <netMsmqBinding>  
             <binding name="TransactedBinding">  
@@ -321,22 +317,22 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     </bindings>  
     ```  
   
-     Обеспечьте связь конечной точки с привязкой, задав атрибут bindingConfiguration конечной точки.  
+     <span data-ttu-id="0b655-193">Обеспечьте связь конечной точки с привязкой, задав атрибут bindingConfiguration конечной точки.</span><span class="sxs-lookup"><span data-stu-id="0b655-193">Ensure the endpoint is associated with the binding by setting the endpoint's bindingConfiguration attribute.</span></span>  
   
-2.  Перед выполнением примера убедитесь, что изменена конфигурация PoisonMessageServer, сервера и клиента.  
+2.  <span data-ttu-id="0b655-194">Перед выполнением примера убедитесь, что изменена конфигурация PoisonMessageServer, сервера и клиента.</span><span class="sxs-lookup"><span data-stu-id="0b655-194">Ensure that you change the configuration on the PoisonMessageServer, server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности `MsmqAuthenticationMode`, `MsmqProtectionLevel` и `Message` значения `None`.  
+    >  <span data-ttu-id="0b655-195">Задание для `security mode` значения `None` эквивалентно заданию для параметров безопасности `MsmqAuthenticationMode`, `MsmqProtectionLevel` и `Message` значения `None`.</span><span class="sxs-lookup"><span data-stu-id="0b655-195">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel`, and `Message` security to `None`.</span></span>  
   
-3.  Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL\-адрес с привязкой http.  Это требует выполнения службы в командном окне с повышенными привилегиями.  В противном случае возникает исключение, например: Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http:\/\/\+:8000\/ServiceModelSamples\/service\/ \(необработанное исключение: System.ServiceModel.AddressAccessDeniedException: HTTP не удалось зарегистрировать URL\-адрес http:\/\/\+:8000\/ServiceModelSamples\/service\/\).  Текущий процесс не имеет прав доступа к этому пространству имен \(см. http:\/\/go.microsoft.com\/fwlink\/?LinkId\=70353 для получения более подробной информации\).  \-\-\-\> System.Net.HttpListenerException: отказано в доступе.  
+3.  <span data-ttu-id="0b655-196">Чтобы обеспечить обмен метаданными, необходимо зарегистрировать URL-адрес с привязкой http.</span><span class="sxs-lookup"><span data-stu-id="0b655-196">In order for Meta Data Exchange to work, we register a URL with http binding.</span></span> <span data-ttu-id="0b655-197">Это требует выполнения службы в командном окне с повышенными привилегиями.</span><span class="sxs-lookup"><span data-stu-id="0b655-197">This requires that the service run in an elevated command window.</span></span> <span data-ttu-id="0b655-198">В противном случае возникает исключение, например: Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/ (необработанное исключение: System.ServiceModel.AddressAccessDeniedException: HTTP не удалось зарегистрировать URL-адрес http://+:8000/ServiceModelSamples/service/).</span><span class="sxs-lookup"><span data-stu-id="0b655-198">Otherwise, you get an exception such as: Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/.</span></span> <span data-ttu-id="0b655-199">Текущий процесс не имеет прав доступа к этому пространству имен (см. http://go.microsoft.com/fwlink/?LinkId=70353 для получения более подробной информации).</span><span class="sxs-lookup"><span data-stu-id="0b655-199">Your process does not have access rights to this namespace (see http://go.microsoft.com/fwlink/?LinkId=70353 for details).</span></span> <span data-ttu-id="0b655-200">---> System.Net.HttpListenerException: отказано в доступе.</span><span class="sxs-lookup"><span data-stu-id="0b655-200">---> System.Net.HttpListenerException: Access is denied.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="0b655-201">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="0b655-201">The samples may already be installed on your computer.</span></span> <span data-ttu-id="0b655-202">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="0b655-202">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="0b655-203">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0b655-203">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0b655-204">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="0b655-204">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="0b655-205">См. также</span><span class="sxs-lookup"><span data-stu-id="0b655-205">See Also</span></span>

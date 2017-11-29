@@ -1,132 +1,141 @@
 ---
-title: "Общие сведения о надежных сеансах | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "Общие сведения о надежных сеансах"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ddec86fac46da7a93d17ecd55f292471fac2ee5e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Общие сведения о надежных сеансах
-Надежный обмен сообщениями SOAP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает безопасный сквозной обмен сообщениями между конечными точками SOAP.Такой обмен реализуется в сетях, которые ненадежны из\-за исправления ошибок транспорта и ошибок на уровне сообщений SOAP.В частности, эта технология обеспечивает основанную на сеансах, одиночную, упорядоченную \(необязательно\) доставку сообщений, отправленных по протоколу SOAP или через транспортных посредников.При основанной на сеансе доставке сообщения группируются в сеансе с необязательным упорядочиванием сообщений.  
-  
- Ниже даны ответы на вопросы: что такое надежный сеанс, как и когда его использовать, как его защитить.  
-  
-## Надежные сеансы WCF  
- Надежные сеансы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] представляют собой реализацию надежного обмена сообщениями SOAP согласно определению протокола WS\-ReliableMessaging.  
-  
- Надежный обмен сообщениями SOAP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает надежный сквозной сеанс между двумя конечными точками независимо от числа или типа посредников, разделяющих конечные точки.В него входят любые транспортные посредники, не использующие протокол SOAP \(например, прокси\-серверы HTTP\), и посредники, использующие этот протокол \(например, мосты и маршрутизаторы на базе SOAP\), необходимые для продвижения сообщений между конечными точками.Канал надежного сеанса поддерживает "интерактивную" передачу данных, поэтому службы, соединенные таким каналом, выполняются параллельно и могут обмениваться и обрабатывать сообщения в условиях небольшой задержки, т.е. в относительно небольшие периоды времени.Такое соединение означает, что эти компоненты вместе работают или завершают работу с ошибкой, поэтому они не изолированы друг от друга.  
-  
- Надежный сеанс скрывает два вида сбоев.  
-  
--   Сбои на уровне сообщений SOAP, которые включают в себя потерянные или дублированные сообщения и сообщения, приходящие в порядке, отличном от порядка, в котором они были отправлены.  
-  
--   Сбои транспорта.  
-  
- Надежный сеанс реализует протокол WS\-ReliableMessaging и окно передачи в памяти, чтобы маскировать сбои на уровне сообщений SOAP, и восстанавливает подключения в случае сбоев транспорта.  
-  
- Надежный сеанс обеспечивает для сообщений SOAP то, что обеспечивает TCP для IP\-пакетов.Подключение через сокет TCP — это единая, упорядоченная передача IP\-пакетов между узлами.Надежный канал обеспечивает тот же тип надежной передачи, но отличается от надежности сокета TCP в следующем.  
-  
--   Надежность поддерживается на уровне сообщений SOAP, она не связана с пакетом байтов произвольного размера.  
-  
--   Надежность поддерживается нейтральным по отношению к транспорту образом, не только для передачи по TCP.  
-  
--   Надежность не привязана к определенному сеансу транспорта \(например сеансу, обеспечиваемому подключением TCP\) и может параллельно или последовательно использовать несколько сеансов транспорта во время существования надежного сеанса.  
-  
--   Надежный сеанс осуществляется между конечными точками отправителя и получателя SOAP независимо от числа транспортных подключений, необходимых для их соединения.Иными словами, надежность TCP заканчивается на участке транспортного подключения, тогда как надежный сеанс обеспечивает сквозную надежность.  
-  
-## Надежные сеансы и привязки  
- Как упоминалось ранее, надежный сеанс нейтрален по отношению к транспорту, и поэтому может быть реализован для большого числа транспортов.Кроме того, надежный сеанс можно реализовать для многих шаблонов обмена сообщениями, например для типа запрос\-ответ или дуплексного сеанса.Поэтому надежный сеанс [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] раскрывается как свойство ряда привязок.  
-  
- Надежный сеанс можно применять для конечных точек, использующих:  
-  
--   стандартные привязки транспорта на основе HTTP  
-  
-    -   `WsHttpBinding` и предоставление контрактов типа запрос\-ответ или односторонних контрактов.  
-  
-    -   Может применяться при использовании надежного сеанса для контракта типа запрос\-ответ или простого одностороннего контракта службы.  
-  
-    -   `WsDualHttpBinding` и предоставление дуплексных, односторонних контрактов или контрактов типа запрос\-ответ.  
-  
-    -   `WsFederationHttpBinding` и предоставление контрактов типа запрос\-ответ или односторонних контрактов.  
-  
--   стандартные привязки транспорта на основе TCP  
-  
-    -   `NetTcpBinding` и предоставление дуплексных, односторонних контрактов или контрактов типа запрос\-ответ.  
-  
- Надежный сеанс также можно использовать для любых других привязок, создав пользовательскую привязку, например HTTPS \(дополнительные сведения по возможным проблемам см. в разделе "Надежные сеансы и безопасность" далее в этой теме\) или привязку именованного канала.  
-  
- Надежный сеанс можно расположить в стеке базовых каналов разных типов, и получаемая форма канала надежного сеанса может быть разной.На клиенте и сервере тип поддерживаемого канала надежного сеанса зависит от используемого типа базового канала.В следующей таблице представлен список типов каналов сеансов, поддерживаемых клиентом, в качестве функции типа базового канала.  
-  
-|Поддерживаемые типы каналов надежного сеанса \(поддерживаемые значения `TChannel` в зависимости от типа базового канала\)|`IRequestChannel`|`IRequestSessionChanne`l|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-------------------------------------------------------------------------------------------------------------------------------|-----------------------|------------------------------|----------------------|-----------------------------|  
-|`IOutputSessionChannel`|Да|Да|Да|Да|  
-|`IRequestSessionChannel`|Да|Да|Нет|Нет|  
-|`IDuplexSessionChannel`|Нет|Нет|Да|Да|  
-  
- Поддерживаемые типы каналов представляют собой значения, доступные для универсального параметра `TChannel`, передаваемого в метод <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
-  
- В следующей таблице представлен список типов каналов сеансов, поддерживаемых сервером, в качестве функции типа базового канала.  
-  
-|Поддерживаемые типы каналов надежного сеанса \(поддерживаемые значения `TChannel` в зависимости от типа базового канала\)|`IReplyChannel`|`IReplySessionChannel`|`IDuplexChannel`|`IDuplexSessionChannel`|  
-|-------------------------------------------------------------------------------------------------------------------------------|---------------------|----------------------------|----------------------|-----------------------------|  
-|`IInputSessionChannel`|Да|Да|Да|Да|  
-|`IReplySessionChannel`|Да|Да|Нет|Нет|  
-|`IDuplexSessionChannel`|Нет|Нет|Да|Да|  
-  
- Поддерживаемые типы каналов представляют собой значения, доступные для значения универсального параметра `TChannel`, передаваемого в метод <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>.  
-  
-## Надежные сеансы и безопасность  
- Защита надежного сеанса важна для обеспечения проверки подлинности взаимодействующих сторон \(службы и клиента\) и сообщений, обмен которыми осуществляется в сеансе.Более того, важно обеспечить целостность каждого отдельного надежного сеанса.Надежный сеанс защищен его привязкой к контексту безопасности, представленному и управляемому каналом сеанса безопасности.Канал безопасности обеспечивает сеанс безопасности.Маркеры безопасности, обмен которыми осуществляется во время установления сеанса, затем используются для защиты сообщений в надежном сеансе.  
-  
- Если надежный сеанс осуществляется по TCP\-S, сеанс TCP привязывается к надежному сеансу, и по существу система безопасности транспорта также обеспечивает привязку безопасности к надежному сеансу.В этом случае восстановление подключения выключено.  
-  
- Единственное исключение относится к использованию HTTPS.Сеанс SSL не привязан к надежному сеансу.Это предполагает угрозу, поскольку сеансы с совместным доступом к контексту безопасности \(сеанс SSL\) не защищены друг от друга. Это может являться или не являться реальной угрозой в зависимости от приложения.  
-  
-## Использование надежных сеансов  
- Чтобы использовать надежные сеансы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], создайте конечную точку с привязкой, которая поддерживает надежный сеанс.Используйте одну из системных привязок, для которой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку надежного сценария, или создайте собственную пользовательскую привязку по такому же принципу.Определенные системой привязки, которые поддерживают и разрешают надежный сеанс, включают в себя:  
-  
--   <xref:System.ServiceModel.WSDualHttpBinding>  
-  
- Предоставленные системой привязки, которые поддерживают и разрешают как дополнительный вариант, но не разрешают надежный сеанс по умолчанию, включают в себя:  
-  
--   <xref:System.ServiceModel.WSHttpBinding>  
-  
--   <xref:System.ServiceModel.WSFederationHttpBinding>  
-  
--   <xref:System.ServiceModel.NetTcpBinding>  
-  
- Пример создания пользовательской привязки см. в разделе [Практическое руководство. Создание пользовательской привязки надежного сеанса с использованием HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).  
-  
- Описание привязок [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], поддерживающих надежные сеансы, см. в разделе [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md).  
-  
-## Когда следует использовать надежные сеансы  
- Важно понять, когда необходимо использовать надежные сеансы в вашем приложении.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает надежные сеансы между активными, работающими одновременно конечными точками.Если для приложения требуется, чтобы одна из конечных точек была недоступна в течение определенного периода времени, для обеспечения надежности можно использовать очереди.  
-  
- Если для сценария требуется подключение двух точек по TCP, TCP может обеспечить достаточно надежный обмен сообщениями, хотя нет необходимости использовать надежный сеанс. TCP обеспечит доставку пакетов в правильном порядке без дублирования.  
-  
- Если сценарию свойственны какие\-либо из следующих характеристик, следует тщательно рассмотреть возможность использования надежного сеанса:  
-  
--   посредники SOAP, например маршрутизаторы SOAP;  
-  
--   посредники прокси или транспортные мосты;  
-  
--   неустойчивое подключение;  
-  
--   сеансы по HTTP.  
-  
-## См. также  
- [Использование привязок для настройки служб и клиентов](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Надежный сеанс WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)
+# <a name="reliable-sessions-overview"></a><span data-ttu-id="218c4-102">Общие сведения о надежных сеансах</span><span class="sxs-lookup"><span data-stu-id="218c4-102">Reliable Sessions Overview</span></span>
+
+<span data-ttu-id="218c4-103">Надежный обмен сообщениями SOAP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает безопасный сквозной обмен сообщениями между конечными точками SOAP.</span><span class="sxs-lookup"><span data-stu-id="218c4-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP reliable messaging provides end-to-end message transfer reliability between SOAP endpoints.</span></span> <span data-ttu-id="218c4-104">Такой обмен реализуется в сетях, которые ненадежны из-за исправления ошибок транспорта и ошибок на уровне сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="218c4-104">It does this on networks that are unreliable by overcoming transport failures and SOAP message-level failures.</span></span> <span data-ttu-id="218c4-105">В частности, эта технология обеспечивает основанную на сеансах, одиночную, упорядоченную (необязательно) доставку сообщений, отправленных по протоколу SOAP или через транспортных посредников.</span><span class="sxs-lookup"><span data-stu-id="218c4-105">In particular, it provides session-based, single, and (optionally) ordered delivery for messages sent across SOAP or transport intermediaries.</span></span> <span data-ttu-id="218c4-106">Для группирования сообщений в сеансе с необязательным упорядочиванием сообщений предоставляет доставки на основе сеансов.</span><span class="sxs-lookup"><span data-stu-id="218c4-106">Session-based delivery provides for grouping messages in a session with optional ordering of the messages.</span></span>
+
+<span data-ttu-id="218c4-107">В этом разделе описываются надежных сеансов, как и способы их использования и для их защиты.</span><span class="sxs-lookup"><span data-stu-id="218c4-107">This topic describes reliable sessions, how and when to use them, and how to secure them.</span></span>
+
+## <a name="wcf-reliable-sessions"></a><span data-ttu-id="218c4-108">Надежные сеансы WCF</span><span class="sxs-lookup"><span data-stu-id="218c4-108">WCF reliable sessions</span></span>
+
+<span data-ttu-id="218c4-109">Надежные сеансы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] представляют собой реализацию надежного обмена сообщениями SOAP согласно определению протокола WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="218c4-109">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions is an implementation of SOAP reliable messaging as defined by the WS-ReliableMessaging protocol.</span></span>
+
+<span data-ttu-id="218c4-110">Надежный обмен сообщениями SOAP в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает надежный сквозной сеанс между двумя конечными точками независимо от числа или типа посредников, разделяющих конечные точки.</span><span class="sxs-lookup"><span data-stu-id="218c4-110">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP reliable messaging provides an end-to-end reliable session between two endpoints, regardless of the number or type of intermediaries that separate the messaging endpoints.</span></span> <span data-ttu-id="218c4-111">Сюда входят любые транспортные посредники, не использующие протокол SOAP (например, прокси-серверы HTTP) или посредники, использующие протокол SOAP (например, мосты или маршрутизаторы на базе SOAP), необходимые для продвижения сообщений между конечными точками.</span><span class="sxs-lookup"><span data-stu-id="218c4-111">This includes any transport intermediaries that don't use SOAP (for example, HTTP proxies) or intermediaries that use SOAP (for example, SOAP-based routers or bridges) that are required for messages to flow between the endpoints.</span></span> <span data-ttu-id="218c4-112">Канал надежного сеанса поддерживает *интерактивный* связи, чтобы службы, соединенные таким каналом выполняться одновременно, а также обмениваться и обрабатывать сообщения в условиях низкой задержкой, в течение относительно небольшого размера интервалы времени.</span><span class="sxs-lookup"><span data-stu-id="218c4-112">A reliable session channel supports *interactive* communication so that the services connected by such a channel run concurrently and exchange and process messages under conditions of low latency, that is, within relatively short intervals of time.</span></span> <span data-ttu-id="218c4-113">Такое объединение означает, что эти компоненты прогресса вместе или ошибкой, то есть не изолированы между ними.</span><span class="sxs-lookup"><span data-stu-id="218c4-113">This coupling means that these components make progress together or fail together, so there's no isolation provided between them.</span></span>
+
+<span data-ttu-id="218c4-114">Надежный сеанс скрывает два вида сбоев.</span><span class="sxs-lookup"><span data-stu-id="218c4-114">A reliable session masks two kinds of failures:</span></span>
+
+- <span data-ttu-id="218c4-115">Сбои на уровне сообщений SOAP, которые включают в себя потерянные или дублированные сообщения и сообщения, приходящие в порядке, отличном от порядка, в котором они были отправлены.</span><span class="sxs-lookup"><span data-stu-id="218c4-115">SOAP message-level failures, which includes lost or duplicated messages and messages that arrive in a different order from the order in which they were sent.</span></span>
+
+- <span data-ttu-id="218c4-116">Сбои транспорта.</span><span class="sxs-lookup"><span data-stu-id="218c4-116">Transport failures.</span></span>
+
+<span data-ttu-id="218c4-117">Надежный сеанс реализует протокол WS-ReliableMessaging и окно передачи в памяти, чтобы маскировать сбои на уровне сообщений SOAP, и восстанавливает подключения в случае сбоев транспорта.</span><span class="sxs-lookup"><span data-stu-id="218c4-117">A reliable session implements the WS-ReliableMessaging protocol and an in-memory transfer window to mask SOAP message-level failures and re-establishes connections in the case of transport failures.</span></span>
+
+<span data-ttu-id="218c4-118">Надежный сеанс обеспечивает для сообщений SOAP то, что обеспечивает TCP для IP-пакетов.</span><span class="sxs-lookup"><span data-stu-id="218c4-118">A reliable session provides for SOAP messages what TCP provides for IP packets.</span></span> <span data-ttu-id="218c4-119">Подключение через сокет TCP - это единая, упорядоченная передача IP-пакетов между узлами.</span><span class="sxs-lookup"><span data-stu-id="218c4-119">A TCP socket connection provides a singular, in-order transfer of IP packets between nodes.</span></span> <span data-ttu-id="218c4-120">Надежный канал обеспечивает тот же тип надежной передачи, но отличается от надежности сокета TCP в следующем.</span><span class="sxs-lookup"><span data-stu-id="218c4-120">The reliable channel provides the same type of reliable transfer, but it differs from TCP socket reliability in the following ways:</span></span>
+
+- <span data-ttu-id="218c4-121">Надежность поддерживается на уровне сообщений SOAP, она не связана с пакетом байтов произвольного размера.</span><span class="sxs-lookup"><span data-stu-id="218c4-121">The reliability is at the SOAP message level, not for an arbitrarily sized packet of bytes.</span></span>
+
+- <span data-ttu-id="218c4-122">Надежность транспорта нейтральные, не только для передачи по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="218c4-122">The reliability is transport-neutral, not just for transfer over TCP.</span></span>
+
+- <span data-ttu-id="218c4-123">Надежность не привязана к определенному сеансу транспорта (например, сеанс, который обеспечивает подключение TCP) и могут использовать несколько сеансов транспорта параллельно или последовательно в течение времени существования надежного сеанса.</span><span class="sxs-lookup"><span data-stu-id="218c4-123">The reliability isn't tied to a particular transport session (for example, the session a TCP connection provides) and can use multiple transport sessions concurrently or sequentially over the lifetime of the reliable session.</span></span>
+
+- <span data-ttu-id="218c4-124">Надежный сеанс осуществляется между конечными точками отправителя и получателя SOAP независимо от числа транспортных подключений, необходимых для их соединения.</span><span class="sxs-lookup"><span data-stu-id="218c4-124">The reliable session is between the sender and receiver SOAP endpoints, regardless of the number of transport connections required for connectivity between them.</span></span> <span data-ttu-id="218c4-125">Иными словами надежность TCP заканчивается, которой заканчивается транспортного соединения, пока надежный сеанс обеспечивает надежность начала до конца.</span><span class="sxs-lookup"><span data-stu-id="218c4-125">In short, TCP reliability ends where the transport connection ends, while a reliable session provides end-to-end reliability.</span></span>
+
+## <a name="reliable-sessions-and-bindings"></a><span data-ttu-id="218c4-126">Надежные сеансы и привязки</span><span class="sxs-lookup"><span data-stu-id="218c4-126">Reliable sessions and bindings</span></span>
+
+<span data-ttu-id="218c4-127">Как упоминалось ранее, надежного сеанса является нейтральным транспорта.</span><span class="sxs-lookup"><span data-stu-id="218c4-127">As mentioned earlier, a reliable session is transport neutral.</span></span> <span data-ttu-id="218c4-128">Кроме того можно установить для многих шаблонов обмена сообщениями, таких как запрос ответ или дуплексного надежного сеанса.</span><span class="sxs-lookup"><span data-stu-id="218c4-128">Also, you can establish a reliable session over many message exchange patterns, such as request-reply or duplex.</span></span> <span data-ttu-id="218c4-129">Объект [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] надежного сеанса предоставляется как свойство ряда привязок.</span><span class="sxs-lookup"><span data-stu-id="218c4-129">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable session is exposed as a property of a set of bindings.</span></span>
+
+<span data-ttu-id="218c4-130">Используйте конечные точки, использующие надежный сеанс:</span><span class="sxs-lookup"><span data-stu-id="218c4-130">Use a reliable session on endpoints that use:</span></span>
+
+- <span data-ttu-id="218c4-131">стандартные привязки транспорта на основе HTTP</span><span class="sxs-lookup"><span data-stu-id="218c4-131">HTTP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="218c4-132">`WsHttpBinding` и предоставление контрактов типа запрос-ответ или односторонних контрактов.</span><span class="sxs-lookup"><span data-stu-id="218c4-132">`WsHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+  - <span data-ttu-id="218c4-133">При использовании надежного сеанса через запрос ответ или простого одностороннего контракта службы.</span><span class="sxs-lookup"><span data-stu-id="218c4-133">When using reliable session over a request-reply or simple one-way service contract.</span></span>
+
+  - <span data-ttu-id="218c4-134">`WsDualHttpBinding` и предоставление дуплексных, односторонних контрактов или контрактов типа запрос-ответ.</span><span class="sxs-lookup"><span data-stu-id="218c4-134">`WsDualHttpBinding` and expose duplex, request-reply, or one-way contracts.</span></span>
+
+  - <span data-ttu-id="218c4-135">`WsFederationHttpBinding` и предоставление контрактов типа запрос-ответ или односторонних контрактов.</span><span class="sxs-lookup"><span data-stu-id="218c4-135">`WsFederationHttpBinding` and expose request-reply or one-way contracts.</span></span>
+
+- <span data-ttu-id="218c4-136">стандартные привязки транспорта на основе TCP</span><span class="sxs-lookup"><span data-stu-id="218c4-136">TCP-based transport standard bindings:</span></span>
+
+  - <span data-ttu-id="218c4-137">`NetTcpBinding` и предоставление дуплексных, односторонних контрактов или контрактов типа запрос-ответ.</span><span class="sxs-lookup"><span data-stu-id="218c4-137">`NetTcpBinding` and expose duplex, request reply, or one-way contracts.</span></span>
+
+<span data-ttu-id="218c4-138">Использовать надежного сеанса для любых других привязок, создав пользовательскую привязку, например HTTPS (Дополнительные сведения о проблемах см. в разделе <a href="#reliable-sessions-and-security">надежные сеансы и безопасность</a>) или привязку именованного канала.</span><span class="sxs-lookup"><span data-stu-id="218c4-138">Use a reliable session on any other bindings by creating a custom binding, such as HTTPS (for more information about issues, see <a href="#reliable-sessions-and-security">Reliable sessions and security</a>) or a named pipe binding.</span></span>
+
+<span data-ttu-id="218c4-139">Можно располагать надежного сеанса на базовых каналов разных типов, и получаемая форма канала надежного сеанса зависит.</span><span class="sxs-lookup"><span data-stu-id="218c4-139">You can stack a reliable session on different underlying channel types, and the resulting reliable session channel shape varies.</span></span> <span data-ttu-id="218c4-140">На клиенте и сервере тип поддерживаемого канала надежного сеанса зависит от типа используемого базового канала.</span><span class="sxs-lookup"><span data-stu-id="218c4-140">On both the client and the server, the type of reliable session channel supported depends on the type of underlying channel used.</span></span> <span data-ttu-id="218c4-141">В следующей таблице представлен список типов каналов сеансов, поддерживаемых клиентом, в качестве функции типа базового канала.</span><span class="sxs-lookup"><span data-stu-id="218c4-141">The following table lists the types of session channels supported on the client as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="218c4-142">Поддерживаемые типы каналов надежного сеанса &#8224;</span><span class="sxs-lookup"><span data-stu-id="218c4-142">Supported reliable session channel types&#8224;</span></span> | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
+| `IOutputSessionChannel`                         | <span data-ttu-id="218c4-143">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-143">Yes</span></span>               | <span data-ttu-id="218c4-144">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-144">Yes</span></span>                      | <span data-ttu-id="218c4-145">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-145">Yes</span></span>              | <span data-ttu-id="218c4-146">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-146">Yes</span></span>                     |
+| `IRequestSessionChannel`                        | <span data-ttu-id="218c4-147">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-147">Yes</span></span>               | <span data-ttu-id="218c4-148">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-148">Yes</span></span>                      | <span data-ttu-id="218c4-149">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-149">No</span></span>               | <span data-ttu-id="218c4-150">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-150">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="218c4-151">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-151">No</span></span>                | <span data-ttu-id="218c4-152">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-152">No</span></span>                       | <span data-ttu-id="218c4-153">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-153">Yes</span></span>              | <span data-ttu-id="218c4-154">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-154">Yes</span></span>                     |
+
+<span data-ttu-id="218c4-155">&#8224; Поддерживаемые типы каналов представляют собой значения, доступные для универсального `TChannel` значение параметра, передаваемого в <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> метод.</span><span class="sxs-lookup"><span data-stu-id="218c4-155">&#8224;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+<span data-ttu-id="218c4-156">В следующей таблице представлен список типов каналов сеансов, поддерживаемых сервером, в качестве функции типа базового канала.</span><span class="sxs-lookup"><span data-stu-id="218c4-156">The following table lists the types of session channels supported on the server as a function of the underlying channel type.</span></span>
+
+| <span data-ttu-id="218c4-157">Поддерживаемые типы каналов надежного сеанса &#8225;</span><span class="sxs-lookup"><span data-stu-id="218c4-157">Supported reliable session channel types&#8225;</span></span> | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
+| `IInputSessionChannel`                          | <span data-ttu-id="218c4-158">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-158">Yes</span></span>             | <span data-ttu-id="218c4-159">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-159">Yes</span></span>                    | <span data-ttu-id="218c4-160">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-160">Yes</span></span>              | <span data-ttu-id="218c4-161">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-161">Yes</span></span>                     |
+| `IReplySessionChannel`                          | <span data-ttu-id="218c4-162">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-162">Yes</span></span>             | <span data-ttu-id="218c4-163">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-163">Yes</span></span>                    | <span data-ttu-id="218c4-164">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-164">No</span></span>               | <span data-ttu-id="218c4-165">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-165">No</span></span>                      |
+| `IDuplexSessionChannel`                         | <span data-ttu-id="218c4-166">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-166">No</span></span>              | <span data-ttu-id="218c4-167">Нет</span><span class="sxs-lookup"><span data-stu-id="218c4-167">No</span></span>                     | <span data-ttu-id="218c4-168">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-168">Yes</span></span>              | <span data-ttu-id="218c4-169">Да</span><span class="sxs-lookup"><span data-stu-id="218c4-169">Yes</span></span>                     |
+
+<span data-ttu-id="218c4-170">&#8225; Поддерживаемые типы каналов представляют собой значения, доступные для универсального `TChannel` значение параметра, передаваемого в <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> метод.</span><span class="sxs-lookup"><span data-stu-id="218c4-170">&#8225;The supported channel types are the values available for the generic `TChannel` parameter value that is passed into the <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> method.</span></span>
+
+## <a name="reliable-sessions-and-security"></a><span data-ttu-id="218c4-171">Надежные сеансы и безопасность</span><span class="sxs-lookup"><span data-stu-id="218c4-171">Reliable sessions and security</span></span>
+
+<span data-ttu-id="218c4-172">Защита надежного сеанса важно для обеспечения проверки подлинности взаимодействующих сторон (службы и клиента), а не подделаны сообщений, передаваемых в сеансе.</span><span class="sxs-lookup"><span data-stu-id="218c4-172">Securing a reliable session is important to ensure that the communicating parties (service and client) are authenticated and that the messages exchanged in the session aren't tampered with.</span></span> <span data-ttu-id="218c4-173">Кроме того важно обеспечить целостность каждого отдельного надежного сеанса.</span><span class="sxs-lookup"><span data-stu-id="218c4-173">Furthermore, it's important to ensure the integrity of each individual reliable session.</span></span> <span data-ttu-id="218c4-174">Надежный сеанс защищен его привязкой к контексту безопасности, представленному и управляемому каналом сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="218c4-174">A reliable session is secured by binding it to a security context that's represented and managed by a security session channel.</span></span> <span data-ttu-id="218c4-175">Канал безопасности обеспечивает сеанс безопасности.</span><span class="sxs-lookup"><span data-stu-id="218c4-175">The security channel provides a security session.</span></span> <span data-ttu-id="218c4-176">Маркеры безопасности, обмен которыми осуществляется во время установления сеанса, затем используются для защиты сообщений в надежном сеансе.</span><span class="sxs-lookup"><span data-stu-id="218c4-176">Security tokens exchanged during the session establishment are then used to secure the messages in the reliable session.</span></span>
+
+<span data-ttu-id="218c4-177">Если надежный сеанс по TCP-S, сеанс TCP привязывается к надежному сеансу.</span><span class="sxs-lookup"><span data-stu-id="218c4-177">When a reliable session is over TCP-S, the TCP session is tied to the reliable session.</span></span> <span data-ttu-id="218c4-178">Таким образом механизм обеспечения безопасности транспорта обеспечивает безопасность и привязан к надежному сеансу.</span><span class="sxs-lookup"><span data-stu-id="218c4-178">Therefore, transport security ensures that security is also tied to the reliable session.</span></span> <span data-ttu-id="218c4-179">В этом случае восстановление подключения выключено.</span><span class="sxs-lookup"><span data-stu-id="218c4-179">In this case, connection re-establishment is turned off.</span></span>
+
+<span data-ttu-id="218c4-180">Единственное исключение относится к использованию HTTPS.</span><span class="sxs-lookup"><span data-stu-id="218c4-180">The only exception is when using HTTPS.</span></span> <span data-ttu-id="218c4-181">Сеанс Secure Sockets Layer (SSL) не привязан к надежному сеансу.</span><span class="sxs-lookup"><span data-stu-id="218c4-181">The Secure Sockets Layer (SSL) session isn't bound to the reliable session.</span></span> <span data-ttu-id="218c4-182">Это предполагает угрозу, поскольку сеансы, которые совместно используют контекст безопасности (сеанс SSL) не защищены друг от друга; Это может являться или не может являться реальной угрозой в зависимости от приложения.</span><span class="sxs-lookup"><span data-stu-id="218c4-182">This imposes a threat because sessions that are sharing a security context (the SSL session) aren't protected from each other; this might or might not be a real threat depending on the application.</span></span>
+
+## <a name="using-reliable-sessions"></a><span data-ttu-id="218c4-183">С использованием надежных сеансов</span><span class="sxs-lookup"><span data-stu-id="218c4-183">Using reliable sessions</span></span>
+
+<span data-ttu-id="218c4-184">Чтобы использовать надежные сеансы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], создайте конечную точку с привязкой, которая поддерживает надежный сеанс.</span><span class="sxs-lookup"><span data-stu-id="218c4-184">To use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable sessions, create an endpoint with a binding that supports a reliable session.</span></span> <span data-ttu-id="218c4-185">Используйте один из предоставляемых системой привязок, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку надежного сценария или создайте собственную пользовательскую привязку, такому же принципу.</span><span class="sxs-lookup"><span data-stu-id="218c4-185">Use one of the system-provided bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides with the reliable session enabled or create your own custom binding that does this.</span></span>
+
+<span data-ttu-id="218c4-186">Определенные системой привязки, которые поддерживают и разрешают надежный сеанс, включают в себя:</span><span class="sxs-lookup"><span data-stu-id="218c4-186">The system-defined bindings that support and enable a reliable session by default include:</span></span>
+
+- <xref:System.ServiceModel.WSDualHttpBinding>
+
+<span data-ttu-id="218c4-187">Предоставляемые системой привязки, которые поддерживают надежные сеансы с помощью параметров, но не включено по умолчанию, включают:</span><span class="sxs-lookup"><span data-stu-id="218c4-187">The system-provided bindings that support a reliable session as an option but don't enable one by default include:</span></span>
+
+- <xref:System.ServiceModel.WSHttpBinding>
+
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+
+- <xref:System.ServiceModel.NetTcpBinding>
+
+<span data-ttu-id="218c4-188">Пример создания пользовательской привязки см. в разделе [как: Создание пользовательской привязки надежного сеанса с использованием HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span><span class="sxs-lookup"><span data-stu-id="218c4-188">For an example of how to create a custom binding, see [How to: Create a Custom Reliable Session Binding with HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).</span></span>
+
+<span data-ttu-id="218c4-189">Описание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] привязок, которые поддерживают надежные сеансы, в разделе [привязка, предоставляемая системой](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="218c4-189">For a discussion of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings that support reliable sessions, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>
+
+## <a name="when-to-use-reliable-sessions"></a><span data-ttu-id="218c4-190">Когда следует использовать надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="218c4-190">When to use reliable sessions</span></span>
+
+<span data-ttu-id="218c4-191">Важно понять, когда следует использовать надежные сеансы в вашем приложении.</span><span class="sxs-lookup"><span data-stu-id="218c4-191">It's important to understand when to use reliable sessions in your application.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="218c4-192"> поддерживает надежные сеансы между активными, работающими одновременно конечными точками.</span><span class="sxs-lookup"><span data-stu-id="218c4-192"> supports reliable sessions between endpoints that are active and alive at the same time.</span></span> <span data-ttu-id="218c4-193">Если приложению требуется одна конечная точка бы недоступной в течение определенного периода времени, а затем использовать очереди для обеспечения надежности.</span><span class="sxs-lookup"><span data-stu-id="218c4-193">If your application requires one of the endpoints be unavailable for a duration of time, then use queues to achieve reliability.</span></span>
+
+<span data-ttu-id="218c4-194">Если сценарий требует две конечные точки подключения по протоколу TCP, TCP может быть достаточно для обеспечения надежного обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="218c4-194">If the scenario requires two endpoints connected over TCP, then TCP may be sufficient to provide reliable message exchanges.</span></span> <span data-ttu-id="218c4-195">Хотя это необязательно для использования надежных сеансов, так как TCP гарантирует, что пакеты прибывают в порядке и только один раз.</span><span class="sxs-lookup"><span data-stu-id="218c4-195">Although, it isn't necessary to use a reliable session, since TCP ensures that the packets arrive in order and only once.</span></span>
+
+<span data-ttu-id="218c4-196">Если ваш сценарий имеет один из следующих характеристик, вы должны серьезно рассмотрите возможность использования надежного сеанса.</span><span class="sxs-lookup"><span data-stu-id="218c4-196">If your scenario has any of the following characteristics, then you must seriously consider using a reliable session.</span></span>
+
+- <span data-ttu-id="218c4-197">Посредники протокола SOAP, например маршрутизаторы SOAP</span><span class="sxs-lookup"><span data-stu-id="218c4-197">SOAP intermediaries, such as SOAP routers</span></span>
+
+- <span data-ttu-id="218c4-198">Посредники прокси или транспортные мосты</span><span class="sxs-lookup"><span data-stu-id="218c4-198">Proxy intermediaries or transport bridges</span></span>
+
+- <span data-ttu-id="218c4-199">Неустойчивое подключение</span><span class="sxs-lookup"><span data-stu-id="218c4-199">Intermittent connectivity</span></span>
+
+- <span data-ttu-id="218c4-200">Сеансы по протоколу HTTP</span><span class="sxs-lookup"><span data-stu-id="218c4-200">Sessions over HTTP</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="218c4-201">См. также</span><span class="sxs-lookup"><span data-stu-id="218c4-201">See also</span></span>
+
+<span data-ttu-id="218c4-202">[Использование привязок для настройки служб и клиентов](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span><span class="sxs-lookup"><span data-stu-id="218c4-202">[Using Bindings to Configure Services and Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md) </span></span>  
+[<span data-ttu-id="218c4-203">Надежный сеанс WS</span><span class="sxs-lookup"><span data-stu-id="218c4-203">WS Reliable Session</span></span>](../../../../docs/framework/wcf/samples/ws-reliable-session.md)

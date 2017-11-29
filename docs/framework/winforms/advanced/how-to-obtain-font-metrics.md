@@ -1,66 +1,70 @@
 ---
-title: "Практическое руководство. Получение метрик шрифтов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "метрики шрифтов, получение"
-  - "шрифты, получение метрик"
+title: "Практическое руководство. Получение метрик шрифтов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], obtaining metrics
+- font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b45f3f903c02d056fc457b652b01fb7b59413a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Получение метрик шрифтов
-Класс <xref:System.Drawing.FontFamily> предоставляет следующие методы для получения различных метрик для некоторой комбинации "семейство шрифтов — начертание".  
+# <a name="how-to-obtain-font-metrics"></a><span data-ttu-id="710dd-102">Практическое руководство. Получение метрик шрифтов</span><span class="sxs-lookup"><span data-stu-id="710dd-102">How to: Obtain Font Metrics</span></span>
+<span data-ttu-id="710dd-103"><xref:System.Drawing.FontFamily> Класс предоставляет следующие методы для получения различных метрик для определенного семейства и стиля сочетания:</span><span class="sxs-lookup"><span data-stu-id="710dd-103">The <xref:System.Drawing.FontFamily> class provides the following methods that retrieve various metrics for a particular family/style combination:</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>\(FontStyle\)  
+-   <span data-ttu-id="710dd-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="710dd-104"><xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>\(FontStyle\)  
+-   <span data-ttu-id="710dd-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="710dd-105"><xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>\(FontStyle\)  
+-   <span data-ttu-id="710dd-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="710dd-106"><xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)</span></span>  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>\(FontStyle\)  
+-   <span data-ttu-id="710dd-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)</span><span class="sxs-lookup"><span data-stu-id="710dd-107"><xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)</span></span>  
   
- Численные значения, возвращаемые этими методами, приводятся в специальных единицах, применяемых при разработке шрифта, поэтому они не зависят от размера и единиц измерения конкретного объекта <xref:System.Drawing.Font>.  
+ <span data-ttu-id="710dd-108">Номера, возвращаемые этими методами, в единицах измерения конструктора, поэтому они не зависят от размера и единиц измерения конкретного <xref:System.Drawing.Font> объекта.</span><span class="sxs-lookup"><span data-stu-id="710dd-108">The numbers returned by these methods are in font design units, so they are independent of the size and units of a particular <xref:System.Drawing.Font> object.</span></span>  
   
- Различные метрики шрифтов показаны на следующем рисунке.  
+ <span data-ttu-id="710dd-109">На следующем рисунке различные метрики.</span><span class="sxs-lookup"><span data-stu-id="710dd-109">The following illustration shows the various metrics.</span></span>  
   
- ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")  
+ <span data-ttu-id="710dd-110">![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span><span class="sxs-lookup"><span data-stu-id="710dd-110">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext7a.png "fontstext7A")</span></span>  
   
-## Пример  
- В следующем примере отображаются метрики обычного начертания шрифтов семейства Arial.  Кодом также создается объект <xref:System.Drawing.Font> \(на основе семейства шрифтов Arial\) с размером в 16 пикселей и отображаются метрики \(в пикселях\) для этого объекта <xref:System.Drawing.Font>.  
+## <a name="example"></a><span data-ttu-id="710dd-111">Пример</span><span class="sxs-lookup"><span data-stu-id="710dd-111">Example</span></span>  
+ <span data-ttu-id="710dd-112">В следующем примере отображаются метрики для семейства шрифтов Arial обычного стиля.</span><span class="sxs-lookup"><span data-stu-id="710dd-112">The following example displays the metrics for the regular style of the Arial font family.</span></span> <span data-ttu-id="710dd-113">Код также создает <xref:System.Drawing.Font> объекта (на основании семейства шрифтов Arial) с размером в 16 пикселей и отображаются метрики (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта.</span><span class="sxs-lookup"><span data-stu-id="710dd-113">The code also creates a <xref:System.Drawing.Font> object (based on the Arial family) with size 16 pixels and displays the metrics (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span>  
   
- На следующем рисунке показан результат выполнения примера кода.  
+ <span data-ttu-id="710dd-114">Ниже показан результат выполнения примера кода.</span><span class="sxs-lookup"><span data-stu-id="710dd-114">The following illustration shows the output of the example code.</span></span>  
   
- ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")  
+ <span data-ttu-id="710dd-115">![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span><span class="sxs-lookup"><span data-stu-id="710dd-115">![Fonts Text](../../../../docs/framework/winforms/advanced/media/csfontstext8.png "csFontsText8")</span></span>  
   
- Обратите внимание на две первые строки текста из приведенного выше рисунка.  Объект <xref:System.Drawing.Font> возвращает в качестве размера 16, а объект <xref:System.Drawing.FontFamily> возвращает размер максимального пробела, равный 2048.  Указанные два числа \(16 и 2048\) являются основой для преобразования между единицами измерения, применяемыми при разработке шрифта, и единицами измерения объекта <xref:System.Drawing.Font> \(в данном случае это пиксели\).  
+ <span data-ttu-id="710dd-116">Обратите внимание, первые две строки выходных данных на предыдущем рисунке.</span><span class="sxs-lookup"><span data-stu-id="710dd-116">Note the first two lines of output in the preceding illustration.</span></span> <span data-ttu-id="710dd-117"><xref:System.Drawing.Font> Размер 16, возвращает объект и <xref:System.Drawing.FontFamily> объект возвращает максимального пробела, равный 2048.</span><span class="sxs-lookup"><span data-stu-id="710dd-117">The <xref:System.Drawing.Font> object returns a size of 16, and the <xref:System.Drawing.FontFamily> object returns an em height of 2,048.</span></span> <span data-ttu-id="710dd-118">Эти два числа (16 и 2048) являются основой для преобразования между единицах измерения конструктора и единиц (в данном случае это пиксели) <xref:System.Drawing.Font> объекта.</span><span class="sxs-lookup"><span data-stu-id="710dd-118">These two numbers (16 and 2,048) are the key to converting between font design units and the units (in this case pixels) of the <xref:System.Drawing.Font> object.</span></span>  
   
- Например, можно преобразовать проектные единицы измерения верхнего выносного элемента в пиксели следующим образом.  
+ <span data-ttu-id="710dd-119">Например можно преобразовать единицах измерения конструктора Восхождение точек следующим образом:</span><span class="sxs-lookup"><span data-stu-id="710dd-119">For example, you can convert the ascent from design units to pixels as follows:</span></span>  
   
- ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")  
+ <span data-ttu-id="710dd-120">![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span><span class="sxs-lookup"><span data-stu-id="710dd-120">![Fonts Text](../../../../docs/framework/winforms/advanced/media/fontstext9.png "FontsText9")</span></span>  
   
- Приведенный выше код располагает текст по вертикали, устанавливая значение члена <xref:System.Drawing.PointF.Y%2A> объекта <xref:System.Drawing.PointF>.  Координата y увеличивается на значение `font.Height` для каждой новой строки текста.  Свойство <xref:System.Drawing.Font.Height%2A> объекта <xref:System.Drawing.Font> возвращает межстрочный интервал \(в пикселях\) для рассматриваемого объекта <xref:System.Drawing.Font>.  В данном примере возвращаемое значение <xref:System.Drawing.Font.Height%2A> равно 19.  Обратите внимание, что оно равно численному значению \(округленному до большего целого\), получаемому при преобразовании метрики межстрочного интервала в пиксели.  
+ <span data-ttu-id="710dd-121">Следующий код располагает текст по вертикали, устанавливая <xref:System.Drawing.PointF.Y%2A> данными-членом <xref:System.Drawing.PointF> объекта.</span><span class="sxs-lookup"><span data-stu-id="710dd-121">The following code positions text vertically by setting the <xref:System.Drawing.PointF.Y%2A> data member of a <xref:System.Drawing.PointF> object.</span></span> <span data-ttu-id="710dd-122">Координата y увеличивается на `font.Height` для каждой новой строки текста.</span><span class="sxs-lookup"><span data-stu-id="710dd-122">The y-coordinate is increased by `font.Height` for each new line of text.</span></span> <span data-ttu-id="710dd-123"><xref:System.Drawing.Font.Height%2A> Свойство <xref:System.Drawing.Font> объект возвращает межстрочный интервал (в пикселях) для этой конкретной <xref:System.Drawing.Font> объекта.</span><span class="sxs-lookup"><span data-stu-id="710dd-123">The <xref:System.Drawing.Font.Height%2A> property of a <xref:System.Drawing.Font> object returns the line spacing (in pixels) for that particular <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="710dd-124">В этом примере возвращаемое значение <xref:System.Drawing.Font.Height%2A> равно 19.</span><span class="sxs-lookup"><span data-stu-id="710dd-124">In this example, the number returned by <xref:System.Drawing.Font.Height%2A> is 19.</span></span> <span data-ttu-id="710dd-125">Обратите внимание, что это то же самое число (округляется в сторону увеличения до целого), получаемому при преобразовании метрики межстрочного интервала в пикселях.</span><span class="sxs-lookup"><span data-stu-id="710dd-125">Note that this is the same as the number (rounded up to an integer) obtained by converting the line-spacing metric to pixels.</span></span>  
   
- Обратите также внимание, что размер максимального пробела \(называемый также эм\-размером\) не равен сумме размеров верхнего и нижнего выносных элементов.  Сумма размеров верхнего и нижнего выносных элементов называется высотой клетки.  Размер максимального пробела вычисляется как разность между высотой клетки и внутренним интерлиньяжем.  Сумма высоты клетки и внешнего интерлиньяжа равна междустрочному интервалу.  
+ <span data-ttu-id="710dd-126">Обратите внимание, что (также называемые размер размер или em) не является сумма Восхождение и спуск.</span><span class="sxs-lookup"><span data-stu-id="710dd-126">Note that the em height (also called size or em size) is not the sum of the ascent and the descent.</span></span> <span data-ttu-id="710dd-127">Сумма размеров верхнего и спуск называется высота ячейки.</span><span class="sxs-lookup"><span data-stu-id="710dd-127">The sum of the ascent and the descent is called the cell height.</span></span> <span data-ttu-id="710dd-128">Высота ячейки минус внутренней начальные равно высоту максимального пробела.</span><span class="sxs-lookup"><span data-stu-id="710dd-128">The cell height minus the internal leading is equal to the em height.</span></span> <span data-ttu-id="710dd-129">Высота ячейки, а также внешних начальные равно межстрочный интервал.</span><span class="sxs-lookup"><span data-stu-id="710dd-129">The cell height plus the external leading is equal to the line spacing.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.FontsAndText#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="710dd-130">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="710dd-130">Compiling the Code</span></span>  
+ <span data-ttu-id="710dd-131">Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="710dd-131">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## См. также  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="710dd-132">См. также</span><span class="sxs-lookup"><span data-stu-id="710dd-132">See Also</span></span>  
+ [<span data-ttu-id="710dd-133">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="710dd-133">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="710dd-134">Работами со шрифтами и текстом</span><span class="sxs-lookup"><span data-stu-id="710dd-134">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

@@ -1,88 +1,92 @@
 ---
-title: "Практическое руководство. Создание линейного градиента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "цвета, создание линейных градиентов"
-  - "градиенты"
-  - "градиенты, создание линейных"
-  - "линейные градиенты, создание"
+title: "Практическое руководство. Создание линейного градиента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- linear gradients [Windows Forms], creating
+- gradients [Windows Forms], creating linear
+- colors [Windows Forms], creating linear gradients
+- gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbf3b1657a5a6b91ba88a0968b6b92d4e4bdbf0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание линейного градиента
-Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает горизонтальные, вертикальные и диагональные линейные градиенты.  По умолчанию цвет в линейном градиенте меняется однородным образом.  Однако можно настроить линейный градиент так, чтобы изменение цвета осуществлялось неоднородным образом.  
+# <a name="how-to-create-a-linear-gradient"></a><span data-ttu-id="b7724-102">Практическое руководство. Создание линейного градиента</span><span class="sxs-lookup"><span data-stu-id="b7724-102">How to: Create a Linear Gradient</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b7724-103">поддерживает горизонтальные, вертикальные и диагональные линейные градиенты.</span><span class="sxs-lookup"><span data-stu-id="b7724-103"> provides horizontal, vertical, and diagonal linear gradients.</span></span> <span data-ttu-id="b7724-104">По умолчанию цвет в линейном градиенте меняется равномерно.</span><span class="sxs-lookup"><span data-stu-id="b7724-104">By default, the color in a linear gradient changes uniformly.</span></span> <span data-ttu-id="b7724-105">Тем не менее можно настроить линейный градиент, чтобы цвет изменяется таким образом неоднородной.</span><span class="sxs-lookup"><span data-stu-id="b7724-105">However, you can customize a linear gradient so that the color changes in a non-uniform fashion.</span></span>  
   
- В следующем примере осуществляется заливка линии, эллипса и прямоугольника с помощью кисти линейного горизонтального градиента.  
+ <span data-ttu-id="b7724-106">В следующем примере заполняется линии, эллипса и прямоугольника с горизонтальной кисти линейного градиента.</span><span class="sxs-lookup"><span data-stu-id="b7724-106">The following example fills a line, an ellipse, and a rectangle with a horizontal linear gradient brush.</span></span>  
   
- Конструктор <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> принимает четыре параметра: две точки и два цвета.  Первая точка \(0, 10\) соответствует первому цвету \(красному\), а вторая точка \(200, 10\) — второму цвету \(синему\).  Как и следовало ожидать, цвет линии, соединяющей точки \(0, 10\) и \(200, 10\), плавно меняется от красного к синему.  
+ <span data-ttu-id="b7724-107"><xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Конструктор принимает четыре параметра: две точки и два цвета.</span><span class="sxs-lookup"><span data-stu-id="b7724-107">The <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor receives four arguments: two points and two colors.</span></span> <span data-ttu-id="b7724-108">Первая точка (0, 10) связан с первый цвет (красный), а вторая точка (200, 10) связан со вторым цветом (синий).</span><span class="sxs-lookup"><span data-stu-id="b7724-108">The first point (0, 10) is associated with the first color (red), and the second point (200, 10) is associated with the second color (blue).</span></span> <span data-ttu-id="b7724-109">Как и следовало ожидать, линии, соединяющей (0, 10) для (200, 10) плавно меняется от красного, синего.</span><span class="sxs-lookup"><span data-stu-id="b7724-109">As you would expect, the line drawn from (0, 10) to (200, 10) changes gradually from red to blue.</span></span>  
   
- Вторые координаты \(10\) для точек \(50, 10\) и \(200, 10\) сами по себе не имеют значения.  Важно то, что вторые координаты у точек совпадают и соединяющая эти точки линия является горизонтальной.  Цвета эллипса и прямоугольника тоже плавно меняются от красного к синему по мере изменения горизонтальной координаты от 0 до 200.  
+ <span data-ttu-id="b7724-110">Вторые точек (50, 10) и (200, 10) не имеют значения.</span><span class="sxs-lookup"><span data-stu-id="b7724-110">The 10s in the points (50, 10) and (200, 10) are not important.</span></span> <span data-ttu-id="b7724-111">Важно то, что две точки имеют одну координату второй — линию, соединяющую их горизонтальной.</span><span class="sxs-lookup"><span data-stu-id="b7724-111">What is important is that the two points have the same second coordinate — the line connecting them is horizontal.</span></span> <span data-ttu-id="b7724-112">Эллипса и прямоугольника тоже плавно меняются от красного, синего как горизонтальной оси находятся значения от 0 до 200.</span><span class="sxs-lookup"><span data-stu-id="b7724-112">The ellipse and the rectangle also change gradually from red to blue as the horizontal coordinate goes from 0 to 200.</span></span>  
   
- На следующем рисунке представлены линия, эллипс и прямоугольник.  Обратите внимание, что цветовой градиент повторяется заново при увеличении горизонтальной координаты до значений, превышающих 200.  
+ <span data-ttu-id="b7724-113">На следующем рисунке линии, эллипса и прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="b7724-113">The following illustration shows the line, the ellipse, and the rectangle.</span></span> <span data-ttu-id="b7724-114">Обратите внимание, что цветового градиента повторяется заново при увеличении горизонтальной координаты за пределы 200.</span><span class="sxs-lookup"><span data-stu-id="b7724-114">Note that the color gradient repeats itself as the horizontal coordinate increases beyond 200.</span></span>  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ <span data-ttu-id="b7724-115">![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")</span><span class="sxs-lookup"><span data-stu-id="b7724-115">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")</span></span>  
   
-### Использование горизонтальных линейных градиентов  
+### <a name="to-use-horizontal-linear-gradients"></a><span data-ttu-id="b7724-116">Использование горизонтальных линейных градиентов</span><span class="sxs-lookup"><span data-stu-id="b7724-116">To use horizontal linear gradients</span></span>  
   
--   Передайте непрозрачный красный и непрозрачный синий цвета в качестве соответственно третьего и четвертого аргументов.  
+-   <span data-ttu-id="b7724-117">Передайте непрозрачный красный и непрозрачный синим цветом в качестве третьего и четвертого аргумента соответственно.</span><span class="sxs-lookup"><span data-stu-id="b7724-117">Pass in the opaque red and opaque blue as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- В предыдущем примере цветовые компоненты линейно меняются по мере увеличения горизонтальной координаты от 0 до 200.  Например, для точки с первой координатой, соответствующей середине этого диапазона от 0 до 200, синий компонент будет находиться в середине цветового диапазона от 0 до 255.  
+ <span data-ttu-id="b7724-118">В предыдущем примере цветовые компоненты линейно меняются при перемещении из горизонтальная координата 0 горизонтальная координата 200.</span><span class="sxs-lookup"><span data-stu-id="b7724-118">In the preceding example, the color components change linearly as you move from a horizontal coordinate of 0 to a horizontal coordinate of 200.</span></span> <span data-ttu-id="b7724-119">Например точки, первая координата на равном расстоянии от 0 до 200 будет синего компонента, который находится на равном расстоянии от 0 до 255.</span><span class="sxs-lookup"><span data-stu-id="b7724-119">For example, a point whose first coordinate is halfway between 0 and 200 will have a blue component that is halfway between 0 and 255.</span></span>  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет настраивать способ градиентного изменения цвета при движении от одного края к другому.  Предположим, требуется создать градиентную кисть, меняющую цвет от черного к красному согласно следующей таблице.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="b7724-120">позволяет настроить способ цвета при движении от одного края градиент в другой.</span><span class="sxs-lookup"><span data-stu-id="b7724-120"> allows you to adjust the way a color varies from one edge of a gradient to the other.</span></span> <span data-ttu-id="b7724-121">Предположим, что вы хотите создать градиентной кисти, меняется с черный цвет на красный согласно следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="b7724-121">Suppose you want to create a gradient brush that changes from black to red according to the following table.</span></span>  
   
-|Горизонтальная координата|RGB\-компоненты|  
-|-------------------------------|---------------------|  
-|0|\(0, 0, 0\)|  
-|40|\(128, 0, 0\)|  
-|200|\(255, 0, 0\)|  
+|<span data-ttu-id="b7724-122">Горизонтальная координата</span><span class="sxs-lookup"><span data-stu-id="b7724-122">Horizontal coordinate</span></span>|<span data-ttu-id="b7724-123">RGB-компоненты</span><span class="sxs-lookup"><span data-stu-id="b7724-123">RGB components</span></span>|  
+|---------------------------|--------------------|  
+|<span data-ttu-id="b7724-124">0</span><span class="sxs-lookup"><span data-stu-id="b7724-124">0</span></span>|<span data-ttu-id="b7724-125">(0, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="b7724-125">(0, 0, 0)</span></span>|  
+|<span data-ttu-id="b7724-126">40</span><span class="sxs-lookup"><span data-stu-id="b7724-126">40</span></span>|<span data-ttu-id="b7724-127">(128, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="b7724-127">(128, 0, 0)</span></span>|  
+|<span data-ttu-id="b7724-128">200</span><span class="sxs-lookup"><span data-stu-id="b7724-128">200</span></span>|<span data-ttu-id="b7724-129">(255, 0, 0)</span><span class="sxs-lookup"><span data-stu-id="b7724-129">(255, 0, 0)</span></span>|  
   
- Обратите внимание, что красный компонент имеет половинную интенсивность, когда горизонтальная координата составляет только 20 процентов пути от 0 до 200.  
+ <span data-ttu-id="b7724-130">Обратите внимание, что красный компонент половину интенсивность когда горизонтальная координата составляет только 20 процентов пути от 0 до 200.</span><span class="sxs-lookup"><span data-stu-id="b7724-130">Note that the red component is at half intensity when the horizontal coordinate is only 20 percent of the way from 0 to 200.</span></span>  
   
- В следующем примере устанавливается свойство <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> объекта <xref:System.Drawing.Drawing2D.LinearGradientBrush> для привязки трех относительных интенсивностей к трем относительным положениям.  Как и в предыдущей таблице, относительная интенсивность 0,5 соответствует относительному положению 0,2.  Этот код служит для заливки эллипса и прямоугольника красным цветом с градиентом.  
+ <span data-ttu-id="b7724-131">В следующем примере задается <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> свойство <xref:System.Drawing.Drawing2D.LinearGradientBrush> объект, связанный с тремя относительные позиции три относительный интенсивности.</span><span class="sxs-lookup"><span data-stu-id="b7724-131">The following example sets the <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> property of a <xref:System.Drawing.Drawing2D.LinearGradientBrush> object to associate three relative intensities with three relative positions.</span></span> <span data-ttu-id="b7724-132">Как показано в предыдущей таблице относительная интенсивность 0,5 связан с относительной позиции 0,2.</span><span class="sxs-lookup"><span data-stu-id="b7724-132">As in the preceding table, a relative intensity of 0.5 is associated with a relative position of 0.2.</span></span> <span data-ttu-id="b7724-133">В коде осуществляется заливка эллипса и прямоугольника с градиентной кисти.</span><span class="sxs-lookup"><span data-stu-id="b7724-133">The code fills an ellipse and a rectangle with the gradient brush.</span></span>  
   
- Окончательный вид эллипса и прямоугольника после заливки представлен на следующем рисунке.  
+ <span data-ttu-id="b7724-134">На следующем рисунке окончательный вид эллипса и прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="b7724-134">The following illustration shows the resulting ellipse and rectangle.</span></span>  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ <span data-ttu-id="b7724-135">![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")</span><span class="sxs-lookup"><span data-stu-id="b7724-135">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")</span></span>  
   
-### Настройка линейных градиентов  
+### <a name="to-customize-linear-gradients"></a><span data-ttu-id="b7724-136">Настройка линейных градиентов</span><span class="sxs-lookup"><span data-stu-id="b7724-136">To customize linear gradients</span></span>  
   
--   Передайте непрозрачный черный и непрозрачный красный цвета в качестве соответственно третьего и четвертого аргументов.  
+-   <span data-ttu-id="b7724-137">Передайте непрозрачный черный и непрозрачный красным цветом в качестве третьего и четвертого аргумента соответственно.</span><span class="sxs-lookup"><span data-stu-id="b7724-137">Pass in the opaque black and opaque red as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- В предыдущих примерах градиенты являлись горизонтальными, т. е. цвет плавно менялся при движении вдоль любой горизонтальной линии.  Можно также задавать вертикальные и диагональные градиенты.  
+ <span data-ttu-id="b7724-138">В предыдущих примерах градиенты являлись горизонтальными; то есть цвет плавно меняется при движении вдоль любой горизонтальной линии.</span><span class="sxs-lookup"><span data-stu-id="b7724-138">The gradients in the preceding examples have been horizontal; that is, the color changes gradually as you move along any horizontal line.</span></span> <span data-ttu-id="b7724-139">Можно также определить вертикальные и диагональные градиенты.</span><span class="sxs-lookup"><span data-stu-id="b7724-139">You can also define vertical gradients and diagonal gradients.</span></span>  
   
- В следующем примере точки \(0, 0\) и \(200, 100\) передаются конструктору <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>.  С точкой \(0, 0\) связан синий цвет, а с точкой \(200, 100\) — зеленый.  Линия \(с толщиной пера 10\) и эллипс заливаются с помощью кисти линейного градиента.  
+ <span data-ttu-id="b7724-140">В следующем примере передается точки (0, 0) и (200, 100), чтобы <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> конструктор.</span><span class="sxs-lookup"><span data-stu-id="b7724-140">The following example passes the points (0, 0) and (200, 100) to a <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor.</span></span> <span data-ttu-id="b7724-141">Связан синий цвет (0, 0) и зеленый цвет, связанные с (200, 100).</span><span class="sxs-lookup"><span data-stu-id="b7724-141">The color blue is associated with (0, 0), and the color green is associated with (200, 100).</span></span> <span data-ttu-id="b7724-142">Линия (толщина пера 10) и эллипс заполняются кисти линейного градиента.</span><span class="sxs-lookup"><span data-stu-id="b7724-142">A line (with pen width 10) and an ellipse are filled with the linear gradient brush.</span></span>  
   
- На следующем рисунке представлены линия и эллипс.  Следует обратить внимание на то, что цвет эллипса плавно меняется вдоль любой линии, параллельной прямой, проходящей через точки \(0, 0\) и \(200, 100\).  
+ <span data-ttu-id="b7724-143">В строке и эллипс на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="b7724-143">The following illustration shows the line and the ellipse.</span></span> <span data-ttu-id="b7724-144">Обратите внимание, что цвет эллипса постепенно при движении вдоль любой строке, параллельной прямой, проходящей через (0, 0) и (200, 100).</span><span class="sxs-lookup"><span data-stu-id="b7724-144">Note that the color in the ellipse changes gradually as you move along any line that is parallel to the line passing through (0, 0) and (200, 100).</span></span>  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ <span data-ttu-id="b7724-145">![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")</span><span class="sxs-lookup"><span data-stu-id="b7724-145">![Linear Gradient](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")</span></span>  
   
-### Создание диагональных линейных градиентов  
+### <a name="to-create-diagonal-linear-gradients"></a><span data-ttu-id="b7724-146">Создание диагональных линейных градиентов</span><span class="sxs-lookup"><span data-stu-id="b7724-146">To create diagonal linear gradients</span></span>  
   
--   Передайте непрозрачный синий и непрозрачный зеленый цвета в качестве соответственно третьего и четвертого аргументов.  
+-   <span data-ttu-id="b7724-147">Передайте непрозрачный синий и непрозрачный зеленым цветом в качестве третьего и четвертого аргумента соответственно.</span><span class="sxs-lookup"><span data-stu-id="b7724-147">Pass in the opaque blue and opaque green as the third and fourth argument, respectively.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## См. также  
- [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b7724-148">См. также</span><span class="sxs-lookup"><span data-stu-id="b7724-148">See Also</span></span>  
+ [<span data-ttu-id="b7724-149">Заливка фигур с помощью градиентной кисти</span><span class="sxs-lookup"><span data-stu-id="b7724-149">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ [<span data-ttu-id="b7724-150">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b7724-150">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

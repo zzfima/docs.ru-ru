@@ -1,109 +1,115 @@
 ---
-title: "Федерация | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "федерация [WCF]"
-  - "WCF, федерация"
+title: "Федерация"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 71b685b372edc99ffa8ea00180cdf622c5e48632
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Федерация
-В этом разделе приведен краткий обзор концепции федеративной безопасности.Кроме того, описывается предусмотренная в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддержка развертывания архитектур федеративной безопасности.Пример приложения, демонстрирующий федерацию, см. в разделе [Образец федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
+# <a name="federation"></a><span data-ttu-id="b8afa-102">Федерация</span><span class="sxs-lookup"><span data-stu-id="b8afa-102">Federation</span></span>
+<span data-ttu-id="b8afa-103">В этом разделе приведен краткий обзор концепции федеративной безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-103">This topic provides a brief overview of the concept of federated security.</span></span> <span data-ttu-id="b8afa-104">Кроме того, описывается предусмотренная в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] поддержка развертывания архитектур федеративной безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-104">It also describes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for deploying federated security architectures.</span></span> <span data-ttu-id="b8afa-105">Образец приложения, демонстрирующий федерации, в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).</span><span class="sxs-lookup"><span data-stu-id="b8afa-105">For a sample application that demonstrates federation, see [Federation Sample](../../../../docs/framework/wcf/samples/federation-sample.md).</span></span>  
   
-## Определение федеративной безопасности  
- Федеративная безопасность обеспечивает четкое разделение между службой, к которой обращается клиент, и связанными процедурами проверки подлинности и авторизации.Федеративная безопасность также делает возможной совместную работу групп из нескольких систем, сетей и организаций, принадлежащих к различным областям доверия.  
+## <a name="definition-of-federated-security"></a><span data-ttu-id="b8afa-106">Определение федеративной безопасности</span><span class="sxs-lookup"><span data-stu-id="b8afa-106">Definition of Federated Security</span></span>  
+ <span data-ttu-id="b8afa-107">Федеративная безопасность обеспечивает четкое разделение между службой, к которой обращается клиент, и связанными процедурами проверки подлинности и авторизации.</span><span class="sxs-lookup"><span data-stu-id="b8afa-107">Federated security allows for clean separation between the service a client is accessing and the associated authentication and authorization procedures.</span></span> <span data-ttu-id="b8afa-108">Федеративная безопасность также делает возможной совместную работу групп из нескольких систем, сетей и организаций, принадлежащих к различным областям доверия.</span><span class="sxs-lookup"><span data-stu-id="b8afa-108">Federated security also enables collaboration across multiple systems, networks, and organizations in different trust realms.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивает поддержку построения и развертывания распределенных систем, в которых используется федеративная безопасность.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b8afa-109"> обеспечивает поддержку построения и развертывания распределенных систем, в которых используется федеративная безопасность.</span><span class="sxs-lookup"><span data-stu-id="b8afa-109"> provides support for building and deploying distributed systems that employ federated security.</span></span>  
   
-### Элементы архитектуры федеративной безопасности  
- Архитектура федеративной безопасности включает три основных элемента, рассмотренных в следующей таблице.  
+### <a name="elements-of-a-federated-security-architecture"></a><span data-ttu-id="b8afa-110">Элементы архитектуры федеративной безопасности</span><span class="sxs-lookup"><span data-stu-id="b8afa-110">Elements of a Federated Security Architecture</span></span>  
+ <span data-ttu-id="b8afa-111">Архитектура федеративной безопасности включает три основных элемента, рассмотренных в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="b8afa-111">The federated security architecture has three key elements, as described in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|Домен\/область|Единица администрирования безопасности или доверия.Типичный домен может включать одну организацию.|  
-|Федерация|Совокупность доменов, между которыми установлено отношение доверия.Уровень доверия может быть разным, но обычно предусматривает проверку подлинности и почти всегда предусматривает авторизацию.Типичная федерация может включать ряд организаций, между которыми установлено отношение доверия для общего доступа к некоторому набору ресурсов.|  
-|Служба токенов безопасности \(STS\)|Веб\-служба, выдающая токены безопасности, т. е. делающая утверждения на основании свидетельств, которым она доверяет, перед теми, кто доверяет ей.Эти утверждения образуют основу посредничества с доверием между доменами.|  
+|<span data-ttu-id="b8afa-112">Элемент</span><span class="sxs-lookup"><span data-stu-id="b8afa-112">Element</span></span>|<span data-ttu-id="b8afa-113">Описание</span><span class="sxs-lookup"><span data-stu-id="b8afa-113">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="b8afa-114">Домен/область</span><span class="sxs-lookup"><span data-stu-id="b8afa-114">Domain/realm</span></span>|<span data-ttu-id="b8afa-115">Единица администрирования безопасности или доверия.</span><span class="sxs-lookup"><span data-stu-id="b8afa-115">A single unit of security administration or trust.</span></span> <span data-ttu-id="b8afa-116">Типичный домен может включать одну организацию.</span><span class="sxs-lookup"><span data-stu-id="b8afa-116">A typical domain might include a single organization.</span></span>|  
+|<span data-ttu-id="b8afa-117">Федерация</span><span class="sxs-lookup"><span data-stu-id="b8afa-117">Federation</span></span>|<span data-ttu-id="b8afa-118">Совокупность доменов, между которыми установлено отношение доверия.</span><span class="sxs-lookup"><span data-stu-id="b8afa-118">A collection of domains that have established trust.</span></span> <span data-ttu-id="b8afa-119">Уровень доверия может быть разным, но обычно предусматривает проверку подлинности и почти всегда предусматривает авторизацию.</span><span class="sxs-lookup"><span data-stu-id="b8afa-119">The level of trust may vary, but typically includes authentication and almost always includes authorization.</span></span> <span data-ttu-id="b8afa-120">Типичная федерация может включать ряд организаций, между которыми установлено отношение доверия для общего доступа к некоторому набору ресурсов.</span><span class="sxs-lookup"><span data-stu-id="b8afa-120">A typical federation might include a number of organizations that have established trust for shared access to a set of resources.</span></span>|  
+|<span data-ttu-id="b8afa-121">Служба маркеров безопасности (STS)</span><span class="sxs-lookup"><span data-stu-id="b8afa-121">Security Token Service (STS)</span></span>|<span data-ttu-id="b8afa-122">Веб-служба, выдающая маркеры безопасности, т. е. делающая утверждения на основании свидетельств, которым она доверяет, перед теми, кто доверяет ей.</span><span class="sxs-lookup"><span data-stu-id="b8afa-122">A Web service that issues security tokens; that is, it makes assertions based on evidence that it trusts, to whomever trusts it.</span></span> <span data-ttu-id="b8afa-123">Эти утверждения образуют основу посредничества с доверием между доменами.</span><span class="sxs-lookup"><span data-stu-id="b8afa-123">This forms the basis of trust brokering between domains.</span></span>|  
   
-### Пример сценария  
- На следующем рисунке показан пример федеративной безопасности.  
+### <a name="example-scenario"></a><span data-ttu-id="b8afa-124">Пример сценария</span><span class="sxs-lookup"><span data-stu-id="b8afa-124">Example Scenario</span></span>  
+ <span data-ttu-id="b8afa-125">На следующем рисунке показан пример федеративной безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-125">The following illustration shows an example of federated security.</span></span>  
   
- ![Федерация](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ <span data-ttu-id="b8afa-126">![Федерации](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")</span><span class="sxs-lookup"><span data-stu-id="b8afa-126">![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")</span></span>  
   
- В этом сценарии участвуют две организации: А и Б.Организация Б имеет веб\-ресурс \(веб\-службу\), которую некоторые пользователи из организации А находят полезной.  
+ <span data-ttu-id="b8afa-127">В сценарии участвует две организации: A и B. Организация B имеет веб-ресурс (веб-службу), которую некоторые пользователи в организации A находят полезной.</span><span class="sxs-lookup"><span data-stu-id="b8afa-127">This scenario includes two organizations: A and B. Organization B has a Web resource (a Web service) that some users in organization A find valuable.</span></span>  
   
 > [!NOTE]
->  В этом разделе термины *ресурс*, *служба* и *веб\-служба* используются взаимозаменяемо.  
+>  <span data-ttu-id="b8afa-128">В этом разделе используются термины *ресурсов*, *службы*, и *веб-службы* попеременно.</span><span class="sxs-lookup"><span data-stu-id="b8afa-128">This section uses the terms *resource*, *service*, and *Web service* interchangeably.</span></span>  
   
- Как правило, организация B требует, чтобы пользователь из организации A предоставил какое\-либо допустимое доказательство своей подлинности, прежде чем обращаться к службе.Кроме того, организация может также потребовать, чтобы пользователь был авторизован для доступа к данному ресурсу.Один из способов решить эту проблему и дать пользователям в организации A возможность доступа к ресурсу в организации B заключается в следующем.  
+ <span data-ttu-id="b8afa-129">Как правило, организация B требует, чтобы пользователь из организации A предоставил какое-либо допустимое доказательство своей подлинности, прежде чем обращаться к службе.</span><span class="sxs-lookup"><span data-stu-id="b8afa-129">Typically, organization B requires that a user from organization A provide some valid form of authentication before accessing the service.</span></span> <span data-ttu-id="b8afa-130">Кроме того, организация может также потребовать, чтобы пользователь был авторизован для доступа к данному ресурсу.</span><span class="sxs-lookup"><span data-stu-id="b8afa-130">In addition, the organization may also require that the user be authorized to access the specific resource in question.</span></span> <span data-ttu-id="b8afa-131">Один из способов решить эту проблему и дать пользователям в организации A возможность доступа к ресурсу в организации B заключается в следующем.</span><span class="sxs-lookup"><span data-stu-id="b8afa-131">One way to address this problem and enable users in organization A to access the resource in organization B is as follows:</span></span>  
   
--   Пользователи из организации A регистрируют свои учетные данные \(имя пользователя и пароль\) в организации B.  
+-   <span data-ttu-id="b8afa-132">Пользователи из организации A регистрируют свои учетные данные (имя пользователя и пароль) в организации B.</span><span class="sxs-lookup"><span data-stu-id="b8afa-132">Users from organization A register their credentials (a user name and password) with organization B.</span></span>  
   
--   При обращении к ресурсу пользователи из организации A предъявляют свои учетные данные организации B, т. е. подлинность пользователей проверяется, прежде чем они получают доступ к ресурсу.  
+-   <span data-ttu-id="b8afa-133">При обращении к ресурсу пользователи из организации A предъявляют свои учетные данные организации B, т. е. подлинность пользователей проверяется, прежде чем они получают доступ к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="b8afa-133">During the resource access, users from organization A present their credentials to organization B and are authenticated before accessing the resource.</span></span>  
   
- Это подход имеет три существенных недостатка.  
+ <span data-ttu-id="b8afa-134">Это подход имеет три существенных недостатка.</span><span class="sxs-lookup"><span data-stu-id="b8afa-134">This approach has three significant drawbacks:</span></span>  
   
--   Организации B приходится управлять учетными данными пользователей из организации A, помимо управления учетными данными своих локальных пользователей.  
+-   <span data-ttu-id="b8afa-135">Организации B приходится управлять учетными данными пользователей из организации A, помимо управления учетными данными своих локальных пользователей.</span><span class="sxs-lookup"><span data-stu-id="b8afa-135">Organization B has to manage the credentials for users from organization A in addition to managing the credentials of its local users.</span></span>  
   
--   Пользователям в организации А приходится иметь дополнительный набор учетных данных \(т. е. помнить дополнительные имя пользователя и пароль\), помимо учетных данных, которыми они пользуются для получения доступа к ресурсам в пределах организации A.Обычно в таких ситуациях люди используют одни и те же имя пользователя и пароль на нескольких сайтах служб, что ослабляет безопасность.  
+-   <span data-ttu-id="b8afa-136">Пользователям в организации A приходится иметь дополнительный набор учетных данных (т. е. помнить дополнительные имя пользователя и пароль) помимо учетных данных, которыми они пользуются для получения доступа к ресурсам в пределах организации A. В таких случаях пользователи часто используют одни и те же имя пользователя и пароль для доступа к нескольким сайтам служб, что ослабляет защиту.</span><span class="sxs-lookup"><span data-stu-id="b8afa-136">Users in organization A need to maintain an additional set of credentials (that is, remember an additional user name and password) apart from the credentials they normally use to gain access to resources within organization A. This usually encourages the practice of using the same user name and password at multiple service sites, which is a weak security measure.</span></span>  
   
--   Архитектура не масштабируется, если другие организации посчитают ресурс в организации B полезным для своих пользователей.  
+-   <span data-ttu-id="b8afa-137">Архитектура не масштабируется, если другие организации посчитают ресурс в организации B полезным для своих пользователей.</span><span class="sxs-lookup"><span data-stu-id="b8afa-137">The architecture does not scale as more organizations perceive the resource at organization B as being of some value.</span></span>  
   
- Альтернативный подход, лишенный упомянутых выше недостатков — это использование федеративной безопасности.В соответствии с этим подходом организации A и B устанавливают отношения доверия и используют службу токенов безопасности \(Security Token Service, STS\) как посредника для установленного доверия.  
+ <span data-ttu-id="b8afa-138">Альтернативный подход, лишенный упомянутых выше недостатков - это использование федеративной безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-138">An alternative approach, which addresses the previously mentioned drawbacks, is to employ federated security.</span></span> <span data-ttu-id="b8afa-139">В соответствии с этим подходом организации A и B устанавливают отношения доверия и используют службу маркеров безопасности (Security Token Service, STS) как посредника для установленного доверия.</span><span class="sxs-lookup"><span data-stu-id="b8afa-139">In this approach, organizations A and B establish a trust relationship and employ Security Token Service (STS) to enable brokering of the established trust.</span></span>  
   
- В архитектуре федеративной безопасности пользователи из организации A знают, что если им требуется обратиться к веб\-службе в организации B, они должны предъявить в организации B допустимый ткен безопасности от службы STS, который используется для проверки их подлинности и авторизации их доступа к определенной службе.  
+ <span data-ttu-id="b8afa-140">В архитектуре федеративной безопасности пользователи из организации A знают, что если им требуется обратиться к веб-службе в организации B, они должны предъявить в организации B допустимый маркер безопасности от службы STS, который используется для проверки их подлинности и авторизации их доступа к определенной службе.</span><span class="sxs-lookup"><span data-stu-id="b8afa-140">In a federated security architecture, users from organization A know that if they want to access the Web service in organization B that they must present a valid security token from the STS at organization B, which authenticates and authorizes their access to the specific service.</span></span>  
   
- При обращении к службе STS B пользователи приобретают еще один уровень косвенного обращения от политики, связанной со службой STS.Прежде чем служба STS B сможет выдать им токен безопасности, они должны предъявить допустимый токен безопасности от службы STS A \(т. е. из области доверия клиента\).Это логическое следствие из отношения доверия, установленного между двумя организациями, подразумевающее, что организации Б не требуется управлять удостоверениями пользователей из организации A.На практике служба STS Б обычно имеет значение NULL для параметров `issuerAddress` и `issuerMetadataAddress`.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Как настраивать локальный издатель](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).В этом случае клиент обращается к локальной политике, чтобы найти службу STS A.Такая конфигурация называется *федерация с домашней областью* и является более масштабируемой, поскольку службе STS Б не требуется хранить информацию о службе STS A.  
+ <span data-ttu-id="b8afa-141">При обращении к службе STS B пользователи приобретают еще один уровень косвенного обращения от политики, связанной со службой STS.</span><span class="sxs-lookup"><span data-stu-id="b8afa-141">On contacting the STS B, the users receive another level of indirection from the policy associated with the STS.</span></span> <span data-ttu-id="b8afa-142">Прежде чем служба STS B сможет выдать им маркер безопасности, они должны предъявить допустимый маркер безопасности от службы STS A (т. е. из области доверия клиента).</span><span class="sxs-lookup"><span data-stu-id="b8afa-142">They must present a valid security token from the STS A (that is, the client trust realm) before the STS B can issue them a security token.</span></span> <span data-ttu-id="b8afa-143">Это логическое следствие из отношения доверия, установленного между двумя организациями, подразумевающее, что организации B не требуется управлять удостоверениями пользователей из организации A. На практике служба STS B обычно имеет пустые адреса `issuerAddress` и `issuerMetadataAddress`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-143">This is a corollary of the trust relationship established between the two organizations and implies that organization B does not have to manage identities for users from organization A. In practice, STS B typically has a null `issuerAddress` and `issuerMetadataAddress`.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b8afa-144">[Как: Настройка локального издателя](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span><span class="sxs-lookup"><span data-stu-id="b8afa-144"> [How to: Configure a Local Issuer](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).</span></span> <span data-ttu-id="b8afa-145">В этом случае клиент обращается к локальной политике, чтобы найти службу STS A. Такая конфигурация называется *домашней области федерации* и является более масштабируемой, так как служба STS B не требуется поддерживать сведения о службе STS A.</span><span class="sxs-lookup"><span data-stu-id="b8afa-145">In that case, the client consults a local policy to locate STS A. This configuration is called *home realm federation* and it scales better because STS B does not have to maintain information about STS A.</span></span>  
   
- Затем пользователи связываются со службой STS в организации А и получают токен безопасности, предъявляя для проверки подлинности учетные данные, которыми они обычно пользуются для доступа к любому другому ресурсу в пределах организации A.Это также устраняет для пользователей необходимость поддерживать несколько наборов учетных данных или использовать один и тот же набор учетных данных на нескольких сайтах служб.  
+ <span data-ttu-id="b8afa-146">Затем пользователи связываются со службой STS в организации A и получают маркер безопасности, предъявляя для проверки подлинности учетные данные, которыми они обычно пользуются для доступа к любому другому ресурсу в пределах организации A. Это также решает проблему пользователей, которым приходится либо помнить несколько наборов учетных данных, либо использовать один и тот же набор учетных данных на нескольких сайтах служб.</span><span class="sxs-lookup"><span data-stu-id="b8afa-146">The users then contact the STS at organization A and obtain a security token by presenting authentication credentials that they normally use to gain access to any other resource within organization A. This also alleviates the problem of users having to maintain multiple sets of credentials or using the same set of credentials at multiple service sites.</span></span>  
   
- После того как пользователи получают токен безопасности от службы STS A, они предъявляют его службе STS Б.Организация Б выполняет авторизацию запросов пользователей и выдает пользователям токен безопасности из собственного набора токенов безопасности.Пользователи затем могут предъявить свой токен ресурсу в организации B и получить доступ к службе.  
+ <span data-ttu-id="b8afa-147">Получив маркер безопасности от службы STS A, пользователи предъявляют маркер службе STS B. Далее организация B авторизует запросы пользователей и выдает пользователям маркер безопасности из собственного набора маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-147">Once the users obtain a security token from the STS A, they present the token to the STS B. Organization B proceeds to perform authorization of the users' requests and issues a security token to the users from its own set of security tokens.</span></span> <span data-ttu-id="b8afa-148">Пользователи затем могут предъявить свой маркер ресурсу в организации B и получить доступ к службе.</span><span class="sxs-lookup"><span data-stu-id="b8afa-148">The users can then present their token to the resource at organization B and access the service.</span></span>  
   
-## Поддержка федеративной безопасности в WCF  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрена готовая поддержка развертывания архитектур федеративной безопасности посредством [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+## <a name="support-for-federated-security-in-wcf"></a><span data-ttu-id="b8afa-149">Поддержка федеративной безопасности в WCF</span><span class="sxs-lookup"><span data-stu-id="b8afa-149">Support for Federated Security in WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="b8afa-150">предоставляет готовое к использованию поддержки развертывания архитектуры федеративной безопасности с помощью [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="b8afa-150"> provides turnkey support for deploying federated security architectures through the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).</span></span>  
   
- Элемент [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) обеспечивает безопасную, надежную, поддерживающую взаимодействие привязку, предполагающую использование протокола HTTP в качестве базового транспортного механизма для связи в стиле "запрос\-ответ" и текста и XML в качестве формата кодирования при передаче по линиям связи.  
+ <span data-ttu-id="b8afa-151">[ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) обеспечивает безопасную, надежную, с возможностью взаимодействия привязку, влечет за собой использование HTTP как базовый механизм транспортировки для стиля передачи типа запрос ответ, Применение текста и XML в качестве формата подключения для кодирования.</span><span class="sxs-lookup"><span data-stu-id="b8afa-151">The [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element provides for a secure, reliable, interoperable binding that entails the use of HTTP as the underlying transport mechanism for request-reply communication style, employing text and XML as the wire format for encoding.</span></span>  
   
- Использование [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) в сценарии федеративной безопасности можно разделить на две логически независимых фазы, как описано ниже.  
+ <span data-ttu-id="b8afa-152">Использование [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) в таком сценарии могут быть отделены на два этапа логически независимым, как описано в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="b8afa-152">The use of [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) in a federated security scenario can be decoupled into two logically independent phases, as described in the following sections.</span></span>  
   
-### Фаза 1: фаза проектирования  
- На фазе проектирования клиент использует [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для чтения политики, предоставляемой конечной точкой службы, и для сбора требований службы в отношении проверки подлинности и авторизации.Строятся соответствующие прокси\-объекты для создания следующей схемы обмена данными федеративной безопасности на стороне клиента:  
+### <a name="phase-1-design-phase"></a><span data-ttu-id="b8afa-153">Фаза 1: фаза проектирования</span><span class="sxs-lookup"><span data-stu-id="b8afa-153">Phase 1: Design Phase</span></span>  
+ <span data-ttu-id="b8afa-154">На этапе проектирования, клиент использует [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) чтение политики предоставляет конечную точку службы и собирать требованиям проверки подлинности и авторизации службы.</span><span class="sxs-lookup"><span data-stu-id="b8afa-154">During the design phase, the client uses the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to read the policy the service endpoint exposes and to collect the service's authentication and authorization requirements.</span></span> <span data-ttu-id="b8afa-155">Строятся соответствующие прокси-объекты для создания следующей схемы обмена данными федеративной безопасности на стороне клиента:</span><span class="sxs-lookup"><span data-stu-id="b8afa-155">The appropriate proxies are constructed to create the following federated security communication pattern at the client:</span></span>  
   
--   получение токена безопасности от службы STS в области доверия клиента;  
+-   <span data-ttu-id="b8afa-156">получение маркера безопасности от службы STS в области доверия клиента;</span><span class="sxs-lookup"><span data-stu-id="b8afa-156">Obtain a security token from the STS in the client trust realm.</span></span>  
   
--   предъявление токена службе STS в области доверия службы;  
+-   <span data-ttu-id="b8afa-157">предъявление маркера службе STS в области доверия службы;</span><span class="sxs-lookup"><span data-stu-id="b8afa-157">Present the token to the STS in the service trust realm.</span></span>  
   
--   получение токена безопасности от службы STS в области доверия службы;  
+-   <span data-ttu-id="b8afa-158">получение маркера безопасности от службы STS в области доверия службы;</span><span class="sxs-lookup"><span data-stu-id="b8afa-158">Obtain a security token from the STS in the service trust realm.</span></span>  
   
--   предъявление токена службе для доступа к службе.  
+-   <span data-ttu-id="b8afa-159">предъявление маркера службе для доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="b8afa-159">Present the token to the service to access the service.</span></span>  
   
-### Фаза 2: фаза времени выполнения  
- На фазе времени выполнения клиент создает экземпляр класса клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и делает вызов с использованием клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Базовая архитектура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обрабатывает упомянутые выше шаги схемы обмена данными федеративной безопасности и позволяет клиенту легко воспользоваться службой.  
+### <a name="phase-2-run-time-phase"></a><span data-ttu-id="b8afa-160">Фаза 2: фаза времени выполнения</span><span class="sxs-lookup"><span data-stu-id="b8afa-160">Phase 2: Run-Time Phase</span></span>  
+ <span data-ttu-id="b8afa-161">На фазе времени выполнения клиент создает экземпляр класса клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и делает вызов с использованием клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8afa-161">During the run-time phase, the client instantiates an object of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class and makes a call using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="b8afa-162">Базовая архитектура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обрабатывает упомянутые выше шаги схемы обмена данными федеративной безопасности и позволяет клиенту легко воспользоваться службой.</span><span class="sxs-lookup"><span data-stu-id="b8afa-162">The underlying framework of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] handles the previously mentioned steps in the federated security communication pattern and enables the client to seamlessly consume the service.</span></span>  
   
-## Пример реализации с использованием WCF  
- На следующем рисунке показан пример реализации архитектуры федеративной безопасности с использованием встроенной поддержки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="sample-implementation-using-wcf"></a><span data-ttu-id="b8afa-163">Пример реализации с использованием WCF</span><span class="sxs-lookup"><span data-stu-id="b8afa-163">Sample Implementation Using WCF</span></span>  
+ <span data-ttu-id="b8afa-164">На следующем рисунке показан пример реализации архитектуры федеративной безопасности с использованием встроенной поддержки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8afa-164">The following illustration shows a sample implementation for a federated security architecture using native support from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- ![Федеративная безопасность в WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ <span data-ttu-id="b8afa-165">![Федеративная безопасность в WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")</span><span class="sxs-lookup"><span data-stu-id="b8afa-165">![Federation security in WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")</span></span>  
   
-### Служба MyService  
- Служба `MyService` предоставляет одну конечную точку — `MyServiceEndpoint`.На следующем рисунке показаны адрес, привязка и контракт, связанные с конечной точкой.  
+### <a name="example-myservice"></a><span data-ttu-id="b8afa-166">Служба MyService</span><span class="sxs-lookup"><span data-stu-id="b8afa-166">Example MyService</span></span>  
+ <span data-ttu-id="b8afa-167">Служба `MyService` предоставляет одну конечную точку - `MyServiceEndpoint`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-167">The service `MyService` exposes a single endpoint through `MyServiceEndpoint`.</span></span> <span data-ttu-id="b8afa-168">На следующем рисунке показаны адрес, привязка и контракт, связанные с конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="b8afa-168">The following illustration shows the address, binding, and contract associated with the endpoint.</span></span>  
   
- ![Федерация](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ <span data-ttu-id="b8afa-169">![Федерации](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")</span><span class="sxs-lookup"><span data-stu-id="b8afa-169">![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")</span></span>  
   
- Конечная точка службы `MyServiceEndpoint` использует [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) и требует наличия допустимого токена языка SAML \(Security Assertions Markup Language\) и утверждения `accessAuthorized`, выданного службой STS Б.Это декларативно указано в конфигурации службы.  
+ <span data-ttu-id="b8afa-170">Конечная точка службы `MyServiceEndpoint` использует [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) и необходим допустимый токен безопасности утверждения Markup Language (SAML) с `accessAuthorized` утверждения, выданный службой STS б. Это декларативно указано в конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="b8afa-170">The service endpoint `MyServiceEndpoint` uses the [\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) and requires a valid Security Assertions Markup Language (SAML) token with an `accessAuthorized` claim issued by STS B. This is declaratively specified in the service configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.MyService"      
@@ -152,23 +158,23 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Относительно утверждений, которые требует служба `MyService`, необходимо отметить один небольшой момент.Из второго рисунка видно, что служба `MyService` требует токен SAML с утверждением `accessAuthorized`.Точнее, эта строка задает тип утверждения, которого требует служба `MyService`.Полное имя этого типа утверждения — http:\/\/tempuri.org:accessAuthorized \(вместе со связанным пространством имен\); это имя используется в файле конфигурации службы.Значение этого утверждения указывает на присутствие этого утверждения, и предполагается, что служба STS B установила его равным `true`.  
+>  <span data-ttu-id="b8afa-171">Относительно утверждений, которые требует служба `MyService`, необходимо отметить один небольшой момент.</span><span class="sxs-lookup"><span data-stu-id="b8afa-171">A subtle point should be noted about the claims required by `MyService`.</span></span> <span data-ttu-id="b8afa-172">Из второго рисунка видно, что служба `MyService` требует маркер SAML с утверждением `accessAuthorized`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-172">The second figure indicates that `MyService` requires a SAML token with the `accessAuthorized` claim.</span></span> <span data-ttu-id="b8afa-173">Точнее, эта строка задает тип утверждения, которого требует служба `MyService`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-173">To be more precise, this specifies the claim type that `MyService` requires.</span></span> <span data-ttu-id="b8afa-174">Полное имя этого типа утверждения - http://tempuri.org:accessAuthorized (вместе со связанным пространством имен); это имя используется в файле конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="b8afa-174">The fully-qualified name of this claim type is http://tempuri.org:accessAuthorized (along with the associated namespace), which is used in the service configuration file.</span></span> <span data-ttu-id="b8afa-175">Значение этого утверждения указывает на присутствие этого утверждения, и предполагается, что служба STS B установила его равным `true`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-175">The value of this claim indicates the presence of this claim and is assumed to be set to `true` by STS B.</span></span>  
   
- Во время выполнения эта политика применяется классом `MyServiceOperationRequirement`, реализованным в составе службы `MyService`.  
+ <span data-ttu-id="b8afa-176">Во время выполнения эта политика применяется классом `MyServiceOperationRequirement`, реализованным в составе службы `MyService`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-176">At runtime, this policy is enforced by the `MyServiceOperationRequirement` class that is implemented as part of the `MyService`.</span></span>  
   
  [!code-csharp[C_Federation#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#0)]
  [!code-vb[C_Federation#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#0)]  
 [!code-csharp[C_Federation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#1)]
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
-#### Служба STS B  
- На следующем рисунке показана служба STS Б.Как говорилось выше, служба токенов безопасности \(STS\) также представляет собой веб\-службу и может иметь свои конечные точки, политику и т. д.  
+#### <a name="sts-b"></a><span data-ttu-id="b8afa-177">Служба STS B</span><span class="sxs-lookup"><span data-stu-id="b8afa-177">STS B</span></span>  
+ <span data-ttu-id="b8afa-178">На следующем рисунке показана служба STS B. Как говорилось выше, служба маркеров безопасности (STS) также представляет собой веб-службу и может иметь свои конечные точки, политику и т. д.</span><span class="sxs-lookup"><span data-stu-id="b8afa-178">The following illustration shows the STS B. As stated earlier, a security token service (STS) is also a Web service and can have its associated endpoints, policy, and so on.</span></span>  
   
- ![Федерация](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ <span data-ttu-id="b8afa-179">![Федерации](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")</span><span class="sxs-lookup"><span data-stu-id="b8afa-179">![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")</span></span>  
   
- Служба STS B предоставляет одну конечную точку, `STSEndpoint`, которую можно использовать для запроса токенов безопасности.В частности, служба STS B выдает токены SAML с утверждением `accessAuthorized`, которые могут быть предъявлены на сайте службы `MyService` для доступа к службе.В то же время служба STS B требует от пользователей предъявления допустимого токена SAML, выданного службой STS A и содержащего утверждение `userAuthenticated`.Это декларативно указано в конфигурации службы STS.  
+ <span data-ttu-id="b8afa-180">Служба STS B предоставляет одну конечную точку, `STSEndpoint`, которую можно использовать для запроса маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-180">STS B exposes a single endpoint, called `STSEndpoint` that can be use to request security tokens.</span></span> <span data-ttu-id="b8afa-181">В частности, служба STS B выдает маркеры SAML с утверждением `accessAuthorized`, которые могут быть предъявлены на сайте службы `MyService` для доступа к службе.</span><span class="sxs-lookup"><span data-stu-id="b8afa-181">Specifically, STS B issues SAML tokens with the `accessAuthorized` claim, which can be presented at the `MyService` service site for accessing the service.</span></span> <span data-ttu-id="b8afa-182">В то же время служба STS B требует от пользователей предъявления допустимого маркера SAML, выданного службой STS A и содержащего утверждение `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-182">However, STS B requires users to present a valid SAML token issued by STS A that contains the `userAuthenticated` claim.</span></span> <span data-ttu-id="b8afa-183">Это декларативно указано в конфигурации службы STS.</span><span class="sxs-lookup"><span data-stu-id="b8afa-183">This is declaratively specified in the STS configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_B" behaviorConfiguration=  
@@ -211,26 +217,26 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Опять же утверждение `userAuthenticated` — это тип утверждения, необходимого для службы STS Б.Полное имя этого типа утверждения — http:\/\/tempuri.org:userAuthenticated \(вместе со связанным пространством имен\); это имя используется в файле конфигурации службы STS.Значение этого утверждения указывает на присутствие этого утверждения, и предполагается, что служба STS A установила его равным `true`.  
+>  <span data-ttu-id="b8afa-184">Снова-таки, утверждение `userAuthenticated` — это тип утверждения, которого требует служба STS B. Полное имя этого типа утверждения — http://tempuri.org:accessAuthorized (вместе со связанным пространством имен); это имя используется в файле конфигурации службы STS.</span><span class="sxs-lookup"><span data-stu-id="b8afa-184">Again, the `userAuthenticated` claim is the claim type that is required by STS B. The fully-qualified name of this claim type is http://tempuri.org:userAuthenticated (along with the associated namespace), which is used in the STS configuration file.</span></span> <span data-ttu-id="b8afa-185">Значение этого утверждения указывает на присутствие этого утверждения, и предполагается, что служба STS A установила его равным `true`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-185">The value of this claim indicates the presence of this claim and is assumed to be set to `true` by STS A.</span></span>  
   
- Во время выполнения эта политика применяется классом `STS_B_OperationRequirement`, реализованным в составе службы STS B.  
+ <span data-ttu-id="b8afa-186">Во время выполнения эта политика применяется классом `STS_B_OperationRequirement`, реализованным в составе службы STS B.</span><span class="sxs-lookup"><span data-stu-id="b8afa-186">At runtime, the `STS_B_OperationRequirement` class enforces this policy, which is implemented as part of STS B.</span></span>  
   
  [!code-csharp[C_Federation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#2)]
  [!code-vb[C_Federation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#2)]  
   
- Если проверка доступа пройдена, служба STS B выдает токен SAML с утверждением `accessAuthorized`.  
+ <span data-ttu-id="b8afa-187">Если проверка доступа пройдена, служба STS B выдает маркер SAML с утверждением `accessAuthorized`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-187">If the access check is clear, STS B issues a SAML token with the `accessAuthorized` claim.</span></span>  
   
  [!code-csharp[C_Federation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#3)]
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
-#### Служба STS A  
- На следующем рисунке показана служба STS A.  
+#### <a name="sts-a"></a><span data-ttu-id="b8afa-188">Служба STS A</span><span class="sxs-lookup"><span data-stu-id="b8afa-188">STS A</span></span>  
+ <span data-ttu-id="b8afa-189">На следующем рисунке показана служба STS A.</span><span class="sxs-lookup"><span data-stu-id="b8afa-189">The following illustration shows the STS A.</span></span>  
   
- ![Федерация](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS\_B")  
+ <span data-ttu-id="b8afa-190">![Федерации](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")</span><span class="sxs-lookup"><span data-stu-id="b8afa-190">![Federation](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")</span></span>  
   
- Как и STS B, служба STS A также представляет собой веб\-службу, выдающую токены безопасности и предоставляющую с этой целью одну конечную точку.Однако она использует другую привязку \(`wsHttpBinding`\) и требует от пользователей предъявления допустимого токена [!INCLUDE[infocard](../../../../includes/infocard-md.md)] с утверждением `emailAddress`.В ответ она выдает токены SAML с утверждением `userAuthenticated`.Это декларативно указано в конфигурации службы.  
+ <span data-ttu-id="b8afa-191">Как и STS B, служба STS A также представляет собой веб-службу, выдающую маркеры безопасности и предоставляющую с этой целью одну конечную точку.</span><span class="sxs-lookup"><span data-stu-id="b8afa-191">Similar to the STS B, the STS A is also a Web service that issues security tokens and exposes a single endpoint for this purpose.</span></span> <span data-ttu-id="b8afa-192">Однако она использует другую привязку (`wsHttpBinding`) и требует от пользователей предъявления допустимого маркера [!INCLUDE[infocard](../../../../includes/infocard-md.md)] с утверждением `emailAddress`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-192">However, it uses a different binding (`wsHttpBinding`) and requires users to present a valid [!INCLUDE[infocard](../../../../includes/infocard-md.md)] with an `emailAddress` claim.</span></span> <span data-ttu-id="b8afa-193">В ответ она выдает маркеры SAML с утверждением `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-193">In response, it issues SAML tokens with the `userAuthenticated` claim.</span></span> <span data-ttu-id="b8afa-194">Это декларативно указано в конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="b8afa-194">This is declaratively specified in the service configuration.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service type="FederationSample.STS_A" behaviorConfiguration="STS-A_Behavior">  
@@ -275,23 +281,23 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 </system.serviceModel>  
 ```  
   
- Во время выполнения эта политика применяется классом `STS_A_OperationRequirement`, реализованным в составе службы STS A.  
+ <span data-ttu-id="b8afa-195">Во время выполнения эта политика применяется классом `STS_A_OperationRequirement`, реализованным в составе службы STS A.</span><span class="sxs-lookup"><span data-stu-id="b8afa-195">At runtime, the `STS_A_OperationRequirement` class enforces this policy, which is implemented as part of STS A.</span></span>  
   
  [!code-csharp[C_Federation#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#4)]
  [!code-vb[C_Federation#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#4)]  
   
- Если проверка доступа возвратила значение `true`, служба STS A выдает токен SAML с утверждением `userAuthenticated`.  
+ <span data-ttu-id="b8afa-196">Если проверка доступа возвратила значение `true`, служба STS A выдает маркер SAML с утверждением `userAuthenticated`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-196">If the access is `true`, STS A issues a SAML token with `userAuthenticated` claim.</span></span>  
   
  [!code-csharp[C_Federation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federation/cs/source.cs#5)]
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
-### Клиент в организации A  
- На следующем рисунке показан клиент в организации A и шаги, которые включает в себя вызов функции `MyService`.Для полноты картины включены также другие функциональные компоненты.  
+### <a name="client-at-organization-a"></a><span data-ttu-id="b8afa-197">Клиент в организации A</span><span class="sxs-lookup"><span data-stu-id="b8afa-197">Client at Organization A</span></span>  
+ <span data-ttu-id="b8afa-198">На следующем рисунке показан клиент в организации A и шаги, которые включает в себя вызов функции `MyService`.</span><span class="sxs-lookup"><span data-stu-id="b8afa-198">The following illustration shows the client at organization A, along with the steps involved in making a `MyService` service call.</span></span> <span data-ttu-id="b8afa-199">Для полноты картины включены также другие функциональные компоненты.</span><span class="sxs-lookup"><span data-stu-id="b8afa-199">The other functional components are also included for completeness.</span></span>  
   
- ![Федерация](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ <span data-ttu-id="b8afa-200">![Федерации](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")</span><span class="sxs-lookup"><span data-stu-id="b8afa-200">![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")</span></span>  
   
-## Заключение  
- Федеративная безопасность обеспечивает четкое разделение ответственности и позволяет выстраивать безопасные, масштабируемые архитектуры служб.В качестве платформы для построения и развертывания распределенных приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусматривает встроенную поддержку для реализации федеративной безопасности.  
+## <a name="summary"></a><span data-ttu-id="b8afa-201">Сводка</span><span class="sxs-lookup"><span data-stu-id="b8afa-201">Summary</span></span>  
+ <span data-ttu-id="b8afa-202">Федеративная безопасность обеспечивает четкое разделение ответственности и позволяет выстраивать безопасные, масштабируемые архитектуры служб.</span><span class="sxs-lookup"><span data-stu-id="b8afa-202">Federated security provides a clean division of responsibility and helps to build secure, scalable service architectures.</span></span> <span data-ttu-id="b8afa-203">В качестве платформы для построения и развертывания распределенных приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусматривает встроенную поддержку для реализации федеративной безопасности.</span><span class="sxs-lookup"><span data-stu-id="b8afa-203">As a platform for building and deploying distributed applications, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides native support for implementing federated security.</span></span>  
   
-## См. также  
- [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="b8afa-204">См. также</span><span class="sxs-lookup"><span data-stu-id="b8afa-204">See Also</span></span>  
+ [<span data-ttu-id="b8afa-205">Безопасность</span><span class="sxs-lookup"><span data-stu-id="b8afa-205">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)

@@ -1,30 +1,36 @@
 ---
-title: "Как напрямую выполнять команды SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Непосредственное выполнение команд SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: feffa98fa890856db579553df6624fef1897b173
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как напрямую выполнять команды SQL
-Если предположить наличие подключения <xref:System.Data.Linq.DataContext>, для выполнения команд, которые не возвращают объекты, можно воспользоваться методом <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>.  
+# <a name="how-to-directly-execute-sql-commands"></a><span data-ttu-id="78810-102">Практическое руководство. Непосредственное выполнение команд SQL</span><span class="sxs-lookup"><span data-stu-id="78810-102">How to: Directly Execute SQL Commands</span></span>
+<span data-ttu-id="78810-103">Если предположить наличие подключения <xref:System.Data.Linq.DataContext>, для выполнения команд, которые не возвращают объекты, можно воспользоваться методом <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>.</span><span class="sxs-lookup"><span data-stu-id="78810-103">Assuming a <xref:System.Data.Linq.DataContext> connection, you can use <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> to execute SQL commands that do not return objects.</span></span>  
   
-## Пример  
- В следующем примере SQL Server увеличивает цену за единицу на 1.  
+## <a name="example"></a><span data-ttu-id="78810-104">Пример</span><span class="sxs-lookup"><span data-stu-id="78810-104">Example</span></span>  
+ <span data-ttu-id="78810-105">В следующем примере SQL Server увеличивает цену за единицу на 1.</span><span class="sxs-lookup"><span data-stu-id="78810-105">The following example causes SQL Server to increase UnitPrice by 1.00.</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#3)]
  [!code-vb[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#3)]  
   
-## См. также  
- [Как напрямую выполнять SQL\-запросы](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)   
- [Взаимодействие с базой данных](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+## <a name="see-also"></a><span data-ttu-id="78810-106">См. также</span><span class="sxs-lookup"><span data-stu-id="78810-106">See Also</span></span>  
+ [<span data-ttu-id="78810-107">Как: непосредственное выполнение запросов SQL</span><span class="sxs-lookup"><span data-stu-id="78810-107">How to: Directly Execute SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
+ [<span data-ttu-id="78810-108">Взаимодействие с базой данных</span><span class="sxs-lookup"><span data-stu-id="78810-108">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

@@ -1,77 +1,80 @@
 ---
-title: "Защита сообщений с использованием средств обеспечения безопасности сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Защита сообщений с использованием средств обеспечения безопасности сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Защита сообщений с использованием средств обеспечения безопасности сообщений
-В этом разделе рассматриваются механизмы обеспечения безопасности сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при использовании <xref:System.ServiceModel.NetMsmqBinding>.  
+# <a name="securing-messages-using-message-security"></a><span data-ttu-id="c6d7a-102">Защита сообщений с использованием средств обеспечения безопасности сообщений</span><span class="sxs-lookup"><span data-stu-id="c6d7a-102">Securing Messages Using Message Security</span></span>
+<span data-ttu-id="c6d7a-103">В этом разделе рассматриваются механизмы обеспечения безопасности сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] при использовании <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-103">This section discusses [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message security when using <xref:System.ServiceModel.NetMsmqBinding>.</span></span>  
   
 > [!NOTE]
->  Перед прочтением этого раздела рекомендуется прочитать [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+>  <span data-ttu-id="c6d7a-104">Перед чтением с этим разделом рекомендуется ознакомиться с [основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-104">Before reading through this topic, it is recommended that you read [Security Concepts](../../../../docs/framework/wcf/feature-details/security-concepts.md).</span></span>  
   
- Следующая иллюстрация представляет концептуальную модель взаимодействия с использованием очередей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Для объяснения принципов безопасности транспорта  
+ <span data-ttu-id="c6d7a-105">Следующая иллюстрация представляет концептуальную модель взаимодействия с использованием очередей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c6d7a-105">The following illustration provides a conceptual model of queued communication using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="c6d7a-106">Для объяснения принципов безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="c6d7a-106">This illustration and terminology are used to explain</span></span>  
   
- используются следующие терминология и рисунки.  
+ <span data-ttu-id="c6d7a-107">используются следующие терминология и рисунки.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-107">transport security concepts.</span></span>  
   
- ![Схема приложения с очередью](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed\-Queue\-Figure")  
+ <span data-ttu-id="c6d7a-108">![Диаграмма приложения в очереди](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "распределенных очереди фигуры")</span><span class="sxs-lookup"><span data-stu-id="c6d7a-108">![Queued Application Diagram](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-Figure")</span></span>  
   
- При передачи сообщений из очереди с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сообщение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] прикрепляется к телу сообщения очереди сообщений \(MSMQ\).В то время как безопасность транспорта обеспечивает безопасность всего сообщения MSMQ, безопасность сообщений \(или протокол SOAP\) обеспечивает безопасность только тела сообщения MSMQ.  
+ <span data-ttu-id="c6d7a-109">При передачи сообщений из очереди с использованием [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сообщение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] прикрепляется к телу сообщения очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-109">When sending queued messages using [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message is attached as a body of the Message Queuing (MSMQ) message.</span></span> <span data-ttu-id="c6d7a-110">В то время как безопасность транспорта обеспечивает безопасность всего сообщения MSMQ, безопасность сообщений (или протокол SOAP) обеспечивает безопасность только тела сообщения MSMQ.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-110">While transport security secures the entire MSMQ message, message (or SOAP) security only secures the body of the MSMQ message.</span></span>  
   
- Ключевым принципом безопасности сообщений является обеспечение безопасности сообщения клиентом для принимающего приложения \(службы\), в отличие от безопасности транспорта, когда клиент обеспечивает безопасность сообщения для целевой очереди.MSMQ как таковая не участвует в обеспечении безопасности сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью безопасности сообщений.  
+ <span data-ttu-id="c6d7a-111">Ключевым принципом безопасности сообщений является обеспечение безопасности сообщения клиентом для принимающего приложения (службы), в отличие от безопасности транспорта, когда клиент обеспечивает безопасность сообщения для целевой очереди.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-111">The key concept of message security is that the client secures the message for the receiving application (service), unlike transport security where the client secures the message for the Target Queue.</span></span> <span data-ttu-id="c6d7a-112">MSMQ как таковая не участвует в обеспечении безопасности сообщения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью безопасности сообщений.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-112">As such, MSMQ plays no part when securing the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message using message security.</span></span>  
   
- Безопасность сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавляет заголовки безопасности к сообщениям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые интегрируются с существующими инфраструктурами безопасности, такими как сертификат или протокол Kerberos.  
+ <span data-ttu-id="c6d7a-113">Безопасность сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] добавляет заголовки безопасности к сообщениям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которые интегрируются с существующими инфраструктурами безопасности, такими как сертификат или протокол Kerberos.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-113">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message security adds security headers to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message that integrate with existing security infrastructures, such as a certificate or the Kerberos protocol.</span></span>  
   
-## Типы учетных данных сообщений  
- С помощью безопасности сообщений служба и клиент могут предоставить учетные данные для двусторонней проверки подлинности.Включить безопасность сообщений можно, установив для режима <xref:System.ServiceModel.NetMsmqBinding.Security%2A> значение `Message` или `Both` \(то есть использование и безопасности транспорта, и безопасности сообщений\).  
+## <a name="message-credential-type"></a><span data-ttu-id="c6d7a-114">Типы учетных данных сообщений</span><span class="sxs-lookup"><span data-stu-id="c6d7a-114">Message Credential Type</span></span>  
+ <span data-ttu-id="c6d7a-115">С помощью безопасности сообщений служба и клиент могут предоставить учетные данные для двусторонней проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-115">Using message security, the service and client can present credentials to authenticate each another.</span></span> <span data-ttu-id="c6d7a-116">Включить безопасность сообщений можно, установив для режима <xref:System.ServiceModel.NetMsmqBinding.Security%2A> значение `Message` или `Both` (то есть использование и безопасности транспорта, и безопасности сообщений).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-116">You can select message security by setting the <xref:System.ServiceModel.NetMsmqBinding.Security%2A> mode to `Message` or `Both` (that is, use both transport security and message security).</span></span>  
   
- Служба может использовать свойство <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> для проверки учетных данных, подтверждающих подлинность клиента.Это свойство также может использоваться на последующих этапах авторизации, применяемых службой.  
+ <span data-ttu-id="c6d7a-117">Служба может использовать свойство <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> для проверки учетных данных, подтверждающих подлинность клиента.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-117">The service can use the <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> property to inspect the credential used to authenticate the client.</span></span> <span data-ttu-id="c6d7a-118">Это свойство также может использоваться на последующих этапах авторизации, применяемых службой.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-118">This can also be used for further authorization checks that the service chooses to implement.</span></span>  
   
- В этом разделе описываются различные типы учетных данных и их использование с очередями.  
+ <span data-ttu-id="c6d7a-119">В этом разделе описываются различные типы учетных данных и их использование с очередями.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-119">This section explains the different credential types and how to use them with queues.</span></span>  
   
-### Сертификат  
- Этот тип учетных данных сертификата использует сертификат X.509 для идентификации службы и клиента.  
+### <a name="certificate"></a><span data-ttu-id="c6d7a-120">Сертификат</span><span class="sxs-lookup"><span data-stu-id="c6d7a-120">Certificate</span></span>  
+ <span data-ttu-id="c6d7a-121">Этот тип учетных данных сертификата использует сертификат X.509 для идентификации службы и клиента.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-121">The certificate credential type uses an X.509 certificate to identify the service and the client.</span></span>  
   
- В типичном сценарии доверенный центр сертификации издает действительный сертификат для клиента и службы.Затем устанавливается соединение, клиент проверяет допустимость службы, обращаясь к ее сертификату для определения ее надежности.Аналогичным образом служба обращается к сертификату клиента для проверки надежности клиента.  
+ <span data-ttu-id="c6d7a-122">В типичном сценарии доверенный центр сертификации издает действительный сертификат для клиента и службы.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-122">In a typical scenario, the client and the service are issued a valid certificate by a trusted certification authority.</span></span> <span data-ttu-id="c6d7a-123">Затем устанавливается соединение, клиент проверяет допустимость службы, обращаясь к ее сертификату для определения ее надежности.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-123">Then the connection is established, the client authenticates the validity of the service using the service's certificate to decide whether it can trust the service.</span></span> <span data-ttu-id="c6d7a-124">Аналогичным образом служба обращается к сертификату клиента для проверки надежности клиента.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-124">Similarly, the service uses the client's certificate to validate the client trust.</span></span>  
   
- Так как очереди отключены от сети, клиент и служба могут быть не подключены к сети одновременно.В таком случае клиент и служба должны обмениваться сертификатами по внештатному каналу.В частности, на основании наличия сертификата службы \(который может быть привязан к центру сертификации\) в доверенном хранилище клиент должен заключить, что взаимодействие осуществляется с нужной службой.Для проверки подлинности клиента служба использует сертификат X.509, прикрепленный к сообщению, для сопоставления его сертификату проверки подлинности клиента в хранилище.Аналогичным образом сертификат должен быть привязан к центру сертификации.  
+ <span data-ttu-id="c6d7a-125">Так как очереди отключены от сети, клиент и служба могут быть не подключены к сети одновременно.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-125">Given the disconnected nature of queues, the client and the service may not be online at the same time.</span></span> <span data-ttu-id="c6d7a-126">В таком случае клиент и служба должны обмениваться сертификатами по внештатному каналу.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-126">As such, the client and service have to exchange certificates out-of-band.</span></span> <span data-ttu-id="c6d7a-127">В частности, на основании наличия сертификата службы (который может быть привязан к центру сертификации) в доверенном хранилище клиент должен заключить, что взаимодействие осуществляется с нужной службой.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-127">In particular, the client, by virtue of holding the service's certificate (which can be chained to a certification authority) in its trusted store, must trust that it is communicating with the correct service.</span></span> <span data-ttu-id="c6d7a-128">Для проверки подлинности клиента служба использует сертификат X.509, прикрепленный к сообщению, для сопоставления его сертификату проверки подлинности клиента в хранилище.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-128">For authenticating the client, the service uses the X.509 certificate attached with the message to matches it with the certificate in its store to verify the authenticity of the client.</span></span> <span data-ttu-id="c6d7a-129">Аналогичным образом сертификат должен быть привязан к центру сертификации.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-129">Again, the certificate must be chained to a certification authority.</span></span>  
   
- На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о различных хранилищах см. в разделе [Хранилища сертификатов](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ <span data-ttu-id="c6d7a-130">На компьютере под управлением Windows имеется несколько типов хранилищ сертификатов.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-130">On a computer running Windows, certificates are held in several kinds of stores.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c6d7a-131">различные хранилища, в разделе [хранилища сертификатов](http://go.microsoft.com/fwlink/?LinkId=87787).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-131"> the different stores, see [Certificate stores](http://go.microsoft.com/fwlink/?LinkId=87787).</span></span>  
   
-### Windows  
- Тип учетных данных сообщений Windows использует протокол Kerberos.  
+### <a name="windows"></a><span data-ttu-id="c6d7a-132">Windows</span><span class="sxs-lookup"><span data-stu-id="c6d7a-132">Windows</span></span>  
+ <span data-ttu-id="c6d7a-133">Тип учетных данных сообщений Windows использует протокол Kerberos.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-133">Windows message credential type uses the Kerberos protocol.</span></span>  
   
- Протокол Kerberos является механизмом обеспечения безопасности, проверяющим подлинность пользователей в домене и позволяющим пользователям, прошедшим проверку подлинности, устанавливать защищенные контексты с другими сущностями в домене.  
+ <span data-ttu-id="c6d7a-134">Протокол Kerberos является механизмом обеспечения безопасности, проверяющим подлинность пользователей в домене и позволяющим пользователям, прошедшим проверку подлинности, устанавливать защищенные контексты с другими сущностями в домене.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-134">The Kerberos protocol is a security mechanism that authenticates users on a domain and allows the authenticated users to establish secure contexts with other entities on a domain.</span></span>  
   
- Проблема, возникающая при применении протокола Kerberos для взаимодействия с использованием очереди, заключается в том, что билеты с учетной записью клиента, выдаваемые центром распространения ключей \(KDC\), имеют относительно короткое время существования.*Время существования* связано с билетом Kerberos, указывающим срок действия билета.Поэтому в случае большой задержки нельзя быть уверенным в том, что маркер еще действителен для службы, выполняющей проверку подлинности клиента.  
+ <span data-ttu-id="c6d7a-135">Проблема, возникающая при применении протокола Kerberos для взаимодействия с использованием очереди, заключается в том, что билеты с учетной записью клиента, выдаваемые центром распространения ключей (KDC), имеют относительно короткое время существования.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-135">The problem with using the Kerberos protocol for queued communication is that the tickets that contain client identity that the Key Distribution Center (KDC) distributes are relatively short-lived.</span></span> <span data-ttu-id="c6d7a-136">Объект *время существования* связано с билетом Kerberos, указывающее срок действия билета.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-136">A *lifetime* is associated with the Kerberos ticket that indicates the validity of the ticket.</span></span> <span data-ttu-id="c6d7a-137">Поэтому в случае большой задержки нельзя быть уверенным в том, что маркер еще действителен для службы, выполняющей проверку подлинности клиента.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-137">As such, given high latency, you cannot be sure that the token is still valid for the service that authenticates the client.</span></span>  
   
- Обратите внимание, что при использовании этого типа учетных данных служба должна запускаться из учетной записи службы \(SERVICE\).  
+ <span data-ttu-id="c6d7a-138">Обратите внимание, что при использовании этого типа учетных данных служба должна запускаться из учетной записи службы (SERVICE).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-138">Note that when using this credential type, the service must be running under the SERVICE account.</span></span>  
   
- Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Работа с протоколом распределенной безопасности Kerberos в Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ <span data-ttu-id="c6d7a-139">Протокол Kerberos используется по умолчанию при выборе учетных данных сообщения.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-139">The Kerberos protocol is used by default when choosing message credential.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="c6d7a-140">[Изучение Kerberos, протокол для распределенной безопасности Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).</span><span class="sxs-lookup"><span data-stu-id="c6d7a-140"> [Exploring Kerberos, the Protocol for Distributed Security in Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).</span></span>  
   
-### Имя пользователя и пароль  
- С помощью этого свойства клиент может проверить подлинность сервера, используя имя пользователя и пароль в заголовке безопасности сообщения.  
+### <a name="username-password"></a><span data-ttu-id="c6d7a-141">Имя пользователя и пароль</span><span class="sxs-lookup"><span data-stu-id="c6d7a-141">Username Password</span></span>  
+ <span data-ttu-id="c6d7a-142">С помощью этого свойства клиент может проверить подлинность сервера, используя имя пользователя и пароль в заголовке безопасности сообщения.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-142">Using this property, the client can authenticate to the server using a username password in the security header of the message.</span></span>  
   
-### IssuedToken  
- Клиент может обратиться к службе маркеров безопасности для получения прикрепляемого к сообщению маркера, с помощью которого служба может проверить подлинность клиента.  
+### <a name="issuedtoken"></a><span data-ttu-id="c6d7a-143">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="c6d7a-143">IssuedToken</span></span>  
+ <span data-ttu-id="c6d7a-144">Клиент может обратиться к службе маркеров безопасности для получения прикрепляемого к сообщению маркера, с помощью которого служба может проверить подлинность клиента.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-144">The client can use the security token service to issue a token that can then be attached to the message for the service to authenticate the client.</span></span>  
   
-## Использование безопасности транспорта и сообщений  
- При применении одновременно и безопасности транспорта, и безопасности сообщений для обеспечения безопасности сообщения как на уровне транспорта, так и на уровне сообщений SOAP должен использоваться один и тот же сертификат.  
+## <a name="using-transport-and-message-security"></a><span data-ttu-id="c6d7a-145">Использование безопасности транспорта и сообщений</span><span class="sxs-lookup"><span data-stu-id="c6d7a-145">Using Transport and Message Security</span></span>  
+ <span data-ttu-id="c6d7a-146">При применении одновременно и безопасности транспорта, и безопасности сообщений для обеспечения безопасности сообщения как на уровне транспорта, так и на уровне сообщений SOAP должен использоваться один и тот же сертификат.</span><span class="sxs-lookup"><span data-stu-id="c6d7a-146">When using both transport security and message security, the certificate used to secure the message both at the transport and the SOAP message level must be the same.</span></span>  
   
-## См. также  
- [Защита сообщений с использованием средств обеспечения безопасности транспорта](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)   
- [Безопасность сообщений при использовании очереди сообщений](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)   
- [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)   
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="c6d7a-147">См. также</span><span class="sxs-lookup"><span data-stu-id="c6d7a-147">See Also</span></span>  
+ [<span data-ttu-id="c6d7a-148">Защита сообщений с использованием безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="c6d7a-148">Securing Messages Using Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [<span data-ttu-id="c6d7a-149">Безопасность сообщений через очереди сообщений</span><span class="sxs-lookup"><span data-stu-id="c6d7a-149">Message Security over Message Queuing</span></span>](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [<span data-ttu-id="c6d7a-150">Основные понятия безопасности</span><span class="sxs-lookup"><span data-stu-id="c6d7a-150">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [<span data-ttu-id="c6d7a-151">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="c6d7a-151">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

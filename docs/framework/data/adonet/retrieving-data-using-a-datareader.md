@@ -1,68 +1,74 @@
 ---
-title: "Извлечение данных с помощью DataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Извлечение данных с помощью объекта DataReader"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Извлечение данных с помощью DataReader
-Для извлечения данных с помощью **DataReader** необходимо создать экземпляр объекта **Command**, а затем создать объект **DataReader**, вызвав метод **Command.ExecuteReader** для получения строк из источника данных.  В следующем примере иллюстрируется использование объекта **DataReader**, где `reader` представляет допустимый DataReader, а `command` представляет допустимый объект Command.  
+# <a name="retrieving-data-using-a-datareader"></a><span data-ttu-id="85f51-102">Извлечение данных с помощью объекта DataReader</span><span class="sxs-lookup"><span data-stu-id="85f51-102">Retrieving Data Using a DataReader</span></span>
+<span data-ttu-id="85f51-103">Получение данных с помощью **DataReader** включает в себя создание экземпляра **команда** объекта, а затем создать **DataReader** путем вызова  **Command.ExecuteReader** для получения строк из источника данных.</span><span class="sxs-lookup"><span data-stu-id="85f51-103">Retrieving data using a **DataReader** involves creating an instance of the **Command** object and then creating a **DataReader** by calling **Command.ExecuteReader** to retrieve rows from a data source.</span></span> <span data-ttu-id="85f51-104">В следующем примере демонстрируется использование **DataReader** где `reader` представляет допустимый DataReader и `command` представляет допустимый объект Command.</span><span class="sxs-lookup"><span data-stu-id="85f51-104">The following example illustrates using a **DataReader** where `reader` represents a valid DataReader and `command` represents a valid Command object.</span></span>  
   
 ```  
 reader = command.ExecuteReader();  
 ```  
   
- Метод **Read** объекта **DataReader** используется для получения строки из результатов запроса.  Доступ к отдельным столбцам возвращенной строки осуществляется по имени или порядковому номеру столбца через объект **DataReader**.  Однако для максимальной производительности объект **DataReader** предоставляет ряд методов, позволяющих обращаться к значениям столбцов в их собственных типах данных \(**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32** и т. д.\).  Список типизированных методов доступа в объектах **DataReader** для конкретных поставщиков данных см. в разделах <xref:System.Data.OleDb.OleDbDataReader> и <xref:System.Data.SqlClient.SqlDataReader>.  Использование типизированных методов доступа при условии, что известен базовый тип данных, сокращает объем преобразований типов, необходимых при извлечении значения столбца.  
+ <span data-ttu-id="85f51-105">Вы используете **чтения** метод **DataReader** объект для получения строки из результатов запроса.</span><span class="sxs-lookup"><span data-stu-id="85f51-105">You use the **Read** method of the **DataReader** object to obtain a row from the results of the query.</span></span> <span data-ttu-id="85f51-106">Доступ к каждого столбца возвращенной строки, передав имя или порядковый номер столбца, **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="85f51-106">You can access each column of the returned row by passing the name or ordinal reference of the column to the **DataReader**.</span></span> <span data-ttu-id="85f51-107">Однако для достижения наилучшей производительности **DataReader** предоставляет ряд методов, которые позволяют получить доступ к значениям столбцов в их собственных типах данных (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**и так далее).</span><span class="sxs-lookup"><span data-stu-id="85f51-107">However, for best performance, the **DataReader** provides a series of methods that allow you to access column values in their native data types (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**, and so on).</span></span> <span data-ttu-id="85f51-108">Список типизированных методов доступа для конкретных поставщиков данных **объекты DataReader**, в разделе <xref:System.Data.OleDb.OleDbDataReader> и <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="85f51-108">For a list of typed accessor methods for data provider-specific **DataReaders**, see <xref:System.Data.OleDb.OleDbDataReader> and <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="85f51-109">Использование типизированных методов доступа при условии, что известен базовый тип данных, сокращает объем преобразований типов, необходимых при извлечении значения столбца.</span><span class="sxs-lookup"><span data-stu-id="85f51-109">Using the typed accessor methods, assuming the underlying data type is known, reduces the amount of type conversion required when retrieving the column value.</span></span>  
   
 > [!NOTE]
->  В версии платформы .NET Framework для Windows Server 2003 имеется дополнительное свойство объекта **DataReader**, **HasRows**, которое позволяет определить, возвратил ли объект **DataReader** какие\-либо результаты, перед тем как читать из него.  
+>  <span data-ttu-id="85f51-110">Выпуск Windows Server 2003 платформы .NET Framework имеется дополнительное свойство для **DataReader**, **HasRows**, что позволяет определить, если **DataReader**вернул никаких результатов перед чтением из него.</span><span class="sxs-lookup"><span data-stu-id="85f51-110">The Windows Server 2003 release of the .NET Framework includes an additional property for the **DataReader**, **HasRows**, which enables you to determine if the **DataReader** has returned any results before reading from it.</span></span>  
   
- В следующем примере кода просматриваются результаты, возвращенные объектом **DataReader** и возвращаются два столбца для каждой строки.  
+ <span data-ttu-id="85f51-111">В следующем примере кода выполняется итерация через **DataReader** объекта и возвращает два столбца из каждой строки.</span><span class="sxs-lookup"><span data-stu-id="85f51-111">The following code example iterates through a **DataReader** object, and returns two columns from each row.</span></span>  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
- Объект **DataReader** предоставляет небуферизованный поток данных, позволяющий процедурам последовательно обрабатывать результаты из источника данных.  Объект **DataReader** хорошо подходит для извлечения больших объемов данных, поскольку данные не кэшируются в памяти.  
+ <span data-ttu-id="85f51-112">**DataReader** предоставляет небуферизованный поток данных, позволяющий процедурам последовательно обрабатывать результаты из источника данных.</span><span class="sxs-lookup"><span data-stu-id="85f51-112">The **DataReader** provides an unbuffered stream of data that allows procedural logic to efficiently process results from a data source sequentially.</span></span> <span data-ttu-id="85f51-113">**DataReader** — хороший выбор при извлечении больших объемов данных, поскольку данные не кэшируются в памяти.</span><span class="sxs-lookup"><span data-stu-id="85f51-113">The **DataReader** is a good choice when retrieving large amounts of data because the data is not cached in memory.</span></span>  
   
-## Закрытие DataReader  
- По окончании использования объекта **DataReader** всегда следует вызывать метод **Close**.  
+## <a name="closing-the-datareader"></a><span data-ttu-id="85f51-114">Закрытие DataReader</span><span class="sxs-lookup"><span data-stu-id="85f51-114">Closing the DataReader</span></span>  
+ <span data-ttu-id="85f51-115">Следует всегда вызывать **закрыть** метод завершения с помощью **DataReader** объекта.</span><span class="sxs-lookup"><span data-stu-id="85f51-115">You should always call the **Close** method when you have finished using the **DataReader** object.</span></span>  
   
- Если метод **Command** содержит выходные параметры или возвращаемые значения, они будут недоступны до закрытия объекта **DataReader**.  
+ <span data-ttu-id="85f51-116">Если ваш **команда** содержит выходные данные параметры или возвращаемые значения, они не будут доступны до **DataReader** закрыт.</span><span class="sxs-lookup"><span data-stu-id="85f51-116">If your **Command** contains output parameters or return values, they will not be available until the **DataReader** is closed.</span></span>  
   
- Имейте в виду, что пока объект **DataReader** открыт, соединение **Connection** используется исключительно этим объектом **DataReader**.  Невозможно выполнять какие\-либо команды для **Connection**, включая создание другого объекта **DataReader**, пока исходный объект **DataReader** не будет закрыт.  
+ <span data-ttu-id="85f51-117">Обратите внимание, что, хотя **DataReader** открыт, **подключения** используется исключительно этим объектом **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="85f51-117">Note that while a **DataReader** is open, the **Connection** is in use exclusively by that **DataReader**.</span></span> <span data-ttu-id="85f51-118">Невозможно выполнить команды для **подключения**, включая создание другого **DataReader**, пока исходный **DataReader** закрыт.</span><span class="sxs-lookup"><span data-stu-id="85f51-118">You cannot execute any commands for the **Connection**, including creating another **DataReader**, until the original **DataReader** is closed.</span></span>  
   
 > [!NOTE]
->  В методе **Finalize** вашего класса нельзя вызывать методы **Close** или **Dispose** объектов **Connection**, **DataReader** или любого другого управляемого объекта.  В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет.  Если класс не владеет какими\-либо неуправляемыми ресурсами, не включайте в его определение метод **Finalize**.  Для получения дополнительной информации см. [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
+>  <span data-ttu-id="85f51-119">Не вызывайте **закрыть** или **Dispose** на **подключения**, **DataReader**, или любого другого управляемого объекта в **Finalize**  метод класса.</span><span class="sxs-lookup"><span data-stu-id="85f51-119">Do not call **Close** or **Dispose** on a **Connection**, a **DataReader**, or any other managed object in the **Finalize** method of your class.</span></span> <span data-ttu-id="85f51-120">В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет.</span><span class="sxs-lookup"><span data-stu-id="85f51-120">In a finalizer, only release unmanaged resources that your class owns directly.</span></span> <span data-ttu-id="85f51-121">Если класс не владеет все неуправляемые ресурсы, не включайте **Finalize** метод в определении класса.</span><span class="sxs-lookup"><span data-stu-id="85f51-121">If your class does not own any unmanaged resources, do not include a **Finalize** method in your class definition.</span></span> <span data-ttu-id="85f51-122">Дополнительные сведения см. в разделе [мусора](../../../../docs/standard/garbage-collection/index.md).</span><span class="sxs-lookup"><span data-stu-id="85f51-122">For more information, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
   
-## Извлечение нескольких результирующих наборов при помощи NextResult  
- При возвращении нескольких результирующих наборов объект **DataReader** предоставляет метод **NextResult** для просмотра наборов результатов по порядку.  В следующем примере показан объект <xref:System.Data.SqlClient.SqlDataReader>, обрабатывающий результаты двух инструкций SELECT с помощью метода <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a><span data-ttu-id="85f51-123">Извлечение нескольких результирующих наборов при помощи NextResult</span><span class="sxs-lookup"><span data-stu-id="85f51-123">Retrieving Multiple Result Sets using NextResult</span></span>  
+ <span data-ttu-id="85f51-124">Если возвращается несколько результирующих наборов, **DataReader** предоставляет **NextResult** задает метод для перебора результат в последовательности.</span><span class="sxs-lookup"><span data-stu-id="85f51-124">If multiple result sets are returned, the **DataReader** provides the **NextResult** method to iterate through the result sets in order.</span></span> <span data-ttu-id="85f51-125">В следующем примере показан объект <xref:System.Data.SqlClient.SqlDataReader>, обрабатывающий результаты двух инструкций SELECT с помощью метода <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.</span><span class="sxs-lookup"><span data-stu-id="85f51-125">The following example shows the <xref:System.Data.SqlClient.SqlDataReader> processing the results of two SELECT statements using the <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> method.</span></span>  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
-## Получение данных схемы от DataReader  
- Когда открыт объект **DataReader**, с помощью метода **GetSchemaTable** можно получить данные схемы о текущем результирующем наборе.  Метод **GetSchemaTable** возвращает объект <xref:System.Data.DataTable>, заполненный строками и столбцами, которые содержат данные схемы для текущего результирующего набора.  Объект **DataTable** содержит одну строку для каждого столбца результирующего набора.  Каждый столбец строки таблицы схемы соответствует свойству столбца, возвращенного в результирующем наборе, где **ColumnName** \- это имя свойства, а значение столбца \- это значение свойства.  В следующем примере кода на консоль выводятся данные схемы для объекта **DataReader**.  
+## <a name="getting-schema-information-from-the-datareader"></a><span data-ttu-id="85f51-126">Получение данных схемы от DataReader</span><span class="sxs-lookup"><span data-stu-id="85f51-126">Getting Schema Information from the DataReader</span></span>  
+ <span data-ttu-id="85f51-127">Хотя **DataReader** является открытым, можно получить данные схемы о текущем результирующем наборе с помощью **GetSchemaTable** метод.</span><span class="sxs-lookup"><span data-stu-id="85f51-127">While a **DataReader** is open, you can retrieve schema information about the current result set using the **GetSchemaTable** method.</span></span> <span data-ttu-id="85f51-128">**GetSchemaTable** возвращает <xref:System.Data.DataTable> заполненный строк и столбцов, содержащих сведения о схеме для текущего результирующего набора.</span><span class="sxs-lookup"><span data-stu-id="85f51-128">**GetSchemaTable** returns a <xref:System.Data.DataTable> object populated with rows and columns that contain the schema information for the current result set.</span></span> <span data-ttu-id="85f51-129">**DataTable** содержит по одной строке для каждого столбца результирующего набора.</span><span class="sxs-lookup"><span data-stu-id="85f51-129">The **DataTable** contains one row for each column of the result set.</span></span> <span data-ttu-id="85f51-130">Каждый столбец строки таблицы схемы соответствует свойству столбца, возвращенного в результирующем наборе, где **ColumnName** имя свойства и значение столбца является значением свойства.</span><span class="sxs-lookup"><span data-stu-id="85f51-130">Each column of the schema table row maps to a property of the column returned in the result set, where the **ColumnName** is the name of the property and the value of the column is the value of the property.</span></span> <span data-ttu-id="85f51-131">Следующий пример кода записывает сведения о схеме для **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="85f51-131">The following code example writes out the schema information for **DataReader**.</span></span>  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
-## Работа с разделами OLE DB  
- Иерархические наборы строк или разделы \(тип **DBTYPE\_HCHAPTER** в OLE DB, тип **adChapter** в ADO\) можно получать с помощью объекта <xref:System.Data.OleDb.OleDbDataReader>.  Когда запрос, содержащий раздел, возвращается в виде объекта **DataReader**, раздел возвращается в виде столбца в этом объекте **DataReader** и представляется как объект **DataReader**.  
+## <a name="working-with-ole-db-chapters"></a><span data-ttu-id="85f51-132">Работа с разделами OLE DB</span><span class="sxs-lookup"><span data-stu-id="85f51-132">Working with OLE DB Chapters</span></span>  
+ <span data-ttu-id="85f51-133">Иерархические наборы строк или разделы (тип OLE DB **DBTYPE_HCHAPTER**, тип ADO **adChapter**) можно получить с помощью <xref:System.Data.OleDb.OleDbDataReader>.</span><span class="sxs-lookup"><span data-stu-id="85f51-133">Hierarchical rowsets, or chapters (OLE DB type **DBTYPE_HCHAPTER**, ADO type **adChapter**) can be retrieved using the <xref:System.Data.OleDb.OleDbDataReader>.</span></span> <span data-ttu-id="85f51-134">Если запрос, включающий раздел возвращается в виде **DataReader**, раздел возвращается в виде столбца в том, что **DataReader** и доступен как **DataReader** объекта.</span><span class="sxs-lookup"><span data-stu-id="85f51-134">When a query that includes a chapter is returned as a **DataReader**, the chapter is returned as a column in that **DataReader** and is exposed as a **DataReader** object.</span></span>  
   
- Для представления иерархических наборов строк при помощи связей типа «родитель\-потомок» между таблицами также можно использовать объект ADO.NET **DataSet**.  Для получения дополнительной информации см. [Объекты DataSet, DataTable и DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ <span data-ttu-id="85f51-135">ADO.NET **набора данных** может также использоваться для представления иерархических наборов строк с помощью родительско дочерних отношений между таблицами.</span><span class="sxs-lookup"><span data-stu-id="85f51-135">The ADO.NET **DataSet** can also be used to represent hierarchical rowsets using parent-child relationships between tables.</span></span> <span data-ttu-id="85f51-136">Дополнительные сведения см. в разделе [наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).</span><span class="sxs-lookup"><span data-stu-id="85f51-136">For more information, see [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).</span></span>  
   
- В следующем примере кода поставщик MSDataShape используется, чтобы сформировать столбец раздела заказов по каждому клиенту из списка клиентов.  
+ <span data-ttu-id="85f51-137">В следующем примере кода поставщик MSDataShape используется, чтобы сформировать столбец раздела заказов по каждому клиенту из списка клиентов.</span><span class="sxs-lookup"><span data-stu-id="85f51-137">The following code example uses the MSDataShape Provider to generate a chapter column of orders for each customer in a list of customers.</span></span>  
   
 ```vb  
 Using connection As OleDbConnection = New OleDbConnection( _  
@@ -128,16 +134,16 @@ custReader.Close();
 }  
 ```  
   
-## Возвращение результатов при помощи Oracle REF CURSOR  
- Поставщик данных .NET Framework для Oracle поддерживает использование параметров Oracle REF CURSOR для возвращения результата запроса.  Параметр Oracle REF CURSOR возвращается в виде объекта <xref:System.Data.OracleClient.OracleDataReader>.  
+## <a name="returning-results-with-oracle-ref-cursors"></a><span data-ttu-id="85f51-138">Возвращение результатов при помощи Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="85f51-138">Returning Results with Oracle REF CURSORs</span></span>  
+ <span data-ttu-id="85f51-139">Поставщик данных .NET Framework для Oracle поддерживает использование параметров Oracle REF CURSOR для возвращения результата запроса.</span><span class="sxs-lookup"><span data-stu-id="85f51-139">The .NET Framework Data Provider for Oracle supports the use of Oracle REF CURSORs to return a query result.</span></span> <span data-ttu-id="85f51-140">Параметр Oracle REF CURSOR возвращается в виде объекта <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="85f51-140">An Oracle REF CURSOR is returned as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  
   
- Объект **OracleDataReader**, который представляет параметр Oracle REF CURSOR, можно получить с помощью метода <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>. Кроме того, также можно указать экземпляр <xref:System.Data.OracleClient.OracleCommand>, который возвращает один или несколько параметров Oracle REF CURSOR в виде **SelectCommand** для адаптера <xref:System.Data.OracleClient.OracleDataAdapter>, используемого, чтобы заполнить набор данных <xref:System.Data.DataSet>.  
+ <span data-ttu-id="85f51-141">Вы можете получить **OracleDataReader** объекта, который представляет Oracle REF CURSOR с использованием <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> метод и можно также указать <xref:System.Data.OracleClient.OracleCommand> , возвращающий один или несколько REF CURSOR Oracle в виде  **SelectCommand** для <xref:System.Data.OracleClient.OracleDataAdapter> используется для заполнения <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="85f51-141">You can retrieve an **OracleDataReader** object, that represents an Oracle REF CURSOR using the <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> method, and you can also specify an <xref:System.Data.OracleClient.OracleCommand> that returns one or more Oracle REF CURSORs as the **SelectCommand** for an <xref:System.Data.OracleClient.OracleDataAdapter> used to fill a <xref:System.Data.DataSet>.</span></span>  
   
- Чтобы получить доступ к параметру REF CURSOR, возвращенному из источника данных Oracle, создайте экземпляр **OracleCommand** для данного запроса и добавьте выходной параметр, устанавливающий ссылку между REF CURSOR и коллекцией **Parameters** данного экземпляра **OracleCommand**.  Имя параметра должно соответствовать имени параметра REF CURSOR, используемого в запросе.  В качестве типа параметра установите **OracleType.Cursor**.  Метод **ExecuteReader** данного экземпляра **OracleCommand** возвратит объект **OracleDataReader** для параметра REF CURSOR.  
+ <span data-ttu-id="85f51-142">Чтобы получить доступ к параметру REF CURSOR, возвращенному из источника данных Oracle, создайте **OracleCommand** запроса и добавьте выходной параметр, ссылающийся REF CURSOR **параметры** коллекцию вашей  **OracleCommand**.</span><span class="sxs-lookup"><span data-stu-id="85f51-142">To access a REF CURSOR returned from an Oracle data source, create an **OracleCommand** for your query and add an output parameter that references the REF CURSOR to the **Parameters** collection of your **OracleCommand**.</span></span> <span data-ttu-id="85f51-143">Имя параметра должно соответствовать имени параметра REF CURSOR, используемого в запросе.</span><span class="sxs-lookup"><span data-stu-id="85f51-143">The name of the parameter must match the name of the REF CURSOR parameter in your query.</span></span> <span data-ttu-id="85f51-144">Задать тип параметра для **OracleType.Cursor**.</span><span class="sxs-lookup"><span data-stu-id="85f51-144">Set the type of the parameter to **OracleType.Cursor**.</span></span> <span data-ttu-id="85f51-145">**ExecuteReader** метод вашей **OracleCommand** вернет **OracleDataReader** для параметра REF CURSOR.</span><span class="sxs-lookup"><span data-stu-id="85f51-145">The **ExecuteReader** method of your **OracleCommand** will return an **OracleDataReader** for the REF CURSOR.</span></span>  
   
- Если экземпляр **OracleCommand** возвращает несколько параметров REF CURSOR, добавьте несколько выходных параметров.  Доступ к разным параметрам REF CURSOR можно получать с помощью метода **OracleCommand.ExecuteReader**.  Вызов метода **ExecuteReader** возвращает объект **OracleDataReader**, ссылающийся на первый параметр REF CURSOR.  Затем можно вызвать метод **OracleDataReader.NextResult**, чтобы получить доступ к последующим параметрам REF CURSOR.  Несмотря на то, что параметры в коллекции **OracleCommand.Parameters** соответствуют выходным параметрам REF CURSOR по имени, объект **OracleDataReader** получает к ним доступ в порядке их добавления в коллекцию **Parameters**.  
+ <span data-ttu-id="85f51-146">Если ваш **OracleCommand** возвращает несколько параметров REF CURSOR, добавьте несколько выходных параметров.</span><span class="sxs-lookup"><span data-stu-id="85f51-146">If your **OracleCommand** returns multiple REF CURSORS, add multiple output parameters.</span></span> <span data-ttu-id="85f51-147">Доступ к другой типа REF CURSOR путем вызова **OracleCommand.ExecuteReader** метод.</span><span class="sxs-lookup"><span data-stu-id="85f51-147">You can access the different REF CURSORs by calling the **OracleCommand.ExecuteReader** method.</span></span> <span data-ttu-id="85f51-148">Вызов **ExecuteReader** возвращает **OracleDataReader** ссылается первый параметр REF CURSOR.</span><span class="sxs-lookup"><span data-stu-id="85f51-148">The call to **ExecuteReader** returns an **OracleDataReader** referencing the first REF CURSOR.</span></span> <span data-ttu-id="85f51-149">Затем можно вызвать **OracleDataReader.NextResult** метод для доступа к последующих параметров REF CURSOR.</span><span class="sxs-lookup"><span data-stu-id="85f51-149">You can then call the **OracleDataReader.NextResult** method to access subsequent REF CURSORs.</span></span> <span data-ttu-id="85f51-150">Хотя параметры в вашей **OracleCommand.Parameters** REF CURSOR соответствуют выходным параметрам по имени, **OracleDataReader** получает к ним доступ в порядке, в котором они были добавлены  **Параметры** коллекции.</span><span class="sxs-lookup"><span data-stu-id="85f51-150">Although the parameters in your **OracleCommand.Parameters** collection match the REF CURSOR output parameters by name, the **OracleDataReader** accesses them in the order that they were added to the **Parameters** collection.</span></span>  
   
- Например, рассмотрим следующий пакет и текст пакета Oracle.  
+ <span data-ttu-id="85f51-151">Например, рассмотрим следующий пакет и текст пакета Oracle.</span><span class="sxs-lookup"><span data-stu-id="85f51-151">For example, consider the following Oracle package and package body.</span></span>  
   
 ```  
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -157,7 +163,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;   
 ```  
   
- В следующем коде создается экземпляр **OracleCommand**, который возвращает параметры REF CURSOR из предыдущего пакета Oracle путем добавления двух параметров типа **OracleType.Cursor** в коллекцию **Parameters**.  
+ <span data-ttu-id="85f51-152">В следующем коде создается **OracleCommand** , возвращает параметры REF CURSOR из предыдущего пакета Oracle путем добавления двух параметров типа **OracleType.Cursor** для **параметры** коллекции.</span><span class="sxs-lookup"><span data-stu-id="85f51-152">The following code creates an **OracleCommand** that returns the REF CURSORs from the previous Oracle package by adding two parameters of type **OracleType.Cursor** to the **Parameters** collection.</span></span>  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -171,7 +177,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- В следующем коде возвращаются результаты предыдущей команды при помощи методов **Read** и **NextResult** объекта **OracleDataReader**.  Параметры REF CURSOR возвращаются по порядку.  
+ <span data-ttu-id="85f51-153">В следующем коде возвращаются результаты предыдущей команды при помощи **чтения** и **NextResult** методы **OracleDataReader**.</span><span class="sxs-lookup"><span data-stu-id="85f51-153">The following code returns the results of the previous command using the **Read** and **NextResult** methods of the **OracleDataReader**.</span></span> <span data-ttu-id="85f51-154">Параметры REF CURSOR возвращаются по порядку.</span><span class="sxs-lookup"><span data-stu-id="85f51-154">The REF CURSOR parameters are returned in order.</span></span>  
   
 ```vb  
 oraConn.Open()  
@@ -227,10 +233,10 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- В следующем примере предыдущая команда используется для заполнения объекта **DataSet** результатами пакета Oracle.  
+ <span data-ttu-id="85f51-155">В следующем примере предыдущая команда используется для заполнения **набора данных** с результатами пакета Oracle.</span><span class="sxs-lookup"><span data-stu-id="85f51-155">The following example uses the previous command to populate a **DataSet** with the results of the Oracle package.</span></span>  
   
 > [!NOTE]
->  Во избежание исключения **OverflowException** рекомендуется также производить преобразования из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в **DataRow**.  Событие **FillError** можно использовать, чтобы определять, появилось ли исключение **OverflowException**.  Дополнительные сведения о событии **FillError** см. в разделе [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+>  <span data-ttu-id="85f51-156">Чтобы избежать **OverflowException**, рекомендуется также производить преобразования из типа Oracle NUMBER в допустимый тип .NET Framework перед сохранением значения в **DataRow**.</span><span class="sxs-lookup"><span data-stu-id="85f51-156">To avoid an **OverflowException**, we recommend that you also handle any conversion from the Oracle NUMBER type to a valid .NET Framework type before storing the value in a **DataRow**.</span></span> <span data-ttu-id="85f51-157">Можно использовать **FillError** событий для определения **OverflowException** произошла.</span><span class="sxs-lookup"><span data-stu-id="85f51-157">You can use the **FillError** event to determine if an **OverflowException** has occurred.</span></span> <span data-ttu-id="85f51-158">Дополнительные сведения о **FillError** событий, в разделе [обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).</span><span class="sxs-lookup"><span data-stu-id="85f51-158">For more information on the **FillError** event, see [Handling DataAdapter Events](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).</span></span>  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -252,9 +258,9 @@ adapter.TableMappings.Add("Table1", "Departments");
 adapter.Fill(ds);  
 ```  
   
-## См. также  
- [Working with DataReaders](http://msdn.microsoft.com/ru-ru/126a966a-d08d-4d22-a19f-f432908b2b54)   
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Получение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="85f51-159">См. также</span><span class="sxs-lookup"><span data-stu-id="85f51-159">See Also</span></span>  
+ [<span data-ttu-id="85f51-160">Работа с объекты DataReader</span><span class="sxs-lookup"><span data-stu-id="85f51-160">Working with DataReaders</span></span>](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [<span data-ttu-id="85f51-161">Объекты DataAdapter и DataReader</span><span class="sxs-lookup"><span data-stu-id="85f51-161">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="85f51-162">Команды и параметры</span><span class="sxs-lookup"><span data-stu-id="85f51-162">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="85f51-163">Получение сведений о схеме базы данных</span><span class="sxs-lookup"><span data-stu-id="85f51-163">Retrieving Database Schema Information</span></span>](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [<span data-ttu-id="85f51-164">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="85f51-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

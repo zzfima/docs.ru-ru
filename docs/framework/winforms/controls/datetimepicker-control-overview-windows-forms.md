@@ -1,38 +1,38 @@
 ---
-title: "Общие сведения об элементе управления DateTimePicker (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DateTimePicker"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления для даты и времени"
-  - "DateTimePicker - элемент управления [Windows Forms], сведения"
+title: "Общие сведения об элементе управления DateTimePicker (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DateTimePicker
+helpviewer_keywords:
+- DateTimePicker control [Windows Forms], about
+- date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a97eecc43614c84867e9dbdd527dbebd7dfd426e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления DateTimePicker (Windows Forms)
-Элемент управления <xref:System.Windows.Forms.DateTimePicker> Windows Forms позволяет пользователю выбрать отдельный элемент в списке дат или времени.  Когда компонент используется для представления даты, он состоит из двух частей: раскрывающегося списка с датой, представленной в виде текста, и сетки, которая появляется при нажатии кнопки со стрелкой вниз, расположенной рядом со списком.  Сетка выглядит аналогично элементу управления <xref:System.Windows.Forms.MonthCalendar>, который используется для выбора нескольких дат.  Дополнительные сведения об элементе управления <xref:System.Windows.Forms.MonthCalendar> см. в разделе [Общие сведения об элементе управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  
+# <a name="datetimepicker-control-overview-windows-forms"></a><span data-ttu-id="b0b4d-102">Общие сведения об элементе управления DateTimePicker (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b0b4d-102">DateTimePicker Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="b0b4d-103">Windows Forms <xref:System.Windows.Forms.DateTimePicker> управления позволяет пользователю выбрать один элемент из списка дат или времени.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-103">The Windows Forms <xref:System.Windows.Forms.DateTimePicker> control allows the user to select a single item from a list of dates or times.</span></span> <span data-ttu-id="b0b4d-104">Используемый для представления даты, он отображается в виде двух частей: раскрывающегося списка с даты, представленной в тексте и сетки, которая появляется, если щелкнуть стрелку вниз рядом со списком.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-104">When used to represent a date, it appears in two parts: a drop-down list with a date represented in text, and a grid that appears when you click on the down-arrow next to the list.</span></span> <span data-ttu-id="b0b4d-105">Сетка выглядит аналогично <xref:System.Windows.Forms.MonthCalendar> элемента управления, который может использоваться для выбора нескольких дат.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-105">The grid looks like the <xref:System.Windows.Forms.MonthCalendar> control, which can be used for selecting multiple dates.</span></span> <span data-ttu-id="b0b4d-106">Дополнительные сведения о <xref:System.Windows.Forms.MonthCalendar> управления см. в разделе [Обзор элемента управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b0b4d-106">For more information on the <xref:System.Windows.Forms.MonthCalendar> control, see [MonthCalendar Control Overview](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).</span></span>  
   
-## Ключевые свойства  
- Если требуется, чтобы <xref:System.Windows.Forms.DateTimePicker> отображался как элемент управления для выбора и изменения времени, а не даты, установите свойству <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> значение `true`, а свойству <xref:System.Windows.Forms.DateTimePicker.Format%2A> — значение <xref:System.Windows.Forms.DateTimePickerFormat>.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение времени с помощью элемента управления DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+## <a name="key-properties"></a><span data-ttu-id="b0b4d-107">Ключевые свойства</span><span class="sxs-lookup"><span data-stu-id="b0b4d-107">Key Properties</span></span>  
+ <span data-ttu-id="b0b4d-108">Если вы хотите <xref:System.Windows.Forms.DateTimePicker> отображаться как элемент управления для выбора или изменение значений времени вместо даты, задайте <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> свойства `true` и <xref:System.Windows.Forms.DateTimePicker.Format%2A> свойства <xref:System.Windows.Forms.DateTimePickerFormat.Time>.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-108">If you wish the <xref:System.Windows.Forms.DateTimePicker> to appear as a control for picking or editing times instead of dates, set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property to `true` and the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time>.</span></span> <span data-ttu-id="b0b4d-109">Дополнительные сведения см. [как: время отображения с помощью элемента управления DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="b0b4d-109">For more information see [How to: Display Time with the DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span></span>  
   
- Если для свойства <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> задано значение `true`, рядом с выделенной датой в элементе управления отображается поле флажка.  При установленном флажке выделенное значение даты и времени можно обновить.  Если флажок снят, отображаемое значение недоступно.  
+ <span data-ttu-id="b0b4d-110">Когда <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> свойству `true`, отображаться флажок рядом с выбранной даты в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-110">When the <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> property is set to `true`, a check box is displayed next to the selected date in the control.</span></span> <span data-ttu-id="b0b4d-111">Если флажок установлен, можно обновить выбранное значение даты и времени.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-111">When the check box is checked, the selected date-time value can be updated.</span></span> <span data-ttu-id="b0b4d-112">Если флажок снят, отображаемое значение недоступно.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-112">When the check box is empty, the value appears unavailable.</span></span>  
   
- Свойства элемента управления <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> и <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> определяют диапазон значений дат и времени.  Свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> содержит текущие дату и время, установленные для элемента управления.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).  Значения могут отображаться в четырех форматах, которые задаются свойством <xref:System.Windows.Forms.DateTimePicker.Format%2A>: <xref:System.Windows.Forms.DateTimePickerFormat>, <xref:System.Windows.Forms.DateTimePickerFormat>, <xref:System.Windows.Forms.DateTimePickerFormat> или <xref:System.Windows.Forms.DateTimePickerFormat>.  При выборе пользовательского формата необходимо задать для свойства <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> соответствующую строку.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
+ <span data-ttu-id="b0b4d-113">Элемент управления <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> и <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> определяют диапазон значений даты и времени.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-113">The control's <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> and <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> properties determine the range of dates and times.</span></span> <span data-ttu-id="b0b4d-114"><xref:System.Windows.Forms.DateTimePicker.Value%2A> Свойство содержит текущую дату и время, имеет значение элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-114">The <xref:System.Windows.Forms.DateTimePicker.Value%2A> property contains the current date and time the control is set to.</span></span> <span data-ttu-id="b0b4d-115">Дополнительные сведения см. в разделе [как: набор и возвращают даты с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="b0b4d-115">For details, see [How to: Set and Return Dates with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).</span></span> <span data-ttu-id="b0b4d-116">Значения могут отображаться в четырех форматов, которые задаются <xref:System.Windows.Forms.DateTimePicker.Format%2A> свойство: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, или <xref:System.Windows.Forms.DateTimePickerFormat.Custom>.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-116">The values can be displayed in four formats, which are set by the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, or <xref:System.Windows.Forms.DateTimePickerFormat.Custom>.</span></span> <span data-ttu-id="b0b4d-117">Если установлен пользовательский формат, необходимо задать <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> свойства соответствующую строку.</span><span class="sxs-lookup"><span data-stu-id="b0b4d-117">If a custom format is selected, you must set the <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> property to an appropriate string.</span></span> <span data-ttu-id="b0b4d-118">Дополнительные сведения см. в разделе [как: Отображение даты в формате с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="b0b4d-118">For details, see [How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).</span></span>  
   
-## См. также  
- [Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)   
- [Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a><span data-ttu-id="b0b4d-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b0b4d-119">See Also</span></span>  
+ [<span data-ttu-id="b0b4d-120">Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0b4d-120">How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ [<span data-ttu-id="b0b4d-121">Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0b4d-121">How to: Set and Return Dates with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

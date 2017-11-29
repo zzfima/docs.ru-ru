@@ -1,57 +1,57 @@
 ---
-title: "Changing the Appearance of Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, changing the appearance of"
+title: "Изменение внешнего вида Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Changing the Appearance of Windows Forms
-Внешний вид приложений Windows Forms можно настраивать различными способами. Например, можно изменять границы, прозрачность, форму, стиль или фоновое изображение.  
+# <a name="changing-the-appearance-of-windows-forms"></a><span data-ttu-id="83a55-102">Изменение внешнего вида Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83a55-102">Changing the Appearance of Windows Forms</span></span>
+<span data-ttu-id="83a55-103">Внешний вид приложений Windows Forms можно настраивать различными способами. Например, можно изменять границы, прозрачность, форму, стиль или фоновое изображение.</span><span class="sxs-lookup"><span data-stu-id="83a55-103">You can customize the look of your Windows Forms applications in many different ways, such as changing the border, opacity, shape, style, or setting a background image for your Windows Forms application.</span></span>  
   
-## В этом подразделе  
- [How to: Change the Borders of Windows Forms](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
- Показано, как изменить стиль границ формы.  
+## <a name="in-this-section"></a><span data-ttu-id="83a55-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="83a55-104">In This Section</span></span>  
+ [<span data-ttu-id="83a55-105">Практическое руководство. Изменение границ в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83a55-105">How to: Change the Borders of Windows Forms</span></span>](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
+ <span data-ttu-id="83a55-106">Показано, как изменить стиль границ формы.</span><span class="sxs-lookup"><span data-stu-id="83a55-106">Shows how to change the border style of a form.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="83a55-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="83a55-107">Reference</span></span>  
  <xref:System.Windows.Forms.Form>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ <span data-ttu-id="83a55-108">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-108">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.FormBorderStyle>  
- Описывается это перечисление и все его члены.  
+ <span data-ttu-id="83a55-109">Описывается это перечисление и все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-109">Describes this enumeration and contains descriptions of all of its members.</span></span>  
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ <span data-ttu-id="83a55-110">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-110">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Image>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ <span data-ttu-id="83a55-111">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-111">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Region>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ <span data-ttu-id="83a55-112">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-112">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Color>  
- Описывается этот класс, и приводятся ссылки на все его члены.  
+ <span data-ttu-id="83a55-113">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="83a55-113">Describes this class and has links to all of its members.</span></span>  
   
-## Связанные подразделы  
- [Adjusting the Size and Scale of Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
- Ссылки на разделы, в которых показано, как изменить размер и масштаб формы.  
+## <a name="related-sections"></a><span data-ttu-id="83a55-114">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="83a55-114">Related Sections</span></span>  
+ [<span data-ttu-id="83a55-115">Настройка размера и масштаба формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83a55-115">Adjusting the Size and Scale of Windows Forms</span></span>](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
+ <span data-ttu-id="83a55-116">Ссылки на разделы, в которых показано, как изменить размер и масштаб формы.</span><span class="sxs-lookup"><span data-stu-id="83a55-116">Contains links to topics that show how to change the size and scale of a form.</span></span>  
   
- [Объекты Graphics и Drawing в Windows Forms](../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- Ссылки на разделы, в которых описываются способы рисования в Windows Forms.  
+ [<span data-ttu-id="83a55-117">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83a55-117">Graphics and Drawing in Windows Forms</span></span>](../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ <span data-ttu-id="83a55-118">Ссылки на разделы, в которых описываются способы рисования в Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="83a55-118">Contains links to topics that describe how to perform custom drawing on Windows Forms.</span></span>  
   
- [Элементы управления Windows Forms со встроенной поддержки рисования владельцем](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- Описывается поддержка рисования владельцем в элементах управления Windows Forms.
+ [<span data-ttu-id="83a55-119">Элементы управления со встроенной поддержкой рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="83a55-119">Controls with Built-In Owner-Drawing Support</span></span>](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ <span data-ttu-id="83a55-120">Описывается поддержка рисования владельцем в элементах управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="83a55-120">List owner-draw support in Windows Forms controls.</span></span>

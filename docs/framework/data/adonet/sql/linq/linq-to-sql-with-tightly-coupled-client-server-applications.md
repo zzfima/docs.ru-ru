@@ -1,27 +1,30 @@
 ---
-title: "LINQ to SQL и тесно связанные клиент-серверные приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LINQ to SQL и тесно связанные клиентские/серверные приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e083d805-dcf6-459d-b9af-9ef0563f2dd7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e3879d8eeec498f2855ee2b540f77570ee91109f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# LINQ to SQL и тесно связанные клиент-серверные приложения
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может использоваться на среднем уровне вместе с тесно связанными интеллектуальными клиентами на уровне представления данных.  Реализация сценариев, в которых используется доступ к данным только для чтения и не выполняются проверки оптимистического параллелизма на основе исходных значений или отметок времени, представляет собой не более сложную задачу, чем сценарии без удаленного взаимодействия.  Однако, если база данных требует выполнения проверки оптимистического параллелизма на основе исходных значений, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не предоставляет того уровня поддержки кругового пути данных, который обеспечивается DataSets.  Тем не менее, средний уровень [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может обмениваться данными с клиентами на любой платформе.  
+# <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a><span data-ttu-id="5a4e2-102">LINQ to SQL и тесно связанные клиентские/серверные приложения</span><span class="sxs-lookup"><span data-stu-id="5a4e2-102">LINQ to SQL with Tightly-Coupled Client-Server Applications</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="5a4e2-103">может использоваться на среднем уровне с тесно связанными интеллектуальными клиентами на уровне представления данных.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-103"> can be used on the middle tier with tightly-coupled Smart Clients on the presentation layer.</span></span> <span data-ttu-id="5a4e2-104">Реализация сценариев, в которых используется доступ к данным только для чтения и не выполняются проверки оптимистического параллелизма на основе исходных значений или меток времени, представляет собой не более сложную задачу, чем сценарии без удаленного взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-104">In scenarios that involve read-only data access, no optimistic concurrency checks, or optimistic concurrency with timestamps, there is not much more complexity than with non-remote scenarios.</span></span> <span data-ttu-id="5a4e2-105">Однако, если база данных требует выполнения проверки оптимистического параллелизма на основе исходных значений, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не предоставляет того уровня поддержки кругового пути данных, который обеспечивается DataSets.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-105">However, when a database requires optimistic concurrency checks with original values, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not provide the level of support for round-tripping of data that you find in DataSets.</span></span> <span data-ttu-id="5a4e2-106">Тем не менее, средний уровень [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] может обмениваться данными с клиентами на любой платформе.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-106">However, a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] middle tier can exchange data with clients on any platform.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] в среде [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] не обеспечивает инфраструктуру для отслеживания состояния сущностей после их сериализации в клиента.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает ориентированные на службы архитектуры, в которых взаимодействия между уровнями данных и представлений невелики и относительно атомарны, но не выполняет никаких обратных преобразований исходных значений.  Поэтому, если вместе с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется использовать тесно связанный интеллектуальный клиент, а в базе данных используются проверки оптимистического параллелизма на основе исходных значений, необходимо реализовать собственный механизм обмена изменениями между уровнем представления данных и средним уровнем.  Стоит ли выполнять эту дополнительную работу ради преимуществ, которые предоставляет [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] на среднем уровне, должен решить разработчик системы.  С другой стороны, если в базе данных содержатся отметки времени, то нет необходимости разрабатывать пользовательскую логику отслеживания изменений.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="5a4e2-107">в [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] не предоставляет инфраструктуру для отслеживания состояния сущностей после их сериализации в клиента.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-107"> in [!INCLUDE[vs_orcas_long](../../../../../../includes/vs-orcas-long-md.md)] provides no infrastructure for tracking entity state after they have been serialized to a client.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="5a4e2-108">включает ориентированных на службы архитектуры, в где взаимодействия между уровнями данных и представлений невелики и относительно атомарны, но не выполняет никаких обратных преобразований исходных значений.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-108"> enables service-oriented architectures where interactions between the data and presentation layers are small and relatively atomic, but does not perform any round-tripping of original values.</span></span> <span data-ttu-id="5a4e2-109">Поэтому, если вместе с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требуется использовать тесно связанный интеллектуальный клиент, а в базе данных используются проверки оптимистического параллелизма на основе исходных значений, необходимо реализовать собственный механизм обмена изменениями между уровнем представления данных и средним уровнем.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-109">Therefore, if you want to use a tightly-coupled Smart Client with [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], and a database uses optimistic concurrency with original values, you will have to implement your own mechanism for communicating changes between the presentation tier and middle tier.</span></span> <span data-ttu-id="5a4e2-110">Стоит ли выполнять эту дополнительную работу ради преимуществ, которые предоставляет [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] на среднем уровне, должен решить разработчик системы.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-110">It is up to the system designer to decide whether it makes sense to do this bit of extra work in exchange for the benefits that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides on the middle tier.</span></span> <span data-ttu-id="5a4e2-111">С другой стороны, если в базе данных содержатся метки времени, то нет необходимости разрабатывать пользовательскую логику отслеживания изменений.</span><span class="sxs-lookup"><span data-stu-id="5a4e2-111">On the other hand, if the database has timestamps, then there is no need for custom change-tracking logic.</span></span>  
   
-## См. также  
- [Многоуровневые и удаленные приложения с LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)   
- [Технология LINQ to SQL в многоуровневых приложениях с веб\-службами](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)   
- [Работа с наборами данных в N\-уровневых приложениях](../Topic/Work%20with%20datasets%20in%20n-tier%20applications.md)
+## <a name="see-also"></a><span data-ttu-id="5a4e2-112">См. также</span><span class="sxs-lookup"><span data-stu-id="5a4e2-112">See Also</span></span>  
+ [<span data-ttu-id="5a4e2-113">N-уровневые и удаленные приложения и LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="5a4e2-113">N-Tier and Remote Applications with LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [<span data-ttu-id="5a4e2-114">LINQ to SQL N-уровневые веб-службы</span><span class="sxs-lookup"><span data-stu-id="5a4e2-114">LINQ to SQL N-Tier with Web Services</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
+ [<span data-ttu-id="5a4e2-115">Работа с наборами данных в N-уровневых приложениях</span><span class="sxs-lookup"><span data-stu-id="5a4e2-115">Work with datasets in n-tier applications</span></span>](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20)

@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58658b3f-c0f1-47e2-bf61-2c786e7b62b1
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f3a1957da63ed0d83f9555648b15b561ae9139c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull
-System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull  
+# <a name="systemservicemodelsecurityissuancetokenproviderservicetokencachefull"></a><span data-ttu-id="43d3f-102">System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull</span><span class="sxs-lookup"><span data-stu-id="43d3f-102">System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull</span></span>
+<span data-ttu-id="43d3f-103">System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull</span><span class="sxs-lookup"><span data-stu-id="43d3f-103">System.ServiceModel.Security.IssuanceTokenProviderServiceTokenCacheFull</span></span>  
   
-## Описание  
- Кэш IssuanceTokenProviderServiceToken полон.  
+## <a name="description"></a><span data-ttu-id="43d3f-104">Описание</span><span class="sxs-lookup"><span data-stu-id="43d3f-104">Description</span></span>  
+ <span data-ttu-id="43d3f-105">Кэш IssuanceTokenProviderServiceToken полон.</span><span class="sxs-lookup"><span data-stu-id="43d3f-105">The IssuanceTokenProviderServiceToken cache is full.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="43d3f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="43d3f-106">See Also</span></span>  
+ [<span data-ttu-id="43d3f-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="43d3f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="43d3f-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="43d3f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="43d3f-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="43d3f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,39 +1,43 @@
 ---
-title: "Практическое руководство. Создание рамки вокруг элемента управления в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], Margin - свойство"
-  - "элементы управления [Windows Forms], структуризация"
-  - "элементы управления [Windows Forms], Padding - свойство"
-  - "Margin - свойство [Windows Forms]"
-  - "поля"
-  - "поля, Windows Forms"
-  - "Padding - свойство [Windows Forms]"
-  - "заполнение, Windows Forms"
+title: "Практическое руководство. Создание рамки вокруг элемента управления в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- margins
+- controls [Windows Forms], Margin property
+- padding [Windows Forms], Windows Forms
+- controls [Windows Forms], Padding property
+- controls [Windows Forms], outlining
+- Padding property [Windows Forms]
+- margins [Windows Forms], Windows Forms
+- Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 573a27343a15ef12ad955295c3beb3fef9130023
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание рамки вокруг элемента управления в Windows Forms
-В следующем примере демонстрируется создание границы или контура вокруг элемента управления <xref:System.Windows.Forms.RichTextBox>.  В этом примере свойству <xref:System.Windows.Forms.Padding> элемента управления <xref:System.Windows.Forms.Panel> присваивается значение 5, а свойству <xref:System.Windows.Forms.Control.Dock%2A> дочернего элемента управления <xref:System.Windows.Forms.RichTextBox> присваивается значение <xref:System.Windows.Forms.DockStyle>.  Свойству <xref:System.Windows.Forms.Control.BackColor%2A> элемента управления <xref:System.Windows.Forms.Panel> присваивается значение <xref:System.Drawing.Color.Blue%2A>, что создает голубую границу вокруг элемента управления <xref:System.Windows.Forms.RichTextBox>.  
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a><span data-ttu-id="41507-102">Практическое руководство. Создание рамки вокруг элемента управления в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41507-102">How to: Create a Border Around a Windows Forms Control Using Padding</span></span>
+<span data-ttu-id="41507-103">В следующем примере кода демонстрируется создание границы или контура вокруг <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="41507-103">The following code example demonstrates how to create a border or outline around a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="41507-104">В примере задается значение <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Padding> равным 5, а свойству <xref:System.Windows.Forms.Control.Dock%2A> дочернего <xref:System.Windows.Forms.RichTextBox> управления <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="41507-104">The example sets the value of a <xref:System.Windows.Forms.Panel> control’s <xref:System.Windows.Forms.Padding> property to 5 and sets the <xref:System.Windows.Forms.Control.Dock%2A> property of a child <xref:System.Windows.Forms.RichTextBox> control to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="41507-105"><xref:System.Windows.Forms.Control.BackColor%2A> Из <xref:System.Windows.Forms.Panel> задано для элемента управления <xref:System.Drawing.Color.Blue%2A>, которая создает синяя рамка вокруг <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="41507-105">The <xref:System.Windows.Forms.Control.BackColor%2A> of the <xref:System.Windows.Forms.Panel> control is set to <xref:System.Drawing.Color.Blue%2A>, which creates a blue border around the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="41507-106">Пример</span><span class="sxs-lookup"><span data-stu-id="41507-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## См. также  
- <xref:System.Windows.Forms.Padding>   
- [Поля и заполнение в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="41507-107">См. также</span><span class="sxs-lookup"><span data-stu-id="41507-107">See Also</span></span>  
+ <xref:System.Windows.Forms.Padding>  
+ [<span data-ttu-id="41507-108">Поля и заполнение в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="41507-108">Margin and Padding in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)

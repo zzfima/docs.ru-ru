@@ -1,56 +1,62 @@
 ---
-title: "Практическое руководство. Олицетворение клиента в рамках службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, олицетворение"
-  - "олицетворение"
-  - "WCF, безопасность"
+title: "Практическое руководство. Олицетворение клиента в рамках службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, impersonation
+- impersonation
+- WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e6140e7d66ecdd905c0595cb813752d4e0a870d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Олицетворение клиента в рамках службы
-Олицетворение клиента в службе [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет службе выполнять действия от имени клиента. В случае действий, для которых предусмотрены проверки списка управления доступом \(ACL\), таким как доступ к каталогам и файлам на компьютере или доступ к базе данных SQL Server, проверка ACL выполняется с использованием клиентской учетной записи пользователя. В данном разделе представлены основные этапы установки клиентом уровня олицетворения клиента в домене Windows. Рабочий пример см. в разделе [Олицетворение клиента](../../../docs/framework/wcf/samples/impersonating-the-client.md).[!INCLUDE[crabout](../../../includes/crabout-md.md)] олицетворении клиента см. в разделе [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+# <a name="how-to-impersonate-a-client-on-a-service"></a><span data-ttu-id="b3a1d-102">Практическое руководство. Олицетворение клиента в рамках службы</span><span class="sxs-lookup"><span data-stu-id="b3a1d-102">How to: Impersonate a Client on a Service</span></span>
+<span data-ttu-id="b3a1d-103">Олицетворение клиента в службе [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяет службе выполнять действия от имени клиента.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-103">Impersonating a client on a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service enables the service to perform actions on behalf of the client.</span></span> <span data-ttu-id="b3a1d-104">В случае действий, для которых предусмотрены проверки списка управления доступом (ACL), таким как доступ к каталогам и файлам на компьютере или доступ к базе данных SQL Server, проверка ACL выполняется с использованием клиентской учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-104">For actions subject to access control list (ACL) checks, such as access to directories and files on a machine or access to a SQL Server database, the ACL check is against the client user account.</span></span> <span data-ttu-id="b3a1d-105">В данном разделе представлены основные этапы установки клиентом уровня олицетворения клиента в домене Windows.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-105">This topic shows the basic steps required to enable a client in a Windows domain to set a client impersonation level.</span></span> <span data-ttu-id="b3a1d-106">Рабочий пример см. в разделе [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-106">For a working example of this, see [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="b3a1d-107">олицетворение клиента в разделе [делегирования и олицетворения](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-107"> client impersonation, see [Delegation and Impersonation](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
 > [!NOTE]
->  Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи \(например, `Local System` или `Network Service`\), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния. WinForms или консольное приложение, как правило, выполняется от имени текущей зарегистрированной учетной записи, что позволяет олицетворить учетную запись по умолчанию. Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], размещенную в службах [!INCLUDE[iis601](../../../includes/iis601-md.md)] или IIS 7.0, клиент выполняется от имени учетной записи `Network Service` по умолчанию. Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркер контекста безопасности без отслеживания состояния. Но если клиент является страницей [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, то олицетворение клиента невозможно.[!INCLUDE[crabout](../../../includes/crabout-md.md)] использовании маркеров контекста безопасности с отслеживанием состояния в защищенном сеансе см. в разделе [Как создать маркер контекста безопасности с отслеживанием состояния для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  <span data-ttu-id="b3a1d-108">Если клиент и служба выполняются на одном компьютере и клиент выполняется от имени системной учетной записи (например, `Local System` или `Network Service`), клиент невозможно олицетворить, если установлен безопасный сеанс с маркерами контекста безопасности с отслеживанием состояния.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-108">When the client and service are running on the same computer and the client is running under a system account (that is, `Local System` or `Network Service`), the client cannot be impersonated when a secure session is established with stateful Security Context tokens.</span></span> <span data-ttu-id="b3a1d-109">WinForms или консольное приложение, как правило, выполняется от имени текущей зарегистрированной учетной записи, что позволяет олицетворить учетную запись по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-109">A WinForms or console application typically is run under the currently logged in account, so that account can be impersonated by default.</span></span> <span data-ttu-id="b3a1d-110">Если же клиент представляет собой страницу [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , размещенную в службах [!INCLUDE[iis601](../../../includes/iis601-md.md)] или IIS 7.0, клиент выполняется от имени учетной записи `Network Service` по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-110">However, when the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and that page is hosted in [!INCLUDE[iis601](../../../includes/iis601-md.md)] or IIS 7.0, then the client does run under the `Network Service` account by default.</span></span> <span data-ttu-id="b3a1d-111">Все предоставляемые системой привязки, поддерживающие защищенные сеансы, по умолчанию используют маркер контекста безопасности без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-111">All of the system-provided bindings that support secure sessions use a stateless Security Context token by default.</span></span> <span data-ttu-id="b3a1d-112">Но если клиент является страницей [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и используются защищенные сеансы с токенами контекста безопасности с отслеживанием состояния, то олицетворение клиента невозможно.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-112">However, if the client is an [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] page and secure sessions with stateful Security Context tokens are used, the client cannot be impersonated.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="b3a1d-113">с помощью маркеров контекста безопасности с отслеживанием состояния в безопасном сеансе, в разделе [как: создание токена контекста безопасности для безопасного сеанса](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-113"> using stateful Security Context tokens in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### Включение олицетворения клиента из кэшированного маркера Windows в службе  
+### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a><span data-ttu-id="b3a1d-114">Включение олицетворения клиента из кэшированного маркера Windows в службе</span><span class="sxs-lookup"><span data-stu-id="b3a1d-114">To enable impersonation of a client from a cached Windows token on a service</span></span>  
   
-1.  Создайте службу. Дополнительные сведения по этой базовой процедуре см. в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  
+1.  <span data-ttu-id="b3a1d-115">Создайте службу.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-115">Create the service.</span></span> <span data-ttu-id="b3a1d-116">Дополнительные сведения по этой базовой процедуре см. в разделе [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-116">For a tutorial of this basic procedure, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  
   
-2.  Используйте привязку, использующую проверку подлинности Windows, и создайте сеанс, такой как <xref:System.ServiceModel.NetTcpBinding> или <xref:System.ServiceModel.WSHttpBinding>.  
+2.  <span data-ttu-id="b3a1d-117">Используйте привязку, использующую проверку подлинности Windows, и создайте сеанс, такой как <xref:System.ServiceModel.NetTcpBinding> или <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-117">Use a binding that uses Windows authentication and creates a session, such as <xref:System.ServiceModel.NetTcpBinding> or <xref:System.ServiceModel.WSHttpBinding>.</span></span>  
   
-3.  При создании реализации интерфейса службы примените класс <xref:System.ServiceModel.OperationBehaviorAttribute> к методу, требующему олицетворения клиента. Задайте для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> значение <xref:System.ServiceModel.ImpersonationOption>.  
+3.  <span data-ttu-id="b3a1d-118">При создании реализации интерфейса службы примените класс <xref:System.ServiceModel.OperationBehaviorAttribute> к методу, требующему олицетворения клиента.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-118">When creating the implementation of the service's interface, apply the <xref:System.ServiceModel.OperationBehaviorAttribute> class to the method that requires client impersonation.</span></span> <span data-ttu-id="b3a1d-119">Задайте для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> значение <xref:System.ServiceModel.ImpersonationOption.Required>.</span><span class="sxs-lookup"><span data-stu-id="b3a1d-119">Set the <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> property to <xref:System.ServiceModel.ImpersonationOption.Required>.</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
-### Установка допустимого уровня олицетворения на стороне клиента  
+### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a><span data-ttu-id="b3a1d-120">Установка допустимого уровня олицетворения на стороне клиента</span><span class="sxs-lookup"><span data-stu-id="b3a1d-120">To set the allowed impersonation level on the client</span></span>  
   
-1.  Создайте код клиента службы с помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).[!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Обращение к службам с использованием клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1.  <span data-ttu-id="b3a1d-121">Создайте код клиента службы с помощью средства [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-121">Create service client code by using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="b3a1d-122">[Доступ к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-122"> [Accessing Services Using a WCF Client](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).</span></span>  
   
-2.  После создания клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] присвойте свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> одно из значений перечисления <xref:System.Security.Principal.TokenImpersonationLevel>.  
+2.  <span data-ttu-id="b3a1d-123">После создания клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] присвойте свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> класса <xref:System.ServiceModel.Security.WindowsClientCredential> одно из значений перечисления <xref:System.Security.Principal.TokenImpersonationLevel> .</span><span class="sxs-lookup"><span data-stu-id="b3a1d-123">After creating the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client, set the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property of the <xref:System.ServiceModel.Security.WindowsClientCredential> class to one of the <xref:System.Security.Principal.TokenImpersonationLevel> enumeration values.</span></span>  
   
     > [!NOTE]
-    >  Для использования <xref:System.Security.Principal.TokenImpersonationLevel> необходимо использовать согласованную проверку подлинности Kerberos \(иногда называемую *многоступенчатой* или *многоэтапной* проверкой Kerberos\). Описание этого процесса см. в разделе [Рекомендации по безопасности](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+    >  <span data-ttu-id="b3a1d-124">Для использования <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>необходимо использовать согласованную проверку подлинности Kerberos (иногда называемую *многоступенчатой* или *многоэтапной* проверкой Kerberos).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-124">To use <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, negotiated Kerberos authentication (sometimes called *multi-leg* or *multi-step* Kerberos) must be used.</span></span> <span data-ttu-id="b3a1d-125">Описание того, как это реализовать см. в разделе [рекомендации по безопасности](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="b3a1d-125">For a description of how to implement this, see [Best Practices for Security](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  
   
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
-## См. также  
- <xref:System.ServiceModel.OperationBehaviorAttribute>   
- <xref:System.Security.Principal.TokenImpersonationLevel>   
- [Олицетворение клиента](../../../docs/framework/wcf/samples/impersonating-the-client.md)   
- [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="b3a1d-126">См. также</span><span class="sxs-lookup"><span data-stu-id="b3a1d-126">See Also</span></span>  
+ <xref:System.ServiceModel.OperationBehaviorAttribute>  
+ <xref:System.Security.Principal.TokenImpersonationLevel>  
+ [<span data-ttu-id="b3a1d-127">Олицетворение клиента</span><span class="sxs-lookup"><span data-stu-id="b3a1d-127">Impersonating the Client</span></span>](../../../docs/framework/wcf/samples/impersonating-the-client.md)  
+ [<span data-ttu-id="b3a1d-128">Делегирование и олицетворение</span><span class="sxs-lookup"><span data-stu-id="b3a1d-128">Delegation and Impersonation</span></span>](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

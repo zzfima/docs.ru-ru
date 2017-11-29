@@ -1,57 +1,60 @@
 ---
-title: "Обратные вызовы сериализации, независимые от версий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "OnDeserializedAttribute [WCF]"
-  - "OnDeserializingAttribute [WCF]"
-  - "OnSerializedAttribute [WCF]"
-  - "OnSerializingAttribute [WCF]"
-  - "сериализация [WCF], установка значений по умолчанию"
+title: "Обратные вызовы сериализации, независимые от версий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- OnDeserializedAttribute [WCF]
+- OnDeserializingAttribute [WCF]
+- OnSerializingAttribute [WCF]
+- serialization [WCF], setting default values
+- OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c00cadd4b0e643e35f7f56a28760e261c423699
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обратные вызовы сериализации, независимые от версий
-Модель программирования контракта данных полностью поддерживает методы обратных вызовов независимой от версий сериализации, которые в свою очередь поддерживают классы <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+# <a name="version-tolerant-serialization-callbacks"></a><span data-ttu-id="cc1eb-102">Обратные вызовы сериализации, независимые от версий</span><span class="sxs-lookup"><span data-stu-id="cc1eb-102">Version-Tolerant Serialization Callbacks</span></span>
+<span data-ttu-id="cc1eb-103">Модель программирования контракта данных полностью поддерживает методы обратных вызовов независимой от версий сериализации, которые в свою очередь поддерживают классы <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> и <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-103">The data contract programming model fully supports the version-tolerant serialization callback methods that the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> and <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> classes support.</span></span>  
   
-## Атрибуты независимой от версий сериализации  
- Существует четыре атрибута обратных вызовов.Каждый атрибут можно применить к методу, который вызывает ядро сериализации\/десериализации в те или иные моменты времени.В таблице ниже представлены правила использования каждого атрибута.  
+## <a name="version-tolerant-attributes"></a><span data-ttu-id="cc1eb-104">Атрибуты независимой от версий сериализации</span><span class="sxs-lookup"><span data-stu-id="cc1eb-104">Version-Tolerant Attributes</span></span>  
+ <span data-ttu-id="cc1eb-105">Существует четыре атрибута обратных вызовов.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-105">There are four callback attributes.</span></span> <span data-ttu-id="cc1eb-106">Каждый атрибут можно применить к методу, который вызывает ядро сериализации/десериализации в те или иные моменты времени.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-106">Each attribute can be applied to a method that the serialization/deserialization engine calls at various times.</span></span> <span data-ttu-id="cc1eb-107">В таблице ниже представлены правила использования каждого атрибута.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-107">The table below explains when to use each attribute.</span></span>  
   
-|Атрибут|Когда вызывается соответствующий метод|  
-|-------------|--------------------------------------------|  
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Вызывается перед сериализацией типа.|  
-|<xref:System.Runtime.Serialization.OnSerializedAttribute>|Вызывается после сериализации типа.|  
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Вызывается перед десериализацией типа.|  
-|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Вызывается после десериализации типа.|  
+|<span data-ttu-id="cc1eb-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="cc1eb-108">Attribute</span></span>|<span data-ttu-id="cc1eb-109">Когда вызывается соответствующий метод</span><span class="sxs-lookup"><span data-stu-id="cc1eb-109">When the corresponding method is called</span></span>|  
+|---------------|---------------------------------------------|  
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|<span data-ttu-id="cc1eb-110">Вызывается перед сериализацией типа.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-110">Called before serializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnSerializedAttribute>|<span data-ttu-id="cc1eb-111">Вызывается после сериализации типа.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-111">Called after serializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|<span data-ttu-id="cc1eb-112">Вызывается перед десериализацией типа.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-112">Called before deserializing the type.</span></span>|  
+|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|<span data-ttu-id="cc1eb-113">Вызывается после десериализации типа.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-113">Called after deserializing the type.</span></span>|  
   
- Методы должны принимать параметр <xref:System.Runtime.Serialization.StreamingContext>.  
+ <span data-ttu-id="cc1eb-114">Методы должны принимать параметр <xref:System.Runtime.Serialization.StreamingContext>.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-114">The methods must accept a <xref:System.Runtime.Serialization.StreamingContext> parameter.</span></span>  
   
- Эти методы в первую очередь предназначены для использования с управлением версиями или инициализацией.Во время десериализации конструкторы не вызываются.Поэтому возможна некорректная инициализация элементов данных \(согласно заданным значениям по умолчанию\), если данные для этих элементов отсутствуют во входящем потоке, например, если данные поступают из предыдущей версии типа, в котором отсутствуют некоторые элементы данных.Чтобы исправить такую ситуацию, используйте метод обратных вызовов, отмеченный <xref:System.Runtime.Serialization.OnDeserializingAttribute>, как показано в следующем примере.  
+ <span data-ttu-id="cc1eb-115">Эти методы в первую очередь предназначены для использования с управлением версиями или инициализацией.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-115">These methods are primarily intended for use with versioning or initialization.</span></span> <span data-ttu-id="cc1eb-116">Во время десериализации конструкторы не вызываются.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-116">During deserialization, no constructors are called.</span></span> <span data-ttu-id="cc1eb-117">Поэтому возможна некорректная инициализация элементов данных (согласно заданным значениям по умолчанию), если данные для этих элементов отсутствуют во входящем потоке, например, если данные поступают из предыдущей версии типа, в котором отсутствуют некоторые элементы данных.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-117">Therefore, data members may not be correctly initialized (to intended default values) if the data for these members is missing in the incoming stream, for example, if the data comes from a previous version of a type that is missing some data members.</span></span> <span data-ttu-id="cc1eb-118">Чтобы исправить такую ситуацию, используйте метод обратных вызовов, отмеченный <xref:System.Runtime.Serialization.OnDeserializingAttribute>, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-118">To correct this, use the callback method marked with the <xref:System.Runtime.Serialization.OnDeserializingAttribute>, as shown in the following example.</span></span>  
   
- Для каждого типа можно отметить только один метод каждым из предыдущих атрибутов обратных вызовов.  
+ <span data-ttu-id="cc1eb-119">Для каждого типа можно отметить только один метод каждым из предыдущих атрибутов обратных вызовов.</span><span class="sxs-lookup"><span data-stu-id="cc1eb-119">You can mark only one method per type with each of the preceding callback attributes.</span></span>  
   
-### Пример  
+### <a name="example"></a><span data-ttu-id="cc1eb-120">Пример</span><span class="sxs-lookup"><span data-stu-id="cc1eb-120">Example</span></span>  
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
-## См. также  
- <xref:System.Runtime.Serialization.OnSerializingAttribute>   
- <xref:System.Runtime.Serialization.OnSerializedAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>   
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>   
- <xref:System.Runtime.Serialization.StreamingContext>   
- [Независимая от версий сериализация](../../../../docs/framework/serialization/version-tolerant-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="cc1eb-121">См. также</span><span class="sxs-lookup"><span data-stu-id="cc1eb-121">See Also</span></span>  
+ <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+ <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+ <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+ <xref:System.Runtime.Serialization.StreamingContext>  
+ [<span data-ttu-id="cc1eb-122">Независимая от версий сериализация</span><span class="sxs-lookup"><span data-stu-id="cc1eb-122">Version Tolerant Serialization</span></span>](../../../../docs/standard/serialization/version-tolerant-serialization.md)

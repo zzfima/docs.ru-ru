@@ -1,33 +1,32 @@
 ---
-title: "Сертификат безопасности сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WS-Security"
+title: "Сертификат безопасности сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 51
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0587883a7f354ec03e3fd47ea362b93f006028ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сертификат безопасности сообщений
-В этом образце показано, как реализовать приложение, использующее протокол WS\-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера.В этом образце используются параметры по умолчанию, обеспечивающие подписывание и шифрование всех сообщений приложения, которыми обмениваются клиент и сервер.Этот образец основан в примере [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) и содержит консольную программу клиента и библиотеку службы, размещаемую в службах IIS.Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".  
+# <a name="message-security-certificate"></a><span data-ttu-id="c0a70-102">Сертификат безопасности сообщений</span><span class="sxs-lookup"><span data-stu-id="c0a70-102">Message Security Certificate</span></span>
+<span data-ttu-id="c0a70-103">В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-103">This sample demonstrates how to implement an application that uses WS-Security with X.509 v3 certificate authentication for the client and requires server authentication using the server's X.509 v3 certificate.</span></span> <span data-ttu-id="c0a70-104">В этом образце используются параметры по умолчанию, обеспечивающие подписывание и шифрование всех сообщений приложения, которыми обмениваются клиент и сервер.</span><span class="sxs-lookup"><span data-stu-id="c0a70-104">This sample uses default settings such that all application messages between the client and server are signed and encrypted.</span></span> <span data-ttu-id="c0a70-105">Этот пример построен на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) и содержит консольную программу клиента и библиотеку службы, размещенные в Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="c0a70-105">This sample is based on the [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) and consists of a client console program and a service library hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="c0a70-106">Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="c0a70-106">The service implements a contract that defines a request-reply communication pattern.</span></span>  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="c0a70-107">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="c0a70-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- В этом образце демонстрируется управление проверкой подлинности с помощью файла конфигурации, а также получение удостоверения вызывающего объекта из контекста безопасности, как показано в следующем образце кода.  
+ <span data-ttu-id="c0a70-108">В этом образце демонстрируется управление проверкой подлинности с помощью файла конфигурации, а также получение удостоверения вызывающего объекта из контекста безопасности, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="c0a70-108">The sample demonstrates controlling authentication by using configuration and how to obtain the caller’s identity from the security context, as shown in the following sample code.</span></span>  
   
 ```  
 public class CalculatorService : ICalculator  
@@ -43,9 +42,9 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Служба предоставляет одну конечную точку для взаимодействия со службой и одну конечную точку для предоставления документа WSDL службы с использованием протокола WS\-MetadataExchange, определенного с помощью файла конфигурации \(Web.config\).Конечная точка состоит из адреса, привязки и контракта.Привязка настраивается с помощью стандартного элемента [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), который по умолчанию использует безопасность сообщений.В этом образце атрибуту `clientCredentialType` присваивается значение Certificate для запроса проверки подлинности клиента.  
+ <span data-ttu-id="c0a70-109">Служба предоставляет одну конечную точку для взаимодействия со службой и одну конечную точку для предоставления документа WSDL службы с использованием протокола WS-MetadataExchange, определенного с помощью файла конфигурации (Web.config).</span><span class="sxs-lookup"><span data-stu-id="c0a70-109">The service exposes one endpoint for communicating with the service and one endpoint for exposing the service's WSDL document using the WS-MetadataExchange protocol, defined by using the configuration file (Web.config).</span></span> <span data-ttu-id="c0a70-110">Конечная точка состоит из адреса, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="c0a70-110">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="c0a70-111">Привязка настраивается с помощью стандартного [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент, который по умолчанию использует безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="c0a70-111">The binding is configured with a standard [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element, which defaults to using message security.</span></span> <span data-ttu-id="c0a70-112">В этом образце атрибуту `clientCredentialType` присваивается значение Certificate для запроса проверки подлинности клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-112">This sample sets the `clientCredentialType` attribute to Certificate to require client authentication.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <protocolMapping>  
       <add scheme="http" binding="wsHttpBinding"/>  
@@ -92,12 +91,11 @@ public class CalculatorService : ICalculator
       </serviceBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
- Поведение задает учетные данные службы, используемые при проверке подлинности службы клиентом.Имя субъекта сертификата сервера задается в атрибуте `findValue` элемента [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ <span data-ttu-id="c0a70-113">Поведение задает учетные данные службы, используемые при проверке подлинности службы клиентом.</span><span class="sxs-lookup"><span data-stu-id="c0a70-113">The behavior specifies the service's credentials that are used when the client authenticates the service.</span></span> <span data-ttu-id="c0a70-114">Указано имя субъекта сертификата сервера в `findValue` атрибута в [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-114">The server certificate subject name is specified in the `findValue` attribute in the [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) element.</span></span>  
   
-```  
+```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
 <behaviors>  
       <serviceBehaviors>  
@@ -126,12 +124,11 @@ public class CalculatorService : ICalculator
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
 ```  
   
- Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта.Привязка клиента настраивается с помощью соответствующих режимов безопасности и проверки подлинности.Если сценарий выполняется на нескольких компьютерах, убедитесь, что адрес конечной точки службы изменен соответствующим образом.  
+ <span data-ttu-id="c0a70-115">Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="c0a70-115">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="c0a70-116">Привязка клиента настраивается с помощью соответствующих режимов безопасности и проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c0a70-116">The client binding is configured with the appropriate security mode and authentication mode.</span></span> <span data-ttu-id="c0a70-117">Если сценарий выполняется на нескольких компьютерах, убедитесь, что адрес конечной точки службы изменен соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="c0a70-117">When running in a cross-computer scenario, ensure that the service endpoint address is changed accordingly.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <!-- Use a behavior to configure the client certificate to present to the service. -->  
@@ -153,12 +150,11 @@ public class CalculatorService : ICalculator
     </bindings>  
 ...  
 </system.serviceModel>  
-  
 ```  
   
- Реализация клиента позволяет задать сертификат для использования посредством файла конфигурации или кода.В следующем образце показано, как задать сертификат для использования в файле конфигурации.  
+ <span data-ttu-id="c0a70-118">Реализация клиента позволяет задать сертификат для использования посредством файла конфигурации или кода.</span><span class="sxs-lookup"><span data-stu-id="c0a70-118">The client implementation can set the certificate to use, either through the configuration file or through code.</span></span> <span data-ttu-id="c0a70-119">В следующем образце показано, как задать сертификат для использования в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c0a70-119">The following sample shows how to set the certificate to use in the configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   ...  
   
@@ -189,10 +185,9 @@ public class CalculatorService : ICalculator
     </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
- В следующем образце показано, как вызвать службу в программе.  
+ <span data-ttu-id="c0a70-120">В следующем образце показано, как вызвать службу в программе.</span><span class="sxs-lookup"><span data-stu-id="c0a70-120">The following sample shows how to call the service in your program.</span></span>  
   
 ```  
 // Create a client.  
@@ -205,7 +200,7 @@ Console.WriteLine(client.GetCallerIdentity());
 client.Close();  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="c0a70-121">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-121">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="c0a70-122">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-122">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 CN=client.com  
@@ -216,11 +211,11 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Пакетный файл Setup.bat, входящий в состав образцов реализации безопасности сообщений, позволяет настроить для клиента и сервера соответствующие сертификаты, необходимые для выполнения размещенного приложения, для которого требуется обеспечение безопасности на основе сертификата.Пакетный файл можно выполнять в трех режимах.Чтобы выполнить пакетный файл в режиме одного компьютера, в командной строке среды Visual Studio введите **setup.bat**, для выполнения в режиме службы введите **setup.bat service**, в режиме клиента введите **setup.bat client**.Режимы клиента и сервера используются для выполнения образца на нескольких компьютерах.Подробные сведения см. в описании процедуры настройки в конце этого раздела.Ниже представлен краткий обзор различных разделов пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.  
+ <span data-ttu-id="c0a70-123">Пакетный файл Setup.bat, входящий в состав образцов реализации безопасности сообщений, позволяет настроить для клиента и сервера соответствующие сертификаты, необходимые для выполнения размещенного приложения, для которого требуется обеспечение безопасности на основе сертификата.</span><span class="sxs-lookup"><span data-stu-id="c0a70-123">The Setup.bat batch file included with the Message Security samples enables you to configure the client and server with relevant certificates to run a hosted application that requires certificate-based security.</span></span> <span data-ttu-id="c0a70-124">Пакетный файл можно выполнять в трех режимах.</span><span class="sxs-lookup"><span data-stu-id="c0a70-124">The batch file can be run in three modes.</span></span> <span data-ttu-id="c0a70-125">Для запуска в режиме одного компьютера тип **setup.bat** в командной строке Visual Studio; для типа службы режим **setup.bat service**; и в режиме клиента введите **setup.bat client** .</span><span class="sxs-lookup"><span data-stu-id="c0a70-125">To run in single-computer mode type **setup.bat** in a Visual Studio Command Prompt ; for service mode type **setup.bat service**; and for client mode type **setup.bat client**.</span></span> <span data-ttu-id="c0a70-126">Режимы клиента и сервера используются для выполнения образца на нескольких компьютерах.</span><span class="sxs-lookup"><span data-stu-id="c0a70-126">Use the client and server mode when running the sample across computers.</span></span> <span data-ttu-id="c0a70-127">Подробные сведения см. в описании процедуры настройки в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="c0a70-127">See the setup procedure at the end of this topic for details.</span></span> <span data-ttu-id="c0a70-128">Ниже представлен краткий обзор различных разделов пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c0a70-128">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in appropriate configuration:</span></span>  
   
--   Создание сертификата клиента.  
+-   <span data-ttu-id="c0a70-129">Создание сертификата клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-129">Creating the client certificate.</span></span>  
   
-     Следующая строка пакетного файла создает сертификат клиента.В качестве имени субъекта создаваемого сертификата используется указанное имя клиента.Сертификат сохраняется в хранилище `My` в расположении `CurrentUser`.  
+     <span data-ttu-id="c0a70-130">Следующая строка пакетного файла создает сертификат клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-130">The following line in the batch file creates the client certificate.</span></span> <span data-ttu-id="c0a70-131">В качестве имени субъекта создаваемого сертификата используется указанное имя клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-131">The client name specified is used in the subject name of the certificate created.</span></span> <span data-ttu-id="c0a70-132">Сертификат сохраняется в хранилище `My` в расположении `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="c0a70-132">The certificate is stored in `My` store at the `CurrentUser` store location.</span></span>  
   
     ```  
     echo ************  
@@ -229,9 +224,9 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   Установка сертификата клиента в хранилище доверенных сертификатов сервера.  
+-   <span data-ttu-id="c0a70-133">Установка сертификата клиента в хранилище доверенных сертификатов сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-133">Installing the client certificate into the server’s trusted certificate store.</span></span>  
   
-     Следующая строка пакетного файла копирует сертификат клиента в хранилище TrustedPeople сервера, чтобы сервер мог принимать соответствующие решения о доверии или недоверии.Чтобы установленный в хранилище TrustedPeople сертификат был доверенным для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], для режима проверки сертификата клиента должно быть задано значение `PeerOrChainTrust` или `PeerTrust`.Чтобы узнать, как это сделать с помощью файла конфигурации, см. приведенный выше образец конфигурации службы.  
+     <span data-ttu-id="c0a70-134">Следующая строка пакетного файла копирует сертификат клиента в хранилище TrustedPeople сервера, чтобы сервер мог принимать соответствующие решения о доверии или недоверии.</span><span class="sxs-lookup"><span data-stu-id="c0a70-134">The following line in the batch file copies the client certificate into the server's TrustedPeople store so that the server can make the relevant trust or no-trust decisions.</span></span> <span data-ttu-id="c0a70-135">Чтобы установленный в хранилище TrustedPeople сертификат был доверенным для службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], для режима проверки сертификата клиента должно быть задано значение `PeerOrChainTrust` или `PeerTrust`.</span><span class="sxs-lookup"><span data-stu-id="c0a70-135">In order for a certificate installed in the TrustedPeople store to be trusted by a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service, the client certificate validation mode must be set to `PeerOrChainTrust` or `PeerTrust`.</span></span> <span data-ttu-id="c0a70-136">Чтобы узнать, как это сделать с помощью файла конфигурации, см. приведенный выше образец конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-136">See the previous service configuration sample to learn how this can be done by using a configuration file.</span></span>  
   
     ```  
     echo ************  
@@ -240,9 +235,9 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
     ```  
   
--   Создание сертификата сервера.  
+-   <span data-ttu-id="c0a70-137">Создание сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-137">Creating the server certificate.</span></span>  
   
-     Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера.  
+     <span data-ttu-id="c0a70-138">Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-138">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span>  
   
     ```  
     echo ************  
@@ -254,19 +249,19 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     Переменная %SERVER\_NAME% задает имя сервера.Сертификат хранится в хранилище LocalMachine.Если пакетный файл Setup.bat запускается с аргументом service \(например, **setup.bat service**\), переменная %SERVER\_NAME% содержит полное имя домена компьютера.В противном случае по умолчанию используется значение localhost.  
+     <span data-ttu-id="c0a70-139">Переменная %SERVER_NAME% задает имя сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-139">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="c0a70-140">Сертификат хранится в хранилище LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="c0a70-140">The certificate is stored in the LocalMachine store.</span></span> <span data-ttu-id="c0a70-141">Если пакетный файл Setup.bat запускается с аргументом service (например, **setup.bat service**) % SERVER_NAME % содержит полное доменное имя компьютера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-141">If the Setup.bat batch file is run with an argument of service (such as, **setup.bat service**) the %SERVER_NAME% contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="c0a70-142">В противном случае по умолчанию используется значение localhost.</span><span class="sxs-lookup"><span data-stu-id="c0a70-142">Otherwise it defaults to localhost.</span></span>  
   
--   Установка сертификата сервера в хранилище доверенных сертификатов клиента.  
+-   <span data-ttu-id="c0a70-143">Установка сертификата сервера в хранилище доверенных сертификатов клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-143">Installing the server certificate into the client’s trusted certificate store.</span></span>  
   
-     Следующая строка копирует сертификат сервера в хранилище доверенных лиц клиента.Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
+     <span data-ttu-id="c0a70-144">Следующая строка копирует сертификат сервера в хранилище доверенных лиц клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-144">The following line copies the server certificate into the client trusted people store.</span></span> <span data-ttu-id="c0a70-145">Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-145">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="c0a70-146">Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.</span><span class="sxs-lookup"><span data-stu-id="c0a70-146">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft-issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Предоставление разрешений в отношении закрытого ключа сертификата.  
+-   <span data-ttu-id="c0a70-147">Предоставление разрешений в отношении закрытого ключа сертификата.</span><span class="sxs-lookup"><span data-stu-id="c0a70-147">Granting permissions on the certificate's private key.</span></span>  
   
-     Следующие строки файла Setup.bat открывают доступ к сертификату сервера, расположенному в хранилище LocalMachine, для учетной записи рабочего процесса [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+     <span data-ttu-id="c0a70-148">Следующие строки файла Setup.bat открывают доступ к сертификату сервера, расположенному в хранилище LocalMachine, для учетной записи рабочего процесса [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c0a70-148">The following lines in the Setup.bat file make the server certificate stored in the LocalMachine store accessible to the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] worker process account.</span></span>  
   
     ```  
     echo ************  
@@ -280,72 +275,72 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  Если используется в англоязычном\(не американском\) выпуске Windows, необходимо изменить файл Setup.bat и заменить имя учетной записи «NT AUTHORITY\\NETWORK SERVICE» своим региональным эквивалентом.  
+    >  <span data-ttu-id="c0a70-149">Если используется в англоязычном (не американском) выпуске Windows, необходимо изменить файл Setup.bat и заменить имя учетной записи «NT AUTHORITY\NETWORK SERVICE» своим региональным эквивалентом.</span><span class="sxs-lookup"><span data-stu-id="c0a70-149">If you are using a non-U.S. English edition of Windows, you must edit the Setup.bat file and replace the "NT AUTHORITY\NETWORK SERVICE" account name with your regional equivalent.</span></span>  
   
 > [!NOTE]
->  Средства, используемые в этом пакетном файле, расположены в каталоге C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\tools или C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0\\bin.Один из этих каталогов должен быть указан в системном пути.Если установлена среда Visual Studio, самым простым способом получения этого каталога в пути является открытие командной строки Visual Studio.Выберите пункт **Пуск**, а затем пункт **Все программы**, **Visual Studio 2012**, **Инструменты**.В командной строке уже должны быть настроены соответствующие пути.В противном случае необходимо вручную добавить соответствующий каталог в путь.  
+>  <span data-ttu-id="c0a70-150">Средства, используемые в этом пакетном файле, расположены в каталоге C:\Program Files\Microsoft Visual Studio 8\Common7\tools или C:\Program Files\Microsoft SDKs\Windows\v6.0\bin.</span><span class="sxs-lookup"><span data-stu-id="c0a70-150">The tools used in this batch file are located in either C:\Program Files\Microsoft Visual Studio 8\Common7\tools or C:\Program Files\Microsoft SDKs\Windows\v6.0\bin.</span></span> <span data-ttu-id="c0a70-151">Один из этих каталогов должен быть указан в системном пути.</span><span class="sxs-lookup"><span data-stu-id="c0a70-151">One of these directories must be in your system path.</span></span> <span data-ttu-id="c0a70-152">Если установлена среда Visual Studio, самым простым способом получения этого каталога в пути является открытие командной строки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c0a70-152">If you have Visual Studio installed, the easiest way to get this directory in your path is to open the Visual Studio Command Prompt.</span></span> <span data-ttu-id="c0a70-153">Нажмите кнопку **запустить**, а затем выберите **все программы**, **Visual Studio 2012**, **средства**.</span><span class="sxs-lookup"><span data-stu-id="c0a70-153">Click **Start**, and then select **All Programs**, **Visual Studio 2012**, **Tools**.</span></span> <span data-ttu-id="c0a70-154">В командной строке уже должны быть настроены соответствующие пути.</span><span class="sxs-lookup"><span data-stu-id="c0a70-154">This command prompt has the appropriate paths already configured.</span></span> <span data-ttu-id="c0a70-155">В противном случае необходимо вручную добавить соответствующий каталог в путь.</span><span class="sxs-lookup"><span data-stu-id="c0a70-155">Otherwise you must add the appropriate directory to your path manually.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением работы проверьте наличие следующего \(предусмотренного по умолчанию\) каталога:  
+>  <span data-ttu-id="c0a70-156">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="c0a70-156">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c0a70-157">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="c0a70-157">Check for the following (default) directory before continuing:</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец находится в следующем каталоге:  
+>  <span data-ttu-id="c0a70-158">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="c0a70-158">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c0a70-159">Этот образец находится в следующем каталоге:</span><span class="sxs-lookup"><span data-stu-id="c0a70-159">This sample is located in the following directory:</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c0a70-160">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="c0a70-160">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнена процедура, описанная в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="c0a70-161">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c0a70-161">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="c0a70-162">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c0a70-162">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### Запуск образца на одном компьютере  
+### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="c0a70-163">Запуск образца на одном компьютере</span><span class="sxs-lookup"><span data-stu-id="c0a70-163">To run the sample on the same computer</span></span>  
   
-1.  Откройте командную строку Visual Studio с правами администратора и запустите файл Setup.bat из папки установки образцов.При этом устанавливаются все сертификаты, необходимые для запуска образца.  
+1.  <span data-ttu-id="c0a70-164">Откройте командную строку Visual Studio с правами администратора и запустите файл Setup.bat из папки установки образцов.</span><span class="sxs-lookup"><span data-stu-id="c0a70-164">Open a Visual Studio Command Prompt  with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="c0a70-165">При этом устанавливаются все сертификаты, необходимые для выполнения образца.</span><span class="sxs-lookup"><span data-stu-id="c0a70-165">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Пакетный файл Setup.bat предназначен для запуска из командной строки Visual Studio.Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK.Эта переменная среды автоматически устанавливается в командной строке Visual Studio 2010.  
+    >  <span data-ttu-id="c0a70-166">Пакетный файл Setup.bat предназначен для запуска из командной строки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c0a70-166">The Setup.bat batch file is designed to be run from a Visual Studio Command Prompt .</span></span> <span data-ttu-id="c0a70-167">Необходимо, чтобы переменная среды path указывала на каталог, в котором установлен пакет SDK.</span><span class="sxs-lookup"><span data-stu-id="c0a70-167">It requires that the path environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="c0a70-168">Эта переменная среды автоматически устанавливается в командной строке Visual Studio 2010.</span><span class="sxs-lookup"><span data-stu-id="c0a70-168">This environment variable is automatically set within a Visual Studio Command Prompt (2010).</span></span>  
   
-2.  Проверьте доступ к службе с помощью браузера путем ввода адреса `http://localhost/servicemodelsamples/service.svc`.  
+2.  <span data-ttu-id="c0a70-169">Проверка доступа к службе с помощью браузера путем ввода адреса `http://localhost/servicemodelsamples/service.svc`.</span><span class="sxs-lookup"><span data-stu-id="c0a70-169">Verify access to the service using a browser by entering the address `http://localhost/servicemodelsamples/service.svc`.</span></span>  
   
-3.  Запустите программу Client.exe из каталога \\client\\bin.Действия клиента отображаются в консольном приложении клиента.  
+3.  <span data-ttu-id="c0a70-170">Запустите программу Client.exe из каталога \client\bin.</span><span class="sxs-lookup"><span data-stu-id="c0a70-170">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="c0a70-171">Действия клиента отображаются в консольном приложении клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-171">Client activity is displayed on the client console application.</span></span>  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  <span data-ttu-id="c0a70-172">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="c0a70-172">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### Запуск образца на нескольких компьютерах  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="c0a70-173">Запуск образца на нескольких компьютерах</span><span class="sxs-lookup"><span data-stu-id="c0a70-173">To run the sample across computers</span></span>  
   
-1.  Создайте каталог на компьютере службы.Создайте для этого каталога виртуальное приложение servicemodelsamples, с помощью средства управления службами IIS.  
+1.  <span data-ttu-id="c0a70-174">Создайте каталог на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-174">Create a directory on the service computer.</span></span> <span data-ttu-id="c0a70-175">Создайте для этого каталога виртуальное приложение servicemodelsamples, с помощью средства управления службами IIS.</span><span class="sxs-lookup"><span data-stu-id="c0a70-175">Create a virtual application named servicemodelsamples for this directory by using the Internet Information Services (IIS) management tool.</span></span>  
   
-2.  Скопируйте файлы служебной программы из каталога «\\inetpub\\wwwroot\\servicemodelsamples» в виртуальный каталог на компьютере службы.Убедитесь, что скопированы все файлы из подкаталога \\bin.Также скопируйте файлы Setup.bat, Cleanup.bat и ImportClientCert.bat на компьютер службы.  
+2.  <span data-ttu-id="c0a70-176">Скопируйте файлы служебной программы из каталога «\inetpub\wwwroot\servicemodelsamples» в виртуальный каталог на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-176">Copy the service program files from \inetpub\wwwroot\servicemodelsamples to the virtual directory on the service computer.</span></span> <span data-ttu-id="c0a70-177">Убедитесь, что скопированы все файлы из подкаталога \bin.</span><span class="sxs-lookup"><span data-stu-id="c0a70-177">Ensure that you copy the files in the \bin subdirectory.</span></span> <span data-ttu-id="c0a70-178">Также скопируйте файлы Setup.bat, Cleanup.bat и ImportClientCert.bat на компьютер службы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-178">Also copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the service computer.</span></span>  
   
-3.  Создайте на клиентском компьютере каталог для двоичных файлов клиента.  
+3.  <span data-ttu-id="c0a70-179">Создайте на клиентском компьютере каталог для двоичных файлов клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-179">Create a directory on the client computer for the client binaries.</span></span>  
   
-4.  Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента.Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
+4.  <span data-ttu-id="c0a70-180">Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента.</span><span class="sxs-lookup"><span data-stu-id="c0a70-180">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="c0a70-181">Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="c0a70-181">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  На сервере откройте командную строку Visual Studio с правами администратора и выполните команду **setup.bat service**.При запуске команды **setup.bat** с аргументом **service** создается сертификат службы с полным именем домена компьютера и экспортируется в файл с именем Service.cer.  
+5.  <span data-ttu-id="c0a70-182">На сервере, выполните **setup.bat service** командную строку Visual Studio с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="c0a70-182">On the server, run **setup.bat service** in a Visual Studio command prompt with administrator privileges.</span></span> <span data-ttu-id="c0a70-183">Под управлением **setup.bat** с **службы** аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.</span><span class="sxs-lookup"><span data-stu-id="c0a70-183">Running **setup.bat** with the **service** argument creates a service certificate with the fully-qualified domain name of the computer and exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  Внесите в файл Web.config изменения в соответствии с новым именем сертификата \(в атрибуте `findValue` в [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), которое совпадает с полным именем домена компьютера.  
+6.  <span data-ttu-id="c0a70-184">Изменение файла Web.config, для отражения нового имени сертификата (в `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) которого совпадает со значением полное доменное имя компьютера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-184">Edit Web.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span>  
   
-7.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
+7.  <span data-ttu-id="c0a70-185">Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.</span><span class="sxs-lookup"><span data-stu-id="c0a70-185">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  На клиентском компьютере выполните команду **setup.bat client** с правами администратора из командной строки Visual Studio.При выполнении команды **setup.bat** с аргументом **client** создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.  
+8.  <span data-ttu-id="c0a70-186">На компьютере клиента, запустите **setup.bat client** командную строку Visual Studio с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="c0a70-186">On the client, run **setup.bat client** in a Visual Studio command prompt with administrator privileges.</span></span> <span data-ttu-id="c0a70-187">Под управлением **setup.bat** с **клиента** создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.</span><span class="sxs-lookup"><span data-stu-id="c0a70-187">Running **setup.bat** with the **client** argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.Для этого замените имя localhost полным доменным именем сервера.  
+9. <span data-ttu-id="c0a70-188">В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.</span><span class="sxs-lookup"><span data-stu-id="c0a70-188">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="c0a70-189">Для этого замените имя localhost полным доменным именем сервера.</span><span class="sxs-lookup"><span data-stu-id="c0a70-189">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
+10. <span data-ttu-id="c0a70-190">Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.</span><span class="sxs-lookup"><span data-stu-id="c0a70-190">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. На клиентском компьютере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser \- TrustedPeople.  
+11. <span data-ttu-id="c0a70-191">На клиентском компьютере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="c0a70-191">On the client, run ImportServiceCert.bat in a Visual Studio command prompt with administrative privileges.</span></span> <span data-ttu-id="c0a70-192">Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="c0a70-192">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. На сервере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.При этом импортируется сертификат клиента из файла Client.cer в хранилище «LocalMachine — TrustedPeople».  
+12. <span data-ttu-id="c0a70-193">На сервере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="c0a70-193">On the server, run ImportClientCert.bat in a Visual Studio command prompt with administrative privileges.</span></span> <span data-ttu-id="c0a70-194">При этом импортируется сертификат клиента из файла Client.cer в хранилище «LocalMachine - TrustedPeople».</span><span class="sxs-lookup"><span data-stu-id="c0a70-194">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. На клиентском компьютере из окна командной строки запустите программу Client.exe.Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. <span data-ttu-id="c0a70-195">На клиентском компьютере из окна командной строки запустите программу Client.exe.</span><span class="sxs-lookup"><span data-stu-id="c0a70-195">On the client computer, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="c0a70-196">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="c0a70-196">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### Очистка после образца  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="c0a70-197">Очистка после образца</span><span class="sxs-lookup"><span data-stu-id="c0a70-197">To clean up after the sample</span></span>  
   
--   После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
+-   <span data-ttu-id="c0a70-198">После завершения работы образца запустите в папке образцов файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="c0a70-198">Run Cleanup.bat in the samples folder after you have finished running the sample.</span></span>  
   
     > [!NOTE]
-    >  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах.Если образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, запускались на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser — TrustedPeople».Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  <span data-ttu-id="c0a70-199">Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах.</span><span class="sxs-lookup"><span data-stu-id="c0a70-199">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="c0a70-200">Если образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, запускались на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser - TrustedPeople».</span><span class="sxs-lookup"><span data-stu-id="c0a70-200">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="c0a70-201">Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="c0a70-201">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="c0a70-202">См. также</span><span class="sxs-lookup"><span data-stu-id="c0a70-202">See Also</span></span>

@@ -1,73 +1,80 @@
 ---
-title: "&lt;serviceSecurityAudit&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;serviceSecurityAudit&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 17
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f0c708c19761f6086e1b5c2fdd15904c76fe3de9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceSecurityAudit&gt;
-Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.  
+# <a name="ltservicesecurityauditgt"></a><span data-ttu-id="33691-102">&lt;serviceSecurityAudit&gt;</span><span class="sxs-lookup"><span data-stu-id="33691-102">&lt;serviceSecurityAudit&gt;</span></span>
+<span data-ttu-id="33691-103">Задает параметры, позволяющие проводить аудит событий безопасности во время обслуживания.</span><span class="sxs-lookup"><span data-stu-id="33691-103">Specifies settings that enable auditing of security events during service operations.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="33691-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="33691-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="33691-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="33691-105">\<behaviors></span></span>  
+<span data-ttu-id="33691-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="33691-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="33691-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="33691-107">\<behavior></span></span>  
+<span data-ttu-id="33691-108">\<serviceSecurityAudit ></span><span class="sxs-lookup"><span data-stu-id="33691-108">\<serviceSecurityAudit></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="33691-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="33691-109">Syntax</span></span>  
   
+```xml  
 <serviceSecurityAudit   
    auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessAndFailure"  
-   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessAndFailure"  
+   messageAuthenticationAuditLevel= None/Success/Failure/SuccessAndFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessAndFailure"  
    suppressAuditFailure="Boolean"  
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="33691-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="33691-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="33691-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="33691-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="33691-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="33691-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|auditLogLocation|Задает местоположение журнала аудита.  Допустимы следующие значения:<br /><br /> -   Default: в ОС Windows XP события безопасности записываются в журнал приложений, а в Windows Server 2003 и Windows Vista \- в журнал событий.<br />-   Application: события аудита записываются в журнал событий приложений.<br />-   Security: события аудита записываются в журнал событий безопасности.<br /><br /> Значением по умолчанию является Default.  Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLogLocation>.|  
-|suppressAuditFailure|Логическое значение, задающее поведение для подавления ошибок записи в журнал аудита.<br /><br /> Приложения должны уведомляться об ошибках записи в журнал аудита.  Если в приложении не предусмотрена обработка ошибок аудита, необходимо использовать этот атрибут для подавления ошибок записи в журнал аудита.<br /><br /> Если этот атрибут имеет значение `true`, исключения, кроме OutOfMemoryException, StackOverFlowException, ThreadAbortException и ArgumentException, которые являются результатом попыток записи событий аудита, обрабатываются системой и не распространяются на приложение.  Если значением этого атрибута является `false`, все исключения, которые являются результатом попыток записи событий аудита, пропускаются в приложение.<br /><br /> Значение по умолчанию — `true`.|  
-|serviceAuthorizationAuditLevel|Задает типы событий авторизации, записываемых в журнал аудита.  Допустимы следующие значения:<br /><br /> -   None: аудит событий авторизации службы не проводится.<br />-   Success: аудит выполняется только в отношении событий успешной авторизации службы.<br />-   Failure: аудит выполняется только в отношении событий неудачной авторизации службы.<br />-   SuccessAndFailure: выполняется аудит событий как успешной, так и неудачной авторизации службы.<br /><br /> По умолчанию используется значение None.  Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Задает тип событий аудита проверки подлинности сообщений, заносимых в журнал.  Допустимы следующие значения:<br /><br /> -   None: события аудита не создаются.<br />-   Success: регистрируются только успешные события системы безопасности \(полная проверка, включая проверку сигнатуры сообщения, проверку шифрования и маркера\).<br />-   Failure: в журнал заносятся только ошибки.<br />-   SuccessAndFailure: в журнал заносятся как успешные события, так и ошибки.<br /><br /> По умолчанию используется значение None.  Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.|  
+|<span data-ttu-id="33691-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="33691-113">Attribute</span></span>|<span data-ttu-id="33691-114">Описание</span><span class="sxs-lookup"><span data-stu-id="33691-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="33691-115">auditLogLocation</span><span class="sxs-lookup"><span data-stu-id="33691-115">auditLogLocation</span></span>|<span data-ttu-id="33691-116">Задает местоположение журнала аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-116">Specifies the location of the audit log.</span></span> <span data-ttu-id="33691-117">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="33691-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="33691-118">-По умолчанию: События безопасности записываются в журнал приложений в Windows XP и в журнал событий в Windows Server 2003 и Windows Vista.</span><span class="sxs-lookup"><span data-stu-id="33691-118">-   Default: Security events are written to the application log on Windows XP, and to the Event Log on Windows Server 2003 and Windows Vista.</span></span><br /><span data-ttu-id="33691-119">-Application: События аудита записываются в журнал событий приложения.</span><span class="sxs-lookup"><span data-stu-id="33691-119">-   Application: Audit events are written to the Application Event Log.</span></span><br /><span data-ttu-id="33691-120">-Security: События аудита записываются в журнал событий безопасности.</span><span class="sxs-lookup"><span data-stu-id="33691-120">-   Security: Audit events are written to the Security Event Log.</span></span><br /><br /> <span data-ttu-id="33691-121">Значением по умолчанию является Default.</span><span class="sxs-lookup"><span data-stu-id="33691-121">The default value is Default.</span></span> <span data-ttu-id="33691-122">Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLogLocation>.</span><span class="sxs-lookup"><span data-stu-id="33691-122">For more information, see <xref:System.ServiceModel.AuditLogLocation>.</span></span>|  
+|<span data-ttu-id="33691-123">suppressAuditFailure</span><span class="sxs-lookup"><span data-stu-id="33691-123">suppressAuditFailure</span></span>|<span data-ttu-id="33691-124">Логическое значение, задающее поведение для подавления ошибок записи в журнал аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-124">A Boolean value that specifies the behavior for suppressing failures of writing to the audit log.</span></span><br /><br /> <span data-ttu-id="33691-125">Приложения должны уведомляться об ошибках записи в журнал аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-125">Applications should be notified for failures of writing to the audit log.</span></span> <span data-ttu-id="33691-126">Если в приложении не предусмотрена обработка ошибок аудита, необходимо использовать этот атрибут для подавления ошибок записи в журнал аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-126">If your application is not designed to handle audit failures, you should use this attribute to suppress failures in writing to the audit log.</span></span><br /><br /> <span data-ttu-id="33691-127">Если этот атрибут имеет значение `true`, исключения, кроме OutOfMemoryException, StackOverFlowException, ThreadAbortException и ArgumentException, которые являются результатом попыток записи событий аудита, обрабатываются системой и не распространяются на приложение.</span><span class="sxs-lookup"><span data-stu-id="33691-127">If this attribute is `true`, exceptions other than OutOfMemoryException, StackOverFlowException, ThreadAbortException, and ArgumentException that result from attempts to write audit events are handled by the system, and are not propagated to the application.</span></span> <span data-ttu-id="33691-128">Если значением этого атрибута является `false`, все исключения, которые являются результатом попыток записи событий аудита, пропускаются в приложение.</span><span class="sxs-lookup"><span data-stu-id="33691-128">If this attribute is `false`, all exceptions that result from attempts to write audit events are passed up to the application.</span></span><br /><br /> <span data-ttu-id="33691-129">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="33691-129">The default is `true`.</span></span>|  
+|<span data-ttu-id="33691-130">serviceAuthorizationAuditLevel</span><span class="sxs-lookup"><span data-stu-id="33691-130">serviceAuthorizationAuditLevel</span></span>|<span data-ttu-id="33691-131">Задает типы событий авторизации, записываемых в журнал аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-131">Specifies the types of authorization events that are recorded in the audit log.</span></span> <span data-ttu-id="33691-132">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="33691-132">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="33691-133">— None: Аудит событий авторизации службы не выполняется.</span><span class="sxs-lookup"><span data-stu-id="33691-133">-   None: No auditing of service authorization events is performed.</span></span><br /><span data-ttu-id="33691-134">-Success: Проверяются только событий успешной авторизации службы.</span><span class="sxs-lookup"><span data-stu-id="33691-134">-   Success: Only successful service authorization events are audited.</span></span><br /><span data-ttu-id="33691-135">-Ошибка: Проверяются только событий неудачной авторизации службы.</span><span class="sxs-lookup"><span data-stu-id="33691-135">-   Failure: Only failure service authorization events are audited.</span></span><br /><span data-ttu-id="33691-136">-SuccessAndFailure: Оба Успех и отказ события авторизации службы будут аудироваться.</span><span class="sxs-lookup"><span data-stu-id="33691-136">-   SuccessAndFailure: Both success and failure service authorization events are audited.</span></span><br /><br /> <span data-ttu-id="33691-137">По умолчанию используется значение None.</span><span class="sxs-lookup"><span data-stu-id="33691-137">The default value is None.</span></span> <span data-ttu-id="33691-138">Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.</span><span class="sxs-lookup"><span data-stu-id="33691-138">For more information, see <xref:System.ServiceModel.AuditLevel>.</span></span>|  
+|<span data-ttu-id="33691-139">messageAuthenticationAuditLevel</span><span class="sxs-lookup"><span data-stu-id="33691-139">messageAuthenticationAuditLevel</span></span>|<span data-ttu-id="33691-140">Задает тип событий аудита проверки подлинности сообщений, заносимых в журнал.</span><span class="sxs-lookup"><span data-stu-id="33691-140">Specifies the type of message authentication audit events logged.</span></span> <span data-ttu-id="33691-141">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="33691-141">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="33691-142">— None: Создаются нет событий аудита.</span><span class="sxs-lookup"><span data-stu-id="33691-142">-   None: No audit events are generated.</span></span><br /><span data-ttu-id="33691-143">-Success: Регистрируются только успешные события системы безопасности (полная проверка, включая проверку сигнатуры сообщения, шифрования и проверки токенов).</span><span class="sxs-lookup"><span data-stu-id="33691-143">-   Success: Only successful security (full validation including message signature validation, cipher, and token validation) events are logged.</span></span><br /><span data-ttu-id="33691-144">-Ошибка: Регистрируются только ошибки.</span><span class="sxs-lookup"><span data-stu-id="33691-144">-   Failure: Only failure events are logged.</span></span><br /><span data-ttu-id="33691-145">-SuccessAndFailure: Оба Успех и отказ событий.</span><span class="sxs-lookup"><span data-stu-id="33691-145">-   SuccessAndFailure: Both success and failure events are logged.</span></span><br /><br /> <span data-ttu-id="33691-146">По умолчанию используется значение None.</span><span class="sxs-lookup"><span data-stu-id="33691-146">The default value is None.</span></span> <span data-ttu-id="33691-147">Для получения дополнительной информации см. <xref:System.ServiceModel.AuditLevel>.</span><span class="sxs-lookup"><span data-stu-id="33691-147">For more information, see <xref:System.ServiceModel.AuditLevel>.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="33691-148">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="33691-148">Child Elements</span></span>  
+ <span data-ttu-id="33691-149">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="33691-149">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="33691-150">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="33691-150">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<поведение\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
+|<span data-ttu-id="33691-151">Элемент</span><span class="sxs-lookup"><span data-stu-id="33691-151">Element</span></span>|<span data-ttu-id="33691-152">Описание</span><span class="sxs-lookup"><span data-stu-id="33691-152">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="33691-153">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="33691-153">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="33691-154">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="33691-154">Specifies a behavior element.</span></span>|  
   
-## Заметки  
- Этот элемент конфигурации используется для аудита событий проверки подлинности [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  При включенном аудите может выполняться аудит либо успешных, либо неудачных попыток проверки подлинности \(или попыток обоих видов\).  События записываются в один из трех журналов событий: журнал приложения, журнал безопасности или журнал, используемый по умолчанию в данной версии операционной системы.  Все журналы событий можно просматривать при помощи средства просмотра событий Windows.  
+## <a name="remarks"></a><span data-ttu-id="33691-155">Примечания</span><span class="sxs-lookup"><span data-stu-id="33691-155">Remarks</span></span>  
+ <span data-ttu-id="33691-156">Этот элемент конфигурации используется для аудита событий проверки подлинности [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="33691-156">This configuraton element is used to audit [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] authentication events.</span></span> <span data-ttu-id="33691-157">При включенном аудите может выполняться аудит либо успешных, либо неудачных попыток проверки подлинности (или попыток обоих видов).</span><span class="sxs-lookup"><span data-stu-id="33691-157">When auditing is enabled, either successful or failed authentication attempts (or both) can be audited.</span></span> <span data-ttu-id="33691-158">События записываются в один из трех журналов событий: журнал приложения, журнал безопасности или журнал, используемый по умолчанию в данной версии операционной системы.</span><span class="sxs-lookup"><span data-stu-id="33691-158">The events are written to one of three event logs: application, security, or the default log for the operating system version.</span></span> <span data-ttu-id="33691-159">Все журналы событий можно просматривать при помощи средства просмотра событий Windows.</span><span class="sxs-lookup"><span data-stu-id="33691-159">The event logs can all be viewed using the Windows Event viewer.</span></span>  
   
- Подробный пример использования этого элемента конфигурации см. в разделе [Поведение аудита службы](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
+ <span data-ttu-id="33691-160">Подробный пример использования этого элемента конфигурации см. в разделе [поведение аудита службы](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="33691-160">For a detailed example of using this configuration element, see [Service Auditing Behavior](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).</span></span>  
   
- По умолчанию в Windows XP события аудита отображаются в журнале приложений, а в операционных системах Windows Server 2003 и Windows Vista события аудита можно просмотреть в журнале безопасности.  Местоположение событий аудита можно задать, присвоив атрибуту `auditLogLocation` значение "Application" или "Security".  Для получения дополнительной информации см. [Практическое руководство. Аудит событий безопасности](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  Если события записываются в журнал безопасности, то для «Success» и «Failure» необходимо выбрать параметр LocalSecurityPolicy\-\> Enable Object Access.  
+ <span data-ttu-id="33691-161">По умолчанию в Windows XP события аудита отображаются в журнале приложений, а в операционных системах Windows Server 2003 и Windows Vista события аудита можно просмотреть в журнале безопасности.</span><span class="sxs-lookup"><span data-stu-id="33691-161">By default, on Windows XP the audit events can be seen in the Application Log; while on Windows Server 2003 and Windows Vista, the audit events can be seen in the Security Log.</span></span> <span data-ttu-id="33691-162">Местоположение событий аудита можно задать, присвоив атрибуту `auditLogLocation` значение "Application" или "Security".</span><span class="sxs-lookup"><span data-stu-id="33691-162">The location of audit events can be specified by setting the `auditLogLocation` attribute to 'Application' or 'Security'.</span></span> <span data-ttu-id="33691-163">Дополнительные сведения см. в разделе [как: события аудита безопасности](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span><span class="sxs-lookup"><span data-stu-id="33691-163">For more information, see [How to: Audit Security Events](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).</span></span> <span data-ttu-id="33691-164">Если события записываются в журнал безопасности, то для «Success» и «Failure» необходимо выбрать параметр LocalSecurityPolicy-> Enable Object Access.</span><span class="sxs-lookup"><span data-stu-id="33691-164">If the events are written in the Security Log, the LocalSecurityPolicy-> Enable Object Access should be set for "Success" and "Failure".</span></span>  
   
- При просмотре журнала событий источником событий аудита является "ServiceModel Audit 3.0.0.0".  Записи аудита проверки подлинности сообщений относятся к категории "MessageAuthentication", а записи аудита авторизации служб \- к категории "ServiceAuthorization".  
+ <span data-ttu-id="33691-165">При просмотре журнала событий источником событий аудита является "ServiceModel Audit 3.0.0.0".</span><span class="sxs-lookup"><span data-stu-id="33691-165">When looking at the event log, the source of the audit events is "ServiceModel Audit 3.0.0.0".</span></span> <span data-ttu-id="33691-166">Записи аудита проверки подлинности сообщений относятся к категории "MessageAuthentication", а записи аудита авторизации служб - к категории "ServiceAuthorization".</span><span class="sxs-lookup"><span data-stu-id="33691-166">Message authentication audit records have a category of "MessageAuthentication" while service authorization audit records have a category of 'ServiceAuthorization'.</span></span>  
   
- События аудита проверки подлинности сообщений указывают, не было ли сообщение подделано, не истек ли срок сообщения, а также может ли клиент пройти проверку подлинности при подключении к службе.  Они предоставляют следующие сведения: результат проверки подлинности, идентификационные данные клиента и конечной точки, в которую было отправлено сообщение, а также действие, связанное с сообщением.  
+ <span data-ttu-id="33691-167">События аудита проверки подлинности сообщений указывают, не было ли сообщение подделано, не истек ли срок сообщения, а также может ли клиент пройти проверку подлинности при подключении к службе.</span><span class="sxs-lookup"><span data-stu-id="33691-167">Message authentication audit events cover whether the message was tampered with, whether the message has expired and whether the client can authenticate to the service.</span></span> <span data-ttu-id="33691-168">Они предоставляют следующие сведения: результат проверки подлинности, идентификационные данные клиента и конечной точки, в которую было отправлено сообщение, а также действие, связанное с сообщением.</span><span class="sxs-lookup"><span data-stu-id="33691-168">They provide information about whether the authentication succeeded or failed along with the identity of the client and the endpoint the message was sent to along with the action associated with the message.</span></span>  
   
- К событиям аудита авторизации службы относится решение об авторизации, принятое диспетчером авторизации служб.  Они содержат следующие сведения: результат авторизации, идентификационные данные клиента, конечная точка, в которую было направлено сообщение, действие, связанное с сообщением, идентификатор контекста авторизации, созданный на основании входящего сообщения, и тип диспетчера авторизации, принявшего решение о предоставлении доступа.  
+ <span data-ttu-id="33691-169">К событиям аудита авторизации службы относится решение об авторизации, принятое диспетчером авторизации служб.</span><span class="sxs-lookup"><span data-stu-id="33691-169">Service authorization audit events cover the authorization decision made by a service authorization manager.</span></span> <span data-ttu-id="33691-170">Они содержат следующие сведения: результат авторизации, идентификационные данные клиента, конечная точка, в которую было направлено сообщение, действие, связанное с сообщением, идентификатор контекста авторизации, созданный на основании входящего сообщения, и тип диспетчера авторизации, принявшего решение о предоставлении доступа.</span><span class="sxs-lookup"><span data-stu-id="33691-170">They provide information about whether authorization succeeded of failed along with the identity of the client, the endpoint the message was sent to, the action associated with the message, the identifier of the authorization context that was generated from the incoming message and the type of the authorization manager that made the access decision.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="33691-171">Пример</span><span class="sxs-lookup"><span data-stu-id="33691-171">Example</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
    <serviceBehaviors>  
       <behavior name="NewBehavior">  
@@ -80,10 +87,10 @@ caps.handback.revision: 17
 </behaviors>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>   
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>   
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Аудит](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)   
- [Практическое руководство. Аудит событий безопасности](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)   
- [Поведение аудита службы](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="33691-172">См. также</span><span class="sxs-lookup"><span data-stu-id="33691-172">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
+ <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
+ [<span data-ttu-id="33691-173">Поведения безопасности</span><span class="sxs-lookup"><span data-stu-id="33691-173">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="33691-174">Аудит</span><span class="sxs-lookup"><span data-stu-id="33691-174">Auditing</span></span>](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [<span data-ttu-id="33691-175">Как: аудит событий безопасности</span><span class="sxs-lookup"><span data-stu-id="33691-175">How to: Audit Security Events</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [<span data-ttu-id="33691-176">Поведение аудита службы</span><span class="sxs-lookup"><span data-stu-id="33691-176">Service Auditing Behavior</span></span>](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

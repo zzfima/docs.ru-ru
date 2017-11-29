@@ -1,40 +1,44 @@
 ---
-title: "Рабочие процессы блок-схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Рабочие процессы блок-схемы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a3475c-d22f-49eb-8912-973c960aebf5
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 568725f9a112756a773eddab9f56411f4d4fa86e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Рабочие процессы блок-схемы
-Блок\-схемы лежат в основе широко известного принципа разработки программ.Действие «Блок\-схема» обычно используется для реализации непоследовательных рабочих процессов, но если не требуются узлы `FlowDecision`, то может использоваться для реализации последовательных рабочих процессов.  
+# <a name="flowchart-workflows"></a><span data-ttu-id="3d491-102">Рабочие процессы блок-схемы</span><span class="sxs-lookup"><span data-stu-id="3d491-102">Flowchart Workflows</span></span>
+<span data-ttu-id="3d491-103">Блок-схемы лежат в основе широко известного принципа разработки программ.</span><span class="sxs-lookup"><span data-stu-id="3d491-103">A flowchart is a well-known paradigm for designing programs.</span></span> <span data-ttu-id="3d491-104">Действие «Блок-схема» обычно используется для реализации непоследовательных рабочих процессов, но если не требуются узлы `FlowDecision`, то может использоваться для реализации последовательных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="3d491-104">The Flowchart activity is typically used to implement non-sequential workflows, but can be used for sequential workflows if no `FlowDecision` nodes are used.</span></span>  
   
-## Структура блок\-схемы рабочих процессов  
- Действие «блок\-схема» представляет собой действие, содержащее коллекцию действий, которые будут выполнены.Блок\-схемы также содержат элементы управления потоком, такие как <xref:System.Activities.Statements.FlowDecision> и <xref:System.Activities.Statements.FlowSwitch>, контролирующие выполнение между содержащимися действиями на основании значений переменных.  
+## <a name="flowchart-workflow-structure"></a><span data-ttu-id="3d491-105">Структура блок-схемы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="3d491-105">Flowchart Workflow Structure</span></span>  
+ <span data-ttu-id="3d491-106">Действие Flowchart представляет собой действие, содержащее набор действий, которые будут выполнены.</span><span class="sxs-lookup"><span data-stu-id="3d491-106">A Flowchart activity is an activity that contains a collection of activities to be executed.</span></span>  <span data-ttu-id="3d491-107">Блок-схемы также содержат элементы управления потоком, такие как <xref:System.Activities.Statements.FlowDecision> и <xref:System.Activities.Statements.FlowSwitch%601>, контролирующие выполнение между содержащимися действиями на основании значений переменных.</span><span class="sxs-lookup"><span data-stu-id="3d491-107">Flowcharts also contain flow control elements such as <xref:System.Activities.Statements.FlowDecision> and <xref:System.Activities.Statements.FlowSwitch%601> that direct execution between contained activities based on the values of variables.</span></span>  
   
-## Типы узлов потоков  
- Используются различные типы элементов в зависимости от типа управления потока, требуемого при выполнении элемента.К типам элементов блок\-схемы относятся следующие:  
+## <a name="types-of-flow-nodes"></a><span data-ttu-id="3d491-108">Типы узлов потоков</span><span class="sxs-lookup"><span data-stu-id="3d491-108">Types of Flow Nodes</span></span>  
+ <span data-ttu-id="3d491-109">Используются различные типы элементов в зависимости от типа управления потока, требуемого при выполнении элемента.</span><span class="sxs-lookup"><span data-stu-id="3d491-109">Different types of elements are used depending on the type of flow control required when the element executes.</span></span> <span data-ttu-id="3d491-110">К типам элементов блок-схемы относятся следующие:</span><span class="sxs-lookup"><span data-stu-id="3d491-110">Types of flowchart elements include:</span></span>  
   
--   `FlowStep` — моделирует один шаг выполнения в блок\-схеме.  
+-   <span data-ttu-id="3d491-111">`FlowStep` - моделирует один шаг выполнения в блок-схеме.</span><span class="sxs-lookup"><span data-stu-id="3d491-111">`FlowStep` - Models one step of execution in the flowchart.</span></span>  
   
--   `FlowDecision` — создает ветвь выполнения на основе логического условия, такого как <xref:System.Activities.Statements.If>.  
+-   <span data-ttu-id="3d491-112">`FlowDecision` - создает ветвь выполнения на основе логического условия, такого как <xref:System.Activities.Statements.If>.</span><span class="sxs-lookup"><span data-stu-id="3d491-112">`FlowDecision` - Branches execution based on a Boolean condition, similar to <xref:System.Activities.Statements.If>.</span></span>  
   
--   `FlowSwitch` — обеспечивает ветвление в ходе выполнения на основе переключателя с неперекрывающимися ветвями, такого как <xref:System.Activities.Statements.Switch%601>.  
+-   <span data-ttu-id="3d491-113">`FlowSwitch` - обеспечивает ветвление в ходе выполнения на основе переключателя с неперекрывающимися ветвями, такого как <xref:System.Activities.Statements.Switch%601>.</span><span class="sxs-lookup"><span data-stu-id="3d491-113">`FlowSwitch` – Branches execution based on an exclusive switch, similar to <xref:System.Activities.Statements.Switch%601>.</span></span>  
   
- Каждая ссылка имеет свойство `Action`, определяющее действие <xref:System.Activities.ActivityAction>, которое может быть использовано для выполнения дочерних действий, а также одно или несколько свойств `Next`, которые определяют элемент или элементы, выполняемые после завершения выполнения текущего элемента.  
+ <span data-ttu-id="3d491-114">Каждая ссылка имеет свойство `Action`, определяющее действие <xref:System.Activities.ActivityAction>, которое может быть использовано для выполнения дочерних действий, а также одно или несколько свойств `Next`, которые определяют элемент или элементы, выполняемые после завершения выполнения текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="3d491-114">Each link has an `Action` property that defines a <xref:System.Activities.ActivityAction> that can be used to execute child activities, and one or more `Next` properties that define which element or elements to execute when the current element finishes execution.</span></span>  
   
-### Создание базовой последовательности действий для узла FlowStep  
- Для моделирования базовой последовательности, в которой поочередно выполняются два действия, используется элемент `FlowStep`.В следующем примере используются два элемента `FlowStep` для последовательного выполнения двух действий.  
+### <a name="creating-a-basic-activity-sequence-with-a-flowstep-node"></a><span data-ttu-id="3d491-115">Создание базовой последовательности действий для узла FlowStep</span><span class="sxs-lookup"><span data-stu-id="3d491-115">Creating a Basic Activity Sequence with a FlowStep Node</span></span>  
+ <span data-ttu-id="3d491-116">Для моделирования базовой последовательности, в которой поочередно выполняются два действия, используется элемент `FlowStep`.</span><span class="sxs-lookup"><span data-stu-id="3d491-116">To model a basic sequence in which two activities execute in turn, the `FlowStep` element is used.</span></span> <span data-ttu-id="3d491-117">В следующем примере используются два элемента `FlowStep` для последовательного выполнения двух действий.</span><span class="sxs-lookup"><span data-stu-id="3d491-117">In the following example, two `FlowStep` elements are used to execute two activities in sequence.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
   <FlowStep>      
   <Assign DisplayName="Get Name">  
@@ -52,13 +56,12 @@ caps.handback.revision: 22
     </FlowStep.Next>  
   </FlowStep>  
 </Flowchart>  
-  
 ```  
   
-### Создание условной блок\-схемы для узла FlowDecision  
- Чтобы смоделировать узел условного потока на блок\-схеме рабочего процесса \(т. е. создать ссылку, работающую аналогично символу принятия решения на стандартной блок\-схеме\), следует использовать узел <xref:System.Activities.Statements.FlowDecision>.Для свойства <xref:System.Activities.Statements.FlowDecision.Condition%2A> узла задано выражение, которое определяет условие, а для свойств <xref:System.Activities.Statements.FlowDecision.True%2A> и <xref:System.Activities.Statements.FlowDecision.False%2A> заданы экземпляры <xref:System.Activities.Statements.FlowNode>, которые будут выполняться, если выражение имеет значение `true` или `false`.В следующем примере показано определение рабочего процесса, который использует узел <xref:System.Activities.Statements.FlowDecision>.  
+### <a name="creating-a-conditional-flowchart-with-a-flowdecision-node"></a><span data-ttu-id="3d491-118">Создание условной блок-схемы для узла FlowDecision</span><span class="sxs-lookup"><span data-stu-id="3d491-118">Creating a Conditional Flowchart with a FlowDecision Node</span></span>  
+ <span data-ttu-id="3d491-119">Чтобы смоделировать узел условного потока на блок-схеме рабочего процесса (т. е. создать ссылку, работающую аналогично символу принятия решения на стандартной блок-схеме), следует использовать узел <xref:System.Activities.Statements.FlowDecision>.</span><span class="sxs-lookup"><span data-stu-id="3d491-119">To model a conditional flow node in a flowchart workflow (that is, to create a link that functions as a traditional flowchart's decision symbol), a <xref:System.Activities.Statements.FlowDecision> node is used.</span></span> <span data-ttu-id="3d491-120">Для свойства <xref:System.Activities.Statements.FlowDecision.Condition%2A> узла задано выражение, которое определяет условие, а для свойств <xref:System.Activities.Statements.FlowDecision.True%2A> и <xref:System.Activities.Statements.FlowDecision.False%2A> заданы экземпляры <xref:System.Activities.Statements.FlowNode>, которые будут выполняться, если результатом вычисления выражения будет `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="3d491-120">The <xref:System.Activities.Statements.FlowDecision.Condition%2A> property of the node is set to an expression that defines the condition, and the <xref:System.Activities.Statements.FlowDecision.True%2A> and <xref:System.Activities.Statements.FlowDecision.False%2A> properties are set to <xref:System.Activities.Statements.FlowNode> instances to be executed if the expression evaluates to `true` or `false`.</span></span> <span data-ttu-id="3d491-121">В следующем примере показано определение рабочего процесса, который использует узел <xref:System.Activities.Statements.FlowDecision>.</span><span class="sxs-lookup"><span data-stu-id="3d491-121">The following example shows how to define a workflow that uses a <xref:System.Activities.Statements.FlowDecision> node.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
   <FlowStep>  
     <Read Result="[s]"/>  
@@ -79,13 +82,12 @@ caps.handback.revision: 22
     </FlowStep.Next>  
   </FlowStep>  
 </Flowchart>  
-  
 ```  
   
-### Создание монопольного переключателя для узла FlowSwitch  
- Чтобы смоделировать блок\-схему, в которой на основе соответствующего значения выбирается один из монопольных вариантов пути, используется узел <xref:System.Activities.Statements.FlowSwitch%601>.Свойство <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> имеет значение <xref:System.Activities.Activity%601> с параметром типа <xref:System.Object>, который определяет значение для сопоставления с выбираемыми элементами.Свойство <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> определяет словарь ключей и объектов <xref:System.Activities.Statements.FlowNode> для сопоставления с условным выражением и набор объектов <xref:System.Activities.Statements.FlowNode>, которые определяют направление выполнения в случае, если заданный вариант соответствует условному выражению.<xref:System.Activities.Statements.FlowSwitch%601> также определяет свойство <xref:System.Activities.Statements.FlowSwitch%601.Default%2A>, которое определяет направление выполнения при отсутствии соответствий условному выражению.В следующем примере показано, как определить рабочий процесс, который использует элемент <xref:System.Activities.Statements.FlowSwitch%601>.  
+### <a name="creating-an-exclusive-switch-with-a-flowswitch-node"></a><span data-ttu-id="3d491-122">Создание взаимоисключающего переключателя для узла FlowSwitch</span><span class="sxs-lookup"><span data-stu-id="3d491-122">Creating an Exclusive Switch with a FlowSwitch Node</span></span>  
+ <span data-ttu-id="3d491-123">Чтобы смоделировать блок-схему, в которой на основе соответствующего значения выбирается один из взаимоисключающих вариантов пути, используется узел <xref:System.Activities.Statements.FlowSwitch%601>.</span><span class="sxs-lookup"><span data-stu-id="3d491-123">To model a flowchart in which one exclusive path is selected based on a matching value, the <xref:System.Activities.Statements.FlowSwitch%601> node is used.</span></span> <span data-ttu-id="3d491-124">Свойство <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> имеет значение <xref:System.Activities.Activity%601> с параметром типа <xref:System.Object>, который определяет значение для сопоставления с выбираемыми элементами.</span><span class="sxs-lookup"><span data-stu-id="3d491-124">The <xref:System.Activities.Statements.FlowSwitch%601.Expression%2A> property is set to a <xref:System.Activities.Activity%601> with a type parameter of <xref:System.Object> that defines the value to match choices against.</span></span> <span data-ttu-id="3d491-125">Свойство <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> определяет словарь ключей и объектов <xref:System.Activities.Statements.FlowNode> для сопоставления с условным выражением и набор объектов <xref:System.Activities.Statements.FlowNode>, которые определяют направление выполнения в случае, если заданный вариант соответствует условному выражению.</span><span class="sxs-lookup"><span data-stu-id="3d491-125">The <xref:System.Activities.Statements.FlowSwitch%601.Cases%2A> property defines a dictionary of keys and <xref:System.Activities.Statements.FlowNode> objects to match against the conditional expression, and a set of <xref:System.Activities.Statements.FlowNode> objects that define how execution should flow if the given case matches the conditional expression.</span></span> <span data-ttu-id="3d491-126"><xref:System.Activities.Statements.FlowSwitch%601> также определяет свойство <xref:System.Activities.Statements.FlowSwitch%601.Default%2A>, которое определяет направление выполнения при отсутствии соответствий условному выражению.</span><span class="sxs-lookup"><span data-stu-id="3d491-126">The <xref:System.Activities.Statements.FlowSwitch%601> also defines a <xref:System.Activities.Statements.FlowSwitch%601.Default%2A> property that defines how execution should flow if no cases match the condition expression.</span></span> <span data-ttu-id="3d491-127">В следующем примере показано, как определить рабочий процесс, который использует элемент <xref:System.Activities.Statements.FlowSwitch%601>.</span><span class="sxs-lookup"><span data-stu-id="3d491-127">The following example demonstrates how to define a workflow that uses a <xref:System.Activities.Statements.FlowSwitch%601> element.</span></span>  
   
-```  
+```xml  
 <Flowchart>  
     <FlowSwitch>  
       <FlowStep x:Key="Red">  
@@ -99,5 +101,4 @@ caps.handback.revision: 22
       </FlowStep>  
     </FlowSwitch>  
 </Flowchart>  
-  
 ```

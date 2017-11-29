@@ -1,25 +1,28 @@
 ---
-title: "CallbackBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CallbackBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9df9629e280a2aec6acf93773e09384e763280ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# CallbackBehavior
-CallbackBehavior  
+# <a name="callbackbehavior"></a><span data-ttu-id="3b093-102">CallbackBehavior</span><span class="sxs-lookup"><span data-stu-id="3b093-102">CallbackBehavior</span></span>
+<span data-ttu-id="3b093-103">CallbackBehavior</span><span class="sxs-lookup"><span data-stu-id="3b093-103">CallbackBehavior</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="3b093-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3b093-104">Syntax</span></span>  
   
 ```  
 class CallbackBehavior : Behavior  
@@ -34,65 +37,65 @@ class CallbackBehavior : Behavior
 };  
 ```  
   
-## Методы  
- Класс CallbackBehavior не определяет никакие методы.  
+## <a name="methods"></a><span data-ttu-id="3b093-105">Методы</span><span class="sxs-lookup"><span data-stu-id="3b093-105">Methods</span></span>  
+ <span data-ttu-id="3b093-106">Класс CallbackBehavior не определяет никакие методы.</span><span class="sxs-lookup"><span data-stu-id="3b093-106">The CallbackBehavior class does not define any methods.</span></span>  
   
-## Свойства  
- Класс CallbackBehavior имеет следующие свойства.  
+## <a name="properties"></a><span data-ttu-id="3b093-107">Свойства</span><span class="sxs-lookup"><span data-stu-id="3b093-107">Properties</span></span>  
+ <span data-ttu-id="3b093-108">Класс CallbackBehavior имеет следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="3b093-108">The CallbackBehavior class has the following properties:</span></span>  
   
-### AutomaticSessionShutdown  
- Тип данных: boolean  
+### <a name="automaticsessionshutdown"></a><span data-ttu-id="3b093-109">AutomaticSessionShutdown</span><span class="sxs-lookup"><span data-stu-id="3b093-109">AutomaticSessionShutdown</span></span>  
+ <span data-ttu-id="3b093-110">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-110">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-111">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-111">Access type: Read-only</span></span>  
   
- Если сеанс имеет значение true, он автоматически закрывается при закрытии службой дуплексного сеанса.  
+ <span data-ttu-id="3b093-112">Если сеанс имеет значение true, он автоматически закрывается при закрытии службой дуплексного сеанса.</span><span class="sxs-lookup"><span data-stu-id="3b093-112">When true, the session is automatically closed when a service closes a duplex session.</span></span>  
   
-### ConcurrencyMode  
- Тип данных: string  
-Тип доступа: только для чтения  
+### <a name="concurrencymode"></a><span data-ttu-id="3b093-113">ConcurrencyMode</span><span class="sxs-lookup"><span data-stu-id="3b093-113">ConcurrencyMode</span></span>  
+ <span data-ttu-id="3b093-114">Тип данных: string</span><span class="sxs-lookup"><span data-stu-id="3b093-114">Data type: string</span></span>  
+<span data-ttu-id="3b093-115">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-115">Access type: Read-only</span></span>  
   
- Указывает, поддерживает служба один поток, несколько потоков или повторные входящие вызовы.  
+ <span data-ttu-id="3b093-116">Указывает, поддерживает служба один поток, несколько потоков или повторные входящие вызовы.</span><span class="sxs-lookup"><span data-stu-id="3b093-116">Specifies whether the service supports one thread, multiple threads, or reentrant calls.</span></span>  
   
-### IgnoreExtensionDataObject  
- Тип данных: boolean  
+### <a name="ignoreextensiondataobject"></a><span data-ttu-id="3b093-117">IgnoreExtensionDataObject</span><span class="sxs-lookup"><span data-stu-id="3b093-117">IgnoreExtensionDataObject</span></span>  
+ <span data-ttu-id="3b093-118">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-118">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-119">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-119">Access type: Read-only</span></span>  
   
- Значение, указывающее, требуется ли передать неизвестные данные сериализации по сети.  
+ <span data-ttu-id="3b093-120">Значение, указывающее, требуется ли передать неизвестные данные сериализации по сети.</span><span class="sxs-lookup"><span data-stu-id="3b093-120">A value that specifies whether to send unknown serialization data onto the wire.</span></span>  
   
-### IncludeExceptionDetailInFaults  
- Тип данных: boolean  
+### <a name="includeexceptiondetailinfaults"></a><span data-ttu-id="3b093-121">IncludeExceptionDetailInFaults</span><span class="sxs-lookup"><span data-stu-id="3b093-121">IncludeExceptionDetailInFaults</span></span>  
+ <span data-ttu-id="3b093-122">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-122">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-123">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-123">Access type: Read-only</span></span>  
   
- Если это свойство включено, подробная информация об исключениях в обратном вызове прикрепляется к ошибкам, возвращаемым в службу.  
+ <span data-ttu-id="3b093-124">Если это свойство включено, подробная информация об исключениях в обратном вызове прикрепляется к ошибкам, возвращаемым в службу.</span><span class="sxs-lookup"><span data-stu-id="3b093-124">When enabled, details about exceptions on the callback are attached to the faults returned to the service.</span></span>  
   
-### MaxItemsInObjectGraph  
- Тип данных: boolean  
+### <a name="maxitemsinobjectgraph"></a><span data-ttu-id="3b093-125">MaxItemsInObjectGraph</span><span class="sxs-lookup"><span data-stu-id="3b093-125">MaxItemsInObjectGraph</span></span>  
+ <span data-ttu-id="3b093-126">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-126">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-127">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-127">Access type: Read-only</span></span>  
   
- Максимальное количество элементов, допустимое в сериализованном объекте.  
+ <span data-ttu-id="3b093-128">Максимальное количество элементов, допустимое в сериализованном объекте.</span><span class="sxs-lookup"><span data-stu-id="3b093-128">The maximum number of items allowed in a serialized object.</span></span>  
   
-### UseSynchronizationContext  
- Тип данных: boolean  
+### <a name="usesynchronizationcontext"></a><span data-ttu-id="3b093-129">UseSynchronizationContext</span><span class="sxs-lookup"><span data-stu-id="3b093-129">UseSynchronizationContext</span></span>  
+ <span data-ttu-id="3b093-130">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-130">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-131">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-131">Access type: Read-only</span></span>  
   
- Указывает, использовать ли текущий контекст синхронизации для выбора потока выполнения.  
+ <span data-ttu-id="3b093-132">Указывает, использовать ли текущий контекст синхронизации для выбора потока выполнения.</span><span class="sxs-lookup"><span data-stu-id="3b093-132">Specifies whether to use the current synchronization context to choose the thread of execution.</span></span>  
   
-### ValidateMustUnderstand  
- Тип данных: boolean  
+### <a name="validatemustunderstand"></a><span data-ttu-id="3b093-133">ValidateMustUnderstand</span><span class="sxs-lookup"><span data-stu-id="3b093-133">ValidateMustUnderstand</span></span>  
+ <span data-ttu-id="3b093-134">Тип данных: boolean</span><span class="sxs-lookup"><span data-stu-id="3b093-134">Data type: boolean</span></span>  
   
- Тип доступа: только для чтения  
+ <span data-ttu-id="3b093-135">Тип доступа: только для чтения</span><span class="sxs-lookup"><span data-stu-id="3b093-135">Access type: Read-only</span></span>  
   
- Указывает, кем выполняется принудительная обработка заголовка SOAP MustUnderstand: системой или приложением.  
+ <span data-ttu-id="3b093-136">Указывает, кем выполняется принудительная обработка заголовка SOAP MustUnderstand: системой или приложением.</span><span class="sxs-lookup"><span data-stu-id="3b093-136">Specifies whether the system or the application enforces SOAP MustUnderstand header processing.</span></span>  
   
-## Требования  
+## <a name="requirements"></a><span data-ttu-id="3b093-137">Требования</span><span class="sxs-lookup"><span data-stu-id="3b093-137">Requirements</span></span>  
   
-|MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|<span data-ttu-id="3b093-138">MOF</span><span class="sxs-lookup"><span data-stu-id="3b093-138">MOF</span></span>|<span data-ttu-id="3b093-139">Объявлено в файле Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="3b093-139">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="3b093-140">Пространство имен</span><span class="sxs-lookup"><span data-stu-id="3b093-140">Namespace</span></span>|<span data-ttu-id="3b093-141">Определено в root\ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="3b093-141">Defined in root\ServiceModel</span></span>|  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="3b093-142">См. также</span><span class="sxs-lookup"><span data-stu-id="3b093-142">See Also</span></span>  
  <xref:System.ServiceModel.CallbackBehaviorAttribute>

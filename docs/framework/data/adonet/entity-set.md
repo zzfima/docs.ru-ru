@@ -1,56 +1,59 @@
 ---
-title: "набор сущностей | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "набор сущностей"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6b28be2b3bdddd9457874881e930ea978ef5c2b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# набор сущностей
-*Набор сущностей* \- это логический контейнер для экземпляров [типа сущности](../../../../docs/framework/data/adonet/entity-type.md) и экземпляров любого производного типа сущности, полученного из этого типа сущности.  \(Дополнительные сведения о производных типах см. в разделе [Модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).\) Связь между типом сущности и набором сущностей схожа со связью между строкой и таблицей в реляционной базе данных. Как и строка, тип сущности описывает структуру данных, и, как и таблица, набор сущностей содержит экземпляры данной структуры.  Набор сущностей не является конструктом моделирования данных; он не описывает структуру данных.  Вместо этого набор сущностей обеспечивает конструкт для среды размещения или хранения \(например, для среды CLR или базы данных сервера SQL\), позволяя группировать экземпляры типа сущности так, чтобы они были сопоставлены хранилищу данных.  
+# <a name="entity-set"></a><span data-ttu-id="f6232-102">набор сущностей</span><span class="sxs-lookup"><span data-stu-id="f6232-102">entity set</span></span>
+<span data-ttu-id="f6232-103">*Набора сущностей* — это логический контейнер для экземпляров [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) и экземпляров любого типа, производного от этого типа сущности.</span><span class="sxs-lookup"><span data-stu-id="f6232-103">An *entity set* is a logical container for instances of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) and instances of any type derived from that entity type.</span></span> <span data-ttu-id="f6232-104">(Сведения о производных типов см. в разделе [модель EDM: наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Связь между типом сущности и набором сущностей схожа со связью между строкой и таблицей в реляционной базе данных. Как и строка, тип сущности описывает структуру данных, и, как и таблица, набор сущностей содержит экземпляры данной структуры.</span><span class="sxs-lookup"><span data-stu-id="f6232-104">(For information about derived types, see [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) The relationship between an entity type and an entity set is analogous to the relationship between a row and a table in a relational database: Like a row, an entity type describes data structure, and, like a table, an entity set contains instances of a given structure.</span></span> <span data-ttu-id="f6232-105">Набор сущностей не является конструктом моделирования данных; он не описывает структуру данных.</span><span class="sxs-lookup"><span data-stu-id="f6232-105">An entity set is not a data modeling construct; it does not describe the structure of data.</span></span> <span data-ttu-id="f6232-106">Вместо этого набор сущностей обеспечивает конструкт для среды размещения или хранения (например, для среды CLR или базы данных сервера SQL), позволяя группировать экземпляры типа сущности так, чтобы они были сопоставлены хранилищу данных.</span><span class="sxs-lookup"><span data-stu-id="f6232-106">Instead, an entity set provides a construct for a hosting or storage environment (such as the common language runtime or a SQL Server database) to group entity type instances so that they can be mapped to a data store.</span></span>  
   
- Набор сущностей определяется внутри [контейнера сущностей](../../../../docs/framework/data/adonet/entity-container.md), который является логической группой наборов сущностей и [наборов ассоциаций](../../../../docs/framework/data/adonet/association-set.md).  
+ <span data-ttu-id="f6232-107">Набор сущностей, определенных в [контейнер сущностей](../../../../docs/framework/data/adonet/entity-container.md), который является логической группой наборов сущностей и [наборов ассоциаций](../../../../docs/framework/data/adonet/association-set.md).</span><span class="sxs-lookup"><span data-stu-id="f6232-107">An entity set is defined within an [entity container](../../../../docs/framework/data/adonet/entity-container.md), which is a logical grouping of entity sets and [association sets](../../../../docs/framework/data/adonet/association-set.md).</span></span>  
   
- Чтобы экземпляр типа сущности существовал в наборе сущности, должны быть выполнены следующие условия.  
+ <span data-ttu-id="f6232-108">Чтобы экземпляр типа сущности существовал в наборе сущности, должны быть выполнены следующие условия.</span><span class="sxs-lookup"><span data-stu-id="f6232-108">For an entity type instance to exist in an entity set, the following must be true:</span></span>  
   
--   Тип экземпляра является либо тем же, что и тип сущности, в котором находится набор сущностей, либо подтипом типа сущности.  
+-   <span data-ttu-id="f6232-109">Тип экземпляра является либо тем же, что и тип сущности, в котором находится набор сущностей, либо подтипом типа сущности.</span><span class="sxs-lookup"><span data-stu-id="f6232-109">The type of the instance is either the same as the entity type on which the entity set is based, or the type of the instance is a subtype of the entity type.</span></span>  
   
--   [Ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) для экземпляра является уникальным внутри набора сущностей.  
+-   <span data-ttu-id="f6232-110">[Ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) для экземпляра является уникальным в пределах набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="f6232-110">The [entity key](../../../../docs/framework/data/adonet/entity-key.md) for the instance is unique within the entity set.</span></span>  
   
--   Экземпляр не существует ни в каком другом наборе сущностей.  
+-   <span data-ttu-id="f6232-111">Экземпляр не существует ни в каком другом наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="f6232-111">The instance does not exist in any other entity set.</span></span>  
   
     > [!NOTE]
-    >  Несколько наборов сущностей могут быть определены при помощи одного и того же типа сущности, однако экземпляр одного типа сущности может существовать только в одном наборе сущностей.  
+    >  <span data-ttu-id="f6232-112">Несколько наборов сущностей могут быть определены при помощи одного и того же типа сущности, однако экземпляр одного типа сущности может существовать только в одном наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="f6232-112">Multiple entity sets can be defined using the same entity type, but an instance of a given entity type can only exist in one entity set.</span></span>  
   
- Нет необходимости определять набор сущностей для каждого типа сущности в концептуальной модели.  
+ <span data-ttu-id="f6232-113">Нет необходимости определять набор сущностей для каждого типа сущности в концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="f6232-113">You do not have to define an entity set for each entity type in a conceptual model.</span></span>  
   
-## Пример  
- На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`.  
+## <a name="example"></a><span data-ttu-id="f6232-114">Пример</span><span class="sxs-lookup"><span data-stu-id="f6232-114">Example</span></span>  
+ <span data-ttu-id="f6232-115">На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`.</span><span class="sxs-lookup"><span data-stu-id="f6232-115">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="f6232-116">![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="f6232-116">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- На следующей схеме показаны два набора сущностей \(`Books` и `Publishers`\) и набор ассоциаций \(`PublishedBy`\), основанный на приведенной выше концептуальной модели.  Bi в наборе сущностей `Books` представляет экземпляр типа сущности `Book` во время выполнения.  Схожим образом, Pj представляет экземпляр `Publisher` в наборе сущностей `Publishers`.  BiPj представляет экземпляр ассоциации `PublishedBy` в наборе ассоциаций `PublishedBy`.  
+ <span data-ttu-id="f6232-117">На следующей схеме показаны два набора сущностей (`Books` и `Publishers`) и набор ассоциаций (`PublishedBy`), основанный на приведенной выше концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="f6232-117">The following diagram shows two entity sets (`Books` and `Publishers`) and an association set (`PublishedBy`) based on the conceptual model shown above.</span></span> <span data-ttu-id="f6232-118">Бизнес-аналитики в `Books` набор сущностей представляет экземпляр `Book` тип сущности во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f6232-118">Bi in the `Books` entity set represents an instance of the `Book` entity type at run time.</span></span> <span data-ttu-id="f6232-119">Подобным образом представляют собой Pj `Publisher` экземпляра в `Publishers` набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="f6232-119">Similarly, Pj represent a `Publisher` instance in the `Publishers` entity set.</span></span> <span data-ttu-id="f6232-120">BiPj представляет экземпляр `PublishedBy` ассоциации в `PublishedBy` набора ассоциаций.</span><span class="sxs-lookup"><span data-stu-id="f6232-120">BiPj represents an instance of the `PublishedBy` association in the `PublishedBy` association set.</span></span>  
   
- ![Пример наборов](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ <span data-ttu-id="f6232-121">![Задает пример](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span><span class="sxs-lookup"><span data-stu-id="f6232-121">![Sets Example](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span></span>  
   
- Платформа [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык DSL, называемый языком CSDL \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), для определения концептуальных моделей.  Далее язык CSDL определяет контейнер сущностей с одним набором сущностей для каждого типа сущностей в приведенной выше концептуальной модели.  Обратите внимание, что имя и тип сущности для каждого набора сущностей определены при помощи атрибутов XML.  
+ <span data-ttu-id="f6232-122">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей.</span><span class="sxs-lookup"><span data-stu-id="f6232-122">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="f6232-123">Далее язык CSDL определяет контейнер сущностей с одним набором сущностей для каждого типа сущностей в приведенной выше концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="f6232-123">The following CSDL defines an entity container with one entity set for each entity type in the conceptual model shown above.</span></span> <span data-ttu-id="f6232-124">Обратите внимание, что имя и тип сущности для каждого набора сущностей определены при помощи атрибутов XML.</span><span class="sxs-lookup"><span data-stu-id="f6232-124">Note that the name and entity type for each entity set are defined using XML attributes.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- Предусмотрена возможность определять несколько наборов сущностей на тип \(модель MEST\).  Далее язык CSDL определяет контейнер сущностей с двумя наборами сущностей для типа сущности `Book`.  
+ <span data-ttu-id="f6232-125">Предусмотрена возможность определять несколько наборов сущностей на тип (модель MEST).</span><span class="sxs-lookup"><span data-stu-id="f6232-125">It is possible to define multiple entity sets per type (MEST).</span></span> <span data-ttu-id="f6232-126">Далее язык CSDL определяет контейнер сущностей с двумя наборами сущностей для типа сущности `Book`.</span><span class="sxs-lookup"><span data-stu-id="f6232-126">The following CSDL defines an entity container with two entity sets for the `Book` entity type:</span></span>  
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="f6232-127">См. также</span><span class="sxs-lookup"><span data-stu-id="f6232-127">See Also</span></span>  
+ [<span data-ttu-id="f6232-128">Основные понятия модели данных сущности</span><span class="sxs-lookup"><span data-stu-id="f6232-128">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="f6232-129">Модель EDM</span><span class="sxs-lookup"><span data-stu-id="f6232-129">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

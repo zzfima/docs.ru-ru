@@ -1,44 +1,48 @@
 ---
-title: "Действия доступа к базе данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Действия доступа к базе данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 10066c1d5e6bd0d03d91337a2fed987c881b23b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Действия доступа к базе данных
-Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса.Эти действия позволяют обеспечивают доступ к базам данных для получения и изменения данных, а также позволяют использовать для доступа к базе данных использования [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081).  
+# <a name="database-access-activities"></a><span data-ttu-id="34833-102">Действия доступа к базе данных</span><span class="sxs-lookup"><span data-stu-id="34833-102">Database Access Activities</span></span>
+<span data-ttu-id="34833-103">Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="34833-103">Database access activities allow you to access a database within a workflow.</span></span> <span data-ttu-id="34833-104">Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.</span><span class="sxs-lookup"><span data-stu-id="34833-104">These activities allow accessing databases to retrieve or modify information and use [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) to access the database.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="34833-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="34833-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="34833-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="34833-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу загрузки, чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="34833-107">Если этот каталог не существует, перейдите на страницу загрузки, чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="34833-107">If this directory does not exist, go to (download page) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="34833-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="34833-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
-## Действия базы данных  
- В следующих разделах приведен список действий, входящих в этот образец.  
+## <a name="database-activities"></a><span data-ttu-id="34833-109">Действия базы данных</span><span class="sxs-lookup"><span data-stu-id="34833-109">Database Activities</span></span>  
+ <span data-ttu-id="34833-110">В следующих разделах приведен список действий, входящих в этот образец.</span><span class="sxs-lookup"><span data-stu-id="34833-110">The following sections detail the list of activities included in this sample.</span></span>  
   
-## DbUpdate  
- Выполняет SQL\-запрос, который реализует изменение в базе данных \(вставку, обновление, удаление или иные изменения\).  
+## <a name="dbupdate"></a><span data-ttu-id="34833-111">DbUpdate</span><span class="sxs-lookup"><span data-stu-id="34833-111">DbUpdate</span></span>  
+ <span data-ttu-id="34833-112">Выполняет SQL-запрос, который реализует изменение в базе данных (вставку, обновление, удаление или иные изменения).</span><span class="sxs-lookup"><span data-stu-id="34833-112">Executes a SQL query that produces a modification in the database (insert, update, delete, and other modifications).</span></span>  
   
- Этот класс выполняет работу асинхронно \(он является производным от класса <xref:System.Activities.AsyncCodeActivity> и использует его возможности для асинхронной работы\).  
+ <span data-ttu-id="34833-113">Этот класс выполняет работу асинхронно (он является производным от класса <xref:System.Activities.AsyncCodeActivity> и использует его возможности для асинхронной работы).</span><span class="sxs-lookup"><span data-stu-id="34833-113">This class performs its work asynchronously (it derives from <xref:System.Activities.AsyncCodeActivity> and uses its asynchronous capabilities).</span></span>  
   
- Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика \(`ProviderName`\) и строку соединения \(`ConnectionString`\) или использовать имя конфигурации строки соединения \(`ConfigFileSectionName`\) из файла конфигурации приложения.  
+ <span data-ttu-id="34833-114">Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="34833-114">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.  
+ <span data-ttu-id="34833-115">Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="34833-115">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- После выполнения `DbUpdate` количество измененных записей возвращается в свойстве `AffectedRecords`.  
+ <span data-ttu-id="34833-116">После выполнения `DbUpdate` количество измененных записей возвращается в свойстве `AffectedRecords`.</span><span class="sxs-lookup"><span data-stu-id="34833-116">After `DbUpdate` is executed, the number of affected records is returned in the `AffectedRecords` property.</span></span>  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -74,27 +78,26 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
-|||  
+|<span data-ttu-id="34833-117">Аргумент</span><span class="sxs-lookup"><span data-stu-id="34833-117">Argument</span></span>|<span data-ttu-id="34833-118">Описание</span><span class="sxs-lookup"><span data-stu-id="34833-118">Description</span></span>|  
 |-|-|  
-|Аргумент|Описание|  
-|ProviderName|Неизменяемое имя поставщика ADO.NET.Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|  
-|ConnectionString|Строка соединения для подключения к базе данных.Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|  
-|ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении.Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|  
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|  
-|Sql|Выполняемая команда SQL.|  
-|Параметры|Коллекция параметров SQL\-запроса.|  
-|AffectedRecords|Количество записей, на которые повлияла последняя операция.|  
+|<span data-ttu-id="34833-119">ProviderName</span><span class="sxs-lookup"><span data-stu-id="34833-119">ProviderName</span></span>|<span data-ttu-id="34833-120">Неизменяемое имя поставщика ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="34833-120">ADO.NET provider invariant name.</span></span> <span data-ttu-id="34833-121">Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="34833-121">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="34833-122">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="34833-122">ConnectionString</span></span>|<span data-ttu-id="34833-123">Строка соединения для подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="34833-123">Connection string to connect to the database.</span></span> <span data-ttu-id="34833-124">Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="34833-124">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="34833-125">ConfigName</span><span class="sxs-lookup"><span data-stu-id="34833-125">ConfigName</span></span>|<span data-ttu-id="34833-126">Имя раздела файла конфигурации, в котором хранятся сведения о соединении.</span><span class="sxs-lookup"><span data-stu-id="34833-126">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="34833-127">Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.</span><span class="sxs-lookup"><span data-stu-id="34833-127">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="34833-128">CommandType</span><span class="sxs-lookup"><span data-stu-id="34833-128">CommandType</span></span>|<span data-ttu-id="34833-129">Тип выполняемой команды <xref:System.Data.Common.DbCommand>.</span><span class="sxs-lookup"><span data-stu-id="34833-129">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="34833-130">Sql</span><span class="sxs-lookup"><span data-stu-id="34833-130">Sql</span></span>|<span data-ttu-id="34833-131">Выполняемая команда SQL.</span><span class="sxs-lookup"><span data-stu-id="34833-131">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="34833-132">Параметры</span><span class="sxs-lookup"><span data-stu-id="34833-132">Parameters</span></span>|<span data-ttu-id="34833-133">Коллекция параметров SQL-запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-133">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="34833-134">AffectedRecords</span><span class="sxs-lookup"><span data-stu-id="34833-134">AffectedRecords</span></span>|<span data-ttu-id="34833-135">Количество записей, на которые повлияла последняя операция.</span><span class="sxs-lookup"><span data-stu-id="34833-135">Number of records affected by the last operation.</span></span>|  
   
-## DbQueryScalar  
- Выполняет запрос, возвращающий единичное значение данные из базы данных.  
+## <a name="dbqueryscalar"></a><span data-ttu-id="34833-136">DbQueryScalar</span><span class="sxs-lookup"><span data-stu-id="34833-136">DbQueryScalar</span></span>  
+ <span data-ttu-id="34833-137">Выполняет запрос, возвращающий единичное значение данные из базы данных.</span><span class="sxs-lookup"><span data-stu-id="34833-137">Executes a query that retrieves a single value from the database.</span></span>  
   
- Этот класс выполняет работу асинхронно \(он является производным от класса <xref:System.Activities.AsyncCodeActivity%601> и использует его возможности для асинхронной работы\).  
+ <span data-ttu-id="34833-138">Этот класс выполняет работу асинхронно (он является производным от класса <xref:System.Activities.AsyncCodeActivity%601> и использует его возможности для асинхронной работы).</span><span class="sxs-lookup"><span data-stu-id="34833-138">This class performs its work asynchronously (it derives from <xref:System.Activities.AsyncCodeActivity%601> and uses its asynchronous capabilities).</span></span>  
   
- Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика \(`ProviderName`\) и строку соединения \(`ConnectionString`\) или использовать имя конфигурации строки соединения \(`ConfigFileSectionName`\) из файла конфигурации приложения.  
+ <span data-ttu-id="34833-139">Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="34833-139">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.  
+ <span data-ttu-id="34833-140">Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="34833-140">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- После выполнения `DbQueryScalar` скалярное значение возвращается в аргументе `Result``out` \(типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>\).  
+ <span data-ttu-id="34833-141">После `DbQueryScalar` — выполняется, скалярное значение возвращается в `Result``out` аргумент (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).</span><span class="sxs-lookup"><span data-stu-id="34833-141">After `DbQueryScalar` is executed, the scalar is returned in the `Result``out` argument (of type `TResult`, that is defined in the base class <xref:System.Activities.AsyncCodeActivity%601>).</span></span>  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -128,25 +131,24 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }  
 ```  
   
-|||  
+|<span data-ttu-id="34833-142">Аргумент</span><span class="sxs-lookup"><span data-stu-id="34833-142">Argument</span></span>|<span data-ttu-id="34833-143">Описание</span><span class="sxs-lookup"><span data-stu-id="34833-143">Description</span></span>|  
 |-|-|  
-|Аргумент|Описание|  
-|ProviderName|Неизменяемое имя поставщика ADO.NET.Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|  
-|ConnectionString|Строка соединения для подключения к базе данных.Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|  
-|ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении.Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|  
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|  
-|Sql|Выполняемая команда SQL.|  
-|Параметры|Коллекция параметров SQL\-запроса.|  
-|Результат|Скаляр, полученный после выполнения запроса.Этот аргумент имеет тип `TResult`.|  
+|<span data-ttu-id="34833-144">ProviderName</span><span class="sxs-lookup"><span data-stu-id="34833-144">ProviderName</span></span>|<span data-ttu-id="34833-145">Неизменяемое имя поставщика ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="34833-145">ADO.NET provider invariant name.</span></span> <span data-ttu-id="34833-146">Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="34833-146">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="34833-147">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="34833-147">ConnectionString</span></span>|<span data-ttu-id="34833-148">Строка соединения для подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="34833-148">Connection string to connect to the database.</span></span> <span data-ttu-id="34833-149">Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="34833-149">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="34833-150">ConfigName</span><span class="sxs-lookup"><span data-stu-id="34833-150">ConfigName</span></span>|<span data-ttu-id="34833-151">Имя раздела файла конфигурации, в котором хранятся сведения о соединении.</span><span class="sxs-lookup"><span data-stu-id="34833-151">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="34833-152">Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.</span><span class="sxs-lookup"><span data-stu-id="34833-152">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="34833-153">CommandType</span><span class="sxs-lookup"><span data-stu-id="34833-153">CommandType</span></span>|<span data-ttu-id="34833-154">Тип выполняемой команды <xref:System.Data.Common.DbCommand>.</span><span class="sxs-lookup"><span data-stu-id="34833-154">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="34833-155">Sql</span><span class="sxs-lookup"><span data-stu-id="34833-155">Sql</span></span>|<span data-ttu-id="34833-156">Выполняемая команда SQL.</span><span class="sxs-lookup"><span data-stu-id="34833-156">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="34833-157">Параметры</span><span class="sxs-lookup"><span data-stu-id="34833-157">Parameters</span></span>|<span data-ttu-id="34833-158">Коллекция параметров SQL-запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-158">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="34833-159">Результат</span><span class="sxs-lookup"><span data-stu-id="34833-159">Result</span></span>|<span data-ttu-id="34833-160">Скаляр, полученный после выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-160">Scalar that is obtained after the query is executed.</span></span> <span data-ttu-id="34833-161">Этот аргумент имеет тип `TResult`.</span><span class="sxs-lookup"><span data-stu-id="34833-161">This argument is of type `TResult`.</span></span>|  
   
-## DbQuery  
- Выполняет запрос, который возвращает список объектов.После выполнения запроса выполняется функция сопоставления \(это может быть <xref:System.Func%601>\<`DbDataReader`, `TResult`\> или <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>\).Эта функция сопоставления получает запись в `DbDataReader` и сопоставляет ее возвращаемому объекту.  
+## <a name="dbquery"></a><span data-ttu-id="34833-162">DbQuery</span><span class="sxs-lookup"><span data-stu-id="34833-162">DbQuery</span></span>  
+ <span data-ttu-id="34833-163">Выполняет запрос, который возвращает список объектов.</span><span class="sxs-lookup"><span data-stu-id="34833-163">Executes a query that retrieves a list of objects.</span></span> <span data-ttu-id="34833-164">После выполнения запроса выполняется функция сопоставления (это может быть <xref:System.Func%601> < `DbDataReader`, `TResult`> или <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>).</span><span class="sxs-lookup"><span data-stu-id="34833-164">After the query is executed, a mapping function is executed (it can be <xref:System.Func%601><`DbDataReader`, `TResult`> or an <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>).</span></span> <span data-ttu-id="34833-165">Эта функция сопоставления получает запись в `DbDataReader` и сопоставляет ее возвращаемому объекту.</span><span class="sxs-lookup"><span data-stu-id="34833-165">This mapping function gets a record in a `DbDataReader` and maps it to the object to be returned.</span></span>  
   
- Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика \(`ProviderName`\) и строку соединения \(`ConnectionString`\) или использовать имя конфигурации строки соединения \(`ConfigFileSectionName`\) из файла конфигурации приложения.  
+ <span data-ttu-id="34833-166">Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="34833-166">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.  
+ <span data-ttu-id="34833-167">Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="34833-167">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- Результаты SQL\-запроса извлекаются с использованием `DbDataReader`.Действие выполняет перебор по `DbDataReader` и сопоставляет строки в `DbDataReader` с экземпляром `TResult`.Пользователь `DbQuery` должен предоставить код сопоставления, что может быть сделано двумя способами: с использованием <xref:System.Func%601>\<`DbDataReader`, `TResult`\> или с использованием <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>.В первом случае сопоставление совершается на одном шаге выполнения.Поэтому этот способ быстрее, но сериализация в XAML невозможна.Во втором случае сопоставление выполняется в несколько шагов.Поэтому может потребоваться больше времени, зато возможны сериализация в XAML и декларативное авторство \(любое существующее действие может участвовать в сопоставлении\).  
+ <span data-ttu-id="34833-168">Результаты SQL-запроса извлекаются с использованием `DbDataReader`.</span><span class="sxs-lookup"><span data-stu-id="34833-168">The results of the SQL query are retrieved using a `DbDataReader`.</span></span> <span data-ttu-id="34833-169">Действие выполняет перебор по `DbDataReader` и сопоставляет строки в `DbDataReader` с экземпляром `TResult`.</span><span class="sxs-lookup"><span data-stu-id="34833-169">The activity iterates through the `DbDataReader` and maps the rows in the `DbDataReader` to an instance of `TResult`.</span></span> <span data-ttu-id="34833-170">Пользователь `DbQuery` должен предоставить код сопоставления, что это можно сделать двумя способами: с помощью <xref:System.Func%601> < `DbDataReader`, `TResult`> или <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>.</span><span class="sxs-lookup"><span data-stu-id="34833-170">The user of `DbQuery` has to provide the mapping code and this can be done in two ways: using a <xref:System.Func%601><`DbDataReader`, `TResult`> or an <xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>.</span></span> <span data-ttu-id="34833-171">В первом случае сопоставление совершается на одном шаге выполнения.</span><span class="sxs-lookup"><span data-stu-id="34833-171">In the first case, the map is done in a single pulse of execution.</span></span> <span data-ttu-id="34833-172">Поэтому этот способ быстрее, но сериализация в XAML невозможна.</span><span class="sxs-lookup"><span data-stu-id="34833-172">Therefore, it is faster, but this cannot be serialized to XAML.</span></span> <span data-ttu-id="34833-173">Во втором случае сопоставление выполняется в несколько шагов.</span><span class="sxs-lookup"><span data-stu-id="34833-173">In the last case, the map is performed in multiple pulses.</span></span> <span data-ttu-id="34833-174">Поэтому может потребоваться больше времени, зато возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).</span><span class="sxs-lookup"><span data-stu-id="34833-174">Therefore, it might be slower but can be serialized to XAML and authored declaratively (any existing activity can participate in the mapping).</span></span>  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -188,27 +190,26 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }  
 ```  
   
-|||  
+|<span data-ttu-id="34833-175">Аргумент</span><span class="sxs-lookup"><span data-stu-id="34833-175">Argument</span></span>|<span data-ttu-id="34833-176">Описание</span><span class="sxs-lookup"><span data-stu-id="34833-176">Description</span></span>|  
 |-|-|  
-|Аргумент|Описание|  
-|ProviderName|Неизменяемое имя поставщика ADO.NET.Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|  
-|ConnectionString|Строка соединения для подключения к базе данных.Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|  
-|ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении.Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|  
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|  
-|Sql|Выполняемая команда SQL.|  
-|Параметры|Коллекция параметров SQL\-запроса.|  
-|Сопоставитель|Функция сопоставления \(<xref:System.Func%601>\<`DbDataReader`, `TResult`\>\), которая принимает запись в объекте `DataReader`, полученном в результате выполнения запроса, и возвращает экземпляр типа `TResult` для добавления в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|  
-|MapperFunc|Функция сопоставления \(<xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>\), которая принимает запись в объекте `DataReader`, полученном в результате выполнения запроса, и возвращает экземпляр типа `TResult` для добавления в коллекцию `Result`.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения.Для этой функции возможны сериализация в XAML и декларативное авторство \(любое существующее действие может участвовать в сопоставлении\).|  
-|Результат|Список объектов, полученный в результате выполнения запроса и выполнения функции сопоставления для каждой записи в `DataReader`.|  
+|<span data-ttu-id="34833-177">ProviderName</span><span class="sxs-lookup"><span data-stu-id="34833-177">ProviderName</span></span>|<span data-ttu-id="34833-178">Неизменяемое имя поставщика ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="34833-178">ADO.NET provider invariant name.</span></span> <span data-ttu-id="34833-179">Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="34833-179">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="34833-180">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="34833-180">ConnectionString</span></span>|<span data-ttu-id="34833-181">Строка соединения для подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="34833-181">Connection string to connect to the database.</span></span> <span data-ttu-id="34833-182">Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="34833-182">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="34833-183">ConfigName</span><span class="sxs-lookup"><span data-stu-id="34833-183">ConfigName</span></span>|<span data-ttu-id="34833-184">Имя раздела файла конфигурации, в котором хранятся сведения о соединении.</span><span class="sxs-lookup"><span data-stu-id="34833-184">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="34833-185">Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.</span><span class="sxs-lookup"><span data-stu-id="34833-185">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="34833-186">CommandType</span><span class="sxs-lookup"><span data-stu-id="34833-186">CommandType</span></span>|<span data-ttu-id="34833-187">Тип выполняемой команды <xref:System.Data.Common.DbCommand>.</span><span class="sxs-lookup"><span data-stu-id="34833-187">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="34833-188">Sql</span><span class="sxs-lookup"><span data-stu-id="34833-188">Sql</span></span>|<span data-ttu-id="34833-189">Выполняемая команда SQL.</span><span class="sxs-lookup"><span data-stu-id="34833-189">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="34833-190">Параметры</span><span class="sxs-lookup"><span data-stu-id="34833-190">Parameters</span></span>|<span data-ttu-id="34833-191">Коллекция параметров SQL-запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-191">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="34833-192">Сопоставитель</span><span class="sxs-lookup"><span data-stu-id="34833-192">Mapper</span></span>|<span data-ttu-id="34833-193">Функция сопоставления (<xref:System.Func%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления `Result` коллекции.</span><span class="sxs-lookup"><span data-stu-id="34833-193">Mapping function (<xref:System.Func%601><`DbDataReader`, `TResult`>) that takes a record in the `DataReader` obtained as result of executing the query and returns an instance of an object of type `TResult` to be added to the `Result` collection.</span></span><br /><br /> <span data-ttu-id="34833-194">В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.</span><span class="sxs-lookup"><span data-stu-id="34833-194">In this case, mapping is done in a single pulse of execution, but it cannot be authored declaratively using the designer.</span></span>|  
+|<span data-ttu-id="34833-195">MapperFunc</span><span class="sxs-lookup"><span data-stu-id="34833-195">MapperFunc</span></span>|<span data-ttu-id="34833-196">Функция сопоставления (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления `Result` коллекции.</span><span class="sxs-lookup"><span data-stu-id="34833-196">Mapping function (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) that takes a record in the `DataReader` obtained as result of executing the query and returns an instance of an object of type `TResult` to be added to the `Result` collection.</span></span><br /><br /> <span data-ttu-id="34833-197">В этом случае сопоставление совершается в несколько шагов выполнения.</span><span class="sxs-lookup"><span data-stu-id="34833-197">In this case, the mapping is done in multiple pulses of execution.</span></span> <span data-ttu-id="34833-198">Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).</span><span class="sxs-lookup"><span data-stu-id="34833-198">This function can be serialized to XAML and authored declaratively (any existing activity can participate in the mapping).</span></span>|  
+|<span data-ttu-id="34833-199">Результат</span><span class="sxs-lookup"><span data-stu-id="34833-199">Result</span></span>|<span data-ttu-id="34833-200">Список объектов, полученный в результате выполнения запроса и выполнения функции сопоставления для каждой записи в `DataReader`.</span><span class="sxs-lookup"><span data-stu-id="34833-200">List of objects obtained as result of executing the query and executing the mapping function for each record in the `DataReader`.</span></span>|  
   
-## DbQueryDataSet  
- Выполняет запрос, который возвращает <xref:System.Data.DataSet>.Этот класс выполняет работу асинхронно.Он является производным от класса <xref:System.Activities.AsyncCodeActivity>\<`TResult`\> и использует его асинхронные возможности.  
+## <a name="dbquerydataset"></a><span data-ttu-id="34833-201">DbQueryDataSet</span><span class="sxs-lookup"><span data-stu-id="34833-201">DbQueryDataSet</span></span>  
+ <span data-ttu-id="34833-202">Выполняет запрос, который возвращает <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="34833-202">Executes a query that returns a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="34833-203">Этот класс выполняет работу асинхронно.</span><span class="sxs-lookup"><span data-stu-id="34833-203">This class performs its work asynchronously.</span></span> <span data-ttu-id="34833-204">Он является производным от <xref:System.Activities.AsyncCodeActivity> < `TResult`> и использует его асинхронные возможности.</span><span class="sxs-lookup"><span data-stu-id="34833-204">It derives from <xref:System.Activities.AsyncCodeActivity><`TResult`> and uses its asynchronous capabilities.</span></span>  
   
- Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика \(`ProviderName`\) и строку соединения \(`ConnectionString`\) или использовать имя конфигурации строки соединения \(`ConfigFileSectionName`\) из файла конфигурации приложения.  
+ <span data-ttu-id="34833-205">Чтобы настроить сведения о соединении, можно задать неизменяемое имя поставщика (`ProviderName`) и строку соединения (`ConnectionString`) или использовать имя конфигурации строки соединения (`ConfigFileSectionName`) из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="34833-205">The connection information can be configured by setting a provider invariant name (`ProviderName`) and the connection string (`ConnectionString`) or just using a connection string configuration name (`ConfigFileSectionName`) from the application configuration file.</span></span>  
   
- Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.  
+ <span data-ttu-id="34833-206">Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="34833-206">The query to be executed is configured in its `Sql` property and the parameters are passed through the `Parameters` collection.</span></span>  
   
- После выполнения `DbQueryDataSet``DataSet` возвращается в аргументе `Result``out` \(типа `TResult`, определенного в базовом классе <xref:System.Activities.AsyncCodeActivity%601>\).  
+ <span data-ttu-id="34833-207">После `DbQueryDataSet` выполняется `DataSet` возвращается в `Result``out` аргумент (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).</span><span class="sxs-lookup"><span data-stu-id="34833-207">After the `DbQueryDataSet` is executed the `DataSet` is returned in the `Result``out` argument (of type `TResult`, that is defined in the base class <xref:System.Activities.AsyncCodeActivity%601>).</span></span>  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -242,21 +243,20 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }  
 ```  
   
-|||  
+|<span data-ttu-id="34833-208">Аргумент</span><span class="sxs-lookup"><span data-stu-id="34833-208">Argument</span></span>|<span data-ttu-id="34833-209">Описание</span><span class="sxs-lookup"><span data-stu-id="34833-209">Description</span></span>|  
 |-|-|  
-|Аргумент|Описание|  
-|ProviderName|Неизменяемое имя поставщика ADO.NET.Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.|  
-|ConnectionString|Строка соединения для подключения к базе данных.Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.|  
-|ConfigName|Имя раздела файла конфигурации, в котором хранятся сведения о соединении.Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.|  
-|CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|  
-|Sql|Выполняемая команда SQL.|  
-|Параметры|Коллекция параметров SQL\-запроса.|  
-|Результат|<xref:System.Data.DataSet>, полученный после выполнения запроса.|  
+|<span data-ttu-id="34833-210">ProviderName</span><span class="sxs-lookup"><span data-stu-id="34833-210">ProviderName</span></span>|<span data-ttu-id="34833-211">Неизменяемое имя поставщика ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="34833-211">ADO.NET provider invariant name.</span></span> <span data-ttu-id="34833-212">Если этот аргумент задан, то необходимо задать и аргумент `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="34833-212">If this argument is set, then the `ConnectionString` must also be set.</span></span>|  
+|<span data-ttu-id="34833-213">ConnectionString</span><span class="sxs-lookup"><span data-stu-id="34833-213">ConnectionString</span></span>|<span data-ttu-id="34833-214">Строка соединения для подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="34833-214">Connection string to connect to the database.</span></span> <span data-ttu-id="34833-215">Если этот аргумент задан, то необходимо задать и аргумент `ProviderName`.</span><span class="sxs-lookup"><span data-stu-id="34833-215">If this argument is set, then `ProviderName` must also be set.</span></span>|  
+|<span data-ttu-id="34833-216">ConfigName</span><span class="sxs-lookup"><span data-stu-id="34833-216">ConfigName</span></span>|<span data-ttu-id="34833-217">Имя раздела файла конфигурации, в котором хранятся сведения о соединении.</span><span class="sxs-lookup"><span data-stu-id="34833-217">Name of the configuration file section where the connection information is stored.</span></span> <span data-ttu-id="34833-218">Если этот аргумент задан, то аргументы `ProviderName` и `ConnectionString` не требуются.</span><span class="sxs-lookup"><span data-stu-id="34833-218">When this argument is set `ProviderName` and `ConnectionString` are not required.</span></span>|  
+|<span data-ttu-id="34833-219">CommandType</span><span class="sxs-lookup"><span data-stu-id="34833-219">CommandType</span></span>|<span data-ttu-id="34833-220">Тип выполняемой команды <xref:System.Data.Common.DbCommand>.</span><span class="sxs-lookup"><span data-stu-id="34833-220">Type of the <xref:System.Data.Common.DbCommand> to be executed.</span></span>|  
+|<span data-ttu-id="34833-221">Sql</span><span class="sxs-lookup"><span data-stu-id="34833-221">Sql</span></span>|<span data-ttu-id="34833-222">Выполняемая команда SQL.</span><span class="sxs-lookup"><span data-stu-id="34833-222">The SQL command to be executed.</span></span>|  
+|<span data-ttu-id="34833-223">Параметры</span><span class="sxs-lookup"><span data-stu-id="34833-223">Parameters</span></span>|<span data-ttu-id="34833-224">Коллекция параметров SQL-запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-224">Collection of the parameters of the SQL query.</span></span>|  
+|<span data-ttu-id="34833-225">Результат</span><span class="sxs-lookup"><span data-stu-id="34833-225">Result</span></span>|<span data-ttu-id="34833-226"><xref:System.Data.DataSet>, полученный после выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="34833-226"><xref:System.Data.DataSet> that is obtained after the query is executed.</span></span>|  
   
-## Настройка сведений о соединении  
- Все DbActivities используют одни и те же параметры конфигурации.Их можно настроить двумя способами.  
+## <a name="configuring-connection-information"></a><span data-ttu-id="34833-227">Настройка сведений о соединении</span><span class="sxs-lookup"><span data-stu-id="34833-227">Configuring Connection Information</span></span>  
+ <span data-ttu-id="34833-228">Все DbActivities используют одни и те же параметры конфигурации.</span><span class="sxs-lookup"><span data-stu-id="34833-228">All DbActivities share the same configuration parameters.</span></span> <span data-ttu-id="34833-229">Их можно настроить двумя способами.</span><span class="sxs-lookup"><span data-stu-id="34833-229">They can be configured in two ways:</span></span>  
   
--   `ConnectionString + InvariantName`: Укажите неизменяемое имя поставщика ADO.NET и строку соединения.  
+-   <span data-ttu-id="34833-230">`ConnectionString + InvariantName`: Укажите неизменяемое имя поставщика ADO.NET и строку соединения.</span><span class="sxs-lookup"><span data-stu-id="34833-230">`ConnectionString + InvariantName`: Set the ADO.NET provider invariant name and connection string.</span></span>  
   
     ```  
     Activity dbSelectCount = new DbQueryScalar<DateTime>()  
@@ -269,9 +269,9 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
--   `ConfigName`: Укажите имя раздела конфигурации, в котором содержатся сведения о соединении.  
+-   <span data-ttu-id="34833-231">`ConfigName`: Укажите имя раздела конфигурации, в котором содержатся сведения о соединении.</span><span class="sxs-lookup"><span data-stu-id="34833-231">`ConfigName`: Set the name of the configuration section that contains the connection information.</span></span>  
   
-    ```  
+    ```xml  
     <connectionStrings>      
         <add name="DbActivitiesSample"  
              providerName="System.Data.SqlClient"  
@@ -279,7 +279,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>  
     ```  
   
--   В действии:  
+-   <span data-ttu-id="34833-232">В действии:</span><span class="sxs-lookup"><span data-stu-id="34833-232">In the activity:</span></span>  
   
     ```  
     Activity dbSelectCount = new DbQueryScalar<int>()  
@@ -289,51 +289,51 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
-## Выполнение образца  
+## <a name="running-this-sample"></a><span data-ttu-id="34833-233">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="34833-233">Running this sample</span></span>  
   
-### Инструкции по установке  
- Этот образец использует базу данных.Вместе с образцом предоставляется скрипт установки и загрузки \(Setup.cmd\).Этот файл необходимо выполнить из командной строки.  
+### <a name="setup-instructions"></a><span data-ttu-id="34833-234">Инструкции по установке</span><span class="sxs-lookup"><span data-stu-id="34833-234">Setup instructions</span></span>  
+ <span data-ttu-id="34833-235">Этот образец использует базу данных.</span><span class="sxs-lookup"><span data-stu-id="34833-235">This sample uses a database.</span></span> <span data-ttu-id="34833-236">Вместе с образцом предоставляется скрипт установки и загрузки (Setup.cmd).</span><span class="sxs-lookup"><span data-stu-id="34833-236">A set-up and load script (Setup.cmd) is provided with the sample.</span></span> <span data-ttu-id="34833-237">Этот файл необходимо выполнить из командной строки.</span><span class="sxs-lookup"><span data-stu-id="34833-237">You must execute that file using the command prompt.</span></span>  
   
- Скрипт Setup.cmd вызывает файл скрипта CreateDb.sql, который содержит команды SQL и выполняет следующие операции.  
+ <span data-ttu-id="34833-238">Скрипт Setup.cmd вызывает файл скрипта CreateDb.sql, который содержит команды SQL и выполняет следующие операции.</span><span class="sxs-lookup"><span data-stu-id="34833-238">The Setup.cmd script invokes the CreateDb.sql script file, which contains SQL commands that do the following:</span></span>  
   
--   Создает базу данных под именем DbActivitiesSample.  
+-   <span data-ttu-id="34833-239">Создает базу данных под именем DbActivitiesSample.</span><span class="sxs-lookup"><span data-stu-id="34833-239">Creates a database called DbActivitiesSample.</span></span>  
   
--   Создает таблицу Roles.  
+-   <span data-ttu-id="34833-240">Создает таблицу Roles.</span><span class="sxs-lookup"><span data-stu-id="34833-240">Creates the Roles table.</span></span>  
   
--   Создает таблицу Employees.  
+-   <span data-ttu-id="34833-241">Создает таблицу Employees.</span><span class="sxs-lookup"><span data-stu-id="34833-241">Creates Employees table.</span></span>  
   
--   Вставляет 3 записи в таблицу Roles.  
+-   <span data-ttu-id="34833-242">Вставляет 3 записи в таблицу Roles.</span><span class="sxs-lookup"><span data-stu-id="34833-242">Inserts three records into the Roles table.</span></span>  
   
--   Вставляет двенадцать записей в таблицу Employees.  
+-   <span data-ttu-id="34833-243">Вставляет двенадцать записей в таблицу Employees.</span><span class="sxs-lookup"><span data-stu-id="34833-243">Inserts twelve records into the Employees table.</span></span>  
   
-##### Запуск команды Setup.cmd  
+##### <a name="to-run-setupcmd"></a><span data-ttu-id="34833-244">Запуск команды Setup.cmd</span><span class="sxs-lookup"><span data-stu-id="34833-244">To run Setup.cmd</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="34833-245">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="34833-245">Open a command prompt.</span></span>  
   
-2.  Перейдите в папку образца DbActivities.  
+2.  <span data-ttu-id="34833-246">Перейдите в папку образца DbActivities.</span><span class="sxs-lookup"><span data-stu-id="34833-246">Go to the DbActivities sample folder.</span></span>  
   
-3.  Введите «setup.cmd» и нажмите клавишу «ВВОД».  
+3.  <span data-ttu-id="34833-247">Введите «setup.cmd» и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="34833-247">Type "setup.cmd" and press ENTER.</span></span>  
   
     > [!NOTE]
-    >  Скрипт Setup.cmd пытается установить образец базы данных на экземпляр SQLExpress на локальном компьютере.Если образец необходимо установить на другом экземпляре сервера SQL, измените Setup.cmd, указав другое имя экземпляра.  
+    >  <span data-ttu-id="34833-248">Скрипт Setup.cmd пытается установить образец базы данных на экземпляр SQLExpress на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="34833-248">Setup.cmd attempts to install the sample in your local machine SqlExpress instance.</span></span> <span data-ttu-id="34833-249">Если образец необходимо установить на другом экземпляре сервера SQL, измените Setup.cmd, указав другое имя экземпляра.</span><span class="sxs-lookup"><span data-stu-id="34833-249">If you want to install it in other SQL server instance, edit Setup.cmd with the new instance name.</span></span>  
   
-##### Удаление образца базы данных  
+##### <a name="to-uninstall-the-sample-database"></a><span data-ttu-id="34833-250">Удаление образца базы данных</span><span class="sxs-lookup"><span data-stu-id="34833-250">To uninstall the sample database</span></span>  
   
-1.  Выполните в командной строке файл Cleanup.cmd из папки образца.  
+1.  <span data-ttu-id="34833-251">Выполните в командной строке файл Cleanup.cmd из папки образца.</span><span class="sxs-lookup"><span data-stu-id="34833-251">Run Cleanup.cmd from the sample folder in a command prompt.</span></span>  
   
-##### Запуск образца  
+##### <a name="to-run-the-sample"></a><span data-ttu-id="34833-252">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="34833-252">To run the sample</span></span>  
   
-1.  Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]  
+1.  <span data-ttu-id="34833-253">Откройте решение в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34833-253">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]</span></span>  
   
-2.  Для компиляции решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="34833-254">Для компиляции решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="34833-254">To compile the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить образец без отладки, нажмите сочетание клавиш CTRL\+F5.  
+3.  <span data-ttu-id="34833-255">Чтобы запустить образец без отладки, нажмите сочетание клавиш CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="34833-255">To run the sample without debugging, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="34833-256">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="34833-256">The samples may already be installed on your machine.</span></span> <span data-ttu-id="34833-257">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="34833-257">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="34833-258">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="34833-258">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="34833-259">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="34833-259">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

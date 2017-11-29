@@ -1,41 +1,47 @@
 ---
-title: "Сравнение отложенной и немедленной загрузки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отложенная и немедленная загрузка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5daf7ac2769128943d98600be08a7ee705028ce2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сравнение отложенной и немедленной загрузки
-При запросе объекта фактически извлекается только запрошенный объект.  *Связанные* объекты не извлекаются автоматически одновременно с основным объектом.  \(Дополнительные сведения см. в разделе [Выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).\) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.  
+# <a name="deferred-versus-immediate-loading"></a><span data-ttu-id="559ed-102">Отложенная и немедленная загрузка</span><span class="sxs-lookup"><span data-stu-id="559ed-102">Deferred versus Immediate Loading</span></span>
+<span data-ttu-id="559ed-103">При запросе объекта фактически извлекается только запрошенный объект.</span><span class="sxs-lookup"><span data-stu-id="559ed-103">When you query for an object, you actually retrieve only the object you requested.</span></span> <span data-ttu-id="559ed-104">*Связанные* объекты не извлекаются автоматически одновременно.</span><span class="sxs-lookup"><span data-stu-id="559ed-104">The *related* objects are not automatically fetched at the same time.</span></span> <span data-ttu-id="559ed-105">(Дополнительные сведения см. в разделе [выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.</span><span class="sxs-lookup"><span data-stu-id="559ed-105">(For more information, see [Querying Across Relationships](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) You cannot see the fact that the related objects are not already loaded, because an attempt to access them produces a request that retrieves them.</span></span>  
   
- Например, может возникнуть потребность выполнить запрос на получение определенного набора заказов и затем лишь при необходимости отправлять уведомления по электронной почте отдельным клиентам.  В этом случае не требуется сразу извлекать все данные о клиентах вместе с каждым заказом.  Можно использовать отложенную загрузку для получения дополнительной информации только тогда, когда она действительно необходима.  Рассмотрим следующий пример.  
+ <span data-ttu-id="559ed-106">Например, может возникнуть потребность выполнить запрос на получение определенного набора заказов и затем лишь при необходимости отправлять уведомления по электронной почте отдельным клиентам.</span><span class="sxs-lookup"><span data-stu-id="559ed-106">For example, you might want to query for a particular set of orders and then only occasionally send an e-mail notification to particular customers.</span></span> <span data-ttu-id="559ed-107">В этом случае не требуется сразу извлекать все данные о клиентах вместе с каждым заказом.</span><span class="sxs-lookup"><span data-stu-id="559ed-107">You would not necessarily need initially to retrieve all customer data with every order.</span></span> <span data-ttu-id="559ed-108">Можно использовать отложенную загрузку для получения дополнительной информации только тогда, когда она действительно необходима.</span><span class="sxs-lookup"><span data-stu-id="559ed-108">You can use deferred loading to defer retrieval of extra information until you absolutely have to.</span></span> <span data-ttu-id="559ed-109">Рассмотрим следующий пример.</span><span class="sxs-lookup"><span data-stu-id="559ed-109">Consider the following example:</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
   
- Иногда бывает полезным реализовать и противоположный подход.  Предположим, имеется приложение, которому требуется одновременно просматривать данные о клиентах и заказах.  В этом случае необходимы оба набора данных.  Поскольку приложению требуются сведения о заказах для каждого клиента в момент получения результатов,  нецелесообразно отправлять отдельные запросы на получение заказов для каждого клиента.  Более эффективно извлекать данные о заказах одновременно с данными о клиентах.  
+ <span data-ttu-id="559ed-110">Иногда бывает полезным реализовать и противоположный подход.</span><span class="sxs-lookup"><span data-stu-id="559ed-110">The opposite might also be true.</span></span> <span data-ttu-id="559ed-111">Предположим, имеется приложение, которому требуется одновременно просматривать данные о клиентах и заказах.</span><span class="sxs-lookup"><span data-stu-id="559ed-111">You might have an application that has to view customer and order data at the same time.</span></span> <span data-ttu-id="559ed-112">В этом случае необходимы оба набора данных.</span><span class="sxs-lookup"><span data-stu-id="559ed-112">You know you need both sets of data.</span></span> <span data-ttu-id="559ed-113">Поскольку приложению требуются сведения о заказах для каждого клиента в момент получения результатов,</span><span class="sxs-lookup"><span data-stu-id="559ed-113">You know your application needs order information for each customer as soon as you get the results.</span></span> <span data-ttu-id="559ed-114">нецелесообразно отправлять отдельные запросы на получение заказов для каждого клиента.</span><span class="sxs-lookup"><span data-stu-id="559ed-114">You would not want to submit individual queries for orders for every customer.</span></span> <span data-ttu-id="559ed-115">Более эффективно извлекать данные о заказах одновременно с данными о клиентах.</span><span class="sxs-lookup"><span data-stu-id="559ed-115">What you really want is to retrieve the order data together with the customers.</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  
   
- Можно также объединить клиентов и заказы в одном запросе путем создания перекрестного произведения и извлечения всех связанных битов данных в виде одной большой проекции.  Однако эти результаты не являются сущностями  \(Дополнительные сведения см. в разделе [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).\)  Сущности представляют собой объекты, которые обладают идентификациями и которые можно изменить. Результаты, напротив, являются проекциями, и их нельзя ни изменить, ни сохранить.  Более того, при таком подходе извлекается большое количество избыточных данных, поскольку в плоских выходных данных, полученных в результате объединения, каждый клиент повторяется в каждом заказе.  
+ <span data-ttu-id="559ed-116">Можно также объединить клиентов и заказы в одном запросе путем создания перекрестного произведения и извлечения всех связанных битов данных в виде одной большой проекции.</span><span class="sxs-lookup"><span data-stu-id="559ed-116">You can also join customers and orders in a query by forming the cross-product and retrieving all the relative bits of data as one large projection.</span></span> <span data-ttu-id="559ed-117">Однако эти результаты не являются сущностями</span><span class="sxs-lookup"><span data-stu-id="559ed-117">But these results are not entities.</span></span> <span data-ttu-id="559ed-118">(Дополнительные сведения см. в разделе [LINQ to SQL модель объектов](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)).</span><span class="sxs-lookup"><span data-stu-id="559ed-118">(For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)).</span></span> <span data-ttu-id="559ed-119">Сущности представляют собой объекты, которые обладают идентификациями и которые можно изменить. Результаты, напротив, являются проекциями, и их нельзя ни изменить, ни сохранить.</span><span class="sxs-lookup"><span data-stu-id="559ed-119">Entities are objects that have identity and that you can modify, whereas these results would be projections that cannot be changed and persisted.</span></span> <span data-ttu-id="559ed-120">Более того, при таком подходе извлекается большое количество избыточных данных, поскольку в плоских выходных данных, полученных в результате объединения, каждый клиент повторяется в каждом заказе.</span><span class="sxs-lookup"><span data-stu-id="559ed-120">Even worse, you would be retrieving lots of redundant data as each customer repeats for each order in the flattened join output.</span></span>  
   
- Действительно эффективным стал бы способ параллельного извлечения набора связанных объектов.  Этот набор является отделенным разделом графа, поэтому пользователь извлекает ровно тот объем данных, который ему необходим.  Для этой цели в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предусмотрены параметры <xref:System.Data.Linq.DataLoadOptions>, позволяющие немедленно загружать область объектной модели.  Ниже перечислены используемые методы.  
+ <span data-ttu-id="559ed-121">Действительно эффективным стал бы способ параллельного извлечения набора связанных объектов.</span><span class="sxs-lookup"><span data-stu-id="559ed-121">What you really need is a way to retrieve a set of related objects at the same time.</span></span> <span data-ttu-id="559ed-122">Этот набор является отделенным разделом графа, поэтому пользователь извлекает ровно тот объем данных, который ему необходим.</span><span class="sxs-lookup"><span data-stu-id="559ed-122">The set is a delineated section of a graph so that you would never be retrieving more or less than was necessary for your intended use.</span></span> <span data-ttu-id="559ed-123">Для этой цели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет <xref:System.Data.Linq.DataLoadOptions> позволяющие немедленно загружать область объектной модели.</span><span class="sxs-lookup"><span data-stu-id="559ed-123">For this purpose, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides <xref:System.Data.Linq.DataLoadOptions> for immediate loading of a region of your object model.</span></span> <span data-ttu-id="559ed-124">Ниже перечислены используемые методы.</span><span class="sxs-lookup"><span data-stu-id="559ed-124">Methods include:</span></span>  
   
--   Метод <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> для немедленной загрузки данные, связанных с основными целевыми объектами.  
+-   <span data-ttu-id="559ed-125">Метод <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> для немедленной загрузки данные, связанных с основными целевыми объектами.</span><span class="sxs-lookup"><span data-stu-id="559ed-125">The  <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method, to immediately load data related to the main target.</span></span>  
   
--   Метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> для фильтрации объектов, извлеченных для определенной связи.  
+-   <span data-ttu-id="559ed-126">Метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> для фильтрации объектов, извлеченных для определенной связи.</span><span class="sxs-lookup"><span data-stu-id="559ed-126">The <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method, to filter objects retrieved for a particular relationship.</span></span>  
   
-## См. также  
- [Основные понятия о запросах](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="559ed-127">См. также</span><span class="sxs-lookup"><span data-stu-id="559ed-127">See Also</span></span>  
+ [<span data-ttu-id="559ed-128">Основные принципы запросов</span><span class="sxs-lookup"><span data-stu-id="559ed-128">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

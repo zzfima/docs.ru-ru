@@ -1,88 +1,90 @@
 ---
-title: "Имена контрактов данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "контракты данных [WCF], именование"
+title: "Имена контрактов данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 27
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a52deae243e4f28e82eebd99e926ac8aeba4f02d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Имена контрактов данных
-Иногда клиент и служба поддерживают разные типы.Они все равно могут передавать данные друг другу при условии, что контракты данных эквивалентны на обеих сторонах.[Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) основана на именах контракта данных и члена данных, следовательно, система предоставляет механизм для сопоставления типов и членов этим именам.В этом разделе поясняются правила именования контрактов данных и описывается поведение по умолчанию инфраструктуры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] при создании имен.  
+# <a name="data-contract-names"></a><span data-ttu-id="803d4-102">Имена контрактов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-102">Data Contract Names</span></span>
+<span data-ttu-id="803d4-103">Иногда клиент и служба поддерживают разные типы.</span><span class="sxs-lookup"><span data-stu-id="803d4-103">Sometimes a client and a service do not share the same types.</span></span> <span data-ttu-id="803d4-104">Они все равно могут передавать данные друг другу при условии, что контракты данных эквивалентны на обеих сторонах.</span><span class="sxs-lookup"><span data-stu-id="803d4-104">They can still pass data to each other as long as the data contracts are equivalent on both sides.</span></span> <span data-ttu-id="803d4-105">[Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) на основе контракта данных и имена членов данных, и поэтому предоставляется механизм для сопоставления типов и членов, эти имена.</span><span class="sxs-lookup"><span data-stu-id="803d4-105">[Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) is based on data contract and data member names, and therefore a mechanism is provided to map types and members to those names.</span></span> <span data-ttu-id="803d4-106">В этом разделе поясняются правила именования контрактов данных и описывается поведение по умолчанию инфраструктуры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] при создании имен.</span><span class="sxs-lookup"><span data-stu-id="803d4-106">This topic explains the rules for naming data contracts as well as the default behavior of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure when creating names.</span></span>  
   
-## Основные правила  
- Ниже приведены основные правила именования контрактов данных:  
+## <a name="basic-rules"></a><span data-ttu-id="803d4-107">Основные правила</span><span class="sxs-lookup"><span data-stu-id="803d4-107">Basic Rules</span></span>  
+ <span data-ttu-id="803d4-108">Ниже приведены основные правила именования контрактов данных:</span><span class="sxs-lookup"><span data-stu-id="803d4-108">Basic rules regarding naming data contracts include:</span></span>  
   
--   Полное имя контракта данных состоит из пространства имен и имени.  
+-   <span data-ttu-id="803d4-109">Полное имя контракта данных состоит из пространства имен и имени.</span><span class="sxs-lookup"><span data-stu-id="803d4-109">A fully-qualified data contract name consists of a namespace and a name.</span></span>  
   
--   Члены данных имеют только имена, но не имеют пространств имен.  
+-   <span data-ttu-id="803d4-110">Члены данных имеют только имена, но не имеют пространств имен.</span><span class="sxs-lookup"><span data-stu-id="803d4-110">Data members have only names, but no namespaces.</span></span>  
   
--   При обработке контрактов данных инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] учитывает регистр пространства имен и имен контрактов данных и членов данных.  
+-   <span data-ttu-id="803d4-111">При обработке контрактов данных инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] учитывает регистр пространства имен и имен контрактов данных и членов данных.</span><span class="sxs-lookup"><span data-stu-id="803d4-111">When processing data contracts, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure is case-sensitive to both the namespaces and the names of data contracts and data members.</span></span>  
   
-## Пространства имен контракта данных  
- Пространство имен контракта данных принимает форму универсального кода ресурса \(URI\).URI может быть как абсолютным, так и относительным.По умолчанию контрактам данных определенного типа данных присваивается пространство имен из пространства имен среды CLR этого типа.  
+## <a name="data-contract-namespaces"></a><span data-ttu-id="803d4-112">Пространства имен контракта данных</span><span class="sxs-lookup"><span data-stu-id="803d4-112">Data Contract Namespaces</span></span>  
+ <span data-ttu-id="803d4-113">Пространство имен контракта данных принимает форму универсального кода ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="803d4-113">A data contract namespace takes the form of a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="803d4-114">URI может быть как абсолютным, так и относительным.</span><span class="sxs-lookup"><span data-stu-id="803d4-114">The URI can be either absolute or relative.</span></span> <span data-ttu-id="803d4-115">По умолчанию контрактам данных определенного типа данных присваивается пространство имен из пространства имен среды CLR этого типа.</span><span class="sxs-lookup"><span data-stu-id="803d4-115">By default, data contracts for a particular type are assigned a namespace that comes from the common language runtime (CLR) namespace of that type.</span></span>  
   
- По умолчанию любое пространство имен среды CLR \(в формате *Clr.Namespace*\) сопоставляется с пространством имен "http:\/\/schemas.datacontract.org\/2004\/07\/Clr.Namespace".Для переопределения данной настройки по умолчанию необходимо применить атрибут <xref:System.Runtime.Serialization.ContractNamespaceAttribute> ко всему модулю или всей сборке.Кроме того, для того чтобы управлять пространством имен контракта данных для каждого типа, необходимо задать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>.  
-  
-> [!NOTE]
->  Пространство имен "http:\/\/schemas.microsoft.com\/2003\/10\/Serialization" зарезервировано, следовательно, его невозможно использовать в качестве пространства имен контракта данных.  
+ <span data-ttu-id="803d4-116">По умолчанию в каждом конкретном пространстве имен среды CLR (в формате *Clr.Namespace*) сопоставляется с пространством имен «http://schemas.datacontract.org/2004/07/Clr.Namespace».</span><span class="sxs-lookup"><span data-stu-id="803d4-116">By default, any given CLR namespace (in the format *Clr.Namespace*) is mapped to the namespace "http://schemas.datacontract.org/2004/07/Clr.Namespace".</span></span> <span data-ttu-id="803d4-117">Для переопределения данной настройки по умолчанию необходимо применить атрибут <xref:System.Runtime.Serialization.ContractNamespaceAttribute> ко всему модулю или всей сборке.</span><span class="sxs-lookup"><span data-stu-id="803d4-117">To override this default, apply the <xref:System.Runtime.Serialization.ContractNamespaceAttribute> attribute to the entire module or assembly.</span></span> <span data-ttu-id="803d4-118">Кроме того, для того чтобы управлять пространством имен контракта данных для каждого типа, необходимо задать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute>.</span><span class="sxs-lookup"><span data-stu-id="803d4-118">Alternatively, to control the data contract namespace for each type, set the <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute>.</span></span>  
   
 > [!NOTE]
->  Нельзя переопределять заданное по умолчанию пространство имен в типах контрактов данных, содержащих объявления `delegate`.  
+>  <span data-ttu-id="803d4-119">Пространство имен "http://schemas.microsoft.com/2003/10/Serialization" зарезервировано, следовательно, его невозможно использовать в качестве пространства имен контракта данных.</span><span class="sxs-lookup"><span data-stu-id="803d4-119">The "http://schemas.microsoft.com/2003/10/Serialization"namespace is reserved and cannot be used as a data contract namespace.</span></span>  
   
-## Имена контрактов данных  
- Имя контракта данных по умолчанию для данного типа является именем этого типа.Для переопределения данной настройки по умолчанию необходимо задать свойству <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute> альтернативное имя.Специальные правила для универсальных типов описаны в части "Имена контрактов данных для универсальных типов" данного раздела \(см. ниже\).  
+> [!NOTE]
+>  <span data-ttu-id="803d4-120">Нельзя переопределять заданное по умолчанию пространство имен в типах контрактов данных, содержащих объявления `delegate`.</span><span class="sxs-lookup"><span data-stu-id="803d4-120">You cannot override the default namespace in data contract types that contain `delegate` declarations.</span></span>  
   
-## Имена членов данных  
- Имя члена данных по умолчанию для указанного поля или свойства является именем этого поля или свойства.Для переопределения данной настройки по умолчанию необходимо задать свойству <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> альтернативное значение.  
+## <a name="data-contract-names"></a><span data-ttu-id="803d4-121">Имена контрактов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-121">Data Contract Names</span></span>  
+ <span data-ttu-id="803d4-122">Имя контракта данных по умолчанию для данного типа является именем этого типа.</span><span class="sxs-lookup"><span data-stu-id="803d4-122">The default name of a data contract for a given type is the name of that type.</span></span> <span data-ttu-id="803d4-123">Для переопределения данной настройки по умолчанию необходимо задать свойству <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataContractAttribute> альтернативное имя.</span><span class="sxs-lookup"><span data-stu-id="803d4-123">To override the default, set the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataContractAttribute> to an alternative name.</span></span> <span data-ttu-id="803d4-124">Специальные правила для универсальных типов описаны в части "Имена контрактов данных для универсальных типов" данного раздела (см. ниже).</span><span class="sxs-lookup"><span data-stu-id="803d4-124">Special rules for generic types are described in "Data Contract Names for Generic Types" later in this topic.</span></span>  
   
-### Примеры  
- В следующем примере показано, как переопределить заданный по умолчанию принцип именования контрактов данных и членов данных.  
+## <a name="data-member-names"></a><span data-ttu-id="803d4-125">Имена членов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-125">Data Member Names</span></span>  
+ <span data-ttu-id="803d4-126">Имя члена данных по умолчанию для указанного поля или свойства является именем этого поля или свойства.</span><span class="sxs-lookup"><span data-stu-id="803d4-126">The default name of a data member for a given field or property is the name of that field or property.</span></span> <span data-ttu-id="803d4-127">Для переопределения данной настройки по умолчанию необходимо задать свойству <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> атрибута <xref:System.Runtime.Serialization.DataMemberAttribute> альтернативное значение.</span><span class="sxs-lookup"><span data-stu-id="803d4-127">To override the default, set the <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> property of the <xref:System.Runtime.Serialization.DataMemberAttribute> to an alternative value.</span></span>  
+  
+### <a name="examples"></a><span data-ttu-id="803d4-128">Примеры</span><span class="sxs-lookup"><span data-stu-id="803d4-128">Examples</span></span>  
+ <span data-ttu-id="803d4-129">В следующем примере показано, как переопределить заданный по умолчанию принцип именования контрактов данных и членов данных.</span><span class="sxs-lookup"><span data-stu-id="803d4-129">The following example shows how you can override the default naming behavior of data contracts and data members.</span></span>  
   
  [!code-csharp[C_DataContractNames#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
  [!code-vb[C_DataContractNames#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]  
   
-## Имена контрактов данных для универсальных типов  
- Имена контрактов данных для универсальных типов определяются по специальным правилам.Эти правила позволяют избежать конфликтов имен контрактов данных, когда речь идет о двух закрытых универсальных шаблонах одного универсального типа.  
+## <a name="data-contract-names-for-generic-types"></a><span data-ttu-id="803d4-130">Имена контрактов данных для универсальных типов</span><span class="sxs-lookup"><span data-stu-id="803d4-130">Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="803d4-131">Имена контрактов данных для универсальных типов определяются по специальным правилам.</span><span class="sxs-lookup"><span data-stu-id="803d4-131">Special rules exist for determining data contract names for generic types.</span></span> <span data-ttu-id="803d4-132">Эти правила позволяют избежать конфликтов имен контрактов данных, когда речь идет о двух закрытых универсальных шаблонах одного универсального типа.</span><span class="sxs-lookup"><span data-stu-id="803d4-132">These rules help avoid data contract name collisions between two closed generics of the same generic type.</span></span>  
   
- По умолчанию именем контракта данных для универсального типа является имя этого типа и строки "Of", за которыми следуют имена контрактов данных универсальных параметров и *хэш*, вычисляемый с помощью пространств имен контрактов данных универсальных параметров.Хэш — это результат математической функции, действующей как "отпечаток", который однозначно определяет блок данных.Когда все универсальные параметры являются типами\-примитивами, хэш не используется.  
+ <span data-ttu-id="803d4-133">По умолчанию именем контракта данных для универсального типа — имя типа, за которым следует строка «Of», следуют имена контрактов данных универсальных параметров, за которым следует *хэш* с использованием пространства имен контракта данных универсальные параметры.</span><span class="sxs-lookup"><span data-stu-id="803d4-133">By default, the data contract name for a generic type is the name of the type, followed by the string "Of", followed by the data contract names of the generic parameters, followed by a *hash* computed using the data contract namespaces of the generic parameters.</span></span> <span data-ttu-id="803d4-134">Хэш - это результат математической функции, действующей как "отпечаток", который однозначно определяет блок данных.</span><span class="sxs-lookup"><span data-stu-id="803d4-134">A hash is the result of a mathematical function that acts as a "fingerprint" that uniquely identifies a piece of data.</span></span> <span data-ttu-id="803d4-135">Когда все универсальные параметры являются типами-примитивами, хэш не используется.</span><span class="sxs-lookup"><span data-stu-id="803d4-135">When all of the generic parameters are primitive types, the hash is omitted.</span></span>  
   
- Например, см. типы в следующем примере.  
+ <span data-ttu-id="803d4-136">Например, см. типы в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="803d4-136">For example, see the types in the following example.</span></span>  
   
  [!code-csharp[C_DataContractNames#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
  [!code-vb[C_DataContractNames#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]  
   
- В данном примере тип `Drawing<Square,RegularRedBrush>` имеет имя контракта данных "DrawingOfSquareRedBrush5HWGAU6h", где "5HWGAU6h" — это хэш пространств имен "urn:shapes" и "urn:default".В данном примере тип `Drawing<Square,SpecialRedBrush>` имеет имя контракта данных DrawingOfSquareRedBrushjpB5LgQ\_S", где "jpB5LgQ\_S" – это хэш пространств имен "urn:shapes" и "urn:special".Обратите внимание, что идентичность двух имен в случае, когда не используется хэш, приводит к конфликту имен.  
+ <span data-ttu-id="803d4-137">В данном примере тип `Drawing<Square,RegularRedBrush>` имеет имя контракта данных "DrawingOfSquareRedBrush5HWGAU6h", где "5HWGAU6h" - это хэш пространств имен "urn:shapes" и "urn:default".</span><span class="sxs-lookup"><span data-stu-id="803d4-137">In this example, the type `Drawing<Square,RegularRedBrush>` has the data contract name "DrawingOfSquareRedBrush5HWGAU6h", where "5HWGAU6h" is a hash of the "urn:shapes" and "urn:default" namespaces.</span></span> <span data-ttu-id="803d4-138">В данном примере тип `Drawing<Square,SpecialRedBrush>` имеет имя контракта данных DrawingOfSquareRedBrushjpB5LgQ_S", где "jpB5LgQ_S" – это хэш пространств имен "urn:shapes" и "urn:special".</span><span class="sxs-lookup"><span data-stu-id="803d4-138">The type `Drawing<Square,SpecialRedBrush>` has the data contract name "DrawingOfSquareRedBrushjpB5LgQ_S", where "jpB5LgQ_S" is a hash of the "urn:shapes" and the "urn:special" namespaces.</span></span> <span data-ttu-id="803d4-139">Обратите внимание, что идентичность двух имен в случае, когда не используется хэш, приводит к конфликту имен.</span><span class="sxs-lookup"><span data-stu-id="803d4-139">Note that if the hash is not used, the two names are identical, and thus a name collision occurs.</span></span>  
   
-## Настройка имен контрактов данных для универсальных типов  
- Иногда имена контрактов данных, созданные для универсальных типов ранее описанным способом, недопустимы.Например, вы, возможно, заранее знаете, что конфликта имен не произойдет, и хотите удалить хэш.В этом случае можно использовать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута `DataContractAttribute`, чтобы указать другой способ создания имен.Вы можете использовать числа в фигурных скобках внутри свойства `Name` для ссылки на имена контрактов данных универсальных параметров.\(0 относится к первому параметру, 1 — ко второму, и т. д.\) Для ссылки на хэш можно использовать знак номера \(\#\) в фигурных скобках.Каждую из этих ссылок можно использовать несколько раз или не использовать совсем.  
+## <a name="customizing-data-contract-names-for-generic-types"></a><span data-ttu-id="803d4-140">Настройка имен контрактов данных для универсальных типов</span><span class="sxs-lookup"><span data-stu-id="803d4-140">Customizing Data Contract Names for Generic Types</span></span>  
+ <span data-ttu-id="803d4-141">Иногда имена контрактов данных, созданные для универсальных типов ранее описанным способом, недопустимы.</span><span class="sxs-lookup"><span data-stu-id="803d4-141">Sometimes, the data contract names generated for generic types, as described previously, are unacceptable.</span></span> <span data-ttu-id="803d4-142">Например, вы, возможно, заранее знаете, что конфликта имен не произойдет, и хотите удалить хэш.</span><span class="sxs-lookup"><span data-stu-id="803d4-142">For example, you may know in advance that you will not run into name collisions and may want to remove the hash.</span></span> <span data-ttu-id="803d4-143">В этом случае можно использовать свойство <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> атрибута `DataContractAttribute`, чтобы указать другой способ создания имен.</span><span class="sxs-lookup"><span data-stu-id="803d4-143">In this case, you can use the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property of the `DataContractAttribute` attribute to specify a different way to generate names.</span></span> <span data-ttu-id="803d4-144">Вы можете использовать числа в фигурных скобках внутри свойства `Name` для ссылки на имена контрактов данных универсальных параметров.</span><span class="sxs-lookup"><span data-stu-id="803d4-144">You can use numbers in curly braces inside of the `Name` property to refer to data contract names of the generic parameters.</span></span> <span data-ttu-id="803d4-145">(0 относится к первому параметру, 1 - ко второму, и т. д.) Для ссылки на хэш можно использовать знак номера (#) в фигурных скобках.</span><span class="sxs-lookup"><span data-stu-id="803d4-145">(0 refers to the first parameter, 1 refers to the second, and so on.) You can use a number (#) sign inside curly braces to refer to the hash.</span></span> <span data-ttu-id="803d4-146">Каждую из этих ссылок можно использовать несколько раз или не использовать совсем.</span><span class="sxs-lookup"><span data-stu-id="803d4-146">You can use each of these references multiple times or not at all.</span></span>  
   
- Например, приведенный выше универсальный тип `Drawing` мог бы быть объявлен так, как показано в примере ниже.  
+ <span data-ttu-id="803d4-147">Например, приведенный выше универсальный тип `Drawing` мог бы быть объявлен так, как показано в примере ниже.</span><span class="sxs-lookup"><span data-stu-id="803d4-147">For example, the preceding generic `Drawing` type could have been declared as shown in the following example.</span></span>  
   
  [!code-csharp[c_DataContractNames#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
  [!code-vb[c_DataContractNames#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]  
   
- В данном случае тип `Drawing<Square,RegularRedBrush>` имеет имя контракта данных "Drawing\_using\_RedBrush\_brush\_and\_Square\_shape".Обратите внимание, что так как в свойстве <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> имеется знак "{\#}", хэш не является частью имени, и, следовательно, могут возникнуть конфликты имен данного типа; например, тип `Drawing<Square,SpecialRedBrush>` имеет точно такое же имя контракта данных.  
+ <span data-ttu-id="803d4-148">В данном случае тип `Drawing<Square,RegularRedBrush>` имеет имя контракта данных "Drawing_using_RedBrush_brush_and_Square_shape".</span><span class="sxs-lookup"><span data-stu-id="803d4-148">In this case, the type `Drawing<Square,RegularRedBrush>` has the data contract name "Drawing_using_RedBrush_brush_and_Square_shape".</span></span> <span data-ttu-id="803d4-149">Обратите внимание, что так как в свойстве <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> имеется знак "{#}", хэш не является частью имени, и, следовательно, могут возникнуть конфликты имен данного типа; например, тип `Drawing<Square,SpecialRedBrush>` имеет точно такое же имя контракта данных.</span><span class="sxs-lookup"><span data-stu-id="803d4-149">Note that because there is a "{#}" in the <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> property, the hash is not a part of the name, and thus the type is susceptible to naming collisions; for example, the type `Drawing<Square,SpecialRedBrush>` would have exactly the same data contract name.</span></span>  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractAttribute>   
- <xref:System.Runtime.Serialization.DataMemberAttribute>   
- <xref:System.Runtime.Serialization.ContractNamespaceAttribute>   
- [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Эквивалентность контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)   
- [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)   
- [Управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+## <a name="see-also"></a><span data-ttu-id="803d4-150">См. также</span><span class="sxs-lookup"><span data-stu-id="803d4-150">See Also</span></span>  
+ <xref:System.Runtime.Serialization.DataContractAttribute>  
+ <xref:System.Runtime.Serialization.DataMemberAttribute>  
+ <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  
+ [<span data-ttu-id="803d4-151">Использование контрактов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-151">Using Data Contracts</span></span>](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [<span data-ttu-id="803d4-152">Эквивалентность контрактов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-152">Data Contract Equivalence</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
+ [<span data-ttu-id="803d4-153">Имена контрактов данных</span><span class="sxs-lookup"><span data-stu-id="803d4-153">Data Contract Names</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
+ [<span data-ttu-id="803d4-154">Управление версиями контракта данных</span><span class="sxs-lookup"><span data-stu-id="803d4-154">Data Contract Versioning</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

@@ -1,35 +1,38 @@
 ---
-title: "3319 - SocketAcceptEnqueued | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3319 - SocketAcceptEnqueued
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 87afe601-5e25-4964-b9c5-aed6d3d35e1c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 196e9830c90bd7d1e592fb799c57a5145d4f9838
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3319 - SocketAcceptEnqueued
-## Свойства  
+# <a name="3319---socketacceptenqueued"></a><span data-ttu-id="8b5cb-102">3319 - SocketAcceptEnqueued</span><span class="sxs-lookup"><span data-stu-id="8b5cb-102">3319 - SocketAcceptEnqueued</span></span>
+## <a name="properties"></a><span data-ttu-id="8b5cb-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="8b5cb-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|3319|  
-|Ключевые слова|TCP|  
-|Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="8b5cb-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="8b5cb-104">ID</span></span>|<span data-ttu-id="8b5cb-105">3319</span><span class="sxs-lookup"><span data-stu-id="8b5cb-105">3319</span></span>|  
+|<span data-ttu-id="8b5cb-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="8b5cb-106">Keywords</span></span>|<span data-ttu-id="8b5cb-107">TCP</span><span class="sxs-lookup"><span data-stu-id="8b5cb-107">TCP</span></span>|  
+|<span data-ttu-id="8b5cb-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="8b5cb-108">Level</span></span>|<span data-ttu-id="8b5cb-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="8b5cb-109">Verbose</span></span>|  
+|<span data-ttu-id="8b5cb-110">Канал</span><span class="sxs-lookup"><span data-stu-id="8b5cb-110">Channel</span></span>|<span data-ttu-id="8b5cb-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="8b5cb-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Описание  
- Событие возникает при запуске принятия соединения.  
+## <a name="description"></a><span data-ttu-id="8b5cb-112">Описание</span><span class="sxs-lookup"><span data-stu-id="8b5cb-112">Description</span></span>  
+ <span data-ttu-id="8b5cb-113">Событие возникает при запуске принятия соединения.</span><span class="sxs-lookup"><span data-stu-id="8b5cb-113">This event is emitted when the connection accept started.</span></span>  
   
-## Сообщение  
- Запущено принятие соединения.  
+## <a name="message"></a><span data-ttu-id="8b5cb-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="8b5cb-114">Message</span></span>  
+ <span data-ttu-id="8b5cb-115">Запущено принятие соединения.</span><span class="sxs-lookup"><span data-stu-id="8b5cb-115">Connection accept started.</span></span>  
   
-## Подробные сведения
+## <a name="details"></a><span data-ttu-id="8b5cb-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="8b5cb-116">Details</span></span>

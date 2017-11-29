@@ -1,47 +1,49 @@
 ---
-title: "Метаданные | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "метаданные [WCF]"
+title: "Метаданные"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36428e30f19de438ce78f2af24fe0865120e5b2b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Метаданные
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб.Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.  
+# <a name="metadata"></a><span data-ttu-id="c3bf0-102">Метаданные</span><span class="sxs-lookup"><span data-stu-id="c3bf0-102">Metadata</span></span>
+<span data-ttu-id="c3bf0-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает инфраструктуру для экспорта, публикации, получения и импорта метаданных служб.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides an infrastructure for exporting, publishing, retrieving, and importing service metadata.</span></span> <span data-ttu-id="c3bf0-104">Службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используют метаданные для описания взаимодействия с конечными точками служб, чтобы такие средства, как Svcutil.exe, могли автоматически создавать клиентский код для обращения к службе.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-104">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services use metadata to describe how to interact with the service's endpoints so that tools, such as Svcutil.exe, can automatically generate client code for accessing the service.</span></span>  
   
-## В этом разделе  
- [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
- Высокоуровневое общее описание архитектуры метаданных.  
+## <a name="in-this-section"></a><span data-ttu-id="c3bf0-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="c3bf0-105">In This Section</span></span>  
+ [<span data-ttu-id="c3bf0-106">Общие сведения об архитектуре метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-106">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ <span data-ttu-id="c3bf0-107">Высокоуровневое общее описание архитектуры метаданных.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-107">A high-level overview of metadata architecture.</span></span>  
   
- [Форматы метаданных](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- Описание различных форматов метаданных.  
+ [<span data-ttu-id="c3bf0-108">Форматы метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-108">Metadata Formats</span></span>](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
+ <span data-ttu-id="c3bf0-109">Описание различных форматов метаданных.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-109">Describes the different metadata formats.</span></span>  
   
- [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- Описание порядка экспорта и импорта метаданных.  
+ [<span data-ttu-id="c3bf0-110">Экспорт и импорт метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-110">Exporting and Importing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
+ <span data-ttu-id="c3bf0-111">Описание порядка экспорта и импорта метаданных.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-111">Describes how to export and import metadata.</span></span>  
   
- [Публикация метаданных](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Описание способов публикации метаданных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="c3bf0-112">Публикация метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-112">Publishing Metadata</span></span>](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
+ <span data-ttu-id="c3bf0-113">Описание способов публикации метаданных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c3bf0-113">Describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publishes metadata.</span></span>  
   
- [Извлечение метаданных](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- Описание различных способов извлечения метаданных.  
+ [<span data-ttu-id="c3bf0-114">Получение метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-114">Retrieving Metadata</span></span>](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
+ <span data-ttu-id="c3bf0-115">Описание различных способов извлечения метаданных.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-115">Describes the different ways to retrieve metadata.</span></span>  
   
- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- Описание различных способов использования метаданных службы.  
+ [<span data-ttu-id="c3bf0-116">Использование метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-116">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ <span data-ttu-id="c3bf0-117">Описание различных способов использования метаданных службы.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-117">Describes different ways to use service metadata.</span></span>  
   
- [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- Описание важных вопросов безопасности при работе с метаданными службы.  
+ [<span data-ttu-id="c3bf0-118">Вопросы безопасности при использовании метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-118">Security Considerations with Metadata</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ <span data-ttu-id="c3bf0-119">Описание важных вопросов безопасности при работе с метаданными службы.</span><span class="sxs-lookup"><span data-stu-id="c3bf0-119">Describes important security considerations when dealing with service metadata.</span></span>  
   
-## См. также  
- [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a><span data-ttu-id="c3bf0-120">См. также</span><span class="sxs-lookup"><span data-stu-id="c3bf0-120">See Also</span></span>  
+ [<span data-ttu-id="c3bf0-121">Расширение системы метаданных</span><span class="sxs-lookup"><span data-stu-id="c3bf0-121">Extending the Metadata System</span></span>](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

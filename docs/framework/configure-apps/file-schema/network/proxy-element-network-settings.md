@@ -1,90 +1,92 @@
 ---
-title: "Элемент &lt;proxy&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<proxy> - элемент"
-  - "proxy - элемент"
+title: "&lt;прокси-сервер&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#proxy
+helpviewer_keywords:
+- <proxy> element
+- proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 7178527f369c698b0ab53aa41cb28dd0126436b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;proxy&gt; (параметры сети)
-Определение прокси\-сервера.  
+# <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="7d72b-102">&lt;прокси-сервер&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="7d72b-102">&lt;proxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="7d72b-103">Определяет прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="7d72b-103">Defines a proxy server.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="7d72b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7d72b-104">\<configuration></span></span>  
+<span data-ttu-id="7d72b-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7d72b-105">\<system.net></span></span>  
+<span data-ttu-id="7d72b-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="7d72b-106">\<defaultProxy></span></span>  
+<span data-ttu-id="7d72b-107">\<прокси-сервера ></span><span class="sxs-lookup"><span data-stu-id="7d72b-107">\<proxy></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="7d72b-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7d72b-108">Syntax</span></span>  
+  
+```xml  
+<proxy
+  autoDetect="true|false|unspecified" 
+  bypassonlocal="true|false|unspecified"
+  proxyaddress="uriString"
+  scriptLocation="uriString"
+  usesystemdefault="true|false|unspecified"
+/>
 ```  
   
-      <proxy   
-  autoDetect="true|false|unspecified"    
-  bypassonlocal="true|false|unspecified"   
-  proxyaddress="uriString"  
-  scriptLocation="uriString"   
-  usesystemdefault="true|false|unspecified "   
-/>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7d72b-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7d72b-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7d72b-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7d72b-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+### <a name="attributes"></a><span data-ttu-id="7d72b-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7d72b-111">Attributes</span></span>  
   
-### Атрибуты  
+|<span data-ttu-id="7d72b-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="7d72b-112">**Attribute**</span></span>|<span data-ttu-id="7d72b-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="7d72b-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`autoDetect`|<span data-ttu-id="7d72b-114">Указывает, обнаруживается ли прокси-сервер автоматически.</span><span class="sxs-lookup"><span data-stu-id="7d72b-114">Specifies whether the proxy is automatically detected.</span></span> <span data-ttu-id="7d72b-115">Значение по умолчанию — `unspecified`.</span><span class="sxs-lookup"><span data-stu-id="7d72b-115">The default value is `unspecified`.</span></span>|  
+|`bypassonlocal`|<span data-ttu-id="7d72b-116">Указывает, пропускает ли прокси-сервер для локальных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="7d72b-116">Specifies whether the proxy is bypassed for local resources.</span></span> <span data-ttu-id="7d72b-117">Локальные ресурсы включают локальный сервер (http://localhost, http://loopback или http://127.0.0.1) и URI без точки (http://webserver).</span><span class="sxs-lookup"><span data-stu-id="7d72b-117">Local resources include the local server (http://localhost, http://loopback, or http://127.0.0.1) and a URI without a period (http://webserver).</span></span> <span data-ttu-id="7d72b-118">Значение по умолчанию — `unspecified`.</span><span class="sxs-lookup"><span data-stu-id="7d72b-118">The default value is `unspecified`.</span></span>|  
+|`proxyaddress`|<span data-ttu-id="7d72b-119">Указывает URI, который используется прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="7d72b-119">Specifies the proxy URI to use.</span></span>|  
+|`scriptLocation`|<span data-ttu-id="7d72b-120">Указывает расположение скрипта конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7d72b-120">Specifies the location of the configuration script.</span></span>|  
+|`usesystemdefault`|<span data-ttu-id="7d72b-121">Указывает, следует ли использовать параметры прокси-сервера обозревателя Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="7d72b-121">Specifies whether to use Internet Explorer proxy settings.</span></span> <span data-ttu-id="7d72b-122">Если значение `true`, следующие атрибуты переопределят параметры прокси Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="7d72b-122">If set to `true`, subsequent attributes will override Internet Explorer proxy settings.</span></span> <span data-ttu-id="7d72b-123">Значение по умолчанию — `unspecified`.</span><span class="sxs-lookup"><span data-stu-id="7d72b-123">The default value is `unspecified`.</span></span>|  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`autoDetect`|Указывает, обнаруживается ли прокси\-сервер автоматически.  Значение по умолчанию — `unspecified`.|  
-|`bypassonlocal`|Указывает, используется ли прокси\-сервер для локальных ресурсов.  Адрес локального ресурса — это локальный адрес сервера \(http:\/\/localhost, http:\/\/loopback или http:\/\/127.0.0.1\) или URI без точки \(http:\/\/webserver\).  Значение по умолчанию — `unspecified`.|  
-|`proxyaddress`|Указывает URI, используемый прокси\-сервером.|  
-|`scriptLocation`|Указывает расположение скрипта конфигурации.|  
-|`usesystemdefault`|Указывает, используются ли обозревателем Internet Explorer настройки прокси\-сервера.  Если используется значение `true`, следующие атрибуты переопределят настройки прокси\-сервера в обозревателе Internet Explorer.  Значение по умолчанию — `unspecified`.|  
+### <a name="child-elements"></a><span data-ttu-id="7d72b-124">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7d72b-124">Child Elements</span></span>  
+ <span data-ttu-id="7d72b-125">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="7d72b-125">None.</span></span>  
   
-### Дочерние элементы  
- Нет.  
+### <a name="parent-elements"></a><span data-ttu-id="7d72b-126">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7d72b-126">Parent Elements</span></span>  
   
-### Родительские элементы  
+|<span data-ttu-id="7d72b-127">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="7d72b-127">**Element**</span></span>|<span data-ttu-id="7d72b-128">**Описание**</span><span class="sxs-lookup"><span data-stu-id="7d72b-128">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="7d72b-129">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="7d72b-129">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="7d72b-130">Настраивает прокси-сервер протокола передачи гипертекста (HTTP).</span><span class="sxs-lookup"><span data-stu-id="7d72b-130">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
+## <a name="text-value"></a><span data-ttu-id="7d72b-131">Текстовое значение</span><span class="sxs-lookup"><span data-stu-id="7d72b-131">Text Value</span></span>  
   
-## Текстовое значение  
+## <a name="remarks"></a><span data-ttu-id="7d72b-132">Примечания</span><span class="sxs-lookup"><span data-stu-id="7d72b-132">Remarks</span></span>  
+ <span data-ttu-id="7d72b-133">`proxy` Элемент определяет прокси-сервер для приложения.</span><span class="sxs-lookup"><span data-stu-id="7d72b-133">The `proxy` element defines a proxy server for an application.</span></span> <span data-ttu-id="7d72b-134">Если этот элемент отсутствует в файле конфигурации, .NET Framework будет использовать параметры прокси-сервера в Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="7d72b-134">If this element is missing from the configuration file, then the .NET Framework will use the proxy settings in Internet Explorer.</span></span>  
   
-## Заметки  
- Элемент `proxy` определяет прокси\-сервер для приложения.  Если этот элемент отсутствует в файле конфигурации, то платформа .NET Framework использует настройки прокси\-сервера из обозревателя Internet Explorer.  
+ <span data-ttu-id="7d72b-135">Значение для `proxyaddress` атрибут должен иметь правильный формат унифицированного указателя ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="7d72b-135">The value for the `proxyaddress` attribute should be a well-formed Uniform Resource Indicator (URI).</span></span>  
   
- Значение атрибута `proxyaddress` должно иметь правильный формат URI.  
+ <span data-ttu-id="7d72b-136">`scriptLocation` Атрибут ссылается на автоматическое обнаружение сценариев настройки прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="7d72b-136">The `scriptLocation` attribute refers to the automatic detection of proxy configuration scripts.</span></span> <span data-ttu-id="7d72b-137"><xref:System.Net.WebProxy> Класс попытается обнаружить сценарий конфигурации (обычно именованный Wpad.dat) при **использовать сценарий автоматической настройки** флажок в Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="7d72b-137">The <xref:System.Net.WebProxy> class will attempt to locate a configuration script (usually named Wpad.dat) when the **Use automatic configuration script** option is selected in Internet Explorer.</span></span>  
   
- Атрибут `scriptLocation` задает автоматическое определение размещения скрипта конфигурации прокси\-сервера.  Если в обозревателе Internet Explorer установлена опция **Использовать скрипт автоматической настройки**, класс <xref:System.Net.WebProxy> попытается обнаружить скрипт конфигурации \(обычно с названием Wpad.dat\).  
+ <span data-ttu-id="7d72b-138">Используйте `usesystemdefault` атрибут для приложений .NET Framework версии 1.1, выполняется миграция в версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="7d72b-138">Use the `usesystemdefault` attribute for .NET Framework version 1.1 applications that are migrating to version 2.0.</span></span>  
   
- Используйте атрибут `usesystemdefault` для приложений .NET Framework версии 1.1 при переходе на версию 2.0.  
+ <span data-ttu-id="7d72b-139">Исключение возникает, если `proxyaddress` атрибут указывает на недопустимое значение по умолчанию прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="7d72b-139">An exception is thrown if the `proxyaddress` attribute specifies an invalid default proxy.</span></span> <span data-ttu-id="7d72b-140">Свойство <xref:System.Exception.InnerException%2A> исключения должно иметь дополнительные сведения о корневой причине ошибки.</span><span class="sxs-lookup"><span data-stu-id="7d72b-140">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
- Если атрибут `proxyaddress` задает недопустимый прокси\-сервер по умолчанию, то возникает исключение.  Свойство <xref:System.Exception.InnerException%2A> при возникновении исключения должно содержать дополнительные сведения об основной причине ошибки.  
+## <a name="configuration-files"></a><span data-ttu-id="7d72b-141">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="7d72b-141">Configuration Files</span></span>  
+ <span data-ttu-id="7d72b-142">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7d72b-142">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="example"></a><span data-ttu-id="7d72b-143">Пример</span><span class="sxs-lookup"><span data-stu-id="7d72b-143">Example</span></span>  
+ <span data-ttu-id="7d72b-144">Следующий пример использует значения по умолчанию из прокси-сервера обозревателя Internet Explorer, указывает адрес прокси-сервера и обходит прокси-сервера для локального доступа.</span><span class="sxs-lookup"><span data-stu-id="7d72b-144">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access.</span></span>  
   
-## Пример  
- В следующем примере кода показано использование настроек прокси\-сервера из Internet Explorer, задание адреса прокси\-сервера и отмена использования прокси\-сервера для локальных адресов и домена contoso.com.  
-  
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -98,6 +100,6 @@ caps.handback.revision: 20
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="7d72b-145">См. также</span><span class="sxs-lookup"><span data-stu-id="7d72b-145">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="7d72b-146">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="7d72b-146">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
