@@ -1,118 +1,124 @@
 ---
-title: "Практическое руководство. Создание градиента вдоль контура | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "градиенты, создание контура"
-  - "контуры, создание градиента"
-  - "градиенты контура, создание"
+title: "Практическое руководство. Создание градиента вдоль контура"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- path gradients [Windows Forms], creating
+- gradients [Windows Forms], creating path
+- graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Создание градиента вдоль контура
-Класс <xref:System.Drawing.Drawing2D.PathGradientBrush> позволяет настраивать способ заливки фигуры плавно меняющимися цветами.  Например, можно указать один цвет для центра контура, а другой — для границы контура.  Можно также определить отдельные цвета для каждой из нескольких точек на границе контура.  
+# <a name="how-to-create-a-path-gradient"></a><span data-ttu-id="5b0c9-102">Практическое руководство. Создание градиента вдоль контура</span><span class="sxs-lookup"><span data-stu-id="5b0c9-102">How to: Create a Path Gradient</span></span>
+<span data-ttu-id="5b0c9-103"><xref:System.Drawing.Drawing2D.PathGradientBrush> Позволяет настроить способ заливки фигуры плавно меняющимися цветами.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-103">The <xref:System.Drawing.Drawing2D.PathGradientBrush> class allows you to customize the way you fill a shape with gradually changing colors.</span></span> <span data-ttu-id="5b0c9-104">Например можно указать один цвет для центра пути, а другой — для границы пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-104">For example, you can specify one color for the center of a path and another color for the boundary of a path.</span></span> <span data-ttu-id="5b0c9-105">Можно также определить отдельные цвета для каждой из нескольких точек на границе пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-105">You can also specify separate colors for each of several points along the boundary of a path.</span></span>  
   
 > [!NOTE]
->  В интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] контур представляет собой последовательность линий и кривых, поддерживаемых объектом <xref:System.Drawing.Drawing2D.GraphicsPath>.  Дополнительные сведения о контурах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] см. в разделах [Контуры в GDI\+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) и [Построение и рисование контуров](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).  
+>  <span data-ttu-id="5b0c9-106">В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], путь представляет собой последовательность линий и кривых, поддерживаемых <xref:System.Drawing.Drawing2D.GraphicsPath> объекта.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-106">In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], a path is a sequence of lines and curves maintained by a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="5b0c9-107">Дополнительные сведения о [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] . в разделе пути, [контуры в GDI +](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) и [Constructing и рисование контуров](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).</span><span class="sxs-lookup"><span data-stu-id="5b0c9-107">For more information about [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] paths, see [Graphics Paths in GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) and [Constructing and Drawing Paths](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md).</span></span>  
   
-### Заливка эллипса с использованием градиента контура  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a><span data-ttu-id="5b0c9-108">Чтобы заполнить градиента вдоль контура эллипса</span><span class="sxs-lookup"><span data-stu-id="5b0c9-108">To fill an ellipse with a path gradient</span></span>  
   
--   В следующем примере осуществляется заливка эллипса с помощью кисти градиента контура.  Для центра установлен синий цвет, а для границы — голубой.  Эллипс после заливки представлен на следующем рисунке.  
+-   <span data-ttu-id="5b0c9-109">В следующем примере заполняется эллипса с градиента вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-109">The following example fills an ellipse with a path gradient brush.</span></span> <span data-ttu-id="5b0c9-110">Центра установлен синий и имеет значение голубой цвет границ.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-110">The center color is set to blue and the boundary color is set to aqua.</span></span> <span data-ttu-id="5b0c9-111">На следующем рисунке закрашенный эллипс.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-111">The following illustration shows the filled ellipse.</span></span>  
   
-     ![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")  
+     <span data-ttu-id="5b0c9-112">![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-112">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")</span></span>  
   
-     По умолчанию кисть градиента контура не расширяется на области вне границы этого контура.  Если кисть градиента контура используется для заливки фигуры, которая заходит за границу данного контура, области вне границы контура не заливаются.  
+     <span data-ttu-id="5b0c9-113">По умолчанию кисти градиента вдоль пути не расширяет за пределами границы пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-113">By default, a path gradient brush does not extend outside the boundary of the path.</span></span> <span data-ttu-id="5b0c9-114">При использовании пути градиентной кисти для заливки фигуры, который выходит за границы пути области экрана за пределами контура не заполняется.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-114">If you use the path gradient brush to fill a figure that extends beyond the boundary of the path, the area of the screen outside the path will not be filled.</span></span>  
   
-     На следующей иллюстрации показано, что происходит при изменении вызова <xref:System.Drawing.Graphics.FillEllipse%2A> в следующем коде на `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     <span data-ttu-id="5b0c9-115">На следующем рисунке показано, что происходит при изменении <xref:System.Drawing.Graphics.FillEllipse%2A> вызов в следующий код в `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-115">The following illustration shows what happens if you change the <xref:System.Drawing.Graphics.FillEllipse%2A> call in the following code to `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.</span></span>  
   
-     ![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")  
+     <span data-ttu-id="5b0c9-116">![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-116">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     Предыдущий пример кода предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs>, являющийся параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+     <span data-ttu-id="5b0c9-117">Предыдущий пример кода предназначен для работы с Windows Forms, и для него необходим <xref:System.Windows.Forms.PaintEventArgs> e, который является параметром для <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-117">The preceding code example is designed for use with Windows Forms, and it requires the <xref:System.Windows.Forms.PaintEventArgs> e, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-### Указание точек на границе  
+### <a name="to-specify-points-on-the-boundary"></a><span data-ttu-id="5b0c9-118">Указание точек на границе</span><span class="sxs-lookup"><span data-stu-id="5b0c9-118">To specify points on the boundary</span></span>  
   
--   В следующем примере кисть градиента контура строится на основе контура в форме звезды.  В коде устанавливается свойство <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A>, что определяет цвет в центре звезды как красный.  Затем устанавливается свойство <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A>, чтобы определить различные цвета \(представленные в массиве `colors`\) для отдельных точек, которые хранятся в массиве `points`.  Последняя инструкция кода осуществляет заливку контура в форме звезды с помощью кисти градиента контура.  
+-   <span data-ttu-id="5b0c9-119">В следующем примере создается Градиентная кисть путь из пути форме звезды.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-119">The following example constructs a path gradient brush from a star-shaped path.</span></span> <span data-ttu-id="5b0c9-120">В коде устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> свойства, которое задает цвет в центре звезды как красный.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-120">The code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> property, which sets the color at the centroid of the star to red.</span></span> <span data-ttu-id="5b0c9-121">Затем устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> свойство для задания различных цветов (хранятся в `colors` массива) для отдельных точек в `points` массива.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-121">Then the code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> property to specify various colors (stored in the `colors` array) at the individual points in the `points` array.</span></span> <span data-ttu-id="5b0c9-122">Последняя инструкция кода заливку пути в форме звезды с градиента вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-122">The final code statement fills the star-shaped path with the path gradient brush.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   В следующем примере выполняется рисование градиента контура без использования в коде объекта <xref:System.Drawing.Drawing2D.GraphicsPath>.  Используемый в примере конструктор <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> получает массив точек и не нуждается в объекте <xref:System.Drawing.Drawing2D.GraphicsPath>.  Кроме того, следует обратить внимание, что кисть <xref:System.Drawing.Drawing2D.PathGradientBrush> используется для заливки прямоугольника, а не контура.  Прямоугольник больше, чем замкнутый контур, используемый для задания кисти, поэтому часть прямоугольника не закрашивается этой кистью.  На следующем рисунке показаны прямоугольник \(пунктирная линия\) и его часть, закрашенная с помощью кисти градиента контура.  
+-   <span data-ttu-id="5b0c9-123">В следующем примере рисуется градиента вдоль контура без <xref:System.Drawing.Drawing2D.GraphicsPath> объекта в коде.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-123">The following example draws a path gradient without a <xref:System.Drawing.Drawing2D.GraphicsPath> object in the code.</span></span> <span data-ttu-id="5b0c9-124">Конкретный <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> конструктор в примере получает массив точек, но не требует <xref:System.Drawing.Drawing2D.GraphicsPath> объекта.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-124">The particular <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> constructor in the example receives an array of points but does not require a <xref:System.Drawing.Drawing2D.GraphicsPath> object.</span></span> <span data-ttu-id="5b0c9-125">Кроме того, обратите внимание, что <xref:System.Drawing.Drawing2D.PathGradientBrush> используется для заливки прямоугольника, а не путь.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-125">Also, note that the <xref:System.Drawing.Drawing2D.PathGradientBrush> is used to fill a rectangle, not a path.</span></span> <span data-ttu-id="5b0c9-126">Прямоугольник больше, чем замкнутый путь, используемый для задания кисти, поэтому часть прямоугольника не закрашивается кисти.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-126">The rectangle is larger than the closed path used to define the brush, so some of the rectangle is not painted by the brush.</span></span> <span data-ttu-id="5b0c9-127">На следующем рисунке прямоугольник (пунктирная линия) и часть прямоугольника, созданный при помощи кисти градиента вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-127">The following illustration shows the rectangle (dotted line) and the portion of the rectangle painted by the path gradient brush.</span></span>  
   
-     ![Градиент](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")  
+     <span data-ttu-id="5b0c9-128">![Градиент](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-128">![Gradient](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### Настройка градиента контура  
+### <a name="to-customize-a-path-gradient"></a><span data-ttu-id="5b0c9-129">Чтобы настроить градиента вдоль контура</span><span class="sxs-lookup"><span data-stu-id="5b0c9-129">To customize a path gradient</span></span>  
   
--   Одним из способов настройки кисти градиента контура является установка ее свойства <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A>.  Это свойство определяет внутренний контур, лежащий внутри основного контура.  Цвет центра используется везде в пределах этого внутреннего контура, а не только в центральной точке.  
+-   <span data-ttu-id="5b0c9-130">Один из способов настройки кисти градиента контура является установка его <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-130">One way to customize a path gradient brush is to set its <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> property.</span></span> <span data-ttu-id="5b0c9-131">Это свойство определяет внутренний путь, находящаяся внутри основного пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-131">The focus scales specify an inner path that lies inside the main path.</span></span> <span data-ttu-id="5b0c9-132">Для центра используется везде в пределах этого внутреннего пути, а не только в центральной точке.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-132">The center color is displayed everywhere inside that inner path rather than only at the center point.</span></span>  
   
-     В следующем примере кисть градиента контура строится на основе эллипса.  В коде в качестве цвета границы устанавливается синий, центрального цвета — голубой; затем кисть градиента контура используется для заливки эллиптического контура.  
+     <span data-ttu-id="5b0c9-133">В следующем примере создается градиентной кисти путь на основе эллиптических пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-133">The following example creates a path gradient brush based on an elliptical path.</span></span> <span data-ttu-id="5b0c9-134">Код задает границу цвет на синий, задает голубой цвет центра и затем использует путь градиентной кисти для заливки голубой.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-134">The code sets the boundary color to blue, sets the center color to aqua, and then uses the path gradient brush to fill the elliptical path.</span></span>  
   
-     Далее в коде устанавливаются коэффициенты масштабирования кисти градиента контура.  Коэффициент масштабирования по шкале x устанавливается равным 0,3, а коэффициент масштабирования по шкале y — 0,8.  Код вызывает метод <xref:System.Drawing.Graphics.TranslateTransform%2A> объекта <xref:System.Drawing.Graphics>, чтобы при последующем вызове метода <xref:System.Drawing.Graphics.FillPath%2A> заполнился эллипс, расположенный справа от первого эллипса.  
+     <span data-ttu-id="5b0c9-135">Далее в коде устанавливаются коэффициенты масштабирования кисти градиента вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-135">Next, the code sets the focus scales of the path gradient brush.</span></span> <span data-ttu-id="5b0c9-136">Коэффициент масштабирования по x равно 0,3, а коэффициент масштабирования по y имеет значение 0,8.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-136">The x focus scale is set to 0.3, and the y focus scale is set to 0.8.</span></span> <span data-ttu-id="5b0c9-137">Этот код вызывает <xref:System.Drawing.Graphics.TranslateTransform%2A> метод <xref:System.Drawing.Graphics> объекта, чтобы в последующий вызов для <xref:System.Drawing.Graphics.FillPath%2A> осуществляется заливка эллипса, который располагается справа от первого эллипса.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-137">The code calls the <xref:System.Drawing.Graphics.TranslateTransform%2A> method of a <xref:System.Drawing.Graphics> object so that the subsequent call to <xref:System.Drawing.Graphics.FillPath%2A> fills an ellipse that sits to the right of the first ellipse.</span></span>  
   
-     Чтобы увидеть эффект применения коэффициентов масштабирования, представьте маленький эллипс, центр которого совпадает с центром основного эллипса.  Маленький \(внутренний\) эллипс представляет собой основной эллипс, масштабированный \(относительно своего центра\) с коэффициентом 0,3 по горизонтали и с коэффициентом 0,8 по вертикали.  По мере движения от границы внешнего эллипса к границе внутреннего эллипса цвет плавно меняется от синего к голубому.  При перемещении от границы внутреннего эллипса к общему центру эллипсов цвет остается тем же \(голубым\).  
+     <span data-ttu-id="5b0c9-138">Чтобы увидеть эффект применения коэффициентов масштабирования, представьте небольшой эллипса, который совпадает с основной эллипс центром.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-138">To see the effect of the focus scales, imagine a small ellipse that shares its center with the main ellipse.</span></span> <span data-ttu-id="5b0c9-139">Маленький (внутренний) эллипс представляет собой основной эллипс, горизонтально масштабировать (относительно своего центра) с коэффициентом 0,3 и по вертикали с коэффициентом 0,8.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-139">The small (inner) ellipse is the main ellipse scaled (about its center) horizontally by a factor of 0.3 and vertically by a factor of 0.8.</span></span> <span data-ttu-id="5b0c9-140">При перемещении от границы внешнего эллипса к границе внутреннего эллипса цвет плавно меняется от синего голубой.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-140">As you move from the boundary of the outer ellipse to the boundary of the inner ellipse, the color changes gradually from blue to aqua.</span></span> <span data-ttu-id="5b0c9-141">При перемещении от границы внутреннего эллипса к общему центру голубой цвет сохраняется.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-141">As you move from the boundary of the inner ellipse to the shared center, the color remains aqua.</span></span>  
   
-     На следующем рисунке показан результат выполнения приведенного ниже кода.  Эллипс в левой части рисунка имеет голубой цвет только в своем центре.  Эллипс в правой части рисунка содержит голубой цвет везде в пределах внутреннего контура.  
+     <span data-ttu-id="5b0c9-142">На рисунке ниже показан результат выполнения следующего кода.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-142">The following illustration shows the output of the following code.</span></span> <span data-ttu-id="5b0c9-143">Эллипс в левой части — голубой цвет только в центральной точки.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-143">The ellipse on the left is aqua only at the center point.</span></span> <span data-ttu-id="5b0c9-144">Эллипс в правой — голубой цвет везде в пределах внутреннего пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-144">The ellipse on the right is aqua everywhere inside the inner path.</span></span>  
   
- ![Градиент](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")  
+ <span data-ttu-id="5b0c9-145">![Градиент](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-145">![Gradient](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")</span></span>  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### Настройка с интерполяцией  
+### <a name="to-customize-with-interpolation"></a><span data-ttu-id="5b0c9-146">Настройка с интерполяцией</span><span class="sxs-lookup"><span data-stu-id="5b0c9-146">To customize with interpolation</span></span>  
   
--   Другим способом настройки кисти градиента контура является указание массива цветов интерполяции и массива положений интерполяции.  
+-   <span data-ttu-id="5b0c9-147">Другим способом настройки кисти градиента вдоль пути является указание массива цветов интерполяции и массива позиций интерполяции.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-147">Another way to customize a path gradient brush is to specify an array of interpolation colors and an array of interpolation positions.</span></span>  
   
-     В следующем примере кисть градиента контура строится на основе контура треугольной формы.  В коде устанавливается свойство <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> кисти градиента контура для определения массива цветов интерполяции \(темно\-зеленый, голубой, синий\) и массива положений интерполяции \(0, 0,25, 1\).  По мере движения от границы треугольника к его центру цвет плавно меняется от темно\-зеленого к голубому, а затем от голубого к синему.  Изменение темно\-зеленого цвета на голубой происходит на 25 процентах расстояния между точками с темно\-зеленым и синим цветами.  
+     <span data-ttu-id="5b0c9-148">В следующем примере создается на треугольник основе кисти градиента контура.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-148">The following example creates a path gradient brush based on a triangle.</span></span> <span data-ttu-id="5b0c9-149">В коде устанавливается <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> свойство кисти градиента контура для определения массива цветов интерполяции (темно-зеленый, голубой, синий) и массива позиций интерполяции (0, 0,25, 1).</span><span class="sxs-lookup"><span data-stu-id="5b0c9-149">The code sets the <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> property of the path gradient brush to specify an array of interpolation colors (dark green, aqua, blue) and an array of interpolation positions (0, 0.25, 1).</span></span> <span data-ttu-id="5b0c9-150">При перемещении от границы треугольника к центральной точке цвет плавно меняется от темно-зеленый голубой цвет, а затем из голубой цвет на синий.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-150">As you move from the boundary of the triangle to the center point, the color changes gradually from dark green to aqua and then from aqua to blue.</span></span> <span data-ttu-id="5b0c9-151">Изменение темно-зеленого цвета голубой происходит на 25 процентов расстояние от темно-зеленого на синий.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-151">The change from dark green to aqua happens in 25 percent of the distance from dark green to blue.</span></span>  
   
-     На следующем рисунке представлен треугольник, залитый с помощью специально настроенной кисти градиента контура.  
+     <span data-ttu-id="5b0c9-152">На следующем рисунке треугольник, заполненный с градиентной кисти пользовательский путь.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-152">The following illustration shows the triangle filled with the custom path gradient brush.</span></span>  
+  
+     <span data-ttu-id="5b0c9-153">![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-153">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### Задание центральной точки  
+### <a name="to-set-the-center-point"></a><span data-ttu-id="5b0c9-154">Чтобы задать центральную точку</span><span class="sxs-lookup"><span data-stu-id="5b0c9-154">To set the center point</span></span>  
   
--   По умолчанию центральной точкой кисти градиента контура является центр контура, используемого при создании этой кисти.  Положение центральной точки можно изменить, установив значение свойства <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> класса <xref:System.Drawing.Drawing2D.PathGradientBrush>.  
+-   <span data-ttu-id="5b0c9-155">По умолчанию центральной точки кисти градиента контура является центр контура, используемого для создания кисти.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-155">By default, the center point of a path gradient brush is at the centroid of the path used to construct the brush.</span></span> <span data-ttu-id="5b0c9-156">Расположение центральной точки можно изменить, задав <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойство <xref:System.Drawing.Drawing2D.PathGradientBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-156">You can change the location of the center point by setting the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> property of the <xref:System.Drawing.Drawing2D.PathGradientBrush> class.</span></span>  
   
-     В следующем примере кисть градиента контура строится на основе эллиптического контура.  Центром эллипса является точка \(70, 35\), но в качестве центральной точки кисти градиента контура устанавливается \(120, 40\).  
+     <span data-ttu-id="5b0c9-157">В следующем примере создается на основе эллиптического кисти градиента контура.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-157">The following example creates a path gradient brush based on an ellipse.</span></span> <span data-ttu-id="5b0c9-158">Центром эллипса является точка (70, 35), но центральной точки кисти градиента вдоль пути устанавливается (120, 40).</span><span class="sxs-lookup"><span data-stu-id="5b0c9-158">The center of the ellipse is at (70, 35), but the center point of the path gradient brush is set to (120, 40).</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     На следующем рисунке представлены залитый эллипс и центральная точка кисти градиента контура.  
+     <span data-ttu-id="5b0c9-159">На следующем рисунке закрашенный эллипс и центральная точка кисти градиента вдоль пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-159">The following illustration shows the filled ellipse and the center point of the path gradient brush.</span></span>  
   
-     ![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")  
+     <span data-ttu-id="5b0c9-160">![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-160">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")</span></span>  
   
--   В качестве центральной точки кисти градиента контура можно установить точку, которая лежит вне контура, который использовался для создания кисти.  В следующем примере показан код, заменяющий участок предыдущего кода, в котором устанавливается свойство <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>.  
+-   <span data-ttu-id="5b0c9-161">Центральная точка кисти градиента вдоль пути можно задать расположение за пределами пути, который использовался для создания кисти.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-161">You can set the center point of a path gradient brush to a location outside the path that was used to construct the brush.</span></span> <span data-ttu-id="5b0c9-162">В следующем примере заменяется вызов для установки <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> свойство в предыдущем примере кода.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-162">The following example replaces the call to set the <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> property in the preceding code.</span></span>  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     На следующем рисунке представлен результат выполнения кода, измененного указанным образом.  
+     <span data-ttu-id="5b0c9-163">Ниже показан результат этого изменения.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-163">The following illustration shows the output with this change.</span></span>  
   
-     ![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")  
+     <span data-ttu-id="5b0c9-164">![Градиент контура](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")</span><span class="sxs-lookup"><span data-stu-id="5b0c9-164">![Gradient Path](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")</span></span>  
   
-     На приведенном выше рисунке точки в правой части эллипса не являются чисто синими \(хотя они очень близки к этому\).  Цвета в градиенте располагаются так, как будто процесс заливки дошел до точки \(145, 35\), цвет которой является чисто синим \(0, 0, 255\).  В действительности же этот процесс не может дойти до точки \(145, 35\), потому что кисть градиента контура осуществляет заливку только в пределах заданного контура.  
+     <span data-ttu-id="5b0c9-165">На предыдущем рисунке в крайней правой точки эллипса не являются чисто синими (хотя они очень близкие).</span><span class="sxs-lookup"><span data-stu-id="5b0c9-165">In the preceding illustration, the points at the far right of the ellipse are not pure blue (although they are very close).</span></span> <span data-ttu-id="5b0c9-166">Цвета в градиенте располагаются, как если бы заливки достиг точки (145, 35), где цвет является чисто синим (0, 0, 255).</span><span class="sxs-lookup"><span data-stu-id="5b0c9-166">The colors in the gradient are positioned as if the fill reached the point (145, 35) where the color would be pure blue (0, 0, 255).</span></span> <span data-ttu-id="5b0c9-167">Никогда не дойти до точки (145, 35) потому что градиентной кисти путь заливку только в пределах заданного пути.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-167">But the fill never reaches (145, 35) because a path gradient brush paints only inside its path.</span></span>  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="5b0c9-168">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="5b0c9-168">Compiling the Code</span></span>  
+ <span data-ttu-id="5b0c9-169">Предыдущий пример предназначен для работы с Windows Forms, и требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="5b0c9-169">The preceding examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## См. также  
- [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="5b0c9-170">См. также</span><span class="sxs-lookup"><span data-stu-id="5b0c9-170">See Also</span></span>  
+ [<span data-ttu-id="5b0c9-171">Заливка фигур с помощью градиентной кисти</span><span class="sxs-lookup"><span data-stu-id="5b0c9-171">Using a Gradient Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

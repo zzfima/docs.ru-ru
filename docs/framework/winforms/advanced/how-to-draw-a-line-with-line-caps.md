@@ -1,47 +1,51 @@
 ---
-title: "Практическое руководство. Рисование линий с наконечниками | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование линий, завершения отрезков"
-  - "рисование, линии"
-  - "линии, рисование"
-  - "перья, рисование линий"
+title: "Практическое руководство. Рисование линий с наконечниками"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drawing [Windows Forms], lines
+- lines [Windows Forms], drawing
+- pens [Windows Forms], drawing lines
+- drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1e2d5a5aba4a7634e0ea8480aa9744a5a7b9721d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование линий с наконечниками
-На одном или другом конце линии можно рисовать одну из нескольких специальных фигур, называемых наконечниками.  В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживается несколько типов наконечников, например круг, квадрат, ромб и стрелка.  
+# <a name="how-to-draw-a-line-with-line-caps"></a><span data-ttu-id="88cd1-102">Практическое руководство. Рисование линий с наконечниками</span><span class="sxs-lookup"><span data-stu-id="88cd1-102">How to: Draw a Line with Line Caps</span></span>
+<span data-ttu-id="88cd1-103">В одном из нескольких фигур, называемых наконечниками можно нарисовать начала и конца строки.</span><span class="sxs-lookup"><span data-stu-id="88cd1-103">You can draw the start or end of a line in one of several shapes called line caps.</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="88cd1-104">поддерживает несколько отрезков, например циклический, ромб, квадрат и стрелки.</span><span class="sxs-lookup"><span data-stu-id="88cd1-104"> supports several line caps, such as round, square, diamond, and arrowhead.</span></span>  
   
-## Пример  
- Можно определять наконечники для начала линии \(начальный наконечник\), для конца линии \(конечный наконечник\) или для штрихов пунктирной линии \(штриховой наконечник\).  
+## <a name="example"></a><span data-ttu-id="88cd1-105">Пример</span><span class="sxs-lookup"><span data-stu-id="88cd1-105">Example</span></span>  
+ <span data-ttu-id="88cd1-106">Можно указать отрезков в начале строки (начальный наконечник), в конец строки (конец) или дефисы пунктирная линия (тире cap).</span><span class="sxs-lookup"><span data-stu-id="88cd1-106">You can specify line caps for the start of a line (start cap), the end of a line (end cap), or the dashes of a dashed line (dash cap).</span></span>  
   
- В следующем примере рисуется линия со стрелкой на одном конце и кружком на другом конце.  Нарисованная линия показана на следующем рисунке.  
+ <span data-ttu-id="88cd1-107">В следующем примере рисуется линию со стрелкой на одном конце и кружком на другом конце.</span><span class="sxs-lookup"><span data-stu-id="88cd1-107">The following example draws a line with an arrowhead at one end and a round cap at the other end.</span></span> <span data-ttu-id="88cd1-108">На рисунке показаны результирующие строки.</span><span class="sxs-lookup"><span data-stu-id="88cd1-108">The illustration shows the resulting line:</span></span>  
   
- ![Перья](../../../../docs/framework/winforms/advanced/media/pens4.png "pens4")  
+ <span data-ttu-id="88cd1-109">![Перья](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")</span><span class="sxs-lookup"><span data-stu-id="88cd1-109">![Pens](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")</span></span>  
   
  [!code-csharp[System.Drawing.UsingAPen#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.UsingAPen#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a><span data-ttu-id="88cd1-110">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="88cd1-110">Compiling the Code</span></span>  
   
--   Создайте форму Windows Forms и перейдите к обработчику события <xref:System.Windows.Forms.Control.Paint> этой формы.  Вставьте приведенный пример кода в обработчик события <xref:System.Windows.Forms.Control.Paint> и передайте `e` в качестве объекта <xref:System.Windows.Forms.PaintEventArgs>.  
+-   <span data-ttu-id="88cd1-111">Создайте форму Windows Form и обработки формы <xref:System.Windows.Forms.Control.Paint> событий.</span><span class="sxs-lookup"><span data-stu-id="88cd1-111">Create a Windows Form and handle the form's <xref:System.Windows.Forms.Control.Paint> event.</span></span> <span data-ttu-id="88cd1-112">Вставьте код в примере <xref:System.Windows.Forms.Control.Paint> обработчик события передачи `e` как <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="88cd1-112">Paste the example code into the <xref:System.Windows.Forms.Control.Paint> event handler passing `e` as <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Drawing2D.LineCap?displayProperty=fullName>   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="88cd1-113">См. также</span><span class="sxs-lookup"><span data-stu-id="88cd1-113">See Also</span></span>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
+ [<span data-ttu-id="88cd1-114">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="88cd1-114">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="88cd1-115">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="88cd1-115">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

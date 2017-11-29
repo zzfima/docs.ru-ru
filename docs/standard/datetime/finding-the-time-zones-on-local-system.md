@@ -1,45 +1,55 @@
 ---
-title: "Поиск часового пояса, заданного в локальной системе | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "доступ к локальному часовому поясу"
-  - "идентификаторы часовых поясов [платформа .NET Framework]"
-  - "часовые пояса [платформа .NET Framework], поиск локальных системных часовых поясов"
-  - "часовые пояса [платформа .NET Framework], локальные"
-  - "часовые пояса [платформа .NET Framework], извлечение"
-  - "часовые пояса [платформа .NET Framework], время в формате UTC"
-  - "время в формате UTC, поиск локальных системных часовых поясов"
+title: "Поиск часового пояса, заданного в локальной системе"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time zones [.NET Framework], local
+- time zones [.NET Framework], finding local system time zones
+- time zone identifiers [.NET Framework]
+- local time zone access
+- time zones [.NET Framework], retrieving
+- UTC times, finding local system time zones
+- time zones [.NET Framework], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c86932455301d15621c03d4440a8a16e44575bac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Поиск часового пояса, заданного в локальной системе
-Класс <xref:System.TimeZoneInfo> не предоставляет открытый конструктор.  В результате ключевое слово `new` невозможно использовать для создания нового объекта <xref:System.TimeZoneInfo>.  Вместо этого экземпляры объектов <xref:System.TimeZoneInfo> создаются либо путем извлечения информации о предопределенных часовых поясах из реестра, либо путем создания пользовательского часового пояса.  В этом разделе описывается создание экземпляра часового пояса из данных, хранимых в реестре.  Кроме того, свойства `static` \(`shared` в Visual Basic\) класса <xref:System.TimeZoneInfo> предоставляют доступ к часовому поясу UTC и местному часовому поясу.  
-  
+# <a name="finding-the-time-zones-defined-on-a-local-system"></a><span data-ttu-id="8b4ff-102">Поиск часового пояса, заданного в локальной системе</span><span class="sxs-lookup"><span data-stu-id="8b4ff-102">Finding the time zones defined on a local system</span></span>
+
+<span data-ttu-id="8b4ff-103">Класс <xref:System.TimeZoneInfo> не предоставляет открытый конструктор.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-103">The <xref:System.TimeZoneInfo> class does not expose a public constructor.</span></span> <span data-ttu-id="8b4ff-104">В результате ключевое слово `new` невозможно использовать для создания нового объекта <xref:System.TimeZoneInfo>.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-104">As a result, the `new` keyword cannot be used to create a new <xref:System.TimeZoneInfo> object.</span></span> <span data-ttu-id="8b4ff-105">Вместо этого экземпляры объектов <xref:System.TimeZoneInfo> создаются либо путем извлечения информации о предопределенных часовых поясах из реестра, либо путем создания пользовательского часового пояса.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-105">Instead, <xref:System.TimeZoneInfo> objects are instantiated either by retrieving information on predefined time zones from the registry or by creating a custom time zone.</span></span> <span data-ttu-id="8b4ff-106">В этом разделе описывается создание экземпляра часового пояса из данных, хранимых в реестре.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-106">This topic discusses instantiating a time zone from data stored in the registry.</span></span> <span data-ttu-id="8b4ff-107">Кроме того, свойства `static` (`shared` в Visual Basic) класса <xref:System.TimeZoneInfo> предоставляют доступ к часовому поясу UTC и местному часовому поясу.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-107">In addition, `static` (`shared` in Visual Basic) properties of the <xref:System.TimeZoneInfo> class provide access to Coordinated Universal Time (UTC) and the local time zone.</span></span>
+
 > [!NOTE]
->  Для часовых поясов, которые не определены в реестре, можно создать пользовательские часовые пояса путем вызова перегрузок метода <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>.  Создание пользовательского часового пояса описано в разделах [Практическое руководство. Создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [Практическое руководство. Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).  Кроме того, можно создать экземпляр объекта <xref:System.TimeZoneInfo>, восстановив его из сериализованной строки с использованием метода <xref:System.TimeZoneInfo.FromSerializedString%2A>.  Сериализация и десериализация объекта <xref:System.TimeZoneInfo> рассматривается в разделах [Практическое руководство. Сохранение часовых поясов во внедренном ресурсе](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [Практическое руководство. Восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).  
-  
-## Доступ к отдельным часовым поясам  
- Класс <xref:System.TimeZoneInfo> предоставляет два предопределенных объекта часовых поясов, которые представляют собой время UTC и местный часовой пояс.  Они доступны из свойств <xref:System.TimeZoneInfo.Utc%2A> и <xref:System.TimeZoneInfo.Local%2A> соответственно.  Инструкции по доступу к часовому поясу UTC или местному часовому поясу см. в разделе [Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов](../../../docs/standard/datetime/access-utc-and-local.md).  
-  
- Можно также создать экземпляр объекта <xref:System.TimeZoneInfo>, который представляет любой часовой пояс, определенный в реестре.  Инструкции по созданию экземпляра объекта конкретного часового пояса см. в разделе [Практическое руководство. Создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).  
-  
-## Идентификаторы часовых поясов  
- Идентификатор часового пояса — это важнейшее поле, которое уникально идентифицирует часовой пояс.  Несмотря на то что большинство ключей являются относительно короткими, идентификатор часового пояса относительно длинный.  В большинстве случаев его значение соответствует свойству <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=fullName>, которое используется для предоставления имени стандартному времени часового пояса.  Однако существуют исключения.  Лучшим способом убедиться, что предоставлен действительный идентификатор, является выполнение перечисления доступных в системе часовых поясов и отслеживание связанных с ними идентификаторов.  
-  
-## См. также  
- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)   
- [Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов](../../../docs/standard/datetime/access-utc-and-local.md)   
- [Практическое руководство. Создание экземпляра объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)   
- [Преобразование времени из одного часового пояса в другой](../../../docs/standard/datetime/converting-between-time-zones.md)
+> <span data-ttu-id="8b4ff-108">Для часовых поясов, которые не определены в реестре, можно создать пользовательские часовые пояса путем вызова перегрузок метода <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-108">For time zones that are not defined in the registry, you can create custom time zones by calling the overloads of the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method.</span></span> <span data-ttu-id="8b4ff-109">Создание пользовательского часового пояса описано в [как: создание часовых поясов без правил коррекции](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) и [как: создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) разделы.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-109">Creating a custom time zone is discussed in the [How to: Create time zones without adjustment rules](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) and [How to: Create time zones with adjustment rules](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) topics.</span></span> <span data-ttu-id="8b4ff-110">Кроме того, можно создать экземпляр объекта <xref:System.TimeZoneInfo>, восстановив его из сериализованной строки с использованием метода <xref:System.TimeZoneInfo.FromSerializedString%2A>.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-110">In addition, you can instantiate a <xref:System.TimeZoneInfo> object by restoring it from a serialized string with the <xref:System.TimeZoneInfo.FromSerializedString%2A> method.</span></span> <span data-ttu-id="8b4ff-111">Сериализация и десериализация <xref:System.TimeZoneInfo> объект рассматривается в [как: сохранение часовых поясов во внедренный ресурс](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) и [как: восстановление часовых поясов из внедренного ресурса](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) разделы.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-111">Serializing and deserializing a <xref:System.TimeZoneInfo> object is discussed in the [How to: Save time zones to an embedded resource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) and [How to: Restore Time Zones from an Embedded Resource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) topics.</span></span>
+
+## <a name="accessing-individual-time-zones"></a><span data-ttu-id="8b4ff-112">Доступ к отдельным часовым поясам</span><span class="sxs-lookup"><span data-stu-id="8b4ff-112">Accessing individual time zones</span></span>
+
+<span data-ttu-id="8b4ff-113">Класс <xref:System.TimeZoneInfo> предоставляет два предопределенных объекта часовых поясов, которые представляют собой время UTC и местный часовой пояс.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-113">The <xref:System.TimeZoneInfo> class provides two predefined time zone objects that represent the UTC time and the local time zone.</span></span> <span data-ttu-id="8b4ff-114">Они доступны из свойств <xref:System.TimeZoneInfo.Utc%2A> и <xref:System.TimeZoneInfo.Local%2A> соответственно.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-114">They are available from the <xref:System.TimeZoneInfo.Utc%2A> and <xref:System.TimeZoneInfo.Local%2A> properties, respectively.</span></span> <span data-ttu-id="8b4ff-115">Инструкции по доступу к часовому поясу UTC или местному часовому поясу см. в разделе [как: доступ к предварительно определенных зоны объектам UTC и местным временем](../../../docs/standard/datetime/access-utc-and-local.md).</span><span class="sxs-lookup"><span data-stu-id="8b4ff-115">For instructions on accessing the UTC or local time zones, see [How to: Access the predefined UTC and local time zone objects](../../../docs/standard/datetime/access-utc-and-local.md).</span></span>
+
+<span data-ttu-id="8b4ff-116">Можно также создать экземпляр объекта <xref:System.TimeZoneInfo>, который представляет любой часовой пояс, определенный в реестре.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-116">You can also instantiate a <xref:System.TimeZoneInfo> object that represents any time zone defined in the registry.</span></span> <span data-ttu-id="8b4ff-117">Инструкции по созданию объекта конкретного часового пояса см. в разделе [как: создание объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).</span><span class="sxs-lookup"><span data-stu-id="8b4ff-117">For instructions on instantiating a specific time zone object, see [How to: Instantiate a TimeZoneInfo object](../../../docs/standard/datetime/instantiate-time-zone-info.md).</span></span>
+
+## <a name="time-zone-identifiers"></a><span data-ttu-id="8b4ff-118">Идентификаторы часовых поясов</span><span class="sxs-lookup"><span data-stu-id="8b4ff-118">Time zone identifiers</span></span>
+
+<span data-ttu-id="8b4ff-119">Идентификатор часового пояса — это важнейшее поле, которое уникально идентифицирует часовой пояс.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-119">The time zone identifier is a key field that uniquely identifies the time zone.</span></span> <span data-ttu-id="8b4ff-120">Несмотря на то что большинство ключей являются относительно короткими, идентификатор часового пояса относительно длинный.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-120">While most keys are relatively short, the time zone identifier is comparatively long.</span></span> <span data-ttu-id="8b4ff-121">В большинстве случаев его значение соответствует свойству <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType>, которое используется для предоставления имени стандартному времени часового пояса.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-121">In most cases, its value corresponds to the <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> property, which is used to provide the name of the time zone's standard time.</span></span> <span data-ttu-id="8b4ff-122">Однако существуют исключения.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-122">However, there are exceptions.</span></span> <span data-ttu-id="8b4ff-123">Лучшим способом убедиться, что предоставлен действительный идентификатор, является выполнение перечисления доступных в системе часовых поясов и отслеживание связанных с ними идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="8b4ff-123">The best way to make sure that you supply a valid identifier is to enumerate the time zones available on your system and note their associated identifiers.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="8b4ff-124">См. также</span><span class="sxs-lookup"><span data-stu-id="8b4ff-124">See also</span></span>
+
+<span data-ttu-id="8b4ff-125">[Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+[как: доступ к предварительно определенных зоны объектам UTC и местным временем](../../../docs/standard/datetime/access-utc-and-local.md)
+[как: создание объекта TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md) 
+ [Преобразование времени из одного часового пояса](../../../docs/standard/datetime/converting-between-time-zones.md)</span><span class="sxs-lookup"><span data-stu-id="8b4ff-125">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[How to: Access the predefined UTC and local time zone objects](../../../docs/standard/datetime/access-utc-and-local.md)
+[How to: Instantiate a TimeZoneInfo object](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+[Converting times between time zones](../../../docs/standard/datetime/converting-between-time-zones.md)</span></span>

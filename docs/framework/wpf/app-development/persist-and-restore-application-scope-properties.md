@@ -1,36 +1,42 @@
 ---
-title: "Практическое руководство. Сохранение и восстановление свойств области определения приложения в сеансах приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства области видимости приложения, сохранение"
-  - "свойства области видимости приложения, восстановление"
-  - "сохранение свойств области видимости приложения"
-  - "свойства, сохранение"
-  - "свойства, восстановление"
-  - "восстановление свойств области видимости приложения"
+title: "Практическое руководство. Сохранение и восстановление свойств области определения приложения в сеансах приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- application-scope properties [WPF], persisting
+- persisting application-scope properties [WPF]
+- properties [WPF], persisting
+- restoring application-scope properties [WPF]
+- properties [WPF], restoring
+- application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Сохранение и восстановление свойств области определения приложения в сеансах приложения
-В этом примере демонстрируется сохранение свойств области определения приложения, когда приложение завершает работу, восстановление свойств области определения приложения при следующем запуске.  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="e25fa-102">Практическое руководство. Сохранение и восстановление свойств области определения приложения в сеансах приложения</span><span class="sxs-lookup"><span data-stu-id="e25fa-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="e25fa-103">В этом примере показано, как для сохранения свойств области приложения, когда приложение завершает работу и как для восстановления запустите свойств области приложения, когда приложение Далее.</span><span class="sxs-lookup"><span data-stu-id="e25fa-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## Пример  
- Приложение сохраняет и восстанавливает свойства области определения приложения из изолированного хранилища.  Изолированное хранилище ― это защищенная область хранения, которая может безопасно использоваться приложениями без разрешения доступа к файлу.  
+## <a name="example"></a><span data-ttu-id="e25fa-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e25fa-104">Example</span></span>  
+ <span data-ttu-id="e25fa-105">Приложение сохраняет свойства области определения приложения и восстанавливает их из изолированного хранилища.</span><span class="sxs-lookup"><span data-stu-id="e25fa-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="e25fa-106">Изолированное хранилище — область защищенного хранилища, которая может безопасно использоваться приложениями без разрешения доступа к файлу.</span><span class="sxs-lookup"><span data-stu-id="e25fa-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
   
- [!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
+[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind1)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]  

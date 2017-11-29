@@ -1,156 +1,160 @@
 ---
-title: "Процесс утверждения документа | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Процесс утверждения документа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Процесс утверждения документа
-В данном образце демонстрируется, как совместно использовать функции [!INCLUDE[wf](../../../../includes/wf-md.md)] и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Вместе они реализуют сценарий утверждения документов.Клиентское приложение может представлять документы на утверждение и утверждать документы.Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения.Утверждение — это рабочий процесс, который может выполняться несколькими способами.Поддерживается единичное утверждение, утверждение кворумом \(частью группы утверждающих\) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.  
+# <a name="document-approval-process"></a><span data-ttu-id="7bef5-102">Процесс утверждения документа</span><span class="sxs-lookup"><span data-stu-id="7bef5-102">Document Approval Process</span></span>
+<span data-ttu-id="7bef5-103">В данном образце демонстрируется, как совместно использовать функции [!INCLUDE[wf](../../../../includes/wf-md.md)] и [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7bef5-103">This sample demonstrates the use of many [!INCLUDE[wf](../../../../includes/wf-md.md)] and [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] features together.</span></span> <span data-ttu-id="7bef5-104">Вместе они реализуют сценарий утверждения документов.</span><span class="sxs-lookup"><span data-stu-id="7bef5-104">Together they implement a document approval process scenario.</span></span> <span data-ttu-id="7bef5-105">Клиентское приложение может представлять документы на утверждение и утверждать документы.</span><span class="sxs-lookup"><span data-stu-id="7bef5-105">A client application can submit documents for approval and approve documents.</span></span> <span data-ttu-id="7bef5-106">Диспетчер утверждений облегчает взаимодействие между клиентами и обеспечивает соблюдение порядка утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-106">An approval manager application exists to facilitate communications between clients and to enforce the rules of the approval process.</span></span> <span data-ttu-id="7bef5-107">Утверждение - это рабочий процесс, который может выполняться несколькими способами.</span><span class="sxs-lookup"><span data-stu-id="7bef5-107">The approval process is a workflow that can execute several types of approval.</span></span> <span data-ttu-id="7bef5-108">Поддерживается единичное утверждение, утверждение кворумом (частью группы утверждающих) и составное утверждение, состоящее из утверждения кворумом и следующего за ним единичного утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-108">Activities exist to get a single approval, a quorum approval (a percentage of set of approvers), and a complex approval process that consists of a quorum and single approval in a sequence.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="7bef5-109">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="7bef5-109">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7bef5-110">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="7bef5-110">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="7bef5-111">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7bef5-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7bef5-112">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="7bef5-112">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
-## Подробные сведения об образце  
- На следующем графике представлена схема процесса утверждения документа.  
+## <a name="sample-details"></a><span data-ttu-id="7bef5-113">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="7bef5-113">Sample Details</span></span>  
+ <span data-ttu-id="7bef5-114">На следующем графике представлена схема процесса утверждения документа.</span><span class="sxs-lookup"><span data-stu-id="7bef5-114">The following graphic demonstrates the document approval process workflow.</span></span>  
   
- ![Рабочий процесс утверждения документа](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ <span data-ttu-id="7bef5-115">![Рабочий процесс утверждения документа](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")</span><span class="sxs-lookup"><span data-stu-id="7bef5-115">![A document approval process workflow](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")</span></span>  
   
- С точки зрения клиента процесс утверждения документа протекает следующим образом.  
+ <span data-ttu-id="7bef5-116">С точки зрения клиента процесс утверждения документа протекает следующим образом.</span><span class="sxs-lookup"><span data-stu-id="7bef5-116">From the client's perspective, the approval process functions as follows:</span></span>  
   
-1.  Клиент отправляет заявку на участие в системе утверждения.  
+1.  <span data-ttu-id="7bef5-117">Клиент отправляет заявку на участие в системе утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-117">A client subscribes to be a user in the approval process system.</span></span>  
   
-2.  Клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отправляет сообщение службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенной в диспетчере утверждения.  
+2.  <span data-ttu-id="7bef5-118">Клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отправляет сообщение службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенной в диспетчере утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-118">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client sends to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service hosted by the approval manager application.</span></span>  
   
-3.  Клиенту возвращается индивидуальный пользовательский идентификатор.Теперь клиент может участвовать в процессе утверждения.  
+3.  <span data-ttu-id="7bef5-119">Клиенту возвращается индивидуальный пользовательский идентификатор.</span><span class="sxs-lookup"><span data-stu-id="7bef5-119">A unique user ID is returned to the client.</span></span> <span data-ttu-id="7bef5-120">Теперь клиент может участвовать в процессе утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-120">The client can now participate in approval processes.</span></span>  
   
-4.  Присоединившись к системе, клиент может отправить документ на единичное утверждение, утверждение кворумом и составное утверждение.  
+4.  <span data-ttu-id="7bef5-121">Присоединившись к системе, клиент может отправить документ на единичное утверждение, утверждение кворумом и составное утверждение.</span><span class="sxs-lookup"><span data-stu-id="7bef5-121">Once joined, a client can send a document for approval using single, quorum or complex approval processes.</span></span>  
   
-5.  По нажатию кнопки в клиентском интерфейсе запускается экземпляр рабочего процесса, размещенного в клиентском узле службы рабочих процессов.  
+5.  <span data-ttu-id="7bef5-122">По нажатию кнопки в клиентском интерфейсе запускается экземпляр рабочего процесса, размещенного в клиентском узле службы рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="7bef5-122">A button in the client’s interface is clicked, starting a workflow instance in a client Workflow Service Host.</span></span>  
   
-6.  Рабочий процесс отправляет запрос на утверждение приложению диспетчера утверждения.  
+6.  <span data-ttu-id="7bef5-123">Рабочий процесс отправляет запрос на утверждение приложению диспетчера утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-123">The workflow sends an approval request to the approval manager application.</span></span>  
   
-7.  Диспетчер рабочего процесса запускает на своем сайте рабочий процесс, представляющий процесс утверждения.  
+7.  <span data-ttu-id="7bef5-124">Диспетчер рабочего процесса запускает на своем сайте рабочий процесс, представляющий процесс утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-124">The workflow manager starts a workflow on its own side to represent an approval process.</span></span>  
   
-8.  По завершении рабочего процесса утверждения диспетчер возвращает клиенту результаты.  
+8.  <span data-ttu-id="7bef5-125">По завершении рабочего процесса утверждения диспетчер возвращает клиенту результаты.</span><span class="sxs-lookup"><span data-stu-id="7bef5-125">Once the manager approval workflow executes, the results are sent back to the client.</span></span>  
   
-9. Результаты отображаются клиентом.  
+9. <span data-ttu-id="7bef5-126">Результаты отображаются клиентом.</span><span class="sxs-lookup"><span data-stu-id="7bef5-126">The client displays the results.</span></span>  
   
-10. Клиент может получить запрос на утверждение и в любой момент ответить на него.  
+10. <span data-ttu-id="7bef5-127">Клиент может получить запрос на утверждение и в любой момент ответить на него.</span><span class="sxs-lookup"><span data-stu-id="7bef5-127">A client may receive an approval request and respond to the request at any point in time.</span></span>  
   
-11. Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенная в клиенте, может получить запрос на утверждение от диспетчера утверждений.  
+11. <span data-ttu-id="7bef5-128">Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенная в клиенте, может получить запрос на утверждение от диспетчера утверждений.</span><span class="sxs-lookup"><span data-stu-id="7bef5-128">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service hosted on the client can receive an approval request from the approval manager application.</span></span>  
   
-12. Данные о документе представляются на обозрение в клиенте.  
+12. <span data-ttu-id="7bef5-129">Данные о документе представляются на обозрение в клиенте.</span><span class="sxs-lookup"><span data-stu-id="7bef5-129">The document information is presented on the client for review.</span></span>  
   
-13. Пользователь может утвердить или отклонить документ.  
+13. <span data-ttu-id="7bef5-130">Пользователь может утвердить или отклонить документ.</span><span class="sxs-lookup"><span data-stu-id="7bef5-130">The user can approve or reject the document.</span></span>  
   
-14. Клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется для отправки ответа с утверждением диспетчеру утверждений.  
+14. <span data-ttu-id="7bef5-131">Клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется для отправки ответа с утверждением диспетчеру утверждений.</span><span class="sxs-lookup"><span data-stu-id="7bef5-131">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client is used to send an approval response back to the approval manager application.</span></span>  
   
- С точки зрения диспетчера утверждений процесс утверждения протекает следующим образом.  
+ <span data-ttu-id="7bef5-132">С точки зрения диспетчера утверждений процесс утверждения протекает следующим образом.</span><span class="sxs-lookup"><span data-stu-id="7bef5-132">From the approval manager application’s point of view, the approval process functions as follows:</span></span>  
   
-1.  Клиент отправляет заявку на участие в системе утверждения.  
+1.  <span data-ttu-id="7bef5-133">Клиент отправляет заявку на участие в системе утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-133">A client requests to participate to the approval process system.</span></span>  
   
-2.  Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] диспетчера утверждений получает запрос на участие в системе утверждения.  
+2.  <span data-ttu-id="7bef5-134">Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] диспетчера утверждений получает запрос на участие в системе утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-134">A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service on the approval manager receives a request to be part of the approval process system.</span></span>  
   
-3.  Для клиента создается индивидуальный идентификатор.Пользовательские данные сохраняются в базе данных.  
+3.  <span data-ttu-id="7bef5-135">Для клиента создается индивидуальный идентификатор.</span><span class="sxs-lookup"><span data-stu-id="7bef5-135">A unique ID is generated for the client.</span></span> <span data-ttu-id="7bef5-136">Пользовательские данные сохраняются в базе данных.</span><span class="sxs-lookup"><span data-stu-id="7bef5-136">The user information is stored in a database.</span></span>  
   
-4.  Пользователю возвращается индивидуальный идентификатор.  
+4.  <span data-ttu-id="7bef5-137">Пользователю возвращается индивидуальный идентификатор.</span><span class="sxs-lookup"><span data-stu-id="7bef5-137">The unique ID is sent back to the user.</span></span>  
   
-5.  Получение запроса на утверждение.Диспетчер запускает процесс утверждения.  
+5.  <span data-ttu-id="7bef5-138">Получение запроса на утверждение.</span><span class="sxs-lookup"><span data-stu-id="7bef5-138">An approval request is receive.</span></span> <span data-ttu-id="7bef5-139">Диспетчер запускает процесс утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-139">The approval manager executes an approval process.</span></span>  
   
-6.  Диспетчер получает запрос на утверждение и начинает новый рабочий процесс.  
+6.  <span data-ttu-id="7bef5-140">Диспетчер получает запрос на утверждение и начинает новый рабочий процесс.</span><span class="sxs-lookup"><span data-stu-id="7bef5-140">An approval request is received by the approval manager, starting a new workflow.</span></span>  
   
-7.  В зависимости от типа запроса \(простое утверждение, утверждение кворумом или составное утверждение\) запускается определенное действие.  
+7.  <span data-ttu-id="7bef5-141">В зависимости от типа запроса (простое утверждение, утверждение кворумом или составное утверждение) запускается определенное действие.</span><span class="sxs-lookup"><span data-stu-id="7bef5-141">Depending on the type of request (simple, quorum, or complex) a different activity is executed.</span></span>  
   
-8.  Действия по отправке и получению с корреляцией используются для отправки запроса на утверждение клиенту на рассмотрения и для получения ответа.  
+8.  <span data-ttu-id="7bef5-142">Действия по отправке и получению с корреляцией используются для отправки запроса на утверждение клиенту на рассмотрения и для получения ответа.</span><span class="sxs-lookup"><span data-stu-id="7bef5-142">Send and Receive activities with correlation are used to send the approval request to the client for review and receive the response.</span></span>  
   
-9. Результат рабочего процесса утверждения отправляется клиенту.  
+9. <span data-ttu-id="7bef5-143">Результат рабочего процесса утверждения отправляется клиенту.</span><span class="sxs-lookup"><span data-stu-id="7bef5-143">The result of the approval process workflow is sent to the client.</span></span>  
   
-## Использование образца  
+## <a name="using-the-sample"></a><span data-ttu-id="7bef5-144">Использование образца</span><span class="sxs-lookup"><span data-stu-id="7bef5-144">Using the Sample</span></span>  
   
-##### Настройка базы данных  
+##### <a name="to-set-up-the-database"></a><span data-ttu-id="7bef5-145">Настройка базы данных</span><span class="sxs-lookup"><span data-stu-id="7bef5-145">To set up the database</span></span>  
   
-1.  Из командной строки [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], открытой с правами администратора, перейдите в директорию DocumentApprovalProcess и запустите команду Setup.cmd.  
+1.  <span data-ttu-id="7bef5-146">Из командной строки [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], открытой с правами администратора, перейдите в каталог DocumentApprovalProcess и запустите команду Setup.cmd.</span><span class="sxs-lookup"><span data-stu-id="7bef5-146">From a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt opened with Administrator privileges, navigate to this DocumentApprovalProcess folder and run Setup.cmd.</span></span>  
   
-##### Настройка приложения  
+##### <a name="to-set-up-the-application"></a><span data-ttu-id="7bef5-147">Настройка приложения</span><span class="sxs-lookup"><span data-stu-id="7bef5-147">To set up the application</span></span>  
   
-1.  Откройте файл решения DocumentApprovalProcess.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="7bef5-148">Откройте файл решения DocumentApprovalProcess.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7bef5-148">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DocumentApprovalProcess.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="7bef5-149">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="7bef5-149">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, откройте диспетчер утверждений, щелкнув правой кнопкой мыши по проекту ApprovalManager в **Обозревателе решений** и выбрав в выпадающем меню **Отладка**\-\>**Начать** новый экземпляр.  
+3.  <span data-ttu-id="7bef5-150">Чтобы запустить решение, запустите приложение утверждающий, щелкнув правой кнопкой мыши проект ApprovalManager в **обозревателе решений** и щелкнув **отладки**->**запуск**  новый экземпляр из контекстного меню.</span><span class="sxs-lookup"><span data-stu-id="7bef5-150">To run the solution, launch the Approval Manager Application by right-clicking the ApprovalManager project in the **Solution Explorer** and clicking **Debug**->**Start** new instance from the right-click menu.</span></span>  
   
-     Подождите, пока от диспетчера не придет сообщение о готовности.  
+     <span data-ttu-id="7bef5-151">Подождите, пока от диспетчера не придет сообщение о готовности.</span><span class="sxs-lookup"><span data-stu-id="7bef5-151">Wait for the manager’s output to let you know that it is ready.</span></span>  
   
-##### Выполнение сценария одиночного утверждения  
+##### <a name="to-run-the-single-approval-scenario"></a><span data-ttu-id="7bef5-152">Выполнение сценария одиночного утверждения</span><span class="sxs-lookup"><span data-stu-id="7bef5-152">To run the single approval scenario</span></span>  
   
-1.  Откройте командную строку с разрешениями администратора.  
+1.  <span data-ttu-id="7bef5-153">Откройте командную строку с разрешениями администратора.</span><span class="sxs-lookup"><span data-stu-id="7bef5-153">Open a command prompt with administrator permission.</span></span>  
   
-2.  Перейдите в каталог, содержащий решение.  
+2.  <span data-ttu-id="7bef5-154">Перейдите в каталог, содержащий решение.</span><span class="sxs-lookup"><span data-stu-id="7bef5-154">Navigate to the directory that contains the solution.</span></span>  
   
-3.  Перейдите в папку ApprovalClient\\Bin\\Debug и запустите два экземпляра ApprovalClient.exe.  
+3.  <span data-ttu-id="7bef5-155">Перейдите в папку ApprovalClient\Bin\Debug и запустите два экземпляра ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="7bef5-155">Navigate to the ApprovalClient\Bin\Debug folder and execute two instances of ApprovalClient.exe.</span></span>  
   
-4.  Нажмите кнопку **Обнаружить** и подождите, пока не станет доступна кнопка **Подписаться**.  
+4.  <span data-ttu-id="7bef5-156">Нажмите кнопку **обнаружение**, подождите, пока **подписаться** кнопка включена.</span><span class="sxs-lookup"><span data-stu-id="7bef5-156">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
   
-5.  Введите любое имя пользователя и нажмите кнопку **Подписаться**.Для первого клиента используйте `UserType1`, а для второго — `UserType2`.  
+5.  <span data-ttu-id="7bef5-157">Введите любое имя пользователя и нажмите кнопку **подписаться**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-157">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="7bef5-158">Для первого клиента используйте `UserType1`, а для второго - `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-158">For one client, use `UserType1` and the other type `UserType2`.</span></span>  
   
-6.  На клиенте `UserType1` выберите один тип подтверждения из раскрывающегося меню и введите имя и содержимое документа.Нажмите кнопку **Подтверждение запроса**.  
+6.  <span data-ttu-id="7bef5-159">На клиенте `UserType1` выберите один тип подтверждения из раскрывающегося меню и введите имя и содержимое документа.</span><span class="sxs-lookup"><span data-stu-id="7bef5-159">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="7bef5-160">Нажмите кнопку **запросить утверждение**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-160">Click **Request Approval**.</span></span>  
   
-7.  В клиенте `UserType2` появится документ, ожидающий утверждения.Выберите его и нажмите кнопку **Подтвердить** или **Отклонить**.Результаты должны отобразиться на клиенте `UserType1`.  
+7.  <span data-ttu-id="7bef5-161">В клиенте `UserType2` появится документ, ожидающий утверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-161">In the `UserType2` client, a document awaiting approval appears.</span></span> <span data-ttu-id="7bef5-162">Выберите его и нажмите клавишу **утвердить** или **Отклонить**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-162">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="7bef5-163">Результаты должны отобразиться на клиенте `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-163">The results should show in the `UserType1` client.</span></span>  
   
-##### Выполнение сценария утверждения кворумом  
+##### <a name="to-run-the-quorum-approval-scenario"></a><span data-ttu-id="7bef5-164">Выполнение сценария утверждения кворумом</span><span class="sxs-lookup"><span data-stu-id="7bef5-164">To run the quorum approval scenario</span></span>  
   
-1.  Откройте командную строку с разрешениями администратора.  
+1.  <span data-ttu-id="7bef5-165">Откройте командную строку с разрешениями администратора.</span><span class="sxs-lookup"><span data-stu-id="7bef5-165">Open a command prompt with administrator permission.</span></span>  
   
-2.  Перейдите в каталог, содержащий решение.  
+2.  <span data-ttu-id="7bef5-166">Перейдите в каталог, содержащий решение.</span><span class="sxs-lookup"><span data-stu-id="7bef5-166">Navigate to the directory that contains the solution.</span></span>  
   
-3.  Перейдите в папку ApprovalClient\\Bin\\Debug и запустите три экземпляра ApprovalClient.exe.  
+3.  <span data-ttu-id="7bef5-167">Перейдите в папку ApprovalClient\Bin\Debug и запустите три экземпляра ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="7bef5-167">Navigate to the ApprovalClient\Bin\Debug folder and execute three instances of ApprovalClient.exe.</span></span>  
   
-4.  Нажмите кнопку **Обнаружить** и подождите, пока не станет доступна кнопка **Подписаться**.  
+4.  <span data-ttu-id="7bef5-168">Нажмите кнопку **обнаружение**, подождите, пока **подписаться** кнопка включена.</span><span class="sxs-lookup"><span data-stu-id="7bef5-168">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
   
-5.  Введите любое имя пользователя и нажмите кнопку **Подписаться**.Для одного клиента используйте `UserType1`, а для двух других — `UserType2`.  
+5.  <span data-ttu-id="7bef5-169">Введите любое имя пользователя и нажмите кнопку **подписаться**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-169">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="7bef5-170">Для одного клиента используйте `UserType1`, а для двух других - `UserType2`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-170">For one client use `UserType1` and the other two type `UserType2`.</span></span>  
   
-6.  В клиенте `UserType1` выберите в раскрывающемся меню утверждение кворумом и введите имя и содержимое документа.Нажмите кнопку **Подтверждение запроса**.В данном случае требуется, чтобы два клиента `UserType2` утвердили или отклонили документ.Хотя ответить должны оба клиента `UserType2`, для утверждения документа достаточно, чтобы его утвердил один из них.  
+6.  <span data-ttu-id="7bef5-171">В клиенте `UserType1` выберите в раскрывающемся меню утверждение кворумом и введите имя и содержимое документа.</span><span class="sxs-lookup"><span data-stu-id="7bef5-171">In the `UserType1` client, select the quorum approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="7bef5-172">Нажмите кнопку **запросить утверждение**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-172">Click **Request Approval**.</span></span> <span data-ttu-id="7bef5-173">В данном случае требуется, чтобы два клиента `UserType2` утвердили или отклонили документ.</span><span class="sxs-lookup"><span data-stu-id="7bef5-173">This requests that the two `UserType2` clients approve or reject the document.</span></span> <span data-ttu-id="7bef5-174">Хотя ответить должны оба клиента `UserType2`, для утверждения документа достаточно, чтобы его утвердил один из них.</span><span class="sxs-lookup"><span data-stu-id="7bef5-174">While both `UserType2` clients must respond, only one client must approve the document for it to be approved.</span></span>  
   
-7.  На клиентах `UserType2` появится документ, ожидающий подтверждения.Выберите его и нажмите кнопку **Подтвердить** или **Отклонить**.Результаты должны отобразиться на клиенте `UserType1`.  
+7.  <span data-ttu-id="7bef5-175">На клиентах `UserType2` появится документ, ожидающий подтверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-175">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="7bef5-176">Выберите его и нажмите клавишу **утвердить** или **Отклонить**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-176">Select it and press **approve** or **reject**.</span></span> <span data-ttu-id="7bef5-177">Результаты должны отобразиться на клиенте `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-177">The results should show in the `UserType1` client.</span></span>  
   
-##### Выполнение сценария составного утверждения  
+##### <a name="to-run-the-complex-approval-scenario"></a><span data-ttu-id="7bef5-178">Выполнение сценария составного утверждения</span><span class="sxs-lookup"><span data-stu-id="7bef5-178">To run the complex approval scenario</span></span>  
   
-1.  Откройте командную строку с разрешениями администратора.  
+1.  <span data-ttu-id="7bef5-179">Откройте командную строку с разрешениями администратора.</span><span class="sxs-lookup"><span data-stu-id="7bef5-179">Open a command prompt with administrator permission.</span></span>  
   
-2.  Перейдите в каталог, содержащий решение.  
+2.  <span data-ttu-id="7bef5-180">Перейдите в каталог, содержащий решение.</span><span class="sxs-lookup"><span data-stu-id="7bef5-180">Navigate to the directory that contains the solution.</span></span>  
   
-3.  Перейдите в папку ApprovalClient\\Bin\\Debug и запустите четыре экземпляра ApprovalClient.exe.  
+3.  <span data-ttu-id="7bef5-181">Перейдите в папку ApprovalClient\Bin\Debug и запустите четыре экземпляра ApprovalClient.exe.</span><span class="sxs-lookup"><span data-stu-id="7bef5-181">Navigate to the ApprovalClient\Bin\Debug folder and execute four instances of ApprovalClient.exe.</span></span>  
   
-4.  Нажмите кнопку **Обнаружить** и подождите, пока не станет доступна кнопка **Подписаться**.  
+4.  <span data-ttu-id="7bef5-182">Нажмите кнопку **обнаружение**, подождите, пока **подписаться** кнопка включена.</span><span class="sxs-lookup"><span data-stu-id="7bef5-182">Click **discover**, wait until the **subscribe** button is enabled.</span></span>  
   
-5.  Введите любое имя пользователя и нажмите кнопку **Подписаться**.Для одного клиента используйте `UserType1`, для двух других — `UserType2`, а для последнего — `UserType3`.  
+5.  <span data-ttu-id="7bef5-183">Введите любое имя пользователя и нажмите кнопку **подписаться**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-183">Type any user name and click **subscribe**.</span></span> <span data-ttu-id="7bef5-184">Для одного клиента используйте `UserType1`, для двух других - `UserType2`, а для последнего - `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-184">For one client use `UserType1`, in two uses type `UserType2`, and in the last use `UserType3`.</span></span>  
   
-6.  На клиенте `UserType1` выберите один тип подтверждения из раскрывающегося меню и введите имя и содержимое документа.Нажмите кнопку **Подтверждение запроса**.  
+6.  <span data-ttu-id="7bef5-185">На клиенте `UserType1` выберите один тип подтверждения из раскрывающегося меню и введите имя и содержимое документа.</span><span class="sxs-lookup"><span data-stu-id="7bef5-185">In the `UserType1` client, select the single approval type from the drop down menu and type a document name and content.</span></span> <span data-ttu-id="7bef5-186">Нажмите кнопку **запросить утверждение**.</span><span class="sxs-lookup"><span data-stu-id="7bef5-186">Click **Request Approval**.</span></span>  
   
-7.  На клиентах `UserType2` появится документ, ожидающий подтверждения.Выберите его и нажмите **утвердить**. Документ буден передан клиенту `UserType3`.  
+7.  <span data-ttu-id="7bef5-187">На клиентах `UserType2` появится документ, ожидающий подтверждения.</span><span class="sxs-lookup"><span data-stu-id="7bef5-187">In the `UserType2` clients, a document awaiting approval appears.</span></span> <span data-ttu-id="7bef5-188">Выберите его и нажмите клавишу **утвердить**, документ передан `UserType3` клиента.</span><span class="sxs-lookup"><span data-stu-id="7bef5-188">Select it and press **approve**, the document is passed to the `UserType3` client.</span></span>  
   
-     Если документ был утвержден первым кворумом `UserType2`, этот документ буден передан клиенту `UserType3`.  
+     <span data-ttu-id="7bef5-189">Если документ был утвержден первым кворумом `UserType2`, этот документ буден передан клиенту `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-189">If the document is approved by the first `UserType2` quorum, the document is passed to the `UserType3` client.</span></span>  
   
-8.  Утвердите или отклоните документ, полученный от клиента `UserType3`.Результаты должны отобразиться на клиенте `UserType1`.  
+8.  <span data-ttu-id="7bef5-190">Утвердите или отклоните документ, полученный от клиента `UserType3`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-190">Approve or reject the document from the `UserType3` client.</span></span> <span data-ttu-id="7bef5-191">Результаты должны отобразиться на клиенте `UserType1`.</span><span class="sxs-lookup"><span data-stu-id="7bef5-191">The results should show in the `UserType1` client.</span></span>  
   
-##### Очистка  
+##### <a name="to-clean-up"></a><span data-ttu-id="7bef5-192">Очистка</span><span class="sxs-lookup"><span data-stu-id="7bef5-192">To clean up</span></span>  
   
-1.  В командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] перейдите в директорию DocumentApprovalProcess и запустите команду Cleanup.cmd.  
+1.  <span data-ttu-id="7bef5-193">В командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] перейдите в директорию DocumentApprovalProcess и запустите команду Cleanup.cmd.</span><span class="sxs-lookup"><span data-stu-id="7bef5-193">From a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt, navigate to the DocumentApprovalProcess folder and run Cleanup.cmd.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="7bef5-194">См. также</span><span class="sxs-lookup"><span data-stu-id="7bef5-194">See Also</span></span>

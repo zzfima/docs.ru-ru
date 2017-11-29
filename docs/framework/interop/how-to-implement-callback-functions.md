@@ -5,53 +5,49 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- callback function, implementing
+- csharp
+- vb
+- cpp
+helpviewer_keywords: callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d4382c956bf3d56426be485897cdda75453b4910
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5be0dbb6666da88897ceedf0757e2af720705a07
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-callback-functions"></a>Практическое руководство. Реализация функций обратного вызова
-В приведенных ниже процедуре и примере показано, как, используя вызов неуправляемого кода, можно напечатать из управляемого приложения значение дескриптора для каждого окна на локальном компьютере. В частности, для печати значения дескриптора окна в процедуре и примере используется функция **EnumWindows**, которая просматривает список окон, и управляемая функция обратного вызова CallBack.  
+# <a name="how-to-implement-callback-functions"></a><span data-ttu-id="1620d-102">Практическое руководство. Реализация функций обратного вызова</span><span class="sxs-lookup"><span data-stu-id="1620d-102">How to: Implement Callback Functions</span></span>
+<span data-ttu-id="1620d-103">В приведенных ниже процедуре и примере показано, как, используя вызов неуправляемого кода, можно напечатать из управляемого приложения значение дескриптора для каждого окна на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="1620d-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="1620d-104">В частности, для печати значения дескриптора окна в процедуре и примере используется функция **EnumWindows**, которая просматривает список окон, и управляемая функция обратного вызова CallBack.</span><span class="sxs-lookup"><span data-stu-id="1620d-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  
   
-### <a name="to-implement-a-callback-function"></a>Реализация функции обратного вызова  
+### <a name="to-implement-a-callback-function"></a><span data-ttu-id="1620d-105">Реализация функции обратного вызова</span><span class="sxs-lookup"><span data-stu-id="1620d-105">To implement a callback function</span></span>  
   
-1.  Прежде чем приступить к реализации, обратите внимание на сигнатуру функции **EnumWindows**. Функция **EnumWindows** имеет следующую сигнатуру:  
+1.  <span data-ttu-id="1620d-106">Прежде чем приступить к реализации, обратите внимание на сигнатуру функции **EnumWindows**.</span><span class="sxs-lookup"><span data-stu-id="1620d-106">Look at the signature for the **EnumWindows** function before going further with the implementation.</span></span> <span data-ttu-id="1620d-107">Функция **EnumWindows** имеет следующую сигнатуру:</span><span class="sxs-lookup"><span data-stu-id="1620d-107">**EnumWindows** has the following signature:</span></span>  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     Признаком необходимости обратного вызова для функции является наличие аргумента **lpEnumFunc**. Обычно в именах аргументов, которые принимают указатель на функцию обратного вызова, присутствует префикс **lp** (long pointer, длинный указатель) и суффикс **Func**. Документацию по функциям Win32 см. в Microsoft Platform SDK.  
+     <span data-ttu-id="1620d-108">Признаком необходимости обратного вызова для функции является наличие аргумента **lpEnumFunc**.</span><span class="sxs-lookup"><span data-stu-id="1620d-108">One clue that this function requires a callback is the presence of the **lpEnumFunc** argument.</span></span> <span data-ttu-id="1620d-109">Обычно в именах аргументов, которые принимают указатель на функцию обратного вызова, присутствует префикс **lp** (long pointer, длинный указатель) и суффикс **Func**.</span><span class="sxs-lookup"><span data-stu-id="1620d-109">It is common to see the **lp** (long pointer) prefix combined with the **Func** suffix in the name of arguments that take a pointer to a callback function.</span></span> <span data-ttu-id="1620d-110">Документацию по функциям Win32 см. в Microsoft Platform SDK.</span><span class="sxs-lookup"><span data-stu-id="1620d-110">For documentation about Win32 functions, see the Microsoft Platform SDK.</span></span>  
   
-2.  Создайте управляемую функцию обратного вызова. В примере объявляется тип делегата `CallBack`, который принимает два аргумента (**hwnd** и **lparam**). Первый аргумент — это дескриптор окна, а второй определяется приложением. В этом выпуске оба аргумента должны быть целыми числами.  
+2.  <span data-ttu-id="1620d-111">Создайте управляемую функцию обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="1620d-111">Create the managed callback function.</span></span> <span data-ttu-id="1620d-112">В примере объявляется тип делегата `CallBack`, который принимает два аргумента (**hwnd** и **lparam**).</span><span class="sxs-lookup"><span data-stu-id="1620d-112">The example declares a delegate type, called `CallBack`, which takes two arguments (**hwnd** and **lparam**).</span></span> <span data-ttu-id="1620d-113">Первый аргумент — это дескриптор окна, а второй определяется приложением.</span><span class="sxs-lookup"><span data-stu-id="1620d-113">The first argument is a handle to the window; the second argument is application-defined.</span></span> <span data-ttu-id="1620d-114">В этом выпуске оба аргумента должны быть целыми числами.</span><span class="sxs-lookup"><span data-stu-id="1620d-114">In this release, both arguments must be integers.</span></span>  
   
-     Функции обратного вызова обычно возвращают ненулевые значения, сообщая об успешном выполнении, и ноль, сообщая о сбое. В этом примере для продолжения перечисления в явном виде устанавливается возвращаемое значение **true**.  
+     <span data-ttu-id="1620d-115">Функции обратного вызова обычно возвращают ненулевые значения, сообщая об успешном выполнении, и ноль, сообщая о сбое.</span><span class="sxs-lookup"><span data-stu-id="1620d-115">Callback functions generally return nonzero values to indicate success and zero to indicate failure.</span></span> <span data-ttu-id="1620d-116">В этом примере для продолжения перечисления в явном виде устанавливается возвращаемое значение **true**.</span><span class="sxs-lookup"><span data-stu-id="1620d-116">This example explicitly sets the return value to **true** to continue the enumeration.</span></span>  
   
-3.  Создайте делегат и передайте его в качестве аргумента в функцию **EnumWindows**. Вызов неуправляемого кода автоматически преобразует делегат в знакомый формат обратного вызова.  
+3.  <span data-ttu-id="1620d-117">Создайте делегат и передайте его в качестве аргумента в функцию **EnumWindows**.</span><span class="sxs-lookup"><span data-stu-id="1620d-117">Create a delegate and pass it as an argument to the **EnumWindows** function.</span></span> <span data-ttu-id="1620d-118">Вызов неуправляемого кода автоматически преобразует делегат в знакомый формат обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="1620d-118">Platform invoke converts the delegate to a familiar callback format automatically.</span></span>  
   
-4.  Убедитесь в том, что сборщик мусора не освобождает делегат до завершения выполнения функции обратного вызова. При передаче делегата в качестве параметра или поля структуры он не уничтожается в течение всего вызова. Таким образом, как показано в примере перечисления ниже, функция обратного вызова завершает работу, прежде чем вызов возвращает управление, не требуя никаких дополнительных действий со стороны управляемого вызывающего объекта.  
+4.  <span data-ttu-id="1620d-119">Убедитесь в том, что сборщик мусора не освобождает делегат до завершения выполнения функции обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="1620d-119">Ensure that the garbage collector does not reclaim the delegate before the callback function completes its work.</span></span> <span data-ttu-id="1620d-120">При передаче делегата в качестве параметра или поля структуры он не уничтожается в течение всего вызова.</span><span class="sxs-lookup"><span data-stu-id="1620d-120">When you pass a delegate as a parameter, or pass a delegate contained as a field in a structure, it remains uncollected for the duration of the call.</span></span> <span data-ttu-id="1620d-121">Таким образом, как показано в примере перечисления ниже, функция обратного вызова завершает работу, прежде чем вызов возвращает управление, не требуя никаких дополнительных действий со стороны управляемого вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="1620d-121">So, as is the case in the following enumeration example, the callback function completes its work before the call returns and requires no additional action by the managed caller.</span></span>  
   
-     Но если функция обратного вызова может быть вызвана после возвращения вызова, управляемый вызывающий объект должен выполнить действия, гарантирующие, что делегат не будет уничтожен, пока функция обратного вызова не завершит работу. Подробную информацию о предотвращении сборки мусора см. в разделе [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md) в подразделе, посвященном вызову неуправляемого кода.  
+     <span data-ttu-id="1620d-122">Но если функция обратного вызова может быть вызвана после возвращения вызова, управляемый вызывающий объект должен выполнить действия, гарантирующие, что делегат не будет уничтожен, пока функция обратного вызова не завершит работу.</span><span class="sxs-lookup"><span data-stu-id="1620d-122">If, however, the callback function can be invoked after the call returns, the managed caller must take steps to ensure that the delegate remains uncollected until the callback function finishes.</span></span> <span data-ttu-id="1620d-123">Подробную информацию о предотвращении сборки мусора см. в разделе [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md) в подразделе, посвященном вызову неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="1620d-123">For detailed information about preventing garbage collection, see [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) with Platform Invoke.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="1620d-124">Пример</span><span class="sxs-lookup"><span data-stu-id="1620d-124">Example</span></span>  
   
 ```vb  
 Imports System  
@@ -140,7 +136,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции обратного вызова](../../../docs/framework/interop/callback-functions.md)   
- [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-
+## <a name="see-also"></a><span data-ttu-id="1620d-125">См. также</span><span class="sxs-lookup"><span data-stu-id="1620d-125">See Also</span></span>  
+ [<span data-ttu-id="1620d-126">Функции обратного вызова</span><span class="sxs-lookup"><span data-stu-id="1620d-126">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ [<span data-ttu-id="1620d-127">Вызов функции DLL</span><span class="sxs-lookup"><span data-stu-id="1620d-127">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -1,57 +1,38 @@
 ---
-title: "Атрибут «Расширения» может применяться только к объявлениям «Модуль», «Sub» или «Функция» | Документы Microsoft"
-ms.date: 2015-07-20
+title: "&#39; Расширение &#39; атрибут может применяться только к &#39; Модуль &#39; &#39; По &#39; или &#39; Функция &#39; объявления"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36550
 - vbc36550
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC36550
+helpviewer_keywords: BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3eee008f737bf625023b6e4d58e1df7d282148d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9d77933c52484eb934501107d1ddad15f0eca826
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a>Атрибут «Расширения» может применяться только к объявлениям «Модуль», «Sub» или «Функция»
-Единственный способ расширения типа данных в Visual Basic является определение метода расширения внутри стандартного модуля. Метод расширения может быть `Sub` процедуры или `Function` процедуры. Все методы расширения должен быть помечен атрибутом расширения, `<Extension()>`, из <xref:System.Runtime.CompilerServices?displayProperty=fullName>имен.</xref:System.Runtime.CompilerServices?displayProperty=fullName> Кроме того модуль, содержащий метод расширения может быть помечен таким же образом. Не используется атрибут расширения является допустимым.  
+# <a name="39extension39-attribute-can-be-applied-only-to-39module39-39sub39-or-39function39-declarations"></a><span data-ttu-id="d7f79-102">&#39; Расширение &#39; атрибут может применяться только к &#39; Модуль &#39; &#39; По &#39; или &#39; Функция &#39; объявления</span><span class="sxs-lookup"><span data-stu-id="d7f79-102">&#39;Extension&#39; attribute can be applied only to &#39;Module&#39;, &#39;Sub&#39;, or &#39;Function&#39; declarations</span></span>
+<span data-ttu-id="d7f79-103">Единственный способ расширения типа данных в Visual Basic является определение метода расширения внутри стандартного модуля.</span><span class="sxs-lookup"><span data-stu-id="d7f79-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="d7f79-104">Методом расширения могут быть `Sub` процедуры или `Function` процедуры.</span><span class="sxs-lookup"><span data-stu-id="d7f79-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="d7f79-105">Все методы расширения должны быть помечены атрибутом расширения, `<Extension()>`, из <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="d7f79-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="d7f79-106">При необходимости модуль, который содержит метод расширения может быть помечен таким же образом.</span><span class="sxs-lookup"><span data-stu-id="d7f79-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="d7f79-107">Не используется расширение атрибута является допустимым.</span><span class="sxs-lookup"><span data-stu-id="d7f79-107">No other use of the extension attribute is valid.</span></span>  
   
- **Идентификатор ошибки:** BC36550  
+ <span data-ttu-id="d7f79-108">**Идентификатор ошибки:** BC36550</span><span class="sxs-lookup"><span data-stu-id="d7f79-108">**Error ID:** BC36550</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7f79-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d7f79-109">To correct this error</span></span>  
   
--   Удалите атрибут расширения.  
+-   <span data-ttu-id="d7f79-110">Удалите атрибут расширения.</span><span class="sxs-lookup"><span data-stu-id="d7f79-110">Remove the extension attribute.</span></span>  
   
--   Измените расширение в качестве метода, определенного в вложенного модуля.  
+-   <span data-ttu-id="d7f79-111">Измените расширение в качестве метода, определенного в вложенного модуля.</span><span class="sxs-lookup"><span data-stu-id="d7f79-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере определяется `Print` метод `String` тип данных.  
+## <a name="example"></a><span data-ttu-id="d7f79-112">Пример</span><span class="sxs-lookup"><span data-stu-id="d7f79-112">Example</span></span>  
+ <span data-ttu-id="d7f79-113">В следующем примере определяется `Print` метод `String` тип данных.</span><span class="sxs-lookup"><span data-stu-id="d7f79-113">The following example defines a `Print` method for the `String` data type.</span></span>  
   
 ```  
 Imports StringUtility  
@@ -67,8 +48,7 @@ Namespace StringUtility
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
- [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Оператор Module](../../../visual-basic/language-reference/statements/module-statement.md)
-
+## <a name="see-also"></a><span data-ttu-id="d7f79-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d7f79-114">See Also</span></span>  
+ [<span data-ttu-id="d7f79-115">Обзор атрибутов</span><span class="sxs-lookup"><span data-stu-id="d7f79-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="d7f79-116">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="d7f79-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ [<span data-ttu-id="d7f79-117">Оператор Module</span><span class="sxs-lookup"><span data-stu-id="d7f79-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)

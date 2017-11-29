@@ -1,246 +1,247 @@
 ---
-title: "Элементы управления для использования в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms]"
-  - "Элементы управления Windows Forms, перечень"
+title: "Элементы управления для использования в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms]
+- Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элементы управления для использования в формах Windows Forms
-Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms. Помимо элементов управления Windows Forms, описанных в этом разделе можно добавить элемент управления ActiveX и пользовательские элементы управления Windows Forms. Если не удается найти элемент управления, который требуется, перечисленных здесь, можно также создать свои собственные. Дополнительные сведения см. в разделе [разработке элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Дополнительные сведения о выборе разделе [элементов управления Windows Forms функцией](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+# <a name="controls-to-use-on-windows-forms"></a><span data-ttu-id="a1d4f-102">Элементы управления для использования в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1d4f-102">Controls to Use on Windows Forms</span></span>
+<span data-ttu-id="a1d4f-103">Ниже приведен алфавитный список элементов управления и компонентов, используемых в формах Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-103">The following is an alphabetic list of controls and components that can be used on Windows Forms.</span></span> <span data-ttu-id="a1d4f-104">Помимо элементов управления Windows Forms, описанных в этом разделе, в формы Windows Forms можно добавлять элементы управления ActiveX и пользовательские элементы управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-104">In addition to the Windows Forms controls covered in this section, you can add ActiveX and custom controls to Windows Forms.</span></span> <span data-ttu-id="a1d4f-105">Если вам не удается найти нужный элемент управления в этом списке, вы можете создать свой собственный.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-105">If you do not find the control you need listed here, you can also create your own.</span></span> <span data-ttu-id="a1d4f-106">См. раздел [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="a1d4f-106">For details, see [Developing Windows Forms Controls at Design Time](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="a1d4f-107">Дополнительные сведения о выборе необходимого элемента управления см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span><span class="sxs-lookup"><span data-stu-id="a1d4f-107">For more information about choosing the control you need, see [Windows Forms Controls by Function](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]элементы управления, основанные на классах, предоставляемых [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  <span data-ttu-id="a1d4f-108">Элементы управления [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] основаны на классах, предоставляемых [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a1d4f-108">[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] controls are based on classes provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Элементы управления по функциям Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
- Перечисляются и описываются элементы управления Windows Forms на основе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="a1d4f-109">Содержание</span><span class="sxs-lookup"><span data-stu-id="a1d4f-109">In This Section</span></span>  
+ [<span data-ttu-id="a1d4f-110">Функциональная классификация элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1d4f-110">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ <span data-ttu-id="a1d4f-111">Список и описание элементов управления Windows Forms на основе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a1d4f-111">Lists and describes Windows Forms controls based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [Элементы управления со встроенной поддержки рисования владельцем](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- Описывает, как изменить внешний вид элемента управления, которые недоступны через свойства.  
+ [<span data-ttu-id="a1d4f-112">Элементы управления со встроенной поддержкой рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="a1d4f-112">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ <span data-ttu-id="a1d4f-113">Описание возможностей изменения аспектов внешнего вида элемента управления, которые недоступны через свойства.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-113">Describes how to alter aspects of a control's appearance that are not available through properties.</span></span>  
   
- [Компонент BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
- Включает формы или элемента управления для асинхронного выполнения операции.  
+ [<span data-ttu-id="a1d4f-114">Компонент BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="a1d4f-114">BackgroundWorker Component</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component.md)  
+ <span data-ttu-id="a1d4f-115">Позволяет форме или элементу управления выполнять операцию асинхронно.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-115">Enables a form or control to run an operation asynchronously.</span></span>  
   
- [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- Предоставляет перехода и пользовательский интерфейс (UI) для элементов управления, привязанных к данным.  
+ [<span data-ttu-id="a1d4f-116">Элемент управления BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="a1d4f-116">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-117">Представляет собой пользовательский интерфейс для перехода и обработки для элементов управления, которые привязываются к данным.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-117">Provides the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span>  
   
- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- Инкапсулирует источник данных для привязки к элементам управления.  
+ [<span data-ttu-id="a1d4f-118">Компонент BindingSource</span><span class="sxs-lookup"><span data-stu-id="a1d4f-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ <span data-ttu-id="a1d4f-119">Инкапсулирует источник данных для привязки к элементам управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-119">Encapsulates a data source for binding to controls.</span></span>  
   
- [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
- Описание стандартной кнопки, пользователь может щелкнуть для выполнения действий.  
+ [<span data-ttu-id="a1d4f-120">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="a1d4f-120">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-121">Представляет стандартную кнопку, которую пользователь может нажать для выполнения действий.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-121">Presents a standard button that the user can click to perform actions.</span></span>  
   
- [Элемент управления CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
- Указывает ли условие.  
+ [<span data-ttu-id="a1d4f-122">Элемент управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-122">CheckBox Control</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-123">Указывает, включено или выключено условие.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-123">Indicates whether a condition is on or off.</span></span>  
   
- [Элемент управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
- Отображает список элементов, снимите флажок рядом с каждым элементом.  
+ [<span data-ttu-id="a1d4f-124">Элемент управления CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-124">CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-125">Отображает список элементов с флажками слева от каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-125">Displays a list of items with a check box next to each item.</span></span>  
   
- [Компонент ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- Позволяет пользователю выбрать цвет из палитры стандартным диалоговым окном и добавить в палитру Дополнительные цвета.  
+ [<span data-ttu-id="a1d4f-126">Компонент ColorDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-126">ColorDialog Component</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-127">Предоставляет стандартное диалоговое окно для выбора цветов из палитры и добавления в нее дополнительных цветов.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-127">Allows the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- Отображение данных в раскрывающемся поле со списком.  
+ [<span data-ttu-id="a1d4f-128">Элемент управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-128">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-129">Отображает данные в раскрывающемся поле со списком.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-129">Displays data in a drop-down combo box.</span></span>  
   
- [Компонент ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- Предоставление пользователям доступного меню часто используемых команд, связанных с выбранным объектом. Хотя <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления предыдущих версий, <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-130">Компонент ContextMenu</span><span class="sxs-lookup"><span data-stu-id="a1d4f-130">ContextMenu Component</span></span>](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-131">Предоставляет пользователям быстрый доступ к меню часто используемых команд, связанных с выбранным объектом.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-131">Provides users with an easily accessible menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="a1d4f-132">Несмотря на то что <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления предыдущих версий, <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-132">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [Элемент управления ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- Представляет контекстное меню. Хотя <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления предыдущих версий, <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-133">Элемент управления ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="a1d4f-133">ContextMenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
+ <span data-ttu-id="a1d4f-134">Представляет контекстное меню.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-134">Represents a shortcut menu.</span></span> <span data-ttu-id="a1d4f-135">Несмотря на то что <xref:System.Windows.Forms.ContextMenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ContextMenu> управления предыдущих версий, <xref:System.Windows.Forms.ContextMenu> при желании можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-135">Although <xref:System.Windows.Forms.ContextMenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control of previous versions, <xref:System.Windows.Forms.ContextMenu> is retained for both backward compatibility and future use if so desired.</span></span>  
   
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- Отображение табличных данных из набора данных и для обновления в источнике данных.  
+ [<span data-ttu-id="a1d4f-136">Элемент управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="a1d4f-136">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-137">Отображает табличные данные из набора данных и позволяет вносить изменения в источник данных.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-137">Displays tabular data from a dataset and allows for updates to the data source.</span></span>  
   
- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- Предоставляет гибкую расширяемую систему для отображения и редактирования табличных данных.  
+ [<span data-ttu-id="a1d4f-138">Элемент управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="a1d4f-138">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-139">Предоставляет гибкую, расширяемую систему для отображения и редактирования табличных данных.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-139">Provides a flexible, extensible system for displaying and editing tabular data.</span></span>  
   
- [Элемент управления DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- Позволяет пользователю выбрать один элемент из списка дат или времени.  
+ [<span data-ttu-id="a1d4f-140">Элемент управления DateTimePicker</span><span class="sxs-lookup"><span data-stu-id="a1d4f-140">DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-141">Позволяет пользователю выбрать один элемент из списка дат или времени.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-141">Allows the user to select a single item from a list of dates or times.</span></span>  
   
- [Компоненты и элементы управления диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Описание набора элементов управления, которые позволяют пользователям выполнять стандартные действия в приложении или системе.  
+ [<span data-ttu-id="a1d4f-142">Элементы управления и компоненты диалоговых окон</span><span class="sxs-lookup"><span data-stu-id="a1d4f-142">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="a1d4f-143">Описание набора элементов управления для выполнения пользователем стандартных действий в приложении или системе.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-143">Describes a set of controls that allow users to perform standard interactions with the application or system.</span></span>  
   
- [Элемент управления DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- Отображает текстовые строки, которые пользователь может просматривать и выделять.  
+ [<span data-ttu-id="a1d4f-144">Элемент управления DomainUpDown</span><span class="sxs-lookup"><span data-stu-id="a1d4f-144">DomainUpDown Control</span></span>](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-145">Отображает текстовые строки, которые пользователь может просматривать и выбирать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-145">Displays text strings that a user can browse through and select from.</span></span>  
   
- [Компонент ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
- Отображает сведения об ошибке для пользователя в фоновом режиме.  
+ [<span data-ttu-id="a1d4f-146">Компонент ErrorProvider</span><span class="sxs-lookup"><span data-stu-id="a1d4f-146">ErrorProvider Component</span></span>](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-147">Отображает сведения об ошибке для пользователя в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-147">Displays error information to the user in a non-intrusive way.</span></span>  
   
- «Класс FileDialog»  
- Предоставляет функциональные возможности базового класса для диалоговых окон файлов.  
+ <span data-ttu-id="a1d4f-148">Класс FileDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-148">"FileDialog Class"</span></span>  
+ <span data-ttu-id="a1d4f-149">Предоставляет функциональные возможности базового класса для диалоговых окон открытия и сохранения файлов.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-149">Provides base-class functionality for file dialog boxes.</span></span>  
   
- [Элемент управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
- Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.  
+ [<span data-ttu-id="a1d4f-150">Элемент управления FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-150">FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-151">Представляет панель, которая динамически располагает содержимое по горизонтали или вертикали.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-151">Represents a panel that dynamically lays out its contents horizontally or vertically.</span></span>  
   
- [Компонент FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
- Отображает интерфейс, с помощью которого пользователи можно Обзор и выберите каталог или создайте новый.  
+ [<span data-ttu-id="a1d4f-152">Компонент FolderBrowserDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-152">FolderBrowserDialog Component</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-153">Отображает интерфейс, с помощью которого пользователи могут просматривать и выбирать каталоги или создавать их.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-153">Displays an interface with which users can browse and select a directory or create a new one.</span></span>  
   
- [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
- Предоставляет приложениям шрифты, установленные в системе на текущий момент.  
+ [<span data-ttu-id="a1d4f-154">Компонент FontDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-154">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-155">Предоставляет приложениям шрифты, установленные в системе на текущий момент.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-155">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- Предоставляет возможность группировки других элементов управления.  
+ [<span data-ttu-id="a1d4f-156">Элемент управления GroupBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-156">GroupBox Control</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-157">Предоставляет возможность идентифицируемой группировки других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-157">Provides an identifiable grouping for other controls.</span></span>  
   
- [Компонент HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- Связывает файл справки HTML с приложением Windows.  
+ [<span data-ttu-id="a1d4f-158">Компонент HelpProvider</span><span class="sxs-lookup"><span data-stu-id="a1d4f-158">HelpProvider Component</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-159">Связывает HTML-файл справки с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-159">Associates an HTML Help file with a Windows-based application.</span></span>  
   
- [HScrollBar и VScrollBar элементов управления](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
- Укажите перемещения по списку элементов или большие объемы информации с либо горизонтальной или вертикальной прокрутки окна приложения или элемента управления.  
+ [<span data-ttu-id="a1d4f-160">Элементы управления HScrollBar и VScrollBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-160">HScrollBar and VScrollBar Controls</span></span>](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-windows-forms.md)  
+ <span data-ttu-id="a1d4f-161">Используются для просмотра длинных списков элементов или большого объема данных с помощью горизонтальной или вертикальной прокрутки окна приложения либо элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-161">Provide navigation through a list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span>  
   
- [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- Отображение изображения на другие элементы управления.  
+ [<span data-ttu-id="a1d4f-162">Компонент ImageList</span><span class="sxs-lookup"><span data-stu-id="a1d4f-162">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-163">Отображает изображения на других элементах управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-163">Displays images on other controls.</span></span>  
   
- [Элемент управления Label](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
- Отображает текст, который не может быть изменена пользователем.  
+ [<span data-ttu-id="a1d4f-164">Элемент управления Label</span><span class="sxs-lookup"><span data-stu-id="a1d4f-164">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-165">Отображает текст, который не может быть изменен пользователем.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-165">Displays text that cannot be edited by the user.</span></span>  
   
- [Элемент управления LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
- Позволяет добавлять веб-ссылок в приложения Windows Forms.  
+ [<span data-ttu-id="a1d4f-166">Элемент управления LinkLabel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-166">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-167">Позволяет добавлять веб-ссылки в приложения Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-167">Allows you to add Web-style links to Windows Forms applications.</span></span>  
   
- [Элемент управления ListBox](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- Позволяет пользователю выбрать один или несколько элементов из заранее определенного списка.  
+ [<span data-ttu-id="a1d4f-168">Элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-168">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-169">Позволяет пользователю выбрать один или несколько элементов из заранее определенного списка.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-169">Allows the user to select one or more items from a predefined list.</span></span>  
   
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- Отображает список элементов со значками в структуре проводника Windows.  
+ [<span data-ttu-id="a1d4f-170">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="a1d4f-170">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-171">Отображает список элементов со значками в стиле проводника Windows.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-171">Displays a list of items with icons, in the manner of Windows Explorer.</span></span>  
   
- [Компонент MainMenu](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- Отображает меню во время выполнения. Хотя <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-172">Компонент MainMenu</span><span class="sxs-lookup"><span data-stu-id="a1d4f-172">MainMenu Component</span></span>](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-173">Отображает меню во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-173">Displays a menu at run time.</span></span> <span data-ttu-id="a1d4f-174">Несмотря на то что <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> можно сохранить для обратной совместимости и использования в будущем, если выбрать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-174">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления MaskedTextBox](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
- Ограничивает формат вводимых пользователем данных в форме.  
+ [<span data-ttu-id="a1d4f-175">Элемент управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-175">MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-176">Ограничивает формат вводимых пользователем данных в форме.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-176">Constrains the format of user input in a form.</span></span>  
   
- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- Предоставляет систему меню для формы. Хотя <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-177">Элемент управления MenuStrip</span><span class="sxs-lookup"><span data-stu-id="a1d4f-177">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-178">Предоставляет систему меню для формы.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-178">Provides a menu system for a form.</span></span> <span data-ttu-id="a1d4f-179">Несмотря на то что <xref:System.Windows.Forms.MenuStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> управления предыдущих версий, <xref:System.Windows.Forms.MainMenu> можно сохранить для обратной совместимости и использования в будущем, если выбрать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-179">Although <xref:System.Windows.Forms.MenuStrip> replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> control of previous versions, <xref:System.Windows.Forms.MainMenu> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- Предоставляет интуитивно понятный графический интерфейс для пользователей, для просмотра и задания сведений о дате.  
+ [<span data-ttu-id="a1d4f-180">Элемент управления MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-180">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-181">Предоставляет интуитивно понятный графический интерфейс для пользователей для просмотра и задания сведений о дате.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-181">Presents an intuitive graphical interface for users to view and set date information.</span></span>  
   
- [Компонент NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- Отображение значков для процессов, выполняемых в фоновом режиме, в противном случае не будет пользовательских интерфейсов.  
+ [<span data-ttu-id="a1d4f-182">Компонент NotifyIcon</span><span class="sxs-lookup"><span data-stu-id="a1d4f-182">NotifyIcon Component</span></span>](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-183">Отображает значки для процессов, выполняемых в фоновом режиме и не имеющих пользовательских интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-183">Displays icons for processes that run in the background and would not otherwise have user interfaces.</span></span>  
   
- [Элемент управления NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- Отображение числа, которые пользователь может просматривать и выделять.  
+ [<span data-ttu-id="a1d4f-184">Элемент управления NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="a1d4f-184">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-185">Отображает числовые значения, которые пользователь может просматривать и выбирать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-185">Displays numerals that a user can browse through and select from.</span></span>  
   
- [Компонент OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
- Позволяет пользователям открывать файлы с помощью предварительно настроенным диалоговым окном.  
+ [<span data-ttu-id="a1d4f-186">Компонент OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-186">OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-187">Позволяет пользователям открывать файлы в стандартном диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-187">Allows users to open files by using a pre-configured dialog box.</span></span>  
   
- [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- Задает параметры страницы для печати через стандартным диалоговым окном.  
+ [<span data-ttu-id="a1d4f-188">Компонент PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-188">PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-189">Предоставляет стандартное диалоговое окно для задания параметров страницы для печати.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-189">Sets page details for printing through a pre-configured dialog box.</span></span>  
   
- [Panel-элемент управления](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- Предоставляют возможность группировки других элементов по смыслу и прокрутки.  
+ [<span data-ttu-id="a1d4f-190">Элемент управления Panel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-190">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-191">Предоставляет возможность идентифицируемой группировки других элементов управления, а также прокрутку.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-191">Provide an identifiable grouping for other controls, and allows for scrolling.</span></span>  
   
- [Элемент управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
- Отображает рисунки в формате точечного рисунка, GIF, JPEG, метафайла или значка.  
+ [<span data-ttu-id="a1d4f-192">Элемент управления PictureBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-192">PictureBox Control</span></span>](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-193">Отображает рисунки в формате точечного рисунка, GIF, JPEG, метафайла или значка.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-193">Displays graphics in bitmap, GIF, JPEG, metafile, or icon format.</span></span>  
   
- [Компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- Служит для выбора принтера, печатаемых страниц и других параметров печати.  
+ [<span data-ttu-id="a1d4f-194">Компонент PrintDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-194">PrintDialog Component</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-195">Служит для выбора принтера, печатаемых страниц и других параметров печати.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-195">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- Задает свойства, описывающие материал на печать, и печатает документ в приложениях Windows.  
+ [<span data-ttu-id="a1d4f-196">Компонент PrintDocument</span><span class="sxs-lookup"><span data-stu-id="a1d4f-196">PrintDocument Component</span></span>](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-197">Задает свойства, описывающие содержимое для печати, и печатает документ в приложениях Windows.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-197">Sets the properties that describe what to print, and prints the document in Windows-based applications.</span></span>  
   
- [Элемент управления PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
- Позволяет создавать собственные `PrintPreview` компонента или диалоговым окном, вместо использования предварительно настроенной версии.  
+ [<span data-ttu-id="a1d4f-198">Элемент управления PrintPreviewControl</span><span class="sxs-lookup"><span data-stu-id="a1d4f-198">PrintPreviewControl Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-199">Позволяет создавать собственный компонент или диалоговое окно `PrintPreview`, вместо использования стандартных версий.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-199">Allows you to create your own `PrintPreview` component or dialog box instead of using the pre-configured version.</span></span>  
   
- [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- Выводит документ в том виде, как он будет выглядеть при печати.  
+ [<span data-ttu-id="a1d4f-200">Элемент управления PrintPreviewDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-200">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-201">Выводит документ в том виде, как он будет выглядеть при печати.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-201">Displays a document as it will appear when it is printed.</span></span>  
   
- [Элемент управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
- Графически показывает ход выполнения действия.  
+ [<span data-ttu-id="a1d4f-202">Элемент управления ProgressBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-202">ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-203">Графически показывает ход выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-203">Graphically indicates the progress of an action towards completion.</span></span>  
   
- [Элемент управления RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
- Представляет набор из двух или более взаимоисключающих вариантов выбора для пользователя.  
+ [<span data-ttu-id="a1d4f-204">Элемент управления RadioButton</span><span class="sxs-lookup"><span data-stu-id="a1d4f-204">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-205">Представляет набор из двух или более взаимоисключающих вариантов выбора для пользователя.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-205">Presents a set of two or more mutually exclusive options to the user.</span></span>  
   
- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- Позволяет пользователям вводить, отображать и изменять текст с форматированием.  
+ [<span data-ttu-id="a1d4f-206">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-206">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-207">Позволяет пользователям вводить, отображать и изменять текст с форматированием.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-207">Allows users to enter, display, and manipulate text with formatting.</span></span>  
   
- [Компонент SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
- Служит для выбора сохраняемых файлов и места их сохранения.  
+ [<span data-ttu-id="a1d4f-208">Компонент SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="a1d4f-208">SaveFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-209">Служит для выбора сохраняемых файлов и места их сохранения.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-209">Selects files to save and where to save them.</span></span>  
   
- «Класс SoundPlayer»  
- Позволяет облегчить добавление звуков в приложениях.  
+ <span data-ttu-id="a1d4f-210">Класс SoundPlayer</span><span class="sxs-lookup"><span data-stu-id="a1d4f-210">"SoundPlayer Class"</span></span>  
+ <span data-ttu-id="a1d4f-211">Упрощает добавление звуков в приложениях.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-211">Enables you to easily include sounds in your applications.</span></span>  
   
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- Позволяет пользователю изменять размер закрепленного элемента управления.  
+ [<span data-ttu-id="a1d4f-212">Элемент управления SplitContainer</span><span class="sxs-lookup"><span data-stu-id="a1d4f-212">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-213">Позволяет пользователю изменять размер закрепленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-213">Allows the user to resize a docked control.</span></span>  
   
- [Элемент управления Splitter](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
- Позволяет пользователю изменять размер закрепленного элемента управления ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.x).  
+ [<span data-ttu-id="a1d4f-214">Элемент управления Splitter</span><span class="sxs-lookup"><span data-stu-id="a1d4f-214">Splitter Control</span></span>](../../../../docs/framework/winforms/controls/splitter-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-215">Позволяет пользователю изменять размер закрепленного элемента управления ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.x).</span><span class="sxs-lookup"><span data-stu-id="a1d4f-215">Allows the user to resize a docked control ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.x).</span></span>  
   
- [Элемент управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
- Отображает сведения о состоянии элемента управления, на котором находится фокус. Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет <xref:System.Windows.Forms.StatusBar> управления предыдущих версий, <xref:System.Windows.Forms.StatusBar> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-216">Элемент управления StatusBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-216">StatusBar Control</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-217">Отображает сведения о состоянии элемента управления, который находится в фокусе.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-217">Displays status information related to the control that has focus.</span></span> <span data-ttu-id="a1d4f-218">Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет элемент управления <xref:System.Windows.Forms.StatusBar> предыдущих версий, <xref:System.Windows.Forms.StatusBar> сохраняется для обеспечения обратной совместимости и использования в будущем при его выборе.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-218">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления StatusStrip](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- Предоставляет элемент управления Windows "Строка состояния". Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет <xref:System.Windows.Forms.StatusBar> управления предыдущих версий, <xref:System.Windows.Forms.StatusBar> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-219">Элемент управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="a1d4f-219">StatusStrip Control</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
+ <span data-ttu-id="a1d4f-220">Предоставляет элемент управления Windows "Строка состояния".</span><span class="sxs-lookup"><span data-stu-id="a1d4f-220">Represents a Windows status bar control.</span></span> <span data-ttu-id="a1d4f-221">Хотя <xref:System.Windows.Forms.StatusStrip> заменяет и расширяет элемент управления <xref:System.Windows.Forms.StatusBar> предыдущих версий, <xref:System.Windows.Forms.StatusBar> сохраняется для обеспечения обратной совместимости и использования в будущем при его выборе.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-221">Although <xref:System.Windows.Forms.StatusStrip> replaces and extends the <xref:System.Windows.Forms.StatusBar> control of previous versions, <xref:System.Windows.Forms.StatusBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
- Отображает вкладки, содержащие рисунки и другие элементы управления.  
+ [<span data-ttu-id="a1d4f-222">Элемент управления TabControl</span><span class="sxs-lookup"><span data-stu-id="a1d4f-222">TabControl Control</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-223">Отображает несколько вкладок, содержащих рисунки и другие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-223">Displays multiple tabs that can contain pictures or other controls.</span></span>  
   
- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
- Представляет панель, в которой содержимое динамически отображается в сетке, состоящей из строк и столбцов.  
+ [<span data-ttu-id="a1d4f-224">Элемент управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-224">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-225">Представляет панель, в которой содержимое динамически отображается в сетке, состоящей из строк и столбцов.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-225">Represents a panel that dynamically lays out its contents in a grid composed of rows and columns.</span></span>  
   
- [Элемент управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
- Позволяет вводить изменяемый текст от пользователя.  
+ [<span data-ttu-id="a1d4f-226">Элемент управления TextBox</span><span class="sxs-lookup"><span data-stu-id="a1d4f-226">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-227">Позволяет пользователю вводить изменяемый текст из нескольких строк.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-227">Allows editable, multiline input from the user.</span></span>  
   
- [Компонент Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- Вызывает событие через определенные интервалы.  
+ [<span data-ttu-id="a1d4f-228">Компонент Timer</span><span class="sxs-lookup"><span data-stu-id="a1d4f-228">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-229">Вызывает событие через определенные интервалы.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-229">Raises an event at regular intervals.</span></span>  
   
- [Элемент управления toolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- Отображает меню и кнопок с растровыми изображениями, активирующих команды. Можно расширить функциональные возможности элемента управления и изменить его внешний вид и поведение. Хотя <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> управления предыдущих версий, <xref:System.Windows.Forms.ToolBar> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-230">Элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-230">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-231">Отображает меню и кнопки с растровыми изображениями, активирующие команды.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-231">Displays menus and bitmapped buttons that activate commands.</span></span> <span data-ttu-id="a1d4f-232">Вы можете расширить функциональные возможности элемента управления и изменить его внешний вид и поведение.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-232">You can extend the functionality of the control and modify its appearance and behavior.</span></span> <span data-ttu-id="a1d4f-233">Несмотря на то что <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> управления предыдущих версий, <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем, если выбрать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-233">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- Создает пользовательские панели инструментов и меню в приложениях Windows Forms. Хотя <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> управления предыдущих версий, <xref:System.Windows.Forms.ToolBar> при выборе можно сохранить для обратной совместимости и использования в будущем.  
+ [<span data-ttu-id="a1d4f-234">Элемент управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="a1d4f-234">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-235">Создает пользовательские панели инструментов и меню в приложениях Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-235">Creates custom toolbars and menus in your Windows Forms applications.</span></span> <span data-ttu-id="a1d4f-236">Несмотря на то что <xref:System.Windows.Forms.ToolStrip> заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.ToolBar> управления предыдущих версий, <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем, если выбрать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-236">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control of previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if you choose.</span></span>  
   
- [Элемент управления ToolStripContainer](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- Предоставляет панели на каждой стороне формы для прикрепления, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления, а также центральную <xref:System.Windows.Forms.ToolStripContentPanel> для традиционных элементов управления.  
+ [<span data-ttu-id="a1d4f-237">Элемент управления ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="a1d4f-237">ToolStripContainer Control</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
+ <span data-ttu-id="a1d4f-238">Предоставляет панели на каждой стороне формы для прикрепления, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления, а также центральную <xref:System.Windows.Forms.ToolStripContentPanel> для традиционных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-238">Provides panels on each side of a form for docking, rafting, and arranging <xref:System.Windows.Forms.ToolStrip> controls, and a central <xref:System.Windows.Forms.ToolStripContentPanel> for traditional controls.</span></span>  
   
- [Элемент управления ToolStripPanel](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
- Предоставляет одну область для прикрепления, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления.  
+ [<span data-ttu-id="a1d4f-239">Элемент управления ToolStripPanel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-239">ToolStripPanel Control</span></span>](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
+ <span data-ttu-id="a1d4f-240">Предоставляет одну область для прикрепления, нависания и упорядочения <xref:System.Windows.Forms.ToolStrip> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-240">Provides one panel for docking, rafting and arranging <xref:System.Windows.Forms.ToolStrip> controls.</span></span>  
   
- [Общие сведения об элементе управления ToolStripProgressBar](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- Графически показывает ход выполнения действия. <xref:System.Windows.Forms.ToolStripProgressBar> обычно содержатся в <xref:System.Windows.Forms.StatusStrip>.  
+ [<span data-ttu-id="a1d4f-241">Элемент управления ToolStripProgressBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-241">ToolStripProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
+ <span data-ttu-id="a1d4f-242">Графически показывает ход выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-242">Graphically indicates the progress of an action towards completion.</span></span> <span data-ttu-id="a1d4f-243"><xref:System.Windows.Forms.ToolStripProgressBar> Обычно содержатся в <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-243">The <xref:System.Windows.Forms.ToolStripProgressBar> is typically contained in a <xref:System.Windows.Forms.StatusStrip>.</span></span>  
   
- [Элемент управления ToolStripStatusLabel](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
- Представляет панель <xref:System.Windows.Forms.StatusStrip> элемента управления.  
+ [<span data-ttu-id="a1d4f-244">Элемент управления ToolStripStatusLabel</span><span class="sxs-lookup"><span data-stu-id="a1d4f-244">ToolStripStatusLabel Control</span></span>](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control.md)  
+ <span data-ttu-id="a1d4f-245">Представляет панель элемента управления <xref:System.Windows.Forms.StatusStrip>.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-245">Represents a panel in a <xref:System.Windows.Forms.StatusStrip> control.</span></span>  
   
- [Компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- Отображает текст при наведении указателя мыши на другие элементы управления.  
+ [<span data-ttu-id="a1d4f-246">Компонент ToolTip</span><span class="sxs-lookup"><span data-stu-id="a1d4f-246">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ <span data-ttu-id="a1d4f-247">Отображает текст при наведении указателя мыши на другие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-247">Displays text when the user points at other controls.</span></span>  
   
- [Элемент управления TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
- Служит для перемещения по большого объема или для визуальной настройки числовых параметров.  
+ [<span data-ttu-id="a1d4f-248">Элемент управления TrackBar</span><span class="sxs-lookup"><span data-stu-id="a1d4f-248">TrackBar Control</span></span>](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-249">Служит для перемещения по большому объему данных или для визуальной настройки числовых параметров.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-249">Allows navigation through a large amount of information or visually adjusting a numeric setting.</span></span>  
   
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- Отображает иерархию узлов, которые можно разворачивать и сворачивать.  
+ [<span data-ttu-id="a1d4f-250">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="a1d4f-250">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-251">Отображает иерархию узлов, которые можно разворачивать и сворачивать.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-251">Displays a hierarchy of nodes that can be expanded or collapsed.</span></span>  
   
- [Элемент управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- Содержит веб-страницы и обеспечивает Internet возможности веб-обзора в приложении.  
+ [<span data-ttu-id="a1d4f-252">Элемент управления WebBrowser</span><span class="sxs-lookup"><span data-stu-id="a1d4f-252">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ <span data-ttu-id="a1d4f-253">Содержит веб-страницы и обеспечивает возможности просмотра интернет-страниц в приложении.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-253">Hosts Web pages and provides Internet Web browsing capabilities to your application.</span></span>  
   
- [Параметры списка для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Описание набора элементов управления, используемых для предоставления пользователям список параметров для выбора.  
+ [<span data-ttu-id="a1d4f-254">Создание списка для выбора элементов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1d4f-254">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="a1d4f-255">Описание набора элементов управления, используемых для предоставления пользователям списка вариантов для выбора.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-255">Describes a set of controls used to provide users with a list of options to choose from.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Описание использования элементов управления Windows Forms и описаны важные понятия для работы с ними.  
+## <a name="related-sections"></a><span data-ttu-id="a1d4f-256">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a1d4f-256">Related Sections</span></span>  
+ [<span data-ttu-id="a1d4f-257">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1d4f-257">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="a1d4f-258">Описание использования элементов управления Windows Forms и важных понятий для работы с ними.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-258">Explains the use of Windows Forms controls, and describes important concepts for working with them.</span></span>  
   
- [Разработка Windows Forms элементов управления во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- Ссылки на разделы с инструкциями, рекомендации по выбору создаваемого элемента управления для создания, а также другие сведения о создании собственного элемента управления.  
+ [<span data-ttu-id="a1d4f-259">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="a1d4f-259">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="a1d4f-260">Ссылки на разделы с инструкциями, рекомендации по выбору создаваемого элемента управления, а также другие сведения о создании собственных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-260">Provides links to step-by-step topics, recommendations for which kind of control to create, and other information about creating your own control.</span></span>  
   
- [Элементы управления и программируемых объектов, сравнение в разных языках и библиотеках](http://msdn.microsoft.com/ru-ru/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- Предоставляет таблицу, связывающую элементы управления Visual Basic 6.0 с соответствующими элементами управления [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Обратите внимание, что элементы управления теперь являются классами в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ [<span data-ttu-id="a1d4f-261">Сравнение элементов управления и программируемых объектов в разных языках и библиотеках</span><span class="sxs-lookup"><span data-stu-id="a1d4f-261">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ <span data-ttu-id="a1d4f-262">Содержит таблицу, в которой элементы управления Visual Basic 6.0 сопоставляются с соответствующими элементами управления в [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a1d4f-262">Provides a table that maps controls in Visual Basic 6.0 to the corresponding control in [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)].</span></span> <span data-ttu-id="a1d4f-263">Обратите внимание, что элементы управления теперь являются классами в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a1d4f-263">Note that controls are now classes in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [Практическое руководство: Добавление элементов управления ActiveX в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- В данной статье описывается использование элементов управления ActiveX в Windows Forms.
+ [<span data-ttu-id="a1d4f-264">Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1d4f-264">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ <span data-ttu-id="a1d4f-265">В этой статье описывается использование элементов управления ActiveX в формах Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a1d4f-265">Describes how to use ActiveX controls on Windows Forms.</span></span>

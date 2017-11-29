@@ -1,60 +1,61 @@
 ---
-title: "Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ElementHost - элемент управления, копирование и вставка во время разработки"
-  - "взаимодействие [WPF]"
-  - "Windows Forms, копирование и вставка содержимого"
-  - "пользовательский элемент управления WPF, размещение в Windows Forms"
+title: "Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, content copying and pasting
+- interoperability [WPF]
+- ElementHost control [Windows Forms], copying and pasting at design time
+- WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9324a7b2634eb7a42b2dbd00814e9647e6741369
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
-В этой процедуре показано, как скопировать элемент управления WPF в форму Windows Forms.  
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="587fb-102">Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки</span><span class="sxs-lookup"><span data-stu-id="587fb-102">How to: Copy and Paste an ElementHost Control at Design Time</span></span>
+<span data-ttu-id="587fb-103">Эта процедура показано, как скопировать элемент управления Windows Presentation Foundation (WPF) в Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="587fb-103">This procedure shows you how to copy a Windows Presentation Foundation (WPF) control on a Windows Form.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="587fb-104">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="587fb-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="587fb-105">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="587fb-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="587fb-106">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="587fb-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Копирование и вставка элемента управления ElementHost во время режима разработки.  
+### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a><span data-ttu-id="587fb-107">Копирование и вставка элемента управления ElementHost во время разработки</span><span class="sxs-lookup"><span data-stu-id="587fb-107">To copy and paste an ElementHost control at design time</span></span>  
   
-1.  Добавьте новый элемент управления WPF <xref:System.Windows.Controls.UserControl> в проект Windows Forms.  Используйте имя по умолчанию \(`UserControl1.xaml`\) для данного типа элемента управления.  Дополнительные сведения см. в разделе [Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  <span data-ttu-id="587fb-108">Добавить новый элемент управления WPF <xref:System.Windows.Controls.UserControl> в проект Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="587fb-108">Add a new WPF <xref:System.Windows.Controls.UserControl> to your Windows Forms project.</span></span> <span data-ttu-id="587fb-109">Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`).</span><span class="sxs-lookup"><span data-stu-id="587fb-109">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="587fb-110">Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового WPF содержимого в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="587fb-110">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-2.  В окне **Свойства** присвойте свойствам <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> элемента управления `UserControl1` значение `200`.  
+2.  <span data-ttu-id="587fb-111">В **свойства** задайте значение <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `UserControl1` для `200`.</span><span class="sxs-lookup"><span data-stu-id="587fb-111">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties of `UserControl1` to `200`.</span></span>  
   
-3.  Присвойте свойству <xref:System.Windows.Controls.Control.Background%2A> значение `Blue`.  
+3.  <span data-ttu-id="587fb-112">Задайте для свойства <xref:System.Windows.Controls.Control.Background%2A> значение `Blue`.</span><span class="sxs-lookup"><span data-stu-id="587fb-112">Set the value of the <xref:System.Windows.Controls.Control.Background%2A> property to `Blue`.</span></span>  
   
-4.  Выполните построение проекта.  
+4.  <span data-ttu-id="587fb-113">Выполните построение проекта.</span><span class="sxs-lookup"><span data-stu-id="587fb-113">Build the project.</span></span>  
   
-5.  Откройте форму `Form1` в конструкторе Windows Forms.  
+5.  <span data-ttu-id="587fb-114">Откройте `Form1` в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="587fb-114">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-6.  Перетащите элемент управления `UserControl1` из **панели элементов** в форму.  
+6.  <span data-ttu-id="587fb-115">Из **элементов**, перетащите экземпляр `UserControl1` в форму.</span><span class="sxs-lookup"><span data-stu-id="587fb-115">From the **Toolbox**, drag an instance of `UserControl1` onto the form.</span></span>  
   
-     Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.  
+     <span data-ttu-id="587fb-116">Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="587fb-116">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-7.  При выбранном элементе управления `elementHost1` нажмите клавиши CTRL\+C для копирования его в буфер обмена.  
+7.  <span data-ttu-id="587fb-117">Выбрав элемент управления `elementHost1`, нажмите клавиши CTRL+C, чтобы скопировать его в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="587fb-117">With `elementHost1` selected, press CTRL+C to copy it to the clipboard.</span></span>  
   
-8.  Нажмите клавиши CTRL\+V для вставки скопированного элемента управления в форму.  
+8.  <span data-ttu-id="587fb-118">Нажмите клавиши CTRL + V, чтобы вставить скопированный элемент управления в форму.</span><span class="sxs-lookup"><span data-stu-id="587fb-118">Press CTRL+V to paste the copied control onto the form.</span></span>  
   
-     Новый элемент управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost2` будет создан в форме.  
+     <span data-ttu-id="587fb-119">Новый <xref:System.Windows.Forms.Integration.ElementHost> управления с именем `elementHost2` создается в форме.</span><span class="sxs-lookup"><span data-stu-id="587fb-119">A new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost2` is created on the form.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Пошаговое руководство. Копирование и вставка элемента интерфейса ElementHost в отдельную форму Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)   
- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
- [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)
+## <a name="see-also"></a><span data-ttu-id="587fb-120">См. также</span><span class="sxs-lookup"><span data-stu-id="587fb-120">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="587fb-121">Пошаговое руководство. Копирование и вставка элемента интерфейса ElementHost в отдельную форму Windows Forms</span><span class="sxs-lookup"><span data-stu-id="587fb-121">Walkthrough: Copying and Pasting an ElementHost Control into Separate Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
+ [<span data-ttu-id="587fb-122">Миграция и взаимодействие систем</span><span class="sxs-lookup"><span data-stu-id="587fb-122">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="587fb-123">Использование элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="587fb-123">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="587fb-124">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="587fb-124">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

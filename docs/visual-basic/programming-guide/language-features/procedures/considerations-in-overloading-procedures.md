@@ -1,158 +1,141 @@
 ---
-title: "Вопросы, связанные с перегрузкой процедур (Visual Basic) | Документы Microsoft"
+title: "Вопросы, связанные с перегрузкой процедур (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- signatures, ParamArray arguments
-- ParamArray keyword, parameter arrays
-- ParamArray keyword, arguments and signatures
-- function overloading, implicit overloads for ParamArray
-- ParamArray keyword, signatures
+- signatures [Visual Basic], ParamArray arguments
+- ParamArray keyword [Visual Basic], parameter arrays
+- ParamArray keyword [Visual Basic], arguments and signatures
+- function overloading [Visual Basic], implicit overloads for ParamArray
+- ParamArray keyword [Visual Basic], signatures
 - Visual Basic code, procedures
 - arguments [Visual Basic], parameter arrays
-- procedures, overloading
-- parameters, lists
-- function overloading, typeless programming
+- procedures [Visual Basic], overloading
+- parameters [Visual Basic], lists
+- function overloading [Visual Basic], typeless programming
 - typeless programming
-- function overloading, restrictions
+- function overloading [Visual Basic], restrictions
 - arguments [Visual Basic], optional
-- optional arguments, overloading
-- signatures, procedure
-- parameter lists
-- parameter arrays, overloading arguments
+- optional arguments [Visual Basic], overloading
+- signatures [Visual Basic], procedure
+- parameter lists [Visual Basic]
+- parameter arrays [Visual Basic], overloading arguments
 - Visual Basic code, parameter lists
-- procedure overloading, considerations
-- Option Explicit statement
-- restrictions, overloading procedures
-- procedures, parameter lists
+- procedure overloading [Visual Basic], considerations
+- Option Explicit statement [Visual Basic]
+- restrictions [Visual Basic], overloading procedures
+- procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa20cf367fba157f88afd861a4799540dcdecde1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="considerations-in-overloading-procedures-visual-basic"></a>Вопросы, связанные с перегрузкой процедур (Visual Basic)
-При перегрузке процедур необходимо использовать другой *подписи* для каждой из перегруженных версий. Это обычно означает, что каждая версия необходимо указать другой список параметров. Дополнительные сведения см. в разделе «Другую подпись» в [перегрузка процедур](./procedure-overloading.md).  
+# <a name="considerations-in-overloading-procedures-visual-basic"></a><span data-ttu-id="2b1b5-102">Вопросы, связанные с перегрузкой процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2b1b5-102">Considerations in Overloading Procedures (Visual Basic)</span></span>
+<span data-ttu-id="2b1b5-103">При перегрузке процедур необходимо использовать другой *подписи* для каждой из перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-103">When you overload a procedure, you must use a different *signature* for each overloaded version.</span></span> <span data-ttu-id="2b1b5-104">Обычно это означает, что каждой версии необходимо указать другим списком параметров.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-104">This usually means each version must specify a different parameter list.</span></span> <span data-ttu-id="2b1b5-105">Дополнительные сведения см. в разделе «Сигнатура» в [перегрузка процедур](./procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="2b1b5-105">For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).</span></span>  
   
- Можно перегрузить `Function` процедуры с `Sub` процедура и наоборот, если они имеют разные сигнатуры. Две перегрузки не отличаются только тем, что одна имеет возвращаемое значение, а другой — нет.  
+ <span data-ttu-id="2b1b5-106">Можно перегрузить `Function` процедуру с `Sub` процедура и наоборот, если они имеют разные сигнатуры.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-106">You can overload a `Function` procedure with a `Sub` procedure, and vice versa, provided they have different signatures.</span></span> <span data-ttu-id="2b1b5-107">Две перегрузки не отличаются только тем, что одна имеет возвращаемое значение, а другой — нет.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-107">Two overloads cannot differ only in that one has a return value and the other does not.</span></span>  
   
- Свойство можно перегрузить перегрузка процедуры, так же, как и с тем же ограничениями. Однако нельзя перегрузить процедуру со свойством или наоборот.  
+ <span data-ttu-id="2b1b5-108">Свойство можно перегрузить перегрузка процедуры, так же, как и с тем же ограничениям.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-108">You can overload a property the same way you overload a procedure, and with the same restrictions.</span></span> <span data-ttu-id="2b1b5-109">Однако нельзя перегрузить процедуру со свойством, или наоборот.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-109">However, you cannot overload a procedure with a property, or vice versa.</span></span>  
   
-## <a name="alternatives-to-overloaded-versions"></a>Альтернативы перегруженных версий  
- Иногда существуют альтернативы перегруженных версий, особенно если наличие аргументов является необязательным или их количество может меняться.  
+## <a name="alternatives-to-overloaded-versions"></a><span data-ttu-id="2b1b5-110">Альтернативы перегруженных версий</span><span class="sxs-lookup"><span data-stu-id="2b1b5-110">Alternatives to Overloaded Versions</span></span>  
+ <span data-ttu-id="2b1b5-111">Иногда имеют альтернативы перегруженных версий, особенно в том случае, если наличие аргументов является необязательным или их количество может меняться.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-111">You sometimes have alternatives to overloaded versions, particularly when the presence of arguments is optional or their number is variable.</span></span>  
   
- Имейте в виду, что необязательные аргументы могут не поддерживаться все языки, а массивы параметров ограничены [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. При создании процедуры, который должен вызываться из кода, написанного на любом из нескольких различных языков, перегруженные версии предоставляют наибольшую гибкость.  
+ <span data-ttu-id="2b1b5-112">Имейте в виду, что необязательные аргументы могут не поддерживаться все языки, а массивы параметров ограничены [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2b1b5-112">Keep in mind that optional arguments are not necessarily supported by all languages, and parameter arrays are limited to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="2b1b5-113">При создании процедуры, который должен вызываться из кода, написанного на любом из нескольких различных языков, перегруженные версии предоставляют наибольшую гибкость.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-113">If you are writing a procedure that is likely to be called from code written in any of several different languages, overloaded versions offer the greatest flexibility.</span></span>  
   
-### <a name="overloads-and-optional-arguments"></a>Перегрузки и необязательные аргументы  
- Если вызывающий код может при необходимости предоставить или пропустить один или несколько аргументов, можно определить несколько перегруженных версий или использовать дополнительные параметры.  
+### <a name="overloads-and-optional-arguments"></a><span data-ttu-id="2b1b5-114">Перегрузки и необязательные аргументы</span><span class="sxs-lookup"><span data-stu-id="2b1b5-114">Overloads and Optional Arguments</span></span>  
+ <span data-ttu-id="2b1b5-115">Если вызывающий код при необходимости можно указать или пропустить один или несколько аргументов, можно определить несколько перегруженных версий или использовать дополнительные параметры.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-115">When the calling code can optionally supply or omit one or more arguments, you can define multiple overloaded versions or use optional parameters.</span></span>  
   
-#### <a name="when-to-use-overloaded-versions"></a>Когда следует использовать перегруженные версии  
- Можно определять наборы перегруженных версий в следующих случаях:  
+#### <a name="when-to-use-overloaded-versions"></a><span data-ttu-id="2b1b5-116">Когда следует использовать перегруженные версии</span><span class="sxs-lookup"><span data-stu-id="2b1b5-116">When to Use Overloaded Versions</span></span>  
+ <span data-ttu-id="2b1b5-117">Можно определить набор перегруженных версий в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-117">You can consider defining a series of overloaded versions in the following cases:</span></span>  
   
--   Логика в коде процедуры существенно отличается в зависимости от того, является ли вызывающий код предоставляет необязательный аргумент или нет.  
+-   <span data-ttu-id="2b1b5-118">Логика в коде процедуры существенно отличается в зависимости от того, является ли вызывающий код предоставляет необязательный аргумент или нет.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-118">The logic in the procedure code is significantly different depending on whether the calling code supplies an optional argument or not.</span></span>  
   
--   Код процедуры нельзя надежно проверить, является ли вызывающий код имеет указанный необязательный аргумент. Это происходит, например, если нет ни одного кандидата для значение по умолчанию, которое вызывающий код не может предоставить.  
+-   <span data-ttu-id="2b1b5-119">Код процедуры нельзя надежно проверить, является ли вызывающий код указанный необязательный аргумент.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-119">The procedure code cannot reliably test whether the calling code has supplied an optional argument.</span></span> <span data-ttu-id="2b1b5-120">Это так, например, если нет ни одного кандидата для значение по умолчанию, которое вызывающий код не может предоставить.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-120">This is the case, for example, if there is no possible candidate for a default value that the calling code could not be expected to supply.</span></span>  
   
-#### <a name="when-to-use-optional-parameters"></a>Когда следует использовать дополнительные параметры  
- Может потребоваться один или несколько необязательных параметров в следующих случаях:  
+#### <a name="when-to-use-optional-parameters"></a><span data-ttu-id="2b1b5-121">Когда следует использовать необязательные параметры</span><span class="sxs-lookup"><span data-stu-id="2b1b5-121">When to Use Optional Parameters</span></span>  
+ <span data-ttu-id="2b1b5-122">Можно использовать один или несколько необязательных параметрах в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-122">You might prefer one or more optional parameters in the following cases:</span></span>  
   
--   Присвойте параметру значение по умолчанию является только требуемое действие, когда вызывающий код не предоставляет необязательный аргумент. В таком случае код процедуры можно упростить, если определить одну версию с одним или несколькими `Optional` параметров.  
+-   <span data-ttu-id="2b1b5-123">Установите для параметра значение по умолчанию является только требуемые действия, когда вызывающий код не предоставляет необязательный аргумент.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-123">The only required action when the calling code does not supply an optional argument is to set the parameter to a default value.</span></span> <span data-ttu-id="2b1b5-124">В этом случае код процедуры может быть проще, если определить одну версию с одним или несколькими `Optional` параметров.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-124">In such a case, the procedure code can be less complicated if you define a single version with one or more `Optional` parameters.</span></span>  
   
- Дополнительные сведения см. в разделе [необязательные параметры](./optional-parameters.md).  
+ <span data-ttu-id="2b1b5-125">Дополнительные сведения см. в разделе [необязательные параметры](./optional-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="2b1b5-125">For more information, see [Optional Parameters](./optional-parameters.md).</span></span>  
   
-### <a name="overloads-and-paramarrays"></a>Перегрузки и массивы параметров  
- Если вызывающий код может передавать переменное число аргументов, можно определить несколько перегруженных версий или использовать массив параметров.  
+### <a name="overloads-and-paramarrays"></a><span data-ttu-id="2b1b5-126">Перегрузки и массивы параметров</span><span class="sxs-lookup"><span data-stu-id="2b1b5-126">Overloads and ParamArrays</span></span>  
+ <span data-ttu-id="2b1b5-127">Если вызывающий код может передавать переменное число аргументов, можно определить несколько перегруженных версий или использовать массив параметров.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-127">When the calling code can pass a variable number of arguments, you can define multiple overloaded versions or use a parameter array.</span></span>  
   
-#### <a name="when-to-use-overloaded-versions"></a>Когда следует использовать перегруженные версии  
- Можно определять наборы перегруженных версий в следующих случаях:  
+#### <a name="when-to-use-overloaded-versions"></a><span data-ttu-id="2b1b5-128">Когда следует использовать перегруженные версии</span><span class="sxs-lookup"><span data-stu-id="2b1b5-128">When to Use Overloaded Versions</span></span>  
+ <span data-ttu-id="2b1b5-129">Можно определить набор перегруженных версий в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-129">You can consider defining a series of overloaded versions in the following cases:</span></span>  
   
--   Вы знаете, что вызывающий код передает в более чем небольшое количество значений в массиве параметров.  
+-   <span data-ttu-id="2b1b5-130">Вы знаете, что вызывающий код никогда не передается больше чем небольшое количество значений в массиве параметров.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-130">You know that the calling code never passes more than a small number of values to the parameter array.</span></span>  
   
--   Логика в коде процедуры существенно отличается в зависимости от количества значений, которые передает вызывающий код.  
+-   <span data-ttu-id="2b1b5-131">Логика в коде процедуры существенно отличается в зависимости от того, сколько значений, которые передает вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-131">The logic in the procedure code is significantly different depending on how many values the calling code passes.</span></span>  
   
--   Вызывающий код может передавать значения различных типов данных.  
+-   <span data-ttu-id="2b1b5-132">Вызывающий код может передавать значения различных типов данных.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-132">The calling code can pass values of different data types.</span></span>  
   
-#### <a name="when-to-use-a-parameter-array"></a>Когда следует использовать массив параметров  
- Вам удобнее работать с `ParamArray` параметр в следующих случаях:  
+#### <a name="when-to-use-a-parameter-array"></a><span data-ttu-id="2b1b5-133">Когда следует использовать массив параметров</span><span class="sxs-lookup"><span data-stu-id="2b1b5-133">When to Use a Parameter Array</span></span>  
+ <span data-ttu-id="2b1b5-134">Вам удобнее работать с `ParamArray` параметр в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-134">You are better served by a `ParamArray` parameter in the following cases:</span></span>  
   
--   Невозможно предсказать количество значений, вызывающий код может передать в массив параметров, и он может быть большим числом.  
+-   <span data-ttu-id="2b1b5-135">Невозможно спрогнозировать количество значений, вызывающий код может передать массив параметров, и это может быть большое число.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-135">You are not able to predict how many values the calling code can pass to the parameter array, and it could be a large number.</span></span>  
   
--   Логика процедуры пригоден для прохода по всем значениям, которые передает вызывающий код выполняет по сути одинаковые операции над каждым значением.  
+-   <span data-ttu-id="2b1b5-136">Логика процедуры пригоден для прохода по всем значениям, вызывающий код передает выполнение по сути одинаковые операции над каждым значением.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-136">The procedure logic lends itself to iterating through all the values the calling code passes, performing essentially the same operations on every value.</span></span>  
   
- Дополнительные сведения см. в разделе [массивы параметров](./parameter-arrays.md).  
+ <span data-ttu-id="2b1b5-137">Дополнительные сведения см. в разделе [массивы параметров](./parameter-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="2b1b5-137">For more information, see [Parameter Arrays](./parameter-arrays.md).</span></span>  
   
-## <a name="implicit-overloads-for-optional-parameters"></a>Неявные перегрузки для дополнительных параметров  
- Процедуры с [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) эквивалентна двум перегруженным процедурам, с необязательным параметром, а другая — нет. Невозможно перегрузить такую процедуру со списком параметров, соответствующего любой из них. Показано в следующих объявлениях.  
+## <a name="implicit-overloads-for-optional-parameters"></a><span data-ttu-id="2b1b5-138">Неявные перегрузки для дополнительных параметров</span><span class="sxs-lookup"><span data-stu-id="2b1b5-138">Implicit Overloads for Optional Parameters</span></span>  
+ <span data-ttu-id="2b1b5-139">Процедуры с [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметр эквивалентен двум перегруженным процедурам, с необязательным параметром, а другая — нет.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-139">A procedure with an [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameter is equivalent to two overloaded procedures, one with the optional parameter and one without it.</span></span> <span data-ttu-id="2b1b5-140">Невозможно перегрузить такую процедуру со списком параметров, соответствующим любому из них.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-140">You cannot overload such a procedure with a parameter list corresponding to either of these.</span></span> <span data-ttu-id="2b1b5-141">Это показано в следующих объявлениях.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-141">The following declarations illustrate this.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#58;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures&#60;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures&#61;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
- Для процедуры с более чем один необязательный параметр существует набор неявных перегрузок, получающихся логикой, подобного приведенному в предыдущем примере.  
+ <span data-ttu-id="2b1b5-142">Для процедуры с более чем один необязательный параметр имеется набор неявных перегрузок, получающихся по той же схеме, в приведенном выше примере.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-142">For a procedure with more than one optional parameter, there is a set of implicit overloads, arrived at by logic similar to that in the preceding example.</span></span>  
   
-## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Неявные перегрузки для параметра ParamArray  
- Компилятор считает, что процедуры с [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметра бесконечным числом перегрузок, отличающихся друг от друга, в то, что вызывающий код передает в массив параметров следующим образом:  
+## <a name="implicit-overloads-for-a-paramarray-parameter"></a><span data-ttu-id="2b1b5-143">Неявные перегрузки параметру ParamArray.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-143">Implicit Overloads for a ParamArray Parameter</span></span>  
+ <span data-ttu-id="2b1b5-144">Компилятор считает, что процедура с [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметру принимать бесконечное число перегрузок, отличающихся друг от друга в том, что вызывающий код передает массив параметров, следующим образом:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-144">The compiler considers a procedure with a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter to have an infinite number of overloads, differing from each other in what the calling code passes to the parameter array, as follows:</span></span>  
   
--   Одна перегрузка, когда вызывающий код не передает аргумент`ParamArray`  
+-   <span data-ttu-id="2b1b5-145">Одна перегрузка, когда вызывающий код не передает аргумент`ParamArray`</span><span class="sxs-lookup"><span data-stu-id="2b1b5-145">One overload for when the calling code does not supply an argument to the `ParamArray`</span></span>  
   
--   Одна перегрузка, когда вызывающий код предоставляет одномерный массив `ParamArray` тип элемента  
+-   <span data-ttu-id="2b1b5-146">Одна перегрузка, когда вызывающий код предоставляет одномерный массив `ParamArray` тип элемента</span><span class="sxs-lookup"><span data-stu-id="2b1b5-146">One overload for when the calling code supplies a one-dimensional array of the `ParamArray` element type</span></span>  
   
--   Одна перегрузка для каждого положительного целого числа, когда вызывающий код предоставляет количество аргументов, каждый из `ParamArray` тип элемента  
+-   <span data-ttu-id="2b1b5-147">Одна перегрузка для каждого положительного целого числа, когда вызывающий код предоставляет количество аргументов, каждый из `ParamArray` тип элемента</span><span class="sxs-lookup"><span data-stu-id="2b1b5-147">For every positive integer, one overload for when the calling code supplies that number of arguments, each of the `ParamArray` element type</span></span>  
   
- Эти неявные перегрузки показывают следующие объявления.  
+ <span data-ttu-id="2b1b5-148">Эти неявные перегрузки показывают следующие объявления.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-148">The following declarations illustrate these implicit overloads.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#68;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures&#70;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
- Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров. Тем не менее можно использовать подписи неявных перегрузок. Показано в следующих объявлениях.  
+ <span data-ttu-id="2b1b5-149">Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-149">You cannot overload such a procedure with a parameter list that takes a one-dimensional array for the parameter array.</span></span> <span data-ttu-id="2b1b5-150">Тем не менее можно использовать подписи неявных перегрузок.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-150">However, you can use the signatures of the other implicit overloads.</span></span> <span data-ttu-id="2b1b5-151">Это показано в следующих объявлениях.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-151">The following declarations illustrate this.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#71;](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
-## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Программирование без типов как альтернатива перегрузке  
- Если требуется разрешить вызывающему коду передачу различных типов данных в параметр альтернативный подход — программирование. Можно задать ключ для проверки типа `Off` с помощью [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) или [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) параметр компилятора. Затем у вас объявить тип данных параметра. Однако такой подход имеет следующие недостатки по сравнению с перегрузкой:  
+## <a name="typeless-programming-as-an-alternative-to-overloading"></a><span data-ttu-id="2b1b5-152">Программирование без типов как альтернатива перегрузке</span><span class="sxs-lookup"><span data-stu-id="2b1b5-152">Typeless Programming as an Alternative to Overloading</span></span>  
+ <span data-ttu-id="2b1b5-153">Если вы хотите разрешить вызывающему коду для передачи различных типов данных в параметр, альтернативный подход — программирование.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-153">If you want to allow the calling code to pass different data types to a parameter, an alternative approach is typeless programming.</span></span> <span data-ttu-id="2b1b5-154">Можно задать ключ для проверки типа `Off` либо [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) или [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-154">You can set the type checking switch to `Off` with either the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) or the [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option.</span></span> <span data-ttu-id="2b1b5-155">Затем объявите тип данных параметра нет.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-155">Then you do not have to declare the parameter's data type.</span></span> <span data-ttu-id="2b1b5-156">Однако такой подход имеет следующие недостатки по сравнению с перегрузкой:</span><span class="sxs-lookup"><span data-stu-id="2b1b5-156">However, this approach has the following disadvantages compared to overloading:</span></span>  
   
--   Программирование выводятся менее эффективного выполнения кода.  
+-   <span data-ttu-id="2b1b5-157">Программирование выводятся менее эффективный код выполнения.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-157">Typeless programming produces less efficient execution code.</span></span>  
   
--   Процедура должна проверять каждый тип данных, который может передан.  
+-   <span data-ttu-id="2b1b5-158">Процедура должна проверять каждый тип данных, которые можно предвидеть передан.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-158">The procedure must test for every data type it anticipates being passed.</span></span>  
   
--   Компилятор не может сообщить об ошибке, если вызывающий код передает тип данных, процедура не поддерживает.  
+-   <span data-ttu-id="2b1b5-159">Компилятор не может сообщить об ошибке, если вызывающий код передает тип данных, процедура не поддерживает.</span><span class="sxs-lookup"><span data-stu-id="2b1b5-159">The compiler cannot signal an error if the calling code passes a data type that the procedure does not support.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Процедуры](./index.md)   
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
- [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)   
- [Практическое руководство: определение различных версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md)   
- [Практическое руководство: вызов перегруженной процедуры](./how-to-call-an-overloaded-procedure.md)   
- [Практическое руководство: перегрузка процедуры, которая принимает необязательные параметры](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [Практическое руководство: перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Разрешение перегрузки](./overload-resolution.md)   
- [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a><span data-ttu-id="2b1b5-160">См. также</span><span class="sxs-lookup"><span data-stu-id="2b1b5-160">See Also</span></span>  
+ [<span data-ttu-id="2b1b5-161">Процедуры</span><span class="sxs-lookup"><span data-stu-id="2b1b5-161">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="2b1b5-162">Параметры и аргументы процедуры</span><span class="sxs-lookup"><span data-stu-id="2b1b5-162">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="2b1b5-163">Рекомендации по устранению неполадок</span><span class="sxs-lookup"><span data-stu-id="2b1b5-163">Troubleshooting Procedures</span></span>](./troubleshooting-procedures.md)  
+ [<span data-ttu-id="2b1b5-164">Практическое руководство. Определение различных версий процедуры</span><span class="sxs-lookup"><span data-stu-id="2b1b5-164">How to: Define Multiple Versions of a Procedure</span></span>](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [<span data-ttu-id="2b1b5-165">Практическое руководство. Вызов перегруженной процедуры</span><span class="sxs-lookup"><span data-stu-id="2b1b5-165">How to: Call an Overloaded Procedure</span></span>](./how-to-call-an-overloaded-procedure.md)  
+ [<span data-ttu-id="2b1b5-166">Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр</span><span class="sxs-lookup"><span data-stu-id="2b1b5-166">How to: Overload a Procedure that Takes Optional Parameters</span></span>](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [<span data-ttu-id="2b1b5-167">Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров</span><span class="sxs-lookup"><span data-stu-id="2b1b5-167">How to: Overload a Procedure that Takes an Indefinite Number of Parameters</span></span>](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [<span data-ttu-id="2b1b5-168">Разрешение перегрузки</span><span class="sxs-lookup"><span data-stu-id="2b1b5-168">Overload Resolution</span></span>](./overload-resolution.md)  
+ [<span data-ttu-id="2b1b5-169">Перегрузки</span><span class="sxs-lookup"><span data-stu-id="2b1b5-169">Overloads</span></span>](../../../../visual-basic/language-reference/modifiers/overloads.md)

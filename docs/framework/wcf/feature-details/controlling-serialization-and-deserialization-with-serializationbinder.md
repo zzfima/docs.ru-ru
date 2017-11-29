@@ -1,30 +1,33 @@
 ---
-title: "Управление сериализацией и десериализацией с помощью SerializationBinder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление сериализацией и десериализацией с помощью SerializationBinder"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1c3180d62824f94e27e02c80e09fdf32252f0a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Управление сериализацией и десериализацией с помощью SerializationBinder
-При сериализации модуль форматирования передает сведения, необходимые для создания экземпляра объекта правильных типа и версии.  Эти сведения обычно содержат полное имя типа и имя сборки объекта.  По умолчанию с помощью этих сведений операция десериализации создает экземпляр такого же объекта.  Некоторым пользователям может понадобиться возможность выбирать классы для сериализации и десериализации, поскольку исходный класс может отсутствовать на компьютере, где выполняется десериализация, быть перемещенным в другую сборку либо на сервере и клиенте могут требоваться разные версии класса.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Использование средства привязки сериализации](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  
+# <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a><span data-ttu-id="4cd4d-102">Управление сериализацией и десериализацией с помощью SerializationBinder</span><span class="sxs-lookup"><span data-stu-id="4cd4d-102">Controlling Serialization and Deserialization with SerializationBinder</span></span>
+<span data-ttu-id="4cd4d-103">При сериализации модуль форматирования передает сведения, необходимые для создания экземпляра объекта правильных типа и версии.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-103">During serialization, a formatter transmits the information required to create an instance of an object of the correct type and version.</span></span> <span data-ttu-id="4cd4d-104">Эти сведения обычно содержат полное имя типа и имя сборки объекта.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-104">This information generally includes the full type name and assembly name of the object.</span></span> <span data-ttu-id="4cd4d-105">По умолчанию с помощью этих сведений операция десериализации создает экземпляр такого же объекта.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-105">By default, deserialization uses this information to create an instance of an identical object.</span></span> <span data-ttu-id="4cd4d-106">Некоторым пользователям может понадобиться возможность выбирать классы для сериализации и десериализации, поскольку исходный класс может отсутствовать на компьютере, где выполняется десериализация, быть перемещенным в другую сборку либо на сервере и клиенте могут требоваться разные версии класса.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-106">Some users may need to control which class to serialize and deserialize, either because the original class may not exist on the machine performing deserialization, the original class has moved between assemblies, or a different version of the class is required on the server and client.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4cd4d-107">[Использование средства привязки сериализации](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).</span><span class="sxs-lookup"><span data-stu-id="4cd4d-107"> [Usage of Serialization Binder](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).</span></span>  
   
 > [!WARNING]
->  Эта функция доступна только при использовании <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.NetDataContractSerializer>.  
+>  <span data-ttu-id="4cd4d-108">Эта функция доступна только при использовании <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-108">This functionality is only available when using the <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> or the <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span>  
   
-## Использование класса SerializationBinder  
- Класс <xref:System.Runtime.Serialization.SerializationBinder> является абстрактным классом, который используется для управления фактическими типами, применяемыми при сериализации и десериализации.  Чтобы управлять типами, используемыми при сериализации и десериализации, нужно создать класс, производный от класса <xref:System.Runtime.Serialization.SerializationBinder>, и переопределить методы <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True и <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True.  Метод <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True принимает объект <xref:System.Type> и возвращает имя типа и сборки.  Метод <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True принимает имя сборки и типа и возвращает объект <xref:System.Type>.  
+## <a name="using-serializationbinder"></a><span data-ttu-id="4cd4d-109">Использование класса SerializationBinder</span><span class="sxs-lookup"><span data-stu-id="4cd4d-109">Using SerializationBinder</span></span>  
+ <span data-ttu-id="4cd4d-110">Класс <xref:System.Runtime.Serialization.SerializationBinder> является абстрактным классом, который используется для управления фактическими типами, применяемыми при сериализации и десериализации.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-110"><xref:System.Runtime.Serialization.SerializationBinder> is an abstract class used to control the actual types used during serialization and deserialization.</span></span> <span data-ttu-id="4cd4d-111">Чтобы управлять типами, используемыми при сериализации и десериализации, создайте класс, производный от <xref:System.Runtime.Serialization.SerializationBinder> и Переопределите <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False & autoUpgrade = True и <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)? qualifyHint = False & autoUpgrade = True методы.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-111">To control the types used during serialization and deserialization, derive a class from <xref:System.Runtime.Serialization.SerializationBinder> and override the <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True and <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True methods.</span></span> <span data-ttu-id="4cd4d-112"><xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False & autoUpgrade = True, метод принимает <xref:System.Type> и возвращает имя сборки и типа.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-112">The <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> System.String, System.String)?qualifyHint=False&autoUpgrade=True method takes a <xref:System.Type> and returns an assembly and type name.</span></span> <span data-ttu-id="4cd4d-113"><xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False & autoUpgrade = True, метод принимает сборки и имя типа и возвращает <xref:System.Type>.</span><span class="sxs-lookup"><span data-stu-id="4cd4d-113">The <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> System.String)?qualifyHint=False&autoUpgrade=True method takes an assembly and type name and returns a <xref:System.Type>.</span></span>  
   
-## См. также  
- [Сериализация и десериализация](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)   
- [Использование средства привязки сериализации](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)
+## <a name="see-also"></a><span data-ttu-id="4cd4d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="4cd4d-114">See Also</span></span>  
+ [<span data-ttu-id="4cd4d-115">Сериализация и десериализация</span><span class="sxs-lookup"><span data-stu-id="4cd4d-115">Serialization and Deserialization</span></span>](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
+ [<span data-ttu-id="4cd4d-116">Использование средства привязки сериализации</span><span class="sxs-lookup"><span data-stu-id="4cd4d-116">Usage of Serialization Binder</span></span>](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)

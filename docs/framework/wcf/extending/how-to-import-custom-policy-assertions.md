@@ -1,76 +1,80 @@
 ---
-title: "Практическое руководство. Импорт утверждений пользовательской политики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Импорт утверждений пользовательской политики"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4d78f4c15aeeb03981ebe5fd72e8607a240d1931
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Импорт утверждений пользовательской политики
-В утверждениях политики описываются возможности и требования конечной точки службы.  Клиентские приложения могут использовать утверждения политики в метаданных службы для настройки привязки клиента или для настройки контракта службы для конечной точки службы.  
+# <a name="how-to-import-custom-policy-assertions"></a><span data-ttu-id="c4fb6-102">Практическое руководство. Импорт утверждений пользовательской политики</span><span class="sxs-lookup"><span data-stu-id="c4fb6-102">How to: Import Custom Policy Assertions</span></span>
+<span data-ttu-id="c4fb6-103">В утверждениях политики описываются возможности и требования конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-103">Policy assertions describe the capabilities and requirements of a service endpoint.</span></span>  <span data-ttu-id="c4fb6-104">Клиентские приложения могут использовать утверждения политики в метаданных службы для настройки привязки клиента или для настройки контракта службы для конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-104">Client applications can use policy assertions in service metadata to configure the client binding or to customize the service contract for a service endpoint.</span></span>  
   
- Утверждения настраиваемой политики импортируются путем реализации <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=fullName> интерфейс и передачи этого объекта системе метаданных или путем регистрации в реализации типа в файле конфигурации приложения.  Реализации <xref:System.ServiceModel.Description.IPolicyImportExtension> интерфейс должен предоставлять конструктор по умолчанию.  
+ <span data-ttu-id="c4fb6-105">Утверждения настраиваемой политики импортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> и передачи этого объекта системе метаданных или путем регистрации типа реализации в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-105">Custom policy assertions are imported by implementing the <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interface and passing that object to the metadata system or by registering the implementation type in your application configuration file.</span></span>  <span data-ttu-id="c4fb6-106">Реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension> должны предоставлять конструктор по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-106">Implementations of the <xref:System.ServiceModel.Description.IPolicyImportExtension> interface must provide a default constructor.</span></span>  
   
-### <a name="to-import-custom-policy-assertions"></a>Импорт утверждений настраиваемой политики  
+### <a name="to-import-custom-policy-assertions"></a><span data-ttu-id="c4fb6-107">Импорт утверждений настраиваемой политики</span><span class="sxs-lookup"><span data-stu-id="c4fb6-107">To import custom policy assertions</span></span>  
   
-1.  Реализуйте <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=fullName> интерфейс класса. См. описанные ниже действия.  
+1.  <span data-ttu-id="c4fb6-108">Реализуйте интерфейс <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> в классе.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-108">Implement the <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interface on a class.</span></span> <span data-ttu-id="c4fb6-109">См. описанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-109">See the following procedures.</span></span>  
   
-2.  Вставьте импортер настраиваемой политики одним из следующих способов:  
+2.  <span data-ttu-id="c4fb6-110">Вставьте импортер настраиваемой политики одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="c4fb6-110">Insert the custom policy importer either by:</span></span>  
   
-3.  Путем использования файла конфигурации. См. описанные ниже действия.  
+3.  <span data-ttu-id="c4fb6-111">Путем использования файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-111">Using a configuration file.</span></span> <span data-ttu-id="c4fb6-112">См. описанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-112">See the following procedures.</span></span>  
   
-4.  С помощью файла конфигурации с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). См. описанные ниже действия.  
+4.  <span data-ttu-id="c4fb6-113">С помощью файла конфигурации с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c4fb6-113">Using a configuration file with [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="c4fb6-114">См. описанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-114">See the following procedures.</span></span>  
   
-5.  Программным путем. См. описанные ниже действия.  
+5.  <span data-ttu-id="c4fb6-115">Программным путем.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-115">Programmatically inserting the policy importer.</span></span> <span data-ttu-id="c4fb6-116">См. описанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-116">See the following procedures.</span></span>  
   
-### <a name="to-implement-the-systemservicemodeldescriptionipolicyimportextension-interface-on-any-class"></a>Реализация интерфейса System.ServiceModel.Description.IPolicyImportExtension в любом классе  
+### <a name="to-implement-the-systemservicemodeldescriptionipolicyimportextension-interface-on-any-class"></a><span data-ttu-id="c4fb6-117">Реализация интерфейса System.ServiceModel.Description.IPolicyImportExtension в любом классе</span><span class="sxs-lookup"><span data-stu-id="c4fb6-117">To implement the System.ServiceModel.Description.IPolicyImportExtension interface on any class</span></span>  
   
-1.  В <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=fullName> метод, для каждого субъекта политики, который вас интересует, найдите утверждения политики, которые требуется импортировать, вызвав соответствующий метод (в зависимости от области утверждения, которое вы хотите) на <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=fullName> объект передается в метод. В следующем примере кода показано, как использовать <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=fullName> метод для поиска утверждения настраиваемой политики и удаляет его из коллекции за один шаг. Если использовать метод удаления для поиска и удаления утверждения, выполнять шаг 4 не потребуется.  
+1.  <span data-ttu-id="c4fb6-118">В методе <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> для каждого интересующего субъекта политики найдите утверждения политики, которые требуется импортировать, вызвав соответствующий метод (в зависимости от требуемой области утверждения) объекта <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType>, переданного методу.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-118">In the <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> method, for each policy subject that you are interested in, find the policy assertions that you want to import by calling the appropriate method (depending upon the scope of the assertion that you want) on the <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> object passed to the method.</span></span> <span data-ttu-id="c4fb6-119">В следующем примере кода показано использование метода <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> для поиска утверждения настраиваемой политики и удаления его из коллекции за один шаг.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-119">The following code example shows how to use the <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> method to locate the custom policy assertion and remove it from the collection in one step.</span></span> <span data-ttu-id="c4fb6-120">Если использовать метод удаления для поиска и удаления утверждения, выполнять шаг 4 не потребуется.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-120">If you use the remove method to locate and remove the assertion, you do not have to perform step 4.</span></span>  
   
      [!code-csharp[CustomPolicySample#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyimporter.cs#9)]
      [!code-vb[CustomPolicySample#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyimporter.vb#9)]  
   
-2.  Обработайте утверждения политики. Обратите внимание, что система политики не нормализует вложенные политики и `wsp:optional`. Эти конструкции необходимо обработать в реализации расширения импорта политики.  
+2.  <span data-ttu-id="c4fb6-121">Обработайте утверждения политики.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-121">Process the policy assertions.</span></span> <span data-ttu-id="c4fb6-122">Обратите внимание, что система политики не нормализует вложенные политики и `wsp:optional`.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-122">Note that the policy system does not normalize nested policies and `wsp:optional`.</span></span> <span data-ttu-id="c4fb6-123">Эти конструкции необходимо обработать в реализации расширения импорта политики.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-123">You must process these constructs in your policy import extension implementation.</span></span>  
   
-3.  Настройте привязку или контракт, поддерживающие возможность или требование, задаваемое утверждением политики. Как правило, в утверждениях указывается, что привязка требует определенной конфигурации или определенного элемента привязки. Внесите эти изменения, обратившись к <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=fullName> свойство. Другие утверждения требуют изменения контракта.  Можно открыть и изменить контракт с помощью <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=fullName> свойство.  Обратите внимание, что импортер политики может вызываться несколько раз для одной и той же привязки и контракта, однако для разных альтернативных политик, если импортировать альтернативную политику не удается. Код должен быть устойчив к такому поведению.  
+3.  <span data-ttu-id="c4fb6-124">Настройте привязку или контракт, поддерживающие возможность или требование, задаваемое утверждением политики.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-124">Perform the customization to the binding or contract that supports the capability or requirement specified by the policy assertion.</span></span> <span data-ttu-id="c4fb6-125">Как правило, в утверждениях указывается, что привязка требует определенной конфигурации или определенного элемента привязки.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-125">Typically assertions indicate that a binding requires a particular configuration or a specific binding element.</span></span> <span data-ttu-id="c4fb6-126">Внесите эти изменения, обратившись к свойству <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-126">Make these modifications by accessing the <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="c4fb6-127">Другие утверждения требуют изменения контракта.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-127">Other assertions require that you modify the contract.</span></span>  <span data-ttu-id="c4fb6-128">Обратиться к контракту и внести в него изменения можно с помощью свойства <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-128">You can access and modify the contract using the <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> property.</span></span>  <span data-ttu-id="c4fb6-129">Обратите внимание, что импортер политики может вызываться несколько раз для одной и той же привязки и контракта, однако для разных альтернативных политик, если импортировать альтернативную политику не удается.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-129">Note that your policy importer may get called multiple times for the same binding and contract, but different policy alternatives if importing a policy alternative fails.</span></span> <span data-ttu-id="c4fb6-130">Код должен быть устойчив к такому поведению.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-130">Your code should be resilient to this behavior.</span></span>  
   
-4.  Удалите утверждение настраиваемой политики из коллекции утверждений. Если не удалить утверждение, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предполагает, что импорт политики завершился неудачно, и не импортирует связанную привязку. Если вы использовали <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=fullName> метод для поиска утверждения настраиваемой политики и удаляет его из коллекции за один шаг, выполнять этот шаг не требуется.  
+4.  <span data-ttu-id="c4fb6-131">Удалите утверждение настраиваемой политики из коллекции утверждений.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-131">Remove the custom policy assertion from the assertion collection.</span></span> <span data-ttu-id="c4fb6-132">Если не удалить утверждение, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предполагает, что импорт политики завершился неудачно, и не импортирует связанную привязку.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-132">If you do not remove the assertion [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] assumes that the policy import was unsuccessful and does not import the associated binding.</span></span> <span data-ttu-id="c4fb6-133">Если использовался метод <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> для поиска утверждения настраиваемой политики и удаления его из коллекции за один шаг, выполнять этот шаг не требуется.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-133">If you used the <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> method to locate the custom policy assertion and remove it from the collection in one step you do not have to perform this step.</span></span>  
   
-### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью файла конфигурации  
+### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a><span data-ttu-id="c4fb6-134">Вставка импортера настраиваемой политики в систему метаданных с помощью файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="c4fb6-134">To insert the custom policy importer into the metadata System using a configuration file</span></span>  
   
-1.  Добавьте тип импортера в `<extensions>` элемент внутри [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации клиента.  
+1.  <span data-ttu-id="c4fb6-135">Добавьте тип импорта для `<extensions>` внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации клиента.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-135">Add the importer type to the `<extensions>` element inside the [\<policyImporters>](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) element in the client configuration file.</span></span>  
   
-     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
-     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
-     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
+     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
-2.  В клиентском приложении используйте <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName> или <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> для разрешения метаданных и импортер будет вызываться автоматически.  
+2.  <span data-ttu-id="c4fb6-136">В клиентском приложении используйте класс <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> для разрешения метаданных, и импортер будет вызываться автоматически.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-136">In the client application, use the <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> or <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> to resolve the metadata and the importer is invoked automatically.</span></span>  
   
      [!code-csharp[CustomPolicySample#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.cs#10)]
      [!code-vb[CustomPolicySample#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.vb#10)]  
   
-### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Вставка импортера настраиваемой политики в систему метаданных с помощью Svcutil.exe  
+### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a><span data-ttu-id="c4fb6-137">Вставка импортера настраиваемой политики в систему метаданных с помощью Svcutil.exe</span><span class="sxs-lookup"><span data-stu-id="c4fb6-137">To insert the custom policy importer into the metadata system using Svcutil.exe</span></span>  
   
-1.  Добавьте тип импортера в `<extensions>` элемент внутри [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации Svcutil.exe.config. Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.  
+1.  <span data-ttu-id="c4fb6-138">Добавьте тип импорта для `<extensions>` внутри [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации Svcutil.exe.config.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-138">Add the importer type to the `<extensions>` element inside the [\<policyImporters>](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) element in the Svcutil.exe.config configuration file.</span></span> <span data-ttu-id="c4fb6-139">Также можно с помощью параметра `/svcutilConfig` дать Svcutil.exe указание загрузить типы импортеров политик, зарегистрированные в другом файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-139">You can also point Svcutil.exe to load policy importer types registered in a different configuration file by using the `/svcutilConfig` option.</span></span>  
   
-2.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для импорта метаданных и импортер будет вызываться автоматически.  
+2.  <span data-ttu-id="c4fb6-140">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для импорта метаданных и импортер будет вызываться автоматически.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-140">Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to import the metadata and the importer is invoked automatically.</span></span>  
   
-### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Вставка импортера настраиваемой политики в систему метаданных программным путем  
+### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a><span data-ttu-id="c4fb6-141">Вставка импортера настраиваемой политики в систему метаданных программным путем</span><span class="sxs-lookup"><span data-stu-id="c4fb6-141">To insert the custom policy importer into the metadata system programmatically</span></span>  
   
-1.  Добавьте импортер в <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=fullName> свойства (например, если вы используете <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName>), прежде чем импортировать метаданные.  
+1.  <span data-ttu-id="c4fb6-142">Добавьте импортер в свойство <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> (например, если используется класс <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>), прежде чем импортировать метаданные.</span><span class="sxs-lookup"><span data-stu-id="c4fb6-142">Add the importer to the <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> property (for example, if you are using the <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) prior to importing the metadata.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName>   
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName>   
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName>   
- [Расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a><span data-ttu-id="c4fb6-143">См. также</span><span class="sxs-lookup"><span data-stu-id="c4fb6-143">See Also</span></span>  
+ <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
+ [<span data-ttu-id="c4fb6-144">Расширение системы метаданных</span><span class="sxs-lookup"><span data-stu-id="c4fb6-144">Extending the Metadata System</span></span>](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

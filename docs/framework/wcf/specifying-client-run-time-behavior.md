@@ -1,53 +1,56 @@
 ---
-title: "Задание поведения клиента во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "поведения [WCF], предусмотренных в системе клиента"
+title: "Задание поведения клиента во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3aebab3799af562d958eb8e3e83380e734fe9268
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Задание поведения клиента во время выполнения
-Клиенты [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], как и службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], можно настроить для изменения поведения среды выполнения в соответствии с особенностями клиентского приложения. Для задания поведения среды выполнения клиента существует три атрибута. Объекты обратного вызова дуплексного клиента могут использовать <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> атрибуты для изменения их поведения во время выполнения. Атрибут, <xref:System.ServiceModel.Description.ClientViaBehavior>, может использоваться для разделения логического назначения и непосредственного назначения сети. Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+# <a name="specifying-client-run-time-behavior"></a><span data-ttu-id="11943-102">Задание поведения клиента во время выполнения</span><span class="sxs-lookup"><span data-stu-id="11943-102">Specifying Client Run-Time Behavior</span></span>
+<span data-ttu-id="11943-103">Клиенты [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], как и службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], можно настроить для изменения поведения среды выполнения в соответствии с особенностями клиентского приложения.</span><span class="sxs-lookup"><span data-stu-id="11943-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] clients, like [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] services, can be configured to modify the run-time behavior to suit the client application.</span></span> <span data-ttu-id="11943-104">Для задания поведения среды выполнения клиента существует три атрибута.</span><span class="sxs-lookup"><span data-stu-id="11943-104">Three attributes are available for specifying client run-time behavior.</span></span> <span data-ttu-id="11943-105">Объекты обратного вызова дуплексного клиента могут использовать атрибуты <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> для изменения своего поведения в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="11943-105">Duplex client callback objects can use the <xref:System.ServiceModel.CallbackBehaviorAttribute> and <xref:System.ServiceModel.Description.CallbackDebugBehavior> attributes to modify their run-time behavior.</span></span> <span data-ttu-id="11943-106">Атрибут <xref:System.ServiceModel.Description.ClientViaBehavior> можно использовать для разделения логического назначения и непосредственного назначения сети.</span><span class="sxs-lookup"><span data-stu-id="11943-106">The other attribute, <xref:System.ServiceModel.Description.ClientViaBehavior>, can be used to separate the logical destination from the immediate network destination.</span></span> <span data-ttu-id="11943-107">Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы.</span><span class="sxs-lookup"><span data-stu-id="11943-107">In addition, duplex client callback types can use some of the service-side behaviors.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="11943-108">[Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="11943-108"> [Specifying Service Run-Time Behavior](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).</span></span>  
   
-## <a name="using-the-callbackbehaviorattribute"></a>Использование атрибута CallbackBehaviorAttribute  
- Можно настроить или расширить поведение выполнения реализации контракта обратного вызова в клиентском приложении с помощью <xref:System.ServiceModel.CallbackBehaviorAttribute> класса. Этот атрибут выполняет те же функции для класса обратного вызова как <xref:System.ServiceModel.ServiceBehaviorAttribute> класса, за исключением экземпляров, поведения и параметров транзакции.  
+## <a name="using-the-callbackbehaviorattribute"></a><span data-ttu-id="11943-109">Использование атрибута CallbackBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="11943-109">Using the CallbackBehaviorAttribute</span></span>  
+ <span data-ttu-id="11943-110">Настроить или расширить поведение выполнения реализации контракта обратного вызова в клиентском приложении можно с помощью класса <xref:System.ServiceModel.CallbackBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="11943-110">You can configure or extend the execution behavior of a callback contract implementation in a client application by using the <xref:System.ServiceModel.CallbackBehaviorAttribute> class.</span></span> <span data-ttu-id="11943-111">Функция, выполняемая этим атрибутом для класса обратного вызова, аналогична функции, выполняемой им для класса <xref:System.ServiceModel.ServiceBehaviorAttribute>, за исключением поведения при создании экземпляров и параметров транзакции.</span><span class="sxs-lookup"><span data-stu-id="11943-111">This attribute performs a similar function for the callback class as the <xref:System.ServiceModel.ServiceBehaviorAttribute> class, with the exception of instancing behavior and transaction settings.</span></span>  
   
- <xref:System.ServiceModel.CallbackBehaviorAttribute> класс должен быть применен к класса, реализующего контракт обратного вызова. Если применяется к реализации контракта недуплексные <xref:System.InvalidOperationException> исключения во время выполнения. В следующем примере кода показано <xref:System.ServiceModel.CallbackBehaviorAttribute> класса для объекта обратного вызова, который использует <xref:System.Threading.SynchronizationContext> объекта для определения потока, который требуется маршалировать, <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> для принудительной проверки сообщений и <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> для возврата исключений как <xref:System.ServiceModel.FaultException> объектов службы для целей отладки.  
+ <span data-ttu-id="11943-112">Необходимо применить класс <xref:System.ServiceModel.CallbackBehaviorAttribute> к классу, реализующему контракт обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="11943-112">The <xref:System.ServiceModel.CallbackBehaviorAttribute> class must be applied to the class that implements the callback contract.</span></span> <span data-ttu-id="11943-113">Если класс применяется к реализации недуплексного контракта, во время выполнения создается исключение <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="11943-113">If applied to a nonduplex contract implementation, an <xref:System.InvalidOperationException> exception is thrown at run time.</span></span> <span data-ttu-id="11943-114">В следующем примере кода показан класс <xref:System.ServiceModel.CallbackBehaviorAttribute> в объекте обратного вызова, в котором используются объект <xref:System.Threading.SynchronizationContext> для определения потока, в который требуется маршалировать, свойство <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> для принудительной проверки сообщений и свойство <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> для возврата исключений службе в виде объектов <xref:System.ServiceModel.FaultException> в целях отладки.</span><span class="sxs-lookup"><span data-stu-id="11943-114">The following code example shows a <xref:System.ServiceModel.CallbackBehaviorAttribute> class on a callback object that uses the <xref:System.Threading.SynchronizationContext> object to determine the thread to marshal to, the <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> property to enforce message validation, and the <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> property to return exceptions as <xref:System.ServiceModel.FaultException> objects to the service for debugging purposes.</span></span>  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
   
-## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Использование поведения CallbackDebugBehavior для разрешения потока сведений об управляемых исключениях.  
- Можно включить поток сведений об управляемых исключениях в объект обратного вызова клиента обратно к службе для отладки, задав <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> свойства `true` программно или из конфигурации приложения файла.  
+## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a><span data-ttu-id="11943-115">Использование поведения CallbackDebugBehavior для разрешения потока сведений об управляемых исключениях.</span><span class="sxs-lookup"><span data-stu-id="11943-115">Using CallbackDebugBehavior to Enable the Flow of Managed Exception Information</span></span>  
+ <span data-ttu-id="11943-116">Чтобы разрешить поток сведений об управляемых исключениях в объекте обратного вызова клиента обратно к службе в целях отладки, необходимо задать свойству <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> значение `true` программно или из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="11943-116">You can enable the flow of managed exception information in a client callback object back to the service for debugging purposes by setting the <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> property to `true` either programmatically or from an application configuration file.</span></span>  
   
- Возвращение службам сведений об управляемых исключениях может представлять угрозу безопасности, потому что данные об исключениях предоставляют информацию о внутренней реализации клиента, которой могут воспользоваться неавторизованные службы. Кроме того хотя <xref:System.ServiceModel.Description.CallbackDebugBehavior> свойства также можно сделать программно, его можно легко забыть отключить <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> при развертывании.  
+ <span data-ttu-id="11943-117">Возвращение службам сведений об управляемых исключениях может представлять угрозу безопасности, потому что данные об исключениях предоставляют информацию о внутренней реализации клиента, которой могут воспользоваться неавторизованные службы.</span><span class="sxs-lookup"><span data-stu-id="11943-117">Returning managed exception information to services can be a security risk because exception details expose information about the internal client implementation that  unauthorized services could use.</span></span> <span data-ttu-id="11943-118">Кроме того, хотя свойства <xref:System.ServiceModel.Description.CallbackDebugBehavior> также могут настраиваться программно, <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> легко забыть отключить при развертывании.</span><span class="sxs-lookup"><span data-stu-id="11943-118">In addition, although the <xref:System.ServiceModel.Description.CallbackDebugBehavior> properties can also be set programmatically, it can be easy to forget to disable <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> when deploying.</span></span>  
   
- Вследствие указанных проблем с безопасностью настоятельно рекомендуется делать следующее.  
+ <span data-ttu-id="11943-119">Вследствие указанных проблем с безопасностью настоятельно рекомендуется делать следующее.</span><span class="sxs-lookup"><span data-stu-id="11943-119">Because of the security issues involved, it is strongly recommended that:</span></span>  
   
--   Использовать файл конфигурации приложения для задания значения <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> свойства `true`.  
+-   <span data-ttu-id="11943-120">Файл конфигурации приложения может использоваться для присвоения свойству <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> значения `true`.</span><span class="sxs-lookup"><span data-stu-id="11943-120">You use an application configuration file to set the value of the <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> property to `true`.</span></span>  
   
--   Это следует делать только в контролируемых сценариях отладки.  
+-   <span data-ttu-id="11943-121">Это следует делать только в контролируемых сценариях отладки.</span><span class="sxs-lookup"><span data-stu-id="11943-121">You do so only in controlled debugging scenarios.</span></span>  
   
- В следующем примере кода показан файл конфигурации клиента, который предписывает [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] возвращать сведения об управляемом исключении из объекта обратного вызова клиента в сообщениях SOAP.  
+ <span data-ttu-id="11943-122">В следующем примере кода показан файл конфигурации клиента, который предписывает [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] возвращать сведения об управляемом исключении из объекта обратного вызова клиента в сообщениях SOAP.</span><span class="sxs-lookup"><span data-stu-id="11943-122">The following code example shows a client configuration file that instructs [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to return managed exception information from a client callback object in SOAP messages.</span></span>  
   
- <!-- TODO: review snippet reference [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]  -->
- <!-- TODO: review snippet reference [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  -->
- <!-- TODO: review snippet reference [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  -->  
+ [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
+ 
+## <a name="using-the-clientviabehavior-behavior"></a><span data-ttu-id="11943-123">Использование поведения ClientViaBehavior</span><span class="sxs-lookup"><span data-stu-id="11943-123">Using the ClientViaBehavior Behavior</span></span>  
+ <span data-ttu-id="11943-124">Для задания универсального кода ресурса (URI), для которого должен быть создан транспортный канал, можно использовать поведение <xref:System.ServiceModel.Description.ClientViaBehavior>.</span><span class="sxs-lookup"><span data-stu-id="11943-124">You can use the <xref:System.ServiceModel.Description.ClientViaBehavior> behavior to specify the Uniform Resource Identifier for which the transport channel should be created.</span></span> <span data-ttu-id="11943-125">Используйте это поведение, если непосредственное назначение сети не является предназначенным средством обработки сообщения.</span><span class="sxs-lookup"><span data-stu-id="11943-125">Use this behavior when the immediate network destination is not the intended processor of the message.</span></span> <span data-ttu-id="11943-126">Благодаря этому возможны диалоги с несколькими участками передачи, если точно не известно, знает ли вызывающее приложение конечную точку назначения, или заголовок назначения `Via` не является адресом.</span><span class="sxs-lookup"><span data-stu-id="11943-126">This enables multiple-hop conversations when the calling application does not necessarily know the ultimate destination or when the destination `Via` header is not an address.</span></span>  
   
-## <a name="using-the-clientviabehavior-behavior"></a>Использование поведения ClientViaBehavior  
- Можно использовать <xref:System.ServiceModel.Description.ClientViaBehavior> поведение, чтобы указать универсальный код ресурса, для которого необходимо создать канал транспорта. Используйте это поведение, если непосредственное назначение сети не является предназначенным средством обработки сообщения. Благодаря этому возможны диалоги с несколькими участками передачи, если точно не известно, знает ли вызывающее приложение конечную точку назначения, или заголовок назначения `Via` не является адресом.  
-  
-## <a name="see-also"></a>См. также  
- [Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a><span data-ttu-id="11943-127">См. также</span><span class="sxs-lookup"><span data-stu-id="11943-127">See Also</span></span>  
+ [<span data-ttu-id="11943-128">Указание поведения службы во время выполнения</span><span class="sxs-lookup"><span data-stu-id="11943-128">Specifying Service Run-Time Behavior</span></span>](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

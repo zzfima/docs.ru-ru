@@ -1,111 +1,94 @@
 ---
-title: "Числовые типы данных (Visual Basic) | Документы Microsoft"
+title: "Числовые типы данных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- integral types, Visual Basic
-- Short data type, numeric data types
-- Double data type, numeric data types
-- Long data type, Visual Basic numeric data types
-- numbers, whole
+- integral types [Visual Basic], Visual Basic
+- Short data type [Visual Basic], numeric data types
+- Double data type [Visual Basic], numeric data types
+- Long data type [Visual Basic], Visual Basic numeric data types
+- numbers [Visual Basic], whole
 - fractions
 - numbers
 - whole numbers
 - integer numbers
-- numbers, integer
-- fractional data types
+- numbers [Visual Basic], integer
+- fractional data types [Visual Basic]
 - mantissas, of fractional numbers
 - mantissas
 - data types [Visual Basic], numeric
-- Integer data type, numeric data types
+- Integer data type [Visual Basic], numeric data types
 - exponent, of fractional numbers
-- integers
-- numeric data types, Visual Basic
-- Single data type, numeric types
-- Decimal data type, numeric data types
+- integers [Visual Basic]
+- numeric data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], numeric types
+- Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c3098370b8d9dcb6aafcb06dcfb8f4e144b899a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="numeric-data-types-visual-basic"></a>Числовые типы данных (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет несколько *числовые типы данных* для обработки чисел в различном представлении. *Целочисленный* типы представляют собой только целые числа (положительные, отрицательные и ноль), и *нецелочисленным* — числа с целой и дробной частей.  
+# <a name="numeric-data-types-visual-basic"></a><span data-ttu-id="c99e4-102">Числовые типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c99e4-102">Numeric Data Types (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="c99e4-103">предоставляет несколько *числовых типов данных* для обработки чисел в различных представлениях.</span><span class="sxs-lookup"><span data-stu-id="c99e4-103"> supplies several *numeric data types* for handling numbers in various representations.</span></span> <span data-ttu-id="c99e4-104">*Целочисленный* типам относятся только целые числа (положительные, отрицательные и ноль), и *нецелочисленным* — с целую и дробную части числа.</span><span class="sxs-lookup"><span data-stu-id="c99e4-104">*Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.</span></span>  
   
- Для таблицы, сравнение side-by-side [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] типы данных в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ <span data-ttu-id="c99e4-105">Для таблицы, сравнение side-by-side [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] типов данных в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span><span class="sxs-lookup"><span data-stu-id="c99e4-105">For a table showing a side-by-side comparison of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] data types, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
-## <a name="integral-numeric-types"></a>Целочисленные типы  
- *Целочисленные типы данных* представляют собой только числа без дробной части.  
+## <a name="integral-numeric-types"></a><span data-ttu-id="c99e4-106">Целочисленные типы</span><span class="sxs-lookup"><span data-stu-id="c99e4-106">Integral Numeric Types</span></span>  
+ <span data-ttu-id="c99e4-107">*Целочисленные типы данных* представляют собой только числа без дробной части.</span><span class="sxs-lookup"><span data-stu-id="c99e4-107">*Integral data types* are those that represent only numbers without fractional parts.</span></span>  
   
- *Подписью* целые типы данных [тип данных SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-разрядный), [тип данных Short](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-разрядная версия), [целочисленный тип данных](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-разрядная версия), и [тип данных Long](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-разрядная версия). Если переменная всегда хранит целые числа, а не дробных чисел, объявите его в качестве одного из этих типов.  
+ <span data-ttu-id="c99e4-108">*Подписан* целые типы данных [тип данных SByte](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-разрядная версия), [тип данных Short](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-разрядная версия), [целочисленный тип данных](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-разрядная версия) и [ Тип данных Long](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-разрядная версия).</span><span class="sxs-lookup"><span data-stu-id="c99e4-108">The *signed* integral data types are [SByte Data Type](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md) (8-bit), [Short Data Type](../../../../visual-basic/language-reference/data-types/short-data-type.md) (16-bit), [Integer Data Type](../../../../visual-basic/language-reference/data-types/integer-data-type.md) (32-bit), and [Long Data Type](../../../../visual-basic/language-reference/data-types/long-data-type.md) (64-bit).</span></span> <span data-ttu-id="c99e4-109">Если переменная всегда хранит целые числа, а не дробных чисел, объявите его как один из этих типов.</span><span class="sxs-lookup"><span data-stu-id="c99e4-109">If a variable always stores integers rather than fractional numbers, declare it as one of these types.</span></span>  
   
- *Без знака* целочисленные типы имеют [тип данных Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-разрядный), [тип данных UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-разрядная версия), [UInteger-тип данных](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-разрядная версия), и [тип данных ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-разрядная версия). Если переменная содержит двоичные данные или данные неизвестной природы, следует объявите ее как один из этих типов.  
+ <span data-ttu-id="c99e4-110">*Без знака* целочисленные типы имеют [типа данных Byte](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-разрядная версия), [тип данных UShort](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-разрядная версия), [UInteger-тип данных](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-разрядная версия) и [ Тип данных ULong](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-разрядная версия).</span><span class="sxs-lookup"><span data-stu-id="c99e4-110">The *unsigned* integral types are [Byte Data Type](../../../../visual-basic/language-reference/data-types/byte-data-type.md) (8-bit), [UShort Data Type](../../../../visual-basic/language-reference/data-types/ushort-data-type.md) (16-bit), [UInteger Data Type](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md) (32-bit), and [ULong Data Type](../../../../visual-basic/language-reference/data-types/ulong-data-type.md) (64-bit).</span></span> <span data-ttu-id="c99e4-111">Если переменная содержит двоичные данные или данные неизвестной природы, объявите его как один из этих типов.</span><span class="sxs-lookup"><span data-stu-id="c99e4-111">If a variable contains binary data, or data of unknown nature, declare it as one of these types.</span></span>  
   
-### <a name="performance"></a>Производительность  
- Арифметические операции выполняются быстрее с целыми типами, чем с другими типами данных. Они являются наиболее быстрым `Integer` и `UInteger` типы в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+### <a name="performance"></a><span data-ttu-id="c99e4-112">Производительность</span><span class="sxs-lookup"><span data-stu-id="c99e4-112">Performance</span></span>  
+ <span data-ttu-id="c99e4-113">Арифметические операции выполняются быстрее с целыми типами, чем с другими типами данных.</span><span class="sxs-lookup"><span data-stu-id="c99e4-113">Arithmetic operations are faster with integral types than with other data types.</span></span> <span data-ttu-id="c99e4-114">Они являются наиболее быстрым `Integer` и `UInteger` типы в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c99e4-114">They are fastest with the `Integer` and `UInteger` types in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-### <a name="large-integers"></a>Больших целых чисел  
- Если необходимо хранить целое число больше, чем `Integer` может содержать тип данных, можно использовать `Long` тип данных. `Long`переменные могут содержать числа в диапазоне от -9223372036854775808 до 9223372036854775807. Операции с `Long` немного медленнее, чем с `Integer`.  
+### <a name="large-integers"></a><span data-ttu-id="c99e4-115">Больших целых чисел</span><span class="sxs-lookup"><span data-stu-id="c99e4-115">Large Integers</span></span>  
+ <span data-ttu-id="c99e4-116">Если необходимо хранить целое число больше, чем `Integer` может содержать тип данных, можно использовать `Long` типа данных.</span><span class="sxs-lookup"><span data-stu-id="c99e4-116">If you need to hold an integer larger than the `Integer` data type can hold, you can use the `Long` data type instead.</span></span> <span data-ttu-id="c99e4-117">`Long`переменные могут содержать числа в диапазоне от -9223372036854775808 до 9223372036854775807.</span><span class="sxs-lookup"><span data-stu-id="c99e4-117">`Long` variables can hold numbers from -9,223,372,036,854,775,808 through 9,223,372,036,854,775,807.</span></span> <span data-ttu-id="c99e4-118">Операции с `Long` немного медленнее, чем с `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c99e4-118">Operations with `Long` are slightly slower than with `Integer`.</span></span>  
   
- Если требуется, чтобы еще больше значений, можно использовать [тип данных Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md). Можно хранить числа в диапазоне от -79,228,162,514,264,337,593,543,950,335 до 79,228,162,514,264,337,593,543,950,335 в `Decimal` переменной, если вы не используете десятичные разряды. Однако операции с `Decimal` номера выполняются значительно медленнее, чем с любым другим типом числовых данных.  
+ <span data-ttu-id="c99e4-119">Если необходимо, чтобы еще больше значения, можно использовать [тип данных Decimal](../../../../visual-basic/language-reference/data-types/decimal-data-type.md).</span><span class="sxs-lookup"><span data-stu-id="c99e4-119">If you need even larger values, you can use the [Decimal Data Type](../../../../visual-basic/language-reference/data-types/decimal-data-type.md).</span></span> <span data-ttu-id="c99e4-120">Можно хранить числа в диапазоне от -79,228,162,514,264,337,593,543,950,335 до 79,228,162,514,264,337,593,543,950,335 в `Decimal` переменной, если вы не используете десятичные разряды.</span><span class="sxs-lookup"><span data-stu-id="c99e4-120">You can hold numbers from -79,228,162,514,264,337,593,543,950,335 through 79,228,162,514,264,337,593,543,950,335 in a `Decimal` variable if you do not use any decimal places.</span></span> <span data-ttu-id="c99e4-121">Тем не менее операции с `Decimal` номера — это значительно медленнее, чем с другими типами числовых данных.</span><span class="sxs-lookup"><span data-stu-id="c99e4-121">However, operations with `Decimal` numbers are considerably slower than with any other numeric data type.</span></span>  
   
-### <a name="small-integers"></a>Двухбайтовые целые числа  
- Если не требуется полный диапазон `Integer` тип данных, можно использовать `Short` тип данных, который может содержать целые числа от-32 768 до 32 767. Для диапазона наименьшее целое число `SByte` тип данных содержит целые числа от -128 до 127. Если имеется большое количество переменных, которые содержат двухбайтовые целые числа, общеязыковая среда выполнения, иногда можно хранить на `Short` и `SByte` переменные более эффективно и снизить потребление памяти. Однако операции с `Short` и `SByte` выполняются медленнее, чем с `Integer`.  
+### <a name="small-integers"></a><span data-ttu-id="c99e4-122">Двухбайтовые целые числа</span><span class="sxs-lookup"><span data-stu-id="c99e4-122">Small Integers</span></span>  
+ <span data-ttu-id="c99e4-123">Если не требуется полный диапазон `Integer` тип данных, вы можете использовать `Short` тип данных, который может содержать целые числа от-32 768 до 32 767.</span><span class="sxs-lookup"><span data-stu-id="c99e4-123">If you do not need the full range of the `Integer` data type, you can use the `Short` data type, which can hold integers from -32,768 through 32,767.</span></span> <span data-ttu-id="c99e4-124">Для диапазона наименьшее целое число `SByte` тип данных содержит целые числа от -128 до 127.</span><span class="sxs-lookup"><span data-stu-id="c99e4-124">For the smallest integer range, the `SByte` data type holds integers from -128 through 127.</span></span> <span data-ttu-id="c99e4-125">Если имеется большое количество переменных, которые содержат двухбайтовые целые числа, среда, иногда можно хранить на `Short` и `SByte` переменные более эффективно и снизить потребление памяти.</span><span class="sxs-lookup"><span data-stu-id="c99e4-125">If you have a very large number of variables that hold small integers, the common language runtime can sometimes store your `Short` and `SByte` variables more efficiently and save memory consumption.</span></span> <span data-ttu-id="c99e4-126">Тем не менее операции с `Short` и `SByte` выполняются медленнее, чем с `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c99e4-126">However, operations with `Short` and `SByte` are somewhat slower than with `Integer`.</span></span>  
   
-### <a name="unsigned-integers"></a>Целые числа без знака  
- Если вы знаете, что переменная никогда не должна содержать отрицательное число, можно использовать *беззнаковых типов*`Byte`, `UShort`, `UInteger`, и `ULong`. Каждый из этих типов данных может содержать положительное целое число два раза превосходящее его соответствующий знаковый тип (`SByte`, `Short`, `Integer`, и `Long`). С точки зрения производительности каждый тип без знака точно так же эффективно, как соответствующий тип со знаком. В частности `UInteger` совместно `Integer` являются наиболее эффективными из всех типов простейших числовых данных.  
+### <a name="unsigned-integers"></a><span data-ttu-id="c99e4-127">Целые числа без знака</span><span class="sxs-lookup"><span data-stu-id="c99e4-127">Unsigned Integers</span></span>  
+ <span data-ttu-id="c99e4-128">Если вы знаете, что переменная никогда не должна содержать отрицательное число, можно использовать *беззнаковых типов*`Byte`, `UShort`, `UInteger`, и `ULong`.</span><span class="sxs-lookup"><span data-stu-id="c99e4-128">If you know that your variable never needs to hold a negative number, you can use the *unsigned types*`Byte`, `UShort`, `UInteger`, and `ULong`.</span></span> <span data-ttu-id="c99e4-129">Каждый из этих типов данных может содержать положительное целое число в два раза превышает как его соответствующий тип со знаком (`SByte`, `Short`, `Integer`, и `Long`).</span><span class="sxs-lookup"><span data-stu-id="c99e4-129">Each of these data types can hold a positive integer twice as large as its corresponding signed type (`SByte`, `Short`, `Integer`, and `Long`).</span></span> <span data-ttu-id="c99e4-130">С точки зрения производительности каждый тип без знака — точно так же эффективно, как его соответствующий тип со знаком.</span><span class="sxs-lookup"><span data-stu-id="c99e4-130">In terms of performance, each unsigned type is exactly as efficient as its corresponding signed type.</span></span> <span data-ttu-id="c99e4-131">В частности `UInteger` являются общими с `Integer` являются наиболее эффективными из всех типов простейших числовых данных.</span><span class="sxs-lookup"><span data-stu-id="c99e4-131">In particular, `UInteger` shares with `Integer` the distinction of being the most efficient of all the elementary numeric data types.</span></span>  
   
-## <a name="nonintegral-numeric-types"></a>Нецелочисленный числовые типы  
- *Типы данных нецелочисленный* представляют собой числа с целой и дробной частей.  
+## <a name="nonintegral-numeric-types"></a><span data-ttu-id="c99e4-132">Нецелочисленный числовые типы</span><span class="sxs-lookup"><span data-stu-id="c99e4-132">Nonintegral Numeric Types</span></span>  
+ <span data-ttu-id="c99e4-133">*Типы данных нецелочисленный* представляют собой целую и дробную части числа.</span><span class="sxs-lookup"><span data-stu-id="c99e4-133">*Nonintegral data types* are those that represent numbers with both integer and fractional parts.</span></span>  
   
- Нецелочисленный числовыми типами данных являются `Decimal` (128 бит с фиксированной запятой), [одного типа данных](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-разрядных чисел с плавающей запятой), и [тип данных Double](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-разрядных чисел с плавающей запятой). Они являются все подписанные типами. Если переменная может содержать дробную часть, следует объявите ее как один из этих типов.  
+ <span data-ttu-id="c99e4-134">Нецелочисленный числовыми типами данных являются `Decimal` (128 бит с фиксированной запятой), [одного типа данных](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-разрядных чисел с плавающей запятой), и [тип данных Double](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-разрядных чисел с плавающей запятой).</span><span class="sxs-lookup"><span data-stu-id="c99e4-134">The nonintegral numeric data types are `Decimal` (128-bit fixed point), [Single Data Type](../../../../visual-basic/language-reference/data-types/single-data-type.md) (32-bit floating point), and [Double Data Type](../../../../visual-basic/language-reference/data-types/double-data-type.md) (64-bit floating point).</span></span> <span data-ttu-id="c99e4-135">Они являются все подписанные типами.</span><span class="sxs-lookup"><span data-stu-id="c99e4-135">They are all signed types.</span></span> <span data-ttu-id="c99e4-136">Если переменная может содержать дробную часть, объявите его как один из этих типов.</span><span class="sxs-lookup"><span data-stu-id="c99e4-136">If a variable can contain a fraction, declare it as one of these types.</span></span>  
   
- `Decimal`не является типом данных с плавающей запятой. `Decimal`числа имеют двоичное целое значение и масштабный коэффициент целых чисел, который определяет, какая часть значения является десятичной дробью.  
+ <span data-ttu-id="c99e4-137">`Decimal`не является типом данных с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="c99e4-137">`Decimal` is not a floating-point data type.</span></span> <span data-ttu-id="c99e4-138">`Decimal`номера имеют двоичное целое значение и масштабный коэффициент целое число, указывающее, какая часть значения является десятичной дробью.</span><span class="sxs-lookup"><span data-stu-id="c99e4-138">`Decimal` numbers have a binary integer value and an integer scaling factor that specifies what portion of the value is a decimal fraction.</span></span>  
   
- Можно использовать `Decimal` переменные для денежных значений. Преимущество имеет точность значений. `Double` Тип данных выполняется быстрее и требует меньше памяти, но она подвержена ошибкам округления. `Decimal` Тип данных сохраняет полную точность до 28 десятичных разрядов.  
+ <span data-ttu-id="c99e4-139">Можно использовать `Decimal` переменные для денежных значений.</span><span class="sxs-lookup"><span data-stu-id="c99e4-139">You can use `Decimal` variables for money values.</span></span> <span data-ttu-id="c99e4-140">Преимущество заключается в точности значений.</span><span class="sxs-lookup"><span data-stu-id="c99e4-140">The advantage is the precision of the values.</span></span> <span data-ttu-id="c99e4-141">`Double` Типа данных происходит быстрее и требует меньше памяти, однако он может быть ошибок округления.</span><span class="sxs-lookup"><span data-stu-id="c99e4-141">The `Double` data type is faster and requires less memory, but it is subject to rounding errors.</span></span> <span data-ttu-id="c99e4-142">`Decimal` Тип данных сохраняет полную точность до 28 десятичных разрядов.</span><span class="sxs-lookup"><span data-stu-id="c99e4-142">The `Decimal` data type retains complete accuracy to 28 decimal places.</span></span>  
   
- С плавающей запятой (`Single` и `Double`) числа имеют большие диапазоны, чем `Decimal` числа, но могут возникать ошибки округления. Типы с плавающей запятой поддерживают меньшее количество значащих цифр, чем `Decimal` , но могут представлять значения большей величины.  
+ <span data-ttu-id="c99e4-143">С плавающей запятой (`Single` и `Double`) номера имеют большие диапазоны, чем `Decimal` чисел, но может быть причиной ошибок округления.</span><span class="sxs-lookup"><span data-stu-id="c99e4-143">Floating-point (`Single` and `Double`) numbers have larger ranges than `Decimal` numbers but can be subject to rounding errors.</span></span> <span data-ttu-id="c99e4-144">Типы с плавающей запятой поддерживают меньшее количество значащих цифр, чем `Decimal` , но могут представлять значения большей величины.</span><span class="sxs-lookup"><span data-stu-id="c99e4-144">Floating-point types support fewer significant digits than `Decimal` but can represent values of greater magnitude.</span></span>  
   
- Нецелочисленные значения могут быть выражены как mmmEeee, в которых mmm является *мантиссы* (значащими цифрами), а eee — *экспоненты* (степень 10). Максимальные положительные значения для нецелочисленных типов являются 7.9228162514264337593543950335E + 28 для `Decimal`, 3, 4028235E + 38 для `Single`и 1, 79769313486231570E + 308 для `Double`.  
+ <span data-ttu-id="c99e4-145">Нецелочисленные значения могут быть выражены как mmmEeee, в которых mmm является *мантиссы* (значащих цифр), а eee — *показатель степени* (степень числа 10).</span><span class="sxs-lookup"><span data-stu-id="c99e4-145">Nonintegral number values can be expressed as mmmEeee, in which mmm is the *mantissa* (the significant digits) and eee is the *exponent* (a power of 10).</span></span> <span data-ttu-id="c99e4-146">Максимальные положительные значения для нецелочисленных типов являются 7.9228162514264337593543950335E + 28 для `Decimal`, 3, 4028235E + 38 для `Single`и 1, 79769313486231570E + 308 для `Double`.</span><span class="sxs-lookup"><span data-stu-id="c99e4-146">The highest positive values of the nonintegral types are 7.9228162514264337593543950335E+28 for `Decimal`, 3.4028235E+38 for `Single`, and 1.79769313486231570E+308 for `Double`.</span></span>  
   
-### <a name="performance"></a>Производительность  
- `Double`является наиболее эффективным из дробных типов данных, поскольку процессоры на современных платформах выполняют операции с плавающей запятой с двойной точностью. Однако операции с `Double` не так же быстро, как и в случае целочисленные типы, такие как `Integer`.  
+### <a name="performance"></a><span data-ttu-id="c99e4-147">Производительность</span><span class="sxs-lookup"><span data-stu-id="c99e4-147">Performance</span></span>  
+ <span data-ttu-id="c99e4-148">`Double`является наиболее эффективным дробных типов данных, поскольку процессоры на современных платформах выполняют операции с плавающей запятой с двойной точностью.</span><span class="sxs-lookup"><span data-stu-id="c99e4-148">`Double` is the most efficient of the fractional data types, because the processors on current platforms perform floating-point operations in double precision.</span></span> <span data-ttu-id="c99e4-149">Тем не менее операции с `Double` не выполняются так же быстро, как и для целочисленных типов, таких как `Integer`.</span><span class="sxs-lookup"><span data-stu-id="c99e4-149">However, operations with `Double` are not as fast as with the integral types such as `Integer`.</span></span>  
   
-### <a name="small-magnitudes"></a>Малые величины  
- Для чисел с наименьшей возможной величиной (стремящейся к 0) `Double` переменные могут содержать числа, как - 4, 94065645841246544E-324 для отрицательных значений и 4, 94065645841246544E-324 для положительных значений.  
+### <a name="small-magnitudes"></a><span data-ttu-id="c99e4-150">Малые величины</span><span class="sxs-lookup"><span data-stu-id="c99e4-150">Small Magnitudes</span></span>  
+ <span data-ttu-id="c99e4-151">Для чисел с наименьшей возможной величиной (наиболее близкое к 0) `Double` переменных может содержать числа, как - 4, 94065645841246544E-324 для отрицательных значений и 4, 94065645841246544E-324 для положительных значений.</span><span class="sxs-lookup"><span data-stu-id="c99e4-151">For numbers with the smallest possible magnitude (closest to 0), `Double` variables can hold numbers as small as -4.94065645841246544E-324 for negative values and 4.94065645841246544E-324 for positive values.</span></span>  
   
-### <a name="small-fractional-numbers"></a>Малые дробные числа  
- Если не требуется полный диапазон `Double` тип данных, можно использовать `Single` тип данных, который может хранить числа с плавающей запятой от - 3, 4028235E + 38 до 3, 4028235E + 38. Минимальные значения `Single` переменные, - 1, 401298E-45 для отрицательных значений и 1, 401298E-45 для положительных значений. Если имеется большое количество переменных, которые содержат небольшие числа с плавающей запятой, общеязыковая среда выполнения, иногда можно хранить на `Single` переменные более эффективно и снизить потребление памяти.  
+### <a name="small-fractional-numbers"></a><span data-ttu-id="c99e4-152">Небольшой дробных чисел</span><span class="sxs-lookup"><span data-stu-id="c99e4-152">Small Fractional Numbers</span></span>  
+ <span data-ttu-id="c99e4-153">Если не требуется полный диапазон `Double` тип данных, вы можете использовать `Single` тип данных, который может хранить числа с плавающей запятой от - 3, 4028235E + 38 до 3, 4028235E + 38.</span><span class="sxs-lookup"><span data-stu-id="c99e4-153">If you do not need the full range of the `Double` data type, you can use the `Single` data type, which can hold floating-point numbers from -3.4028235E+38 through 3.4028235E+38.</span></span> <span data-ttu-id="c99e4-154">Минимальные значения `Single` переменные являются - 1, 401298E-45 для отрицательных значений и 1, 401298E-45 для положительных значений.</span><span class="sxs-lookup"><span data-stu-id="c99e4-154">The smallest magnitudes for `Single` variables are -1.401298E-45 for negative values and 1.401298E-45 for positive values.</span></span> <span data-ttu-id="c99e4-155">Если имеется большое количество переменных, которые содержат небольшого числа с плавающей запятой, среда может хранить иногда вашей `Single` переменные более эффективно и снизить потребление памяти.</span><span class="sxs-lookup"><span data-stu-id="c99e4-155">If you have a very large number of variables that hold small floating-point numbers, the common language runtime can sometimes store your `Single` variables more efficiently and save memory consumption.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Символьные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)   
- [Прочие типы данных](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)   
- [Устранение неполадок типы данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a><span data-ttu-id="c99e4-156">См. также</span><span class="sxs-lookup"><span data-stu-id="c99e4-156">See Also</span></span>  
+ [<span data-ttu-id="c99e4-157">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="c99e4-157">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="c99e4-158">Символьные типы данных</span><span class="sxs-lookup"><span data-stu-id="c99e4-158">Character Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
+ [<span data-ttu-id="c99e4-159">Прочие типы данных</span><span class="sxs-lookup"><span data-stu-id="c99e4-159">Miscellaneous Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
+ [<span data-ttu-id="c99e4-160">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="c99e4-160">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="c99e4-161">Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа</span><span class="sxs-lookup"><span data-stu-id="c99e4-161">How to: Call a Windows Function that Takes Unsigned Types</span></span>](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

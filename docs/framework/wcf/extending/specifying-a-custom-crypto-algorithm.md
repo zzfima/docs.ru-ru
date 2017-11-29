@@ -1,32 +1,35 @@
 ---
-title: "Задание пользовательского алгоритма шифрования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Задание пользовательского алгоритма шифрования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 630457e4d1b30fe2a9439c3a41af5da92606c55a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Задание пользовательского алгоритма шифрования
-WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей.  Для этого выполните следующие действия.  
+# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="52fb9-102">Задание пользовательского алгоритма шифрования</span><span class="sxs-lookup"><span data-stu-id="52fb9-102">Specifying a Custom Crypto Algorithm</span></span>
+<span data-ttu-id="52fb9-103">WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей.</span><span class="sxs-lookup"><span data-stu-id="52fb9-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="52fb9-104">Для этого выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="52fb9-104">This is done by the following steps:</span></span>  
   
-1.  Создайте производный класс от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
+1.  <span data-ttu-id="52fb9-105">Создайте производный класс от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span><span class="sxs-lookup"><span data-stu-id="52fb9-105">Derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span></span>  
   
-2.  Регистрация алгоритма  
+2.  <span data-ttu-id="52fb9-106">Регистрация алгоритма</span><span class="sxs-lookup"><span data-stu-id="52fb9-106">Register the algorithm</span></span>  
   
-3.  Настройте привязку с классом, который является производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
+3.  <span data-ttu-id="52fb9-107">Настройте привязку с классом, который является производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span><span class="sxs-lookup"><span data-stu-id="52fb9-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
   
-## Создание производного класса от класса SecurityAlgorithmSuite  
- <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> является абстрактным базовым классом, позволяющим указывать алгоритм, используемый при выполнении различных операций, связанных с безопасностью.  Например, вычисление хэша для цифровой подписи или шифрование сообщения.  В следующем коде показано, как наследовать класс от класса <xref:System.ServiceModel.Security.SecurityAlgorithm>.  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="52fb9-108">Создание производного класса от класса SecurityAlgorithmSuite</span><span class="sxs-lookup"><span data-stu-id="52fb9-108">Derive a class from SecurityAlgorithmSuite</span></span>  
+ <span data-ttu-id="52fb9-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> является абстрактным базовым классом, позволяющим указывать алгоритм, используемый при выполнении различных операций, связанных с безопасностью.</span><span class="sxs-lookup"><span data-stu-id="52fb9-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="52fb9-110">Например, вычисление хэша для цифровой подписи или шифрование сообщения.</span><span class="sxs-lookup"><span data-stu-id="52fb9-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="52fb9-111">В следующем коде показано, как наследовать класс от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.</span><span class="sxs-lookup"><span data-stu-id="52fb9-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -91,11 +94,10 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
             return length >= 128 && length <= 256;  
         }  
     }  
-  
 ```  
   
-## Регистрация пользовательского алгоритма  
- Регистрацию можно выполнить в файле конфигурации или в императивном коде.  Регистрация пользовательского алгоритма выполняется путем создания сопоставления между классом, реализующим поставщик службы шифрования, и псевдонимом.  Затем псевдоним сопоставляется с URI, который используется при указании алгоритма в привязке службы WCF.  Следующий фрагмент конфигурации показывает, как зарегистрировать пользовательский алгоритм в конфигурации.  
+## <a name="register-the-custom-algorithm"></a><span data-ttu-id="52fb9-112">Регистрация пользовательского алгоритма</span><span class="sxs-lookup"><span data-stu-id="52fb9-112">Register the Custom Algorithm</span></span>  
+ <span data-ttu-id="52fb9-113">Регистрацию можно выполнить в файле конфигурации или в императивном коде.</span><span class="sxs-lookup"><span data-stu-id="52fb9-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="52fb9-114">Регистрация пользовательского алгоритма выполняется путем создания сопоставления между классом, реализующим поставщик службы шифрования, и псевдонимом.</span><span class="sxs-lookup"><span data-stu-id="52fb9-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="52fb9-115">Затем псевдоним сопоставляется с URI, который используется при указании алгоритма в привязке службы WCF.</span><span class="sxs-lookup"><span data-stu-id="52fb9-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="52fb9-116">Следующий фрагмент конфигурации показывает, как зарегистрировать пользовательский алгоритм в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="52fb9-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
   
 ```xml  
 <configuration>  
@@ -111,33 +113,30 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
         </cryptographySettings>  
     </mscorlib>  
 </configuration>  
-  
 ```  
   
- Раздел, находящийся под элементом \<`cryptoClasses`\>, создает сопоставление между поставщиком SHA256CryptoServiceProvider и псевдонимом «SHA256CSP».  Элемент \<[nameEntry](assetId:///nameEntry?qualifyHint=False&amp;autoUpgrade=True)\> создает сопоставление между псевдонимом «SHA256CSP» и указанным URL\-адресом \(http:\/\/constoso.com\/CustomAlgorithms\/CustomHashAlgorithm\).  
+ <span data-ttu-id="52fb9-117">Раздел находится в <`cryptoClasses`> создает сопоставление между поставщиком SHA256CryptoServiceProvider и псевдонимом «SHA256CSP».</span><span class="sxs-lookup"><span data-stu-id="52fb9-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="52fb9-118"><`nameEntry`> Создает сопоставление между псевдонимом «SHA256CSP» и указанный URL-адрес (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).</span><span class="sxs-lookup"><span data-stu-id="52fb9-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
   
- Для регистрации пользовательского алгоритма в коде используйте метод [M:System.Security.Cryptography.CryptoConfig.AddAlgorithm\(System.Type, System.String\<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True.  Этот метод создает и оба сопоставления.  В следующем примере показано, как вызвать этот метод.  
+ <span data-ttu-id="52fb9-119">Для регистрации пользовательского алгоритма в коде используется <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False & autoUpgrade = True, метод.</span><span class="sxs-lookup"><span data-stu-id="52fb9-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm%2A> System.String[])?qualifyHint=False&autoUpgrade=True method.</span></span> <span data-ttu-id="52fb9-120">Этот метод создает и оба сопоставления.</span><span class="sxs-lookup"><span data-stu-id="52fb9-120">This method creates both mappings.</span></span> <span data-ttu-id="52fb9-121">В следующем примере показано, как вызвать этот метод.</span><span class="sxs-lookup"><span data-stu-id="52fb9-121">The following example shows how to call this method:</span></span>  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
 // SHA256CryptoServiceProvider hash algorithm object.  
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
-  
 ```  
   
-## Настройка привязки  
- Привязка настраивается путем указания пользовательского класса, являющегося производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, в параметрах привязки, как показано в следующем фрагменте кода.  
+## <a name="configure-the-binding"></a><span data-ttu-id="52fb9-122">Настройка привязки</span><span class="sxs-lookup"><span data-stu-id="52fb9-122">Configure the Binding</span></span>  
+ <span data-ttu-id="52fb9-123">Привязка настраивается путем указания пользовательского класса, являющегося производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, в параметрах привязки, как показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="52fb9-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
-  
 ```  
   
- Полный пример кода приведен в образце [Криптографическая гибкость в системе безопасности WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md).  
+ <span data-ttu-id="52fb9-124">Полный пример кода см. в разделе [криптографическая гибкость в системе безопасности WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) образца.</span><span class="sxs-lookup"><span data-stu-id="52fb9-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
   
-## См. также  
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Защита служб](../../../../docs/framework/wcf/securing-services.md)   
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Основные понятия безопасности](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="52fb9-125">См. также</span><span class="sxs-lookup"><span data-stu-id="52fb9-125">See Also</span></span>  
+ [<span data-ttu-id="52fb9-126">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="52fb9-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="52fb9-127">Защита служб</span><span class="sxs-lookup"><span data-stu-id="52fb9-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="52fb9-128">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="52fb9-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="52fb9-129">Основные понятия безопасности</span><span class="sxs-lookup"><span data-stu-id="52fb9-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)

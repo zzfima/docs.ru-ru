@@ -1,47 +1,47 @@
 ---
-title: "Средства Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF, средства"
-  - "Windows Communication Foundation, средства"
+title: "Средства Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, tools
+- Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9039ae27ea02b16b9b476c7c94856ea438176dad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Средства Windows Communication Foundation
-Средства Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяют упростить создание и развертывание приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также управление ими.  Данный раздел содержит подробные сведения об этих средствах.  Обратите внимание, что некоторые средства могут не поддерживаться.  
+# <a name="windows-communication-foundation-tools"></a><span data-ttu-id="ccd8d-102">Средства Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ccd8d-102">Windows Communication Foundation Tools</span></span>
+<span data-ttu-id="ccd8d-103">Средства Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] позволяют упростить создание и развертывание приложений [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], а также управление ими.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-103">Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] tools are designed to make it easier for you to create, deploy, and manage [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications.</span></span> <span data-ttu-id="ccd8d-104">Данный раздел содержит подробные сведения об этих средствах.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-104">This section contains detailed information about the tools.</span></span> <span data-ttu-id="ccd8d-105">Обратите внимание, что некоторые средства могут не поддерживаться.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-105">Please note that the tools are not supported.</span></span>  
   
- Все инструменты можно запускать из командной строки.  
+ <span data-ttu-id="ccd8d-106">Все инструменты можно запускать из командной строки.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-106">You can run all the tools from the command line.</span></span>  
   
- В следующей таблице представлены средства и их краткое описание.  
+ <span data-ttu-id="ccd8d-107">В следующей таблице представлены средства и их краткое описание.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-107">The following table lists these tools and provides a brief description.</span></span>  
   
-|Средство|Описание|  
-|--------------|--------------|  
-|[Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|Создает код модели службы из документов метаданных и документы метаданных из кода модели службы.|  
-|[Средство поиска закрытых ключей \(FindPrivateKey.exe\)](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|Извлекает закрытый ключ из указанного хранилища.|  
-|[Средство регистрации ServiceModel \(ServiceModelReg.exe\)](../../../docs/framework/wcf/servicemodelreg-exe.md)|Управляет регистрацией и отменой регистрации ServiceModel на одном компьютере.|  
-|[Программа командной строки настройки модели служб COM\+ \(ComSvcConfig.exe\)](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|Настраивает интерфейсы COM\+ для предоставления в качестве веб\-служб.|  
-|[Средство редактирования конфигурации \(SvcConfigEditor.exe\)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|Создает и изменяет параметры конфигурации служб WCF.|  
-|[Программа Service Trace Viewer \(SvcTraceViewer.exe\)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)|Служит для просмотра, группировки и фильтрации сообщений трассировки в целях диагностики, устранения и проверки неисправностей служб WCF.|  
-|[Программа конфигурации WS\-AtomicTransaction \(wsatConfig.exe\)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Настраивает основные параметры поддержки WS\-AtomicTransaction с помощью программы командной строки.|  
-|[Оснастка консоли MMC для конфигурации WS\-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Настраивает основные параметры поддержки WS\-AtomicTransaction с помощью оснастки консоли MMC.|  
-|[Программа регистрации служб WorkFlow \(WFServicesReg.exe\)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Регистрирует службу Windows Workflow.|  
-|[Узел службы WCF \(WcfSvcHost.exe\)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Размещает службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], содержащиеся в DLL\-файлах.|  
-|[Тестовый клиент WCF \(WcfTestClient.exe\)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Средство графического пользовательского интерфейса позволяет ввести параметры произвольного типа, отправить их в службу и просмотреть ответ, возвращенный службой.|  
-|[Средство первого контакта](../../../docs/framework/wcf/contract-first-tool.md)|Задача сборки Visual Studio, создающая классы кода из контрактов данных XSD.|  
+|<span data-ttu-id="ccd8d-108">Средство</span><span class="sxs-lookup"><span data-stu-id="ccd8d-108">Tool</span></span>|<span data-ttu-id="ccd8d-109">Описание</span><span class="sxs-lookup"><span data-stu-id="ccd8d-109">Description</span></span>|  
+|----------|-----------------|  
+|[<span data-ttu-id="ccd8d-110">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-110">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)|<span data-ttu-id="ccd8d-111">Создает код модели службы из документов метаданных и документы метаданных из кода модели службы.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-111">Generates service model code from metadata documents and metadata documents from service model code.</span></span>|  
+|[<span data-ttu-id="ccd8d-112">Средство поиска закрытых ключей (FindPrivateKey.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-112">Find Private Key Tool (FindPrivateKey.exe)</span></span>](../../../docs/framework/wcf/find-private-key-tool-findprivatekey-exe.md)|<span data-ttu-id="ccd8d-113">Извлекает закрытый ключ из указанного хранилища.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-113">Retrieves the private key from a specified store.</span></span>|  
+|[<span data-ttu-id="ccd8d-114">Средство регистрации ServiceModel (ServiceModelReg.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-114">ServiceModel Registration Tool (ServiceModelReg.exe)</span></span>](../../../docs/framework/wcf/servicemodelreg-exe.md)|<span data-ttu-id="ccd8d-115">Управляет регистрацией и отменой регистрации ServiceModel на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-115">Manages the registration and un-registration of ServiceModel on a single machine.</span></span>|  
+|[<span data-ttu-id="ccd8d-116">Средство настройки модели служб COM+ (ComSvcConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-116">COM+ Service Model Configuration Tool (ComSvcConfig.exe)</span></span>](../../../docs/framework/wcf/com-service-model-configuration-tool-comsvcconfig-exe.md)|<span data-ttu-id="ccd8d-117">Настраивает интерфейсы COM+ для предоставления в качестве веб-служб.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-117">Configures COM+ interfaces to be exposed as Web services.</span></span>|  
+|[<span data-ttu-id="ccd8d-118">Редактор конфигурации (SvcConfigEditor.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-118">Configuration Editor Tool (SvcConfigEditor.exe)</span></span>](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)|<span data-ttu-id="ccd8d-119">Создает и изменяет параметры конфигурации служб WCF.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-119">Creates and modifies configuration settings for WCF services.</span></span>|  
+|[<span data-ttu-id="ccd8d-120">Средство просмотра трассировки служб (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-120">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)|<span data-ttu-id="ccd8d-121">Служит для просмотра, группировки и фильтрации сообщений трассировки в целях диагностики, устранения и проверки неисправностей служб WCF.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-121">Helps you view, group, and filter trace messages so that you can diagnose, repair, and verify issues with WCF services.</span></span>|  
+|[<span data-ttu-id="ccd8d-122">Служебная программа конфигурации WS-AtomicTransaction (wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-122">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|<span data-ttu-id="ccd8d-123">Настраивает основные параметры поддержки WS-AtomicTransaction с помощью программы командной строки.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-123">Configures basic WS-AtomicTransaction support settings using a command line tool.</span></span>|  
+|[<span data-ttu-id="ccd8d-124">Оснастка консоли MMC для конфигурации WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="ccd8d-124">WS-AtomicTransaction Configuration MMC Snap-in</span></span>](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|<span data-ttu-id="ccd8d-125">Настраивает основные параметры поддержки WS-AtomicTransaction с помощью оснастки консоли MMC.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-125">Configures basic WS-AtomicTransaction support settings using a MMC snap-in.</span></span>|  
+|[<span data-ttu-id="ccd8d-126">Средство регистрации служб рабочих процессов (WFServicesReg.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-126">WorkFlow Service Registration Tool (WFServicesReg.exe)</span></span>](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|<span data-ttu-id="ccd8d-127">Регистрирует службу Windows Workflow.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-127">Registers a Windows Workflow service.</span></span>|  
+|[<span data-ttu-id="ccd8d-128">Узел службы WCF (WcfSvcHost.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-128">WCF Service Host (WcfSvcHost.exe)</span></span>](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|<span data-ttu-id="ccd8d-129">Размещает службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], содержащиеся в DLL-файлах.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-129">Hosts [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services contained in libraries (*.dll) files</span></span>|  
+|[<span data-ttu-id="ccd8d-130">Тестовый клиент WCF (WcfTestClient.exe)</span><span class="sxs-lookup"><span data-stu-id="ccd8d-130">WCF Test Client (WcfTestClient.exe)</span></span>](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|<span data-ttu-id="ccd8d-131">Средство графического пользовательского интерфейса позволяет ввести параметры произвольного типа, отправить их в службу и просмотреть ответ, возвращенный службой.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-131">A GUI tool that allows you to input parameters of arbitrary types, submit that input to the service, and view the response the service sends back.</span></span>|  
+|[<span data-ttu-id="ccd8d-132">Средство для первоочередного назначения контрактов</span><span class="sxs-lookup"><span data-stu-id="ccd8d-132">Contract-First Tool</span></span>](../../../docs/framework/wcf/contract-first-tool.md)|<span data-ttu-id="ccd8d-133">Задача сборки Visual Studio, создающая классы кода из контрактов данных XSD.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-133">A Visual Studio build task that creates code classes from XSD data contracts.</span></span>|  
   
- Все вышеуказанные средства, кроме ServiceModelReg.exe, WsatConfig.exe и ComSvcConfig.exe, поставляются с Windows SDK и находятся в папке C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0\\Bin.  Остальные три средства находятся в папке C:\\Windows\\Microsoft.NET\\Framework\\v3.0\\Windows Communication Foundation.
+ <span data-ttu-id="ccd8d-134">Все вышеуказанные средства, кроме ServiceModelReg.exe, WsatConfig.exe и ComSvcConfig.exe, поставляются с Windows SDK и находятся в папке C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-134">All the preceding tools except ServiceModelReg.exe, WsatConfig.exe and ComSvcConfig.exe ship with the Windows SDK, and can be found under the C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin folder.</span></span>  <span data-ttu-id="ccd8d-135">Остальные три средства находятся в папке C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="ccd8d-135">The specific 3 tools can be found under C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation.</span></span>

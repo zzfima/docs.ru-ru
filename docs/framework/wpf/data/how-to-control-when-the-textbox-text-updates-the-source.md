@@ -1,53 +1,59 @@
 ---
-title: "Практическое руководство. Управление обновлением источника из поля TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка данных, учет времени обновлений источника"
-  - "обновления источника, учет времени"
-  - "учет времени обновлений источника"
+title: "Практическое руководство. Управление обновлением источника из поля TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- source updates [WPF], timing of
+- data binding [WPF], timing of source updates
+- timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c923a24f5abfdb059a436206a15181a67d03068f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Управление обновлением источника из поля TextBox
-В этом разделе описывает способы использования свойства <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> для контроля времени обновлений [источника привязки](GTMT).  В разделе используется элемент управления <xref:System.Windows.Controls.TextBox> в качестве примера.  
+# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a><span data-ttu-id="5f5b4-102">Практическое руководство. Управление обновлением источника из поля TextBox</span><span class="sxs-lookup"><span data-stu-id="5f5b4-102">How to: Control When the TextBox Text Updates the Source</span></span>
+<span data-ttu-id="5f5b4-103">В этом разделе описывается использование <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойства для управления синхронизацией обновлений источника привязки.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-103">This topic describes how to use the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property to control the timing of binding source updates.</span></span> <span data-ttu-id="5f5b4-104">В этом разделе используются <xref:System.Windows.Controls.TextBox> элемента управления в качестве примера.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-104">The topic uses the <xref:System.Windows.Controls.TextBox> control as an example.</span></span>  
   
-## Пример  
- Свойство <xref:System.Windows.Controls.TextBox>. <xref:System.Windows.Controls.TextBox.Text%2A> имеет значение <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Data.UpdateSourceTrigger> по умолчанию.  Это означает, что если приложение имеет <xref:System.Windows.Controls.TextBox> с привязки к данным свойствам <xref:System.Windows.Controls.TextBox>. <xref:System.Windows.Controls.TextBox.Text%2A>, текст, вводимый вами в <xref:System.Windows.Controls.TextBox>, не обновляет источник до тех пор, пока <xref:System.Windows.Controls.TextBox> не потеряет фокус \(например, если щелкнуть мышью вне <xref:System.Windows.Controls.TextBox>\).  
+## <a name="example"></a><span data-ttu-id="5f5b4-105">Пример</span><span class="sxs-lookup"><span data-stu-id="5f5b4-105">Example</span></span>  
+ <span data-ttu-id="5f5b4-106"><xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Свойство имеет значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-106">The <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> property has a default <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value of <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.</span></span> <span data-ttu-id="5f5b4-107">Это означает, что если приложение имеет <xref:System.Windows.Controls.TextBox> с привязкой к данным <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство, текст, вводимый в <xref:System.Windows.Controls.TextBox> обновляет источник до <xref:System.Windows.Controls.TextBox> теряет фокус (например, если щелкнуть вне <xref:System.Windows.Controls.TextBox>).</span><span class="sxs-lookup"><span data-stu-id="5f5b4-107">This means if an application has a <xref:System.Windows.Controls.TextBox> with a data-bound <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> property, the text you type into the <xref:System.Windows.Controls.TextBox> does not update the source until the <xref:System.Windows.Controls.TextBox> loses focus (for instance, when you click away from the <xref:System.Windows.Controls.TextBox>).</span></span>  
   
- Если требуется, чтобы источник обновлялся при вводе, задайте <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки к <xref:System.Windows.Data.UpdateSourceTrigger>.  В следующем примере свойства `Text` и <xref:System.Windows.Controls.TextBox>, и <xref:System.Windows.Controls.TextBlock> связаны с теми же свойствами источника.  Свойство <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки <xref:System.Windows.Controls.TextBox> устанавливается в значение <xref:System.Windows.Data.UpdateSourceTrigger>.  
+ <span data-ttu-id="5f5b4-108">Если нужно Источник обновлялся при вводе, задайте <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-108">If you want the source to get updated as you are typing, set the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> of the binding to <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span></span> <span data-ttu-id="5f5b4-109">В следующем примере `Text` свойства обоих <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBlock> связаны с теми же свойствами источника.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-109">In the following example, the `Text` properties of both the <xref:System.Windows.Controls.TextBox> and the <xref:System.Windows.Controls.TextBlock> are bound to the same source property.</span></span> <span data-ttu-id="5f5b4-110"><xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство <xref:System.Windows.Controls.TextBox> привязки имеет значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-110">The <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property of the <xref:System.Windows.Controls.TextBox> binding is set to <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span></span>  
   
- [!code-xml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#usthowto)]  
+ [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#usthowto)]  
   
- В результате <xref:System.Windows.Controls.TextBlock> отображает текст \(поскольку источник изменяется\), которой пользователь вводит в <xref:System.Windows.Controls.TextBox>, как показано на следующем снимке экрана:  
+ <span data-ttu-id="5f5b4-111">В результате <xref:System.Windows.Controls.TextBlock> отображает текст (поскольку источник изменяется), как пользователь вводит в <xref:System.Windows.Controls.TextBox>, как показано на следующем снимке экрана образца:</span><span class="sxs-lookup"><span data-stu-id="5f5b4-111">As a result, the <xref:System.Windows.Controls.TextBlock> shows the same text (because the source changes) as the user enters text into the <xref:System.Windows.Controls.TextBox>, as illustrated by the following screenshot of the sample:</span></span>  
   
- ![Снимок экрана простого примера привязки данных](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ <span data-ttu-id="5f5b4-112">![Снимок экрана примера простой привязки данных ](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")</span><span class="sxs-lookup"><span data-stu-id="5f5b4-112">![Simple data binding sample screen shot](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")</span></span>  
   
- Если имеется диалоговое окно или редактируемая пользователем форма, и требуется отложить обновление источника до тех пор, пока пользователь не завершит редактирование поля и нажмет кнопку «ОК», то можно установить значение <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки в <xref:System.Windows.Data.UpdateSourceTrigger>, как в следующем примере:  
+ <span data-ttu-id="5f5b4-113">Если у вас есть диалоговое окно или редактируемая пользователем форма и требуется отложить обновление источника, пока пользователь не завершит редактирование поля и нажимает кнопку «ОК», можно задать <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение привязки в <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="5f5b4-113">If you have a dialog or a user-editable form and you want to defer source updates until the user is finished editing the fields and clicks "OK", you can set the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value of your bindings to <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, as in the following example:</span></span>  
   
- [!code-xml[UpdateSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
+ [!code-xaml[UpdateSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
   
- Если задано значение <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>, равное <xref:System.Windows.Data.UpdateSourceTrigger>, то значение источника изменится только тогда, когда приложение вызовет метод <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>.  В следующем примере показан способ вызова <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> для `itemNameTextBox`:  
+ <span data-ttu-id="5f5b4-114">При задании <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, исходное значение изменяется, только когда приложение вызывает <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-114">When you set the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value to <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, the source value only changes when the application calls the <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> method.</span></span> <span data-ttu-id="5f5b4-115">В следующем примере демонстрируется вызов <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> для `itemNameTextBox`:</span><span class="sxs-lookup"><span data-stu-id="5f5b4-115">The following example shows how to call <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> for `itemNameTextBox`:</span></span>  
   
  [!code-csharp[UpdateSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
  [!code-vb[UpdateSource#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
   
 > [!NOTE]
->  Можно использовать одинаковые технологии для свойств других элементов управления, но следует помнить, что большинство других свойств имеют значения <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> для <xref:System.Windows.Data.UpdateSourceTrigger> по умолчанию.  Дополнительные сведения см. в свойстве на странице свойства <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+>  <span data-ttu-id="5f5b4-116">Можно использовать ту же методику для свойств других элементов управления, но имейте в виду, что большинство других свойств имеют значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-116">You can use the same technique for properties of other controls, but keep in mind that most other properties have a default <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> value of <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.</span></span> <span data-ttu-id="5f5b4-117">Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> страницу свойств.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-117">For more information, see the <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property page.</span></span>  
   
 > [!NOTE]
->  Свойство <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> имеет дело с обновлениями источника и, таким образом, относится только к привязкам <xref:System.Windows.Data.BindingMode> или <xref:System.Windows.Data.BindingMode>.  Чтобы привязки <xref:System.Windows.Data.BindingMode> и <xref:System.Windows.Data.BindingMode> работали, исходный объект должен предоставить уведомление об изменениях свойства.  Можно обратиться к примеру в данном разделе для получения дополнительных сведений.  Кроме того, можно посмотреть в [Реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+>  <span data-ttu-id="5f5b4-118"><xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство имеет дело с обновлениями источника и поэтому относится только к <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-118">The <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> property deals with source updates and therefore is only relevant for <xref:System.Windows.Data.BindingMode.TwoWay> or <xref:System.Windows.Data.BindingMode.OneWayToSource> bindings.</span></span> <span data-ttu-id="5f5b4-119">Для <xref:System.Windows.Data.BindingMode.TwoWay> и <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки для работы, исходный объект должен предоставить уведомление об изменениях свойств.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-119">For <xref:System.Windows.Data.BindingMode.TwoWay> and <xref:System.Windows.Data.BindingMode.OneWayToSource> bindings to work, the source object needs to provide property change notifications.</span></span> <span data-ttu-id="5f5b4-120">Можно изучить примеры, приведенные в этом разделе, для получения дополнительной информации.</span><span class="sxs-lookup"><span data-stu-id="5f5b4-120">You can refer to the samples cited in this topic for more information.</span></span> <span data-ttu-id="5f5b4-121">Кроме того, см. раздел [Реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).</span><span class="sxs-lookup"><span data-stu-id="5f5b4-121">In addition, you can look at [Implement Property Change Notification](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).</span></span>  
   
-## См. также  
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="5f5b4-122">См. также</span><span class="sxs-lookup"><span data-stu-id="5f5b4-122">See Also</span></span>  
+ [<span data-ttu-id="5f5b4-123">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="5f5b4-123">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

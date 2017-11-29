@@ -1,88 +1,86 @@
 ---
-title: "Элемент &lt;iriParsing&gt; (параметры URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;iriParsing&gt; элемент (параметры Uri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: aad2ea9a9255a6fc11465bae92f693065db21cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;iriParsing&gt; (параметры URI)
-Указывает, применяется ли синтаксический анализ международного имени ресурса \(IRI\) к <xref:System.Uri>, а также следует ли применять правила синтаксического анализа IRI.  
+# <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="d086e-102">&lt;iriParsing&gt; элемент (параметры Uri)</span><span class="sxs-lookup"><span data-stu-id="d086e-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="d086e-103">Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="d086e-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  
   
-## Схема иерархии  
- [Элемент \<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="d086e-104">Схема иерархии</span><span class="sxs-lookup"><span data-stu-id="d086e-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="d086e-105">Элемент \<configuration></span><span class="sxs-lookup"><span data-stu-id="d086e-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [Элемент \<Uri\> \(параметры URI\)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="d086e-106">\<URI > элемент (параметры Uri)</span><span class="sxs-lookup"><span data-stu-id="d086e-106">\<Uri> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<iriParsing\>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
+ [<span data-ttu-id="d086e-107">\<iriParsing ></span><span class="sxs-lookup"><span data-stu-id="d086e-107">\<iriParsing></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="d086e-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d086e-108">Syntax</span></span>  
   
-```  
-<idn  
+```xml  
+<iriParsing  
   enabled="true|false"  
-/idn>  
+/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d086e-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="d086e-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d086e-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="d086e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="d086e-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d086e-111">Attributes</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|`enabled`|Указание того, включен ли анализ IRI.  Значение по умолчанию — `false`.|  
+|<span data-ttu-id="d086e-112">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="d086e-112">**Element**</span></span>|<span data-ttu-id="d086e-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="d086e-113">**Description**</span></span>|  
+|-----------------|---------------------|  
+|`enabled`|<span data-ttu-id="d086e-114">Указывает, включен ли синтаксического анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="d086e-114">Specifies whether IRI parsing is enabled.</span></span> <span data-ttu-id="d086e-115">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="d086e-115">The default value is `false`.</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="d086e-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="d086e-116">Child Elements</span></span>  
+ <span data-ttu-id="d086e-117">Нет</span><span class="sxs-lookup"><span data-stu-id="d086e-117">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="d086e-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="d086e-118">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб\-адреса, выраженные с использованием универсальных кодов ресурсов \(URI\).|  
+|<span data-ttu-id="d086e-119">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="d086e-119">**Element**</span></span>|<span data-ttu-id="d086e-120">**Описание**</span><span class="sxs-lookup"><span data-stu-id="d086e-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="d086e-121">URI</span><span class="sxs-lookup"><span data-stu-id="d086e-121">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="d086e-122">Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).</span><span class="sxs-lookup"><span data-stu-id="d086e-122">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## Примечания  
- Существующий класс <xref:System.Uri> был расширен в .NET Framework 3.5, 3.0 SP1 и 2.0 SP1 для поддержки международных идентификаторов ресурсов \(IRI\) и международных доменных имен \(IDN\).  Пользователи не увидят никаких функциональных изменений в сравнении с .NET Framework 2.0, если специально не включат поддержку IRI и IDN.  Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
+## <a name="remarks"></a><span data-ttu-id="d086e-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="d086e-123">Remarks</span></span>  
+ <span data-ttu-id="d086e-124">Существующий <xref:System.Uri> класс был расширен в .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="d086e-124">The existing <xref:System.Uri> class has been extended in .NET Framework 3.5.</span></span> <span data-ttu-id="d086e-125">3.0 с пакетом обновления 1 и 2.0 с пакетом обновления 1, чтобы обеспечить поддержку международных идентификаторов ресурсов (IRI) и международных доменных имен (IDN).</span><span class="sxs-lookup"><span data-stu-id="d086e-125">3.0 SP1, and 2.0 SP1 to provide support for International Resource Identifiers (IRI) and Internationalized Domain Names (IDN).</span></span> <span data-ttu-id="d086e-126">Текущие пользователи не увидят любые изменения в работе платформы .NET Framework 2.0, пока они не запустят IRI и IDN поддержки.</span><span class="sxs-lookup"><span data-stu-id="d086e-126">Current users will not see any change from the .NET Framework 2.0 behavior unless they specifically enable IRI and IDN support.</span></span> <span data-ttu-id="d086e-127">Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d086e-127">This ensures application compatibility with prior versions of the .NET Framework.</span></span>  
   
- Для включения поддержки IRI требуется внести два изменения.  
+ <span data-ttu-id="d086e-128">Чтобы обеспечить поддержку IRI, необходимы следующие два изменения:</span><span class="sxs-lookup"><span data-stu-id="d086e-128">To enable support for IRI, the following two changes are required:</span></span>  
   
-1.  Добавить следующую строку в файл machine.config в каталоге .NET Framework 2.0.  
+1.  <span data-ttu-id="d086e-129">Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="d086e-129">Add the following line to the machine.config file under the .NET Framework 2.0 directory</span></span>  
   
-    ```  
+    ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Указать, применяются ли правила анализа IRI.  Это можно сделать в файле machine.config или в файле app.config.  
+2.  <span data-ttu-id="d086e-130">Укажите, следует ли применять правила синтаксического анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="d086e-130">Specify whether IRI parsing rules should be applied.</span></span> <span data-ttu-id="d086e-131">Это можно сделать в файле machine.config или в файле app.config.</span><span class="sxs-lookup"><span data-stu-id="d086e-131">This can be done in the machine.config or in the app.config file.</span></span>  
   
- При включении синтаксического анализа IRI \(iriParsing enabled \= `true`\) нормализация и проверка символов выполняются в соответствии с новейшими правилами IRI в стандарте RFC 3987.  По умолчанию используется значение `false`, а нормализация и проверка символов выполняются в соответствии со стандартами RFC 2396 и RFC 3986 \(для литералов IPv6\).  
+ <span data-ttu-id="d086e-132">Включение синтаксического анализа IRI (iriParsing включен = `true`) нормализация и проверка символов в соответствии с последней IRI правилами в стандарте RFC 3987.</span><span class="sxs-lookup"><span data-stu-id="d086e-132">Enabling IRI parsing (iriParsing enabled = `true`) will do normalization and character checking according to the latest IRI rules in RFC 3987.</span></span> <span data-ttu-id="d086e-133">Значение по умолчанию — `false` и нормализации и символов проверка в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).</span><span class="sxs-lookup"><span data-stu-id="d086e-133">The default value is `false` and will do normalization and character checking according to RFC 2396 and RFC 3986 (for IPv6 literals).</span></span>  
   
-### Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+### <a name="configuration-files"></a><span data-ttu-id="d086e-134">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="d086e-134">Configuration Files</span></span>  
+ <span data-ttu-id="d086e-135">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="d086e-135">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="d086e-136">Пример</span><span class="sxs-lookup"><span data-stu-id="d086e-136">Example</span></span>  
   
-### Описание  
- В следующем примере кода показывается, как использовать класс <xref:System.Uri> для поддержки синтаксического анализа IRI и имен IDN.  
+### <a name="description"></a><span data-ttu-id="d086e-137">Описание</span><span class="sxs-lookup"><span data-stu-id="d086e-137">Description</span></span>  
+ <span data-ttu-id="d086e-138">В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки синтаксического анализа IRI и имен IDN.</span><span class="sxs-lookup"><span data-stu-id="d086e-138">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="d086e-139">Код</span><span class="sxs-lookup"><span data-stu-id="d086e-139">Code</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -91,7 +89,7 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="d086e-140">См. также</span><span class="sxs-lookup"><span data-stu-id="d086e-140">See Also</span></span>  
+ <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ [<span data-ttu-id="d086e-141">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="d086e-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

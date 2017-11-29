@@ -1,35 +1,27 @@
 ---
-title: "Пример XML-файла: Книги (LINQ to XML) | Документы Microsoft"
+title: "Пример XML-файла. Книги (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e229b1f411fe05510aa626781f362dd8ff6c9b2f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 04131afff2075043936bba97b7ce344ffeeb4300
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>Пример XML-файла. Книги (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Этот файл содержит сведения о книгах.  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="00fb3-102">Пример XML-файла. Книги (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="00fb3-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="00fb3-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="00fb3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="00fb3-104">Этот файл содержит сведения о книгах.</span><span class="sxs-lookup"><span data-stu-id="00fb3-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="00fb3-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="00fb3-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,5 +48,5 @@ ms.lasthandoff: 03/13/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="00fb3-106">См. также</span><span class="sxs-lookup"><span data-stu-id="00fb3-106">See Also</span></span>  
+ [<span data-ttu-id="00fb3-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="00fb3-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

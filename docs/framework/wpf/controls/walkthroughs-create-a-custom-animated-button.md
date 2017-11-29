@@ -1,48 +1,51 @@
 ---
-title: "Пошаговые руководства: создание пользовательской анимированной кнопки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, кнопки"
-  - "кнопки"
-  - "пользовательские анимированные кнопки"
+title: "Пошаговые руководства: создание пользовательской анимированной кнопки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom animated buttons [WPF]
+- buttons [WPF]
+- animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Пошаговые руководства: создание пользовательской анимированной кнопки
-Как видно из его названия, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] является удобным средством для получения опыта создания презентаций для клиентов.  В данных пошаговых руководствах показан процесс настройки внешнего вида и поведения кнопки \(включая анимацию\).  Эта настройка выполняется с использованием стиля и шаблона таким образом, что эта пользовательская кнопка легко может быть применена к любой кнопке в приложении.  На рисунке показана пользовательская кнопка, которую вы создадите.  
+# <a name="walkthroughs-create-a-custom-animated-button"></a><span data-ttu-id="cf7ec-102">Пошаговые руководства: создание пользовательской анимированной кнопки</span><span class="sxs-lookup"><span data-stu-id="cf7ec-102">Walkthroughs: Create a Custom Animated Button</span></span>
+<span data-ttu-id="cf7ec-103">Как и предполагает его имя, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] отлично подходит для создания презентаций взаимодействия для клиентов.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-103">As its name suggests, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] is great for making rich presentation experiences for customers.</span></span> <span data-ttu-id="cf7ec-104">В этих пошаговых руководствах показано, как настроить внешний вид и поведение кнопки (включая анимацию).</span><span class="sxs-lookup"><span data-stu-id="cf7ec-104">These walkthroughs show you how to customize the look and behavior of a button (including animations).</span></span> <span data-ttu-id="cf7ec-105">Эта настройка выполняется с помощью стилей и шаблонов, что можно применить эта пользовательская кнопка легко на все кнопки в приложении.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-105">This customization is done using a style and template so that you can apply this custom button easily to any buttons in your application.</span></span> <span data-ttu-id="cf7ec-106">На следующем рисунке настраиваемая кнопка будет создан.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-106">The following illustration shows the customized button that you will create.</span></span>  
   
- ![Настраиваемая кнопка, которая создается](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ <span data-ttu-id="cf7ec-107">![Настраиваемая кнопка, которая будет создан](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span><span class="sxs-lookup"><span data-stu-id="cf7ec-107">![The customized button that you will create](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")</span></span>  
   
- Векторная графика, составляющая внешний вид кнопки, создается при помощи [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] аналогичен HTML, но является более мощным и расширяемым.  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] может быть введен вручную с помощью Microsoft Visual Studio или Блокнота. Разработчик также может использовать средства визуальной разработки, например Microsoft Expression Blend.  Expression Blend работает путем создания основного кода [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], поэтому оба метода создают одинаковую графику.  
+ <span data-ttu-id="cf7ec-108">Векторная графика, составляющие внешний вид кнопки создаются с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf7ec-108">The vector graphics that make up the appearance of the button are created by using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]<span data-ttu-id="cf7ec-109">аналогичен HTML но является более мощным и расширяемым.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-109"> is similar to HTML except it is more powerful and extensible.</span></span> [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="cf7ec-110">можно вводить вручную с помощью Microsoft Visual Studio или Блокнот, или можно использовать средства визуального проектирования, такого как Microsoft Expression Blend.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-110"> can be typed in manually using Microsoft Visual Studio or Notepad, or you can use a visual design tool such as Microsoft Expression Blend.</span></span> <span data-ttu-id="cf7ec-111">Expression Blend работает путем создания основного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] кода, поэтому оба метода создают одинаковую графику.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-111">Expression Blend works by creating underlying [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code, so both methods create the same graphics.</span></span>  
   
-## В этом подразделе  
- [Создание кнопки с помощью Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- Демонстрирует способ создания пользовательских кнопок с помощью средства конструктора Expression Blend.  
+## <a name="in-this-section"></a><span data-ttu-id="cf7ec-112">Содержание</span><span class="sxs-lookup"><span data-stu-id="cf7ec-112">In This Section</span></span>  
+ [<span data-ttu-id="cf7ec-113">Создание кнопки с помощью Microsoft Expression Blend</span><span class="sxs-lookup"><span data-stu-id="cf7ec-113">Create a Button by Using Microsoft Expression Blend</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
+ <span data-ttu-id="cf7ec-114">Демонстрирует создание кнопки с помощью пользовательского поведения с помощью средства конструктора Expression Blend.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-114">Demonstrates how to create buttons with custom behavior by using the designer features of Expression Blend.</span></span>  
   
- [Создание кнопки с помощью XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- Демонстрирует способы создания пользовательских кнопок с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ [<span data-ttu-id="cf7ec-115">Создание кнопки с помощью XAML</span><span class="sxs-lookup"><span data-stu-id="cf7ec-115">Create a Button by Using XAML</span></span>](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ <span data-ttu-id="cf7ec-116">Демонстрирует создание кнопки с помощью пользовательского поведения с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf7ec-116">Demonstrates how to create buttons with custom behavior by using [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span></span>  
   
-## Связанные подразделы  
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- Содержит сведения о том, как стили и шаблоны могут использоваться для определения внешнего вида и поведения элементов управления.  
+## <a name="related-sections"></a><span data-ttu-id="cf7ec-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cf7ec-117">Related Sections</span></span>  
+ [<span data-ttu-id="cf7ec-118">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="cf7ec-118">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ <span data-ttu-id="cf7ec-119">Описывает, как стили и шаблоны могут использоваться для определения внешнего вида и поведения элементов управления.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-119">Describes how styles and templates can be used to determine the appearance and behavior of controls.</span></span>  
   
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- Содержит сведения о том, как объекты могут быть анимированы с помощью анимации [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и системы времени.  
+ [<span data-ttu-id="cf7ec-120">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="cf7ec-120">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ <span data-ttu-id="cf7ec-121">Описывает, как объекты могут быть анимированы с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] анимации и системы управления временем.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-121">Describes how objects can be animated by using the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] animation and timing system.</span></span>  
   
- [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- Описывает способы использования объектов кисти для рисования сплошным цветом, линейным градиентом и радиальным градиентом.  
+ [<span data-ttu-id="cf7ec-122">Общие сведения о закраске сплошным цветом и градиентом</span><span class="sxs-lookup"><span data-stu-id="cf7ec-122">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ <span data-ttu-id="cf7ec-123">Описание способов использования объектов кисти для рисования сплошным цветом, линейным градиентом и радиального градиента.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-123">Describes how to use brush objects to paint with solid colors, linear gradients, and radial gradients.</span></span>  
   
- [Общие сведения об эффектах для точечных рисунков](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
- Описывает эффекты точечного рисунка, поддерживаемые [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], и способы их применения.
+ [<span data-ttu-id="cf7ec-124">Общие сведения об эффектах для точечных рисунков</span><span class="sxs-lookup"><span data-stu-id="cf7ec-124">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ <span data-ttu-id="cf7ec-125">Описывает эффекты точечного рисунка, поддерживаемые [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и о способах их применения.</span><span class="sxs-lookup"><span data-stu-id="cf7ec-125">Describes the bitmap effects supported by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] and explains how to apply them.</span></span>

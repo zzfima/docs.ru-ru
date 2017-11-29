@@ -1,97 +1,98 @@
 ---
-title: "Практическое руководство. Создание составных элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "составные элементы управления, создание"
-  - "пользовательские элементы управления [Windows Forms], создание"
-  - "пользовательские элементы управления [Windows Forms], наследование от"
-  - "UserControl - класс, создание составных элементов управления"
+title: "Практическое руководство. Создание составных элементов управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UserControl class [Windows Forms], creating composite controls
+- user controls [Windows Forms], creating
+- user controls [Windows Forms], inheriting from
+- composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 72c68568f0178956d6154f0b3a070e69b6ff0502
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание составных элементов управления
-Составные элементы управления могут применяться несколькими способами.  Можно создать их как часть проекта приложения для рабочего стола Windows и использовать затем только в формах проекта.  Можно также создать их в проекте библиотеки элементов управления Windows, скомпилировать проект в сборку, а затем использовать элементы управления в других проектах.  Можно даже наследовать их и использовать визуальное наследование для быстрой настройки.  
+# <a name="how-to-author-composite-controls"></a><span data-ttu-id="a1268-102">Практическое руководство. Создание составных элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1268-102">How to: Author Composite Controls</span></span>
+<span data-ttu-id="a1268-103">Составные элементы управления можно применять различным образом.</span><span class="sxs-lookup"><span data-stu-id="a1268-103">Composite controls can be employed in many ways.</span></span> <span data-ttu-id="a1268-104">Их можно создать как часть проекта приложения рабочего стола Windows и использовать только в формах проекта.</span><span class="sxs-lookup"><span data-stu-id="a1268-104">You can author them as part of a Windows desktop application project, and use them only on forms in the project.</span></span> <span data-ttu-id="a1268-105">Или их можно создать в проекте библиотеки элементов управления Windows, скомпилировать проект в сборку и использовать элементы управления в других проектах.</span><span class="sxs-lookup"><span data-stu-id="a1268-105">Or you can author them in a Windows Control Library project, compile the project into an assembly, and use the controls in other projects.</span></span> <span data-ttu-id="a1268-106">Можно даже от них наследовать и использовать визуальное наследование для их быстрой настройки.</span><span class="sxs-lookup"><span data-stu-id="a1268-106">You can even inherit from them, and use visual inheritance to customize them quickly for special purposes.</span></span>  
   
 > [!NOTE]
->  Если необходимо создать составной элемент управления для использования в конструкторе Web Forms, см. раздел [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+>  <span data-ttu-id="a1268-107">Если необходимо создать составной элемент управления для использования в Web Forms, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span><span class="sxs-lookup"><span data-stu-id="a1268-107">If you want to author a composite control to use on Web Forms, see [Developing Custom ASP.NET Server Controls](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).</span></span>  
 >   
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="a1268-108">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="a1268-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a1268-109">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="a1268-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a1268-110">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="a1268-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы создать составной элемент управления, выполните следующие действия:  
+### <a name="to-author-a-composite-control"></a><span data-ttu-id="a1268-111">Создание составного элемента управления</span><span class="sxs-lookup"><span data-stu-id="a1268-111">To author a composite control</span></span>  
   
-1.  Откройте новый проект **Приложение Windows** с именем `DemoControlHost`.  
+1.  <span data-ttu-id="a1268-112">Откройте новый проект **приложения Windows** с именем `DemoControlHost`.</span><span class="sxs-lookup"><span data-stu-id="a1268-112">Open a new **Windows Application** project called `DemoControlHost`.</span></span>  
   
-2.  В меню **Проект** выберите команду **Добавить пользовательский элемент управления**.  
+2.  <span data-ttu-id="a1268-113">В меню **Проект** выберите команду **Добавить пользовательский элемент управления**.</span><span class="sxs-lookup"><span data-stu-id="a1268-113">On the **Project**menu, click **Add User Control**.</span></span>  
   
-3.  В диалоговом окне **Добавление нового элемента** присвойте файлу класса \(.vb или .cs\) имя, которое планируется назначить составному элементу управления.  
+3.  <span data-ttu-id="a1268-114">В диалоговом окне **Добавить новый элемент** присвойте файлу класса (файлу VB или CS) имя, которое должен иметь составной элемент управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-114">In the **Add New Item** dialog box, give the class file (.vb or .cs file) the name you want the composite control to have.</span></span>  
   
-4.  Нажмите кнопку **Добавить**, чтобы создать файл класса для составного элемента управления.  
+4.  <span data-ttu-id="a1268-115">Нажмите кнопку **Добавить**, чтобы создать файл класса для составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-115">Click the **Add** button to create the class file for the composite control.</span></span>  
   
-5.  Добавьте элементы управления из **панели элементов** на поверхность составного элемента управления.  
+5.  <span data-ttu-id="a1268-116">Добавьте элементы управления с **панели элементов** на поверхность составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-116">Add controls from the **Toolbox** to the composite control surface.</span></span>  
   
-6.  Поместите код в процедуры событий для обработки событий, вызываемых составным элементом управления или входящими в его состав элементами управления.  
+6.  <span data-ttu-id="a1268-117">Поместите код в соответствующие процедуры для обработки событий, вызываемых составным элементом управления или входящими в его состав элементами управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-117">Place code in event procedures, to handle events raised by the composite control or by its constituent controls.</span></span>  
   
-7.  Закройте конструктор для составного элемента управления и сохраните файл в ответ на соответствующее приглашение.  
+7.  <span data-ttu-id="a1268-118">Закройте конструктор для составного элемента управления и сохраните файл по запросу.</span><span class="sxs-lookup"><span data-stu-id="a1268-118">Close the designer for the composite control, and save the file when you are prompted.</span></span>  
   
-8.  В меню **Построение** выберите **Построить решение**.  
+8.  <span data-ttu-id="a1268-119">В меню **Сборка** выберите **Собрать решение**.</span><span class="sxs-lookup"><span data-stu-id="a1268-119">On the **Build** menu, click **Build Solution**.</span></span>  
   
-     Построение проекта необходимо для того, чтобы пользовательские элементы управления отображались в **панели элементов**.  
+     <span data-ttu-id="a1268-120">Проект необходимо собрать, чтобы пользовательские элементы управления появились на **панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="a1268-120">The project must be built in order for custom controls to appear in the **Toolbox**.</span></span>  
   
-9. Используя вкладку **DemoControlHost** в **панели элементов**, добавьте экземпляры элемента управления в форму `Form1`.  
+9. <span data-ttu-id="a1268-121">Для добавления экземпляров элемента управления в `Form1` используйте вкладку **DemoControlHost** на **панели элементов**.</span><span class="sxs-lookup"><span data-stu-id="a1268-121">Use the **DemoControlHost** tab of the **Toolbox** to add instances of your control to `Form1`.</span></span>  
   
-### Чтобы разработать библиотеку классов элементов управления, выполните следующие действия:  
+### <a name="to-author-a-control-class-library"></a><span data-ttu-id="a1268-122">Разработка библиотеки классов элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1268-122">To author a control class library</span></span>  
   
-1.  Откройте новый проект **Библиотека элементов управления Windows**.  
+1.  <span data-ttu-id="a1268-123">Откройте новый проект **библиотеки элементов управления Windows**.</span><span class="sxs-lookup"><span data-stu-id="a1268-123">Open a new **Windows Control Library** project.</span></span>  
   
-     По умолчанию проект содержит составной элемент управления.  
+     <span data-ttu-id="a1268-124">По умолчанию проект содержит составной элемент управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-124">By default, the project contains a composite control.</span></span>  
   
-2.  Добавьте элементы управления и код, как описано в предыдущей процедуре.  
+2.  <span data-ttu-id="a1268-125">Добавьте элементы управления и код, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="a1268-125">Add controls and code as described in the procedure above.</span></span>  
   
-3.  Выберите элемент управления, который не должен изменяться при наследовании классов, и задайте для свойства **Модификаторы** этого элемента управления значение **Private**.  
+3.  <span data-ttu-id="a1268-126">Выберите элемент управления, который не должны изменять производные классы, и установите для свойства **Модификаторы** этого элемента управления значение **Закрытый**.</span><span class="sxs-lookup"><span data-stu-id="a1268-126">Choose a control you do not want inheriting classes to change, and set the **Modifiers** property of this control to **Private**.</span></span>  
   
-4.  Постройте библиотеку DLL.  
+4.  <span data-ttu-id="a1268-127">Построение библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="a1268-127">Build the DLL.</span></span>  
   
-### Чтобы наследовать из составного элемента управления в библиотеке классов элементов управления, выполните следующие действия:  
+### <a name="to-inherit-from-a-composite-control-in-a-control-class-library"></a><span data-ttu-id="a1268-128">Наследование от составного элемента управления в библиотеке классов элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1268-128">To inherit from a composite control in a control class library</span></span>  
   
-1.  В меню **Файл** выберите **Создать**, затем выберите **Создать проект**, чтобы добавить в решение новый проект **Приложение Windows**.  
+1.  <span data-ttu-id="a1268-129">В меню **Файл** наведите указатель мыши на **Добавить** и выберите **Новый проект** для добавления нового проекта **приложения Windows** в решение.</span><span class="sxs-lookup"><span data-stu-id="a1268-129">On the **File** menu, point to **Add** and select **New Project** to add a new **Windows Application** project to the solution.</span></span>  
   
-2.  В **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** для нового проекта, затем выберите команду **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.  
+2.  <span data-ttu-id="a1268-130">В **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** для нового проекта и выберите **Добавить ссылку**, чтобы открыть диалоговое окно **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="a1268-130">In **Solution Explorer**, right-click the **References** folder for the new project and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-3.  Выберите вкладку **Проекты** и дважды щелкните проект библиотеки элементов управления.  
+3.  <span data-ttu-id="a1268-131">Перейдите на вкладку **Проекты** и дважды щелкните проект библиотеки элементов управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-131">Select the **Projects** tab and double-click your control library project.</span></span>  
   
-4.  В меню **Построение** выберите **Построить решение**.  
+4.  <span data-ttu-id="a1268-132">В меню **Сборка** выберите **Собрать решение**.</span><span class="sxs-lookup"><span data-stu-id="a1268-132">On the **Build** menu, click **Build Solution**.</span></span>  
   
-5.  В **обозревателе решений** щелкните правой кнопкой мыши проект библиотеки элементов управления и выберите из контекстного меню команду **Добавить новый элемент**.  
+5.  <span data-ttu-id="a1268-133">В **обозревателе решений** щелкните правой кнопкой мыши проект библиотеки элементов управления и выберите пункт **Добавить новый элемент** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="a1268-133">In **Solution Explorer**, right-click your control library project and select **Add New Item** from the shortcut menu.</span></span>  
   
-6.  В диалоговом окне **Добавление нового элемента** выберите шаблон **Производный пользовательский элемент управления**.  
+6.  <span data-ttu-id="a1268-134">Выберите шаблон **Производный пользовательский элемент управления** в диалоговом окне **Добавить новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="a1268-134">Select the **Inherited User Control** template from the **Add New Item** dialog box.</span></span>  
   
-7.  В диалоговом окне **Выбор компонентов для наследования** дважды щелкните элемент управления, который необходимо наследовать.  
+7.  <span data-ttu-id="a1268-135">В диалоговом окне **Выбор компонентов для наследования** дважды щелкните элемент управления, от которого должно производиться наследование.</span><span class="sxs-lookup"><span data-stu-id="a1268-135">In the **Inheritance Picker** dialog box, double-click the control you want to inherit from.</span></span>  
   
-     В проект добавляется новый элемент управления.  
+     <span data-ttu-id="a1268-136">В ваш проект будет добавлен новый элемент управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-136">A new control is added to your project.</span></span>  
   
-8.  Откройте визуальный конструктор для нового элемента управления и добавьте в него необходимые вложенные элементы управления.  
+8.  <span data-ttu-id="a1268-137">Откройте визуальный конструктор для нового элемента управления и добавьте дополнительные вложенные элементы управления.</span><span class="sxs-lookup"><span data-stu-id="a1268-137">Open the visual designer for the new control and add additional constituent controls.</span></span>  
   
-     В окне будут показаны вложенные элементы управления, унаследованные из составного элемента управления в библиотеке DLL, причем свойства тех элементов управления, для которых свойство **Модификаторы** имеет значение **Public**, можно изменять.  Свойства элементов управления, для которых свойство **Модификаторы** имеет значение **Private**, изменять нельзя.  
+     <span data-ttu-id="a1268-138">Вы увидите вложенные элементы управления, унаследованные от составного элемента управления в библиотеке DLL, и сможете изменить свойства элементов управления, для свойства **Модификаторы** которых установлено значение **Открытый**.</span><span class="sxs-lookup"><span data-stu-id="a1268-138">You can see the constituent controls that were inherited from the composite control in your DLL, and you can alter the properties of controls whose **Modifiers** property is **Public**.</span></span> <span data-ttu-id="a1268-139">Свойства элемента управления, для свойства **Модификаторы** которого установлено значение **Закрытый**, менять нельзя.</span><span class="sxs-lookup"><span data-stu-id="a1268-139">You cannot change the properties of the control whose **Modifiers** property is **Private**.</span></span>  
   
-## См. также  
- [Пример. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)   
- [Пример. Создание составного элемента управления с помощью C\#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)   
- [Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)   
- [Пример. Наследование элементов управления форм Windows Forms с помощью Visual C\#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)   
- [Рекомендации относительно типов элементов управления](../../../../docs/framework/winforms/controls/control-type-recommendations.md)   
- [Практическое руководство. Создание элементов управления для форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)   
- [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="a1268-140">См. также</span><span class="sxs-lookup"><span data-stu-id="a1268-140">See Also</span></span>  
+ [<span data-ttu-id="a1268-141">Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1268-141">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [<span data-ttu-id="a1268-142">Пошаговое руководство. Создание составного элемента управления с помощью C#</span><span class="sxs-lookup"><span data-stu-id="a1268-142">Walkthrough: Authoring a Composite Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ [<span data-ttu-id="a1268-143">Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1268-143">Walkthrough: Inheriting from a Windows Forms Control with Visual Basic</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [<span data-ttu-id="a1268-144">Пошаговое руководство. Наследование элементов управления форм Windows Forms с помощью Visual C#</span><span class="sxs-lookup"><span data-stu-id="a1268-144">Walkthrough: Inheriting from a Windows Forms Control with Visual C#</span></span>](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ [<span data-ttu-id="a1268-145">Рекомендации относительно типов элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1268-145">Control Type Recommendations</span></span>](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
+ [<span data-ttu-id="a1268-146">Практическое руководство. Создание элементов управления для форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1268-146">How to: Author Controls for Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
+ [<span data-ttu-id="a1268-147">Разновидности пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="a1268-147">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

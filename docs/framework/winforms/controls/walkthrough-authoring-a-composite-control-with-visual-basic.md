@@ -1,90 +1,92 @@
 ---
-title: "Пример. Создание составного элемента управления с помощью Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "составные элементы управления, создание"
-  - "элементы управления [Windows Forms], составные элементы управления"
-  - "пользовательские элементы управления [Visual Basic]"
-  - "пользовательские элементы управления [Windows Forms], создание"
-  - "пользовательские элементы управления [Visual Basic]"
-  - "пользовательские элементы управления [Windows Forms], создание с помощью Visual Basic"
-  - "UserControl - класс, пошаговые руководства"
+title: "Пример. Создание составного элемента управления с помощью Visual Basic"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Visual Basic]
+- user controls [Visual Basic]
+- UserControl class [Windows Forms], walkthroughs
+- user controls [Windows Forms], creating with Visual Basic
+- controls [Windows Forms], composite controls
+- composite controls [Windows Forms], creating
+- custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Создание составного элемента управления с помощью Visual Basic
-Составные элементы управления являются тем средством, с помощью которого можно создавать и многократно использовать пользовательские графические интерфейсы.  Составной элемент управления — это компонент, имеющий визуальное представление.  Он может состоять из одного или нескольких элементов управления форм Windows Forms, компонентов или блоков кода, позволяющих расширить функциональные возможности \(например, проверять допустимость вводимых пользователем данных, изменять свойства отображения или выполнять другие действия, необходимые разработчику\).  Составные элементы управления можно поместить в формы Windows Forms точно так же, как и другие элементы управления.  В первой части пошагового руководства будет создан простой составной элемент управления `ctlClock`.  Во второй части пошагового руководства функциональные возможности элемента `ctlClock` будут расширены с помощью наследования.  
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a><span data-ttu-id="b3f88-102">Пример. Создание составного элемента управления с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b3f88-102">Walkthrough: Authoring a Composite Control with Visual Basic</span></span>
+<span data-ttu-id="b3f88-103">Составные элементы управления предоставляют средства для создания и повторного использования настраиваемых графических интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-103">Composite controls provide a means by which custom graphical interfaces can be created and reused.</span></span> <span data-ttu-id="b3f88-104">Составной элемент управления — это компонент, имеющий визуальное представление.</span><span class="sxs-lookup"><span data-stu-id="b3f88-104">A composite control is essentially a component with a visual representation.</span></span> <span data-ttu-id="b3f88-105">Таким образом, он может состоять из одного или нескольких элементов управления, компонентов или блоков кода Windows Forms, позволяющих расширить функциональные возможности за счет проверки введенных пользователем данных, изменения свойств отображения или выполнения других предусмотренных разработчиком действий.</span><span class="sxs-lookup"><span data-stu-id="b3f88-105">As such, it might consist of one or more Windows Forms controls, components, or blocks of code that can extend functionality by validating user input, modifying display properties, or performing other tasks required by the author.</span></span> <span data-ttu-id="b3f88-106">Составные элементы управления можно вставлять в Windows Forms точно так же, как другие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-106">Composite controls can be placed on Windows Forms in the same manner as other controls.</span></span> <span data-ttu-id="b3f88-107">В первой части этого пошагового руководства мы создадим простой составной элемент управления с именем `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-107">In the first part of this walkthrough, you create a simple composite control called `ctlClock`.</span></span> <span data-ttu-id="b3f88-108">Во второй части мы расширим функциональность `ctlClock` за счет наследования.</span><span class="sxs-lookup"><span data-stu-id="b3f88-108">In the second part of the walkthrough, you extend the functionality of `ctlClock` through inheritance.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="b3f88-109">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="b3f88-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="b3f88-110">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="b3f88-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="b3f88-111">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="b3f88-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## Создание проекта  
- При создании нового проекта следует задать его имя, чтобы были установлены корневое пространство имен, имя сборки и имя проекта, а компонент, создаваемый по умолчанию, был помещен в нужное пространство имен.  
+## <a name="creating-the-project"></a><span data-ttu-id="b3f88-112">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="b3f88-112">Creating the Project</span></span>  
+ <span data-ttu-id="b3f88-113">Создавая проект, вы указываете для него имя, чтобы задать корневое пространство имен, имя сборки и имя проекта, и необходимо убедиться в том, что компонент по умолчанию попадет в нужное пространство имен.</span><span class="sxs-lookup"><span data-stu-id="b3f88-113">When you create a new project, you specify its name to set the root namespace, assembly name, and project name, and ensure that the default component will be in the correct namespace.</span></span>  
   
-#### Чтобы создать библиотеку элементов управления ctlClockLib и элемент управления ctlClock  
+#### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a><span data-ttu-id="b3f88-114">Создание библиотеки элементов управления ctlClockLib и элемента управления ctlClock</span><span class="sxs-lookup"><span data-stu-id="b3f88-114">To create the ctlClockLib control library and the ctlClock control</span></span>  
   
-1.  В меню **Файл** выберите **Создать** и выберите пункт **Проект**, чтобы открыть диалоговое окно **Новый проект**.  
+1.  <span data-ttu-id="b3f88-115">В меню **Файл** наведите указатель мыши на пункт **Создать** и выберите **Проект**, чтобы открыть диалоговое окно **Создание проекта**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-115">On the **File** menu, point to **New**, and then click **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  Из списка проектов [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] выберите шаблон проекта **Библиотека элементов управления Windows** и в поле **Имя** введите `ctlClockLib`, затем нажмите кнопку **OK**.  
+2.  <span data-ttu-id="b3f88-116">В списке проектов [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] выберите шаблон проекта **Библиотека элементов управления Windows**, введите `ctlClockLib` в поле **Имя** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-116">From the list of [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] projects, select the **Windows Control Library** project template, type `ctlClockLib` in the **Name** box, and then click **OK**.</span></span>  
   
-     Имя проекта \(`ctlClockLib`\) также назначается по умолчанию корневому пространству имен.  Для определения имен компонентов в сборке используется корневое пространство имен.  Например, если в двух сборках содержатся компоненты с именем `ctlClock`, то можно указать свой компонент `ctlClock`, используя имя `ctlClockLib.ctlClock.` .  
+     <span data-ttu-id="b3f88-117">Имя проекта, `ctlClockLib`, по умолчанию также назначается корневому пространству имен.</span><span class="sxs-lookup"><span data-stu-id="b3f88-117">The project name, `ctlClockLib`, is also assigned to the root namespace by default.</span></span> <span data-ttu-id="b3f88-118">Корневое пространство имен используется для определения имен компонентов в сборке.</span><span class="sxs-lookup"><span data-stu-id="b3f88-118">The root namespace is used to qualify the names of components in the assembly.</span></span> <span data-ttu-id="b3f88-119">Например, если в двух сборках содержатся компоненты с именем `ctlClock`, можно указать компонент `ctlClock`, используя `ctlClockLib.ctlClock.`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-119">For example, if two assemblies provide components named `ctlClock`, you can specify your `ctlClock` component using `ctlClockLib.ctlClock.`</span></span>  
   
-3.  В обозревателе решений щелкните правой кнопкой мыши файл **UserControl1.vb** и затем нажмите **Переименовать**.  Измените имя файла на `ctlClock.vb`.  Нажмите кнопку **Да**, чтобы переименовать все ссылки на элемент кода UserControl1.  
+3.  <span data-ttu-id="b3f88-120">В обозревателе решений щелкните файл **UserControl1.vb** правой кнопкой мыши и выберите команду **Переименовать**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-120">In Solution Explorer, right-click **UserControl1.vb**, and then click **Rename**.</span></span> <span data-ttu-id="b3f88-121">Измените имя файла на `ctlClock.vb`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-121">Change the file name to `ctlClock.vb`.</span></span> <span data-ttu-id="b3f88-122">Чтобы переименовать все ссылки на элемент кода UserControl1, в соответствующем запросе нажмите кнопку **Да**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-122">Click the **Yes** button when you are asked if you want to rename all references to the code element "UserControl1".</span></span>  
   
     > [!NOTE]
-    >  По умолчанию составной компонент является наследником класса <xref:System.Windows.Forms.UserControl>, предоставляемого системой.  Класс <xref:System.Windows.Forms.UserControl> обеспечивает функциональность, необходимую всем составным элементам управления, и реализует стандартные методы и свойства.  
+    >  <span data-ttu-id="b3f88-123">По умолчанию, составного элемента управления наследует от <xref:System.Windows.Forms.UserControl> класс, предоставляемый системой.</span><span class="sxs-lookup"><span data-stu-id="b3f88-123">By default, a composite control inherits from the <xref:System.Windows.Forms.UserControl> class provided by the system.</span></span> <span data-ttu-id="b3f88-124"><xref:System.Windows.Forms.UserControl> Класс обеспечивает функциональность, необходимую всем составным элементам управления и реализует стандартные методы и свойства.</span><span class="sxs-lookup"><span data-stu-id="b3f88-124">The <xref:System.Windows.Forms.UserControl> class provides functionality required by all composite controls, and implements standard methods and properties.</span></span>  
   
-4.  В меню **Файл** выберите команду **Сохранить все** для сохранения проекта.  
+4.  <span data-ttu-id="b3f88-125">Сохраните проект, открыв меню **Файл** и выбрав пункт **Сохранить все**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-125">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Добавление элементов управления и компонентов Windows в составной элемент управления  
- Визуальный интерфейс — это важная часть составного элемента управления.  Он создается путем добавления одного или нескольких элементов управления Windows на поверхность конструктора.  В приведенном ниже примере будет показано, как добавлять элементы управления Windows в составной элемент управления и реализовывать необходимые функциональные возможности с помощью написания кода.  
+## <a name="adding-windows-controls-and-components-to-the-composite-control"></a><span data-ttu-id="b3f88-126">Добавление элементов управления и компонентов Windows в составной элемент управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-126">Adding Windows Controls and Components to the Composite Control</span></span>  
+ <span data-ttu-id="b3f88-127">Визуальный интерфейс представляет собой важную часть составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-127">A visual interface is an essential part of your composite control.</span></span> <span data-ttu-id="b3f88-128">Он реализуется путем добавления одного или нескольких элементов управления Windows на поверхность конструктора.</span><span class="sxs-lookup"><span data-stu-id="b3f88-128">This visual interface is implemented by the addition of one or more Windows controls to the designer surface.</span></span> <span data-ttu-id="b3f88-129">В следующем примере мы добавим элементы управления Windows в составной элемент управления и напишем код для реализации функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="b3f88-129">In the following demonstration, you will incorporate Windows controls into your composite control and write code to implement functionality.</span></span>  
   
-#### Чтобы добавить элементы управления Label и Timer в составной элемент управления  
+#### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a><span data-ttu-id="b3f88-130">Добавление метки и таймера в составной элемент управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-130">To add a Label and a Timer to your composite control</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlClock.vb** и выберите пункт **Конструктор представлений**.  
+1.  <span data-ttu-id="b3f88-131">В обозревателе решений щелкните файл **ctlClock.vb** правой кнопкой мыши и выберите пункт **Открыть в конструкторе**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-131">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  На панели элементов разверните узел **Общие элементы управления** и дважды щелкните элемент **Надпись**.  
+2.  <span data-ttu-id="b3f88-132">На панели элементов разверните узел **Общие элементы управления**, а затем дважды щелкните пункт **Метка**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-132">In the Toolbox, expand the **Common Controls** node, and then double-click **Label**.</span></span>  
   
-     Элемент управления <xref:System.Windows.Forms.Label> с именем `Label1` будет добавлен в созданный элемент управления на поверхности конструктора.  
+     <span data-ttu-id="b3f88-133">Объект <xref:System.Windows.Forms.Label> управления с именем `Label1` добавляется в элемент управления в рабочей области конструктора.</span><span class="sxs-lookup"><span data-stu-id="b3f88-133">A <xref:System.Windows.Forms.Label> control named `Label1` is added to your control on the designer surface.</span></span>  
   
-3.  Выберите в конструкторе элемент **Label1**.  В окне свойств задайте значения для следующих свойств.  
+3.  <span data-ttu-id="b3f88-134">В конструкторе щелкните пункт **Label1**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-134">In the designer, click **Label1**.</span></span> <span data-ttu-id="b3f88-135">В окне "Свойства" задайте следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="b3f88-135">In the Properties window, set the following properties.</span></span>  
   
-    |Свойство.|Значение|  
-    |---------------|--------------|  
-    |**Имя**|`lblDisplay`|  
-    |**Текст**|`(пробел)`|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Font.Size**|`14`|  
+    |<span data-ttu-id="b3f88-136">Свойство</span><span class="sxs-lookup"><span data-stu-id="b3f88-136">Property</span></span>|<span data-ttu-id="b3f88-137">Измените на</span><span class="sxs-lookup"><span data-stu-id="b3f88-137">Change to</span></span>|  
+    |--------------|---------------|  
+    |<span data-ttu-id="b3f88-138">**Имя**</span><span class="sxs-lookup"><span data-stu-id="b3f88-138">**Name**</span></span>|`lblDisplay`|  
+    |<span data-ttu-id="b3f88-139">**Текст**</span><span class="sxs-lookup"><span data-stu-id="b3f88-139">**Text**</span></span>|`(blank space)`|  
+    |<span data-ttu-id="b3f88-140">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="b3f88-140">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="b3f88-141">**Font.Size**</span><span class="sxs-lookup"><span data-stu-id="b3f88-141">**Font.Size**</span></span>|`14`|  
   
-4.  На **панели элементов** разверните узел **Компоненты** и дважды щелкните элемент **Таймер**.  
+4.  <span data-ttu-id="b3f88-142">На **панели элементов** разверните узел **Компоненты**, а затем дважды щелкните пункт **Таймер**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-142">In the **Toolbox**, expand the **Components** node, and then double-click **Timer**.</span></span>  
   
-     Поскольку <xref:System.Windows.Forms.Timer> является компонентом, он не имеет визуального представления во время выполнения.  Поэтому он отображается не с элементами управления на поверхности конструктора, а в Конструкторе компонентов \(область в нижней части поверхности конструктора\).  
+     <span data-ttu-id="b3f88-143">Поскольку <xref:System.Windows.Forms.Timer> является компонентом, он не имеет визуального представления во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b3f88-143">Because a <xref:System.Windows.Forms.Timer> is a component, it has no visual representation at run time.</span></span> <span data-ttu-id="b3f88-144">В связи с этим он отображается не с элементами управления на поверхности конструктора, а в конструкторе компонентов (область в нижней части поверхности конструктора).</span><span class="sxs-lookup"><span data-stu-id="b3f88-144">Therefore, it does not appear with the controls on the designer surface, but rather in the Component Designer (a tray at the bottom of the designer surface).</span></span>  
   
-5.  В Конструкторе компонентов щелкните компонент **Timer1** и установите значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> равным `1000`, а значение свойства <xref:System.Windows.Forms.Timer.Enabled%2A> равным `True`.  
+5.  <span data-ttu-id="b3f88-145">В конструкторе компонентов щелкните **Timer1**и задайте <xref:System.Windows.Forms.Timer.Interval%2A> свойства `1000` и <xref:System.Windows.Forms.Timer.Enabled%2A> свойства `True`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-145">In the Component Designer, click **Timer1**, and then set the <xref:System.Windows.Forms.Timer.Interval%2A> property to `1000` and the <xref:System.Windows.Forms.Timer.Enabled%2A> property to `True`.</span></span>  
   
-     Свойство <xref:System.Windows.Forms.Timer.Interval%2A> управляет частотой тиканья компонента Timer.  Каждый раз, когда компонент `Timer1` тикает, выполняется код события `Timer1_Tick`.  Значение этого свойства — это количество миллисекунд между событиями Tick.  
+     <span data-ttu-id="b3f88-146"><xref:System.Windows.Forms.Timer.Interval%2A> Свойство управляет частотой, с которой такты компонента timer.</span><span class="sxs-lookup"><span data-stu-id="b3f88-146">The <xref:System.Windows.Forms.Timer.Interval%2A> property controls the frequency with which the timer component ticks.</span></span> <span data-ttu-id="b3f88-147">При каждом такте `Timer1` оно запускает код в событии `Timer1_Tick`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-147">Each time `Timer1` ticks, it runs the code in the `Timer1_Tick` event.</span></span> <span data-ttu-id="b3f88-148">Интервал представляет время между тактами в миллисекундах.</span><span class="sxs-lookup"><span data-stu-id="b3f88-148">The interval represents the number of milliseconds between ticks.</span></span>  
   
-6.  В Конструкторе компонентов дважды щелкните компонент **Timer1**, чтобы перейти к событию `Timer1_Tick` компонента `ctlClock`.  
+6.  <span data-ttu-id="b3f88-149">В конструкторе компонентов дважды щелкните **Timer1**, чтобы перейти к событию `Timer1_Tick` для `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-149">In the Component Designer, double-click **Timer1** to go to the `Timer1_Tick` event for `ctlClock`.</span></span>  
   
-7.  Измените код, как указано ниже.  Обязательно измените модификатор доступа с `Private` на `Protected`.  
+7.  <span data-ttu-id="b3f88-150">Измените код, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="b3f88-150">Modify the code so that it resembles the following code sample.</span></span> <span data-ttu-id="b3f88-151">Измените модификатор доступа с `Private` на `Protected`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-151">Be sure to change the access modifier from `Private` to `Protected`.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Sub Timer1_Tick(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles Timer1.Tick  
         ' Causes the label to display the current time.    
@@ -92,44 +94,38 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-     Этот код позволяет отобразить текущее время в элементе управления `lblDisplay`.  Поскольку интервал между событиями Tick для компонента `Timer1` был установлен равным `1000`, эти события возникают через каждую тысячу миллисекунд, то есть текущее время обновляется каждую секунду.  
+     <span data-ttu-id="b3f88-152">Этот код вызывает отображение текущего времени в `lblDisplay`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-152">This code will cause the current time to be shown in `lblDisplay`.</span></span> <span data-ttu-id="b3f88-153">Поскольку для интервала `Timer1` было задано значение `1000`, это событие возникает через каждую тысячу миллисекунд, а значит, текущее время обновляется каждую секунду.</span><span class="sxs-lookup"><span data-stu-id="b3f88-153">Because the interval of `Timer1` was set to `1000`, this event will occur every thousand milliseconds, thus updating the current time every second.</span></span>  
   
-8.  Измените этот метод, сделав его доступным для переопределения.  Дополнительные сведения см. ниже в разделе "Наследование из пользовательского элемента управления".  
+8.  <span data-ttu-id="b3f88-154">Измените метод для переопределения.</span><span class="sxs-lookup"><span data-stu-id="b3f88-154">Modify the method to be overridable.</span></span> <span data-ttu-id="b3f88-155">Дополнительные сведения см. ниже в разделе "Наследование из пользовательского элемента управления".</span><span class="sxs-lookup"><span data-stu-id="b3f88-155">For more information, see the "Inheriting from a User Control" section below.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overridable Sub Timer1_Tick(ByVal sender As Object, ByVal _  
         e As System.EventArgs) Handles Timer1.Tick  
     ```  
   
-9. В меню **Файл** выберите команду **Сохранить все** для сохранения проекта.  
+9. <span data-ttu-id="b3f88-156">Сохраните проект, открыв меню **Файл** и выбрав пункт **Сохранить все**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-156">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Добавление свойств в составной элемент управления  
- Созданный элемент управления часы теперь инкапсулирует элемент управления <xref:System.Windows.Forms.Label> и компонент <xref:System.Windows.Forms.Timer>, каждый из которых имеет собственный набор наследуемых свойств.  Хотя свойства этих элементов управления не будут доступны пользователям создаваемого элемента управления, можно создать и предоставить другим приложениям настраиваемые свойства, написав соответствующие блоки кода.  В следующей процедуре показано, как добавить в элемент управления свойства, позволяющие пользователю изменять цвет фона и текста.  
+## <a name="adding-properties-to-the-composite-control"></a><span data-ttu-id="b3f88-157">Добавление свойств в составной элемент управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-157">Adding Properties to the Composite Control</span></span>  
+ <span data-ttu-id="b3f88-158">Элемент управления инкапсулирует <xref:System.Windows.Forms.Label> управления и <xref:System.Windows.Forms.Timer> компонента, каждый из которых свой собственный набор наследуемых свойств.</span><span class="sxs-lookup"><span data-stu-id="b3f88-158">Your clock control now encapsulates a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.Timer> component, each with its own set of inherent properties.</span></span> <span data-ttu-id="b3f88-159">Несмотря на то что отдельные свойства этих элементов управления не будут доступны последующим пользователям вашего элемента управления, вы можете создать и предоставить настраиваемые свойства, написав соответствующие блоки кода.</span><span class="sxs-lookup"><span data-stu-id="b3f88-159">While the individual properties of these controls will not be accessible to subsequent users of your control, you can create and expose custom properties by writing the appropriate blocks of code.</span></span> <span data-ttu-id="b3f88-160">Выполняя следующую процедуру, вы добавите в элемент управления свойства, позволяющие пользователю изменять цвет фона и текста.</span><span class="sxs-lookup"><span data-stu-id="b3f88-160">In the following procedure, you will add properties to your control that enable the user to change the color of the background and text.</span></span>  
   
-#### Для добавления свойства в составной элемент управления выполните следующие действия.  
+#### <a name="to-add-a-property-to-your-composite-control"></a><span data-ttu-id="b3f88-161">Добавление свойства в составной элемент управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-161">To add a property to your composite control</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlClock.vb** и выберите пункт **Просмотреть код**.  
+1.  <span data-ttu-id="b3f88-162">В обозревателе решений щелкните файл **ctlClock.vb** правой кнопкой мыши и выберите пункт **Показать код**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-162">In Solution Explorer, right-click **ctlClock.vb**, and then click **View Code**.</span></span>  
   
-     Откроется Редактор кода для выбранного элемента управления.  
+     <span data-ttu-id="b3f88-163">Откроется редактор кода для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-163">The Code Editor for your control opens.</span></span>  
   
-2.  Найдите оператор `Public Class ctlClock`.  Под ней введите следующий код.  
+2.  <span data-ttu-id="b3f88-164">Найдите оператор `Public Class ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-164">Locate the `Public Class ctlClock` statement.</span></span> <span data-ttu-id="b3f88-165">Под этим оператором введите следующий код.</span><span class="sxs-lookup"><span data-stu-id="b3f88-165">Beneath it, type the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private colFColor as Color  
     Private colBColor as Color  
     ```  
   
-     Эти операторы создают закрытые переменные. В них будут храниться значения создаваемых свойств.  
+     <span data-ttu-id="b3f88-166">Эти операторы создают закрытые переменные для хранения значений свойств, которые вы собираетесь создать.</span><span class="sxs-lookup"><span data-stu-id="b3f88-166">These statements create the private variables that you will use to store the values for the properties you are about to create.</span></span>  
   
-3.  Вставьте следующий код под объявлениями переменных, созданными на этапе 2:  
+3.  <span data-ttu-id="b3f88-167">Вставьте следующий код под объявлениями переменных, созданными в шаге 2.</span><span class="sxs-lookup"><span data-stu-id="b3f88-167">Insert the following code beneath the variable declarations from step 2.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     ' Declares the name and type of the property.  
     Property ClockBackColor() as Color  
         ' Retrieves the value of the private variable colBColor.  
@@ -156,65 +152,63 @@ caps.handback.revision: 21
     End Property  
     ```  
   
-     Приведенный выше код позволяет пользователям этого элемента управления получить доступ к настраиваемым свойствам `ClockForeColor` и `ClockBackColor` с помощью вызова оператора `Property`.  Операторы `Get` и `Set` соответственно сохраняют и извлекают значение свойства, а также выполняют код, реализующий необходимую функцию.  
+     <span data-ttu-id="b3f88-168">Приведенный выше код обеспечивает доступ к двум настраиваемым свойствам, `ClockForeColor` и `ClockBackColor`, для последующих пользователей данного элемента управления, вызывая оператор `Property`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-168">The preceding code makes two custom properties, `ClockForeColor` and `ClockBackColor`, available to subsequent users of this control by invoking the `Property` statement.</span></span> <span data-ttu-id="b3f88-169">Операторы `Get` и `Set` позволяют хранить и извлекать значение свойства, а также предоставляют код для реализации соответствующих этому свойству функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="b3f88-169">The `Get` and `Set` statements provide for storage and retrieval of the property value, as well as code to implement functionality appropriate to the property.</span></span>  
   
-4.  В меню **Файл** выберите команду **Сохранить все** для сохранения проекта.  
+4.  <span data-ttu-id="b3f88-170">Сохраните проект, открыв меню **Файл** и выбрав пункт **Сохранить все**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-170">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-## Проверка элемента управления  
- Элементы управления не являются автономными проектами; они должны быть включены в контейнер.  Проверьте поведение созданного элемента управления и испытайте его свойства с помощью **Тестового контейнера пользовательских элементов управления**.  Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="testing-the-control"></a><span data-ttu-id="b3f88-171">Тестирование элемента управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-171">Testing the Control</span></span>  
+ <span data-ttu-id="b3f88-172">Элементы управления не являются автономными проектами и должны размещаться в контейнере.</span><span class="sxs-lookup"><span data-stu-id="b3f88-172">Controls are not stand-alone projects; they must be hosted in a container.</span></span> <span data-ttu-id="b3f88-173">Проверьте поведение элемента управления в среде выполнения и испытайте его свойства в **тестовом контейнере пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-173">Test your control's run-time behavior and exercise its properties with the **UserControl Test Container**.</span></span> <span data-ttu-id="b3f88-174">Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="b3f88-174">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
-#### Чтобы протестировать элемент управления  
+#### <a name="to-test-your-control"></a><span data-ttu-id="b3f88-175">Проверка элемента управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-175">To test your control</span></span>  
   
-1.  Нажмите клавишу F5 для построения проекта и запустите элемент управления в **Тестовом контейнере пользовательских элементов управления**.  
+1.  <span data-ttu-id="b3f88-176">Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-176">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
   
-2.  В таблице свойств тестового контейнера выберите свойство `ClockBackColor` и щелкните стрелку выпадающего меню, чтобы вывести на экран цветовую палитру.  
+2.  <span data-ttu-id="b3f88-177">В таблице свойств тестового контейнера выберите свойство `ClockBackColor`, а затем щелкните стрелку раскрывающегося списка, чтобы открыть палитру цветов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-177">In the test container's property grid, select the `ClockBackColor` property, and then click the drop-down arrow to display the color palette.</span></span>  
   
-3.  Выберите цвет с помощью щелчка мыши.  
+3.  <span data-ttu-id="b3f88-178">Щелкните нужный цвет.</span><span class="sxs-lookup"><span data-stu-id="b3f88-178">Choose a color by clicking it.</span></span>  
   
-     Цвет фона элемента управления изменится на выбранный цвет.  
+     <span data-ttu-id="b3f88-179">Цвет фона элемента управления изменится на выбранный.</span><span class="sxs-lookup"><span data-stu-id="b3f88-179">The background color of your control changes to the color you selected.</span></span>  
   
-4.  С помощью аналогичной последовательности событий проверьте, что свойство `ClockForeColor` работает правильно.  
+4.  <span data-ttu-id="b3f88-180">Используя аналогичную последовательность событий, проверьте, функционирует ли свойство `ClockForeColor` должным образом.</span><span class="sxs-lookup"><span data-stu-id="b3f88-180">Use a similar sequence of events to verify that the `ClockForeColor` property is functioning as expected.</span></span>  
   
-5.  Нажмите кнопку **Закрыть**, чтобы закрыть окно **Тестового контейнера пользовательских элементов управления**.  
+5.  <span data-ttu-id="b3f88-181">Нажмите **Закрыть**, чтобы закрыть **тестовый контейнер пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-181">Click **Close** to close the **UserControl Test Container**.</span></span>  
   
-     В этом и предыдущем разделе было показано, как компоненты и элементы управления Windows можно объединить с кодом и упаковкой, чтобы предоставить пользовательские функциональные возможности в виде составного элемента управления.  Было продемонстрировано, как предоставлять свойства составного элемента управления и тестировать элемент управления после завершения его разработки.  В следующем разделе содержатся сведения о построении наследуемого составного элемента управления на базе элемента управления `ctlClock`.  
+     <span data-ttu-id="b3f88-182">Из этого и предыдущих разделов вы узнали, как объединить компоненты и элементы управления Windows с кодом и упаковкой и, таким образом, предоставить настраиваемые функциональные возможности в виде составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-182">In this section and the preceding sections, you have seen how components and Windows controls can be combined with code and packaging to provide custom functionality in the form of a composite control.</span></span> <span data-ttu-id="b3f88-183">Вы узнали, как вывести свойства в составной элемент управления и проверить элемент управления после того, как он будет готов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-183">You have learned to expose properties in your composite control, and how to test your control after it is complete.</span></span> <span data-ttu-id="b3f88-184">В следующем разделе вы узнаете, как сконструировать производный составной элемент управления, используя в качестве базы `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-184">In the next section you will learn how to construct an inherited composite control using `ctlClock` as a base.</span></span>  
   
-## Наследование из составного элемента управления  
- В предыдущих разделах рассказывалось, как объединить компоненты, элементы управления Windows и код, чтобы создать составные элементы управления, доступные для многократного использования.  В этом разделе будет показано, как на основе составного элемента управления построить другие элементы управления.  Процесс создания производного класса на основе базового класса называется *наследованием*.  В этом разделе будет создан составной элемент управления `ctlAlarmClock`.  Он будет производным от родительского элемента управления `ctlClock`.  Также будет показано, как расширить функциональные возможности элемента `ctlClock` путем переопределения методов родительского класса и добавления новых методов и свойств.  
+## <a name="inheriting-from-a-composite-control"></a><span data-ttu-id="b3f88-185">Наследование из составного элемента управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-185">Inheriting from a Composite Control</span></span>  
+ <span data-ttu-id="b3f88-186">В предыдущих разделах вы узнали, как объединить элементы управления, компоненты и код Windows в составные элементы управления, доступные для повторного использования.</span><span class="sxs-lookup"><span data-stu-id="b3f88-186">In the previous sections, you learned how to combine Windows controls, components, and code into reusable composite controls.</span></span> <span data-ttu-id="b3f88-187">После этого составной элемент управления можно использовать как базу, на основе которой будут создаваться другие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-187">Your composite control can now be used as a base upon which other controls can be built.</span></span> <span data-ttu-id="b3f88-188">Процесс создания класса, производного от базового, называется *наследованием*.</span><span class="sxs-lookup"><span data-stu-id="b3f88-188">The process of deriving a class from a base class is called *inheritance*.</span></span> <span data-ttu-id="b3f88-189">В этом разделе вы создадите составной элемент управления с именем `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-189">In this section, you will create a composite control called `ctlAlarmClock`.</span></span> <span data-ttu-id="b3f88-190">Он будет производным от родительского элемента управления, `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-190">This control will be derived from its parent control, `ctlClock`.</span></span> <span data-ttu-id="b3f88-191">Вы узнаете, как расширить функциональные возможности `ctlClock`, переопределив методы родительского класса и добавив новые методы и свойства.</span><span class="sxs-lookup"><span data-stu-id="b3f88-191">You will learn to extend the functionality of `ctlClock` by overriding parent methods and adding new methods and properties.</span></span>  
   
- Первым шагом для создания наследуемого элемента управления является наследование от родительского элемента управления.  При этом создается новый элемент управления, который не только имеет все свойства, методы и графические характеристики родительского элемента управления, но и служит основой для добавления или изменения функциональных возможностей.  
+ <span data-ttu-id="b3f88-192">Первый шаг в создании производного элемента управления — это его наследование из родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="b3f88-192">The first step in creating an inherited control is to derive it from its parent.</span></span> <span data-ttu-id="b3f88-193">Это действие создает новый элемент управления, обладающий всеми свойствами, методами и графическими характеристиками родительского элемента управления, а также может служить основой для добавления или изменения функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="b3f88-193">This action creates a new control that has all of the properties, methods, and graphical characteristics of the parent control, but can also act as a base for the addition of new or modified functionality.</span></span>  
   
-#### Чтобы создать наследуемый элемент управления  
+#### <a name="to-create-the-inherited-control"></a><span data-ttu-id="b3f88-194">Создание производного элемента управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-194">To create the inherited control</span></span>  
   
-1.  В обозревателе решений щелкните проект правой кнопкой мыши элемент **ctlClockLib**, укажите **Добавить** и выберите **Пользовательский элемент управления**.  
+1.  <span data-ttu-id="b3f88-195">В обозревателе решений щелкните файл **ctlClockLib** правой кнопкой мыши, наведите указатель мыши на пункт **Добавить** и выберите **Пользовательский элемент управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-195">In Solution Explorer, right-click **ctlClockLib**, point to **Add**, and then click **User Control**.</span></span>  
   
-     Откроется диалоговое окно **Добавление нового элемента**.  
+     <span data-ttu-id="b3f88-196">Откроется диалоговое окно **Добавление нового элемента**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-196">The **Add New Item** dialog box opens.</span></span>  
   
-2.  Выберите шаблон **Наследуемый пользовательский элемент управления**.  
+2.  <span data-ttu-id="b3f88-197">Выберите шаблон **Производный пользовательский элемент управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-197">Select the **Inherited User Control** template.</span></span>  
   
-3.  В поле **Имя** введите `ctlAlarmClock.vb` и нажмите кнопку **Добавить**.  
+3.  <span data-ttu-id="b3f88-198">В поле **Имя** введите `ctlAlarmClock.vb` и нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-198">In the **Name** box, type `ctlAlarmClock.vb`, and then click **Add**.</span></span>  
   
-     Откроется диалоговое окно **Выбор компонентов для наследования**.  
+     <span data-ttu-id="b3f88-199">Откроется диалоговое окно **Выбор компонентов для наследования**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-199">The **Inheritance Picker** dialog box appears.</span></span>  
   
-4.  Дважды щелкните **ctlClock** под строкой **Имя компонента**.  
+4.  <span data-ttu-id="b3f88-200">В разделе **Имя компонента** дважды щелкните файл **ctlClock**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-200">Under **Component Name**, double-click **ctlClock**.</span></span>  
   
-5.  В обозревателе решений просмотрите список текущих проектов.  
+5.  <span data-ttu-id="b3f88-201">В обозревателе решений просмотрите список текущих проектов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-201">In Solution Explorer, browse through the current projects.</span></span>  
   
     > [!NOTE]
-    >  В текущий проект был добавлен файл **ctlAlarmClock.vb**.  
+    >  <span data-ttu-id="b3f88-202">Файл с именем **элемент ctlAlarmClock.vb** будет добавлен в текущий проект.</span><span class="sxs-lookup"><span data-stu-id="b3f88-202">A file called **ctlAlarmClock.vb** has been added to the current project.</span></span>  
   
-### Добавление свойств будильника  
- Добавление свойств в наследуемый элемент управления выполняется точно так же, как и в случае с составным элементом управления.  Теперь будет использован синтаксис объявления свойства для добавления двух свойств в элемент управления: `AlarmTime`, хранящее значение даты и времени срабатывания будильника, и `AlarmSet`, показывающее, установлен ли будильник.  
+### <a name="adding-the-alarm-properties"></a><span data-ttu-id="b3f88-203">Добавление свойств будильника</span><span class="sxs-lookup"><span data-stu-id="b3f88-203">Adding the Alarm Properties</span></span>  
+ <span data-ttu-id="b3f88-204">Свойства, добавляются в производный элемент управления точно так же, как в составной элемент управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-204">Properties are added to an inherited control in the same way they are added to a composite control.</span></span> <span data-ttu-id="b3f88-205">Теперь, используя синтаксис объявления свойств, добавим в элемент управления два свойства: свойство `AlarmTime`, в котором хранится значение даты и времени отключения будильника, и свойство `AlarmSet`, определяющее время срабатывания будильника.</span><span class="sxs-lookup"><span data-stu-id="b3f88-205">You will now use the property declaration syntax to add two properties to your control: `AlarmTime`, which will store the value of the date and time the alarm is to go off, and `AlarmSet`, which will indicate whether the alarm is set.</span></span>  
   
-##### Для добавления свойств в составной элемент управления выполните следующие действия.  
+##### <a name="to-add-properties-to-your-composite-control"></a><span data-ttu-id="b3f88-206">Добавление свойств в составной элемент управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-206">To add properties to your composite control</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlAlarmClock** и выберите пункт **Просмотреть код**.  
+1.  <span data-ttu-id="b3f88-207">В обозревателе решений щелкните файл **ctlAlarmClock** правой кнопкой мыши и выберите пункт **Показать код**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-207">In Solution Explorer, right-click **ctlAlarmClock**, and then click **View Code**.</span></span>  
   
-2.  Найдите объявление класса элемента управления ctlAlarmClock, которое выглядит как `Public Class ctlAlarmClock`.  Добавьте в объявление класса следующий код.  
+2.  <span data-ttu-id="b3f88-208">Найдите объявление класса для элемента управления ctlAlarmClock, которое выглядит как `Public Class ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-208">Locate the class declaration for the ctlAlarmClock control, which appears as `Public Class ctlAlarmClock`.</span></span>  <span data-ttu-id="b3f88-209">В это объявление класса вставьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="b3f88-209">In the class declaration, insert the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private dteAlarmTime As Date  
     Private blnAlarmSet As Boolean  
     ' These properties will be declared as Public to allow future   
@@ -237,54 +231,50 @@ caps.handback.revision: 21
     End Property  
     ```  
   
-### Добавление графического интерфейса в элемент управления  
- Наследуемый элемент управления имеет такой же визуальный интерфейс, как и его родительский элемент управления.  Наследуемый элемент управления также наследует все элементы управления, содержащиеся в родительском элементе управления, но их свойства недоступны из наследуемого элемента, если они не были предоставлены явным образом.  В графический интерфейс наследуемого составного элемента управления можно добавлять элементы так же, как и в графический интерфейс любого другого составного элемента управления.  Далее в визуальный интерфейс будильника будет добавлен элемент управления надпись, который будет мигать при срабатывании будильника.  
+### <a name="adding-to-the-graphical-interface-of-the-control"></a><span data-ttu-id="b3f88-210">Добавление графического интерфейса элементу управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-210">Adding to the Graphical Interface of the Control</span></span>  
+ <span data-ttu-id="b3f88-211">Производный элемент управления получает такой же графический интерфейс, как у того элемента, из которого он наследуется.</span><span class="sxs-lookup"><span data-stu-id="b3f88-211">Your inherited control has a visual interface that is identical to the control it inherits from.</span></span> <span data-ttu-id="b3f88-212">Кроме того, он включает те же составные элементы управления, что и родительский элемент управления, однако свойства этих составных элементов будут доступны, только если предоставить их напрямую.</span><span class="sxs-lookup"><span data-stu-id="b3f88-212">It possesses the same constituent controls as its parent control, but the properties of the constituent controls will not be available unless they were specifically exposed.</span></span> <span data-ttu-id="b3f88-213">Графический интерфейс производного элемента управления добавляется точно так же, как и для любого составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-213">You may add to the graphical interface of an inherited composite control in the same manner as you would add to any composite control.</span></span> <span data-ttu-id="b3f88-214">Чтобы продолжить добавление графического интерфейса для будильника, добавим элемент управления Label, который будет мигать при срабатывании будильника.</span><span class="sxs-lookup"><span data-stu-id="b3f88-214">To continue adding to your alarm clock's visual interface, you will add a label control that will flash when the alarm is sounding.</span></span>  
   
-##### Чтобы добавить элемент управления надпись  
+##### <a name="to-add-the-label-control"></a><span data-ttu-id="b3f88-215">Добавление элемента управления Label</span><span class="sxs-lookup"><span data-stu-id="b3f88-215">To add the label control</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlAlarmClock** и выберите пункт **Конструктор представлений**.  
+1.  <span data-ttu-id="b3f88-216">В обозревателе решений щелкните файл **ctlAlarmClock** правой кнопкой мыши и выберите пункт **Показать конструктор**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-216">In Solution Explorer, right-click **ctlAlarmClock**, and click **View Designer**.</span></span>  
   
-     В главном окне откроется конструктор элемента управления `ctlAlarmClock`.  
+     <span data-ttu-id="b3f88-217">Конструктор для `ctlAlarmClock` откроется в главном окне.</span><span class="sxs-lookup"><span data-stu-id="b3f88-217">The designer for `ctlAlarmClock` opens in the main window.</span></span>  
   
-2.  Щелкните `lblDisplay` \(область отображения элемента управления\) и изучите окно "Свойства".  
-  
-    > [!NOTE]
-    >  Хотя все свойства отображаются, они затенены.  Это означает, что эти свойства являются собственными свойствами для `lblDisplay` и в окне свойств нельзя ни изменить их, ни обратиться к ним.  Элементы управления, содержащиеся в составном элементе управления, по умолчанию являются закрытыми \(`Private`\), и их свойства недоступны.  
+2.  <span data-ttu-id="b3f88-218">Нажмите `lblDisplay` (отображаемая область элемента управления) и просмотрите окно свойств.</span><span class="sxs-lookup"><span data-stu-id="b3f88-218">Click `lblDisplay` (the display portion of the control), and view the Properties window.</span></span>  
   
     > [!NOTE]
-    >  Чтобы пользователи элемента управления имели доступ к его внутренним элементам управления, эти элементы управления должны быть объявлены как `Public` или `Protected`.  Это позволит устанавливать и изменять свойства элементов управления, содержащихся в составном элементе управления, с помощью написания соответствующего кода.  
+    >  <span data-ttu-id="b3f88-219">Все свойства отображаются, но недоступны.</span><span class="sxs-lookup"><span data-stu-id="b3f88-219">While all the properties are displayed, they are dimmed.</span></span> <span data-ttu-id="b3f88-220">Это означает, что эти свойства являются собственными свойствами `lblDisplay`, в окне свойств изменить их или получить к ним доступ нельзя.</span><span class="sxs-lookup"><span data-stu-id="b3f88-220">This indicates that these properties are native to `lblDisplay` and cannot be modified or accessed in the Properties window.</span></span> <span data-ttu-id="b3f88-221">По умолчанию элементы управления, входящие в составной элемент управления, имеют статус `Private` и их свойства недоступны.</span><span class="sxs-lookup"><span data-stu-id="b3f88-221">By default, controls contained in a composite control are `Private`, and their properties are not accessible by any means.</span></span>  
   
-3.  Для добавления элемента управления <xref:System.Windows.Forms.Label> в составной элемент управления выполните следующие действия.  
+    > [!NOTE]
+    >  <span data-ttu-id="b3f88-222">Чтобы последующие пользователи составного элемента управления получили доступ к входящим в него элементам управления, объявите их как `Public` или `Protected`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-222">If you want subsequent users of your composite control to have access to its internal controls, declare them as `Public` or `Protected`.</span></span> <span data-ttu-id="b3f88-223">Это позволит вам задавать и изменять свойства элементов управления в составном элементе управления, используя соответствующий код.</span><span class="sxs-lookup"><span data-stu-id="b3f88-223">This will allow you to set and modify properties of controls contained within your composite control by using the appropriate code.</span></span>  
   
-4.  С помощью мыши перетащите элемент управления <xref:System.Windows.Forms.Label> непосредственно под поле отображения.  В окне свойств задайте значения для следующих свойств.  
+3.  <span data-ttu-id="b3f88-224">Добавить <xref:System.Windows.Forms.Label> элемента управления в составной элемент управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-224">Add a <xref:System.Windows.Forms.Label> control to your composite control.</span></span>  
   
-    |Свойство.|Параметр|  
-    |---------------|--------------|  
-    |**Имя**|`lblAlarm`|  
-    |**Текст**|Будильник\!|  
-    |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`False`|  
+4.  <span data-ttu-id="b3f88-225">С помощью мыши, перетащите <xref:System.Windows.Forms.Label> управления сразу под поле отображения.</span><span class="sxs-lookup"><span data-stu-id="b3f88-225">Using the mouse, drag the <xref:System.Windows.Forms.Label> control immediately beneath the display box.</span></span> <span data-ttu-id="b3f88-226">В окне "Свойства" задайте следующие свойства.</span><span class="sxs-lookup"><span data-stu-id="b3f88-226">In the Properties window, set the following properties.</span></span>  
   
-### Добавление функциональных возможностей будильника  
- Свойства и элемент управления, добавленные в предыдущих процедурах, позволяют реализовать функциональные возможности будильника в составном элементе управления.  В этой процедуре в пользовательский элемент управления будет добавлен код, в котором текущее время сравнивается со временем срабатывания будильника. Если они совпадают, будильник начинает звонить и мигать.  Переопределив метод `Timer1_Tick` элемента управления `ctlClock`и добавив в него дополнительный код, можно расширить функциональные возможности наследуемого элемента управления `ctlAlarmClock`, сохранив в то же время все функциональные возможности элемента `ctlClock`.  
+    |<span data-ttu-id="b3f88-227">Свойство</span><span class="sxs-lookup"><span data-stu-id="b3f88-227">Property</span></span>|<span data-ttu-id="b3f88-228">Параметр</span><span class="sxs-lookup"><span data-stu-id="b3f88-228">Setting</span></span>|  
+    |--------------|-------------|  
+    |<span data-ttu-id="b3f88-229">**Имя**</span><span class="sxs-lookup"><span data-stu-id="b3f88-229">**Name**</span></span>|`lblAlarm`|  
+    |<span data-ttu-id="b3f88-230">**Текст**</span><span class="sxs-lookup"><span data-stu-id="b3f88-230">**Text**</span></span>|<span data-ttu-id="b3f88-231">**Alarm!**</span><span class="sxs-lookup"><span data-stu-id="b3f88-231">**Alarm!**</span></span>|  
+    |<span data-ttu-id="b3f88-232">**TextAlign**</span><span class="sxs-lookup"><span data-stu-id="b3f88-232">**TextAlign**</span></span>|`MiddleCenter`|  
+    |<span data-ttu-id="b3f88-233">**Visible**</span><span class="sxs-lookup"><span data-stu-id="b3f88-233">**Visible**</span></span>|`False`|  
   
-##### Чтобы переопределить метод Timer1\_Tick компонента ctlClock  
+### <a name="adding-the-alarm-functionality"></a><span data-ttu-id="b3f88-234">Добавление функциональных возможностей будильника</span><span class="sxs-lookup"><span data-stu-id="b3f88-234">Adding the Alarm Functionality</span></span>  
+ <span data-ttu-id="b3f88-235">Выполняя предыдущие процедуры, вы добавили свойства и элемент управления, которые обеспечат функциональность будильника в составном элементе управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-235">In the previous procedures, you added properties and a control that will enable alarm functionality in your composite control.</span></span> <span data-ttu-id="b3f88-236">В ходе этой процедуры вы добавите код, который будет сравнивать текущее время со временем будильника и, если они совпадают, запускать звуковой сигнал и мигающее оповещение.</span><span class="sxs-lookup"><span data-stu-id="b3f88-236">In this procedure, you will add code to compare the current time to the alarm time and, if they are the same, to sound and flash an alarm.</span></span> <span data-ttu-id="b3f88-237">Переопределив метод `Timer1_Tick` в `ctlClock` и добавив в него дополнительный код, вы расширите возможности `ctlAlarmClock`, сохранив при этом все унаследованные функции `ctlClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-237">By overriding the `Timer1_Tick` method of `ctlClock` and adding additional code to it, you will extend the capability of `ctlAlarmClock` while retaining all of the inherent functionality of `ctlClock`.</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlAlarmClock.vb** и выберите пункт **Просмотреть код**.  
+##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a><span data-ttu-id="b3f88-238">Переопределение метода Timer1_Tick в ctlClock</span><span class="sxs-lookup"><span data-stu-id="b3f88-238">To override the Timer1_Tick method of ctlClock</span></span>  
   
-2.  Найдите оператор `Private blnAlarmSet As Boolean`.  Непосредственно после него добавьте следующий оператор.  
+1.  <span data-ttu-id="b3f88-239">В обозревателе решений щелкните файл **ctlAlarmClock.vb** правой кнопкой мыши и выберите пункт **Показать код**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-239">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Code**.</span></span>  
   
-     \[Visual Basic\]  
+2.  <span data-ttu-id="b3f88-240">Найдите оператор `Private blnAlarmSet As Boolean`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-240">Locate the `Private blnAlarmSet As Boolean` statement.</span></span> <span data-ttu-id="b3f88-241">Сразу после него добавьте следующий оператор.</span><span class="sxs-lookup"><span data-stu-id="b3f88-241">Immediately beneath it, add the following statement.</span></span>  
   
-    ```  
+    ```vb  
     Dim blnColorTicker as Boolean  
     ```  
   
-3.  В нижней части страницы найдите оператор `End Class`.  Непосредственно перед оператором `End Class` добавьте следующий код.  
+3.  <span data-ttu-id="b3f88-242">Найдите оператор `End Class` в нижней части страницы.</span><span class="sxs-lookup"><span data-stu-id="b3f88-242">Locate the `End Class` statement at the bottom of the page.</span></span> <span data-ttu-id="b3f88-243">Непосредственно перед оператором `End Class` добавьте следующий код.</span><span class="sxs-lookup"><span data-stu-id="b3f88-243">Just before the `End Class` statement, add the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Protected Overrides Sub Timer1_Tick(ByVal sender As Object, ByVal e _  
         As System.EventArgs)  
         ' Calls the Timer1_Tick method of ctlClock.  
@@ -318,24 +308,22 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-     Этот код выполняет несколько задач.  Оператор `Overrides` указывает, что элемент управления должен использовать этот метод вместо метода, унаследованного от базового элемента управления.  При вызове этого метода он вызывает переопределяемый им метод \(с помощью вызова оператора `MyBase.Timer1_Tick`\). Благодаря этому все функциональные возможности исходного элемента управления реализуются и в этом элементе.  Затем выполняется дополнительный код, реализующий функциональные возможности будильника.  При наступлении времени срабатывания будильника появится мигающий элемент управления "Надпись" и раздастся звуковой сигнал.  
+     <span data-ttu-id="b3f88-244">Добавление этого кода решает сразу несколько задач.</span><span class="sxs-lookup"><span data-stu-id="b3f88-244">The addition of this code accomplishes several tasks.</span></span> <span data-ttu-id="b3f88-245">Оператор `Overrides` указывает элементу управления использовать этот метод вместо метода, унаследованного из базового элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-245">The `Overrides` statement directs the control to use this method in place of the method that was inherited from the base control.</span></span> <span data-ttu-id="b3f88-246">При вызове этого метода он вызывает переопределяемый метод, используя оператор `MyBase.Timer1_Tick`, и следит за тем, чтобы в этом элементе управления были реализованы все функции исходного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-246">When this method is called, it calls the method it overrides by invoking the `MyBase.Timer1_Tick` statement, ensuring that all of the functionality incorporated in the original control is reproduced in this control.</span></span> <span data-ttu-id="b3f88-247">Затем он выполняет дополнительный код, реализующий функции будильника.</span><span class="sxs-lookup"><span data-stu-id="b3f88-247">It then runs additional code to incorporate the alarm functionality.</span></span> <span data-ttu-id="b3f88-248">Когда будильник срабатывает, появляется мигающая метка и раздается звуковой сигнал.</span><span class="sxs-lookup"><span data-stu-id="b3f88-248">A flashing label control will appear when the alarm occurs, and an audible beep will be heard.</span></span>  
   
     > [!NOTE]
-    >  Обратите внимание, что при переопределении наследуемого обработчика событий событие с ключевым словом `Handles` указывать не требуется.  Это событие уже подключено.  Требуется переопределить только реализацию обработчика.  
+    >  <span data-ttu-id="b3f88-249">Поскольку вы переопределяете производный обработчик событий, указывать событие с помощью ключевого слова `Handles` не требуется.</span><span class="sxs-lookup"><span data-stu-id="b3f88-249">Because you are overriding an inherited event handler, you do not have to specify the event with the `Handles` keyword.</span></span> <span data-ttu-id="b3f88-250">Событие уже подключено.</span><span class="sxs-lookup"><span data-stu-id="b3f88-250">The event is already hooked up.</span></span> <span data-ttu-id="b3f88-251">Переопределяется только реализация обработчика.</span><span class="sxs-lookup"><span data-stu-id="b3f88-251">All you are overriding is the implementation of the handler.</span></span>  
   
-     Теперь разработка будильника почти завершена.  Необходимо только реализовать возможность его отключения.  Для этого необходимо добавить код в метод `lblAlarm_Click`.  
+     <span data-ttu-id="b3f88-252">Элемент управления "Будильник" почти готов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-252">Your alarm clock control is almost complete.</span></span> <span data-ttu-id="b3f88-253">Осталось реализовать только его отключение.</span><span class="sxs-lookup"><span data-stu-id="b3f88-253">The only thing that remains is to implement a way to turn it off.</span></span> <span data-ttu-id="b3f88-254">Для этого нужно добавить код в метод `lblAlarm_Click`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-254">To do this, you will add code to the `lblAlarm_Click` method.</span></span>  
   
-##### Чтобы реализовать метод отключения будильника  
+##### <a name="to-implement-the-shutoff-method"></a><span data-ttu-id="b3f88-255">Реализация метода отключения</span><span class="sxs-lookup"><span data-stu-id="b3f88-255">To implement the shutoff method</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши элемент **ctlAlarmClock.vb** и выберите пункт **Конструктор представлений**.  
+1.  <span data-ttu-id="b3f88-256">В обозревателе решений щелкните файл **ctlAlarmClock.vb** правой кнопкой мыши и выберите пункт **Показать конструктор**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-256">In Solution Explorer, right-click **ctlAlarmClock.vb**, and then click **View Designer**.</span></span>  
   
-2.  В конструкторе дважды щелкните компонент **lblAlarm**.  В **Редакторе кода** откроется строка `Private Sub lblAlarm_Click`.  
+2.  <span data-ttu-id="b3f88-257">В конструкторе дважды щелкните **lblAlarm**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-257">In the designer, double-click **lblAlarm**.</span></span> <span data-ttu-id="b3f88-258">Откроется **редактор кода** со строкой `Private Sub lblAlarm_Click`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-258">The **Code Editor** opens to the `Private Sub lblAlarm_Click` line.</span></span>  
   
-3.  Измените этот метод, как указано ниже.  
+3.  <span data-ttu-id="b3f88-259">Измените метод, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="b3f88-259">Modify this method so that it resembles the following code.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub lblAlarm_Click(ByVal sender As Object, ByVal e As _  
      System.EventArgs) Handles lblAlarm.Click  
         ' Turns off the alarm.  
@@ -345,55 +333,53 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-4.  В меню **Файл** выберите команду **Сохранить все** для сохранения проекта.  
+4.  <span data-ttu-id="b3f88-260">Сохраните проект, открыв меню **Файл** и выбрав пункт **Сохранить все**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-260">On the **File** menu, click **Save All** to save the project.</span></span>  
   
-### Использование наследуемого элемента управления в форме  
- Проверить наследуемый элемент управления можно таким же образом, как был проверен элемент управления базового класса, `ctlClock`: нажмите клавишу F5 для построения проекта и напустите элемент управления в **Тестовом контейнере пользовательских элементов управления**.  Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+### <a name="using-the-inherited-control-on-a-form"></a><span data-ttu-id="b3f88-261">Использование производного элемента управления в форме</span><span class="sxs-lookup"><span data-stu-id="b3f88-261">Using the Inherited Control on a Form</span></span>  
+ <span data-ttu-id="b3f88-262">Производный элемент управления проверяется точно так же, как элемент управления базового класса `ctlClock`: нажмите клавишу F5, чтобы выполнить сборку проекта и запустить элемент управления в **тестовом контейнере пользовательских элементов управления**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-262">You can test your inherited control the same way you tested the base class control, `ctlClock`: Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span> <span data-ttu-id="b3f88-263">Дополнительные сведения см. в разделе [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span><span class="sxs-lookup"><span data-stu-id="b3f88-263">For more information, see [How to: Test the Run-Time Behavior of a UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).</span></span>  
   
- Для использования элемента управления необходимо включить его в форму.  Как и стандартный составной элемент управления, наследуемый составной элемент управления не может быть автономным и должен быть включен в форму или другой контейнер.  Поскольку элемент управления `ctlAlarmClock` имеет дополнительные функциональные возможности, для его тестирования требуется дополнительный код.  В этой процедуре будет написана простая программа для проверки функциональных возможностей элемента управления `ctlAlarmClock`.  Она будет устанавливать и отображать значение свойства `AlarmTime` элемента `ctlAlarmClock` и тестировать его функции.  
+ <span data-ttu-id="b3f88-264">Чтобы элемент управления можно было использовать, необходимо поместить его в форму.</span><span class="sxs-lookup"><span data-stu-id="b3f88-264">To put your control to use, you will need to host it on a form.</span></span> <span data-ttu-id="b3f88-265">Производный составной элемент управления, как и стандартный, не может быть автономным и должен быть размещен в форме или другом контейнере.</span><span class="sxs-lookup"><span data-stu-id="b3f88-265">As with a standard composite control, an inherited composite control cannot stand alone and must be hosted in a form or other container.</span></span> <span data-ttu-id="b3f88-266">Поскольку `ctlAlarmClock` отличается более широкими функциональными возможностями, для его проверки требуется дополнительный код.</span><span class="sxs-lookup"><span data-stu-id="b3f88-266">Since `ctlAlarmClock` has a greater depth of functionality, additional code is required to test it.</span></span> <span data-ttu-id="b3f88-267">В ходе этой процедуры вы напишете простую программу для проверки функциональных возможностей `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-267">In this procedure, you will write a simple program to test the functionality of `ctlAlarmClock`.</span></span> <span data-ttu-id="b3f88-268">Вы напишете код, задающий и отображающий свойство `AlarmTime` в `ctlAlarmClock` и проверяющий его унаследованные функции.</span><span class="sxs-lookup"><span data-stu-id="b3f88-268">You will write code to set and display the `AlarmTime` property of `ctlAlarmClock`, and will test its inherent functions.</span></span>  
   
-##### Чтобы построить элемент управления и добавить его в тестовую форму  
+##### <a name="to-build-and-add-your-control-to-a-test-form"></a><span data-ttu-id="b3f88-269">Сборка и добавление элемента управления в тестовую форму</span><span class="sxs-lookup"><span data-stu-id="b3f88-269">To build and add your control to a test form</span></span>  
   
-1.  В обозревателе решений щелкните правой кнопкой мыши **ctlClockLib** и затем выберите **Построить**.  
+1.  <span data-ttu-id="b3f88-270">В обозревателе решений щелкните файл **ctlClockLib** правой кнопкой мыши и выберите пункт **Построить**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-270">In Solution Explorer, right-click **ctlClockLib**, and then click **Build**.</span></span>  
   
-2.  В меню **Файл** выберите **Добавить**, затем **Новый проект**.  
+2.  <span data-ttu-id="b3f88-271">В меню **Файл** выберите команду **Добавить**, а затем **Создать проект**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-271">On the **File** menu, point to **Add**, and then click **New Project**.</span></span>  
   
-3.  Добавьте в решение новый проект **Приложение Windows** и назовите его `Test`.  
+3.  <span data-ttu-id="b3f88-272">Добавьте в решение новый проект **приложения Windows** с именем `Test`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-272">Add a new **Windows Application** project to the solution, and name it `Test`.</span></span>  
   
-     Проект **Test** будет добавлен в обозреватель решений.  
+     <span data-ttu-id="b3f88-273">Проект **Test** будет добавлен в обозреватель решений.</span><span class="sxs-lookup"><span data-stu-id="b3f88-273">The **Test** project is added to Solution Explorer.</span></span>  
   
-4.  Щелкните правой кнопкой мыши узел проекта `Test` в обозревателе решений и выберите пункт **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.  
+4.  <span data-ttu-id="b3f88-274">В обозревателе решений щелкните правой кнопкой мыши узел проекта `Test` и выберите пункт **Добавить ссылку**, чтобы открыть диалоговое окно **Добавление ссылки**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-274">In Solution Explorer, right-click the `Test` project node, and then click **Add Reference** to display the **Add Reference** dialog box.</span></span>  
   
-5.  Перейдите на вкладку **Проекты**.  Под строкой **Имя проекта** можно будет увидеть проект **ctlClockLib**.  Дважды щелкните **ctlClockLib**, чтобы добавить ссылку на тестовый проект.  
+5.  <span data-ttu-id="b3f88-275">Выберите вкладку **Проекты**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-275">Click the tab labeled **Projects**.</span></span> <span data-ttu-id="b3f88-276">Проект **ctlClockLib** будет указан под полем **Имя проекта**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-276">The project **ctlClockLib** will be listed under **Project Name**.</span></span> <span data-ttu-id="b3f88-277">Дважды щелкните файл **ctlClockLib**, чтобы добавить ссылку на тестовый проект.</span><span class="sxs-lookup"><span data-stu-id="b3f88-277">Double-click **ctlClockLib** to add the reference to the test project.</span></span>  
   
-6.  В обозревателе решений щелкните правой кнопкой мыши **Test** и затем выберите **Построить**.  
+6.  <span data-ttu-id="b3f88-278">В обозревателе решений щелкните **Тест** правой кнопкой мыши и выберите пункт **Построить**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-278">In Solution Explorer, right-click **Test**, and then click **Build**.</span></span>  
   
-7.  На **панели элементов** разверните узел **Компоненты ctlClockLib**.  
+7.  <span data-ttu-id="b3f88-279">На **панели элементов** разверните узел **Компоненты ctlClockLib**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-279">In the **Toolbox**, expand the **ctlClockLib Components** node.</span></span>  
   
-8.  Дважды щелкните **ctlAlarmClock**, чтобы добавить экземпляр `ctlAlarmClock` в форму.  
+8.  <span data-ttu-id="b3f88-280">Дважды щелкните **ctlAlarmClock**, чтобы добавить экземпляр `ctlAlarmClock` в свою форму.</span><span class="sxs-lookup"><span data-stu-id="b3f88-280">Double-click **ctlAlarmClock** to add an instance of `ctlAlarmClock` to your form.</span></span>  
   
-9. На **панели элементов** найдите элемент **DateTimePicker** и дважды щелкните его, чтобы добавить элемент управления <xref:System.Windows.Forms.DateTimePicker> в форму, а затем добавьте элемент управления <xref:System.Windows.Forms.Label>, дважды щелкнув элемент **Надпись**.  
+9. <span data-ttu-id="b3f88-281">В **элементов**, найдите и дважды щелкните **DateTimePicker** добавление <xref:System.Windows.Forms.DateTimePicker> управления в форму, а затем добавьте <xref:System.Windows.Forms.Label> управления, дважды щелкнув **метка**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-281">In the **Toolbox**, locate and double-click **DateTimePicker** to add a <xref:System.Windows.Forms.DateTimePicker> control to your form, and then add a <xref:System.Windows.Forms.Label> control by double-clicking **Label**.</span></span>  
   
-10. С помощью мыши удобно расположите элементы управления в форме.  
+10. <span data-ttu-id="b3f88-282">С помощью мыши разместите элементы управления в удобном месте формы.</span><span class="sxs-lookup"><span data-stu-id="b3f88-282">Use the mouse to position the controls in a convenient place on the form.</span></span>  
   
-11. Установите свойства этих элементов управления следующим образом.  
+11. <span data-ttu-id="b3f88-283">Задайте свойства этих элементов управления следующим образом.</span><span class="sxs-lookup"><span data-stu-id="b3f88-283">Set the properties of these controls in the following manner.</span></span>  
   
-    |Элемент управления|Свойство.|Значение|  
-    |------------------------|---------------|--------------|  
-    |`label1`|**Текст**|`(пробел)`|  
-    ||**Имя**|`lblTest`|  
-    |`dateTimePicker1`|**Имя**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat>|  
+    |<span data-ttu-id="b3f88-284">Control</span><span class="sxs-lookup"><span data-stu-id="b3f88-284">Control</span></span>|<span data-ttu-id="b3f88-285">Свойство</span><span class="sxs-lookup"><span data-stu-id="b3f88-285">Property</span></span>|<span data-ttu-id="b3f88-286">Значение</span><span class="sxs-lookup"><span data-stu-id="b3f88-286">Value</span></span>|  
+    |-------------|--------------|-----------|  
+    |`label1`|<span data-ttu-id="b3f88-287">**Текст**</span><span class="sxs-lookup"><span data-stu-id="b3f88-287">**Text**</span></span>|`(blank space)`|  
+    ||<span data-ttu-id="b3f88-288">**Имя**</span><span class="sxs-lookup"><span data-stu-id="b3f88-288">**Name**</span></span>|`lblTest`|  
+    |`dateTimePicker1`|<span data-ttu-id="b3f88-289">**Имя**</span><span class="sxs-lookup"><span data-stu-id="b3f88-289">**Name**</span></span>|`dtpTest`|  
+    ||<span data-ttu-id="b3f88-290">**Формат**</span><span class="sxs-lookup"><span data-stu-id="b3f88-290">**Format**</span></span>|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
-12. В конструкторе дважды щелкните компонент **dtpTest**.  
+12. <span data-ttu-id="b3f88-291">В конструкторе дважды щелкните **dtpTest**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-291">In the designer, double-click **dtpTest**.</span></span>  
   
-     В **редакторе кода** откроется `Private Sub dtpTest_ValueChanged`.  
+     <span data-ttu-id="b3f88-292">В **редакторе кода** откроется `Private Sub dtpTest_ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-292">The **Code Editor** opens to `Private Sub dtpTest_ValueChanged`.</span></span>  
   
-13. Измените код, как показано ниже.  
+13. <span data-ttu-id="b3f88-293">Измените код, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="b3f88-293">Modify the code so that it resembles the following.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub dtpTest_ValueChanged(ByVal sender As Object, ByVal e As _  
         System.EventArgs) Handles dtpTest.ValueChanged  
         ctlAlarmClock1.AlarmTime = dtpTest.Value  
@@ -403,24 +389,24 @@ caps.handback.revision: 21
     End Sub  
     ```  
   
-14. В обозревателе решений щелкните правой кнопкой мыши **Test** и выберите **Назначить автозагружаемым проектом**.  
+14. <span data-ttu-id="b3f88-294">В обозревателе решений щелкните правой кнопкой мыши **Тест** и выберите пункт **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-294">In Solution Explorer, right-click **Test**, and then click **Set as StartUp Project**.</span></span>  
   
-15. В меню **Отладка** щелкните **Начать отладку**.  
+15. <span data-ttu-id="b3f88-295">В меню **Отладка** щелкните **Начать отладку**.</span><span class="sxs-lookup"><span data-stu-id="b3f88-295">On the **Debug** menu, click **Start Debugging**.</span></span>  
   
-     Начнется выполнение тестовой программы.  Обратите внимание, что в элементе управления `ctlAlarmClock` отображается текущее время \(которое постоянно обновляется\), а в элементе управления <xref:System.Windows.Forms.DateTimePicker> — начальное время.  
+     <span data-ttu-id="b3f88-296">Запустится тестовая программа.</span><span class="sxs-lookup"><span data-stu-id="b3f88-296">The test program starts.</span></span> <span data-ttu-id="b3f88-297">Обратите внимание, что текущее время обновляется в `ctlAlarmClock` управления и что время начала, отображаются в <xref:System.Windows.Forms.DateTimePicker> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-297">Note that the current time is updated in the `ctlAlarmClock` control, and that the starting time is shown in the <xref:System.Windows.Forms.DateTimePicker> control.</span></span>  
   
-16. Щелкните поле элемента <xref:System.Windows.Forms.DateTimePicker>, в котором отображаются минуты.  
+16. <span data-ttu-id="b3f88-298">Нажмите кнопку <xref:System.Windows.Forms.DateTimePicker> которой отображаются минуты часа.</span><span class="sxs-lookup"><span data-stu-id="b3f88-298">Click the <xref:System.Windows.Forms.DateTimePicker> where the minutes of the hour are displayed.</span></span>  
   
-17. С помощью клавиатуры измените значение этого поля таким образом, чтобы оно было на одну минуту больше текущего времени, отображаемого элементом `ctlAlarmClock`.  
+17. <span data-ttu-id="b3f88-299">С помощью клавиатуры укажите значение минут, составляющее на одну минуту больше текущего времени, отображаемого `ctlAlarmClock`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-299">Using the keyboard, set a value for minutes that is one minute greater than the current time shown by `ctlAlarmClock`.</span></span>  
   
-     Время включения будильника показано в элементе `lblTest`.  Дождитесь, когда текущее время станет равным времени срабатывания будильника.  В этот момент раздастся звуковой сигнал и элемент `lblAlarm` начнет мигать.  
+     <span data-ttu-id="b3f88-300">Время включения будильника отображается в `lblTest`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-300">The time for the alarm setting is shown in `lblTest`.</span></span> <span data-ttu-id="b3f88-301">Дождитесь момента, когда отображаемое время совпадет с установленным временем будильника.</span><span class="sxs-lookup"><span data-stu-id="b3f88-301">Wait for the displayed time to reach the alarm setting time.</span></span> <span data-ttu-id="b3f88-302">Когда это произойдет, раздастся звуковой сигнал, и `lblAlarm` начнет мигать.</span><span class="sxs-lookup"><span data-stu-id="b3f88-302">When the displayed time reaches the time to which the alarm is set, the beep will sound and `lblAlarm` will flash.</span></span>  
   
-18. Отключите будильник, нажав `lblAlarm`.  Теперь можно переустановить будильник.  
+18. <span data-ttu-id="b3f88-303">Отключите сигнал, нажав `lblAlarm`.</span><span class="sxs-lookup"><span data-stu-id="b3f88-303">Turn off the alarm by clicking `lblAlarm`.</span></span> <span data-ttu-id="b3f88-304">Теперь будильник можно сбросить.</span><span class="sxs-lookup"><span data-stu-id="b3f88-304">You may now reset the alarm.</span></span>  
   
-     В этом пошаговом руководстве был проиллюстрирован ряд ключевых положений.  В частности, в нем было показано, как создавать составной элемент управления посредством объединения элементов управления и компонентов в контейнер составного элемента управления.  Также было описано, как добавлять свойства в элемент управления и писать код, реализующий пользовательские функциональные возможности.  В последнем разделе было продемонстрировано, как расширять функциональные возможности составного элемента управления с помощью наследования и как изменять функциональные возможности базового элемента управления посредством переопределения методов.  
+     <span data-ttu-id="b3f88-305">В этом пошаговом руководстве был проиллюстрирован ряд ключевых понятий.</span><span class="sxs-lookup"><span data-stu-id="b3f88-305">This walkthrough has covered a number of key concepts.</span></span> <span data-ttu-id="b3f88-306">Вы узнали, как создать составной элемент управления, объединив элементы управления и компоненты в контейнер составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b3f88-306">You have learned to create a composite control by combining controls and components into a composite control container.</span></span> <span data-ttu-id="b3f88-307">Вы узнали, как добавить свойства в элемент управления и написать код для реализации настраиваемых функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="b3f88-307">You have learned to add properties to your control, and to write code to implement custom functionality.</span></span> <span data-ttu-id="b3f88-308">В последнем разделе вы узнали, как расширять функциональные возможности заданного составного элемента управления с помощью наследования и как изменять функциональные возможности методов узла путем переопределения методов.</span><span class="sxs-lookup"><span data-stu-id="b3f88-308">In the last section, you learned to extend the functionality of a given composite control through inheritance, and to alter the functionality of host methods by overriding those methods.</span></span>  
   
-## См. также  
- [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)   
- [Практическое руководство. Создание составных элементов управления](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)   
- [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)   
- [Component Authoring Walkthroughs](../Topic/Component%20Authoring%20Walkthroughs.md)
+## <a name="see-also"></a><span data-ttu-id="b3f88-309">См. также</span><span class="sxs-lookup"><span data-stu-id="b3f88-309">See Also</span></span>  
+ [<span data-ttu-id="b3f88-310">Разновидности пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-310">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [<span data-ttu-id="b3f88-311">Практическое руководство. Создание составных элементов управления</span><span class="sxs-lookup"><span data-stu-id="b3f88-311">How to: Author Composite Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
+ [<span data-ttu-id="b3f88-312">Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов</span><span class="sxs-lookup"><span data-stu-id="b3f88-312">How to: Display a Control in the Choose Toolbox Items Dialog Box</span></span>](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ [<span data-ttu-id="b3f88-313">Примеры создания компонентов</span><span class="sxs-lookup"><span data-stu-id="b3f88-313">Component Authoring Walkthroughs</span></span>](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

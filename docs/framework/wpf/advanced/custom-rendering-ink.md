@@ -1,62 +1,63 @@
 ---
-title: "Пользовательская отрисовка рукописных данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "классы, DynamicRenderer"
-  - "классы, InkCanvas"
-  - "классы, Росчерк"
-  - "пользовательская отрисовка рукописных данных"
-  - "DynamicRenderer - класс"
-  - "рукописный ввод, пользовательская отрисовка"
-  - "InkCanvas - класс"
-  - "Stroke - класс"
+title: "Пользовательская отрисовка рукописных данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom-rendering ink
+- ink [WPF], custom-rendering
+- classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Пользовательская отрисовка рукописных данных
-Свойство <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> штриха позволяет задавать внешний вид штриха: размер, цвет и очертание, но иногда, чтобы настроить внешний вид, требуется использовать другие возможности, чем предлагает <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>.  Возможно, потребуется настроить внешний вид рукописных данных с помощью аэрографа, масляной краски и других эффектов.  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] позволяет настроить отображение настраиваемых рукописных данных путем реализации пользовательских объектов <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и <xref:System.Windows.Ink.Stroke>.  
+# <a name="custom-rendering-ink"></a><span data-ttu-id="b6e7d-102">Пользовательская отрисовка рукописных данных</span><span class="sxs-lookup"><span data-stu-id="b6e7d-102">Custom Rendering Ink</span></span>
+<span data-ttu-id="b6e7d-103"><xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Свойство штриха позволяет задавать внешний вид штриха, такие как его размер, цвет и формы, но могут возникнуть ситуации, в которых требуется настроить внешний вид что <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> разрешить.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-103">The <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> property of a stroke allows you to specify the appearance of a stroke, such as its size, color, and shape, but there may be times that you want to customize the appearance beyond what <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> allow.</span></span> <span data-ttu-id="b6e7d-104">Может потребоваться настроить отображение рукописного фрагмента с эффектом аэрографа, масляной живописи и т. д.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-104">You may want to customize the appearance of ink by rendering in the appearance of an air brush, oil paint, and many other effects.</span></span> <span data-ttu-id="b6e7d-105">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Разрешает отображение настраиваемых рукописного ввода путем реализации пользовательского <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и <xref:System.Windows.Ink.Stroke> объекта.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-105">The [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] allows you to custom render ink by implementing a custom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and <xref:System.Windows.Ink.Stroke> object.</span></span>  
   
- В этом разделе содержатся следующие подразделы:  
+ <span data-ttu-id="b6e7d-106">В этом разделе содержатся следующие подразделы:</span><span class="sxs-lookup"><span data-stu-id="b6e7d-106">This topic contains the following subsections:</span></span>  
   
--   [Архитектура](#Architecture)  
+-   [<span data-ttu-id="b6e7d-107">Архитектура</span><span class="sxs-lookup"><span data-stu-id="b6e7d-107">Architecture</span></span>](#Architecture)  
   
--   [Реализация динамического обработчика прорисовки](#ImplementingADynamicRenderer)  
+-   [<span data-ttu-id="b6e7d-108">Реализация динамического отрисовщика</span><span class="sxs-lookup"><span data-stu-id="b6e7d-108">Implementing a Dynamic Renderer</span></span>](#ImplementingADynamicRenderer)  
   
--   [Implementing a Custom Stroke](#ImplementingACustomStroke)  
+-   [<span data-ttu-id="b6e7d-109">Реализация пользовательских штрихов</span><span class="sxs-lookup"><span data-stu-id="b6e7d-109">Implementing Custom Strokes</span></span>](#ImplementingCustomStrokes)  
   
--   [Реализация пользовательского класса InkCanvas](#ImplementingACustomInkCanvas)  
+-   [<span data-ttu-id="b6e7d-110">Реализация пользовательского объекта InkCanvas</span><span class="sxs-lookup"><span data-stu-id="b6e7d-110">Implementing a Custom InkCanvas</span></span>](#ImplementingACustomInkCanvas)  
   
--   [Заключение](#Conclusion)  
+-   [<span data-ttu-id="b6e7d-111">Заключение</span><span class="sxs-lookup"><span data-stu-id="b6e7d-111">Conclusion</span></span>](#Conclusion)  
   
 <a name="Architecture"></a>   
-## Архитектура  
- Отрисовка рукописных данных создается в двух случаях: когда пользователь пишет на поверхности рисования и снова после того, как на поверхность для ввода рукописных данных, добавляется штрих.  Объект <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> отображает рукописные данные при перемещении пера планшета по дигитайзеру, а объект <xref:System.Windows.Ink.Stroke> отображает сам себя после его добавления к элементу.  
+## <a name="architecture"></a><span data-ttu-id="b6e7d-112">Архитектура</span><span class="sxs-lookup"><span data-stu-id="b6e7d-112">Architecture</span></span>  
+ <span data-ttu-id="b6e7d-113">Отрисовка рукописных фрагментов происходит два раза: когда пользователь осуществляет рукописный ввод на поверхности рукописного ввода, а затем еще раз после добавления штриха в область с поддержкой рукописного ввода.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-113">Ink rendering occurs two times; when a user writes ink to an inking surface, and again after the stroke is added to the ink-enabled surface.</span></span> <span data-ttu-id="b6e7d-114"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Отображает рукописные данные при перемещении пера планшета по дигитайзеру, а <xref:System.Windows.Ink.Stroke> отображает сам себя после его добавления к элементу.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-114">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the ink when the user moves the tablet pen on the digitizer, and the <xref:System.Windows.Ink.Stroke> renders itself once it is added to an element.</span></span>  
   
- Существуют три класса для реализации при динамической отрисовке рукописных данных.  
+ <span data-ttu-id="b6e7d-115">Предусмотрено три класса для реализации динамической отрисовки рукописных фрагментов.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-115">There are three classes to implement when dynamically rendering ink.</span></span>  
   
-1.  **DynamicRenderer**: реализует класс, производный класса <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Это специализированный класс <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, отображающий штрих после его написания.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> осуществляет отрисовку в отдельном потоке, поэтому поверхность для отображения рукописного ввода появляется для сбора рукописных данных даже при блокировке потока пользовательского интерфейса приложения.   Дополнительные сведения о потоковой модели содержатся в разделе [Потоковая модель рукописного ввода](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).  Чтобы настроить динамическую отрисовку штриха, переопределите метод <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>.  
+1.  <span data-ttu-id="b6e7d-116">**DynamicRenderer**: реализация класса, производного от <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-116">**DynamicRenderer**: Implement a class that derives from <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="b6e7d-117">Этот класс является специализированным <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> , отображающий штрих после его написания.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-117">This class is a specialized <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> that renders the stroke as it is drawn.</span></span> <span data-ttu-id="b6e7d-118"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Осуществляет отрисовку в отдельном потоке, поэтому поверхности рукописного ввода появляется для сбора рукописного ввода, даже при блокировке потока пользовательского интерфейса приложения.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-118">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> does the rendering on a separate thread, so the inking surface appears to collect ink even when the application user interface (UI) thread is blocked.</span></span> <span data-ttu-id="b6e7d-119">Дополнительные сведения о потоковой модели см. в статье [Потоковая модель рукописного ввода](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).</span><span class="sxs-lookup"><span data-stu-id="b6e7d-119">For more information about the threading model, see [The Ink Threading Model](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).</span></span> <span data-ttu-id="b6e7d-120">Чтобы настроить динамическую отрисовку штриха, переопределите <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-120">To customize dynamically rendering a stroke, override the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> method.</span></span>  
   
-2.  **Stroke**: реализует класс, производный класса <xref:System.Windows.Ink.Stroke>.  Этот класс отвечает за статическую отрисовку данных <xref:System.Windows.Input.StylusPoint> после преобразования в объект <xref:System.Windows.Ink.Stroke>.  Переопределите метод <xref:System.Windows.Ink.Stroke.DrawCore%2A>, чтобы гарантировать согласованность статической отрисовки штриха с динамическим.  
+2.  <span data-ttu-id="b6e7d-121">**Обводки**: реализация класса, производного от <xref:System.Windows.Ink.Stroke>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-121">**Stroke**: Implement a class that derives from <xref:System.Windows.Ink.Stroke>.</span></span> <span data-ttu-id="b6e7d-122">Этот класс отвечает за статической отрисовки <xref:System.Windows.Input.StylusPoint> данные после преобразования в <xref:System.Windows.Ink.Stroke> объекта.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-122">This class is responsible for static rendering of the <xref:System.Windows.Input.StylusPoint> data after it has been converted into a <xref:System.Windows.Ink.Stroke> object.</span></span> <span data-ttu-id="b6e7d-123">Переопределить <xref:System.Windows.Ink.Stroke.DrawCore%2A> метод, чтобы гарантировать статической отрисовки мазка согласуется с динамической отрисовки.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-123">Override the <xref:System.Windows.Ink.Stroke.DrawCore%2A> method to ensure that static rendering of the stroke is consistent with dynamic rendering.</span></span>  
   
-3.  **InkCanvas:** реализует класс, производный класса <xref:System.Windows.Controls.InkCanvas>.  Назначьте пользовательский объект <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> свойству <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>.  Переопределите метод <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> и добавьте пользовательский штрих к свойству <xref:System.Windows.Controls.InkCanvas.Strokes%2A>.  Это гарантирует согласованность внешнего вида рукописных данных.  
+3.  <span data-ttu-id="b6e7d-124">**InkCanvas:** реализовать класс, производный от <xref:System.Windows.Controls.InkCanvas>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-124">**InkCanvas:** Implement a class that derives from <xref:System.Windows.Controls.InkCanvas>.</span></span> <span data-ttu-id="b6e7d-125">Назначьте пользовательский <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> для <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-125">Assign the customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property.</span></span> <span data-ttu-id="b6e7d-126">Переопределить <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> метода и добавьте пользовательский штрих к <xref:System.Windows.Controls.InkCanvas.Strokes%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-126">Override the <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> method and add a custom stroke to the <xref:System.Windows.Controls.InkCanvas.Strokes%2A> property.</span></span> <span data-ttu-id="b6e7d-127">Это гарантирует согласованность внешнего вида рукописных фрагментов.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-127">This ensures that the appearance of the ink is consistent.</span></span>  
   
 <a name="ImplementingADynamicRenderer"></a>   
-## Реализация динамического обработчика прорисовки  
- Хотя класс <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> является стандартной частью приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], для выполнения специальных задач отрисовки необходимо создать пользовательский динамический обработчик прорисовки, производный объекта <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, и переопределить метод <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A>.  
+## <a name="implementing-a-dynamic-renderer"></a><span data-ttu-id="b6e7d-128">Реализация динамического отрисовщика</span><span class="sxs-lookup"><span data-stu-id="b6e7d-128">Implementing a Dynamic Renderer</span></span>  
+ <span data-ttu-id="b6e7d-129">Несмотря на то что <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> класс является стандартной частью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], для выполнения специальных подготовки отчетов, необходимо создать пользовательский динамический обработчик прорисовки, производный от <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и Переопределите <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-129">Although the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> class is a standard part of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], to perform more specialized rendering, you must create a customized dynamic renderer that derives from the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and override the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> method.</span></span>  
   
- В следующем примере показан пользовательский объект <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, который отображает рукописные данные, введенные кистью с эффектом линейного градиента.  
+ <span data-ttu-id="b6e7d-130">В следующем примере демонстрируется настраиваемый <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> , который выполняет отрисовку рукописного ввода с эффектом кисти линейного градиента.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-130">The following example demonstrates a customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> that draws ink with a linear gradient brush effect.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -64,14 +65,14 @@ caps.handback.revision: 8
 [!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
-## Реализация пользовательских штрихов  
- Реализуйте класс, производный класса <xref:System.Windows.Ink.Stroke>.  Этот класс отвечает за отрисовку данных <xref:System.Windows.Input.StylusPoint> после преобразования в объект <xref:System.Windows.Ink.Stroke>.  Переопределите класс <xref:System.Windows.Ink.Stroke.DrawCore%2A> для выполнения фактического рисования.  
+## <a name="implementing-custom-strokes"></a><span data-ttu-id="b6e7d-131">Реализация пользовательских штрихов</span><span class="sxs-lookup"><span data-stu-id="b6e7d-131">Implementing Custom Strokes</span></span>  
+ <span data-ttu-id="b6e7d-132">Реализация класса, унаследованного от класса <xref:System.Windows.Ink.Stroke>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-132">Implement a class that derives from <xref:System.Windows.Ink.Stroke>.</span></span> <span data-ttu-id="b6e7d-133">Этот класс отвечает за отрисовку <xref:System.Windows.Input.StylusPoint> данные после преобразования в <xref:System.Windows.Ink.Stroke> объекта.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-133">This class is responsible for rendering <xref:System.Windows.Input.StylusPoint> data after it has been converted into a <xref:System.Windows.Ink.Stroke> object.</span></span> <span data-ttu-id="b6e7d-134">Переопределить <xref:System.Windows.Ink.Stroke.DrawCore%2A> класса для выполнения фактического рисования.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-134">Override the <xref:System.Windows.Ink.Stroke.DrawCore%2A> class to do the actual drawing.</span></span>  
   
- Класс Stroke может также хранить пользовательские данные с помощью метода <xref:System.Windows.Ink.Stroke.AddPropertyData%2A>.  Эти данные сохраняются с данными штриха при сохранении.  
+ <span data-ttu-id="b6e7d-135">Класс Stroke можно также сохранять пользовательские данные с помощью <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-135">Your Stroke class can also store custom data by using the <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> method.</span></span> <span data-ttu-id="b6e7d-136">Эти данные хранятся с данными штриха при сохранении.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-136">This data is stored with the stroke data when persisted.</span></span>  
   
- Класс <xref:System.Windows.Ink.Stroke> может также выполнить проверку попадания курсора мыши.  Можно также реализовать собственный алгоритм проверки попадания путем переопределения метода <xref:System.Windows.Ink.Stroke.HitTest%2A> в текущем классе.  
+ <span data-ttu-id="b6e7d-137"><xref:System.Windows.Ink.Stroke> Класс может также выполнять проверки нажатия.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-137">The <xref:System.Windows.Ink.Stroke> class can also perform hit testing.</span></span> <span data-ttu-id="b6e7d-138">Также можно реализовать собственный алгоритм проверки попадания путем переопределения <xref:System.Windows.Ink.Stroke.HitTest%2A> метода в текущем классе.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-138">You can also implement your own hit testing algorithm by overriding the <xref:System.Windows.Ink.Stroke.HitTest%2A> method in the current class.</span></span>  
   
- Следующий код C\# демонстрирует пользовательский класс <xref:System.Windows.Ink.Stroke>, отображающий данные <xref:System.Windows.Input.StylusPoint> в виде трехмерного штриха.  
+ <span data-ttu-id="b6e7d-139">Следующий код C# демонстрирует пользовательский <xref:System.Windows.Ink.Stroke> класс, который выполняет визуализацию <xref:System.Windows.Input.StylusPoint> данные в виде трехмерного штриха.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-139">The following C# code demonstrates a custom <xref:System.Windows.Ink.Stroke> class that renders <xref:System.Windows.Input.StylusPoint> data as a 3-D stroke.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -79,26 +80,26 @@ caps.handback.revision: 8
 [!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
-## Реализация пользовательского класса InkCanvas  
- Самым простым способом применения пользовательского класса <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и штриха является реализация класса, который наследует из класса <xref:System.Windows.Controls.InkCanvas> и использует эти классы.  Класс <xref:System.Windows.Controls.InkCanvas> имеет свойство <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A>, указывающее, каким образом отображается штрих, когда пользователь его рисует.  
+## <a name="implementing-a-custom-inkcanvas"></a><span data-ttu-id="b6e7d-140">Реализация пользовательского объекта InkCanvas</span><span class="sxs-lookup"><span data-stu-id="b6e7d-140">Implementing a Custom InkCanvas</span></span>  
+ <span data-ttu-id="b6e7d-141">Самый простой способ применения пользовательского <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и штриха является реализация класса, производного от <xref:System.Windows.Controls.InkCanvas> и использует эти классы.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-141">The easiest way to use your customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and stroke is to implement a class that derives from <xref:System.Windows.Controls.InkCanvas> and uses these classes.</span></span> <span data-ttu-id="b6e7d-142"><xref:System.Windows.Controls.InkCanvas> Имеет <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> свойство, которое указывает, как отображается штрих, когда пользователь его рисует.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-142">The <xref:System.Windows.Controls.InkCanvas> has a <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property that specifies how the stroke is rendered when the user is drawing it.</span></span>  
   
- Для отображения пользовательских штрихов в классе <xref:System.Windows.Controls.InkCanvas> выполните следующие действия:  
+ <span data-ttu-id="b6e7d-143">Для отображения пользовательских штрихов на <xref:System.Windows.Controls.InkCanvas> выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="b6e7d-143">To custom render strokes on an <xref:System.Windows.Controls.InkCanvas> do the following:</span></span>  
   
--   Создайте класс, производный класса <xref:System.Windows.Controls.InkCanvas>.  
+-   <span data-ttu-id="b6e7d-144">Создайте класс, производный от <xref:System.Windows.Controls.InkCanvas>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-144">Create a class that derives from the <xref:System.Windows.Controls.InkCanvas>.</span></span>  
   
--   Назначьте пользовательский класс <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> свойству <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="b6e7d-145">Назначьте пользовательский <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> для <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> свойства.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-145">Assign your customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> property.</span></span>  
   
--   Переопределите метод <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>.  В этом методе удалите исходный штрих, который был добавлен к классу InkCanvas.  Создайте пользовательский штрих, добавьте его к свойству <xref:System.Windows.Controls.InkCanvas.Strokes%2A> и вызовите базовый класс с новым объектом <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs>, содержащим пользовательский штрих.  
+-   <span data-ttu-id="b6e7d-146">Переопределите метод <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-146">Override the <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> method.</span></span> <span data-ttu-id="b6e7d-147">В этом методе удалите исходный штрих, который был добавлен в InkCanvas.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-147">In this method, remove the original stroke that was added to the InkCanvas.</span></span> <span data-ttu-id="b6e7d-148">Затем создайте пользовательский штрих, добавьте ее в <xref:System.Windows.Controls.InkCanvas.Strokes%2A> свойство и вызовите метод базового класса с новым <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> , содержащий пользовательские штриха.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-148">Then create a custom stroke, add it to the <xref:System.Windows.Controls.InkCanvas.Strokes%2A> property, and call the base class with a new <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> that contains the custom stroke.</span></span>  
   
- Следующий код C\# демонстрирует пользовательский класс <xref:System.Windows.Controls.InkCanvas>, использующий настраиваемый объект <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и сохраняющий пользовательские штрихи.  
+ <span data-ttu-id="b6e7d-149">Следующий код C# демонстрирует пользовательский <xref:System.Windows.Controls.InkCanvas> класс, использующий настраиваемый <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и сохраняющий пользовательские штрихи.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-149">The following C# code demonstrates a custom <xref:System.Windows.Controls.InkCanvas> class that uses a customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and collects custom strokes.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
- Класс <xref:System.Windows.Controls.InkCanvas> может содержать несколько объектов <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  Можно добавить несколько объектов <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> к классу <xref:System.Windows.Controls.InkCanvas>, путем добавления их к свойству <xref:System.Windows.UIElement.StylusPlugIns%2A>.  
+ <span data-ttu-id="b6e7d-150"><xref:System.Windows.Controls.InkCanvas> Может иметь несколько <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-150">An <xref:System.Windows.Controls.InkCanvas> can have more than one <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="b6e7d-151">Можно добавить несколько <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> объектов <xref:System.Windows.Controls.InkCanvas> , добавив их в <xref:System.Windows.UIElement.StylusPlugIns%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-151">You can add multiple <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objects to the <xref:System.Windows.Controls.InkCanvas> by adding them to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span>  
   
 <a name="Conclusion"></a>   
-## Заключение  
- Можно настроить внешний вид рукописных данных путем наследования своих собственных классов <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke> и <xref:System.Windows.Controls.InkCanvas>.  Вместе эти классы гарантируют единообразный внешний вид во время рисования и после сохранения штриха.  
+## <a name="conclusion"></a><span data-ttu-id="b6e7d-152">Заключение</span><span class="sxs-lookup"><span data-stu-id="b6e7d-152">Conclusion</span></span>  
+ <span data-ttu-id="b6e7d-153">Можно настроить внешний вид рукописного ввода путем наследования своих собственных <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, и <xref:System.Windows.Controls.InkCanvas> классы.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-153">You can customize the appearance of ink by deriving your own <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, and <xref:System.Windows.Controls.InkCanvas> classes.</span></span> <span data-ttu-id="b6e7d-154">Вместе эти классы гарантируют согласованность внешнего вида штриха в момент, когда пользователь рисует штрих, и после его сбора.</span><span class="sxs-lookup"><span data-stu-id="b6e7d-154">Together, these classes ensure that the appearance of the stroke is consistent when the user draws the stroke and after it is collected.</span></span>  
   
-## См. также  
- [Дополнительная обработка рукописных данных](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+## <a name="see-also"></a><span data-ttu-id="b6e7d-155">См. также</span><span class="sxs-lookup"><span data-stu-id="b6e7d-155">See Also</span></span>  
+ [<span data-ttu-id="b6e7d-156">Дополнительная обработка рукописных фрагментов</span><span class="sxs-lookup"><span data-stu-id="b6e7d-156">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

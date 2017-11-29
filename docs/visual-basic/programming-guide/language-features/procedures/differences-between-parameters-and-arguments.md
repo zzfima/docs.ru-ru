@@ -1,59 +1,58 @@
 ---
-title: "Различия между параметрами и аргументами (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "аргументы [Visual Basic], и параметры"
-  - "параметры, и аргументы"
-  - "параметры, определение"
-  - "аргументы процедур"
-  - "параметры процедуры"
-  - "процедуры, аргументы"
-  - "процедуры, параметры"
-  - "код Visual Basic, процедуры"
+title: "Различия между параметрами и аргументами (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], arguments
+- procedures [Visual Basic], parameters
+- parameters [Visual Basic], and arguments
+- procedure arguments
+- Visual Basic code, procedures
+- arguments [Visual Basic], and parameters
+- procedure parameters
+- parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Различия между параметрами и аргументами (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-В большинстве случаев процедуре требуется некоторая информация об обстоятельствах, при которых она была вызвана.  Процедура, которая выполняет повторяющуюся задачу, может использовать разную информацию при разных вызовах.  Такая информация состоит из переменных, констант и выражений, которые передаются процедуре при ее вызове.  
+# <a name="differences-between-parameters-and-arguments-visual-basic"></a><span data-ttu-id="f4594-102">Различия между параметрами и аргументами (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4594-102">Differences Between Parameters and Arguments (Visual Basic)</span></span>
+<span data-ttu-id="f4594-103">В большинстве случаев процедуре требуется некоторая информация о ситуациях, в которых она была вызвана.</span><span class="sxs-lookup"><span data-stu-id="f4594-103">In most cases, a procedure must have some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="f4594-104">Процедура, которая выполняет повторяющуюся задачу использует различные сведения для каждого вызова.</span><span class="sxs-lookup"><span data-stu-id="f4594-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="f4594-105">Эта информация состоит из переменных, констант и выражений, которые передаются процедуре при ее вызове.</span><span class="sxs-lookup"><span data-stu-id="f4594-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  
   
- Для передачи в процедуру этих сведений она определяет *параметр*, а вызывающий код передает *аргумент* в этот параметр.  Можно представить параметр как парковочное место и аргумент как автомобиль.  Точно так же, как различные автомобили могут парковаться на парковочном месте в разное время, при каждом вызове процедуры вызывающий код может передать другой аргумент для одного параметра.  
+ <span data-ttu-id="f4594-106">Для передачи этих сведений в процедуру, определяемого этой процедурой *параметр*, а вызывающий код передает *аргумент* для данного параметра.</span><span class="sxs-lookup"><span data-stu-id="f4594-106">To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter.</span></span> <span data-ttu-id="f4594-107">Можно рассматривать как пробел парковки и аргумент как автомобиль.</span><span class="sxs-lookup"><span data-stu-id="f4594-107">You can think of the parameter as a parking space and the argument as an automobile.</span></span> <span data-ttu-id="f4594-108">Так же, как различные автомобили можно оставить в пространстве парковки в разное время, вызывающий код можно передать другой аргумент для одного параметра при каждом вызове процедуры.</span><span class="sxs-lookup"><span data-stu-id="f4594-108">Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.</span></span>  
   
-## Параметры  
- *Параметр* представляет значение, которое необходимо указать процедуре при ее вызове.  В объявлении процедуры определяются ее параметры.  
+## <a name="parameters"></a><span data-ttu-id="f4594-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="f4594-109">Parameters</span></span>  
+ <span data-ttu-id="f4594-110">Объект *параметр* представляет значение, которое процедура ожидает передачи при ее вызове.</span><span class="sxs-lookup"><span data-stu-id="f4594-110">A *parameter* represents a value that the procedure expects you to pass when you call it.</span></span> <span data-ttu-id="f4594-111">Объявление процедуры определяет его параметры.</span><span class="sxs-lookup"><span data-stu-id="f4594-111">The procedure's declaration defines its parameters.</span></span>  
   
- При определении `Function` или `Sub` процедуры, необходимо указать *список параметров* в скобках сразу после имени процедуры.  Для каждого параметра необходимо указать имя, тип данных и механизм передачи \([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)\).  Можно также указать, что параметр является опциональным.  Это означает, что вызывающий код не обязан передавать значение для него.  
+ <span data-ttu-id="f4594-112">При определении `Function` или `Sub` процедуры, укажите *список параметров* в скобках сразу после имени процедуры.</span><span class="sxs-lookup"><span data-stu-id="f4594-112">When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name.</span></span> <span data-ttu-id="f4594-113">Для каждого параметра укажите имя, тип данных и механизм передачи ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)).</span><span class="sxs-lookup"><span data-stu-id="f4594-113">For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)).</span></span> <span data-ttu-id="f4594-114">Можно также указать, что параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="f4594-114">You can also indicate that a parameter is optional.</span></span> <span data-ttu-id="f4594-115">Это означает, что вызывающий код имеет значение передается для него.</span><span class="sxs-lookup"><span data-stu-id="f4594-115">This means that the calling code does not have to pass a value for it.</span></span>  
   
- Имя каждого параметра служит в качестве *локальной переменной* в процедуре.  Имя параметра используется так же, как любая другая переменная.  
+ <span data-ttu-id="f4594-116">Имя каждого параметра служит в качестве *локальной переменной* в процедуре.</span><span class="sxs-lookup"><span data-stu-id="f4594-116">The name of each parameter serves as a *local variable* in the procedure.</span></span> <span data-ttu-id="f4594-117">Имя параметра используется так же, как любая другая переменная.</span><span class="sxs-lookup"><span data-stu-id="f4594-117">You use the parameter name the same way you use any other variable.</span></span>  
   
-## Аргументы  
- *Аргумент* представляет значение, указанное в параметрах процедуры при ее вызове.  Код вызова указывает аргументы при вызове процедуры.  
+## <a name="arguments"></a><span data-ttu-id="f4594-118">Аргументы</span><span class="sxs-lookup"><span data-stu-id="f4594-118">Arguments</span></span>  
+ <span data-ttu-id="f4594-119">*Аргумент* представляет значение, которое передается параметр процедуры, при вызове процедуры.</span><span class="sxs-lookup"><span data-stu-id="f4594-119">An *argument* represents the value that you pass to a procedure parameter when you call the procedure.</span></span> <span data-ttu-id="f4594-120">Вызывающий код не предоставляет аргументы при вызове процедуры.</span><span class="sxs-lookup"><span data-stu-id="f4594-120">The calling code supplies the arguments when it calls the procedure.</span></span>  
   
- При вызове `Function` или `Sub` процедуры *список аргументов* включается в скобках сразу после имени процедуры.  Каждый аргумент соответствует параметру в той же позиции в списке.  
+ <span data-ttu-id="f4594-121">При вызове `Function` или `Sub` процедуры, включают *список аргументов* в скобках сразу после имени процедуры.</span><span class="sxs-lookup"><span data-stu-id="f4594-121">When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name.</span></span> <span data-ttu-id="f4594-122">Каждый аргумент соответствует параметру в той же позиции в списке.</span><span class="sxs-lookup"><span data-stu-id="f4594-122">Each argument corresponds to the parameter in the same position in the list.</span></span>  
   
- В отличие от определения параметра аргументы не имеют имен.  Каждый аргумент является выражением, которое может содержать ноль или более переменных, констант и литералов.  Тип данных вычисления выражения должен соответствовать типу данных, определенному для соответствующего параметра или в любом случае должен быть преобразуемым к типу параметра.  
+ <span data-ttu-id="f4594-123">В отличие от определения параметра аргументы не имеют имен.</span><span class="sxs-lookup"><span data-stu-id="f4594-123">In contrast to parameter definition, arguments do not have names.</span></span> <span data-ttu-id="f4594-124">Каждый аргумент является выражение, которое может содержать ноль или несколько переменных, констант и литералы.</span><span class="sxs-lookup"><span data-stu-id="f4594-124">Each argument is an expression, which can contain zero or more variables, constants, and literals.</span></span> <span data-ttu-id="f4594-125">Тип данных вычисляемого выражения обычно должен соответствовать типу данных, определенному для соответствующего параметра, и в любом случае должен быть преобразуемым к типу параметра.</span><span class="sxs-lookup"><span data-stu-id="f4594-125">The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.</span></span>  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Процедуры Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Процедуры свойств](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Процедуры операторов](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Практическое руководство. Определение параметра для процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [Практическое руководство. Передача аргументов в процедуру](../../../../visual-basic/programming-guide/language-features/procedures/how-to-pass-arguments-to-a-procedure.md)   
- [Передача аргументов по значению и по ссылке](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Рекурсивные процедуры](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+## <a name="see-also"></a><span data-ttu-id="f4594-126">См. также</span><span class="sxs-lookup"><span data-stu-id="f4594-126">See Also</span></span>  
+ [<span data-ttu-id="f4594-127">Процедуры</span><span class="sxs-lookup"><span data-stu-id="f4594-127">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="f4594-128">Подпрограммы</span><span class="sxs-lookup"><span data-stu-id="f4594-128">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="f4594-129">Процедуры функций</span><span class="sxs-lookup"><span data-stu-id="f4594-129">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="f4594-130">Процедуры свойств</span><span class="sxs-lookup"><span data-stu-id="f4594-130">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="f4594-131">Процедуры операторов</span><span class="sxs-lookup"><span data-stu-id="f4594-131">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="f4594-132">Практическое руководство. Определение параметра для процедуры</span><span class="sxs-lookup"><span data-stu-id="f4594-132">How to: Define a Parameter for a Procedure</span></span>](./how-to-define-a-parameter-for-a-procedure.md)  
+ [<span data-ttu-id="f4594-133">Практическое руководство. Передача аргументов в процедуру</span><span class="sxs-lookup"><span data-stu-id="f4594-133">How to: Pass Arguments to a Procedure</span></span>](./how-to-pass-arguments-to-a-procedure.md)  
+ [<span data-ttu-id="f4594-134">Передача аргументов по значению и по ссылке</span><span class="sxs-lookup"><span data-stu-id="f4594-134">Passing Arguments by Value and by Reference</span></span>](./passing-arguments-by-value-and-by-reference.md)  
+ [<span data-ttu-id="f4594-135">Рекурсивные процедуры</span><span class="sxs-lookup"><span data-stu-id="f4594-135">Recursive Procedures</span></span>](./recursive-procedures.md)  
+ [<span data-ttu-id="f4594-136">Перегрузка процедур</span><span class="sxs-lookup"><span data-stu-id="f4594-136">Procedure Overloading</span></span>](./procedure-overloading.md)

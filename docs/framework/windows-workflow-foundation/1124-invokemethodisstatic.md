@@ -1,38 +1,42 @@
 ---
-title: "1124 - InvokeMethodIsStatic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1124 - InvokeMethodIsStatic
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b9643641-fb52-4fa8-b354-4dd6617d68f6
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4fbeeb37813d4e387fc976b50f22809f7ead8926
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 1124 - InvokeMethodIsStatic
-## Свойства  
+# <a name="1124---invokemethodisstatic"></a><span data-ttu-id="08789-102">1124 - InvokeMethodIsStatic</span><span class="sxs-lookup"><span data-stu-id="08789-102">1124 - InvokeMethodIsStatic</span></span>
+## <a name="properties"></a><span data-ttu-id="08789-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="08789-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|1124|  
-|Ключевые слова|WFRuntime|  
-|Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="08789-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="08789-104">ID</span></span>|<span data-ttu-id="08789-105">1124</span><span class="sxs-lookup"><span data-stu-id="08789-105">1124</span></span>|  
+|<span data-ttu-id="08789-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="08789-106">Keywords</span></span>|<span data-ttu-id="08789-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="08789-107">WFRuntime</span></span>|  
+|<span data-ttu-id="08789-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="08789-108">Level</span></span>|<span data-ttu-id="08789-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="08789-109">Information</span></span>|  
+|<span data-ttu-id="08789-110">Канал</span><span class="sxs-lookup"><span data-stu-id="08789-110">Channel</span></span>|<span data-ttu-id="08789-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="08789-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Описание  
- На шаге CacheMetadata действие InvokeMethod означает, что вызываемый метод \- статический.  
+## <a name="description"></a><span data-ttu-id="08789-112">Описание</span><span class="sxs-lookup"><span data-stu-id="08789-112">Description</span></span>  
+ <span data-ttu-id="08789-113">На шаге CacheMetadata действие InvokeMethod означает, что вызываемый метод - статический.</span><span class="sxs-lookup"><span data-stu-id="08789-113">During CacheMetadata step, InvokeMethod activity indicates the method to be invoked is static.</span></span>  
   
-## Сообщение  
- Метод InvokeMethod «%1»: метод является статическим.  
+## <a name="message"></a><span data-ttu-id="08789-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="08789-114">Message</span></span>  
+ <span data-ttu-id="08789-115">Метод InvokeMethod «%1»: метод является статическим.</span><span class="sxs-lookup"><span data-stu-id="08789-115">InvokeMethod '%1' - method is Static.</span></span>  
   
-## Подробные сведения  
+## <a name="details"></a><span data-ttu-id="08789-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="08789-116">Details</span></span>  
   
-|Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
-|InvokeMethod|xs:string|Отображаемое имя действия InvokeMethod.|  
-|AppDomain|xs:string|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="08789-117">Имя элемента данных</span><span class="sxs-lookup"><span data-stu-id="08789-117">Data Item Name</span></span>|<span data-ttu-id="08789-118">Тип элемента данных</span><span class="sxs-lookup"><span data-stu-id="08789-118">Data Item Type</span></span>|<span data-ttu-id="08789-119">Описание</span><span class="sxs-lookup"><span data-stu-id="08789-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="08789-120">InvokeMethod</span><span class="sxs-lookup"><span data-stu-id="08789-120">InvokeMethod</span></span>|<span data-ttu-id="08789-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="08789-121">xs:string</span></span>|<span data-ttu-id="08789-122">Отображаемое имя действия InvokeMethod.</span><span class="sxs-lookup"><span data-stu-id="08789-122">The display name of the InvokeMethod activity.</span></span>|  
+|<span data-ttu-id="08789-123">AppDomain</span><span class="sxs-lookup"><span data-stu-id="08789-123">AppDomain</span></span>|<span data-ttu-id="08789-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="08789-124">xs:string</span></span>|<span data-ttu-id="08789-125">Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="08789-125">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

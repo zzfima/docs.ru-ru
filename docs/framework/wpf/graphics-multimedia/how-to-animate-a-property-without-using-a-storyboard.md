@@ -1,48 +1,55 @@
 ---
-title: "Практическое руководство. Анимация свойства без раскадровки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, Анимация без использования Storyboard (локальная)"
-  - "локальная анимация"
-  - "Анимация без использования Storyboard"
+title: "Практическое руководство. Анимация свойства без раскадровки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- non-Storyboard animation
+- local animation [WPF]
+- animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация свойства без раскадровки
-В этом примере показан один из способов применения анимации к свойству без использования раскадровки <xref:System.Windows.Media.Animation.Storyboard>.  
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a><span data-ttu-id="8ce8d-102">Практическое руководство. Анимация свойства без раскадровки</span><span class="sxs-lookup"><span data-stu-id="8ce8d-102">How to: Animate a Property Without Using a Storyboard</span></span>
+<span data-ttu-id="8ce8d-103">В этом примере показан один из способов применения анимации свойства без использования <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="8ce8d-103">This example shows one way to apply an animation to a property without using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
 > [!NOTE]
->  Эта функция недоступна в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Сведения об анимации свойства в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] см. в разделе [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
+>  <span data-ttu-id="8ce8d-104">Эта функциональность недоступна в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8ce8d-104">This functionality is not available in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="8ce8d-105">Дополнительные сведения об анимации свойств в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] см. в разделе [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).</span><span class="sxs-lookup"><span data-stu-id="8ce8d-105">For information about animating a property in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).</span></span>  
   
- Чтобы применить локальную анимацию к свойству, используйте метод <xref:System.Windows.UIElement.BeginAnimation%2A>.  Этот метод требует два параметра: свойство зависимости <xref:System.Windows.DependencyProperty>, указывающее свойство, подлежащее анимации, и анимацию, применяемую к этому свойству.  
+ <span data-ttu-id="8ce8d-106">Чтобы применить локальную анимацию к свойству, используйте <xref:System.Windows.UIElement.BeginAnimation%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="8ce8d-106">To apply a local animation to a property, use the <xref:System.Windows.UIElement.BeginAnimation%2A> method.</span></span> <span data-ttu-id="8ce8d-107">Этот метод принимает два параметра: <xref:System.Windows.DependencyProperty> , указывающий анимируемое свойство и анимации, применяемую к этому свойству.</span><span class="sxs-lookup"><span data-stu-id="8ce8d-107">This method takes two parameters: a <xref:System.Windows.DependencyProperty> that specifies the property to animate, and the animation to apply to that property.</span></span>  
   
-## Пример  
- В следующем примере показана анимация ширины и цвета фона кнопки <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a><span data-ttu-id="8ce8d-108">Пример</span><span class="sxs-lookup"><span data-stu-id="8ce8d-108">Example</span></span>  
+ <span data-ttu-id="8ce8d-109">В следующем примере показано, как анимация ширины и цвета фона <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="8ce8d-109">The following example shows how to animate the width and background color of a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-cpp[animateproperty#11](../../../../samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
- Разнообразные классы анимации в пространстве имен <xref:System.Windows.Media.Animation> существуют для анимации различных типов свойств.  Дополнительные сведения об анимации свойств см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  Дополнительные сведения о [свойствах зависимости](GTMT) \(тип свойств, приведенных в этих примерах\) и их функциях содержатся в разделе [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <span data-ttu-id="8ce8d-110">Различные классы анимации в <xref:System.Windows.Media.Animation> существует пространство имен для анимации различных типов свойств.</span><span class="sxs-lookup"><span data-stu-id="8ce8d-110">A variety of animation classes in the <xref:System.Windows.Media.Animation> namespace exist for animating different types of properties.</span></span> <span data-ttu-id="8ce8d-111">Дополнительные сведения об анимации свойств см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8ce8d-111">For more information about animating properties, see [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span> <span data-ttu-id="8ce8d-112">Дополнительные сведения о свойствах зависимостей (тип свойств, приведенных в этих примерах) и их функциях см. в разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8ce8d-112">For more information about dependency properties (the type of properties that are shown in these examples) and their features, see [Dependency Properties Overview](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).</span></span>  
   
- Существуют другие способы анимации без использования объектов <xref:System.Windows.Media.Animation.Storyboard>; дополнительные сведения см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ <span data-ttu-id="8ce8d-113">Существуют другие способы анимации без использования <xref:System.Windows.Media.Animation.Storyboard> объектов; Дополнительные сведения см. в разделе [Общие сведения о методах анимации свойства](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span><span class="sxs-lookup"><span data-stu-id="8ce8d-113">There are other ways to animate without using <xref:System.Windows.Media.Animation.Storyboard> objects; for more information, see [Property Animation Techniques Overview](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>   
- <xref:System.Windows.Media.Animation>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8ce8d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="8ce8d-114">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>  
+ <xref:System.Windows.Media.Animation>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ [<span data-ttu-id="8ce8d-115">Общие сведения о методах анимации свойств</span><span class="sxs-lookup"><span data-stu-id="8ce8d-115">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [<span data-ttu-id="8ce8d-116">Общие сведения об эффектах анимации</span><span class="sxs-lookup"><span data-stu-id="8ce8d-116">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

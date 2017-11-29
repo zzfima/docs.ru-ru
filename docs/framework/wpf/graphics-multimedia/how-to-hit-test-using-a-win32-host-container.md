@@ -1,44 +1,50 @@
 ---
-title: "Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "проверка нажатия, использование контейнеров размещения Win32"
-  - "визуальные объекты, проверка нажатия"
-  - "контейнеры размещения Win32, проверка нажатия"
+title: "Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], using Win32 host containers
+- visual objects [WPF], hit tests on
+- Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9a5cb77a53cbb106593b70d618bab67ef816e901
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32
-Если визуальные объекты создаются в окне [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], то для таких визуальных объектов можно использовать вложенный контейнер окна.  Чтобы обрабатывать события для содержащихся визуальных объектов, необходимо выполнять обработку сообщений, которые передаются в фильтрующий цикл обработки сообщений вложенного контейнера окна.  Дополнительные сведения о способах размещения визуальных объектов в окне [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] см. в разделе [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+# <a name="how-to-hit-test-using-a-win32-host-container"></a><span data-ttu-id="797e6-102">Практическое руководство. Проверка попадания курсора с помощью вложенного контейнера Win32</span><span class="sxs-lookup"><span data-stu-id="797e6-102">How to: Hit Test Using a Win32 Host Container</span></span>
+<span data-ttu-id="797e6-103">Можно создать визуальных объектов в пределах [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окна использовать вложенный контейнер окна для визуальных объектов.</span><span class="sxs-lookup"><span data-stu-id="797e6-103">You can create visual objects within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window by providing a host window container for the visual objects.</span></span> <span data-ttu-id="797e6-104">Чтобы обрабатывать события для содержащихся визуальных объектов, выполняется обработка сообщений, переданных в цикл фильтрации сообщений контейнера окна.</span><span class="sxs-lookup"><span data-stu-id="797e6-104">To provide event handling for the contained visual objects you process the messages passed to the host window container’s message filter loop.</span></span> <span data-ttu-id="797e6-105">Ссылаться на [учебника: размещения визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) Дополнительные сведения о способах размещения визуальных объектов в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.</span><span class="sxs-lookup"><span data-stu-id="797e6-105">Refer to [Tutorial: Hosting Visual Objects in a Win32 Application](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md) for more information on how to host visual objects in a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window.</span></span>  
   
-## Пример  
- В следующем коде показана настройка обработчиков событий мыши для окна [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], используемого в качестве вложенного контейнера для визуальных объектов.  
+## <a name="example"></a><span data-ttu-id="797e6-106">Пример</span><span class="sxs-lookup"><span data-stu-id="797e6-106">Example</span></span>  
+ <span data-ttu-id="797e6-107">Ниже показано, как настройка обработчиков событий мыши для [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окно, которое используется в качестве вложенного контейнера для визуальных объектов.</span><span class="sxs-lookup"><span data-stu-id="797e6-107">The following code shows how to set up mouse event handlers for a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] window that is used as a host container for visual objects.</span></span>  
   
  [!code-csharp[VisualsHitTesting#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyWindow.cs#103)]
  [!code-vb[VisualsHitTesting#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyWindow.vb#103)]  
   
- Следующий пример показывает, как установить [проверку попадания курсора](GTMT) в ответ на перехват конкретных событий мыши.  
+ <span data-ttu-id="797e6-108">В следующем примере показано, как для настройки проверки нажатия в ответ на перехват конкретных событий мыши.</span><span class="sxs-lookup"><span data-stu-id="797e6-108">The following example shows how to set up a hit test in response to trapping specific mouse events.</span></span>  
   
  [!code-csharp[VisualsHitTesting#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- Объект <xref:System.Windows.Interop.HwndSource> представляет содержимое [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в окне [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]. Значение свойства <xref:System.Windows.Interop.HwndSource.RootVisual%2A> объекта <xref:System.Windows.Interop.HwndSource> представляет самый верхний узел в иерархии [визуального дерева](GTMT).  
+ <span data-ttu-id="797e6-109"><xref:System.Windows.Interop.HwndSource> Объект представляет [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимого в [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окна.</span><span class="sxs-lookup"><span data-stu-id="797e6-109">The <xref:System.Windows.Interop.HwndSource> object presents [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] content within a [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] window.</span></span> <span data-ttu-id="797e6-110">Значение <xref:System.Windows.Interop.HwndSource.RootVisual%2A> свойство <xref:System.Windows.Interop.HwndSource> представляет самый верхний узел в иерархии визуального дерева.</span><span class="sxs-lookup"><span data-stu-id="797e6-110">The value of the <xref:System.Windows.Interop.HwndSource.RootVisual%2A> property of the <xref:System.Windows.Interop.HwndSource> object represents the top-most node in the visual tree hierarchy.</span></span>  
   
- Полный пример объектов проверки нажатия с помощью вложенного контейнера Win32 см. в разделе [Пример проверки нажатия с помощью взаимодействия Win32](http://go.microsoft.com/fwlink/?LinkID=159995).  
+ <span data-ttu-id="797e6-111">Полный пример проверки нажатия объектов с помощью вложенного контейнера Win32 см. в разделе [с образец взаимодействие Win32](http://go.microsoft.com/fwlink/?LinkID=159995).</span><span class="sxs-lookup"><span data-stu-id="797e6-111">For the complete sample on hit testing objects using a Win32 host container, see [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995).</span></span>  
   
-## См. также  
- <xref:System.Windows.Interop.HwndSource>   
- [Проверка попадания на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+## <a name="see-also"></a><span data-ttu-id="797e6-112">См. также</span><span class="sxs-lookup"><span data-stu-id="797e6-112">See Also</span></span>  
+ <xref:System.Windows.Interop.HwndSource>  
+ [<span data-ttu-id="797e6-113">Проверка нажатия на визуальном уровне</span><span class="sxs-lookup"><span data-stu-id="797e6-113">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="797e6-114">Руководство по размещению визуальных объектов в приложении Win32</span><span class="sxs-lookup"><span data-stu-id="797e6-114">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)

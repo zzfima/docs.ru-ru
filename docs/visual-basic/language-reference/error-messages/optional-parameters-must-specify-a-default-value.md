@@ -1,35 +1,33 @@
 ---
-title: "Для необязательных параметров должно быть задано значение по умолчанию | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30812"
-  - "bc30812"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30812"
+title: "Для необязательных параметров должно быть задано значение по умолчанию"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30812
+- bc30812
+helpviewer_keywords: BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e9ec6d044ba0a1bb904030ddbb4c4fa406c3ba63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Для необязательных параметров должно быть задано значение по умолчанию
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Для необязательных параметров должны быть заданы значения по умолчанию, которые будут использоваться при отсутствии параметра в вызывающей процедуре.  
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="e8f14-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="e8f14-102">Optional parameters must specify a default value</span></span>
+<span data-ttu-id="e8f14-103">Необязательные параметры необходимо указать значения по умолчанию, которые можно использовать, если параметр не указан в вызывающей процедуре.</span><span class="sxs-lookup"><span data-stu-id="e8f14-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
   
- **Идентификатор ошибки:** BC30812  
+ <span data-ttu-id="e8f14-104">**Идентификатор ошибки:** BC30812</span><span class="sxs-lookup"><span data-stu-id="e8f14-104">**Error ID:** BC30812</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e8f14-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="e8f14-105">To correct this error</span></span>  
   
--   Для необязательных параметров укажите значение по умолчанию, например:  
+-   <span data-ttu-id="e8f14-106">Задание значений по умолчанию для необязательных параметров; Например:</span><span class="sxs-lookup"><span data-stu-id="e8f14-106">Specify default values for optional parameters; for example:</span></span>  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -38,5 +36,5 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## См. также  
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)
+## <a name="see-also"></a><span data-ttu-id="e8f14-107">См. также</span><span class="sxs-lookup"><span data-stu-id="e8f14-107">See Also</span></span>  
+ [<span data-ttu-id="e8f14-108">Необязательный</span><span class="sxs-lookup"><span data-stu-id="e8f14-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)

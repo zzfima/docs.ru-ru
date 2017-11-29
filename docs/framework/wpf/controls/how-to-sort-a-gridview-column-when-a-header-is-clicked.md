@@ -1,31 +1,37 @@
 ---
-title: "Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементов управления GridView"
-  - "элементы управления, ListView"
-  - "Элементы управления ListView, сортировка столбцов GridView"
-  - "Элементы управления GridView, элемент управления ListView"
+title: "Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], GridView
+- controls [WPF], ListView
+- ListView controls [WPF], sorting GridView columns
+- GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок
-В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, реализующий <xref:System.Windows.Controls.GridView> просмотреть режим и сортировка данных содержимого, когда пользователь щелкает заголовок столбца.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="425bc-102">Практическое руководство. Сортировка столбцов GridView при нажатии на заголовок</span><span class="sxs-lookup"><span data-stu-id="425bc-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+<span data-ttu-id="425bc-103">В этом примере показано, как создать <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> просмотра режим и сортировка данных содержимого при щелчке заголовка столбца.</span><span class="sxs-lookup"><span data-stu-id="425bc-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере определяется <xref:System.Windows.Controls.GridView> с тремя столбцами, которые привязаны к <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, и <xref:System.DateTime.Day%2A>, свойства <xref:System.DateTime> структуры.  
+## <a name="example"></a><span data-ttu-id="425bc-104">Пример</span><span class="sxs-lookup"><span data-stu-id="425bc-104">Example</span></span>  
+ <span data-ttu-id="425bc-105">В следующем примере определяется <xref:System.Windows.Controls.GridView> с тремя столбцами, которые привязаны к <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, и <xref:System.DateTime.Day%2A>, свойства <xref:System.DateTime> структуры.</span><span class="sxs-lookup"><span data-stu-id="425bc-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>  
   
 ```xaml  
 <GridView>  
@@ -41,7 +47,7 @@ caps.handback.revision: 18
 </GridView>  
 ```  
   
- В следующем примере показано элементов данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов. <xref:System.Collections.ArrayList> определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.  
+ <span data-ttu-id="425bc-106">В следующем примере показано элементов данных, которые определены как <xref:System.Collections.ArrayList> из <xref:System.DateTime> объектов.</span><span class="sxs-lookup"><span data-stu-id="425bc-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="425bc-107"><xref:System.Collections.ArrayList> Определяется как <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="425bc-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>  
   
 ```xaml  
 <ListView.ItemsSource>  
@@ -62,7 +68,7 @@ caps.handback.revision: 18
 </ListView.ItemsSource>  
 ```  
   
- `s` И `p` идентификаторы в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] тегов см. сопоставления пространства имен, которые определены в метаданных [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы. В следующем примере показано определение метаданных.  
+ <span data-ttu-id="425bc-108">Идентификаторы `s` и `p` в тегах [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] относятся к сопоставлениям пространства имен, определенных в метаданных страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="425bc-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="425bc-109">В следующем примере представлено определение метаданных.</span><span class="sxs-lookup"><span data-stu-id="425bc-109">The following example shows the metadata definition.</span></span>  
   
 ```xaml  
 <Window        
@@ -73,7 +79,7 @@ caps.handback.revision: 18
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Чтобы отсортировать данные в соответствии с содержимым столбца, в примере определяется обработчик событий для обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при нажатии кнопки заголовка столбца. В следующем примере показано, как задать обработчик событий для <xref:System.Windows.Controls.GridViewColumnHeader> управления.  
+ <span data-ttu-id="425bc-110">Чтобы отсортировать данные в соответствии с содержимым столбца, в примере определяется обработчик событий для обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, возникающее при нажатии кнопки заголовка столбца.</span><span class="sxs-lookup"><span data-stu-id="425bc-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="425bc-111">В следующем примере показано, как задать обработчик событий для <xref:System.Windows.Controls.GridViewColumnHeader> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="425bc-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -82,7 +88,7 @@ caps.handback.revision: 18
  >  
 ```  
   
- В примере определяется обработчик событий, чтобы изменяет направление сортировки по возрастанию и убыванию при каждом нажатии кнопки заголовка столбца. В следующем примере показан обработчик событий.  
+ <span data-ttu-id="425bc-112">В примере определяется обработчик событий, который изменяет направление сортировки по возрастанию и убыванию при каждом нажатии кнопки заголовка столбца.</span><span class="sxs-lookup"><span data-stu-id="425bc-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="425bc-113">В следующем примере показан обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="425bc-113">The following example shows the event handler.</span></span>  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -196,7 +202,7 @@ Partial Public Class Window1
         End Sub  
 ```  
   
- В следующем примере алгоритм сортировки, который вызывается обработчиком событий для сортировки данных. Сортировка выполняется путем создания нового <xref:System.ComponentModel.SortDescription> структуры.  
+ <span data-ttu-id="425bc-114">В следующем примере приводится алгоритм сортировки, который вызывается обработчиком событий для сортировки данных.</span><span class="sxs-lookup"><span data-stu-id="425bc-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="425bc-115">Сортировка выполняется путем создания нового <xref:System.ComponentModel.SortDescription> структуры.</span><span class="sxs-lookup"><span data-stu-id="425bc-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -209,7 +215,6 @@ private void Sort(string sortBy, ListSortDirection direction)
     dataView.SortDescriptions.Add(sd);  
     dataView.Refresh();  
 }  
-  
 ```  
   
 ```vb  
@@ -223,9 +228,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
         End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Общие сведения о ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [Разделы практического руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="425bc-116">См. также</span><span class="sxs-lookup"><span data-stu-id="425bc-116">See Also</span></span>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [<span data-ttu-id="425bc-117">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="425bc-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="425bc-118">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="425bc-118">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="425bc-119">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="425bc-119">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

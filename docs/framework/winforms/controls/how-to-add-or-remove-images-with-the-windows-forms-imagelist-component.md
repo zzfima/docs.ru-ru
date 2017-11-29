@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ImageList - компонент [Windows Forms], добавление изображений"
-  - "ImageList - компонент [Windows Forms], удаление изображений"
-  - "изображения [Windows Forms], добавление в компонент ImageList"
-  - "изображения [Windows Forms], отображение с помощью элементов управления"
-  - "изображения [Windows Forms], удаление из компонента ImageList"
-  - "изображения [Windows Forms], хранение для элементов управления"
+title: "Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], removing from ImageList component
+- images [Windows Forms], storing for controls
+- ImageList component [Windows Forms], adding images
+- ImageList component [Windows Forms], removing images
+- images [Windows Forms], adding to ImageList component
+- images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ce13ba3413c13ced7ff9a967e23d87622309feb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
-Компонент Windows Forms <xref:System.Windows.Forms.ImageList> обычно заполняется рисунками перед связыванием с каким\-либо элементом управления.  Однако добавление и удаление рисунков возможно и после связывания этого компонента с элементом управления.  
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a><span data-ttu-id="45d98-102">Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="45d98-102">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>
+<span data-ttu-id="45d98-103">Windows Forms <xref:System.Windows.Forms.ImageList> компонента обычно заполняется с изображениями, прежде чем он будет связан с элементом управления.</span><span class="sxs-lookup"><span data-stu-id="45d98-103">The Windows Forms <xref:System.Windows.Forms.ImageList> component is typically populated with images before it is associated with a control.</span></span> <span data-ttu-id="45d98-104">Тем не менее можно добавить и удалить изображения после связывания списка изображений с элементом управления.</span><span class="sxs-lookup"><span data-stu-id="45d98-104">However, you can add and remove images after associating the image list with a control.</span></span>  
   
 > [!NOTE]
->  При удалении рисунков обеспечьте, чтобы оставалось действительным свойство <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> любых связанных элементов управления.  
+>  <span data-ttu-id="45d98-105">При удалении изображений, убедитесь, что <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> свойство любых связанных элементов управления по-прежнему допустимо.</span><span class="sxs-lookup"><span data-stu-id="45d98-105">When you remove images, verify that the <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> property of any associated controls is still valid.</span></span>  
   
-### Чтобы добавить рисунки с помощью программных средств  
+### <a name="to-add-images-programmatically"></a><span data-ttu-id="45d98-106">Добавление изображений программными средствами</span><span class="sxs-lookup"><span data-stu-id="45d98-106">To add images programmatically</span></span>  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> свойства <xref:System.Windows.Forms.ImageList.Images%2A> набора изображений.  
+-   <span data-ttu-id="45d98-107">Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> метод списка изображений <xref:System.Windows.Forms.ImageList.Images%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="45d98-107">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> method of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-     В следующем примере кода в качестве местоположения изображения выбрана папка **Мои документы**.  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера кода требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.ImageList>.  
+     <span data-ttu-id="45d98-108">В следующем примере кода путь задан при размещении изображения является **Мои документы** папки.</span><span class="sxs-lookup"><span data-stu-id="45d98-108">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="45d98-109">Это расположение используется, так как предполагается, что большинство компьютеров под управлением операционной системы Windows включает эту папку.</span><span class="sxs-lookup"><span data-stu-id="45d98-109">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="45d98-110">Эта папка также дает возможность пользователям минимальный уровень доступа к системе более безопасно запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="45d98-110">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="45d98-111">В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.ImageList> управления уже добавлен.</span><span class="sxs-lookup"><span data-stu-id="45d98-111">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -46,7 +51,6 @@ caps.handback.revision: 15
        & "\Image.gif")  
        ImageList1.Images.Add(myImage)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -61,7 +65,6 @@ caps.handback.revision: 15
        + @"\Image.gif");  
        imageList1.Images.Add(myImage);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,11 +84,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-### Добавление изображений со значением ключа.  
+### <a name="to-add-images-with-a-key-value"></a><span data-ttu-id="45d98-112">Добавление изображений со значением ключа.</span><span class="sxs-lookup"><span data-stu-id="45d98-112">To add images with a key value.</span></span>  
   
--   Используйте один из методов <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> свойства <xref:System.Windows.Forms.ImageList.Images%2A> набора изображений, которое принимает значение ключа.  
+-   <span data-ttu-id="45d98-113">Используйте один из <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> методы списка изображений <xref:System.Windows.Forms.ImageList.Images%2A> свойства, которое принимает значение ключа.</span><span class="sxs-lookup"><span data-stu-id="45d98-113">Use one of the <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> methods of the image list's <xref:System.Windows.Forms.ImageList.Images%2A> property that takes a key value.</span></span>  
   
-     В следующем примере кода в качестве местоположения изображения выбрана папка **Мои документы**.  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера кода требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.ImageList>.  
+     <span data-ttu-id="45d98-114">В следующем примере кода путь задан при размещении изображения является **Мои документы** папки.</span><span class="sxs-lookup"><span data-stu-id="45d98-114">In the following code example, the path set for the location of the image is the **My Documents** folder.</span></span> <span data-ttu-id="45d98-115">Это расположение используется, так как предполагается, что большинство компьютеров под управлением операционной системы Windows включает эту папку.</span><span class="sxs-lookup"><span data-stu-id="45d98-115">This location is used because you can assume that most computers that are running the Windows operating system will include this folder.</span></span> <span data-ttu-id="45d98-116">Эта папка также дает возможность пользователям минимальный уровень доступа к системе более безопасно запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="45d98-116">Choosing this location also lets users who have minimal system access levels more safely run the application.</span></span> <span data-ttu-id="45d98-117">В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.ImageList> управления уже добавлен.</span><span class="sxs-lookup"><span data-stu-id="45d98-117">The following code example requires that you have a form with an <xref:System.Windows.Forms.ImageList> control already added.</span></span>  
   
     ```vb  
     Public Sub LoadImage()  
@@ -96,7 +99,6 @@ caps.handback.revision: 15
        & "\Image.gif")  
        ImageList1.Images.Add("myPhoto", myImage)  
     End Sub  
-  
     ```  
   
 ```csharp  
@@ -111,23 +113,23 @@ public void addImage()
    + @"\Image.gif");  
    imageList1.Images.Add("myPhoto", myImage);  
 }  
-  
 ```  
   
-### Чтобы удалить все изображения с помощью программных средств  
+1.  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> для удаления одного изображения  
+### <a name="to-remove-all-images-programmatically"></a><span data-ttu-id="45d98-118">Чтобы удалить все образы программными средствами</span><span class="sxs-lookup"><span data-stu-id="45d98-118">To remove all images programmatically</span></span>  
   
-     \-либо\-  
+-   <span data-ttu-id="45d98-119">Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> метод для удаления одного образа</span><span class="sxs-lookup"><span data-stu-id="45d98-119">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> method to remove a single image</span></span>  
   
-     Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> для удаления всех изображений в наборе.  
+     <span data-ttu-id="45d98-120">, - или -</span><span class="sxs-lookup"><span data-stu-id="45d98-120">,-or-</span></span>  
+  
+     <span data-ttu-id="45d98-121">Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> метод, чтобы удалить все образы в списке изображений.</span><span class="sxs-lookup"><span data-stu-id="45d98-121">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> method to clear all images in the image list.</span></span>  
   
     ```vb  
     ' Removes the first image in the image list  
     ImageList1.Images.Remove(myImage)  
     ' Clears all images in the image list  
     ImageList1.Images.Clear()  
-  
     ```  
   
 ```csharp  
@@ -135,26 +137,23 @@ public void addImage()
 imageList1.Images.Remove(myImage);  
 // Clears all images in the image list.  
 imageList1.Images.Clear();  
-  
 ```  
   
-### Чтобы удалить рисунки по ключу  
+### <a name="to-remove-images-by-key"></a><span data-ttu-id="45d98-122">Чтобы удалить рисунки по ключу</span><span class="sxs-lookup"><span data-stu-id="45d98-122">To remove images by key</span></span>  
   
--   Используйте метод <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> для удаления отдельного изображения по ключу.  
+-   <span data-ttu-id="45d98-123">Используйте <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> метод для удаления одного образа по его ключу.</span><span class="sxs-lookup"><span data-stu-id="45d98-123">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> method to remove a single image by its key.</span></span>  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  
     ImageList1.Images.RemoveByKey("myPhoto")  
-  
     ```  
   
 ```csharp  
 // Removes the image named "myPhoto" from the list.  
 imageList1.Images.RemoveByKey("myPhoto");  
-  
 ```  
   
-## См. также  
- [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)   
- [Общие сведения о компоненте ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)   
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="45d98-124">См. также</span><span class="sxs-lookup"><span data-stu-id="45d98-124">See Also</span></span>  
+ [<span data-ttu-id="45d98-125">Компонент ImageList</span><span class="sxs-lookup"><span data-stu-id="45d98-125">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [<span data-ttu-id="45d98-126">Общие сведения о компоненте ImageList</span><span class="sxs-lookup"><span data-stu-id="45d98-126">ImageList Component Overview</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
+ [<span data-ttu-id="45d98-127">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="45d98-127">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

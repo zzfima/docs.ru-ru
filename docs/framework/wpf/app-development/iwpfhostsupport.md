@@ -1,44 +1,46 @@
 ---
-title: "Интерфейс IWpfHostSupport | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IWpfHostSupport - интерфейс"
+title: "Интерфейс IWpfHostSupport"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85d4ed09d6c5ca17e148d531e6aac483ff737d51
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Интерфейс IWpfHostSupport
-Приложения, в которых размещается содержимое [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] средствами PresentationHost.exe, реализуют этот интерфейс для предоставления точки интегрирования между ведущим приложением и PresentationHost.exe.  
+# <a name="iwpfhostsupport"></a><span data-ttu-id="39893-102">Интерфейс IWpfHostSupport</span><span class="sxs-lookup"><span data-stu-id="39893-102">IWpfHostSupport</span></span>
+<span data-ttu-id="39893-103">Приложения, размещающие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимым при помощи PresentationHost.exe реализуют этот интерфейс для предоставления точки интеграции между узлом и PresentationHost.exe.</span><span class="sxs-lookup"><span data-stu-id="39893-103">Applications that host [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] content via PresentationHost.exe implement this interface to provide a point of integration between the host and PresentationHost.exe.</span></span>  
   
-## Заметки  
- Приложения [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], например, браузеры, могут размещать содержимое [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)], включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободные XAML.  Для размещения содержимого [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] приложения [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] создают экземпляр [элемента управления WebBrowser](http://go.microsoft.com/fwlink/?LinkId=97911).  Чтобы разместить объект, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] создает экземпляр PresentationHost.exe, который предоставляет размещаемое содержимое [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] ведущему приложению для отображения в [элементе управления WebBrowser](http://go.microsoft.com/fwlink/?LinkId=97911).  
+## <a name="remarks"></a><span data-ttu-id="39893-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="39893-104">Remarks</span></span>  
+ [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]<span data-ttu-id="39893-105">можно размещать приложения, такие как веб-браузеры [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимого, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и Свободный XAML.</span><span class="sxs-lookup"><span data-stu-id="39893-105"> applications such as Web browsers can host [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] content, including [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML.</span></span> <span data-ttu-id="39893-106">Узел [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимое, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] приложения создают экземпляр [элемент управления WebBrowser](http://go.microsoft.com/fwlink/?LinkId=97911).</span><span class="sxs-lookup"><span data-stu-id="39893-106">To host [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] content, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] applications create an instance of the [WebBrowser control](http://go.microsoft.com/fwlink/?LinkId=97911).</span></span> <span data-ttu-id="39893-107">Для размещения [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] создает экземпляр PresentationHost.exe, который предоставляет размещаемый [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] содержимого на узел для отображения в [элемент управления WebBrowser](http://go.microsoft.com/fwlink/?LinkId=97911).</span><span class="sxs-lookup"><span data-stu-id="39893-107">To be hosted, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] creates an instance of PresentationHost.exe, which provides the hosted [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] content to the host for display in the [WebBrowser control](http://go.microsoft.com/fwlink/?LinkId=97911).</span></span>  
   
- Интеграция, обеспечиваемая `IWpfHostSupport`, позволяет PresentationHost.exe выполнить следующие действия:  
+ <span data-ttu-id="39893-108">Интеграция включаемые `IWpfHostSupport` позволяет PresentationHost.exe для:</span><span class="sxs-lookup"><span data-stu-id="39893-108">The integration enabled by `IWpfHostSupport` allows PresentationHost.exe to:</span></span>  
   
--   определить и зарегистрировать устройства необработанного ввода \(HID\-устройства\), в которых заинтересовано ведущее приложение;  
+-   <span data-ttu-id="39893-109">Определить и зарегистрировать устройства необработанного ввода (HID-устройства), которых интересует ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="39893-109">Discover and register with the raw input devices (Human Interface Devices) that the host application is interested in.</span></span>  
   
--   получить сообщения с входными данными от зарегистрированного устройства необработанного ввода и переслать соответствующие сообщения в ведущее приложение;  
+-   <span data-ttu-id="39893-110">Получение входных сообщений от зарегистрированного устройства необработанного ввода и переслать соответствующие сообщения в ведущее приложение.</span><span class="sxs-lookup"><span data-stu-id="39893-110">Receive input messages from the registered raw input devices and forward appropriate messages to the host application.</span></span>  
   
--   сделать запрос ведущему приложению для получения сведений о ходе выполнения и пользовательского интерфейса ошибок.  
+-   <span data-ttu-id="39893-111">Запрос ведущего приложения для пользовательских интерфейсов пользователя хода выполнения и ошибки.</span><span class="sxs-lookup"><span data-stu-id="39893-111">Query the host application for custom progress and error user interfaces.</span></span>  
   
 > [!NOTE]
->  Этот API предназначен и поддерживается только для использования на локальном клиентском компьютере  
+>  <span data-ttu-id="39893-112">Этот API предназначен и поддерживается только для использования на локальном клиентском компьютере</span><span class="sxs-lookup"><span data-stu-id="39893-112">This API is only intended and supported for use on the local client machine</span></span>  
   
-## Члены  
+## <a name="members"></a><span data-ttu-id="39893-113">Члены</span><span class="sxs-lookup"><span data-stu-id="39893-113">Members</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Получение необработанных устройств ввода](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Позволяют программе PresentationHost.exe обнаруживать необработанные устройства ввода \(устройства пользовательского интерфейса\), в которых заинтересовано главное приложение.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Вызывается с помощью PresentationHost.exe всякий раз, когда получено сообщение и не возвращается E\_NOTIMPL.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|По умолчанию PresentationHost.exe предоставляет свой собственный ход развертывания и пользовательский интерфейс ошибок развертывания, которые отображаются при развертывании содержимого WPF.|
+|<span data-ttu-id="39893-114">Член</span><span class="sxs-lookup"><span data-stu-id="39893-114">Member</span></span>|<span data-ttu-id="39893-115">Описание</span><span class="sxs-lookup"><span data-stu-id="39893-115">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="39893-116">GetRawInputDevices</span><span class="sxs-lookup"><span data-stu-id="39893-116">GetRawInputDevices</span></span>](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|<span data-ttu-id="39893-117">Позволяет программе PresentationHost.exe обнаруживать устройства необработанного ввода (устройства HID), которые интересуют ведущее приложение.</span><span class="sxs-lookup"><span data-stu-id="39893-117">Allows PresentationHost.exe to discover the raw input devices (Human Interface Devices) that the host application is interested in.</span></span>|  
+|[<span data-ttu-id="39893-118">FilterInputMessage</span><span class="sxs-lookup"><span data-stu-id="39893-118">FilterInputMessage</span></span>](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|<span data-ttu-id="39893-119">Вызывается программой PresentationHost.exe всякий раз при получении сообщения, пока не будет возвращено E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="39893-119">Called by PresentationHost.exe whenever a message is received unless E_NOTIMPL is returned.</span></span>|  
+|[<span data-ttu-id="39893-120">GetCustomUI</span><span class="sxs-lookup"><span data-stu-id="39893-120">GetCustomUI</span></span>](../../../../docs/framework/wpf/app-development/getcustomui.md)|<span data-ttu-id="39893-121">По умолчанию PresentationHost.exe время от времени предоставляет свой собственный ход выполнения развертывания и ошибка развертывания при пользовательские интерфейсы, которые отображаются при развертывании содержимого WPF.</span><span class="sxs-lookup"><span data-stu-id="39893-121">By default, PresentationHost.exe provides its own deployment progress and deployment error user interfaces that are displayed when WPF content is deployed.</span></span>|

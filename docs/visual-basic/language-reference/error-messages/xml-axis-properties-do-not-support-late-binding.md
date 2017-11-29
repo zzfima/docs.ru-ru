@@ -1,36 +1,34 @@
 ---
-title: "Свойства оси XML не поддерживают позднее связывание | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc31168"
-  - "vbc31168"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC31168"
+title: "Свойства оси XML не поддерживают позднее связывание"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc31168
+- vbc31168
+helpviewer_keywords: BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4bc6883751c8cdaca1efc5faa724d95d23cf618e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Свойства оси XML не поддерживают позднее связывание
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Свойство XML axis ссылается на нетипизированный объект.  
+# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="77fc8-102">Свойства оси XML не поддерживают позднее связывание</span><span class="sxs-lookup"><span data-stu-id="77fc8-102">XML axis properties do not support late binding</span></span>
+<span data-ttu-id="77fc8-103">Свойство оси XML имеется ссылка на нетипизированный объект.</span><span class="sxs-lookup"><span data-stu-id="77fc8-103">An XML axis property has been referenced for an untyped object.</span></span>  
   
- **Идентификатор ошибки:** BC31168  
+ <span data-ttu-id="77fc8-104">**Идентификатор ошибки:** BC31168</span><span class="sxs-lookup"><span data-stu-id="77fc8-104">**Error ID:** BC31168</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="77fc8-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="77fc8-105">To correct this error</span></span>  
   
--   Убедитесь, что объект является типобезопасным <xref:System.Xml.Linq.XElement> перед ссылкой на свойство XML axis.  
+-   <span data-ttu-id="77fc8-106">Убедитесь, что объект является типобезопасным <xref:System.Xml.Linq.XElement> перед ссылкой на свойство оси XML.</span><span class="sxs-lookup"><span data-stu-id="77fc8-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
   
-## См. также  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="77fc8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="77fc8-107">See Also</span></span>  
+ [<span data-ttu-id="77fc8-108">Свойства оси XML</span><span class="sxs-lookup"><span data-stu-id="77fc8-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="77fc8-109">XML</span><span class="sxs-lookup"><span data-stu-id="77fc8-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)

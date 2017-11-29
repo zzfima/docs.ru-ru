@@ -1,82 +1,81 @@
 ---
-title: "Область видимости в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "область действия блока"
-  - "объявленные элементы, область действия"
-  - "уровни области действия"
-  - "уровень модуля"
-  - "область действия модуля"
-  - "пространства имен, область действия"
-  - "область действия процедуры"
-  - "процедуры, область действия"
-  - "область действия, сведения об области действия"
-  - "область действия, объявленные элементы"
-  - "область действия, уровни"
-  - "область действия, Visual Basic"
+title: "Область видимости в Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module scope [Visual Basic]
+- scope [Visual Basic], levels
+- module level
+- procedures [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- namespaces [Visual Basic], scope
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], about scope
+- levels of scope [Visual Basic]
+- block scope [Visual Basic]
+- scope [Visual Basic], Visual Basic
+- procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Область видимости в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-*Областью действия* объявленного элемента называется множество конструкций кода, которые могут обращаться к этому элементу без уточнения его имени или получения его с помощью оператора [Оператор Imports \(пространство имен .NET и тип\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  Элемент может обладать областью действия одного из следующих уровней:  
+# <a name="scope-in-visual-basic"></a><span data-ttu-id="01c04-102">Область видимости в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01c04-102">Scope in Visual Basic</span></span>
+<span data-ttu-id="01c04-103">*Область* объявленного элемента — это набор всех элементов кода, на него можно ссылаться без уточнения его имени или получения его с помощью [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="01c04-103">The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span> <span data-ttu-id="01c04-104">Элемент может иметь область на одном из следующих уровней:</span><span class="sxs-lookup"><span data-stu-id="01c04-104">An element can have scope at one of the following levels:</span></span>  
   
-|Уровень|Описание|  
-|-------------|--------------|  
-|Область действия блока|Элемент доступен только в пределах блока кода, в котором он объявлен.|  
-|Область действия процедуры|Элемент доступен в коде в пределах процедуры, в которой он объявлен.|  
-|Область действия модуля|Элемент доступен в коде в пределах модуля, класса или структуры, в которых он объявлен.|  
-|Область действия уровня пространства имен|Элемент доступен в коде в пространстве имен, в котором он объявлен.|  
+|<span data-ttu-id="01c04-105">Уровень</span><span class="sxs-lookup"><span data-stu-id="01c04-105">Level</span></span>|<span data-ttu-id="01c04-106">Описание</span><span class="sxs-lookup"><span data-stu-id="01c04-106">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="01c04-107">Область действия блока</span><span class="sxs-lookup"><span data-stu-id="01c04-107">Block scope</span></span>|<span data-ttu-id="01c04-108">Доступно только в коде блока, в котором она объявлена</span><span class="sxs-lookup"><span data-stu-id="01c04-108">Available only within the code block in which it is declared</span></span>|  
+|<span data-ttu-id="01c04-109">Область действия процедуры</span><span class="sxs-lookup"><span data-stu-id="01c04-109">Procedure scope</span></span>|<span data-ttu-id="01c04-110">Доступен в коде в рамках процедуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="01c04-110">Available to all code within the procedure in which it is declared</span></span>|  
+|<span data-ttu-id="01c04-111">Область действия модуля</span><span class="sxs-lookup"><span data-stu-id="01c04-111">Module scope</span></span>|<span data-ttu-id="01c04-112">Доступен в коде в пределах модуля, класса или структуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="01c04-112">Available to all code within the module, class, or structure in which it is declared</span></span>|  
+|<span data-ttu-id="01c04-113">Область видимости пространства имен</span><span class="sxs-lookup"><span data-stu-id="01c04-113">Namespace scope</span></span>|<span data-ttu-id="01c04-114">Доступен в коде в пространстве имен, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="01c04-114">Available to all code in the namespace in which it is declared</span></span>|  
   
- Области действия выше перечислены от самой узкой \(блока\) до самой широкой \(пространства имен\), где *самая узкая область действия* означает наименьшее множество кода, который может обращаться к элементу без уточнения имени.  Дополнительные сведения см. в разделе "Уровни областей действия" на этой странице.  
+ <span data-ttu-id="01c04-115">Эти уровни области изменяются от узкой (блока) до самой широкой (пространства имен), где *узкой областью* означает наименьшее множество кода, который может обращаться к элементу без уточнения.</span><span class="sxs-lookup"><span data-stu-id="01c04-115">These levels of scope progress from the narrowest (block) to the widest (namespace), where *narrowest scope* means the smallest set of code that can refer to the element without qualification.</span></span> <span data-ttu-id="01c04-116">Дополнительные сведения см. в разделе «Уровни область» на этой странице.</span><span class="sxs-lookup"><span data-stu-id="01c04-116">For more information, see "Levels of Scope" on this page.</span></span>  
   
-## Указание области и определение переменных  
- Область действия элемента задается при его объявлении.  Область действия может зависеть от следующих факторов:  
+## <a name="specifying-scope-and-defining-variables"></a><span data-ttu-id="01c04-117">Указание области и определение переменных</span><span class="sxs-lookup"><span data-stu-id="01c04-117">Specifying Scope and Defining Variables</span></span>  
+ <span data-ttu-id="01c04-118">Укажите область действия элемента, при ее объявлении.</span><span class="sxs-lookup"><span data-stu-id="01c04-118">You specify the scope of an element when you declare it.</span></span> <span data-ttu-id="01c04-119">Область может зависеть от следующих факторов:</span><span class="sxs-lookup"><span data-stu-id="01c04-119">The scope can depend on the following factors:</span></span>  
   
--   Область кода \(блок, процедура, модуль, класс или структура\), в которой объявляется элемент.  
+-   <span data-ttu-id="01c04-120">Область (блок, процедура, модуля, класса или структуры), в которой объявляется элемент</span><span class="sxs-lookup"><span data-stu-id="01c04-120">The region (block, procedure, module, class, or structure) in which you declare the element</span></span>  
   
--   Пространство имен, которому принадлежит объявление элемента.  
+-   <span data-ttu-id="01c04-121">Пространства имен, содержащего объявление элемента</span><span class="sxs-lookup"><span data-stu-id="01c04-121">The namespace containing the element's declaration</span></span>  
   
--   Объявленный уровень доступа элемента.  
+-   <span data-ttu-id="01c04-122">Уровень доступа, объявленный элемент</span><span class="sxs-lookup"><span data-stu-id="01c04-122">The access level you declare for the element</span></span>  
   
- Следует с осторожностью относиться к объявлению переменных с одинаковыми именами, но разными областями действия, так как это может привести к непредсказуемым результатам.  Дополнительные сведения см. в разделе [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ <span data-ttu-id="01c04-123">Будьте внимательны при определении переменных с одинаковыми именами, но разными областями действия, так как это может привести к непредвиденным результатам.</span><span class="sxs-lookup"><span data-stu-id="01c04-123">Use care when you define variables with the same name but different scope, because doing so can lead to unexpected results.</span></span> <span data-ttu-id="01c04-124">Для получения дополнительной информации см. [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="01c04-124">For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## Уровни областей действия  
- Программный элемент является доступным во всей области кода, в которой он объявлен.  Весь код в этой области может обращаться к элементу без уточнения его имени.  
+## <a name="levels-of-scope"></a><span data-ttu-id="01c04-125">Уровни области действия</span><span class="sxs-lookup"><span data-stu-id="01c04-125">Levels of Scope</span></span>  
+ <span data-ttu-id="01c04-126">Программный элемент доступен во всей области, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="01c04-126">A programming element is available throughout the region in which you declare it.</span></span> <span data-ttu-id="01c04-127">Весь код в одном регионе может ссылаться на элемент неполного имени.</span><span class="sxs-lookup"><span data-stu-id="01c04-127">All code in the same region can refer to the element without qualifying its name.</span></span>  
   
-### Область действия уровня блока  
- Блок представляет собой набор операторов, в начале и в конце которого стоят операторы начала и завершения блока. Примеры:  
+### <a name="block-scope"></a><span data-ttu-id="01c04-128">Область видимости блока</span><span class="sxs-lookup"><span data-stu-id="01c04-128">Block Scope</span></span>  
+ <span data-ttu-id="01c04-129">Блок — это набор инструкций, заключенная в начальными и конечными операторы объявления, например следующие:</span><span class="sxs-lookup"><span data-stu-id="01c04-129">A block is a set of statements enclosed within initiating and terminating declaration statements, such as the following:</span></span>  
   
--   `Do` и `Loop`.  
+-   <span data-ttu-id="01c04-130">`Do` и `Loop`.</span><span class="sxs-lookup"><span data-stu-id="01c04-130">`Do` and `Loop`</span></span>  
   
--   `For` \[`Each`\] и `Next`.  
+-   <span data-ttu-id="01c04-131">`For`[`Each`] и`Next`</span><span class="sxs-lookup"><span data-stu-id="01c04-131">`For` [`Each`] and `Next`</span></span>  
   
--   `If` и `End If`.  
+-   <span data-ttu-id="01c04-132">`If` и `End If`.</span><span class="sxs-lookup"><span data-stu-id="01c04-132">`If` and `End If`</span></span>  
   
--   `Select` и `End Select`.  
+-   <span data-ttu-id="01c04-133">`Select` и `End Select`.</span><span class="sxs-lookup"><span data-stu-id="01c04-133">`Select` and `End Select`</span></span>  
   
--   `SyncLock` и `End SyncLock`.  
+-   <span data-ttu-id="01c04-134">`SyncLock` и `End SyncLock`.</span><span class="sxs-lookup"><span data-stu-id="01c04-134">`SyncLock` and `End SyncLock`</span></span>  
   
--   `Try` и `End Try`.  
+-   <span data-ttu-id="01c04-135">`Try` и `End Try`.</span><span class="sxs-lookup"><span data-stu-id="01c04-135">`Try` and `End Try`</span></span>  
   
--   `While` и `End While`.  
+-   <span data-ttu-id="01c04-136">`While` и `End While`.</span><span class="sxs-lookup"><span data-stu-id="01c04-136">`While` and `End While`</span></span>  
   
--   `With` и `End With`.  
+-   <span data-ttu-id="01c04-137">`With` и `End With`.</span><span class="sxs-lookup"><span data-stu-id="01c04-137">`With` and `End With`</span></span>  
   
- Если объявить переменную в блоке, то ее можно использовать только внутри этого блока.  В следующем примере область действия переменной `cube` типа Integer — это блок между операторами `If` и `End If`. Ссылаться на переменную `cube` вне блока нельзя.  
+ <span data-ttu-id="01c04-138">Если объявить переменную в блоке, его можно использовать только внутри этого блока.</span><span class="sxs-lookup"><span data-stu-id="01c04-138">If you declare a variable within a block, you can use it only within that block.</span></span> <span data-ttu-id="01c04-139">В следующем примере область целочисленной переменной `cube` — это блок между `If` и `End If`, и вы больше не может ссылаться на `cube` операторами блока.</span><span class="sxs-lookup"><span data-stu-id="01c04-139">In the following example, the scope of the integer variable `cube` is the block between `If` and `End If`, and you can no longer refer to `cube` when execution passes out of the block.</span></span>  
   
 ```  
 If n < 1291 Then  
@@ -86,24 +85,24 @@ End If
 ```  
   
 > [!NOTE]
->  Хотя область действия переменной и ограничена блоком, ее время существования совпадает со временем существования всей процедуры.  Если в ходе выполнения процедуры код внутри блока выполняется несколько раз, переменная каждого блока сохраняет свое предыдущее значение.  Чтобы избежать непредвиденных результатов, добавляйте операторы инициализации переменных в начале блока.  
+>  <span data-ttu-id="01c04-140">Даже если с блоком ограничен областью действия переменной, время существования по-прежнему всей процедуры.</span><span class="sxs-lookup"><span data-stu-id="01c04-140">Even if the scope of a variable is limited to a block, its lifetime is still that of the entire procedure.</span></span> <span data-ttu-id="01c04-141">При вводе блока несколько раз во время процедуры, переменная каждого блока сохраняет свое предыдущее значение.</span><span class="sxs-lookup"><span data-stu-id="01c04-141">If you enter the block more than once during the procedure, each block variable retains its previous value.</span></span> <span data-ttu-id="01c04-142">Чтобы избежать непредвиденных результатов, в таком случае, имеет смысл инициализации переменных в начале блока.</span><span class="sxs-lookup"><span data-stu-id="01c04-142">To avoid unexpected results in such a case, it is wise to initialize block variables at the beginning of the block.</span></span>  
   
-### Область действия уровня процедуры  
- Элемент, объявленный внутри процедуры, недоступен вне этой процедуры.  Его может использовать только процедура, содержащая объявление этого элемента.  Переменные на этом уровне, называются *локальными переменными*.  Они объявляются с помощью [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) с ключевым словом [Static](../../../../visual-basic/language-reference/modifiers/static.md) или без него.  
+### <a name="procedure-scope"></a><span data-ttu-id="01c04-143">Область действия процедуры</span><span class="sxs-lookup"><span data-stu-id="01c04-143">Procedure Scope</span></span>  
+ <span data-ttu-id="01c04-144">Элемент, объявленный внутри процедуры недоступен вне этой процедуры.</span><span class="sxs-lookup"><span data-stu-id="01c04-144">An element declared within a procedure is not available outside that procedure.</span></span> <span data-ttu-id="01c04-145">Его можно использовать только процедура, содержащая объявление.</span><span class="sxs-lookup"><span data-stu-id="01c04-145">Only the procedure that contains the declaration can use it.</span></span> <span data-ttu-id="01c04-146">Переменные на этом уровне также называются *локальные переменные*.</span><span class="sxs-lookup"><span data-stu-id="01c04-146">Variables at this level are also known as *local variables*.</span></span> <span data-ttu-id="01c04-147">Они объявляются с [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md), независимо от [статических](../../../../visual-basic/language-reference/modifiers/static.md) ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="01c04-147">You declare them with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), with or without the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.</span></span>  
   
- Области действия уровня процедуры и уровня блока тесно связаны.  Если объявляется переменная внутри процедуры, но вне любого блока в этой процедуре, то можно представить, что переменная имеет область действия блока \(при этом блоком области является вся процедура\).  
+ <span data-ttu-id="01c04-148">Область действия процедуры и блока тесно связаны.</span><span class="sxs-lookup"><span data-stu-id="01c04-148">Procedure and block scope are closely related.</span></span> <span data-ttu-id="01c04-149">При объявлении переменной внутри процедуры, но вне любого блока в рамках этой процедуры можно представить переменная имеет область видимости блока, где блоком является всю процедуру.</span><span class="sxs-lookup"><span data-stu-id="01c04-149">If you declare a variable inside a procedure but outside any block within that procedure, you can think of the variable as having block scope, where the block is the entire procedure.</span></span>  
   
 > [!NOTE]
->  Все локальные элементы, даже если они объявляются как переменные `Static`, являются закрытыми элементами процедуры, в которой они объявлены.  Нельзя объявить элемент с использованием ключевого слова [Public](../../../../visual-basic/language-reference/modifiers/public.md) внутри процедуры.  
+>  <span data-ttu-id="01c04-150">Все локальные элементы, даже если они являются `Static` переменные, являющиеся собственными для процедуры, в котором они отображаются.</span><span class="sxs-lookup"><span data-stu-id="01c04-150">All local elements, even if they are `Static` variables, are private to the procedure in which they appear.</span></span> <span data-ttu-id="01c04-151">Нельзя объявить элемент с использованием [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово в процедуре.</span><span class="sxs-lookup"><span data-stu-id="01c04-151">You cannot declare any element using the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword within a procedure.</span></span>  
   
-### Область действия уровня модуля  
- Для удобства один и тот же термин *уровень модуля* применяется в отношении модулей, классов и структур.  Элементы этого уровня объявляются вне любой процедуры или блока, но в пределах модуля, класса или структуры.  
+### <a name="module-scope"></a><span data-ttu-id="01c04-152">Область действия модуля</span><span class="sxs-lookup"><span data-stu-id="01c04-152">Module Scope</span></span>  
+ <span data-ttu-id="01c04-153">Для удобства один термин *уровне модуля* одинаково применимо для модулей, классов и структур.</span><span class="sxs-lookup"><span data-stu-id="01c04-153">For convenience, the single term *module level* applies equally to modules, classes, and structures.</span></span> <span data-ttu-id="01c04-154">Можно объявлять элементы этого уровня, поместив в операторе объявления вне любой процедуры или блока, но внутри модуля, класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="01c04-154">You can declare elements at this level by placing the declaration statement outside of any procedure or block but within the module, class, or structure.</span></span>  
   
- При объявлении элемента на уровне модуля его область действия определяется объявленным уровнем доступа.  На область действия также влияет пространство имен, которому принадлежит модуль, класс или структура.  
+ <span data-ttu-id="01c04-155">При объявлении на уровне модуля, выбранного уровня доступа определяет область.</span><span class="sxs-lookup"><span data-stu-id="01c04-155">When you make a declaration at the module level, the access level you choose determines the scope.</span></span> <span data-ttu-id="01c04-156">Пространство имен, содержащее модуля, класса или структуры также влияет на область.</span><span class="sxs-lookup"><span data-stu-id="01c04-156">The namespace that contains the module, class, or structure also affects the scope.</span></span>  
   
- Элементы, для которых объявляется уровень доступа [Private](../../../../visual-basic/language-reference/modifiers/private.md), доступны для каждой процедуры в этом модуле, но не для кода в другом модуле.  Оператор `Dim` на уровне модуля по умолчанию имеет уровень доступа `Private`, если не используются какие\-либо другие ключевые слова, указывающие уровень доступа.  Однако можно сделать область действия и уровень доступа более очевидным с помощью ключевого слова `Private` в операторе `Dim`.  
+ <span data-ttu-id="01c04-157">Элементы, для которых объявляется [закрытый](../../../../visual-basic/language-reference/modifiers/private.md) уровень доступа, доступны для каждой процедуры в этом модуле, но не для кода в другом модуле.</span><span class="sxs-lookup"><span data-stu-id="01c04-157">Elements for which you declare [Private](../../../../visual-basic/language-reference/modifiers/private.md) access level are available to every procedure in that module, but not to any code in a different module.</span></span> <span data-ttu-id="01c04-158">`Dim` Инструкции на уровне модуля по умолчанию имеет значение `Private` , если вы не используете любого ключевого слова уровня доступа.</span><span class="sxs-lookup"><span data-stu-id="01c04-158">The `Dim` statement at module level defaults to `Private` if you do not use any access level keywords.</span></span> <span data-ttu-id="01c04-159">Тем не менее, выполненные области и уровень доступа более очевидным с помощью `Private` ключевое слово в `Dim` инструкции.</span><span class="sxs-lookup"><span data-stu-id="01c04-159">However, you can make the scope and access level more obvious by using the `Private` keyword in the `Dim` statement.</span></span>  
   
- В следующем примере все процедуры, определенные в модуле, могут ссылаться на строковую переменную `strMsg`.  При вызове второй процедуры выводится значение строковой переменной `strMsg` в диалоговом окне.  
+ <span data-ttu-id="01c04-160">В следующем примере все процедуры, определенные в модуле может ссылаться на строковую переменную `strMsg`.</span><span class="sxs-lookup"><span data-stu-id="01c04-160">In the following example, all procedures defined in the module can refer to the string variable `strMsg`.</span></span> <span data-ttu-id="01c04-161">Если вызывается вторая процедура, он отображает содержимое строковой переменной `strMsg` в диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="01c04-161">When the second procedure is called, it displays the contents of the string variable `strMsg` in a dialog box.</span></span>  
   
 ```  
 ' Put the following declaration at module level (not in any procedure).  
@@ -118,35 +117,35 @@ Sub usePrivateVariable()
 End Sub  
 ```  
   
-### Область действия уровня пространства имен  
- Если элемент объявляется на уровне модуля с ключевым словом [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [Public](../../../../visual-basic/language-reference/modifiers/public.md), он становится доступным для всех процедур из пространства имен, в котором он объявлен.  Учитывая следующие изменения в предыдущем примере, обращаться к строковой переменной `strMsg` по коду можно из любого места в пространстве имен ее объявления.  
+### <a name="namespace-scope"></a><span data-ttu-id="01c04-162">Область видимости пространства имен</span><span class="sxs-lookup"><span data-stu-id="01c04-162">Namespace Scope</span></span>  
+ <span data-ttu-id="01c04-163">При объявлении элемента на уровне модуля с [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово, он становится доступным для всех процедур из пространства имен, в котором объявлен элемент.</span><span class="sxs-lookup"><span data-stu-id="01c04-163">If you declare an element at module level using the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) or [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword, it becomes available to all procedures throughout the namespace in which the element is declared.</span></span> <span data-ttu-id="01c04-164">Учитывая следующие изменения в предыдущем примере строковая переменная `strMsg` можно ссылаться из кода в любом месте в пространстве имен ее объявления.</span><span class="sxs-lookup"><span data-stu-id="01c04-164">With the following alteration to the preceding example, the string variable `strMsg` can be referred to by code anywhere in the namespace of its declaration.</span></span>  
   
 ```  
 ' Include this declaration at module level (not inside any procedure).  
 Public strMsg As String  
 ```  
   
- Область действия уровня пространства имен включает вложенные пространства имен.  Элемент, доступный внутри пространства имен, также доступен и внутри любого пространства имен, вложенного в него.  
+ <span data-ttu-id="01c04-165">Область видимости пространства имен включает вложенные пространства имен.</span><span class="sxs-lookup"><span data-stu-id="01c04-165">Namespace scope includes nested namespaces.</span></span> <span data-ttu-id="01c04-166">Элемент, доступный в пределах пространства имен доступно также в любое пространство имен, вложенных в это пространство имен.</span><span class="sxs-lookup"><span data-stu-id="01c04-166">An element available from within a namespace is also available from within any namespace nested inside that namespace.</span></span>  
   
- Если проект не содержит операторов [Оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md), весь проект считается одним пространством имен.  В этом случае область пространства имен может рассматриваться как область проекта.  Элементы `Public` в модуле, классе или структуре также доступны для любого проекта, который ссылается на соответствующий проект.  
+ <span data-ttu-id="01c04-167">Если проект не содержит [оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, весь проект находится в том же пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="01c04-167">If your project does not contain any [Namespace Statement](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, everything in the project is in the same namespace.</span></span> <span data-ttu-id="01c04-168">В этом случае область пространства имен может рассматриваться как область проекта.</span><span class="sxs-lookup"><span data-stu-id="01c04-168">In this case, namespace scope can be thought of as project scope.</span></span> <span data-ttu-id="01c04-169">`Public`элементы модуля, класса или структуры также доступны в любой проект, который ссылается на соответствующий проект.</span><span class="sxs-lookup"><span data-stu-id="01c04-169">`Public` elements in a module, class, or structure are also available to any project that references their project.</span></span>  
   
-## Выбор области действия  
- При объявлении переменной и выборе ее области действия следует иметь в виду следующие моменты.  
+## <a name="choice-of-scope"></a><span data-ttu-id="01c04-170">Выбор области действия</span><span class="sxs-lookup"><span data-stu-id="01c04-170">Choice of Scope</span></span>  
+ <span data-ttu-id="01c04-171">При объявлении переменной, вам необходимо иметь в виду следующие моменты при выборе ее области действия.</span><span class="sxs-lookup"><span data-stu-id="01c04-171">When you declare a variable, you should keep in mind the following points when choosing its scope.</span></span>  
   
-### Преимущества локальных переменных  
- Локальные переменные являются хорошим выбором для любого типа временных вычислений по следующим причинам:  
+### <a name="advantages-of-local-variables"></a><span data-ttu-id="01c04-172">Преимущества локальных переменных</span><span class="sxs-lookup"><span data-stu-id="01c04-172">Advantages of Local Variables</span></span>  
+ <span data-ttu-id="01c04-173">Локальные переменные являются хорошим выбором для любого типа временных вычислений по следующим причинам:</span><span class="sxs-lookup"><span data-stu-id="01c04-173">Local variables are a good choice for any kind of temporary calculation, for the following reasons:</span></span>  
   
--   **Предотвращение конфликтов имен**. Имена локальных переменных исключает возможность конфликта имен.  Например, можно создать несколько разных процедур, содержащих переменную с именем `intTemp`.  Поскольку каждая переменная `intTemp` объявлена как локальная переменная, каждая процедура распознает только свою собственную версию `intTemp`.  Любая процедура может изменить значение собственной локальной переменной `intTemp`, не затрагивая значений переменных `intTemp` в других процедурах.  
+-   <span data-ttu-id="01c04-174">**Предотвращение конфликтов имен.**</span><span class="sxs-lookup"><span data-stu-id="01c04-174">**Name Conflict Avoidance.**</span></span> <span data-ttu-id="01c04-175">Имена локальных переменных не приводит к конфликту.</span><span class="sxs-lookup"><span data-stu-id="01c04-175">Local variable names are not susceptible to conflict.</span></span> <span data-ttu-id="01c04-176">Например, можно создать несколько разных процедур, содержащих переменную с именем `intTemp`.</span><span class="sxs-lookup"><span data-stu-id="01c04-176">For example, you can create several different procedures containing a variable called `intTemp`.</span></span> <span data-ttu-id="01c04-177">В течение каждого `intTemp` объявлен как локальная переменная, каждая процедура распознает только свою собственную версию из `intTemp`.</span><span class="sxs-lookup"><span data-stu-id="01c04-177">As long as each `intTemp` is declared as a local variable, each procedure recognizes only its own version of `intTemp`.</span></span> <span data-ttu-id="01c04-178">Любая процедура может изменить значение собственной локальной переменной `intTemp` без влияния на `intTemp` переменных в других процедур.</span><span class="sxs-lookup"><span data-stu-id="01c04-178">Any one procedure can alter the value in its local `intTemp` without affecting `intTemp` variables in other procedures.</span></span>  
   
--   **Потребление ресурсов памяти**. Локальные переменные потребляют память только во время выполнения процедуры.  Память, занимаемая ими, высвобождается, когда процедура возвращает управление вызывающему коду.  Напротив, переменные [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) и [Static](../../../../visual-basic/language-reference/modifiers/static.md) используют ресурсы памяти до тех пор, пока не завершится работа приложения, поэтому следует их использовать только при необходимости.  *Переменные экземпляра* потребляют память, пока их экземпляр продолжает существовать, что делает их менее эффективными, чем локальные переменные, но потенциально более эффективными, чем переменные `Shared` и `Static`.  
+-   <span data-ttu-id="01c04-179">**Потребление памяти.**</span><span class="sxs-lookup"><span data-stu-id="01c04-179">**Memory Consumption.**</span></span> <span data-ttu-id="01c04-180">Локальные переменные потребляют память только во время выполнения процедуры.</span><span class="sxs-lookup"><span data-stu-id="01c04-180">Local variables consume memory only while their procedure is running.</span></span> <span data-ttu-id="01c04-181">Их память освобождается, когда процедура возвращает в вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="01c04-181">Their memory is released when the procedure returns to the calling code.</span></span> <span data-ttu-id="01c04-182">В отличие от этого [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) и [статических](../../../../visual-basic/language-reference/modifiers/static.md) переменные потребление ресурсов памяти, пока не завершится работа приложения, поэтому следует использовать их только при необходимости.</span><span class="sxs-lookup"><span data-stu-id="01c04-182">By contrast, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) and [Static](../../../../visual-basic/language-reference/modifiers/static.md) variables consume memory resources until your application stops running, so use them only when necessary.</span></span> <span data-ttu-id="01c04-183">*Переменные экземпляра* потребляют память, пока их экземпляр продолжает существовать, что делает их менее эффективными, чем локальные переменные, но потенциально более эффективными, чем `Shared` или `Static` переменных.</span><span class="sxs-lookup"><span data-stu-id="01c04-183">*Instance variables* consume memory while their instance continues to exist, which makes them less efficient than local variables, but potentially more efficient than `Shared` or `Static` variables.</span></span>  
   
-### Сокращение области действия  
- В целом, при объявлении любой переменной или константы считается хорошим стилем программирования сокращать ее область насколько это возможно \(самая маленькая область — область блока\).  Это помогает освободить ресурсы памяти и свести к минимуму вероятность вызова в коде недопустимой переменной.  По этой же причине лучше объявлять переменную как статическую \([Static](../../../../visual-basic/language-reference/modifiers/static.md)\) только тогда, когда необходимо сохранить ее значение между вызовами процедур.  
+### <a name="minimizing-scope"></a><span data-ttu-id="01c04-184">Сокращение области действия</span><span class="sxs-lookup"><span data-stu-id="01c04-184">Minimizing Scope</span></span>  
+ <span data-ttu-id="01c04-185">Как правило, при объявлении любая переменная или константа, он является хорошим стилем программирования сокращать ее область насколько это возможно (узкая — область видимости блока).</span><span class="sxs-lookup"><span data-stu-id="01c04-185">In general, when declaring any variable or constant, it is good programming practice to make the scope as narrow as possible (block scope is the narrowest).</span></span> <span data-ttu-id="01c04-186">Это помогает освободить ресурсы памяти и сводит к минимуму вероятность коде недопустимой переменной.</span><span class="sxs-lookup"><span data-stu-id="01c04-186">This helps conserve memory and minimizes the chances of your code erroneously referring to the wrong variable.</span></span> <span data-ttu-id="01c04-187">Аналогичным образом, следует объявить переменную [статических](../../../../visual-basic/language-reference/modifiers/static.md) только когда это необходимо сохранить ее значение между вызовами процедур.</span><span class="sxs-lookup"><span data-stu-id="01c04-187">Similarly, you should declare a variable to be [Static](../../../../visual-basic/language-reference/modifiers/static.md) only when it is necessary to preserve its value between procedure calls.</span></span>  
   
-## См. также  
- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Объявление переменной](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="01c04-188">См. также</span><span class="sxs-lookup"><span data-stu-id="01c04-188">See Also</span></span>  
+ [<span data-ttu-id="01c04-189">Характеристики объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="01c04-189">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="01c04-190">Практическое руководство. Управление областью действия переменной</span><span class="sxs-lookup"><span data-stu-id="01c04-190">How to: Control the Scope of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [<span data-ttu-id="01c04-191">Время существования в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01c04-191">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="01c04-192">Уровни доступа в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="01c04-192">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="01c04-193">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="01c04-193">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="01c04-194">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="01c04-194">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

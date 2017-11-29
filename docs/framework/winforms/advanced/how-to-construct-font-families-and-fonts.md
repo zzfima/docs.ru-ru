@@ -1,60 +1,64 @@
 ---
-title: "Практическое руководство. Разработка шрифтов и их семейств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "семейства шрифтов, создание"
-  - "шрифты, создание"
+title: "Практическое руководство. Разработка шрифтов и их семейств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- font families [Windows Forms], constructing
+- fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 066cf358e43dabb3b952b32ecec34ca77c6e8c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Разработка шрифтов и их семейств
-Шрифты с одинаковым характером рисунка, но разными начертаниями группируются в интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] в семейства шрифтов.  Например, семейство шрифтов Arial содержит следующие шрифты:  
+# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="333f7-102">Практическое руководство. Разработка шрифтов и их семейств</span><span class="sxs-lookup"><span data-stu-id="333f7-102">How to: Construct Font Families and Fonts</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="333f7-103">шрифты с же гарнитуры, но разными стилями группируются в семейства шрифтов.</span><span class="sxs-lookup"><span data-stu-id="333f7-103"> groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="333f7-104">Например семейство шрифтов Arial содержит следующие шрифты:</span><span class="sxs-lookup"><span data-stu-id="333f7-104">For example, the Arial font family contains the following fonts:</span></span>  
   
--   Arial Regular  
+-   <span data-ttu-id="333f7-105">Arial обычного</span><span class="sxs-lookup"><span data-stu-id="333f7-105">Arial Regular</span></span>  
   
--   Arial Bold  
+-   <span data-ttu-id="333f7-106">Arial полужирным шрифтом</span><span class="sxs-lookup"><span data-stu-id="333f7-106">Arial Bold</span></span>  
   
--   Arial Italic  
+-   <span data-ttu-id="333f7-107">Arial курсив</span><span class="sxs-lookup"><span data-stu-id="333f7-107">Arial Italic</span></span>  
   
--   Arial Bold Italic  
+-   <span data-ttu-id="333f7-108">Arial полужирный курсив</span><span class="sxs-lookup"><span data-stu-id="333f7-108">Arial Bold Italic</span></span>  
   
- В интерфейсе [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] используются четыре начертания для формирования семейств шрифтов: обычный \(regular\), полужирный \(bold\), курсив \(italic\) и полужирный курсив \(bold italic\).  Такие прилагательные как *narrow \(узкий\)* или *rounded \(скругленный\)*  не определяют новых начертаний, а лишь являются частью имен семейств.  Например, Arial Narrow является семейством шрифтов, включающим следующие члены:  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="333f7-109">используются четыре стиля для формирования семейств шрифтов: обычный, полужирный, курсив и полужирный курсив.</span><span class="sxs-lookup"><span data-stu-id="333f7-109"> uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="333f7-110">Прилагательные, такие как *сузить* и *округленное* не считаются стили; они являются частями имен семейств шрифтов.</span><span class="sxs-lookup"><span data-stu-id="333f7-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="333f7-111">Например Arial Narrow — семейство шрифтов с следующие члены:</span><span class="sxs-lookup"><span data-stu-id="333f7-111">For example, Arial Narrow is a font family with the following members:</span></span>  
   
--   Arial Narrow Regular  
+-   <span data-ttu-id="333f7-112">Arial обычного узкий</span><span class="sxs-lookup"><span data-stu-id="333f7-112">Arial Narrow Regular</span></span>  
   
--   Arial Narrow Bold  
+-   <span data-ttu-id="333f7-113">Полужирным шрифтом Arial узкая</span><span class="sxs-lookup"><span data-stu-id="333f7-113">Arial Narrow Bold</span></span>  
   
--   Arial Narrow Italic  
+-   <span data-ttu-id="333f7-114">Arial узких курсив</span><span class="sxs-lookup"><span data-stu-id="333f7-114">Arial Narrow Italic</span></span>  
   
--   Arial Narrow Bold Italic  
+-   <span data-ttu-id="333f7-115">Arial узких полужирный курсив</span><span class="sxs-lookup"><span data-stu-id="333f7-115">Arial Narrow Bold Italic</span></span>  
   
- Перед тем как выводить текст с помощью интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объекты <xref:System.Drawing.FontFamily> и <xref:System.Drawing.Font>.  Объект <xref:System.Drawing.FontFamily> определяет гарнитуру \(например Arial\), а объект <xref:System.Drawing.Font> указывает размер, начертание и единицы измерения.  
+ <span data-ttu-id="333f7-116">Перед тем как выводить текст с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать <xref:System.Drawing.FontFamily> объекта и <xref:System.Drawing.Font> объекта.</span><span class="sxs-lookup"><span data-stu-id="333f7-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="333f7-117"><xref:System.Drawing.FontFamily> Объекта определяет гарнитуру (например, Arial) и <xref:System.Drawing.Font> объект определяет размер, стиль и единицы измерения.</span><span class="sxs-lookup"><span data-stu-id="333f7-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
   
-## Пример  
- В следующем примере создается шрифт Arial с обычным начертанием и размером, равным 16 пикселям.  В приведенном выше коде конструктор <xref:System.Drawing.Font.%23ctor%2A> получает в качестве своего первого параметра объект <xref:System.Drawing.FontFamily>.  Второй параметр определяет размер шрифта в единицах измерения, задаваемых в четвертом параметре.  Третий параметр указывает начертание шрифта.  
+## <a name="example"></a><span data-ttu-id="333f7-118">Пример</span><span class="sxs-lookup"><span data-stu-id="333f7-118">Example</span></span>  
+ <span data-ttu-id="333f7-119">В следующем примере создается обычного стиля шрифта Arial с размером 16 пикселей.</span><span class="sxs-lookup"><span data-stu-id="333f7-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="333f7-120">В следующем коде первый аргумент, переданный <xref:System.Drawing.Font.%23ctor%2A> конструктор является <xref:System.Drawing.FontFamily> объекта.</span><span class="sxs-lookup"><span data-stu-id="333f7-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="333f7-121">Второй аргумент задает размер шрифта, измеряется в единицах, которые идентифицируют четвертый аргумент.</span><span class="sxs-lookup"><span data-stu-id="333f7-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="333f7-122">Третий параметр указывает стиль.</span><span class="sxs-lookup"><span data-stu-id="333f7-122">The third argument identifies the style.</span></span>  
   
- Значение <xref:System.Drawing.GraphicsUnit> является членом перечисления <xref:System.Drawing.GraphicsUnit>, а значение <xref:System.Drawing.FontStyle> является членом перечисления <xref:System.Drawing.FontStyle>.  
+ <span data-ttu-id="333f7-123"><xref:System.Drawing.GraphicsUnit.Pixel>является членом <xref:System.Drawing.GraphicsUnit> перечисления, и <xref:System.Drawing.FontStyle.Regular> является членом <xref:System.Drawing.FontStyle> перечисления.</span><span class="sxs-lookup"><span data-stu-id="333f7-123"><xref:System.Drawing.GraphicsUnit.Pixel> is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="333f7-124">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="333f7-124">Compiling the Code</span></span>  
+ <span data-ttu-id="333f7-125">Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="333f7-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## См. также  
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="333f7-126">См. также</span><span class="sxs-lookup"><span data-stu-id="333f7-126">See Also</span></span>  
+ [<span data-ttu-id="333f7-127">Работами со шрифтами и текстом</span><span class="sxs-lookup"><span data-stu-id="333f7-127">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [<span data-ttu-id="333f7-128">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="333f7-128">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

@@ -1,58 +1,61 @@
 ---
-title: "Как закрасить область с линейным градиентом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кисти, рисование с линейным градиентом"
-  - "линейные градиенты, рисование с помощью"
-  - "рисование, с линейным градиентом"
+title: "Как закрасить область с линейным градиентом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linear gradients [WPF], painting with
+- brushes [WPF], painting with linear gradients
+- painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dcc37651d6f1f304f15d3244c2504517a2a9fb76
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Как закрасить область с линейным градиентом
-В этом примере показано использование класса <xref:System.Windows.Media.LinearGradientBrush> для закрашивания области с линейным градиентом.  В следующем примере, <xref:System.Windows.Shapes.Shape.Fill%2A> для <xref:System.Windows.Shapes.Rectangle> закрашено с использованием диагонального линейного градиента с переходом цвета от желтого к красному, синему и затем зеленому.  
+# <a name="how-to-paint-an-area-with-a-linear-gradient"></a><span data-ttu-id="2a3e6-102">Как закрасить область с линейным градиентом</span><span class="sxs-lookup"><span data-stu-id="2a3e6-102">How to: Paint an Area with a Linear Gradient</span></span>
+<span data-ttu-id="2a3e6-103">В этом примере показано, как использовать <xref:System.Windows.Media.LinearGradientBrush> класса Закраска области с линейным градиентом.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-103">This example shows how to use the <xref:System.Windows.Media.LinearGradientBrush> class to paint an area with a linear gradient.</span></span> <span data-ttu-id="2a3e6-104">В следующем примере <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Rectangle> отрисовывается с диагонального линейного градиента, которая переходит с желтого на красный цвет на синий и зеленого.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-104">In the following example, the <xref:System.Windows.Shapes.Shape.Fill%2A> of a <xref:System.Windows.Shapes.Rectangle> is painted with a diagonal linear gradient that transitions from yellow to red to blue to lime green.</span></span>  
   
-## Пример  
- [!code-xml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
+## <a name="example"></a><span data-ttu-id="2a3e6-105">Пример</span><span class="sxs-lookup"><span data-stu-id="2a3e6-105">Example</span></span>  
+ [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
- Ниже показан градиент, созданный в предыдущем примере.  
+ <span data-ttu-id="2a3e6-106">Ниже показан градиент, созданный в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-106">The following illustration shows the gradient created by the previous example.</span></span>  
   
- ![Диагональный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-diagonallgb.png "graphicsmm\_DiagonalLGB")  
+ <span data-ttu-id="2a3e6-107">![Диагональный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")</span><span class="sxs-lookup"><span data-stu-id="2a3e6-107">![Diagonal linear gradient](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")</span></span>  
   
- Для создания горизонтального линейного градиента следует изменить значения <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> класса <xref:System.Windows.Media.LinearGradientBrush> на \(0,0.5\) и \(1,0.5\).  В следующем примере объект <xref:System.Windows.Shapes.Rectangle> окрашивается с помощью горизонтального линейного градиента.  
+ <span data-ttu-id="2a3e6-108">Чтобы создать горизонтальный линейный градиент, измените <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> из <xref:System.Windows.Media.LinearGradientBrush> для (0,0.5) и (1,0.5).</span><span class="sxs-lookup"><span data-stu-id="2a3e6-108">To create a horizontal linear gradient, change the <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> and <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> of the <xref:System.Windows.Media.LinearGradientBrush> to (0,0.5) and (1,0.5).</span></span> <span data-ttu-id="2a3e6-109">В следующем примере <xref:System.Windows.Shapes.Rectangle> отрисовывается с горизонтального линейного градиента.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-109">In the following example, a <xref:System.Windows.Shapes.Rectangle> is painted with a horizontal linear gradient.</span></span>  
   
- [!code-xml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
- Ниже показан градиент, созданный в предыдущем примере.  
+ <span data-ttu-id="2a3e6-110">Ниже показан градиент, созданный в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-110">The following illustration shows the gradient created by the previous example.</span></span>  
   
- ![Горизонтальный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-horizontallgb.png "graphicsmm\_HorizontalLGB")  
+ <span data-ttu-id="2a3e6-111">![Горизонтальный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")</span><span class="sxs-lookup"><span data-stu-id="2a3e6-111">![A horizontal linear gradient](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")</span></span>  
   
- Для создания вертикального линейного градиента следует изменить значения <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> класса <xref:System.Windows.Media.LinearGradientBrush> на \(0.5,0\) и \(0.5,1\).  В следующем примере объект <xref:System.Windows.Shapes.Rectangle> окрашивается с помощью вертикального линейного градиента.  
+ <span data-ttu-id="2a3e6-112">Чтобы создать Вертикальный линейный градиент, измените <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> и <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> из <xref:System.Windows.Media.LinearGradientBrush> на (0.5,0) и (0.5,1).</span><span class="sxs-lookup"><span data-stu-id="2a3e6-112">To create a vertical linear gradient, change the <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> and <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> of the <xref:System.Windows.Media.LinearGradientBrush> to (0.5,0) and (0.5,1).</span></span> <span data-ttu-id="2a3e6-113">В следующем примере <xref:System.Windows.Shapes.Rectangle> отрисовывается с помощью вертикального линейного градиента.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-113">In the following example, a <xref:System.Windows.Shapes.Rectangle> is painted with a vertical linear gradient.</span></span>  
   
- [!code-xml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
- Ниже показан градиент, созданный в предыдущем примере.  
+ <span data-ttu-id="2a3e6-114">Ниже показан градиент, созданный в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-114">The following illustration shows the gradient created by the previous example.</span></span>  
   
- ![Вертикальный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-verticallgb.png "graphicsmm\_VerticalLGB")  
+ <span data-ttu-id="2a3e6-115">![Вертикальный линейный градиент](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")</span><span class="sxs-lookup"><span data-stu-id="2a3e6-115">![Vertical linear gradient](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")</span></span>  
   
 > [!NOTE]
->  В примерах в этом разделе используется система координат по умолчанию для установки начальной и конечной точки.  Система координат по умолчанию связана с ограничивающим прямоугольником: 0 указывает 0 процентов ограничивающего прямоугольника и 1 — 100 процентов.  Можно изменить эту систему координат, задав свойству <xref:System.Windows.Media.GradientBrush.MappingMode%2A> значение <xref:System.Windows.Media.BrushMappingMode?displayProperty=fullName>.  Абсолютная система координат определяется не относительно ограничивающего прямоугольника.  Значения интерпретируются непосредственно в локальной области.  
+>  <span data-ttu-id="2a3e6-116">В примерах в этом разделе используется система координат по умолчанию для установки начальной и конечной точек.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-116">The examples in this topic use the default coordinate system for setting start points and end points.</span></span> <span data-ttu-id="2a3e6-117">Система координат по умолчанию задается относительно ограничивающего прямоугольника: 0 указывает 0 процентов ограничивающего прямоугольника, а 1 — 100 процентов ограничивающего прямоугольника.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-117">The default coordinate system is relative to a bounding box: 0 indicates 0 percent of the bounding box, and 1 indicates 100 percent of the bounding box.</span></span> <span data-ttu-id="2a3e6-118">Можно изменить эту систему координат, задав <xref:System.Windows.Media.GradientBrush.MappingMode%2A> значение <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-118">You can change this coordinate system by setting the <xref:System.Windows.Media.GradientBrush.MappingMode%2A> property to the value <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="2a3e6-119">Абсолютная система координат не привязана к ограничивающему прямоугольнику.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-119">An absolute coordinate system is not relative to a bounding box.</span></span> <span data-ttu-id="2a3e6-120">Значения интерпретируются непосредственно в локальной области.</span><span class="sxs-lookup"><span data-stu-id="2a3e6-120">Values are interpreted directly in local space.</span></span>  
   
- Дополнительные примеры см. в разделе [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973) \("Примеры использования кистей"\).  Дополнительные сведения о градиенте и других типах кистей см. в разделе [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).
+ <span data-ttu-id="2a3e6-121">Дополнительные примеры см. в разделе [образец кисти](http://go.microsoft.com/fwlink/?LinkID=159973).</span><span class="sxs-lookup"><span data-stu-id="2a3e6-121">For additional examples, see [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).</span></span> <span data-ttu-id="2a3e6-122">Дополнительные сведения о градиенте и других типах кистей см. в разделе [Рисование с сплошные цвета и градиенты Обзор](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2a3e6-122">For more information about gradients and other types of brushes, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span>

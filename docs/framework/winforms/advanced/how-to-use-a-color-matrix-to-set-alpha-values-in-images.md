@@ -1,46 +1,50 @@
 ---
-title: "Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "растровые изображения [Windows Forms], использование матриц цветов для прозрачных"
-  - "изображения [Windows Forms], использование матриц цветов для прозрачных"
-  - "матрицы, альфа-компоненты"
-  - "прозрачность, матрицы цветов"
+title: "Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using color matrices for semi-transparent
+- transparency [Windows Forms], color matrices
+- matrices [Windows Forms], alpha values
+- bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba7a016c96556f2719d4a247c93df7ac698b24fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях
-Классы <xref:System.Drawing.Bitmap> \(наследующий у класса <xref:System.Drawing.Image>\) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функции для чтения и записи значений пикселей.  Для изменения альфа\-компонентов во всем изображении можно использовать класс <xref:System.Drawing.Imaging.ImageAttributes>, либо можно вызывать метод <xref:System.Drawing.Bitmap.SetPixel%2A> класса <xref:System.Drawing.Bitmap> для изменения значений отдельных пикселей.  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a><span data-ttu-id="8a0db-102">Практическое руководство. Использование матрицы цветов для задания значений прозрачности в изображениях</span><span class="sxs-lookup"><span data-stu-id="8a0db-102">How to: Use a Color Matrix to Set Alpha Values in Images</span></span>
+<span data-ttu-id="8a0db-103"><xref:System.Drawing.Bitmap> Класса (который наследуется от <xref:System.Drawing.Image> класса) и <xref:System.Drawing.Imaging.ImageAttributes> предоставляют функции для получения и задания значений пикселей.</span><span class="sxs-lookup"><span data-stu-id="8a0db-103">The <xref:System.Drawing.Bitmap> class (which inherits from the <xref:System.Drawing.Image> class) and the <xref:System.Drawing.Imaging.ImageAttributes> class provide functionality for getting and setting pixel values.</span></span> <span data-ttu-id="8a0db-104">Можно использовать <xref:System.Drawing.Imaging.ImageAttributes> класс для изменения альфа-канал значения для всего изображения, или можно вызвать <xref:System.Drawing.Bitmap.SetPixel%2A> метод <xref:System.Drawing.Bitmap> класса для изменения значений отдельных пикселей.</span><span class="sxs-lookup"><span data-stu-id="8a0db-104">You can use the <xref:System.Drawing.Imaging.ImageAttributes> class to modify the alpha values for an entire image, or you can call the <xref:System.Drawing.Bitmap.SetPixel%2A> method of the <xref:System.Drawing.Bitmap> class to modify individual pixel values.</span></span>  
   
-## Пример  
- Класс <xref:System.Drawing.Imaging.ImageAttributes> содержит множество свойств, которые можно использовать для модификаций изображений при их отрисовке.  В следующем примере объект <xref:System.Drawing.Imaging.ImageAttributes> используется для установки значений всех альфа\-компонентов равными 80 процентам от их первоначальных значений.  Для этого выполняется инициализация матрицы цветов и установка в этой матрице масштабирующего коэффициента для альфа\-компонента равным 0,8.  Адрес матрицы цветов передается методу <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> объекта <xref:System.Drawing.Imaging.ImageAttributes>, а объект <xref:System.Drawing.Imaging.ImageAttributes> передается методу <xref:System.Drawing.Graphics.DrawString%2A> объекта <xref:System.Drawing.Graphics>.  
+## <a name="example"></a><span data-ttu-id="8a0db-105">Пример</span><span class="sxs-lookup"><span data-stu-id="8a0db-105">Example</span></span>  
+ <span data-ttu-id="8a0db-106"><xref:System.Drawing.Imaging.ImageAttributes> Класс имеет множество свойств, которые можно использовать для изменения во время подготовки к просмотру изображений.</span><span class="sxs-lookup"><span data-stu-id="8a0db-106">The <xref:System.Drawing.Imaging.ImageAttributes> class has many properties that you can use to modify images during rendering.</span></span> <span data-ttu-id="8a0db-107">В следующем примере <xref:System.Drawing.Imaging.ImageAttributes> объект используется для равным 80% от их первоначальных альфа-значения.</span><span class="sxs-lookup"><span data-stu-id="8a0db-107">In the following example, an <xref:System.Drawing.Imaging.ImageAttributes> object is used to set all the alpha values to 80 percent of what they were.</span></span> <span data-ttu-id="8a0db-108">Это делается, инициализация матрицы цветов и установив значение в матрице 0,8 масштабирования альфа-канал.</span><span class="sxs-lookup"><span data-stu-id="8a0db-108">This is done by initializing a color matrix and setting the alpha scaling value in the matrix to 0.8.</span></span> <span data-ttu-id="8a0db-109">Адрес матрицы цветов передается <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> метод <xref:System.Drawing.Imaging.ImageAttributes> объекта и <xref:System.Drawing.Imaging.ImageAttributes> объект передается <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="8a0db-109">The address of the color matrix is passed to the <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> method of the <xref:System.Drawing.Imaging.ImageAttributes> object, and the <xref:System.Drawing.Imaging.ImageAttributes> object is passed to the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> object.</span></span>  
   
- В процессе отрисовки значения альфа\-компонентов растрового изображения преобразуются и становятся равными 80% от их первоначальных значений.  Это приводит к смешиванию изображения и фона.  Как показано на следующем рисунке, растровое изображение выглядит прозрачным, и сквозь него можно видеть сплошную черную линию.  
+ <span data-ttu-id="8a0db-110">Во время подготовки к просмотру, альфа-факторы в битовой карте преобразуются в 80 процентов они были.</span><span class="sxs-lookup"><span data-stu-id="8a0db-110">During rendering, the alpha values in the bitmap are converted to 80 percent of what they were.</span></span> <span data-ttu-id="8a0db-111">Это приводит к изображение, смешивается с цветом фона.</span><span class="sxs-lookup"><span data-stu-id="8a0db-111">This results in an image that is blended with the background.</span></span> <span data-ttu-id="8a0db-112">Как показано на следующем рисунке, растровое изображение выглядит прозрачным; Появится сплошная линия черным через него.</span><span class="sxs-lookup"><span data-stu-id="8a0db-112">As the following illustration shows, the bitmap image looks transparent; you can see the solid black line through it.</span></span>  
   
- ![Альфа&#45;сглаживание с использованием матрицы](../../../../docs/framework/winforms/advanced/media/image2.png "image2")  
+ <span data-ttu-id="8a0db-113">![Альфа-смешение цвета с помощью матрицы](../../../../docs/framework/winforms/advanced/media/image2.png "изображение2")</span><span class="sxs-lookup"><span data-stu-id="8a0db-113">![Alpha Blending Using a Matrix](../../../../docs/framework/winforms/advanced/media/image2.png "image2")</span></span>  
   
- В местах, где изображение покрывает белые участки фона, оно смешивается с белым цветом.  Там, где изображение пересекает черную линию, оно смешивается с черным цветом.  
+ <span data-ttu-id="8a0db-114">Местах, где изображение покрывает белые участки фона, оно смешивается с белым цветом.</span><span class="sxs-lookup"><span data-stu-id="8a0db-114">Where the image is over the white portion of the background, the image has been blended with the color white.</span></span> <span data-ttu-id="8a0db-115">Где изображение пересекает черную линию, изображение смешивается с черным цветом.</span><span class="sxs-lookup"><span data-stu-id="8a0db-115">Where the image crosses the black line, the image is blended with the color black.</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="8a0db-116">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="8a0db-116">Compiling the Code</span></span>  
+ <span data-ttu-id="8a0db-117">Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="8a0db-117">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## См. также  
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Альфа\-смешение цвета для линий и заливок](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+## <a name="see-also"></a><span data-ttu-id="8a0db-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8a0db-118">See Also</span></span>  
+ [<span data-ttu-id="8a0db-119">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8a0db-119">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="8a0db-120">Альфа-смешение цвета для линий и заливок</span><span class="sxs-lookup"><span data-stu-id="8a0db-120">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

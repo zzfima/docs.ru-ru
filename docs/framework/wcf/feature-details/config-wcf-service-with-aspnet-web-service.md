@@ -1,61 +1,66 @@
 ---
-title: "Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce9c0ca82803654b2268ff0440bbacec4cb0d0dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET
-Настройка [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] конечной точки службы с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] клиентами веб-службы, используйте <xref:System.ServiceModel.BasicHttpBinding?displayProperty=fullName> с типом привязки для конечной точки службы.  
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a><span data-ttu-id="0d6c4-102">Практическое руководство. Настройка службы WCF для взаимодействия с клиентами веб-службы ASP.NET</span><span class="sxs-lookup"><span data-stu-id="0d6c4-102">How to: Configure WCF Service to Interoperate with ASP.NET Web Service Clients</span></span>
+<span data-ttu-id="0d6c4-103">Для настройки конечной точки службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] таким образом, чтобы она могла взаимодействовать с клиентами веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], используйте в качестве типа привязки для конечной точки вашей службы тип <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-103">To configure a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service endpoint to be interoperable with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients, use the <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type as the binding type for your service endpoint.</span></span>  
   
- В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Клиенты веб-службы не поддерживают кодирование сообщений MTOM, поэтому <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=fullName> свойство следует оставить значение по умолчанию, который является <xref:System.ServiceModel.WSMessageEncoding?displayProperty=fullName>. Клиенты веб-службы ASP.Net не поддерживают WS-Security, поэтому <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=fullName> должно быть присвоено <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ <span data-ttu-id="0d6c4-104">В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-104">You can optionally enable support for HTTPS and transport-level client authentication on the binding.</span></span> <span data-ttu-id="0d6c4-105">Клиенты веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] не поддерживают кодирование сообщений MTOM, поэтому для свойства <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> следует сохранить значение по умолчанию, т. е. <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-105">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients do not support MTOM message encoding, so the <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> property should be left as its default value, which is <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>.</span></span> <span data-ttu-id="0d6c4-106">Клиенты веб-служб ASP.Net не поддерживают WS-Security, поэтому для <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> должно быть задано значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-106">ASP.Net Web Service clients do not support WS-Security, so the <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> should be set to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span>  
   
- Чтобы сделать метаданные [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] служба доступна для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] средства создания прокси-сервера службы веб-(то есть, [инструмент языка описания веб-служб (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [инструмент обнаружения веб-служб (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)и функции Add Web Reference в Visual Studio), должны предоставлять конечную точку метаданных HTTP/GET.  
+ <span data-ttu-id="0d6c4-107">Чтобы сделать метаданные для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службу, доступную [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-инструменты создания прокси-сервера службы (т. е [инструмент языка описания веб-служб (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [(средство обнаружения веб-служб DISCO.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)и возможность добавить веб-ссылку в Visual Studio), должны предоставлять конечную точку метаданных HTTP/GET.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-107">To make the metadata for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service available to [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service proxy generation tools (that is, [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Services Discovery Tool (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834), and the Add Web Reference feature in Visual Studio), you should expose an HTTP/GET metadata endpoint.</span></span>  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Добавление конечной точки WCF, совместимой с клиентами веб-службы ASP.NET, в код  
+### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a><span data-ttu-id="0d6c4-108">Добавление конечной точки WCF, совместимой с клиентами веб-службы ASP.NET, в код</span><span class="sxs-lookup"><span data-stu-id="0d6c4-108">To add a WCF endpoint that is compatible with ASP.NET Web service clients in code</span></span>  
   
-1.  Создайте новый <xref:System.ServiceModel.BasicHttpBinding> экземпляра  
+1.  <span data-ttu-id="0d6c4-109">Создайте новый экземпляр класса <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-109">Create a new <xref:System.ServiceModel.BasicHttpBinding> instance</span></span>  
   
-2.  При необходимости включить режим безопасности транспорта для привязки этой конечной точки службы, установив режим безопасности для привязки к <xref:System.ServiceModel.BasicHttpSecurityMode>. Дополнительные сведения см. в разделе [безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2.  <span data-ttu-id="0d6c4-110">Если требуется, включите безопасность транспортного уровня для привязки этой конечной точки службы, задав для привязки режим безопасности <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-110">Optionally enable transport security for this service endpoint binding by setting the security mode for the binding to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span> <span data-ttu-id="0d6c4-111">Дополнительные сведения см. в разделе [безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-111">For details, please see [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).</span></span>  
   
-3.  Добавьте новую конечную точку приложения в узел службы, используя созданный экземпляр привязки. Дополнительные сведения о том, как добавить конечную точку службы в коде см. в разделе [Практическое руководство: Создание конечной точки службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3.  <span data-ttu-id="0d6c4-112">Добавьте новую конечную точку приложения в узел службы, используя созданный экземпляр привязки.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-112">Add a new application endpoint to your service host using the binding instance that you just created.</span></span> <span data-ttu-id="0d6c4-113">Дополнительные сведения о том, как добавить конечную точку службы в коде см. в разделе [как: создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-113">For details about how to add a service endpoint in code, see the [How to: Create a Service Endpoint in Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).</span></span>  
   
-4.  Включите конечную точку метаданных HTTP/GET для своей службы. Дополнительные сведения см. [как: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+4.  <span data-ttu-id="0d6c4-114">Включите конечную точку метаданных HTTP/GET для своей службы.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-114">Enable an HTTP/GET metadata endpoint for your service.</span></span> <span data-ttu-id="0d6c4-115">Дополнительные сведения см. [как: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-115">For details see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span>  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Добавление конечной точки WCF, совместимой с клиентами веб-службы ASP.NET, в файл конфигурации  
+### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a><span data-ttu-id="0d6c4-116">Добавление конечной точки WCF, совместимой с клиентами веб-службы ASP.NET, в файл конфигурации</span><span class="sxs-lookup"><span data-stu-id="0d6c4-116">To add a WCF endpoint that is compatible with ASP.NET Web service clients in a configuration file</span></span>  
   
-1.  Создайте новый <xref:System.ServiceModel.BasicHttpBinding> конфигурации привязки. Дополнительные сведения см. в разделе [как: Укажите привязку службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+1.  <span data-ttu-id="0d6c4-117">Создайте новую конфигурацию привязки <xref:System.ServiceModel.BasicHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-117">Create a new <xref:System.ServiceModel.BasicHttpBinding> binding configuration.</span></span> <span data-ttu-id="0d6c4-118">Дополнительные сведения см. в разделе [как: Укажите привязку службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-118">For details, see the [How to: Specify a Service Binding in Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span></span>  
   
-2.  При необходимости включить режим безопасности транспорта для данной конфигурации привязки конечной точки службы, установив режим безопасности для привязки к <xref:System.ServiceModel.BasicHttpSecurityMode>. Дополнительные сведения см. в разделе [безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2.  <span data-ttu-id="0d6c4-119">Если требуется, включите безопасность транспортного уровня для конфигурации привязки этой конечной точки службы, задав для привязки режим безопасности <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-119">Optionally enable transport security for this service endpoint binding configuration by setting the security mode for the binding to <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.</span></span> <span data-ttu-id="0d6c4-120">Дополнительные сведения см. в разделе [безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-120">For details, see [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).</span></span>  
   
-3.  Настройте новую конечную точку приложения для службы, используя созданную конфигурацию привязки. Дополнительные сведения о том, как добавить конечную точку службы в файле конфигурации см. в разделе [Практическое руководство: Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+3.  <span data-ttu-id="0d6c4-121">Настройте новую конечную точку приложения для службы, используя созданную конфигурацию привязки.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-121">Configure a new application endpoint for your service using the binding configuration that you just created.</span></span> <span data-ttu-id="0d6c4-122">Дополнительные сведения о том, как добавить конечную точку службы в файле конфигурации см. в разделе [как: создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-122">For details about how to add a service endpoint in a configuration file, see the [How to: Create a Service Endpoint in Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).</span></span>  
   
-4.  Включите конечную точку метаданных HTTP/GET для своей службы. Дополнительные сведения см. [как: публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+4.  <span data-ttu-id="0d6c4-123">Включите конечную точку метаданных HTTP/GET для своей службы.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-123">Enable an HTTP/GET metadata endpoint for your service.</span></span> <span data-ttu-id="0d6c4-124">Дополнительные сведения см. [как: публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c4-124">For details see the [How to: Publish Metadata for a Service Using a Configuration File](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере кода показано, как добавить конечную точку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], совместимую с клиентами веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в код или в файлы конфигурации.  
+## <a name="example"></a><span data-ttu-id="0d6c4-125">Пример</span><span class="sxs-lookup"><span data-stu-id="0d6c4-125">Example</span></span>  
+ <span data-ttu-id="0d6c4-126">В следующем примере кода показано, как добавить конечную точку [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], совместимую с клиентами веб-службы [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в код или в файлы конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0d6c4-126">The following example code demonstrates how to add a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint that is compatible with [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web service clients in code and alternatively in configuration files.</span></span>  
   
- [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
- [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
+ [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)] 
+ [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)] 
+ [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]     
   
- <!-- TODO: review snippet reference [!code[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  -->  
-  
-## <a name="see-also"></a>См. также  
- [Практическое руководство: Создание конечной точки службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)   
- [Практическое руководство: публикация метаданных для службы с помощью кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)   
- [Практическое руководство: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)   
- [Практическое руководство: Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)   
- [Практическое руководство: публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)   
- [Безопасность транспорта](../../../../docs/framework/wcf/feature-details/transport-security.md)   
- [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="0d6c4-127">См. также</span><span class="sxs-lookup"><span data-stu-id="0d6c4-127">See Also</span></span>  
+ [<span data-ttu-id="0d6c4-128">Как: создать конечную точку службы в коде</span><span class="sxs-lookup"><span data-stu-id="0d6c4-128">How to: Create a Service Endpoint in Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [<span data-ttu-id="0d6c4-129">Как: публикация метаданных для службы в коде</span><span class="sxs-lookup"><span data-stu-id="0d6c4-129">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [<span data-ttu-id="0d6c4-130">Практическое руководство. Указание привязки службы в конфигурации</span><span class="sxs-lookup"><span data-stu-id="0d6c4-130">How to: Specify a Service Binding in Configuration</span></span>](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [<span data-ttu-id="0d6c4-131">Как: создать конечную точку службы в конфигурации</span><span class="sxs-lookup"><span data-stu-id="0d6c4-131">How to: Create a Service Endpoint in Configuration</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [<span data-ttu-id="0d6c4-132">Как: публикация метаданных для службы с помощью файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="0d6c4-132">How to: Publish Metadata for a Service Using a Configuration File</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [<span data-ttu-id="0d6c4-133">Безопасность транспорта</span><span class="sxs-lookup"><span data-stu-id="0d6c4-133">Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [<span data-ttu-id="0d6c4-134">Использование метаданных</span><span class="sxs-lookup"><span data-stu-id="0d6c4-134">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)

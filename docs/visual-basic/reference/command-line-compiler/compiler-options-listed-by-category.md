@@ -1,152 +1,134 @@
 ---
-title: "Параметры компилятора Visual Basic, упорядоченные по категориям | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Параметры компилятора Visual Basic по категориям"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c379a937f798a02badd7b7cd8470f2e1ce3b072
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Параметры компилятора Visual Basic по категориям
-Компилятор командной строки [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], отсортированных по функциональной категории.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a><span data-ttu-id="544b9-102">Параметры компилятора Visual Basic по категориям</span><span class="sxs-lookup"><span data-stu-id="544b9-102">Visual Basic Compiler Options Listed by Category</span></span>
+<span data-ttu-id="544b9-103">Компилятор командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] служит альтернативой программам компиляции в составе интегрированной среды разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="544b9-103">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler is provided as an alternative to compiling programs from within the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] integrated development environment (IDE).</span></span> <span data-ttu-id="544b9-104">Ниже приведен список параметров компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], отсортированных по функциональной категории.</span><span class="sxs-lookup"><span data-stu-id="544b9-104">The following is a list of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] command-line compiler options sorted by functional category.</span></span>  
   
-## <a name="compiler-output"></a>Сообщения компилятора  
+## <a name="compiler-output"></a><span data-ttu-id="544b9-105">Сообщения компилятора</span><span class="sxs-lookup"><span data-stu-id="544b9-105">Compiler Output</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-106">Option</span></span>|<span data-ttu-id="544b9-107">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-107">Purpose</span></span>|  
 |---|---|  
-|[/nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Подавляет сведения баннера компилятора.|  
-|[/utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Отображает выходные данные компилятора в кодировке UTF-8.|  
-|[/verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Отображает дополнительные сведения во время компиляции.|  
-|`/modulename:<string>`|Укажите имя исходного модуля.|  
-|[/ preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Укажите язык для выходных данных компилятора.|  
+|[<span data-ttu-id="544b9-108">/nologo</span><span class="sxs-lookup"><span data-stu-id="544b9-108">/nologo</span></span>](../../../visual-basic/reference/command-line-compiler/nologo.md)|<span data-ttu-id="544b9-109">Подавляет сведения баннера компилятора.</span><span class="sxs-lookup"><span data-stu-id="544b9-109">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="544b9-110">/utf8output</span><span class="sxs-lookup"><span data-stu-id="544b9-110">/utf8output</span></span>](../../../visual-basic/reference/command-line-compiler/utf8output.md)|<span data-ttu-id="544b9-111">Отображает выходные данные компилятора в кодировке UTF-8.</span><span class="sxs-lookup"><span data-stu-id="544b9-111">Displays compiler output using UTF-8 encoding.</span></span>|  
+|[<span data-ttu-id="544b9-112">/verbose</span><span class="sxs-lookup"><span data-stu-id="544b9-112">/verbose</span></span>](../../../visual-basic/reference/command-line-compiler/verbose.md)|<span data-ttu-id="544b9-113">Отображает дополнительные сведения во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="544b9-113">Outputs extra information during compilation.</span></span>|  
+|`/modulename:<string>`|<span data-ttu-id="544b9-114">Укажите имя исходного модуля.</span><span class="sxs-lookup"><span data-stu-id="544b9-114">Specify the name of the source module</span></span>|  
+|[<span data-ttu-id="544b9-115">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="544b9-115">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="544b9-116">Укажите язык для выходных данных компилятора.</span><span class="sxs-lookup"><span data-stu-id="544b9-116">Specify a language for compiler output.</span></span>|  
   
-## <a name="optimization"></a>Оптимизация  
+## <a name="optimization"></a><span data-ttu-id="544b9-117">Оптимизация</span><span class="sxs-lookup"><span data-stu-id="544b9-117">Optimization</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-118">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-118">Option</span></span>|<span data-ttu-id="544b9-119">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-119">Purpose</span></span>|  
 |---|---|  
-|[/filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Задает выравнивание размеров выходного файла.|  
-|[/optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Включает или отключает оптимизацию.|  
+|[<span data-ttu-id="544b9-120">/filealign</span><span class="sxs-lookup"><span data-stu-id="544b9-120">/filealign</span></span>](../../../visual-basic/reference/command-line-compiler/filealign.md)|<span data-ttu-id="544b9-121">Задает выравнивание размеров выходного файла.</span><span class="sxs-lookup"><span data-stu-id="544b9-121">Specifies where to align the sections of the output file.</span></span>|  
+|[<span data-ttu-id="544b9-122">/optimize</span><span class="sxs-lookup"><span data-stu-id="544b9-122">/optimize</span></span>](../../../visual-basic/reference/command-line-compiler/optimize.md)|<span data-ttu-id="544b9-123">Включает или отключает оптимизацию.</span><span class="sxs-lookup"><span data-stu-id="544b9-123">Enables/disables optimizations.</span></span>|  
   
-## <a name="output-files"></a>Выходные файлы  
+## <a name="output-files"></a><span data-ttu-id="544b9-124">Выходные файлы</span><span class="sxs-lookup"><span data-stu-id="544b9-124">Output Files</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-125">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-125">Option</span></span>|<span data-ttu-id="544b9-126">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-126">Purpose</span></span>|  
 |---|---|  
-|[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Сведение документирующих комментариев в XML-файл.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает для компилятора целевой объект [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].|  
-|[/out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
-|[/target](../../../visual-basic/reference/command-line-compiler/target.md)|Задает формат выходного файла.|  
+|[<span data-ttu-id="544b9-127">/doc</span><span class="sxs-lookup"><span data-stu-id="544b9-127">/doc</span></span>](../../../visual-basic/reference/command-line-compiler/doc.md)|<span data-ttu-id="544b9-128">Сведение документирующих комментариев в XML-файл.</span><span class="sxs-lookup"><span data-stu-id="544b9-128">Process documentation comments to an XML file.</span></span>|  
+|[<span data-ttu-id="544b9-129">/netcf</span><span class="sxs-lookup"><span data-stu-id="544b9-129">/netcf</span></span>](../../../visual-basic/reference/command-line-compiler/netcf.md)|<span data-ttu-id="544b9-130">Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="544b9-130">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>|  
+|[<span data-ttu-id="544b9-131">/out</span><span class="sxs-lookup"><span data-stu-id="544b9-131">/out</span></span>](../../../visual-basic/reference/command-line-compiler/out.md)|<span data-ttu-id="544b9-132">Задает выходной файл.</span><span class="sxs-lookup"><span data-stu-id="544b9-132">Specifies an output file.</span></span>|  
+|[<span data-ttu-id="544b9-133">/target</span><span class="sxs-lookup"><span data-stu-id="544b9-133">/target</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)|<span data-ttu-id="544b9-134">Задает формат выходного файла.</span><span class="sxs-lookup"><span data-stu-id="544b9-134">Specifies the format of the output.</span></span>|  
   
-## <a name="net-assemblies"></a>Сборки .NET  
+## <a name="net-assemblies"></a><span data-ttu-id="544b9-135">Сборки .NET</span><span class="sxs-lookup"><span data-stu-id="544b9-135">.NET Assemblies</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-136">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-136">Option</span></span>|<span data-ttu-id="544b9-137">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-137">Purpose</span></span>|  
 |---|---|  
-|[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.|  
-|[/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Указывает, будет ли сборка полностью или частично подписана.|  
-|[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Импортирует пространство имен из указанной сборки.|  
-|[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.|  
-|[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Указывает расположение ссылок на сборки с [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр.|  
-|[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Импортирует метаданные из сборки.|  
-|[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Указывает имя сборки, частью которого будет данный модуль.|  
-|`/analyzer`|Запускает анализаторы из этой сборки (краткая форма: /a)|  
-|`/additionalfile`|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
+|[<span data-ttu-id="544b9-138">/addmodule</span><span class="sxs-lookup"><span data-stu-id="544b9-138">/addmodule</span></span>](../../../visual-basic/reference/command-line-compiler/addmodule.md)|<span data-ttu-id="544b9-139">Дает компилятору указание сделать всю информацию о типах из указанных файлов доступной компилируемому проекту.</span><span class="sxs-lookup"><span data-stu-id="544b9-139">Causes the compiler to make all type information from the specified file(s) available to the project you are currently compiling.</span></span>|  
+|[<span data-ttu-id="544b9-140">/delaysign</span><span class="sxs-lookup"><span data-stu-id="544b9-140">/delaysign</span></span>](../../../visual-basic/reference/command-line-compiler/delaysign.md)|<span data-ttu-id="544b9-141">Указывает, будет ли сборка полностью или частично подписана.</span><span class="sxs-lookup"><span data-stu-id="544b9-141">Specifies whether the assembly will be fully or partially signed.</span></span>|  
+|[<span data-ttu-id="544b9-142">/imports</span><span class="sxs-lookup"><span data-stu-id="544b9-142">/imports</span></span>](../../../visual-basic/reference/command-line-compiler/imports.md)|<span data-ttu-id="544b9-143">Импортирует пространство имен из указанной сборки.</span><span class="sxs-lookup"><span data-stu-id="544b9-143">Imports a namespace from a specified assembly.</span></span>|  
+|[<span data-ttu-id="544b9-144">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="544b9-144">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|<span data-ttu-id="544b9-145">Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.</span><span class="sxs-lookup"><span data-stu-id="544b9-145">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="544b9-146">/keyfile</span><span class="sxs-lookup"><span data-stu-id="544b9-146">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)|<span data-ttu-id="544b9-147">Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.</span><span class="sxs-lookup"><span data-stu-id="544b9-147">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>|  
+|[<span data-ttu-id="544b9-148">/libpath</span><span class="sxs-lookup"><span data-stu-id="544b9-148">/libpath</span></span>](../../../visual-basic/reference/command-line-compiler/libpath.md)|<span data-ttu-id="544b9-149">Указывает расположение ссылок на сборки с [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) параметр.</span><span class="sxs-lookup"><span data-stu-id="544b9-149">Specifies the location of assemblies referenced by the [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>|  
+|[<span data-ttu-id="544b9-150">/reference</span><span class="sxs-lookup"><span data-stu-id="544b9-150">/reference</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)|<span data-ttu-id="544b9-151">Импортирует метаданные из сборки.</span><span class="sxs-lookup"><span data-stu-id="544b9-151">Imports metadata from an assembly.</span></span>|  
+|[<span data-ttu-id="544b9-152">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="544b9-152">/moduleassemblyname</span></span>](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|<span data-ttu-id="544b9-153">Указывает имя сборки, частью которого будет данный модуль.</span><span class="sxs-lookup"><span data-stu-id="544b9-153">Specifies the name of the assembly that a module will be a part of.</span></span>|  
+|`/analyzer`|<span data-ttu-id="544b9-154">Запускает анализаторы из этой сборки (краткая форма: /a)</span><span class="sxs-lookup"><span data-stu-id="544b9-154">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|`/additionalfile`|<span data-ttu-id="544b9-155">Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.</span><span class="sxs-lookup"><span data-stu-id="544b9-155">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-## <a name="debuggingerror-checking"></a>Отладка и проверка на ошибки  
+## <a name="debuggingerror-checking"></a><span data-ttu-id="544b9-156">Отладка и проверка на ошибки</span><span class="sxs-lookup"><span data-stu-id="544b9-156">Debugging/Error Checking</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-157">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-157">Option</span></span>|<span data-ttu-id="544b9-158">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-158">Purpose</span></span>|  
 |---|---|  
-|[/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.|  
-|[/debug](../../../visual-basic/reference/command-line-compiler/debug.md)|Создает отладочную информацию.|  
-|[/nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)|Отключает возможность компилятора создавать предупреждения.|  
-|[/quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Запрещает компилятору показывать код синтаксических ошибок и предупреждений.|  
-|[/removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Отключает проверку переполнения для целочисленных значений.|  
-|[/warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|Приравнивает предупреждения к ошибкам.|  
-|`/ruleset:<file>`|Укажите файл набора правил, который отключает определенные диагностики.|  
+|[<span data-ttu-id="544b9-159">/bugreport</span><span class="sxs-lookup"><span data-stu-id="544b9-159">/bugreport</span></span>](../../../visual-basic/reference/command-line-compiler/bugreport.md)|<span data-ttu-id="544b9-160">Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.</span><span class="sxs-lookup"><span data-stu-id="544b9-160">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="544b9-161">/debug</span><span class="sxs-lookup"><span data-stu-id="544b9-161">/debug</span></span>](../../../visual-basic/reference/command-line-compiler/debug.md)|<span data-ttu-id="544b9-162">Создает отладочную информацию.</span><span class="sxs-lookup"><span data-stu-id="544b9-162">Produces debugging information.</span></span>|  
+|[<span data-ttu-id="544b9-163">/nowarn</span><span class="sxs-lookup"><span data-stu-id="544b9-163">/nowarn</span></span>](../../../visual-basic/reference/command-line-compiler/nowarn.md)|<span data-ttu-id="544b9-164">Отключает возможность компилятора создавать предупреждения.</span><span class="sxs-lookup"><span data-stu-id="544b9-164">Suppresses the compiler's ability to generate warnings.</span></span>|  
+|[<span data-ttu-id="544b9-165">/quiet</span><span class="sxs-lookup"><span data-stu-id="544b9-165">/quiet</span></span>](../../../visual-basic/reference/command-line-compiler/quiet.md)|<span data-ttu-id="544b9-166">Запрещает компилятору показывать код синтаксических ошибок и предупреждений.</span><span class="sxs-lookup"><span data-stu-id="544b9-166">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>|  
+|[<span data-ttu-id="544b9-167">/removeintchecks</span><span class="sxs-lookup"><span data-stu-id="544b9-167">/removeintchecks</span></span>](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|<span data-ttu-id="544b9-168">Отключает проверку переполнения для целочисленных значений.</span><span class="sxs-lookup"><span data-stu-id="544b9-168">Disables integer overflow checking.</span></span>|  
+|[<span data-ttu-id="544b9-169">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="544b9-169">/warnaserror</span></span>](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|<span data-ttu-id="544b9-170">Приравнивает предупреждения к ошибкам.</span><span class="sxs-lookup"><span data-stu-id="544b9-170">Promotes warnings to errors.</span></span>|  
+|`/ruleset:<file>`|<span data-ttu-id="544b9-171">Укажите файл набора правил, который отключает определенные диагностики.</span><span class="sxs-lookup"><span data-stu-id="544b9-171">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-## <a name="help"></a>Справка  
+## <a name="help"></a><span data-ttu-id="544b9-172">Справка</span><span class="sxs-lookup"><span data-stu-id="544b9-172">Help</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-173">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-173">Option</span></span>|<span data-ttu-id="544b9-174">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-174">Purpose</span></span>|  
 |---|---|  
-|[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/help`. Компиляция не происходит.|  
-|[/ Help](../../../visual-basic/reference/command-line-compiler/help.md)|Отображает параметры компилятора. Эта команда аналогична параметру `/?`. Компиляция не происходит.|  
+|[<span data-ttu-id="544b9-175">/?</span><span class="sxs-lookup"><span data-stu-id="544b9-175">/?</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="544b9-176">Отображает параметры компилятора.</span><span class="sxs-lookup"><span data-stu-id="544b9-176">Displays the compiler options.</span></span> <span data-ttu-id="544b9-177">Эта команда аналогична параметру `/help`.</span><span class="sxs-lookup"><span data-stu-id="544b9-177">This command is the same as specifying the `/help` option.</span></span> <span data-ttu-id="544b9-178">Компиляция не происходит.</span><span class="sxs-lookup"><span data-stu-id="544b9-178">No compilation occurs.</span></span>|  
+|[<span data-ttu-id="544b9-179">/help</span><span class="sxs-lookup"><span data-stu-id="544b9-179">/help</span></span>](../../../visual-basic/reference/command-line-compiler/help.md)|<span data-ttu-id="544b9-180">Отображает параметры компилятора.</span><span class="sxs-lookup"><span data-stu-id="544b9-180">Displays the compiler options.</span></span> <span data-ttu-id="544b9-181">Эта команда аналогична параметру `/?`.</span><span class="sxs-lookup"><span data-stu-id="544b9-181">This command is the same as specifying the `/?` option.</span></span> <span data-ttu-id="544b9-182">Компиляция не происходит.</span><span class="sxs-lookup"><span data-stu-id="544b9-182">No compilation occurs.</span></span>|  
   
-## <a name="language"></a>Язык  
+## <a name="language"></a><span data-ttu-id="544b9-183">Язык</span><span class="sxs-lookup"><span data-stu-id="544b9-183">Language</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-184">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-184">Option</span></span>|<span data-ttu-id="544b9-185">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-185">Purpose</span></span>|  
 |---|---|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Укажите языковую версию: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
-|[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Принудительное явное объявление переменных.|  
-|[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Принудительное применение строгой семантики.|  
-|[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Указывает, будут ли сравнения строк двоичными или следует использовать семантику языкового стандарта.|  
-|[/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Включает использование локального определения типов в различных объявлениях.|  
+|[<span data-ttu-id="544b9-186">/langversion</span><span class="sxs-lookup"><span data-stu-id="544b9-186">/langversion</span></span>](../../../visual-basic/reference/command-line-compiler/langversion.md)|<span data-ttu-id="544b9-187">Укажите версию языка: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.</span><span class="sxs-lookup"><span data-stu-id="544b9-187">Specify language version: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.</span></span>|  
+|[<span data-ttu-id="544b9-188">/optionexplicit</span><span class="sxs-lookup"><span data-stu-id="544b9-188">/optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|<span data-ttu-id="544b9-189">Принудительное явное объявление переменных.</span><span class="sxs-lookup"><span data-stu-id="544b9-189">Enforces explicit declaration of variables.</span></span>|  
+|[<span data-ttu-id="544b9-190">/optionstrict</span><span class="sxs-lookup"><span data-stu-id="544b9-190">/optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|<span data-ttu-id="544b9-191">Принудительное применение строгой семантики.</span><span class="sxs-lookup"><span data-stu-id="544b9-191">Enforces strict type semantics.</span></span>|  
+|[<span data-ttu-id="544b9-192">/optioncompare</span><span class="sxs-lookup"><span data-stu-id="544b9-192">/optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|<span data-ttu-id="544b9-193">Указывает, будут ли сравнения строк двоичными или следует использовать семантику языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="544b9-193">Specifies whether string comparisons should be binary or use locale-specific text semantics.</span></span>|  
+|[<span data-ttu-id="544b9-194">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="544b9-194">/optioninfer</span></span>](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|<span data-ttu-id="544b9-195">Включает использование локального определения типов в различных объявлениях.</span><span class="sxs-lookup"><span data-stu-id="544b9-195">Enables the use of local type inference in variable declarations.</span></span>|  
   
-## <a name="preprocessor"></a>Препроцессор  
+## <a name="preprocessor"></a><span data-ttu-id="544b9-196">Препроцессор</span><span class="sxs-lookup"><span data-stu-id="544b9-196">Preprocessor</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-197">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-197">Option</span></span>|<span data-ttu-id="544b9-198">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-198">Purpose</span></span>|  
 |---|---|  
-|[/define](../../../visual-basic/reference/command-line-compiler/define.md)|Определяет символы условной компиляции.|  
+|[<span data-ttu-id="544b9-199">/define</span><span class="sxs-lookup"><span data-stu-id="544b9-199">/define</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)|<span data-ttu-id="544b9-200">Определяет символы условной компиляции.</span><span class="sxs-lookup"><span data-stu-id="544b9-200">Defines symbols for conditional compilation.</span></span>|  
   
-## <a name="resources"></a>Ресурсы  
+## <a name="resources"></a><span data-ttu-id="544b9-201">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="544b9-201">Resources</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-202">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-202">Option</span></span>|<span data-ttu-id="544b9-203">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-203">Purpose</span></span>|  
 |---|---|  
-|[/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|Создает ссылку на управляемый ресурс.|  
-|[/resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Внедряет управляемый ресурс в сборку.|  
-|[/win32icon](../../../visual-basic/reference/command-line-compiler/win32icon.md)|Внедряет ICO-файл в выходной файл.|  
-|[/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Внедряет ресурс Win32 в выходной файл.|  
+|[<span data-ttu-id="544b9-204">/linkresource</span><span class="sxs-lookup"><span data-stu-id="544b9-204">/linkresource</span></span>](../../../visual-basic/reference/command-line-compiler/linkresource.md)|<span data-ttu-id="544b9-205">Создает ссылку на управляемый ресурс.</span><span class="sxs-lookup"><span data-stu-id="544b9-205">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="544b9-206">/resource</span><span class="sxs-lookup"><span data-stu-id="544b9-206">/resource</span></span>](../../../visual-basic/reference/command-line-compiler/resource.md)|<span data-ttu-id="544b9-207">Внедряет управляемый ресурс в сборку.</span><span class="sxs-lookup"><span data-stu-id="544b9-207">Embeds a managed resource in an assembly.</span></span>|  
+|[<span data-ttu-id="544b9-208">/win32icon</span><span class="sxs-lookup"><span data-stu-id="544b9-208">/win32icon</span></span>](../../../visual-basic/reference/command-line-compiler/win32icon.md)|<span data-ttu-id="544b9-209">Внедряет ICO-файл в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="544b9-209">Inserts an .ico file into the output file.</span></span>|  
+|[<span data-ttu-id="544b9-210">/win32resource</span><span class="sxs-lookup"><span data-stu-id="544b9-210">/win32resource</span></span>](../../../visual-basic/reference/command-line-compiler/win32resource.md)|<span data-ttu-id="544b9-211">Внедряет ресурс Win32 в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="544b9-211">Inserts a Win32 resource into the output file.</span></span>|  
   
-## <a name="miscellaneous"></a>Прочее  
+## <a name="miscellaneous"></a><span data-ttu-id="544b9-212">Прочее</span><span class="sxs-lookup"><span data-stu-id="544b9-212">Miscellaneous</span></span>  
   
-|Параметр|Цель|  
+|<span data-ttu-id="544b9-213">Параметр</span><span class="sxs-lookup"><span data-stu-id="544b9-213">Option</span></span>|<span data-ttu-id="544b9-214">Назначение</span><span class="sxs-lookup"><span data-stu-id="544b9-214">Purpose</span></span>|  
 |---|---|  
-|[@ (указание файла ответов)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Указывает файл ответа.|  
-|[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Задает базовый адрес библиотеки DLL.|  
-|[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Указывает, как компилятор [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] должен сообщать о внутренних ошибках.|  
-|[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Сообщает ядру Windows, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Указывает класс, содержащий `Sub``Main` процедуры при запуске.|  
-|[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Не компилировать с Vbc.rsp.|  
-|[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Указывает компилятору не ссылаться на стандартные библиотеки.|  
-|[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Указывает компилятору не внедрять манифест приложения в исполняемый файл.|  
-|[/platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Указывает компилятору платформу процессора для выходного файла.|  
-|[/recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Выполняет поиск в подкаталогах исходных файлов для компиляции.|  
-|[/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Задает пространство имен для всех объявлений типов.|  
-|[/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Задает расположение библиотек mscorlib.dll и microsoft.visualbasic.dll.|  
-|[/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.|  
-|[/win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).|  
-|`/parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку (+).|  
-|`/checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
+|[<span data-ttu-id="544b9-215">@ (указание файла ответов)</span><span class="sxs-lookup"><span data-stu-id="544b9-215">@ (Specify Response File)</span></span>](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|<span data-ttu-id="544b9-216">Указывает файл ответа.</span><span class="sxs-lookup"><span data-stu-id="544b9-216">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="544b9-217">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="544b9-217">/baseaddress</span></span>](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|<span data-ttu-id="544b9-218">Задает базовый адрес библиотеки DLL.</span><span class="sxs-lookup"><span data-stu-id="544b9-218">Specifies the base address of a DLL.</span></span>|  
+|[<span data-ttu-id="544b9-219">/codepage</span><span class="sxs-lookup"><span data-stu-id="544b9-219">/codepage</span></span>](../../../visual-basic/reference/command-line-compiler/codepage.md)|<span data-ttu-id="544b9-220">Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.</span><span class="sxs-lookup"><span data-stu-id="544b9-220">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="544b9-221">/errorreport</span><span class="sxs-lookup"><span data-stu-id="544b9-221">/errorreport</span></span>](../../../visual-basic/reference/command-line-compiler/errorreport.md)|<span data-ttu-id="544b9-222">Указывает, как компилятор [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен сообщать о внутренних ошибках.</span><span class="sxs-lookup"><span data-stu-id="544b9-222">Specifies how the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler should report internal compiler errors.</span></span>|  
+|[<span data-ttu-id="544b9-223">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="544b9-223">/highentropyva</span></span>](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|<span data-ttu-id="544b9-224">Сообщает ядру Windows, поддерживает ли указанный исполняемый файл технологию Address Space Layout Randomization (ASLR) с высокой энтропией.</span><span class="sxs-lookup"><span data-stu-id="544b9-224">Tells the Windows kernel whether a particular executable supports high entropy Address Space Layout Randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="544b9-225">/main</span><span class="sxs-lookup"><span data-stu-id="544b9-225">/main</span></span>](../../../visual-basic/reference/command-line-compiler/main.md)|<span data-ttu-id="544b9-226">Указывает класс, который содержит `Sub``Main` процедуры при запуске.</span><span class="sxs-lookup"><span data-stu-id="544b9-226">Specifies the class that contains the `Sub``Main` procedure to use at startup.</span></span>|  
+|[<span data-ttu-id="544b9-227">/noconfig</span><span class="sxs-lookup"><span data-stu-id="544b9-227">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)|<span data-ttu-id="544b9-228">Не компилировать с Vbc.rsp.</span><span class="sxs-lookup"><span data-stu-id="544b9-228">Do not compile with Vbc.rsp</span></span>|  
+|[<span data-ttu-id="544b9-229">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="544b9-229">/nostdlib</span></span>](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|<span data-ttu-id="544b9-230">Указывает компилятору не ссылаться на стандартные библиотеки.</span><span class="sxs-lookup"><span data-stu-id="544b9-230">Causes the compiler not to reference the standard libraries.</span></span>|  
+|[<span data-ttu-id="544b9-231">/nowin32manifest</span><span class="sxs-lookup"><span data-stu-id="544b9-231">/nowin32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|<span data-ttu-id="544b9-232">Указывает компилятору не внедрять манифест приложения в исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="544b9-232">Instructs the compiler not to embed any application manifest into the executable file.</span></span>|  
+|[<span data-ttu-id="544b9-233">/platform</span><span class="sxs-lookup"><span data-stu-id="544b9-233">/platform</span></span>](../../../visual-basic/reference/command-line-compiler/platform.md)|<span data-ttu-id="544b9-234">Указывает компилятору платформу процессора для выходного файла.</span><span class="sxs-lookup"><span data-stu-id="544b9-234">Specifies the processor platform the compiler targets for the output file.</span></span>|  
+|[<span data-ttu-id="544b9-235">/recurse</span><span class="sxs-lookup"><span data-stu-id="544b9-235">/recurse</span></span>](../../../visual-basic/reference/command-line-compiler/recurse.md)|<span data-ttu-id="544b9-236">Выполняет поиск в подкаталогах исходных файлов для компиляции.</span><span class="sxs-lookup"><span data-stu-id="544b9-236">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="544b9-237">/rootnamespace</span><span class="sxs-lookup"><span data-stu-id="544b9-237">/rootnamespace</span></span>](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|<span data-ttu-id="544b9-238">Задает пространство имен для всех объявлений типов.</span><span class="sxs-lookup"><span data-stu-id="544b9-238">Specifies a namespace for all type declarations.</span></span>|  
+|[<span data-ttu-id="544b9-239">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="544b9-239">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|<span data-ttu-id="544b9-240">Задает расположение библиотек mscorlib.dll и microsoft.visualbasic.dll.</span><span class="sxs-lookup"><span data-stu-id="544b9-240">Specifies the location of Mscorlib.dll and Microsoft.VisualBasic.dll.</span></span>|  
+|[<span data-ttu-id="544b9-241">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="544b9-241">/vbruntime</span></span>](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|<span data-ttu-id="544b9-242">Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="544b9-242">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>|  
+|[<span data-ttu-id="544b9-243">/win32manifest</span><span class="sxs-lookup"><span data-stu-id="544b9-243">/win32manifest</span></span>](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|<span data-ttu-id="544b9-244">Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).</span><span class="sxs-lookup"><span data-stu-id="544b9-244">Identifies a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>|  
+|`/parallel[+&#124;-]`|<span data-ttu-id="544b9-245">Указывает, следует ли использовать параллельную сборку (+).</span><span class="sxs-lookup"><span data-stu-id="544b9-245">Specifies whether to use concurrent build (+).</span></span>|  
+|`/checksumalgorithm:<alg>`|<span data-ttu-id="544b9-246">Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.</span><span class="sxs-lookup"><span data-stu-id="544b9-246">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="544b9-247">Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.</span><span class="sxs-lookup"><span data-stu-id="544b9-247">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)   
- [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a><span data-ttu-id="544b9-248">См. также</span><span class="sxs-lookup"><span data-stu-id="544b9-248">See Also</span></span>  
+ [<span data-ttu-id="544b9-249">Параметры компилятора Visual Basic в алфавитном порядке</span><span class="sxs-lookup"><span data-stu-id="544b9-249">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+ [<span data-ttu-id="544b9-250">Знакомство с конструктором проектов</span><span class="sxs-lookup"><span data-stu-id="544b9-250">Introduction to the Project Designer</span></span>](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [<span data-ttu-id="544b9-251">Параметры компилятора C# в алфавитном порядке</span><span class="sxs-lookup"><span data-stu-id="544b9-251">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [<span data-ttu-id="544b9-252">Параметры компилятора C#, упорядоченные по категориям</span><span class="sxs-lookup"><span data-stu-id="544b9-252">C# Compiler Options Listed by Category</span></span>](../../../csharp/language-reference/compiler-options/listed-by-category.md)

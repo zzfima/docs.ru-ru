@@ -1,57 +1,54 @@
 ---
-title: "THEN (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: THEN (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 99fd941c963ff87203d7b315beb606d40001224d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# THEN (Entity SQL)
-Результат предложения WHEN, если оно оценивается как значение `true`.  
+# <a name="then-entity-sql"></a><span data-ttu-id="e3ec4-102">THEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="e3ec4-102">THEN (Entity SQL)</span></span>
+<span data-ttu-id="e3ec4-103">Результат предложения WHEN, если оно оценивается как значение `true`.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-103">The result of a WHEN clause when it evaluates to `true`.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="e3ec4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e3ec4-104">Syntax</span></span>  
   
 ```  
-  
 WHEN when_expression THEN then_expression  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a><span data-ttu-id="e3ec4-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="e3ec4-105">Arguments</span></span>  
  `when_expression`  
- Любое допустимое выражение типа Boolean.  
+ <span data-ttu-id="e3ec4-106">Любое допустимое выражение типа Boolean.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-106">Any valid Boolean expression.</span></span>  
   
  `then_expression`  
- Любое допустимое выражение запроса, возвращающее коллекцию.  
+ <span data-ttu-id="e3ec4-107">Любое допустимое выражение запроса, возвращающее коллекцию.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-107">Any valid query expression that returns a collection.</span></span>  
   
-## Заметки  
- Если аргумент `when_expression` оценивается как значение `true`, результатом является соответствующее значение `then-expression`. Если не выполнено ни одно из условий предложения WHEN, оценивается выражение `else-expression`. Однако, если выражение `else-expression` отсутствует, результат равен NULL.  
+## <a name="remarks"></a><span data-ttu-id="e3ec4-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="e3ec4-108">Remarks</span></span>  
+ <span data-ttu-id="e3ec4-109">Если аргумент `when_expression` оценивается как значение `true`, результатом является соответствующее значение `then-expression`.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-109">If `when_expression` evaluates to the value `true`, the result is the corresponding `then-expression`.</span></span> <span data-ttu-id="e3ec4-110">Если не выполнено ни одно из условий предложения WHEN, оценивается выражение `else-expression` .</span><span class="sxs-lookup"><span data-stu-id="e3ec4-110">If none of the WHEN conditions are satisfied, the `else-expression` is evaluated.</span></span> <span data-ttu-id="e3ec4-111">Однако, если выражение `else-expression`отсутствует, результат равен NULL.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-111">However, if there is no `else-expression`, the result is null.</span></span>  
   
- Пример см. в разделе [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md).  
+ <span data-ttu-id="e3ec4-112">Пример см. в разделе [случае](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="e3ec4-112">For an example, see [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md).</span></span>  
   
-## Пример  
- В следующем запросе Entity SQL с помощью выражения CASE оценивается набор выражений типа `Boolean`. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
+## <a name="example"></a><span data-ttu-id="e3ec4-113">Пример</span><span class="sxs-lookup"><span data-stu-id="e3ec4-113">Example</span></span>  
+ <span data-ttu-id="e3ec4-114">В следующем запросе Entity SQL с помощью выражения CASE оценивается набор выражений типа `Boolean` .</span><span class="sxs-lookup"><span data-stu-id="e3ec4-114">The following Entity SQL query uses the CASE expression to evaluate a set of `Boolean` expressions.</span></span> <span data-ttu-id="e3ec4-115">Запрос основан на модели AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e3ec4-116">Для компиляции и запуска этого запроса выполните следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="e3ec4-116">To compile and run this query, follow these steps:</span></span>  
   
-1.  Выполните процедуру из статьи [Как выполнить запрос, возвращающий типы\-примитивы](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  <span data-ttu-id="e3ec4-117">Выполните процедуру, описанную в [как: выполнение запроса, возвращает результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e3ec4-117">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery`:  
+2.  <span data-ttu-id="e3ec4-118">Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="e3ec4-118">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
-## См. также  
- [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)   
- [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="e3ec4-119">См. также</span><span class="sxs-lookup"><span data-stu-id="e3ec4-119">See Also</span></span>  
+ [<span data-ttu-id="e3ec4-120">РЕГИСТР</span><span class="sxs-lookup"><span data-stu-id="e3ec4-120">CASE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)  
+ [<span data-ttu-id="e3ec4-121">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="e3ec4-121">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
