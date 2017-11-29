@@ -1,69 +1,74 @@
 ---
-title: "Возвращающие табличное значение параметры | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Возвращающие табличное значение параметры"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 47009516d4118fec1a075a2dbccfa747f9a63131
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Возвращающие табличное значение параметры
-Возвращающие табличное значение параметры обеспечивают легкий способ упаковки строк данных из клиентского приложения в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], не требуя многочисленных циклов приема\-передачи или специальной логики на стороне сервера для обработки данных.  Возвращающие табличное значение параметры можно использовать для инкапсуляции строк данных в клиентском приложении и отправки данных на сервер с помощью одной параметризированной команды.  Входящие строки данных сохраняются в табличной переменной, с которой затем можно работать, используя язык [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+# <a name="table-valued-parameters"></a><span data-ttu-id="474c9-102">Возвращающие табличное значение параметры</span><span class="sxs-lookup"><span data-stu-id="474c9-102">Table-Valued Parameters</span></span>
+<span data-ttu-id="474c9-103">Возвращающие табличное значение параметры обеспечивают легкий способ упаковки строк данных из клиентского приложения в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], не требуя многочисленных циклов приема-передачи или специальной логики на стороне сервера для обработки данных.</span><span class="sxs-lookup"><span data-stu-id="474c9-103">Table-valued parameters provide an easy way to marshal multiple rows of data from a client application to [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] without requiring multiple round trips or special server-side logic for processing the data.</span></span> <span data-ttu-id="474c9-104">Возвращающие табличное значение параметры можно использовать для инкапсуляции строк данных в клиентском приложении и отправки данных на сервер с помощью одной параметризированной команды.</span><span class="sxs-lookup"><span data-stu-id="474c9-104">You can use table-valued parameters to encapsulate rows of data in a client application and send the data to the server in a single parameterized command.</span></span> <span data-ttu-id="474c9-105">Входящие строки данных сохраняются в табличной переменной, с которой затем можно работать, используя язык [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="474c9-105">The incoming data rows are stored in a table variable that can then be operated on by using [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].</span></span>  
   
- Доступ к значениям столбца в возвращающих табличное значение параметрах обеспечивается с помощью стандартных инструкций SELECT [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  Возвращающие табличное значение параметры строго типизированы, а проверка их структуры выполняется автоматически.  Объем, занимаемый возвращающими табличное значение параметрами, ограничен только размерами памяти на сервере.  
+ <span data-ttu-id="474c9-106">Доступ к значениям столбца в возвращающих табличное значение параметрах обеспечивается с помощью стандартных инструкций SELECT [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="474c9-106">Column values in table-valued parameters can be accessed using standard [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT statements.</span></span> <span data-ttu-id="474c9-107">Возвращающие табличное значение параметры строго типизированы, а проверка их структуры выполняется автоматически.</span><span class="sxs-lookup"><span data-stu-id="474c9-107">Table-valued parameters are strongly typed and their structure is automatically validated.</span></span> <span data-ttu-id="474c9-108">Объем, занимаемый возвращающими табличное значение параметрами, ограничен только размерами памяти на сервере.</span><span class="sxs-lookup"><span data-stu-id="474c9-108">The size of table-valued parameters is limited only by server memory.</span></span>  
   
 > [!NOTE]
->  В возвращающий табличное значение параметр нельзя вернуть данные.  Возвращающие табличное значение параметры являются исключительно входными. Ключевое слово OUTPUT не поддерживается.  
+>  <span data-ttu-id="474c9-109">В возвращающий табличное значение параметр нельзя вернуть данные.</span><span class="sxs-lookup"><span data-stu-id="474c9-109">You cannot return data in a table-valued parameter.</span></span> <span data-ttu-id="474c9-110">Возвращающие табличное значение параметры являются исключительно входными. Ключевое слово OUTPUT не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="474c9-110">Table-valued parameters are input-only; the OUTPUT keyword is not supported.</span></span>  
   
- Дополнительные сведения о возвращающих табличное значение параметрах см. в приведенных ниже ресурсах.  
+ <span data-ttu-id="474c9-111">Дополнительные сведения о возвращающих табличное значение параметрах см. в приведенных ниже ресурсах.</span><span class="sxs-lookup"><span data-stu-id="474c9-111">For more information about table-valued parameters, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Возвращающие табличное значение параметры \(компонент Database Engine\)](http://go.microsoft.com/fwlink/?LinkId=98363) в электронной документации [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]|Описывается создание и использование возвращающих табличное значение параметров.|  
-|[Определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkId=98364) в электронной документации [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]|Описывается использование определяемых пользователем табличных типов, предназначенных для объявления возвращающих табличное значение параметров.|  
-|Раздел [Microsoft SQL Server Database Engine](http://go.microsoft.com/fwlink/?LinkId=120507) на веб\-сайте [CodePlex](http://go.microsoft.com/fwlink/?LinkID=67739)|Содержит образцы, в которых демонстрируется использование возможностей и функций [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
+|<span data-ttu-id="474c9-112">Ресурс</span><span class="sxs-lookup"><span data-stu-id="474c9-112">Resource</span></span>|<span data-ttu-id="474c9-113">Описание</span><span class="sxs-lookup"><span data-stu-id="474c9-113">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="474c9-114">[Возвращающие табличные значения параметров (компонент Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации</span><span class="sxs-lookup"><span data-stu-id="474c9-114">[Table-Valued Parameters (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="474c9-115">Описывается создание и использование возвращающих табличное значение параметров.</span><span class="sxs-lookup"><span data-stu-id="474c9-115">Describes how to create and use table-valued parameters.</span></span>|  
+|<span data-ttu-id="474c9-116">[Определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkId=98364) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации</span><span class="sxs-lookup"><span data-stu-id="474c9-116">[User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkId=98364) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online</span></span>|<span data-ttu-id="474c9-117">Описывается использование определяемых пользователем табличных типов, предназначенных для объявления возвращающих табличное значение параметров.</span><span class="sxs-lookup"><span data-stu-id="474c9-117">Describes user-defined table types that are used to declare table-valued parameters.</span></span>|  
   
-## Передача нескольких строк в предыдущие версии SQL Server  
- До появления в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008 параметров, возвращающих табличное значение, были ограниченны возможности передачи нескольких строк данных в хранимую процедуру или параметризованную команду SQL.  При передаче нескольких строк на сервер разработчик может воспользоваться одним из описанных ниже вариантов.  
+## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a><span data-ttu-id="474c9-118">Передача нескольких строк в предыдущие версии SQL Server</span><span class="sxs-lookup"><span data-stu-id="474c9-118">Passing Multiple Rows in Previous Versions of SQL Server</span></span>  
+ <span data-ttu-id="474c9-119">До появления в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008 параметров, возвращающих табличное значение, были ограниченны возможности передачи нескольких строк данных в хранимую процедуру или параметризованную команду SQL.</span><span class="sxs-lookup"><span data-stu-id="474c9-119">Before table-valued parameters were introduced to [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited.</span></span> <span data-ttu-id="474c9-120">При передаче нескольких строк на сервер разработчик может воспользоваться одним из описанных ниже вариантов.</span><span class="sxs-lookup"><span data-stu-id="474c9-120">A developer could choose from the following options for passing multiple rows to the server:</span></span>  
   
--   Использование ряда отдельных параметров, представляющих значения в нескольких столбцах и строках данных.  Объем данных, который можно передать с помощью этого метода, ограничен максимально допустимым количеством параметров.  В процедурах [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] можно использовать максимум 2100 параметров.  Для сборки отдельных значений в табличную переменную или временную таблицу для дальнейшей обработки необходимо реализовать логику на стороне сервера.  
+-   <span data-ttu-id="474c9-121">Использование ряда отдельных параметров, представляющих значения в нескольких столбцах и строках данных.</span><span class="sxs-lookup"><span data-stu-id="474c9-121">Use a series of individual parameters to represent the values in multiple columns and rows of data.</span></span> <span data-ttu-id="474c9-122">Объем данных, который можно передать с помощью этого метода, ограничен максимально допустимым количеством параметров.</span><span class="sxs-lookup"><span data-stu-id="474c9-122">The amount of data that can be passed by using this method is limited by the number of parameters allowed.</span></span> <span data-ttu-id="474c9-123">В процедурах [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] можно использовать максимум 2100 параметров.</span><span class="sxs-lookup"><span data-stu-id="474c9-123">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] procedures can have, at most, 2100 parameters.</span></span> <span data-ttu-id="474c9-124">Для сборки отдельных значений в табличную переменную или временную таблицу для дальнейшей обработки необходимо реализовать логику на стороне сервера.</span><span class="sxs-lookup"><span data-stu-id="474c9-124">Server-side logic is required to assemble these individual values into a table variable or a temporary table for processing.</span></span>  
   
--   Объединение нескольких значений данных в строки с разделителями или XML\-документы и последующая передача этих текстовых значений в процедуру или инструкцию.  При этом в процедуру или инструкцию необходимо включить логику для проверки структур данных и разделения значений.  
+-   <span data-ttu-id="474c9-125">Объединение нескольких значений данных в строки с разделителями или XML-документы и последующая передача этих текстовых значений в процедуру или инструкцию.</span><span class="sxs-lookup"><span data-stu-id="474c9-125">Bundle multiple data values into delimited strings or XML documents and then pass those text values to a procedure or statement.</span></span> <span data-ttu-id="474c9-126">При этом в процедуру или инструкцию необходимо включить логику для проверки структур данных и разделения значений.</span><span class="sxs-lookup"><span data-stu-id="474c9-126">This requires the procedure or statement to include the logic necessary for validating the data structures and unbundling the values.</span></span>  
   
--   Создание ряда отдельных инструкций SQL для изменения данных в нескольких строках, например инструкций, создаваемых при вызове метода `Update` класса <xref:System.Data.SqlClient.SqlDataAdapter>.  Изменения можно отправить на сервер по отдельности или объединенными в группы.  Тем не менее, даже при отправке в пакетах из нескольких инструкций, каждая инструкция выполняется на сервере отдельно.  
+-   <span data-ttu-id="474c9-127">Создание ряда отдельных инструкций SQL для изменения данных в нескольких строках, например инструкций, создаваемых при вызове метода `Update` класса <xref:System.Data.SqlClient.SqlDataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="474c9-127">Create a series of individual SQL statements for data modifications that affect multiple rows, such as those created by calling the `Update` method of a <xref:System.Data.SqlClient.SqlDataAdapter>.</span></span> <span data-ttu-id="474c9-128">Изменения можно отправить на сервер по отдельности или объединенными в группы.</span><span class="sxs-lookup"><span data-stu-id="474c9-128">Changes can be submitted to the server individually or batched into groups.</span></span> <span data-ttu-id="474c9-129">Тем не менее, даже при отправке в пакетах из нескольких инструкций, каждая инструкция выполняется на сервере отдельно.</span><span class="sxs-lookup"><span data-stu-id="474c9-129">However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.</span></span>  
   
--   Чтобы загрузить несколько строк данных в таблицу, воспользуйтесь служебной программой `bcp` или объектом <xref:System.Data.SqlClient.SqlBulkCopy>.  Хотя этот метод весьма эффективен, в нем не поддерживается обработка данных на стороне сервера, если данные не загружены во временную таблицу или табличную переменную.  
+-   <span data-ttu-id="474c9-130">Чтобы загрузить несколько строк данных в таблицу, воспользуйтесь служебной программой `bcp` или объектом <xref:System.Data.SqlClient.SqlBulkCopy>.</span><span class="sxs-lookup"><span data-stu-id="474c9-130">Use the `bcp` utility program or the <xref:System.Data.SqlClient.SqlBulkCopy> object to load many rows of data into a table.</span></span> <span data-ttu-id="474c9-131">Хотя этот метод весьма эффективен, в нем не поддерживается обработка данных на стороне сервера, если данные не загружены во временную таблицу или табличную переменную.</span><span class="sxs-lookup"><span data-stu-id="474c9-131">Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.</span></span>  
   
-## Создание типов параметров, возвращающих табличное значение  
- Возвращающие табличное значение параметры основаны на строго типизированных табличных структурах, заданных с помощью инструкций [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE.  Перед использованием в клиентских приложениях возвращающих табличное значение параметров в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] необходимо создать табличный тип и определить структуру.  Дополнительные сведения о создании типов таблиц см. в разделе [Определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkId=98364) в электронной документации [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="creating-table-valued-parameter-types"></a><span data-ttu-id="474c9-132">Создание типов параметров, возвращающих табличное значение</span><span class="sxs-lookup"><span data-stu-id="474c9-132">Creating Table-Valued Parameter Types</span></span>  
+ <span data-ttu-id="474c9-133">Возвращающие табличное значение параметры основаны на строго типизированных табличных структурах, заданных с помощью инструкций [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE.</span><span class="sxs-lookup"><span data-stu-id="474c9-133">Table-valued parameters are based on strongly-typed table structures that are defined by using [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE statements.</span></span> <span data-ttu-id="474c9-134">Перед использованием в клиентских приложениях возвращающих табличное значение параметров в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] необходимо создать табличный тип и определить структуру.</span><span class="sxs-lookup"><span data-stu-id="474c9-134">You have to create a table type and define the structure in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] before you can use table-valued parameters in your client applications.</span></span> <span data-ttu-id="474c9-135">Дополнительные сведения о создании типов таблиц см. в разделе [определяемые пользователем табличные типы](http://go.microsoft.com/fwlink/?LinkID=98364) в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] электронной документации.</span><span class="sxs-lookup"><span data-stu-id="474c9-135">For more information about creating table types, see [User-Defined Table Types](http://go.microsoft.com/fwlink/?LinkID=98364) in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online.</span></span>  
   
- Приведенная ниже инструкция создает табличный тип с именем CategoryTableType, которая состоит из столбцов CategoryID и CategoryName.  
+ <span data-ttu-id="474c9-136">Приведенная ниже инструкция создает табличный тип с именем CategoryTableType, которая состоит из столбцов CategoryID и CategoryName.</span><span class="sxs-lookup"><span data-stu-id="474c9-136">The following statement creates a table type named CategoryTableType that consists of CategoryID and CategoryName columns:</span></span>  
   
 ```  
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- После создания табличного типа можно объявить возвращающие табличное значение параметры, основанные на этом типе.  В приведенном ниже фрагменте кода [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] демонстрируется объявление возвращающего табличное значение параметра в определении хранимой процедуры.  Обратите внимание, что для объявления возвращающего табличное значение параметра необходимо использовать ключевое слово READONLY.  
+ <span data-ttu-id="474c9-137">После создания табличного типа можно объявить возвращающие табличное значение параметры, основанные на этом типе.</span><span class="sxs-lookup"><span data-stu-id="474c9-137">After you create a table type, you can declare table-valued parameters based on that type.</span></span> <span data-ttu-id="474c9-138">В приведенном ниже фрагменте кода [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] демонстрируется объявление возвращающего табличное значение параметра в определении хранимой процедуры.</span><span class="sxs-lookup"><span data-stu-id="474c9-138">The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] fragment demonstrates how to declare a table-valued parameter in a stored procedure definition.</span></span> <span data-ttu-id="474c9-139">Обратите внимание, что для объявления возвращающего табличное значение параметра необходимо использовать ключевое слово READONLY.</span><span class="sxs-lookup"><span data-stu-id="474c9-139">Note that the READONLY keyword is required for declaring a table-valued parameter.</span></span>  
   
 ```  
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
   
-## Изменение данных с помощью возвращающих табличное значение параметров \(Transact\-SQL\)  
- Возвращающие табличное значение параметры можно использовать для изменения данных на основе наборов, при котором в одной инструкции затрагивается несколько строк.  Например, можно выбрать все строки возвращающего табличное значение параметра и вставить их в таблицу базы данных или создать инструкцию UPDATE, соединив возвращающий табличное значение параметр с таблицей, которую необходимо обновить.  
+## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a><span data-ttu-id="474c9-140">Изменение данных с помощью возвращающих табличное значение параметров (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="474c9-140">Modifying Data with Table-Valued Parameters (Transact-SQL)</span></span>  
+ <span data-ttu-id="474c9-141">Возвращающие табличное значение параметры можно использовать для изменения данных на основе наборов, при котором в одной инструкции затрагивается несколько строк.</span><span class="sxs-lookup"><span data-stu-id="474c9-141">Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement.</span></span> <span data-ttu-id="474c9-142">Например, можно выбрать все строки возвращающего табличное значение параметра и вставить их в таблицу базы данных или создать инструкцию UPDATE, соединив возвращающий табличное значение параметр с таблицей, которую необходимо обновить.</span><span class="sxs-lookup"><span data-stu-id="474c9-142">For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.</span></span>  
   
- В приведенной ниже инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE демонстрируется соединение возвращающего табличное значение параметра с таблицей Categories.  При использовании возвращающего табличное значение параметра в операторе JOIN предложения FROM необходимо создать для этого параметра псевдоним; как показано здесь, для возвращающего табличное значение параметра используется псевдоним «ec»:  
+ <span data-ttu-id="474c9-143">В приведенной ниже инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE демонстрируется соединение возвращающего табличное значение параметра с таблицей Categories.</span><span class="sxs-lookup"><span data-stu-id="474c9-143">The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] UPDATE statement demonstrates how to use a table-valued parameter by joining it to the Categories table.</span></span> <span data-ttu-id="474c9-144">При использовании возвращающего табличное значение параметра в операторе JOIN предложения FROM необходимо создать для этого параметра псевдоним; как показано здесь, для возвращающего табличное значение параметра используется псевдоним «ec»:</span><span class="sxs-lookup"><span data-stu-id="474c9-144">When you use a table-valued parameter with a JOIN in a FROM clause, you must also alias it, as shown here, where the table-valued parameter is aliased as "ec":</span></span>  
   
 ```  
 UPDATE dbo.Categories  
@@ -72,33 +77,31 @@ UPDATE dbo.Categories
     ON dbo.Categories.CategoryID = ec.CategoryID;  
 ```  
   
- В данном примере кода [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] демонстрируется выбор строк из возвращающего табличное значение параметра для выполнения инструкции INSERT в одной операции на основе набора данных.  
+ <span data-ttu-id="474c9-145">В данном примере кода [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] демонстрируется выбор строк из возвращающего табличное значение параметра для выполнения инструкции INSERT в одной операции на основе набора данных.</span><span class="sxs-lookup"><span data-stu-id="474c9-145">This [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] example demonstrates how to select rows from a table-valued parameter to perform an INSERT in a single set-based operation.</span></span>  
   
 ```  
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
   
-## Ограничения возвращающих табличное значение параметров  
- На использование возвращающих табличное значение параметров накладывается ряд указанных ниже ограничений.  
+## <a name="limitations-of-table-valued-parameters"></a><span data-ttu-id="474c9-146">Ограничения возвращающих табличное значение параметров</span><span class="sxs-lookup"><span data-stu-id="474c9-146">Limitations of Table-Valued Parameters</span></span>  
+ <span data-ttu-id="474c9-147">На использование возвращающих табличное значение параметров накладывается ряд указанных ниже ограничений.</span><span class="sxs-lookup"><span data-stu-id="474c9-147">There are several limitations to table-valued parameters:</span></span>  
   
--   Возвращающие табличное значение параметры нельзя передавать [определяемым пользователем функциям CLR](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   <span data-ttu-id="474c9-148">Невозможно передать табличные параметры для [определяемых пользователем функций CLR](http://msdn.microsoft.com/library/ms131077.aspx).</span><span class="sxs-lookup"><span data-stu-id="474c9-148">You cannot pass table-valued parameters to [CLR user-defined functions](http://msdn.microsoft.com/library/ms131077.aspx).</span></span>  
   
--   Возвращающие табличное значение параметры можно индексировать только для поддержки ограничений UNIQUE и PRIMARY KEY.  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] не ведет статистику по возвращающим табличное значение параметрам.  
+-   <span data-ttu-id="474c9-149">Возвращающие табличное значение параметры можно индексировать только для поддержки ограничений UNIQUE и PRIMARY KEY.</span><span class="sxs-lookup"><span data-stu-id="474c9-149">Table-valued parameters can only be indexed to support UNIQUE or PRIMARY KEY constraints.</span></span> [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="474c9-150"> не ведет статистику по возвращающим табличное значение параметрам.</span><span class="sxs-lookup"><span data-stu-id="474c9-150"> does not maintain statistics on table-valued parameters.</span></span>  
   
--   В коде [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] возвращающие табличное значение параметры предназначены только для чтения.  Значения столбцов в строках возвращающего табличное значение параметра нельзя обновить; также нельзя вставлять и удалять строки.  Чтобы изменить данные, передаваемые в хранимую процедуру или параметризованную инструкцию через возвращающий табличное значение параметр, необходимо вставить данные во временную таблицу или табличную переменную.  
+-   <span data-ttu-id="474c9-151">В коде [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] возвращающие табличное значение параметры предназначены только для чтения.</span><span class="sxs-lookup"><span data-stu-id="474c9-151">Table-valued parameters are read-only in [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] code.</span></span> <span data-ttu-id="474c9-152">Значения столбцов в строках возвращающего табличное значение параметра нельзя обновить; также нельзя вставлять и удалять строки.</span><span class="sxs-lookup"><span data-stu-id="474c9-152">You cannot update the column values in the rows of a table-valued parameter and you cannot insert or delete rows.</span></span> <span data-ttu-id="474c9-153">Чтобы изменить данные, передаваемые в хранимую процедуру или параметризованную инструкцию через возвращающий табличное значение параметр, необходимо вставить данные во временную таблицу или табличную переменную.</span><span class="sxs-lookup"><span data-stu-id="474c9-153">To modify the data that is passed to a stored procedure or parameterized statement in table-valued parameter, you must insert the data into a temporary table or into a table variable.</span></span>  
   
--   Для изменения структуры возвращающего табличное значение параметра нельзя использовать инструкции ALTER TABLE.  
+-   <span data-ttu-id="474c9-154">Для изменения структуры возвращающего табличное значение параметра нельзя использовать инструкции ALTER TABLE.</span><span class="sxs-lookup"><span data-stu-id="474c9-154">You cannot use ALTER TABLE statements to modify the design of table-valued parameters.</span></span>  
   
-## Пример настройки параметра SqlParameter  
- Поставщик <xref:System.Data.SqlClient> поддерживает заполнение возвращающих табличное значение параметров из объектов <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> или System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>\> \(<xref:System.Collections.Generic.IEnumerable%601>?qualifyHint=False&autoUpgrade=True).  Необходимо указать имя типа возвращающего табличное значение параметра с помощью свойства <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> объекта <xref:System.Data.SqlClient.SqlParameter>.  Значение `TypeName` должно совпадать с именем совместимого типа, созданного ранее на сервере.  В приведенном ниже фрагменте кода демонстрируется настройка объекта <xref:System.Data.SqlClient.SqlParameter> для вставки данных.  
+## <a name="configuring-a-sqlparameter-example"></a><span data-ttu-id="474c9-155">Пример настройки параметра SqlParameter</span><span class="sxs-lookup"><span data-stu-id="474c9-155">Configuring a SqlParameter Example</span></span>  
+ <span data-ttu-id="474c9-156"><xref:System.Data.SqlClient>поддерживает заполнение возвращающих табличное значение параметров из <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> или System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>? qualifyHint = False & autoUpgrade = True) объектов.</span><span class="sxs-lookup"><span data-stu-id="474c9-156"><xref:System.Data.SqlClient> supports populating table-valued parameters from <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> or System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>?qualifyHint=False&autoUpgrade=True) objects.</span></span> <span data-ttu-id="474c9-157">Необходимо указать имя типа возвращающего табличное значение параметра с помощью свойства <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> объекта <xref:System.Data.SqlClient.SqlParameter>.</span><span class="sxs-lookup"><span data-stu-id="474c9-157">You must specify a type name for the table-valued parameter by using the <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:System.Data.SqlClient.SqlParameter>.</span></span> <span data-ttu-id="474c9-158">Значение `TypeName` должно совпадать с именем совместимого типа, созданного ранее на сервере.</span><span class="sxs-lookup"><span data-stu-id="474c9-158">The `TypeName` must match the name of a compatible type previously created on the server.</span></span> <span data-ttu-id="474c9-159">В приведенном ниже фрагменте кода демонстрируется настройка объекта <xref:System.Data.SqlClient.SqlParameter> для вставки данных.</span><span class="sxs-lookup"><span data-stu-id="474c9-159">The following code fragment demonstrates how to configure <xref:System.Data.SqlClient.SqlParameter> to insert data.</span></span>  
   
 ```csharp  
 // Configure the command and parameter.  
-SqlCommand insertCommand = new SqlCommand(  
-    sqlInsert, connection);  
-SqlParameter tvpParam = insertCommand.Parameters.AddWithValue(  
-    "@tvpNewCategories", addedCategories);  
+SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
+SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", addedCategories);  
 tvpParam.SqlDbType = SqlDbType.Structured;  
 tvpParam.TypeName = "dbo.CategoryTableType";  
 ```  
@@ -111,19 +114,15 @@ Dim tvpParam As SqlParameter = _
   "@tvpNewCategories", addedCategories)  
 tvpParam.SqlDbType = SqlDbType.Structured  
 tvpParam.TypeName = "dbo.CategoryTableType"  
-  
 ```  
   
- Также для передачи строк данных в возвращающий табличное значение параметр можно использовать любой производный от <xref:System.Data.Common.DbDataReader> объект, как показано в этом фрагменте.  
+ <span data-ttu-id="474c9-160">Также для передачи строк данных в возвращающий табличное значение параметр можно использовать любой производный от <xref:System.Data.Common.DbDataReader> объект, как показано в этом фрагменте.</span><span class="sxs-lookup"><span data-stu-id="474c9-160">You can also use any object derived from <xref:System.Data.Common.DbDataReader> to stream rows of data to a table-valued parameter, as shown in this fragment:</span></span>  
   
 ```csharp  
 // Configure the SqlCommand and table-valued parameter.  
-SqlCommand insertCommand = new SqlCommand(  
-  "usp_InsertCategories", connection);  
+SqlCommand insertCommand = new SqlCommand("usp_InsertCategories", connection);  
 insertCommand.CommandType = CommandType.StoredProcedure;  
-SqlParameter tvpParam =   
-   insertCommand.Parameters.AddWithValue(  
-   "@tvpNewCategories", dataReader);  
+SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", dataReader);  
 tvpParam.SqlDbType = SqlDbType.Structured;  
 ```  
   
@@ -135,30 +134,26 @@ Dim tvpParam As SqlParameter = _
   insertCommand.Parameters.AddWithValue("@tvpNewCategories", _  
   dataReader)  
 tvpParam.SqlDbType = SqlDbType.Structured  
-  
 ```  
   
-## Передача возвращающего табличное значение параметра в хранимую процедуру  
- В данном примере демонстрируется передача возвращающего табличное значение параметра в хранимую процедуру.  Добавленные строки извлекаются в коде в новый объект <xref:System.Data.DataTable> с помощью метода <xref:System.Data.DataTable.GetChanges%2A>.  Затем в коде задается команда <xref:System.Data.SqlClient.SqlCommand>, присваивающая свойству <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> значение <xref:System.Data.CommandType>.  Объект <xref:System.Data.SqlClient.SqlParameter> заполняется с помощью метода <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>, а свойству <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> присваивается значение `Structured`.  Затем с помощью метода выполняется <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> команда <xref:System.Data.SqlClient.SqlCommand>.  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><span data-ttu-id="474c9-161">Передача возвращающего табличное значение параметра в хранимую процедуру</span><span class="sxs-lookup"><span data-stu-id="474c9-161">Passing a Table-Valued Parameter to a Stored Procedure</span></span>  
+ <span data-ttu-id="474c9-162">В данном примере демонстрируется передача возвращающего табличное значение параметра в хранимую процедуру.</span><span class="sxs-lookup"><span data-stu-id="474c9-162">This example demonstrates how to pass table-valued parameter data to a stored procedure.</span></span> <span data-ttu-id="474c9-163">Добавленные строки извлекаются в коде в новый объект <xref:System.Data.DataTable> с помощью метода <xref:System.Data.DataTable.GetChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="474c9-163">The code extracts added rows into a new <xref:System.Data.DataTable> by using the <xref:System.Data.DataTable.GetChanges%2A> method.</span></span> <span data-ttu-id="474c9-164">Затем в коде задается команда <xref:System.Data.SqlClient.SqlCommand>, присваивающая свойству <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> значение <xref:System.Data.CommandType.StoredProcedure>.</span><span class="sxs-lookup"><span data-stu-id="474c9-164">The code then defines a <xref:System.Data.SqlClient.SqlCommand>, setting the <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> property to <xref:System.Data.CommandType.StoredProcedure>.</span></span> <span data-ttu-id="474c9-165">Объект <xref:System.Data.SqlClient.SqlParameter> заполняется с помощью метода <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>, а свойству <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> присваивается значение `Structured`.</span><span class="sxs-lookup"><span data-stu-id="474c9-165">The <xref:System.Data.SqlClient.SqlParameter> is populated by using the <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> method and the <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> is set to `Structured`.</span></span> <span data-ttu-id="474c9-166">Затем с помощью метода выполняется <xref:System.Data.SqlClient.SqlCommand> команда <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.</span><span class="sxs-lookup"><span data-stu-id="474c9-166">The <xref:System.Data.SqlClient.SqlCommand> is then executed by using the <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method.</span></span>  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
 using (connection)  
 {  
-// Create a DataTable with the modified rows.  
-DataTable addedCategories =  
-  CategoriesDataTable.GetChanges(DataRowState.Added);  
-  
-// Configure the SqlCommand and SqlParameter.  
-SqlCommand insertCommand = new SqlCommand(  
-    "usp_InsertCategories", connection);  
-insertCommand.CommandType = CommandType.StoredProcedure;  
-SqlParameter tvpParam = insertCommand.Parameters.AddWithValue(  
-    "@tvpNewCategories", addedCategories);  
-tvpParam.SqlDbType = SqlDbType.Structured;  
-  
-// Execute the command.  
-insertCommand.ExecuteNonQuery();  
+  // Create a DataTable with the modified rows.  
+  DataTable addedCategories = CategoriesDataTable.GetChanges(DataRowState.Added);  
+
+  // Configure the SqlCommand and SqlParameter.  
+  SqlCommand insertCommand = new SqlCommand("usp_InsertCategories", connection);  
+  insertCommand.CommandType = CommandType.StoredProcedure;  
+  SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", addedCategories);  
+  tvpParam.SqlDbType = SqlDbType.Structured;  
+
+  // Execute the command.  
+  insertCommand.ExecuteNonQuery();  
 }  
 ```  
   
@@ -183,36 +178,33 @@ Using connection
 End Using  
 ```  
   
-### Передача возвращающего табличное значение параметра в параметризованную инструкцию SQL  
- В приведенном ниже примере кода демонстрируется вставка данных в таблицу dbo.Categories с помощью инструкции INSERT с вложенным запросом SELECT, для которого в качестве источника данных указан возвращающий табличное значение параметр.  При передаче в параметризованную инструкцию SQL возвращающего табличное значение параметра необходимо указать для этого параметра имя типа с помощью нового свойства <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> класса <xref:System.Data.SqlClient.SqlParameter>.  Значение `TypeName` должно совпадать с именем совместимого типа, созданного ранее на сервере.  Для ссылки на структуру типов, заданную в dbo.CategoryTableType, в данном примере кода используется свойство `TypeName`.  
+### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a><span data-ttu-id="474c9-167">Передача возвращающего табличное значение параметра в параметризованную инструкцию SQL</span><span class="sxs-lookup"><span data-stu-id="474c9-167">Passing a Table-Valued Parameter to a Parameterized SQL Statement</span></span>  
+ <span data-ttu-id="474c9-168">В приведенном ниже примере кода демонстрируется вставка данных в таблицу dbo.Categories с помощью инструкции INSERT с вложенным запросом SELECT, для которого в качестве источника данных указан возвращающий табличное значение параметр.</span><span class="sxs-lookup"><span data-stu-id="474c9-168">The following example demonstrates how to insert data into the dbo.Categories table by using an INSERT statement with a SELECT subquery that has a table-valued parameter as the data source.</span></span> <span data-ttu-id="474c9-169">При передаче в параметризованную инструкцию SQL возвращающего табличное значение параметра необходимо указать для этого параметра имя типа с помощью нового свойства <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> класса <xref:System.Data.SqlClient.SqlParameter>.</span><span class="sxs-lookup"><span data-stu-id="474c9-169">When passing a table-valued parameter to a parameterized SQL statement, you must specify a type name for the table-valued parameter by using the new <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> property of a <xref:System.Data.SqlClient.SqlParameter>.</span></span> <span data-ttu-id="474c9-170">Значение `TypeName` должно совпадать с именем совместимого типа, созданного ранее на сервере.</span><span class="sxs-lookup"><span data-stu-id="474c9-170">This `TypeName` must match the name of a compatible type previously created on the server.</span></span> <span data-ttu-id="474c9-171">Для ссылки на структуру типов, заданную в dbo.CategoryTableType, в данном примере кода используется свойство `TypeName`.</span><span class="sxs-lookup"><span data-stu-id="474c9-171">The code in this example uses the `TypeName` property to reference the type structure defined in dbo.CategoryTableType.</span></span>  
   
 > [!NOTE]
->  При указании значения для столбца идентификаторов в возвращающем табличное значение параметре необходимо выполнить для сеанса инструкцию SET IDENTITY\_INSERT.  
+>  <span data-ttu-id="474c9-172">При указании значения для столбца идентификаторов в возвращающем табличное значение параметре необходимо выполнить для сеанса инструкцию SET IDENTITY_INSERT.</span><span class="sxs-lookup"><span data-stu-id="474c9-172">If you supply a value for an identity column in a table-valued parameter, you must issue the SET IDENTITY_INSERT statement for the session.</span></span>  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
 using (connection)  
 {  
-// Create a DataTable with the modified rows.  
-DataTable addedCategories = CategoriesDataTable.GetChanges(  
-    DataRowState.Added);  
-  
-// Define the INSERT-SELECT statement.  
-string sqlInsert =   
-    "INSERT INTO dbo.Categories (CategoryID, CategoryName)"  
-    + " SELECT nc.CategoryID, nc.CategoryName"  
-    + " FROM @tvpNewCategories AS nc;"  
-  
-// Configure the command and parameter.  
-SqlCommand insertCommand = new SqlCommand(  
-    sqlInsert, connection);  
-SqlParameter tvpParam = insertCommand.Parameters.AddWithValue(  
-    "@tvpNewCategories", addedCategories);  
-tvpParam.SqlDbType = SqlDbType.Structured;  
-tvpParam.TypeName = "dbo.CategoryTableType";  
-  
-// Execute the command.  
-insertCommand.ExecuteNonQuery();  
+  // Create a DataTable with the modified rows.  
+  DataTable addedCategories = CategoriesDataTable.GetChanges(DataRowState.Added);  
+
+  // Define the INSERT-SELECT statement.  
+  string sqlInsert =   
+      "INSERT INTO dbo.Categories (CategoryID, CategoryName)"  
+      + " SELECT nc.CategoryID, nc.CategoryName"  
+      + " FROM @tvpNewCategories AS nc;"  
+
+  // Configure the command and parameter.  
+  SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
+  SqlParameter tvpParam = insertCommand.Parameters.AddWithValue("@tvpNewCategories", addedCategories);  
+  tvpParam.SqlDbType = SqlDbType.Structured;  
+  tvpParam.TypeName = "dbo.CategoryTableType";  
+
+  // Execute the command.  
+  insertCommand.ExecuteNonQuery();  
 }  
 ```  
   
@@ -242,8 +234,8 @@ Using connection
 End Using  
 ```  
   
-## Потоковая передача строк с помощью объекта DataReader  
- Также для потоковой передачи строк данных в возвращающий табличное значение параметр можно использовать любой производный от <xref:System.Data.Common.DbDataReader> класс.  В приведенном ниже фрагменте кода демонстрируется загрузка данных из базы данных Oracle с помощью <xref:System.Data.OracleClient.OracleCommand> и <xref:System.Data.OracleClient.OracleDataReader>.  Затем в коде настраивается команда <xref:System.Data.SqlClient.SqlCommand>, предназначенная для вызова хранимой процедуры с одним входным параметром.  Свойству <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> класса <xref:System.Data.SqlClient.SqlParameter> присваивается значение `Structured`.  Метод <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> передает результирующий набор `OracleDataReader` в хранимую процедуру в виде возвращающего табличное значение параметра.  
+## <a name="streaming-rows-with-a-datareader"></a><span data-ttu-id="474c9-173">Потоковая передача строк с помощью объекта DataReader</span><span class="sxs-lookup"><span data-stu-id="474c9-173">Streaming Rows with a DataReader</span></span>  
+ <span data-ttu-id="474c9-174">Также для потоковой передачи строк данных в возвращающий табличное значение параметр можно использовать любой производный от <xref:System.Data.Common.DbDataReader> класс.</span><span class="sxs-lookup"><span data-stu-id="474c9-174">You can also use any object derived from <xref:System.Data.Common.DbDataReader> to stream rows of data to a table-valued parameter.</span></span> <span data-ttu-id="474c9-175">В приведенном ниже фрагменте кода демонстрируется загрузка данных из базы данных Oracle с помощью <xref:System.Data.OracleClient.OracleCommand> и <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="474c9-175">The following code fragment demonstrates retrieving data from an Oracle database by using an <xref:System.Data.OracleClient.OracleCommand> and an <xref:System.Data.OracleClient.OracleDataReader>.</span></span> <span data-ttu-id="474c9-176">Затем в коде настраивается команда <xref:System.Data.SqlClient.SqlCommand>, предназначенная для вызова хранимой процедуры с одним входным параметром.</span><span class="sxs-lookup"><span data-stu-id="474c9-176">The code then configures a <xref:System.Data.SqlClient.SqlCommand> to invoke a stored procedure with a single input parameter.</span></span> <span data-ttu-id="474c9-177">Свойству <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> класса <xref:System.Data.SqlClient.SqlParameter> присваивается значение `Structured`.</span><span class="sxs-lookup"><span data-stu-id="474c9-177">The <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> property of the <xref:System.Data.SqlClient.SqlParameter> is set to `Structured`.</span></span> <span data-ttu-id="474c9-178">Метод <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> передает результирующий набор `OracleDataReader` в хранимую процедуру в виде возвращающего табличное значение параметра.</span><span class="sxs-lookup"><span data-stu-id="474c9-178">The <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> passes the `OracleDataReader` result set to the stored procedure as a table-valued parameter.</span></span>  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
@@ -258,7 +250,7 @@ OracleDataReader oracleReader = selectCommand.ExecuteReader(
  SqlCommand insertCommand = new SqlCommand(  
    "usp_InsertCategories", connection);  
  insertCommand.CommandType = CommandType.StoredProcedure;  
- SqlParameter tvpParam =   
+ SqlParameter tvpParam =  
     insertCommand.Parameters.AddWithValue(  
     "@tvpNewCategories", oracleReader);  
  tvpParam.SqlDbType = SqlDbType.Structured;  
@@ -288,9 +280,9 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## См. также  
- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)   
- [Команды и параметры](../../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)   
- [Операции с данными SQL Server в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="474c9-179">См. также</span><span class="sxs-lookup"><span data-stu-id="474c9-179">See Also</span></span>  
+ [<span data-ttu-id="474c9-180">Настройка параметров и типов данных параметров</span><span class="sxs-lookup"><span data-stu-id="474c9-180">Configuring Parameters and Parameter Data Types</span></span>](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [<span data-ttu-id="474c9-181">Команды и параметры</span><span class="sxs-lookup"><span data-stu-id="474c9-181">Commands and Parameters</span></span>](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="474c9-182">Параметры DataAdapter</span><span class="sxs-lookup"><span data-stu-id="474c9-182">DataAdapter Parameters</span></span>](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [<span data-ttu-id="474c9-183">Операции данных SQL Server Data в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="474c9-183">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
+ [<span data-ttu-id="474c9-184">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="474c9-184">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

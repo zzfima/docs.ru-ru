@@ -1,107 +1,107 @@
 ---
-title: "&lt;serviceHostingEnvironment&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;serviceHostingEnvironment&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5770cb8fd68eb68145f3f7fbcf197302883efe9f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceHostingEnvironment&gt;
-Этот элемент определяет тип, который среда размещения служб создает для определенного транспорта.  Если этот элемент является пустым, используется тип, применяемый по умолчанию.  Этот элемент может применяться только на уровне файлов конфигурации приложения или компьютера.  
+# <a name="ltservicehostingenvironmentgt"></a><span data-ttu-id="c309c-102">&lt;serviceHostingEnvironment&gt;</span><span class="sxs-lookup"><span data-stu-id="c309c-102">&lt;serviceHostingEnvironment&gt;</span></span>
+<span data-ttu-id="c309c-103">Этот элемент определяет тип, который среда размещения служб создает для определенного транспорта.</span><span class="sxs-lookup"><span data-stu-id="c309c-103">This element defines the type the service hosting environment instantiates for a particular transport.</span></span> <span data-ttu-id="c309c-104">Если этот элемент является пустым, используется тип, применяемый по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c309c-104">If this element is empty, the default type is used.</span></span> <span data-ttu-id="c309c-105">Этот элемент может применяться только на уровне файлов конфигурации приложения или компьютера.</span><span class="sxs-lookup"><span data-stu-id="c309c-105">This element can only be used at the application or machine level configuration files.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="c309c-106">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c309c-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c309c-107">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="c309c-107">\<ServiceHostingEnvironment></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c309c-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c309c-108">Syntax</span></span>  
   
-<serviceHostingEnvironment  
-     aspNetCompatibilityEnabled="Boolean"  
-     minFreeMemoryPercentageToActivateService="Integer"  
-     multipleSiteBindingsEnabled="Boolean">  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-      <serviceActivations>  
-        <add factory="String" service="String"/>  
-      </serviceActivations>  
-     <transportConfigurationTypes>  
-        <add name="String"   
-             transportConfigurationType="String" />  
-     </transportConfigurationTypes>  
+```xml  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
+                           minFreeMemoryPercentageToActivateService="Integer" 
+                           multipleSiteBindingsEnabled="Boolean">
+  <baseAddressPrefixFilters>
+    <add prefix="string" />
+  </baseAddressPrefixFilters>
+  <serviceActivations>
+    <add factory="String" service="String" />
+  </serviceActivations>
+  <transportConfigurationTypes>
+    <add name="String" transportConfigurationType="String" />
+  </transportConfigurationTypes>
 </serviceHostingEnvironment>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c309c-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="c309c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c309c-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="c309c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="c309c-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c309c-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|aspNetCompatibilityEnabled|Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения.  Значение по умолчанию — `false`.<br /><br /> Если этот атрибут имеет значение `true`, запросы к службам [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] проходят через конвейер HTTP ASP.NET, и взаимодействие, выполняющееся по протоколам, отличным от протокола HTTP, запрещено.  Для получения дополнительной информации см. [Службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Целое число, которое задает минимальный объем свободной памяти, который должен быть доступен системе перед активированием службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. **Caution:**  Установка этого атрибута вместе с частичным доверием в файле web.config службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] приводит к возникновению исключения <xref:System.Security.SecurityException> при запуске службы.|  
-|multipleSiteBindingsEnabled|Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.<br /><br /> Службы IIS состоят из веб\-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги.  Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS.  Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки.  Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу.  Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP\-адрес, порт, заголовок узла и т. п.<br /><br /> IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы.  Однако служба [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], размещаемая на узле, разрешает привязку только к одному базовому адресу для каждой схемы.<br /><br /> Чтобы разрешить службе [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] использование нескольких привязок IIS для одного узла, присвойте этому атрибуту значение `true`.  Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP.  Адрес конечной точки в файле конфигурации должен быть полным URI.|  
+|<span data-ttu-id="c309c-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="c309c-112">Attribute</span></span>|<span data-ttu-id="c309c-113">Описание</span><span class="sxs-lookup"><span data-stu-id="c309c-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="c309c-114">aspNetCompatibilityEnabled</span><span class="sxs-lookup"><span data-stu-id="c309c-114">aspNetCompatibilityEnabled</span></span>|<span data-ttu-id="c309c-115">Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения.</span><span class="sxs-lookup"><span data-stu-id="c309c-115">A Boolean value indicating whether the ASP.NET compatibility mode has been turned on for the current application.</span></span> <span data-ttu-id="c309c-116">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="c309c-116">The default is `false`.</span></span><br /><br /> <span data-ttu-id="c309c-117">Если этот атрибут имеет значение `true`, запросы к службам [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] проходят через конвейер HTTP ASP.NET, и взаимодействие, выполняющееся по протоколам, отличным от протокола HTTP, запрещено.</span><span class="sxs-lookup"><span data-stu-id="c309c-117">When this attribute is set to `true`, requests to [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services flow through the ASP.NET HTTP pipeline, and communication over non-HTTP protocols is prohibited.</span></span> <span data-ttu-id="c309c-118">Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).</span><span class="sxs-lookup"><span data-stu-id="c309c-118">For more information, see [WCF Services and ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).</span></span>|  
+|<span data-ttu-id="c309c-119">minFreeMemoryPercentageToActivateService</span><span class="sxs-lookup"><span data-stu-id="c309c-119">minFreeMemoryPercentageToActivateService</span></span>|<span data-ttu-id="c309c-120">Целое число, которое задает минимальный объем свободной памяти, который должен быть доступен системе перед активированием службы [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c309c-120">An integer that specifies the minimum amount of free memory that should be available to the system, before a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service can be activated.</span></span> <span data-ttu-id="c309c-121">**Предупреждение:** указания этого атрибута вместе с частичным доверием в файле web.config [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] службы приведет к <xref:System.Security.SecurityException> при запуске службы.</span><span class="sxs-lookup"><span data-stu-id="c309c-121">**Caution:**  Specifying this attribute along with partial trust in the web.config file of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service will result in a <xref:System.Security.SecurityException> when the service is run.</span></span>|  
+|<span data-ttu-id="c309c-122">multipleSiteBindingsEnabled</span><span class="sxs-lookup"><span data-stu-id="c309c-122">multipleSiteBindingsEnabled</span></span>|<span data-ttu-id="c309c-123">Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.</span><span class="sxs-lookup"><span data-stu-id="c309c-123">A Boolean value that specifies whether multiple IIS bindings per site is enabled.</span></span><br /><br /> <span data-ttu-id="c309c-124">Службы IIS состоят из веб-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги.</span><span class="sxs-lookup"><span data-stu-id="c309c-124">IIS consists of web sites, which are containers for virtual applications containing virtual directories.</span></span> <span data-ttu-id="c309c-125">Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS.</span><span class="sxs-lookup"><span data-stu-id="c309c-125">The application in a site can be accessed through one or more IIS binding.</span></span> <span data-ttu-id="c309c-126">Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки.</span><span class="sxs-lookup"><span data-stu-id="c309c-126">An IIS binding provides two pieces of information: a binding protocol and binding information.</span></span> <span data-ttu-id="c309c-127">Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу.</span><span class="sxs-lookup"><span data-stu-id="c309c-127">Binding protocol defines the scheme over which communication occurs, and binding information is the information used to access the site.</span></span> <span data-ttu-id="c309c-128">Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP-адрес, порт, заголовок узла и т. п.</span><span class="sxs-lookup"><span data-stu-id="c309c-128">An example of a binding protocol can be HTTP, whereas binding information can contain an IP address, Port, host header, etc.</span></span><br /><br /> <span data-ttu-id="c309c-129">IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы.</span><span class="sxs-lookup"><span data-stu-id="c309c-129">IIS supports specifying multiple IIS bindings per site, which results in multiple base addresses per scheme.</span></span> <span data-ttu-id="c309c-130">Однако служба [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], размещаемая на узле, разрешает привязку только к одному базовому адресу для каждой схемы.</span><span class="sxs-lookup"><span data-stu-id="c309c-130">However, a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service hosted under a site allows binding to only one baseAddress per scheme.</span></span><br /><br /> <span data-ttu-id="c309c-131">Чтобы разрешить службе [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] использование нескольких привязок IIS для одного узла, присвойте этому атрибуту значение `true`.</span><span class="sxs-lookup"><span data-stu-id="c309c-131">To enable multiple IIS bindings per site for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service, set this attribute to `true`.</span></span> <span data-ttu-id="c309c-132">Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP.</span><span class="sxs-lookup"><span data-stu-id="c309c-132">Notice that multiple site binding is supported only for the HTTP protocol.</span></span> <span data-ttu-id="c309c-133">Адрес конечной точки в файле конфигурации должен быть полным URI.</span><span class="sxs-lookup"><span data-stu-id="c309c-133">The address of endpoints in the configuration file needs to be a complete URI.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="c309c-134">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c309c-134">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<baseAddressPrefixFilters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
-|[\<serviceActivations\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  
-|[\<transportConfigurationTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.|  
+|<span data-ttu-id="c309c-135">Элемент</span><span class="sxs-lookup"><span data-stu-id="c309c-135">Element</span></span>|<span data-ttu-id="c309c-136">Описание</span><span class="sxs-lookup"><span data-stu-id="c309c-136">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c309c-137">\<baseAddressPrefixFilters ></span><span class="sxs-lookup"><span data-stu-id="c309c-137">\<baseAddressPrefixFilters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|<span data-ttu-id="c309c-138">Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.</span><span class="sxs-lookup"><span data-stu-id="c309c-138">A collection of configuration elements that specify prefix filters for the base addresses used by the service host.</span></span>|  
+|[<span data-ttu-id="c309c-139">\<serviceActivations ></span><span class="sxs-lookup"><span data-stu-id="c309c-139">\<serviceActivations></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|<span data-ttu-id="c309c-140">Раздел конфигурации, в котором описываются параметры активации.</span><span class="sxs-lookup"><span data-stu-id="c309c-140">A configuration section that describes activation settings.</span></span>|  
+|[<span data-ttu-id="c309c-141">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="c309c-141">\<transportConfigurationTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|<span data-ttu-id="c309c-142">Коллекция элементов конфигурации, которые определяют тип конкретного транспорта.</span><span class="sxs-lookup"><span data-stu-id="c309c-142">A collection of configuration elements that identify the type of a particular transport.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="c309c-143">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="c309c-143">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|serviceModel|Корневой элемент всех элементов конфигурации Windows Communication Foundation \(WCF\).|  
+|<span data-ttu-id="c309c-144">Элемент</span><span class="sxs-lookup"><span data-stu-id="c309c-144">Element</span></span>|<span data-ttu-id="c309c-145">Описание</span><span class="sxs-lookup"><span data-stu-id="c309c-145">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="c309c-146">serviceModel</span><span class="sxs-lookup"><span data-stu-id="c309c-146">serviceModel</span></span>|<span data-ttu-id="c309c-147">Корневой элемент всех элементов конфигурации Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c309c-147">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## Заметки  
- По умолчанию службы WCF выполняются параллельно с ASP.NET в размещенных доменах приложений \(AppDomain\).  Хотя WCF и ASP.NET могут существовать вместе в одном домене приложений, по умолчанию конвейер HTTP ASP.NET не обрабатывает запросы WCF.  В результате несколько элементов платформы приложений ASP.NET будут недоступны службам WCF.  К ним относятся:  
+## <a name="remarks"></a><span data-ttu-id="c309c-148">Примечания</span><span class="sxs-lookup"><span data-stu-id="c309c-148">Remarks</span></span>  
+ <span data-ttu-id="c309c-149">По умолчанию службы WCF выполняются параллельно с ASP.NET в размещенных доменах приложений (AppDomain).</span><span class="sxs-lookup"><span data-stu-id="c309c-149">By default, WCF services run side-by-side with ASP.NET in hosted Application Domains (AppDomain).</span></span> <span data-ttu-id="c309c-150">Хотя WCF и ASP.NET могут существовать вместе в одном домене приложений, по умолчанию конвейер HTTP ASP.NET не обрабатывает запросы WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-150">Even though WCF and ASP.NET can coexist in the same AppDomain, WCF requests are not processed by the ASP.NET HTTP Pipeline by default.</span></span> <span data-ttu-id="c309c-151">В результате несколько элементов платформы приложений ASP.NET будут недоступны службам WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-151">As a result, several elements of the ASP.NET application platform are not available to WCF services.</span></span> <span data-ttu-id="c309c-152">К ним относятся:</span><span class="sxs-lookup"><span data-stu-id="c309c-152">These include</span></span>  
   
--   Авторизация файла\/URL\-адреса ASP.NET  
+-   <span data-ttu-id="c309c-153">Авторизация файла/URL-адреса ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c309c-153">ASP.NET File/URL Authorization</span></span>  
   
--   Олицетворение ASP.NET  
+-   <span data-ttu-id="c309c-154">Олицетворение ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c309c-154">ASP.NET Impersonation</span></span>  
   
--   Состояние сеанса на основании файлов Cookie  
+-   <span data-ttu-id="c309c-155">Состояние сеанса на основании файлов Cookie</span><span class="sxs-lookup"><span data-stu-id="c309c-155">Cookie-based Session State</span></span>  
   
--   HttpContext.Current  
+-   <span data-ttu-id="c309c-156">HttpContext.Current</span><span class="sxs-lookup"><span data-stu-id="c309c-156">HttpContext.Current</span></span>  
   
--   Расширяемость конвейера через настраиваемый элемент HttpModule  
+-   <span data-ttu-id="c309c-157">Расширяемость конвейера через настраиваемый элемент HttpModule</span><span class="sxs-lookup"><span data-stu-id="c309c-157">Pipeline Extensibility via custom HttpModule</span></span>  
   
- Если службам WCF нужно функционировать в контексте ASP.NET и взаимодействовать только по протоколу HTTP, можно использовать режим совместимости ASP.NET WCF.  Этот режим включается, когда атрибут `aspNetCompatibilityEnabled` имеет значение `true` на уровне приложения.  В реализации службы должна быть объявлена возможность выполнения в режиме совместимости с помощью класса <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>.  Если режим совместимости включен, это приводит к следующему.  
+ <span data-ttu-id="c309c-158">Если службам WCF нужно функционировать в контексте ASP.NET и взаимодействовать только по протоколу HTTP, можно использовать режим совместимости ASP.NET WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-158">If your WCF services need to function in the ASP.NET context, and communicate only over HTTP, you can use WCF’s ASP.NET compatibility mode.</span></span> <span data-ttu-id="c309c-159">Этот режим включается, когда атрибут `aspNetCompatibilityEnabled` имеет значение `true` на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="c309c-159">This mode is turned on when the `aspNetCompatibilityEnabled` attribute is set to `true` at the application level.</span></span> <span data-ttu-id="c309c-160">В реализации службы должна быть объявлена возможность выполнения в режиме совместимости с помощью класса <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="c309c-160">Service implementations must declare their ability to run in compatibility mode using the <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> class.</span></span> <span data-ttu-id="c309c-161">Если режим совместимости включен, это приводит к следующему.</span><span class="sxs-lookup"><span data-stu-id="c309c-161">When the compatibility mode is enabled,</span></span>  
   
--   Авторизация файла\/URL\-адреса ASP.NET принудительно выполняется до авторизации WCF.  Решение об авторизации основано на удостоверении запроса уровня транспорта.  Удостоверения уровня сообщения не учитываются.  
+-   <span data-ttu-id="c309c-162">Авторизация файла/URL-адреса ASP.NET принудительно выполняется до авторизации WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-162">ASP.NET File/URL Authorization is enforced prior to WCF authorization.</span></span> <span data-ttu-id="c309c-163">Решение об авторизации основано на удостоверении запроса уровня транспорта.</span><span class="sxs-lookup"><span data-stu-id="c309c-163">An authorization decision is based on the transport-level identity of the request.</span></span> <span data-ttu-id="c309c-164">Удостоверения уровня сообщения не учитываются.</span><span class="sxs-lookup"><span data-stu-id="c309c-164">Identities at the message level are ignored.</span></span>  
   
--   Операции служб WCF начинают выполняться в контексте олицетворения ASP.NET.  Если для конкретной службы включены и олицетворение ASP.NET, и олицетворение WCF, применяется контекст олицетворения WCF.  
+-   <span data-ttu-id="c309c-165">Операции служб WCF начинают выполняться в контексте олицетворения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="c309c-165">WCF service operations start to execute in the ASP.NET impersonation context.</span></span> <span data-ttu-id="c309c-166">Если для конкретной службы включены и олицетворение ASP.NET, и олицетворение WCF, применяется контекст олицетворения WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-166">If both ASP.NET impersonation and WCF impersonation are enabled for a specific service, the WCF impersonation context applies.</span></span>  
   
--   HttpContext.Current может использоваться из кода службы WCF, и предотвращается представление службами конечных точек, работающих по протоколу, отличному от HTTP.  
+-   <span data-ttu-id="c309c-167">HttpContext.Current может использоваться из кода службы WCF, и предотвращается представление службами конечных точек, работающих по протоколу, отличному от HTTP.</span><span class="sxs-lookup"><span data-stu-id="c309c-167">HttpContext.Current can be used from WCF service code, and services are prevented from exposing non-HTTP endpoints.</span></span>  
   
--   Запросы WCF обрабатываются конвейером ASP.NET.  Элемент HttpModules, заданный для обработки входящих запросов, также может обрабатывать запросы WCF.  Они могут включать компоненты платформы ASP.NET \(например, <xref:System.Web.SessionState.SessionStateModule>\), а также настраиваемые модули сторонних поставщиков.  
+-   <span data-ttu-id="c309c-168">Запросы WCF обрабатываются конвейером ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="c309c-168">WCF requests are processed by the ASP.NET pipeline.</span></span> <span data-ttu-id="c309c-169">Элемент HttpModules, заданный для обработки входящих запросов, также может обрабатывать запросы WCF.</span><span class="sxs-lookup"><span data-stu-id="c309c-169">HttpModules that have been configured to act on incoming requests can also process WCF requests.</span></span> <span data-ttu-id="c309c-170">Они могут включать компоненты платформы ASP.NET (например, <xref:System.Web.SessionState.SessionStateModule>), а также настраиваемые модули сторонних поставщиков.</span><span class="sxs-lookup"><span data-stu-id="c309c-170">These can include ASP.NET platform components (e.g., <xref:System.Web.SessionState.SessionStateModule>), as well as custom third party modules.</span></span>  
   
-## Пример  
- В следующем образце кода показано, как включить режим совместимости ASP.  
+## <a name="example"></a><span data-ttu-id="c309c-171">Пример</span><span class="sxs-lookup"><span data-stu-id="c309c-171">Example</span></span>  
+ <span data-ttu-id="c309c-172">В следующем образце кода показано, как включить режим совместимости ASP.</span><span class="sxs-lookup"><span data-stu-id="c309c-172">The following code sample shows how to enable ASP Compatibility Mode.</span></span>  
   
-## Код  
+## <a name="code"></a><span data-ttu-id="c309c-173">Код</span><span class="sxs-lookup"><span data-stu-id="c309c-173">Code</span></span>  
   
-```  
+```xml  
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
- <xref:System.ServiceModel.ServiceHostingEnvironment>   
- [Размещение](../../../../../docs/framework/wcf/feature-details/hosting.md)   
- [Службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a><span data-ttu-id="c309c-174">См. также</span><span class="sxs-lookup"><span data-stu-id="c309c-174">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
+ <xref:System.ServiceModel.ServiceHostingEnvironment>  
+ [<span data-ttu-id="c309c-175">Размещение</span><span class="sxs-lookup"><span data-stu-id="c309c-175">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [<span data-ttu-id="c309c-176">Службы WCF и ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c309c-176">WCF Services and ASP.NET</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

@@ -1,76 +1,78 @@
 ---
-title: "Элемент &lt;add&gt; для authenticationModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> - элемент, authenticationModules"
-  - "<authenticationModules>, add - элемент"
-  - "add - элемент, authenticationModules"
-  - "authenticationModules, add - элемент"
+title: "&lt;Добавить&gt; элемент для authenticationModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
+helpviewer_keywords:
+- authenticationModules, add element
+- add element, authenticationModules
+- <authenticationModules>, add element
+- <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 60909a738afbe2ec14d0f67846b06578a7393601
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для authenticationModules (параметры сети)
-Добавляет в приложение модуль проверки подлинности.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="4b32c-102">&lt;Добавить&gt; элемент для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="4b32c-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="4b32c-103">Добавляет модуль проверки подлинности для приложения.</span><span class="sxs-lookup"><span data-stu-id="4b32c-103">Adds an authentication module to the application.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="4b32c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4b32c-104">\<configuration></span></span>  
+<span data-ttu-id="4b32c-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="4b32c-105">\<system.net></span></span>  
+<span data-ttu-id="4b32c-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="4b32c-106">\<authenticationModules></span></span>  
+<span data-ttu-id="4b32c-107">\<add></span><span class="sxs-lookup"><span data-stu-id="4b32c-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4b32c-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4b32c-108">Syntax</span></span>  
   
-      <add   
-   type = "client type", System, Version="version number", Culture="culture", PublicKeyToken="token"   
+```xml  
+<add
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4b32c-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="4b32c-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="4b32c-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="4b32c-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="4b32c-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="4b32c-111">Attributes</span></span>  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`type`|Имя класса и разновидности модуля, в которых реализована проверка подлинности.|  
+|<span data-ttu-id="4b32c-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="4b32c-112">**Attribute**</span></span>|<span data-ttu-id="4b32c-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="4b32c-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`type`|<span data-ttu-id="4b32c-114">Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделив их запятой.</span><span class="sxs-lookup"><span data-stu-id="4b32c-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="4b32c-115">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="4b32c-115">Child Elements</span></span>  
+ <span data-ttu-id="4b32c-116">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="4b32c-116">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="4b32c-117">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="4b32c-117">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Модули, используемые для проверки подлинности сетевых запросов.|  
+|<span data-ttu-id="4b32c-118">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="4b32c-118">**Element**</span></span>|<span data-ttu-id="4b32c-119">**Описание**</span><span class="sxs-lookup"><span data-stu-id="4b32c-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="4b32c-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="4b32c-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="4b32c-121">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="4b32c-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## Заметки  
- Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности.  Эти модули вызываются в том порядке, в котором они были добавлены в список.  
+## <a name="remarks"></a><span data-ttu-id="4b32c-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="4b32c-122">Remarks</span></span>  
+ <span data-ttu-id="4b32c-123">Элемент `add` добавляет модуль проверки подлинности в конец списка зарегистрированных модулей проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="4b32c-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="4b32c-124">Модули проверки подлинности вызываются в том порядке, в котором они были добавлены в список.</span><span class="sxs-lookup"><span data-stu-id="4b32c-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- Значением атрибута `type` должно быть допустимое имя библиотеки DLL или соответствующее имя класса, отделенное запятой.  
+ <span data-ttu-id="4b32c-125">Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных точкой с запятой.</span><span class="sxs-lookup"><span data-stu-id="4b32c-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="4b32c-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="4b32c-126">Configuration Files</span></span>  
+ <span data-ttu-id="4b32c-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="4b32c-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода показано включение используемых по умолчанию модулей проверки подлинности.  Необходимо заменить значения для параметров Version и PublicKeyToken правильными значениями для указанного модуля.  
+## <a name="example"></a><span data-ttu-id="4b32c-128">Пример</span><span class="sxs-lookup"><span data-stu-id="4b32c-128">Example</span></span>  
+ <span data-ttu-id="4b32c-129">В следующем примере включается модули проверки подлинности по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4b32c-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="4b32c-130">Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="4b32c-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
         <authenticationModules>  
@@ -89,7 +91,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="4b32c-131">См. также</span><span class="sxs-lookup"><span data-stu-id="4b32c-131">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="4b32c-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="4b32c-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

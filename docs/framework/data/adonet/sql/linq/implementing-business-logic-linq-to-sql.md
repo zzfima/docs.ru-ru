@@ -1,35 +1,41 @@
 ---
-title: "Реализация бизнес-логики (LINQ to SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Реализация бизнес-логики (LINQ to SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9cba4c71d895d9398e2444885f4f26bf04433251
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Реализация бизнес-логики (LINQ to SQL)
-Термин "бизнес\-логика" в данном разделе относится к любым пользовательским правилам или проверкам, которые применяются к данным перед их вставкой, обновлением или удалением в базе данных.  Бизнес\-логику также иногда называют терминами "бизнес\-правила" или "логика домена". В многоуровневых приложениях бизнес\-логика реализуется в виде логического уровня, и ее можно изменять независимо от уровня представления данных или уровня доступа к данным.  Бизнес\-логика может вызываться уровнем доступа к данным перед обновлением, вставкой или удалением данных в базе данных или после выполнения этих операций.  
+# <a name="implementing-business-logic-linq-to-sql"></a><span data-ttu-id="92591-102">Реализация бизнес-логики (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="92591-102">Implementing Business Logic (LINQ to SQL)</span></span>
+<span data-ttu-id="92591-103">Термин "бизнес-логика" в данном разделе относится к любым пользовательским правилам или проверкам, которые применяются к данным перед их вставкой, обновлением или удалением в базе данных.</span><span class="sxs-lookup"><span data-stu-id="92591-103">The term "business logic" in this topic refers to any custom rules or validation tests that you apply to data before it is inserted, updated or deleted from the database.</span></span> <span data-ttu-id="92591-104">Бизнес-логику также иногда называют терминами "бизнес-правила" или "логика домена".</span><span class="sxs-lookup"><span data-stu-id="92591-104">Business logic is also sometimes referred to as "business rules" or "domain logic."</span></span> <span data-ttu-id="92591-105">В многоуровневых приложениях бизнес-логика реализуется в виде логического уровня, и ее можно изменять независимо от уровня представления данных или уровня доступа к данным.</span><span class="sxs-lookup"><span data-stu-id="92591-105">In n-tier applications it is typically designed as a logical layer so that it can be modified independently of the presentation layer or data access layer.</span></span> <span data-ttu-id="92591-106">Бизнес-логика может вызываться уровнем доступа к данным перед обновлением, вставкой или удалением данных в базе данных или после выполнения этих операций.</span><span class="sxs-lookup"><span data-stu-id="92591-106">The business logic can be invoked by the data access layer before or after any update, insertion, or deletion of data in the database.</span></span>  
   
- Бизнес\-логика может представлять собой простую схему проверки совместимости типа поля с типом столбца таблицы.  Она также может состоять из набора объектов, взаимодействующих произвольным и довольно сложным образом.  Правила могут реализовываться в виде хранимых процедур для базы данных или в качестве объектов, содержащихся в памяти.  Независимо от способа реализации бизнес\-логики технология [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] позволяет использовать разделяемые классы и методы для отделения бизнес\-логики от кода доступа к данным.  
+ <span data-ttu-id="92591-107">Бизнес-логика может представлять собой простую схему проверки совместимости типа поля с типом столбца таблицы.</span><span class="sxs-lookup"><span data-stu-id="92591-107">The business logic can be as simple as a schema validation to make sure that the type of the field is compatible with the type of the table column.</span></span> <span data-ttu-id="92591-108">Она также может состоять из набора объектов, взаимодействующих произвольным и довольно сложным образом.</span><span class="sxs-lookup"><span data-stu-id="92591-108">Or it can consist of a set of objects that interact in arbitrarily complex ways.</span></span> <span data-ttu-id="92591-109">Правила могут реализовываться в виде хранимых процедур для базы данных или в качестве объектов, содержащихся в памяти.</span><span class="sxs-lookup"><span data-stu-id="92591-109">The rules may be implemented as stored procedures on the database or as in-memory objects.</span></span> <span data-ttu-id="92591-110">Однако бизнес-логики реализован, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] позволяет использовать разделяемые классы и методы для отделения бизнес-логики от кода доступа к данным.</span><span class="sxs-lookup"><span data-stu-id="92591-110">However the business logic is implemented, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] enables you use partial classes and partial methods to separate the business logic from the data access code.</span></span>  
   
-## Способы вызова бизнес\-логики технологией LINQ to SQL  
- Если во время разработки либо вручную, либо с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы SQLMetal создается класс сущностей, он определяется как разделяемый класс.  Это означает, что в отдельном файле с исходным кодом можно определить другую часть этого класса сущностей, содержащего пользовательскую бизнес\-логику.  Во время компиляции обе части объединяются в один класс. Однако, если требуется повторное создание класса сущностей с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы SQLMetal, это можно сделать без изменения той части, которая содержит бизнес\-логику.  
+## <a name="how-linq-to-sql-invokes-your-business-logic"></a><span data-ttu-id="92591-111">Способы вызова бизнес-логики технологией LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="92591-111">How LINQ to SQL Invokes Your Business Logic</span></span>  
+ <span data-ttu-id="92591-112">Если во время разработки либо вручную, либо с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы SQLMetal создается класс сущностей, он определяется как разделяемый класс.</span><span class="sxs-lookup"><span data-stu-id="92591-112">When you generate an entity class at design time, either manually or by using the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or SQLMetal, it is defined as a partial class.</span></span> <span data-ttu-id="92591-113">Это означает, что в отдельном файле с исходным кодом можно определить другую часть этого класса сущностей, содержащего пользовательскую бизнес-логику.</span><span class="sxs-lookup"><span data-stu-id="92591-113">This means that, in a separate code file, you can define another part of the entity class that contains your custom business logic.</span></span> <span data-ttu-id="92591-114">Во время компиляции обе части объединяются в один класс.</span><span class="sxs-lookup"><span data-stu-id="92591-114">At compile time, the two parts are merged into a single class.</span></span> <span data-ttu-id="92591-115">Однако, если требуется повторное создание класса сущностей с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы SQLMetal, это можно сделать без изменения той части, которая содержит бизнес-логику.</span><span class="sxs-lookup"><span data-stu-id="92591-115">But if you have to regenerate your entity classes by using the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or SQLMetal, you can do so and your part of the class will not be modified.</span></span>  
   
- Разделяемые классы, которые определяют сущности, и класс <xref:System.Data.Linq.DataContext> содержат разделяемые методы.  Эти методы являются точками расширения, которые можно использовать для применения бизнес\-логики перед обновлением, вставкой или удалением сущности или свойства сущности, а также после выполнения этих операций.  Разделяемые методы можно рассматривать как события времени компиляции.  Генератор кода определяет сигнатуру метода и вызывает эти методы в методах доступа к свойствам "get" и "set", конструкторе `DataContext` и в некоторых случаях неявным образом при вызове метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  Однако, если не реализовать определенный разделяемый метод, все ссылки на него и определение удаляются во время компиляции.  
+ <span data-ttu-id="92591-116">Разделяемые классы, которые определяют сущности, и класс <xref:System.Data.Linq.DataContext> содержат разделяемые методы.</span><span class="sxs-lookup"><span data-stu-id="92591-116">The partial classes that define entities and the <xref:System.Data.Linq.DataContext> contain partial methods.</span></span> <span data-ttu-id="92591-117">Эти методы являются точками расширения, которые можно использовать для применения бизнес-логики перед обновлением, вставкой или удалением сущности или свойства сущности, а также после выполнения этих операций.</span><span class="sxs-lookup"><span data-stu-id="92591-117">These are the extensibility points that you can use to apply your business logic before and after any update, insert, or delete for an entity or entity property.</span></span> <span data-ttu-id="92591-118">Разделяемые методы можно рассматривать как события времени компиляции.</span><span class="sxs-lookup"><span data-stu-id="92591-118">Partial methods can be thought of as compile-time events.</span></span> <span data-ttu-id="92591-119">Генератор кода определяет сигнатуру метода и вызывает эти методы в методах доступа к свойствам "get" и "set", конструкторе `DataContext` и в некоторых случаях неявным образом при вызове метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="92591-119">The code-generator defines a method signature and calls the methods in the get and set property accessors, the `DataContext` constructor, and in some cases behind the scenes when <xref:System.Data.Linq.DataContext.SubmitChanges%2A> is called.</span></span> <span data-ttu-id="92591-120">Однако, если не реализовать определенный разделяемый метод, все ссылки на него и определение удаляются во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="92591-120">However, if you do not implement a particular partial method, then all the references to it and the definition are removed at compile time.</span></span>  
   
- В определении реализации, созданном в отдельном файле с исходным кодом, можно выполнить любую требуемую пользовательскую логику.  Можно использовать разделяемый класс в качестве уровня домена или вызывать его из определения реализации разделяемого метода в отдельном объекте или объектах.  В любом случае бизнес\-логика полностью отделена как от кода уровня доступа к данным, так и от кода уровня представления данных.  
+ <span data-ttu-id="92591-121">В определении реализации, созданном в отдельном файле с исходным кодом, можно выполнить любую требуемую пользовательскую логику.</span><span class="sxs-lookup"><span data-stu-id="92591-121">In the implementing definition that you write in your separate code file, you can perform whatever custom logic is required.</span></span> <span data-ttu-id="92591-122">Можно использовать разделяемый класс в качестве уровня домена или вызывать его из определения реализации разделяемого метода в отдельном объекте или объектах.</span><span class="sxs-lookup"><span data-stu-id="92591-122">You can use your partial class itself as your domain layer, or you can call from your implementing definition of the partial method into a separate object or objects.</span></span> <span data-ttu-id="92591-123">В любом случае бизнес-логика полностью отделена как от кода уровня доступа к данным, так и от кода уровня представления данных.</span><span class="sxs-lookup"><span data-stu-id="92591-123">Either way, your business logic is cleanly separated from both your data access code and your presentation layer code.</span></span>  
   
-## Более подробное рассмотрение точек расширения  
- В следующем примере демонстрируется часть кода, созданного с помощью [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для класса `DataContext`, который содержит две таблицы: `Customers` и `Orders`.  Обратите внимание, что методы "Insert", "Update" и "Delete" определены для каждой таблицы в классе.  
+## <a name="a-closer-look-at-the-extensibility-points"></a><span data-ttu-id="92591-124">Более подробное рассмотрение точек расширения</span><span class="sxs-lookup"><span data-stu-id="92591-124">A Closer Look at the Extensibility Points</span></span>  
+ <span data-ttu-id="92591-125">В следующем примере показано часть кода, созданного [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для `DataContext` класс, который содержит две таблицы: `Customers` и `Orders`.</span><span class="sxs-lookup"><span data-stu-id="92591-125">The following example shows part of the code generated by the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] for the `DataContext` class that has two tables: `Customers` and `Orders`.</span></span> <span data-ttu-id="92591-126">Обратите внимание, что методы "Insert", "Update" и "Delete" определены для каждой таблицы в классе.</span><span class="sxs-lookup"><span data-stu-id="92591-126">Note that Insert, Update, and Delete methods are defined for each table in the class.</span></span>  
   
 ```vb  
 Partial Public Class Northwnd  
@@ -73,9 +79,9 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Если реализовать методы "Insert", "Update" и "Delete" в разделяемом классе, то при вызове метода [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] среда выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> вызовет их вместо собственных методов, используемых по умолчанию.  Это позволяет переопределить поведение, реализуемое по умолчанию для операций создания, чтения, обновления и удаления.  Подробнее: [Пошаговое руководство. Настройка операций вставки, обновления и удаления в классах сущностей](../Topic/Walkthrough:%20Customizing%20the%20insert,%20update,%20and%20delete%20behavior%20of%20entity%20classes.md).  
+ <span data-ttu-id="92591-127">Если реализовать методы "Insert", "Update" и "Delete" в разделяемом классе, то при вызове метода [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] среда выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> вызовет их вместо собственных методов, используемых по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="92591-127">If you implement the Insert, Update and Delete methods in your partial class, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] runtime will call them instead of its own default methods when <xref:System.Data.Linq.DataContext.SubmitChanges%2A> is called.</span></span> <span data-ttu-id="92591-128">Это позволяет переопределить поведение, реализуемое по умолчанию для операций создания, чтения, обновления и удаления.</span><span class="sxs-lookup"><span data-stu-id="92591-128">This enables you to override the default behavior for create / read / update / delete operations.</span></span> <span data-ttu-id="92591-129">Дополнительные сведения см. в разделе [Пошаговое руководство: Настройка инструкции insert, update и delete поведение классов сущностей](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).</span><span class="sxs-lookup"><span data-stu-id="92591-129">For more information, see [Walkthrough: Customizing the insert, update, and delete behavior of entity classes](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).</span></span>  
   
- Метод `OnCreated` вызывается в классе конструктора.  
+ <span data-ttu-id="92591-130">Метод `OnCreated` вызывается в классе конструктора.</span><span class="sxs-lookup"><span data-stu-id="92591-130">The `OnCreated` method is called in the class constructor.</span></span>  
   
 ```vb  
 Public Sub New(ByVal connection As String)  
@@ -92,7 +98,7 @@ public MyNorthWindDataContext(string connection) :
         }  
 ```  
   
- Классы сущностей имеют три метода, вызываемые средой выполнения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при создании, загрузке и проверки сущности \(при вызове метода `SubmitChanges`\).  Классы сущностей также имеют два разделяемых метода для каждого свойства. Один метод вызывается перед заданием свойства, а другой — после.  В следующем примере кода демонстрируются некоторые методы, созданные для класса `Customer`.  
+ <span data-ttu-id="92591-131">Классы сущностей имеют три метода, вызываемые средой выполнения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при создании, загрузке и проверки сущности (при вызове метода `SubmitChanges`).</span><span class="sxs-lookup"><span data-stu-id="92591-131">The entity classes have three methods that are called by the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] runtime when the entity is created, loaded, and validated (when `SubmitChanges` is called).</span></span> <span data-ttu-id="92591-132">Классы сущностей также имеют два разделяемых метода для каждого свойства. Один метод вызывается перед заданием свойства, а другой — после.</span><span class="sxs-lookup"><span data-stu-id="92591-132">The entity classes also have two partial methods for each property, one that is called before the property is set, and one that is called after.</span></span> <span data-ttu-id="92591-133">В следующем примере кода демонстрируются некоторые методы, созданные для класса `Customer`.</span><span class="sxs-lookup"><span data-stu-id="92591-133">The following code example shows some of the methods generated for the `Customer` class:</span></span>  
   
 ```vb  
 #Region "Extensibility Method Definitions"  
@@ -126,7 +132,7 @@ public MyNorthWindDataContext(string connection) :
 // ...additional Changing/Changed methods for each property  
 ```  
   
- Эти методы вызывается в методе доступа "set" для свойства, как показано в следующем примере для свойства `CustomerID`:  
+ <span data-ttu-id="92591-134">Эти методы вызывается в методе доступа "set" для свойства, как показано в следующем примере для свойства `CustomerID`:</span><span class="sxs-lookup"><span data-stu-id="92591-134">The methods are called in the property set accessor as shown in the following example for the `CustomerID` property:</span></span>  
   
 ```vb  
 Public Property CustomerID() As String  
@@ -159,7 +165,7 @@ public string CustomerID
 }  
 ```  
   
- В пользовательской части класса создается определение реализации метода.  Если в среде [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] ввести слово `partial`, технология IntelliSense отобразит определения метода в другой части класса.  
+ <span data-ttu-id="92591-135">В пользовательской части класса создается определение реализации метода.</span><span class="sxs-lookup"><span data-stu-id="92591-135">In your part of the class, you write an implementing definition of the method.</span></span> <span data-ttu-id="92591-136">В [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], после ввода `partial` технология IntelliSense отобразит определения метода в другой части класса.</span><span class="sxs-lookup"><span data-stu-id="92591-136">In [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], after you type `partial` you will see IntelliSense for the method definitions in the other part of the class.</span></span>  
   
 ```vb  
 Partial Public Class Customer  
@@ -179,16 +185,16 @@ partial class Customer
     }  
 ```  
   
- Дополнительные сведения о добавлении бизнес\-логики в приложение с помощью разделяемых методов см. в следующих разделах.  
+ <span data-ttu-id="92591-137">Дополнительные сведения о добавлении бизнес-логики в приложение с помощью разделяемых методов см. в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="92591-137">For more information about how to add business logic to your application by using partial methods, see the following topics:</span></span>  
   
- [Как добавить проверку в классы сущностей](../Topic/How%20to:%20Add%20validation%20to%20entity%20classes.md)  
+ [<span data-ttu-id="92591-138">Практическое руководство. Добавление проверки в классы сущностей</span><span class="sxs-lookup"><span data-stu-id="92591-138">How to: Add validation to entity classes</span></span>](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Пошаговое руководство. Настройка операций вставки, обновления и удаления в классах сущностей](../Topic/Walkthrough:%20Customizing%20the%20insert,%20update,%20and%20delete%20behavior%20of%20entity%20classes.md)  
+ [<span data-ttu-id="92591-139">Пошаговое руководство. Настройка поведения вставки, обновления и удаления классов сущностей</span><span class="sxs-lookup"><span data-stu-id="92591-139">Walkthrough: Customizing the insert, update, and delete behavior of entity classes</span></span>](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Пошаговое руководство. Добавление проверки в классы сущностей](../Topic/Walkthrough:%20Adding%20Validation%20to%20Entity%20Classes.md)  
+ [<span data-ttu-id="92591-140">Пошаговое руководство: Добавление проверки к классам сущностей</span><span class="sxs-lookup"><span data-stu-id="92591-140">Walkthrough: Adding Validation to Entity Classes</span></span>](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## См. также  
- [Разделяемые классы и методы](../Topic/Partial%20Classes%20and%20Methods%20\(C%23%20Programming%20Guide\).md)   
- [Разделяемые методы](../Topic/Partial%20Methods%20\(Visual%20Basic\).md)   
- [Средства LINQ to SQL в Visual Studio](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)   
- [SqlMetal.exe \(средство создания кода\)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a><span data-ttu-id="92591-141">См. также</span><span class="sxs-lookup"><span data-stu-id="92591-141">See Also</span></span>  
+ [<span data-ttu-id="92591-142">Разделяемые классы и методы</span><span class="sxs-lookup"><span data-stu-id="92591-142">Partial Classes and Methods</span></span>](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
+ [<span data-ttu-id="92591-143">Разделяемые методы</span><span class="sxs-lookup"><span data-stu-id="92591-143">Partial Methods</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
+ [<span data-ttu-id="92591-144">Средства LINQ to SQL в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="92591-144">LINQ to SQL Tools in Visual Studio</span></span>](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [<span data-ttu-id="92591-145">SqlMetal.exe (средство создания кода)</span><span class="sxs-lookup"><span data-stu-id="92591-145">SqlMetal.exe (Code Generation Tool)</span></span>](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

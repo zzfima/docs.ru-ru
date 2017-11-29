@@ -1,71 +1,75 @@
 ---
-title: "Свойства зависимостей типа коллекция | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "свойства типа-коллекции"
-  - "свойства зависимостей"
-  - "свойства, тип коллекции"
-  - "свойства, dependency"
+title: "Свойства зависимостей типа коллекция"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Свойства зависимостей типа коллекция
-Данный раздел содержит рекомендации и рекомендуемые шаблоны для реализации [свойства зависимостей](GTMT), типом которых является коллекция.  
+# <a name="collection-type-dependency-properties"></a><span data-ttu-id="c8ce8-102">Свойства зависимостей типа коллекция</span><span class="sxs-lookup"><span data-stu-id="c8ce8-102">Collection-Type Dependency Properties</span></span>
+<span data-ttu-id="c8ce8-103">Этот раздел содержит рекомендации и примеры шаблонов для реализации свойства зависимостей, где типом свойства является коллекция.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-103">This topic provides guidance and suggested patterns for how to implement a dependency property where the type of the property is a collection type.</span></span>  
   
-   
+ 
   
 <a name="implementing"></a>   
-## Реализация свойства зависимостей типа коллекция  
- В общем случае для свойства зависимостей шаблоном реализации, которому необходимо следовать, является определение обертки свойства [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], где это свойство возвращается идентификатором <xref:System.Windows.DependencyProperty>, а не полем или другой конструкцией.  Необходимо следовать этому же шаблону и при реализации свойства типа коллекция.  Однако свойство типа коллекция представляет некоторые сложности в шаблоне, если тип, содержащийся в коллекции, является классом, производным от <xref:System.Windows.DependencyObject> или <xref:System.Windows.Freezable>.  
+## <a name="implementing-a-collection-type-dependency-property"></a><span data-ttu-id="c8ce8-104">Реализация свойства зависимостей типа "коллекция"</span><span class="sxs-lookup"><span data-stu-id="c8ce8-104">Implementing a Collection-Type Dependency Property</span></span>  
+ <span data-ttu-id="c8ce8-105">Для свойства зависимостей в общем случае реализация шаблон следовать — определить [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] обертки свойства, где это свойство является <xref:System.Windows.DependencyProperty> идентификатор, а не поле или другой конструкции.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-105">For a dependency property in general, the implementation pattern that you follow is that you define a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property wrapper, where that property is backed by a <xref:System.Windows.DependencyProperty> identifier rather than a field or other construct.</span></span> <span data-ttu-id="c8ce8-106">При реализации свойства типа "коллекция" вы следуете этому же шаблону.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-106">You follow this same pattern when you implement a collection-type property.</span></span> <span data-ttu-id="c8ce8-107">Однако свойство типа коллекции представляет некоторую сложность шаблону, каждый раз, когда сам является тип, который содержится в коллекции <xref:System.Windows.DependencyObject> или <xref:System.Windows.Freezable> производного класса.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-107">However, a collection-type property introduces some complexity to the pattern whenever the type that is contained within the collection is itself a <xref:System.Windows.DependencyObject> or <xref:System.Windows.Freezable> derived class.</span></span>  
   
 <a name="initializing"></a>   
-## Инициализация коллекции со значением не по умолчанию  
- При создании свойства зависимостей значение свойства по умолчанию не задается в качестве начального значения поля.  Вместо этого значение по умолчанию задается с помощью метаданных свойства зависимостей.  Если свойство является ссылочным типом, то значение по умолчанию, заданное в метаданных свойства зависимостей, не является значением по умолчанию для каждого экземпляра. Вместо этого оно является значением по умолчанию, которое применяется ко всем экземплярам типа.  Поэтому необходимо избегать использования единственной статической коллекции, определенную метаданными свойства коллекции, как рабочее значение по умолчанию для только что созданных экземпляров типа.  Вместо этого следует убедиться, что значение коллекции намеренно задается одной \(одним экземпляром\) коллекцией как часть логики конструктора класса.  В противном случае будет создан случайный одноэлементный класс.  
+## <a name="initializing-the-collection-beyond-the-default-value"></a><span data-ttu-id="c8ce8-108">Инициализация коллекции за пределами значения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="c8ce8-108">Initializing the Collection Beyond the Default Value</span></span>  
+ <span data-ttu-id="c8ce8-109">При создании свойства зависимостей вы не указываете значение свойства по умолчанию в качестве начального значения поля.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-109">When you create a dependency property, you do not specify the property default value as the initial field value.</span></span> <span data-ttu-id="c8ce8-110">Вместо этого значение по умолчанию указывается через метаданные свойства зависимостей.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-110">Instead, you specify the default value through the dependency property metadata.</span></span> <span data-ttu-id="c8ce8-111">Если свойство является ссылочным типом, значение по умолчанию, заданное в метаданных свойства зависимостей, не является значением по умолчанию для каждого экземпляра. Напротив, это значение по умолчанию, которое применяется ко всем экземплярам типа.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-111">If your property is a reference type, the default value specified in dependency property metadata is not a default value per instance; instead it is a default value that applies to all instances of the type.</span></span> <span data-ttu-id="c8ce8-112">Поэтому необходимо избегать использования единственной статической коллекции, определенной метаданными свойства коллекции, в качестве рабочего значения по умолчанию для вновь создаваемых экземпляров типа.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-112">Therefore you must be careful to not use the singular static collection defined by the collection property metadata as the working default value for newly created instances of your type.</span></span> <span data-ttu-id="c8ce8-113">Вместо этого необходимо явно задать в качестве значения коллекции уникальную коллекцию (экземпляр) как часть логики конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-113">Instead, you must make sure that you deliberately set the collection value to a unique (instance) collection as part of your class constructor logic.</span></span> <span data-ttu-id="c8ce8-114">В противном случае будет создан случайный одноэлементный класс.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-114">Otherwise you will have created an unintentional singleton class.</span></span>  
   
- Рассмотрим следующий пример.  В следующем разделе примера показано определение класса `Aquarium`.  Класс определяет свойство зависимостей типа коллекция `AquariumObjects`, которое использует базовый тип <xref:System.Collections.Generic.List%601> с ограничением типа <xref:System.Windows.FrameworkElement>.  В вызове <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> для свойства зависимости метаданные устанавливают значение по умолчанию новым базовым <xref:System.Collections.Generic.List%601>.  
+ <span data-ttu-id="c8ce8-115">Рассмотрим следующий пример.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-115">Consider the following example.</span></span> <span data-ttu-id="c8ce8-116">В следующем разделе примера показано определение класса `Aquarium`.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-116">The following section of the example shows the definition for a class `Aquarium`.</span></span> <span data-ttu-id="c8ce8-117">Этот класс определяет свойство зависимостей типа коллекции `AquariumObjects`, которое использует базовый <xref:System.Collections.Generic.List%601> тип с <xref:System.Windows.FrameworkElement> ограничение типа.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-117">The class defines the collection type dependency property `AquariumObjects`, which uses the generic <xref:System.Collections.Generic.List%601> type with a <xref:System.Windows.FrameworkElement> type constraint.</span></span> <span data-ttu-id="c8ce8-118">В <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> вызова для свойства зависимостей, метаданные устанавливает это значение по умолчанию должно быть новым базовым <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-118">In the <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> call for the dependency property, the metadata establishes the default value to be a new generic <xref:System.Collections.Generic.List%601>.</span></span>  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- Однако, если оставить код как показано, это одно приведенное значение по умолчанию будет совместно используемым значением всеми экземплярами `Aquarium`.  Если выполнить следующий код проверки, предназначенный для того, чтобы показать, как будут созданы два отдельных экземпляра `Aquarium` и как к каждому из них будет добавлен один отличный `Fish`, обнаружится интересный результат:  
+ <span data-ttu-id="c8ce8-119">Однако если оставить такой код, как в примере, это значение по умолчанию одного списка будет использоваться совместно для всех экземпляров `Aquarium`.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-119">However, if you just left the code as shown, that single list default value is shared for all instances of `Aquarium`.</span></span> <span data-ttu-id="c8ce8-120">Если выполнить следующий тестовый код, предназначенный для демонстрации того, как создаются два отдельных экземпляра `Aquarium` и добавляется один отличный `Fish` для каждого из них, вы увидите странный результат.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-120">If you ran the following test code, which is intended to show how you would instantiate two separate `Aquarium` instances and add a single different `Fish` to each of them, you would see a surprising result:</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- В каждой коллекции вместо числа 1 будет 2.  Это происходит потому, что каждый `Aquarium` добавляет свой `Fish` в коллекцию значений по умолчанию, созданную в результате единственного вызова конструктора в метаданных и совместно используемую в дальнейшем всеми экземплярами.  Эта ситуация почти никогда не является требуемым результатом.  
+ <span data-ttu-id="c8ce8-121">Вместо того чтобы каждой коллекции назначалось число 1, каждой коллекции назначается число 2!</span><span class="sxs-lookup"><span data-stu-id="c8ce8-121">Instead of each collection having a count of one, each collection has a count of two!</span></span> <span data-ttu-id="c8ce8-122">Это происходит, поскольку каждый `Aquarium` добавил свой объект `Fish` в коллекцию значений по умолчанию, которая является результатом вызова одного конструктора в метаданных и, таким образом, совместно используется всеми экземплярами.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-122">This is because each `Aquarium` added its `Fish` to the default value collection, which resulted from a single constructor call in the metadata and is therefore shared between all instances.</span></span> <span data-ttu-id="c8ce8-123">Как правило, такая ситуация нежелательна.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-123">This situation is almost never what you want.</span></span>  
   
- Чтобы устранить эту проблему, необходимо задать значение свойства зависимости коллекции уникальным экземпляром в составе вызова конструктора класса.  Так как свойство зависимости доступно только для чтения, для его задания используется метод <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> с использованием <xref:System.Windows.DependencyPropertyKey>, являющегося единственно доступным в классе.  
+ <span data-ttu-id="c8ce8-124">Чтобы устранить эту проблему, необходимо сбросить значение свойства зависимостей коллекции, задав уникальный экземпляр в составе вызова конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-124">To correct this problem, you must reset the collection dependency property value to a unique instance, as part of the class constructor call.</span></span> <span data-ttu-id="c8ce8-125">Так как свойство является свойством зависимостей только для чтения, используется <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> метод задается с помощью <xref:System.Windows.DependencyPropertyKey> , доступен только в пределах класса.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-125">Because the property is a read-only dependency property, you use the <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> method to set it, using the <xref:System.Windows.DependencyPropertyKey> that is only accessible within the class.</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- Теперь, если запустить тот же код проверки еще раз, можно увидеть более ожидаемых результаты: каждый `Aquarium` поддерживает свою собственную уникальную коллекцию.  
+ <span data-ttu-id="c8ce8-126">Теперь, запустив тот же тестовый код еще раз, вы можете заметить, что результаты стали более ожидаемыми, то есть каждый `Aquarium` поддерживает свою собственную уникальную коллекцию.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-126">Now, if you ran that same test code again, you could see more expected results, where each `Aquarium` supported its own unique collection.</span></span>  
   
- Если бы свойство коллекции было доступным и для чтения, и для записи, шаблон слегка отличался бы от этого.  В таком случае можно было бы вызвать открытый доступ из конструктора для выполнения инициализации, он бы так же вызвал не ключевую сигнатуру <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> внутри обертки записи при помощи открытого идентификатора <xref:System.Windows.DependencyProperty>.  
+ <span data-ttu-id="c8ce8-127">Если свойство коллекции будет доступным для чтения и записи, в этот шаблон потребуется внести небольшое изменение.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-127">There would be a slight variation on this pattern if you chose to have your collection property be read-write.</span></span> <span data-ttu-id="c8ce8-128">В этом случае можно вызывать открытый доступ из конструктора для выполнения инициализации, которые по-прежнему будет вызывать ключевую сигнатуру <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> внутри обертки, при помощи открытого <xref:System.Windows.DependencyProperty> идентификатор.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-128">In that case, you could call the public set accessor from the constructor to do the initialization, which would still be calling the nonkey signature of <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> within your set wrapper, using a public <xref:System.Windows.DependencyProperty> identifier.</span></span>  
   
-## Сообщение об изменениях значений привязки из свойств коллекции  
- Свойство коллекции, которое само является свойством зависимости, автоматически не сообщает об изменениях своим подсвойствам.  При создании привязки в коллекции привязке не будет сообщено об изменениях и следовательно нарушатся некоторые сценарии привязки данных.  Однако, если использовать тип коллекции <xref:System.Windows.FreezableCollection%601> в качестве типа коллекции, то об изменениях субсвойств в содержащихся в коллекции элементах будет сообщено, и привязка будет работать, как ожидалось.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a><span data-ttu-id="c8ce8-129">Передача сведений об изменении значений привязки из свойств коллекции</span><span class="sxs-lookup"><span data-stu-id="c8ce8-129">Reporting Binding Value Changes from Collection Properties</span></span>  
+ <span data-ttu-id="c8ce8-130">Свойство коллекции, которое само является свойством зависимостей, не сообщает об изменениях своих подсвойств автоматически.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-130">A collection property that is itself a dependency property does not automatically report changes to its subproperties.</span></span> <span data-ttu-id="c8ce8-131">При создании привязок в коллекции это может мешать привязке сообщать об изменениях и, следовательно, нарушить некоторые сценарии привязки данных.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-131">If you are creating bindings into a collection, this can prevent the binding from reporting changes, thus invalidating some data binding scenarios.</span></span> <span data-ttu-id="c8ce8-132">Тем не менее если использовать тип коллекции <xref:System.Windows.FreezableCollection%601> как типа коллекции, затем подсвойства изменения содержащихся в нем элементов в коллекции будет сообщено, и привязка работает должным образом.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-132">However, if you use the collection type <xref:System.Windows.FreezableCollection%601> as your collection type, then subproperty changes to contained elements in the collection are properly reported, and binding works as expected.</span></span>  
   
- Чтобы включить привязку подсвойства в объектной коллекции зависимости, создайте свойство коллекции типа <xref:System.Windows.FreezableCollection%601> с ограничением типа для этой коллекции любым классом, производным от <xref:System.Windows.DependencyObject>.  
+ <span data-ttu-id="c8ce8-133">Чтобы включить привязку подсвойства в коллекции объекта зависимостей, создайте свойство коллекции как тип <xref:System.Windows.FreezableCollection%601>, с ограничением типа для этой коллекции любым <xref:System.Windows.DependencyObject> производного класса.</span><span class="sxs-lookup"><span data-stu-id="c8ce8-133">To enable subproperty binding in a dependency object collection, create the collection property as type <xref:System.Windows.FreezableCollection%601>, with a type constraint for that collection to any <xref:System.Windows.DependencyObject> derived class.</span></span>  
   
-## См. также  
- <xref:System.Windows.FreezableCollection%601>   
- [Код XAML и пользовательские классы для WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Пользовательские свойства зависимостей](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Метаданные свойства зависимости](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="c8ce8-134">См. также</span><span class="sxs-lookup"><span data-stu-id="c8ce8-134">See Also</span></span>  
+ <xref:System.Windows.FreezableCollection%601>  
+ [<span data-ttu-id="c8ce8-135">Код XAML и пользовательские классы для WPF</span><span class="sxs-lookup"><span data-stu-id="c8ce8-135">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="c8ce8-136">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="c8ce8-136">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="c8ce8-137">Общие сведения о свойствах зависимости</span><span class="sxs-lookup"><span data-stu-id="c8ce8-137">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="c8ce8-138">Пользовательские свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="c8ce8-138">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="c8ce8-139">Метаданные свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="c8ce8-139">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

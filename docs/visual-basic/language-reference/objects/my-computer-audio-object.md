@@ -1,38 +1,37 @@
 ---
-title: "Объект My.Computer.Audio | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Audio - объект"
-  - "My.Computer.Audio - объект"
+title: "Объект My.Computer.Audio"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Audio object
+- My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0f03f6464d9be551b2fa4ff7fc2f7ae2c5f7d67f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Объект My.Computer.Audio
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предоставляет методы для воспроизведения звука.  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="d11d6-102">Объект My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="d11d6-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="d11d6-103">Предоставляет методы для воспроизведения звуков.</span><span class="sxs-lookup"><span data-stu-id="d11d6-103">Provides methods for playing sounds.</span></span>  
   
-## Заметки  
- Дополнительные сведения о доступных методах и свойствах объекта `My.Computer.Audio` см. в разделе <xref:Microsoft.VisualBasic.Devices.Audio>.  
+## <a name="remarks"></a><span data-ttu-id="d11d6-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="d11d6-104">Remarks</span></span>  
+ <span data-ttu-id="d11d6-105">Дополнительные сведения о методах и свойствах `My.Computer.Audio` см. в разделе <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="d11d6-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- Дополнительные сведения см. в разделе [Воспроизведение звуков](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ <span data-ttu-id="d11d6-106">Дополнительные сведения см. в разделе [звуки игральной](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="d11d6-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## Требования  
- **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
+## <a name="requirements"></a><span data-ttu-id="d11d6-107">Требования</span><span class="sxs-lookup"><span data-stu-id="d11d6-107">Requirements</span></span>  
+ <span data-ttu-id="d11d6-108">**Пространство имен:**<xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="d11d6-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- **Класс:** <xref:Microsoft.VisualBasic.Devices.Audio>  
+ <span data-ttu-id="d11d6-109">**Класс:**<xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="d11d6-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+ <span data-ttu-id="d11d6-110">**Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="d11d6-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## См. также  
- [Объект My.Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="d11d6-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d11d6-111">See Also</span></span>  
+ [<span data-ttu-id="d11d6-112">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="d11d6-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,75 +1,78 @@
 ---
-title: "Элемент &lt;filter&gt; для &lt;add&gt; для &lt;sharedListeners&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<filter> - элемент для <add> для <listeners> для <sharedListeners>"
-  - "элемент filter для элемента <add> для элемента <sharedListeners>"
-  - "фильтры, прослушиватели трассировки"
-  - "initializeData - атрибут"
-  - "прослушиватели трассировки, фильтры"
+title: "&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;sharedListeners&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
+helpviewer_keywords:
+- filter element for <add> for <sharedListeners>
+- initializeData attribute
+- <filter> element for <add> for <sharedListeners>
+- filters, trace listeners
+- trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: ce4134d9059d1f1d5bd2e435a3cc87d3fbccd422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;filter&gt; для &lt;add&gt; для &lt;sharedListeners&gt;
-Добавляет фильтр в прослушиватель в коллекции `sharedListeners`.  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a><span data-ttu-id="f28c2-102">&lt;Фильтр&gt; элемент для &lt;добавить&gt; для &lt;sharedListeners&gt;</span><span class="sxs-lookup"><span data-stu-id="f28c2-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;sharedListeners&gt;</span></span>
+<span data-ttu-id="f28c2-103">Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="f28c2-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="f28c2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f28c2-104">\<configuration></span></span>  
+<span data-ttu-id="f28c2-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="f28c2-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="f28c2-106">\<sharedListeners > элемент</span><span class="sxs-lookup"><span data-stu-id="f28c2-106">\<sharedListeners> Element</span></span>  
+<span data-ttu-id="f28c2-107">\<add></span><span class="sxs-lookup"><span data-stu-id="f28c2-107">\<add></span></span>  
+<span data-ttu-id="f28c2-108">\<Фильтр ></span><span class="sxs-lookup"><span data-stu-id="f28c2-108">\<filter></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="f28c2-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f28c2-109">Syntax</span></span>  
+  
+```xml  
 <filter type="System.Diagnostics.EventTypeFilter"   
   initializeData="Warning" />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f28c2-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f28c2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f28c2-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f28c2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="f28c2-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f28c2-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|**type**|Обязательный атрибут.<br /><br /> Задает типа фильтра.  Можно использовать только полное имя типа \(в формате свойства <xref:System.Type.FullName%2A?displayProperty=fullName>\) или полное имя типа, включающее информацию о сборке \(в формате свойства <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>\).  Для получения более подробных сведений о создании полного имени см. раздел [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса.|  
+|<span data-ttu-id="f28c2-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f28c2-113">Attribute</span></span>|<span data-ttu-id="f28c2-114">Описание</span><span class="sxs-lookup"><span data-stu-id="f28c2-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="f28c2-115">**type**</span><span class="sxs-lookup"><span data-stu-id="f28c2-115">**type**</span></span>|<span data-ttu-id="f28c2-116">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="f28c2-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="f28c2-117">Задает тип фильтра.</span><span class="sxs-lookup"><span data-stu-id="f28c2-117">Specifies the type of the filter.</span></span> <span data-ttu-id="f28c2-118">Можно использовать полное имя типа (в формате <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойства), или можно использовать полное имя, включая сведения о сборке (в формате <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> свойство).</span><span class="sxs-lookup"><span data-stu-id="f28c2-118">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="f28c2-119">Сведения о создании полное имя типа см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="f28c2-119">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="f28c2-120">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="f28c2-120">**initializeData**</span></span>|<span data-ttu-id="f28c2-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="f28c2-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f28c2-122">Строка, передаваемая в конструктор для заданного класса.</span><span class="sxs-lookup"><span data-stu-id="f28c2-122">The string passed to the constructor for the specified class.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="f28c2-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f28c2-123">Child Elements</span></span>  
+ <span data-ttu-id="f28c2-124">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="f28c2-124">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="f28c2-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f28c2-125">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sharedListeners`|Коллекция прослушивателей, на которые может ссылаться любой источник или элемент трассировки.|  
-|`add`|Добавляет прослушиватель в коллекцию **sharedListeners**.|  
+|<span data-ttu-id="f28c2-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="f28c2-126">Element</span></span>|<span data-ttu-id="f28c2-127">Описание</span><span class="sxs-lookup"><span data-stu-id="f28c2-127">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="f28c2-128">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f28c2-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="f28c2-129">Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.</span><span class="sxs-lookup"><span data-stu-id="f28c2-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sharedListeners`|<span data-ttu-id="f28c2-130">Коллекция прослушивателей, которые могут ссылаться на любой источник или элемент трассировки.</span><span class="sxs-lookup"><span data-stu-id="f28c2-130">A collection of listeners that any source or trace element can reference.</span></span>|  
+|`add`|<span data-ttu-id="f28c2-131">Добавление прослушивателя к **sharedListeners** коллекции.</span><span class="sxs-lookup"><span data-stu-id="f28c2-131">Adds a listener to the **sharedListeners** collection.</span></span>|  
   
-## Заметки  
- Если прослушиватель задан в элементе `<add>` элемента `<sharedListeners>`, фильтр прослушивателя должен быть задан в элементе `<filter>`, являющимся дочерним по отношению к элементу `<add>`.  
+## <a name="remarks"></a><span data-ttu-id="f28c2-132">Примечания</span><span class="sxs-lookup"><span data-stu-id="f28c2-132">Remarks</span></span>  
+ <span data-ttu-id="f28c2-133">Если прослушиватель определен в `<add>` элемент `<sharedListeners>` элемент, фильтр для этого прослушивателя должен быть определен в `<filter>` элемент, который является потомком `<add>` элемента.</span><span class="sxs-lookup"><span data-stu-id="f28c2-133">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
   
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+ <span data-ttu-id="f28c2-134">Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="f28c2-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<filter>` для добавления фильтра трассировки прослушивателя `console` в коллекцию `sharedListeners`.  
+## <a name="example"></a><span data-ttu-id="f28c2-135">Пример</span><span class="sxs-lookup"><span data-stu-id="f28c2-135">Example</span></span>  
+ <span data-ttu-id="f28c2-136">В следующем примере показано, как использовать `<filter>` элемент, чтобы добавить фильтр к прослушивателю трассировки `console` в `sharedListeners` коллекции.</span><span class="sxs-lookup"><span data-stu-id="f28c2-136">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -91,8 +94,8 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceFilter>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.TraceSource>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="f28c2-137">См. также</span><span class="sxs-lookup"><span data-stu-id="f28c2-137">See Also</span></span>  
+ <xref:System.Diagnostics.TraceFilter>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.TraceSource>  
+ [<span data-ttu-id="f28c2-138">Схема параметров трассировки и отладки</span><span class="sxs-lookup"><span data-stu-id="f28c2-138">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

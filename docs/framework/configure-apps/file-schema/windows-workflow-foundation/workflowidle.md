@@ -1,56 +1,64 @@
 ---
-title: "&lt;workflowIdle&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;workflowIdle&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5f9b4989de57204d9ec97d69475121c30ae82644
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;workflowIdle&gt;
-Поведение службы, управляющее выгрузкой и сохранением простаивающих экземпляров рабочего процесса.  
+# <a name="ltworkflowidlegt"></a><span data-ttu-id="bc571-102">&lt;workflowIdle&gt;</span><span class="sxs-lookup"><span data-stu-id="bc571-102">&lt;workflowIdle&gt;</span></span>
+<span data-ttu-id="bc571-103">Поведение службы, управляющее выгрузкой и сохранением простаивающих экземпляров рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bc571-103">A service behavior that controls when idle workflow instances are unloaded and persisted.</span></span>  
   
-## Синтаксис  
+<span data-ttu-id="bc571-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="bc571-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="bc571-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="bc571-105">\<behaviors></span></span>  
+<span data-ttu-id="bc571-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="bc571-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="bc571-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="bc571-107">\<behavior></span></span>  
+<span data-ttu-id="bc571-108">\<workflowIdle ></span><span class="sxs-lookup"><span data-stu-id="bc571-108">\<workflowIdle></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="bc571-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bc571-109">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-      <workflowIdle timeToPersist=”TimeSpan”  
-          timeToUnload=”TimeSpan” />  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <workflowIdle timeToPersist="TimeSpan" 
+                    timeToUnload="TimeSpan" />
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bc571-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="bc571-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="bc571-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="bc571-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="bc571-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="bc571-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|timeToPersist|Значение Timespan, указывающее интервал, который возникает между моментом, когда рабочий процесс становится неактивным, и его сохранением.  Значением по умолчанию является TimeSpan.MaxValue.<br /><br /> Начало интервала определяется моментом, когда экземпляр рабочего процесса становится неактивным.  Этот атрибут может оказаться полезным в том случае, если необходимо более интенсивно сохранять экземпляр рабочего процесса, оставляя его в памяти как можно дольше.  Этот атрибут допустим только в том случае, если его значение меньше атрибута **timeToUnload**.  Если значение больше, оно не учитывается.  Если время, указанное в атрибуте, истекло раньше значения, определенного атрибутом **timeToUnload**, то сохранение должно быть завершено до того, как рабочий процесс будет выгружен.  Это означает, что операция выгрузки может быть задержана, пока рабочий процесс не будет сохранен.  Уровень сохраняемости ответственен за обработку повторений для временных ошибок и выдает исключения только для неустранимых ошибок.  В связи с этим все исключения, возникшие во время сохранения, считаются неустранимыми, и производится прерывание работы экземпляра рабочего процесса.|  
-|timeToUnload|Значение Timespan, указывающее интервал времени от момента, когда рабочий процесс стал неактивным, до его выгрузки.  Значение по умолчанию \- 1 минута.<br /><br /> При выгрузке рабочего процесса подразумевается, что было произведено его сохранение.  Если этот атрибут имеет нулевое значение, экземпляр рабочего процесса сохраняется и выгружается сразу после того, как становится неактивным.  Если задать этому атрибуту значение TimeSpan.MaxValue, операция выгрузки будет фактически отключена.  Простаивающие экземпляры рабочего процесса не выгружаются.|  
+|<span data-ttu-id="bc571-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="bc571-113">Attribute</span></span>|<span data-ttu-id="bc571-114">Описание</span><span class="sxs-lookup"><span data-stu-id="bc571-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="bc571-115">timeToPersist</span><span class="sxs-lookup"><span data-stu-id="bc571-115">timeToPersist</span></span>|<span data-ttu-id="bc571-116">Значение Timespan, которое указывает время между моментом рабочий процесс переходит в состояние бездействия и сохраняется.</span><span class="sxs-lookup"><span data-stu-id="bc571-116">A Timespan value that specifies the duration between the time the workflow becomes idle and is persisted.</span></span> <span data-ttu-id="bc571-117">Значение по умолчанию — TimeSpan.MaxValue.</span><span class="sxs-lookup"><span data-stu-id="bc571-117">The default value is TimeSpan.MaxValue.</span></span><br /><br /> <span data-ttu-id="bc571-118">Начало интервала определяется моментом, когда экземпляр рабочего процесса становится неактивным.</span><span class="sxs-lookup"><span data-stu-id="bc571-118">The duration begins to elapse when the workflow instance becomes idle.</span></span> <span data-ttu-id="bc571-119">Этот атрибут полезен, если вы хотите сохранить экземпляр рабочего процесса активнее, при этом оставляя экземпляр в памяти в то же время.</span><span class="sxs-lookup"><span data-stu-id="bc571-119">This attribute  is useful if you want to persist a workflow instance more aggressively while still keeping the instance in memory for as long as possible.</span></span> <span data-ttu-id="bc571-120">Этот атрибут действителен, только если его значение меньше, чем **timeToUnload** атрибута.</span><span class="sxs-lookup"><span data-stu-id="bc571-120">This attribute  is only valid if its value is less than the **timeToUnload** attribute.</span></span> <span data-ttu-id="bc571-121">Если значение больше, оно не учитывается.</span><span class="sxs-lookup"><span data-stu-id="bc571-121">If it is greater, it is ignored.</span></span> <span data-ttu-id="bc571-122">Если этот атрибут истекает до значения, указанного в **timeToUnload** атрибут, сохранение должно быть завершено до выгрузки рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bc571-122">If this attribute elapses before the value specified by the **timeToUnload** attribute, persistence must complete before the workflow is unloaded.</span></span> <span data-ttu-id="bc571-123">Это означает, что операция выгрузки может быть задержана, пока рабочий процесс не будет сохранен.</span><span class="sxs-lookup"><span data-stu-id="bc571-123">This implies that the unload operation may be delayed until the workflow is persisted.</span></span> <span data-ttu-id="bc571-124">Уровень сохраняемости ответственен за обработку повторений для временных ошибок и выдает исключения только для неустранимых ошибок.</span><span class="sxs-lookup"><span data-stu-id="bc571-124">The persistence layer is responsible for handling any retries for transient errors and only throws exceptions on non-recoverable errors.</span></span> <span data-ttu-id="bc571-125">В связи с этим все исключения, возникшие во время сохранения, считаются неустранимыми, и производится прерывание работы экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bc571-125">Therefore, any exceptions thrown during persistence are treated as fatal and the workflow instance is aborted.</span></span>|  
+|<span data-ttu-id="bc571-126">timeToUnload</span><span class="sxs-lookup"><span data-stu-id="bc571-126">timeToUnload</span></span>|<span data-ttu-id="bc571-127">Значение Timespan, указывающее интервал времени от момента, когда рабочий процесс стал неактивным, до его выгрузки.</span><span class="sxs-lookup"><span data-stu-id="bc571-127">A Timespan value that specifies the duration between the time the workflow becomes idle and is unloaded.</span></span> <span data-ttu-id="bc571-128">Значение по умолчанию - 1 минута.</span><span class="sxs-lookup"><span data-stu-id="bc571-128">The default value is 1 minute.</span></span><br /><br /> <span data-ttu-id="bc571-129">При выгрузке рабочего процесса подразумевается, что было произведено его сохранение.</span><span class="sxs-lookup"><span data-stu-id="bc571-129">Unloading a workflow implies that it is also persisted.</span></span> <span data-ttu-id="bc571-130">Если этот атрибут имеет значение ноль, экземпляр рабочего процесса сохраняется и выгружается сразу после рабочий процесс становится неактивным.</span><span class="sxs-lookup"><span data-stu-id="bc571-130">If this attribute is set to zero the workflow instance is persisted and unloaded immediately after the workflow becomes idle.</span></span> <span data-ttu-id="bc571-131">Задав этому атрибуту значение TimeSpan.MaxValue фактически операция выгрузки будет отключена.</span><span class="sxs-lookup"><span data-stu-id="bc571-131">Setting this attribute to TimeSpan.MaxValue effectively disables the unload operation.</span></span> <span data-ttu-id="bc571-132">Простаивающие экземпляры рабочего процесса не выгружаются.</span><span class="sxs-lookup"><span data-stu-id="bc571-132">Idle workflow instances are never unloaded.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="bc571-133">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="bc571-133">Child Elements</span></span>  
+ <span data-ttu-id="bc571-134">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="bc571-134">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="bc571-135">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="bc571-135">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<behavior\> для \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Указывает элемент поведения.|  
+|<span data-ttu-id="bc571-136">Элемент</span><span class="sxs-lookup"><span data-stu-id="bc571-136">Element</span></span>|<span data-ttu-id="bc571-137">Описание</span><span class="sxs-lookup"><span data-stu-id="bc571-137">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="bc571-138">\<поведение > из \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="bc571-138">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="bc571-139">Указывает элемент поведения.</span><span class="sxs-lookup"><span data-stu-id="bc571-139">Specifies a behavior element.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>   
+## <a name="see-also"></a><span data-ttu-id="bc571-140">См. также</span><span class="sxs-lookup"><span data-stu-id="bc571-140">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>  
  <xref:System.ServiceModel.Activities.Configuration.WorkflowIdleElement>

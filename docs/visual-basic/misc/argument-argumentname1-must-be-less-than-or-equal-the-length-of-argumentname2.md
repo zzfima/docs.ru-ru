@@ -1,22 +1,25 @@
 ---
-title: "Аргумент &quot;&lt;аргумент1&gt;&quot; должен быть меньше или равен длине аргумента &quot;&lt;аргумент2&gt;&quot;. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Аргумент &#39; &lt;аргумент1&gt;&#39; должно быть меньше или равно длина аргумента &#39;&lt; аргумент2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 55a2401f-a44d-4671-b35e-878f48594162
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ccd628042f934fa6b16e014b0a8887c534772c62
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Аргумент &quot;&lt;аргумент1&gt;&quot; должен быть меньше или равен длине аргумента &quot;&lt;аргумент2&gt;&quot;.
-Длина предоставленного аргумента превышает длину аргумента, который он замещает.  
+# <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a><span data-ttu-id="70bc4-102">Аргумент &#39; &lt;аргумент1&gt;&#39; должно быть меньше или равно длина аргумента &#39;&lt; аргумент2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="70bc4-102">Argument &#39;&lt;argumentname1&gt;&#39; must be less than or equal the length of argument &#39;&lt;argumentname2&gt;&#39;</span></span>
+<span data-ttu-id="70bc4-103">Длина предоставленного аргумента превышает длину аргумента, который он замещает.</span><span class="sxs-lookup"><span data-stu-id="70bc4-103">The length of a supplied argument exceeds the length of the argument it is replacing.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="70bc4-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="70bc4-104">To correct this error</span></span>  
   
--   Сократите длину первого аргумента, чтобы она была не больше длины второго аргумента.  
+-   <span data-ttu-id="70bc4-105">Сократите длину первого аргумента, чтобы она была не больше длины второго аргумента.</span><span class="sxs-lookup"><span data-stu-id="70bc4-105">Make the length of the first argument less than or equal to the length of the second argument.</span></span>  
   
-## См. также  
- [Типы ошибок](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="70bc4-106">См. также</span><span class="sxs-lookup"><span data-stu-id="70bc4-106">See Also</span></span>  
+ [<span data-ttu-id="70bc4-107">Типы ошибок</span><span class="sxs-lookup"><span data-stu-id="70bc4-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,84 +1,87 @@
 ---
-title: "Элемент &lt;add&gt; для schemeSettings (Параметры URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Добавить&gt; элемент для schemeSettings (параметры Uri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 8ce4cc33d054e74fc9868a16764e744daf260c10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для schemeSettings (Параметры URI)
-Добавляет параметр схемы для имени схемы.  
+# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="7f8fa-102">&lt;Добавить&gt; элемент для schemeSettings (параметры Uri)</span><span class="sxs-lookup"><span data-stu-id="7f8fa-102">&lt;add&gt; Element for schemeSettings (Uri Settings)</span></span>
+<span data-ttu-id="7f8fa-103">Добавляет параметр схемы для имени схемы.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-103">Adds a scheme setting for a scheme name.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="7f8fa-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7f8fa-104">\<configuration></span></span>  
+<span data-ttu-id="7f8fa-105">\<URI ></span><span class="sxs-lookup"><span data-stu-id="7f8fa-105">\<uri></span></span>  
+<span data-ttu-id="7f8fa-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="7f8fa-106">\<schemeSettings></span></span>  
+<span data-ttu-id="7f8fa-107">\<add></span><span class="sxs-lookup"><span data-stu-id="7f8fa-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7f8fa-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f8fa-108">Syntax</span></span>  
   
-      <add   
-   name = "http|https" genericUriParserOptions="DontUnescapePathDotsAndSlashes"  
+```xml  
+<add
+  name="http|https"
+  genericUriParserOptions="DontUnescapePathDotsAndSlashes"
 />  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7f8fa-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="7f8fa-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7f8fa-110">В следующих разделах описываются атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-110">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="7f8fa-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="7f8fa-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|name|Имя схемы, для которой применяется этот параметр.  Единственные поддерживаемые значения — name\="http"и имя\="https".|  
+|<span data-ttu-id="7f8fa-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="7f8fa-112">Attribute</span></span>|<span data-ttu-id="7f8fa-113">Описание</span><span class="sxs-lookup"><span data-stu-id="7f8fa-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="7f8fa-114">имя</span><span class="sxs-lookup"><span data-stu-id="7f8fa-114">name</span></span>|<span data-ttu-id="7f8fa-115">Имя схемы, к которому применяется эта политика.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="7f8fa-116">Только поддерживаемые значения: имя = «http» и имя = «https».</span><span class="sxs-lookup"><span data-stu-id="7f8fa-116">The only supported values are name="http" and name="https".</span></span>|  
   
-## Атрибут {Имя\_атрибута}  
+## <a name="attribute-name-attribute"></a><span data-ttu-id="7f8fa-117">{Имя_атрибута} Атрибут</span><span class="sxs-lookup"><span data-stu-id="7f8fa-117">{Attribute name} Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|genericUriParserOptions|Параметры анализатора для этой схемы.  Единственное поддерживаемое значение — genericUriParserOptions \= "DontUnescapePathDotsAndSlashes".|  
+|<span data-ttu-id="7f8fa-118">Значение</span><span class="sxs-lookup"><span data-stu-id="7f8fa-118">Value</span></span>|<span data-ttu-id="7f8fa-119">Описание</span><span class="sxs-lookup"><span data-stu-id="7f8fa-119">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="7f8fa-120">genericUriParserOptions</span><span class="sxs-lookup"><span data-stu-id="7f8fa-120">genericUriParserOptions</span></span>|<span data-ttu-id="7f8fa-121">Параметры средства синтаксического анализа для этой схемы.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-121">The parser options for this scheme.</span></span> <span data-ttu-id="7f8fa-122">Поддерживается только значение genericUriParserOptions = «DontUnescapePathDotsAndSlashes».</span><span class="sxs-lookup"><span data-stu-id="7f8fa-122">The only supported value is genericUriParserOptions= "DontUnescapePathDotsAndSlashes".</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="7f8fa-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="7f8fa-123">Child Elements</span></span>  
+ <span data-ttu-id="7f8fa-124">Нет</span><span class="sxs-lookup"><span data-stu-id="7f8fa-124">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="7f8fa-125">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="7f8fa-125">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент \<schemeSettings\> \(параметры URI\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Указывает, как <xref:System.Uri> будет анализироваться по конкретным схемам.|  
+|<span data-ttu-id="7f8fa-126">Элемент</span><span class="sxs-lookup"><span data-stu-id="7f8fa-126">Element</span></span>|<span data-ttu-id="7f8fa-127">Описание</span><span class="sxs-lookup"><span data-stu-id="7f8fa-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="7f8fa-128">Элемент \<schemeSettings> (параметры URI)</span><span class="sxs-lookup"><span data-stu-id="7f8fa-128">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="7f8fa-129">Определяет, как <xref:System.Uri> анализируется для определенных схем.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-129">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-## Заметки  
- По умолчанию класс <xref:System.Uri?displayProperty=fullName> разэкранирует закодированные знаками процента разделители путей до выполнения сжатия пути.  Это было реализовано следующим образом, как механизм обеспечения безопасности от атак:  
+## <a name="remarks"></a><span data-ttu-id="7f8fa-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="7f8fa-130">Remarks</span></span>  
+ <span data-ttu-id="7f8fa-131">По умолчанию <xref:System.Uri?displayProperty=nameWithType> процентов класс un-escape-символы в кодировке разделители пути до выполнения сжатия пути.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-131">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="7f8fa-132">Это было реализовано в качестве механизма защиты от атак на систему следующим образом:</span><span class="sxs-lookup"><span data-stu-id="7f8fa-132">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Если этот URI передается вниз к модулям, не обрабатывающим корректно символы, закодированные знаками процента, это может привести к выполнению сервером следующей команды:  
+ <span data-ttu-id="7f8fa-133">Если этот URI передается вниз к модулям не обрабатывает процентов символы в кодировке правильно, это может привести в следующей команде, выполняемой на сервере:</span><span class="sxs-lookup"><span data-stu-id="7f8fa-133">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине класс <xref:System.Uri?displayProperty=fullName> сначала разэкранирует разделители пути, а затем применяет сжатие пути.  Результат передачи вредоносного URL\-адреса выше в конструктор класса <xref:System.Uri?displayProperty=fullName> приводит к следующему виду универсального кода ресурса \(URI\):  
+ <span data-ttu-id="7f8fa-134">По этой причине <xref:System.Uri?displayProperty=nameWithType> класса первый разделители пути un-escape-последовательности, а затем применяет сжатие пути.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-134">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="7f8fa-135">Результат передачи вредоносного URL-адрес выше <xref:System.Uri?displayProperty=nameWithType> класса конструктор результаты в следующий URI:</span><span class="sxs-lookup"><span data-stu-id="7f8fa-135">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Это поведение по умолчанию может быть изменено так, чтобы закодированные знаками процента разделители пути не разэкранировались; для этого к конкретной схеме следует применить параметр конфигурации schemeSettings.  
+ <span data-ttu-id="7f8fa-136">Можно изменить это поведение по умолчанию для не разделители un escape-символ процента закодированный путь, с помощью параметра конфигурации schemeSettings для нужной раскладки.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-136">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="7f8fa-137">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="7f8fa-137">Configuration Files</span></span>  
+ <span data-ttu-id="7f8fa-138">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7f8fa-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода показывается конфигурация, используемая классом <xref:System.Uri> для поддержки отмены использования процентных escape\-символов для разделителей пути в схеме HTTP.  
+## <a name="example"></a><span data-ttu-id="7f8fa-139">Пример</span><span class="sxs-lookup"><span data-stu-id="7f8fa-139">Example</span></span>  
+ <span data-ttu-id="7f8fa-140">В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки не экранирования разделителей закодированные пути для схемы http.</span><span class="sxs-lookup"><span data-stu-id="7f8fa-140">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -88,11 +91,11 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="7f8fa-141">См. также</span><span class="sxs-lookup"><span data-stu-id="7f8fa-141">See Also</span></span>  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
+ [<span data-ttu-id="7f8fa-142">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="7f8fa-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

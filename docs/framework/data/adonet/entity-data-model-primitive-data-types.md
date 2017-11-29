@@ -1,50 +1,53 @@
 ---
-title: "Модель EDM. Примитивные типы данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Модель EDM. Примитивные типы данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Модель EDM. Примитивные типы данных
-Модель EDM поддерживает набор абстрактных типов\-примитивов данных \(таких как строка, логическое выражение, Int32 и так далее\), которые используются для определения [свойств](../../../../docs/framework/data/adonet/property.md) в концептуальной модели.  Эти примитивные типы данных являются посредниками для фактических примитивных типов данных, которые поддерживаются в среде хранения или размещения, такой как база данных сервера SQL или среда CLR.  Модель EDM не определяет семантику операций или преобразований для примитивных типов данных; такая семантика определяется средой хранения или размещения.  Обычно примитивные типы данных в модели EDM сопоставляются соответствующим примитивным типам данных в среде хранения или размещения.  Дополнительные сведения о том, как платформа Entity Framework сопоставляет примитивные типы в модели EDM с типами данных сервера SQL, см. в разделе [Типы SqlClient для Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+# <a name="entity-data-model-primitive-data-types"></a><span data-ttu-id="e6d94-102">Модель EDM. Примитивные типы данных</span><span class="sxs-lookup"><span data-stu-id="e6d94-102">Entity Data Model: Primitive Data Types</span></span>
+<span data-ttu-id="e6d94-103">Модель данных сущности (EDM) поддерживает набор абстрактных примитивных типов данных (например, строка, логическое значение, Int32 и так далее), используемые для определения [свойства](../../../../docs/framework/data/adonet/property.md) в концептуальной модели.</span><span class="sxs-lookup"><span data-stu-id="e6d94-103">The Entity Data Model (EDM) supports a set of abstract primitive data types (such as String, Boolean, Int32, and so on) that are used to define [properties](../../../../docs/framework/data/adonet/property.md) in a conceptual model.</span></span> <span data-ttu-id="e6d94-104">Эти примитивные типы данных являются посредниками для фактических примитивных типов данных, которые поддерживаются в среде хранения или размещения, такой как база данных сервера SQL или среда CLR.</span><span class="sxs-lookup"><span data-stu-id="e6d94-104">These primitive data types are proxies for actual primitive data types that are supported in the storage or hosting environment, such as a SQL Server database or the common language runtime (CLR).</span></span> <span data-ttu-id="e6d94-105">Модель EDM не определяет семантику операций или преобразований для примитивных типов данных; такая семантика определяется средой хранения или размещения.</span><span class="sxs-lookup"><span data-stu-id="e6d94-105">The EDM does not define the semantics of operations or conversions over primitive data types; these semantics are defined by the storage or hosting environment.</span></span> <span data-ttu-id="e6d94-106">Обычно примитивные типы данных в модели EDM сопоставляются соответствующим примитивным типам данных в среде хранения или размещения.</span><span class="sxs-lookup"><span data-stu-id="e6d94-106">Typically, primitive data types in the EDM are mapped to corresponding primitive data types in the storage or hosting environment.</span></span> <span data-ttu-id="e6d94-107">Сведения о как Entity Framework сопоставляет типы-примитивы в модели EDM с типами данных SQL Server см. в разделе [SqlClient для Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span><span class="sxs-lookup"><span data-stu-id="e6d94-107">For information about how the Entity Framework maps primitive types in the EDM to SQL Server data types, see [SqlClient for Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span></span>  
   
 > [!NOTE]
->  Модель EDM не поддерживает коллекции примитивных типов данных.  
+>  <span data-ttu-id="e6d94-108">Модель EDM не поддерживает коллекции примитивных типов данных.</span><span class="sxs-lookup"><span data-stu-id="e6d94-108">The EDM does not support collections of primitive data types.</span></span>  
   
- Дополнительные сведения о типах структурированных данных в модели EDM см. в разделе [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) и [сложный тип](../../../../docs/framework/data/adonet/complex-type.md).  
+ <span data-ttu-id="e6d94-109">Сведения о типах структурированных данных в модели EDM см. в разделе [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) и [сложный тип](../../../../docs/framework/data/adonet/complex-type.md).</span><span class="sxs-lookup"><span data-stu-id="e6d94-109">For information about structured data types in the EDM, see [entity type](../../../../docs/framework/data/adonet/entity-type.md) and [complex type](../../../../docs/framework/data/adonet/complex-type.md).</span></span>  
   
-## Примитивные типы данных, поддерживаемые в модели EDM  
- В приведенной ниже таблице представлены примитивные типы данных, поддерживаемые моделью EDM.  Также в таблице приводятся [аспекты](../../../../docs/framework/data/adonet/facet.md), которые могут быть применены к каждому примитивному типу данных.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a><span data-ttu-id="e6d94-110">Примитивные типы данных, поддерживаемые в модели EDM</span><span class="sxs-lookup"><span data-stu-id="e6d94-110">Primitive Data Types Supported in the Entity Data Model</span></span>  
+ <span data-ttu-id="e6d94-111">В приведенной ниже таблице представлены примитивные типы данных, поддерживаемые моделью EDM.</span><span class="sxs-lookup"><span data-stu-id="e6d94-111">The table below lists the primitive data types supported by the EDM.</span></span> <span data-ttu-id="e6d94-112">В таблице также перечислены [аспекты](../../../../docs/framework/data/adonet/facet.md) , может применяться к каждому примитивному типу данных.</span><span class="sxs-lookup"><span data-stu-id="e6d94-112">The table also lists the [facets](../../../../docs/framework/data/adonet/facet.md) that can be applied to each primitive data type.</span></span>  
   
-|Примитивный тип данных|Описание|Применимые аспекты|  
-|----------------------------|--------------|------------------------|  
-|Binary|Содержит двоичные данные.|MaxLength, FixedLength, Nullable, Default|  
-|Boolean|Содержит значение `true` или `false`.|Nullable, Default|  
-|Byte|Содержит 8\-битное целое значение без знака.|Precision, Nullable, Default|  
-|DateTime|Представляет дату и время.|Precision, Nullable, Default|  
-|DateTimeOffset|Возвращает дату и время в виде смещения в минутах от времени GMT.|Precision, Nullable, Default|  
-|Десятичное число|Содержит точное числовое значение с заданной точностью и масштабом.|Precision, Nullable, Default|  
-|Double|Содержит число с плавающей запятой с точностью до 15 цифр.|Precision, Nullable, Default|  
-|Float|Содержит число с плавающей запятой с точностью до 7 цифр.|Precision, Nullable, Default|  
-|Guid|Содержит уникальный 16\-битный идентификатор.|Precision, Nullable, Default|  
-|Int16|Содержит 16\-разрядное целое значение со знаком.|Precision, Nullable, Default|  
-|Int32|Содержит 32\-разрядное целое значение со знаком.|Precision, Nullable, Default|  
-|Int64|Содержит 64\-разрядное целое значение со знаком.|Precision, Nullable, Default|  
-|SByte|Содержит 8\-разрядное целое значение со знаком.|Precision, Nullable, Default|  
-|Строковое|Содержит символьные данные.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|Время|Содержит время дня.|Precision, Nullable, Default|  
+|<span data-ttu-id="e6d94-113">Примитивный тип данных</span><span class="sxs-lookup"><span data-stu-id="e6d94-113">Primitive Data Type</span></span>|<span data-ttu-id="e6d94-114">Описание</span><span class="sxs-lookup"><span data-stu-id="e6d94-114">Description</span></span>|<span data-ttu-id="e6d94-115">Применимые аспекты</span><span class="sxs-lookup"><span data-stu-id="e6d94-115">Applicable Facets</span></span>|  
+|-------------------------|-----------------|-----------------------|  
+|<span data-ttu-id="e6d94-116">Binary</span><span class="sxs-lookup"><span data-stu-id="e6d94-116">Binary</span></span>|<span data-ttu-id="e6d94-117">Содержит двоичные данные.</span><span class="sxs-lookup"><span data-stu-id="e6d94-117">Contains binary data.</span></span>|<span data-ttu-id="e6d94-118">MaxLength, FixedLength, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-118">MaxLength, FixedLength, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-119">Boolean</span><span class="sxs-lookup"><span data-stu-id="e6d94-119">Boolean</span></span>|<span data-ttu-id="e6d94-120">Содержит значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="e6d94-120">Contains the value `true` or `false`.</span></span>|<span data-ttu-id="e6d94-121">Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-121">Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-122">Byte</span><span class="sxs-lookup"><span data-stu-id="e6d94-122">Byte</span></span>|<span data-ttu-id="e6d94-123">Содержит 8-битное целое значение без знака.</span><span class="sxs-lookup"><span data-stu-id="e6d94-123">Contains an unsigned 8-bit integer value.</span></span>|<span data-ttu-id="e6d94-124">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-124">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-125">DateTime</span><span class="sxs-lookup"><span data-stu-id="e6d94-125">DateTime</span></span>|<span data-ttu-id="e6d94-126">Представляет дату и время.</span><span class="sxs-lookup"><span data-stu-id="e6d94-126">Represents a date and time.</span></span>|<span data-ttu-id="e6d94-127">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-127">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-128">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="e6d94-128">DateTimeOffset</span></span>|<span data-ttu-id="e6d94-129">Возвращает дату и время в виде смещения в минутах от времени GMT.</span><span class="sxs-lookup"><span data-stu-id="e6d94-129">Contains a date and time as an offset in minutes from GMT.</span></span>|<span data-ttu-id="e6d94-130">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-130">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-131">Десятичное число</span><span class="sxs-lookup"><span data-stu-id="e6d94-131">Decimal</span></span>|<span data-ttu-id="e6d94-132">Содержит точное числовое значение с заданной точностью и масштабом.</span><span class="sxs-lookup"><span data-stu-id="e6d94-132">Contains a numeric value with fixed precision and scale.</span></span>|<span data-ttu-id="e6d94-133">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-133">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-134">Double</span><span class="sxs-lookup"><span data-stu-id="e6d94-134">Double</span></span>|<span data-ttu-id="e6d94-135">Содержит число с плавающей запятой с точностью до 15 цифр.</span><span class="sxs-lookup"><span data-stu-id="e6d94-135">Contains a floating point number with 15 digit precision.</span></span>|<span data-ttu-id="e6d94-136">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-136">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-137">Float</span><span class="sxs-lookup"><span data-stu-id="e6d94-137">Float</span></span>|<span data-ttu-id="e6d94-138">Содержит число с плавающей запятой с точностью до 7 цифр.</span><span class="sxs-lookup"><span data-stu-id="e6d94-138">Contains a floating point number with seven digit precision.</span></span>|<span data-ttu-id="e6d94-139">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-139">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-140">Guid</span><span class="sxs-lookup"><span data-stu-id="e6d94-140">Guid</span></span>|<span data-ttu-id="e6d94-141">Содержит уникальный 16-битный идентификатор.</span><span class="sxs-lookup"><span data-stu-id="e6d94-141">Contains a 16-byte unique identifier.</span></span>|<span data-ttu-id="e6d94-142">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-142">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-143">Int16</span><span class="sxs-lookup"><span data-stu-id="e6d94-143">Int16</span></span>|<span data-ttu-id="e6d94-144">Содержит 16-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6d94-144">Contains a signed 16-bit integer value.</span></span>|<span data-ttu-id="e6d94-145">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-145">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-146">Int32</span><span class="sxs-lookup"><span data-stu-id="e6d94-146">Int32</span></span>|<span data-ttu-id="e6d94-147">Содержит 32-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6d94-147">Contains a signed 32-bit integer value.</span></span>|<span data-ttu-id="e6d94-148">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-148">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-149">Int64</span><span class="sxs-lookup"><span data-stu-id="e6d94-149">Int64</span></span>|<span data-ttu-id="e6d94-150">Содержит 64-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6d94-150">Contains a signed 64-bit integer value.</span></span>|<span data-ttu-id="e6d94-151">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-151">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-152">SByte</span><span class="sxs-lookup"><span data-stu-id="e6d94-152">SByte</span></span>|<span data-ttu-id="e6d94-153">Содержит 8-разрядное целое значение со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6d94-153">Contains a signed 8-bit integer value.</span></span>|<span data-ttu-id="e6d94-154">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-154">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-155">Строковое</span><span class="sxs-lookup"><span data-stu-id="e6d94-155">String</span></span>|<span data-ttu-id="e6d94-156">Содержит символьные данные.</span><span class="sxs-lookup"><span data-stu-id="e6d94-156">Contains character data.</span></span>|<span data-ttu-id="e6d94-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="e6d94-158">Время</span><span class="sxs-lookup"><span data-stu-id="e6d94-158">Time</span></span>|<span data-ttu-id="e6d94-159">Содержит время дня.</span><span class="sxs-lookup"><span data-stu-id="e6d94-159">Contains a time of day.</span></span>|<span data-ttu-id="e6d94-160">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="e6d94-160">Precision, Nullable, Default</span></span>|  
   
-## См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="e6d94-161">См. также</span><span class="sxs-lookup"><span data-stu-id="e6d94-161">See Also</span></span>  
+ [<span data-ttu-id="e6d94-162">Основные понятия модели данных сущности</span><span class="sxs-lookup"><span data-stu-id="e6d94-162">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="e6d94-163">Модель EDM</span><span class="sxs-lookup"><span data-stu-id="e6d94-163">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

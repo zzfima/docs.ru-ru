@@ -1,47 +1,49 @@
 ---
-title: "Расширение разметки RelativeSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RelativeSource"
-helpviewer_keywords: 
-  - "RelativeSource - расширения разметки"
-  - "XAML, RelativeSource - расширение разметки"
+title: "Расширение разметки RelativeSource"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RelativeSource
+helpviewer_keywords:
+- RelativeSource markup extensions [WPF]
+- XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Расширение разметки RelativeSource
-Задает свойства источника привязки <xref:System.Windows.Data.RelativeSource> для использования внутри [Привязка расширения разметки](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании свойства <xref:System.Windows.Data.Binding.RelativeSource%2A> элемента <xref:System.Windows.Data.Binding>, определенного в XAML.  
+# <a name="relativesource-markupextension"></a><span data-ttu-id="67b47-102">Расширение разметки RelativeSource</span><span class="sxs-lookup"><span data-stu-id="67b47-102">RelativeSource MarkupExtension</span></span>
+<span data-ttu-id="67b47-103">Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые должны использоваться в [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> элемента установлено в XAML.</span><span class="sxs-lookup"><span data-stu-id="67b47-103">Specifies properties of a <xref:System.Windows.Data.RelativeSource> binding source, to be used within a [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), or when setting the <xref:System.Windows.Data.Binding.RelativeSource%2A> property of a <xref:System.Windows.Data.Binding> element established in XAML.</span></span>  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="67b47-104">Использование атрибута XAML</span><span class="sxs-lookup"><span data-stu-id="67b47-104">XAML Attribute Usage</span></span>  
   
-```  
-<Binding RelativeSource="{RelativeSource modeEnumValue}" .../>  
-```  
-  
-## Использование атрибута XAML \(вложенный в расширение Binding\)  
-  
-```  
-<object property="{Binding RelativeSource={RelativeSource modeEnumValue} ...}" .../>  
+```xml  
+<Binding RelativeSource="{RelativeSource modeEnumValue}" .../>  
 ```  
   
-## Использование элемента объекта XAML  
+## <a name="xaml-attribute-usage-nested-within-binding-extension"></a><span data-ttu-id="67b47-105">Использование атрибута XAML (вложенный в расширение Binding)</span><span class="sxs-lookup"><span data-stu-id="67b47-105">XAML Attribute Usage (nested within Binding extension)</span></span>  
   
+```xml  
+<object property="{Binding RelativeSource={RelativeSource modeEnumValue} ...}" .../>  
 ```  
+  
+## <a name="xaml-object-element-usage"></a><span data-ttu-id="67b47-106">Использование элемента объекта XAML</span><span class="sxs-lookup"><span data-stu-id="67b47-106">XAML Object Element Usage</span></span>  
+  
+```xml  
 <Binding>  
   <Binding.RelativeSource>  
-    <RelativeSource Mode="modeEnumValue"/>  
+    <RelativeSource Mode="modeEnumValue"/>  
   </Binding.RelativeSource>  
 </Binding>  
 - or   
@@ -49,42 +51,42 @@ caps.handback.revision: 18
   <Binding.RelativeSource>  
     <RelativeSource  
       Mode="FindAncestor"  
-      AncestorType="{x:Type typeName}"  
+      AncestorType="{x:Type typeName}"  
       AncestorLevel="intLevel"  
     />  
   </Binding.RelativeSource>  
 </Binding>  
 ```  
   
-## Значения XAML  
+## <a name="xaml-values"></a><span data-ttu-id="67b47-107">Значения XAML</span><span class="sxs-lookup"><span data-stu-id="67b47-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`modeEnumValue`|Один из следующих вариантов:<br /><br /> -   Строковая лексема `Self`; соответствует <xref:System.Windows.Data.RelativeSource> при создании со свойством <xref:System.Windows.Data.RelativeSource.Mode%2A>, для которого установлено значение <xref:System.Windows.Data.RelativeSourceMode>.<br />-   Строковая лексема `TemplatedParent`; соответствует <xref:System.Windows.Data.RelativeSource> при создании со свойством <xref:System.Windows.Data.RelativeSource.Mode%2A>, для которого установлено значение <xref:System.Windows.Data.RelativeSourceMode>.<br />-   Строковая лексема `PreviousData`; соответствует <xref:System.Windows.Data.RelativeSource> при создании со свойством <xref:System.Windows.Data.RelativeSource.Mode%2A>, для которого установлено значение <xref:System.Windows.Data.RelativeSourceMode>.<br />-   Сведения о режиме `FindAncestor` приведены ниже.|  
-|`FindAncestor`|Строковая лексема `FindAncestor`.  Использовании этой лексемы осуществляет переход в режим, где `RelativeSource` задает тип предка и \(при необходимости\) уровень предка.  Это соответствует <xref:System.Windows.Data.RelativeSource> при создании со свойством <xref:System.Windows.Data.RelativeSource.Mode%2A>, для которого задано значение <xref:System.Windows.Data.RelativeSourceMode>.|  
-|`typeName`|Требуется для режима `FindAncestor`.  Имя типа, которое заполняет свойство <xref:System.Windows.Data.RelativeSource.AncestorType%2A>.|  
-|`intLevel`|Необязательно для режима `FindAncestor`.  Уровень предка \(вычисляется в направлении родителя в логическом дереве\).|  
+|`modeEnumValue`|<span data-ttu-id="67b47-108">Один из следующих вариантов:</span><span class="sxs-lookup"><span data-stu-id="67b47-108">One of the following:</span></span><br /><br /> <span data-ttu-id="67b47-109">-Символ строки `Self`; соответствует <xref:System.Windows.Data.RelativeSource> , созданных с помощью его <xref:System.Windows.Data.RelativeSource.Mode%2A> свойство <xref:System.Windows.Data.RelativeSourceMode.Self>.</span><span class="sxs-lookup"><span data-stu-id="67b47-109">-   The string token `Self`; corresponds to a <xref:System.Windows.Data.RelativeSource> as created with its <xref:System.Windows.Data.RelativeSource.Mode%2A> property set to <xref:System.Windows.Data.RelativeSourceMode.Self>.</span></span><br /><span data-ttu-id="67b47-110">-Символ строки `TemplatedParent`; соответствует <xref:System.Windows.Data.RelativeSource> , созданных с помощью его <xref:System.Windows.Data.RelativeSource.Mode%2A> свойство <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>.</span><span class="sxs-lookup"><span data-stu-id="67b47-110">-   The string token `TemplatedParent`; corresponds to a <xref:System.Windows.Data.RelativeSource> as created with its <xref:System.Windows.Data.RelativeSource.Mode%2A> property set to <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>.</span></span><br /><span data-ttu-id="67b47-111">-Символ строки `PreviousData`; соответствует <xref:System.Windows.Data.RelativeSource> , созданных с помощью его <xref:System.Windows.Data.RelativeSource.Mode%2A> свойство <xref:System.Windows.Data.RelativeSourceMode.PreviousData>.</span><span class="sxs-lookup"><span data-stu-id="67b47-111">-   The string token `PreviousData`; corresponds to a <xref:System.Windows.Data.RelativeSource> as created with its <xref:System.Windows.Data.RelativeSource.Mode%2A> property set to <xref:System.Windows.Data.RelativeSourceMode.PreviousData>.</span></span><br /><span data-ttu-id="67b47-112">-Сведения см. ниже в `FindAncestor` режиме.</span><span class="sxs-lookup"><span data-stu-id="67b47-112">-   See below for information on `FindAncestor` mode.</span></span>|  
+|`FindAncestor`|<span data-ttu-id="67b47-113">Строковая лексема `FindAncestor`.</span><span class="sxs-lookup"><span data-stu-id="67b47-113">The string token `FindAncestor`.</span></span> <span data-ttu-id="67b47-114">Использовании этой лексемы осуществляет переход в режим, где `RelativeSource` задает тип предка и (при необходимости) уровень предка.</span><span class="sxs-lookup"><span data-stu-id="67b47-114">Using this token enters a mode whereby a `RelativeSource` specifies an ancestor type and optionally an ancestor level.</span></span> <span data-ttu-id="67b47-115">Это соответствует <xref:System.Windows.Data.RelativeSource> при создании со свойством <xref:System.Windows.Data.RelativeSource.Mode%2A>, для которого задано значение <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.</span><span class="sxs-lookup"><span data-stu-id="67b47-115">This corresponds to a <xref:System.Windows.Data.RelativeSource> as created with its <xref:System.Windows.Data.RelativeSource.Mode%2A> property set to <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.</span></span>|  
+|`typeName`|<span data-ttu-id="67b47-116">Требуется для режима `FindAncestor`.</span><span class="sxs-lookup"><span data-stu-id="67b47-116">Required for `FindAncestor` mode.</span></span> <span data-ttu-id="67b47-117">Имя типа, которое заполняет свойство <xref:System.Windows.Data.RelativeSource.AncestorType%2A>.</span><span class="sxs-lookup"><span data-stu-id="67b47-117">The name of a type, which fills the <xref:System.Windows.Data.RelativeSource.AncestorType%2A> property.</span></span>|  
+|`intLevel`|<span data-ttu-id="67b47-118">Необязательно для режима `FindAncestor`.</span><span class="sxs-lookup"><span data-stu-id="67b47-118">Optional for `FindAncestor` mode.</span></span> <span data-ttu-id="67b47-119">Уровень предка (вычисляется в направлении родителя в логическом дереве).</span><span class="sxs-lookup"><span data-stu-id="67b47-119">An ancestor level (evaluated towards the parent direction in the logical tree).</span></span>|  
   
-## Заметки  
- Использование привязки `{RelativeSource TemplatedParent}` является основным механизмом решения масштабной задачи разделения пользовательского интерфейса элемента управления и логики элемента управления.  Это делает возможным привязку из определения шаблона к созданному по шаблону родительскому элементу \(экземпляр объекта времени выполнения, в котором применяется шаблон\).  В этом случае [Расширение разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) фактически является сокращением для следующего выражения привязки: `{Binding RelativeSource={RelativeSource TemplatedParent}}`.  Использование `TemplateBinding` или `{RelativeSource TemplatedParent}` имеет значение только в коде XAML, где определяется шаблон.  Дополнительные сведения см. в разделе [Расширение разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md).  
+## <a name="remarks"></a><span data-ttu-id="67b47-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="67b47-120">Remarks</span></span>  
+ <span data-ttu-id="67b47-121">`{RelativeSource TemplatedParent}`Использование привязки являются ключевым способом, направленный большего концепции разделения элемента управления пользовательского интерфейса и логики управления.</span><span class="sxs-lookup"><span data-stu-id="67b47-121">`{RelativeSource TemplatedParent}` binding usages are a key technique that addresses a larger concept of the separation of a control's UI and a control's logic.</span></span> <span data-ttu-id="67b47-122">Это делает возможным привязку из определения шаблона к созданному по шаблону родительскому элементу (экземпляр объекта времени выполнения, в котором применяется шаблон).</span><span class="sxs-lookup"><span data-stu-id="67b47-122">This enables binding from within the template definition to the templated parent (the run time object instance where the template is applied).</span></span> <span data-ttu-id="67b47-123">В этом случае [расширения разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) на самом деле является сокращением для следующее выражение привязки: `{Binding RelativeSource={RelativeSource TemplatedParent}}`.</span><span class="sxs-lookup"><span data-stu-id="67b47-123">For this case, the [TemplateBinding Markup Extension](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) is in fact a shorthand for the following binding expression: `{Binding RelativeSource={RelativeSource TemplatedParent}}`.</span></span> <span data-ttu-id="67b47-124">`TemplateBinding`или `{RelativeSource TemplatedParent}` использований присутствуют только соответствующие в XAML, определяющего шаблона.</span><span class="sxs-lookup"><span data-stu-id="67b47-124">`TemplateBinding` or `{RelativeSource TemplatedParent}` usages are both only relevant within the XAML that defines a template.</span></span> <span data-ttu-id="67b47-125">Дополнительные сведения см. в разделе [расширения разметки TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)</span><span class="sxs-lookup"><span data-stu-id="67b47-125">For more information, see [TemplateBinding Markup Extension](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)</span></span>  
   
- `{RelativeSource FindAncestor}` используется главным образом в шаблонах элементов управления или предсказуемых автономных композициях пользовательского интерфейса в случаях, когда элемент управления всегда должен находиться в видимом дереве определенного типа предка.  Например, элементы в элементе управления элементами могут использовать вхождения `FindAncestor` для привязки к свойствам предка элемента управления элементами.  Либо элементы, которые являются частью композиции элемента управления в шаблоне, могут использовать привязки `FindAncestor` к родительским элементам в той же структуре композиции.  
+ <span data-ttu-id="67b47-126">`{RelativeSource FindAncestor}`основном применяется в шаблонах элементов управления или прогнозируемого самодостаточным пользовательского интерфейса композиции, для случаев, когда элемент управления всегда должен быть в визуальное дерево определенного типа предка.</span><span class="sxs-lookup"><span data-stu-id="67b47-126">`{RelativeSource FindAncestor}` is mainly used in control templates or predictable self-contained UI compositions, for cases where a control is always expected to be in a visual tree of a certain ancestor type.</span></span> <span data-ttu-id="67b47-127">Например, элементы в элементе управления элементами могут использовать вхождения `FindAncestor` для привязки к свойствам предка элемента управления элементами.</span><span class="sxs-lookup"><span data-stu-id="67b47-127">For example, items of an items control might use `FindAncestor` usages to bind to properties of their items control parent ancestor.</span></span> <span data-ttu-id="67b47-128">Либо элементы, которые являются частью композиции элемента управления в шаблоне, могут использовать привязки `FindAncestor` к родительским элементам в той же структуре композиции.</span><span class="sxs-lookup"><span data-stu-id="67b47-128">Or, elements that are part of control composition in a template can use `FindAncestor` bindings to the parent elements in that same composition structure.</span></span>  
   
- В синтаксисе объектного элемента для режима `FindAncestor`, показанного выше в разделах синтаксиса XAML, второй синтаксис объектного элемента используется специально для режима `FindAncestor`.  Режим `FindAncestor` требует значения <xref:System.Windows.Data.RelativeSource.AncestorType%2A>.  Необходимо установить <xref:System.Windows.Data.RelativeSource.AncestorType%2A> в качестве атрибута, используя ссылку [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) на тип искомого предка.  Значение <xref:System.Windows.Data.RelativeSource.AncestorType%2A> используется при обработке запроса привязки во время выполнения.  
+ <span data-ttu-id="67b47-129">В синтаксисе объектного элемента для режима `FindAncestor`, показанного выше в разделах синтаксиса XAML, второй синтаксис объектного элемента используется специально для режима `FindAncestor`.</span><span class="sxs-lookup"><span data-stu-id="67b47-129">In the object element syntax for `FindAncestor` mode shown in the XAML Syntax sections, the second object element syntax is used specifically for `FindAncestor` mode.</span></span> <span data-ttu-id="67b47-130">Режим `FindAncestor` требует значения <xref:System.Windows.Data.RelativeSource.AncestorType%2A>.</span><span class="sxs-lookup"><span data-stu-id="67b47-130">`FindAncestor` mode requires an <xref:System.Windows.Data.RelativeSource.AncestorType%2A> value.</span></span> <span data-ttu-id="67b47-131">Необходимо задать <xref:System.Windows.Data.RelativeSource.AncestorType%2A> как атрибут с использованием [расширение разметки x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) ссылку на тип предка.</span><span class="sxs-lookup"><span data-stu-id="67b47-131">You must set <xref:System.Windows.Data.RelativeSource.AncestorType%2A> as an attribute using an [x:Type Markup Extension](../../../../docs/framework/xaml-services/x-type-markup-extension.md) reference to the type of ancestor to look for.</span></span> <span data-ttu-id="67b47-132">Значение <xref:System.Windows.Data.RelativeSource.AncestorType%2A> используется при обработке запроса привязки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="67b47-132">The <xref:System.Windows.Data.RelativeSource.AncestorType%2A> value is used when the binding request is processed at run-time.</span></span>  
   
- Для режима `FindAncestor` необязательное свойство <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> может помочь устранить неоднозначность поиска предка в случаях, где в дереве элементов, возможно, существует более одного предка данного типа.  
+ <span data-ttu-id="67b47-133">Для режима `FindAncestor` необязательное свойство <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> может помочь устранить неоднозначность поиска предка в случаях, где в дереве элементов, возможно, существует более одного предка данного типа.</span><span class="sxs-lookup"><span data-stu-id="67b47-133">For `FindAncestor` mode, the optional property <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> can help disambiguate the ancestor lookup in cases where there is possibly more than one ancestor of that type existing in the element tree.</span></span>  
   
- Дополнительные сведения об использовании режима `FindAncestor` см. в разделе <xref:System.Windows.Data.RelativeSource>.  
+ <span data-ttu-id="67b47-134">Дополнительные сведения об использовании режима `FindAncestor` см. в разделе <xref:System.Windows.Data.RelativeSource>.</span><span class="sxs-lookup"><span data-stu-id="67b47-134">For more information on how to use the `FindAncestor` mode, see <xref:System.Windows.Data.RelativeSource>.</span></span>  
   
- `{RelativeSource Self}` удобно использовать в сценариях, где одно из свойств экземпляра должно зависеть от значения другого свойства того же экземпляра, но между этими двумя свойствами еще не существует общего отношения свойства зависимостей, такого как приведение.  Хотя изредка случается так, что в объекте существует два свойства с буквально одинаковыми значениями \(и идентичными типами\), также можно применить параметр `Converter` к привязке с `{RelativeSource Self}` и использовать этот преобразователь для преобразования из исходного типа в целевой.  Еще один сценарий использования `{RelativeSource Self}` — в составе <xref:System.Windows.MultiDataTrigger>.  
+ <span data-ttu-id="67b47-135">`{RelativeSource Self}`полезно для сценариев, где одно свойство экземпляра должно зависеть от значения другого свойства тот же экземпляр и отношение зависимостей общие свойства (например, приведение) уже существует между этими двумя свойствами.</span><span class="sxs-lookup"><span data-stu-id="67b47-135">`{RelativeSource Self}` is useful for scenarios where one property of an instance should depend on the value of another property of the same instance, and no general dependency property relationship (such as coercion) already exists between those two properties.</span></span> <span data-ttu-id="67b47-136">Несмотря на то, что довольно редко, что существует два свойства для объекта таким образом, что значения идентичны буквально (и идентично типизированы), можно также применить `Converter` параметр привязку, которая имеет `{RelativeSource Self}`и использовать преобразователь для преобразования между исходной и типы целевых объектов.</span><span class="sxs-lookup"><span data-stu-id="67b47-136">Although it is rare that two properties exist on an object such that the values are literally identical (and are identically typed), you can also apply a `Converter` parameter to a binding that has `{RelativeSource Self}`, and use the converter to convert between source and target types.</span></span> <span data-ttu-id="67b47-137">Другим случаем `{RelativeSource Self}` как часть <xref:System.Windows.MultiDataTrigger>.</span><span class="sxs-lookup"><span data-stu-id="67b47-137">Another scenario for `{RelativeSource Self}` is as part of a <xref:System.Windows.MultiDataTrigger>.</span></span>  
   
- Например, следующий код XAML определяет такой элемент <xref:System.Windows.Shapes.Rectangle>, что независимо от того, какое значение вводится для свойства <xref:System.Windows.FrameworkElement.Width%2A>, объектом <xref:System.Windows.Shapes.Rectangle> всегда является квадрат: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`  
+ <span data-ttu-id="67b47-138">Например, следующий код XAML определяет такой элемент <xref:System.Windows.Shapes.Rectangle>, что независимо от того, какое значение вводится для свойства <xref:System.Windows.FrameworkElement.Width%2A>, объектом <xref:System.Windows.Shapes.Rectangle> всегда является квадрат: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`</span><span class="sxs-lookup"><span data-stu-id="67b47-138">For example, the following XAML defines a <xref:System.Windows.Shapes.Rectangle> element such that no matter what value is entered for <xref:System.Windows.FrameworkElement.Width%2A>, the <xref:System.Windows.Shapes.Rectangle> is always a square: `<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`</span></span>  
   
- `{RelativeSource PreviousData}` удобно использовать либо в шаблонах данных, либо в случаях, когда привязки используют коллекцию в качестве источника данных.  Можно воспользоваться `{RelativeSource PreviousData}` для выделения связей между соседними элементами данных в коллекции.  Соответствующей методикой является установление привязки <xref:System.Windows.Data.MultiBinding> между текущим и предыдущим элементами в источнике данных и использование преобразователя в этой привязке для определения различия между двумя элементами и их свойствами.  
+ <span data-ttu-id="67b47-139">`{RelativeSource PreviousData}`используется в шаблонах данных или в случаях, где привязки использование коллекции в качестве источника данных.</span><span class="sxs-lookup"><span data-stu-id="67b47-139">`{RelativeSource PreviousData}` is useful either in data templates, or in cases where bindings are using a collection as the data source.</span></span> <span data-ttu-id="67b47-140">Можно использовать `{RelativeSource PreviousData}` для выделения связи между элементами смежных набора данных в коллекции.</span><span class="sxs-lookup"><span data-stu-id="67b47-140">You can use `{RelativeSource PreviousData}` to highlight relationships between adjacent data items in the collection.</span></span> <span data-ttu-id="67b47-141">Соответствующей методикой является установление привязки <xref:System.Windows.Data.MultiBinding> между текущим и предыдущим элементами в источнике данных и использование преобразователя в этой привязке для определения различия между двумя элементами и их свойствами.</span><span class="sxs-lookup"><span data-stu-id="67b47-141">A related technique is to establish a <xref:System.Windows.Data.MultiBinding> between the current and previous items in the data source, and use a converter on that binding to determine the difference between the two items and their properties.</span></span>  
   
- В следующем примере первый элемент <xref:System.Windows.Controls.TextBlock> в шаблоне элементов отображает текущий номер.  Вторая привязка <xref:System.Windows.Controls.TextBlock> является привязкой <xref:System.Windows.Data.MultiBinding>, которая номинально состоит из двух частей <xref:System.Windows.Data.Binding>: текущей записи и привязки, в которой намеренно используется предыдущая запись данных с помощью `{RelativeSource PreviousData}`.  Затем преобразователь в объекте <xref:System.Windows.Data.MultiBinding> вычисляет разницу и возвращает ее в привязку.  
+ <span data-ttu-id="67b47-142">В следующем примере первый элемент <xref:System.Windows.Controls.TextBlock> в шаблоне элементов отображает текущий номер.</span><span class="sxs-lookup"><span data-stu-id="67b47-142">In the following example, the first <xref:System.Windows.Controls.TextBlock> in the items template displays the current number.</span></span> <span data-ttu-id="67b47-143">Второй <xref:System.Windows.Controls.TextBlock> привязка <xref:System.Windows.Data.MultiBinding> , обычно общедоступны имеет два <xref:System.Windows.Data.Binding> consistuents: текущей записи и привязку, которая намеренно использует предыдущей записи данных с помощью `{RelativeSource PreviousData}`.</span><span class="sxs-lookup"><span data-stu-id="67b47-143">The second <xref:System.Windows.Controls.TextBlock> binding is a <xref:System.Windows.Data.MultiBinding> that nominally has two <xref:System.Windows.Data.Binding> consistuents: the current record, and a binding that deliberately uses the previous data record by using `{RelativeSource PreviousData}`.</span></span> <span data-ttu-id="67b47-144">Затем преобразователь в объекте <xref:System.Windows.Data.MultiBinding> вычисляет разницу и возвращает ее в привязку.</span><span class="sxs-lookup"><span data-stu-id="67b47-144">Then, a converter on the <xref:System.Windows.Data.MultiBinding> calculates the difference and returns it to the binding.</span></span>  
   
-```  
+```xml  
 <ListBox Name="fibolist">  
     <ListBox.ItemTemplate>  
         <DataTemplate>  
@@ -100,21 +102,21 @@ caps.handback.revision: 18
                     </TextBlock.Text>  
                 </TextBlock>  
             </StackPanel>  
-            </DataTemplate>  
+        </DataTemplate>  
     </ListBox.ItemTemplate>  
 ```  
   
- Описание принципа привязки данных не рассматривается в данном разделе; см. [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ <span data-ttu-id="67b47-145">Описание привязки данных, как концепции здесь, не описаны в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="67b47-145">Describing data binding as a concept is not covered here, see [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>  
   
- В реализации обработчика XAML [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обработка данного расширения разметки определяется классом <xref:System.Windows.Data.RelativeSource>.  
+ <span data-ttu-id="67b47-146">В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализации процессора XAML, обработка для данного расширения разметки определяется <xref:System.Windows.Data.RelativeSource> класса.</span><span class="sxs-lookup"><span data-stu-id="67b47-146">In the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML processor implementation, the handling for this markup extension is defined by the <xref:System.Windows.Data.RelativeSource> class.</span></span>  
   
- `RelativeSource` является расширением разметки.  Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.  Все расширения разметки в XAML используют знаки `{` и `}` в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут.  Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ <span data-ttu-id="67b47-147">`RelativeSource` является расширением разметки.</span><span class="sxs-lookup"><span data-stu-id="67b47-147">`RelativeSource` is a markup extension.</span></span> <span data-ttu-id="67b47-148">Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами.</span><span class="sxs-lookup"><span data-stu-id="67b47-148">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="67b47-149">Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать атрибут.</span><span class="sxs-lookup"><span data-stu-id="67b47-149">All markup extensions in XAML use the `{` and `}` characters in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must process the attribute.</span></span> <span data-ttu-id="67b47-150">Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="67b47-150">For more information, see [Markup Extensions and WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Data.Binding>   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Расширения разметки и XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Общие сведения об объявлении привязок](../../../../docs/framework/wpf/data/binding-declarations-overview.md)   
- [Расширение разметки x:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+## <a name="see-also"></a><span data-ttu-id="67b47-151">См. также</span><span class="sxs-lookup"><span data-stu-id="67b47-151">See Also</span></span>  
+ <xref:System.Windows.Data.Binding>  
+ [<span data-ttu-id="67b47-152">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="67b47-152">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="67b47-153">Общие сведения о языке XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="67b47-153">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="67b47-154">Расширения разметки и XAML WPF</span><span class="sxs-lookup"><span data-stu-id="67b47-154">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="67b47-155">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="67b47-155">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="67b47-156">Общие сведения об объявлении привязок</span><span class="sxs-lookup"><span data-stu-id="67b47-156">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [<span data-ttu-id="67b47-157">Расширение разметки x:Type</span><span class="sxs-lookup"><span data-stu-id="67b47-157">x:Type Markup Extension</span></span>](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

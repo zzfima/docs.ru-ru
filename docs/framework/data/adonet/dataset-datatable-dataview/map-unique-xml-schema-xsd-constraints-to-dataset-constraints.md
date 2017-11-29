@@ -1,34 +1,37 @@
 ---
-title: "Сопоставление ограничений уникальности схемы XML (XSD) с ограничениями DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66183768b5b48608dc69a4021b27816595c43b4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сопоставление ограничений уникальности схемы XML (XSD) с ограничениями DataSet
-В схеме на языке XSD элемент **unique** накладывает на элемент или атрибут ограничение уникальности.  В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML\-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.  
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="8aa1f-102">Сопоставление уникальных ограничений XML-схемы (XSD) с ограничениями набора данных</span><span class="sxs-lookup"><span data-stu-id="8aa1f-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="8aa1f-103">В схему языка определения схемы XML **уникальный** элемент указывает на элемент или атрибут ограничение уникальности.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="8aa1f-104">В процессе преобразования схемы XML в реляционную схему наложенное на элемент или атрибут ограничение, гарантирующее уникальность, в XML-схеме сопоставляется с ограничением уникальности в объекте <xref:System.Data.DataTable> в соответствующем объекте <xref:System.Data.DataSet>, который формируется.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
   
- В следующей таблице приведено описание атрибутов **msdata**, которые можно задать в элементе **unique**.  
+ <span data-ttu-id="8aa1f-105">В следующей таблице описываются **msdata** атрибутов, которые можно указать в **уникальный** элемента.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
   
-|Имя атрибута|Описание|  
-|------------------|--------------|  
-|**msdata:ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения.  В противном случае имя ограничения указывается атрибутом **name**.|  
-|**msdata:PrimaryKey**|Если в элементе **unique** присутствует `PrimaryKey="true"`, то создается ограничение уникальности со свойством **IsPrimaryKey**, которому задано значение **true**.|  
+|<span data-ttu-id="8aa1f-106">Имя атрибута</span><span class="sxs-lookup"><span data-stu-id="8aa1f-106">Attribute name</span></span>|<span data-ttu-id="8aa1f-107">Описание</span><span class="sxs-lookup"><span data-stu-id="8aa1f-107">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="8aa1f-108">**msdata: ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="8aa1f-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="8aa1f-109">Если этот атрибут указан, его значение используется в качестве имени ограничения.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="8aa1f-110">В противном случае **имя** атрибут содержит значение имени ограничения.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="8aa1f-111">**msdata: PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="8aa1f-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="8aa1f-112">Если `PrimaryKey="true"` присутствует в **уникальный** , ограничения unique создается элемент с **IsPrimaryKey** свойство **true**.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
   
- В следующем примере показана схема XML, в которой элемент **unique** используется для наложения ограничения уникальности.  
+ <span data-ttu-id="8aa1f-113">В следующем примере показано схему XML, который использует **уникальный** элемента, чтобы указать ограничение уникальности.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
   
-```  
+```xml  
 <xs:schema id="SampleDataSet"   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -50,56 +53,48 @@ caps.handback.revision: 4
       <xs:element ref="Customers" />  
     </xs:choice>  
   </xs:complexType>  
-   <xs:unique      
-msdata:ConstraintName="UCustID"      
-name="UniqueCustIDConstr" >        
-<xs:selector xpath=".//Customers" />        
-<xs:field xpath="CustomerID" />      
-</xs:unique>  
+   <xs:unique     msdata:ConstraintName="UCustID"     name="UniqueCustIDConstr" >       <xs:selector xpath=".//Customers" />       <xs:field xpath="CustomerID" />     </xs:unique>  
 </xs:element>  
 </xs:schema>  
 ```  
   
- Элемент **unique** в этой схеме указывает, что для всех элементов **Customers** в экземпляре документа значение дочернего элемента **CustomerID** должно быть уникальным.  При построении объекта **DataSet** процесс сопоставления считывает эту схему и формирует следующую таблицу:  
+ <span data-ttu-id="8aa1f-114">**Уникальный** элемента в схеме указывает, что для всех **клиентов** элементы в документе экземпляра значение **CustomerID** дочерний элемент должен быть уникальным.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="8aa1f-115">В здании **набора данных**, процесс сопоставления считывает эту схему и формирует следующую таблицу:</span><span class="sxs-lookup"><span data-stu-id="8aa1f-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
   
 ```  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Процесс сопоставления также налагает ограничение уникальности на столбец **CustomerID**, как показано в следующем объекте **DataSet**.  \(Для простоты показаны только значимые свойства.\)  
+ <span data-ttu-id="8aa1f-116">Процесс сопоставления также налагает ограничение уникальности на **CustomerID** столбца, как показано в следующем примере **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="8aa1f-117">(Для простоты показаны только значимые свойства.)</span><span class="sxs-lookup"><span data-stu-id="8aa1f-117">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
       AllowDBNull: True  
       Unique: True  
-  ConstraintName: UcustID  
-      Type: UniqueConstraint  
+  ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
       Columns: CustomerID   
       IsPrimaryKey: False  
 ```  
   
- В сформированном объекте **DataSet** для ограничения уникальности свойство **IsPrimaryKey** имеет значение **False**.  Свойство **unique** для столбца указывает, что значения в столбце **CustomerID** должны быть уникальными \(однако они могут быть null, как указано свойством **AllowDBNull** столбца\).  
+ <span data-ttu-id="8aa1f-118">В **DataSet** сформированном **IsPrimaryKey** свойству **False** для ограничения уникальности.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="8aa1f-119">**Уникальный** для столбца указывает, что **CustomerID** значения столбца должны быть уникальными (Однако они могут быть пустая ссылка, в соответствии с **AllowDBNull** свойство столбца).</span><span class="sxs-lookup"><span data-stu-id="8aa1f-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
   
- В случае изменения схемы и задания необязательному атрибуту **msdata:PrimaryKey** значения **True**, создается ограничение уникальности для таблицы.  Свойство столбца **AllowDBNull** имеет значение **False**, а свойство **IsPrimaryKey** набора ограничений \- значение **True**, в результате чего столбец **CustomerID** становится столбцом первичного ключа.  
+ <span data-ttu-id="8aa1f-120">Если изменения схемы и задания необязательному **msdata: PrimaryKey** значение для атрибута **True**, создается ограничение уникальности на таблицу.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="8aa1f-121">**AllowDBNull** столбца задано значение **False**и **IsPrimaryKey** свойство ограничений-значение **True**, в результате чего **CustomerID** столбец столбцом первичного ключа.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
   
- Ограничение уникальности можно наложить на сочетание элементов или атрибутов в схеме XML.  В следующем примере демонстрируется, как указать, что сочетание значений **CustomerID** и **CompanyName** должно быть уникальным для всех **Customers** в любом экземпляре путем добавления в схему еще одного элемента **xs:field**.  
+ <span data-ttu-id="8aa1f-122">Ограничение уникальности можно наложить на сочетание элементов или атрибутов в схеме XML.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="8aa1f-123">В следующем примере показано, как указать, что сочетание **CustomerID** и **CompanyName** значения должны быть уникальными для всех **клиентов** в любом экземпляре путем Добавление другого **xs: field** элемента в схеме.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
   
-```  
-  
-      <xs:unique     
-         msdata:ConstraintName="SomeName"    
-         name="UniqueCustIDConstr" >   
-  <xs:selector xpath=".//Customers" />   
-  <xs:field xpath="CustomerID" />   
-  <xs:field xpath="CompanyName" />   
+```xml  
+      <xs:unique     
+         msdata:ConstraintName="SomeName"    
+         name="UniqueCustIDConstr" >   
+  <xs:selector xpath=".//Customers" />   
+  <xs:field xpath="CustomerID" />   
+  <xs:field xpath="CompanyName" />   
 </xs:unique>  
 ```  
   
- Вот это ограничение, которое создано в итоговом объекте **DataSet**.  
+ <span data-ttu-id="8aa1f-124">Это ограничение, которое создается в результате **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="8aa1f-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
   
 ```  
 ConstraintName: SomeName  
@@ -108,7 +103,7 @@ ConstraintName: SomeName
   IsPrimaryKey: False  
 ```  
   
-## См. также  
- [Сопоставление ограничений схемы XML \(XSD\) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Формирование связей DataSet на основе схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8aa1f-125">См. также</span><span class="sxs-lookup"><span data-stu-id="8aa1f-125">See Also</span></span>  
+ [<span data-ttu-id="8aa1f-126">Сопоставление ограничений XML схемы (XSD) для ограничения набора данных</span><span class="sxs-lookup"><span data-stu-id="8aa1f-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="8aa1f-127">Создание отношений наборов данных из XML-схемы (XSD)</span><span class="sxs-lookup"><span data-stu-id="8aa1f-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="8aa1f-128">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="8aa1f-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

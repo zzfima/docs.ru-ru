@@ -1,154 +1,157 @@
 ---
-title: "Протоколы транзакций версии 1.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Протоколы транзакций версии 1.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95bf16a4e243d82b9b8fe83b306284335ae0bd16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Протоколы транзакций версии 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] версии 1 реализует версию 1.0 протоколов WS\-Atomic Transaction и WS\-Coordination.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о версии 1.1 см. в разделе [Протоколы транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+# <a name="transaction-protocols-version-10"></a><span data-ttu-id="3d8e9-102">Протоколы транзакций версии 1.0</span><span class="sxs-lookup"><span data-stu-id="3d8e9-102">Transaction Protocols version 1.0</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="3d8e9-103"> версии 1 реализует версию 1.0 протоколов WS-Atomic Transaction и WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-103"> version 1 implements version 1.0 of the WS-Atomic Transaction and WS-Coordination protocols.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3d8e9-104">версии 1.1, в разделе [протоколов транзакций](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-104"> version 1.1, see [Transaction Protocols](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).</span></span>  
   
-|Спецификация\/документ|Ссылка|  
-|----------------------------|------------|  
-|WS\-Coordination|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-coordination\/|  
-|WS\-AtomicTransaction|http:\/\/msdn.microsoft.com\/ws\/2005\/08\/ws\-atomictransaction\/|  
+|<span data-ttu-id="3d8e9-105">Спецификация/документ</span><span class="sxs-lookup"><span data-stu-id="3d8e9-105">Specification/Document</span></span>|<span data-ttu-id="3d8e9-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="3d8e9-106">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="3d8e9-107">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="3d8e9-107">WS-Coordination</span></span>|<span data-ttu-id="3d8e9-108">http://msdn.microsoft.com/ws/2005/08/ws-coordination/</span><span class="sxs-lookup"><span data-stu-id="3d8e9-108">http://msdn.microsoft.com/ws/2005/08/ws-coordination/</span></span>|  
+|<span data-ttu-id="3d8e9-109">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="3d8e9-109">WS-AtomicTransaction</span></span>|<span data-ttu-id="3d8e9-110">http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/</span><span class="sxs-lookup"><span data-stu-id="3d8e9-110">http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/</span></span>|  
   
- Согласно этим спецификациям протоколов, требуется взаимодействие на двух уровнях: между приложениями и между диспетчерами транзакций \(см. следующий рисунок\).В спецификациях подробно описываются форматы сообщений и обмен сообщениями для обоих уровней взаимодействия.При обмене между приложениями применяются определенные средства обеспечения безопасности, надежности и методы кодирования, как и при обычном обмене в пределах сообщения.Однако для успешного взаимодействия между диспетчерами транзакций требуется соглашение по конкретной привязке, поскольку она обычно не настраивается пользователем.  
+ <span data-ttu-id="3d8e9-111">Согласно этим спецификациям протоколов, требуется взаимодействие на двух уровнях: между приложениями и между диспетчерами транзакций (см. следующий рисунок).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-111">Interoperability on these protocol specifications is required at two levels: between applications and between transaction managers (see the following figure).</span></span> <span data-ttu-id="3d8e9-112">В спецификациях подробно описываются форматы сообщений и обмен сообщениями для обоих уровней взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-112">Specifications describe in great detail the message formats and message exchange for both interoperability levels.</span></span> <span data-ttu-id="3d8e9-113">При обмене между приложениями применяются определенные средства обеспечения безопасности, надежности и методы кодирования, как и при обычном обмене в пределах сообщения.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-113">Certain security, reliability, and encodings for application-to-application exchange apply as they do for regular application exchange.</span></span> <span data-ttu-id="3d8e9-114">Однако для успешного взаимодействия между диспетчерами транзакций требуется соглашение по конкретной привязке, поскольку она обычно не настраивается пользователем.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-114">However, successful interoperability between transaction managers requires agreement on the particular binding, because it is usually not configured by the user.</span></span>  
   
- В этом разделе описываются состав спецификации протокола WS\-Atomic Transaction \(WS\-AT\) со средствами безопасности, а также безопасная привязка, используемая для обмена данными между диспетчерами транзакций.Подход, описанный в этом документе, успешно протестирован с другими реализациями протоколов WS\-AT и WS\-Coordination, включая IBM, IONA, Sun Microsystems и пр.  
+ <span data-ttu-id="3d8e9-115">В этом разделе описываются состав спецификации протокола WS-Atomic Transaction (WS-AT) со средствами безопасности, а также безопасная привязка, используемая для обмена данными между диспетчерами транзакций.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-115">This topic describes a composition of the WS-Atomic Transaction (WS-AT) specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="3d8e9-116">Подход, описанный в этом документе, успешно протестирован с другими реализациями протоколов WS-AT и WS-Coordination, включая IBM, IONA, Sun Microsystems и пр.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-116">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination including IBM, IONA, Sun Microsystems, and others.</span></span>  
   
- На следующем рисунке показано взаимодействие между двумя диспетчерами транзакций \(диспетчером транзакций 1 и диспетчером транзакций 2\) и двумя приложениями \(приложением 1 и приложением 2\).  
+ <span data-ttu-id="3d8e9-117">На следующем рисунке показано взаимодействие между двумя диспетчерами транзакций (диспетчером транзакций 1 и диспетчером транзакций 2) и двумя приложениями (приложением 1 и приложением 2).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-117">The following figure depicts the interoperability between two transaction managers, Transaction Manager 1 and Transaction Manager 2, and two applications, Application 1 and Application 2.</span></span>  
   
- ![Протоколы транзакций](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ <span data-ttu-id="3d8e9-118">![Протоколы транзакций](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "диспетчеры транзакций")</span><span class="sxs-lookup"><span data-stu-id="3d8e9-118">![Transaction Protocols](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")</span></span>  
   
- Рассмотрим типовой сценарий WS\-Coordination\/WS\-Atomic Transaction с одним инициатором \(I\) и одним участником \(P\).И инициатор, и участник имеют диспетчеры транзакций \(ITM и PTM, соответственно\).Двухфазная фиксация обозначается в этом разделе как 2PC.  
+ <span data-ttu-id="3d8e9-119">Рассмотрим типовой сценарий WS-Coordination/WS-Atomic Transaction с одним инициатором (I) и одним участником (P).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-119">Consider a typical WS-Coordination/WS-Atomic Transaction scenario with one Initiator (I) and one Participant (P).</span></span> <span data-ttu-id="3d8e9-120">И инициатор, и участник имеют диспетчеры транзакций (ITM и PTM, соответственно).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-120">Both Initiator and Participant have Transaction Managers, (ITM and PTM, respectively).</span></span> <span data-ttu-id="3d8e9-121">Двухфазная фиксация обозначается в этом разделе как 2PC.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-121">Two-phase commit is referred to as 2PC in this topic.</span></span>  
   
 |||  
 |-|-|  
-|1.CreateCoordinationContext|12.Ответ на сообщение приложения|  
-|2.CreateCoordinationContextResponse|13.Commit \(завершение\)|  
-|3.Register \(завершение\)|14.Prepare \(2PC\)|  
-|4.RegisterResponse|15.Prepare \(2PC\)|  
-|5.Сообщение приложения|16.Prepared \(2PC\)|  
-|6.CreateCoordinationContext с контекстом|17.Prepared \(2PC\)|  
-|7.Register \(устойчивое\)|18.Committed \(завершение\)|  
-|8.RegisterResponse|19.Commit \(2PC\)|  
-|9.CreateCoordinationContextResponse|20.Commit \(2PC\)|  
-|10.Register \(устойчивое\)|21.Committed \(2PC\)|  
-|11.RegisterResponse|22.Committed \(2PC\)|  
+|<span data-ttu-id="3d8e9-122">1. CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="3d8e9-122">1. CreateCoordinationContext</span></span>|<span data-ttu-id="3d8e9-123">12. Ответ на сообщение приложения</span><span class="sxs-lookup"><span data-stu-id="3d8e9-123">12. Application Message Response</span></span>|  
+|<span data-ttu-id="3d8e9-124">2. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-124">2. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="3d8e9-125">13. Commit (завершение)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-125">13. Commit (Completion)</span></span>|  
+|<span data-ttu-id="3d8e9-126">3. Register (завершение)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-126">3. Register (Completion)</span></span>|<span data-ttu-id="3d8e9-127">14. Prepare (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-127">14. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-128">4. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-128">4. RegisterResponse</span></span>|<span data-ttu-id="3d8e9-129">15. Prepare (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-129">15. Prepare (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-130">5. Сообщение приложения</span><span class="sxs-lookup"><span data-stu-id="3d8e9-130">5. Application Message</span></span>|<span data-ttu-id="3d8e9-131">16. Prepared (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-131">16. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-132">6. CreateCoordinationContext с контекстом</span><span class="sxs-lookup"><span data-stu-id="3d8e9-132">6. CreateCoordinationContext with Context</span></span>|<span data-ttu-id="3d8e9-133">17. Prepared (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-133">17. Prepared (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-134">7. Register (устойчивое)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-134">7. Register (Durable)</span></span>|<span data-ttu-id="3d8e9-135">18. Committed (завершение)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-135">18. Committed (Completion)</span></span>|  
+|<span data-ttu-id="3d8e9-136">8. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-136">8. RegisterResponse</span></span>|<span data-ttu-id="3d8e9-137">19. Commit (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-137">19. Commit (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-138">9. CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-138">9. CreateCoordinationContextResponse</span></span>|<span data-ttu-id="3d8e9-139">20. Commit (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-139">20. Commit (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-140">10. Register (устойчивое)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-140">10. Register (Durable)</span></span>|<span data-ttu-id="3d8e9-141">21. Committed (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-141">21. Committed (2PC)</span></span>|  
+|<span data-ttu-id="3d8e9-142">11. RegisterResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-142">11. RegisterResponse</span></span>|<span data-ttu-id="3d8e9-143">22. Committed (2PC)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-143">22. Committed (2PC)</span></span>|  
   
- В этом документе описываются состав спецификации протокола WS\-AtomicTransaction со средствами безопасности, а также безопасная привязка, используемая для взаимодействия между диспетчерами транзакций.Подход, описанный в этом документе, успешно протестирован с другими реализациями протоколов WS\-AT и WS\-Coordination.  
+ <span data-ttu-id="3d8e9-144">В этом документе описываются состав спецификации протокола WS-AtomicTransaction со средствами безопасности, а также безопасная привязка, используемая для взаимодействия между диспетчерами транзакций.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-144">This document describes a composition of the WS-AtomicTransaction specification with security and describes the secure binding used for communication between transaction managers.</span></span> <span data-ttu-id="3d8e9-145">Подход, описанный в этом документе, успешно протестирован с другими реализациями протоколов WS-AT и WS-Coordination.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-145">The approach described in this document has been successfully tested with other implementations of WS-AT and WS-Coordination.</span></span>  
   
- На рисунке и в таблице представлены четыре класса сообщений с точки зрения безопасности:  
+ <span data-ttu-id="3d8e9-146">На рисунке и в таблице представлены четыре класса сообщений с точки зрения безопасности:</span><span class="sxs-lookup"><span data-stu-id="3d8e9-146">The figure and table illustrate four classes of messages from the viewpoint of security:</span></span>  
   
--   сообщения активации \(CreateCoordinationContext и CreateCoordinationContextResponse\);  
+-   <span data-ttu-id="3d8e9-147">сообщения активации (CreateCoordinationContext и CreateCoordinationContextResponse);</span><span class="sxs-lookup"><span data-stu-id="3d8e9-147">Activation messages (CreateCoordinationContext and CreateCoordinationContextResponse).</span></span>  
   
--   сообщения регистрации \(Register и RegisterResponse\);  
+-   <span data-ttu-id="3d8e9-148">сообщения регистрации (Register и RegisterResponse);</span><span class="sxs-lookup"><span data-stu-id="3d8e9-148">Registration messages (Register and RegisterResponse)</span></span>  
   
--   протокольные сообщения \(Prepare, Rollback, Commit, Aborted и т. д.\);  
+-   <span data-ttu-id="3d8e9-149">протокольные сообщения (Prepare, Rollback, Commit, Aborted и т. д.);</span><span class="sxs-lookup"><span data-stu-id="3d8e9-149">Protocol messages (Prepare, Rollback, Commit, Aborted, and so on).</span></span>  
   
--   сообщения приложений.  
+-   <span data-ttu-id="3d8e9-150">сообщения приложений.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-150">Application messages.</span></span>  
   
- Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе.Четвертый класс сообщений — это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе.В этом разделе описываются привязки протокола, используемые системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для каждого из этих классов.  
+ <span data-ttu-id="3d8e9-151">Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-151">The first three message classes are considered Transaction Manager messages and their binding configuration is described in the "Application Message Exchange" later in this topic.</span></span> <span data-ttu-id="3d8e9-152">Четвертый класс сообщений - это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-152">The fourth class of message is application to application messages and is described in the "Message Examples" section later in this topic.</span></span> <span data-ttu-id="3d8e9-153">В этом разделе описываются привязки протокола, используемые системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] для каждого из этих классов.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-153">This section describes the protocol bindings used for each of these classes by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
- Во всем данном документе используются следующие пространства имен XML и связанные с ними префиксы.  
+ <span data-ttu-id="3d8e9-154">Во всем данном документе используются следующие пространства имен XML и связанные с ними префиксы.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-154">The following XML Namespaces and associated prefixes are used throughout this document.</span></span>  
   
-|Префикс|Универсальный код ресурса \(URI\) пространства имен|  
-|-------------|---------------------------------------------------------|  
-|s11|http:\/\/schemas.xmlsoap.org\/soap\/envelope|  
-|wsa|http:\/\/www.w3.org\/2004\/08\/addressing|  
-|wscoor|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wscoor|  
-|wsat|http:\/\/schemas.xmlsoap.org\/ws\/2004\/10\/wsat|  
-|t|http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust|  
-|o|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.0.xsd|  
-|xsd|http:\/\/www.w3.org\/2001\/XMLSchema|  
+|<span data-ttu-id="3d8e9-155">Префикс</span><span class="sxs-lookup"><span data-stu-id="3d8e9-155">Prefix</span></span>|<span data-ttu-id="3d8e9-156">Универсальный код ресурса (URI) пространства имен</span><span class="sxs-lookup"><span data-stu-id="3d8e9-156">Namespace URI</span></span>|  
+|------------|-------------------|  
+|<span data-ttu-id="3d8e9-157">s11</span><span class="sxs-lookup"><span data-stu-id="3d8e9-157">s11</span></span>|<span data-ttu-id="3d8e9-158">http://schemas.xmlsoap.org/soap/envelope</span><span class="sxs-lookup"><span data-stu-id="3d8e9-158">http://schemas.xmlsoap.org/soap/envelope</span></span>|  
+|<span data-ttu-id="3d8e9-159">wsa</span><span class="sxs-lookup"><span data-stu-id="3d8e9-159">wsa</span></span>|<span data-ttu-id="3d8e9-160">http://www.w3.org/2004/08/Addressing</span><span class="sxs-lookup"><span data-stu-id="3d8e9-160">http://www.w3.org/2004/08/addressing</span></span>|  
+|<span data-ttu-id="3d8e9-161">wscoor</span><span class="sxs-lookup"><span data-stu-id="3d8e9-161">wscoor</span></span>|<span data-ttu-id="3d8e9-162">http://schemas.xmlsoap.org/ws/2004/10/wscoor</span><span class="sxs-lookup"><span data-stu-id="3d8e9-162">http://schemas.xmlsoap.org/ws/2004/10/wscoor</span></span>|  
+|<span data-ttu-id="3d8e9-163">wsat</span><span class="sxs-lookup"><span data-stu-id="3d8e9-163">wsat</span></span>|<span data-ttu-id="3d8e9-164">http://schemas.xmlsoap.org/ws/2004/10/wsat</span><span class="sxs-lookup"><span data-stu-id="3d8e9-164">http://schemas.xmlsoap.org/ws/2004/10/wsat</span></span>|  
+|<span data-ttu-id="3d8e9-165">t</span><span class="sxs-lookup"><span data-stu-id="3d8e9-165">t</span></span>|<span data-ttu-id="3d8e9-166">http://schemas.xmlsoap.org/ws/2005/02/trust</span><span class="sxs-lookup"><span data-stu-id="3d8e9-166">http://schemas.xmlsoap.org/ws/2005/02/trust</span></span>|  
+|<span data-ttu-id="3d8e9-167">o</span><span class="sxs-lookup"><span data-stu-id="3d8e9-167">o</span></span>|<span data-ttu-id="3d8e9-168">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</span><span class="sxs-lookup"><span data-stu-id="3d8e9-168">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd</span></span>|  
+|<span data-ttu-id="3d8e9-169">xsd</span><span class="sxs-lookup"><span data-stu-id="3d8e9-169">xsd</span></span>|<span data-ttu-id="3d8e9-170">http://www.w3.org/2001/XMLSchema</span><span class="sxs-lookup"><span data-stu-id="3d8e9-170">http://www.w3.org/2001/XMLSchema</span></span>|  
   
-## Привязки диспетчеров транзакций  
- R1001: для обмена сообщениями протоколов WS\-Atomic Transaction и WS\-Coordination диспетчеры транзакций должны использовать SOAP 1.1 и WS\-Addressing 2004\/08.  
+## <a name="transaction-manager-bindings"></a><span data-ttu-id="3d8e9-171">Привязки диспетчеров транзакций</span><span class="sxs-lookup"><span data-stu-id="3d8e9-171">Transaction Manager Bindings</span></span>  
+ <span data-ttu-id="3d8e9-172">R1001: для обмена сообщениями протоколов WS-Atomic Transaction и WS-Coordination диспетчеры транзакций должны использовать SOAP 1.1 и WS-Addressing 2004/08.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-172">R1001: Transaction Managers must use SOAP 1.1 and WS-Addressing 2004/08 for WS-Atomic Transaction and WS-Coordination message exchanges.</span></span>  
   
- Сообщения приложений не ограничиваются этими привязками и описываются ниже.  
+ <span data-ttu-id="3d8e9-173">Сообщения приложений не ограничиваются этими привязками и описываются ниже.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-173">Application messages are not constrained to these bindings and are described later.</span></span>  
   
-### Привязка HTTPS диспетчера транзакций  
- Для обеспечения безопасности и установления доверия между каждой парой "отправитель\-получатель" в дереве транзакций привязка HTTPS диспетчера транзакций полагается только на механизм безопасности транспорта.  
+### <a name="transaction-manager-https-binding"></a><span data-ttu-id="3d8e9-174">Привязка HTTPS диспетчера транзакций</span><span class="sxs-lookup"><span data-stu-id="3d8e9-174">Transaction Manager HTTPS Binding</span></span>  
+ <span data-ttu-id="3d8e9-175">Для обеспечения безопасности и установления доверия между каждой парой "отправитель-получатель" в дереве транзакций привязка HTTPS диспетчера транзакций полагается только на механизм безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-175">The transaction manager HTTPS binding relies solely on transport security to achieve security and establish trust between each sender-receiver pair in the transaction tree.</span></span>  
   
-#### Конфигурация транспорта HTTPS  
- Для установления идентификации диспетчера транзакций используются сертификаты X.509.Проверка подлинности клиента и сервера является обязательной, а авторизация клиента и сервера зависит от реализации:  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="3d8e9-176">Конфигурация транспорта HTTPS</span><span class="sxs-lookup"><span data-stu-id="3d8e9-176">HTTPS Transport Configuration</span></span>  
+ <span data-ttu-id="3d8e9-177">Для установления идентификации диспетчера транзакций используются сертификаты X.509.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-177">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="3d8e9-178">Проверка подлинности клиента и сервера является обязательной, а авторизация клиента и сервера зависит от реализации:</span><span class="sxs-lookup"><span data-stu-id="3d8e9-178">Client/server authentication is required, and client/server authorization is left as an implementation detail:</span></span>  
   
--   R1111: сертификаты X.509, представляемые по линии связи, должны иметь имя субъекта, соответствующее полному доменному имени исходного компьютера;  
+-   <span data-ttu-id="3d8e9-179">R1111: сертификаты X.509, представляемые по линии связи, должны иметь имя субъекта, соответствующее полному доменному имени исходного компьютера;</span><span class="sxs-lookup"><span data-stu-id="3d8e9-179">R1111: X.509 certificates presented over the wire must have a subject name that matches the fully qualified domain name (FQDN) of the originating machine.</span></span>  
   
--   B1112: для успешного выполнения проверок имени субъекта X.509 между каждой парой "отправитель\-получатель" в системе должна работать служба DNS.  
+-   <span data-ttu-id="3d8e9-180">B1112: для успешного выполнения проверок имени субъекта X.509 между каждой парой "отправитель-получатель" в системе должна работать служба DNS.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-180">B1112: DNS must be functional between each sender-receiver pair in the system for X.509 subject name checks to succeed.</span></span>  
   
-#### Конфигурация привязки активации и регистрации  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] требует дуплексной привязки "запрос\-ответ" с корреляцией по протоколу HTTPS.\(Дополнительные сведения о корреляции и описание шаблонов обмена сообщениями "запрос\-ответ" см. в разделе 8 спецификации WS\-Atomic Transaction.\)  
+#### <a name="activation-and-registration-binding-configuration"></a><span data-ttu-id="3d8e9-181">Конфигурация привязки активации и регистрации</span><span class="sxs-lookup"><span data-stu-id="3d8e9-181">Activation and Registration Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3d8e9-182"> требует дуплексной привязки "запрос-ответ" с корреляцией по протоколу HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-182"> requires request/reply duplex binding with correlation over HTTPS.</span></span> <span data-ttu-id="3d8e9-183">(Дополнительные сведения о корреляции и описание шаблонов обмена сообщениями "запрос-ответ" см. в разделе 8 спецификации WS-Atomic Transaction.)</span><span class="sxs-lookup"><span data-stu-id="3d8e9-183">(For more information about correlation and descriptions of the request/reply message exchange patterns, see WS-Atomic Transaction, Section 8.)</span></span>  
   
-#### Конфигурация привязки протокола 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает однонаправленную \(датаграммную\) передачу сообщений по протоколу HTTPS.Корреляция между сообщениями зависит от реализации.  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="3d8e9-184">Конфигурация привязки протокола 2PC</span><span class="sxs-lookup"><span data-stu-id="3d8e9-184">2PC Protocol Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3d8e9-185"> поддерживает однонаправленную (датаграммную) передачу сообщений по протоколу HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-185"> supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="3d8e9-186">Корреляция между сообщениями зависит от реализации.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-186">Correlation among the messages is left as an implementation detail.</span></span>  
   
- B2131: для обеспечения корреляции сообщений 2PC [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализации должны поддерживать `wsa:ReferenceParameters`, как описано в "WS\-Addressing".  
+ <span data-ttu-id="3d8e9-187">B2131: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]элемента сообщений 2PC.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-187">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s 2PC messages.</span></span>  
   
-### Привязка безопасности диспетчера транзакций смешанного режима  
- Это альтернативная привязка \(смешанного режима\), которая для установления идентификации использует безопасность транспорта, объединенную с моделью маркера, создаваемого протоколом WS\-Coordination.В двух привязках отличаются только элементы "Активация" и "Регистрация".  
+### <a name="transaction-manager-mixed-security-binding"></a><span data-ttu-id="3d8e9-188">Привязка безопасности диспетчера транзакций смешанного режима</span><span class="sxs-lookup"><span data-stu-id="3d8e9-188">Transaction Manager Mixed Security Binding</span></span>  
+ <span data-ttu-id="3d8e9-189">Это альтернативная привязка, использующим безопасность транспорта в сочетании с моделью маркера, выдаваемого WS-Coordination для установления идентификации (смешанного режима).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-189">This is an alternate (mixed mode) binding that uses transport security combined with the  WS-Coordination Issued Token model for identity establishment purposes.</span></span>  <span data-ttu-id="3d8e9-190">В двух привязках отличаются только элементы "Активация" и "Регистрация".</span><span class="sxs-lookup"><span data-stu-id="3d8e9-190">Activation and Registration are the only elements that differ between the two bindings.</span></span>  
   
-#### Конфигурация транспорта HTTPS  
- Для установления идентификации диспетчера транзакций используются сертификаты X.509.Проверка подлинности клиента и сервера является обязательной, а авторизация клиента и сервера зависит от реализации.  
+#### <a name="https-transport-configuration"></a><span data-ttu-id="3d8e9-191">Конфигурация транспорта HTTPS</span><span class="sxs-lookup"><span data-stu-id="3d8e9-191">HTTPS Transport Configuration</span></span>  
+ <span data-ttu-id="3d8e9-192">Для установления идентификации диспетчера транзакций используются сертификаты X.509.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-192">X.509 certificates are used to establish Transaction Manager Identity.</span></span> <span data-ttu-id="3d8e9-193">Проверка подлинности клиента и сервера является обязательной, а авторизация клиента и сервера зависит от реализации.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-193">Client/Server authentication is required, and client/server authorization is left as an implementation detail.</span></span>  
   
-#### Конфигурация привязки сообщений активации  
- Сообщения активации обычно не участвуют во взаимодействии, поскольку они, как правило, передаются между приложением и его локальным диспетчером транзакций.  
+#### <a name="activation-message-binding-configuration"></a><span data-ttu-id="3d8e9-194">Конфигурация привязки сообщений активации</span><span class="sxs-lookup"><span data-stu-id="3d8e9-194">Activation Message Binding Configuration</span></span>  
+ <span data-ttu-id="3d8e9-195">Сообщения активации обычно не участвуют во взаимодействии, поскольку они, как правило, передаются между приложением и его локальным диспетчером транзакций.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-195">Activation Messages usually do not participate in interoperability because they typically occur between an application and its local Transaction Manager.</span></span>  
   
- B1221: для сообщений активации система [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует дуплексную привязку HTTPS \(описанную в разделе [Протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\).Сообщения запроса и ответа коррелируются с помощью WS\-Addressing 2004\/08.  
+ <span data-ttu-id="3d8e9-196">B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) для сообщения активации.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-196">B1221: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses duplex HTTPS binding (described in [Messaging Protocols](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) for Activation messages.</span></span> <span data-ttu-id="3d8e9-197">Сообщения запроса и ответа коррелируются с помощью WS-Addressing 2004/08.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-197">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- В спецификации WS\-Atomic Transaction \(раздел 8\) приводятся дополнительные сведения о корреляции и шаблоны обмена сообщениями.  
+ <span data-ttu-id="3d8e9-198">В разделе 8 спецификации WS-Atomic Transaction приводятся дополнительные сведения о корреляции и шаблонах обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-198">WS-Atomic Transaction specification, Section 8, describes further details about correlation and the message exchange patterns.</span></span>  
   
--   R1222: при получении сообщения `CreateCoordinationContext` координатор должен выдать маркер `SecurityContextToken` со связанным с ним паролем `STx`.Этот маркер возвращается в заголовке `t:IssuedTokens` согласно спецификации WS\-Trust.  
+-   <span data-ttu-id="3d8e9-199">R1222: при получении сообщения `CreateCoordinationContext` координатор должен выдать маркер `SecurityContextToken` со связанным с ним паролем `STx`.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-199">R1222: Upon receiving a `CreateCoordinationContext`, the Coordinator must issue a `SecurityContextToken` with associated secret `STx`.</span></span> <span data-ttu-id="3d8e9-200">Этот маркер возвращается в заголовке `t:IssuedTokens` согласно спецификации WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-200">This token is returned inside a `t:IssuedTokens` header following WS-Trust specification.</span></span>  
   
--   R1223: если активация происходит в пределах существующего контекста координации, в сообщении `CreateCoordinationContext` должен передаваться заголовок `t:IssuedTokens` с маркером `SecurityContextToken`, связанным с существующим контекстом.  
+-   <span data-ttu-id="3d8e9-201">R1223: если активация происходит в пределах существующего контекста координации, в сообщении `t:IssuedTokens` должен передаваться заголовок `SecurityContextToken` с маркером `CreateCoordinationContext`, связанным с существующим контекстом.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-201">R1223: If Activation occurs within an existing Coordination Context, the `t:IssuedTokens` header with the `SecurityContextToken` associated with existing Context must flow on the `CreateCoordinationContext` message.</span></span>  
   
- Для присоединения к исходящему сообщению `wscoor:CreateCoordinationContextResponse` должен формироваться новый заголовок `t:IssuedTokens`.  
+ <span data-ttu-id="3d8e9-202">Новый `t:IssuedTokens` заголовок должно создаваться для присоединения к исходящему `wscoor:CreateCoordinationContextResponse` сообщения.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-202">A new `t:IssuedTokens` header should be generated for attaching to the outgoing `wscoor:CreateCoordinationContextResponse` message.</span></span>  
   
-#### Конфигурация привязки сообщений регистрации  
- B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует дуплексную привязку HTTPS \(описанную в разделе [Протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)\).Сообщения запроса и ответа коррелируются с помощью WS\-Addressing 2004\/08.  
+#### <a name="registration-message-binding-configuration"></a><span data-ttu-id="3d8e9-203">Конфигурация привязки сообщений регистрации</span><span class="sxs-lookup"><span data-stu-id="3d8e9-203">Registration Message Binding Configuration</span></span>  
+ <span data-ttu-id="3d8e9-204">B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-204">B1231: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses duplex HTTPS binding (described in [Messaging Protocols](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)).</span></span> <span data-ttu-id="3d8e9-205">Сообщения запроса и ответа коррелируются с помощью WS-Addressing 2004/08.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-205">Request and Reply messages are correlated using WS-Addressing 2004/08.</span></span>  
   
- В спецификации WS\-AtomicTransaction \(раздел 8\) приводятся дополнительные сведения о корреляции и описание шаблонов обмена сообщениями.  
+ <span data-ttu-id="3d8e9-206">В разделе 8 спецификации WS-AtomicTransaction приводятся дополнительные сведения о корреляции и описание шаблонов обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-206">WS-AtomicTransaction, Section 8, describes further details about correlation and descriptions of the message exchange patterns.</span></span>  
   
- R1232: для исходящих сообщений `wscoor:Register` должен использоваться режим проверки подлинности `IssuedTokenOverTransport`, описанный в разделе [Протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ <span data-ttu-id="3d8e9-207">R1232: Исходящие `wscoor:Register` сообщений необходимо использовать `IssuedTokenOverTransport` описывается режим проверки подлинности в [протоколы WS-Security](../../../../docs/framework/wcf/feature-details/security-protocols.md).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-207">R1232: Outgoing `wscoor:Register` messages must use the `IssuedTokenOverTransport` authentication mode described in [Security Protocols](../../../../docs/framework/wcf/feature-details/security-protocols.md).</span></span>  
   
- Элемент `wsse:Timestamp` должен быть подписан с помощью выданного пароля `STx` маркера `SecurityContextToken`.Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию.Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
+ <span data-ttu-id="3d8e9-208">`wsse:Timestamp` Элемент должен быть подписан с помощью `SecurityContextToken``STx` выдан.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-208">The `wsse:Timestamp` element must be signed using the `SecurityContextToken``STx` issued.</span></span> <span data-ttu-id="3d8e9-209">Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-209">This signature is a proof of possession of the token associated with particular transaction and is used to authenticate a participant enlisting in the transaction.</span></span> <span data-ttu-id="3d8e9-210">Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-210">The RegistrationResponse message is sent back over HTTPS.</span></span>  
   
-#### Конфигурация привязки протокола 2PC  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает однонаправленную \(датаграммную\) передачу сообщений по протоколу HTTPS.Корреляция между сообщениями зависит от реализации.  
+#### <a name="2pc-protocol-binding-configuration"></a><span data-ttu-id="3d8e9-211">Конфигурация привязки протокола 2PC</span><span class="sxs-lookup"><span data-stu-id="3d8e9-211">2PC Protocol Binding Configuration</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3d8e9-212"> поддерживает однонаправленную (датаграммную) передачу сообщений по протоколу HTTPS.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-212"> supports one-way (datagram) messages over HTTPS.</span></span> <span data-ttu-id="3d8e9-213">Корреляция между сообщениями зависит от реализации.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-213">Correlation among the messages is left as an implementation detail.</span></span>  
   
- B2131: для обеспечения корреляции сообщений 2PC [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализации должны поддерживать `wsa:ReferenceParameters`, как описано в "WS\-Addressing".  
+ <span data-ttu-id="3d8e9-214">B2131: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]элемента сообщений 2PC.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-214">B2131: Implementations must support `wsa:ReferenceParameters` as described in WS-Addressing to achieve correlation of [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]’s 2PC messages.</span></span>  
   
-## Обмен сообщениями приложений  
- Для сообщений, передаваемых между приложениями, приложения могут использовать любую привязку, если она удовлетворяет следующим требованиям безопасности.  
+## <a name="application-message-exchange"></a><span data-ttu-id="3d8e9-215">Обмен сообщениями приложений</span><span class="sxs-lookup"><span data-stu-id="3d8e9-215">Application Message Exchange</span></span>  
+ <span data-ttu-id="3d8e9-216">Для сообщений, передаваемых между приложениями, приложения могут использовать любую привязку, если она удовлетворяет следующим требованиям безопасности.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-216">Applications are free to use any particular binding for application-to-application messages, as long as the binding meets the following security requirements:</span></span>  
   
--   R2001: заголовок сообщений, передаваемых между приложениями, должен содержать заголовок `t:IssuedTokens` наряду с `CoordinationContext`.  
+-   <span data-ttu-id="3d8e9-217">R2001: заголовок сообщений, передаваемых между приложениями, должен содержать заголовок `t:IssuedTokens` наряду с `CoordinationContext`.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-217">R2001: Application-to-application messages must flow the `t:IssuedTokens` header along with the `CoordinationContext` in the header of the message.</span></span>  
   
--   R2002: необходимо обеспечение целостности и конфиденциальности `t:IssuedToken`.  
+-   <span data-ttu-id="3d8e9-218">R2002: необходимо обеспечение целостности и конфиденциальности `t:IssuedToken`.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-218">R2002: Integrity and confidentiality of `t:IssuedToken` must be provided.</span></span>  
   
- Заголовок `CoordinationContext` содержит `wscoor:Identifier`.Хотя определение `xsd:AnyURI` допускает использование и абсолютных, и относительных универсальных кодов ресурса \(URI\), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает только идентификаторы `wscoor:Identifiers`, являющиеся универсальными кодами ресурса \(URI\).  
+ <span data-ttu-id="3d8e9-219">Заголовок `CoordinationContext` содержит `wscoor:Identifier`.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-219">The `CoordinationContext` header contains `wscoor:Identifier`.</span></span> <span data-ttu-id="3d8e9-220">Хотя определение `xsd:AnyURI` допускает использование и абсолютных, и относительных универсальных кодов ресурсов (URI), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поддерживает только идентификаторы `wscoor:Identifiers`, являющиеся абсолютными URI.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-220">While the definition of `xsd:AnyURI` allows the use of both absolute and relative URIs, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports only `wscoor:Identifiers`, which are absolute URIs.</span></span>  
   
- Если идентификатор `wscoor:Identifier` контекста `wscoor:CoordinationContext` является относительным универсальным кодом ресурса \(URI\), из транзакционных служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] будут возвращаться сбои.  
+ <span data-ttu-id="3d8e9-221">Если идентификатор `wscoor:Identifier` контекста `wscoor:CoordinationContext` является относительным универсальным кодом ресурса (URI), из транзакционных служб [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] будут возвращаться сбои.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-221">If the `wscoor:Identifier` of the `wscoor:CoordinationContext` is a relative URI, faults will be returned from transactional [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## Примеры сообщений  
+## <a name="message-examples"></a><span data-ttu-id="3d8e9-222">Примеры сообщений</span><span class="sxs-lookup"><span data-stu-id="3d8e9-222">Message Examples</span></span>  
   
-### Сообщения запроса и ответа CreateCoordinationContext  
- Следующие сообщения соответствуют шаблону "запрос\-ответ".  
+### <a name="createcoordinationcontext-requestresponse-messages"></a><span data-ttu-id="3d8e9-223">Сообщения запроса и ответа CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="3d8e9-223">CreateCoordinationContext Request/Response Messages</span></span>  
+ <span data-ttu-id="3d8e9-224">Следующие сообщения соответствуют шаблону "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="3d8e9-224">The following messages follow a request/response pattern.</span></span>  
   
-#### CreateCoordinationContext  
+#### <a name="createcoordinationcontext"></a><span data-ttu-id="3d8e9-225">CreateCoordinationContext</span><span class="sxs-lookup"><span data-stu-id="3d8e9-225">CreateCoordinationContext</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wscoor/CreateCoordinationContext</Action>  
@@ -170,12 +173,11 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContext>  
   </s:Body>  
 </s11:Envelope>  
-  
 ```  
   
-#### CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse"></a><span data-ttu-id="3d8e9-226">CreateCoordinationContextResponse</span><span class="sxs-lookup"><span data-stu-id="3d8e9-226">CreateCoordinationContextResponse</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <!-- Data below is shown in the clear for  
        illustration purposes only. -->  
@@ -253,15 +255,14 @@ caps.handback.revision: 3
     </wscoor:CreateCoordinationContextResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Сообщения регистрации  
- Следующие сообщения являются сообщениями регистрации.  
+### <a name="registration-messages"></a><span data-ttu-id="3d8e9-227">Сообщения регистрации</span><span class="sxs-lookup"><span data-stu-id="3d8e9-227">Registration Messages</span></span>  
+ <span data-ttu-id="3d8e9-228">Следующие сообщения являются сообщениями регистрации.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-228">The following messages are registration messages.</span></span>  
   
-#### Register  
+#### <a name="register"></a><span data-ttu-id="3d8e9-229">Регистровое</span><span class="sxs-lookup"><span data-stu-id="3d8e9-229">Register</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
@@ -318,12 +319,11 @@ caps.handback.revision: 3
     </wscoor:Register>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-#### Register Response  
+#### <a name="register-response"></a><span data-ttu-id="3d8e9-230">Register Response</span><span class="sxs-lookup"><span data-stu-id="3d8e9-230">Register Response</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>  
@@ -355,15 +355,14 @@ caps.handback.revision: 3
     </wscoor:RegisterResponse>  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Сообщения протокола двухфазной фиксации  
- Следующее сообщение относится к протоколу двухфазной фиксации \(2PC\).  
+### <a name="two-phase-commit-protocol-messages"></a><span data-ttu-id="3d8e9-231">Сообщения протокола двухфазной фиксации</span><span class="sxs-lookup"><span data-stu-id="3d8e9-231">Two Phase Commit Protocol Messages</span></span>  
+ <span data-ttu-id="3d8e9-232">Следующее сообщение относится к протоколу двухфазной фиксации (2PC).</span><span class="sxs-lookup"><span data-stu-id="3d8e9-232">The following message relates to the two-phase commit (2PC) protocol.</span></span>  
   
-#### Commit  
+#### <a name="commit"></a><span data-ttu-id="3d8e9-233">Фиксация</span><span class="sxs-lookup"><span data-stu-id="3d8e9-233">Commit</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
@@ -382,15 +381,14 @@ caps.handback.revision: 3
     <wsat:Commit />  
   </s:Body>  
 </s:Envelope>  
-  
 ```  
   
-### Сообщения приложений  
- Следующие сообщения являются сообщениями приложений.  
+### <a name="application-messages"></a><span data-ttu-id="3d8e9-234">Сообщения приложений</span><span class="sxs-lookup"><span data-stu-id="3d8e9-234">Application Messages</span></span>  
+ <span data-ttu-id="3d8e9-235">Следующие сообщения являются сообщениями приложений.</span><span class="sxs-lookup"><span data-stu-id="3d8e9-235">The following messages are application messages.</span></span>  
   
-#### Сообщение приложения — запрос  
+#### <a name="application-message-request"></a><span data-ttu-id="3d8e9-236">Сообщение приложения - запрос</span><span class="sxs-lookup"><span data-stu-id="3d8e9-236">Application message-Request</span></span>  
   
-```  
+```xml  
 <s:Envelope>  
   <s:Header>  
 <!-- Addressing headers, all signed-->  

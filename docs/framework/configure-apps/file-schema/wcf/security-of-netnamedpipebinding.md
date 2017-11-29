@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; для &lt;netNamedPipeBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;security&gt; для &lt;netNamedPipeBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-caps.latest.revision: 11
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: efb6289c63cdc98402336949ef5916e7568775a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; для &lt;netNamedPipeBinding&gt;
-Определяет параметры безопасности для привязки.  
+# <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="e7b08-102">&lt;security&gt; для &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e7b08-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
+<span data-ttu-id="e7b08-103">Определяет параметры безопасности для привязки.</span><span class="sxs-lookup"><span data-stu-id="e7b08-103">Defines the security settings for a binding.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="e7b08-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="e7b08-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="e7b08-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="e7b08-105">\<bindings></span></span>  
+<span data-ttu-id="e7b08-106">\<netNamedPipeBinding ></span><span class="sxs-lookup"><span data-stu-id="e7b08-106">\<netNamedPipeBinding></span></span>  
+<span data-ttu-id="e7b08-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="e7b08-107">\<binding></span></span>  
+<span data-ttu-id="e7b08-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="e7b08-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e7b08-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e7b08-109">Syntax</span></span>  
   
+```xml  
 <netNamedPipeBinding>  
       <binding>  
             <security mode="None/Transport">  
@@ -32,35 +40,35 @@ caps.handback.revision: 11
 </netNamedPipeBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e7b08-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e7b08-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="e7b08-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e7b08-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="e7b08-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e7b08-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|режим|Задает тип системы безопасности, применяемой к этой привязке.  Допустимы следующие значения:<br /><br /> -   None: режим безопасности отключен.<br />-   Transport: безопасность обеспечивается с помощью базовых функций безопасности транспорта.  Этот режим позволяет контролировать уровень защиты.<br />-   Значение по умолчанию \- Transport.  Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|<span data-ttu-id="e7b08-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e7b08-113">Attribute</span></span>|<span data-ttu-id="e7b08-114">Описание</span><span class="sxs-lookup"><span data-stu-id="e7b08-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="e7b08-115">режим</span><span class="sxs-lookup"><span data-stu-id="e7b08-115">mode</span></span>|<span data-ttu-id="e7b08-116">Задает тип системы безопасности, применяемой к этой привязке.</span><span class="sxs-lookup"><span data-stu-id="e7b08-116">Specifies the type of security that is applied to this binding.</span></span> <span data-ttu-id="e7b08-117">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="e7b08-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="e7b08-118">— None: Режим безопасности отключен.</span><span class="sxs-lookup"><span data-stu-id="e7b08-118">-   None: This disables security.</span></span><br /><span data-ttu-id="e7b08-119">-Transport: Безопасность обеспечивается с помощью базовых функций безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="e7b08-119">-   Transport: Security is provided using underlying transport based security.</span></span> <span data-ttu-id="e7b08-120">Этот режим позволяет контролировать уровень защиты.</span><span class="sxs-lookup"><span data-stu-id="e7b08-120">It is possible to control the protection level with this mode.</span></span><br /><span data-ttu-id="e7b08-121">Значение по умолчанию-Transport.</span><span class="sxs-lookup"><span data-stu-id="e7b08-121">-   The default value is Transport.</span></span> <span data-ttu-id="e7b08-122">Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="e7b08-122">This attribute is of type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="e7b08-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e7b08-123">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|транспорт|Определяет параметры безопасности для данного транспорта.  Это элемент типа <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.|  
+|<span data-ttu-id="e7b08-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="e7b08-124">Element</span></span>|<span data-ttu-id="e7b08-125">Описание</span><span class="sxs-lookup"><span data-stu-id="e7b08-125">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="e7b08-126">транспорт</span><span class="sxs-lookup"><span data-stu-id="e7b08-126">transport</span></span>|<span data-ttu-id="e7b08-127">Определяет параметры безопасности для данного транспорта.</span><span class="sxs-lookup"><span data-stu-id="e7b08-127">Defines the security settings for the transport.</span></span> <span data-ttu-id="e7b08-128">Это элемент типа <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="e7b08-128">This element is of type <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="e7b08-129">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e7b08-129">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|привязка|Элемент привязки [\<netNamedPipeBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
+|<span data-ttu-id="e7b08-130">Элемент</span><span class="sxs-lookup"><span data-stu-id="e7b08-130">Element</span></span>|<span data-ttu-id="e7b08-131">Описание</span><span class="sxs-lookup"><span data-stu-id="e7b08-131">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="e7b08-132">привязка</span><span class="sxs-lookup"><span data-stu-id="e7b08-132">binding</span></span>|<span data-ttu-id="e7b08-133">Элемент привязки для [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span><span class="sxs-lookup"><span data-stu-id="e7b08-133">The binding element of the [\<netNamedPipeBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.NetNamedPipeSecurity>   
- <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="e7b08-134">См. также</span><span class="sxs-lookup"><span data-stu-id="e7b08-134">See Also</span></span>  
+ <xref:System.ServiceModel.NetNamedPipeSecurity>  
+ <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>  
+ [<span data-ttu-id="e7b08-135">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="e7b08-135">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="e7b08-136">При выборе типа учетных данных</span><span class="sxs-lookup"><span data-stu-id="e7b08-136">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="e7b08-137">Привязки</span><span class="sxs-lookup"><span data-stu-id="e7b08-137">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="e7b08-138">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="e7b08-138">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="e7b08-139">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="e7b08-139">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="e7b08-140">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="e7b08-140">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

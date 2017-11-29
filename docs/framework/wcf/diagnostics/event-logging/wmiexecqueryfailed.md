@@ -1,31 +1,34 @@
 ---
-title: "WmiExecQueryFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WmiExecQueryFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 464ffd94-1bb2-4eda-ad87-24ca567bf7f3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fda52373b636ca6fe59cfa01c079e679c4b6eb5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# WmiExecQueryFailed
-Идентификатор: 124  
+# <a name="wmiexecqueryfailed"></a><span data-ttu-id="fbdae-102">WmiExecQueryFailed</span><span class="sxs-lookup"><span data-stu-id="fbdae-102">WmiExecQueryFailed</span></span>
+<span data-ttu-id="fbdae-103">Идентификатор: 124</span><span class="sxs-lookup"><span data-stu-id="fbdae-103">Id: 124</span></span>  
   
- Важность: ошибка  
+ <span data-ttu-id="fbdae-104">Важность: ошибка</span><span class="sxs-lookup"><span data-stu-id="fbdae-104">Severity: Error</span></span>  
   
- Категория: ServiceModel  
+ <span data-ttu-id="fbdae-105">Категория: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="fbdae-105">Category: ServiceModel</span></span>  
   
-## Описание  
- Это событие указывает на то, что запрос ExecQuery инструментария WMI не был обработан.В событии указаны исключение, имя процесса и ИД процесса.  
+## <a name="description"></a><span data-ttu-id="fbdae-106">Описание</span><span class="sxs-lookup"><span data-stu-id="fbdae-106">Description</span></span>  
+ <span data-ttu-id="fbdae-107">Это событие указывает на то, что запрос ExecQuery инструментария WMI не был обработан.</span><span class="sxs-lookup"><span data-stu-id="fbdae-107">This event indicates that the WMI ExecQuery request was not processed.</span></span> <span data-ttu-id="fbdae-108">В событии указаны исключение, имя процесса и ИД процесса.</span><span class="sxs-lookup"><span data-stu-id="fbdae-108">The event lists Exception, process name and process ID.</span></span>  
   
-## См. также  
- [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="fbdae-109">См. также</span><span class="sxs-lookup"><span data-stu-id="fbdae-109">See Also</span></span>  
+ [<span data-ttu-id="fbdae-110">Ведение журнала событий</span><span class="sxs-lookup"><span data-stu-id="fbdae-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="fbdae-111">Общие справочные сведения события</span><span class="sxs-lookup"><span data-stu-id="fbdae-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

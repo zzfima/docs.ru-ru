@@ -1,28 +1,34 @@
 ---
-title: "Вставка изображения из файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вставка изображения из файла"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a780e35d9eb5420138587102aee753e96a8eff9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вставка изображения из файла
-Большой двоичный объект \(BLOB\) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных.  BLOB \- это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="5ee9c-102">Вставка изображения из файла</span><span class="sxs-lookup"><span data-stu-id="5ee9c-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="5ee9c-103">Большой двоичный объект (BLOB) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="5ee9c-104">BLOB - это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- Чтобы записать значение BLOB в базу данных, выполните соответствующую инструкцию INSERT или UPDATE, передав значение BLOB в качестве входного параметра \(см. раздел [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)\).  Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра.  Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
+ <span data-ttu-id="5ee9c-105">Запись значения большого двоичного ОБЪЕКТА для базы данных, выполните соответствующие инструкции INSERT или UPDATE и передать значение BLOB-ОБЪЕКТОВ в качестве входного параметра (в разделе [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span><span class="sxs-lookup"><span data-stu-id="5ee9c-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="5ee9c-106">Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="5ee9c-107">Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## Пример  
- Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind.  Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.  
+## <a name="example"></a><span data-ttu-id="5ee9c-108">Пример</span><span class="sxs-lookup"><span data-stu-id="5ee9c-108">Example</span></span>  
+ <span data-ttu-id="5ee9c-109">Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="5ee9c-110">Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.</span><span class="sxs-lookup"><span data-stu-id="5ee9c-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -134,9 +140,9 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## См. также  
- [Использование команд для изменения данных](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [Получение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)   
- [Двоичные данные и данные большого размера SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)   
- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="5ee9c-111">См. также</span><span class="sxs-lookup"><span data-stu-id="5ee9c-111">See Also</span></span>  
+ [<span data-ttu-id="5ee9c-112">Изменение данных с помощью команды</span><span class="sxs-lookup"><span data-stu-id="5ee9c-112">Using Commands to Modify Data</span></span>](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [<span data-ttu-id="5ee9c-113">Получение двоичных данных</span><span class="sxs-lookup"><span data-stu-id="5ee9c-113">Retrieving Binary Data</span></span>](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
+ [<span data-ttu-id="5ee9c-114">Двоичные данные и данные большого объема SQL Server</span><span class="sxs-lookup"><span data-stu-id="5ee9c-114">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [<span data-ttu-id="5ee9c-115">Сопоставления типов данных SQL Server</span><span class="sxs-lookup"><span data-stu-id="5ee9c-115">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="5ee9c-116">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5ee9c-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,75 +1,78 @@
 ---
-title: "Каналы WCF с поддержкой ReceiveContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Каналы WCF с поддержкой ReceiveContext"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ec3b161ec9dedc2cbf389d8ec5ac4629cf54e007
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Каналы WCF с поддержкой ReceiveContext
-Данный образец демонстрирует применение каналов WCF с поддержкой <xref:System.ServiceModel.Channels.ReceiveContext>.  Образец реализует службу для нахождения произведения двух чисел с помощью канала NetMSMQ.  
+# <a name="receivecontext-enabled-wcf-channels"></a><span data-ttu-id="9d807-102">Каналы WCF с поддержкой ReceiveContext</span><span class="sxs-lookup"><span data-stu-id="9d807-102">ReceiveContext-Enabled WCF Channels</span></span>
+<span data-ttu-id="9d807-103">Данный образец демонстрирует применение каналов WCF с поддержкой <xref:System.ServiceModel.Channels.ReceiveContext>.</span><span class="sxs-lookup"><span data-stu-id="9d807-103">This sample demonstrates the usefulness of <xref:System.ServiceModel.Channels.ReceiveContext>-enabled WCF channels.</span></span> <span data-ttu-id="9d807-104">Образец реализует службу для нахождения произведения двух чисел с помощью канала NetMSMQ.</span><span class="sxs-lookup"><span data-stu-id="9d807-104">The sample implements a service to find the product of two numbers using a NetMSMQ channel.</span></span>  
   
- Класс <xref:System.ServiceModel.Channels.ReceiveContext> позволяет приложению решить, обратиться ли к сообщению или оставить его в очереди для дальнейшей обработки, даже если содержимое сообщения уже было проверено.  В данном образце клиент отправляет в транзакционную очередь случайные числа.  Служба `ProductCalculator` получает сообщения, анализирует их содержимое \(целые числа\) и определяет, можно ли вычислить произведение.  Если операция службы не вычисляет произведение, сообщение отправляется обратно в очередь и может быть получено вновь службой, прослушивающей очередь.  
+ <span data-ttu-id="9d807-105">Класс <xref:System.ServiceModel.Channels.ReceiveContext> позволяет приложению решить, обратиться ли к сообщению или оставить его в очереди для дальнейшей обработки, даже если содержимое сообщения уже было проверено.</span><span class="sxs-lookup"><span data-stu-id="9d807-105">The <xref:System.ServiceModel.Channels.ReceiveContext> class enables an application to decide whether to access the message or leave it in the queue for further processing, even after the contents of the message have been inspected.</span></span> <span data-ttu-id="9d807-106">В данном образце клиент отправляет в транзакционную очередь случайные числа.</span><span class="sxs-lookup"><span data-stu-id="9d807-106">In this sample, a client sends random integers to a transactional queue.</span></span> <span data-ttu-id="9d807-107">Служба `ProductCalculator` получает сообщения, анализирует их содержимое (целые числа) и определяет, можно ли вычислить произведение.</span><span class="sxs-lookup"><span data-stu-id="9d807-107">The `ProductCalculator` service receives the messages and inspects the message contents, which are integers, to determine whether the product can be computed.</span></span> <span data-ttu-id="9d807-108">Если операция службы не вычисляет произведение, сообщение отправляется обратно в очередь и может быть получено вновь службой, прослушивающей очередь.</span><span class="sxs-lookup"><span data-stu-id="9d807-108">If the service operation does not compute the product, the message is put back into the queue and can be received again by the service listening on the queue.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="9d807-109">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9d807-109">The samples may already be installed on your computer.</span></span> <span data-ttu-id="9d807-110">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="9d807-110">Check for the following (default) directory before continuing:</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец находится в следующем каталоге:  
+>  <span data-ttu-id="9d807-111">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="9d807-111">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9d807-112">Этот образец находится в следующем каталоге:</span><span class="sxs-lookup"><span data-stu-id="9d807-112">This sample is located in the following directory:</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="9d807-113">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="9d807-113">To use this sample</span></span>  
   
-1.  Убедитесь, что установлена служба очередей сообщений \(Майкрософт\) \(MSMQ\).  
+1.  <span data-ttu-id="9d807-114">Убедитесь, что установлена служба очередей сообщений (Майкрософт) (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="9d807-114">Ensure that Microsoft Message Queuing (MSMQ) is installed.</span></span>  
   
-    1.  Установка службы MSMQ под управлением [!INCLUDE[lserver](../../../../includes/lserver-md.md)].  
+    1.  <span data-ttu-id="9d807-115">Установка службы MSMQ под управлением [!INCLUDE[lserver](../../../../includes/lserver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d807-115">To install MSMQ on [!INCLUDE[lserver](../../../../includes/lserver-md.md)]:</span></span>  
   
-        1.  Выберите в **Диспетчере сервера** пункт **Функции**.  
+        1.  <span data-ttu-id="9d807-116">В **диспетчера сервера**, нажмите кнопку **функции**.</span><span class="sxs-lookup"><span data-stu-id="9d807-116">In **Server Manager**, click **Features**.</span></span>  
   
-        2.  В правой области под пунктом **Сводка функций** выберите **Добавить функции**.  
+        2.  <span data-ttu-id="9d807-117">В правой панели в разделе **Сводка компонентов**, нажмите кнопку **добавить компоненты**.</span><span class="sxs-lookup"><span data-stu-id="9d807-117">In the right pane under **Features Summary**, click **Add Features**.</span></span>  
   
-        3.  Разверните в появившемся окне **Очередь сообщений** .  
+        3.  <span data-ttu-id="9d807-118">В появившемся окне разверните **очереди сообщений**.</span><span class="sxs-lookup"><span data-stu-id="9d807-118">In the resulting window, expand **Message Queuing**.</span></span>  
   
-        4.  Разверните **Службы очереди сообщений**.  
+        4.  <span data-ttu-id="9d807-119">Разверните **службы очереди сообщений**.</span><span class="sxs-lookup"><span data-stu-id="9d807-119">Expand **Message Queuing Services**.</span></span>  
   
-        5.  Выберите **Интеграция со службами каталогов** \(для компьютеров, подключенных к домену\), затем выберите **Поддержка HTTP**.  
+        5.  <span data-ttu-id="9d807-120">Нажмите кнопку **интеграция со службами каталогов** (для компьютеров, присоединенных к домену), а затем нажмите кнопку **поддержка HTTP**.</span><span class="sxs-lookup"><span data-stu-id="9d807-120">Click **Directory Services Integration** (for computers joined to a domain), and then click **HTTP Support**.</span></span>  
   
-        6.  Нажмите кнопку **Далее**, затем нажмите кнопку **Установить**.  
+        6.  <span data-ttu-id="9d807-121">Нажмите кнопку **Далее**, а затем нажмите кнопку **установить**.</span><span class="sxs-lookup"><span data-stu-id="9d807-121">Click **Next**, and then click **Install**.</span></span>  
   
-    2.  Установка службы MSMQ под управлением [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+    2.  <span data-ttu-id="9d807-122">Установка службы MSMQ под управлением [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d807-122">To install MSMQ on [!INCLUDE[wv](../../../../includes/wv-md.md)]:</span></span>  
   
-        1.  Откройте **панель управления**.  
+        1.  <span data-ttu-id="9d807-123">Откройте **панель управления**.</span><span class="sxs-lookup"><span data-stu-id="9d807-123">Open **Control Panel**.</span></span>  
   
-        2.  Щелкните **Программы** и затем в разделе **Программы и функции** щелкните **Включить и выключить функции Windows**.  
+        2.  <span data-ttu-id="9d807-124">Нажмите кнопку **программы** и затем в разделе **программы и компоненты**, нажмите кнопку **Включение и отключение компонентов Windows**.</span><span class="sxs-lookup"><span data-stu-id="9d807-124">Click **Programs** and then, under **Programs and Features**, click **Turn Windows Features on and off**.</span></span>  
   
-        3.  Разверните узел **Сервер службы очередей сообщений Windows \(MSMQ\)**, разверните узел **Базовые функции сервера службы очередей сообщенийMicrosoft \(MSMQ\)** и установите флажки рядом со следующими устанавливаемыми функциями службы очередей сообщений.  
+        3.  <span data-ttu-id="9d807-125">Разверните **сервер очереди сообщений Microsoft (MSMQ)**, разверните **ядро сервера очереди сообщений Microsoft (MSMQ)**, а затем установите флажки для следующих функций очереди сообщений для установки:</span><span class="sxs-lookup"><span data-stu-id="9d807-125">Expand **Microsoft Message Queue (MSMQ) Server**, expand **Microsoft Message Queue (MSMQ) Server Core**, and then select the check boxes for the following Message Queuing features to install:</span></span>  
   
-            -   Сервер службы очередей сообщений  
+            -   <span data-ttu-id="9d807-126">Сервер службы очередей сообщений</span><span class="sxs-lookup"><span data-stu-id="9d807-126">Message Queuing Server</span></span>  
   
-            -   Интеграция со службами доменов MSMQ Active Directory \(для компьютеров, подключенных к домену\)  
+            -   <span data-ttu-id="9d807-127">Интеграция со службами доменов MSMQ Active Directory (для компьютеров, подключенных к домену)</span><span class="sxs-lookup"><span data-stu-id="9d807-127">MSMQ Active Directory Domain Services Integration (for computers joined to a domain)</span></span>  
   
-            -   Поддержка MSMQ HTTP  
+            -   <span data-ttu-id="9d807-128">Поддержка MSMQ HTTP</span><span class="sxs-lookup"><span data-stu-id="9d807-128">MSMQ HTTP Support</span></span>  
   
-        4.  Нажмите кнопку **ОК**.  
+        4.  <span data-ttu-id="9d807-129">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="9d807-129">Click **OK**.</span></span>  
   
-        5.  При появлении запроса на перезагрузку компьютера нажмите кнопку **ОК** для завершения установки.  
+        5.  <span data-ttu-id="9d807-130">При появлении запроса на перезагрузку компьютера нажмите кнопку **ОК** для завершения установки.</span><span class="sxs-lookup"><span data-stu-id="9d807-130">If you are prompted to restart the computer, click **OK** to complete the installation.</span></span>  
   
-2.  Убедитесь, что на компьютере установлена среда [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+2.  <span data-ttu-id="9d807-131">Убедитесь, что на компьютере установлена среда [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d807-131">Ensure that [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] is installed on the computer.</span></span>  
   
-3.  Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл решения ReceiveContextProductGenerator.sln.  
+3.  <span data-ttu-id="9d807-132">Откройте в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] файл решения ReceiveContextProductGenerator.sln.</span><span class="sxs-lookup"><span data-stu-id="9d807-132">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the ReceiveContextProductGenerator.sln solution file.</span></span>  
   
-4.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+4.  <span data-ttu-id="9d807-133">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="9d807-133">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-5.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.
+5.  <span data-ttu-id="9d807-134">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="9d807-134">To run the solution, press CTRL+F5.</span></span>

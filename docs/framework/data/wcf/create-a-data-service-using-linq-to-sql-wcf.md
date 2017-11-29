@@ -1,76 +1,82 @@
 ---
-title: "Как создать службу данных с помощью источника данных LINQ to SQL (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, LINQ to SQL"
-  - "Службы WCF Data Services, поставщики"
+title: "Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, LINQ to SQL
+- WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a44498381bc33b6bd418003fbd28fd2fcfca17b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать службу данных с помощью источника данных LINQ to SQL (службы WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляет данные сущности в виде службы данных.  Поставщик отражения позволяет определить модель данных на основе любого класса, предоставляющего элементы, возвращаемые реализацией интерфейса <xref:System.Linq.IQueryable%601>.  Для выполнения обновлений данных в источнике данных эти классы должны также реализовать интерфейс <xref:System.Data.Services.IUpdatable>.  Для получения дополнительной информации см. [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  В этом разделе показано, как создать классы LINQ to SQL, обращающиеся к образцу базы данных Northwind с помощью поставщика, а также как создать службу данных на основе этих классов.  
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a><span data-ttu-id="ec40f-102">Практическое руководство. Создание службы данных с использованием источника данных LINQ to SQL (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="ec40f-102">How to: Create a Data Service Using a LINQ to SQL Data Source (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="ec40f-103"> предоставляет данные сущности в виде службы данных.</span><span class="sxs-lookup"><span data-stu-id="ec40f-103"> exposes entity data as a data service.</span></span> <span data-ttu-id="ec40f-104">Поставщик отражения позволяет определить модель данных, основанный на любой класс, который предоставляет члены, возвращающие <xref:System.Linq.IQueryable%601> реализации.</span><span class="sxs-lookup"><span data-stu-id="ec40f-104">The reflection provider enables you to define a data model that is based on any class that exposes members that return an <xref:System.Linq.IQueryable%601> implementation.</span></span> <span data-ttu-id="ec40f-105">Для выполнения обновлений данных в источнике данных эти классы должны также реализовать интерфейс <xref:System.Data.Services.IUpdatable>.</span><span class="sxs-lookup"><span data-stu-id="ec40f-105">To be able to make updates to data in the data source, these classes must also implement the <xref:System.Data.Services.IUpdatable> interface.</span></span> <span data-ttu-id="ec40f-106">Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="ec40f-106">For more information, see [Data Services Providers](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).</span></span> <span data-ttu-id="ec40f-107">В этом разделе показано, как создать классы LINQ to SQL, обращающиеся к образцу базы данных Northwind с помощью поставщика, а также как создать службу данных на основе этих классов.</span><span class="sxs-lookup"><span data-stu-id="ec40f-107">This topic shows you how to create LINQ to SQL classes that access the Northwind sample database by using the reflection provider, as well as how to create the data service that is based on these data classes.</span></span>  
   
-### Добавление в проект объектов классов LINQ to SQL  
+### <a name="to-add-linq-to-sql-classes-to-a-project"></a><span data-ttu-id="ec40f-108">Добавление в проект объектов классов LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="ec40f-108">To add LINQ to SQL classes to a project</span></span>  
   
-1.  Из приложения на Visual Basic или C\# в меню **Проект** щелкните по пункту **Добавить новый элемент**.  
+1.  <span data-ttu-id="ec40f-109">Из приложения Visual Basic или C# на **проекта** меню, нажмите кнопку **Добавление нового элемента**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-109">From within a Visual Basic or C# application, on the **Project** menu, click **Add New Item**.</span></span>  
   
-2.  Выберите шаблон **LINQ to SQL Classes**.  
+2.  <span data-ttu-id="ec40f-110">Нажмите кнопку **LINQ to SQL Classes** шаблона.</span><span class="sxs-lookup"><span data-stu-id="ec40f-110">Click the **LINQ to SQL Classes** template.</span></span>  
   
-3.  Измените имя на Northwind.dbml.  
+3.  <span data-ttu-id="ec40f-111">Измените имя на **Northwind.dbml**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-111">Change the name to **Northwind.dbml**.</span></span>  
   
-4.  Нажмите кнопку **Добавить**.  
+4.  <span data-ttu-id="ec40f-112">Нажмите кнопку **Добавить**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-112">Click **Add**.</span></span>  
   
-     Файл Northwind.dbml добавляется в проект и открывается реляционный конструктор объектов.  
+     <span data-ttu-id="ec40f-113">Файл Northwind.dbml добавляется в проект и открывается реляционный конструктор объектов.</span><span class="sxs-lookup"><span data-stu-id="ec40f-113">The Northwind.dbml file is added to the project and the Object Relational Designer (O/R Designer) opens.</span></span>  
   
-5.  В **обозревателе базы данных**\/**сервера** в окне Northwind разверните узел **Таблицы** и перетащите таблицу `Customers` в реляционный конструктор объектов.  
+5.  <span data-ttu-id="ec40f-114">В **сервера**/**обозреватель баз данных**, в окне Northwind разверните **таблиц** и перетащите `Customers` таблицы на реляционный конструктор объектов (O/R Конструктор).</span><span class="sxs-lookup"><span data-stu-id="ec40f-114">In **Server**/**Database Explorer**, under Northwind, expand **Tables** and drag the `Customers` table onto the Object Relational Designer (O/R Designer).</span></span>  
   
-     При этом в области конструктора создается и отображается класс сущностей `Customer`.  
+     <span data-ttu-id="ec40f-115">При этом в области конструктора создается и отображается класс сущностей `Customer`.</span><span class="sxs-lookup"><span data-stu-id="ec40f-115">A `Customer` entity class is created and appears on the design surface.</span></span>  
   
-6.  Повторите шаг 6 для таблиц `Orders`, `Order_Details` и `Products`.  
+6.  <span data-ttu-id="ec40f-116">Повторите шаг 6 для таблиц `Orders`, `Order_Details` и `Products`.</span><span class="sxs-lookup"><span data-stu-id="ec40f-116">Repeat step 6 for the `Orders`, `Order_Details`, and `Products` tables.</span></span>  
   
-7.  Щелкните правой кнопкой мыши DBML\-файл, представляющий классы запросов LINQ to SQL, и выберите команду **Просмотр кода**.  
+7.  <span data-ttu-id="ec40f-117">Щелкните правой кнопкой мыши новый DBML-файл, представляющий LINQ для классов SQL и нажмите кнопку **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-117">Right-click the new .dbml file that represents the LINQ to SQL classes and click **View Code**.</span></span>  
   
-     При этом создается новая страница с выделенным кодом Northwind.cs, содержащая разделяемый класс, производный от класса <xref:System.Data.Linq.DataContext>, представляющего в данном случае контекст `NorthwindDataContext`.  
+     <span data-ttu-id="ec40f-118">При этом создается новая страница с выделенным кодом Northwind.cs, содержащая разделяемый класс, производный от класса <xref:System.Data.Linq.DataContext>, представляющего в данном случае контекст `NorthwindDataContext`.</span><span class="sxs-lookup"><span data-stu-id="ec40f-118">This creates a new code-behind page named Northwind.cs that contains a partial class definition for the class that inherits from the <xref:System.Data.Linq.DataContext> class, which in this case is `NorthwindDataContext`.</span></span>  
   
-8.  Замените содержимое файла Northwind.cs следующим кодом.  Этот код реализует поставщик отражения, расширяя контекст <xref:System.Data.Linq.DataContext> и классы данных, сформированные LINQ to SQL.  
+8.  <span data-ttu-id="ec40f-119">Замените содержимое файла Northwind.cs следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="ec40f-119">Replace the contents of the Northwind.cs code file with the following code.</span></span> <span data-ttu-id="ec40f-120">Этот код реализует поставщик отражения, расширяя контекст <xref:System.Data.Linq.DataContext> и классы данных, сформированные LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="ec40f-120">This code implements the reflection provider by extending the <xref:System.Data.Linq.DataContext> and data classes generated by LINQ to SQL:</span></span>  
   
      [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.cs#linq2sqlprovider)]
      [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.vb#linq2sqlprovider)]  
   
-### Создание службы данных с использованием модели данных на основе LINQ to SQL  
+### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a><span data-ttu-id="ec40f-121">Создание службы данных с использованием модели данных на основе LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="ec40f-121">To create a data service by using a LINQ to SQL-based data model</span></span>  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши имя проекта ASP.NET и выберите команду **Добавить новый элемент**.  
+1.  <span data-ttu-id="ec40f-122">В **обозревателе решений**, щелкните правой кнопкой мыши имя проекта ASP.NET и выберите команду **Добавление нового элемента**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-122">In **Solution Explorer**, right-click the name of your ASP.NET project, and then click **Add New Item**.</span></span>  
   
-2.  В диалоговом окне **Добавление нового элемента** выберите пункт **Служба данных WCF**.  
+2.  <span data-ttu-id="ec40f-123">В **Добавление нового элемента** выберите **службы данных WCF**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-123">In the **Add New Item** dialog box, select **WCF Data Service**.</span></span>  
   
-3.  Введите имя службы и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="ec40f-124">Задайте имя для службы и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="ec40f-124">Supply a name for the service, and then click **OK**.</span></span>  
   
-     В Visual Studio для новой службы создаются файлы разметки и кодов XML.  По умолчанию открывается окно редактора кода.  
+     <span data-ttu-id="ec40f-125">В Visual Studio для новой службы создаются файлы разметки и кодов XML.</span><span class="sxs-lookup"><span data-stu-id="ec40f-125">Visual Studio creates the XML markup and code files for the new service.</span></span> <span data-ttu-id="ec40f-126">По умолчанию открывается окно редактора кода.</span><span class="sxs-lookup"><span data-stu-id="ec40f-126">By default, the code-editor window opens.</span></span>  
   
-4.  В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом контейнера сущностей модели данных, который в данном случае равен `NorthwindDataContext`.  
+4.  <span data-ttu-id="ec40f-127">В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом контейнера сущностей модели данных, который в данном случае равен `NorthwindDataContext`.</span><span class="sxs-lookup"><span data-stu-id="ec40f-127">In the code for the data service, replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is `NorthwindDataContext`.</span></span>  
   
-5.  В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:  
+5.  <span data-ttu-id="ec40f-128">В коде службы данных замените код местозаполнителя в функции `InitializeService` следующим текстом:</span><span class="sxs-lookup"><span data-stu-id="ec40f-128">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
   
      [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.svc.cs#enableaccess)]
      [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.svc.vb#enableaccess)]  
   
-     Это позволяет авторизованным клиентам осуществлять доступ к ресурсам трех указанных наборов сущностей.  
+     <span data-ttu-id="ec40f-129">Это позволяет авторизованным клиентам осуществлять доступ к ресурсам трех указанных наборов сущностей.</span><span class="sxs-lookup"><span data-stu-id="ec40f-129">This enables authorized clients to access resources for the three specified entity sets.</span></span>  
   
-6.  Для проверки службы данных Northwind.svc с помощью веб\-браузера следуйте инструкциям в разделе [Доступ к службе из веб\-браузера](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
+6.  <span data-ttu-id="ec40f-130">Для тестирования службы Northwind.svc данных с помощью веб-браузера, следуйте инструкциям в разделе [доступа к службе из веб-браузер](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).</span><span class="sxs-lookup"><span data-stu-id="ec40f-130">To test the Northwind.svc data service by using a Web browser, follow the instructions in the topic [Accessing the Service from a Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).</span></span>  
   
-## См. также  
- [Как создать службу данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)   
- [Как создать службу данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)   
- [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="ec40f-131">См. также</span><span class="sxs-lookup"><span data-stu-id="ec40f-131">See Also</span></span>  
+ [<span data-ttu-id="ec40f-132">Как: создание службы данных с использованием источника данных ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="ec40f-132">How to: Create a Data Service Using an ADO.NET Entity Framework Data Source</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
+ [<span data-ttu-id="ec40f-133">Как: создание службы данных с помощью поставщика отражения</span><span class="sxs-lookup"><span data-stu-id="ec40f-133">How to: Create a Data Service Using the Reflection Provider</span></span>](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+ [<span data-ttu-id="ec40f-134">Поставщики служб данных</span><span class="sxs-lookup"><span data-stu-id="ec40f-134">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

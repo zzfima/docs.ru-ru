@@ -1,93 +1,93 @@
 ---
-title: "Элемент &lt;gcServer&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcServer> - элемент"
-  - "gcServer - элемент"
+title: "&lt;gcServer&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer
+helpviewer_keywords:
+- gcServer element
+- <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;gcServer&gt;
-Указывает, выполняет ли среда CLR сборку мусора сервера.  
+# <a name="ltgcservergt-element"></a><span data-ttu-id="e6078-102">&lt;gcServer&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="e6078-102">&lt;gcServer&gt; Element</span></span>
+<span data-ttu-id="e6078-103">Указывает, выполняет ли среда CLR сборку мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="e6078-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e6078-104">\<configuration></span></span>  
+<span data-ttu-id="e6078-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="e6078-105">\<runtime></span></span>  
+<span data-ttu-id="e6078-106">\<gcServer ></span><span class="sxs-lookup"><span data-stu-id="e6078-106">\<gcServer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e6078-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e6078-107">Syntax</span></span>  
+  
+```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e6078-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e6078-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e6078-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e6078-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="e6078-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e6078-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, выполняет ли среда выполнения сборку мусора сервера.|  
+|<span data-ttu-id="e6078-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e6078-111">Attribute</span></span>|<span data-ttu-id="e6078-112">Описание</span><span class="sxs-lookup"><span data-stu-id="e6078-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="e6078-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="e6078-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="e6078-114">Указывает, выполняет ли среда выполнения сборку мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="e6078-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="e6078-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Не выполняет сборку мусора сервера.  Это значение по умолчанию.|  
-|`true`|Выполняет сборку мусора сервера.|  
+|<span data-ttu-id="e6078-116">Значение</span><span class="sxs-lookup"><span data-stu-id="e6078-116">Value</span></span>|<span data-ttu-id="e6078-117">Описание</span><span class="sxs-lookup"><span data-stu-id="e6078-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="e6078-118">Не выполняет сборку мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-118">Does not run server garbage collection.</span></span> <span data-ttu-id="e6078-119">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e6078-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="e6078-120">Выполняет сборку мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-120">Runs server garbage collection.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="e6078-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e6078-121">Child Elements</span></span>  
+ <span data-ttu-id="e6078-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="e6078-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="e6078-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e6078-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
+|<span data-ttu-id="e6078-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="e6078-124">Element</span></span>|<span data-ttu-id="e6078-125">Описание</span><span class="sxs-lookup"><span data-stu-id="e6078-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e6078-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e6078-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e6078-127">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="e6078-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Заметки  
- Среда CLR поддерживает два типа сборки мусора: сборку мусора рабочей станции, которая доступна во всех системах, и сборку мусора сервера, которая доступна в многопроцессорных системах.  Для управления типом сборки мусора среды CLR можно использовать элемент `<gcServer>`.  Используйте свойство <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName>, чтобы определить, включена ли сборка мусора сервера.  
+## <a name="remarks"></a><span data-ttu-id="e6078-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="e6078-128">Remarks</span></span>  
+ <span data-ttu-id="e6078-129">Среда CLR поддерживает два типа сборки мусора: сборку мусора рабочей станции, которая доступна во всех системах, и сборку мусора сервера, которая доступна в многопроцессорных системах.</span><span class="sxs-lookup"><span data-stu-id="e6078-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="e6078-130">Для управления типом сборки мусора среды CLR можно использовать элемент `<gcServer>`.</span><span class="sxs-lookup"><span data-stu-id="e6078-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="e6078-131">Используйте свойство <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>, чтобы определить, включена ли сборка мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- Для однопроцессорных компьютеров сборка мусора рабочей станции по умолчанию должна быть самым быстрым вариантом.  Для двухпроцессорных компьютеров можно использовать сборку мусора как рабочей станции, так и сервера.  Сборка мусора сервера должно быть самым быстрым вариантом при наличии более двух процессоров.  
+ <span data-ttu-id="e6078-132">Для однопроцессорных компьютеров сборка мусора рабочей станции по умолчанию должна быть самым быстрым вариантом.</span><span class="sxs-lookup"><span data-stu-id="e6078-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="e6078-133">Для двухпроцессорных компьютеров можно использовать сборку мусора как рабочей станции, так и сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="e6078-134">Сборка мусора сервера должно быть самым быстрым вариантом при наличии более двух процессоров.</span><span class="sxs-lookup"><span data-stu-id="e6078-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- Этот элемент может использоваться только в файле конфигурации приложения; в файле конфигурации компьютера он игнорируется.  
+ <span data-ttu-id="e6078-135">Этот элемент может использоваться только в файле конфигурации приложения; в файле конфигурации компьютера он игнорируется.</span><span class="sxs-lookup"><span data-stu-id="e6078-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора.  Начиная с версии [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] сборка мусора сервера является параллельной.  Для использования непараллельной серверной сборки мусора присвойте элементу `<gcServer>` значение `true`, а [элементу \<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) — значение `false`.  
+>  <span data-ttu-id="e6078-136">В платформе .NET Framework версии 4 и более ранних версиях параллельная сборка мусора недоступна, если включена серверная сборка мусора.</span><span class="sxs-lookup"><span data-stu-id="e6078-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="e6078-137">Начиная с версии [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] сборка мусора сервера является параллельной.</span><span class="sxs-lookup"><span data-stu-id="e6078-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="e6078-138">Для использования непараллельной серверной сборки мусора присвойте `<gcServer>` элемент `true` и [ \<gcConcurrent > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) для `false`.</span><span class="sxs-lookup"><span data-stu-id="e6078-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## Пример  
- В следующем примере включается параллельная сборка мусора сервера.  
+## <a name="example"></a><span data-ttu-id="e6078-139">Пример</span><span class="sxs-lookup"><span data-stu-id="e6078-139">Example</span></span>  
+ <span data-ttu-id="e6078-140">В следующем примере включается параллельная сборка мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="e6078-140">The following example enables server garbage collection.</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcServer enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## См. также  
- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName>   
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/ru-ru/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="e6078-141">См. также</span><span class="sxs-lookup"><span data-stu-id="e6078-141">See Also</span></span>  
+ <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="e6078-142">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="e6078-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="e6078-143">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="e6078-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e6078-144">Как: отключить параллельная сборка мусора</span><span class="sxs-lookup"><span data-stu-id="e6078-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)

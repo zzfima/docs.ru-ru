@@ -1,35 +1,33 @@
 ---
-title: "Строковые константы должны завершаться двойной кавычкой | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30648"
-  - "bc30648"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30648"
+title: "Строковые константы должны завершаться двойной кавычкой"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30648
+- bc30648
+helpviewer_keywords: BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 02f8c127f35a511c9f8529078e5c1eaedda2cfae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Строковые константы должны завершаться двойной кавычкой
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Строковые константы должны начинаться и заканчиваться кавычками.  
+# <a name="string-constants-must-end-with-a-double-quote"></a><span data-ttu-id="0784c-102">Строковые константы должны завершаться двойной кавычкой</span><span class="sxs-lookup"><span data-stu-id="0784c-102">String constants must end with a double quote</span></span>
+<span data-ttu-id="0784c-103">Строковые константы должны начинаться и заканчиваться в кавычки.</span><span class="sxs-lookup"><span data-stu-id="0784c-103">String constants must begin and end with quotation marks.</span></span>  
   
- **Идентификатор ошибки:** BC30648  
+ <span data-ttu-id="0784c-104">**Идентификатор ошибки:** BC30648</span><span class="sxs-lookup"><span data-stu-id="0784c-104">**ErrorID:** BC30648</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0784c-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="0784c-105">To correct this error</span></span>  
   
--   Убедитесь, что строковый литерал заканчивается кавычкой \(''\).  При вставке значений из других текстовых редакторов убедитесь, что вставленный символ является допустимой кавычкой, а не одним из похожих символов, например фигурной кавычкой \(" или "\) или двумя одинарными кавычками \(''\).  
+-   <span data-ttu-id="0784c-106">Убедитесь, что строковый литерал заканчивается знак кавычек ("«).</span><span class="sxs-lookup"><span data-stu-id="0784c-106">Make sure the string literal ends with a quotation mark (").</span></span> <span data-ttu-id="0784c-107">При вставке значения из других текстовых редакторов, убедитесь, что вставленный символ является допустимой кавычкой, а не символы, которые похожи, такие как «smart» или «фигурных» кавычки («или») или двумя одинарными кавычками ("«).</span><span class="sxs-lookup"><span data-stu-id="0784c-107">If you paste values from other text editors, make sure the pasted character is a valid quotation mark and not one of the characters that resemble it, such as "smart" or "curly" quotation marks (" or ") or two single quotation marks ('').</span></span>  
   
-## См. также  
- [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="0784c-108">См. также</span><span class="sxs-lookup"><span data-stu-id="0784c-108">See Also</span></span>  
+ [<span data-ttu-id="0784c-109">Строки</span><span class="sxs-lookup"><span data-stu-id="0784c-109">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)

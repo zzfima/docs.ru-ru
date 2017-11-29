@@ -1,44 +1,44 @@
 ---
-title: "Создание экземпляров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "пример создания экземпляров [Windows Communication Foundation]"
-  - "поведения служб, пример создания экземпляров"
+title: "Создание экземпляров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, instancing sample
+- Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 40
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b38d70a4f4c3938d6cc6116c94a009ec0f34dc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Создание экземпляров
-В образце создания экземпляра демонстрируется действие параметра, регулирующего способ создания экземпляров класса службы при получении запросов от клиентов.  Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует контракт службы `ICalculator`.  В этом образце определен новый контракт `ICalculatorInstance`, производный от класса `ICalculator`.  Контракт, указанный для `ICalculatorInstance`, обеспечивает три дополнительные операции для проверки состояния экземпляра службы.  Изменив параметр создания экземпляров, можно запустить клиент и проверить, как изменилось поведение создания экземпляров.  
+# <a name="instancing"></a><span data-ttu-id="acdcd-102">Создание экземпляров</span><span class="sxs-lookup"><span data-stu-id="acdcd-102">Instancing</span></span>
+<span data-ttu-id="acdcd-103">В образце создания экземпляра демонстрируется действие параметра, регулирующего способ создания экземпляров класса службы при получении запросов от клиентов.</span><span class="sxs-lookup"><span data-stu-id="acdcd-103">The Instancing sample demonstrates the instancing behavior setting, which controls how instances of a service class are created in response to client requests.</span></span> <span data-ttu-id="acdcd-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы.</span><span class="sxs-lookup"><span data-stu-id="acdcd-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="acdcd-105">В этом образце определен новый контракт `ICalculatorInstance`, производный от класса `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="acdcd-105">This sample defines a new contract, `ICalculatorInstance`, which inherits from `ICalculator`.</span></span> <span data-ttu-id="acdcd-106">Контракт, указанный для `ICalculatorInstance`, обеспечивает три дополнительные операции для проверки состояния экземпляра службы.</span><span class="sxs-lookup"><span data-stu-id="acdcd-106">The contract specified by `ICalculatorInstance` provides three additional operations for inspecting the state of the service instance.</span></span> <span data-ttu-id="acdcd-107">Изменив параметр создания экземпляров, можно запустить клиент и проверить, как изменилось поведение создания экземпляров.</span><span class="sxs-lookup"><span data-stu-id="acdcd-107">By altering the instancing setting, you can observe the change in behavior by running the client.</span></span>  
   
- В этом образце клиентом является консольное приложение \(EXE\), а служба размещается в службах IIS.  
+ <span data-ttu-id="acdcd-108">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="acdcd-108">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="acdcd-109">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="acdcd-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Доступны следующие режимы создания экземпляров:  
+ <span data-ttu-id="acdcd-110">Доступны следующие режимы создания экземпляров:</span><span class="sxs-lookup"><span data-stu-id="acdcd-110">The following instancing modes are available:</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: создание нового экземпляра для каждого запроса клиента.  
+-   <span data-ttu-id="acdcd-111"><xref:System.ServiceModel.InstanceContextMode.PerCall>: создание нового экземпляра для каждого запроса клиента.</span><span class="sxs-lookup"><span data-stu-id="acdcd-111"><xref:System.ServiceModel.InstanceContextMode.PerCall>: A new service instance is created for each client request.</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: новый контекст создается для каждого нового сеанса клиента и существует в течение времени существования этого сеанса \(для этого требуется привязка, поддерживающая сеанс\).  
+-   <span data-ttu-id="acdcd-112"><xref:System.ServiceModel.InstanceContextMode.PerSession>: новый контекст создается для каждого нового сеанса клиента и существует в течение времени существования этого сеанса (для этого требуется привязка, поддерживающая сеанс).</span><span class="sxs-lookup"><span data-stu-id="acdcd-112"><xref:System.ServiceModel.InstanceContextMode.PerSession>: A new instance is created for each new client session, and maintained for the lifetime of that session (requires a binding that supports session).</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: все запросы клиентов за время существования приложения обрабатываются одним экземпляром класса службы.  
+-   <span data-ttu-id="acdcd-113"><xref:System.ServiceModel.InstanceContextMode.Single>: все запросы клиентов за время существования приложения обрабатываются одним экземпляром класса службы.</span><span class="sxs-lookup"><span data-stu-id="acdcd-113"><xref:System.ServiceModel.InstanceContextMode.Single>: A single instance of the service class handles all client requests for the lifetime of the application.</span></span>  
   
- Класс службы задает поведение создания экземпляров с помощью атрибута `[ServiceBehavior(InstanceContextMode=<setting>)]`, как показано в следующем образце кода.  Можно проследить поведение каждого режима создания экземпляров, вставляя и удаляя символы комментирования перед различными строками кода.  Не забывайте заново построить службу после изменения режима создания экземпляров.  На клиенте не задаются никакие параметры, связанные с созданием экземпляров.  
+ <span data-ttu-id="acdcd-114">Класс службы задает поведение создания экземпляров с помощью атрибута `[ServiceBehavior(InstanceContextMode=<setting>)]`, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="acdcd-114">The service class specifies instancing behavior with the `[ServiceBehavior(InstanceContextMode=<setting>)]` attribute as shown in the code sample that follows.</span></span> <span data-ttu-id="acdcd-115">Можно проследить поведение каждого режима создания экземпляров, вставляя и удаляя символы комментирования перед различными строками кода.</span><span class="sxs-lookup"><span data-stu-id="acdcd-115">By changing which lines are commented out, you can observe the behavior of each of the instance modes.</span></span> <span data-ttu-id="acdcd-116">Не забывайте заново построить службу после изменения режима создания экземпляров.</span><span class="sxs-lookup"><span data-stu-id="acdcd-116">Remember to rebuild the service after changing the instancing mode.</span></span> <span data-ttu-id="acdcd-117">На клиенте не задаются никакие параметры, связанные с созданием экземпляров.</span><span class="sxs-lookup"><span data-stu-id="acdcd-117">There are no instancing-related settings to specify on the client.</span></span>  
   
 ```  
 // Enable one of the following instance modes to compare instancing behaviors.  
@@ -130,23 +130,23 @@ static void Main()
 }  
 ```  
   
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Отображается режим создания экземпляров, используемый службой.  После каждой операции отображается идентификатор экземпляра и счетчик операций \(эти величины характеризуют поведение режима создания экземпляров\).  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="acdcd-118">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="acdcd-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="acdcd-119">Отображается режим создания экземпляров, используемый службой.</span><span class="sxs-lookup"><span data-stu-id="acdcd-119">The instance mode the service is running under is displayed.</span></span> <span data-ttu-id="acdcd-120">После каждой операции отображается идентификатор экземпляра и счетчик операций (эти величины характеризуют поведение режима создания экземпляров).</span><span class="sxs-lookup"><span data-stu-id="acdcd-120">After each operation, the instance ID and operation count are displayed to reflect the behavior of the instancing mode.</span></span> <span data-ttu-id="acdcd-121">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="acdcd-121">Press ENTER in the client window to shut down the client.</span></span>  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="acdcd-122">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="acdcd-122">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="acdcd-123">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="acdcd-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="acdcd-124">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="acdcd-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="acdcd-125">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="acdcd-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="acdcd-126">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="acdcd-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="acdcd-127">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="acdcd-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="acdcd-128">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="acdcd-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="acdcd-129">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="acdcd-129">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="acdcd-130">См. также</span><span class="sxs-lookup"><span data-stu-id="acdcd-130">See Also</span></span>

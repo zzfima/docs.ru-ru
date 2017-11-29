@@ -1,6 +1,6 @@
 ---
 title: "Значения (F#)"
-description: "Значения (F#)"
+description: "Узнайте, как значения в языке F # — это величины, имеющие определенный тип."
 keywords: "visual f#, f#, функциональное программирование"
 author: cartermp
 ms.author: phcart
@@ -10,51 +10,49 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="values"></a><span data-ttu-id="11536-104">Значения</span><span class="sxs-lookup"><span data-stu-id="11536-104">Values</span></span>
 
-# <a name="values"></a>Значения
-
-Значения в F# являются величинами, имеющими конкретный тип. Значения могут быть целыми числами или числами с плавающей запятой, символами или текстом, списками, последовательностями, массивами, кортежами, размеченными объединениями, записями, типами классов или значениями функции.
+<span data-ttu-id="11536-105">Значения в F# являются величинами, имеющими конкретный тип. Значения могут быть целыми числами или числами с плавающей запятой, символами или текстом, списками, последовательностями, массивами, кортежами, размеченными объединениями, записями, типами классов или значениями функции.</span><span class="sxs-lookup"><span data-stu-id="11536-105">Values in F# are quantities that have a specific type; values can be integral or floating point numbers, characters or text, lists, sequences, arrays, tuples, discriminated unions, records, class types, or function values.</span></span>
 
 
-## <a name="binding-a-value"></a>Привязка значения
-Термин *привязка* означает сопоставление имени с определением. Ключевое слово `let` привязывает значение, как показано в следующих примерах:
+## <a name="binding-a-value"></a><span data-ttu-id="11536-106">Привязка значения</span><span class="sxs-lookup"><span data-stu-id="11536-106">Binding a Value</span></span>
+<span data-ttu-id="11536-107">Термин *привязка* означает сопоставление имени с определением.</span><span class="sxs-lookup"><span data-stu-id="11536-107">The term *binding* means associating a name with a definition.</span></span> <span data-ttu-id="11536-108">Ключевое слово `let` привязывает значение, как показано в следующих примерах:</span><span class="sxs-lookup"><span data-stu-id="11536-108">The `let` keyword binds a value, as in the following examples:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
-Тип значения выводится из определения. Для типа-примитива, такого как целое число или число с плавающей запятой, тип определяется типом литерала. Таким образом, в предыдущем примере компилятор определяет тип `b` как `unsigned int`, а тип `a` — как `int`. Тип значения функции определяется по возвращаемому значению в теле функции. Дополнительные сведения о типах значений функций см. в статье [Функции](../functions/index.md). Дополнительные сведения о типах литералов см. в статье [Литералы](../literals.md).
+<span data-ttu-id="11536-109">Тип значения выводится из определения.</span><span class="sxs-lookup"><span data-stu-id="11536-109">The type of a value is inferred from the definition.</span></span> <span data-ttu-id="11536-110">Для типа-примитива, такого как целое число или число с плавающей запятой, тип определяется типом литерала.</span><span class="sxs-lookup"><span data-stu-id="11536-110">For a primitive type, such as an integral or floating point number, the type is determined from the type of the literal.</span></span> <span data-ttu-id="11536-111">Таким образом, в предыдущем примере компилятор определяет тип `b` как `unsigned int`, а тип `a` — как `int`.</span><span class="sxs-lookup"><span data-stu-id="11536-111">Therefore, in the previous example, the compiler infers the type of `b` to be `unsigned int`, whereas the compiler infers the type of `a` to be `int`.</span></span> <span data-ttu-id="11536-112">Тип значения функции определяется по возвращаемому значению в теле функции.</span><span class="sxs-lookup"><span data-stu-id="11536-112">The type of a function value is determined from the return value in the function body.</span></span> <span data-ttu-id="11536-113">Дополнительные сведения о типах значений функций см. в статье [Функции](../functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="11536-113">For more information about function value types, see [Functions](../functions/index.md).</span></span> <span data-ttu-id="11536-114">Дополнительные сведения о типах литералов см. в статье [Литералы](../literals.md).</span><span class="sxs-lookup"><span data-stu-id="11536-114">For more information about literal types, see [Literals](../literals.md).</span></span>
 
 
-## <a name="why-immutable"></a>Для чего нужны неизменяемые значения?
-Неизменяемые значения — это значения, которые не могут изменяться в течение всего выполнения программы. Если вы привыкли к таким языкам, как C++, Visual Basic или C#, вас может удивить, что в F# предпочтение отдается неизменяемым значениям, а не переменным, которым можно назначать новые значения во время выполнения программы. Неизменяемые данные являются важным элементом функционального программирования. В многопоточной среде управлять общими изменяемыми переменными, которые могут изменяться множеством разных потоков, довольно сложно. Кроме того, при работе с изменяемыми переменными иногда бывает трудно определить, может ли переменная изменяться при передаче в другую функцию.
+## <a name="why-immutable"></a><span data-ttu-id="11536-115">Для чего нужны неизменяемые значения?</span><span class="sxs-lookup"><span data-stu-id="11536-115">Why Immutable?</span></span>
+<span data-ttu-id="11536-116">Неизменяемые значения — это значения, которые не могут изменяться в течение всего выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="11536-116">Immutable values are values that cannot be changed throughout the course of a program's execution.</span></span> <span data-ttu-id="11536-117">Если вы привыкли к таким языкам, как C++, Visual Basic или C#, вас может удивить, что в F# предпочтение отдается неизменяемым значениям, а не переменным, которым можно назначать новые значения во время выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="11536-117">If you are used to languages such as C++, Visual Basic, or C#, you might find it surprising that F# puts primacy over immutable values rather than variables that can be assigned new values during the execution of a program.</span></span> <span data-ttu-id="11536-118">Неизменяемые данные являются важным элементом функционального программирования.</span><span class="sxs-lookup"><span data-stu-id="11536-118">Immutable data is an important element of functional programming.</span></span> <span data-ttu-id="11536-119">В многопоточной среде управлять общими изменяемыми переменными, которые могут изменяться множеством разных потоков, довольно сложно.</span><span class="sxs-lookup"><span data-stu-id="11536-119">In a multithreaded environment, shared mutable variables that can be changed by many different threads are difficult to manage.</span></span> <span data-ttu-id="11536-120">Кроме того, при работе с изменяемыми переменными иногда бывает трудно определить, может ли переменная изменяться при передаче в другую функцию.</span><span class="sxs-lookup"><span data-stu-id="11536-120">Also, with mutable variables, it can sometimes be hard to tell if a variable might be changed when it is passed to another function.</span></span>
 
-В чисто функциональных языках переменные отсутствуют, а функции ведут себя строго как математические функции. Там, где код на процедурном языке присваивает переменную для изменения значения, эквивалентный код на функциональном языке использует неизменяемое значение, относящееся к входным данным, неизменяемую функцию и разные неизменяемые значения в качестве выходных данных. Такая математическая строгость позволяет точнее организовать работу программы. Это позволяет компиляторам строже проверять код и эффективнее оптимизировать его, а также помогает разработчикам читать и составлять код правильно. Таким образом, по сравнению с обычным процедурным кодом отладка функционального кода, скорее всего, будет выполнять проще.
+<span data-ttu-id="11536-121">В чисто функциональных языках переменные отсутствуют, а функции ведут себя строго как математические функции.</span><span class="sxs-lookup"><span data-stu-id="11536-121">In pure functional languages, there are no variables, and functions behave strictly as mathematical functions.</span></span> <span data-ttu-id="11536-122">Там, где код на процедурном языке присваивает переменную для изменения значения, эквивалентный код на функциональном языке использует неизменяемое значение, относящееся к входным данным, неизменяемую функцию и разные неизменяемые значения в качестве выходных данных.</span><span class="sxs-lookup"><span data-stu-id="11536-122">Where code in a procedural language uses a variable assignment to alter a value, the equivalent code in a functional language has an immutable value that is the input, an immutable function, and different immutable values as the output.</span></span> <span data-ttu-id="11536-123">Такая математическая строгость позволяет точнее организовать работу программы.</span><span class="sxs-lookup"><span data-stu-id="11536-123">This mathematical strictness allows for tighter reasoning about the behavior of the program.</span></span> <span data-ttu-id="11536-124">Это позволяет компиляторам строже проверять код и эффективнее оптимизировать его, а также помогает разработчикам читать и составлять код правильно.</span><span class="sxs-lookup"><span data-stu-id="11536-124">This tighter reasoning is what enables compilers to check code more stringently and to optimize more effectively, and helps make it easier for developers to understand and write correct code.</span></span> <span data-ttu-id="11536-125">Таким образом, по сравнению с обычным процедурным кодом отладка функционального кода, скорее всего, будет выполнять проще.</span><span class="sxs-lookup"><span data-stu-id="11536-125">Functional code is therefore likely to be easier to debug than ordinary procedural code.</span></span>
 
-Хотя F# и не является чисто функциональным языком, он полностью поддерживает возможности функционального программирования. Применять неизменяемые значения крайне полезно, так как это позволяет коду использовать важные преимущества функционального программирования.
+<span data-ttu-id="11536-126">Хотя F# и не является чисто функциональным языком, он полностью поддерживает возможности функционального программирования.</span><span class="sxs-lookup"><span data-stu-id="11536-126">F# is not a pure functional language, yet it fully supports functional programming.</span></span> <span data-ttu-id="11536-127">Применять неизменяемые значения крайне полезно, так как это позволяет коду использовать важные преимущества функционального программирования.</span><span class="sxs-lookup"><span data-stu-id="11536-127">Using immutable values is a good practice because doing this allows your code to benefit from an important aspect of functional programming.</span></span>
 
 
-## <a name="mutable-variables"></a>Изменяемые переменные
-Вы можете использовать ключевое слово `mutable` для задания переменной, которую можно изменить. В общем случае изменяемые переменные в F# должны иметь ограниченную область действия, например в виде поля типа или локального значения. Изменяемыми переменными с ограниченной областью легче управлять, кроме того, для них ниже вероятность ошибочного изменения.
+## <a name="mutable-variables"></a><span data-ttu-id="11536-128">Изменяемые переменные</span><span class="sxs-lookup"><span data-stu-id="11536-128">Mutable Variables</span></span>
+<span data-ttu-id="11536-129">Вы можете использовать ключевое слово `mutable` для задания переменной, которую можно изменить.</span><span class="sxs-lookup"><span data-stu-id="11536-129">You can use the keyword `mutable` to specify a variable that can be changed.</span></span> <span data-ttu-id="11536-130">В общем случае изменяемые переменные в F# должны иметь ограниченную область действия, например в виде поля типа или локального значения.</span><span class="sxs-lookup"><span data-stu-id="11536-130">Mutable variables in F# should generally have a limited scope, either as a field of a type or as a local value.</span></span> <span data-ttu-id="11536-131">Изменяемыми переменными с ограниченной областью легче управлять, кроме того, для них ниже вероятность ошибочного изменения.</span><span class="sxs-lookup"><span data-stu-id="11536-131">Mutable variables with a limited scope are easier to control and are less likely to be modified in incorrect ways.</span></span>
 
-Вы можете присвоить изменяемой переменной начальное значение с помощью ключевого слова `let` точно так же, как и при определении значения. Отличие заключается в том, что позднее изменяемым переменным можно присваивать новые значения с помощью оператора `<-`, как показано в следующем примере.
+<span data-ttu-id="11536-132">Вы можете присвоить изменяемой переменной начальное значение с помощью ключевого слова `let` точно так же, как и при определении значения.</span><span class="sxs-lookup"><span data-stu-id="11536-132">You can assign an initial value to a mutable variable by using the `let` keyword in the same way as you would define a value.</span></span> <span data-ttu-id="11536-133">Отличие заключается в том, что позднее изменяемым переменным можно присваивать новые значения с помощью оператора `<-`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="11536-133">However, the difference is that you can subsequently assign new values to mutable variables by using the `<-` operator, as in the following example.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
     
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a><span data-ttu-id="11536-134">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="11536-134">Related Topics</span></span>
 
 
-|Заголовок|Описание|
+|<span data-ttu-id="11536-135">Заголовок</span><span class="sxs-lookup"><span data-stu-id="11536-135">Title</span></span>|<span data-ttu-id="11536-136">Описание</span><span class="sxs-lookup"><span data-stu-id="11536-136">Description</span></span>|
 |-----|-----------|
-|[Привязки let](../functions/let-bindings.md)|Содержит сведения об использовании ключевого слова `let` для привязки имен к значениям и функциям.|
-|[Функции](../functions/index.md)|Содержит общие сведения о функциях в F#.|
+|[<span data-ttu-id="11536-137">Привязки let</span><span class="sxs-lookup"><span data-stu-id="11536-137">let Bindings</span></span>](../functions/let-bindings.md)|<span data-ttu-id="11536-138">Содержит сведения об использовании `let` ключевое слово для привязки имен к значениям и функциям.</span><span class="sxs-lookup"><span data-stu-id="11536-138">Provides information about using the `let` keyword to bind names to values and functions.</span></span>|
+|[<span data-ttu-id="11536-139">Функции</span><span class="sxs-lookup"><span data-stu-id="11536-139">Functions</span></span>](../functions/index.md)|<span data-ttu-id="11536-140">Содержит общие сведения о функциях в F#.</span><span class="sxs-lookup"><span data-stu-id="11536-140">Provides an overview of functions in F#.</span></span>|
 
-## <a name="see-also"></a>См. также
-[Значения NULL](null-Values.md)
+## <a name="see-also"></a><span data-ttu-id="11536-141">См. также</span><span class="sxs-lookup"><span data-stu-id="11536-141">See Also</span></span>
+[<span data-ttu-id="11536-142">Значения NULL</span><span class="sxs-lookup"><span data-stu-id="11536-142">Null Values</span></span>](null-Values.md)
 
-[Справочник по языку F#](../index.md)
-
+[<span data-ttu-id="11536-143">Справочник по языку F#</span><span class="sxs-lookup"><span data-stu-id="11536-143">F# Language Reference</span></span>](../index.md)

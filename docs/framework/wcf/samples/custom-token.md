@@ -1,39 +1,42 @@
 ---
-title: "Пользовательский маркер | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательский маркер"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19593e61cc640068ac7c90a6abbd6ea0d6a3ff08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательский маркер
-В этом образце показано добавление пользовательской реализации маркера в приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  В этом примере маркер `CreditCardToken` используется для безопасной передачи информации о кредитных картах клиента в службу.  Маркер передается в заголовок сообщения WS\-Security, подписывается и шифруется с помощью симметричного элемента привязки безопасности вместе с телом и другими заголовками сообщения.  Это полезно в случаях, когда встроенных маркеров недостаточно.  В этом образце показано, как предоставить пользовательский маркер безопасности службы вместо того, чтобы использовать встроенные маркеры.  Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".  
+# <a name="custom-token"></a><span data-ttu-id="cf2f4-102">Пользовательский маркер</span><span class="sxs-lookup"><span data-stu-id="cf2f4-102">Custom Token</span></span>
+<span data-ttu-id="cf2f4-103">В этом образце показано добавление пользовательской реализации маркера в приложение [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf2f4-103">This sample demonstrates how to add a custom token implementation into a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="cf2f4-104">В этом примере маркер `CreditCardToken` используется для безопасной передачи информации о кредитных картах клиента в службу.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-104">The example uses a `CreditCardToken` to securely pass information about client credit cards to the service.</span></span> <span data-ttu-id="cf2f4-105">Маркер передается в заголовок сообщения WS-Security, подписывается и шифруется с помощью симметричного элемента привязки безопасности вместе с телом и другими заголовками сообщения.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-105">The token is passed in the WS-Security message header and is signed and encrypted using the symmetric security binding element along with message body and other message headers.</span></span> <span data-ttu-id="cf2f4-106">Это полезно в случаях, когда встроенных маркеров недостаточно.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-106">This is useful in cases where the built-in tokens are not sufficient.</span></span> <span data-ttu-id="cf2f4-107">В этом образце показано, как предоставить пользовательский маркер безопасности службы вместо того, чтобы использовать встроенные маркеры.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-107">This sample demonstrates how to provide a custom security token to a service instead of using one of the built-in tokens.</span></span> <span data-ttu-id="cf2f4-108">Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="cf2f4-108">The service implements a contract that defines a request-reply communication pattern.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="cf2f4-109">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Итак, этот образец демонстрирует следующее:  
+ <span data-ttu-id="cf2f4-110">Итак, этот образец демонстрирует следующее:</span><span class="sxs-lookup"><span data-stu-id="cf2f4-110">To summarize, this sample demonstrates the following:</span></span>  
   
--   как клиент может передать в службу пользовательские маркеры безопасности;  
+-   <span data-ttu-id="cf2f4-111">как клиент может передать в службу пользовательские маркеры безопасности;</span><span class="sxs-lookup"><span data-stu-id="cf2f4-111">How a client can pass a custom security token to a service.</span></span>  
   
--   как служба может использовать и проверить пользовательский маркер безопасности;  
+-   <span data-ttu-id="cf2f4-112">как служба может использовать и проверить пользовательский маркер безопасности;</span><span class="sxs-lookup"><span data-stu-id="cf2f4-112">How the service can consume and validate a custom security token.</span></span>  
   
--   как код службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может получить сведения о полученных маркерах безопасности, включая пользовательский маркер безопасности;  
+-   <span data-ttu-id="cf2f4-113">как код службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может получить сведения о полученных маркерах безопасности, включая пользовательский маркер безопасности;</span><span class="sxs-lookup"><span data-stu-id="cf2f4-113">How the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service code can obtain the information about received security tokens including the custom security token.</span></span>  
   
--   как сертификат X.509 сервера используется для защиты симметричного ключа, служащего для шифрования и подписывания сообщений.  
+-   <span data-ttu-id="cf2f4-114">как сертификат X.509 сервера используется для защиты симметричного ключа, служащего для шифрования и подписывания сообщений.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-114">How the server's X.509 certificate is used to protect the symmetric key used for message encryption and signature.</span></span>  
   
-## Проверка подлинности клиента с помощью пользовательского маркера безопасности  
- Служба предоставляет одну конечную точку, создаваемую программно с помощью классов `BindingHelper` и `EchoServiceHost`.  Конечная точка состоит из адреса, привязки и контракта.  Привязка настраивается с пользовательской привязкой с помощью элементов `SymmetricSecurityBindingElement` и `HttpTransportBindingElement`.  В этом образце элементу `SymmetricSecurityBindingElement` задается использование сертификата X.509 службы для защиты симметричного ключа во время передачи и для передачи пользовательского маркера `CreditCardToken` в заголовке сообщения WS\-Security в виде подписанного и зашифрованного маркера безопасности.  Поведение задает учетные данные службы, которые должны использоваться для проверки подлинности клиента, а также информацию о сертификате X.509 службы.  
+## <a name="client-authentication-using-a-custom-security-token"></a><span data-ttu-id="cf2f4-115">Проверка подлинности клиента с помощью пользовательского маркера безопасности</span><span class="sxs-lookup"><span data-stu-id="cf2f4-115">Client Authentication Using a Custom Security Token</span></span>  
+ <span data-ttu-id="cf2f4-116">Служба предоставляет одну конечную точку, создаваемую программно с помощью классов `BindingHelper` и `EchoServiceHost`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-116">The service exposes a single endpoint that is programmatically created using `BindingHelper` and `EchoServiceHost` classes.</span></span> <span data-ttu-id="cf2f4-117">Конечная точка состоит из адреса, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-117">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="cf2f4-118">Привязка настраивается с пользовательской привязкой с помощью элементов `SymmetricSecurityBindingElement` и `HttpTransportBindingElement`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-118">The binding is configured with a custom binding using `SymmetricSecurityBindingElement` and `HttpTransportBindingElement`.</span></span> <span data-ttu-id="cf2f4-119">В этом образце элементу `SymmetricSecurityBindingElement` задается использование сертификата X.509 службы для защиты симметричного ключа во время передачи и для передачи пользовательского маркера `CreditCardToken` в заголовке сообщения WS-Security в виде подписанного и зашифрованного маркера безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-119">This sample sets the `SymmetricSecurityBindingElement` to use a service's X.509 certificate to protect the symmetric key during transmission and to pass a custom `CreditCardToken` in a WS-Security message header as a signed and encrypted security token.</span></span> <span data-ttu-id="cf2f4-120">Поведение задает учетные данные службы, которые должны использоваться для проверки подлинности клиента, а также информацию о сертификате X.509 службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-120">The behavior specifies the service credentials that are to be used for client authentication and also information about the service X.509 certificate.</span></span>  
   
 ```  
 public static class BindingHelper  
@@ -54,7 +57,7 @@ public static class BindingHelper
 }  
 ```  
   
- Чтобы реализовать возможность использования в сообщении маркера кредитной карты, в образце используются пользовательские учетные данные службы.  Класс учетных данных службы располагается в классе `CreditCardServiceCredentials` и добавляется к коллекциям поведений узла службы в методе `EchoServiceHost.InitializeRuntime`.  
+ <span data-ttu-id="cf2f4-121">Чтобы реализовать возможность использования в сообщении маркера кредитной карты, в образце используются пользовательские учетные данные службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-121">To consume a credit card token in the message, the sample uses custom service credentials to provide this functionality.</span></span> <span data-ttu-id="cf2f4-122">Класс учетных данных службы располагается в классе `CreditCardServiceCredentials` и добавляется к коллекциям поведений узла службы в методе `EchoServiceHost.InitializeRuntime`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-122">The service credentials class is located in the `CreditCardServiceCredentials` class and is added to the behaviors collections of the service host in the `EchoServiceHost.InitializeRuntime` method.</span></span>  
   
 ```  
 class EchoServiceHost : ServiceHost  
@@ -89,10 +92,9 @@ class EchoServiceHost : ServiceHost
         base.InitializeRuntime();  
     }  
 }  
-  
 ```  
   
- Конечная точка клиента настраивается таким же образом, как и конечная точка службы.  Для создания привязки в клиенте используется этот же класс `BindingHelper`.  Остальная часть настройки находится в классе `Client`.  Клиент в коде настройки также задает сведения, которые должны содержаться в `CreditCardToken`, и сведения о сертификате X.509 службы посредством добавления экземпляра `CreditCardClientCredentials` с соответствующими данными в коллекцию поведений конечной точки клиента.  В этом образце в качестве сертификата службы используется сертификат X.509 службы, которому задано значение `CN=localhost`.  
+ <span data-ttu-id="cf2f4-123">Конечная точка клиента настраивается таким же образом, как и конечная точка службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-123">The client endpoint is configured in a similar manner as the service endpoint.</span></span> <span data-ttu-id="cf2f4-124">Для создания привязки в клиенте используется этот же класс `BindingHelper`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-124">The client uses the same `BindingHelper` class to create a binding.</span></span> <span data-ttu-id="cf2f4-125">Остальная часть настройки находится в классе `Client`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-125">The rest of the setup is located in the `Client` class.</span></span> <span data-ttu-id="cf2f4-126">Клиент в коде настройки также задает сведения, которые должны содержаться в `CreditCardToken`, и сведения о сертификате X.509 службы посредством добавления экземпляра `CreditCardClientCredentials` с соответствующими данными в коллекцию поведений конечной точки клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-126">The client also sets information to be contained in the `CreditCardToken` and information about the service X.509 certificate in the setup code by adding a `CreditCardClientCredentials` instance with the proper data to the client endpoint behaviors collection.</span></span> <span data-ttu-id="cf2f4-127">В этом образце в качестве сертификата службы используется сертификат X.509 службы, которому задано значение `CN=localhost`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-127">The sample uses X.509 certificate with subject name set to `CN=localhost` as the service certificate.</span></span>  
   
 ```  
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();  
@@ -122,10 +124,10 @@ Console.WriteLine("Echo service returned: {0}", client.Echo());
 channelFactory.Close();  
 ```  
   
-## Реализация пользовательского маркера безопасности  
- Чтобы включить пользовательский маркер безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], создайте представление объекта пользовательского маркера безопасности.  В этом образце представление находится в классе `CreditCardToken`.  Представление объекта отвечает за хранение всех данных, относящихся к маркеру безопасности, и предоставление списка ключей безопасности, содержащихся в маркере безопасности.  В этом случае маркер безопасности кредитной карты не содержит ключ безопасности.  
+## <a name="custom-security-token-implementation"></a><span data-ttu-id="cf2f4-128">Реализация пользовательского маркера безопасности</span><span class="sxs-lookup"><span data-stu-id="cf2f4-128">Custom Security Token Implementation</span></span>  
+ <span data-ttu-id="cf2f4-129">Чтобы включить пользовательский маркер безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], создайте представление объекта пользовательского маркера безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-129">To enable a custom security token in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], create an object representation of the custom security token.</span></span> <span data-ttu-id="cf2f4-130">В этом образце представление находится в классе `CreditCardToken`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-130">The sample has this representation in the `CreditCardToken` class.</span></span> <span data-ttu-id="cf2f4-131">Представление объекта отвечает за хранение всех данных, относящихся к маркеру безопасности, и предоставление списка ключей безопасности, содержащихся в маркере безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-131">The object representation is responsible for holding all relevant security token information and to provide a list of security keys contained in the security token.</span></span> <span data-ttu-id="cf2f4-132">В этом случае маркер безопасности кредитной карты не содержит ключ безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-132">In this case, the credit card security token does not contain any security key.</span></span>  
   
- В следующем разделе описываются действия, которые необходимо предпринять, чтобы включить передачу пользовательского маркера по сети и использование его конечной точкой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="cf2f4-133">В следующем разделе описываются действия, которые необходимо предпринять, чтобы включить передачу пользовательского маркера по сети и использование его конечной точкой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf2f4-133">The next section describes what must be done to enable a custom token to be transmitted over the wire and consumed by a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint.</span></span>  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -160,15 +162,14 @@ class CreditCardToken : SecurityToken
     public override DateTime ValidTo { get { return this.cardInfo.ExpirationDate; } }  
     public override string Id { get { return this.id; } }  
 }  
-  
 ```  
   
-## Возвращение пользовательского маркера кредитной карты в сообщение и из сообщения  
- Сериализаторы маркеров безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отвечают за создание представления объекта маркеров безопасности из XML сообщения и создание XML\-форм маркеров безопасности.  Они также выполняют другие действия, такие как чтение и запись идентификаторов ключей, указывающих на маркеры безопасности, но в этом примере используются только функции, связанные с маркерами безопасности.  Чтобы включить пользовательский маркер необходимо реализовать собственный сериализатор маркеров безопасности.  В этом образце для этой цели используется класс `CreditCardSecurityTokenSerializer`.  
+## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a><span data-ttu-id="cf2f4-134">Возвращение пользовательского маркера кредитной карты в сообщение и из сообщения</span><span class="sxs-lookup"><span data-stu-id="cf2f4-134">Getting the Custom Credit Card Token to and from the Message</span></span>  
+ <span data-ttu-id="cf2f4-135">Сериализаторы маркеров безопасности в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] отвечают за создание представления объекта маркеров безопасности из XML сообщения и создание XML-форм маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-135">Security token serializers in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are responsible for creating an object representation of security tokens from the XML in the message and creating a XML form of the security tokens.</span></span> <span data-ttu-id="cf2f4-136">Они также выполняют другие действия, такие как чтение и запись идентификаторов ключей, указывающих на маркеры безопасности, но в этом примере используются только функции, связанные с маркерами безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-136">They are also responsible for other functionality such as reading and writing key identifiers pointing to security tokens, but this example uses only security token-related functionality.</span></span> <span data-ttu-id="cf2f4-137">Чтобы включить пользовательский маркер необходимо реализовать собственный сериализатор маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-137">To enable a custom token you must implement your own security token serializer.</span></span> <span data-ttu-id="cf2f4-138">В этом образце для этой цели используется класс `CreditCardSecurityTokenSerializer`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-138">This sample uses the `CreditCardSecurityTokenSerializer` class for this purpose.</span></span>  
   
- На стороне службы пользовательский сериализатор считывает XML\-форму пользовательского маркера и создает из нее представление объекта пользовательского маркера.  
+ <span data-ttu-id="cf2f4-139">На стороне службы пользовательский сериализатор считывает XML-форму пользовательского маркера и создает из нее представление объекта пользовательского маркера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-139">On the service, the custom serializer reads the XML form of the custom token and creates the custom token object representation from it.</span></span>  
   
- На стороне клиента класс `CreditCardSecurityTokenSerializer` записывает данные, содержащиеся в представлении объекта маркера безопасности, в средство записи XML.  
+ <span data-ttu-id="cf2f4-140">На стороне клиента класс `CreditCardSecurityTokenSerializer` записывает данные, содержащиеся в представлении объекта маркера безопасности, в средство записи XML.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-140">On the client, the `CreditCardSecurityTokenSerializer` class writes the information contained in the security token object representation into the XML writer.</span></span>  
   
 ```  
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer  
@@ -251,20 +252,20 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 }  
 ```  
   
-## Создание поставщика маркеров и классов структуры проверки подлинности маркеров  
- Учетные данные клиента и службы отвечают за предоставление экземпляра диспетчера маркера безопасности.  Экземпляр диспетчера маркера безопасности используется для возвращения поставщиков, структур проверки подлинности и сериализаторов маркеров.  
+## <a name="how-token-provider-and-token-authenticator-classes-are-created"></a><span data-ttu-id="cf2f4-141">Создание поставщика маркеров и классов структуры проверки подлинности маркеров</span><span class="sxs-lookup"><span data-stu-id="cf2f4-141">How Token Provider and Token Authenticator Classes are Created</span></span>  
+ <span data-ttu-id="cf2f4-142">Учетные данные клиента и службы отвечают за предоставление экземпляра диспетчера маркера безопасности.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-142">Client and service credentials are responsible for providing the security token manager instance.</span></span> <span data-ttu-id="cf2f4-143">Экземпляр диспетчера маркера безопасности используется для возвращения поставщиков, структур проверки подлинности и сериализаторов маркеров.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-143">The security token manager instance is used to get token providers, token authenticators and token serializers.</span></span>  
   
- Поставщик маркеров создает представление объекта маркера на основании сведений учетных данных клиента или службы.  Затем представление объекта маркера записывается в сообщение с помощью сериализатора маркеров \(об этом говорится в предыдущем разделе\).  
+ <span data-ttu-id="cf2f4-144">Поставщик маркеров создает представление объекта маркера на основании сведений учетных данных клиента или службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-144">The token provider creates an object representation of the token based on the information contained in the client or service credentials.</span></span> <span data-ttu-id="cf2f4-145">Затем представление объекта маркера записывается в сообщение с помощью сериализатора маркеров (об этом говорится в предыдущем разделе).</span><span class="sxs-lookup"><span data-stu-id="cf2f4-145">The token object representation is then written to the message using the token serializer (discussed in the previous section).</span></span>  
   
- Структура проверки подлинности маркеров проверяет маркеры, получаемые в сообщении.  Сериализатор маркера создает представление объекта входящего маркера.  Это представление объекта затем передается в структуру проверки подлинности маркеров для проверки.  После успешной проверки маркера структура проверки подлинности возвращает коллекцию объектов `IAuthorizationPolicy`, представляющих сведения, содержащиеся в маркере.  Эти сведения затем используются при обработке сообщения для принятия решений об авторизации и предоставления утверждений для приложения.  В этом примере с этой целью структура проверки подлинности маркера кредитной карты использует `CreditCardTokenAuthorizationPolicy`.  
+ <span data-ttu-id="cf2f4-146">Структура проверки подлинности маркеров проверяет маркеры, получаемые в сообщении.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-146">The token authenticator validates tokens that arrive in the message.</span></span> <span data-ttu-id="cf2f4-147">Сериализатор маркера создает представление объекта входящего маркера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-147">The incoming token object representation is created by the token serializer.</span></span> <span data-ttu-id="cf2f4-148">Это представление объекта затем передается в структуру проверки подлинности маркеров для проверки.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-148">This object representation is then passed to the token authenticator for validation.</span></span> <span data-ttu-id="cf2f4-149">После успешной проверки маркера структура проверки подлинности возвращает коллекцию объектов `IAuthorizationPolicy`, представляющих сведения, содержащиеся в маркере.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-149">After the token is successfully validated, the token authenticator returns a collection of `IAuthorizationPolicy` objects that represent the information contained in the token.</span></span> <span data-ttu-id="cf2f4-150">Эти сведения затем используются при обработке сообщения для принятия решений об авторизации и предоставления утверждений для приложения.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-150">This information is used later during the message processing to perform authorization decisions and to provide claims for the application.</span></span> <span data-ttu-id="cf2f4-151">В этом примере с этой целью структура проверки подлинности маркера кредитной карты использует `CreditCardTokenAuthorizationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-151">In this example, the credit card token authenticator uses `CreditCardTokenAuthorizationPolicy` for this purpose.</span></span>  
   
- Сериализатор маркеров отвечает за возвращение представления объекта маркера в сеть и из сети.  Об этом говорилось в предыдущем разделе.  
+ <span data-ttu-id="cf2f4-152">Сериализатор маркеров отвечает за возвращение представления объекта маркера в сеть и из сети.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-152">The token serializer is responsible for getting the object representation of the token to and from the wire.</span></span> <span data-ttu-id="cf2f4-153">Об этом говорилось в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-153">This is discussed in the previous section.</span></span>  
   
- В этом образце поставщик маркеров используется только на стороне клиента, а структура проверки подлинности только на стороне службы, поскольку маркер кредитной карты требуется передать только в направлении от клиента к службе.  
+ <span data-ttu-id="cf2f4-154">В этом образце поставщик маркеров используется только на стороне клиента, а структура проверки подлинности только на стороне службы, поскольку маркер кредитной карты требуется передать только в направлении от клиента к службе.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-154">In this sample, we use a token provider only on the client and a token authenticator only on the service, because we want to transmit a credit card token only in the client-to-service direction.</span></span>  
   
- Функции на стороне клиента находятся в классах `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` и `CreditCardTokenProvider`.  
+ <span data-ttu-id="cf2f4-155">Функции на стороне клиента находятся в классах `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` и `CreditCardTokenProvider`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-155">The functionality on the client is located in the `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` and `CreditCardTokenProvider` classes.</span></span>  
   
- Функции на стороне службы находятся в классах `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` и `CreditCardTokenAuthorizationPolicy`.  
+ <span data-ttu-id="cf2f4-156">Функции на стороне службы находятся в классах `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` и `CreditCardTokenAuthorizationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-156">On the service, the functionality resides in the `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` and `CreditCardTokenAuthorizationPolicy` classes.</span></span>  
   
 ```  
     public class CreditCardClientCredentials : ClientCredentials  
@@ -506,11 +507,10 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
             return true;  
         }  
     }  
-  
 ```  
   
-## Отображение информации об абоненте  
- Для вывода информации об абоненте можно использовать свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, как показано в следующем коде.  Свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` содержит утверждения авторизации, связанные с текущим абонентом.  Утверждения предоставляются классом `CreditCardToken` в его коллекции `AuthorizationPolicies`.  
+## <a name="displaying-the-callers-information"></a><span data-ttu-id="cf2f4-157">Отображение информации об абоненте</span><span class="sxs-lookup"><span data-stu-id="cf2f4-157">Displaying the Callers' Information</span></span>  
+ <span data-ttu-id="cf2f4-158">Для вывода информации об абоненте можно использовать свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-158">To display the caller's information, use the `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` as shown in the following sample code.</span></span> <span data-ttu-id="cf2f4-159">Свойство `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` содержит утверждения авторизации, связанные с текущим абонентом.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-159">The `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contains authorization claims associated with the current caller.</span></span> <span data-ttu-id="cf2f4-160">Утверждения предоставляются классом `CreditCardToken` в его коллекции `AuthorizationPolicies`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-160">The claims are supplied by the `CreditCardToken` class in its `AuthorizationPolicies` collection.</span></span>  
   
 ```  
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)  
@@ -551,21 +551,20 @@ string GetCallerCreditCardNumber()
 }  
 ```  
   
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="cf2f4-161">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-161">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="cf2f4-162">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-162">Press ENTER in the client window to shut down the client.</span></span>  
   
-## Пакетный файл Setup  
- Входящий в состав образца пакетный файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения приложения, размещенного в службах IIS, которое требует обеспечения безопасности на основе сертификата сервера.  Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.  
+## <a name="setup-batch-file"></a><span data-ttu-id="cf2f4-163">Пакетный файл Setup</span><span class="sxs-lookup"><span data-stu-id="cf2f4-163">Setup Batch File</span></span>  
+ <span data-ttu-id="cf2f4-164">Входящий в состав образца пакетный файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения приложения, размещенного в службах IIS, которое требует обеспечения безопасности на основе сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-164">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run the IIS-hosted application that requires server certificate-based security.</span></span> <span data-ttu-id="cf2f4-165">Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-165">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- Ниже представлены общие сведения о различных разделах пакетных файлов, позволяющие изменять их для выполнения в соответствующей конфигурации.  
+ <span data-ttu-id="cf2f4-166">Ниже представлены общие сведения о различных разделах пакетных файлов, позволяющие изменять их для выполнения в соответствующей конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-166">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration.</span></span>  
   
--   Создание сертификата сервера.  
+-   <span data-ttu-id="cf2f4-167">Создание сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-167">Creating the server certificate:</span></span>  
   
-     Следующие строки из файла `Setup.bat` создают используемый в дальнейшем сертификат сервера.  Переменная `%SERVER_NAME%` задает имя сервера.  Измените эту переменную, чтобы задать собственное имя сервера.  По умолчанию в этом пакетном файле используется имя localhost.  При изменении переменной `%SERVER_NAME%` требуется заменить все вхождения "localhost" в файлах Client.cs и Service.cs именем сервера, используемым в скрипте Setup.bat.  
+     <span data-ttu-id="cf2f4-168">Следующие строки из файла `Setup.bat` создают используемый в дальнейшем сертификат сервера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-168">The following lines from the `Setup.bat` batch file create the server certificate to be used.</span></span> <span data-ttu-id="cf2f4-169">Переменная `%SERVER_NAME%`задает имя сервера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-169">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="cf2f4-170">Измените эту переменную, чтобы задать собственное имя сервера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-170">Change this variable to specify your own server name.</span></span> <span data-ttu-id="cf2f4-171">По умолчанию в этом пакетном файле используется имя localhost.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-171">The default in this batch file is localhost.</span></span> <span data-ttu-id="cf2f4-172">При изменении переменной `%SERVER_NAME%` требуется заменить все вхождения "localhost" в файлах Client.cs и Service.cs именем сервера, используемым в скрипте Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-172">If you change the `%SERVER_NAME%` variable, you must go through the Client.cs and Service.cs files and replace all instances of localhost with the server name that you use in the Setup.bat script.</span></span>  
   
-     Сертификат хранится в хранилище "My store" \(Личном хранилище\) в расположении `LocalMachine`.  Для служб, размещенных в службах IIS, сертификат хранится в хранилище LocalMachine.  Для резидентных служб необходимо изменить пакетный файл, чтобы сертификат клиента хранился в местоположении хранения CurrentUser, заменив строку LocalMachine строкой CurrentUser.  
+     <span data-ttu-id="cf2f4-173">Сертификат хранится в хранилище "My store" (Личном хранилище) в расположении `LocalMachine`.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-173">The certificate is stored in My (Personal) store under the `LocalMachine` store location.</span></span> <span data-ttu-id="cf2f4-174">Для служб, размещенных в службах IIS, сертификат хранится в хранилище LocalMachine.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-174">The certificate is stored in the LocalMachine store for the IIS-hosted services.</span></span> <span data-ttu-id="cf2f4-175">Для резидентных служб необходимо изменить пакетный файл, чтобы сертификат клиента хранился в местоположении хранения CurrentUser, заменив строку LocalMachine строкой CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-175">For self-hosted services, you should modify the batch file to store the client certificate in the CurrentUser store location by replacing the string LocalMachine with CurrentUser.</span></span>  
   
     ```  
-  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -573,23 +572,20 @@ string GetCallerCreditCardNumber()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   Установка сертификата сервера в хранилище доверенных сертификатов клиента.  
+-   <span data-ttu-id="cf2f4-176">Установка сертификата сервера в хранилище доверенных сертификатов клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-176">Installing the server certificate into client's trusted certificate store:</span></span>  
   
-     Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента.  Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.  Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
+     <span data-ttu-id="cf2f4-177">Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-177">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="cf2f4-178">Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-178">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="cf2f4-179">Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-179">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
-  
     echo ************  
     echo copying server cert to client's TrustedPeople store  
     echo ************  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-  
     ```  
   
--   Чтобы разрешить доступ к закрытому ключу сертификата из службы, размещенной в службах IIS, учетной записи пользователя, под которой выполняется процесс, размещенный в службах IIS, должны быть предоставлены соответствующие разрешения для закрытого ключа.  Это производится в последних шагах скрипта Setup.bat.  
+-   <span data-ttu-id="cf2f4-180">Чтобы разрешить доступ к закрытому ключу сертификата из службы, размещенной в службах IIS, учетной записи пользователя, под которой выполняется процесс, размещенный в службах IIS, должны быть предоставлены соответствующие разрешения для закрытого ключа.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-180">To enable access to the certificate private key from the IIS-hosted service, the user account under which the IIS-hosted process is running must be granted appropriate permissions for the private key.</span></span> <span data-ttu-id="cf2f4-181">Это производится в последних шагах скрипта Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-181">This is accomplished by last steps in the Setup.bat script.</span></span>  
   
     ```  
     echo ************  
@@ -603,49 +599,49 @@ string GetCallerCreditCardNumber()
     ```  
   
 > [!NOTE]
->  Пакетный файл Setup.bat предназначен для запуска из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  Переменная среды PATH, заданная в командной строке [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.  
+>  <span data-ttu-id="cf2f4-182">Пакетный файл Setup.bat предназначен для запуска из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf2f4-182">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="cf2f4-183">Переменная среды PATH, заданная в командной строке [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-183">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-#### Настройка и сборка образца  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="cf2f4-184">Настройка и сборка образца</span><span class="sxs-lookup"><span data-stu-id="cf2f4-184">To set up and build the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="cf2f4-185">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="cf2f4-185">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Для сборки решения следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="cf2f4-186">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="cf2f4-186">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### Запуск образца на одном компьютере  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="cf2f4-187">Запуск образца на одном компьютере</span><span class="sxs-lookup"><span data-stu-id="cf2f4-187">To run the sample on the same computer</span></span>  
   
-1.  Откройте окно командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и запустите файл Setup.bat из папки установки образца.  При этом устанавливаются все сертификаты, необходимые для выполнения образца. Убедитесь, что папка, в которой находится файл Makecert.exe, входит в путь поиска.  
+1.  <span data-ttu-id="cf2f4-188">Откройте окно командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и запустите файл Setup.bat из папки установки образца.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-188">Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="cf2f4-189">При этом устанавливаются все сертификаты, необходимые для выполнения образца. Убедитесь, что папка, в которой находится файл Makecert.exe, входит в путь поиска.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-189">This installs all the certificates required for running the sample.Make sure that the path includes the folder where Makecert.exe is located.</span></span>  
   
 > [!NOTE]
->  После завершения работы с образцом для удаления сертификатов обязательно запустите файл Cleanup.bat.  В других образцах обеспечения безопасности используются те же сертификаты.  
+>  <span data-ttu-id="cf2f4-190">После завершения работы с образцом для удаления сертификатов обязательно запустите файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-190">Be sure to remove the certificates by running Cleanup.bat when finished with the sample.</span></span> <span data-ttu-id="cf2f4-191">В других образцах обеспечения безопасности используются те же сертификаты.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-191">Other security samples use the same certificates.</span></span>  
   
-1.  Запустите Client.exe из каталога \\client\\bin.  Действия клиента отображаются в консольном приложении клиента.  
+1.  <span data-ttu-id="cf2f4-192">Запустите Client.exe из каталога \client\bin.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-192">Launch Client.exe from client\bin directory.</span></span> <span data-ttu-id="cf2f4-193">Действия клиента отображаются в консольном приложении клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-193">Client activity is displayed on the client console application.</span></span>  
   
-2.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  <span data-ttu-id="cf2f4-194">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="cf2f4-194">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Выполнение образца на нескольких компьютерах  
+#### <a name="to-run-the-sample-across-computer"></a><span data-ttu-id="cf2f4-195">Выполнение образца на нескольких компьютерах</span><span class="sxs-lookup"><span data-stu-id="cf2f4-195">To run the sample across computer</span></span>  
   
-1.  Создайте на компьютере службы каталог для двоичных файлов службы.  
+1.  <span data-ttu-id="cf2f4-196">Создайте на компьютере службы каталог для двоичных файлов службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-196">Create a directory on the service computer for the service binaries.</span></span>  
   
-2.  Скопируйте файлы служебной программы в каталог службы на компьютере службы.  Не забудьте скопировать файл CreditCardFile.txt; в противном случае структура проверки подлинности кредитной карты не сможет выполнить проверку подлинности данных кредитной карты, отправленных клиентом.  Кроме того, скопируйте файлы Setup.bat и Cleanup.bat на компьютер службы.  
+2.  <span data-ttu-id="cf2f4-197">Скопируйте файлы служебной программы в каталог службы на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-197">Copy the service program files into the service directory on the service computer.</span></span> <span data-ttu-id="cf2f4-198">Не забудьте скопировать файл CreditCardFile.txt; в противном случае структура проверки подлинности кредитной карты не сможет выполнить проверку подлинности данных кредитной карты, отправленных клиентом.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-198">Do not forget to copy CreditCardFile.txt; otherwise the credit card authenticator cannot validate credit card information sent from the client.</span></span> <span data-ttu-id="cf2f4-199">Кроме того, скопируйте файлы Setup.bat и Cleanup.bat на компьютер службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-199">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  Необходимо иметь сертификат сервера с именем субъекта, содержащим полное имя домена компьютера.  Можно создать его с помощью файла Setup.bat, если заменить имя переменной `%SERVER_NAME%` полным именем компьютера, на котором будет размещаться служба.  Обратите внимание, что файл Setup.bat нужно запускать в командной строке Visual Studio, открытой с правами администратора.  
+3.  <span data-ttu-id="cf2f4-200">Необходимо иметь сертификат сервера с именем субъекта, содержащим полное имя домена компьютера.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-200">You must have a server certificate with the subject name that contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="cf2f4-201">Можно создать его с помощью файла Setup.bat, если заменить имя переменной `%SERVER_NAME%` полным именем компьютера, на котором будет размещаться служба.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-201">You can create one using the Setup.bat if you change the `%SERVER_NAME%` variable to fully-qualified name of the computer where the service is hosted.</span></span> <span data-ttu-id="cf2f4-202">Обратите внимание, что файл Setup.bat нужно запускать в командной строке Visual Studio, открытой с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-202">Note that the Setup.bat file must be run in a Visual Studio command prompt opened with administrator privileges.</span></span>  
   
-4.  Скопируйте сертификат сервера в хранилище CurrentUser\-TrustedPeople на стороне клиента.  Это необходимо сделать только в том случае, если сертификат сервера не был выдан доверенным издателем.  
+4.  <span data-ttu-id="cf2f4-203">Скопируйте сертификат сервера в хранилище CurrentUser-TrustedPeople на стороне клиента.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-203">Copy the server certificate into the CurrentUser-TrustedPeople store on the client.</span></span> <span data-ttu-id="cf2f4-204">Это необходимо сделать только в том случае, если сертификат сервера не был выдан доверенным издателем.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-204">You must do this only if the server certificate is not issued by a trusted issuer.</span></span>  
   
-5.  В файле EchoServiceHost.cs измените значение имени субъекта сертификата, чтобы указать полное имя компьютера вместо localhost.  
+5.  <span data-ttu-id="cf2f4-205">В файле EchoServiceHost.cs измените значение имени субъекта сертификата, чтобы указать полное имя компьютера вместо localhost.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-205">In the EchoServiceHost.cs file, change the value of the certificate subject name to specify a fully-qualified computer name instead of localhost.</span></span>  
   
-6.  Скопируйте на клиентские компьютеры файлы из папки \\client\\bin\\ в папку языка.  
+6.  <span data-ttu-id="cf2f4-206">Скопируйте на клиентские компьютеры файлы из папки \client\bin\ в папку языка.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-206">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-7.  В файле Client.cs измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.  
+7.  <span data-ttu-id="cf2f4-207">В файле Client.cs измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-207">In the Client.cs file, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-8.  В файле Client.cs измените значение имени субъекта сертификата X.509 службы, чтобы оно соответствовало полному имени компьютера удаленного узла вместо localhost.  
+8.  <span data-ttu-id="cf2f4-208">В файле Client.cs измените значение имени субъекта сертификата X.509 службы, чтобы оно соответствовало полному имени компьютера удаленного узла вместо localhost.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-208">In the Client.cs file change the subject name of the service X.509 certificate to match the fully-qualified computer name of the remote host instead of localhost.</span></span>  
   
-9. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
+9. <span data-ttu-id="cf2f4-209">На клиентском компьютере из окна командной строки запустите программу Client.exe.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-209">On the client computer, launch Client.exe from a command prompt window.</span></span>  
   
-10. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. <span data-ttu-id="cf2f4-210">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="cf2f4-210">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Очистка после образца  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="cf2f4-211">Очистка после образца</span><span class="sxs-lookup"><span data-stu-id="cf2f4-211">To clean up after the sample</span></span>  
   
-1.  После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
+1.  <span data-ttu-id="cf2f4-212">После завершения работы примера запустите в папке примеров файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="cf2f4-212">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="cf2f4-213">См. также</span><span class="sxs-lookup"><span data-stu-id="cf2f4-213">See Also</span></span>

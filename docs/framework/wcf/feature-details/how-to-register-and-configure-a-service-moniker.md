@@ -1,54 +1,54 @@
 ---
-title: "Практическое руководство. Регистрация и настройка моникера службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "COM [WCF], настройка моникеров служб"
-  - "COM [WCF], регистрация моникеров служб"
+title: "Практическое руководство. Регистрация и настройка моникера службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- COM [WCF], configure service monikers
+- COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 86938301d28cbb0293ece4b3e12a2ef2d2a54e69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Регистрация и настройка моникера службы
-Перед использованием моникера службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в рамках приложения COM с типизированным контрактом необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с необходимой конфигурацией привязки.  
+# <a name="how-to-register-and-configure-a-service-moniker"></a><span data-ttu-id="5e99c-102">Практическое руководство. Регистрация и настройка моникера службы</span><span class="sxs-lookup"><span data-stu-id="5e99c-102">How to: Register and Configure a Service Moniker</span></span>
+<span data-ttu-id="5e99c-103">Перед использованием моникера службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в рамках приложения COM с типизированным контрактом необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с необходимой конфигурацией привязки.</span><span class="sxs-lookup"><span data-stu-id="5e99c-103">Before using the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service moniker within a COM application with a typed contract, you must register the required attributed types with COM, and configure the COM application and the moniker with the required binding configuration.</span></span>  
   
-### Регистрация необходимых типов с атрибутами с помощью COM  
+### <a name="to-register-the-required-attributed-types-with-com"></a><span data-ttu-id="5e99c-104">Регистрация необходимых типов с атрибутами с помощью COM</span><span class="sxs-lookup"><span data-stu-id="5e99c-104">To register the required attributed types with COM</span></span>  
   
-1.  С помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) получите контракт метаданных службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  При этом будет создан исходный код сборки клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и файл конфигурации клиентского приложения.  
+1.  <span data-ttu-id="5e99c-105">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта из [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы.</span><span class="sxs-lookup"><span data-stu-id="5e99c-105">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool to retrieve the metadata contract from the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="5e99c-106">При этом будет создан исходный код сборки клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и файл конфигурации клиентского приложения.</span><span class="sxs-lookup"><span data-stu-id="5e99c-106">This generates the source code for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client assembly and a client application configuration file.</span></span>  
   
-2.  Убедитесь, что все типы в сборке имеют пометку `ComVisible`.  Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
+2.  <span data-ttu-id="5e99c-107">Убедитесь, что все типы в сборке имеют пометку `ComVisible`.</span><span class="sxs-lookup"><span data-stu-id="5e99c-107">Ensure that the types in the assembly are marked as `ComVisible`.</span></span> <span data-ttu-id="5e99c-108">Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.</span><span class="sxs-lookup"><span data-stu-id="5e99c-108">To do so, add the following attribute to the AssemblyInfo.cs file in your Visual Studio project.</span></span>  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Скомпилируйте управляемый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в виде сборки со строгим именем.  Для этого нужно подписать ее с помощью пары ключей шифрования.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Подпись сборки строгим именем](http://go.microsoft.com/fwlink/?LinkId=94874) в руководстве разработчика по .NET.  
+3.  <span data-ttu-id="5e99c-109">Скомпилируйте управляемый клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] в виде сборки со строгим именем.</span><span class="sxs-lookup"><span data-stu-id="5e99c-109">Compile the managed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client as a strong-named assembly.</span></span> <span data-ttu-id="5e99c-110">Для этого нужно подписать ее с помощью пары ключей шифрования.</span><span class="sxs-lookup"><span data-stu-id="5e99c-110">This requires signing with a cryptographic key pair.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="5e99c-111">[Подпись сборки строгим именем](http://go.microsoft.com/fwlink/?LinkId=94874) руководства разработчика .NET.</span><span class="sxs-lookup"><span data-stu-id="5e99c-111"> [Signing an Assembly with a Strong Name](http://go.microsoft.com/fwlink/?LinkId=94874) in the .NET Developer's Guide.</span></span>  
   
-4.  С помощью средства регистрации сборок \(Regasm.exe\) с параметром `/tlb` зарегистрируйте типы сборки в COM.  
+4.  <span data-ttu-id="5e99c-112">С помощью средства регистрации сборок (Regasm.exe) с параметром `/tlb` зарегистрируйте типы сборки в COM.</span><span class="sxs-lookup"><span data-stu-id="5e99c-112">Use the Assembly Registration (Regasm.exe) tool with the `/tlb` option to register the types in the assembly with COM.</span></span>  
   
-5.  Чтобы добавить сборку в глобальный кэш сборок, используйте средство глобального кэша сборок \(Gacutil.exe\).  
+5.  <span data-ttu-id="5e99c-113">Чтобы добавить сборку в глобальный кэш сборок, используйте средство глобального кэша сборок (Gacutil.exe).</span><span class="sxs-lookup"><span data-stu-id="5e99c-113">Use the Global Assembly Cache (Gacutil.exe) tool to add the assembly to the global assembly cache.</span></span>  
   
     > [!NOTE]
-    >  Подписывание сборки и ее добавление в глобальный кэш сборок являются необязательными шагами, однако они могут упростить процесс загрузки сборки из правильного расположения во время выполнения.  
+    >  <span data-ttu-id="5e99c-114">Подписывание сборки и ее добавление в глобальный кэш сборок являются необязательными шагами, однако они могут упростить процесс загрузки сборки из правильного расположения во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="5e99c-114">Signing the assembly and adding it to the Global Assembly Cache are optional steps, but they can simplify the process of loading the assembly from the correct location at runtime.</span></span>  
   
-### Настройка приложения COM и моникера с использованием нужной конфигурации привязки  
+### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a><span data-ttu-id="5e99c-115">Настройка приложения COM и моникера с использованием нужной конфигурации привязки</span><span class="sxs-lookup"><span data-stu-id="5e99c-115">To configure the COM application and the moniker with the required binding configuration</span></span>  
   
--   Поместите определения привязки \(созданные средством [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в созданном файле конфигурации клиентского приложения\) в файл конфигурации клиентского приложения.  Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл.  Теперь клиентское приложение может использовать моникер.  Обратите внимание, что конфигурация привязки не требуется, если используется один из стандартных типов привязок [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="5e99c-116">Поместить все определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения клиента) в файле конфигурации клиентского приложения.</span><span class="sxs-lookup"><span data-stu-id="5e99c-116">Place the binding definitions (generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) in the generated client application configuration file) in the client application's configuration file.</span></span> <span data-ttu-id="5e99c-117">Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="5e99c-117">For example, for a Visual Basic 6.0 executable named CallCenterClient.exe, the configuration should be placed in a file named CallCenterConfig.exe.config within the same directory as the executable.</span></span> <span data-ttu-id="5e99c-118">Теперь клиентское приложение может использовать моникер.</span><span class="sxs-lookup"><span data-stu-id="5e99c-118">The client application can now use the moniker.</span></span> <span data-ttu-id="5e99c-119">Обратите внимание, что конфигурация привязки не требуется, если используется один из стандартных типов привязок [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5e99c-119">Note that the binding configuration is not required if using one of the standard binding types provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-     Регистрируется следующий тип.  
+     <span data-ttu-id="5e99c-120">Регистрируется следующий тип.</span><span class="sxs-lookup"><span data-stu-id="5e99c-120">The following type is registered.</span></span>  
   
     ```  
     using System.ServiceModel;  
@@ -65,21 +65,19 @@ caps.handback.revision: 20
     }  
     ```  
   
-     Доступ к приложению предоставляется через следующую привязку `wsHttpBinding`.  Для заданного типа и конфигурации приложения используются следующие примеры строк моникера.  
+     <span data-ttu-id="5e99c-121">Доступ к приложению предоставляется через следующую привязку `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="5e99c-121">The application is exposed using a `wsHttpBinding` binding.</span></span> <span data-ttu-id="5e99c-122">Для заданного типа и конфигурации приложения используются следующие примеры строк моникера.</span><span class="sxs-lookup"><span data-stu-id="5e99c-122">For the given type and application configuration, the following example moniker strings are used.</span></span>  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
-  
     ```  
   
      `or`  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
-  
     ```  
   
-     Можно использовать любую из этих строк моникера из приложения Visual Basic 6.0 после добавления ссылки на сборку, содержащую типы `IMathService`, как показано в следующем образце кода.  
+     <span data-ttu-id="5e99c-123">Можно использовать любую из этих строк моникера из приложения Visual Basic 6.0 после добавления ссылки на сборку, содержащую типы `IMathService`, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="5e99c-123">You can use either of these moniker strings from within a Visual Basic 6.0 application, after adding a reference to the assembly that contains the `IMathService` types, as shown in the following sample code.</span></span>  
   
     ```  
     Dim MathProxy As IMathService  
@@ -91,24 +89,23 @@ caps.handback.revision: 20
             bindingConfiguration=Binding1")  
   
     result = MathProxy.Add(3, 5)  
-  
     ```  
   
-     В этом примере определение конфигурации привязки `Binding1` хранится в файле конфигурации клиентского приложения с соответствующим именем, например vb6appname.exe.config.  
+     <span data-ttu-id="5e99c-124">В этом примере определение конфигурации привязки `Binding1` хранится в файле конфигурации клиентского приложения с соответствующим именем, например vb6appname.exe.config.</span><span class="sxs-lookup"><span data-stu-id="5e99c-124">In this example, the definition for the binding configuration `Binding1` is stored in a suitably named configuration file for the client application, such as vb6appname.exe.config.</span></span>  
   
     > [!NOTE]
-    >  Аналогичный код можно использовать в C\#, C\+\+ или любом другом языке приложений .NET.  
+    >  <span data-ttu-id="5e99c-125">Аналогичный код можно использовать в C#, C++ или любом другом языке приложений .NET.</span><span class="sxs-lookup"><span data-stu-id="5e99c-125">You can use similar code in a C#, a C++, or any other .NET Language application.</span></span>  
   
     > [!NOTE]
-    >  Если моникер сформирован неправильно или служба недоступна, при вызове метода `GetObject` будет возвращена ошибка "Синтаксическая ошибка".  При получении этой ошибки убедитесь, что используется правильный моникер, а служба доступна.  
+    >  <span data-ttu-id="5e99c-126">Если моникер сформирован неправильно или служба недоступна, при вызове метода `GetObject` будет возвращена ошибка "Синтаксическая ошибка".</span><span class="sxs-lookup"><span data-stu-id="5e99c-126">: If the moniker is malformed or if the service is unavailable, the call to `GetObject` returns an error of "Invalid Syntax".</span></span> <span data-ttu-id="5e99c-127">При получении этой ошибки убедитесь, что используется правильный моникер, а служба доступна.</span><span class="sxs-lookup"><span data-stu-id="5e99c-127">If you receive this error, make sure the moniker you are using is correct and the service is available.</span></span>  
   
-     Хотя в этом разделе описывается использование моникера службы из кода VB 6.0, моникер службы можно использовать для любого другого языка.  При использовании моникера из кода C\+\+ сбоку, созданную с помощью средства Svcutil.exe, необходимо импортировать с атрибутом "no\_namespace named\_guids raw\_interfaces\_only", как показано в следующем примере кода.  
+     <span data-ttu-id="5e99c-128">Хотя в этом разделе описывается использование моникера службы из кода VB 6.0, моникер службы можно использовать для любого другого языка.</span><span class="sxs-lookup"><span data-stu-id="5e99c-128">Although this topic focuses on using the service moniker from VB 6.0 code, you can use a service moniker from other languages.</span></span> <span data-ttu-id="5e99c-129">При использовании моникера из кода C++ сбоку, созданную с помощью средства Svcutil.exe, необходимо импортировать с атрибутом "no_namespace named_guids raw_interfaces_only", как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="5e99c-129">When using a moniker from C++ code the Svcutil.exe generated assembly should be imported with "no_namespace named_guids raw_interfaces_only" as shown in the following code.</span></span>  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     При этом изменяются определения импортированного интерфейса, чтобы все методы возвращали `HResult`.  Все остальные возвращаемые значения преобразуются в выходные параметры.  Общий процесс выполнения методов остается прежним.  Это позволяет определить причину исключения при вызове метода в прокси.  Эта функция доступна только в коде C\+\+.  
+     <span data-ttu-id="5e99c-130">При этом изменяются определения импортированного интерфейса, чтобы все методы возвращали `HResult`.</span><span class="sxs-lookup"><span data-stu-id="5e99c-130">This modifies the imported interface definitions so that all methods return an `HResult`.</span></span> <span data-ttu-id="5e99c-131">Все остальные возвращаемые значения преобразуются в выходные параметры.</span><span class="sxs-lookup"><span data-stu-id="5e99c-131">Any other return values are converted into out parameters.</span></span> <span data-ttu-id="5e99c-132">Общий процесс выполнения методов остается прежним.</span><span class="sxs-lookup"><span data-stu-id="5e99c-132">The overall execution of the methods remains the same.</span></span> <span data-ttu-id="5e99c-133">Это позволяет определить причину исключения при вызове метода в прокси.</span><span class="sxs-lookup"><span data-stu-id="5e99c-133">This allows you to determine the cause of an exception when calling a method on the proxy.</span></span> <span data-ttu-id="5e99c-134">Эта функция доступна только в коде C++.</span><span class="sxs-lookup"><span data-stu-id="5e99c-134">This functionality is only available from C++ code.</span></span>  
   
-## См. также  
- [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="5e99c-135">См. также</span><span class="sxs-lookup"><span data-stu-id="5e99c-135">See Also</span></span>  
+ [<span data-ttu-id="5e99c-136">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="5e99c-136">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

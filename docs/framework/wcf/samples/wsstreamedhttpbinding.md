@@ -1,41 +1,44 @@
 ---
-title: "WSStreamedHttpBinding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSStreamedHttpBinding
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: 27
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8238ede6fd43cc5cca2df1f8c7f9162f9c4a1302
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# WSStreamedHttpBinding
-В этом образце показано, как создать привязку, предназначенную для поддержки сценариев работы с потоками при использовании транспорта HTTP.  
+# <a name="wsstreamedhttpbinding"></a><span data-ttu-id="983f4-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="983f4-102">WSStreamedHttpBinding</span></span>
+<span data-ttu-id="983f4-103">В этом образце показано, как создать привязку, предназначенную для поддержки сценариев работы с потоками при использовании транспорта HTTP.</span><span class="sxs-lookup"><span data-stu-id="983f4-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для этого образца приведены в конце этого раздела.  
+>  <span data-ttu-id="983f4-104">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="983f4-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="983f4-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="983f4-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="983f4-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="983f4-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="983f4-107">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="983f4-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="983f4-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="983f4-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
- Ниже приводятся действия по созданию и настройке новой стандартной привязки.  
+ <span data-ttu-id="983f4-109">Ниже приводятся действия по созданию и настройке новой стандартной привязки.</span><span class="sxs-lookup"><span data-stu-id="983f4-109">The steps to create and configure a new standard binding are as follows.</span></span>  
   
-1.  Создание новой стандартной привязки  
+1.  <span data-ttu-id="983f4-110">Создание новой стандартной привязки</span><span class="sxs-lookup"><span data-stu-id="983f4-110">Create a new standard binding</span></span>  
   
-     Стандартные привязки в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], такие как basicHttpBinding и netTcpBinding, настраивают соответствующие транспорты и стек каналов под конкретные требования.В этом образце привязка `WSStreamedHttpBinding` настраивает стек каналов на поддержку потоковой передачи.По умолчанию функции WS\-Security и надежного обмена сообщениями не добавляются в стек каналов, поскольку обе эти функции не поддерживаются при потоковой передаче.Новая привязка реализуется в классе `WSStreamedHttpBinding`, наследуемом от <xref:System.ServiceModel.Channels.Binding>.`WSStreamedHttpBinding` содержит следующие элементы привязки: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.Класс предоставляет метод `CreateBindingElements()` для настройки результирующего стека привязок, как показано в следующем образце кода.  
+     <span data-ttu-id="983f4-111">Стандартные привязки в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], такие как basicHttpBinding и netTcpBinding, настраивают соответствующие транспорты и стек каналов под конкретные требования.</span><span class="sxs-lookup"><span data-stu-id="983f4-111">The standard bindings in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] such as basicHttpBinding, and netTcpBinding configure the underlying transports and channel stack for specific requirements.</span></span> <span data-ttu-id="983f4-112">В этом образце привязка `WSStreamedHttpBinding` настраивает стек каналов на поддержку потоковой передачи.</span><span class="sxs-lookup"><span data-stu-id="983f4-112">In this sample, `WSStreamedHttpBinding` configures the channel stack to support streaming.</span></span> <span data-ttu-id="983f4-113">По умолчанию функции WS-Security и надежного обмена сообщениями не добавляются в стек каналов, поскольку обе эти функции не поддерживаются при потоковой передаче.</span><span class="sxs-lookup"><span data-stu-id="983f4-113">By default, WS-Security and reliable messaging are not added to the channel stack because both features are not supported by streaming.</span></span> <span data-ttu-id="983f4-114">Новая привязка реализуется в классе `WSStreamedHttpBinding`, наследуемом от <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="983f4-114">The new binding is implemented in the class `WSStreamedHttpBinding` that derives from <xref:System.ServiceModel.Channels.Binding>.</span></span> <span data-ttu-id="983f4-115">`WSStreamedHttpBinding` содержит следующие элементы привязки: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> и <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="983f4-115">The `WSStreamedHttpBinding` contains the following binding elements: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, and <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.</span></span> <span data-ttu-id="983f4-116">Класс предоставляет метод `CreateBindingElements()` для настройки результирующего стека привязок, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="983f4-116">The class provides a `CreateBindingElements()` method to configure the resulting binding stack, as shown in the following sample code.</span></span>  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -55,16 +58,15 @@ caps.handback.revision: 27
         bindingElements.Add(transport);  
         return bindingElements.Clone();  
     }  
-  
     ```  
   
-2.  Добавление поддержки конфигурации  
+2.  <span data-ttu-id="983f4-117">Добавление поддержки конфигурации</span><span class="sxs-lookup"><span data-stu-id="983f4-117">Add configuration support</span></span>  
   
-     Для предоставления транспорта через конфигурацию в образце реализуется два дополнительных класса —`WSStreamedHttpBindingConfigurationElement` и `WSStreamedHttpBindingSection`.Класс `WSStreamedHttpBindingSection` является типом <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, который предоставляет привязку `WSStreamedHttpBinding` системе конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Основная часть реализации делегируется классу `WSStreamedHttpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>.Класс `WSStreamedHttpBindingConfigurationElement` имеет свойства, соответствующие свойствам класса `WSStreamedHttpBinding`, и функции для сопоставления каждого элемента конфигурации привязке.  
+     <span data-ttu-id="983f4-118">Для предоставления транспорта через конфигурацию в образце реализуется два дополнительных класса -`WSStreamedHttpBindingConfigurationElement` и `WSStreamedHttpBindingSection`.</span><span class="sxs-lookup"><span data-stu-id="983f4-118">To expose the transport through configuration the sample implements two more classes—`WSStreamedHttpBindingConfigurationElement` and `WSStreamedHttpBindingSection`.</span></span> <span data-ttu-id="983f4-119">Класс `WSStreamedHttpBindingSection` является типом <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>, который предоставляет привязку `WSStreamedHttpBinding` системе конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="983f4-119">The class `WSStreamedHttpBindingSection` is a <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> that exposes `WSStreamedHttpBinding` to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration system.</span></span> <span data-ttu-id="983f4-120">Основная часть реализации делегируется классу `WSStreamedHttpBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="983f4-120">The bulk of the implementation is delegated to `WSStreamedHttpBindingConfigurationElement`, which derives from <xref:System.ServiceModel.Configuration.StandardBindingElement>.</span></span> <span data-ttu-id="983f4-121">Класс `WSStreamedHttpBindingConfigurationElement` имеет свойства, соответствующие свойствам класса `WSStreamedHttpBinding`, и функции для сопоставления каждого элемента конфигурации привязке.</span><span class="sxs-lookup"><span data-stu-id="983f4-121">The class `WSStreamedHttpBindingConfigurationElement` has properties that correspond to the properties of `WSStreamedHttpBinding`, and functions to map each configuration element to a binding.</span></span>  
   
-     Зарегистрируйте обработчик в системе конфигурации, добавив в файл конфигурации службы следующий раздел.  
+     <span data-ttu-id="983f4-122">Зарегистрируйте обработчик в системе конфигурации, добавив в файл конфигурации службы следующий раздел.</span><span class="sxs-lookup"><span data-stu-id="983f4-122">Register the handler with the configuration system, by adding the following section to the service's configuration file.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.serviceModel>  
         <extensions>  
@@ -74,12 +76,11 @@ caps.handback.revision: 27
         </extensions>  
       </system.serviceModel>  
     </configuration>  
-  
     ```  
   
-     После этого на обработчик можно сослаться из раздела конфигурации serviceModel.  
+     <span data-ttu-id="983f4-123">После этого на обработчик можно сослаться из раздела конфигурации serviceModel.</span><span class="sxs-lookup"><span data-stu-id="983f4-123">The handler can then be referenced from the serviceModel configuration section.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
       <system.serviceModel>  
         <client>  
@@ -93,27 +94,26 @@ caps.handback.revision: 27
     </configuration>  
     ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="983f4-124">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="983f4-124">To set up, build, and run the sample</span></span>  
   
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
+1.  <span data-ttu-id="983f4-125">Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="983f4-125">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Убедитесь, что выполнены шаги, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  <span data-ttu-id="983f4-126">Убедитесь, что вы выполнили шаги, указанные в [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="983f4-126">Ensure that you have performed the steps listed in [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Убедитесь, что выполнены процедуры, описанные в разделе [Инструкции по установке сертификата сервера в службах IIS](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3.  <span data-ttu-id="983f4-127">Убедитесь, что вы выполнили [инструкции по установке сертификата сервера Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span><span class="sxs-lookup"><span data-stu-id="983f4-127">Ensure that you have performed the [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
   
-4.  Чтобы выполнить построение решения, следуйте инструкциям раздела [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  <span data-ttu-id="983f4-128">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="983f4-128">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Чтобы выполнить образец на нескольких компьютерах, выполните инструкции в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  <span data-ttu-id="983f4-129">Для запуска образца в конфигурации между компьютерами, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="983f4-129">To run the sample in a cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-6.  При отображении окна клиента введите "Sample.txt".Копия файла "Sample.txt" должна находиться в каталоге пользователя.  
+6.  <span data-ttu-id="983f4-130">При отображении окна клиента введите "Sample.txt".</span><span class="sxs-lookup"><span data-stu-id="983f4-130">When the client window displays, type "Sample.txt".</span></span> <span data-ttu-id="983f4-131">Копия файла "Sample.txt" должна находиться в каталоге пользователя.</span><span class="sxs-lookup"><span data-stu-id="983f4-131">You should find a "Copy of Sample.txt" in your directory.</span></span>  
   
-## Образец службы WSStreamedHttpBinding  
- Образец службы, использующей привязку `WSStreamedHttpBinding`, расположен в подкаталоге службы.Реализация `OperationContract` использует `MemoryStream` для извлечения всех данных из входящего потока перед возвратом `MemoryStream`.Служба размещается в IIS.  
+## <a name="the-wsstreamedhttpbinding-sample-service"></a><span data-ttu-id="983f4-132">Образец службы WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="983f4-132">The WSStreamedHttpBinding Sample Service</span></span>  
+ <span data-ttu-id="983f4-133">Образец службы, использующей привязку `WSStreamedHttpBinding`, расположен в подкаталоге службы.</span><span class="sxs-lookup"><span data-stu-id="983f4-133">The sample service that uses `WSStreamedHttpBinding` is located in the service subdirectory.</span></span> <span data-ttu-id="983f4-134">Реализация `OperationContract` использует `MemoryStream` для извлечения всех данных из входящего потока перед возвратом `MemoryStream`.</span><span class="sxs-lookup"><span data-stu-id="983f4-134">The implementation of `OperationContract` uses a `MemoryStream` to first retrieve all data from the incoming stream before returning the `MemoryStream`.</span></span> <span data-ttu-id="983f4-135">Служба размещается в IIS.</span><span class="sxs-lookup"><span data-stu-id="983f4-135">The sample service is hosted by Internet Information Services (IIS).</span></span>  
   
 ```  
 [ServiceContract]  
@@ -141,17 +141,15 @@ public class StreamedEchoService : IStreamedEchoService
         return dataStorage;  
     }  
 }  
-  
 ```  
   
-## Образец клиента WSStreamedHttpBinding  
- Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента.При попытке доступа через браузер к адресу HTTPS, такому как https:\/\/localhost\/servicemodelsamples\/service.svc, появляется предупреждение системы безопасности, поскольку сертификат, используемый в этом образце, является тестовым сертификатом, созданным Makecert.exe.Чтобы клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности.При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
+## <a name="the-wsstreamedhttpbinding-sample-client"></a><span data-ttu-id="983f4-136">Образец клиента WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="983f4-136">The WSStreamedHttpBinding Sample Client</span></span>  
+ <span data-ttu-id="983f4-137">Клиент, используемый для взаимодействия со службой с помощью привязки `WSStreamedHttpBinding`, расположен в подкаталоге клиента.</span><span class="sxs-lookup"><span data-stu-id="983f4-137">The client that is used to interact with the service using `WSStreamedHttpBinding` is located in the client subdirectory.</span></span> <span data-ttu-id="983f4-138">При попытке доступа через браузер к адресу HTTPS, такому как https://localhost/servicemodelsamples/service.svc, появляется предупреждение системы безопасности, поскольку сертификат, используемый в этом образце, является тестовым сертификатом, созданным Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="983f4-138">Because the certificate used in this sample is a test certificate created with Makecert.exe, a security alert displays when you attempt to access an HTTPS address in your browser such as https://localhost/servicemodelsamples/service.svc.</span></span> <span data-ttu-id="983f4-139">Чтобы клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] мог работать с используемым тестовым сертификатом, в клиент был добавлен дополнительный код, подавляющий появление предупреждения системы безопасности.</span><span class="sxs-lookup"><span data-stu-id="983f4-139">To allow the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client to work with a test certificate in place, some additional code has been added to the client to suppress the security alert.</span></span> <span data-ttu-id="983f4-140">При использовании рабочих сертификатов этот код и соответствующие классы не требуются.</span><span class="sxs-lookup"><span data-stu-id="983f4-140">The code and the accompanying class are not required when using production certificates.</span></span>  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   
 // not recommended for production code.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-  
 ```  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="983f4-141">См. также</span><span class="sxs-lookup"><span data-stu-id="983f4-141">See Also</span></span>

@@ -1,26 +1,29 @@
 ---
-title: "Транспорт: образец пользовательских транзакций по протоколу UDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Транспорт: пример пользовательских транзакций по протоколу UDP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c1586b763d98776468322144019407c7c6cc27a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Транспорт: образец пользовательских транзакций по протоколу UDP
-Этот пример основан на примере [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) из [Расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md)[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Он расширяет образец транспорта определяемой пользователем процедуры за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="71087-102">Транспорт: пример пользовательских транзакций по протоколу UDP</span><span class="sxs-lookup"><span data-stu-id="71087-102">Transport: Custom Transactions over UDP Sample</span></span>
+<span data-ttu-id="71087-103">Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [расширяемость транспорта](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span><span class="sxs-lookup"><span data-stu-id="71087-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="71087-104">Он расширяет пример транспорта UDP за счет поддержки пользовательского потока транзакций и иллюстрирует использование свойства <xref:System.ServiceModel.Channels.TransactionMessageProperty>.</span><span class="sxs-lookup"><span data-stu-id="71087-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
   
-## Изменения кода в образце транспорта UDP  
- Чтобы продемонстрировать поток транзакций, в этом образце изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`.Кроме того, в контракт операции `Add` добавлен параметр `System.Guid`.Этот параметр используется для передачи службе идентификатора транзакции клиента.  
+## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="71087-105">Изменения кода в примере транспорта UDP</span><span class="sxs-lookup"><span data-stu-id="71087-105">Code Changes in the UDP Transport Sample</span></span>  
+ <span data-ttu-id="71087-106">Чтобы продемонстрировать поток транзакций, в этом примере изменен контракт службы для `ICalculatorContract`. Здесь этот контракт требует область транзакции для `CalculatorService.Add()`.</span><span class="sxs-lookup"><span data-stu-id="71087-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="71087-107">Кроме того, в контракт операции `System.Guid` добавлен параметр `Add`.</span><span class="sxs-lookup"><span data-stu-id="71087-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="71087-108">Этот параметр используется для передачи службе идентификатора транзакции клиента.</span><span class="sxs-lookup"><span data-stu-id="71087-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
   
 ```  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -45,7 +48,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- Образец [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) использует пакеты UDP для обмена сообщениями между клиентом и службой.Образец [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует для транспортировки сообщений тот же механизм, но при создании потока транзакции она вставляется в пакет UDP вместе с закодированным сообщением.  
+ <span data-ttu-id="71087-109">[Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образец использует пакеты UDP для передачи сообщений между клиентом и службой.</span><span class="sxs-lookup"><span data-stu-id="71087-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="71087-110">[Транспорт: пример пользовательского транспорта](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) использует тот же механизм для передачи сообщений, но если поток транзакций, он автоматически вставляется в пакете UDP вместе с закодированное сообщение.</span><span class="sxs-lookup"><span data-stu-id="71087-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -53,13 +56,13 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` — вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.  
+ <span data-ttu-id="71087-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` - вспомогательный метод, содержащий новые функции для слияния маркера распространения для текущей транзакции с сущностью сообщения и его помещения в буфер.</span><span class="sxs-lookup"><span data-stu-id="71087-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
   
- Для транспорта пользовательского потока транзакций реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций, и передавать эти сведения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Должен быть и механизм для передачи транзакции пользователя на транспортный уровень.Данный образец использует для получения этих сведений "инспекторы сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]".Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:  
+ <span data-ttu-id="71087-112">Для транспорта пользовательского потока транзакций реализация клиента должна знать, какие операции службы нуждаются в потоке транзакций, и передавать эти сведения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="71087-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="71087-113">Должен быть и механизм для передачи транзакции пользователя на транспортный уровень.</span><span class="sxs-lookup"><span data-stu-id="71087-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="71087-114">Данный образец использует для получения этих сведений "инспекторы сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]".</span><span class="sxs-lookup"><span data-stu-id="71087-114">This sample uses "[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] message inspectors" to obtain this information.</span></span> <span data-ttu-id="71087-115">Инспектор сообщений клиента, реализованный здесь, называется `TransactionFlowInspector` и выполняет следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="71087-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
   
--   Определяет, следует ли создать поток транзакции для данного действия сообщения \(это происходит в `IsTxFlowRequiredForThisOperation()`\);  
+-   <span data-ttu-id="71087-116">Определяет, следует ли создать поток транзакции для данного действия сообщения (это происходит в `IsTxFlowRequiredForThisOperation()`);</span><span class="sxs-lookup"><span data-stu-id="71087-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
   
--   Присоединяет к сообщению текущую внешнюю транзакцию с помощью `TransactionFlowProperty`, если транзакцию нужно заключить в поток \(это делается в `BeforeSendRequest()`\).  
+-   <span data-ttu-id="71087-117">Присоединяет к сообщению текущую внешнюю транзакцию с помощью `TransactionFlowProperty`, если транзакцию нужно заключить в поток (это делается в `BeforeSendRequest()`).</span><span class="sxs-lookup"><span data-stu-id="71087-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -97,10 +100,9 @@ public class TransactionFlowInspector : IClientMessageInspector
       [...]  
  }  
 }  
-  
 ```  
   
- Сам `TransactionFlowInspector` передается инфраструктуре с помощью пользовательского поведения `TransactionFlowBehavior`.  
+ <span data-ttu-id="71087-118">Сам `TransactionFlowInspector` передается инфраструктуре с помощью пользовательского поведения `TransactionFlowBehavior`.</span><span class="sxs-lookup"><span data-stu-id="71087-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
   
 ```  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -125,7 +127,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- При наличии вышеуказанного механизма пользовательский код создает область `TransactionScope` перед вызовом операции службы.Инспектор сообщений следит, чтобы транзакция была передана транспорту, если она должна быть заключена в поток для операции службы.  
+ <span data-ttu-id="71087-119">При наличии вышеуказанного механизма пользовательский код создает область `TransactionScope` перед вызовом операции службы.</span><span class="sxs-lookup"><span data-stu-id="71087-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="71087-120">Инспектор сообщений следит, чтобы транзакция была передана транспорту, если она должна быть заключена в поток для операции службы.</span><span class="sxs-lookup"><span data-stu-id="71087-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -159,7 +161,7 @@ catch (Exception)
 }  
 ```  
   
- После получения от клиента пакета UPD служба десериализует его, чтобы извлечь сообщение и, возможно, транзакцию.  
+ <span data-ttu-id="71087-121">После получения от клиента пакета UPD служба десериализует его, чтобы извлечь сообщение и, возможно, транзакцию.</span><span class="sxs-lookup"><span data-stu-id="71087-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
   
 ```  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -167,9 +169,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` — это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
+ <span data-ttu-id="71087-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` - это вспомогательный метод, обращающий процесс сериализации, выполняемый `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span><span class="sxs-lookup"><span data-stu-id="71087-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
   
- Если транзакция получена в потоке, она присоединяется к сообщению в свойстве `TransactionMessageProperty`.  
+ <span data-ttu-id="71087-123">Если транзакция получена в потоке, она присоединяется к сообщению в свойстве `TransactionMessageProperty`.</span><span class="sxs-lookup"><span data-stu-id="71087-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
   
 ```  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -180,15 +182,15 @@ if (transaction != null)
 }  
 ```  
   
- Это обеспечивает принятие диспетчером транзакции в момент распределения и использование ее при вызове операции службы, которой адресовано сообщение.  
+ <span data-ttu-id="71087-124">Это обеспечивает принятие диспетчером транзакции в момент распределения и использование ее при вызове операции службы, которой адресовано сообщение.</span><span class="sxs-lookup"><span data-stu-id="71087-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="71087-125">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="71087-125">To set up, build, and run the sample</span></span>  
   
-1.  Чтобы выполнить построение решения, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="71087-126">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="71087-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  Этот образец следует выполнять так же, как образец [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).Для его запуска запустите службу с UdpTestService.exe.В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий.Для этого в проводнике щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и выберите **Запуск от имени администратора**.  
+2.  <span data-ttu-id="71087-127">Текущая выборка должна выполняться так же, как [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.</span><span class="sxs-lookup"><span data-stu-id="71087-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="71087-128">Для его запуска запустите службу с UdpTestService.exe.</span><span class="sxs-lookup"><span data-stu-id="71087-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="71087-129">В случае использования [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] службу необходимо запустить с более высоким уровнем привилегий.</span><span class="sxs-lookup"><span data-stu-id="71087-129">If you are running [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], you must start the service with elevated privileges.</span></span> <span data-ttu-id="71087-130">Чтобы сделать это, щелкните правой кнопкой мыши UdpTestService.exe в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] и нажмите кнопку **Запуск от имени администратора**.</span><span class="sxs-lookup"><span data-stu-id="71087-130">To do so, right-click UdpTestService.exe in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] and click **Run as administrator**.</span></span>  
   
-3.  Получатся следующие результаты.  
+3.  <span data-ttu-id="71087-131">Получатся следующие результаты.</span><span class="sxs-lookup"><span data-stu-id="71087-131">This produces the following output.</span></span>  
   
     ```  
     Testing Udp From Code.  
@@ -196,7 +198,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4.  В этот момент можно запустить клиент, выполнив UdpTestClient.exe.Результаты работы клиента таковы.  
+4.  <span data-ttu-id="71087-132">В этот момент можно запустить клиент, выполнив UdpTestClient.exe.</span><span class="sxs-lookup"><span data-stu-id="71087-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="71087-133">Результаты работы клиента таковы.</span><span class="sxs-lookup"><span data-stu-id="71087-133">The output produced by the client is as follows.</span></span>  
   
     ```  
     0  
@@ -207,7 +209,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5.  Вывод службы имеют следующий вид.  
+5.  <span data-ttu-id="71087-134">Вывод службы имеют следующий вид.</span><span class="sxs-lookup"><span data-stu-id="71087-134">The service output is as follows.</span></span>  
   
     ```  
     Hello, world!  
@@ -227,9 +229,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  Приложение службы отображает сообщение `The client transaction has flowed to the service`, если может сопоставить идентификатор, присланный клиентом в параметре `clientTransactionId` операции `CalculatorService.Add()`, идентификатору транзакции службы.Сопоставление происходит, только если транзакция клиента доставлена службе в виде потока.  
+6.  <span data-ttu-id="71087-135">Приложение службы отображает сообщение `The client transaction has flowed to the service`, если может сопоставить идентификатор, присланный клиентом в параметре `clientTransactionId` операции `CalculatorService.Add()`, идентификатору транзакции службы.</span><span class="sxs-lookup"><span data-stu-id="71087-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="71087-136">Сопоставление происходит, только если транзакция клиента доставлена службе в виде потока.</span><span class="sxs-lookup"><span data-stu-id="71087-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
   
-7.  Для выполнения клиентского приложения относительно конечных точек, опубликованных с помощью конфигурации, нажмите в окне приложения службы клавишу ВВОД и снова запустите тестовый клиент.Служба должна предоставить следующие результаты.  
+7.  <span data-ttu-id="71087-137">Для выполнения клиентского приложения относительно конечных точек, опубликованных с помощью конфигурации, нажмите в окне приложения службы клавишу ВВОД и снова запустите тестовый клиент.</span><span class="sxs-lookup"><span data-stu-id="71087-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="71087-138">Служба должна предоставить следующие результаты.</span><span class="sxs-lookup"><span data-stu-id="71087-138">You should see the following output on the service.</span></span>  
   
     ```  
     Testing Udp From Config.  
@@ -237,17 +239,17 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8.  Выполнение клиента относительно службы теперь дает такие же результаты, как раньше.  
+8.  <span data-ttu-id="71087-139">Выполнение клиента относительно службы теперь дает такие же результаты, как раньше.</span><span class="sxs-lookup"><span data-stu-id="71087-139">Running the client against the service now produces similar output as before.</span></span>  
   
-9. Для восстановления кода клиента и конфигурации с помощью Svcutil.exe запустите приложение службы и выполните следующую команду Svcutil.exe из корневого каталога образца.  
+9. <span data-ttu-id="71087-140">Для восстановления кода клиента и конфигурации с помощью Svcutil.exe запустите приложение службы и выполните следующую команду Svcutil.exe из корневого каталога образца.</span><span class="sxs-lookup"><span data-stu-id="71087-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
   
     ```  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Обратите внимание, что Svcutil.exe не создает конфигурацию расширения привязки для `sampleProfileUdpBinding`, поэтому ее нужно добавить вручную.  
+10. <span data-ttu-id="71087-141">Обратите внимание, что Svcutil.exe не создает конфигурацию расширения привязки для `sampleProfileUdpBinding`, поэтому ее нужно добавить вручную.</span><span class="sxs-lookup"><span data-stu-id="71087-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
         <system.serviceModel>      
             …  
@@ -262,13 +264,13 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="71087-142">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="71087-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="71087-143">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="71087-143">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="71087-144">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="71087-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="71087-145">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="71087-145">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## См. также  
- [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a><span data-ttu-id="71087-146">См. также</span><span class="sxs-lookup"><span data-stu-id="71087-146">See Also</span></span>  
+ [<span data-ttu-id="71087-147">Транспорт: UDP</span><span class="sxs-lookup"><span data-stu-id="71087-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)

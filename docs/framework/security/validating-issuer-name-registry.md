@@ -5,36 +5,33 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4644dd1-dead-48ff-abeb-7bffae69a6ac
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c6c1b72048f1f7cb421e5a19d34c2c2dea5463ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="validating-issuer-name-registry"></a>Проверка реестра имен поставщиков
-Проверка реестра имен эмитентов (VINR) для Windows Identity Foundation позволяет приложениям с большим числом владельцев убеждаться, что входящий токен создан доверенным клиентом и поставщиком удостоверений. Эта функция особенно полезна для приложений с несколькими владельцами, использующих Microsoft Azure Active Directory, поскольку все токены, выданные Microsoft Azure AD, подписываются с помощью одного сертификата. Чтобы различать запросы от нескольких клиентов, использующих один и тот же сертификат — и, следовательно, имеющих один и тот же отпечаток — приложение должно сохранять имя эмитента для каждого клиента, чтобы выполнить логику проверки. VINR предоставляет эту функцию, а также позволяет добавить логику проверки или сохранения сведений о регистрации эмитента не только в файле конфигурации. Данное расширение можно добавить в конвейер WIF приложения или использовать независимо.  
+# <a name="validating-issuer-name-registry"></a><span data-ttu-id="800d4-102">Проверка реестра имен поставщиков</span><span class="sxs-lookup"><span data-stu-id="800d4-102">Validating Issuer Name Registry</span></span>
+<span data-ttu-id="800d4-103">Проверка реестра имен эмитентов (VINR) для Windows Identity Foundation позволяет приложениям с большим числом владельцев убеждаться, что входящий токен создан доверенным клиентом и поставщиком удостоверений.</span><span class="sxs-lookup"><span data-stu-id="800d4-103">The Validating Issuer Name Registry (VINR) for Windows Identity Foundation enables multi-tenant applications to ensure that an incoming token has been issued by a trusted tenant and identity provider.</span></span> <span data-ttu-id="800d4-104">Эта функция особенно полезна для приложений с несколькими владельцами, использующих Microsoft Azure Active Directory, поскольку все токены, выданные Microsoft Azure AD, подписываются с помощью одного сертификата.</span><span class="sxs-lookup"><span data-stu-id="800d4-104">This functionality is particularly useful for multi-tenant applications that use Windows Azure Active Directory because all tokens issued by Windows Azure AD are signed using the same certificate.</span></span> <span data-ttu-id="800d4-105">Чтобы различать запросы от нескольких клиентов, использующих один и тот же сертификат — и, следовательно, имеющих один и тот же отпечаток — приложение должно сохранять имя эмитента для каждого клиента, чтобы выполнить логику проверки.</span><span class="sxs-lookup"><span data-stu-id="800d4-105">In order to differentiate between requests from multiple tenants that use the same certificate – and consequently have the same thumbprint – your application must persist the issuer name for each tenant to perform validation logic.</span></span> <span data-ttu-id="800d4-106">VINR предоставляет эту функцию, а также позволяет добавить логику проверки или сохранения сведений о регистрации эмитента не только в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="800d4-106">The VINR provides this functionality, and it also enables you to add custom validation logic or to store the issuer registry data in locations other than a configuration file.</span></span> <span data-ttu-id="800d4-107">Данное расширение можно добавить в конвейер WIF приложения или использовать независимо.</span><span class="sxs-lookup"><span data-stu-id="800d4-107">The extension can be added to your application’s WIF pipeline or it can be used independently.</span></span>  
   
- VINR доступен как пакет NuGet. Дополнительные сведения см. в разделе [Загрузка пакета проверки реестра имен поставщиков](../../../docs/framework/security/downloading-the-validating-issuer-name-registry-package.md).  
+ <span data-ttu-id="800d4-108">VINR доступен как пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="800d4-108">The VINR is available as a NuGet package.</span></span> <span data-ttu-id="800d4-109">Дополнительные сведения см. в разделе [Загрузка пакета проверки реестра имен поставщиков](../../../docs/framework/security/downloading-the-validating-issuer-name-registry-package.md).</span><span class="sxs-lookup"><span data-stu-id="800d4-109">See [Downloading the Validating Issuer Name Registry Package](../../../docs/framework/security/downloading-the-validating-issuer-name-registry-package.md) for more information.</span></span>  
   
-## <a name="scenarios"></a>Сценарии  
- VINR реализует следующий основной сценарий:  
+## <a name="scenarios"></a><span data-ttu-id="800d4-110">Сценарии</span><span class="sxs-lookup"><span data-stu-id="800d4-110">Scenarios</span></span>  
+ <span data-ttu-id="800d4-111">VINR реализует следующий основной сценарий:</span><span class="sxs-lookup"><span data-stu-id="800d4-111">The VINR enables the following key scenario:</span></span>  
   
--   **Проверка токена в мультитенантном приложении**: в этом сценарии компания с названием Litware разработала мультитенантное приложение, в котором используется такой поставщик удостоверений, как Microsoft Azure AD. Это приложение обслуживает двух заказчиков: Contoso и Fabrikam. Когда пользователь из Fabrikam проходит аутентификацию в приложении Litware, токен, выданный Microsoft Azure AD, подписывается с помощью стандартного сертификата, и запрос оформляется компанией Fabrikam. Приложению необходимо убедиться, что имя эмитента и токен являются допустимыми допустимым, а также отличить подобные запросы от запросов из Contoso, которые подписаны таким же сертификатом из Microsoft Azure AD. Благодаря VINR приложению Litware проще различать и проверять запросы от разных владельцев (например, Contoso и Fabrikam).  
+-   <span data-ttu-id="800d4-112">**Проверка токена в мультитенантном приложении**: в этом сценарии компания с названием Litware разработала мультитенантное приложение, в котором используется такой поставщик удостоверений, как Microsoft Azure AD.</span><span class="sxs-lookup"><span data-stu-id="800d4-112">**Validate a Token in a Multi-Tenant Application**: In this scenario, a company named Litware has developed a multi-tenant application that uses an identity provider such as Windows Azure AD.</span></span> <span data-ttu-id="800d4-113">Это приложение обслуживает двух заказчиков: Contoso и Fabrikam.</span><span class="sxs-lookup"><span data-stu-id="800d4-113">This application serves two customers: Contoso and Fabrikam.</span></span> <span data-ttu-id="800d4-114">Когда пользователь из Fabrikam проходит аутентификацию в приложении Litware, токен, выданный Microsoft Azure AD, подписывается с помощью стандартного сертификата, и запрос оформляется компанией Fabrikam.</span><span class="sxs-lookup"><span data-stu-id="800d4-114">When a user from Fabrikam authenticates to Litware’s application, the resulting token from Windows Azure AD is signed using its standard certificate and the request is issued by Fabrikam.</span></span> <span data-ttu-id="800d4-115">Приложению необходимо убедиться, что имя эмитента и токен являются допустимыми допустимым, а также отличить подобные запросы от запросов из Contoso, которые подписаны таким же сертификатом из Microsoft Azure AD.</span><span class="sxs-lookup"><span data-stu-id="800d4-115">The application needs to verify that both the issuer name and the token is valid, and needs to differentiate requests from Contoso that are signed using the same certificate from Windows Azure AD.</span></span> <span data-ttu-id="800d4-116">Благодаря VINR приложению Litware проще различать и проверять запросы от разных владельцев (например, Contoso и Fabrikam).</span><span class="sxs-lookup"><span data-stu-id="800d4-116">The VINR makes it easy for Litware’s application to differentiate and validate requests from multiple tenants such as Contoso and Fabrikam.</span></span>  
   
-## <a name="features"></a>Функции  
- VINR обеспечивает следующие возможности.  
+## <a name="features"></a><span data-ttu-id="800d4-117">Функции</span><span class="sxs-lookup"><span data-stu-id="800d4-117">Features</span></span>  
+ <span data-ttu-id="800d4-118">VINR обеспечивает следующие возможности.</span><span class="sxs-lookup"><span data-stu-id="800d4-118">The VINR offers the following features:</span></span>  
   
--   **Проверка имени издателя и токена для мультитенантных приложений**: проверяет входящий токен путем проверки имени издателя (клиента), а также того, подписан ли токен с использованием действительного сертификата от поставщика удостоверений.  
+-   <span data-ttu-id="800d4-119">**Проверка имени издателя и токена для мультитенантных приложений**: проверяет входящий токен путем проверки имени издателя (клиента), а также того, подписан ли токен с использованием действительного сертификата от поставщика удостоверений.</span><span class="sxs-lookup"><span data-stu-id="800d4-119">**Issuer Name and Token Validation for Multi-Tenant Applications**: Validates the incoming token by verifying the issuer name (tenant) and whether the token was signed using a valid certificate from the identity provider.</span></span>  
   
--   **Расширяемость для логики настраиваемой проверки и хранилищ данных**: обеспечивает расширяемость для добавления собственной логики проверки, а также для задания хранилища данных, отличного от файла конфигурации по умолчанию.
-
+-   <span data-ttu-id="800d4-120">**Расширяемость для логики настраиваемой проверки и хранилищ данных**: обеспечивает расширяемость для добавления собственной логики проверки, а также для задания хранилища данных, отличного от файла конфигурации по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="800d4-120">**Extensibility for Custom Validation Logic and Data Stores**: Provides extensibility to inject your own validation logic and to specify a data store other than the default configuration file.</span></span>

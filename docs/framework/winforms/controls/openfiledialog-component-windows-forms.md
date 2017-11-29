@@ -1,46 +1,47 @@
 ---
-title: "Компонент OpenFileDialog (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Открыть файл - диалоговое окно"
-  - "OpenFileDialog - компонент"
+title: "Компонент OpenFileDialog (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Open File dialog box
+- OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9d7e9540c933a53bd4692aa09850a96977bfb6b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Компонент OpenFileDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном.  Он аналогичен диалоговому окну **Открыть файл** операционной системы Windows.  Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
+# <a name="openfiledialog-component-windows-forms"></a><span data-ttu-id="ae04d-102">Компонент OpenFileDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ae04d-102">OpenFileDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="ae04d-103">Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном.</span><span class="sxs-lookup"><span data-stu-id="ae04d-103">The Windows Forms <xref:System.Windows.Forms.OpenFileDialog> component is a pre-configured dialog box.</span></span> <span data-ttu-id="ae04d-104">Он аналогичен **открыть файл** диалоговому операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="ae04d-104">It is the same **Open File** dialog box exposed by the Windows operating system.</span></span> <span data-ttu-id="ae04d-105">Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.</span><span class="sxs-lookup"><span data-stu-id="ae04d-105">It inherits from the <xref:System.Windows.Forms.CommonDialog> class.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о компоненте OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
- Основные понятия, связанные с компонентом <xref:System.Windows.Forms.OpenFileDialog>, служащим для вывода стандартного диалогового окна, которое может использоваться пользователем для открытия файлов.  
+## <a name="in-this-section"></a><span data-ttu-id="ae04d-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="ae04d-106">In This Section</span></span>  
+ [<span data-ttu-id="ae04d-107">Общие сведения о компоненте OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="ae04d-107">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="ae04d-108">Основные понятия, связанные с компонентом <xref:System.Windows.Forms.OpenFileDialog>, служащим для вывода стандартного диалогового окна, которое может использоваться пользователем для открытия файлов.</span><span class="sxs-lookup"><span data-stu-id="ae04d-108">Introduces the general concepts of the <xref:System.Windows.Forms.OpenFileDialog> component, which allows you to display a pre-configured dialog box that users can use to open files.</span></span>  
   
- [Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
- Описание открытия файла во время выполнения с помощью экземпляра компонента <xref:System.Windows.Forms.OpenFileDialog>.  
+ [<span data-ttu-id="ae04d-109">Практическое руководство. Открытие файлов с помощью компонента OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="ae04d-109">How to: Open Files Using the OpenFileDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
+ <span data-ttu-id="ae04d-110">Описание открытия файла во время выполнения с помощью экземпляра компонента <xref:System.Windows.Forms.OpenFileDialog>.</span><span class="sxs-lookup"><span data-stu-id="ae04d-110">Explains how to open a file at run time via an instance of the <xref:System.Windows.Forms.OpenFileDialog> component.</span></span>  
   
-## Ссылка  
+## <a name="reference"></a><span data-ttu-id="ae04d-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ae04d-111">Reference</span></span>  
  <xref:System.Windows.Forms.OpenFileDialog>  
- Содержит справочные сведения о классе <xref:System.Windows.Forms.OpenFileDialog> и его членах.  
+ <span data-ttu-id="ae04d-112">Содержит справочные сведения о классе <xref:System.Windows.Forms.OpenFileDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="ae04d-112">Provides reference information on the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
-## Связанные подразделы  
- [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Описание набора элементов управления и компонентов для выполнения пользователем стандартных действий в приложении или системе.  
+## <a name="related-sections"></a><span data-ttu-id="ae04d-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ae04d-113">Related Sections</span></span>  
+ [<span data-ttu-id="ae04d-114">Элементы управления и компоненты диалоговых окон</span><span class="sxs-lookup"><span data-stu-id="ae04d-114">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="ae04d-115">Описание набора элементов управления и компонентов для выполнения пользователем стандартных действий в приложении или системе.</span><span class="sxs-lookup"><span data-stu-id="ae04d-115">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы с описанием их применения.  
+ [<span data-ttu-id="ae04d-116">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae04d-116">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="ae04d-117">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="ae04d-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [Базовый код для диалоговых окон Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
- Описание элементов управления и компонентов диалоговых окон Windows Forms, а также кода, необходимого для выполнения их основных функций.  \(Техническая статья библиотеки MSDN в Интернете\)
+ [<span data-ttu-id="ae04d-118">Основной код для диалоговых окон Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae04d-118">Essential Code for Windows Forms Dialog Boxes</span></span>](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ <span data-ttu-id="ae04d-119">Описываются элементы управления и компоненты диалоговых окон Windows Forms, а также код, необходимый для выполнения их основных функций</span><span class="sxs-lookup"><span data-stu-id="ae04d-119">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="ae04d-120">(техническая статья в библиотеке MSDN в Интернете).</span><span class="sxs-lookup"><span data-stu-id="ae04d-120">(MSDN Online Library technical article)</span></span>

@@ -1,70 +1,71 @@
 ---
-title: "Элемент &lt;clear&gt; для элемента authenticationModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear - элемент"
-  - "<clear> - элемент, authenticationModules"
-  - "authenticationModules, clear - элемент"
-  - "clear - элемент, authenticationModules"
+title: "&lt;Очистить&gt; элемент для authenticationModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для элемента authenticationModules (параметры сети)
-Удаляет из приложения все модули проверки подлинности.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="3bf89-102">&lt;Очистить&gt; элемент для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="3bf89-102">&lt;clear&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="3bf89-103">Удаляет все модули проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="3bf89-103">Clears all authentication modules from the application.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="3bf89-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3bf89-104">\<configuration></span></span>  
+<span data-ttu-id="3bf89-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="3bf89-105">\<system.net></span></span>  
+<span data-ttu-id="3bf89-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="3bf89-106">\<authenticationModules></span></span>  
+<span data-ttu-id="3bf89-107">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="3bf89-107">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="3bf89-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3bf89-108">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3bf89-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="3bf89-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="3bf89-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="3bf89-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="3bf89-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="3bf89-111">Attributes</span></span>  
+ <span data-ttu-id="3bf89-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="3bf89-112">None.</span></span>  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="3bf89-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="3bf89-113">Child Elements</span></span>  
+ <span data-ttu-id="3bf89-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="3bf89-114">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="3bf89-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="3bf89-115">Parent Elements</span></span>  
   
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Модули, используемые для проверки подлинности сетевых запросов.|  
+|<span data-ttu-id="3bf89-116">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="3bf89-116">**Element**</span></span>|<span data-ttu-id="3bf89-117">**Описание**</span><span class="sxs-lookup"><span data-stu-id="3bf89-117">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="3bf89-118">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="3bf89-118">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="3bf89-119">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="3bf89-119">Specifies modules used to authenticate network requests.</span></span>|  
   
-## Заметки  
- Элемент `clear` вызывает удаление всех модулей проверки подлинности, определенных ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
+## <a name="remarks"></a><span data-ttu-id="3bf89-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="3bf89-120">Remarks</span></span>  
+ <span data-ttu-id="3bf89-121">`clear` Элемент удаляет все модули проверки подлинности, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3bf89-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="3bf89-122">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="3bf89-122">Configuration Files</span></span>  
+ <span data-ttu-id="3bf89-123">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="3bf89-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Пример  
- В следующем примере кода демонстрируется удаление всех настроенных модулей проверки подлинности.  
+## <a name="example"></a><span data-ttu-id="3bf89-124">Пример</span><span class="sxs-lookup"><span data-stu-id="3bf89-124">Example</span></span>  
+ <span data-ttu-id="3bf89-125">Следующий пример удаляет все модули проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="3bf89-125">The following example removes all configured authentication modules.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="3bf89-126">См. также</span><span class="sxs-lookup"><span data-stu-id="3bf89-126">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="3bf89-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="3bf89-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

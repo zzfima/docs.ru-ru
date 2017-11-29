@@ -1,45 +1,48 @@
 ---
-title: "Пользовательский узел службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательский узел службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a7fd853ed67b843888b899d0bd0528b293a7520f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательский узел службы
-Этот образец показывает, как применять пользовательский производный класс для класса <xref:System.ServiceModel.ServiceHost>, чтобы изменять поведение службы во время выполнения.  Такой подход обеспечивает поддерживающую повторное использование альтернативу настройке большого числа служб одинаковым образом.  Кроме того, в этом примере демонстрируется, как с помощью класса <xref:System.ServiceModel.Activation.ServiceHostFactory> применять пользовательский объект ServiceHost в среде размещения IIS или службы активации Windows \(WAS\).  
+# <a name="custom-service-host"></a><span data-ttu-id="93970-102">Пользовательский узел службы</span><span class="sxs-lookup"><span data-stu-id="93970-102">Custom Service Host</span></span>
+<span data-ttu-id="93970-103">Этот образец показывает, как применять пользовательский производный класс для класса <xref:System.ServiceModel.ServiceHost>, чтобы изменять поведение службы во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="93970-103">This sample demonstrates how to use a custom derivative of the <xref:System.ServiceModel.ServiceHost> class to alter the run-time behavior of a service.</span></span> <span data-ttu-id="93970-104">Такой подход обеспечивает поддерживающую повторное использование альтернативу настройке большого числа служб одинаковым образом.</span><span class="sxs-lookup"><span data-stu-id="93970-104">This approach provides a reusable alternative to configuring a large number of services in a common way.</span></span> <span data-ttu-id="93970-105">Кроме того, в этом примере демонстрируется, как с помощью класса <xref:System.ServiceModel.Activation.ServiceHostFactory> применять пользовательский объект ServiceHost в среде размещения IIS или службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="93970-105">The sample also demonstrates how to use the <xref:System.ServiceModel.Activation.ServiceHostFactory> class to use a custom ServiceHost in the Internet Information Services (IIS) or Windows Process Activation Service (WAS) hosting environment.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="93970-106">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="93970-106">The samples may already be installed on your machine.</span></span> <span data-ttu-id="93970-107">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="93970-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="93970-108">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="93970-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="93970-109">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="93970-109">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
-## Сценарий  
- Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, в конфигурации служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] публикация метаданных по умолчанию отключена.  Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных \(например, Svcutil.exe\) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.  
+## <a name="about-the-scenario"></a><span data-ttu-id="93970-110">Сценарий</span><span class="sxs-lookup"><span data-stu-id="93970-110">About the Scenario</span></span>  
+ <span data-ttu-id="93970-111">Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, в конфигурации служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] публикация метаданных по умолчанию отключена.</span><span class="sxs-lookup"><span data-stu-id="93970-111">To prevent unintentional disclosure of potentially sensitive service metadata, the default configuration for [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services disables metadata publishing.</span></span> <span data-ttu-id="93970-112">Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="93970-112">This behavior is secure by default, but also means that you cannot use a metadata import tool (such as Svcutil.exe) to generate the client code required to call the service unless the service’s metadata publishing behavior is explicitly enabled in configuration.</span></span>  
   
- Включение публикации метаданных для большого числа служб связано с добавлением одинаковых элементов конфигурации для всех служб по отдельности, что приводит к появлению значительного объема повторяющейся информации конфигураций.  Вместо конфигурации всех служб по отдельности можно написать принудительный код, один раз включающий публикацию метаданных, а затем использовать его повторно для нескольких других служб.  Для этого создается новый класс, наследуемый от класса <xref:System.ServiceModel.ServiceHost>, переопределяющий метод `ApplyConfiguration`\(\) так, чтобы принудительно добавить поведение публикации метаданных.  
+ <span data-ttu-id="93970-113">Включение публикации метаданных для большого числа служб связано с добавлением одинаковых элементов конфигурации для всех служб по отдельности, что приводит к появлению значительного объема повторяющейся информации конфигураций.</span><span class="sxs-lookup"><span data-stu-id="93970-113">Enabling metadata publishing for a large number of services involves adding the same configuration elements to each individual service, which results in a large amount of configuration information that is essentially the same.</span></span> <span data-ttu-id="93970-114">Вместо конфигурации всех служб по отдельности можно написать принудительный код, один раз включающий публикацию метаданных, а затем использовать его повторно для нескольких других служб.</span><span class="sxs-lookup"><span data-stu-id="93970-114">As an alternative to configuring each service individually, it is possible to write the imperative code that enables metadata publishing once and then reuse that code across several different services.</span></span> <span data-ttu-id="93970-115">Для этого создается новый класс, наследуемый от класса <xref:System.ServiceModel.ServiceHost>, переопределяющий метод `ApplyConfiguration`() так, чтобы принудительно добавить поведение публикации метаданных.</span><span class="sxs-lookup"><span data-stu-id="93970-115">This is accomplished by creating a new class that derives from <xref:System.ServiceModel.ServiceHost> and overrides the `ApplyConfiguration`() method to imperatively add the metadata publishing behavior.</span></span>  
   
 > [!IMPORTANT]
->  Для ясности этот образец демонстрирует создание незащищенной конечной точки публикации метаданных.  Такие конечные точки являются потенциально доступными для анонимных не прошедших проверку подлинности потребителей, поэтому перед развертыванием таких конечных точек следует соблюдать осторожность и убедиться, что публичное раскрытие метаданных службы уместно.  
+>  <span data-ttu-id="93970-116">Для ясности этот образец демонстрирует создание незащищенной конечной точки публикации метаданных.</span><span class="sxs-lookup"><span data-stu-id="93970-116">For clarity, this sample demonstrates how to create an unsecured metadata publishing endpoint.</span></span> <span data-ttu-id="93970-117">Такие конечные точки являются потенциально доступными для анонимных не прошедших проверку подлинности потребителей, поэтому перед развертыванием таких конечных точек следует соблюдать осторожность и убедиться, что публичное раскрытие метаданных службы уместно.</span><span class="sxs-lookup"><span data-stu-id="93970-117">Such endpoints are potentially available to anonymous unauthenticated consumers and care must be taken before deploying such endpoints to ensure that publicly disclosing a service’s metadata is appropriate.</span></span>  
   
-## Реализация пользовательского класса ServiceHost  
- Класс <xref:System.ServiceModel.ServiceHost> предоставляет несколько полезных виртуальных методов, которые наследующие классы могут переопределять, чтобы изменять поведение службы во время выполнения.  Например, метод `ApplyConfiguration`\(\) выполняет чтение сведений конфигурации службы из хранилища конфигураций и соответствующим образом изменяет объект <xref:System.ServiceModel.Description.ServiceDescription> основного приложения.  Реализация по умолчанию считывает конфигурацию из файла конфигурации приложения.  Пользовательские реализации могут переопределять метод `ApplyConfiguration`\(\) для дополнительного изменения<xref:System.ServiceModel.Description.ServiceDescription> с помощью императивного кода или даже полностью заменять хранилище конфигураций по умолчанию.  Например, чтобы читать конфигурацию конечной точки службы не из файла конфигурации приложения, а из базы данных.  
+## <a name="implementing-a-custom-servicehost"></a><span data-ttu-id="93970-118">Реализация пользовательского класса ServiceHost</span><span class="sxs-lookup"><span data-stu-id="93970-118">Implementing a Custom ServiceHost</span></span>  
+ <span data-ttu-id="93970-119">Класс <xref:System.ServiceModel.ServiceHost> предоставляет несколько полезных виртуальных методов, которые наследующие классы могут переопределять, чтобы изменять поведение службы во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="93970-119">The <xref:System.ServiceModel.ServiceHost> class exposes several useful virtual methods that inheritors can override to alter the run-time behavior of a service.</span></span> <span data-ttu-id="93970-120">Например, метод `ApplyConfiguration`() выполняет чтение сведений конфигурации службы из хранилища конфигураций и соответствующим образом изменяет объект <xref:System.ServiceModel.Description.ServiceDescription> основного приложения.</span><span class="sxs-lookup"><span data-stu-id="93970-120">For example, the `ApplyConfiguration`() method reads service configuration information from the configuration store and alters the host's <xref:System.ServiceModel.Description.ServiceDescription> accordingly.</span></span> <span data-ttu-id="93970-121">Реализация по умолчанию считывает конфигурацию из файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="93970-121">The default implementation reads configuration from the application’s configuration file.</span></span> <span data-ttu-id="93970-122">Пользовательские реализации могут переопределять метод `ApplyConfiguration`() для дополнительного изменения<xref:System.ServiceModel.Description.ServiceDescription> с помощью императивного кода или даже полностью заменять хранилище конфигураций по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="93970-122">Custom implementations can override `ApplyConfiguration`() to further alter the <xref:System.ServiceModel.Description.ServiceDescription> using imperative code or even replace the default configuration store entirely.</span></span> <span data-ttu-id="93970-123">Например, чтобы читать конфигурацию конечной точки службы не из файла конфигурации приложения, а из базы данных.</span><span class="sxs-lookup"><span data-stu-id="93970-123">For example, to read a service’s endpoint configuration from a database instead of the application’s configuration file.</span></span>  
   
- В этом примере нам нужно построить пользовательский класс ServiceHost, добавляющий поведение ServiceMetadataBehavior \(включающее публикацию метаданных\), даже если такое поведение не добавлено в файл конфигурации службы явно.  Для этого нужно создать новый класс, наследуемый от класса <xref:System.ServiceModel.ServiceHost>, переопределяющий метод `ApplyConfiguration`\(\).  
+ <span data-ttu-id="93970-124">В этом примере нам нужно построить пользовательский класс ServiceHost, добавляющий поведение ServiceMetadataBehavior (включающее публикацию метаданных), даже если такое поведение не добавлено в файл конфигурации службы явно.</span><span class="sxs-lookup"><span data-stu-id="93970-124">In this sample, we want to build a custom ServiceHost that adds the ServiceMetadataBehavior, (which enables metadata publishing), even if this behavior is not explicitly added in the service’s configuration file.</span></span> <span data-ttu-id="93970-125">Для этого нужно создать новый класс, наследуемый от класса <xref:System.ServiceModel.ServiceHost>, переопределяющий метод `ApplyConfiguration`().</span><span class="sxs-lookup"><span data-stu-id="93970-125">To accomplish this, we create a new class that inherits from <xref:System.ServiceModel.ServiceHost> and overrides `ApplyConfiguration`().</span></span>  
   
 ```  
 class SelfDescribingServiceHost : ServiceHost  
@@ -64,7 +67,7 @@ class SelfDescribingServiceHost : ServiceHost
 }  
 ```  
   
- Так как игнорировать конфигурацию, предоставленную в файле конфигурации приложения, не нужно, переопределение `ApplyConfiguration`\(\) в первую очередь вызывает базовую реализацию.  После выполнения этого метода можно принудительно добавить в описание поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior> с помощью следующего принудительного кода.  
+ <span data-ttu-id="93970-126">Так как игнорировать конфигурацию, предоставленную в файле конфигурации приложения, не нужно, переопределение `ApplyConfiguration`() в первую очередь вызывает базовую реализацию.</span><span class="sxs-lookup"><span data-stu-id="93970-126">Because we do not want to ignore any configuration that has been provided in the application’s configuration file, the first thing our override of `ApplyConfiguration`() does is call the base implementation.</span></span> <span data-ttu-id="93970-127">После выполнения этого метода можно принудительно добавить в описание поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior> с помощью следующего принудительного кода.</span><span class="sxs-lookup"><span data-stu-id="93970-127">Once this method completes, we can imperatively add the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> to the description using the following imperative code.</span></span>  
   
 ```  
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -81,7 +84,7 @@ else
 }  
 ```  
   
- Наконец, переопределение `ApplyConfiguration`\(\) должно добавить конечную точку метаданных по умолчанию.  По соглашению для каждого универсального кода ресурса \(URI\) в коллекции BaseAddresses главного приложения службы создается по одной конечной точке метаданных.  
+ <span data-ttu-id="93970-128">Наконец, переопределение `ApplyConfiguration`() должно добавить конечную точку метаданных по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="93970-128">The last thing our `ApplyConfiguration`() override must do is add the default metadata endpoint.</span></span> <span data-ttu-id="93970-129">По соглашению для каждого универсального кода ресурса (URI) в коллекции BaseAddresses главного приложения службы создается по одной конечной точке метаданных.</span><span class="sxs-lookup"><span data-stu-id="93970-129">By convention, one metadata endpoint is created for each URI in the service host’s BaseAddresses collection.</span></span>  
   
 ```  
 //Add a metadata endpoint at each base address  
@@ -115,11 +118,10 @@ foreach (Uri baseAddress in this.BaseAddresses)
                                 "mex");  
     }  
 }  
-  
 ```  
   
-## Использование пользовательского ServiceHost в резидентной службе  
- Выполненную реализацию пользовательского ServiceHost можно использовать для добавления поведения публикации метаданных к любой службе, разместив эту службу внутри экземпляра `SelfDescribingServiceHost`.  В следующем примере кода демонстрируется его использование с резидентной службой.  
+## <a name="using-a-custom-servicehost-in-self-host"></a><span data-ttu-id="93970-130">Использование пользовательского ServiceHost в резидентной службе</span><span class="sxs-lookup"><span data-stu-id="93970-130">Using a custom ServiceHost in self-host</span></span>  
+ <span data-ttu-id="93970-131">Выполненную реализацию пользовательского ServiceHost можно использовать для добавления поведения публикации метаданных к любой службе, разместив эту службу внутри экземпляра `SelfDescribingServiceHost`.</span><span class="sxs-lookup"><span data-stu-id="93970-131">Now that we have completed our custom ServiceHost implementation, we can use it to add metadata publishing behavior to any service by hosting that service inside of an instance of our `SelfDescribingServiceHost`.</span></span> <span data-ttu-id="93970-132">В следующем примере кода демонстрируется его использование с резидентной службой.</span><span class="sxs-lookup"><span data-stu-id="93970-132">The following code shows how to use it in the self-host scenario.</span></span>  
   
 ```  
 SelfDescribingServiceHost host =   
@@ -127,10 +129,10 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- Пользовательское основное приложение продолжает считывать конфигурацию конечной точки службы из файла конфигурации приложения, как если бы для размещения службы использовался класс <xref:System.ServiceModel.ServiceHost> по умолчанию.  Но так как в пользовательское основное приложение добавлена логика, включающая публикацию метаданных, нет необходимости явно включать поведение публикации метаданных в конфигурации.  Этот подход удобен при создании приложения, содержащего несколько служб, для которых нужно включить публикацию метаданных. Он позволяет не повторять несколько раз запись одинаковых элементов конфигурации.  
+ <span data-ttu-id="93970-133">Пользовательское основное приложение продолжает считывать конфигурацию конечной точки службы из файла конфигурации приложения, как если бы для размещения службы использовался класс <xref:System.ServiceModel.ServiceHost> по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="93970-133">Our custom host still reads the service’s endpoint configuration from the application’s configuration file, just as if we had used the default <xref:System.ServiceModel.ServiceHost> class to host the service.</span></span> <span data-ttu-id="93970-134">Но так как в пользовательское основное приложение добавлена логика, включающая публикацию метаданных, нет необходимости явно включать поведение публикации метаданных в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="93970-134">However, because we added the logic to enable metadata publishing inside of our custom host, we no longer must explicitly enable the metadata publishing behavior in configuration.</span></span> <span data-ttu-id="93970-135">Этот подход удобен при создании приложения, содержащего несколько служб, для которых нужно включить публикацию метаданных. Он позволяет не повторять несколько раз запись одинаковых элементов конфигурации.</span><span class="sxs-lookup"><span data-stu-id="93970-135">This approach has a distinct advantage when you are building an application that contains several services and you want to enable metadata publishing on each of them without writing the same configuration elements over and over.</span></span>  
   
-## Использование пользовательского класса ServiceHost в службах IIS или WAS  
- Использовать пользовательский узел службы в резидентных сценариях нетрудно, потому что за создание и открытие экземпляра основного приложения службы отвечает в итоге код вашего приложения.  Однако в среде размещения IIS или WAS инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] динамически создает экземпляры основного приложения службы в ответ на входящие сообщения.  В этой среде размещения также можно использовать пользовательские узлы служб, но для этого требуется дополнительный код в виде ServiceHostFactory.  В следующем коде приведен класс, наследуемый от <xref:System.ServiceModel.Activation.ServiceHostFactory>, возвращающий экземпляры пользовательского `SelfDescribingServiceHost`.  
+## <a name="using-a-custom-servicehost-in-iis-or-was"></a><span data-ttu-id="93970-136">Использование пользовательского класса ServiceHost в службах IIS или WAS</span><span class="sxs-lookup"><span data-stu-id="93970-136">Using a Custom ServiceHost in IIS or WAS</span></span>  
+ <span data-ttu-id="93970-137">Использовать пользовательский узел службы в резидентных сценариях нетрудно, потому что за создание и открытие экземпляра основного приложения службы отвечает в итоге код вашего приложения.</span><span class="sxs-lookup"><span data-stu-id="93970-137">Using a custom service host in self-host scenarios is straightforward, because it is your application code that is ultimately responsible for creating and opening the service host instance.</span></span> <span data-ttu-id="93970-138">Однако в среде размещения IIS или WAS инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] динамически создает экземпляры основного приложения службы в ответ на входящие сообщения.</span><span class="sxs-lookup"><span data-stu-id="93970-138">In the IIS or WAS hosting environment, however, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure is dynamically instantiating your service’s host in response to incoming messages.</span></span> <span data-ttu-id="93970-139">В этой среде размещения также можно использовать пользовательские узлы служб, но для этого требуется дополнительный код в виде ServiceHostFactory.</span><span class="sxs-lookup"><span data-stu-id="93970-139">Custom service hosts can also be used in this hosting environment, but they require some additional code in the form of a ServiceHostFactory.</span></span> <span data-ttu-id="93970-140">В следующем коде приведен класс, наследуемый от <xref:System.ServiceModel.Activation.ServiceHostFactory>, возвращающий экземпляры пользовательского `SelfDescribingServiceHost`.</span><span class="sxs-lookup"><span data-stu-id="93970-140">The following code shows a derivative of <xref:System.ServiceModel.Activation.ServiceHostFactory> that returns instances of our custom `SelfDescribingServiceHost`.</span></span>  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -149,9 +151,9 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 }  
 ```  
   
- Реализация пользовательской фабрики ServiceHostFactory тоже вполне очевидна.  Вся пользовательская логика находится внутри реализации ServiceHost; фабрика возвращает экземпляр производного класса.  
+ <span data-ttu-id="93970-141">Реализация пользовательской фабрики ServiceHostFactory тоже вполне очевидна.</span><span class="sxs-lookup"><span data-stu-id="93970-141">As you can see, implementing a custom ServiceHostFactory is very straightforward.</span></span> <span data-ttu-id="93970-142">Вся пользовательская логика находится внутри реализации ServiceHost; фабрика возвращает экземпляр производного класса.</span><span class="sxs-lookup"><span data-stu-id="93970-142">All of the custom logic resides inside of the ServiceHost implementation; the factory returns an instance of the derived class.</span></span>  
   
- Для использования пользовательской фабрики с реализацией службы необходимо добавить в файл SVC службы дополнительные метаданные.  
+ <span data-ttu-id="93970-143">Для использования пользовательской фабрики с реализацией службы необходимо добавить в файл SVC службы дополнительные метаданные.</span><span class="sxs-lookup"><span data-stu-id="93970-143">To use a custom factory with a service implementation, we must add some additional metadata to the service’s .svc file.</span></span>  
   
 ```  
 <%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -159,28 +161,28 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- В директиву `@ServiceHost` добавлен дополнительный атрибут `Factory`, в качестве значения которого передано имя типа CLR пользовательской фабрики.  При получении службой IIS или WAS сообщения для этой службы размещающая инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сначала создает экземпляр фабрики ServiceHostFactory, а затем экземпляр самого основного приложения службы, вызывая `ServiceHostFactory.CreateServiceHost()`.  
+ <span data-ttu-id="93970-144">В директиву `Factory` добавлен дополнительный атрибут `@ServiceHost`, в качестве значения которого передано имя типа CLR пользовательской фабрики.</span><span class="sxs-lookup"><span data-stu-id="93970-144">Here we have added an additional `Factory` attribute to the `@ServiceHost` directive, and passed the CLR type name of our custom factory as the attribute’s value.</span></span> <span data-ttu-id="93970-145">При получении службой IIS или WAS сообщения для этой службы размещающая инфраструктура [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] сначала создает экземпляр фабрики ServiceHostFactory, а затем экземпляр самого основного приложения службы, вызывая `ServiceHostFactory.CreateServiceHost()`.</span><span class="sxs-lookup"><span data-stu-id="93970-145">When IIS or WAS receives a message for this service, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hosting infrastructure first creates an instance of the ServiceHostFactory and then instantiate the service host itself by calling `ServiceHostFactory.CreateServiceHost()`.</span></span>  
   
-## Запуск примера  
- В этом примере содержатся полностью функциональные реализации клиента и службы, но цель этого примера — продемонстрировать изменение поведения службы во время выполнения с помощью пользовательского ведущего приложения, выполните следующие действия.  
+## <a name="running-the-sample"></a><span data-ttu-id="93970-146">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="93970-146">Running the Sample</span></span>  
+ <span data-ttu-id="93970-147">В этом примере содержатся полностью функциональные реализации клиента и службы, но цель этого примера — продемонстрировать изменение поведения службы во время выполнения с помощью пользовательского ведущего приложения, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="93970-147">Although this sample does provide a fully-functional client and service implementation, the point of the sample is to illustrate how to alter a service’s run-time behavior by means of a custom host., do the following steps:</span></span>  
   
-#### Действие пользовательского ведущего приложения  
+#### <a name="to-observe-the-effect-of-the-custom-host"></a><span data-ttu-id="93970-148">Действие пользовательского ведущего приложения</span><span class="sxs-lookup"><span data-stu-id="93970-148">To observe the effect of the custom host</span></span>  
   
-1.  Откройте файл Web.config службы и убедитесь, что там нет конфигурации, явно включающей для службы метаданные.  
+1.  <span data-ttu-id="93970-149">Откройте файл Web.config службы и убедитесь, что там нет конфигурации, явно включающей для службы метаданные.</span><span class="sxs-lookup"><span data-stu-id="93970-149">Open the service’s Web.config file and observe that there is no configuration explicitly enabling metadata for the service.</span></span>  
   
-2.  Откройте файл SVC службы и убедитесь, что директива @ServiceHost содержит атрибут Factory, задающий имя пользовательской фабрики ServiceHostFactory.  
+2.  <span data-ttu-id="93970-150">Откройте файл SVC службы и обратите внимание, что его @ServiceHost директива содержит атрибут Factory, задающий имя пользовательской фабрики ServiceHostFactory.</span><span class="sxs-lookup"><span data-stu-id="93970-150">Open the service’s .svc file and observe that its @ServiceHost directive contains a Factory attribute that specifies the name of a custom ServiceHostFactory.</span></span>  
   
-#### Настройка, сборка и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="93970-151">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="93970-151">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="93970-152">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="93970-152">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Для сборки решения следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="93970-153">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="93970-153">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  После построения решения запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в службах [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Теперь каталог ServiceModelSamples должен представляться как приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+3.  <span data-ttu-id="93970-154">После построения решения запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в службах [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="93970-154">After the solution has been built, run Setup.bat to set up the ServiceModelSamples Application in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="93970-155">Теперь каталог ServiceModelSamples должен представляться как приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="93970-155">The ServiceModelSamples directory should now appear as an [!INCLUDE[iisver](../../../../includes/iisver-md.md)] Application.</span></span>  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="93970-156">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="93970-156">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-5.  Чтобы удалить приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)], выполните файл Cleanup.bat.  
+5.  <span data-ttu-id="93970-157">Чтобы удалить приложение [!INCLUDE[iisver](../../../../includes/iisver-md.md)], выполните файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="93970-157">To remove the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] application, run Cleanup.bat.</span></span>  
   
-## См. также  
- [Как разместить службу WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+## <a name="see-also"></a><span data-ttu-id="93970-158">См. также</span><span class="sxs-lookup"><span data-stu-id="93970-158">See Also</span></span>  
+ [<span data-ttu-id="93970-159">Практическое руководство. Размещение службы WCF в IIS</span><span class="sxs-lookup"><span data-stu-id="93970-159">How to: Host a WCF Service in IIS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

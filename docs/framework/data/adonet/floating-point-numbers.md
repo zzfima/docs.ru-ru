@@ -1,30 +1,33 @@
 ---
-title: "Числа с плавающей запятой | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Числа с плавающей запятой"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c3e8ac8b5a97c62bb173fba57ac8aeb26a1dad42
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Числа с плавающей запятой
-В этом разделе описаны некоторые из проблем, с которыми разработчики часто встречаются при работе с числами с плавающей запятой в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  Эти проблемы вызваны способом, которым эти числа хранятся в компьютерах, и не характерны для определенных поставщиков, например <xref:System.Data.SqlClient> или <xref:System.Data.OracleClient>.  
+# <a name="floating-point-numbers"></a><span data-ttu-id="77a71-102">Числа с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="77a71-102">Floating-Point Numbers</span></span>
+<span data-ttu-id="77a71-103">В этом разделе описаны некоторые из проблем, с которыми разработчики часто встречаются при работе с числами с плавающей запятой в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="77a71-103">This topic describes some of the issues that developers frequently encounter when they work with floating-point numbers in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span> <span data-ttu-id="77a71-104">Эти проблемы вызваны способом, которым эти числа хранятся в компьютерах, и не характерны для определенных поставщиков, например <xref:System.Data.SqlClient> или <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="77a71-104">These issues are caused by the way that computers store floating-point numbers, and are not specific to a particular provider such as <xref:System.Data.SqlClient> or <xref:System.Data.OracleClient>.</span></span>  
   
- Числа с плавающей запятой, как правило, не имеют точного двоичного представления.  Вместо этого в компьютере сохраняется приближение числа.  В разное время для представления числа может использоваться разное число двоичных цифр.  При преобразовании числа с плавающей запятой из одного представления в другое наименее значительные цифры этого числа могут немного отличаться.  Обычно преобразование происходит при приведении числа из одного типа в другой.  При выполнении преобразования между типами, представляющими значения базы данных, или между типами базы данных происходит отклонение.  Вследствие этих изменений числа, которые логически равны, могут отличаться своими наименее значительными цифрами, что приводит к отличию между их значениями.  Количество разрядов точности в числе может быть больше или меньше ожидаемого.  При форматировании в виде строки число может не отображать ожидаемое значение.  
+ <span data-ttu-id="77a71-105">Числа с плавающей запятой, как правило, не имеют точного двоичного представления.</span><span class="sxs-lookup"><span data-stu-id="77a71-105">Floating-point numbers generally do not have an exact binary representation.</span></span> <span data-ttu-id="77a71-106">Вместо этого в компьютере сохраняется приближение числа.</span><span class="sxs-lookup"><span data-stu-id="77a71-106">Instead, the computer stores an approximation of the number.</span></span> <span data-ttu-id="77a71-107">В разное время для представления числа может использоваться разное число двоичных цифр.</span><span class="sxs-lookup"><span data-stu-id="77a71-107">At different times, different numbers of binary digits may be used to represent the number.</span></span> <span data-ttu-id="77a71-108">При преобразовании числа с плавающей запятой из одного представления в другое наименее значительные цифры этого числа могут немного отличаться.</span><span class="sxs-lookup"><span data-stu-id="77a71-108">When a floating point number is converted from one representation to another representation, the least significant digits of that number may vary slightly.</span></span> <span data-ttu-id="77a71-109">Обычно преобразование происходит при приведении числа из одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="77a71-109">Conversion typically occurs when the number is cast from one type to another type.</span></span> <span data-ttu-id="77a71-110">При выполнении преобразования между типами, представляющими значения базы данных, или между типами базы данных происходит отклонение.</span><span class="sxs-lookup"><span data-stu-id="77a71-110">The variation occurs whether the conversion occurs within a database, between types that represent database values, or between types.</span></span> <span data-ttu-id="77a71-111">Вследствие этих изменений числа, которые логически равны, могут отличаться своими наименее значительными цифрами, что приводит к отличию между их значениями.</span><span class="sxs-lookup"><span data-stu-id="77a71-111">Because of these changes, numbers that would logically be equal may have changes in their least-significant digits that cause them to have different values.</span></span> <span data-ttu-id="77a71-112">Количество разрядов точности в числе может быть больше или меньше ожидаемого.</span><span class="sxs-lookup"><span data-stu-id="77a71-112">The number of digits of precision in the number may be larger or smaller than expected.</span></span> <span data-ttu-id="77a71-113">При форматировании в виде строки число может не отображать ожидаемое значение.</span><span class="sxs-lookup"><span data-stu-id="77a71-113">When formatted as a string, the number may not show the expected value.</span></span>  
   
- Для минимизации этих эффектов необходимо использовать ближайшее соответствие между доступными числовыми типами.  Например, при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] точное числовое значение может меняться при преобразовании значения Transact\-SQL типа real в значение типа float.  В платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] преобразование <xref:System.Single> в <xref:System.Double> может привести к непредвиденным результатам.  В обоих случаях хорошей стратегией является обеспечение использования всеми значениями приложения одинакового числового типа.  Также можно использовать десятичный тип с фиксированной точностью или приводить числа с плавающей запятой к этому типу перед работой с ними.  
+ <span data-ttu-id="77a71-114">Для минимизации этих эффектов необходимо использовать ближайшее соответствие между доступными числовыми типами.</span><span class="sxs-lookup"><span data-stu-id="77a71-114">To minimize these effects, you should use the closest match between numeric types that is available to you.</span></span> <span data-ttu-id="77a71-115">Например, при работе с [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] точное числовое значение может меняться при преобразовании значения Transact-SQL типа real в значение типа float.</span><span class="sxs-lookup"><span data-stu-id="77a71-115">For example, if you are working with [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], the exact numeric value may change if you convert a Transact-SQL value of real type to a value of float type.</span></span> <span data-ttu-id="77a71-116">В платформе [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] преобразование <xref:System.Single> в <xref:System.Double> может привести к непредвиденным результатам.</span><span class="sxs-lookup"><span data-stu-id="77a71-116">In the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], converting a <xref:System.Single> to a <xref:System.Double> may also produce unexpected results.</span></span> <span data-ttu-id="77a71-117">В обоих случаях хорошей стратегией является обеспечение использования всеми значениями приложения одинакового числового типа.</span><span class="sxs-lookup"><span data-stu-id="77a71-117">In both of these cases, a good strategy is to make all the values in the application use the same numeric type.</span></span> <span data-ttu-id="77a71-118">Также можно использовать десятичный тип с фиксированной точностью или приводить числа с плавающей запятой к этому типу перед работой с ними.</span><span class="sxs-lookup"><span data-stu-id="77a71-118">You can also use a fixed-precision decimal type, or cast floating-point numbers to a fixed-precision decimal type before you work with them.</span></span>  
   
- Чтобы обойти проблемы со сравнением на равенство, рассмотрите использование кодирования приложения, чтобы отклонения в наименее значительных разрядах не учитывались.  Например, вместо сравнения двух чисел \- вычитать одно из другого.  Если разница лежит в пределах допустимого поля округлений, то приложение рассматривает числа как одинаковые.  
+ <span data-ttu-id="77a71-119">Чтобы обойти проблемы со сравнением на равенство, рассмотрите использование кодирования приложения, чтобы отклонения в наименее значительных разрядах не учитывались.</span><span class="sxs-lookup"><span data-stu-id="77a71-119">To work around problems with equality comparison, consider coding your application so that variations in the least significant digits are ignored.</span></span> <span data-ttu-id="77a71-120">Например, вместо сравнения двух чисел - вычитать одно из другого.</span><span class="sxs-lookup"><span data-stu-id="77a71-120">For example, instead of comparing to see whether two numbers are equal, subtract one number from the other number.</span></span> <span data-ttu-id="77a71-121">Если разница лежит в пределах допустимого поля округлений, то приложение рассматривает числа как одинаковые.</span><span class="sxs-lookup"><span data-stu-id="77a71-121">If the difference is within an acceptable margin of rounding, your application can treat the numbers as if they are the same.</span></span>  
   
-## См. также  
- [Почему может уменьшиться точность чисел с плавающей запятой](../Topic/Why%20Floating-Point%20Numbers%20May%20Lose%20Precision.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="77a71-122">См. также</span><span class="sxs-lookup"><span data-stu-id="77a71-122">See Also</span></span>  
+ [<span data-ttu-id="77a71-123">Почему может уменьшиться точность чисел с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="77a71-123">Why Floating-Point Numbers May Lose Precision</span></span>](http://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
+ [<span data-ttu-id="77a71-124">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="77a71-124">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

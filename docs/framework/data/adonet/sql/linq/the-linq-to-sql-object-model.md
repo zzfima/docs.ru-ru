@@ -1,89 +1,95 @@
 ---
-title: "Модель объектов LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Модель объектов LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 30231ea756e80ddeac087fa8b3e46664860c26a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Модель объектов LINQ to SQL
-В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектная модель, выраженная на языке программирования разработчика, сопоставляется модели данных реляционной базы данных.  После этого операции с данными выполняются в соответствии с объектной моделью.  
+# <a name="the-linq-to-sql-object-model"></a><span data-ttu-id="08eee-102">Модель объектов LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="08eee-102">The LINQ to SQL Object Model</span></span>
+<span data-ttu-id="08eee-103">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], в модель данных реляционной базы данных сопоставляется объектной модели, выраженной в языке программирования разработчика.</span><span class="sxs-lookup"><span data-stu-id="08eee-103">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], an object model expressed in the programming language of the developer is mapped to the data model of a relational database.</span></span> <span data-ttu-id="08eee-104">После этого операции с данными выполняются в соответствии с объектной моделью.</span><span class="sxs-lookup"><span data-stu-id="08eee-104">Operations on the data are then conducted according to the object model.</span></span>  
   
- В данном сценарии команды базы данных \(например, `INSERT`\) не выполняются в базе данных.  Вместо этого изменение значений и выполнение методов происходит в рамках объектной модели.  Если необходимо отправить запрос к базе данных или передать изменения, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует требования в корректные команды SQL и отправляет эти команды в базу данных.  
+ <span data-ttu-id="08eee-105">В данном сценарии команды базы данных (например, `INSERT`) не выполняются в базе данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-105">In this scenario, you do not issue database commands (for example, `INSERT`) to the database.</span></span> <span data-ttu-id="08eee-106">Вместо этого изменение значений и выполнение методов происходит в рамках объектной модели.</span><span class="sxs-lookup"><span data-stu-id="08eee-106">Instead, you change values and execute methods within your object model.</span></span> <span data-ttu-id="08eee-107">Если необходимо отправить запрос к базе данных или передать изменения, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] преобразует требования в корректные команды SQL и отправляет эти команды в базу данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-107">When you want to query the database or send it changes, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates your requests into the correct SQL commands and sends those commands to the database.</span></span>  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ <span data-ttu-id="08eee-108">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span><span class="sxs-lookup"><span data-stu-id="08eee-108">![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")</span></span>  
   
- В следующей таблице представлены самые основные элементы в объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и их связь с элементами в реляционной модели данных.  
+ <span data-ttu-id="08eee-109">Самые основные элементы в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объектной модели и их связь с элементами в реляционной модели данных приведены в следующей таблице:</span><span class="sxs-lookup"><span data-stu-id="08eee-109">The most fundamental elements in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] object model and their relationship to elements in the relational data model are summarized in the following table:</span></span>  
   
-|Объектная модель LINQ to SQL|Реляционная модель данных|  
-|----------------------------------|-------------------------------|  
-|Класс сущностей|Таблица|  
-|Член класса|Столбец|  
-|Ассоциация|Отношение внешнего ключа|  
-|Метод|Хранимая процедура или функция|  
+|<span data-ttu-id="08eee-110">Объектная модель LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="08eee-110">LINQ to SQL Object Model</span></span>|<span data-ttu-id="08eee-111">Реляционная модель данных</span><span class="sxs-lookup"><span data-stu-id="08eee-111">Relational Data Model</span></span>|  
+|------------------------------|---------------------------|  
+|<span data-ttu-id="08eee-112">Класс сущностей</span><span class="sxs-lookup"><span data-stu-id="08eee-112">Entity class</span></span>|<span data-ttu-id="08eee-113">Таблица</span><span class="sxs-lookup"><span data-stu-id="08eee-113">Table</span></span>|  
+|<span data-ttu-id="08eee-114">Член класса</span><span class="sxs-lookup"><span data-stu-id="08eee-114">Class member</span></span>|<span data-ttu-id="08eee-115">Столбец</span><span class="sxs-lookup"><span data-stu-id="08eee-115">Column</span></span>|  
+|<span data-ttu-id="08eee-116">Ассоциация</span><span class="sxs-lookup"><span data-stu-id="08eee-116">Association</span></span>|<span data-ttu-id="08eee-117">Отношение внешнего ключа</span><span class="sxs-lookup"><span data-stu-id="08eee-117">Foreign-key relationship</span></span>|  
+|<span data-ttu-id="08eee-118">Метод</span><span class="sxs-lookup"><span data-stu-id="08eee-118">Method</span></span>|<span data-ttu-id="08eee-119">Хранимая процедура или функция</span><span class="sxs-lookup"><span data-stu-id="08eee-119">Stored Procedure or Function</span></span>|  
   
 > [!NOTE]
->  Следующие сведения подразумевают наличие базовых знаний о реляционной модели данных и правилах.  
+>  <span data-ttu-id="08eee-120">Следующие сведения подразумевают наличие базовых знаний о реляционной модели данных и правилах.</span><span class="sxs-lookup"><span data-stu-id="08eee-120">The following descriptions assume that you have a basic knowledge of the relational data model and rules.</span></span>  
   
-## Таблицы классов сущностей и баз данных LINQ to SQL  
- В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] таблица базы данных представлена *классом сущностей*.  Класс сущностей аналогичен любому другому создаваемому классу за исключением того, что для снабжения класса примечаниями используются специальные данные, связывающие его с таблицей базы данных.  Для этого к объявлению класса добавляется пользовательский атрибут \(<xref:System.Data.Linq.Mapping.TableAttribute>\), как показано в следующем примере.  
+## <a name="linq-to-sql-entity-classes-and-database-tables"></a><span data-ttu-id="08eee-121">Таблицы классов сущностей и баз данных LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="08eee-121">LINQ to SQL Entity Classes and Database Tables</span></span>  
+ <span data-ttu-id="08eee-122">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], таблица базы данных представлена *класс сущностей*.</span><span class="sxs-lookup"><span data-stu-id="08eee-122">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a database table is represented by an *entity class*.</span></span> <span data-ttu-id="08eee-123">Класс сущностей аналогичен любому другому создаваемому классу за исключением того, что для снабжения класса примечаниями используются специальные данные, связывающие его с таблицей базы данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-123">An entity class is like any other class you might create except that you annotate the class by using special information that associates the class with a database table.</span></span> <span data-ttu-id="08eee-124">Для этого к объявлению класса добавляется пользовательский атрибут (<xref:System.Data.Linq.Mapping.TableAttribute>), как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="08eee-124">You make this annotation by adding a custom attribute (<xref:System.Data.Linq.Mapping.TableAttribute>) to your class declaration, as in the following example:</span></span>  
   
-### Пример  
+### <a name="example"></a><span data-ttu-id="08eee-125">Пример</span><span class="sxs-lookup"><span data-stu-id="08eee-125">Example</span></span>  
  [!code-csharp[DLinqObjectModel#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#1)]
  [!code-vb[DLinqObjectModel#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#1)]  
   
- В базе данных могут быть сохранены только экземпляры классов, объявленные как таблицы \(то есть классы сущностей\).  
+ <span data-ttu-id="08eee-126">В базе данных могут быть сохранены только экземпляры классов, объявленные как таблицы (то есть классы сущностей).</span><span class="sxs-lookup"><span data-stu-id="08eee-126">Only instances of classes declared as tables (that is, entity classes) can be saved to the database.</span></span>  
   
- Дополнительные сведения см. в разделе «Атрибут Table» статьи [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="08eee-127">Дополнительные сведения см. в разделе области атрибута таблицы [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="08eee-127">For more information, see the Table Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## Столбцы членов класса и базы данных LINQ to SQL  
- Кроме связывания классов с таблицами, можно назначить поля или свойства для представления столбцов базы данных.  Для этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute>, как показано в следующем примере.  
+## <a name="linq-to-sql-class-members-and-database-columns"></a><span data-ttu-id="08eee-128">Столбцы членов класса и базы данных LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="08eee-128">LINQ to SQL Class Members and Database Columns</span></span>  
+ <span data-ttu-id="08eee-129">Кроме связывания классов с таблицами, можно назначить поля или свойства для представления столбцов базы данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-129">In addition to associating classes with tables, you designate fields or properties to represent database columns.</span></span> <span data-ttu-id="08eee-130">Для этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] определяет атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute>, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="08eee-130">For this purpose, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] defines the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute, as in the following example:</span></span>  
   
-### Пример  
+### <a name="example"></a><span data-ttu-id="08eee-131">Пример</span><span class="sxs-lookup"><span data-stu-id="08eee-131">Example</span></span>  
  [!code-csharp[DLinqObjectModel#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#2)]
  [!code-vb[DLinqObjectModel#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/Module1.vb#2)]  
   
- В базе данных сохраняются или из нее извлекаются только те поля и свойства, которые сопоставлены столбцам.  Поля и свойства, не объявленные в качестве столбцов, считаются временными частями логики приложения.  
+ <span data-ttu-id="08eee-132">В базе данных сохраняются или из нее извлекаются только те поля и свойства, которые сопоставлены столбцам.</span><span class="sxs-lookup"><span data-stu-id="08eee-132">Only fields and properties mapped to columns are persisted to or retrieved from the database.</span></span> <span data-ttu-id="08eee-133">Поля и свойства, не объявленные в качестве столбцов, считаются временными частями логики приложения.</span><span class="sxs-lookup"><span data-stu-id="08eee-133">Those not declared as columns are considered as transient parts of your application logic.</span></span>  
   
- Атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute> имеет целый ряд свойств, которые можно использовать для настройки членов, представляющих столбцы \(например, назначение члена, представляющего столбец первичного ключа\).  Дополнительные сведения см. в разделе «Атрибут Column» статьи [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="08eee-134">Атрибут <xref:System.Data.Linq.Mapping.ColumnAttribute> имеет целый ряд свойств, которые можно использовать для настройки членов, представляющих столбцы (например, назначение члена, представляющего столбец первичного ключа).</span><span class="sxs-lookup"><span data-stu-id="08eee-134">The <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute has a variety of properties that you can use to customize these members that represent columns (for example, designating a member as representing a primary key column).</span></span> <span data-ttu-id="08eee-135">Дополнительные сведения см. в разделе разделе атрибут столбца [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="08eee-135">For more information, see the Column Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## Связи и отношения внешнего ключа баз данных LINQ to SQL  
- В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для представления связей базы данных \(например, отношений между первичным и внешним ключами\) используется атрибут <xref:System.Data.Linq.Mapping.AssociationAttribute>.  В следующем сегменте кода класс `Order` содержит свойство возвращается свойство `Customer`, имеющее атрибут <xref:System.Data.Linq.Mapping.AssociationAttribute>.  Это свойство и его атрибут предоставляют класс `Order` с отношением для класса `Customer`.  
+## <a name="linq-to-sql-associations-and-database-foreign-key-relationships"></a><span data-ttu-id="08eee-136">Связи и отношения внешнего ключа баз данных LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="08eee-136">LINQ to SQL Associations and Database Foreign-key Relationships</span></span>  
+ <span data-ttu-id="08eee-137">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], представляющие связи баз данных (например, внешнего ключа на связи первичного ключа), применив <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута.</span><span class="sxs-lookup"><span data-stu-id="08eee-137">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you represent database associations (such as foreign-key to primary-key relationships) by applying the <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute.</span></span> <span data-ttu-id="08eee-138">В следующем сегменте кода `Order` класс содержит `Customer` свойство, имеющее <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута.</span><span class="sxs-lookup"><span data-stu-id="08eee-138">In the following segment of code, the `Order` class contains a `Customer` property that has an <xref:System.Data.Linq.Mapping.AssociationAttribute> attribute.</span></span> <span data-ttu-id="08eee-139">Это свойство и его атрибут предоставляют класс `Order` с отношением для класса `Customer`.</span><span class="sxs-lookup"><span data-stu-id="08eee-139">This property and its attribute provide the `Order` class with a relationship to the `Customer` class.</span></span>  
   
- В следующем примере кода представлено свойство `Customer` из класса `Order`.  
+ <span data-ttu-id="08eee-140">В следующем примере кода представлено свойство `Customer` из класса `Order`.</span><span class="sxs-lookup"><span data-stu-id="08eee-140">The following code example shows the `Customer` property from the `Order` class.</span></span>  
   
-### Пример  
+### <a name="example"></a><span data-ttu-id="08eee-141">Пример</span><span class="sxs-lookup"><span data-stu-id="08eee-141">Example</span></span>  
  [!code-csharp[DLinqObjectModel#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#3)]
  [!code-vb[DLinqObjectModel#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#3)]  
   
- Дополнительные сведения см. в разделе «Атрибут Association» статьи [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ <span data-ttu-id="08eee-142">Дополнительные сведения см. в разделе разделе атрибут Association [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="08eee-142">For more information, see the Association Attribute section of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).</span></span>  
   
-## Хранимые процедуры методов и баз данных LINQ to SQL.  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает хранимые процедуры и пользовательские функции.  В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] эти абстракции, определенные базой данных, сопоставляются с клиентскими объектами так, что к ним можно обращаться из клиентского кода в режиме строгой типизации.  Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных.  Для определения этих методов можно использовать IntelliSense.  
+## <a name="linq-to-sql-methods-and-database-stored-procedures"></a><span data-ttu-id="08eee-143">Хранимые процедуры методов и баз данных LINQ to SQL.</span><span class="sxs-lookup"><span data-stu-id="08eee-143">LINQ to SQL Methods and Database Stored Procedures</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="08eee-144"> поддерживает хранимые процедуры и пользовательские функции.</span><span class="sxs-lookup"><span data-stu-id="08eee-144"> supports stored procedures and user-defined functions.</span></span> <span data-ttu-id="08eee-145">В [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], сопоставляются эти абстракции, определенные в базе данных с клиентскими объектами так, что они будут доступны в режиме строгой типизации из клиентского кода.</span><span class="sxs-lookup"><span data-stu-id="08eee-145">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], you map these database-defined abstractions to client objects so that you can access them in a strongly typed manner from client code.</span></span> <span data-ttu-id="08eee-146">Подписи методов очень схожи с сигнатурами процедур и функций, определенных в базе данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-146">The method signatures resemble as closely as possible the signatures of the procedures and functions defined in the database.</span></span> <span data-ttu-id="08eee-147">Для определения этих методов можно использовать IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="08eee-147">You can use IntelliSense to discover these methods.</span></span>  
   
- В качестве набора результатов, возвращенного вызовом сопоставленной процедуры, выступает строго типизированная коллекция.  
+ <span data-ttu-id="08eee-148">В качестве набора результатов, возвращенного вызовом сопоставленной процедуры, выступает строго типизированная коллекция.</span><span class="sxs-lookup"><span data-stu-id="08eee-148">A result set that is returned by a call to a mapped procedure is a strongly typed collection.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет хранимые процедуры и функции с методами с помощью атрибутов <xref:System.Data.Linq.Mapping.FunctionAttribute> и <xref:System.Data.Linq.Mapping.ParameterAttribute>.  Методы, представляющие хранимые процедуры, отличаются от методов, представляющих пользовательские функции, свойством <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>.  Если данное свойство имеет значение `false` \(значение по умолчанию\), значит метод представляет хранимую процедуру.  Если свойству задано значение `true`, метод представляет функцию базы данных.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="08eee-149"> сопоставляет хранимые процедуры и функции с методами с помощью атрибутов <xref:System.Data.Linq.Mapping.FunctionAttribute> и <xref:System.Data.Linq.Mapping.ParameterAttribute>.</span><span class="sxs-lookup"><span data-stu-id="08eee-149"> maps stored procedures and functions to methods by using the <xref:System.Data.Linq.Mapping.FunctionAttribute> and <xref:System.Data.Linq.Mapping.ParameterAttribute> attributes.</span></span> <span data-ttu-id="08eee-150">Методы, представляющие хранимые процедуры, отличаются от методов, представляющих пользовательские функции, свойством <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>.</span><span class="sxs-lookup"><span data-stu-id="08eee-150">Methods representing stored procedures are distinguished from those representing user-defined functions by the <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> property.</span></span> <span data-ttu-id="08eee-151">Если данное свойство имеет значение `false` (значение по умолчанию), значит метод представляет хранимую процедуру.</span><span class="sxs-lookup"><span data-stu-id="08eee-151">If this property is set to `false` (the default), the method represents a stored procedure.</span></span> <span data-ttu-id="08eee-152">Если свойству задано значение `true`, метод представляет функцию базы данных.</span><span class="sxs-lookup"><span data-stu-id="08eee-152">If it is set to `true`, the method represents a database function.</span></span>  
   
 > [!NOTE]
->  Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут воспользоваться конструктором [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания методов, сопоставленных с хранимыми процедурами и определяемыми пользователем функциями.  
+>  <span data-ttu-id="08eee-153">Пользователи среды [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] могут воспользоваться конструктором [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания методов, сопоставленных с хранимыми процедурами и определяемыми пользователем функциями.</span><span class="sxs-lookup"><span data-stu-id="08eee-153">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to create methods mapped to stored procedures and user-defined functions.</span></span>  
   
-### Пример  
+### <a name="example"></a><span data-ttu-id="08eee-154">Пример</span><span class="sxs-lookup"><span data-stu-id="08eee-154">Example</span></span>  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- Дополнительные сведения см. в описаниях атрибутов Function, Stored Procedure и Parameter в разделах [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) и [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
+ <span data-ttu-id="08eee-155">Дополнительные сведения см. в разделах атрибут функции, хранимые процедуры атрибут и атрибут параметра из [сопоставления на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) и [хранимых процедур](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="08eee-155">For more information, see the Function Attribute, Stored Procedure Attribute, and Parameter Attribute sections of [Attribute-Based Mapping](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) and [Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).</span></span>  
   
-## См. также  
- [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)   
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a><span data-ttu-id="08eee-156">См. также</span><span class="sxs-lookup"><span data-stu-id="08eee-156">See Also</span></span>  
+ [<span data-ttu-id="08eee-157">Сопоставление на основе атрибутов</span><span class="sxs-lookup"><span data-stu-id="08eee-157">Attribute-Based Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [<span data-ttu-id="08eee-158">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="08eee-158">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -1,51 +1,55 @@
 ---
-title: "Доступ к контексту OperationContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Доступ к контексту OperationContext"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 861329c3945a53bf6c8ceeb7487aa0ef9902c93a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Доступ к контексту OperationContext
-Этот образец демонстрирует способ использования действий обмена сообщениями \(<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>\) в действии пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и для прикрепления пользовательского заголовка сообщения к исходящему сообщению или его получения из входящего сообщения.  
+# <a name="accessing-operationcontext"></a><span data-ttu-id="78804-102">Доступ к контексту OperationContext</span><span class="sxs-lookup"><span data-stu-id="78804-102">Accessing OperationContext</span></span>
+<span data-ttu-id="78804-103">В этом примере показано, как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) может использоваться посредством действий пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и присоединения или получить пользовательского заголовка сообщения исходящего или входящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="78804-103">This sample demonstrates how the messaging activities (<xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.Send>) can be used with a custom scope activity to access <xref:System.ServiceModel.OperationContext.Current%2A> and attach or retrieve a custom message header within an outgoing or incoming message.</span></span>  
   
-## Демонстрации  
- Действия обмена сообщениями, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.  
+## <a name="demonstrates"></a><span data-ttu-id="78804-104">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="78804-104">Demonstrates</span></span>  
+ <span data-ttu-id="78804-105">Действия обмена сообщениями, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.</span><span class="sxs-lookup"><span data-stu-id="78804-105">Messaging Activities, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.</span></span>  
   
-## Обсуждение  
- В этом образце показано, как использовать точки расширяемости \(<xref:System.ServiceModel.Activities.ISendMessageCallback>\) <xref:System.ServiceModel.Activities.IReceiveMessageCallback>\) в действиях обмена сообщения для доступа к <xref:System.ServiceModel.OperationContext.Current%2A>.Обратные вызовы регистрируются в среде выполнения рабочего процесса в качестве реализации свойства <xref:System.Activities.IExecutionProperty>, которое выбирается действиями обмена сообщениями после выполнения.Затрагиваются все действия обмена сообщениями в той же области, что и реализация <xref:System.Activities.IExecutionProperty>.В частности, в этом образце используется действие пользовательской области для принудительного задания поведения обратного вызова.<xref:System.ServiceModel.Activities.ISendMessageCallback> используется в клиентском рабочем процессе, чтобы включить состояние <xref:System.Activities.WorkflowApplication.Id%2A> рабочего процесса в качестве заголовка <xref:System.ServiceModel.Channels.MessageHeader> исходящего сообщения.Затем этот заголовок выбирается в службе с помощью <xref:System.ServiceModel.Activities.IReceiveMessageCallback>, и значение заголовка выводится на консоли.  
+## <a name="discussion"></a><span data-ttu-id="78804-106">Обсуждение</span><span class="sxs-lookup"><span data-stu-id="78804-106">Discussion</span></span>  
+ <span data-ttu-id="78804-107">В этом образце показано, как использовать точки расширяемости (<xref:System.ServiceModel.Activities.ISendMessageCallback>) <xref:System.ServiceModel.Activities.IReceiveMessageCallback>) в действиях обмена сообщения для доступа к <xref:System.ServiceModel.OperationContext.Current%2A>.</span><span class="sxs-lookup"><span data-stu-id="78804-107">This sample shows how to use extensibility points (<xref:System.ServiceModel.Activities.ISendMessageCallback>) <xref:System.ServiceModel.Activities.IReceiveMessageCallback>) in the messaging activities to access <xref:System.ServiceModel.OperationContext.Current%2A>.</span></span> <span data-ttu-id="78804-108">Обратные вызовы регистрируются в среде выполнения рабочего процесса в качестве реализации свойства <xref:System.Activities.IExecutionProperty>, которое выбирается действиями обмена сообщениями после выполнения.</span><span class="sxs-lookup"><span data-stu-id="78804-108">The callbacks are registered within the workflow runtime as an implementation of <xref:System.Activities.IExecutionProperty> that is picked up by the messaging activities upon execution.</span></span> <span data-ttu-id="78804-109">Затрагиваются все действия обмена сообщениями в той же области, что и реализация <xref:System.Activities.IExecutionProperty>.</span><span class="sxs-lookup"><span data-stu-id="78804-109">Any messaging activity in the same scope as that <xref:System.Activities.IExecutionProperty> implementation is affected.</span></span> <span data-ttu-id="78804-110">В частности, в этом образце используется действие пользовательской области для принудительного задания поведения обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="78804-110">In particular, this sample uses a custom scope activity to enforce the callback behavior.</span></span> <span data-ttu-id="78804-111"><xref:System.ServiceModel.Activities.ISendMessageCallback> используется в клиентском рабочем процессе, чтобы включить состояние <xref:System.Activities.WorkflowApplication.Id%2A> рабочего процесса в качестве заголовка <xref:System.ServiceModel.Channels.MessageHeader> исходящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="78804-111">The <xref:System.ServiceModel.Activities.ISendMessageCallback> is used in the client workflow to include the workflow’s <xref:System.Activities.WorkflowApplication.Id%2A> as an outgoing <xref:System.ServiceModel.Channels.MessageHeader>.</span></span> <span data-ttu-id="78804-112">Затем этот заголовок выбирается в службе с помощью <xref:System.ServiceModel.Activities.IReceiveMessageCallback>, и значение заголовка выводится на консоли.</span><span class="sxs-lookup"><span data-stu-id="78804-112">This header is then picked up in the service using the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> and the value of the header is printed out to the console.</span></span>  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="78804-113">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="78804-113">To set up, build, and run the sample</span></span>  
   
-1.  В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP.Для выполнения этого образца необходимо добавить списки управления доступом по URL\-адресу \(дополнительные сведения см. в разделе [Настройка HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)\). Для этого запустите среду Visual Studio от имени администратора или выполните следующую команду в командной строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом.Убедитесь, что подставлены нужный домен и имя пользователя.  
+1.  <span data-ttu-id="78804-114">В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP.</span><span class="sxs-lookup"><span data-stu-id="78804-114">This sample exposes a workflow service using HTTP endpoints.</span></span> <span data-ttu-id="78804-115">Для запуска этого примера, соответствующие URL ACL, необходимо добавить (см. [Настройка протоколов HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения), запустив Visual Studio от имени администратора, или, выполнив следующую команду в командной строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом.</span><span class="sxs-lookup"><span data-stu-id="78804-115">To run this sample, proper URL ACLs must be added (see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) for details), either by running Visual Studio as Administrator or by executing the following command at an elevated prompt to add the appropriate ACLs.</span></span> <span data-ttu-id="78804-116">Убедитесь, что подставлены нужный домен и имя пользователя.</span><span class="sxs-lookup"><span data-stu-id="78804-116">Ensure that your Domain and Username are substituted.</span></span>  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  После добавления списков управления доступом по URL\-адресу выполните следующие действия.  
+2.  <span data-ttu-id="78804-117">После добавления списков управления доступом по URL-адресу выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="78804-117">Once the URL ACLs are added, use the following steps.</span></span>  
   
-    1.  Постройте решение.  
+    1.  <span data-ttu-id="78804-118">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="78804-118">Build the solution.</span></span>  
   
-    2.  Задайте несколько запускаемых проектов. Для этого щелкните решение правой кнопкой мыши и выберите команду **Назначить запускаемые проекты**.  
+    2.  <span data-ttu-id="78804-119">Задайте несколько запускаемых проектов, щелкните правой кнопкой мыши решение и выбрав **назначить запускаемые проекты**.</span><span class="sxs-lookup"><span data-stu-id="78804-119">Set multiple start-up projects by right-clicking the solution and selecting **Set Startup Projects**.</span></span>  
   
-    3.  Добавьте проекты **Служба** и **Клиент** \(в этом порядке\) в качестве запускаемых проектов.  
+    3.  <span data-ttu-id="78804-120">Добавить **службы** и **клиента** (в указанном порядке) в качестве запускаемых проектов.</span><span class="sxs-lookup"><span data-stu-id="78804-120">Add **Service** and **Client** (in that order) as multiple start-up projects.</span></span>  
   
-    4.  Запустите приложение.На консоли клиента показан дважды выполняемый рабочий процесс, а в окне службы показаны идентификаторы экземпляров этих рабочих процессов.  
+    4.  <span data-ttu-id="78804-121">Запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="78804-121">Run the application.</span></span> <span data-ttu-id="78804-122">На консоли клиента показан дважды выполняемый рабочий процесс, а в окне службы показаны идентификаторы экземпляров этих рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="78804-122">The client console shows a workflow running twice and the Service window shows the instance ID of those workflows.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="78804-123">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="78804-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="78804-124">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="78804-124">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="78804-125">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="78804-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="78804-126">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="78804-126">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

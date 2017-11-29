@@ -1,52 +1,55 @@
 ---
-title: "Безопасность SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность SQL Server"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность SQL Server
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] предоставляет много функций для создания безопасных приложений баз данных.  
+# <a name="sql-server-security"></a><span data-ttu-id="f88ce-102">Безопасность SQL Server</span><span class="sxs-lookup"><span data-stu-id="f88ce-102">SQL Server Security</span></span>
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]<span data-ttu-id="f88ce-103"> предоставляет много функций для создания безопасных приложений баз данных.</span><span class="sxs-lookup"><span data-stu-id="f88ce-103"> has many features that support creating secure database applications.</span></span>  
   
- Такие общие угрозы безопасности, как кража данных или вандализм, существуют независимо от используемой версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Целостность данных также следует рассматривать как проблему безопасности.  При отсутствии защиты данных они могут стать бесполезными, если разрешено нерегламентированное управление данными и в данные случайно или преднамеренно вносятся неверные значения или они полностью удаляются.  Кроме того, зачастую существуют законодательные требования, которые необходимо соблюдать, например, касающиеся правильного хранения конфиденциальной информации.  Хранение некоторых личных данных полностью запрещено в зависимости от законодательства, которое применяется в конкретной юрисдикции.  
+ <span data-ttu-id="f88ce-104">Такие общие угрозы безопасности, как кража данных или вандализм, существуют независимо от используемой версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f88ce-104">Common security considerations, such as data theft or vandalism, apply regardless of the version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] you are using.</span></span> <span data-ttu-id="f88ce-105">Целостность данных также следует рассматривать как проблему безопасности.</span><span class="sxs-lookup"><span data-stu-id="f88ce-105">Data integrity should also be considered as a security issue.</span></span> <span data-ttu-id="f88ce-106">При отсутствии защиты данных они могут стать бесполезными, если разрешено нерегламентированное управление данными и в данные случайно или преднамеренно вносятся неверные значения или они полностью удаляются.</span><span class="sxs-lookup"><span data-stu-id="f88ce-106">If data is not protected, it is possible that it could become worthless if ad hoc data manipulation is permitted and the data is inadvertently or maliciously modified with incorrect values or deleted entirely.</span></span> <span data-ttu-id="f88ce-107">Кроме того, зачастую существуют законодательные требования, которые необходимо соблюдать, например, касающиеся правильного хранения конфиденциальной информации.</span><span class="sxs-lookup"><span data-stu-id="f88ce-107">In addition, there are often legal requirements that must be adhered to, such as the correct storage of confidential information.</span></span> <span data-ttu-id="f88ce-108">Хранение некоторых личных данных полностью запрещено в зависимости от законодательства, которое применяется в конкретной юрисдикции.</span><span class="sxs-lookup"><span data-stu-id="f88ce-108">Storing some kinds of personal data is proscribed entirely, depending on the laws that apply in a particular jurisdiction.</span></span>  
   
- В каждой версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] есть свои средства безопасности, как и в каждой версии Windows, при этом возможности более поздних версий шире, чем возможности более ранних.  Важно понимать, что сами по себе средства безопасности не могут гарантировать защиту приложения базы данных.  Каждое приложение базы данных имеет уникальные требования, среду выполнения, модель развертывания, физическое расположение и количество пользователей.  Некоторым приложениям, работающим локально, необходима минимальная защита, тогда как другим локальным приложениям или приложениям, развернутым через Интернет, могут требоваться строгие меры безопасности вместе с постоянным мониторингом и контролем.  
+ <span data-ttu-id="f88ce-109">В каждой версии [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] есть свои средства безопасности, как и в каждой версии Windows, при этом возможности более поздних версий шире, чем возможности более ранних.</span><span class="sxs-lookup"><span data-stu-id="f88ce-109">Each version of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] has different security features, as does each version of Windows, with later versions having enhanced functionality over earlier ones.</span></span> <span data-ttu-id="f88ce-110">Важно понимать, что сами по себе средства безопасности не могут гарантировать защиту приложения базы данных.</span><span class="sxs-lookup"><span data-stu-id="f88ce-110">It is important to understand that security features alone cannot guarantee a secure database application.</span></span> <span data-ttu-id="f88ce-111">Каждое приложение базы данных имеет уникальные требования, среду выполнения, модель развертывания, физическое расположение и количество пользователей.</span><span class="sxs-lookup"><span data-stu-id="f88ce-111">Each database application is unique in its requirements, execution environment, deployment model, physical location, and user population.</span></span> <span data-ttu-id="f88ce-112">Некоторым приложениям, работающим локально, необходима минимальная защита, тогда как другим локальным приложениям или приложениям, развернутым через Интернет, могут требоваться строгие меры безопасности вместе с постоянным мониторингом и контролем.</span><span class="sxs-lookup"><span data-stu-id="f88ce-112">Some applications that are local in scope may need only minimal security whereas other local applications or applications deployed over the Internet may require stringent security measures and ongoing monitoring and evaluation.</span></span>  
   
- Требования безопасности для приложения базы данных [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] следует рассматривать во время разработки, а не впоследствии.  Оценка угроз еще на стадии разработки позволяет сократить потенциальный ущерб в случае обнаружения уязвимости.  
+ <span data-ttu-id="f88ce-113">Требования безопасности для приложения базы данных [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] следует рассматривать во время разработки, а не впоследствии.</span><span class="sxs-lookup"><span data-stu-id="f88ce-113">The security requirements of a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] database application should be considered at design time, not as an afterthought.</span></span> <span data-ttu-id="f88ce-114">Оценка угроз еще на стадии разработки позволяет сократить потенциальный ущерб в случае обнаружения уязвимости.</span><span class="sxs-lookup"><span data-stu-id="f88ce-114">Evaluating threats early in the development cycle gives you the opportunity to mitigate potential damage wherever a vulnerability is detected.</span></span>  
   
- Даже если первоначально приложение разработано безупречно, по мере развития системы могут появляться новые угрозы.  Создание эшелонированной защиты вокруг базы данных позволяет свести к минимуму ущерб, причиняемый прорывом системы безопасности.  На первой линии защиты необходимо сократить контактную зону для атаки злоумышленников. Для этого никогда не следует предоставлять больше прав доступа, чем необходимо.  
+ <span data-ttu-id="f88ce-115">Даже если первоначально приложение разработано безупречно, по мере развития системы могут появляться новые угрозы.</span><span class="sxs-lookup"><span data-stu-id="f88ce-115">Even if the initial design of an application is sound, new threats may emerge as the system evolves.</span></span> <span data-ttu-id="f88ce-116">Создание эшелонированной защиты вокруг базы данных позволяет свести к минимуму ущерб, причиняемый прорывом системы безопасности.</span><span class="sxs-lookup"><span data-stu-id="f88ce-116">By creating multiple lines of defense around your database, you can minimize the damage inflicted by a security breach.</span></span> <span data-ttu-id="f88ce-117">На первой линии защиты необходимо сократить контактную зону для атаки злоумышленников. Для этого никогда не следует предоставлять больше прав доступа, чем необходимо.</span><span class="sxs-lookup"><span data-stu-id="f88ce-117">Your first line of defense is to reduce the attack surface area by never to granting more permissions than are absolutely necessary.</span></span>  
   
- В этом разделе кратко описываются средства безопасности в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые нужны разработчикам. Здесь также приведены ссылки на соответствующие разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] и другие ресурсы, где эти функции описаны более подробно.  
+ <span data-ttu-id="f88ce-118">В этом разделе кратко описываются средства безопасности в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], которые нужны разработчикам. Здесь также приведены ссылки на соответствующие разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] и другие ресурсы, где эти функции описаны более подробно.</span><span class="sxs-lookup"><span data-stu-id="f88ce-118">The topics in this section briefly describe the security features in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] that are relevant for developers, with links to relevant topics in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online and other resources that provide more detailed coverage.</span></span>  
   
-## В этом подразделе  
- [Общие сведения о безопасности в SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- Описание архитектуры и средств безопасности [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="f88ce-119">Содержание</span><span class="sxs-lookup"><span data-stu-id="f88ce-119">In This Section</span></span>  
+ [<span data-ttu-id="f88ce-120">Общие сведения о безопасности SQL Server</span><span class="sxs-lookup"><span data-stu-id="f88ce-120">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ <span data-ttu-id="f88ce-121">Описание архитектуры и средств безопасности [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f88ce-121">Describes the architecture and security features of [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span></span>  
   
- [Сценарии защиты приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+ [<span data-ttu-id="f88ce-122">Сценарии безопасности приложений в SQL Server</span><span class="sxs-lookup"><span data-stu-id="f88ce-122">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ <span data-ttu-id="f88ce-123">Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f88ce-123">Contains topics discussing various application security scenarios for ADO.NET and [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] applications.</span></span>  
   
- [Безопасность SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- Описание вопросов безопасности для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
+ [<span data-ttu-id="f88ce-124">Безопасность экспресс-выпуск SQL Server</span><span class="sxs-lookup"><span data-stu-id="f88ce-124">SQL Server Express Security</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ <span data-ttu-id="f88ce-125">Описание вопросов безопасности для [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.</span><span class="sxs-lookup"><span data-stu-id="f88ce-125">Describes security considerations for [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.</span></span>  
   
-## Связанные подразделы  
- [Защита и обеспечение безопасности \(компонент Database Engine\)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.  
+## <a name="related-sections"></a><span data-ttu-id="f88ce-126">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f88ce-126">Related Sections</span></span>  
+ <span data-ttu-id="f88ce-127">[Безопасность и защита (компонент Database Engine)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)</span><span class="sxs-lookup"><span data-stu-id="f88ce-127">[Security and Protection (Database Engine)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)</span></span>  
+ <span data-ttu-id="f88ce-128">Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.</span><span class="sxs-lookup"><span data-stu-id="f88ce-128">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online security topics.</span></span>  
   
- [Вопросы безопасности SQL Server](http://go.microsoft.com/fwlink/?LinkId=98587)  
- Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.  
+ [<span data-ttu-id="f88ce-129">Вопросы безопасности для SQL Server</span><span class="sxs-lookup"><span data-stu-id="f88ce-129">Security Considerations for SQL Server</span></span>](http://go.microsoft.com/fwlink/?LinkId=98587)  
+ <span data-ttu-id="f88ce-130">Разделы электронной документации по [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], посвященные безопасности.</span><span class="sxs-lookup"><span data-stu-id="f88ce-130">[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Books Online security topics.</span></span>  
   
-## См. также  
- [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f88ce-131">См. также</span><span class="sxs-lookup"><span data-stu-id="f88ce-131">See Also</span></span>  
+ [<span data-ttu-id="f88ce-132">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f88ce-132">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="f88ce-133">SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f88ce-133">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="f88ce-134">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f88ce-134">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

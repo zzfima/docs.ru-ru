@@ -1,54 +1,64 @@
 ---
-title: "&lt;remove&gt; элемента &lt;claimTypeRequirements&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;remove&gt; элемента &lt;claimTypeRequirements&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96155ed805d99a3678c5d20d83a490efb9811815
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;remove&gt; элемента &lt;claimTypeRequirements&gt;
-Указывает типы утверждений в федеративных учетных данных, которые должны быть удалены.  
+# <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="4b401-102">&lt;remove&gt; элемента &lt;claimTypeRequirements&gt;</span><span class="sxs-lookup"><span data-stu-id="4b401-102">&lt;remove&gt; of &lt;claimTypeRequirements&gt; element</span></span>
+<span data-ttu-id="4b401-103">Указывает типы утверждений в федеративных учетных данных, которые должны быть удалены.</span><span class="sxs-lookup"><span data-stu-id="4b401-103">Specifies the types of claims to be removed in the federated credential.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="4b401-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="4b401-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="4b401-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="4b401-105">\<bindings></span></span>  
+<span data-ttu-id="4b401-106">\<wsFederatedBinding ></span><span class="sxs-lookup"><span data-stu-id="4b401-106">\<wsFederatedBinding></span></span>  
+<span data-ttu-id="4b401-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="4b401-107">\<binding></span></span>  
+<span data-ttu-id="4b401-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="4b401-108">\<security></span></span>  
+<span data-ttu-id="4b401-109">\<сообщение ></span><span class="sxs-lookup"><span data-stu-id="4b401-109">\<message></span></span>  
+<span data-ttu-id="4b401-110">\<claimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="4b401-110">\<claimTypeRequirements></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4b401-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4b401-111">Syntax</span></span>  
   
+```xml  
 <claimTypeRequirements>  
       <remove claimType="URI" />  
 </claimTypeRequirements>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4b401-112">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="4b401-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="4b401-113">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="4b401-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="4b401-114">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="4b401-114">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|claimType|Универсальный код ресурса \(URI\), определяющий тип утверждения, которое требуется удалить.|  
+|<span data-ttu-id="4b401-115">Атрибут</span><span class="sxs-lookup"><span data-stu-id="4b401-115">Attribute</span></span>|<span data-ttu-id="4b401-116">Описание</span><span class="sxs-lookup"><span data-stu-id="4b401-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="4b401-117">claimType</span><span class="sxs-lookup"><span data-stu-id="4b401-117">claimType</span></span>|<span data-ttu-id="4b401-118">Универсальный код ресурса (URI), определяющий тип утверждения, которое требуется удалить.</span><span class="sxs-lookup"><span data-stu-id="4b401-118">A URI that defines the type of a claim to be removed.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="4b401-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="4b401-119">Child Elements</span></span>  
+ <span data-ttu-id="4b401-120">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="4b401-120">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="4b401-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="4b401-121">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Задает коллекцию обязательных типов утверждений.  Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным.  Например, входящие учетные данные должны обладать определенным набором типов утверждений.  Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
+|<span data-ttu-id="4b401-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="4b401-122">Element</span></span>|<span data-ttu-id="4b401-123">Описание</span><span class="sxs-lookup"><span data-stu-id="4b401-123">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4b401-124">\<claimTypeRequirements ></span><span class="sxs-lookup"><span data-stu-id="4b401-124">\<claimTypeRequirements></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|<span data-ttu-id="4b401-125">Задает коллекцию обязательных типов утверждений.</span><span class="sxs-lookup"><span data-stu-id="4b401-125">Specifies a collection of required claim types.</span></span> <span data-ttu-id="4b401-126">Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="4b401-126">Each element is of type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.</span></span><br /><br /> <span data-ttu-id="4b401-127">В федеративном сценарии службы предъявляют требования к входящим учетным данным.</span><span class="sxs-lookup"><span data-stu-id="4b401-127">In a federated scenario, services state the requirements on incoming credentials.</span></span> <span data-ttu-id="4b401-128">Например, входящие учетные данные должны обладать определенным набором типов утверждений.</span><span class="sxs-lookup"><span data-stu-id="4b401-128">For example, the incoming credentials must possess a certain set of claim types.</span></span> <span data-ttu-id="4b401-129">Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.</span><span class="sxs-lookup"><span data-stu-id="4b401-129">Each element in this collection specifies the types of required and optional claims expected to appear in a federated credential.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>   
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>   
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>   
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>   
+## <a name="see-also"></a><span data-ttu-id="4b401-130">См. также</span><span class="sxs-lookup"><span data-stu-id="4b401-130">See Also</span></span>  
+ <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
+ <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
+ <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
+ <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
  <xref:System.ServiceModel.Configuration.ClaimTypeElement>

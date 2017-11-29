@@ -1,59 +1,65 @@
 ---
-title: "Данные даты и времени | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Данные даты и времени"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2bd9fa595281f7dfda50ef22914ccce7bf814a36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Данные даты и времени
-В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени.  Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса.  Начиная с .NET Framework 3.5 с пакетом обновления 1 \(SP1\), поставщик данных .NET Framework для SQL Server \(<xref:System.Data.SqlClient>\) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008.  Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 \(SP1\) или более поздней версии.  
+# <a name="date-and-time-data"></a><span data-ttu-id="3ae44-102">Данные даты и времени</span><span class="sxs-lookup"><span data-stu-id="3ae44-102">Date and Time Data</span></span>
+<span data-ttu-id="3ae44-103">В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-103">SQL Server 2008 introduces new data types for handling date and time information.</span></span> <span data-ttu-id="3ae44-104">Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса.</span><span class="sxs-lookup"><span data-stu-id="3ae44-104">The new data types include separate types for date and time, and expanded data types with greater range, precision, and time-zone awareness.</span></span> <span data-ttu-id="3ae44-105">Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="3ae44-105">Starting with the .NET Framework version 3.5 Service Pack (SP) 1, the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) provides full support for all the new features of the SQL Server 2008 Database Engine.</span></span> <span data-ttu-id="3ae44-106">Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="3ae44-106">You must install the .NET Framework 3.5 SP1 (or later) to use these new features with SqlClient.</span></span>  
   
- В версиях SQL Server ранее SQL Server 2008 было всего два типа данных для работы с датой и временем: `datetime` и `smalldatetime`.  Оба типа данных содержат как значение даты, так и значение времени, что затрудняет работу только со значениями даты или времени.  Кроме того, эти типы данных поддерживают только даты после введения григорианского календаря в Англии в 1753 г.  Другое ограничение заключается в том, что эти устаревшие типы данных не учитывают часовые пояса, что затрудняет работу с данными, поступившими из разных часовых поясов.  
+ <span data-ttu-id="3ae44-107">В версиях SQL Server ранее SQL Server 2008 было всего два типа данных для работы с датой и временем: `datetime` и `smalldatetime`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-107">Versions of SQL Server earlier than SQL Server 2008 only had two data types for working with date and time values: `datetime` and `smalldatetime`.</span></span> <span data-ttu-id="3ae44-108">Оба типа данных содержат как значение даты, так и значение времени, что затрудняет работу только со значениями даты или времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-108">Both of these data types contain both the date value and a time value, which makes it difficult to work with only date or only time values.</span></span> <span data-ttu-id="3ae44-109">Кроме того, эти типы данных поддерживают только даты после введения григорианского календаря в Англии в 1753 г.</span><span class="sxs-lookup"><span data-stu-id="3ae44-109">Also, these data types only support dates that occur after the introduction of the Gregorian calendar in England in 1753.</span></span> <span data-ttu-id="3ae44-110">Другое ограничение заключается в том, что эти устаревшие типы данных не учитывают часовые пояса, что затрудняет работу с данными, поступившими из разных часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="3ae44-110">Another limitation is that these older data types are not time-zone aware, which makes it difficult to work with data that originates from multiple time zones.</span></span>  
   
- Полная документация по типам данных SQL Server доступна в электронной документации по SQL Server.  В приведенной ниже таблице перечислены разделы, посвященные дате и времени, для конкретных версий SQL Server.  
+ <span data-ttu-id="3ae44-111">Полная документация по типам данных SQL Server доступна в электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3ae44-111">Complete documentation for SQL Server data types is available in SQL Server Books Online.</span></span> <span data-ttu-id="3ae44-112">В приведенной ниже таблице перечислены разделы, посвященные дате и времени, для конкретных версий SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3ae44-112">The following table lists the version-specific entry-level topics for date and time data.</span></span>  
   
- **Электронная документация по SQL Server**  
+ <span data-ttu-id="3ae44-113">**Электронная документация по SQL Server**</span><span class="sxs-lookup"><span data-stu-id="3ae44-113">**SQL Server Books Online**</span></span>  
   
-1.  [Использование данных даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [<span data-ttu-id="3ae44-114">Использование данных даты и времени</span><span class="sxs-lookup"><span data-stu-id="3ae44-114">Using Date and Time Data</span></span>](http://go.microsoft.com/fwlink/?LinkID=98361)  
   
-## Типы данных даты и времени и только даты, появившиеся в SQL Server 2008  
- В приведенной ниже таблице описаны новые типы данных даты и времени.  
+## <a name="datetime-data-types-introduced-in-sql-server-2008"></a><span data-ttu-id="3ae44-115">Типы данных даты и времени и только даты, появившиеся в SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="3ae44-115">Date/Time Data Types Introduced in SQL Server 2008</span></span>  
+ <span data-ttu-id="3ae44-116">В приведенной ниже таблице описаны новые типы данных даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-116">The following table describes the new date and time data types.</span></span>  
   
-|Тип данных SQL Server|Описание|  
-|---------------------------|--------------|  
-|`date`|Тип данных `date` имеет диапазон от 1 января 01 года н. э. до 31 декабря 9999 года н. э. с точностью до дня.  Значение по умолчанию \- 1 января 1900 года.  Размер хранения составляет 3 байта.|  
-|`time`|Тип данных `time` сохраняет только значения времени, основанные на 24\-часовом формате.  Тип данных `time` имеет диапазон от 00:00:00.0000000 до 23:59:59.9999999 с точностью 100 наносекунд.  Значение по умолчанию \- 00:00:00.0000000 \(полночь\).  Тип данных `time` поддерживает определяемую пользователем точность в долях секунды, а размер хранения изменяется от 3 до 6 байт в зависимости от указанной точности.|  
-|`datetime2`|Тип данных `datetime2` объединяет диапазон и точность типов данных `date` и `time` в один тип данных.<br /><br /> Значения по умолчанию и форматы строковых литералов аналогичны значениям, определенным для типов данных `date` и `time`.|  
-|`datetimeoffset`|Тип данных `datetimeoffset` обладает всеми характеристиками типа `datetime2` с добавлением смещения часового пояса.  Смещение часового пояса представлено в виде \[\+&#124;\-\] ЧЧ:ММ.  ЧЧ \- это 2 разряда от 00 до 14, представляющие количество часов в смещении часового пояса.  ММ \- это 2 разряда от 00 до 59, представляющие количество дополнительных минут в смещении часового пояса.  Форматы времени поддерживаются с точностью до 100 наносекунд.  Обязательный знак «\+» или «\-» указывает, нужно ли прибавить смещение часового пояса ко времени в формате UTC \(универсальное время или время по Гринвичу\) или отнять его, чтобы получить местное время.|  
-  
-> [!NOTE]
->  Дополнительные сведения об использовании ключевого слова `Type System Version` см. в разделе <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
-  
-## Формат даты и порядок даты  
- Способ синтаксического разбора сервером SQL Server значений даты и времени зависит не только от версии системы типов и версии сервера, но также от установленных на сервере по умолчанию языковых параметров и параметров форматирования.  Строка даты, подходящая для форматов даты на одном языке, может не распознаваться, если запрос выполняется в подключении, в котором используется другой язык и другой формат даты.  
-  
- Инструкция Transact\-SQL SET LANGUAGE неявным образом задает значение параметра DATEFORMAT, определяющего порядок компонентов даты.  Инструкцию Transact\-SQL SET DATEFORMAT можно использовать в подключении для устранения неоднозначности значений даты путем расположения компонентов даты в порядке МДГ, ДМГ, ГМД, ГДМ, МГД или ДГМ.  
-  
- Если значение параметра DATEFORMAT для подключения не указано, SQL Server использует связанный с подключением язык по умолчанию.  Например, строка даты '01\/02\/03' будет интерпретирована как МДГ \(2 января 2003 г.\), если на сервере установлен английский язык \(США\), и как ДМГ \(1 февраля 2003 г.\), если на сервере установлен английский язык \(Великобритания\).  Год определяется по правилу отсечения двух цифр года SQL Server, которое определяет дату отсечения для выбора века.  Дополнительные сведения см. в разделе [Параметр отсечения двух цифр года](http://go.microsoft.com/fwlink/?LinkId=120473) электронной документации по SQL Server.  
+|<span data-ttu-id="3ae44-117">Тип данных SQL Server</span><span class="sxs-lookup"><span data-stu-id="3ae44-117">SQL Server data type</span></span>|<span data-ttu-id="3ae44-118">Описание</span><span class="sxs-lookup"><span data-stu-id="3ae44-118">Description</span></span>|  
+|--------------------------|-----------------|  
+|`date`|<span data-ttu-id="3ae44-119">Тип данных `date` имеет диапазон от 1 января 01 года н. э. до 31 декабря 9999 года н. э. с точностью до дня.</span><span class="sxs-lookup"><span data-stu-id="3ae44-119">The `date` data type has a range of January 1, 01 through December 31, 9999 with an accuracy of 1 day.</span></span> <span data-ttu-id="3ae44-120">Значение по умолчанию - 1 января 1900 года.</span><span class="sxs-lookup"><span data-stu-id="3ae44-120">The default value is January 1, 1900.</span></span> <span data-ttu-id="3ae44-121">Размер хранения составляет 3 байта.</span><span class="sxs-lookup"><span data-stu-id="3ae44-121">The storage size is 3 bytes.</span></span>|  
+|`time`|<span data-ttu-id="3ae44-122">Тип данных `time` сохраняет только значения времени, основанные на 24-часовом формате.</span><span class="sxs-lookup"><span data-stu-id="3ae44-122">The `time` data type stores time values only, based on a 24-hour clock.</span></span> <span data-ttu-id="3ae44-123">Тип данных `time` имеет диапазон от 00:00:00.0000000 до 23:59:59.9999999 с точностью 100 наносекунд.</span><span class="sxs-lookup"><span data-stu-id="3ae44-123">The `time` data type has a range of 00:00:00.0000000 through 23:59:59.9999999 with an accuracy of 100 nanoseconds.</span></span> <span data-ttu-id="3ae44-124">Значение по умолчанию - 00:00:00.0000000 (полночь).</span><span class="sxs-lookup"><span data-stu-id="3ae44-124">The default value is 00:00:00.0000000 (midnight).</span></span> <span data-ttu-id="3ae44-125">Тип данных `time` поддерживает определяемую пользователем точность в долях секунды, а размер хранения изменяется от 3 до 6 байт в зависимости от указанной точности.</span><span class="sxs-lookup"><span data-stu-id="3ae44-125">The `time` data type supports user-defined fractional second precision, and the storage size varies from 3 to 6 bytes, based on the precision specified.</span></span>|  
+|`datetime2`|<span data-ttu-id="3ae44-126">Тип данных `datetime2` объединяет диапазон и точность типов данных `date` и `time` в один тип данных.</span><span class="sxs-lookup"><span data-stu-id="3ae44-126">The `datetime2` data type combines the range and precision of the `date` and `time` data types into a single data type.</span></span><br /><br /> <span data-ttu-id="3ae44-127">Значения по умолчанию и форматы строковых литералов аналогичны значениям, определенным для типов данных `date` и `time`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-127">The default values and string literal formats are the same as those defined in the `date` and `time` data types.</span></span>|  
+|`datetimeoffset`|<span data-ttu-id="3ae44-128">Тип данных `datetimeoffset` обладает всеми характеристиками типа `datetime2` с добавлением смещения часового пояса.</span><span class="sxs-lookup"><span data-stu-id="3ae44-128">The `datetimeoffset` data type has all the features of `datetime2` with an additional time zone offset.</span></span> <span data-ttu-id="3ae44-129">Смещение часового пояса представляется в виде [+ &#124;-] чч: мм.</span><span class="sxs-lookup"><span data-stu-id="3ae44-129">The time zone offset is represented as [+&#124;-] HH:MM.</span></span> <span data-ttu-id="3ae44-130">ЧЧ - это 2 разряда от 00 до 14, представляющие количество часов в смещении часового пояса.</span><span class="sxs-lookup"><span data-stu-id="3ae44-130">HH is 2 digits ranging from 00 to 14 that represent the number of hours in the time zone offset.</span></span> <span data-ttu-id="3ae44-131">ММ - это 2 разряда от 00 до 59, представляющие количество дополнительных минут в смещении часового пояса.</span><span class="sxs-lookup"><span data-stu-id="3ae44-131">MM is 2 digits ranging from 00 to 59 that represent the number of additional minutes in the time zone offset.</span></span> <span data-ttu-id="3ae44-132">Форматы времени поддерживаются с точностью до 100 наносекунд.</span><span class="sxs-lookup"><span data-stu-id="3ae44-132">Time formats are supported to 100 nanoseconds.</span></span> <span data-ttu-id="3ae44-133">Обязательный знак «+» или «-» указывает, нужно ли прибавить смещение часового пояса ко времени в формате UTC (универсальное время или время по Гринвичу) или отнять его, чтобы получить местное время.</span><span class="sxs-lookup"><span data-stu-id="3ae44-133">The mandatory + or - sign indicates whether the time zone offset is added or subtracted from UTC (Universal Time Coordinate or Greenwich Mean Time) to obtain the local time.</span></span>|  
   
 > [!NOTE]
->  Формат даты ГДМ не поддерживается при преобразовании из строкового формата в формат `date`, `time`, `datetime2` или `datetimeoffset`.  
+>  <span data-ttu-id="3ae44-134">Дополнительные сведения об использовании ключевого слова `Type System Version` см. в разделе <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-134">For more information about using the `Type System Version` keyword, see <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.</span></span>  
   
- Дополнительные сведения об интерпретации сервером SQL Server даты и времени см. в разделе [Использование данных даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361) электронной документации по SQL Server 2008.  
+## <a name="date-format-and-date-order"></a><span data-ttu-id="3ae44-135">Формат даты и порядок даты</span><span class="sxs-lookup"><span data-stu-id="3ae44-135">Date Format and Date Order</span></span>  
+ <span data-ttu-id="3ae44-136">Способ синтаксического разбора сервером SQL Server значений даты и времени зависит не только от версии системы типов и версии сервера, но также от установленных на сервере по умолчанию языковых параметров и параметров форматирования.</span><span class="sxs-lookup"><span data-stu-id="3ae44-136">How SQL Server parses date and time values depends not only on the type system version and server version, but also on the server's default language and format settings.</span></span> <span data-ttu-id="3ae44-137">Строка даты, подходящая для форматов даты на одном языке, может не распознаваться, если запрос выполняется в подключении, в котором используется другой язык и другой формат даты.</span><span class="sxs-lookup"><span data-stu-id="3ae44-137">A date string that works for the date formats of one language might be unrecognizable if the query is executed by a connection that uses a different language and date format setting.</span></span>  
   
-## Параметры и типы данных даты\-времени  
- Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из перечислений <xref:System.Data.SqlDbType>.  Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.  
+ <span data-ttu-id="3ae44-138">Инструкция Transact-SQL SET LANGUAGE неявным образом задает значение параметра DATEFORMAT, определяющего порядок компонентов даты.</span><span class="sxs-lookup"><span data-stu-id="3ae44-138">The Transact-SQL SET LANGUAGE statement implicitly sets the DATEFORMAT that determines the order of the date parts.</span></span> <span data-ttu-id="3ae44-139">Инструкцию Transact-SQL SET DATEFORMAT можно использовать в подключении для устранения неоднозначности значений даты путем расположения компонентов даты в порядке МДГ, ДМГ, ГМД, ГДМ, МГД или ДГМ.</span><span class="sxs-lookup"><span data-stu-id="3ae44-139">You can use the SET DATEFORMAT Transact-SQL statement on a connection to disambiguate date values by ordering the date parts in MDY, DMY, YMD, YDM, MYD, or DYM order.</span></span>  
+  
+ <span data-ttu-id="3ae44-140">Если значение параметра DATEFORMAT для подключения не указано, SQL Server использует связанный с подключением язык по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3ae44-140">If you do not specify any DATEFORMAT for the connection, SQL Server uses the default language associated with the connection.</span></span> <span data-ttu-id="3ae44-141">Например, строка даты '01/02/03' будет интерпретирована как МДГ (2 января 2003 г.), если на сервере установлен английский язык (США), и как ДМГ (1 февраля 2003 г.), если на сервере установлен английский язык (Великобритания).</span><span class="sxs-lookup"><span data-stu-id="3ae44-141">For example, a date string of '01/02/03' would be interpreted as MDY (January 2, 2003) on a server with a language setting of United States English, and as DMY (February 1, 2003) on a server with a language setting of British English.</span></span> <span data-ttu-id="3ae44-142">Год определяется по правилу отсечения двух цифр года SQL Server, которое определяет дату отсечения для выбора века.</span><span class="sxs-lookup"><span data-stu-id="3ae44-142">The year is determined by using SQL Server's cutoff year rule, which defines the cutoff date for assigning the century value.</span></span> <span data-ttu-id="3ae44-143">Дополнительные сведения см. в разделе [параметр две цифры года для двухзначной записи](http://go.microsoft.com/fwlink/?LinkId=120473) в электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3ae44-143">For more information, see [two digit year cutoff Option](http://go.microsoft.com/fwlink/?LinkId=120473) in SQL Server Books Online.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="3ae44-144">Формат даты ГДМ не поддерживается при преобразовании из строкового формата в формат `date`, `time`, `datetime2` или `datetimeoffset`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-144">The YDM date format is not supported when converting from a string format to `date`, `time`, `datetime2`, or `datetimeoffset`.</span></span>  
+  
+ <span data-ttu-id="3ae44-145">Дополнительные сведения об интерпретации сервером SQL Server даты и времени см. в разделе [данных с использованием даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361) в электронной документации по SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="3ae44-145">For more information about how SQL Server interprets date and time data, see [Using Date and Time Data](http://go.microsoft.com/fwlink/?LinkID=98361) in SQL Server 2008 Books Online.</span></span>  
+  
+## <a name="datetime-data-types-and-parameters"></a><span data-ttu-id="3ae44-146">Параметры и типы данных даты-времени</span><span class="sxs-lookup"><span data-stu-id="3ae44-146">Date/Time Data Types and Parameters</span></span>  
+ <span data-ttu-id="3ae44-147">Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из перечислений <xref:System.Data.SqlDbType>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-147">You can specify the data type of a <xref:System.Data.SqlClient.SqlParameter> by using one of the <xref:System.Data.SqlDbType> enumerations.</span></span> <span data-ttu-id="3ae44-148">Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.</span><span class="sxs-lookup"><span data-stu-id="3ae44-148">The following enumerations have been added to <xref:System.Data.SqlDbType> to support the new date and time data types.</span></span>  
   
 -   `SqlDbType.Date`  
   
@@ -63,47 +69,47 @@ caps.handback.revision: 7
   
 -   `SqlDbType.DateTimeOffSet`  
   
- Также можно указать тип объекта <xref:System.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:System.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>.  Для поддержки типов данных `datetime2` и `datetimeoffset` к свойству <xref:System.Data.DbType> были добавлены следующие значения перечисления.  
+ <span data-ttu-id="3ae44-149">Также можно указать тип объекта <xref:System.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:System.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-149">You can also specify the type of a <xref:System.Data.SqlClient.SqlParameter> generically by setting the <xref:System.Data.SqlClient.SqlParameter.DbType%2A> property of a `SqlParameter` object to a particular <xref:System.Data.DbType> enumeration value.</span></span> <span data-ttu-id="3ae44-150">Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.</span><span class="sxs-lookup"><span data-stu-id="3ae44-150">The following enumeration values have been added to <xref:System.Data.DbType> to support the `datetime2` and `datetimeoffset` data types:</span></span>  
   
--   DbType.DateTime2  
+-   <span data-ttu-id="3ae44-151">DbType.DateTime2</span><span class="sxs-lookup"><span data-stu-id="3ae44-151">DbType.DateTime2</span></span>  
   
--   DbType.DateTimeOffset  
+-   <span data-ttu-id="3ae44-152">DbType.DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-152">DbType.DateTimeOffset</span></span>  
   
- Новые перечисления дополняют перечисления `Date`, `Time` и `DateTime` из предыдущих версий .NET Framework.  
+ <span data-ttu-id="3ae44-153">Новые перечисления дополняют перечисления `Date`, `Time` и `DateTime` из предыдущих версий .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3ae44-153">These new enumerations supplement the `Date`, `Time`, and `DateTime` enumerations, which existed in earlier versions of the .NET Framework.</span></span>  
   
- Тип поставщика данных платформы .NET Framework объекта параметра выводится из значения типа платформы .NET Framework объекта параметра или из свойства `DbType` объекта параметра.  Для поддержки новых типов данных даты и времени не было представлено новых типов данных <xref:System.Data.SqlTypes>.  В следующей таблице описаны сопоставления между типами данных даты и времени SQL Server 2008 и типами данных CLR.  
+ <span data-ttu-id="3ae44-154">Тип поставщика данных платформы .NET Framework объекта параметра выводится из значения типа платформы .NET Framework объекта параметра или из свойства `DbType` объекта параметра.</span><span class="sxs-lookup"><span data-stu-id="3ae44-154">The .NET Framework data provider type of a parameter object is inferred from the .NET Framework type of the value of the parameter object, or from the `DbType` of the parameter object.</span></span> <span data-ttu-id="3ae44-155">Для поддержки новых типов данных даты и времени не было представлено новых типов данных <xref:System.Data.SqlTypes>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-155">No new <xref:System.Data.SqlTypes> data types have been introduced to support the new date and time data types.</span></span> <span data-ttu-id="3ae44-156">В следующей таблице описаны сопоставления между типами данных даты и времени SQL Server 2008 и типами данных CLR.</span><span class="sxs-lookup"><span data-stu-id="3ae44-156">The following table describes the mappings between the SQL Server 2008 date and time data types and the CLR data types.</span></span>  
   
-|Тип данных SQL Server|Тип платформы .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
-|---------------------------|----------------------------------|---------------------------|------------------------|  
-|date|System.DateTime|дата.|дата.|  
-|время|System.TimeSpan|Время|Время|  
-|datetime2|System.DateTime|DateTime2|DateTime2|  
-|datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
-|datetime|System.DateTime|DateTime|DateTime|  
-|smalldatetime|System.DateTime|DateTime|DateTime|  
+|<span data-ttu-id="3ae44-157">Тип данных SQL Server</span><span class="sxs-lookup"><span data-stu-id="3ae44-157">SQL Server data type</span></span>|<span data-ttu-id="3ae44-158">Тип платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3ae44-158">.NET Framework type</span></span>|<span data-ttu-id="3ae44-159">System.Data.SqlDbType</span><span class="sxs-lookup"><span data-stu-id="3ae44-159">System.Data.SqlDbType</span></span>|<span data-ttu-id="3ae44-160">System.Data.DbType</span><span class="sxs-lookup"><span data-stu-id="3ae44-160">System.Data.DbType</span></span>|  
+|--------------------------|-------------------------|---------------------------|------------------------|  
+|<span data-ttu-id="3ae44-161">date</span><span class="sxs-lookup"><span data-stu-id="3ae44-161">date</span></span>|<span data-ttu-id="3ae44-162">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-162">System.DateTime</span></span>|<span data-ttu-id="3ae44-163">дата.</span><span class="sxs-lookup"><span data-stu-id="3ae44-163">Date</span></span>|<span data-ttu-id="3ae44-164">дата.</span><span class="sxs-lookup"><span data-stu-id="3ae44-164">Date</span></span>|  
+|<span data-ttu-id="3ae44-165">время</span><span class="sxs-lookup"><span data-stu-id="3ae44-165">time</span></span>|<span data-ttu-id="3ae44-166">System.TimeSpan</span><span class="sxs-lookup"><span data-stu-id="3ae44-166">System.TimeSpan</span></span>|<span data-ttu-id="3ae44-167">Время</span><span class="sxs-lookup"><span data-stu-id="3ae44-167">Time</span></span>|<span data-ttu-id="3ae44-168">Время</span><span class="sxs-lookup"><span data-stu-id="3ae44-168">Time</span></span>|  
+|<span data-ttu-id="3ae44-169">datetime2</span><span class="sxs-lookup"><span data-stu-id="3ae44-169">datetime2</span></span>|<span data-ttu-id="3ae44-170">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-170">System.DateTime</span></span>|<span data-ttu-id="3ae44-171">DateTime2</span><span class="sxs-lookup"><span data-stu-id="3ae44-171">DateTime2</span></span>|<span data-ttu-id="3ae44-172">DateTime2</span><span class="sxs-lookup"><span data-stu-id="3ae44-172">DateTime2</span></span>|  
+|<span data-ttu-id="3ae44-173">datetimeoffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-173">datetimeoffset</span></span>|<span data-ttu-id="3ae44-174">System.DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-174">System.DateTimeOffset</span></span>|<span data-ttu-id="3ae44-175">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-175">DateTimeOffset</span></span>|<span data-ttu-id="3ae44-176">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-176">DateTimeOffset</span></span>|  
+|<span data-ttu-id="3ae44-177">datetime</span><span class="sxs-lookup"><span data-stu-id="3ae44-177">datetime</span></span>|<span data-ttu-id="3ae44-178">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-178">System.DateTime</span></span>|<span data-ttu-id="3ae44-179">DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-179">DateTime</span></span>|<span data-ttu-id="3ae44-180">DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-180">DateTime</span></span>|  
+|<span data-ttu-id="3ae44-181">smalldatetime</span><span class="sxs-lookup"><span data-stu-id="3ae44-181">smalldatetime</span></span>|<span data-ttu-id="3ae44-182">System.DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-182">System.DateTime</span></span>|<span data-ttu-id="3ae44-183">DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-183">DateTime</span></span>|<span data-ttu-id="3ae44-184">DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-184">DateTime</span></span>|  
   
-### Свойства SqlParameter  
- В приведенной ниже таблице описаны свойства `SqlParameter`, соответствующие типам данных даты и времени.  
+### <a name="sqlparameter-properties"></a><span data-ttu-id="3ae44-185">Свойства SqlParameter</span><span class="sxs-lookup"><span data-stu-id="3ae44-185">SqlParameter Properties</span></span>  
+ <span data-ttu-id="3ae44-186">В приведенной ниже таблице описаны свойства `SqlParameter`, соответствующие типам данных даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-186">The following table describes `SqlParameter` properties that are relevant to date and time data types.</span></span>  
   
-|Свойство|Описание|  
-|--------------|--------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL.  При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` \(`Nothing` в Visual Basic\).  Дополнительные сведения о значении NULL базы данных см. в разделе [Обработка значений NULL](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)|  
-|<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Возвращает или задает максимальное количество разрядов, используемых для представления значения.  Этот параметр пропускается для типов данных даты и времени.|  
-|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Возвращает или задает число десятичных разрядов, до которых разрешается промежуток времени для `Time`, `DateTime2` `` и `DateTimeOffset`.  Значение по умолчанию — 0, означающее, что фактический масштаб выводится из значения и отправляется на сервер.|  
-|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Пропускается для типов данных даты и времени.|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Возвращает или задает значение параметра.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Возвращает или задает значение параметра.|  
+|<span data-ttu-id="3ae44-187">Свойство</span><span class="sxs-lookup"><span data-stu-id="3ae44-187">Property</span></span>|<span data-ttu-id="3ae44-188">Описание</span><span class="sxs-lookup"><span data-stu-id="3ae44-188">Description</span></span>|  
+|--------------|-----------------|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|<span data-ttu-id="3ae44-189">Возвращает или задает значение, указывающее, можно ли использовать значения NULL.</span><span class="sxs-lookup"><span data-stu-id="3ae44-189">Gets or sets whether a value is nullable.</span></span> <span data-ttu-id="3ae44-190">При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="3ae44-190">When you send a null parameter value to the server, you must specify <xref:System.DBNull>, rather than `null` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="3ae44-191">Дополнительные сведения о null базы данных см. в разделе [обработки значения Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).</span><span class="sxs-lookup"><span data-stu-id="3ae44-191">For more information about database nulls, see [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|<span data-ttu-id="3ae44-192">Возвращает или задает максимальное количество разрядов, используемых для представления значения.</span><span class="sxs-lookup"><span data-stu-id="3ae44-192">Gets or sets the maximum number of digits used to represent the value.</span></span> <span data-ttu-id="3ae44-193">Этот параметр пропускается для типов данных даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-193">This setting is ignored for date and time data types.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|<span data-ttu-id="3ae44-194">Возвращает или задает число десятичных разрядов, до которых разрешается промежуток времени для `Time`, `DateTime2`, и `DateTimeOffset`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-194">Gets or sets the number of decimal places to which the time portion of the value is resolved for `Time`, `DateTime2`,and `DateTimeOffset`.</span></span> <span data-ttu-id="3ae44-195">Значение по умолчанию — 0, означающее, что фактический масштаб выводится из значения и отправляется на сервер.</span><span class="sxs-lookup"><span data-stu-id="3ae44-195">The default value is 0, which means that the actual scale is inferred from the value and sent to the server.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|<span data-ttu-id="3ae44-196">Пропускается для типов данных даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-196">Ignored for date and time data types.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|<span data-ttu-id="3ae44-197">Возвращает или задает значение параметра.</span><span class="sxs-lookup"><span data-stu-id="3ae44-197">Gets or sets the parameter value.</span></span>|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|<span data-ttu-id="3ae44-198">Возвращает или задает значение параметра.</span><span class="sxs-lookup"><span data-stu-id="3ae44-198">Gets or sets the parameter value.</span></span>|  
   
 > [!NOTE]
->  Значения времени, меньшие нуля или большие либо равные 24 часам, приводят к вызову исключения <xref:System.ArgumentException>.  
+>  <span data-ttu-id="3ae44-199">Значения времени, меньшие нуля или большие либо равные 24 часам, приводят к вызову исключения <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-199">Time values that are less than zero or greater than or equal to 24 hours will throw an <xref:System.ArgumentException>.</span></span>  
   
-### Создание параметров  
- Объект <xref:System.Data.SqlClient.SqlParameter> можно создать с помощью конструктора либо путем добавления этого объекта в коллекцию <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> путем вызова метода `Add` класса <xref:System.Data.SqlClient.SqlParameterCollection>.  Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.  
+### <a name="creating-parameters"></a><span data-ttu-id="3ae44-200">Создание параметров</span><span class="sxs-lookup"><span data-stu-id="3ae44-200">Creating Parameters</span></span>  
+ <span data-ttu-id="3ae44-201">Объект <xref:System.Data.SqlClient.SqlParameter> можно создать с помощью конструктора либо путем добавления этого объекта в коллекцию <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> путем вызова метода `Add` класса <xref:System.Data.SqlClient.SqlParameterCollection>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-201">You can create a <xref:System.Data.SqlClient.SqlParameter> object by using its constructor, or by adding it to a <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> collection by calling the `Add` method of the <xref:System.Data.SqlClient.SqlParameterCollection>.</span></span> <span data-ttu-id="3ae44-202">Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.</span><span class="sxs-lookup"><span data-stu-id="3ae44-202">The `Add` method will take as input either constructor arguments or an existing parameter object.</span></span>  
   
- В следующих подразделах данного раздела приведены примеры указания параметров даты и времени.  Дополнительные примеры по работе с параметрами см. в разделах [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) и [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ <span data-ttu-id="3ae44-203">В следующих подразделах данного раздела приведены примеры указания параметров даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-203">The next sections in this topic provide examples of how to specify date and time parameters.</span></span> <span data-ttu-id="3ae44-204">Дополнительные примеры по работе с параметрами см. в разделе [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) и [параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="3ae44-204">For additional examples of working with parameters, see [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) and [DataAdapter Parameters](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).</span></span>  
   
-### Пример работы с типом date  
- В нижеприведенном примере кода показано указание параметра `date`.  
+### <a name="date-example"></a><span data-ttu-id="3ae44-205">Пример работы с типом date</span><span class="sxs-lookup"><span data-stu-id="3ae44-205">Date Example</span></span>  
+ <span data-ttu-id="3ae44-206">В нижеприведенном примере кода показано указание параметра `date`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-206">The following code fragment demonstrates how to specify a `date` parameter.</span></span>  
   
 ```csharp  
 SqlParameter parameter = new SqlParameter();  
@@ -119,8 +125,8 @@ parameter.SqlDbType = SqlDbType.Date
 parameter.Value = "2007/12/1"  
 ```  
   
-### Пример работы с типом time  
- В нижеприведенном примере кода показано указание параметра `time`.  
+### <a name="time-example"></a><span data-ttu-id="3ae44-207">Пример работы с типом time</span><span class="sxs-lookup"><span data-stu-id="3ae44-207">Time Example</span></span>  
+ <span data-ttu-id="3ae44-208">В нижеприведенном примере кода показано указание параметра `time`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-208">The following code fragment demonstrates how to specify a `time` parameter.</span></span>  
   
 ```csharp  
 SqlParameter parameter = new SqlParameter();  
@@ -136,8 +142,8 @@ parameter.SqlDbType = SqlDbType.Time
 parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;  
 ```  
   
-### Пример работы с типом Datetime2  
- В приведенном ниже примере кода демонстрируется указание параметра `datetime2`, содержащего компоненты даты и времени.  
+### <a name="datetime2-example"></a><span data-ttu-id="3ae44-209">Пример работы с типом Datetime2</span><span class="sxs-lookup"><span data-stu-id="3ae44-209">Datetime2 Example</span></span>  
+ <span data-ttu-id="3ae44-210">В приведенном ниже примере кода демонстрируется указание параметра `datetime2`, содержащего компоненты даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-210">The following code fragment demonstrates how to specify a `datetime2` parameter with both the date and time parts.</span></span>  
   
 ```csharp  
 SqlParameter parameter = new SqlParameter();  
@@ -153,8 +159,8 @@ parameter.SqlDbType = SqlDbType.DateTime2
 parameter.Value = DateTime.Parse("1666-09-02 1:00:00");  
 ```  
   
-### Пример работы с типом DateTimeOffSet  
- В приведенном ниже примере кода демонстрируется указание параметра `DateTimeOffSet`, содержащего дату, время и смещение часового пояса, равное 0.  
+### <a name="datetimeoffset-example"></a><span data-ttu-id="3ae44-211">Пример работы с типом DateTimeOffSet</span><span class="sxs-lookup"><span data-stu-id="3ae44-211">DateTimeOffSet Example</span></span>  
+ <span data-ttu-id="3ae44-212">В приведенном ниже примере кода демонстрируется указание параметра `DateTimeOffSet`, содержащего дату, время и смещение часового пояса, равное 0.</span><span class="sxs-lookup"><span data-stu-id="3ae44-212">The following code fragment demonstrates how to specify a `DateTimeOffSet` parameter with a date, a time, and a time zone offset of 0.</span></span>  
   
 ```csharp  
 SqlParameter parameter = new SqlParameter();  
@@ -170,8 +176,8 @@ parameter.SqlDbType = SqlDbType.DateTimeOffSet
 parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");  
 ```  
   
-### Метод AddWithValue  
- Указать параметры также можно с помощью метода `AddWithValue` класса <xref:System.Data.SqlClient.SqlCommand>, как показано в приведенном ниже фрагменте кода.  Однако метод `AddWithValue` не позволяет указать для параметра значения свойств <xref:System.Data.SqlClient.SqlParameter.DbType%2A> и <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>.  
+### <a name="addwithvalue"></a><span data-ttu-id="3ae44-213">Метод AddWithValue</span><span class="sxs-lookup"><span data-stu-id="3ae44-213">AddWithValue</span></span>  
+ <span data-ttu-id="3ae44-214">Указать параметры также можно с помощью метода `AddWithValue` класса <xref:System.Data.SqlClient.SqlCommand>, как показано в приведенном ниже фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="3ae44-214">You can also supply parameters by using the `AddWithValue` method of a <xref:System.Data.SqlClient.SqlCommand>, as shown in the following code fragment.</span></span> <span data-ttu-id="3ae44-215">Однако метод `AddWithValue` не позволяет указать для параметра значения свойств <xref:System.Data.SqlClient.SqlParameter.DbType%2A> и <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-215">However, the `AddWithValue` method does not allow you to specify the <xref:System.Data.SqlClient.SqlParameter.DbType%2A> or <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> for the parameter.</span></span>  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -183,63 +189,63 @@ command.Parameters.AddWithValue( _
     "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
- Параметр `@date` можно сопоставить типу данных `date`, `datetime` или `datetime2` на сервере.  При работе с новыми типами данных `datetime` необходимо явным образом присвоить свойству <xref:System.Data.SqlDbType> параметра тип данных экземпляра.  Использование <xref:System.Data.SqlDbType> или неявных значений параметра может привести к проблемам с обратной совместимостью для типов данных `datetime` и `smalldatetime`.  
+ <span data-ttu-id="3ae44-216">`@date` Можно сопоставить `date`, `datetime`, или `datetime2` тип данных на сервере.</span><span class="sxs-lookup"><span data-stu-id="3ae44-216">The `@date` parameter could map to a `date`, `datetime`, or `datetime2` data type on the server.</span></span> <span data-ttu-id="3ae44-217">При работе с новыми типами данных `datetime` необходимо явным образом присвоить свойству <xref:System.Data.SqlDbType> параметра тип данных экземпляра.</span><span class="sxs-lookup"><span data-stu-id="3ae44-217">When working with the new `datetime` data types, you must explicitly set the parameter's <xref:System.Data.SqlDbType> property to the data type of the instance.</span></span> <span data-ttu-id="3ae44-218">Использование <xref:System.Data.SqlDbType.Variant> или неявных значений параметра может привести к проблемам с обратной совместимостью для типов данных `datetime` и `smalldatetime`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-218">Using <xref:System.Data.SqlDbType.Variant> or implicitly supplying parameter values can cause problems with backward compatibility with the `datetime` and `smalldatetime` data types.</span></span>  
   
- В приведенной ниже таблице показано, какие типы `SqlDbTypes` выводятся из каких типов среды CLR.  
+ <span data-ttu-id="3ae44-219">В приведенной ниже таблице показано, какие типы `SqlDbTypes` выводятся из каких типов среды CLR.</span><span class="sxs-lookup"><span data-stu-id="3ae44-219">The following table shows which `SqlDbTypes` are inferred from which CLR types:</span></span>  
   
-|Тип CLR|Выводимый тип SqlDbType|  
-|-------------|-----------------------------|  
-|DateTime|SqlDbType.DateTime|  
-|TimeSpan|SqlDbType.Time|  
-|DateTimeOffset|SqlDbType.DateTimeOffset|  
+|<span data-ttu-id="3ae44-220">Тип CLR</span><span class="sxs-lookup"><span data-stu-id="3ae44-220">CLR type</span></span>|<span data-ttu-id="3ae44-221">Выводимый тип SqlDbType</span><span class="sxs-lookup"><span data-stu-id="3ae44-221">Inferred SqlDbType</span></span>|  
+|--------------|------------------------|  
+|<span data-ttu-id="3ae44-222">DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-222">DateTime</span></span>|<span data-ttu-id="3ae44-223">SqlDbType.DateTime</span><span class="sxs-lookup"><span data-stu-id="3ae44-223">SqlDbType.DateTime</span></span>|  
+|<span data-ttu-id="3ae44-224">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="3ae44-224">TimeSpan</span></span>|<span data-ttu-id="3ae44-225">SqlDbType.Time</span><span class="sxs-lookup"><span data-stu-id="3ae44-225">SqlDbType.Time</span></span>|  
+|<span data-ttu-id="3ae44-226">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-226">DateTimeOffset</span></span>|<span data-ttu-id="3ae44-227">SqlDbType.DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3ae44-227">SqlDbType.DateTimeOffset</span></span>|  
   
-## Извлечение данных даты и времени  
- В следующей таблице описаны методы, используемые для извлечения значений даты и времени SQL Server 2008.  
+## <a name="retrieving-date-and-time-data"></a><span data-ttu-id="3ae44-228">Извлечение данных даты и времени</span><span class="sxs-lookup"><span data-stu-id="3ae44-228">Retrieving Date and Time Data</span></span>  
+ <span data-ttu-id="3ae44-229">В следующей таблице описаны методы, используемые для извлечения значений даты и времени SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="3ae44-229">The following table describes methods that are used to retrieve SQL Server 2008 date and time values.</span></span>  
   
-|Метод SqlClient|Описание|  
-|---------------------|--------------|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|Возвращает значение указанного столбца в виде структуры <xref:System.DateTime>.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|Возвращает значение указанного столбца в виде структуры <xref:System.DateTimeOffset>.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|Возвращает базовый тип поля, зависящий от поставщика.  Возвращает те же типы, что и метод `GetFieldType` для новых типов даты и времени.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|Возвращает значение указанного столбца.  Возвращает те же типы, что и `GetValue` для новых типов даты и времени.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|Извлекает значения из указанного массива.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|Возвращает значение столбца в виде <xref:System.Data.SqlTypes.SqlString>.  Если данные нельзя выразить в виде объекта `SqlString`, возникнет исключение <xref:System.InvalidCastException>.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|Возвращает данные столбца в качестве значений по умолчанию `SqlDbType`.  Возвращает те же типы, что и `GetValue` для новых типов даты и времени.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|Извлекает значения из указанного массива.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A>|Возвращает значение столбца в виде строки, если Type System Version имеет значение «SQL Server 2005».  Если данные нельзя представить в виде строки, то возникнет исключение <xref:System.InvalidCastException>.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetTimeSpan%2A>|Возвращает значение указанного столбца в виде структуры <xref:System.Timespan>.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>|Возвращает значение указанного столбца в виде базового типа CLR.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>|Возвращает значения столбца в массив.|  
-|<xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>|Возвращает объект <xref:System.Data.DataTable>, описывающий метаданные результирующего набора.|  
-  
-> [!NOTE]
->  Новые типы даты и времени `SqlDbTypes` не поддерживаются для кода, выполняющегося в SQL Server внутри процесса.  При передаче на сервер одного из этих типов возникает исключение.  
-  
-## Указание значений даты и времени в виде литералов  
- Типы данных даты и времени можно указать с помощью множества различных форматов строк литералов, которые SQL Server затем оценивает во время выполнения, преобразуя их во внутренние структуры даты и времени.  SQL Server распознает данные даты и времени, заключенные в апострофы \('\).  В приведенных ниже примерах демонстрируются некоторые форматы.  
-  
--   Алфавитные форматы даты, например `'October 15, 2006'`.  
-  
--   Численные форматы даты, например `'10/15/2006'`.  
-  
--   Строковые форматы без разделителей, например строка `'20061015'`, которую можно интерпретировать как 15 октября 2006 г. при использовании стандартного формата даты ISO.  
+|<span data-ttu-id="3ae44-230">Метод SqlClient</span><span class="sxs-lookup"><span data-stu-id="3ae44-230">SqlClient method</span></span>|<span data-ttu-id="3ae44-231">Описание</span><span class="sxs-lookup"><span data-stu-id="3ae44-231">Description</span></span>|  
+|----------------------|-----------------|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|<span data-ttu-id="3ae44-232">Возвращает значение указанного столбца в виде структуры <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-232">Retrieves the specified column value as a <xref:System.DateTime> structure.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|<span data-ttu-id="3ae44-233">Возвращает значение указанного столбца в виде структуры <xref:System.DateTimeOffset>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-233">Retrieves the specified column value as a <xref:System.DateTimeOffset> structure.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|<span data-ttu-id="3ae44-234">Возвращает базовый тип поля, зависящий от поставщика.</span><span class="sxs-lookup"><span data-stu-id="3ae44-234">Returns the type that is the underlying provider-specific type for the field.</span></span> <span data-ttu-id="3ae44-235">Возвращает те же типы, что и метод `GetFieldType` для новых типов даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-235">Returns the same types as `GetFieldType` for new date and time types.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|<span data-ttu-id="3ae44-236">Возвращает значение указанного столбца.</span><span class="sxs-lookup"><span data-stu-id="3ae44-236">Retrieves the value of the specified column.</span></span> <span data-ttu-id="3ae44-237">Возвращает те же типы, что и `GetValue` для новых типов даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-237">Returns the same types as `GetValue` for the new date and time types.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|<span data-ttu-id="3ae44-238">Извлекает значения из указанного массива.</span><span class="sxs-lookup"><span data-stu-id="3ae44-238">Retrieves the values in the specified array.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<span data-ttu-id="3ae44-239">Возвращает значение столбца в виде <xref:System.Data.SqlTypes.SqlString>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-239">Retrieves the column value as a <xref:System.Data.SqlTypes.SqlString>.</span></span> <span data-ttu-id="3ae44-240">Если данные нельзя выразить в виде объекта <xref:System.InvalidCastException>, возникнет исключение `SqlString`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-240">An <xref:System.InvalidCastException> occurs if the data cannot be expressed as a `SqlString`.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|<span data-ttu-id="3ae44-241">Возвращает данные столбца в качестве значений по умолчанию `SqlDbType`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-241">Retrieves column data as its default `SqlDbType`.</span></span> <span data-ttu-id="3ae44-242">Возвращает те же типы, что и `GetValue` для новых типов даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-242">Returns the same types as `GetValue` for the new date and time types.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|<span data-ttu-id="3ae44-243">Извлекает значения из указанного массива.</span><span class="sxs-lookup"><span data-stu-id="3ae44-243">Retrieves the values in the specified array.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A>|<span data-ttu-id="3ae44-244">Возвращает значение столбца в виде строки, если Type System Version имеет значение «SQL Server 2005».</span><span class="sxs-lookup"><span data-stu-id="3ae44-244">Retrieves the column value as a string if the Type System Version is set to SQL Server 2005.</span></span> <span data-ttu-id="3ae44-245">Если данные нельзя представить в виде строки, то возникнет исключение <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-245">An <xref:System.InvalidCastException> occurs if the data cannot be expressed as a string.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetTimeSpan%2A>|<span data-ttu-id="3ae44-246">Возвращает значение указанного столбца в виде структуры <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-246">Retrieves the specified column value as a <xref:System.TimeSpan> structure.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>|<span data-ttu-id="3ae44-247">Возвращает значение указанного столбца в виде базового типа CLR.</span><span class="sxs-lookup"><span data-stu-id="3ae44-247">Retrieves the specified column value as its underlying CLR type.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>|<span data-ttu-id="3ae44-248">Возвращает значения столбца в массив.</span><span class="sxs-lookup"><span data-stu-id="3ae44-248">Retrieves column values in an array.</span></span>|  
+|<xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>|<span data-ttu-id="3ae44-249">Возвращает объект <xref:System.Data.DataTable>, описывающий метаданные результирующего набора.</span><span class="sxs-lookup"><span data-stu-id="3ae44-249">Returns a <xref:System.Data.DataTable> that describes the metadata of the result set.</span></span>|  
   
 > [!NOTE]
->  Полную документацию по всем литеральным строковым форматам и другим возможностям типов данных даты и времени можно найти в электронной документации по SQL Server.  
+>  <span data-ttu-id="3ae44-250">Новые типы даты и времени `SqlDbTypes` не поддерживаются для кода, выполняющегося в SQL Server внутри процесса.</span><span class="sxs-lookup"><span data-stu-id="3ae44-250">The new date and time `SqlDbTypes` are not supported for code that is executing in-process in SQL Server.</span></span> <span data-ttu-id="3ae44-251">При передаче на сервер одного из этих типов возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="3ae44-251">An exception will be raised if one of these types is passed to the server.</span></span>  
   
- Значения времени, меньшие нуля или большие либо равные 24 часам, приводят к вызову исключения <xref:System.ArgumentException>.  
+## <a name="specifying-date-and-time-values-as-literals"></a><span data-ttu-id="3ae44-252">Указание значений даты и времени в виде литералов</span><span class="sxs-lookup"><span data-stu-id="3ae44-252">Specifying Date and Time Values as Literals</span></span>  
+ <span data-ttu-id="3ae44-253">Типы данных даты и времени можно указать с помощью множества различных форматов строк литералов, которые SQL Server затем оценивает во время выполнения, преобразуя их во внутренние структуры даты и времени.</span><span class="sxs-lookup"><span data-stu-id="3ae44-253">You can specify date and time data types by using a variety of different literal string formats, which SQL Server then evaluates at run time, converting them to internal date/time structures.</span></span> <span data-ttu-id="3ae44-254">SQL Server распознает данные даты и времени, заключенные в апострофы (').</span><span class="sxs-lookup"><span data-stu-id="3ae44-254">SQL Server recognizes date and time data that is enclosed in single quotation marks (').</span></span> <span data-ttu-id="3ae44-255">В приведенных ниже примерах демонстрируются некоторые форматы.</span><span class="sxs-lookup"><span data-stu-id="3ae44-255">The following examples demonstrate some formats:</span></span>  
   
-## Ресурсы электронной документации по SQL Server 2008  
- Дополнительные сведения о работе со значениями даты и времени в SQL Server 2008 см. в приведенных ниже ресурсах электронной документации по SQL Server 2008.  
+-   <span data-ttu-id="3ae44-256">Алфавитные форматы даты, например `'October 15, 2006'`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-256">Alphabetic date formats, such as `'October 15, 2006'`.</span></span>  
   
-|Раздел|Описание|  
-|------------|--------------|  
-|[Типы данных и функции даты и времени \(Transact\-SQL\)](http://go.microsoft.com/fwlink/?LinkID=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact\-SQL.|  
-|[Использование данных даты и времени](http://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.|  
-|[Типы данных \(Transact\-SQL\)](http://go.microsoft.com/fwlink/?LinkId=98362)|Описываются системные типы данных в SQL Server 2008.|  
+-   <span data-ttu-id="3ae44-257">Численные форматы даты, например `'10/15/2006'`.</span><span class="sxs-lookup"><span data-stu-id="3ae44-257">Numeric date formats, such as `'10/15/2006'`.</span></span>  
   
-## См. также  
- [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)   
- [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)   
- [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+-   <span data-ttu-id="3ae44-258">Строковые форматы без разделителей, например строка `'20061015'`, которую можно интерпретировать как 15 октября 2006 г. при использовании стандартного формата даты ISO.</span><span class="sxs-lookup"><span data-stu-id="3ae44-258">Unseparated string formats, such as `'20061015'`, which would be interpreted as October 15, 2006 if you are using the ISO standard date format.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="3ae44-259">Полную документацию по всем литеральным строковым форматам и другим возможностям типов данных даты и времени можно найти в электронной документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3ae44-259">You can find complete documentation for all of the literal string formats and other features of the date and time data types in SQL Server Books Online.</span></span>  
+  
+ <span data-ttu-id="3ae44-260">Значения времени, меньшие нуля или большие либо равные 24 часам, приводят к вызову исключения <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="3ae44-260">Time values that are less than zero or greater than or equal to 24 hours will throw an <xref:System.ArgumentException>.</span></span>  
+  
+## <a name="resources-in-sql-server-2008-books-online"></a><span data-ttu-id="3ae44-261">Ресурсы электронной документации по SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="3ae44-261">Resources in SQL Server 2008 Books Online</span></span>  
+ <span data-ttu-id="3ae44-262">Дополнительные сведения о работе со значениями даты и времени в SQL Server 2008 см. в приведенных ниже ресурсах электронной документации по SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="3ae44-262">For more information about working with date and time values in SQL Server 2008, see the following resources in SQL Server 2008 Books Online.</span></span>  
+  
+|<span data-ttu-id="3ae44-263">Раздел</span><span class="sxs-lookup"><span data-stu-id="3ae44-263">Topic</span></span>|<span data-ttu-id="3ae44-264">Описание</span><span class="sxs-lookup"><span data-stu-id="3ae44-264">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="3ae44-265">Данных даты и времени типы и функции (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="3ae44-265">Date and Time Data Types and Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=98360)|<span data-ttu-id="3ae44-266">Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="3ae44-266">Provides an overview of all Transact-SQL date and time data types and functions.</span></span>|  
+|[<span data-ttu-id="3ae44-267">Использование данных даты и времени</span><span class="sxs-lookup"><span data-stu-id="3ae44-267">Using Date and Time Data</span></span>](http://go.microsoft.com/fwlink/?LinkId=98361)|<span data-ttu-id="3ae44-268">Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.</span><span class="sxs-lookup"><span data-stu-id="3ae44-268">Provides information about the date and time data types and functions, and examples of using them.</span></span>|  
+|[<span data-ttu-id="3ae44-269">Типы данных (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="3ae44-269">Data Types (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=98362)|<span data-ttu-id="3ae44-270">Описываются системные типы данных в SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="3ae44-270">Describes system data types in SQL Server 2008.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="3ae44-271">См. также</span><span class="sxs-lookup"><span data-stu-id="3ae44-271">See Also</span></span>  
+ [<span data-ttu-id="3ae44-272">Сопоставления типов данных SQL Server</span><span class="sxs-lookup"><span data-stu-id="3ae44-272">SQL Server Data Type Mappings</span></span>](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
+ [<span data-ttu-id="3ae44-273">Настройка параметров и типов данных параметров</span><span class="sxs-lookup"><span data-stu-id="3ae44-273">Configuring Parameters and Parameter Data Types</span></span>](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
+ [<span data-ttu-id="3ae44-274">Типы данных SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3ae44-274">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [<span data-ttu-id="3ae44-275">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="3ae44-275">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
