@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 516e065bc360538e7b62807a5492c0c6c9d16e69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-wif-tracing"></a>Практическое руководство. Включение трассировки WIF
 ## <a name="applies-to"></a>Применение  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/21/2017
   
 -   Шаг 1. Создание простого приложения веб-форм ASP.NET и включение трассировки  
   
--   Шаг 2. Тестирование решения  
+-   Шаг 2. Тестирование решения  
   
 ## <a name="objectives"></a>Цели  
   
@@ -112,4 +110,3 @@ ms.lasthandoff: 08/21/2017
 2.  Закройте окно браузера и перейдите в папку **C:\logs**. Откройте файл **C:\logs\WIF.xml** в текстовом редакторе.  
   
 3.  Просмотрите файл **WIF.xml** и убедитесь, что в нем есть записи, которые начинаются с элемента **\<E2ETraceEvent>**. Эти записи трассировки будут содержать элементы **\<TraceRecord>** с описаниями действий трассировки, например **Validating SecurityToken**.
-

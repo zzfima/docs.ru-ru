@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
+ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc8f38d96f7f1c41f04d64c2acc2f53805b6b012
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="using-attributes-in-c"></a>Использование атрибутов в C# #
 
 Атрибуты предоставляют возможность декларативно связать информацию с кодом. Также этот элемент можно многократно использовать повторно для разнообразных целевых объектов.
@@ -38,6 +36,8 @@ ms.lasthandoff: 07/28/2017
 
 Эта команда создает скелет файлов проекта для .NET Core. Нужно также выполнить команду `dotnet restore`, чтобы восстановить зависимости, необходимые для компиляции проекта.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 Чтобы выполнить программу, используйте `dotnet run`. Она выведет в консоль сообщение "Hello, World".
 
 ## <a name="how-to-add-attributes-to-code"></a>Добавление атрибутов к коду
@@ -45,14 +45,14 @@ ms.lasthandoff: 07/28/2017
 В C# атрибуты представляют собой классы, наследующие от базового класса `Attribute`. Любой класс, который наследует от `Attribute`, можно использовать как своего рода "тег" на другие части кода.
 Например, существует атрибут с именем `ObsoleteAttribute`. С его помощью можно обозначить, что код устарел и больше не должен использоваться. Этот атрибут можно поместить в класс, используя квадратные скобки.
 
-[!code-csharp[Пример использования атрибута Obsolete](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 
 Обратите внимание, что полное название класса — `ObsoleteAttribute`, но в коде достаточно указать только `[Obsolete]`. Это стандартное соглашение в C#.
 При желании вы можете использовать полное имя `[ObsoleteAttribute]`.
 
 Когда вы отмечаете класс как устаревший, желательно предоставить некоторые сведения о том, *почему* он устарел и (или) *что* можно использовать вместо него. Для этого передайте в атрибут Obsolete строковый параметр.
 
-[!code-csharp[Пример использования атрибута Obsolete с параметрами](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
+[!code-csharp[Obsolete attribute example with parameters](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
 
 Эта строка передается в качестве аргумента в конструктор `ObsoleteAttribute`, как если бы вы использовали синтаксис `var attr = new ObsoleteAttribute("some string")`.
 
@@ -63,21 +63,21 @@ ms.lasthandoff: 07/28/2017
 
 Чтобы создать собственный атрибут, достаточно унаследовать его от базового класса `Attribute`.
 
-[!code-csharp[Создание собственного атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
+[!code-csharp[Create your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
 
 Добавив такой код, вы сможете использовать `[MySpecial]` (или `[MySpecialAttribute]`) в качестве атрибута в любом месте кода.
 
-[!code-csharp[Использование собственного атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
 
 Атрибуты в библиотеке базовых классов .NET, например `ObsoleteAttribute`, активируют определенный действия компилятора. Но созданные вами атрибуты сами по себе лишь выполняют роль метаданных и не влекут за собой исполнение какого-либо кода в классе атрибута. Вы должны проверять эти метаданные и выполнять необходимые действия в другой части кода (подробнее об этом написано дальше в этом руководстве).
 
 Здесь есть один подвох, которого следует остерегаться. Как упоминалось выше, в качестве аргументов при использовании атрибутов можно передавать только некоторые определенные типы. Но компилятор C# не помешает вам указать другие параметры при создании типа атрибута. В следующем примере кода я создаю атрибут с конструктором, который отлично компилируется.
 
-[!code-csharp[Допустимый конструктор для атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
+[!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
 Но объект с таким конструктором вы не сможете использовать в роли атрибута.
 
-[!code-csharp[Недопустимая попытка использовать конструктор атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
+[!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
 Такой код вызовет ошибку компиляции, например такую: `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
 
@@ -103,11 +103,11 @@ ms.lasthandoff: 07/28/2017
 
 Когда вы создаете класс атрибута, C# по умолчанию позволяет использовать этот атрибут для любого из допустимых целевых объектов. Если вы хотите, чтобы атрибут можно было использовать только для некоторых из целевых объектов, используйте `AttributeUsageAttribute` в классе атрибута. Да-да, именно так, атрибут для атрибута!
 
-[!code-csharp[Использование собственного атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
 Если вы попробуете применить описанный выше атрибут для сущности, которая не является классом или структурой, вы получите ошибку компиляции такого рода: `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
 
-[!code-csharp[Использование собственного атрибута](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
 ## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Как использовать атрибуты, прикрепленные к элементу кода
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 07/28/2017
 
 Например, с помощью отражения можно получить сведения о классе: 
 
-[!code-csharp[Проверка сведений о типе с помощью отражения](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
 Этот код выведет такие данные: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 07/28/2017
 
 Ниже вы видите пример использования `GetCustomAttributes` для экземпляра `MemberInfo` класса `MyClass` (как мы продемонстрировали ранее, он имеет атрибут `[Obsolete]`).
 
-[!code-csharp[Проверка сведений о типе с помощью отражения](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
 
 Этот код выведет в консоль текст: `Attribute on MyClass: ObsoleteAttribute`. Попробуйте добавить другие атрибуты для `MyClass`.
 
@@ -146,11 +146,10 @@ ms.lasthandoff: 07/28/2017
 
 * `[CallerMemberName]`. Этот атрибут можно применить для параметров. Он размещен в пространства имен `System.Runtime.CompilerServices`. Этот атрибут позволяет передать имя метода добавления, который вызывает другой метод. Обычно он используется для устранения "волшебных строк" при реализации INotifyPropertyChanged в различных платформах взаимодействия с пользователем. Вот пример:
 
-[!code-csharp[Использование CallerMemberName при реализации INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
+[!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
 В приведенном выше коде не обязательно использовать литеральную строку `"Name"`. Это помогает предотвратить ошибки, связанные с опечатками, а также позволяет плавно выполнять рефакторинг и (или) переименование.
 
 ## <a name="summary"></a>Сводка
 
 Атрибуты предоставляют в C# мощь декларативного синтаксиса. Но они лишь позволяют использовать в коде метаданных, и выполняют сами никаких действий.
-

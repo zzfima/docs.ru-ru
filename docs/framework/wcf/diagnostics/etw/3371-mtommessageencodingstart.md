@@ -1,35 +1,38 @@
 ---
-title: "3371 - MtomMessageEncodingStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3371 - MtomMessageEncodingStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b1ba417f-f765-4567-82e3-ea2080e0ac73
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b9c468f2ab5fa2d61fdb6a1f377a320d7b18a704
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3371 - MtomMessageEncodingStart
-## Свойства  
+# <a name="3371---mtommessageencodingstart"></a>3371 - MtomMessageEncodingStart
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3371|  
 |Ключевые слова|Канал|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается, когда MtomMessageEncoder начал кодировать сообщение.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  MtomMessageEncoder начал кодирование сообщения.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

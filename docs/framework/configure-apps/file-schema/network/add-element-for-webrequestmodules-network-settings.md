@@ -1,82 +1,84 @@
 ---
-title: "Элемент &lt;add&gt; для webRequestModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> - элемент, webRequestModules"
-  - "<webRequestModules>, add - элемент"
-  - "add - элемент, webRequestModules"
-  - "webRequestModules, add - элемент"
+title: "&lt;Добавить&gt; элемент для webRequestModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <webRequestModules>, add element
+- webRequestModules, add element
+- add element, webRequestModules
+- <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd407f77e75bce4bdbc37acd5f28bbe39f92d564
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для webRequestModules (параметры сети)
-Добавляет в приложение пользовательский модуль веб\-запросов.  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Добавить&gt; элемент для webRequestModules (параметры сети)
+Добавляет в приложение пользовательский модуль веб-запросов.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <add   
-  prefix = "URI prefix"   
-  type = "module name, Version, Culture, PublicKeyToken"   
+```xml  
+<add   
+  prefix="URI prefix"   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`prefix`|Префикс URI для запросов, обрабатываемых данным модулем веб\-запросов.|  
-|`type`|Имя сборки и класса модуля, реализующего данный модуль веб\-запросов.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`prefix`|Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.|  
+|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделенных запятыми, который реализует этот модуль веб-запросов.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
+|-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
   
-## Заметки  
- Атрибут `prefix` определяет префикс URI, используемый заданным модулем веб\-запросов.  Такие модули веб\-запросов обычно регистрируются для обработки конкретных протоколов, например HTTP или FTP, но они также могут быть зарегистрированы и для обработки запросов к заданному серверу или пути на сервере.  
+## <a name="remarks"></a>Примечания  
+ `prefix` Атрибут определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для обработки определенных протоколов, таких как HTTP или FTP, но могут быть зарегистрированы для обработки запросов к определенному серверу или пути на сервере.  
   
- Модуль веб\-запроса создается, когда URI, соответствующий префиксу, передается методу <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>.  
+ Модуль веб-запросов создается в том случае, если соответствующий префикс URI передается на <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> метод.  
   
- Значением атрибута `prefix` должны быть первые символы действительного URI, например "http" или "http:\/\/www.contoso.com".  
+ Значение для `prefix` атрибут должен иметь первые символы допустимый URI — например, «http» или «http://www.contoso.com».  
   
- Значением атрибута `type` должно быть допустимое имя библиотеки DLL или соответствующее имя класса, отделенное запятой.  
+ Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных точкой с запятой.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода выполняется регистрация пользовательского модуля веб\-запросов для HTTP.  Необходимо заменить значения для параметров Version и PublicKeyToken правильными значениями для указанного модуля.  
+## <a name="example"></a>Пример  
+ В следующем примере регистрируется пользовательский модуль веб-запросов для HTTP. Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
@@ -89,6 +91,6 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebRequest>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

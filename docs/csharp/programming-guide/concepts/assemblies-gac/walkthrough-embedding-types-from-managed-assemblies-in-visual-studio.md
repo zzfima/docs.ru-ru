@@ -1,30 +1,21 @@
 ---
 title: "Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)
 Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой. Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.  
@@ -49,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Константы не внедряются.  
   
--   Класс <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> не поддерживает использование внедренного типа в качестве ключа. Для поддержки внедренного типа в качестве ключа можно реализовать свой собственный тип словаря.  
+-   Класс <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> не поддерживает использование внедренного типа в качестве ключа. Для поддержки внедренного типа в качестве ключа можно реализовать свой собственный тип словаря.  
   
  В этом пошаговом руководстве выполняются следующие задачи:  
   
@@ -250,8 +241,7 @@ ms.lasthandoff: 07/28/2017
 6.  В проводнике откройте папку выходного пути (например, C:\TypeEquivalenceSample). Дважды щелкните файл TypeEquivalenceClient.exe, чтобы выполнить программу. Новая версия сборки TypeEquivalenceRuntime отображается в программе без повторной компиляции.  
   
 ## <a name="see-also"></a>См. также  
- [-link (Параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)   
+ [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+ [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)  
  [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

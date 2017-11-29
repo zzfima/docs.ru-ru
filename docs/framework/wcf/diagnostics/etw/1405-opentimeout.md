@@ -1,35 +1,38 @@
 ---
-title: "1405 - OpenTimeout | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1405 - OpenTimeout
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45470cf9-b84c-4e5e-86e2-2eb7722cbc1a
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6899f09bbed50e22a5b693c0ccb075129a0f26c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 1405 - OpenTimeout
-## Свойства  
+# <a name="1405---opentimeout"></a>1405 - OpenTimeout
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|1405|  
 |Ключевые слова|ServiceModel|  
 |Уровень|Ошибка|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается по истечении времени ожидания открытия.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  1%  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

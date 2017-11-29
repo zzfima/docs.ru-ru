@@ -1,38 +1,19 @@
 ---
 title: "Различия между шаблонами языка C++ и универсальными шаблонами языка C# (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], vs. C++ templates
+helpviewer_keywords: generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: aea1b51c26a8f3de56ea66b9cf89e75bfeb59d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 483d33531141127e083c5b75789f405427e46890
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Различия между шаблонами языка C++ и универсальными шаблонами языка C# (Руководство по программированию в C#)
 Универсальные шаблоны C# и шаблоны C++ — это возможности языков программирования, обеспечивающие поддержку параметризированных типов. Однако между ними существует немало различий. На уровне синтаксиса универсальные шаблоны C# представляют собой более простой способ работы с параметризованными типами без сложностей, связанных с шаблонами C++. Кроме того, C# не пытается предоставить все функции, предоставляемые шаблонами C++. На уровне реализации основное различие заключается в том, что замена универсальных типов C# осуществляется во время выполнения, а значит для объектов, экземпляры которых при этом создаются, сохраняются данные об универсальных типах. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -56,7 +37,6 @@ ms.lasthandoff: 07/28/2017
 -   C++ позволяет использовать код, который может быть недопустимым для всех параметров типа в шаблоне, а затем проверяет, используется ли в качестве параметра типа определенный тип. C# требует, чтобы код в классе был написан так, чтобы он работал с любым типом, соответствующим ограничениям. Например, в C++ можно написать функцию, которая применяет арифметические операторы `+` и `-` к объектам параметра типа, в связи с чем при создании экземпляра шаблона, тип которого не поддерживает эти операторы, возникает ошибка. C# этого не позволяет; допускаются только те языковые конструкции, которые можно вывести из ограничений.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Шаблоны](/cpp/cpp/templates-cpp)
-

@@ -2,8 +2,7 @@
 title: "Проблемы при переходе на .NET Framework 4"
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>Проблемы при переходе на .NET Framework 4
 
 В этом разделе описываются проблемы при переходе между .NET Framework 3.5 с пакетом обновления 1 (SP1) и .NET Framework 4, в том числе исправления, изменения для соответствия стандартам и обеспечения безопасности, а также изменения, внесенные на основе отзывов пользователей. Большинство изменений не требуют каких-либо программных изменений в ваших приложениях. Случаи, требующие изменений, описаны в столбце "Рекомендованные изменения" таблицы.
@@ -263,7 +260,7 @@ ms.lasthandoff: 08/28/2017
 | **Привязка экземпляров команд** | Чтобы предоставить механизм для привязки экземпляров команд на основе модели представления к действиям ввода на основе представления, класс <xref:System.Windows.Input.InputBinding> теперь наследует от класса <xref:System.Windows.Freezable> вместо класса <xref:System.Windows.DependencyObject>. Перечисленные ниже свойства теперь являются свойствами зависимостей.<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>Это изменение имеет указанные ниже последствия.<br><br>* Объект <xref:System.Windows.Input.InputBinding> теперь фиксируется после регистрации, вместо того чтобы оставаться изменяемым.<br>* Отсутствует доступ к объектам <xref:System.Windows.Input.InputBinding> на уровне экземпляра из нескольких потоков в связи с ограничениями класса <xref:System.Windows.DependencyObject>.<br>* Нельзя изменять привязки ввода на уровне класса после их регистрации в связи с ограничениями класса <xref:System.Windows.Freezable>.<br>* Нельзя задавать привязки ввода для экземпляров команд, созданных в модели представления. | Создайте отдельные экземпляры класса <xref:System.Windows.Input.InputBinding> в отдельных потоках, если привязки должны быть изменяемыми, или фиксируйте их в противном случае. Не изменяйте статическую привязку <xref:System.Windows.Input.InputBinding> уровня класса после того, как она зарегистрирована. |
 | **Приложения для браузеров** | WPF-приложения для браузера (XBAP) теперь обрабатывают ключевые события как отдельные приложения WPF, поэтому объекты получают перенаправляемые ключевые события в правильном порядке. | Отсутствует. |
 | **Неработающие сочетания клавиш** | WPF не показывает неработающие клавиши, которые не производят видимых символов, но указывает, что для создания символа эту клавишу следует нажать вместе со следующей буквенной клавишей. События ввода с клавиатуры, например событие <xref:System.Windows.Input.Keyboard.KeyDownEvent>, сообщают, когда клавиша является нерабочей, задавая для свойства <xref:System.Windows.Input.KeyEventArgs.Key> значение <xref:System.Windows.Input.Key>. Как правило, это ожидаемое поведение, так как в приложениях обычно не предусмотрена реакция на ввод с клавиатуры, создающий комбинированный символ. | Приложения, которые должны считывать клавиши, бывшие частью комбинированных символов, могут получить скрытую клавишу, используя свойство <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey>. |
-| **Диспетчер фокуса** | Когда в метод <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> передается элемент, имеющий присоединенное свойство [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) со значением `true`, этот метод возвращает последний элемент, на котором находился фокус клавиатуры в пределах этой области фокуса, тогда и только тогда, когда возвращаемый элемент принадлежит тому же объекту <xref:System.Windows.PresentationSource>, что и элемент, переданный в метод. | Отсутствует. |
+| **Диспетчер фокуса** | Когда в метод <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> передается элемент, имеющий присоединенное свойство [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) со значением `true`, этот метод возвращает последний элемент, на котором находился фокус клавиатуры в пределах этой области фокуса, тогда и только тогда, когда возвращаемый элемент принадлежит тому же объекту <xref:System.Windows.PresentationSource>, что и элемент, переданный в метод. | Отсутствует. |
 
 ### <a name="ui-automation"></a>Автоматизация пользовательского интерфейса
 
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/28/2017
 
 [Устаревшие возможности .NET Framework](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Проблемы при переходе с бета-версии 2 на версию RTM в приложениях .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=191505)
-

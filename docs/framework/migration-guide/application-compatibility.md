@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>Совместимость приложений в .NET Framework
 
 ## <a name="introduction"></a>Вступление
-
 Важной задачей каждого выпуска .NET является совместимость. Совместимость гарантирует, что каждая версия дополняет предыдущие и позволяет им работать так же, как и раньше. С другой стороны, изменения в функциях по сравнению с предыдущими версиями (для улучшения производительности, устранения проблем с безопасностью или исправления ошибок) могут привести к проблемам совместимости в существующем коде или приложениях, которые запускаются в более поздней версии. Платформа .NET Framework учитывает изменения целевой платформы и среды выполнения. Изменения целевой платформы влияют на приложения, разработанные для конкретной версии .NET Framework, но запускаемые на более поздней версии платформы. Изменения среды выполнения влияют на все приложения, запускаемые на конкретной версии платформы.
 
 Каждое приложение разрабатывается для конкретной версии платформы .NET Framework, которую можно указать следующими способами.
 
-- Назначив требуемую версию .NET Framework в Visual Studio.
-- Указав требуемую версию .NET Framework в файле проекта.
-- Применив <xref:System.Runtime.Versioning.TargetFrameworkAttribute> к исходному коду.
+* Назначив требуемую версию .NET Framework в Visual Studio.
+* Указав требуемую версию .NET Framework в файле проекта.
+* Применив <xref:System.Runtime.Versioning.TargetFrameworkAttribute> к исходному коду.
 
 При использовании более новой версии .NET Framework по сравнению с целевой, платформа будет имитировать поведение старой целевой версии. Другими словами, приложение будет запущено на более новой версии платформы, но будет работать так, как если бы оно было запущено на более ранней версии. Такая имитация позволяет устранить многие проблемы совместимости между версиями .NET Framework.
 
@@ -82,16 +79,14 @@ ms.lasthandoff: 07/28/2017
 -   Идентификаторы доступных средств диагностики
 
 ## <a name="usage"></a>Использование
-
 Для начала выберите тип изменения совместимости ниже.
 
-- [Изменение целевой платформы](./retargeting/index.md)
-- [Изменения среды выполнения](./runtime/index.md)
+* [Изменение целевой платформы](./retargeting/index.md)
+* [Изменения среды выполнения](./runtime/index.md)
 
 
 ## <a name="see-also"></a>См. также
 
-[Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[Новые возможности](../../../docs/framework/whats-new/index.md)   
-[Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Новые возможности](../../../docs/framework/whats-new/index.md)
+* [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)

@@ -1,27 +1,33 @@
 ---
-title: "Управление объектами DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Управление объектами DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3cf89cd378d19b5de64a733e80ec757c7e3bdb89
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Управление объектами DataView
-С помощью класса <xref:System.Data.DataViewManager> можно управлять параметрами представлений во всех таблицах <xref:System.Data.DataView>.  Если есть элемент управления, который нужно связать с несколькими таблицами, например сеткой перехода по связям, то для этого идеально подойдет класс **DataViewManager**.  
+# <a name="managing-dataviews"></a>Управление объектами DataView
+С помощью класса <xref:System.Data.DataViewManager> можно управлять параметрами представлений во всех таблицах <xref:System.Data.DataView>. Если имеется элемент управления, который требуется связать с несколькими таблицами, например сеткой перехода по связям, **DataViewManager** идеально.  
   
- Класс **DataViewManager** содержит коллекцию объектов <xref:System.Data.DataViewSetting>, которые используются для установки параметров представления таблиц в <xref:System.Data.DataSet>.  Коллекция <xref:System.Data.DataViewSettingCollection> содержит один объект <xref:System.Data.DataViewSetting> для каждой таблицы в **DataSet**.  С помощью **DataViewSetting** можно задать свойства по умолчанию **ApplyDefaultSort**, **Sort**, **RowFilter** и **RowStateFilter** таблицы.  На **DataViewSetting** конкретной таблицы можно ссылаться по имени или по порядковому номеру, либо путем передачи ссылки на этот конкретный объект таблицы.  Доступ к коллекции объектов **DataViewSetting** можно получить в **DataViewManager** с помощью свойства **DataViewSettings**.  
+ **DataViewManager** содержит коллекцию <xref:System.Data.DataViewSetting> объектов, которые используются для установки параметров представления таблиц в <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> Содержит один <xref:System.Data.DataViewSetting> для каждой таблицы в **набора данных**. Значение по умолчанию **ApplyDefaultSort**, **сортировки**, **RowFilter**, и **RowStateFilter** свойства указанной таблицы, с помощью его **DataViewSetting**. Можно ссылаться на **DataViewSetting** для конкретной таблицы по имени или порядковому номеру или путем передачи ссылки на этот конкретный объект таблицы. Можно получить доступ к коллекции из **DataViewSetting** объекты в **DataViewManager** с помощью **DataViewSettings** свойство.  
   
- В следующем примере кода объект **DataSet** заполняется таблицами базы данных **Northwind** SQL Server с именами **Customers**, **Orders** и **Order Details**, создаются связи между таблицами, с помощью диспетчера **DataViewManager** устанавливаются параметры **DataView** по умолчанию, и к **DataViewManager** привязывается **DataGrid**.  В примере устанавливаются параметры **DataView** по умолчанию для всех таблиц **DataSet** для сортировки первичного ключа таблицы \(**ApplyDefaultSort** \= **true**\) и изменяется порядок сортировки таблицы **Customers** для сортировки по **CompanyName**.  
+ В следующем примере кода в примере заливки **DataSet** с SQL Server **Northwind** таблицы базы данных **клиентов**, **заказов**и  **Подробности заказа**, создает связи между таблицами, использует **DataViewManager** значений по умолчанию **DataView** параметров и привязывает **DataGrid**  для **DataViewManager**. В примере задается значение по умолчанию **DataView** параметры для всех таблиц в **DataSet** для сортировки по первичному ключу таблицы (**ApplyDefaultSort**  =  **true**), а затем изменяет порядок сортировки **клиентов** для сортировки по **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -72,7 +78,6 @@ viewManager.DataViewSettings("Customers").Sort = "CompanyName"
 ' Bind to a DataGrid.  
 Dim grid As System.Windows.Forms.DataGrid = New System.Windows.Forms.DataGrid()  
 grid.SetDataBinding(viewManager, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -124,10 +129,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## См. также  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataViewManager>   
- <xref:System.Data.DataViewSetting>   
- <xref:System.Data.DataViewSettingCollection>   
- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataViewManager>  
+ <xref:System.Data.DataViewSetting>  
+ <xref:System.Data.DataViewSettingCollection>  
+ [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

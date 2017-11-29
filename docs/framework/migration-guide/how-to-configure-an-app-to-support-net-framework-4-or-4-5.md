@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5
 Все приложения, которые размещают в себе среду CLR, должны запускать или *активировать* среду CLR для выполнения управляемого кода. Как правило, приложение .NET Framework запускается в той версии среды CLR, в которой оно было собрано, однако для приложений для настольных систем это поведение можно изменить с помощью файла конфигурации приложения (иногда называемого файлом app.config). Однако, для приложений Магазина Windows или приложений Windows Phone, изменить предусмотренное по умолчанию поведение активации с помощью файла конфигурации приложения невозможно. В этой статье поясняется, как разрешить приложению для настольных систем запускаться в другой версии .NET Framework, а также приводятся примеры нацеливания на версию 4 или 4.5.  
@@ -92,6 +90,5 @@ ms.lasthandoff: 07/28/2017
  \*Дополнительные сведения об этом сообщении об ошибке и о том, как избежать этой ошибки, см. в статье [Ошибки инициализации платформы .NET Framework. Управление взаимодействием с пользователем](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>См. также  
- [Миграция из .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
- [Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5](../../../docs/framework/migration-guide/index.md)
-
+ [Миграция из .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [Руководство по миграции](../../../docs/framework/migration-guide/index.md)

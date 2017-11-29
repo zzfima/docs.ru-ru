@@ -1,42 +1,24 @@
 ---
 title: "Доступ к параметрам приложения (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My.Settings object, application settings
+- My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea87d6a1d20a7d85b063990f6e401f90548627be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6ac0be10bbae9071a3ac128d1456d560836d0607
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Доступ к параметрам приложения (Visual Basic)
 В этом разделе содержатся ссылки на разделы с описанием объекта `My.Settings` и задач, которые он позволяет выполнить.  
@@ -57,6 +39,5 @@ ms.lasthandoff: 07/28/2017
 |Определение значений пользовательских параметров|[Практическое руководство. Чтение параметров приложения в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)   
+ [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)  
  [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-

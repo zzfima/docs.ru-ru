@@ -1,26 +1,29 @@
 ---
-title: "Коллекции схем OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Коллекции схемы OLE DB"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9b88308c5dad69ed1ba6f48f525931e94f13ef1a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Коллекции схем OLE DB
+# <a name="ole-db-schema-collections"></a>Коллекции схемы OLE DB
 В данном разделе рассматривается поддержка коллекций схем для поставщиков OLE DB для Microsoft SQL Server, Oracle и Microsoft Jet.  
   
-## Поставщик OLE DB для Microsoft SQL Server  
- Драйвер OLE DB для Microsoft SQL Server поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям.  
+## <a name="microsoft-sql-server-ole-db-provider"></a>Поставщик OLE DB для Microsoft SQL Server  
+ Драйвер Microsoft SQL Server OLE DB поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям схем:  
   
 -   Таблицы  
   
@@ -34,132 +37,132 @@ caps.handback.revision: 3
   
 -   Indexes  
   
-### Таблицы  
+### <a name="tables"></a>Таблицы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|TABLE\_TYPE|Строковое|  
-|TABLE\_GUID|Guid|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|TABLE_TYPE|Строковое|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Строковое|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Столбцы  
+### <a name="columns"></a>Столбцы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Строковое|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Строковое|  
-|CHARACTER\_SET\_SCHEMA|Строковое|  
-|CHARACTER\_SET\_NAME|Строковое|  
-|COLLATION\_CATALOG|Строковое|  
-|COLLATION\_SCHEMA|Строковое|  
-|COLLATION\_NAME|Строковое|  
-|DOMAIN\_CATALOG|Строковое|  
-|DOMAIN\_SCHEMA|Строковое|  
-|DOMAIN\_NAME|Строковое|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Строковое|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Строковое|  
+|CHARACTER_SET_SCHEMA|Строковое|  
+|CHARACTER_SET_NAME|Строковое|  
+|COLLATION_CATALOG|Строковое|  
+|COLLATION_SCHEMA|Строковое|  
+|COLLATION_NAME|Строковое|  
+|DOMAIN_CATALOG|Строковое|  
+|DOMAIN_SCHEMA|Строковое|  
+|DOMAIN_NAME|Строковое|  
 |DESCRIPTION|Строковое|  
-|COLUMN\_LCID|Int32|  
-|COLUMN\_COMPFLAGS|Int32|  
-|COLUMN\_SORTID|Int32|  
-|COLUMN\_TDSCOLLATION|Byte\[\]|  
-|IS\_COMPUTED|Boolean|  
+|COLUMN_LCID|Int32|  
+|COLUMN_COMPFLAGS|Int32|  
+|COLUMN_SORTID|Int32|  
+|COLUMN_TDSCOLLATION|Byte[]|  
+|IS_COMPUTED|Boolean|  
   
-### Процедуры  
+### <a name="procedures"></a>Процедуры  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CATALOG|Строковое|  
-|PROCEDURE\_SCHEMA|Строковое|  
-|PROCEDURE\_NAME|Строковое|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Строковое|  
+|PROCEDURE_CATALOG|Строковое|  
+|PROCEDURE_SCHEMA|Строковое|  
+|PROCEDURE_NAME|Строковое|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Строковое|  
 |DESCRIPTION|Строковое|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CATALOG|Строковое|  
-|PROCEDURE\_SCHEMA|Строковое|  
-|PROCEDURE\_NAME|Строковое|  
-|PARAMETER\_NAME|Строковое|  
-|ORDINAL\_POSITION|Int32|  
-|PARAMETER\_TYPE|Int32|  
-|PARAMETER\_HASDEFAULT|Boolean|  
-|PARAMETER\_DEFAULT|Строковое|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|PROCEDURE_CATALOG|Строковое|  
+|PROCEDURE_SCHEMA|Строковое|  
+|PROCEDURE_NAME|Строковое|  
+|PARAMETER_NAME|Строковое|  
+|ORDINAL_POSITION|Int32|  
+|PARAMETER_TYPE|Int32|  
+|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_DEFAULT|Строковое|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|Строковое|  
-|TYPE\_NAME|Строковое|  
-|LOCAL\_TYPE\_NAME|Строковое|  
+|TYPE_NAME|Строковое|  
+|LOCAL_TYPE_NAME|Строковое|  
   
-### Catalog  
+### <a name="catalog"></a>Catalog  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|CATALOG\_NAME|Строковое|  
+|CATALOG_NAME|Строковое|  
 |DESCRIPTION|Строковое|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|INDEX\_CATALOG|Строковое|  
-|INDEX\_SCHEMA|Строковое|  
-|INDEX\_NAME|Строковое|  
-|PRIMARY\_KEY|Boolean|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|INDEX_CATALOG|Строковое|  
+|INDEX_SCHEMA|Строковое|  
+|INDEX_NAME|Строковое|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Десятичное число|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Строковое|  
+|FILTER_CONDITION|Строковое|  
 |INTEGRATED|Boolean|  
   
-## Поставщик Microsoft OLE DB для Oracle  
- Драйвер OLE DB для Oracle \(Майкрософт\) поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям.  
+## <a name="microsoft-oracle-ole-db-provider"></a>Поставщик Microsoft OLE DB для Oracle  
+ Драйвер OLE DB для Oracle (Майкрософт) поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям.  
   
 -   Таблицы  
   
@@ -175,134 +178,134 @@ caps.handback.revision: 3
   
 -   Indexes  
   
-### Таблицы  
+### <a name="tables"></a>Таблицы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|TABLE\_TYPE|Строковое|  
-|TABLE\_GUID|Guid|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|TABLE_TYPE|Строковое|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Строковое|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Столбцы  
+### <a name="columns"></a>Столбцы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Строковое|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Строковое|  
-|CHARACTER\_SET\_SCHEMA|Строковое|  
-|CHARACTER\_SET\_NAME|Строковое|  
-|COLLATION\_CATALOG|Строковое|  
-|COLLATION\_SCHEMA|Строковое|  
-|COLLATION\_NAME|Строковое|  
-|DOMAIN\_CATALOG|Строковое|  
-|DOMAIN\_SCHEMA|Строковое|  
-|DOMAIN\_NAME|Строковое|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Строковое|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Строковое|  
+|CHARACTER_SET_SCHEMA|Строковое|  
+|CHARACTER_SET_NAME|Строковое|  
+|COLLATION_CATALOG|Строковое|  
+|COLLATION_SCHEMA|Строковое|  
+|COLLATION_NAME|Строковое|  
+|DOMAIN_CATALOG|Строковое|  
+|DOMAIN_SCHEMA|Строковое|  
+|DOMAIN_NAME|Строковое|  
 |DESCRIPTION|Строковое|  
   
-### Процедуры  
+### <a name="procedures"></a>Процедуры  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CATALOG|Строковое|  
-|PROCEDURE\_SCHEMA|Строковое|  
-|PROCEDURE\_NAME|Строковое|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Строковое|  
+|PROCEDURE_CATALOG|Строковое|  
+|PROCEDURE_SCHEMA|Строковое|  
+|PROCEDURE_NAME|Строковое|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Строковое|  
 |DESCRIPTION|Строковое|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CATALOG|Строковое|  
-|PROCEDURE\_SCHEMA|Строковое|  
-|PROCEDURE\_NAME|Строковое|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ROWSET\_NUMBER|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
+|PROCEDURE_CATALOG|Строковое|  
+|PROCEDURE_SCHEMA|Строковое|  
+|PROCEDURE_NAME|Строковое|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ROWSET_NUMBER|Int64|  
+|ORDINAL_POSITION|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
 |DESCRIPTION|Строковое|  
 |OVERLOAD|Int16|  
   
-### Представления  
+### <a name="views"></a>Представления  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|VIEW\_DEFINITION|Строковое|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|VIEW_DEFINITION|Строковое|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|Строковое|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|INDEX\_CATALOG|Строковое|  
-|INDEX\_SCHEMA|Строковое|  
-|INDEX\_NAME|Строковое|  
-|PRIMARY\_KEY|Boolean|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|INDEX_CATALOG|Строковое|  
+|INDEX_SCHEMA|Строковое|  
+|INDEX_NAME|Строковое|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Десятичное число|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Строковое|  
+|FILTER_CONDITION|Строковое|  
 |INTEGRATED|Boolean|  
   
-## Поставщик OLE DB для Microsoft Jet  
- Драйвер OLE DB для Jet \(Майкрософт\) поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям.  
+## <a name="microsoft-jet-ole-db-provider"></a>Поставщик OLE DB для Microsoft Jet  
+ Драйвер OLE DB для Jet (Майкрософт) поддерживает следующие специальные коллекции схем в дополнение к общим коллекциям.  
   
 -   Таблицы  
   
@@ -314,109 +317,109 @@ caps.handback.revision: 3
   
 -   Indexes  
   
-### Таблицы  
+### <a name="tables"></a>Таблицы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|TABLE\_TYPE|Строковое|  
-|TABLE\_GUID|Guid|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|TABLE_TYPE|Строковое|  
+|TABLE_GUID|Guid|  
 |DESCRIPTION|Строковое|  
-|TABLE\_PROPID|Int64|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|TABLE_PROPID|Int64|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Столбцы  
+### <a name="columns"></a>Столбцы  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_HASDEFAULT|Boolean|  
-|COLUMN\_DEFAULT|Строковое|  
-|COLUMN\_FLAGS|Int64|  
-|IS\_NULLABLE|Boolean|  
-|DATA\_TYPE|Int32|  
-|TYPE\_GUID|Guid|  
-|CHARACTER\_MAXIMUM\_LENGTH|Int64|  
-|CHARACTER\_OCTET\_LENGTH|Int64|  
-|NUMERIC\_PRECISION|Int32|  
-|NUMERIC\_SCALE|Int16|  
-|DATETIME\_PRECISION|Int64|  
-|CHARACTER\_SET\_CATALOG|Строковое|  
-|CHARACTER\_SET\_SCHEMA|Строковое|  
-|CHARACTER\_SET\_NAME|Строковое|  
-|COLLATION\_CATALOG|Строковое|  
-|COLLATION\_SCHEMA|Строковое|  
-|COLLATION\_NAME|Строковое|  
-|DOMAIN\_CATALOG|Строковое|  
-|DOMAIN\_SCHEMA|Строковое|  
-|DOMAIN\_NAME|Строковое|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_DEFAULT|Строковое|  
+|COLUMN_FLAGS|Int64|  
+|IS_NULLABLE|Boolean|  
+|DATA_TYPE|Int32|  
+|TYPE_GUID|Guid|  
+|CHARACTER_MAXIMUM_LENGTH|Int64|  
+|CHARACTER_OCTET_LENGTH|Int64|  
+|NUMERIC_PRECISION|Int32|  
+|NUMERIC_SCALE|Int16|  
+|DATETIME_PRECISION|Int64|  
+|CHARACTER_SET_CATALOG|Строковое|  
+|CHARACTER_SET_SCHEMA|Строковое|  
+|CHARACTER_SET_NAME|Строковое|  
+|COLLATION_CATALOG|Строковое|  
+|COLLATION_SCHEMA|Строковое|  
+|COLLATION_NAME|Строковое|  
+|DOMAIN_CATALOG|Строковое|  
+|DOMAIN_SCHEMA|Строковое|  
+|DOMAIN_NAME|Строковое|  
 |DESCRIPTION|Строковое|  
   
-### Процедуры  
+### <a name="procedures"></a>Процедуры  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|PROCEDURE\_CATALOG|Строковое|  
-|PROCEDURE\_SCHEMA|Строковое|  
-|PROCEDURE\_NAME|Строковое|  
-|PROCEDURE\_TYPE|Int16|  
-|PROCEDURE\_DEFINITION|Строковое|  
+|PROCEDURE_CATALOG|Строковое|  
+|PROCEDURE_SCHEMA|Строковое|  
+|PROCEDURE_NAME|Строковое|  
+|PROCEDURE_TYPE|Int16|  
+|PROCEDURE_DEFINITION|Строковое|  
 |DESCRIPTION|Строковое|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Представления  
+### <a name="views"></a>Представления  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|VIEW\_DEFINITION|Строковое|  
-|CHECK\_OPTION|Boolean|  
-|IS\_UPDATABLE|Boolean|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|VIEW_DEFINITION|Строковое|  
+|CHECK_OPTION|Boolean|  
+|IS_UPDATABLE|Boolean|  
 |DESCRIPTION|Строковое|  
-|DATE\_CREATED|DateTime|  
-|DATE\_MODIFIED|DateTime|  
+|DATE_CREATED|DateTime|  
+|DATE_MODIFIED|DateTime|  
   
-### Indexes  
+### <a name="indexes"></a>Indexes  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
-|TABLE\_CATALOG|Строковое|  
-|TABLE\_SCHEMA|Строковое|  
-|TABLE\_NAME|Строковое|  
-|INDEX\_CATALOG|Строковое|  
-|INDEX\_SCHEMA|Строковое|  
-|INDEX\_NAME|Строковое|  
-|PRIMARY\_KEY|Boolean|  
+|TABLE_CATALOG|Строковое|  
+|TABLE_SCHEMA|Строковое|  
+|TABLE_NAME|Строковое|  
+|INDEX_CATALOG|Строковое|  
+|INDEX_SCHEMA|Строковое|  
+|INDEX_NAME|Строковое|  
+|PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
 |TYPE|Int32|  
-|FILL\_FACTOR|Int32|  
-|INITIAL\_SIZE|Int32|  
+|FILL_FACTOR|Int32|  
+|INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT\_BOOKMARKS|Boolean|  
-|AUTO\_UPDATE|Boolean|  
-|NULL\_COLLATION|Int32|  
-|ORDINAL\_POSITION|Int64|  
-|COLUMN\_NAME|Строковое|  
-|COLUMN\_GUID|Guid|  
-|COLUMN\_PROPID|Int64|  
+|SORT_BOOKMARKS|Boolean|  
+|AUTO_UPDATE|Boolean|  
+|NULL_COLLATION|Int32|  
+|ORDINAL_POSITION|Int64|  
+|COLUMN_NAME|Строковое|  
+|COLUMN_GUID|Guid|  
+|COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Десятичное число|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|Строковое|  
+|FILTER_CONDITION|Строковое|  
 |INTEGRATED|Boolean|  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

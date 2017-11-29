@@ -1,25 +1,28 @@
 ---
-title: "MustUnderstandBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MustUnderstandBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dca98f1d8d5f868285ecf11c01122f795ee6cfd8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# MustUnderstandBehavior
+# <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
 MustUnderstandBehavior  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class MustUnderstandBehavior : Behavior  
@@ -28,24 +31,24 @@ class MustUnderstandBehavior : Behavior
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс MustUnderstandBehavior не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс MustUnderstandBehavior содержит следующие свойства:  
   
-### ValidateMustUnderstand  
+### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Если логическое значение равно `true`, все заголовки SOAP с атрибутом `MustUnderstand` не обрабатываются, потому что поведение создало исключение.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Description.MustUnderstandBehavior>

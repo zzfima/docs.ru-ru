@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Глобализация и локализация приложений .NET Framework
 Разработка [международного приложения](http://msdn.microsoft.com/goglobal/bb978433.aspx), в том числе приложения, которое можно локализовать на один или несколько языков, включает следующие шаги: глобализацию, анализ локализуемости и локализацию.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 09/05/2017
  Описание лучших методик по глобализации, локализации и разработке международных приложений ASP.NET.  
   
 ## <a name="reference"></a>Ссылка  
- Пространство имен <xref:System.Globalization?displayProperty=fullName>  
+ Пространство имен <xref:System.Globalization?displayProperty=nameWithType>  
  Содержит классы, определяющие сведения, относящиеся к культуре, такие как язык, название страны, используемые календари, шаблоны форматирования дат, денежных единиц и чисел, а также порядок сортировки строк.  
   
  Пространство имен <xref:System.Resources>  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/05/2017
   
  [Winres.exe (редактор ресурсов Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Описание использования Winres.exe для локализации форм Windows Forms.
-

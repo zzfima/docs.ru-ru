@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="what-is-managed-code"></a>Что такое управляемый код
 
 При работе с платформой .NET Framework вы будете часто сталкиваться с термином "управляемый код". В этом документе приводится пояснение этого термина и дополнительные сведения о нем.
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/21/2017
 *   [Общие сведения об основных понятиях .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Небезопасный код и указатели](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [Взаимодействие (руководство по программированию на C#)](https://msdn.microsoft.com/library/ms173184.aspx)
-

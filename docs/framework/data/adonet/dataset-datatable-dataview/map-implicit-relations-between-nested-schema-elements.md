@@ -1,37 +1,40 @@
 ---
-title: "Сопоставление неявных связей между вложенными элементами схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставление неявных отношений между вложенными элементами схемы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3e3243384bd1dd55661a87ee67cc3052b94e923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сопоставление неявных связей между вложенными элементами схемы
-Схема на языке XSD может иметь сложные типы, вложенные друг в друга.  В этом случае процесс сопоставления применяет сопоставление по умолчанию и создает в объекте <xref:System.Data.DataSet>:  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>Сопоставление неявных отношений между вложенными элементами схемы
+Схема на языке XSD может иметь сложные типы, вложенные друг в друга. В этом случае процесс сопоставления применяет сопоставление по умолчанию и создает в объекте <xref:System.Data.DataSet>:  
   
--   одну таблицу для каждого сложного типа \(родительского и дочернего\);  
+-   одну таблицу для каждого сложного типа (родительского и дочернего);  
   
--   один дополнительный столбец *TableName*\_Id в первичном ключе на каждое определение таблицы, где *TableName* — это имя родительской таблицы, если для родительской таблицы не существует ограничения уникальности;  
+-   Если не существует ограничения уникальности в родительском, один дополнительный столбец первичного ключа в определение таблицы с именем *TableName*_Id где *TableName* имя родительской таблицы.  
   
--   ограничение первичного ключа для родительской таблицы, определяющее дополнительный столбец как часть первичного ключа \(путем задания свойству **IsPrimaryKey** значения **True**\).  Ограничению назначается имя Constraint*\#*, где *\#* — это 1, 2, 3 и т. д.  Например, имя первого ограничения по умолчанию \- Constraint1;  
+-   Ограничение первичного ключа в родительской таблице, определяющее дополнительный столбец в качестве первичного ключа (установив **IsPrimaryKey** свойства **True**). Ограничению назначается имя Constraint *#*  где  *#*  — 1, 2, 3 и т. д. Например, имя первого ограничения по умолчанию - Constraint1;  
   
--   ограничение внешнего ключа для дочерней таблицы, определяющее дополнительный столбец как внешний ключ, ссылающийся на первичный ключ родительской таблицы.  Ограничение имеет имя *ParentTable\_ChildTable*, где *ParentTable* — это имя родительской таблицы, а *ChildTable* — это имя дочерней таблицы;  
+-   ограничение внешнего ключа для дочерней таблицы, определяющее дополнительный столбец как внешний ключ, ссылающийся на первичный ключ родительской таблицы. Ограничению назначается имя *ParentTable_ChildTable* где *ParentTable* имя родительской таблицы и *ChildTable* имя дочерней таблицы.  
   
 -   связи данных между родительскими и дочерними таблицами.  
   
- В следующем примере показывается схема, где **OrderDetail** \- это дочерний элемент таблицы **Order**.  
+ В следующем примере показано, схема которой **OrderDetail** является дочерним элементом элемента **порядок**.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,16 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- Процесс сопоставления схемы XML создает в объекте **DataSet**:  
+ Процесс сопоставления схем XML создает в **набора данных**:  
   
--   Таблицы **Order** и **OrderDetail**.  
+-   **Порядок** и **OrderDetail** таблицы.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Ограничение уникальности на таблицу **Order**.  Отметим, что свойство **IsPrimaryKey** имеет значение **True**.  
+-   Ограничение уникальности на **порядок** таблицы. Обратите внимание, что **IsPrimaryKey** свойству **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -80,7 +83,7 @@ caps.handback.revision: 4
     IsPrimaryKey: True  
     ```  
   
--   Ограничение внешнего ключа на таблицу **OrderDetail**.  
+-   Ограничение внешнего ключа для **OrderDetail** таблицы.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -91,7 +94,7 @@ caps.handback.revision: 4
     RelatedColumns: Order_Id   
     ```  
   
--   Связь между таблицами **Order** и **OrderDetail**.  Свойству **Nested** для данной связи устанавливается значение **True**, так как элементы **Order** и **OrderDetail** вложены в схему.  
+-   Связь между **порядок** и **OrderDetail** таблиц. **Nested** для этого отношения свойству **True** из-за **порядок** и **OrderDetail** элементы являются вложенными в схеме .  
   
     ```  
     ParentTable: Order  
@@ -104,7 +107,7 @@ caps.handback.revision: 4
     Nested: True  
     ```  
   
-## См. также  
- [Формирование связей DataSet на основе схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Сопоставление ограничений схемы XML \(XSD\) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Создание отношений наборов данных из XML-схемы (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Сопоставление ограничений XML схемы (XSD) для ограничения набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

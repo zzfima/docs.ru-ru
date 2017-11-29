@@ -1,45 +1,48 @@
 ---
-title: "ограничение ссылочной целостности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ограничение ссылочной целостности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 10e469838073b4cf1faba1704b88b47f30b8b3d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# ограничение ссылочной целостности
-*Ограничение ссылочной целостности* в модели EDM схоже с ограничением ссылочной целостности в реляционной базе данных.  Так же как столбец \(или столбцы\) из таблицы базы данных может иметь ссылку на первичный ключ другой таблицы, [свойство](../../../../docs/framework/data/adonet/property.md) \(или свойства\) [типа сущности](../../../../docs/framework/data/adonet/entity-type.md) может иметь ссылки на [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности.  Тип сущности, на которую ссылаются, называется *основным элементом* ограничения.  Тип сущности, которая ссылается на основной элемент, называется *зависимым элементом* ограничения.  
+# <a name="referential-integrity-constraint"></a>ограничение ссылочной целостности
+Объект *ограничение ссылочной целостности* в модель данных сущности (EDM) похоже на ограничение ссылочной целостности в реляционной базе данных. Таким же образом, столбец (или столбцы) из таблицы базы данных может ссылаться первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который имеется ссылка называется *основной элемент* ограничения. Тип сущности, который ссылается на основной элемент называется *зависимом* ограничения.  
   
- Ограничение ссылочной целостности определяется как часть [ассоциации](../../../../docs/framework/data/adonet/association-type.md) между двумя типами сущностей.  Определение ограничения ссылочной целостности включает следующую информацию.  
+ Ограничение ссылочной целостности определяется как часть [ассоциации](../../../../docs/framework/data/adonet/association-type.md) между двумя типами сущностей. Определение ограничения ссылочной целостности включает следующую информацию.  
   
--   Основной конец ограничения.  \(Тип сущности, ключ сущности которого имеет ссылку на зависимый конец.\)  
+-   Основной конец ограничения. (Тип сущности, ключ сущности которого имеет ссылку на зависимый конец.)  
   
 -   Ключ сущности основного конца.  
   
--   Зависимый конец ограничения.  \(Тип сущности, который имеет свойство или свойства, ссылающиеся на ключ сущности основного конца.\)  
+-   Зависимый конец ограничения. (Тип сущности, который имеет свойство или свойства, ссылающиеся на ключ сущности основного конца.)  
   
 -   Ссылка на свойство или свойства зависимого конца.  
   
- Целью ограничения ссылочной целостности в модели EDM является обеспечение постоянного существования допустимых ассоциаций.  Для получения дополнительной информации см. [свойство внешнего ключа](../../../../docs/framework/data/adonet/foreign-key-property.md).  
+ Целью ограничения ссылочной целостности в модели EDM является обеспечение постоянного существования допустимых ассоциаций. Дополнительные сведения см. в разделе [свойство внешнего ключа](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   
-## Пример  
- На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `WrittenBy` и `PublishedBy`.  Тип сущности `Book` имеет свойство `PublisherId`, которое ссылается на ключ сущности типа сущности `Publisher` при определении ограничения ссылочной целостности ассоциации `PublishedBy`.  
+## <a name="example"></a>Пример  
+ На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `WrittenBy` и `PublishedBy`. Тип сущности `Book` имеет свойство `PublisherId`, которое ссылается на ключ сущности типа сущности `Publisher` при определении ограничения ссылочной целостности ассоциации `PublishedBy`.  
   
  ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
   
- Платформа [Платформа ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык DSL, называемый языком CSDL \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\), для определения концептуальных моделей.  Далее на языке CSDL определяется ограничение ссылочной целостности для ассоциации `PublishedBy`, которая ранее приводилась в концептуальной модели.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Далее на языке CSDL определяется ограничение ссылочной целостности для ассоциации `PublishedBy`, которая ранее приводилась в концептуальной модели.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## См. также  
- [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
+## <a name="see-also"></a>См. также  
+ [Основные понятия модели данных сущности](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [Модель EDM](../../../../docs/framework/data/adonet/entity-data-model.md)

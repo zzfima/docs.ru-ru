@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - failed assembly binds
 - Fuslogvw.exe
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
 Средство просмотра журнала привязки сборок выводит подробные сведения об ошибках привязки сборок. Эта информация поможет определить причину, по которой .NET Framework не находит сборку во время выполнения. Ошибки обычно вызваны развертыванием сборки в неверном расположении, использованием машинного образа, который более не является допустимым, а также несовпадением версий или языков и региональных параметров. Если среде CLR не удается найти сборку, обычно в приложении отображается исключение <xref:System.TypeLoadException>.  
@@ -221,7 +214,7 @@ Discarding native image.
      См. важное примечание о сборках, которые загружаются как нейтральные к домену.  
   
 > [!IMPORTANT]
->  Если сборка загружается как нейтральная к домену, например если свойству <xref:System.AppDomainSetup.LoaderOptimization%2A> задано значение <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> или <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, в некоторых случаях ведение журнала может привести к утечке памяти. Это возможно, если запись вносится в журнал при загрузке нейтрального к домену модуля в домен приложения с последующей выгрузкой домена приложения. Запись журнала может не освобождаться до завершения данного процесса. Некоторые отладчики включают ведение журналов автоматически.  
+>  Если сборка загружается как нейтральная к домену, например если свойству <xref:System.AppDomainSetup.LoaderOptimization%2A> задано значение <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> или <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, в некоторых случаях ведение журнала может привести к утечке памяти. Это возможно, если запись вносится в журнал при загрузке нейтрального к домену модуля в домен приложения с последующей выгрузкой домена приложения. Запись журнала может не освобождаться до завершения данного процесса. Некоторые отладчики включают ведение журналов автоматически.  
   
 #### <a name="to-enable-a-custom-log-path"></a>Разрешение пользовательского пути к журналу  
   
@@ -244,9 +237,8 @@ Discarding native image.
     >  Это поле активно только в Windows 8 или более поздней версии.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.TypeLoadException>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.TypeLoadException>  
+ [Инструменты](../../../docs/framework/tools/index.md)  
+ [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

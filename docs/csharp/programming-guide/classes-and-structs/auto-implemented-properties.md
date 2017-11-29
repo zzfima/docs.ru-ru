@@ -1,39 +1,21 @@
 ---
 title: "Автоматически реализуемые свойства (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1aa923c6d8208c2d5451957c4112493d0acd561d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 92e0037b73f1054673ea8060b71af5bd4db13ca3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Автоматически реализуемые свойства (Руководство по программированию на C#)
 В C# 3.0 и более поздних версиях автоматически реализуемые свойства делают объявление свойств более лаконичным, когда в методах доступа к свойствам не требуется дополнительная логика. Они также позволяют клиентскому коду создавать объекты. При объявлении свойства, как показано в следующем примере, компилятор создает закрытое анонимное резервное поле, которое может быть доступно только через методы доступа `get` и `set` свойства.  
@@ -41,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>Пример  
  В следующем примере показан простой класс, имеющий несколько автоматически реализуемых свойств.  
   
- [!code-cs[csProgGuideLINQ #28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  В C# 6 и более поздних версиях можно инициализировать автоматически реализуемые свойства аналогично полям.  
   
@@ -54,6 +36,5 @@ public string FirstName { get; set; } = "Jane";
  Атрибуты в автоматически реализуемых свойствах допускаются, но очевидно не в резервных полях, так как они недоступны из исходного кода. Если вам необходимо использовать атрибут в резервном поле свойства, просто создайте обычное свойство.  
   
 ## <a name="see-also"></a>См. также  
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
+ [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
-

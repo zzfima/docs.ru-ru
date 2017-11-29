@@ -1,211 +1,210 @@
 ---
-title: "Сопоставление методов CLR каноническим функциям | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Сопоставление методов CLR с каноническими функциями"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сопоставление методов CLR каноническим функциям
-Платформа Entity Framework предоставляет набор канонических функций, которые реализуют операции над строками, математические функции и другую общую функциональность для многих систем баз данных.  Это позволяет разработчикам работать с широким кругом систем баз данных.  При вызове из технологии запросов \(например, из LINQ to Entities\) канонические функции преобразуются в соответствующую функцию хранилища для используемого поставщика.  Это позволяет для различных источников данных выражать вызовы функций в общей форме, обеспечивая согласованность при применении запросов.  Побитовые операторы AND, OR, NOT и XOR также сопоставляются с каноническими функциями, если операнд имеет числовой тип. Для операндов типа Boolean побитовые операторы AND, OR, NOT и XOR выполняют соответствующие логические операции.  Для получения дополнительной информации см. [Канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+# <a name="clr-method-to-canonical-function-mapping"></a>Сопоставление методов CLR с каноническими функциями
+Платформа Entity Framework предоставляет набор канонических функций, которые реализуют операции над строками, математические функции и другую общую функциональность для многих систем баз данных. Это позволяет разработчикам работать с широким кругом систем баз данных. При вызове из технологии запросов (например, из LINQ to Entities) канонические функции преобразуются в соответствующую функцию хранилища для используемого поставщика. Это позволяет для различных источников данных выражать вызовы функций в общей форме, обеспечивая согласованность при применении запросов. Битовые операторы AND, OR, NOT и XOR также сопоставляются с каноническими функциями, если операнд имеет числовой тип. Для операндов логического типа битовые операторы AND, OR, NOT и XOR выполняют логические операции «И», «ИЛИ», «НЕ» и «Исключающее ИЛИ». Дополнительные сведения см. в разделе [канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
- Для сценариев LINQ запросы к платформе Entity Framework включают сопоставление определенных методов CLR с методами базового источника данных через канонические функции.  Любой вызов метода в запросе LINQ to Entities, который явно не сопоставлен с канонической функцией, приведет к активизации исключения времени выполнения <xref:System.NotSupportedException>.  
+ Для сценариев LINQ запросы к платформе Entity Framework включают сопоставление определенных методов CLR с методами базового источника данных через канонические функции. Любой вызов метода в запросе LINQ to Entities, который явно не сопоставлен с канонической функцией, приведет к активизации исключения времени выполнения <xref:System.NotSupportedException>.  
   
-## Сопоставление метода System.String \(статический\)  
+## <a name="systemstring-method-static-mapping"></a>Сопоставление метода System.String (статический)  
   
-|Метод System.String \(статический\)|Каноническая функция|  
-|-----------------------------------------|--------------------------|  
-|System.String Concat\(String `str0`, String `str1`\)|Concat\(`str0`, `str1`\)|  
-|System.String Concat\(String `str0`, String `str1`, String `str2`\)|Concat\(Concat\(`str0`, `str1`\), `str2`\)|  
-|System.String Concat\(String `str0`, String `str1`, String `str2`, String `str03`\)|Concat\(Concat\(Concat\(`str0`, `str1`\), `str2`\), `str3`\)|  
-|Boolean Equals\(String `a`, String `b`\)|\= \- оператор|  
-|Boolean IsNullOrEmpty\(String `value`\)|\(IsNull\(`value`\)\) OR Length\(`value`\) \= 0|  
-|Boolean op\_Equality\(String `a`, String `b`\)|\= \- оператор|  
-|Boolean op\_Inequality\(String `a` , String `b`\)|\!\= \- оператор|  
-|Microsoft.VisualBasic.Strings.Trim\(String `str`\)|Trim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.LTrim\(String `str`\)|Ltrim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.RTrim\(String `str`\)|Rtrim\(`str`\)|  
-|Microsoft.VisualBasic.Strings.Len\(String `expression`\)|Length\(`expression`\)|  
-|Microsoft.VisualBasic.Strings.Left\(String `str`, Int32 `Length`\)|Left\(`str`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.Mid\(String `str`, Int32 `Start`, Int32 `Length`\)|Substring\(`str`, `Start`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.Right\(String `str`, Int32 `Length`\)|Right\(`str`, `Length`\)|  
-|Microsoft.VisualBasic.Strings.UCase\(String `Value`\)|ToUpper\(`Value`\)|  
-|Microsoft.VisualBasic.Strings.LCase\(String Value\)|ToLower\(`Value`\)|  
+|Метод System.String (статический)|Каноническая функция|  
+|-------------------------------------|------------------------|  
+|System.String Concat(String `str0`, String `str1`)|Concat(`str0`, `str1`)|  
+|System.String Concat(String `str0`, String `str1`, String `str2`)|Concat(Concat(`str0`, `str1`), `str2`)|  
+|System.String Concat(String `str0`, String `str1`, String `str2`, String `str03`)|Concat(Concat(Concat(`str0`, `str1`), `str2`), `str3`)|  
+|Boolean Equals(String `a`, String `b`)|= - оператор|  
+|Boolean IsNullOrEmpty(String `value`)|(IsNull(`value`)) OR Length(`value`) = 0|  
+|Boolean op_Equality(String `a`, String `b`)|= - оператор|  
+|Boolean op_Inequality(String `a` , String `b`)|!= - оператор|  
+|Microsoft.VisualBasic.Strings.Trim(String `str`)|Trim(`str`)|  
+|Microsoft.VisualBasic.Strings.LTrim(String `str`)|Ltrim(`str`)|  
+|Microsoft.VisualBasic.Strings.RTrim(String `str`)|Rtrim(`str`)|  
+|Microsoft.VisualBasic.Strings.Len(String `expression`)|Length(`expression`)|  
+|Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)|Left(`str`, `Length`)|  
+|Microsoft.VisualBasic.Strings.Mid(String `str`, Int32 `Start`, Int32 `Length`)|Substring(`str`, `Start`, `Length`)|  
+|Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)|Right(`str`, `Length`)|  
+|Microsoft.VisualBasic.Strings.UCase(String `Value`)|ToUpper(`Value`)|  
+|Microsoft.VisualBasic.Strings.LCase(String Value)|ToLower(`Value`)|  
   
-## Сопоставление метода System.String \(экземпляр\)  
+## <a name="systemstring-method-instance-mapping"></a>Сопоставление метода System.String (экземпляр)  
   
-|Метод System.String \(экземпляр\)|Каноническая функция|Примечания|  
-|---------------------------------------|--------------------------|----------------|  
-|Boolean Contains\(String `value`\)|`this` LIKE '%`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf\(`this`, `value`\) \> 0|  
-|Boolean EndsWith\(String `value`\)|`this` LIKE `'`%`value`'|Если `value` не является константой, от он сопоставляется с Right\(`this`, length\(`value`\)\) \= `value`.|  
-|Boolean StartsWith\(String `value`\)|`this` LIKE '`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf\(`this`, `value`\) \= 1.|  
-|Длина|Length\(`this`\)||  
-|Int32 IndexOf\(String `value`\)|IndexOf\(`this`, `value`\) \- 1||  
-|System.String Insert\(Int32 `startIndex`, String `value`\)|Concat\(Concat\(Substring\(`this`, 1, `startIndex`\), `value`\), Substring\(`this`, `startIndex`\+1, Length\(`this`\) \- `startIndex`\)\)||  
-|System.String Remove\(Int32 `startIndex`\)|Substring\(`this`, 1, `startIndex`\)||  
-|System.String Remove\(Int32 `startIndex`, Int32 `count`\)|Concat\(Substring\(`this`, 1, `startIndex`\) , Substring\(`this`, `startIndex` \+ `count` \+1, Length\(`this`\) \- \(`startIndex` \+ `count`\)\)\)|Remove\(`startIndex`, `count`\) поддерживается, только если `count` \- это неотрицательное целое число.|  
-|System.String Replace\(String `oldValue`, String `newValue`\)|Replace\(`this`, `oldValue`, `newValue`\)||  
-|System.String Substring\(Int32 `startIndex`\)|Substring\(`this`, `startIndex` \+1, Length\(`this`\) \- `startIndex`\)||  
-|System.String Substring\(Int32 `startIndex`, Int32 `length`\)|Substring\(`this`, `startIndex` \+1, `length`\)||  
-|System.String ToLower\(\)|ToLower\(`this`\)||  
-|System.String ToUpper\(\)|ToUpper\(`this`\)||  
-|System.String Trim\(\)|Trim\(`this`\)||  
-|System.String TrimEnd\(Char\[\] `trimChars`\)|RTrim\(`this`\)||  
-|System.String TrimStart\(Char\[\]`trimChars`\)|LTrim\(`this`\)||  
-|Boolean Equals\(String `value`\)|\= \- оператор||  
+|Метод System.String (экземпляр)|Каноническая функция|Примечания|  
+|---------------------------------------|------------------------|-----------|  
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) > 0|  
+|Boolean EndsWith(String `value`)|`this`КАК `'` % `value`"|Если `value` не является константой, от он сопоставляется с Right(`this`, length(`value`)) = `value`.|  
+|Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Если `value` не является константой, от он сопоставляется с IndexOf(`this`, `value`) = 1.|  
+|Длина|Length(`this`)||  
+|Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
+|System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
+|System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (подстрока (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, длина (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) поддерживается, только если `count` - это неотрицательное целое число.|  
+систему. Строка замены (строка `oldValue`, строка `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+|System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|SUBSTRING (`this`, `startIndex` + 1, `length`)||  
+|System.String ToLower()|ToLower(`this`)||  
+|System.String ToUpper()|ToUpper(`this`)||  
+|System.String Trim()|Trim(`this`)||  
+|System.String TrimEnd(Char[] `trimChars`)|RTrim(`this`)||  
+|System.String TrimStart(Char[]`trimChars`)|LTrim(`this`)||  
+|Boolean Equals(String `value`)|= - оператор||  
   
-## Сопоставление метода System.DateTime \(статический\)  
+## <a name="systemdatetime-method-static-mapping"></a>Сопоставление метода System.DateTime (статический)  
   
-|Метод System.DateTime \(статический\)|Каноническая функция|Примечания|  
-|-------------------------------------------|--------------------------|----------------|  
-|Boolean Equals\(DateTime `t1`, DateTime `t2`\)|\= \- оператор||  
-|System.DateTime.Now|CurrentDateTime\(\)||  
-|System.DateTime.UtcNow|CurrentUtcDateTime\(\)||  
-|Boolean op\_Equality\(DateTime `d1`, DateTime `d2`\)|\= \- оператор||  
-|Boolean op\_GreaterThan\(DateTime `t1`, DateTime `t2`\)|\> \- оператор||  
-|Boolean op\_GreaterThanOrEqual\(DateTime `t1`, DateTime `t2`\)|\>\= \- оператор||  
-|Boolean op\_Inequality\(DateTime `t1`, DateTime `t2`\)|\!\= \- оператор||  
-|Boolean op\_LessThan\(DateTime `t1`, DateTime `t2`\)|\< \- оператор||  
-|Boolean op\_LessThanOrEqual\(DateTime `t1`, DateTime `t2`\)|\<\= \- оператор||  
-|Microsoft.VisualBasic.DateAndTime.DatePart\( \_<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` As DateTime, \_<br /><br /> Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek \= VbSunday, \_<br /><br /> Optional ByVal `FirstWeekOfYearValue` As FirstWeekOfYear \= VbFirstJan1 \_<br /><br /> \) As Integer||Дополнительные сведения см. в разделе «Функция DatePart».|  
-|Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Year\(DateTime `TimeValue`\)|Year\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Month\(DateTime `TimeValue`\)|Month\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Day\(DateTime `TimeValue`\)|Day\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Hour\(DateTime `TimeValue`\)|Hour\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Minute\(DateTime `TimeValue`\)|Minute\(\)||  
-|Microsoft.VisualBasic.DateAndTime.Second\(DateTime `TimeValue`\)|Second\(\)||  
+|Метод System.DateTime (статический)|Каноническая функция|Примечания|  
+|---------------------------------------|------------------------|-----------|  
+|Boolean Equals(DateTime `t1`, DateTime `t2`)|= - оператор||  
+|System.DateTime.Now|CurrentDateTime()||  
+|System.DateTime.UtcNow|CurrentUtcDateTime()||  
+|Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= - оператор||  
+|Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> - оператор||  
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= - оператор||  
+|Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= - оператор||  
+|Op_LessThan логическое (DateTime `t1`, DateTime `t2`)|< - оператор||  
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= - оператор||  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` как DateInterval,\_<br /><br /> ByVal `DateValue` как значение DateTime,\_<br /><br /> Необязательный ByVal `FirstDayOfWeekValue` как FirstDayOfWeek = VbSunday,\_<br /><br /> Необязательный ByVal `FirstWeekOfYearValue` как Первая_неделя_года = VbFirstJan1\_<br /><br /> ) As Integer||Дополнительные сведения см. в разделе «Функция DatePart».|  
+|Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
+|Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
+|Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
+сообщению. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
+|Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
+|Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
+|Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  
   
-## Сопоставление метода System.DateTime \(экземпляр\)  
+## <a name="systemdatetime-method-instance-mapping"></a>Сопоставление метода System.DateTime (экземпляр)  
   
-|Метод System.DateTime \(экземпляр\)|Каноническая функция|  
-|-----------------------------------------|--------------------------|  
-|Boolean Equals\(DateTime `value`\)|\= \- оператор|  
-|Day|Day\(`this`\)|  
-|Hour|Hour\(`this`\)|  
-|Millisecond|Millisecond\(`this`\)|  
-|Minute|Minute\(`this`\)|  
-|Месяц.|Month\(`this`\)|  
-|Second|Second\(`this`\)|  
-|Year|Year\(`this`\)|  
+|Метод System.DateTime (экземпляр)|Каноническая функция|  
+|-----------------------------------------|------------------------|  
+|Boolean Equals(DateTime `value`)|= - оператор|  
+|Day|Day(`this`)|  
+|Hour|Hour(`this`)|  
+|Millisecond|Millisecond(`this`)|  
+|Minute|Minute(`this`)|  
+|Месяц.|Month(`this`)|  
+|Second|Second(`this`)|  
+|Year|Year(`this`)|  
   
-## Сопоставление метода System.DateTimeOffset \(экземпляр\)  
+## <a name="systemdatetimeoffset-method-instance-mapping"></a>Сопоставление метода System.DateTimeOffset (экземпляр)  
  Сопоставление, выводимое для методов `get` с указанными свойствами.  
   
-|Метода System.DateTimeOffset \(экземпляр\)|Каноническая функция|Примечания|  
-|------------------------------------------------|--------------------------|----------------|  
-|Day|Day\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Hour|Hour\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Millisecond|Millisecond\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Minute|Minute\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Месяц.|Month\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Second|Second\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Year|Year\(`this`\)|Не поддерживается для SQL Server 2005.|  
+|Метода System.DateTimeOffset (экземпляр)|Каноническая функция|Примечания|  
+|-----------------------------------------------|------------------------|-----------|  
+|Day|Day(`this`)|Не поддерживается для SQL Server 2005.|  
+|Hour|Hour(`this`)|Не поддерживается для SQL Server 2005.|  
+|Millisecond|Millisecond(`this`)|Не поддерживается для SQL Server 2005.|  
+|Minute|Minute(`this`)|Не поддерживается для SQL Server 2005.|  
+|Месяц.|Month(`this`)|Не поддерживается для SQL Server 2005.|  
+|Second|Second(`this`)|Не поддерживается для SQL Server 2005.|  
+|Year|Year(`this`)|Не поддерживается для SQL Server 2005.|  
   
 > [!NOTE]
->  Метод <xref:System.DateTimeOffset.Equals%2A> возвращает значение `true`, если сравниваемые объекты <xref:System.DateTimeOffset> равны, и значение `false` в противном случае.  Метод <xref:System.DateTimeOffset.CompareTo%2A> возвращает значение 0, 1 или \-1 в зависимости от состояния объекта <xref:System.DateTimeOffset> \(соответственно равен, больше или меньше\).  
+>  Метод <xref:System.DateTimeOffset.Equals%2A> возвращает значение `true`, если сравниваемые объекты <xref:System.DateTimeOffset> равны, и значение `false` в противном случае. Метод <xref:System.DateTimeOffset.CompareTo%2A> возвращает значение 0, 1 или -1 в зависимости от состояния объекта <xref:System.DateTimeOffset> (соответственно равен, больше или меньше).  
   
-## Сопоставление метода System.DateTimeOffset \(статический\)  
+## <a name="systemdatetimeoffset-method-static-mapping"></a>Сопоставление метода System.DateTimeOffset (статический)  
  Сопоставление, выводимое для методов `get` с указанными свойствами.  
   
-|Метод System.DateTimeOffset \(статический\)|Каноническая функция|Примечания|  
-|-------------------------------------------------|--------------------------|----------------|  
-|System.DateTimeOffset.Now\(\)|CurrentDateTimeOffset\(\)|Не поддерживается для SQL Server 2005.|  
+|Метод System.DateTimeOffset (статический)|Каноническая функция|Примечания|  
+|---------------------------------------------|------------------------|-----------|  
+|System.DateTimeOffset.Now()|CurrentDateTimeOffset()|Не поддерживается для SQL Server 2005.|  
   
-## Сопоставление метода System.TimeSpan \(экземпляр\)  
+## <a name="systemtimespan-method-instance-mapping"></a>Сопоставление метода System.TimeSpan (экземпляр)  
  Сопоставление, выводимое для методов `get` с указанными свойствами.  
   
-|Метод System.TimeSpan \(экземпляр\)|Каноническая функция|Примечания|  
-|-----------------------------------------|--------------------------|----------------|  
-|Часы.|Hour\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Milliseconds|Millisecond\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Минуты.|Minute\(`this`\)|Не поддерживается для SQL Server 2005.|  
-|Seconds|Second\(`this`\)|Не поддерживается для SQL Server 2005.|  
+|Метод System.TimeSpan (экземпляр)|Каноническая функция|Примечания|  
+|-----------------------------------------|------------------------|-----------|  
+|Часы.|Hour(`this`)|Не поддерживается для SQL Server 2005.|  
+|Milliseconds|Millisecond(`this`)|Не поддерживается для SQL Server 2005.|  
+|Минуты.|Minute(`this`)|Не поддерживается для SQL Server 2005.|  
+|Seconds|Second(`this`)|Не поддерживается для SQL Server 2005.|  
   
 > [!NOTE]
->  Метод <xref:System.TimeSpan.Equals%2A> возвращает значение `true`, если сравниваемые объекты <xref:System.TimeSpan> равны, и значение `false` в противном случае.  Метод <xref:System.TimeSpan.CompareTo%2A> возвращает значение 0, 1 или \-1 в зависимости от состояния объекта <xref:System.TimeSpan> \(соответственно равен, больше или меньше\).  
+>  Метод <xref:System.TimeSpan.Equals%2A> возвращает значение `true`, если сравниваемые объекты <xref:System.TimeSpan> равны, и значение `false` в противном случае. Метод <xref:System.TimeSpan.CompareTo%2A> возвращает значение 0, 1 или -1 в зависимости от состояния объекта <xref:System.TimeSpan> (соответственно равен, больше или меньше).  
   
-### Функция DatePart  
- Функция `DatePart` сопоставляется с одной или несколькими каноническими функциями в зависимости от значения `Interval`.  В следующей таблице приведено сопоставление канонических функций для поддерживаемых значений `Interval`.  
+### <a name="datepart-function"></a>Функция DatePart  
+ Функция `DatePart` сопоставляется с одной или несколькими каноническими функциями в зависимости от значения `Interval`. В следующей таблице приведено сопоставление канонических функций для поддерживаемых значений `Interval`.  
   
 |Значение интервала|Каноническая функция|  
-|------------------------|--------------------------|  
-|DateInterval.Year|Year\(\)|  
-|DateInterval.Month|Month\(\)|  
-|DateInterval.Day|Day\(\)|  
-|DateInterval.Hour|Hour\(\)|  
-|DateInterval.Minute|Minute\(\)|  
-|DateInterval.Second|Second\(\)|  
+|--------------------|------------------------|  
+|DateInterval.Year|Year()|  
+|DateInterval.Month|Month()|  
+|DateInterval.Day|Day()|  
+|DateInterval.Hour|Hour()|  
+|DateInterval.Minute|Minute()|  
+|DateInterval.Second|Second()|  
   
-## Сопоставление математических функций  
+## <a name="mathematical-function-mapping"></a>Сопоставление математических функций  
   
 |Метод CLR|Каноническая функция|  
-|---------------|--------------------------|  
-|System.Decimal.Ceiling\(Decimal `d`\)|Ceiling\(`d`\)|  
-|System.Decimal.Floor\(Decimal `d`\)|Floor\(`d`\)|  
-|System.Decimal.Round\(Decimal `d`\)|Round\(`d`\)|  
-|System.Math.Ceiling\(Decimal `d`\)|Ceiling\(`d`\)|  
-|System.Math.Floor\(Decimal `d`\)|Floor\(`d`\)|  
-|System.Math.Round\(Decimal `d`\)|Round\(`d`\)|  
-|System.Math.Ceiling\(Double `a`\)|Ceiling\(`a`\)|  
-|System.Math.Floor\(Double `a`\)|Floor\(`a`\)|  
-|System.Math.Round\(Double `a`\)|Round\(`a`\)|  
-|System.Math.Round\(значение Double, количество знаков Int16\)|Round\(значение, количество знаков\)|  
-|System.Math.Round\(значение Double, количество знаков Int32\)|Round\(значение, количество знаков\)|  
-|System.Math.Round\(значение Decimal, количество знаков Int16\)|Round\(значение, количество знаков\)|  
-|System.Math.Round\(значение Decimal, количество знаков Int32\)|Round\(значение, количество знаков\)|  
-|System.Math.Abs\(значение Int16\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Int32\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Int64\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Byte\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Single\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Double\)|Abs\(значение\)|  
-|System.Math.Abs\(значение Decimal\)|Abs\(значение\)|  
-|System.Math.Truncate\(значение Double, количество знаков Int16\)|Truncate\(значение, количество знаков\)|  
-|System.Math.Truncate\(значение Double, количество знаков Int32\)|Truncate\(значение, количество знаков\)|  
-|System.Math.Truncate\(значение Decimal, количество знаков Int16\)|Truncate\(значение, количество знаков\)|  
-|System.Math.Truncate\(значение Decimal, количество знаков Int32\)|Truncate\(значение, количество знаков\)|  
-|System.Math.Power\(значение Int32, показатель степени Int64\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Int32, показатель степени Double\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Int32, показатель степени Decimal\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Int64, показатель степени Int64\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Int64, показатель степени Double\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Int64, показатель степени Decimal\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Double, показатель степени Int64\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Double, показатель степени Double\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Double, показатель степени Decimal\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Decimal, показатель степени Int64\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Decimal, показатель степени Double\)|Power\(значение, показатель степени\)|  
-|System.Math.Power\(значение Decimal, показатель степени Decimal\)|Power\(значение, показатель степени\)|  
+|----------------|------------------------|  
+|System.Decimal.Ceiling(Decimal `d`)|Ceiling(`d`)|  
+|System.Decimal.Floor(Decimal `d`)|Floor(`d`)|  
+|System.Decimal.Round(Decimal `d`)|Round(`d`)|  
+|System.Math.Ceiling(Decimal `d`)|Ceiling(`d`)|  
+|System.Math.Floor(Decimal `d`)|Floor(`d`)|  
+|System.Math.Round(Decimal `d`)|Round(`d`)|  
+|System.Math.Ceiling(Double `a`)|Ceiling(`a`)|  
+|System.Math.Floor(Double `a`)|Floor(`a`)|  
+|System.Math.Round(Double `a`)|Round(`a`)|  
+|System.Math.Round(значение Double, количество знаков Int16)|Round(значение, количество знаков)|  
+|System.Math.Round(значение Double, количество знаков Int32)|Round(значение, количество знаков)|  
+|System.Math.Round(значение Decimal, количество знаков Int16)|Round(значение, количество знаков)|  
+|System.Math.Round(значение Decimal, количество знаков Int32)|Round(значение, количество знаков)|  
+|System.Math.Abs(значение Int16)|Abs(значение)|  
+|System.Math.Abs(значение Int32)|Abs(значение)|  
+|System.Math.Abs(значение Int64)|Abs(значение)|  
+|System.Math.Abs(значение Byte)|Abs(значение)|  
+|System.Math.Abs(значение Single)|Abs(значение)|  
+|System.Math.Abs(значение Double)|Abs(значение)|  
+|System.Math.Abs(значение Decimal)|Abs(значение)|  
+|System.Math.Truncate(значение Double, количество знаков Int16)|Truncate(значение, количество знаков)|  
+|System.Math.Truncate(значение Double, количество знаков Int32)|Truncate(значение, количество знаков)|  
+|System.Math.Truncate(значение Decimal, количество знаков Int16)|Truncate(значение, количество знаков)|  
+|System.Math.Truncate(значение Decimal, количество знаков Int32)|Truncate(значение, количество знаков)|  
+|System.Math.Power(значение Int32, показатель степени Int64)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Int32, показатель степени Double)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Int32, показатель степени Decimal)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Int64, показатель степени Int64)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Int64, показатель степени Double)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Int64, показатель степени Decimal)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Double, показатель степени Int64)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Double, показатель степени Double)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Double, показатель степени Decimal)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Decimal, показатель степени Int64)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Decimal, показатель степени Double)|Power(значение, показатель степени)|  
+|System.Math.Power(значение Decimal, показатель степени Decimal)|Power(значение, показатель степени)|  
   
-## Сопоставление побитовых операторов  
+## <a name="bitwise-operator-mapping"></a>Сопоставление побитовых операторов  
   
 |Побитовый оператор|Канонические функции для нелогических операндов|Канонические функции для логических операндов|  
-|------------------------|-----------------------------------------------------|---------------------------------------------------|  
+|----------------------|--------------------------------------------------|---------------------------------------------|  
 |Побитовый оператор AND|BitWiseAnd|op1 AND op2|  
 |Побитовый оператор OR|BitWiseOr|op1 OR op2|  
-|Побитовый оператор NOT|BitWiseNot|NOT\(op\)|  
-|Побитовый оператор XOR|BitWiseXor|\(\(op1 AND NOT\(op2\)\) OR \(NOT\(op1\) AND op2\)\)|  
+|Побитовый оператор NOT|BitWiseNot|NOT(op)|  
+|Побитовый оператор XOR|BitWiseXor|((op1 AND NOT(op2)) OR (NOT(op1) AND op2))|  
   
-## Другое сопоставление  
+## <a name="other-mapping"></a>Другое сопоставление  
   
 |Метод|Каноническая функция|  
-|-----------|--------------------------|  
-|Guid.NewGuid\(\)|NewGuid\(\)|  
+|------------|------------------------|  
+|Guid.NewGuid()|NewGuid()|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

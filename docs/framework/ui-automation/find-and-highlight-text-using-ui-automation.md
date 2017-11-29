@@ -1,36 +1,42 @@
 ---
-title: "Find and Highlight Text Using UI Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "text, highlighting"
-  - "finding text"
-  - "text, finding"
-  - "UI automation, highlighting text"
-  - "UI automation, finding text"
-  - "highlighting text"
+title: "Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text, highlighting
+- finding text
+- text, finding
+- UI automation, highlighting text
+- UI automation, finding text
+- highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-caps.latest.revision: 15
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 10945314fe6edf89d7331974a32066d172df65f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Find and Highlight Text Using UI Automation
+# <a name="find-and-highlight-text-using-ui-automation"></a>Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков на платформе .NET Framework, которым требуется использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], определенные в пространстве имен <xref:System.Windows.Automation>.  Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. на веб\-странице [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом разделе демонстрируется последовательный поиск и выделение каждого вхождения строки внутри содержимого текстового элемента управления с помощью [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ В этом разделе показано, как последовательный поиск и выделение каждого вхождения строки внутри содержимого элемента управления текста с использованием [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
-## Пример  
- В следующем примере из текстового элемента управления получается объект <xref:System.Windows.Automation.TextPattern>.  После этого объект <xref:System.Windows.Automation.Text.TextPatternRange>, предоставляющий текстовое содержимое всего документа, создается с помощью свойства <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> объекта <xref:System.Windows.Automation.TextPattern>.  Затем создаются два дополнительных объекта <xref:System.Windows.Automation.Text.TextPatternRange>, которые используются для последовательного поиска и выделения.  
+## <a name="example"></a>Пример  
+ В следующем примере извлекается <xref:System.Windows.Automation.TextPattern> объекта из элемента управления text. Объект <xref:System.Windows.Automation.Text.TextPatternRange> объект, предоставляющий текстовое содержимое всего документа создается с помощью <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> этого <xref:System.Windows.Automation.TextPattern>. Два дополнительных <xref:System.Windows.Automation.Text.TextPatternRange> объекты создаются для последовательного поиска и выделения.  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -39,5 +45,5 @@ caps.handback.revision: 15
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]
 [!code-vb[FindText#SearchTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#searchtarget)]  
   
-## См. также  
- [Find and Highlight Text Using UI Automation](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+## <a name="see-also"></a>См. также  
+ [Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

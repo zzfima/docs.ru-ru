@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,22 +16,21 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 Помощник по отладке управляемого кода (MDA) `bindingFailure` запускается в случае сбоя при загрузке сборки.  
   
 ## <a name="symptoms"></a>Признаки  
- Код попытался загрузить сборку с использованием статической ссылки или одного из методов загрузчика, такого как <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> или <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. Сборка не загружается, в результате чего возникает исключение <xref:System.IO.FileNotFoundException> или <xref:System.IO.FileLoadException>.  
+ Код попытался загрузить сборку с использованием статической ссылки или одного из методов загрузчика, такого как <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> или <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Сборка не загружается, в результате чего возникает исключение <xref:System.IO.FileNotFoundException> или <xref:System.IO.FileLoadException>.  
   
 ## <a name="cause"></a>Причина  
  Если среде выполнения не удается загрузить сборку, происходит сбой привязки. Сбой привязки может возникать в одной из следующих ситуаций:  
@@ -115,4 +108,3 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>См. также  
  [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

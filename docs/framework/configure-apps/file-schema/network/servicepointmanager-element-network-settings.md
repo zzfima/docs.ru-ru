@@ -1,40 +1,42 @@
 ---
-title: "Элемент &lt;servicePointManager&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/servicePointManager"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<servicePointManager> - элемент"
-  - "servicePointManager - элемент"
+title: "&lt;servicePointManager&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/servicePointManager
+helpviewer_keywords:
+- servicePointManager element
+- <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 85ccad3e2c3b237e286f3737589a5e58994521bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;servicePointManager&gt; (параметры сети)
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; элемент (параметры сети)
 Настраивает подключения к сетевым ресурсам.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<Параметры >  
+\<servicePointManager >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <servicePointManager  
+```xml  
+<servicePointManager  
   checkCertificateName="true|false"  
   checkCertificateRevocationList="true|false"  
   encryptionPolicy="AllowNoEncryption|NoEncryption|RequireEncryption"  
@@ -45,36 +47,36 @@ caps.handback.revision: 16
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`checkCertificateName`|Указывает, следует ли системе перед использованием сертификата проверить, соответствует ли имя на сертификате имени узла сервера.  Значение по умолчанию — `true`.|  
-|`checkCertificateRevocationList`|Указывает, следует ли системе перед использованием сертификата проверить, не был ли он отозван.  Значение по умолчанию — `false`.|  
-|`dnsRefreshTimeout`|Определяет, как долго \(в миллисекундах\) разрешения DNS\-имен хранятся вместе с параметрами циклического перебора DNS.  По умолчанию установлено значение 120 000 миллисекунд \(2 минутам\).|  
-|`enableDnsRoundRobin`|Указывает, возвращают ли разрешенные DNS\-имена узлов с несколькими IP\-адресами все адреса или только первый из них.  Значение по умолчанию — `false`.|  
-|`encryptionPolicy`|Задает политику шифрования для сеанса SSL\/TLS на экземпляре<xref:System.Net.ServicePointManager>.  Возможные значения эквивалентны значениям для перечисления <xref:System.Net.Security.EncryptionPolicy>.  Использование <xref:System.Security.Authentication.CipherAlgorithmType> является обязательным, если политика шифрования имеет значение `NoEncryption`.  Значение по умолчанию — `RequireEncryption`.|  
-|`expect100Continue`|Указывает, следует ли методам POST ожидать получения ответа `100-continue` от сервера.  Значение по умолчанию — `true`.|  
-|`useNagleAlgorithm`|Указывает, следует ли подключениям, управляемым диспетчером точек обслуживания, использовать алгоритм Nagle.  Значение по умолчанию — `true`.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера перед использованием сертификата имя сертификата. Значение по умолчанию — `true`.|  
+|`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, перед использованием сертификата. Значение по умолчанию — `false`.|  
+|`dnsRefreshTimeout`|Указывает срок службы доменных имен (DNS) разрешений кэшируются в сочетании с параметром циклического перебора DNS, в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
+|`enableDnsRoundRobin`|Указывает имена ли разрешенные DNS-узла с помощью нескольких адресов протокола IP (Internet) возвращаемого все адреса или только первый из них. Значение по умолчанию — `false`.|  
+|`encryptionPolicy`|Указывает политики шифрования, примененные к сеанса SSL/TLS на <xref:System.Net.ServicePointManager> экземпляра. Возможные значения равны значениям для <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если политика шифрования `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
+|`expect100Continue`|Указывает ли методам POST ожидать получения `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
+|`useNagleAlgorithm`|Указывает, управляемых диспетчером службы точки подключения использовать алгоритм Nagle. Значение по умолчанию — `true`.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные сетевые параметры для пространства имен <xref:System.Net>.|  
+|-----------------|---------------------|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## См. также  
- <xref:System.Net.ServicePointManager>   
- <xref:System.Net.Security.EncryptionPolicy>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.ServicePointManager>  
+ <xref:System.Net.Security.EncryptionPolicy>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

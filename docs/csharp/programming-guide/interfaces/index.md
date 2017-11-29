@@ -1,39 +1,21 @@
 ---
 title: "Интерфейсы (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0552cea71f66ba8c299b1706cab6778c9e3367c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 Интерфейс содержит определения для группы связанных функциональных возможностей, которые может реализовать [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md).  
@@ -42,7 +24,7 @@ ms.lasthandoff: 07/28/2017
   
  Интерфейс определяется с помощью ключевого слова [interface](../../../csharp/language-reference/keywords/interface.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
  Любой объект (класс или структура), реализующий интерфейс <xref:System.IEquatable%601>, должен содержать определение для метода <xref:System.IEquatable%601.Equals%2A>, соответствующее сигнатуре, которую задает интерфейс. В результате вы можете быть уверены, что класс, реализующий `IEquatable<T>`, содержит метод `Equals`, с помощью которого экземпляр этого класса может определить, равен ли он другому экземпляру того же класса.  
   
@@ -58,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
  В следующем примере показана реализация интерфейса IEquatable<T\>. Реализующий класс `Car` должен предоставлять реализацию метода <xref:System.IEquatable%601.Equals%2A>.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
  Свойства и индексаторы класса могут определять дополнительные методы доступа для свойства или индексатора, определенного в интерфейсе. Например, интерфейс может объявлять свойство, имеющее акцессор [get](../../../csharp/language-reference/keywords/get.md). Класс, реализующий этот интерфейс, может объявлять это же свойство с обоими акцессорами (`get` и [set](../../../csharp/language-reference/keywords/set.md)). Однако если свойство или индексатор использует явную реализацию, методы доступа должны совпадать. Дополнительные сведения о явной реализации см. в статьях [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) и [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   
@@ -117,6 +99,5 @@ ms.lasthandoff: 07/28/2017
  Глава [Интерфейсы](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) в документе [Изучение C# 3.0: овладение основными понятиями C# 3.0](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-

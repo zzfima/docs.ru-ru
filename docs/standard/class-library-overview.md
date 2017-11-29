@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Общие сведения о библиотеке классов .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] содержит классы, интерфейсы и типы значений, которые облегчают и оптимизируют процесс разработки, а также обеспечивают доступ к функциям системы. Для упрощения взаимодействия между языками большинство типов платформы .NET Framework являются CLS-совместимыми, и поэтому их можно использовать в любом языке программирования, компилятор которого соответствует спецификации CLS.  
@@ -114,7 +113,6 @@ ms.lasthandoff: 08/21/2017
  Дополнительные сведения о пространствах имен см. в [Библиотеке классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195). В справочной документации представлен краткий обзор каждого пространства имен, а также дано формальное описание каждого типа и его членов.  
   
 ## <a name="see-also"></a>См. также  
- [Система общих типов CTS](../../docs/standard/base-types/common-type-system.md)   
- [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [Система общих типов CTS](../../docs/standard/base-types/common-type-system.md)  
+ [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Обзор набора средств Visual Studio для Unity](../../docs/framework/get-started/overview.md)
-

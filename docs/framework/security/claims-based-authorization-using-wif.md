@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Авторизация на основе утверждений с использованием WIF
 В приложении с проверяющей стороной авторизация определяет, к каким ресурсам имеет доступ удостоверение, прошедшее проверку подлинности, и какие операции ему разрешается выполнять по отношению к данным ресурсам. Неправильная или слабая авторизация приводит к утечке информации и хищению данных. В этом разделе представлены допустимые подходы к внедрению авторизации для веб-приложений и служб ASP.NET, учитывающих утверждения, при помощи Windows Identity Foundation (WIF) и одной из служб маркеров безопасности (STS), например службы контроля доступа (ACS) Microsoft Azure.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/21/2017
 5.  Доступ предоставляется, если результат имеет значение true, и не предоставляется, если результат имеет значение false. Например, может существовать правило, согласно которому пользователю должно быть не менее 21 года и он должен проживать в штате Вашингтон.  
   
  <xref:System.Security.Claims.ClaimsAuthorizationManager> — полезная система внешнего выражения логики принятия решений для авторизации на основе утверждений в ваших приложениях. ClaimsAuthenticationManager — это один из компонентов WIF, предоставляемый в комплекте с .NET 4.5. ClaimsAuthorizationManager позволяет перехватывать входящие запросы и реализовать любую логику на усмотрение разработчика для принятия решений об авторизации на основе входящих утверждений. Такая возможность приобретает существенное значение, если логику авторизации требуется изменить. В этом случае использование ClaimsAuthorizationManager не влияет на целостность приложения, благодаря чему уменьшается вероятность возникновения ошибки приложения в результате изменения. Дополнительные сведения об использовании ClaimsAuthorizationManager для реализации управления доступом на основе утверждений см. в разделе [Инструкции по реализации авторизации утверждений в приложении ASP.NET с поддержкой утверждений на основе WIF и ACS](http://go.microsoft.com/fwlink/?LinkID=247446).
-

@@ -5,29 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 404a092c6c05bcef568b234c9abeaf7969703cce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это распространяемый пакет среды выполнения. Если вы разрабатываете приложения для данной версии платформы .NET Framework, можно включить (присоединить к цепочке) установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в качестве необходимого компонента при установке приложения. Для создания специальной или универсальной процедуры установки может потребоваться автоматический запуск и отслеживание процесса установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] с одновременным отображением собственного представления хода выполнения установки. Для включения отслеживания в автоматическом режиме установка [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], которая может находиться под наблюдением, определяет протокол с помощью сегмента памяти ввода-вывода (MMIO) для связи с вашей установкой (наблюдателем или формирователем цепочки). Этот протокол определяет способ, которым формирователь цепочки получает информацию о ходе выполнения, получает подробные результаты, отвечает на сообщения и отменяет установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -323,6 +317,5 @@ ms.lasthandoff: 07/28/2017
  Типовой сервер создает случайное имя файла MMIO, создает файл (как показано в предыдущем примере кода в `Server::CreateSection`) и запускает распространяемый пакет с помощью метода `CreateProcess`, передавая имя канала с параметром `-pipe someFileSectionName`. Сервер должен реализовать методы `OnProgress`, `Send` и `Finished` с кодом, характерным для пользовательского интерфейса приложения.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Развертывание](../../../docs/framework/deployment/index.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>Обзор универсальных типов (универсальных шаблонов)
 
 В C# мы постоянно используем универсальные шаблоны — как явно, так и неявно. Замечали ли вы, что работаете с IEnumerable<T> при использовании LINQ в C#? Или, может быть, вы замечали, что большинство методов возвращает IQueryable<T> в примере "универсального репозитория" для обращения к базам данных через Entity Framework? Возможно, вы задавались вопросом, что такое **T** в этих примерах и зачем это нужно?
@@ -75,4 +73,3 @@ Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
 
 *   [Введение в универсальные шаблоны C#](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [Руководство по программированию на C# — универсальные шаблоны](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

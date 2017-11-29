@@ -1,76 +1,73 @@
 ---
-title: "Элемент &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#source"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<source> - элемент"
-  - "source - элемент"
-ms.assetid: ecf86505-735d-4844-aaba-266fdd134218
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+title: "&lt;источник&gt; элемент"
+ms.date: 09/29/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#source
+helpviewer_keywords:
+- <source> element
+- source element
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 129888986a933fe875aade153f6becd8439d4704
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;source&gt;
-Источник трассировки, инициирующий сообщения трассировки.  
+# <a name="ltsourcegt-element"></a>&lt;источник&gt; элемент
+Содержит источник трассировки, который инициирует сообщения трассировки.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.Diagnostics >  
+\<источники >  
+\<Источник >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <source>   
   <listeners>...</listeners>  
 </source>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
+|---------------|-----------------|  
 |`name`|Необязательный атрибут.<br /><br /> Задает имя источника трассировки.|  
-|`switchName`|Необязательный атрибут.<br /><br /> Задает имя экземпляра переключателя трассировки в приложении.  Если переключатель не идентифицирован в элементе `<switches>`, это значение задает уровень для переключателя.|  
-|`switchType`|Необязательный атрибут.<br /><br /> Задает тип переключателя трассировки.  Если этот атрибут указан, тип должен представлять собой действительное имя класса и не может быть пустой строкой.|  
-|`extraAttribute`|Необязательный атрибут.<br /><br /> Задает значение атрибута конкретного источника трассировки, идентифицируемого методом <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> данного источника.|  
+|`switchName`|Необязательный атрибут.<br /><br /> Задает имя экземпляра коммутатора трассировки в приложении. Если параметр не указан в `<switches>` элемент, значение задает уровень для переключателя.|  
+|`switchType`|Необязательный атрибут.<br /><br /> Указывает тип переключателя трассировки. Если он имеется, тип должен быть допустимым именем класса и не может быть пустой строкой.|  
+|`extraAttribute`|Необязательный атрибут.<br /><br /> Указывает значение для атрибута каждого источника трассировки, определяется <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> метода для этого источника трассировки.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<listeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Содержит прослушиватели, собирающие, хранящие и маршрутизирующие сообщения.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sources`|Элемент, содержащий источники трассировки, инициирующие трассировочные сообщения.|  
+|-------------|-----------------|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Содержит прослушиватели для сбора, хранения и маршрутизации сообщений.|  
   
-## Заметки  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<source>`  для добавления источника трассировки `mySource` и установки уровня переключателя источника с именем `sourceSwitch`.  Добавляется прослушиватель трассировки консоли, выводящий трассировочную информацию на консоль.  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
+|`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
   
-```  
+## <a name="remarks"></a>Примечания  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `<source>` элемента для добавления источника трассировки `mySource` и задать уровень для переключателя источника с именем `sourceSwitch`. Добавляется прослушиватель трассировки консоли, который записывает данные трассировки на консоль.  
+  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -90,6 +87,6 @@ caps.handback.revision: 11
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Switches](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>См. также  
+ [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Переключатели трассировки](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

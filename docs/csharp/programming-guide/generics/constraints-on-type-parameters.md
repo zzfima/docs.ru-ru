@@ -1,41 +1,23 @@
 ---
 title: "Ограничения параметров типа (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
 ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e91ae026bd89a6dd30b4c9233da4dd897928291e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (Руководство по программированию на C#)
 При определении универсального класса можно применить ограничения на типы, которые могут использоваться в клиентском коде для аргументов типа при создании экземпляра класса. Если в клиентском коде для создания экземпляра класса используется недопустимый тип, возникает ошибка времени компиляции. Таким образом, устанавливаются ограничения. Ограничения задаются с помощью контекстного ключевого слова `where`. В следующей таблице описываются шесть типов ограничений:  
@@ -52,26 +34,26 @@ ms.lasthandoff: 07/28/2017
 ## <a name="why-use-constraints"></a>Зачем использовать ограничения  
  Чтобы проверить допустимость элемента универсального списка или сравнить его с каким-либо другим элементом, компилятору нужны гарантии того, что вызываемый для этого оператор или метод будет поддерживаться любым аргументом типа, который может быть указан в клиентском коде. Это достигается путем применения одного или нескольких ограничений к определению универсального класса. Например, на основе ограничения базового класса компилятор определяет, что в качестве аргументов типа будут использоваться только объекты указанного типа или производных от него. Имея такую гарантию, компилятор может вызывать методы указанного типа в универсальном классе. Ограничения задаются с помощью контекстного ключевого слова `where`. В следующем примере кода показаны функциональные возможности, которые можно добавить в класс `GenericList<T>` (см. раздел [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)), применив ограничения базового класса.  
   
- [!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
   
  Это ограничение позволяет универсальному классу использовать свойство `Employee.Name`, поскольку все элементы типа T гарантированно будут являться объектами `Employee` или объектами, унаследованными от `Employee`.  
   
  К одному параметру типа можно применять несколько ограничений, которые сами по себе могут быть универсальными типами, как показано ниже:  
   
- [!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
   
  Ограничивая параметр типа, вы расширяете выбор разрешенных операций и вызовов метода до поддерживаемых ограничивающим типом и всеми типами в его иерархии наследования. Таким образом, если при разработке универсальных классов или методов планируется выполнение любых других операций с универсальными элементами, помимо простого присвоения или вызова методов, не поддерживаемых `System.Object`, вам необходимо применить ограничения к параметру типа.  
   
  При применении ограничения `where T : class` не рекомендуется использовать операторы `==` и `!=` для параметра типа, поскольку в этом случае будет проверяться только удостоверение ссылки, а не равенство значений. Такое поведение будет наблюдаться даже в том случае, если эти операторы будут перегружены в типе, используемом в качестве аргумента. Эта особенность показана в следующем коде, который будет возвращать значение false даже в том случае, если класс <xref:System.String> перегружает оператор `==`.  
   
- [!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
   
  Такое поведение обусловлено тем, что во время компиляции компилятору известно только то, что тип T является ссылочным, и он вынужден использовать операторы по умолчанию, которые действительны для всех ссылочных типов. Чтобы проверить равенство значений, рекомендуется применить ограничение `where T : IComparable<T>` и реализовать соответствующий интерфейс в любом классе, который будет использоваться для создания универсального класса.  
   
 ## <a name="constraining-multiple-parameters"></a>Ограничение нескольких параметров  
  Ограничения можно применить к нескольким параметрам. Кроме того, к одному параметру можно применять несколько ограничений, как показано в следующем примере:  
   
- [!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
   
 ## <a name="unbounded-type-parameters"></a>Несвязанные параметры типа  
  Не имеющие ограничений параметры типа (например, T в общем классе `SampleClass<T>{}`) называются несвязанными. В отношении несвязанных параметров типа применяются следующие правила:  
@@ -85,20 +67,19 @@ ms.lasthandoff: 07/28/2017
 ## <a name="type-parameters-as-constraints"></a>Параметры типа в качестве ограничений  
  Использование параметров универсального типа в качестве ограничений применимо, когда функция-член со своим параметром типа должна ограничивать этот параметр параметром содержащего типа, как показано в следующем примере:  
   
- [!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
   
  В предыдущем примере `T` является ограничением типа в контексте метода `Add` и несвязанным параметром типа в контексте класса `List`.  
   
  Параметры типа также можно использовать в определениях универсальных классов. Обратите внимание, что параметр типа необходимо объявлять в угловых скобках вместе с любыми другими параметрами типа:  
   
- [!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
   
  Применение параметров типа в качестве ограничений для универсальных классов ограничено, поскольку в отношении таких параметров типа компилятор может предполагать только то, что они являются производными от `System.Object`. Параметры типа в качестве ограничений следует использовать в универсальных классах в тех случаях, когда необходимо обеспечить отношение наследования между двумя параметрами типа.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)   
+ <xref:System.Collections.Generic>  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+ [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)  
  [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)
-

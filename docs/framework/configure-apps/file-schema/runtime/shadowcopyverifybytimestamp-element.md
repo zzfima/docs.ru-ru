@@ -1,71 +1,73 @@
 ---
-title: "Элемент &lt;shadowCopyVerifyByTimestamp&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<shadowCopyTimeStampVerification> - элемент"
-  - "shadowCopyTimeStampVerification - элемент"
+title: "&lt;shadowCopyVerifyByTimestamp&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <shadowCopyTimeStampVerification> element
+- shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 261962819e9b2b37682a13bffb53d2912a660566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;shadowCopyVerifyByTimestamp&gt;
-Указывает, используется ли при теневом копировании поведение при запуске по умолчанию, введенное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или осуществляется возврат к поведению при запуске, имевшему место в предыдущих версиях платформы .NET Framework.  
+# <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt; элемент
+Указывает, использует ли теневое копирование поведение при запуске по умолчанию, представленное в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], или возвращается к поведению при запуске, используемому в предыдущих версиях .NET Framework.  
   
-## Синтаксис  
+ \<Конфигурация > элемент  
+\<Среда выполнения > элемент  
+\<shadowCopyVerifyByTimestamp > элемент  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <shadowCopyVerifyByTimestamp enabled="true|false" />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|enabled|Обязательный атрибут.<br /><br /> Указывает, будут ли домены приложений, использующие теневое копирования, сравнивать отметки времени сборок при запуске, чтобы определить, была ли сборка обновлена перед ее теневым копированием.|  
+|---------------|-----------------|  
+|enabled|Обязательный атрибут.<br /><br /> Указывает ли домены приложений, использующих теневое копирование сравнивать отметки времени сборок при запуске, чтобы определить, обновляется ли сборки перед теневым копированием.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|true|При запуске копируются только сборки, которые были обновлены с момента последнего копирования в каталог теневых копий.  Этот вариант используется в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] по умолчанию.|  
-|false|Возвращается к поведению при запуске предыдущих версий платформы .NET Framework, в котором при запуске копировались все файлы.|  
+|-----------|-----------------|  
+|true|При запуске копируются только сборки, которые были обновлены с момента последнего копирования в каталог теневого копирования. Это значение по умолчанию для [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
+|false|Возвращается к поведению при запуске предыдущих версий платформы .NET Framework, который был для копирования всех файлов во время запуска.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], теневое копирование сборок выполняется только в том случае, если их отметки времени показывают, что они были изменены с момента последнего копирования в каталог теневых копий.  Это сокращает время запуска для многих приложений, использующих теневое копирование, как описано в [Теневое копирование сборок](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md).  Приложения, которые имеют высокие процент и частоту обновлений сборок, могут не получить выгоды от этого изменения в поведении.  В этом случае можно использовать этот элемент для восстановления поведения предыдущих версий платформы .NET Framework.  
+## <a name="remarks"></a>Примечания  
+ Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], выполняется теневое копирование только в том случае, если их отметки времени показывают, что они были изменены с момента последнего копирования в каталог теневого копирования сборок. Это сокращает время запуска для многих приложений, использующих теневое копирование, как описано в [теневое копирование сборок](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Для приложений с большим процентом и высокой частотой обновления сборок это изменение в поведении может не быть выгодно. В этом случае можно использовать этот элемент для восстановления поведения предыдущих версий платформы .NET Framework.  
   
-## Пример  
- В следующем примере показывается, как запретить поведение теневого копирования при запуске, установленное по умолчанию в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], и вернуться к поведению при запуске, которое существовало в предыдущих версиях платформы .NET Framework.  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как отключить поведение по умолчанию при запуске теневое копирование в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]и вернуться к поведению при запуске предыдущих версий платформы .NET Framework.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <shadowCopyVerifyByTimestamp enabled="false" />  
@@ -73,7 +75,7 @@ caps.handback.revision: 7
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Теневое копирование сборок](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

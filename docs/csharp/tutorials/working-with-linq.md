@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="working-with-linq"></a>Работа с LINQ
 
 ## <a name="introduction"></a>Вступление
@@ -297,7 +295,7 @@ public static void Main(string[] args)
 
 Сначала займемся мастями. Самое время применить для них `enum`:
 
-[!CODE-csharp[Перечисление Suit](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
+[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
 
 Для метода `Suits()` также изменится тип и реализация:
 
@@ -305,7 +303,7 @@ public static void Main(string[] args)
 
 Затем выполните те же изменения для достоинства карт:
 
-[!CODE-csharp[Перечисление Rank](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
+[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
 
 И для метода, который их создает:
 
@@ -334,4 +332,3 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 В этом примере мы продемонстрировали вам некоторые методы, используемые в запросах LINQ. Также вы узнали, как создать собственные методы и легко использовать их в коде с поддержкой LINQ. Мы наглядно продемонстрировали различия между упреждающим и отложенным вычислением, а также потенциальное влияние этого выбора на производительность.
 
 И теперь вы знаете чуть больше о приемах иллюзионистов. Они используют тасовку по методу фаро, потому что она позволяет хорошо контролировать положение каждой карты в колоде. В некоторых фокусах иллюзионист предлагает зрителю положить карту на верх колоды и спокойно тасует колоду несколько раз, при этом точно зная, где эта карта окажется. Для других фокусов может понадобиться колода, сложенная в определенном порядке. Тогда иллюзионист заранее готовит колоду перед выполнением фокуса. Затем он выполняет 5 внешних тасовок фаро. После этого на сцене он демонстрирует зрителям колоду, порядок карт в которой выглядит случайным, выполняет еще 3 внешних тасовки фаро, и колода принимает необходимое состояние.
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - version boundaries
 - type boundaries
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Сборки в среде CLR
 Сборки являются структурными элементами приложений .NET Framework; они составляют основную единицу развертывания, управления версиями, повторного использования, областей действия активации и разрешений безопасности. Сборка представляет собой коллекцию типов и ресурсов, собранных для совместной работы и образующих логическую функциональную единицу. Сборка предоставляет среде CLR сведения, необходимые для распознавания реализаций типов. Для среды выполнения тип не существует вне контекста сборки.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 07/28/2017
   
  Сборки могут быть статическими или динамическими. Статические сборки могут включать в себя типы платформы .NET Framework (интерфейсы и классы), а также ресурсы сборки (рисунки, JPEG-файлы, файлы ресурсов и т. д.). Статические сборки хранятся на диске в виде переносимых исполняемых (PE) файлов. Кроме того, платформу .NET Framework можно использовать для создания динамических сборок, которые запускаются непосредственно из памяти и не сохраняются на диск перед выполнением. Динамические сборки можно сохранить на диске после выполнения.  
   
- Существует несколько способов создания сборок. Можно использовать средства разработки, такие как Visual Studio, которые раньше использовались для создания DLL- или EXE-файлов. Чтобы создать сборки с использованием модулей, созданных в других средствах разработки, можно воспользоваться средствами [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Для создания динамических сборок также можно использовать интерфейсы CLR такие, как <xref:System.Reflection.Emit?displayProperty=fullName>.  
+ Существует несколько способов создания сборок. Можно использовать средства разработки, такие как Visual Studio, которые раньше использовались для создания DLL- или EXE-файлов. Чтобы создать сборки с использованием модулей, созданных в других средствах разработки, можно воспользоваться средствами [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Для создания динамических сборок также можно использовать интерфейсы CLR такие, как <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Связанные разделы  
   
@@ -71,5 +69,4 @@ ms.lasthandoff: 07/28/2017
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описание способов разрешения платформой .NET Framework ссылок на сборки во время выполнения.|  
   
 ## <a name="reference"></a>Ссылки  
- <xref:System.Reflection.Assembly?displayProperty=fullName>
-
+ <xref:System.Reflection.Assembly?displayProperty=nameWithType>

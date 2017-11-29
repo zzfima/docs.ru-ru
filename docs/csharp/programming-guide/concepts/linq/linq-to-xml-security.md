@@ -1,30 +1,21 @@
 ---
 title: "Безопасность LINQ to XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 281f979d0c7df2538f664199e4444db5166ba55e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b55a9b70ad4291bc74b629e289bdc168a30702ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-security-c"></a>Безопасность LINQ to XML (C#)
 В этом разделе обсуждаются проблемы безопасности, связанные с LINQ to XML. Кроме того, в нем приводятся рекомендации по снижению рисков нарушения безопасности.  
@@ -39,9 +30,9 @@ ms.lasthandoff: 07/28/2017
  XML по своей природе уязвим для атак типа «отказ в обслуживании» из-за того, что XML-документы не ограничены по размеру, глубине, длине имен элементов и так далее. Независимо от компонента, с помощью которого обрабатывается XML, следует всегда быть готовым к очистке домена приложения, если он потребляет излишне много ресурсов.  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Предотвращение атак XML, XSD, XPath и XSLT  
- Технология LINQ to XML построена на основе объектов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. LINQ to XML поддерживает XSD и XPath через методы расширения в пространствах имен <xref:System.Xml.Schema?displayProperty=fullName> и <xref:System.Xml.XPath?displayProperty=fullName>. Используя классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlWriter> совместно с LINQ to XML, можно вызывать XSLT для преобразования XML-деревьев.  
+ Технология LINQ to XML построена на основе объектов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. LINQ to XML поддерживает XSD и XPath через методы расширения в пространствах имен <xref:System.Xml.Schema?displayProperty=nameWithType> и <xref:System.Xml.XPath?displayProperty=nameWithType>. Используя классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> и <xref:System.Xml.XmlWriter> совместно с LINQ to XML, можно вызывать XSLT для преобразования XML-деревьев.  
   
- При работе в менее защищенной среде возникает несколько проблем безопасности, связанных с XML и использованием классов в <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> и <xref:System.Xml.Xsl?displayProperty=fullName>. Эти проблемы включают следующие, но не ограничиваются ими.  
+ При работе в менее защищенной среде возникает несколько проблем безопасности, связанных с XML и использованием классов в <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> и <xref:System.Xml.Xsl?displayProperty=nameWithType>. Эти проблемы включают следующие, но не ограничиваются ими.  
   
 -   Языки XSD, XPath и XSLT основаны на использовании строк, поэтому в них могут быть определены операции, которые занимают много времени и требуют большого объема памяти. Разработчики приложений, принимающих строки XSD, XPath и XSLT из источников, не заслуживающих доверия, отвечают за то, чтобы осуществлялась проверка этих строк на отсутствие вредоносного кода и чтобы она не приводила к чрезмерному потреблению системных ресурсов.  
   
@@ -78,9 +69,9 @@ ms.lasthandoff: 07/28/2017
 ### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>Отказ от вызова CodeAccessPermissions.Assert в обработчике события  
  Сборка может иметь меньшее или большее количество разрешений. Сборка с большими разрешениями имеет более полный контроль над компьютером и средой.  
   
- Если в коде сборки с большими разрешениями вызывается метод <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> в обработчике события, а затем полученное XML-дерево передается вредоносной сборке, имеющей меньшие разрешения, то в последней сборке может быть активизировано событие. При этом в обработчике этого события будет выполняться код из сборки с большими разрешениями, поэтому появится возможность применять вредоносную сборку с повышенными правами доступа.  
+ Если в коде сборки с большими разрешениями вызывается метод <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> в обработчике события, а затем полученное XML-дерево передается вредоносной сборке, имеющей меньшие разрешения, то в последней сборке может быть активизировано событие. При этом в обработчике этого события будет выполняться код из сборки с большими разрешениями, поэтому появится возможность применять вредоносную сборку с повышенными правами доступа.  
   
- Корпорация Майкрософт рекомендует ни в коем случае не вызывать метод <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> в обработчике события.  
+ Корпорация Майкрософт рекомендует ни в коем случае не вызывать метод <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=nameWithType> в обработчике события.  
   
 ### <a name="dtds-are-not-secure"></a>Небезопасные определения DTD  
  Сущности в DTD изначально являются небезопасными. Применение XML-документа, содержащего DTD, с недобрыми намерениями может привести к тому, что синтаксический анализатор захватит всю память и ресурсы ЦП, создав предпосылки атаки типа «отказ в обслуживании». Поэтому в LINQ to XML обработка DTD отключена по умолчанию. Не следует принимать определения DTD из ненадежных источников.  
@@ -90,12 +81,12 @@ ms.lasthandoff: 07/28/2017
 ### <a name="avoid-excessive-buffer-allocation"></a>Отказ от выделения чрезмерного объема буферной памяти  
  Разработчики приложений должны учитывать, что применение слишком крупных источников данных может привести к исчерпанию ресурсов и возникновению атаки типа «отказ в обслуживании».  
   
- Если злонамеренный пользователь предоставляет или передает очень большой XML-документ, это может стать причиной чрезмерного потребления системных ресурсов LINQ to XML. Это равнозначно атаке типа «отказ в обслуживании». Чтобы избежать этого, можно задать значение свойства <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> и создать модуль чтения, который в дальнейшем будет ограничивать размер загружаемого документа. Затем с помощью средства чтения создается XML-дерево.  
+ Если злонамеренный пользователь предоставляет или передает очень большой XML-документ, это может стать причиной чрезмерного потребления системных ресурсов LINQ to XML. Это равнозначно атаке типа «отказ в обслуживании». Чтобы избежать этого, можно задать значение свойства <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> и создать модуль чтения, который в дальнейшем будет ограничивать размер загружаемого документа. Затем с помощью средства чтения создается XML-дерево.  
   
- Например, если известно, что максимальный ожидаемый размер XML-документов из не заслуживающего доверия источника меньше 50 КБ, присвойте свойству <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=fullName> значение 100 000. При этом обработка XML-документов не будет нарушена, но уменьшится риск атаки типа «отказ в обслуживании», при которой могут передаваться документы, требующие большого объема памяти.  
+ Например, если известно, что максимальный ожидаемый размер XML-документов из не заслуживающего доверия источника меньше 50 КБ, присвойте свойству <xref:System.Xml.XmlReaderSettings.MaxCharactersInDocument%2A?displayProperty=nameWithType> значение 100 000. При этом обработка XML-документов не будет нарушена, но уменьшится риск атаки типа «отказ в обслуживании», при которой могут передаваться документы, требующие большого объема памяти.  
   
 ### <a name="avoid-excess-entity-expansion"></a>Предотвращение чрезмерного раскрытия сущности  
- Одна из известных атак типа «отказ в обслуживании» при использовании DTD основана на документе, вызывающем чрезмерное раскрытие сущности. Чтобы избежать этого, можно задать значение свойства <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=fullName> и создать модуль чтения, который в дальнейшем будет ограничивать число символов, являющихся результатом раскрытия сущности. Затем с помощью средства чтения создается XML-дерево.  
+ Одна из известных атак типа «отказ в обслуживании» при использовании DTD основана на документе, вызывающем чрезмерное раскрытие сущности. Чтобы избежать этого, можно задать значение свойства <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> и создать модуль чтения, который в дальнейшем будет ограничивать число символов, являющихся результатом раскрытия сущности. Затем с помощью средства чтения создается XML-дерево.  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Ограничение глубины XML-иерархии  
  Одной из возможных атак типа «отказ в обслуживании» является предоставление документа с избыточной глубиной иерархии. Чтобы избежать этого, можно заключить <xref:System.Xml.XmlReader> в собственный класс, который подсчитывает глубину вложенности элементов. Если эта глубина превышает заранее определенную приемлемую величину, можно завершить обработку вредоносного документа.  
@@ -118,4 +109,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

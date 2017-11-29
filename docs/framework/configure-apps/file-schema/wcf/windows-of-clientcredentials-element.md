@@ -1,61 +1,70 @@
 ---
-title: "&lt;windows&gt; элемента &lt;clientCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;windows&gt; элемента &lt;clientCredentials&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bc98f45d197675f8cc9618f08447cc42acdd1872
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;windows&gt; элемента &lt;clientCredentials&gt;
+# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; элемента &lt;clientCredentials&gt;
 Определяет параметры учетных данных Windows, которые используются для представления клиента.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<поведения >  
+\<endpointBehaviors >  
+\<поведение >  
+\<clientCredentials >  
+\<Windows >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <windows   
     allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
         allowNtlm="Boolean"  
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`allowedImpersonationLevel`|Задает параметры олицетворения, сообщаемые клиентом серверу.  Режим олицетворения, выбираемый клиентом, не задается принудительно для сервера.  Допустимы следующие значения:<br /><br /> -   Identification: сервер может получать удостоверение и привилегии клиента, но не может олицетворять клиент.<br />-   Impersonation: сервер может олицетворять контекст безопасности клиента в локальной системе.<br />-   Delegation: сервер может олицетворять контекст безопасности клиента в удаленных системах.<br />-   Anonymous: сервер не может олицетворять или идентифицировать клиента.<br />-   None: уровень олицетворения не назначается.<br /><br /> Значение по умолчанию \- Identification.  Это атрибут типа <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Если установить для данного свойства значение `true`, то проверка подлинности может понижаться до NTLM в том случае, если проверка Kerberos недоступна.<br /><br /> Если установить для данного свойства значение `false`, это приведет к тому, что [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] будет принимать все возможные усилия для вызова исключения в том случае, если используется NTLM.  Обратите внимание, что установка для данного свойства значения `false` не предотвращает отправки учетных данных NTLM по сети.|  
+|---------------|-----------------|  
+|`allowedImpersonationLevel`|Задает параметры олицетворения, сообщаемые клиентом серверу. Режим олицетворения, выбираемый клиентом, не задается принудительно для сервера. Допустимы следующие значения:<br /><br /> -Identification: Сервер может получать удостоверение и привилегии клиента, но не может олицетворять клиента.<br />-Олицетворения: Сервер может олицетворять контекст безопасности клиента в локальной системе.<br />-Делегирование: Сервер может олицетворять контекст безопасности клиента в удаленных системах.<br />-Anonymous: Сервер не может олицетворять или идентифицировать клиента.<br />— None: Уровень олицетворения не назначается.<br /><br /> Значение по умолчанию - Identification. Это атрибут типа <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Если установить для данного свойства значение `true`, то проверка подлинности может понижаться до NTLM в том случае, если проверка Kerberos недоступна.<br /><br /> Если установить для данного свойства значение `false`, это приведет к тому, что [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] будет принимать все возможные усилия для вызова исключения в том случае, если используется NTLM. Обратите внимание, что установка для данного свойства значения `false` не предотвращает отправки учетных данных NTLM по сети.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
+|-------------|-----------------|  
+|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.WindowsClientElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>   
- <xref:System.ServiceModel.Security.WindowsClientCredential>   
- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)   
- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.WindowsClientElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>  
+ <xref:System.ServiceModel.Security.WindowsClientCredential>  
+ [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)  
+ [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

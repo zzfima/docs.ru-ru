@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
+ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017
 
 В этой статье содержится пошаговое описание процессов сборки, отладки и публикации простого консольного приложения .NET Core на C# с помощью Visual Studio 2017. Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. Если само приложение не имеет зависимостей от конкретной платформы, его можно выполнять на любой официально поддерживаемой платформе .NET Core и в любой системе, в которой установлена .NET Core.
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/14/2017
 
    ![Visual Studio и новый проект Hello World](./media/with-visual-studio/devenv.png)
 
-   Этот шаблон создает простое приложение Hello World. Он вызывает метод <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> для отображения литеральной строки "Hello World!" в окне консоли. Запустите программу в режиме отладки, нажав на панели инструментов кнопку **HelloWorld** с зеленой стрелкой. Окно консоли появится на короткое время и затем сразу же закроется. Это происходит потому, что метод `Main` и приложение в целом завершаются сразу же, как только будет выполнена единственная инструкция в методе `Main`.
+   Этот шаблон создает простое приложение Hello World. Он вызывает метод <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> для отображения литеральной строки "Hello World!" в окне консоли. Запустите программу в режиме отладки, нажав на панели инструментов кнопку **HelloWorld** с зеленой стрелкой. Окно консоли появится на короткое время и затем сразу же закроется. Это происходит потому, что метод `Main` и приложение в целом завершаются сразу же, как только будет выполнена единственная инструкция в методе `Main`.
 
-1. Чтобы приостановить приложение перед тем, как закроется окно консоли, добавьте следующий код сразу после вызова метода <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>:
+1. Чтобы приостановить приложение перед тем, как закроется окно консоли, добавьте следующий код сразу после вызова метода <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>:
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -66,11 +64,11 @@ ms.lasthandoff: 09/14/2017
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   Этот код заменяет существующие операторы <xref:System.Console.WriteLine%2A?displayProperty=fullName>, <xref:System.Console.Write%2A?displayProperty=fullName> и <xref:System.Console.ReadKey%2A?displayProperty=fullName>.
+   Этот код заменяет существующие операторы <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> и <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
 
    ![Файл C# Visual Studio с обновленным методом Main](./media/with-visual-studio/codewindow.png)
 
-   Теперь код выдает строку "What is your name?" (Как вас зовут?) в окно консоли и ожидает, чтобы пользователь ввел строку текста и нажал клавишу ВВОД. Приложение сохраняет полученную строку в переменной с именем `name`. Оно также получает значение свойства <xref:System.DateTime.Now?displayProperty=fullName>, которое содержит текущее локальное время, и присваивает его переменной с именем `date`. Наконец, с помощью [интерполированной строки](../../csharp/language-reference/keywords/interpolated-strings.md) эти значения выводятся в окно консоли.
+   Теперь код выдает строку "What is your name?" (Как вас зовут?) в окно консоли и ожидает, чтобы пользователь ввел строку текста и нажал клавишу ВВОД. Приложение сохраняет полученную строку в переменной с именем `name`. Оно также получает значение свойства <xref:System.DateTime.Now?displayProperty=nameWithType>, которое содержит текущее локальное время, и присваивает его переменной с именем `date`. Наконец, с помощью [интерполированной строки](../../csharp/language-reference/keywords/interpolated-strings.md) эти значения выводятся в окно консоли.
 
 1. Скомпилируйте программу, выбрав действие **Сборка** > **Собрать решение**.
 
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/14/2017
 Вместо консольного приложения .NET Core и Visual Studio 2017 позволяют создать библиотеку классов. Пошаговое описание этого процесса вы найдете в статье [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017).
 
 Для разработки консольных приложений .NET Core для Mac, Linux и Windows также можно использовать редактор кода [Visual Studio Code](https://code.visualstudio.com/). Пошаговые инструкции см. в статье [Getting Started with Visual Studio Code](with-visual-studio-code.md) (Приступая к работе с Visual Studio Code).
-

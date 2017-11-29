@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>Руководство по .NET
 
 Руководство по .NET содержит большой объем информации о .NET.  В зависимости от вашего уровня знаний в области .NET вы можете изучить различные разделы данного руководства, а также другие разделы документации по .NET.
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="api-reference"></a>Справочник по интерфейсам API
 
 Просмотрите статью [Справочник по API .NET](../../api/index.md), где можно найти перечень доступных API-интерфейсов.
-

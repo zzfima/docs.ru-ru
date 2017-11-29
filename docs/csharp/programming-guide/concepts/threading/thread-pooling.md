@@ -1,30 +1,21 @@
 ---
 title: "Группировка потоков в пул (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>Группировка потоков в пул (C#)
 *Пул потоков* — это коллекция потоков, которые могут использоваться для выполнения нескольких задач в фоновом режиме. (Базовые сведения см. в разделе [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md).) Это позволяет разгрузить главный поток для асинхронного выполнения других задач.  
@@ -37,7 +28,7 @@ ms.lasthandoff: 07/28/2017
   
  Можно реализовать собственный пул потоков, но гораздо проще использовать пул потоков, предоставляемых .NET Framework через класс <xref:System.Threading.ThreadPool>.  
   
- Используя группировку потоков в пул, можно вызвать метод <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> с делегатом для процедуры, которую требуется выполнить, а C# создает поток и выполнит указанную процедуру.  
+ Используя группировку потоков в пул, можно вызвать метод <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> с делегатом для процедуры, которую требуется выполнить, а C# создает поток и выполнит указанную процедуру.  
   
 ## <a name="thread-pooling-example"></a>Пример группировки потоков в пул  
  В следующем примере показано, как можно использовать группировку потоков в пул для запуска нескольких задач.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  Структуры, входящие в состав объектов состояния, нельзя использовать для получения возвращаемых значений. Поскольку структуры являются типами, передаваемыми по значению, изменения, вносимые асинхронным процессом, не влияют на члены исходной структуры. Структуры следует использовать для передачи параметров, когда не требуется получать возвращаемые значения.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) (Работа с потоками (C#))  
+ [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Синхронизация потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

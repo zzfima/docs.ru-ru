@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="native-interoperability"></a>Взаимодействие на уровне машинного кода
 
 В этом документе мы немного подробнее рассмотрим все три способа "взаимодействия на уровне машинного кода", доступные при использовании .NET.
@@ -342,4 +340,3 @@ public class StatClass {
 *   [Вики-сайт PInvoke.net](http://www.pinvoke.net) — это отличный ресурс с информацией о распространенных API Win32 и способах их вызова.
 *   [Сведения о P/Invoke на сайте MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [Документация Mono по P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
-

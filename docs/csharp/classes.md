@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="classes"></a>Классы
 *Класс* — это конструкция, которая позволяет создавать собственные настраиваемые типы путем группирования переменных других типов, методов и событий. Класс похож на проект. Он определяет данные и поведение типа. Если класс не объявлен как статический, клиентский код может использовать его, создавая *объекты* или *экземпляры*, назначенные переменной. Переменная остается в памяти до тех пор, пока все ссылки на нее не выйдут из области. В этот момент среда CLR помечает ее пригодной для сборки мусора. Если класс объявляется как [статический](language-reference/keywords/static.md), то в памяти существует только одна копия, и клиентский код может получать к ней доступ только через сам класс, а не *переменную экземпляра*. Дополнительные сведения см. в разделе [Статические классы и члены статических классов](programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
@@ -84,5 +82,4 @@ ms.lasthandoff: 09/14/2017
 [Конструкторы](programming-guide/classes-and-structs/constructors.md)   
 [Методы завершения](programming-guide/classes-and-structs/destructors.md)   
 [Объекты](programming-guide/classes-and-structs/objects.md)
-
 

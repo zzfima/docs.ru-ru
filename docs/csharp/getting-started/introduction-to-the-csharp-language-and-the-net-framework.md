@@ -1,40 +1,22 @@
 ---
 title: "Введение в язык C# и .NET Framework"
 description: "Изучите основы C# и .NET. Ознакомьтесь с общими сведениями о языке C# и экосистеме .NET."
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
 C# — это изящный объектно-ориентированный язык со строгой типизацией, позволяющий разработчикам создавать различные безопасные и надежные приложения, работающие на платформе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. C# можно использовать для создания клиентских приложений Windows, XML-веб-служб, распределенных компонентов, приложений клиент-сервер, приложений баз данных и т. д. Visual C# предоставляет развитый редактор кода, удобные конструкторы пользовательского интерфейса, интегрированный отладчик и многие другие средства, которые упрощают разработку приложений на языке C# для платформы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -69,10 +51,8 @@ C# — это изящный объектно-ориентированный я
   
 -   Подробные сведения о конкретных аспектах языка C# вы найдете в [справочнике по C#](../../csharp/language-reference/index.md).  
   
--   Дополнительные сведения о [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] см. в [этой статье о LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
-  
--   Свежие статьи и ресурсы, предлагаемые группой разработчиков Visual C#, размещаются в [центре для разработчиков Visual C#](http://go.microsoft.com/fwlink/?LinkId=47811).  
-  
+-   Дополнительные сведения о [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] см. в [этой статье о LINQ](../programming-guide/concepts/linq/index.md).  
+
 ## <a name="net-framework-platform-architecture"></a>Архитектура платформы .NET Framework  
  Программы C# выполняются на платформе [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], которая интегрирована в Windows и содержит виртуальную общеязыковую среду выполнения (среду CLR) и унифицированный набор библиотек классов. Среда CLR корпорации Майкрософт представляет собой коммерческую реализацию международного стандарта Common Language Infrastructure (CLI), который служит основой для создания сред выполнения и разработки, позволяющих совместно использовать разные языки и библиотеки.  
   
@@ -86,8 +66,7 @@ C# — это изящный объектно-ориентированный я
   
  Помимо служб времени выполнения, платформа [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] содержит обширную библиотеку, в которую входит более 4000 классов. Эти классы распределены по пространствам имен, соответствующим разным полезных функциям: от операций файлового ввода и вывода до управления строками, от синтаксического анализа XML до элементов управления Windows Forms. Обычно приложения C# активно используют библиотеку классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для решения типовых задач взаимодействия.  
   
- Дополнительные сведения см. в [обзоре платформы Microsoft .NET Framework](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355).  
+ Дополнительные сведения см. в [обзоре платформы Microsoft .NET Framework](../../framework/get-started/overview.md).  
   
 ## <a name="see-also"></a>См. также  
  [C#](../../csharp/index.md) [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

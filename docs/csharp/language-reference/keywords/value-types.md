@@ -1,42 +1,23 @@
 ---
 title: "Типы значений (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>Типы значений (Справочник по C#)
 Типы значений относятся к двум основным категориям:  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="main-features-of-value-types"></a>Основные возможности типов значений  
  Переменные, основанные на типах значений, непосредственно содержат значения. Если присвоить одну переменную типа значения другой, в нее будет скопировано содержащееся в исходной переменной значение. В этом заключается отличие от присвоения переменных ссылочного типа, при котором копируется не сам объект, а ссылка на него.  
   
- Все типы значения являются неявными производными от <xref:System.ValueType?displayProperty=fullName>.  
+ Все типы значения являются неявными производными от <xref:System.ValueType?displayProperty=nameWithType>.  
   
  В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя. Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.  
   
@@ -71,7 +52,7 @@ ms.lasthandoff: 07/28/2017
  Каждый тип значения имеет неявный конструктор по умолчанию, который инициализирует значение по умолчанию для этого типа. Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).  
   
 ## <a name="main-features-of-simple-types"></a>Основные возможности простых типов  
- Все простые типы, реализованные в языке C#, являются псевдонимами системных типов платформы .NET. Например, [int](../../../csharp/language-reference/keywords/int.md) является псевдонимом типа <xref:System.Int32?displayProperty=fullName>. Полный список псевдонимов см. в разделе [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md).  
+ Все простые типы, реализованные в языке C#, являются псевдонимами системных типов платформы .NET. Например, [int](../../../csharp/language-reference/keywords/int.md) является псевдонимом типа <xref:System.Int32?displayProperty=nameWithType>. Полный список псевдонимов см. в разделе [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md).  
   
  Константные выражения, операнды которых являются константами простого типа, вычисляются во время компиляции.  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  Дополнительные сведения о форматировании выходных данных числовых типов см. в разделе [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Типы](../../../csharp/language-reference/keywords/types.md)   
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Типы](../../../csharp/language-reference/keywords/types.md)  
+ [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
-

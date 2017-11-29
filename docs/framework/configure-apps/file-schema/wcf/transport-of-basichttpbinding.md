@@ -1,27 +1,37 @@
 ---
-title: "&lt;transport&gt; для &lt;basicHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;transport&gt; для &lt;basicHttpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a69be01146e71e71ba7e901de288d84c533b1e1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transport&gt; для &lt;basicHttpBinding&gt;
+# <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; для &lt;basicHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<привязки >  
+\<basicHttpBinding >  
+\<Привязка >  
+\<Безопасность >  
+\<Транспорт >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <basicHttpBinding>  
     <binding>  
         <security  
@@ -39,53 +49,53 @@ caps.handback.revision: 18
 </basicHttpBinding>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|clientCredentialType|-   Задает тип учетных данных, которые должны использоваться при проверке подлинности клиента с использованием проверки подлинности HTTP.  Значение по умолчанию — `None`.  Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-   Задает тип учетных данных, используемых при проверке подлинности клиента из домена с использованием прокси через HTTP.  Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`.  Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест\-проверки подлинности.  Значение по умолчанию \- пустая строка.|  
-|policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtectionPolicy>.<br /><br /> 1.  Never \- политика никогда не применяется \(расширенная защита отключена\).<br />2.  WhenSupported \- политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always \- политика применяется всегда.  Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
+|---------------|-----------------|  
+|clientCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента из домена с использованием прокси-сервер по протоколу HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию - пустая строка.|  
+|policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
 |protectionScenario|Это перечисление указывает сценарий защиты, регламентированный политикой.|  
   
-## Атрибут clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
 |Нет|Во время передачи сообщения не защищены.|  
 |Basic|Задает обычную проверку подлинности.|  
-|Digest|Задает дайджест\-проверку подлинности.|  
+|Digest|Задает дайджест-проверку подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
 |Windows|Задает встроенную проверку подлинности Windows.|  
   
-## Атрибут proxyCredentialType  
+## <a name="proxycredentialtype-attribute"></a>Атрибут proxyCredentialType  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|Нет|-   Во время передачи сообщения не защищены.|  
-|Basic|Задает обычную проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест\-проверке подлинности.|  
-|Digest|Задает дайджест\-проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест\-проверке подлинности.|  
+|-----------|-----------------|  
+|Нет|-Во время передачи сообщения не защищены.|  
+|Basic|Задает обычную проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
+|Digest|Задает дайджест-проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
 |Windows|Задает встроенную проверку подлинности Windows.|  
-|Сертификат|Выполняет проверку подлинности клиента с использованием сертификата.  Такая возможность действует, только если атрибут `Mode` родительского элемента `security` имеет значение Transport, и не действует, если этот атрибут имеет значение TransportCredentialOnly.|  
+|Сертификат|Выполняет проверку подлинности клиента с использованием сертификата. Такая возможность действует, только если атрибут `Mode` родительского элемента `security` имеет значение Transport, и не действует, если этот атрибут имеет значение TransportCredentialOnly.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет возможности безопасности для элемента [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|-------------|-----------------|  
+|[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
-## Пример  
- В следующем примере демонстрируется использование безопасности транспорта SSL с использованием основной привязки.  По умолчанию основная привязка поддерживает взаимодействие по протоколу HTTP.  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется использование безопасности транспорта SSL с использованием основной привязки. По умолчанию основная привязка поддерживает взаимодействие по протоколу HTTP.  
   
-```  
+```xml  
 <system.serviceModel>  
    <services>  
       <service   
@@ -117,13 +127,13 @@ caps.handback.revision: 18
 </system.serviceModel>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>   
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>   
- <xref:System.ServiceModel.HttpTransportSecurity>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>  
+ <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
+ <xref:System.ServiceModel.HttpTransportSecurity>  
+ [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Привязки](../../../../../docs/framework/wcf/bindings.md)  
+ [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Привязка >](../../../../../docs/framework/misc/binding.md)

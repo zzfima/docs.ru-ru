@@ -1,29 +1,32 @@
 ---
-title: "Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа &quot;запрос-ответ&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа \"запрос-ответ\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 20d9cad52c0f528b521b031173b5dce1cb4f2a50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа &quot;запрос-ответ&quot;
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа "запрос-ответ"
 В следующих процедурах описан способ доступа к службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], определяющей односторонний контракт и контракт типа запрос-ответ и не использующей дуплексный обмен данными.  
   
 ### <a name="to-define-the-service"></a>Определение службы  
   
-1.  Объявите контракт службы. Операции, которые должны быть односторонними, должны иметь `IsOneWay` значение `true` в <xref:System.ServiceModel.OperationContractAttribute>. В следующем коде объявляется контракт `IOneWayCalculator`, имеющий односторонние операции для `Add`, `Subtract`, `Multiply` и `Divide`. В нем также определяется операция ответа на запрос, называемая `SayHello`.  
+1.  Объявите контракт службы. Для операций, которые требуется сделать односторонними, необходимо назначить для `IsOneWay` значение `true` в атрибуте <xref:System.ServiceModel.OperationContractAttribute>. В следующем коде объявляется контракт `IOneWayCalculator`, имеющий односторонние операции для `Add`, `Subtract`, `Multiply` и `Divide`. В нем также определяется операция ответа на запрос, называемая `SayHello`.  
   
-    ```  
+    ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -42,7 +45,7 @@ caps.handback.revision: 8
   
 2.  Реализуйте контракт службы. В следующем коде реализуется интерфейс `IOnewayCalculator`.  
   
-    ```  
+    ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
     public class CalculatorService : IOneWayCalculator  
     {  
@@ -80,7 +83,7 @@ caps.handback.revision: 8
   
 3.  Разместите службу в консольном приложении. В следующем примере кода показано, как это сделать.  
   
-    ```  
+    ```csharp  
     // Host the service within this EXE console application.  
     public static void Main()  
     {  
@@ -116,9 +119,9 @@ caps.handback.revision: 8
   
 ### <a name="to-access-the-service"></a>Доступ к службе  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с использованием адреса конечной точки обмена метаданными для создания класса клиента для службы, используя следующую команду: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсов и классов, как показано в следующем образце кода.  
+1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создать класс клиента для службы, с помощью следующей командной строки с помощью адрес конечной точки обмена метаданными: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем образце кода.  
   
-    ```  
+    ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://Microsoft.ServiceModel.Samples", ConfigurationName="IOneWayCalculator")]  
     public interface IOneWayCalculator  
@@ -199,24 +202,22 @@ caps.handback.revision: 8
             return base.Channel.SayHello(name);  
         }  
     }  
-  
     ```  
   
-     Обратите внимание на `IOneWayCalculator` интерфейс, имеющий односторонние операции службы <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> атрибута `true` и операции запроса ответа службы имеет этого атрибута задано значение по умолчанию `false`. Также обратите внимание на класс `OneWayCalculatorClient`. Он используется для вызова службы.  
+     Обратите внимание, что в интерфейсе `IOneWayCalculator` односторонним операциям службы задано значение <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> для атрибута `true`, а операции запроса-ответа службы для этого атрибута задано значение по умолчанию: `false`. Также обратите внимание на класс `OneWayCalculatorClient`. Он используется для вызова службы.  
   
 2.  Создайте клиентский объект.  
   
-    ```  
+    ```csharp  
     // Create a client  
     WSHttpBinding binding = new WSHttpBinding();  
     EndpointAddress epAddress = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
-  
     ```  
   
 3.  Вызовите операции службы.  
   
-    ```  
+    ```csharp  
     // Call the Add service operation.  
     double value1 = 100.00D;  
     double value2 = 15.99D;  
@@ -246,21 +247,19 @@ caps.handback.revision: 8
     string response = client.SayHello(name);  
     Console.WriteLine("SayHello([0])", name);  
     Console.WriteLine("SayHello() returned: " + response);  
-  
     ```  
   
 4.  Закройте клиент, чтобы закрыть соединения и очистить ресурсы.  
   
-    ```  
+    ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
-  
     ```  
   
 ## <a name="example"></a>Пример  
  Код, фрагменты которого представлены в данном разделе, полностью приведен ниже.  
   
-```  
+```csharp  
 // Service.cs  
 using System;  
 using System.Configuration;  
@@ -352,8 +351,10 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-}  
-  
+} 
+```
+
+```csharp
 // client.cs  
 using System;  
 using System.ServiceModel;  
@@ -407,10 +408,7 @@ namespace Microsoft.ServiceModel.Samples
         }  
     }  
 }  
-  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
   
 ## <a name="see-also"></a>См. также  
  [Односторонние службы](../../../../docs/framework/wcf/feature-details/one-way-services.md)

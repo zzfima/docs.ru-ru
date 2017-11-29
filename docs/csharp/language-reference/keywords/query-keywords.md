@@ -1,39 +1,21 @@
 ---
 title: "Ключевые слова запроса (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30526e7bc4f99110d421855866381d9b7934d31c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6dadce6d48e711032cca03a7f7c2ba02360e685f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="query-keywords-c-reference"></a>Ключевые слова запроса (Справочник по C#)
 В этом разделе приводятся контекстные ключевые слова, используемые в выражениях запросов.  
@@ -58,8 +40,7 @@ ms.lasthandoff: 07/28/2017
 |[descending](../../../csharp/language-reference/keywords/descending.md)|Контекстное ключевое слово в предложении [orderby](../../../csharp/language-reference/keywords/orderby-clause.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Встроенный язык запросов LINQ](../../programming-guide/concepts/linq/index.md)  
+ [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>Перечисления
 
 ***Тип enum*** представляет собой тип значения с набором именованных констант. Перечисления удобно использовать в том случае, когда переменная может иметь только дискретные значения из определенного набора. В качестве базового хранилища в перечислении используется один из целочисленных типов значений. Перечисления предоставляют семантическое значение для дискретных значений.
@@ -45,4 +43,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [Назад](interfaces.md)
 [Вперед](delegates.md)
-

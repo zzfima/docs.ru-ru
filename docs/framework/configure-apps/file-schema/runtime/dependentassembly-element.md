@@ -1,70 +1,73 @@
 ---
-title: "Элемент &lt;dependentAssembly&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<dependentAssembly> - элемент"
-  - "теги контейнеров, <dependentAssembly> - элемент"
-  - "dependentAssembly - элемент"
+title: "&lt;dependentAssembly&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly
+helpviewer_keywords:
+- container tags, <dependentAssembly> element
+- dependentAssembly element
+- <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;dependentAssembly&gt;
-Инкапсуляция политики привязки и расположения для каждой сборки.  Используйте один элемент `dependentAssembly` для каждой сборки.  
+# <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; элемент
+Инкапсулирует политику привязки и расположение каждой сборки. Используйте один `dependentAssembly` элемент для каждой сборки.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+\<assemblyBinding >  
+\<dependentAssembly >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <dependentAssembly>   
 </dependentAssembly>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|`assemblyIdentity`|Содержит идентификационные сведения о сборке.  Этот элемент должен включаться в каждый элемент `dependentAssembly`.|  
-|`codeBase`|Указывает место поиска средой выполнения общей сборки, если она не была установлена на компьютер.|  
-|`bindingRedirect`|Перенаправление одной версии сборки к другой.|  
-|`publisherPolicy`|Указывает, будет ли среда выполнения применять политику издателя для этой сборки.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположении сборок.|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`assemblyIdentity`|Содержит идентификационные сведения о сборке. Этот элемент должен быть включен в каждом `dependentAssembly` элемента.|  
+|`codeBase`|Указывает, где среда выполнения можно найти общей сборки, если он не установлен на компьютере.|  
+|`bindingRedirect`|Перенаправляет одну версию сборки на другую.|  
+|`publisherPolicy`|Указывает, применяется ли среда выполнения политику издателя для этой сборки.|  
   
-## Пример  
- В следующем примере показан способ инкапсуляции данных для двух сборок.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-```  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как для инкапсуляции данных для двух сборок.  
+  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -85,7 +88,7 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,25 +1,21 @@
 ---
 title: "Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 847d8f830c26f54521664accc4bf569f822f255a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)
 Операции по обработке запросов и осей часто реализуются с использованием отложенного выполнения. В этом разделе разъясняются требования и достоинства отложенного выполнения, а также содержатся некоторые соображения относительно реализации.  
@@ -27,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="deferred-execution"></a>Отложенное выполнение  
  Отложенное выполнение означает, что вычисление выражения откладывается до тех пор, пока не возникнет действительная потребность в его *реализованном* значении. Отложенное выполнение может значительно повышать производительность в ситуациях, когда приходится манипулировать большими коллекциями данных, особенно в программах, содержащих ряд последовательных запросов или манипуляций. В лучшем случае отложенное выполнение обеспечивает только один проход по исходной коллекции.  
   
- Технологии LINQ предусматривают широкое использование отложенного выполнения как в членах основных классов <xref:System.Linq?displayProperty=fullName>, так и в методах расширений в различных пространствах имен LINQ, таких как <xref:System.Xml.Linq.Extensions?displayProperty=fullName>.  
+ Технологии LINQ предусматривают широкое использование отложенного выполнения как в членах основных классов <xref:System.Linq?displayProperty=nameWithType>, так и в методах расширений в различных пространствах имен LINQ, таких как <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
   
  Отложенное выполнение напрямую поддерживается в языке C# с помощью ключевого слова [yield`yield-return` (в форме оператора ](../../../../csharp/language-reference/keywords/yield.md)), когда оно используется внутри блока итератора. Такой итератор должен возвращать коллекцию типа <xref:System.Collections.IEnumerator> либо <xref:System.Collections.Generic.IEnumerator%601> (или одного из производных типов).  
   
@@ -46,8 +42,7 @@ ms.lasthandoff: 07/28/2017
 -   [Пример отложенного выполнения (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>См. также  
- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)   
- [Основные принципы и терминология (функциональное преобразование) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
- [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
+ [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+ [Основные принципы и терминология (функциональное преобразование) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+ [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
  [yield](../../../../csharp/language-reference/keywords/yield.md)
-

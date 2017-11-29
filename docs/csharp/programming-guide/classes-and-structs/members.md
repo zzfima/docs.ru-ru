@@ -1,39 +1,21 @@
 ---
 title: "Члены (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="members-c-programming-guide"></a>Члены (Руководство по программированию на C#)
 В классах и структурах есть члены, представляющие их данные и поведение. Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса. Закрытые члены в базовых классах наследуются, но недоступны из производных классов.  
@@ -54,16 +36,15 @@ ms.lasthandoff: 07/28/2017
 |[Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Вложенными типами являются типы, объявленные в другом типе. Вложенные типы часто применяются для описания объектов, использующихся только типами, в которых эти объекты находятся.|  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Methods (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Методы (руководство по программированию на C#)  
- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+ [События](../../../csharp/programming-guide/events/index.md)  
+ [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-

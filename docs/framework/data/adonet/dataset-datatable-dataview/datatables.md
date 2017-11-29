@@ -1,66 +1,69 @@
 ---
-title: "DataTables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataTables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d1222d3df30bf2b3de1761b8fa5c702dc687d0a0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# DataTables
-Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений.  В ADO.NET объекты <xref:System.Data.DataTable> используются для представления таблиц в наборе данных **DataSet**.  Таблица данных **DataTable** представляет одну таблицу с реляционными данными, размещенными в памяти. Данные локально расположены в приложении на основе .NET, но могут заполняться из источника данных, например Microsoft SQL Server, с помощью **DataAdapter**. Дополнительные сведения см. в разделе [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+# <a name="datatables"></a>DataTables
+Набор данных <xref:System.Data.DataSet> состоит из коллекции таблиц, связей и ограничений. В ADO.NET <xref:System.Data.DataTable> объекты используются для представления таблиц в **набора данных**. Объект **DataTable** представляет одну таблицу находящихся в памяти реляционных данных; является локальным для данных. NET-приложение в котором он находится, но могут быть заполнены из источника данных, например Microsoft SQL Server с помощью **DataAdapter** Дополнительные сведения см. в разделе [заполнение DataSet из объекта DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
   
- Класс **DataTable** является элементом пространства имен **System.Data** внутри библиотеки классов платформы .NET Framework.  Можно создавать и использовать **DataTable** независимо или в качестве элемента **DataSet**, и объекты **DataTable** также можно использовать совместно с другими объектами платформы .NET Framework, включая <xref:System.Data.DataView>.  Доступ к коллекции таблиц в **DataSet** обеспечивается с помощью свойства **Tables** объекта **DataSet**.  
+ **DataTable** входит класс **System.Data** пространство имен в библиотеке классов .NET Framework. Можно создать и использовать **DataTable** отдельно или как член **DataSet**, и **DataTable** объекты могут также использоваться в сочетании с другими объектами .NET Framework включая <xref:System.Data.DataView>. Можно получить доступ к коллекции таблиц в **DataSet** через **таблиц** свойство **набора данных** объекта.  
   
- Схема или структура таблицы представляется столбцами и ограничениями.  Схема **DataTable** определяется с помощью объектов <xref:System.Data.DataColumn>, а также объектов <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint>.  Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
+ Схема или структура таблицы представляется столбцами и ограничениями. Определения схемы **DataTable** с помощью <xref:System.Data.DataColumn> объектов в том числе в <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint> объектов. Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
   
- Кроме схемы, объект **DataTable** должен также иметь строки, в которых хранятся и упорядочиваются данные.  Класс <xref:System.Data.DataRow> представляет фактические данные, содержащиеся в таблице.  Объект **DataRow**, а также его свойства и методы используются для извлечения, оценки и обработки данных таблицы.  После доступа к данным строки и их изменения объект **DataRow** сохраняет и текущее, и исходное состояние.  
+ Кроме схемы **DataTable** должен также иметь строки, содержащие и данные о заказах. Класс <xref:System.Data.DataRow> представляет фактические данные, содержащиеся в таблице. Вы используете **DataRow** и его свойства и методы для извлечения, оценки и обработки данных в таблице. Как открывать и изменять данные в строке, **DataRow** сохраняет свое текущее и исходное состояние.  
   
- С помощью одного или нескольких связанных столбцов таблицы между таблицами можно создавать связи типа «родители\-потомки».  Связь между объектами **DataTable** создается с помощью <xref:System.Data.DataRelation>.  Объекты **DataRelation** можно использовать для возврата связанных дочерних или родительских строк определенной строки.  Для получения дополнительной информации см. [Добавление объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ С помощью одного или нескольких связанных столбцов таблицы между таблицами можно создавать связи типа «родители-потомки». Создать связь между **DataTable** объектов с помощью <xref:System.Data.DataRelation>. **DataRelation** объекты могут затем использоваться для возврата связанных дочерних или родительских строк определенной строки. Дополнительные сведения см. в разделе [Добавление отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
-## В этом подразделе  
- [Создание DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- Объясняет, как создавать **DataTable** и добавлять ее в **DataSet**.  
+## <a name="in-this-section"></a>Содержание  
+ [Создание таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ Описание способов создания **DataTable** и добавьте его в **набора данных**.  
   
- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- Содержит сведения о создании и использовании объектов и ограничений **DataColumn**.  
+ [Определение схемы таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ Содержит сведения о создании и использовании **DataColumn** объектов и ограничений.  
   
- [Обработка данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- Описывает, как добавлять, изменять и удалять данные таблицы.  Объясняет, как использовать события **DataTable** для изучения изменений данных таблицы.  
+ [Обработка данных в объект DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ Описывает, как добавлять, изменять и удалять данные таблицы. Описание способов использования **DataTable** событий для изучения изменений данных в таблице.  
   
- [Обработка событий DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- Приводит сведения о событиях, которые можно использовать с объектом **DataTable**, включая события, связанные с изменением значений столбцов и добавлением или удалением строк.  
+ [Обработка событий таблиц данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ Предоставляет сведения о событиях, доступных для использования с **DataTable**, включая события, связанные с изменением значений столбцов и добавлением или удалением строк.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  Описывает архитектуру и компоненты ADO.NET, а также их использование для получения доступа к существующим источникам данных и управления данными приложения.  
   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Содержит сведения о классе **DataSet** ADO.NET, в том числе о способе создания связей между таблицами.  
+ [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ Предоставляет сведения о ADO.NET **DataSet** включая создание связей между таблицами.  
   
- [Класс Constraint](frlrfSystemDataConstraintClassTopic)  
- Предоставляет справочные сведения об объекте **Constraint**.  
+ <xref:System.Data.Constraint>  
+ Содержит справочные сведения о **ограничение** объекта.  
   
- [Класс DataColumn](frlrfSystemDataDataColumnClassTopic)  
- Содержит справочные сведения об объекте **DataColumn**.  
+ <xref:System.Data.DataColumn>  
+ Содержит справочные сведения о **DataColumn** объекта.  
   
- [Класс DataSet](frlrfSystemDataDataSetClassTopic)  
- Содержит справочные сведения об объекте **DataSet**.  
+ <xref:System.Data.DataSet>  
+ Содержит справочные сведения о **DataSet** объекта.  
   
- [Класс DataTable](frlrfSystemDataDataTableClassTopic)  
- Содержит справочные сведения об объекте **DataTable**.  
+ <xref:System.Data.DataTable>  
+ Содержит справочные сведения о **DataTable** объекта.  
   
  [Общие сведения о библиотеке классов](../../../../../docs/standard/class-library-overview.md)  
- Содержит общие сведения о библиотеке классов платформы .NET Framework, включая пространство имен **System**, а также пространство имен второго уровня, **System.Data**.  
+ Общие сведения о библиотеке классов .NET Framework, включая **системы** пространства имен и пространство имен второго уровня **System.Data**.  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

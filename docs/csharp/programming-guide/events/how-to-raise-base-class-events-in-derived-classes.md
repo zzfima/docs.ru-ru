@@ -1,38 +1,19 @@
 ---
 title: "Практическое руководство. Создание событий базового класса в производных классах (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], in derived classes
+helpviewer_keywords: events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 548409d3f632213f3ff1de0a27a70b9f42b18332
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 13501f51a1e99eb6fb792a1c6abe5c7029cc020a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Практическое руководство. Создание событий базового класса в производных классах (Руководство по программированию в C#)
 В следующем простом примере показан стандартный способ объявления событий в базовом классе, позволяющий вызывать их из производных классов. Этот шаблон активно применяется в классах Windows Forms в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -43,12 +24,11 @@ ms.lasthandoff: 07/28/2017
 >  Не объявляйте виртуальные события в базовом классе и не переопределяйте их в производном классе. Компилятор c# не обрабатывает их корректно, поэтому сложно сказать, будет ли подписчик производного события на самом деле подписываться на событие базового класса.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
+ [!code-csharp[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [События](../../../csharp/programming-guide/events/index.md)   
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)   
- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [События](../../../csharp/programming-guide/events/index.md)  
+ [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+ [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
  [Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (инструмент для установки)
 Программа для установки является программой командной строки, с помощью которой можно устанавливать и удалять ресурсы сервера путем выполнения компонентов установщика в соответствующих сборках. Эта программа работает совместно с классами в пространстве имен <xref:System.Configuration.Install>.  
@@ -62,7 +55,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |Параметр|Описание|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> -или-<br /><br /> `/?`|Отображает синтаксис команд и параметров программы.|  
-|`/help` *сборка*<br /><br /> -или-<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName>, в текст справки программы InstallUtil.exe.|  
+|`/help` *сборка*<br /><br /> -или-<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>, в текст справки программы InstallUtil.exe.|  
 |`/AssemblyName` "*имя_сборки*,<br /><br /> Version = *основная.дополнительная.сборка.редакция*,<br /><br /> Culture = *языковой стандарт*,<br /><br /> PublicKeyToken = *publicKeyToken*"|Задает строгое имя сборки, которое требуется зарегистрировать в глобальном кэше сборок. Имя сборки должно содержать версию, язык и региональные параметры, а также токен открытого ключа сборки. Полное имя должно быть заключено в кавычки.<br /><br /> Например, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" — это полное имя сборки.|  
 |`/InstallStateDir=[` *имя_каталога* `]`|Задает каталог InstallState-файла, содержащего данные, которые используются для удаления сборки. По умолчанию используется каталог, содержащий сборку.|  
 |`/LogFile=`[*имя_файла*]|Задает имя файла журнала, в который записывается ход установки. По умолчанию, если параметр `/LogFile` не указан, создается файл журнала с именем *имя_сборки*.InstallLog. Если параметр *имя_файла* не указан, файл журнала не создается.|  
@@ -75,7 +68,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
  Отдельные установщики, используемые в сборке, кроме перечисленных в разделе [Параметры](#options), могут распознавать и другие параметры. Чтобы узнать об этих параметрах, запустите программу InstallUtil.exe с путями к сборкам в командной строке, а также с параметром `/?` или `/help`. Чтобы задать эти параметры, необходимо включить их в командную строку вместе с параметрами, распознаваемыми программой InstallUtil.exe.  
   
 > [!NOTE]
->  Текст справки о параметрах, поддерживаемых отдельными компонентами установщика, возвращается свойством <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName>. Отдельные параметры, которые были введены в командной строке, доступны программно из свойства <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=fullName>.  
+>  Текст справки о параметрах, поддерживаемых отдельными компонентами установщика, возвращается свойством <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>. Отдельные параметры, которые были введены в командной строке, доступны программно из свойства <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType>.  
   
  Все параметры командной строки записываются в файл журнала установки. Однако если используется параметр `/Password`, распознаваемый некоторыми компонентами установщика, сведения о пароле будут заменены восемью звездочками (*) и не будут отображаться в файле журнала.  
   
@@ -95,7 +88,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 -   *имя_сборки*.InstallState — содержит данные, используемые для удаления сборки.  
   
- Программа Installutil.exe использует отражение для проверки указанных сборок и поиска всех типов <xref:System.Configuration.Install.Installer>, у которых значение атрибута <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=fullName> имеет значение `true`. Программа, выполняющая метод <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=fullName> или <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=fullName> для каждого экземпляра типа <xref:System.Configuration.Install.Installer>. Программа Installutil.exe выполняет установку как транзакцию, то есть если какую-либо сборку не удалось установить, отменяется установка всех остальных сборок. Удаление не считается транзакцией.  
+ Программа Installutil.exe использует отражение для проверки указанных сборок и поиска всех типов <xref:System.Configuration.Install.Installer>, у которых значение атрибута <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=nameWithType> имеет значение `true`. Программа, выполняющая метод <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> или <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=nameWithType> для каждого экземпляра типа <xref:System.Configuration.Install.Installer>. Программа Installutil.exe выполняет установку как транзакцию, то есть если какую-либо сборку не удалось установить, отменяется установка всех остальных сборок. Удаление не считается транзакцией.  
   
  Программа Installutil.exe не может устанавливать или удалять сборки с отложенной подписью, но может устанавливать и удалять сборки со строгими именами.  
   
@@ -110,7 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 installutil /?  
 ```  
   
- Следующая команда выводит описание синтаксиса и параметров команды для программы InstallUtil.exe. Она также отображает для `myAssembly.exe` описание и список параметров, поддерживаемых компонентами установщика, если свойству <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> установщика было задано значение текста справки.  
+ Следующая команда выводит описание синтаксиса и параметров команды для программы InstallUtil.exe. Она также отображает для `myAssembly.exe` описание и список параметров, поддерживаемых компонентами установщика, если свойству <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> установщика было задано значение текста справки.  
   
 ```  
 installutil /? myAssembly.exe  
@@ -177,7 +170,6 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Configuration.Install>   
- [Инструменты](../../../docs/framework/tools/index.md)   
+ <xref:System.Configuration.Install>  
+ [Инструменты](../../../docs/framework/tools/index.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -1,32 +1,35 @@
 ---
-title: "Ограничения и связи схемы XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ограничения и отношения схемы XML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a324c3b7f24d3395382067ea5581313af58e13f0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ограничения и связи схемы XML
-В схеме XSD можно указать ограничения \(ограничения unique, key и keyref\) и связи \(с использованием заметки **msdata:Relationship**\).  В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
+# <a name="xml-schema-constraints-and-relationships"></a>Ограничения и отношения схемы XML
+Ограничения можно указать в схему языка определения схемы XML (unique, key и keyref) и связи (с помощью **msdata: Relationship** заметки). В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  
   
- Как правило, в схеме XML указывается заметка **msdata:Relationship**, если нужно создать только связи в **DataSet**.  Для получения дополнительной информации см. [Формирование связей DataSet на основе схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md).  Необходимо указать ограничения \(unique, key и keyref\), если нужно создать ограничения в наборе данных **DataSet**.  Обратите внимание, что ограничения key и keyref используются также для формирования связей, как объясняется далее в подразделе.  
+ Как правило, в схеме XML указывается **msdata: Relationship** заметку, если вы хотите создать только связи в **набора данных**. Дополнительные сведения см. в разделе [создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Указать ограничения (unique, key и keyref) Если вы хотите создать ограничения в **набора данных**. Обратите внимание, что ограничения key и keyref используются также для формирования связей, как объясняется далее в подразделе.  
   
-## Формирование связи из ограничений key и keyref  
- Чтобы сформировать не только ограничения, но и связи в наборе **DataSet**, можно вместо заметки **msdata:Relationship** указать ограничения key и keyref, которые используются в процессе сопоставления схемы XML.  Однако, если указать `msdata:ConstraintOnly="true"` в элементе **keyref**, то в набор **DataSet** войдут только ограничения, но не связи.  
+## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Формирование связи из ограничений key и keyref  
+ Вместо указания **msdata: Relationship** заметки, можно указать ограничения key и keyref, которые используются в процессе сопоставления схемы XML для создания не только ограничения, но и связи в  **Набор данных**. Тем не менее при указании `msdata:ConstraintOnly="true"` в **keyref** элемент, **DataSet** войдут только ограничения и не содержит связь.  
   
- В следующем примере показана схема XML, в которую входят невложенные элементы **Order** и **OrderDetail**.  Схема также указывает ограничения key и keyref.  
+ В следующем примере показано схемы XML, включающий **порядок** и **OrderDetail** элементы, которые не являются вложенными. Схема также указывает ограничения key и keyref.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -66,7 +69,7 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- Набор **DataSet**, создаваемый в процессе сопоставления схемы XML, содержит таблицы **Order** и **OrderDetail**.  Кроме того, в **DataSet** входят связи и ограничения.  Эти связи и ограничения показаны в приведенном ниже примере.  Обратите внимание, что в схеме не указывается заметка **msdata:Relationship**. Вместо этого создается связь с помощью ограничений key и keyref.  
+ **DataSet** , создаваемый в процессе включает процесс сопоставления схемы XML **порядок** и **OrderDetail** таблиц. Кроме того **DataSet** входят связи и ограничения. Эти связи и ограничения показаны в приведенном ниже примере. Обратите внимание, что схема задает **msdata: Relationship** заметку; вместо этого ограничения key и keyref используются для создания связи.  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -92,9 +95,9 @@ caps.handback.revision: 4
 ..Nested: False  
 ```  
   
- В предыдущем примере схемы элементы **Order** и **OrderDetail** не вложены.  В следующем примере схемы эти элементы являются вложенными.  Однако аннотация **msdata:Relationship** не указана, поэтому подразумевается неявная связь.  Для получения дополнительной информации см. [Сопоставление неявных связей между вложенными элементами схемы](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md).  Схема также указывает ограничения key и keyref.  
+ В предыдущем примере схемы **порядок** и **OrderDetail** элементы не являются вложенными. В следующем примере схемы эти элементы являются вложенными. Тем не менее не **msdata: Relationship** указана заметка; поэтому подразумевается неявная связь. Дополнительные сведения см. в разделе [неявные отношения между вложенным схемы элементов карты](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). Схема также указывает ограничения key и keyref.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -136,14 +139,14 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- Набор **DataSet**, полученный в процессе сопоставления схемы XML, содержит две таблицы:  
+ **Набора данных** , полученных в результате сопоставления XML-схемы содержит две таблицы:  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **DataSet** также содержит две связи \(одну на основе аннотации **msdata:relationship** и другую на основе ограничений key и keyref\) и различные ограничения.  Эти связи и ограничения показаны в следующем примере.  
+ **DataSet** также содержит две связи (одну на основе **msdata: Relationship** заметки, а другой в зависимости от ограничений key и keyref) и различные ограничения. Эти связи и ограничения показаны в следующем примере.  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -191,8 +194,8 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Если ограничение keyref, ссылающееся на вложенную таблицу, содержит аннотацию **msdata:IsNested\="true"**, то набор **DataSet** создаст одну вложенную связь на основе ограничения keyref и связанного ограничения unique\/key.  
+ Если ограничение keyref, ссылающиеся на вложенной таблицы содержит **msdata: IsNested = «true»** заметки, **DataSet** создаст одну вложенную связь на основании ограничения keyref и связанные ограничения unique/key.  
   
-## См. также  
- [Выведение реляционной структуры DataSet из схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

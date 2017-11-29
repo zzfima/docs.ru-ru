@@ -1,30 +1,36 @@
 ---
-title: "Создание таблицы данных на основе представления данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание таблицы данных из объекта DataView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e51188f550b7d910cb278165776133d6f4c03eb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание таблицы данных на основе представления данных
-После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно.  Сделать это позволяет класс <xref:System.Data.DataView>.  Кроме того, если нужно создать новую таблицу <xref:System.Data.DataTable> `` из представления <xref:System.Data.DataView>, то можно с помощью метода <xref:System.Data.DataView.ToTable%2A> скопировать все строки и столбцы либо подмножество данных в новую таблицу <xref:System.Data.DataTable>.  Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
+# <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
+После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно создать новую <xref:System.Data.DataTable> из <xref:System.Data.DataView>, можно использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки и столбцы или подмножества данных в новую <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
   
 -   Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
   
--   Создание таблицы <xref:System.Data.DataTable>, `` содержащей только уникальные строки из представления <xref:System.Data.DataView>, аналогично ключевому слову DISTINCT в Transact\-SQL.  
+-   Создание <xref:System.Data.DataTable> , включает только уникальные строки из <xref:System.Data.DataView>, аналогично ключевого слова DISTINCT в Transact-SQL.  
   
-## Пример  
- Следующее приложение командной строки создает таблицу <xref:System.Data.DataTable>, `` содержащую данные из таблицы **Person.Contact** образца базы данных **AdventureWorks**.  Затем пример создает отсортированное и отфильтрованное представление <xref:System.Data.DataView> `` на основе таблицы <xref:System.Data.DataTable>.  После отображения содержимого таблицы <xref:System.Data.DataTable> `` и представления <xref:System.Data.DataView> создается новая таблица <xref:System.Data.DataTable> `` из представления <xref:System.Data.DataView> вызовом метода <xref:System.Data.DataView.ToTable%2A>, который выбирает лишь подмножество имеющихся столбцов.  Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
+## <a name="example"></a>Пример  
+ Следующий образец консольного приложения создает <xref:System.Data.DataTable> , содержащий данные из **Person.Contact** в таблицу **AdventureWorks** образца базы данных. Затем пример создает отсортированное и отфильтрованных <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения содержимого <xref:System.Data.DataTable> и <xref:System.Data.DataView>, в примере создается новый <xref:System.Data.DataTable> из <xref:System.Data.DataView> путем вызова <xref:System.Data.DataView.ToTable%2A> метод, при выборе только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -209,7 +215,7 @@ Console.WriteLine();
   
  }  
   
-## См. также  
- <xref:System.Data.DataView.ToTable%2A>   
- [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataView.ToTable%2A>  
+ [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

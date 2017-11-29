@@ -1,80 +1,83 @@
 ---
-title: "Элемент &lt;add&gt; для bypasslist (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> - элемент, bypasslist"
-  - "<bypasslist>, add - элемент"
-  - "add - элемент, bypasslist"
-  - "bypasslist, add - элемент"
+title: "&lt;Добавить&gt; элемент для bypasslist (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+helpviewer_keywords:
+- <bypasslist>, add element
+- bypasslist, add element
+- <add> element, bypasslist
+- add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;add&gt; для bypasslist (параметры сети)
-Добавление IP\-адреса или DNS\-имени в список адресов, пропускаемых прокси\-сервером.  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Добавить&gt; элемент для bypasslist (параметры сети)
+Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<bypasslist >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <add   
-   address = "regular expression"   
+```xml  
+<add   
+  address="regular expression"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|**address**|Регулярное выражение, описывающее IP\-адрес или DNS\-имя.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|**address**|Регулярное выражение, описывающее IP-адрес или DNS-имя.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Набор регулярных выражений, описывающих адреса, пропускаемые прокси\-сервером.|  
+|-----------------|---------------------|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
-## Заметки  
- Элемент `add` добавляет в список адресов, для которых не используется прокси\-сервер, регулярные выражения, описывающие IP\-адреса или имена DNS\-серверов.  
+## <a name="remarks"></a>Примечания  
+ `add` Элемент вставляет регулярное выражение, описывающее IP-адреса или имена DNS-серверов в список адресов, которые обходят прокси-сервер.  
   
- Значение атрибута `address` должно быть регулярным выражением, описывающим набор IP\-адресов или имен узлов.  
+ Значение `address` атрибут должен иметь регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
   
- Соблюдайте осторожность при вводе регулярного выражения для этого элемента.  Регулярное выражение "\[a\-z\]\+\\.contoso\\.com" соответствует любому узлу в домене contoso.com, но при этом оно соответствует и любому узлу в домене contoso.com.cpandl.com.  Чтобы задать однозначное соответствие только одному узлу в домене contoso.com, используйте символ привязки \("$"\): "\[a\-z\]\+\\.contoso\\.com$".  
+ Следует проявлять осторожность при вводе регулярного выражения для данного элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадает с любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы соответствовать только одному узлу в домене contoso.com, используйте элемент привязки («$»): «[a-z] +\\.contoso\\.com$».  
   
- Дополнительные сведения о регулярных выражениях см. в разделе [Регулярные выражения в .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода в список пропускаемых адресов добавляются два адреса.  Первая запись отменяет использование прокси\-сервера для всех серверов домена contoso.com, а вторая — для всех серверов, IP\-адреса которых начинаются с 192.168.  
+## <a name="example"></a>Пример  
+ Список пропускаемых в следующем примере добавляются два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адрес начинается с 192.168.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -87,6 +90,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

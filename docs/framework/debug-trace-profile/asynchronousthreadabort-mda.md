@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>Помощник по отладке управляемого кода asynchronousThreadAbort
 Помощник по отладке управляемого кода (MDA) `asynchronousThreadAbort` активируется в том случае, если поток пытается выполнить асинхронное прерывание в другом потоке. При вызове синхронных прерываний потока помощник `asynchronousThreadAbort` не активируется.
@@ -43,7 +36,7 @@ ms.lasthandoff: 08/21/2017
  Из-за случайного характера возникновения этой проблемы ее симптомы могут быть самыми разными.
 
 ## <a name="cause"></a>Причина
- Код в одном потоке вызвал метод <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> для целевого потока, чтобы выполнить асинхронное прерывание. Прерывание является асинхронным, поскольку код выполняет вызов <xref:System.Threading.Thread.Abort%2A> в потоке, который отличается от целевого потока операции прерывания. При синхронном прерывании проблемы не должны возникать, поскольку поток, выполняющий метод <xref:System.Threading.Thread.Abort%2A>, делает это только в безопасной контрольной точке, в которой состояние приложения является согласованным.
+ Код в одном потоке вызвал метод <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> для целевого потока, чтобы выполнить асинхронное прерывание. Прерывание является асинхронным, поскольку код выполняет вызов <xref:System.Threading.Thread.Abort%2A> в потоке, который отличается от целевого потока операции прерывания. При синхронном прерывании проблемы не должны возникать, поскольку поток, выполняющий метод <xref:System.Threading.Thread.Abort%2A>, делает это только в безопасной контрольной точке, в которой состояние приложения является согласованным.
 
  При асинхронном прерывании проблемы возникают потому, что обработка осуществляется в произвольных точках выполняемого целевого потока. Чтобы предотвратить это, код для выполнения в потоке, который может быть прерван таким образом, должен предусматривать обработку исключения <xref:System.Threading.ThreadAbortException> практически в каждой точке кода, чтобы обеспечить гарантированный возврат данных приложения в согласованное состояние. Естественно, сложно рассчитывать на то, что при написании кода будет учитываться вероятность возникновения этой проблемы, а также реализована защита во всех возможных ситуациях.
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>См. также
  <xref:System.Threading.Thread> [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

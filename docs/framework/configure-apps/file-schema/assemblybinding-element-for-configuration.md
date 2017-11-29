@@ -1,79 +1,80 @@
 ---
-title: "Элемент &lt;assemblyBinding&gt; для &lt;configuration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assemblyBinding> - элемент"
-  - "assemblyBinding - элемент"
+title: "&lt;assemblyBinding&gt; элемент для &lt;конфигурации&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
+helpviewer_keywords:
+- assemblyBinding Element
+- <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 2753e290af60d0dcf4efaa79ff3ffffbd7305c27
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент &lt;assemblyBinding&gt; для &lt;configuration&gt;
-Определяет политику привязки сборок на уровне конфигурации.  
-  
-## Синтаксис  
-  
-```  
-<assemblyBinding    
-   xmlns="urn:schemas-microsoft-com:asm.v1">  
-</assemblyBinding>  
-```  
-  
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
-  
-### Атрибуты  
-  
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`xmlns`|Обязательный атрибут.<br /><br /> Задает пространство имен XML, необходимое для привязки сборок.  В качестве значения следует использовать строку "urn:schemas\-microsoft\-com:asm.v1".|  
-  
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент \<linkedConfiguration\>](../../../../docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)|Указание файла конфигурации, который следует включить.|  
-  
-### Родительские элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[Элемент \<configuration\>](../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-  
-## Заметки  
- Элемент [Элемент \<linkedConfiguration\>](../../../../docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) упрощает управление сборками компонентов, позволяя файлам конфигурации приложений помещать файлы конфигурации сборки в общеизвестных расположениям, а не дублировать параметры конфигурации сборки.  
-  
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > элемент для \<конфигурации >
+
+Определяет политику привязки сборок на уровне конфигурации.
+
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;**\<assemblyBinding >**
+
+## <a name="syntax"></a>Синтаксис
+
+```xml
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+  <!-- Configuration files to include. -->
+</assemblyBinding>
+```
+
+## <a name="attribute"></a>Атрибут
+
+|           | Описание |
+| --------- | ----------- |
+| **xmlns** | Обязательный атрибут.<br><br>Задает пространство имен XML, необходимое для привязки сборок. Используйте строку urn:schemas-microsoft-com:asm.v1 в качестве значения. |
+
+## <a name="parent-element"></a>Родительский элемент
+
+|     | Описание |
+| --- | ----------- |
+| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework. |
+
+## <a name="child-element"></a>Дочерний элемент
+
+|     | Описание |
+| --- | ----------- |
+| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Указание файла конфигурации, который следует включить. |
+
+## <a name="remarks"></a>Примечания
+
+[  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) элемент упрощает управление сборками компонентов, позволяя файлы конфигурации в файлах конфигурации, чтобы включить сборку хорошо известных расположений, а не дублировать параметры конфигурации сборки.
+
 > [!NOTE]
->  Элемент `<linkedConfiguration>` не поддерживается приложениями с параллельными манифестами Windows.  
-  
-## Пример  
- В следующем примере кода показано, как поместить файл конфигурации на локальный жесткий диск.  
-  
-```  
-<configuration>  
-   <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-      <linkedConfiguration href="file://c:\Program Files\Contoso\sharedConfig.xml"/>  
-   </assemblyBinding>  
-</configuration>  
-```  
-  
-## См. также  
- [Схема файла конфигурации](../../../../docs/framework/configure-apps/file-schema/index.md)
+> **\<LinkedConfiguration >** элемент не поддерживается для приложений с Windows side-by-side манифесты.
+
+## <a name="example"></a>Пример
+
+Приведенный ниже показано, как можно включить файл конфигурации на локальном жестком диске:
+
+```xml
+<configuration>
+  <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+    <linkedConfiguration href="file://c:\Program Files\Contoso\sharedConfig.xml" />
+  </assemblyBinding>
+</configuration>
+```
+
+## <a name="see-also"></a>См. также
+
+[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

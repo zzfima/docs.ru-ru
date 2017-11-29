@@ -1,42 +1,24 @@
 ---
 title: "События (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="events-visual-basic"></a>События (Visual Basic)
 Возможно, вы воспринимаете проект [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] как набор процедур, выполняемых в определенной последовательности. Но на практике большинство программ управляются событиями, то есть поток выполнения определяется внешними воздействиями, которые называются *событиями*.  
@@ -81,7 +63,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Нельзя использовать переменную `WithEvents` в качестве переменной объекта. То есть вы не можете объявить ее как `Object`. При объявлении переменной необходимо указать имя класса.  
   
--   Поскольку общие события не связываются с экземплярами класса, вы не можете использовать `WithEvents` для декларативной обработки общих событий. Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`. В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.  
+-   Поскольку общие события не связаны с экземплярами класса, нельзя использовать `WithEvents` для декларативной обработки общих событий. Аналогично, нельзя использовать `WithEvents` или `Handles` для обработки событий от `Structure`. В обоих случаях для обработки таких событий можно использовать инструкцию `AddHandler`.  
   
 -   Вы не можете создавать массивы переменных типа `WithEvents`.  
   
@@ -117,7 +99,7 @@ ms.lasthandoff: 07/28/2017
   
 #### <a name="to-handle-events-from-a-base-class"></a>Обработка событий из базового класса  
   
--   Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Например:  
+-   Объявите обработчик событий в производном классе, добавив инструкцию `Handles MyBase.`*eventname* в строку объявления процедуры обработчика событий, где *eventname* — это имя события в базовом классе, которое вы хотите обрабатывать. Пример:  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
@@ -133,4 +115,3 @@ ms.lasthandoff: 07/28/2017
 |[События](../../../../standard/events/index.md)|Предоставляет обзор модели событий в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Описывает, как работать с событиями, связанными с объектами Windows Forms.|  
 |[Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Предоставляет обзор делегатов в Visual Basic.|
-

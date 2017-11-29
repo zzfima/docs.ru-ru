@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be4fc9f9f2fc9ae57f22a7e59eca05a331ebfb32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
 <a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
@@ -69,7 +67,6 @@ ms.lasthandoff: 07/28/2017
  Так как строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантирует целостность, политику управления доступом для кода можно основать на этих двух видах свидетельства сборки. Строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантируют целостность благодаря цифровым подписям и сертификатам. Все перечисленные технологии (проверка хэша, использование строгих имен и цифровая подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md)) используются вместе, чтобы гарантировать, что сборка не была каким-либо образом изменена.  
   
 ## <a name="see-also"></a>См. также  
- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
+ [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [SignTool.exe (программа подписывания)](../../../docs/framework/tools/signtool-exe.md)
-

@@ -1,42 +1,24 @@
 ---
 title: "Практическое руководство. Перебор дерева папок (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Практическое руководство. Перебор дерева папок (Руководство по программированию на C#)
-Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=fullName> или <xref:System.IO.DirectoryInfo?displayProperty=fullName>.  
+Под фразой "итерация дерева каталога" подразумевается доступ к каждому файлу в каждом вложенном подкаталоге в заданной корневой папке на любую глубину. Необязательно открывать каждый файл. Можно просто извлечь имя файла или подкаталога в виде значения `string` или получить дополнительную информацию в форме объекта <xref:System.IO.FileInfo?displayProperty=nameWithType> или <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  В Windows термины "каталог" и "папка" являются взаимозаменяемыми. В большинстве документации и в текстах пользовательского интерфейса используется термин "папка", но в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] используется термин "каталог".  
@@ -63,14 +45,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Обрабатываемые исключения и действия, выполняемые с каждым файлом или папкой, предоставляются только в качестве примеров. Этот код следует изменить в соответствии с конкретными требованиями. Дополнительные сведения см. в комментариях в коде.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показана итерация файлов и папок в дереве каталога без использования рекурсии. Этот метод использует универсальный тип коллекции <xref:System.Collections.Generic.Stack%601>, который представляет стек типа "последним пришел — первым вышел" (LIFO).  
   
  Обрабатываемые исключения и действия, выполняемые с каждым файлом или папкой, предоставляются только в качестве примеров. Этот код следует изменить в соответствии с конкретными требованиями. Дополнительные сведения см. в комментариях в коде.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  Обычно проверка каждой папки на наличие у приложения разрешений на ее открытие занимает слишком много времени. Поэтому в примере кода эта часть операции просто включена в блок `try/catch`. Блок `catch` можно изменить так, чтобы при отказе в доступе к папке предпринималась попытка повысить права, а затем повторная попытка получить доступ. Как правило, следует перехватывать только те исключения, которые можно обработать, не оставляя приложение в неопределенном состоянии.  
   
@@ -80,7 +62,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Надежный код итерации файлов должен учитывать сложности файловой системы. Дополнительные сведения см. в разделе [техническом справочнике по NTFS](http://go.microsoft.com/fwlink/?LinkId=79488).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.IO>   
- [LINQ и каталоги файлов](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
+ <xref:System.IO>  
+ [LINQ и каталоги файлов](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
  [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
-

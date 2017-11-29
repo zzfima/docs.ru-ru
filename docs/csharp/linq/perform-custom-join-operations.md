@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
+ms.openlocfilehash: fef146c92a5cbbf21f8f1688f221c2bd45c99de7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 51bdae75346022a7564fdb50e582c143e7762a1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-custom-join-operations"></a>Выполнение пользовательских операций соединения
 
@@ -40,15 +38,14 @@ ms.lasthandoff: 07/28/2017
   
  Результатом второго метода является последовательность всех продуктов, идентификатор категории которых находится в списке категорий с правой стороны. Учтите необходимость использования предложения `let` и метода `Contains` для создания временного массива. Также можно создать массив перед запросом и удалить первое предложение `from`.  
   
- [!code-cs[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#64](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_1.cs)]  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере запрос должен соединять две последовательности на основе сопоставления ключей, которые в случае с внутренней (правосторонней) последовательностью не могут быть получены до предложения соединения. Если соединение было выполнено с предложением `join`, для каждого элемента требуется вызвать метод `Split`. Использование нескольких предложений `from` позволяет запросу избежать издержек, связанных с повторным вызовом метода. Однако поскольку предложение `join` оптимизировано, в этом случае его использование может быть эффективнее нескольких предложений `from`. Результаты будут зависеть в основном от затрат на вызов метода.  
   
- [!code-cs[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [Выражения запросов LINQ](index.md)   
- [Предложение join](../language-reference/keywords/join-clause.md)   
+ [Выражения запросов LINQ](index.md)  
+ [предложение join](../language-reference/keywords/join-clause.md)  
  [Упорядочение результатов предложения соединения](order-the-results-of-a-join-clause.md)
-

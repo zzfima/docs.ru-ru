@@ -1,12 +1,9 @@
 ---
 title: "Наследование (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="inheritance-c-programming-guide"></a>Наследование (Руководство по программированию на C#)
 
@@ -50,14 +32,14 @@ ms.lasthandoff: 07/28/2017
   
  При определении класса для наследования от другого класса производный класс явно получает все члены базового класса за исключением конструкторов и методов завершения. Производный класс может, таким образом, повторно использовать код в базовом классе без необходимости в его повторной реализации. В производном классе можно добавить больше членов. Таким образом, производный класс расширяет функциональность базового класса.  
   
- На следующем рисунке показан класс `WorkItem`, представляющий рабочий элемент в бизнес-процессе. Как и другие классы, он является производным от <xref:System.Object?displayProperty=fullName> и наследует все его методы. В `WorkItem` имеется пять собственных членов. К ним относятся конструктор, поскольку конструкторы не наследуются. Класс `ChangeRequest` наследует от `WorkItem` и представляет конкретный вид рабочего элемента. `ChangeRequest` добавляет еще два члена к членам, унаследованным от `WorkItem` и <xref:System.Object>. Он должен добавить собственный конструктор, и он также добавляет `originalItemID`. Свойство `originalItemID` позволяет `ChangeRequest` связать экземпляр с исходным объектом `WorkItem`, к которому применен запрос на изменение.  
+ На следующем рисунке показан класс `WorkItem`, представляющий рабочий элемент в бизнес-процессе. Как и другие классы, он является производным от <xref:System.Object?displayProperty=nameWithType> и наследует все его методы. В `WorkItem` имеется пять собственных членов. К ним относятся конструктор, поскольку конструкторы не наследуются. Класс `ChangeRequest` наследует от `WorkItem` и представляет конкретный вид рабочего элемента. `ChangeRequest` добавляет еще два члена к членам, унаследованным от `WorkItem` и <xref:System.Object>. Он должен добавить собственный конструктор, и он также добавляет `originalItemID`. Свойство `originalItemID` позволяет `ChangeRequest` связать экземпляр с исходным объектом `WorkItem`, к которому применен запрос на изменение.  
   
  ![Наследование классов](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Наследование классов  
   
- В следующем примере показано, как выражаются в C# отношения между классами, продемонстрированные на предыдущем рисунке. В примере также показано, как `WorkItem` переопределяет виртуальный метод <xref:System.Object.ToString%2A?displayProperty=fullName> и как класс `ChangeRequest` наследует `WorkItem` реализацию метода.  
+ В следующем примере показано, как выражаются в C# отношения между классами, продемонстрированные на предыдущем рисунке. В примере также показано, как `WorkItem` переопределяет виртуальный метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> и как класс `ChangeRequest` наследует `WorkItem` реализацию метода.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Абстрактные и виртуальные методы  
  Когда базовый класс объявляет метод как [виртуальный](../../../csharp/language-reference/keywords/virtual.md), производный класс может [переопределить](../../../csharp/language-reference/keywords/override.md) метод с помощью своей собственной реализации. Если базовый класс объявляет член как [абстрактный](../../../csharp/language-reference/keywords/abstract.md), этот метод должен быть переопределен в любом неабстрактном классе, который прямо наследует от этого класса. Если производный класс сам является абстрактным, то он наследует абстрактные члены, не реализуя их. Абстрактные и виртуальные члены являются основой для полиморфизма, который является второй основной характеристикой объектно-ориентированного программирования. Дополнительные сведения см. в разделе [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -68,7 +50,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="interfaces"></a>Интерфейсы  
  *Интерфейс* является ссылочным типом, в чем-то схожим с абстрактным базовым классом, который состоит только из абстрактных членов. Если класс реализует интерфейс, этот класс должен предоставлять реализацию для всех членов интерфейса. В классе может быть реализовано несколько интерфейсов, хотя производным он может быть только от одного прямого базового класса.  
   
- Интерфейсы используются для определения определенных возможностей для классов, которые не обязательно имеют отношения тождественности. Например, интерфейс <xref:System.IEquatable%601?displayProperty=fullName> может быть реализован любым классом или структурой, включающими клиентский код для определения эквивалентности двух объектов типа (однако тип определяет эквивалентность). <xref:System.IEquatable%601> не подразумевает тот же вид отношений тождественности, который существует между базовым и производным классами (например, `Mammal` является `Animal`). Дополнительные сведения см. в статье [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
+ Интерфейсы используются для определения определенных возможностей для классов, которые не обязательно имеют отношения тождественности. Например, интерфейс <xref:System.IEquatable%601?displayProperty=nameWithType> может быть реализован любым классом или структурой, включающими клиентский код для определения эквивалентности двух объектов типа (однако тип определяет эквивалентность). <xref:System.IEquatable%601> не подразумевает тот же вид отношений тождественности, который существует между базовым и производным классами (например, `Mammal` является `Animal`). Дополнительные сведения см. в статье [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Предотвращение дальнейшего наследования  
  Класс может предотвратить наследование от других классов или наследование от любых его членов, объявив себя или члены [запечатанными](../../../csharp/language-reference/keywords/sealed.md). Дополнительные сведения см. в разделе [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
@@ -77,8 +59,7 @@ ms.lasthandoff: 07/28/2017
  Производный класс может скрывать члены базового класса путем объявления членов с тем же именем и сигнатурой. Модификатор [new](../../../csharp/language-reference/keywords/new.md) может использоваться, чтобы явно указать, что член не должен быть переопределением базового члена. Использовать [new](../../../csharp/language-reference/keywords/new.md) необязательно, но если [new](../../../csharp/language-reference/keywords/new.md) не используется, будет создано предупреждение компилятора. Дополнительные сведения см. в разделах [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) и [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [struct](../../../csharp/language-reference/keywords/struct.md)
-

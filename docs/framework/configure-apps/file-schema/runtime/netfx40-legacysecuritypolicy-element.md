@@ -1,88 +1,90 @@
 ---
-title: "Элемент &lt;NetFx40_LegacySecurityPolicy&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<NetFx40_LegacySecurityPolicy> - элемент"
-  - "NetFx40_LegacySecurityPolicy - элемент"
+title: "&lt;NetFx40_LegacySecurityPolicy&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <NetFx40_LegacySecurityPolicy> element
+- NetFx40_LegacySecurityPolicy element
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
-caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cb59eb6e2a5e831f603747b3e0f9435bd076fbf8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;NetFx40_LegacySecurityPolicy&gt;
-Определяет, использует ли среда выполнения политику разграничения доступа кода \(CAS\) прежних версий.  
+# <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; элемент
+Указывает, использует ли среда выполнения устаревшую политику разграничения доступа кода.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+<NetFx40_LegacySecurityPolicy>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <NetFx40_LegacySecurityPolicy  
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Определяет, использует ли среда выполнения политику управления доступа для кода \(CAS\) предыдущей версии.|  
+|---------------|-----------------|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения политику разграничения доступа кода прежних версий.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|Среда выполнения не использует политику разграничения доступа кода \(CAS\).  Это значение по умолчанию.|  
-|`true`|Среда выполнения использует политику разграничения доступа кода \(CAS\) прежних версий.|  
+|-----------|-----------------|  
+|`false`|Среда выполнения не использует политику разграничения доступа кода прежних версий. Это значение по умолчанию.|  
+|`true`|Среда выполнения использует политику разграничения доступа кода прежних версий.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
-## Заметки  
- В .NET Framework версии 3.5 и более ранних версиях политика разграничения доступа кода действует всегда.  В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] политика разграничения доступа кода должна быть включена.  
+## <a name="remarks"></a>Примечания  
+ В .NET Framework версии 3.5 и более ранних версий политика разграничения доступа кода настроена на срабатывание всегда. В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], необходимо включить политику разграничения доступа кода.  
   
- Политика разграничения доступа кода зависит от версии.  Настраиваемые политики разграничения доступа кода, существующие в предыдущих версиях платформы .NET Framework, необходимо заново определить в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Политика разграничения доступа кода зависит от версии. Настраиваемые политики CAS, которые существуют в более ранних версиях платформы .NET Framework, необходимо заново определить в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- Применение элемента `<NetFx40_LegacySecurityPolicy>` к сборке[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] не влияет на [прозрачный для системы безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по\-прежнему применяются правила прозрачности.  
+ Применение `<NetFx40_LegacySecurityPolicy>` элемент [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] сборки не влияет на [прозрачный с точки зрения безопасности код](../../../../../docs/framework/misc/security-transparent-code.md); по-прежнему применяются правила прозрачности.  
   
 > [!IMPORTANT]
->  Применение элемента `<NetFx40_LegacySecurityPolicy>` может привести к снижению производительности для сборок образов в машинном коде, созданных  [генератором образов в машинном коде \(Ngen.exe\)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md), которые не установлены в [глобальный кэш сборок](../../../../../docs/framework/app-domains/gac.md).  Снижение производительности вызвано невозможностью среды выполнения загружать сборки в виде образов в машинном коде при применении атрибута, что приводит к их загрузке в виде сборок JIT.  
+>  Применение `<NetFx40_LegacySecurityPolicy>` элемента может привести к снижению производительности для сборки образов в машинном коде, созданные [генератором машинных образов (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) , которые не установлены в [глобальный кэш сборок ](../../../../../docs/framework/app-domains/gac.md). Снижение производительности, вызванные невозможностью среды выполнения загружать сборки как образы в машинном коде при применении атрибута, что приводит к их загруженных сборок как just-in-time.  
   
 > [!NOTE]
->  Если в настройках проекта Visual Studio указать целевую версию платформы .NET Framework, более раннюю, чем [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], политика CAS будет включена, включая любые указанные для этой версии настраиваемые политики CAS.  При этом использование новых типов и участников [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] будет невозможным.  Более раннюю версию платформы .NET Framework также можно указать с помощью элемента [\<supportedRuntime\> element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) в схеме параметров запуска в [файла конфигурации приложения](../../../../../docs/framework/configure-apps/index.md).  
+>  При указании целевой версии .NET Framework, выпущенной ранее [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] в параметрах проекта для проекта Visual Studio, политика разграничения доступа кода будет включена, включая любые настраиваемые политики управления доступом для кода, указанных для данной версии. Тем не менее, вы не сможете использовать новые [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] типы и члены. Можно также указать более ранней версии платформы .NET Framework с помощью [ \<supportedRuntime > элемент](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) в схеме параметров запуска в вашей [файла конфигурации приложения](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
->  В файлах конфигурации учитывается регистр.  Следует использовать синтаксис, как показано в разделах, посвященных синтаксису и примерам.  
+>  Синтаксис файлов конфигурации учитывается регистр. Следует использовать синтаксис, как указано в разделах «синтаксис» и пример.  
   
-## Файл конфигурации  
+## <a name="configuration-file"></a>Файл конфигурации  
  Этот элемент может использоваться только в файле конфигурации приложения.  
   
-## Пример  
- Следующий пример показывает, как включить политику управления доступом для кода \(CAS\) предыдущей версии для приложения.  
+## <a name="example"></a>Пример  
+ В следующем примере показано включение политику разграничения доступа кода прежних версий для приложения.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_LegacySecurityPolicy enabled="true"/>  
@@ -90,6 +92,6 @@ caps.handback.revision: 21
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

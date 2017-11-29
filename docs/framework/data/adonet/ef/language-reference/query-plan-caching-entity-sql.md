@@ -1,43 +1,42 @@
 ---
-title: "Кэширование плана запроса (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Кэширование плана запроса (Entity SQL)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 814b4451d5e08d5f9df4d370b2127d971f3fdd1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Кэширование плана запроса (Entity SQL)
-При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен.  Если это так, то кэшированный план используется повторно вместо построения нового плана.  Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется.  Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров \(имен и типов\).  Все текстовые сравнения выполняются с учетом регистра.  
+# <a name="query-plan-caching-entity-sql"></a>Кэширование плана запроса (Entity SQL)
+При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен. Если это так, то кэшированный план используется повторно вместо построения нового плана. Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется. Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов). Все текстовые сравнения выполняются с учетом регистра.  
   
-## Конфигурация  
+## <a name="configuration"></a>Конфигурация  
  Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.  
   
- Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=fullName>, назначьте этому свойству значение `true` или `false`.  Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
+ Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, назначьте этому свойству значение `true` или `false`. Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
   
  Можно включить кэширование планов запросов с помощью <xref:System.Data.Objects.ObjectQuery.EnablePlanCaching%2A>.  
   
-## Рекомендации  
- Как правило, следует избегать динамических запросов.  Динамический запрос в следующем примере уязвим для атак путем внедрения кода SQL, так как входные данные пользователя принимаются напрямую без проверки.  
+## <a name="recommended-practice"></a>Рекомендации  
+ Как правило, следует избегать динамических запросов. Динамический запрос в следующем примере уязвим для атак путем внедрения кода SQL, так как входные данные пользователя принимаются напрямую без проверки.  
   
  `"SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;`  
   
  Если используются динамически формируемые запросы, подумайте об отключении кэширования плана запроса, чтобы избежать ненужного расходования памяти для записей кэша, которые вряд ли будут использоваться повторно.  
   
- Кэширование планов запросов для статических запросов и параметризованных запросов может увеличить производительность.  Ниже приводится пример статического запроса:  
+ Кэширование планов запросов для статических запросов и параметризованных запросов может увеличить производительность. Ниже приводится пример статического запроса:  
   
 ```  
 "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";  
@@ -59,5 +58,5 @@ caps.handback.revision: 2
   
 -   Изменение текста внутри комментариев.  
   
-## См. также  
- [Общие сведения о языке Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

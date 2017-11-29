@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CCW
 - COM interop, COM wrappers
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbf466fb52af94d51babb30fdee85f4a056298c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874550511ed04427003f6fd54fdd97b3001356fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-callable-wrapper"></a>Вызываемая оболочка COM
 Когда клиент COM вызывает объект .NET, среда CLR создает для этого объекта управляемый объект и вызываемую оболочку COM. Не имея возможности обращаться к объекту .NET напрямую, клиенты COM используют вызываемую оболочку COM в качестве посредника для управляемого объекта.  
@@ -189,11 +185,10 @@ public class LoanApp : IAnother {
  Изредка автоматически созданный сдвоенный интерфейс может оказаться полезным, но чаще он создает трудности при работе с версиями. Например, внесение изменений в базовый класс легко может нарушить работу клиентов COM, использующих интерфейс производного класса. Если базовый класс предоставляется сторонним поставщиком, вы не можете контролировать компоновку интерфейса класса. Кроме того, в отличие от интерфейса диспетчеризации сдвоенный интерфейс (**ClassInterface.AutoDual**) предоставляет описание интерфейса класса в экспортированной библиотеке типов. Это описание стимулирует клиентов с поздним связыванием кэшировать идентификаторы DispId во время выполнения.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)   
- [Оболочки COM](../../../docs/framework/interop/com-wrappers.md)   
- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [Имитация COM-интерфейсов](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)   
- [Уточнение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [Oболочки COM](../../../docs/framework/interop/com-wrappers.md)  
+ [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [Имитация COM-интерфейсов](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Oпределение типов .NET для взаимодействия](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)
-

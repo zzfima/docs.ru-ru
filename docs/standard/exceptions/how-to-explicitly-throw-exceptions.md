@@ -1,38 +1,41 @@
 ---
-title: "Практическое руководство. Явное создание исключения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "исключения, создание"
-  - "исключения, блоки try/catch"
-  - "FileNotFoundException - класс"
-  - "неявное создание исключений"
-  - "блоки try/catch"
+title: "Практическое руководство. Явное создание исключения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- exceptions, try/catch blocks
+- FileNotFoundException class
+- try/catch blocks
+- exceptions, throwing
+- implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c3fce332263dac3f9906d33fe3bd2590050b86f8
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-# Практическое руководство. Явное создание исключения
-Исключения можно создавать явно с помощью оператора `throw`.  Используя оператор `throw`, также можно переслать далее перехваченное исключение.  Хорошей практикой в программировании является добавление информации к исключению, которое посылается повторно — это позволяет сделать процесс отладки более информативным.  
-  
- В следующем примере кода для перехвата возможного исключения <xref:System.IO.FileNotFoundException> используется блок try\/catch.  За блоком try следует блок catch, который перехватывает исключение <xref:System.IO.FileNotFoundException>и выводит на консоль сообщение в том случае, если файл данных не найден.  Далее идет оператор throw, который создает новое исключение <xref:System.IO.FileNotFoundException> и добавляет к исключению текстовую информацию.  
-  
-## Пример  
- [!code-csharp[Exception.Throwing#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
- [!code-vb[Exception.Throwing#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
-  
-## См. также  
- [Практическое руководство. Использование пробного блока и блока перехвата для перехвата исключений](../../../docs/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md)   
- [Практическое руководство. Использование определенных исключений в блоке Catch](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)   
- [Практическое руководство. Использование блоков Finally](../../../docs/standard/exceptions/how-to-use-finally-blocks.md)   
- [Основы обработки исключений](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+# <a name="how-to-explicitly-throw-exceptions"></a>Явное создание исключений
+
+Исключение можно вызвать явным образом с помощью оператора `throw`. Перехваченное исключение можно вызвать повторно с помощью оператора `throw`. При написании кода рекомендуется добавлять сведения в исключение, которое выдается повторно, чтобы предоставить дополнительную информацию при отладке.
+
+В следующем примере кода блок `try`/`catch` используется, чтобы перехватить возможное <xref:System.IO.FileNotFoundException>. После блока `try` находится блок `catch`, который перехватывает <xref:System.IO.FileNotFoundException> и выводит сообщение в консоль, если файл данных не найден. Следующий оператор `throw` создает новое исключение <xref:System.IO.FileNotFoundException> и добавляет в него текстовую информацию.
+
+[!code-csharp[Exception.Throwing#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
+[!code-vb[Exception.Throwing#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
+
+## <a name="see-also"></a>См. также  
+[Исключения](index.md)

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-versioning"></a>Управление версиями сборок
 Управление версиями сборок, использующих среду CLR, производится полностью на уровне сборки. Конкретная версия сборки и версии зависимых от нее сборок указываются в манифесте сборки. Политика управления версиями по умолчанию для среды выполнения заключается в том, что приложения могут выполняться только с версиями, с которыми они были разработаны и протестированы, если иное не переопределено явной политикой использования версий в файлах конфигурации (в файле конфигурации приложения, файле политики издателя и файле конфигурации администратора компьютера).  
@@ -78,11 +76,10 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  Хотя можно задать любой текст, при компиляции появится предупреждение, если строка имеет формат отличный от формата номера версии сборки или если она имеет правильный формат, но содержит подстановочные знаки. Это не опасное предупреждение.  
   
- Информационная версия представляется с помощью пользовательского атрибута <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=fullName>. Дополнительные сведения об атрибуте информационной версии см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Информационная версия представляется с помощью пользовательского атрибута <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Дополнительные сведения об атрибуте информационной версии см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>См. также  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Настройка приложений](../../../docs/framework/configure-apps/index.md)   
- [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md)   
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
+ [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md)  
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-

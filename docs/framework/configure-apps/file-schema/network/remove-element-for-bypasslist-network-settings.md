@@ -1,83 +1,86 @@
 ---
-title: "Элемент &lt;remove&gt; для bypasslist (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, remove - элемент"
-  - "bypasslist, remove - элемент"
-  - "remove - элемент, bypasslist"
-  - "remove - элемент, bypasslist"
+title: "&lt;Удалить&gt; элемент для bypasslist (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- <bypasslist>, remove element
+- remove elemment, bypasslist
+- bypasslist, remove element
+- remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;remove&gt; для bypasslist (параметры сети)
-Удаление IP\-адреса или DNS\-имени из списка обхода прокси\-серверов.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Удалить&gt; элемент для bypasslist (параметры сети)
+Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<bypasslist >  
+\<Удалите >  
   
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
+<remove   
+  address="regular expression"   
+/>
 ```  
   
-      <remove   
-   name = "regular expression"   
-/>  
-```  
-  
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`name`|Регулярное выражение, описывающее IP\-адрес или DNS\-имя.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`address`|Регулярное выражение, описывающее IP-адрес или DNS-имя.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Набор регулярных выражений, описывающих адреса, пропускаемые прокси\-сервером.|  
+|-----------------|---------------------|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
-## Заметки  
- Элемент `remove` удаляет регулярное выражение, описывающее IP\-адреса или DNS\-имена сервера, из списка адресов, для которых не используется прокси\-сервер.  Эти адреса были заданы ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+## <a name="remarks"></a>Примечания  
+ `remove` Элемент удаляет регулярное выражение, описывающее IP-адреса или имена DNS-серверов в списке адресов, которые обходят прокси-сервер. Эти адреса были заданы ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
- Значение атрибута `name` должно быть регулярным выражением, описывающим набор IP\-адресов или имен узлов.  
+ Значение для `address` атрибут должен иметь регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
   
- Дополнительные сведения о регулярных выражениях см. в разделе [Регулярные выражения в .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода для домена adventure\-works.com удаляются все предыдущие определения, а затем в список пропускаемых адресов добавляется домен contoso.com.  
+## <a name="example"></a>Пример  
+ Следующий пример удаляет все предыдущие определения для домена adventure-works.com и затем добавляет в список пропускаемых домена contoso.com.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <bypasslist>  
-        <remove name = "[a-z]+\.adventure-works\.com$" />  
+        <remove address="[a-z]+\.adventure-works\.com$" />  
         <add address="[a-z]+\.contoso\.com$" />  
       </bypasslist>  
     </defaultProxy>  
@@ -85,6 +88,6 @@ caps.handback.revision: 16
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

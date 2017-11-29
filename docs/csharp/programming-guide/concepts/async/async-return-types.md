@@ -1,30 +1,21 @@
 ---
 title: "Асинхронные типы возвращаемых значений (C#)"
 ms.custom: 
-ms.date: 2075-05-29
+ms.date: 05/29/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e7f31d4160d44668f4ddea5e1ca0eaa3037c5a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
@@ -35,7 +26,7 @@ ms.lasthandoff: 07/28/2017
 
 - `void` для обработчика событий. 
 
-- Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName>.
+- Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Дополнительные сведения об асинхронных методах см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -46,7 +37,7 @@ ms.lasthandoff: 07/28/2017
   
 В следующем примере асинхронный метод `GetLeisureHours` содержит инструкцию `return`, которая возвращает целое число. Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task<int>`.  Асинхронный метод <xref:System.Threading.Tasks.Task.FromResult%2A> представляет собой заполнитель для операции, которая возвращает строку.
   
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
 При вызове `GetLeisureHours` из выражения await в методе `ShowTodaysInfo` это выражение await извлекает целочисленное значение (значение `leisureHours`), хранящееся в задаче, которая возвращается методом `GetLeisureHours`. Дополнительные сведения о выражениях await см. в разделе [await](../../../../csharp/language-reference/keywords/await.md).  
   
@@ -55,14 +46,14 @@ ms.lasthandoff: 07/28/2017
 > [!IMPORTANT]
 >  Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является блокирующим свойством. При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным. В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству. <br/> В предыдущем примере извлекалось значение свойства <xref:System.Threading.Tasks.Task%601.Result%2A> для блокировки основного потока. Это позволяет закончить выполнение метода `ShowTodaysInfo` до того, как завершится работа приложения.  
 
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
 ##  <a name="BKMK_TaskReturnType"></a> Тип возвращаемого значения Task  
 Асинхронные методы, не содержащие инструкцию `return` или содержащие инструкцию `return`, которая не возвращает операнд, обычно имеют тип возвращаемого значения <xref:System.Threading.Tasks.Task>. При синхронном выполнении такие методы возвращают `void`. Если для асинхронного метода вы используете тип возвращаемого значения <xref:System.Threading.Tasks.Task>, вызывающий метод может использовать оператор `await` для приостановки выполнения вызывающего объекта до завершения вызванного асинхронного метода.  
   
 В следующем примере асинхронный метод `WaitAndApologize` не содержит инструкцию `return`, в связи с чем он возвращает объект <xref:System.Threading.Tasks.Task>. Это позволяет реализовать ожидание `WaitAndApologize`. Обратите внимание, что тип <xref:System.Threading.Tasks.Task> не имеет возвращаемого значения и, соответственно, не содержит свойство `Result`.  
 
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
 `WaitAndApologize` вызывается и ожидается с помощью инструкции await (вместо выражения await), похожей на инструкцию вызова для синхронного метода, возвращающего значение void. Применение оператора await в этом случае не возвращает значение.  
   
@@ -70,7 +61,7 @@ ms.lasthandoff: 07/28/2017
   
 В следующем коде вызов метода `WaitAndApologize` отделяется от ожидания задачи, которую возвращает этот метод.  
  
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
 ##  <a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void  
 Тип возвращаемого значения `void` используется в асинхронных обработчиках событий, для которых требуется тип возвращаемого значения `void`. Поскольку методы, не являющиеся обработчиками событий, не возвращают значения, вместо этого необходимо вернуть <xref:System.Threading.Tasks.Task>. Это вызвано тем, что для асинхронных методов, возвращающих значение `void`, ожидание невозможно. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
@@ -81,7 +72,7 @@ ms.lasthandoff: 07/28/2017
   
 Следующий фрагмент кода определяет асинхронный обработчик событий.  
  
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Обобщенные асинхронные типы возвращаемых значений и ValueTask<T>
 
@@ -89,9 +80,9 @@ ms.lasthandoff: 07/28/2017
  
 Поскольку <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> являются ссылочными типами, выделение памяти во влияющих на производительность сегментах (особенно при выделении памяти в ограниченных циклах) может серьезно снизить производительность. Поддержка обобщенных типов возвращаемых значений позволяет возвращать небольшой тип значения вместо ссылочного типа, благодаря чему удается предотвратить избыточное выделение памяти. 
 
-На платформе .NET представлена структура <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName>, которая является упрощенной реализацией обобщенного значения, возвращающего задачу. Чтобы использовать тип <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName>, необходимо добавить в проект пакет NuGet `System.Threading.Tasks.Extensions`. В следующем примере структура <xref:System.Threading.Tasks.ValueTask%601> используется для извлечения значений двух игральных костей. 
+На платформе .NET представлена структура <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, которая является упрощенной реализацией обобщенного значения, возвращающего задачу. Чтобы использовать тип <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType>, необходимо добавить в проект пакет NuGet `System.Threading.Tasks.Extensions`. В следующем примере структура <xref:System.Threading.Tasks.ValueTask%601> используется для извлечения значений двух игральных костей. 
   
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
 ## <a name="see-also"></a>См. также  
 <xref:System.Threading.Tasks.Task.FromResult%2A>   
@@ -99,4 +90,3 @@ ms.lasthandoff: 07/28/2017
 [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 [async](../../../../csharp/language-reference/keywords/async.md)   
 [await](../../../../csharp/language-reference/keywords/await.md)
-

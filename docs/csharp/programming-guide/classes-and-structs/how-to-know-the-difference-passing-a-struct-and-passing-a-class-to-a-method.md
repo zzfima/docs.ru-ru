@@ -1,40 +1,22 @@
 ---
 title: "Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b989c3cefe72c6c17d10dd91005dcecbfc84e389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4508c8765ac678fd371180cb0c3ece3e1d9a44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Практическое руководство. Определение различия между передачей структуры и ссылки класса в метод (Руководство по программированию в C#)
 В следующем примере демонстрируется, чем передача [структуры](../../../csharp/language-reference/keywords/struct.md) в метод отличается от передачи экземпляра [класса](../../../csharp/language-reference/keywords/class.md) в метод. В этом примере оба аргумента (структура и экземпляр класса) передаются по значению, и оба метода изменяют значение одного поля аргумента. Тем не менее результаты этих двух методов будут отличаться, поскольку в случае со структурой передаваемое содержимое отличается от передачи экземпляра класса.  
@@ -46,11 +28,10 @@ ms.lasthandoff: 07/28/2017
  Различия демонстрируются в выходных данных следующего примера. Значение поля `willIChange` экземпляра класса изменяется в результате вызова метода `ClassTaker`, поскольку этот метод находит указанное поле экземпляра класса по адресу, содержащемуся в параметре. Поле `willIChange` структуры в вызывающем методе не изменяется в результате вызова метода `StructTaker`, поскольку значением аргумента является копия самой структуры, а не ее адреса. `StructTaker` изменяет саму копию, которая будет утрачена после завершения вызова `StructTaker`.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+ [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [Передача параметров](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-

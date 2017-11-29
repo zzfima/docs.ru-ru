@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>Обработчик веб-токенов JSON
 Расширение обработчика веб-токенов JSON для Windows Identity Foundation позволяет создавать и проверять веб-токены JSON (JWT) в ваших приложениях. Обработчик токена JWT можно настроить для запуска в конвейере WIF, как и другие встроенные обработчики токенов безопасности, однако данный обработчик также можно использовать независимо для выполнения проверки токенов в облегченных версиях приложений. Обработчик токенов JWT особенно эффективен при использовании схемы токенов носителя OAuth 2.0, например аутентификации в Microsoft Azure Active Directory.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 08/21/2017
 -   **Проверка токена JWT**: токены JWT несложно проверить с помощью логики проверки данного обработчика токенов, даже в составе конвейера WIF приложения или независимо от WIF  
   
 -   **Создание токена JWT**: обработчик токенов JWT можно использовать для создания токенов JWT в целях авторизации в службах более низкого уровня
-

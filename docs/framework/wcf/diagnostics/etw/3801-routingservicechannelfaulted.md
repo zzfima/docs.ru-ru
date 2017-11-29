@@ -1,35 +1,38 @@
 ---
-title: "3801 - RoutingServiceChannelFaulted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3801 - RoutingServiceChannelFaulted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 06cd2a1a-ee5f-4f44-900c-15b5bb6e302b
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6eaebd02102633c37f5edc0e3c0758c865e4e792
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3801 - RoutingServiceChannelFaulted
-## Свойства  
+# <a name="3801---routingservicechannelfaulted"></a>3801 - RoutingServiceChannelFaulted
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3801|  
 |Ключевые слова|Службы маршрутизации|  
 |Уровень|Предупреждение|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие формируется при сбое клиента службы маршрутизации.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Клиент службы маршрутизации «%1» завершил выполнение с ошибкой.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

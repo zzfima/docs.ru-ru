@@ -1,30 +1,21 @@
 ---
 title: "Общие атрибуты (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  
@@ -59,7 +50,7 @@ ms.lasthandoff: 07/28/2017
   
  В следующей таблице приведены атрибуты удостоверения.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|Полностью описывает удостоверение сборки.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Задает версию сборки.|  
@@ -67,9 +58,9 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Указывает, поддерживает ли сборка параллельное выполнение на одном компьютере, в одном процессе или в одном домене приложения.|  
   
 ### <a name="informational-attributes"></a>Информационные атрибуты  
- Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в пространстве имен <xref:System.Reflection?displayProperty=fullName>.  
+ Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Определяет настраиваемый атрибут, задающий имя продукта для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Определяет настраиваемый атрибут, задающий товарный знак для манифеста сборки.|  
@@ -80,9 +71,9 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.CLSCompliantAttribute>|Указывает, соответствует ли сборка спецификации CLS.|  
   
 ### <a name="assembly-manifest-attributes"></a>Атрибуты манифеста сборки  
- Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. К ним относится заголовок, описание, псевдоним по умолчанию и конфигурация. В следующей таблице показаны атрибуты манифеста сборки, определенные в пространстве имен <xref:System.Reflection?displayProperty=fullName>.  
+ Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. К ним относится заголовок, описание, псевдоним по умолчанию и конфигурация. В следующей таблице показаны атрибуты манифеста сборки, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|Определяет настраиваемый атрибут, задающий название сборки для манифеста сборки.|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|Определяет настраиваемый атрибут, задающий описание сборки для манифеста сборки.|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> Информационные атрибуты вызывающего объекта  
  С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта.  
   
- Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Атрибут|Описание|Тип|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  Дополнительные сведения об информационных атрибутах вызывающего объекта см. в разделе [Сведения о вызывающем объекте (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+ [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
  [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

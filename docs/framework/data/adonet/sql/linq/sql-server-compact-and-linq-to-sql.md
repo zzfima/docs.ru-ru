@@ -1,43 +1,46 @@
 ---
-title: "SQL Server Compact и LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Compact и LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 600d4deacd7a9b048fb9c3d996e62d441c87eeaa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# SQL Server Compact и LINQ to SQL
-SQL Server Compact \- база данных по умолчанию, устанавливаемая вместе с Visual Studio. Дополнительные сведения см. в разделе [PAVE OVER Using SQL Server Compact \(Visual Studio\)](http://msdn.microsoft.com/ru-ru/13320dd1-94e5-4077-bf76-8df253695ccc).  
+# <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact и LINQ to SQL
+SQL Server Compact — база данных по умолчанию, устанавливается вместе с Visual Studio. Дополнительные сведения см. в разделе [PAVE по с помощью SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc).  
   
- В этом разделе описаны основные отличия в использовании, настройке, наборе функций и области применения поддержки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ В этом разделе описаны основные отличия в использовании, конфигурации, наборы функций и области [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддержки.  
   
-## Характеристики SQL Server Compact относительно LINQ to SQL  
- По умолчанию SQL Server Compact установлена для всех выпусков [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] и поэтому доступна для использования c [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] на компьютере разработчика.  Однако развертывание приложения, использующего SQL Server Compact и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], отличается от развертывания приложения [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)].  SQL Server Compact не является частью платформы .NET Framework. Этот компонент должен быть упакован в состав приложения или загружен отдельно с веб\-сайта Майкрософт.  
+## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a>Характеристики SQL Server Compact относительно LINQ to SQL  
+ По умолчанию SQL Server Compact устанавливаются для всех [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] выпуски и поэтому доступна на компьютере разработчика для использования с [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Однако развертывание приложения, использующего SQL Server Compact и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] отличается от [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] приложения. SQL Server Compact не является частью платформы .NET Framework. Этот компонент должен быть упакован в состав приложения или загружен отдельно с веб-сайта Майкрософт.  
   
  Обратите внимание на следующие характеристики.  
   
--   SQL Server Compact упаковывается в виде DLL\-файла, который может использоваться непосредственно в файлах базы данных \(расширение SDF\).  
+-   SQL Server Compact упаковывается в виде DLL-файла, который может использоваться непосредственно в файлах базы данных (расширение SDF).  
   
--   SQL Server Compact выполняется в тех же процессах, что и клиентское приложение.  Следовательно, эффективность взаимодействия с SQL Server Compact может быть значительно выше, чем с [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)].  С другой стороны, для SQL Server Compact не требуется взаимодействие управляемого и неуправляемого кода с сопутствующими расходами.  
+-   SQL Server Compact выполняется в том же процессе, что и клиентское приложение. Эффективность взаимодействия с SQL Server Compact, поэтому может быть значительно выше, чем с [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. С другой стороны SQL Server Compact требуется взаимодействие управляемого и неуправляемого кода с сопутствующими расходами.  
   
--   Размер DLL\-библиотеки SQL Server Compact невелик.  Данная функция сокращает общий размер приложения.  
+-   Устанавливается малый размер SQL Server Compact библиотеки DLL. Данная возможность сокращает общий размер приложения.  
   
 -   Среда выполнения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и средство командной строки SQLMetal поддерживают SQL Server Compact.  
   
 -   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] не поддерживает SQL Server Compact.  
   
-## Набор функций  
- Набор функций SQL Server Compact гораздо проще набора [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] в отношении способов, которые могут повлиять на приложения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="feature-set"></a>Набор возможностей  
+ Набор компонентов SQL Server Compact гораздо проще, чем набор функциональных возможностей [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] одним из следующих способов, которые могут повлиять на [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] приложений:  
   
 -   SQL Server Compact не поддерживает хранимые процедуры или представления.  
   
@@ -45,9 +48,9 @@ SQL Server Compact \- база данных по умолчанию, устан
   
 -   SQL Server Compact поддерживает только подмножество конструкций SQL.  
   
--   SQL Server Compact предоставляет только минимальный оптимизатор.  Существует возможность истечения времени ожидания некоторых запросов.  
+-   SQL Server Compact предоставляет только минимальный оптимизатор. Это возможно, что некоторые запросы, время ожидания может истечь.  
   
 -   SQL Server Compact не поддерживает частичное доверие.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

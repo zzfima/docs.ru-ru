@@ -7,18 +7,15 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
+ms.openlocfilehash: f3efbfd232bd7e19d3db56289f57724c71dca064
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="write-linq-queries-in-c"></a>Создание запросов LINQ на языке C#
 
 В этом разделе рассматриваются три способа создания запросов LINQ в C#:  
@@ -39,7 +36,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="query-syntax"></a>Синтаксис запроса  
  Для создания запросов рекомендуется использовать *синтаксис запроса*, позволяющий создавать *выражения запросов*. В следующем примере показаны три выражения запросов. Первое выражение запроса показывает, как фильтровать или ограничивать результаты, применяя условия в предложении `where`. Оно возвращает все элементы исходной последовательности, значения которых больше 7 или меньше 3. Второе выражение показывает, как сортировать возвращаемые результаты. Третье выражение показывает, как группировать результаты по ключу. Этот запрос возвращает две группы на основе первой буквы слова.  
   
- [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
  Обратите внимание, что запросы имеют тип <xref:System.Collections.Generic.IEnumerable%601>. Все эти запросы можно написать с помощью `var`, как показано в следующем примере:  
   
@@ -52,25 +49,25 @@ ms.lasthandoff: 07/28/2017
 ## <a name="method-syntax"></a>Синтаксис метода  
  Некоторые операции запросов должны быть выражены как вызов метода. Как правило, такие методы возвращают одноэлементные числовые значения, например <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> и другие. Эти методы необходимо вызывать в запросе последними, поскольку представляют только одно значение и не могут служить источником для дополнительной операции запроса. В следующем примере показан вызов метода в выражении запроса:  
   
- [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
 ## <a name="example"></a>Пример  
  Если метод имеет параметры Action или Func, они предоставляются в виде [лямбда](../programming-guide/statements-expressions-operators/lambda-expressions.md)-выражения, как показано в следующем примере:  
   
- [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
+ [!code-csharp[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
  Из числа предыдущих запросов незамедлительно выполняется только запрос 4. Это связано с тем, что возвращается одно значение, а не универсальная коллекция <xref:System.Collections.Generic.IEnumerable%601>. Сам метод для вычисления значения должен использовать `foreach`.  
   
  Каждый из предыдущих запросов может быть написан с использованием неявной типизации по переменной [var](../language-reference/keywords/var.md), как показано в следующем примере:  
   
- [!code-cs[csProgGuideLINQ#8](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]  
+ [!code-csharp[csProgGuideLINQ#8](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]  
   
 ## <a name="example"></a>Пример  
   
 ## <a name="mixed-query-and-method-syntax"></a>Смешанный синтаксис запроса и метода  
  В этом примере показано, как применять синтаксис метода к результатам предложения запроса. Просто заключите выражение запроса в круглые скобки, а затем примените оператор точки и вызовите метод. В следующем примере запрос 7 возвращает количество чисел со значением от 3 до 7. При этом в целом сохранять результат вызова метода лучше во вторую переменную. В этом случае меньше вероятность спутать запрос с его результатами.  
   
- [!code-cs[csProgGuideLINQ#9](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]  
+ [!code-csharp[csProgGuideLINQ#9](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]  
   
  Поскольку запрос 7 возвращает одно значение, а не коллекцию, он выполняется незамедлительно.  
   
@@ -94,6 +91,5 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   
 ## <a name="see-also"></a>См. также  
   [Пошаговое руководство. Написание запросов на C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [Выражения запросов LINQ](index.md)   
+ [Выражения запросов LINQ](index.md)  
  [предложение where](../language-reference/keywords/where-clause.md)
-
