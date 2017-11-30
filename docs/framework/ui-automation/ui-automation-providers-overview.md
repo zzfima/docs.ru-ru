@@ -1,61 +1,64 @@
 ---
-title: "UI Automation Providers Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, providers"
-  - "providers, UI Automation"
+title: "Общие сведения о поставщиках автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, providers
+- providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: 38
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 4adcc157f4d79898a0418219993681920eb92965
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# UI Automation Providers Overview
+# <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Поставщики автоматизации пользовательского интерфейса включают элементы управления для взаимодействия с клиентскими приложениями модели автоматизации пользовательского интерфейса. В целом каждый элемент управления или другой отдельный элемент в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] представляется поставщиком. Поставщик предоставляет сведения об этом элементе и при необходимости реализует шаблоны элементов управления, которые позволяют клиентскому приложению взаимодействовать с этим элементом управления.  
   
- Клиентские приложения обычно не должны работать непосредственно с поставщиками. Большинство стандартных элементов управления в приложениях, использующих инфраструктуру [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], автоматически предоставляется в систему [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Приложения, реализующие пользовательские элементы управления, могут также реализовывать поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для этих элементов управления, и клиентским приложениям не требуется предпринимать дополнительные действия для получения доступа к ним.  
+ Клиентские приложения обычно не должны работать непосредственно с поставщиками. Большинство стандартных элементов управления в приложениях, использующих инфраструктуру [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]или [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , автоматически предоставляется в систему [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Приложения, реализующие пользовательские элементы управления, могут также реализовывать поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] для этих элементов управления, и клиентским приложениям не требуется предпринимать дополнительные действия для получения доступа к ним.  
   
- В этом разделе приведены общие сведения о том, как разработчики элементов управления реализуют поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], в частности для элементов управления в окнах [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)].  
+ В этом разделе приведены общие сведения о том, как разработчики элементов управления реализуют поставщики [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , в частности для элементов управления в окнах [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] .  
   
 <a name="Types_of_Providers"></a>   
-## Типы поставщиков  
+## <a name="types-of-providers"></a>Типы поставщиков  
  Поставщики автоматизации пользовательского интерфейса делятся на две категории: поставщики на стороне клиента и поставщики на стороне сервера.  
   
-### Поставщики на стороне клиента  
- Поставщики на стороне клиента реализуются клиентами автоматизации пользовательского интерфейса для взаимодействия с приложением, которое не поддерживает или не полностью поддерживает [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поставщики на стороне клиента обычно взаимодействуют с сервером через границу процесса путем отправки и получения сообщений [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)].  
+### <a name="client-side-providers"></a>Поставщики на стороне клиента  
+ Поставщики на стороне клиента реализуются клиентами автоматизации пользовательского интерфейса для взаимодействия с приложением, которое не поддерживает или не полностью поддерживает [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поставщики на стороне клиента обычно взаимодействуют с сервером через границу процесса путем отправки и получения сообщений [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] .  
   
  Поскольку поставщики автоматизации пользовательского интерфейса для элементов управления в приложениях [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)], или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] предоставляются в рамках операционной системы, клиентским приложениям редко требуется реализовывать свои собственные поставщики, и в этом обзоре они не рассматривается.  
   
-### Поставщики на стороне сервера  
- Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями , основанными на инфраструктуре пользовательского интерфейса, отличной от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+### <a name="server-side-providers"></a>Поставщики на стороне сервера  
+ Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями , основанными на инфраструктуре пользовательского интерфейса, отличной от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
- Поставщики на стороне сервера взаимодействуют с клиентскими приложениями через границу процесса, предоставляя интерфейсы для базовой системы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], которая в свою очередь обслуживает запросы от клиентов.  
+ Поставщики на стороне сервера взаимодействуют с клиентскими приложениями через границу процесса, предоставляя интерфейсы для базовой системы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которая в свою очередь обслуживает запросы от клиентов.  
   
 <a name="AutomationProviderConcepts"></a>   
-## Основные понятия поставщиков автоматизации пользовательского интерфейса  
+## <a name="ui-automation-provider-concepts"></a>Основные понятия поставщиков автоматизации пользовательского интерфейса  
  В этом разделе содержится краткое описание некоторых ключевых понятий, которые необходимо знать для реализации поставщиков автоматизации пользовательского интерфейса.  
   
-### Элементы  
- Элементы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это части [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], видимые клиентам автоматизации пользовательского интерфейса. В качестве примеров можно привести окна приложений, панели, кнопки, подсказки, списки и элементы списков.  
+### <a name="elements"></a>Элементы  
+ Элементы[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это части [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , видимые клиентам автоматизации пользовательского интерфейса. В качестве примеров можно привести окна приложений, панели, кнопки, подсказки, списки и элементы списков.  
   
-### Навигация  
- Элементы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляются клиентам в виде дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] создает это дерево путем перемещения от одного элемента к другому. Поставщики разрешают навигацию для всех элементов, каждый из которых может указывать на родительский элемент, одноуровневые элементы и дочерние элементы.  
+### <a name="navigation"></a>Навигация  
+ Элементы[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляются клиентам в виде дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] создает это дерево путем перемещения от одного элемента к другому. Поставщики разрешают навигацию для всех элементов, каждый из которых может указывать на родительский элемент, одноуровневые элементы и дочерние элементы.  
   
  Дополнительные сведения о клиентском представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-### Представления  
+### <a name="views"></a>Представления  
  Клиент может видеть дерево [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] в трех различных представлениях, как показано в следующей таблице.  
   
 |||  
@@ -68,20 +71,20 @@ caps.handback.revision: 38
   
  Поставщик в своей реализации определяет элемент как элемент содержимого или элемент управления. Элементы управления могут быть или не быть также и элементами содержимого, но все элементы содержимого являются элементами управления.  
   
-### Инфраструктуры  
- Инфраструктура — это компонент, который управляет дочерними элементами управления, проверкой попадания и визуализацией в области экрана. Например, окно [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], которое часто называют HWND, может служить инфраструктурой, которая содержит несколько элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], таких как меню, строка состояния и кнопки.  
+### <a name="frameworks"></a>Инфраструктуры  
+ Инфраструктура — это компонент, который управляет дочерними элементами управления, проверкой попадания и визуализацией в области экрана. Например, окно [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , которое часто называют HWND, может служить инфраструктурой, которая содержит несколько элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как меню, строка состояния и кнопки.  
   
- Контейнерные элементы управления [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], такие как списки и представления в виде дерева, считаются инфраструктурами, так как они содержат собственный код для визуализации дочерних элементов и выполнения проверки попадания в них. Напротив, список [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] не является инфраструктурой, поскольку визуализация и проверка попадания обрабатываются содержащим его окном [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Контейнерные элементы управления[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , такие как списки и представления в виде дерева, считаются инфраструктурами, так как они содержат собственный код для визуализации дочерних элементов и выполнения проверки попадания в них. Напротив, список [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] не является инфраструктурой, поскольку визуализация и проверка попадания обрабатываются содержащим его окном [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
- [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] в приложении может состоять из разных инфраструктур. Например, окно приложения HWND может содержать [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)], который в свою очередь содержит компонент, например поле со списком в HWND.  
+ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] в приложении может состоять из разных инфраструктур. Например, окно приложения HWND может содержать [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] , который в свою очередь содержит компонент, например поле со списком в HWND.  
   
-### Фрагменты  
- Фрагмент — это полное поддерево элементов из определенной инфраструктуры. Элемент на уровне корневого узла поддерева называется корнем фрагмента. У корня фрагмента отсутствует родительский элемент, но он размещается в другой инфраструктуре, обычно в окне [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] \(HWND\).  
+### <a name="fragments"></a>Фрагменты  
+ Фрагмент — это полное поддерево элементов из определенной инфраструктуры. Элемент на уровне корневого узла поддерева называется корнем фрагмента. У корня фрагмента отсутствует родительский элемент, но он размещается в другой инфраструктуре, обычно в окне [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  
   
-### Узлы  
- Корневой узел каждого фрагмента должен быть размещен в элементе, обычно в окне [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] \(HWND\). Исключением является рабочий стол, который не размещается ни в каком другом элементе. Узлом пользовательского элемента управления является HWND самого элемента управления, а не окно приложения или какое\-либо другое окно, которое может содержать группы элементов управления верхнего уровня.  
+### <a name="hosts"></a>Узлы  
+ Корневой узел каждого фрагмента должен быть размещен в элементе, обычно в окне [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] (HWND). Исключением является рабочий стол, который не размещается ни в каком другом элементе. Узлом пользовательского элемента управления является HWND самого элемента управления, а не окно приложения или какое-либо другое окно, которое может содержать группы элементов управления верхнего уровня.  
   
- Узел фрагмента играет важную роль в предоставлении служб [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Он позволяет навигацию в корень фрагмента и предоставляет некоторые свойства по умолчанию, чтобы настраиваемому поставщику не требовалось реализовывать их.  
+ Узел фрагмента играет важную роль в предоставлении служб [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Он позволяет навигацию в корень фрагмента и предоставляет некоторые свойства по умолчанию, чтобы настраиваемому поставщику не требовалось реализовывать их.  
   
-## См. также  
- [Server\-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>См. также  
+ [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

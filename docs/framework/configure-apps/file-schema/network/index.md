@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
 - sending data, network configuration elements
@@ -25,16 +19,15 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a101b3d6ebf1c884bce08077a1138a4ab6376d1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-settings-schema"></a>Схема параметров сети
 Параметры сети определяют способ подключения .NET Framework к Интернету. В приведенной ниже таблице описывается назначение каждого дочернего элемента конфигурации для [элемента \<system.Net> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -46,7 +39,7 @@ ms.lasthandoff: 09/05/2017
 |[Элемент \<defaultProxy> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Задает прокси-сервер, используемый для HTTP-запросов к Интернету.|  
 |[Элемент \<mailSettings> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Содержит параметры отправки почты.|  
 |[Элемент \<requestCaching> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Задает модули, используемые для запроса данных от узлов в Интернете.|  
-|[Элемент \<requestCaching> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=fullName>.|  
+|[Элемент \<requestCaching> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=nameWithType>.|  
 |[Элемент \<webRequestModules> (параметры сети)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от узлов в Интернете.|  
   
  Параметры универсальных кодов ресурсов (URI) определяют, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием URI. В приведенной ниже таблице описывается назначение каждого дочернего элемента конфигурации для [элемента \<Uri> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  
@@ -58,6 +51,5 @@ ms.lasthandoff: 09/05/2017
 |[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="see-also"></a>См. также  
- [Настройка веб-приложений](../../../../../docs/framework/network-programming/configuring-internet-applications.md)   
+ [Настройка веб-приложений](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-

@@ -1,35 +1,38 @@
 ---
-title: "1451 - MaxRetryCyclesExceeded | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1451 - MaxRetryCyclesExceeded
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b2466f5-a6cb-43b7-aff1-70327ffbdbc1
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f404c69feb4370d32d84d2bc4f00e0a75724c5b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 1451 - MaxRetryCyclesExceeded
-## Свойства  
+# <a name="1451---maxretrycyclesexceeded"></a>1451 - MaxRetryCyclesExceeded
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|1451|  
 |Ключевые слова|Квота|  
 |Уровень|Ошибка|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается при превышении максимального количества циклов повторных попыток.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  1%  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

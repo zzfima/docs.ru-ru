@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="method-etw-events"></a>События методов (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, связанные с методами. Полезные данные этих событий необходимы для разрешения символов. Кроме того, эти события содержат полезные сведения, например сколько раз вызывался метод.  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>См. также  
  [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-

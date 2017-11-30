@@ -1,61 +1,64 @@
 ---
-title: "Элемент &lt;clear&gt; для &lt;namedCaches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> - элемент для <namedCaches>"
-  - "clear - элемент для <namedCaches>"
+title: "&lt;Очистить&gt; элемент для &lt;namedCaches&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <clear> element for <namedCaches>
+- clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0819141b2135a2de99a2801a1888f7b0e1cd19fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент &lt;clear&gt; для &lt;namedCaches&gt;
-Очищает все записи `namedCache` в коллекции `namedCaches` для кэша памяти.  
+# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Очистить&gt; элемент для &lt;namedCaches&gt;
+Удаляет все `namedCache` записей в `namedCaches` коллекции для кэш-памяти.  
   
-## Синтаксис  
+ \<System.Runtime.Caching >  
+\<memoryCache >  
+\<namedCaches >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <namedCaches>  
     <clear name="default" />  
     <!-- child elements -->  
  </namedCaches>  
 ```  
   
-## Тип  
+## <a name="type"></a>Тип  
  `Type`  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
  `None`  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  `None`  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<namedCaches\>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованных экземпляров <xref:System.Runtime.Caching.MemoryCache>.|  
+|-------------|-----------------|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров.|  
   
-## Заметки  
- Элемент `clear` очищает все записи `namedCache` в коллекции именованных кэшей для кэша памяти.  Элемент `clear` можно использовать перед использованием элемента `add`, чтобы добавить новую запись именованного кэша, чтобы убедиться, что в коллекции отсутствуют другие именованные кэши.  
+## <a name="remarks"></a>Примечания  
+ `clear` Элемент очищает все `namedCache` записи в коллекции именованных кэшей для кэша памяти. Можно использовать `clear` элемент, прежде чем использовать `add` элемента, который требуется добавить новую запись именованного кэша, чтобы быть уверенным, никакие другие именованные кэши в коллекции.  
   
-## См. также  
- [Элемент \<namedCaches\> \(параметры кэша\)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a>См. также  
+ [\<namedCaches > элемент (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

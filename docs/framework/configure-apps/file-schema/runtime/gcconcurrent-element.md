@@ -1,105 +1,103 @@
 ---
-title: "Элемент &lt;gcConcurrent&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcConcurrent> - элемент"
-  - "теги контейнеров, <gcConcurrent> - элемент"
-  - "gcConcurrent - элемент"
+title: "&lt;gcConcurrent&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
+helpviewer_keywords:
+- container tags, <gcConcurrent> element
+- gcConcurrent element
+- <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;gcConcurrent&gt;
+# <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; элемент
 Указывает, выполняет ли среда CLR сборку мусора в отдельном потоке.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+\<gcConcurrent >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <gcConcurrent    
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
+|---------------|-----------------|  
 |`enabled`|Обязательный атрибут.<br /><br /> Указывает, выполняет ли среда выполнения сборку мусора параллельно.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
 |`false`|Сборка мусора не выполняется параллельно.|  
-|`true`|Сборка мусора выполняется параллельно.  Это значение по умолчанию.|  
+|`true`|Сборка мусора выполняется параллельно. Это значение по умолчанию.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
+|-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- До .NET Framework 4 сборка мусора рабочей станции поддерживала параллельную сборку мусора, которая выполнялась в фоновом режиме в отдельном потоке.  В .NET Framework 4 параллельная сборка мусора была заменена фоновой сборкой мусора, которая также выполняется в фоновом режиме в отдельном потоке.  Начиная с .NET Framework 4.5 фоновая сборка мусора стала доступна для сборки мусора сервера.  Элемент `<gcConcurrent>` управляет тем, какую сборку мусора выполняет среда выполнения —параллельную или фоновую сборку мусора, если она доступна, либо сборку мусора на переднем плане.  
+## <a name="remarks"></a>Примечания  
+ До .NET Framework 4 сборка мусора рабочей станции поддерживала параллельную сборку мусора, которая выполнялась в фоновом режиме в отдельном потоке. В .NET Framework 4 параллельная сборка мусора была заменена фоновой сборкой мусора, которая также выполняется в фоновом режиме в отдельном потоке. Начиная с .NET Framework 4.5 фоновая сборка мусора стала доступна для сборки мусора сервера. Элемент `<gcConcurrent>` управляет тем, какую сборку мусора выполняет среда выполнения —параллельную или фоновую сборку мусора, если она доступна, либо сборку мусора на переднем плане.  
   
 > [!WARNING]
->  Начиная с .NET Framework 4, параллельная сборка мусора заменена на фоновую сборку мусора.  В документации платформы .NET Framework термины *параллельная* и *фоновая* взаимозаменяемы.  Чтобы отключить фоновую сборку мусора, используйте элемент `<gcConcurrent>`, как описано в этом разделе.  
+>  Начиная с .NET Framework 4, параллельная сборка мусора заменена на фоновую сборку мусора. Условия *параллельных* и *фона* взаимозаменяемы в документации по платформе .NET Framework. Чтобы отключить фоновую сборку мусора, используйте элемент `<gcConcurrent>`, как описано в этом разделе.  
   
- По умолчанию среда выполнения использует параллельную или фоновую сборку мусора, которая оптимизирована по задержкам.  Если приложение подразумевает активное взаимодействие с пользователем, рекомендуется использовать параллельную сборку мусора, чтобы сократить паузы в работе приложения, возникающие при сборке мусора.  Если атрибут `enabled` элемента `<gcConcurrent>` имеет значение `false`, среда выполнения использует непараллельную сборку мусора, которая оптимизирована по производительности.  В следующем файле конфигурации отключается фоновая сборка мусора.  
+ По умолчанию среда выполнения использует параллельную или фоновую сборку мусора, которая оптимизирована по задержкам. Если приложение подразумевает активное взаимодействие с пользователем, рекомендуется использовать параллельную сборку мусора, чтобы сократить паузы в работе приложения, возникающие при сборке мусора. Если атрибут `enabled` элемента `<gcConcurrent>` имеет значение `false`, среда выполнения использует непараллельную сборку мусора, которая оптимизирована по производительности. В следующем файле конфигурации отключается фоновая сборка мусора.  
   
 ```xml  
-  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="false"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
- Если в файле конфигурации компьютера имеется параметр `<gcConcurrentSetting>`, он определяет значение по умолчанию для всех приложений .NET Framework.  Параметр в файле конфигурации компьютера переопределяет параметр в файле конфигурации приложения.  
+ Если в файле конфигурации компьютера имеется параметр `<gcConcurrentSetting>`, он определяет значение по умолчанию для всех приложений .NET Framework. Параметр в файле конфигурации компьютера переопределяет параметр в файле конфигурации приложения.  
   
- Дополнительные сведения о параллельной и фоновой сборке мусора, см. в разделе «Параллельная сборка мусора» статьи [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md).  
+ Дополнительные сведения о параллельной и фоновой сборке мусора см. в разделе «параллельная сборка мусора» [основы сборки мусора](../../../../../docs/standard/garbage-collection/fundamentals.md) раздела.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере включается параллельная сборка мусора.  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Основы сборки мусора](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -1,67 +1,75 @@
 ---
-title: "&lt;add&gt; для &lt;filters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;add&gt; для &lt;filters&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7143216b6b195c59077b004f8aaa1b17a249fbc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; для &lt;filters&gt;
+# <a name="ltaddgt-of-ltfiltersgt"></a>&lt;add&gt; для &lt;filters&gt;
 Фильтр XPath, задающий тип сообщений для записи в журнал.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<диагностические >  
+\<messageLogging >  
+\<Фильтры >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <filters>  
    <add filter="String"/>  
 </filters>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|фильтр|Строка, задающая запрос к документу XML, определенный в виде выражения XPath 1.0.  Для получения дополнительной информации см. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|---------------|-----------------|  
+|фильтр|Строка, задающая запрос к документу XML, определенный в виде выражения XPath 1.0. Для получения дополнительной информации см. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<фильтры\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
+|-------------|-----------------|  
+|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
   
-## Заметки  
- Фильтры применяются только на транспортном уровне, когда параметр `logMessagesAtTransportLevel` имеет значение `true`.  Фильтры не влияют на ведение журнала сообщений уровня службы и неправильно сформированных сообщений.  
+## <a name="remarks"></a>Примечания  
+ Фильтры применяются только на транспортном уровне, когда параметр `logMessagesAtTransportLevel` имеет значение `true`. Фильтры не влияют на ведение журнала сообщений уровня службы и неправильно сформированных сообщений.  
   
- Для добавления нового фильтра в коллекцию используется ключевое слово `add`.  Если в файле конфигурации определены один или несколько фильтров, в журнал записываются только сообщения, соответствующие хотя бы одному из фильтров.  Если фильтры не заданы, в журнал записываются все сообщения.  
+ Для добавления нового фильтра в коллекцию используется ключевое слово `add`. Если в файле конфигурации определены один или несколько фильтров, в журнал записываются только сообщения, соответствующие хотя бы одному из фильтров. Если фильтры не заданы, в журнал записываются все сообщения.  
   
- Фильтры поддерживают полный синтаксис XPath и применяются в том порядке, в котором они записаны в файле конфигурации.  Синтаксически неверные фильтры вызывают исключения конфигурации.  
+ Фильтры поддерживают полный синтаксис XPath и применяются в том порядке, в котором они записаны в файле конфигурации. Синтаксически неверные фильтры вызывают исключения конфигурации.  
   
  В следующем примере показано, как настроить фильтр для записи только сообщений с разделом заголовка SOAP.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как настроить фильтр для записи только сообщений с разделом заголовка SOAP.  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
      logMalformedMessages="true" logMessagesAtServiceLevel="true"  
-     logMessagesAtTransportLevel="true" maxMessagesToLog="420”>  
+     logMessagesAtTransportLevel="true" maxMessagesToLog="420">  
      <filters>  
         <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
                         /soap:Envelope/soap:Headers  
@@ -70,14 +78,14 @@ caps.handback.revision: 4
 </messageLogging>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>   
- <xref:System.ServiceModel.Configuration.XpathMessageFilterElement>   
- <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>   
- [Настройка ведения журнала сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)   
- [Настройка ведения журнала сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)   
- [\<messageLogging\>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>  
+ <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>  
+ <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>  
+ [Настройка ведения журналов сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [Настройка ведения журналов сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

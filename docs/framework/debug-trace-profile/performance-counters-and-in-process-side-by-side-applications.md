@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Счетчики производительности и внутрипроцессные параллельные приложения
 С помощью системного монитора (Perfmon.exe) можно различать счетчики производительности на основе среды выполнения. В этом разделе описываются изменения в реестре, необходимые для включения этой функции.  
@@ -59,7 +55,8 @@ ms.lasthandoff: 08/21/2017
   
  В следующем примере показано изменение значения `ProcessNameFormat` программным способом.  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  При внесении этого изменения в реестр программа Perfmon.exe отображает имена приложений, предназначенных для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], как *приложение*_`p`*ИД_процесса*\_`r`*ИД_среды_выполнения*, где *приложение* — это имя приложения, *ИД_процесса* — идентификатор процесса, а *ИД_среды_выполнения* — идентификатор общеязыковой среды выполнения. Например, если приложение myapp.exe загружает два экземпляра общеязыковой среды выполнения, программа Perfmon.exe может идентифицировать их как myapp_p1416_r10 и myapp_p3160_r10 соответственно. Идентификатор среды выполнения может использоваться только для различения сред выполнения в рамках процесса и не предоставляет какой-либо другой информации о среде выполнения. (Например, идентификатор среды выполнения не связан с ее версией или номером SKU.)  
   
@@ -69,4 +66,3 @@ ms.lasthandoff: 08/21/2017
 >  Идентификатор процесса позволяет устранить неоднозначность при идентификации двух приложений с одинаковыми именами, использующих более ранние версии среды выполнения. Идентификатор среды выполнения для более ранних версий общеязыковой среды выполнения не нужен, поскольку в них не поддерживаются сценарии параллельного размещения.  
   
  Если платформа [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] отсутствует или не была установлена, этот параметр раздела реестра не учитывается. Это означает, что два приложения с одинаковым именем будут по-прежнему отображаться в программе Perfmon.exe как *приложение* и *приложение#1* (например, **myapp** и **myapp#1**).
-

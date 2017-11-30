@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="constrained-execution-regions"></a>области с ограничением выполнения
 Область ограниченного выполнения (CER) является одной из составляющих механизма создания надежного управляемого кода. В этой области общеязыковая среда выполнения (CLR) не может выдавать специализированные исключения, препятствующие полному выполнению заключенного в эту область кода. В этой области не может выполняться пользовательский код, в результате которого могут возникать специализированные исключения. Метод <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> указывается непосредственно перед блоком `try` и помечает блоки `catch`, `finally` и `fault` как области ограниченного выполнения. После определения области ограниченного выполнения код может вызывать только другой код со строгими контрактами надежности и не должен выделять память или выполнять виртуальные вызовы для неподготовленных или ненадежных методов, если в таком коде не предусмотрены механизмы обработки сбоев. Среда выполнения задерживает аварийные завершения потоков для кода, который выполняется в области ограниченного выполнения.  
@@ -126,4 +124,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Рекомендации по обеспечению надежности](../../../docs/framework/performance/reliability-best-practices.md)
-

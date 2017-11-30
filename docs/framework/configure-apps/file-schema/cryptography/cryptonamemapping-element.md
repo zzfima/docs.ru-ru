@@ -1,69 +1,71 @@
 ---
-title: "Элемент &lt;cryptoNameMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoNameMapping> - элемент"
-  - "cryptoNameMapping - элемент"
+title: "&lt;cryptoNameMapping&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping
+helpviewer_keywords:
+- <cryptoNameMapping> element
+- cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 2156c6441190b530c48a70e67e93e4806d20b199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;cryptoNameMapping&gt;
-Сопоставление классов с понятными именами.  
+# <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt; элемент
+Содержит сопоставления классов с понятными именами.  
   
-## Синтаксис  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <cryptoNameMapping>   
+```xml  
+      <cryptoNameMapping>   
 </cryptoNameMapping>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанным в элементе **\<nameEntry\>**.|  
-|`nameEntry`|Сопоставление имени класса с понятным именем алгоритма, позволяющим одному классу иметь несколько понятных имен.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`cryptographySettings`|Этот элемент содержит параметры криптографии.|  
-|`cryptoNameMapping`|Сопоставление классов с понятными именами.|  
-|`mscorlib`|Содержит элемент \<cryptographySettings\>.|  
+|-------------|-----------------|  
+|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе **\<nameEntry>**.|  
+|`nameEntry`|Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.|  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<cryptoNameMapping\>** для создания ссылки на криптографический класс и конфигурирования среды выполнения.  В этом случае можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для получения объекта `MyCryptoRSAClass`.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-```  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`cryptographySettings`|Содержит параметры шифрования.|  
+|`cryptoNameMapping`|Содержит сопоставления классов с понятными именами.|  
+|`mscorlib`|Содержит \<cryptographySettings > элемент.|  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать  **\<cryptoNameMapping >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,8 +84,8 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>См. также  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)  
  [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

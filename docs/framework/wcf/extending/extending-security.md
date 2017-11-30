@@ -1,35 +1,37 @@
 ---
-title: "Расширение системы безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "безопасность [WCF], расширение"
+title: "Расширение безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 23
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a3950b156ede806382bbe4e013db5d94a8b20a23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расширение системы безопасности
-Для размещения новых типов утверждений и пользовательских маркеров можно расширить инфраструктуру безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Это подробно описывается в следующих подразделах.  
+# <a name="extending-security"></a>Расширение безопасности
+Для размещения новых типов утверждений и пользовательских маркеров можно расширить инфраструктуру безопасности [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Это подробно описывается в следующих подразделах.  
   
-## В этом подразделе  
- [Security Architecture](http://msdn.microsoft.com/ru-ru/16593476-d36a-408d-808c-ae6fd483e28f)  
+## <a name="in-this-section"></a>Содержание  
+ [Архитектура безопасности](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)  
  Пошаговое рассмотрение архитектуры системы безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Пользовательские учетные данные и проверка учетных данных](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
+ [Пользовательские учетные данные и проверки учетных данных](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Рассматривается, как модель удостоверения используется при проверке пользовательских учетных данных.  
   
  [Пользовательские маркеры](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- Маркеры, выдаваемые службой маркеров безопасности \(STS\), — обычно маркеры SAML.В этом разделе описывается, как создать тип пользовательского маркера.  
+ Маркеры, выдаваемые службой маркеров безопасности (STS), - обычно маркеры SAML. В этом разделе описывается, как создать тип пользовательского маркера.  
   
  [Пользовательская авторизация](../../../../docs/framework/wcf/extending/custom-authorization.md)  
  Объясняется, как реализовать пользовательскую авторизацию.  
@@ -37,16 +39,16 @@ caps.handback.revision: 23
  [Переопределение идентификатора службы для проверки подлинности](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  Описывается, как переопределить идентификацию службы для проверки подлинности.  
   
- [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Как: создать средство проверки удостоверения настраиваемые](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  Демонстрирует, как проверить идентификацию пользовательской конечной точки.  
   
- [Как использовать отдельные сертификаты X.509 для подписывания и шифрования](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- Обычно сообщения подписываются и шифруются одним сертификатом.В этом разделе объясняется, как при необходимости использовать два сертификата.  
+ [Как: использование отдельных сертификатов X.509 для подписывания и шифрования](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ Обычно сообщения подписываются и шифруются одним сертификатом. В этом разделе объясняется, как при необходимости использовать два сертификата.  
   
- [Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [Как: изменить поставщика служб шифрования для закрытого ключа сертификата X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  Объясняется, как изменить поставщика служб шифрования, предоставлявшего закрытый ключ сертификата X.509, и как интегрировать поставщика в инфраструктуру [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
   
  <xref:System.ServiceModel.Security>  
@@ -59,10 +61,10 @@ caps.handback.revision: 23
   
  <xref:System.IdentityModel.Selectors>  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)

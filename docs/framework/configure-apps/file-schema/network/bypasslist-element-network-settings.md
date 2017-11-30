@@ -1,77 +1,79 @@
 ---
-title: "Элемент &lt;bypasslist&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist> - элемент"
-  - "bypasslist - элемент"
+title: "&lt;bypasslist&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist
+helpviewer_keywords:
+- bypasslist element
+- <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3d349f14535de806e0b130ef64b58333e63f1b86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;bypasslist&gt; (параметры сети)
-Набор регулярных выражений, описывающих адреса, пропускаемые прокси\-сервером.  
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; элемент (параметры сети)
+Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<bypasslist >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <bypasslist>   
+```xml  
+<bypasslist>   
 </bypasslist>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[добавление;](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Добавление IP\-адреса или DNS\-имени в список адресов, пропускаемых прокси\-сервером.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Удаляет список пропускаемых адресов.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Удаление IP\-адреса или DNS\-имени из списка обхода прокси\-серверов.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Очищает список обхода.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.|  
   
-## Заметки  
- Список пропускаемых адресов содержит описывающие URI регулярные выражения, доступ к которым экземплярами <xref:System.Net.WebRequest> осуществляется напрямую, а не через прокси\-сервер.  
+### <a name="parent-elements"></a>Родительские элементы  
   
- Соблюдайте осторожность при вводе регулярного выражения для этого элемента.  Регулярное выражение "\[a\-z\]\+\\.contoso\\.com" соответствует любому узлу в домене contoso.com, но при этом оно соответствует и любому узлу в домене contoso.com.cpandl.com.  Чтобы задать однозначное соответствие только одному узлу в домене contoso.com, используйте символ привязки \("$"\): "\[a\-z\]\+\\.contoso\\.com$".  
+|**Элемент**|**Описание**|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
- Дополнительные сведения о регулярных выражениях см. в разделе [Регулярные выражения в .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+## <a name="remarks"></a>Примечания  
+ Список пропускаемых содержит регулярных выражений, описывающих URI, <xref:System.Net.WebRequest> экземпляры доступ напрямую вместо того, через прокси-сервер.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+ Следует проявлять осторожность при вводе регулярного выражения для данного элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадает с любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы соответствовать только одному узлу в домене contoso.com, используйте элемент привязки («$»): «[a-z] +\\.contoso\\.com$».  
   
-## Пример  
- В следующем примере кода в список пропускаемых адресов добавляются два адреса.  Первая запись задает для прокси пропуск всех серверов, содержащихся в домене contoso.com, а вторая — всех серверов, IP\-адреса которых начинаются с 192.168.  
+ Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
-```  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
+  
+## <a name="example"></a>Пример  
+ Список пропускаемых в следующем примере добавляются два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адреса которых начинаются с 192.168.  
+  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -84,6 +86,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
