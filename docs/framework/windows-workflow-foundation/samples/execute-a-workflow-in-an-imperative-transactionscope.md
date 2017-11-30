@@ -1,46 +1,50 @@
 ---
-title: "Выполнение рабочего процесса в императивном коде TransactionScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выполнение рабочего процесса в императивном коде TransactionScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd0e8686-c1d0-4400-a541-da94ed03afc7
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26117e7b089e85e8953912745ebc74baad8bfa29
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выполнение рабочего процесса в императивном коде TransactionScope
-Этот образец демонстрирует, как выполнить рабочий процесс с использованием <xref:System.Activities.WorkflowInvoker> в рамках транзакции <xref:System.Transactions.Transaction> из императивного кода C\#.  
+# <a name="execute-a-workflow-in-an-imperative-transactionscope"></a><span data-ttu-id="73936-102">Выполнение рабочего процесса в императивном коде TransactionScope</span><span class="sxs-lookup"><span data-stu-id="73936-102">Execute a Workflow in an Imperative TransactionScope</span></span>
+<span data-ttu-id="73936-103">Этот образец демонстрирует, как выполнить рабочий процесс с использованием <xref:System.Activities.WorkflowInvoker> в рамках транзакции <xref:System.Transactions.Transaction> из императивного кода C#.</span><span class="sxs-lookup"><span data-stu-id="73936-103">This sample shows how to execute a workflow using <xref:System.Activities.WorkflowInvoker> under a <xref:System.Transactions.Transaction> from imperative C# code.</span></span>  
   
-## Подробные сведения об образце  
- В императивном коде C\# для инкапсуляции набора работ, выполняемых в той же транзакции, используется класс <xref:System.Transactions.TransactionScope>.<xref:System.Transactions.TransactionScope> создает внешнюю транзакцию и инициализирует свойство <xref:System.Transactions.Transaction.Current%2A>, к которому впоследствии может обращаться любая работа, выполняемая в этом потоке.  
+## <a name="sample-details"></a><span data-ttu-id="73936-104">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="73936-104">Sample Details</span></span>  
+ <span data-ttu-id="73936-105">В императивном коде C# для инкапсуляции набора работ, выполняемых в той же транзакции, используется класс <xref:System.Transactions.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="73936-105">In imperative C# code, the <xref:System.Transactions.TransactionScope> is used to encapsulate a set of work that executes under the same transaction.</span></span> <span data-ttu-id="73936-106"><xref:System.Transactions.TransactionScope> создает внешнюю транзакцию и инициализирует свойство <xref:System.Transactions.Transaction.Current%2A>, к которому впоследствии может обращаться любая работа, выполняемая в этом потоке.</span><span class="sxs-lookup"><span data-stu-id="73936-106">The <xref:System.Transactions.TransactionScope> works by creating an ambient transaction and initializing the <xref:System.Transactions.Transaction.Current%2A> property, which can then be accessed by any work being executed on that thread.</span></span>  
   
- Чтобы получить эквивалентное поведение в рабочем процессе, до выполнения каждого действия в среде выполнения должна быть выполнена дополнительная инициализация <xref:System.Transactions.Transaction.Current%2A>, поскольку рабочий процесс не сохраняет сходство потоков между действиями.С учетом описанных действий в среде выполнения, результирующее поведение будет таким же, как если бы рабочий процесс был выполнен с помощью <xref:System.Activities.WorkflowInvoker> внутри <xref:System.Transactions.TransactionScope>, все действия гарантированно будут выполняться в контексте внешней транзакции, созданной объектом <xref:System.Transactions.TransactionScope>.  
+ <span data-ttu-id="73936-107">Чтобы получить эквивалентное поведение в рабочем процессе, до выполнения каждого действия в среде выполнения должна быть выполнена дополнительная инициализация <xref:System.Transactions.Transaction.Current%2A>, поскольку рабочий процесс не сохраняет сходство потоков между действиями.</span><span class="sxs-lookup"><span data-stu-id="73936-107">To get equivalent behavior in workflow, the runtime has to do the extra work of initializing <xref:System.Transactions.Transaction.Current%2A> before executing each activity because a workflow does not maintain thread affinity between activities.</span></span> <span data-ttu-id="73936-108">С учетом описанных действий в среде выполнения, результирующее поведение будет таким же, как если бы рабочий процесс был выполнен с помощью <xref:System.Activities.WorkflowInvoker> внутри <xref:System.Transactions.TransactionScope>, все действия гарантированно будут выполняться в контексте внешней транзакции, созданной объектом <xref:System.Transactions.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="73936-108">With this runtime support, the resulting behavior is that when executing a workflow with <xref:System.Activities.WorkflowInvoker> inside a <xref:System.Transactions.TransactionScope>, all activities are guaranteed to run under the context of the ambient transaction created by the <xref:System.Transactions.TransactionScope>.</span></span>  
   
- Рабочий процесс может иметь лишь одну внешнюю транзакцию для каждого экземпляра рабочего процесса; использование вложенных транзакций не разрешается.Даже если рабочий процесс содержит действие <xref:System.Activities.Statements.TransactionScope>, это действие не создает новую внутреннюю транзакцию.Вместо этого повторно используется внешняя транзакция, созданная вне рабочего процесса.  
+ <span data-ttu-id="73936-109">Рабочий процесс может иметь лишь одну внешнюю транзакцию для каждого экземпляра рабочего процесса; использование вложенных транзакций не разрешается.</span><span class="sxs-lookup"><span data-stu-id="73936-109">A workflow can have only a single ambient transaction for each workflow instance; nested transactions are not available.</span></span> <span data-ttu-id="73936-110">Даже если рабочий процесс содержит действие <xref:System.Activities.Statements.TransactionScope>, это действие не создает новую внутреннюю транзакцию.</span><span class="sxs-lookup"><span data-stu-id="73936-110">Even if the workflow contains a <xref:System.Activities.Statements.TransactionScope> activity, this does not create a new inner transaction.</span></span> <span data-ttu-id="73936-111">Вместо этого повторно используется внешняя транзакция, созданная вне рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="73936-111">Instead, this reuses the ambient transaction that was created outside the workflow.</span></span>  
   
- Образец инициализирует новый объект <xref:System.Transactions.Transaction.TransactionScope>, выводит на экран консоли идентификатор транзакции и запускает рабочий процесс с помощью <xref:System.Activities.WorkflowInvoker>.Рабочий процесс повторно выводит на экран консоли идентификатор транзакции, сообщая тем самым, что это та же самая транзакция, затем запускает <xref:System.Activities.Statements.TransactionScope> и завершает работу.Вызов <xref:System.Activities.WorkflowInvoker.Invoke%2A> в <xref:System.Activities.WorkflowInvoker> является синхронным, поэтому исходный поток блокируется вплоть до завершения рабочего процесса.Как только рабочий процесс будет завершен, транзакция завершается и происходит высвобождение ресурсов.  
+ <span data-ttu-id="73936-112">Образец инициализирует новый объект <xref:System.Transactions.TransactionScope>, выводит на экран консоли идентификатор транзакции и запускает рабочий процесс с помощью <xref:System.Activities.WorkflowInvoker>.</span><span class="sxs-lookup"><span data-stu-id="73936-112">The sample begins a new <xref:System.Transactions.TransactionScope>, prints the transaction ID and begins a workflow using <xref:System.Activities.WorkflowInvoker>.</span></span> <span data-ttu-id="73936-113">Рабочий процесс повторно выводит на экран консоли идентификатор транзакции, сообщая тем самым, что это та же самая транзакция, затем запускает <xref:System.Activities.Statements.TransactionScope> и завершает работу.</span><span class="sxs-lookup"><span data-stu-id="73936-113">The workflow prints the transaction ID again, showing that it is the same transaction, then runs a <xref:System.Activities.Statements.TransactionScope>, then completes.</span></span> <span data-ttu-id="73936-114">Вызов <xref:System.Activities.WorkflowInvoker.Invoke%2A> в <xref:System.Activities.WorkflowInvoker> является синхронным, поэтому исходный поток блокируется вплоть до завершения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="73936-114">The <xref:System.Activities.WorkflowInvoker.Invoke%2A> call on <xref:System.Activities.WorkflowInvoker> is synchronous so the original thread blocks until the workflow completes.</span></span> <span data-ttu-id="73936-115">Как только рабочий процесс будет завершен, транзакция завершается и происходит высвобождение ресурсов.</span><span class="sxs-lookup"><span data-stu-id="73936-115">Once the workflow is complete, the transaction is completed and resources disposed.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="73936-116">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="73936-116">To use this sample</span></span>  
   
-1.  Откройте файл решения ImperativeTransactionSample.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="73936-117">Откройте файл решения ImperativeTransactionSample.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="73936-117">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the ImperativeTransactionSample.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="73936-118">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="73936-118">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавишу F5.  
+3.  <span data-ttu-id="73936-119">Чтобы запустить решение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="73936-119">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="73936-120">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="73936-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="73936-121">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="73936-121">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="73936-122">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="73936-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="73936-123">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="73936-123">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\Transactions\ImperativeTransaction`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\ImperativeTransaction`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="73936-124">См. также</span><span class="sxs-lookup"><span data-stu-id="73936-124">See Also</span></span>

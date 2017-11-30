@@ -1,35 +1,39 @@
 ---
-title: "Использование Interop для обмена с внешними данными | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование Interop для обмена с внешними данными"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 96f6fe26-5305-494f-9119-7748e0c4b3fa
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a17e4a51648facbc17e6af31f65360a3414a5c15
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование Interop для обмена с внешними данными
-Действие <xref:System.Activities.Statements.Interop> можно использовать для выполнения действий из [!INCLUDE[wf](../../../../includes/wf-md.md)] в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] \(WF3\), а также рабочих процессов в [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] \(WF4\).В этом образце описывается настройка и выполнение рабочего процесса WF3, использующего <xref:System.Workflow.Activities.ExternalDataExchangeService> \(и соответствующих настраиваемых действий для вызова методов и обработки событий\) с помощью действия <xref:System.Activities.Statements.Interop> в службе рабочего процесса WF4.  
+# <a name="using-interop-with-external-data-exchange"></a><span data-ttu-id="9c4dc-102">Использование Interop для обмена с внешними данными</span><span class="sxs-lookup"><span data-stu-id="9c4dc-102">Using Interop with External Data Exchange</span></span>
+<span data-ttu-id="9c4dc-103">Действие <xref:System.Activities.Statements.Interop> можно использовать для выполнения действий из [!INCLUDE[wf](../../../../includes/wf-md.md)] в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] и [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF3), а также рабочих процессов в [!INCLUDE[wf2](../../../../includes/wf2-md.md)] в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF4).</span><span class="sxs-lookup"><span data-stu-id="9c4dc-103">The <xref:System.Activities.Statements.Interop> activity can be used to execute activities from [!INCLUDE[wf](../../../../includes/wf-md.md)] in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] and [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF3), and workflows within [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF4).</span></span> <span data-ttu-id="9c4dc-104">В этом образце описывается настройка и выполнение рабочего процесса WF3, использующего <xref:System.Workflow.Activities.ExternalDataExchangeService> (и соответствующих настраиваемых действий для вызова методов и обработки событий) с помощью действия <xref:System.Activities.Statements.Interop> в службе рабочего процесса WF4.</span><span class="sxs-lookup"><span data-stu-id="9c4dc-104">This sample shows how to configure and run a WF3 workflow that uses <xref:System.Workflow.Activities.ExternalDataExchangeService> (and corresponding custom activities for calling methods and handling events) by using the <xref:System.Activities.Statements.Interop> activity in a WF4 workflow service.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="9c4dc-105">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="9c4dc-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9c4dc-106">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="9c4dc-106">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="9c4dc-107">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="9c4dc-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9c4dc-108">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="9c4dc-108">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Migration\ExternalDataExchange`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Migration\ExternalDataExchange`  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="9c4dc-109">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="9c4dc-109">To use this sample</span></span>  
   
-1.  Откройте файл ExternalDataExchange.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="9c4dc-110">Откройте файл ExternalDataExchange.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9c4dc-110">Open the ExternalDataExchange.sln file in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Для построения образца нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="9c4dc-111">Для построения образца нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="9c4dc-111">To build the sample, press CTRL+SHIFT+B.</span></span>  
   
-3.  Нажмите клавишу F5, чтобы запустить образец.
+3.  <span data-ttu-id="9c4dc-112">Нажмите клавишу F5, чтобы запустить образец.</span><span class="sxs-lookup"><span data-stu-id="9c4dc-112">To run the sample, press F5.</span></span>

@@ -1,65 +1,68 @@
 ---
-title: "Использование действия InvokePowerShell | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование действия InvokePowerShell"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 23351ad32e608dc27b973691ec9a00fc2f94b3fe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование действия InvokePowerShell
-Образец InvokePowerShell демонстрирует, как вызывать команды Windows PowerShell с помощью действия `InvokePowerShell`.  
+# <a name="using-the-invokepowershell-activity"></a><span data-ttu-id="e58e7-102">Использование действия InvokePowerShell</span><span class="sxs-lookup"><span data-stu-id="e58e7-102">Using the InvokePowerShell Activity</span></span>
+<span data-ttu-id="e58e7-103">Образец InvokePowerShell демонстрирует, как вызывать команды Windows PowerShell с помощью действия `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-103">The InvokePowerShell sample demonstrates how to invoke Windows PowerShell commands using the `InvokePowerShell` activity.</span></span>  
   
-## Демонстрации  
+## <a name="demonstrates"></a><span data-ttu-id="e58e7-104">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="e58e7-104">Demonstrates</span></span>  
   
--   Простой новый метод использования команд Windows PowerShell.  
+-   <span data-ttu-id="e58e7-105">Простой новый метод использования команд Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-105">Simple innovation of Windows PowerShell commands.</span></span>  
   
--   Получите значения из канала выходных данных Windows PowerShell и сохраните их в переменных рабочего процесса.  
+-   <span data-ttu-id="e58e7-106">Получите значения из канала выходных данных Windows PowerShell и сохраните их в переменных рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="e58e7-106">Retrieve values from the Windows PowerShell output pipeline and store them in workflow variables.</span></span>  
   
--   Передайте данные в Windows PowerShell в виде канала входных данных для исполняемой команды.  
+-   <span data-ttu-id="e58e7-107">Передайте данные в Windows PowerShell в виде канала входных данных для исполняемой команды.</span><span class="sxs-lookup"><span data-stu-id="e58e7-107">Pass data into windows PowerShell as input pipeline for an executing command.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="e58e7-108">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e58e7-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e58e7-109">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="e58e7-109">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="e58e7-110">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e58e7-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e58e7-111">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="e58e7-111">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
-## Обсуждение  
- Этот образец содержит следующие три проекта.  
+## <a name="discussion"></a><span data-ttu-id="e58e7-112">Обсуждение</span><span class="sxs-lookup"><span data-stu-id="e58e7-112">Discussion</span></span>  
+ <span data-ttu-id="e58e7-113">Этот образец содержит следующие три проекта.</span><span class="sxs-lookup"><span data-stu-id="e58e7-113">This sample contains the following three projects.</span></span>  
   
-|Имя проекта|Описание|Основные файлы|  
-|-----------------|--------------|--------------------|  
-|CodedClient|Образец клиентского приложения, использующий действие PowerShell.|-   **Program.cs**: Программным образом создает рабочий процесс на основе последовательности, вызывающей действие InvokePowerShell.|  
-|DesignerClient|Набор пользовательских действий, содержащих пользовательское действие `InvokePowerShell`, прочие пользовательские действия и рабочий процесс, использующий их.|<ul><li>Действия:<br /><br /> <ul><li>**PrintCollection.cs**: вспомогательное действие, выводящее все элементы коллекции на консоль.</li><li>**ReadLine.cs**: вспомогательное действие, считывающее входные данные с консоли.</li></ul></li><li>Файловая система:<br /><br /> <ul><li>**Copy.xaml**: действие, копирующее файл.</li><li>**CreateFile.xaml**: действие, создающее файл.</li><li>**DeleteFile.xaml**: действие, удаляющее файл.</li><li>**MakeDir.xaml**: действие, создающее директорию.</li><li>**Move.xaml**: действие, перемещающее файл.</li><li>**ReadFile.xaml**: действие, считывающее файл и возвращающее его содержимое.</li><li>**TestPath.xaml**: действие, проверяющее наличие пути.</li></ul></li><li>Процесс:<br /><br /> <ul><li>**GetProcess.xaml**: действие, возвращающее перечень запущенных процессов.</li><li>**StopProcess.xaml**: действие, останавливающее конкретный процесс.</li></ul></li><li>**Program.cs**: вызывает рабочий процесс Sequence1.</li><li>**Sequence1.xaml**: рабочий процесс на основе последовательности.</li></ul>|  
-|PowerShell|Действие `InvokePowerShell` и связанные с ним конструкторы.|Файлы действия<br /><br /> -   **ExecutePowerShell.cs**: основная логика исполнения действия.<br />-   **InvokePowerShell.cs**: оболочка главной логики исполнения, содержащая стандартную \(возвращающую значение\) версию и нестандартную \(не возвращающую значение\) версию.Это открытый интерфейс действия.<br />-   **NoPersistZone.cs**: это действие препятствует сохранению дочерних действий.Данный класс используется в реализации действия `InvokePowerShell` для предотвращения сохранения действия в ходе исполнения.<br /><br /> Файлы конструктора:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: диалог Windows, позволяющий пользователю изменять аргументы действия `InvokePowerShell`.<br />2.  **GenericInvokePowerShellDesigner.xaml** и **GenericInvokePowerShellDesigner.xaml.cs**: определяет внешний вид стандартного действия `InvokePowerShell` в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** и **InvokePowerShellDesigner.cs**: определяет внешний вид нестандартного действия `InvokePowerShell` в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
+|<span data-ttu-id="e58e7-114">Имя проекта</span><span class="sxs-lookup"><span data-stu-id="e58e7-114">Project Name</span></span>|<span data-ttu-id="e58e7-115">Описание</span><span class="sxs-lookup"><span data-stu-id="e58e7-115">Description</span></span>|<span data-ttu-id="e58e7-116">Основные файлы</span><span class="sxs-lookup"><span data-stu-id="e58e7-116">Main Files</span></span>|  
+|------------------|-----------------|----------------|  
+|<span data-ttu-id="e58e7-117">CodedClient</span><span class="sxs-lookup"><span data-stu-id="e58e7-117">CodedClient</span></span>|<span data-ttu-id="e58e7-118">Образец клиентского приложения, использующий действие PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-118">A sample client application that uses the PowerShell activity.</span></span>|<span data-ttu-id="e58e7-119">-   **Program.cs**: программным образом создает рабочий процесс на основе последовательности, вызывающей действие InvokePowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-119">-   **Program.cs**: Programmatically creates a sequence-based workflow that calls the InvokePowerShell activity.</span></span>|  
+|<span data-ttu-id="e58e7-120">DesignerClient</span><span class="sxs-lookup"><span data-stu-id="e58e7-120">DesignerClient</span></span>|<span data-ttu-id="e58e7-121">Набор пользовательских действий, содержащих пользовательское действие `InvokePowerShell`, прочие пользовательские действия и рабочий процесс, использующий их.</span><span class="sxs-lookup"><span data-stu-id="e58e7-121">A set of custom activities that contain the `InvokePowerShell` custom activity and other miscellaneous custom activities, and a workflow that uses them.</span></span>|<ul><li><span data-ttu-id="e58e7-122">Действия:</span><span class="sxs-lookup"><span data-stu-id="e58e7-122">Activities:</span></span><br /><br /> <ul><li><span data-ttu-id="e58e7-123">**PrintCollection.cs**: вспомогательное действие, выводящее все элементы в коллекции на консоль.</span><span class="sxs-lookup"><span data-stu-id="e58e7-123">**PrintCollection.cs**: A helper activity that prints all the items in a collection to the console.</span></span></li><li><span data-ttu-id="e58e7-124">**ReadLine.cs**: вспомогательное действие для чтения данные с консоли.</span><span class="sxs-lookup"><span data-stu-id="e58e7-124">**ReadLine.cs**: A helper activity for reading input from the console.</span></span></li></ul></li><li><span data-ttu-id="e58e7-125">Файловая система:</span><span class="sxs-lookup"><span data-stu-id="e58e7-125">File System:</span></span><br /><br /> <ul><li><span data-ttu-id="e58e7-126">**Copy.XAML**: действие, копирующее файл.</span><span class="sxs-lookup"><span data-stu-id="e58e7-126">**Copy.xaml**: An activity that copies a file.</span></span></li><li><span data-ttu-id="e58e7-127">**CreateFile.xaml**: действие, создающее файл.</span><span class="sxs-lookup"><span data-stu-id="e58e7-127">**CreateFile.xaml**: An activity that creates a file.</span></span></li><li><span data-ttu-id="e58e7-128">**DeleteFile.xaml**: действие, которое удаляет файл.</span><span class="sxs-lookup"><span data-stu-id="e58e7-128">**DeleteFile.xaml**: An activity that deletes a file.</span></span></li><li><span data-ttu-id="e58e7-129">**MakeDir.xaml**: действие, которое создает каталог.</span><span class="sxs-lookup"><span data-stu-id="e58e7-129">**MakeDir.xaml**: An activity that creates a directory.</span></span></li><li><span data-ttu-id="e58e7-130">**MOVE.XAML**: действие, перемещающее файл.</span><span class="sxs-lookup"><span data-stu-id="e58e7-130">**Move.xaml**: An activity that moves a file.</span></span></li><li><span data-ttu-id="e58e7-131">**ReadFile.xaml**: действие, которое считывает файл и возвращает его содержимое.</span><span class="sxs-lookup"><span data-stu-id="e58e7-131">**ReadFile.xaml**: An activity that reads a file and returns its contents.</span></span></li><li><span data-ttu-id="e58e7-132">**TestPath.xaml**: действие, проверяющее наличие пути.</span><span class="sxs-lookup"><span data-stu-id="e58e7-132">**TestPath.xaml**: An activity that tests for the existence of a path.</span></span></li></ul></li><li><span data-ttu-id="e58e7-133">Процесс:</span><span class="sxs-lookup"><span data-stu-id="e58e7-133">Process:</span></span><br /><br /> <ul><li><span data-ttu-id="e58e7-134">**GetProcess.xaml**: действие, возвращающее перечень запущенных процессов.</span><span class="sxs-lookup"><span data-stu-id="e58e7-134">**GetProcess.xaml**: An activity that gets a list of running processes.</span></span></li><li><span data-ttu-id="e58e7-135">**StopProcess.xaml**: действие, останавливающее конкретный процесс.</span><span class="sxs-lookup"><span data-stu-id="e58e7-135">**StopProcess.xaml**: An activity that stops a specific process.</span></span></li></ul></li><li><span data-ttu-id="e58e7-136">**Program.cs**: вызывает рабочий процесс Sequence1.</span><span class="sxs-lookup"><span data-stu-id="e58e7-136">**Program.cs**: Calls the Sequence1 workflow.</span></span></li><li><span data-ttu-id="e58e7-137">**Sequence1.XAML**: рабочий процесс на основе последовательности.</span><span class="sxs-lookup"><span data-stu-id="e58e7-137">**Sequence1.xaml**: A sequence-based workflow.</span></span></li></ul>|  
+|<span data-ttu-id="e58e7-138">PowerShell</span><span class="sxs-lookup"><span data-stu-id="e58e7-138">PowerShell</span></span>|<span data-ttu-id="e58e7-139">Действие `InvokePowerShell` и связанные с ним конструкторы.</span><span class="sxs-lookup"><span data-stu-id="e58e7-139">The `InvokePowerShell` activity and its associated designers.</span></span>|<span data-ttu-id="e58e7-140">Файлы действия</span><span class="sxs-lookup"><span data-stu-id="e58e7-140">Activity Files</span></span><br /><br /> <span data-ttu-id="e58e7-141">-   **ExecutePowerShell.cs**: основной логики выполнения действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-141">-   **ExecutePowerShell.cs**: The main execution logic of the activity.</span></span><br /><span data-ttu-id="e58e7-142">-   **InvokePowerShell.cs**: оболочка главной логики исполнения, который содержит стандартную (возвращающую значение) версию и нестандартную (не возвращающую значение) версию.</span><span class="sxs-lookup"><span data-stu-id="e58e7-142">-   **InvokePowerShell.cs**: The wrapper around the main execution logic, which contains a generic (return value) version and a non-generic (non-return value) version.</span></span> <span data-ttu-id="e58e7-143">Это открытый интерфейс действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-143">This is the public interface for the activity.</span></span><br /><span data-ttu-id="e58e7-144">-   **NoPersistZone.cs**: это действие препятствующее сохранению дочерних действий.</span><span class="sxs-lookup"><span data-stu-id="e58e7-144">-   **NoPersistZone.cs**: This activity prevents any child activities from persisting.</span></span> <span data-ttu-id="e58e7-145">Данный класс используется в реализации действия `InvokePowerShell` для предотвращения сохранения действия в ходе исполнения.</span><span class="sxs-lookup"><span data-stu-id="e58e7-145">This class is used within the `InvokePowerShell` activity implementation to prevent the activity from being persisted mid-execution.</span></span><br /><br /> <span data-ttu-id="e58e7-146">Файлы конструктора:</span><span class="sxs-lookup"><span data-stu-id="e58e7-146">Designer files:</span></span><br /><br /> <span data-ttu-id="e58e7-147">1.  **ArgumentDictionaryEditor.cs**: диалог Windows, который позволяет пользователю изменять аргументы `InvokePowerShell` действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-147">1.  **ArgumentDictionaryEditor.cs**: A Windows dialog that allows the user to edit the arguments of the `InvokePowerShell` activity.</span></span><br /><span data-ttu-id="e58e7-148">2.  **GenericInvokePowerShellDesigner.xaml** и **GenericInvokePowerShellDesigner.xaml.cs**: Определяет внешний вид универсального `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e58e7-148">2.  **GenericInvokePowerShellDesigner.xaml** and **GenericInvokePowerShellDesigner.xaml.cs**: Defines the appearance of the generic `InvokePowerShell` activity in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span></span><br /><span data-ttu-id="e58e7-149">3.  **InvokePowerShellDesigner.xaml** и **InvokePowerShellDesigner.cs**: Определяет внешний вид неуниверсальные `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e58e7-149">3.  **InvokePowerShellDesigner.xaml** and **InvokePowerShellDesigner.cs**: Defines the appearance of the non-generic `InvokePowerShell` activity in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].</span></span>|  
   
- Клиентские проекты обсуждаются в первую очередь, поскольку проще понять внутреннее функционирование действия PowerShell, изучив его практическое применение.  
+ <span data-ttu-id="e58e7-150">Клиентские проекты обсуждаются в первую очередь, поскольку проще понять внутреннее функционирование действия PowerShell, изучив его практическое применение.</span><span class="sxs-lookup"><span data-stu-id="e58e7-150">The client projects are discussed first, as it is easier to understand the internal functionality of the PowerShell activity once its use is understood.</span></span>  
   
-## Использование этого образца  
- В следующих разделах описано, как использовать три проекта в образце.  
+## <a name="using-this-sample"></a><span data-ttu-id="e58e7-151">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="e58e7-151">Using This Sample</span></span>  
+ <span data-ttu-id="e58e7-152">В следующих разделах описано, как использовать три проекта в образце.</span><span class="sxs-lookup"><span data-stu-id="e58e7-152">The following sections describe how to use the three projects in the sample.</span></span>  
   
-### Использование закодированного клиентского проекта.  
- Образец клиента программным образом создает действие `InvokePowerShell`.При первом вызове запускается блокнот.  
+### <a name="using-the-coded-client-project"></a><span data-ttu-id="e58e7-153">Использование закодированного клиентского проекта.</span><span class="sxs-lookup"><span data-stu-id="e58e7-153">Using the Coded Client Project</span></span>  
+ <span data-ttu-id="e58e7-154">Образец клиента программным образом создает действие `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-154">The sample client programmatically creates a sequence activity, which contains examples of several different methods of using the `InvokePowerShell` activity.</span></span> <span data-ttu-id="e58e7-155">При первом вызове запускается блокнот.</span><span class="sxs-lookup"><span data-stu-id="e58e7-155">The first invocation launches Notepad.</span></span>  
   
 ```  
 new InvokePowerShell()  
 {  
     CommandText = "notepad"  
 },  
-  
 ```  
   
- При втором вызове возвращается перечень процессов, запущенных на локальном компьютере.  
+ <span data-ttu-id="e58e7-156">При втором вызове возвращается перечень процессов, запущенных на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="e58e7-156">The second invocation gets a list of the processes running on the local machine.</span></span>  
   
 ```  
 new InvokePowerShell<Process>()  
@@ -67,54 +70,50 @@ new InvokePowerShell<Process>()
     CommandText = "Get-Process",  
     Output = processes1,  
 },  
-  
 ```  
   
- `Output` — это переменная, используемая для хранения выходных данных команды.  
+ <span data-ttu-id="e58e7-157">`Output` - это переменная, используемая для хранения выходных данных команды.</span><span class="sxs-lookup"><span data-stu-id="e58e7-157">`Output` is the variable used to store the output of the command.</span></span>  
   
- При следующем вызове показывается, как запускать стадию завершающей обработки для каждого отдельного выхода вызова PowerShell.`InitializationAction` задается как функция, выводящая строчное представление каждого процесса.Коллекция этих строк возвращается в переменную `Output` действием `InvokePowerShell<string>`.  
+ <span data-ttu-id="e58e7-158">При следующем вызове показывается, как запускать стадию завершающей обработки для каждого отдельного выхода вызова PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-158">The next call demonstrates how to run a post-processing step on each individual output of the PowerShell invocation.</span></span> <span data-ttu-id="e58e7-159">`InitializationAction` задается как функция, выводящая строчное представление каждого процесса.</span><span class="sxs-lookup"><span data-stu-id="e58e7-159">`InitializationAction` is set to the function that outputs a string representation for each process.</span></span> <span data-ttu-id="e58e7-160">Коллекция этих строк возвращается в переменную `Output` действием `InvokePowerShell<string>`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-160">The collection of these strings is returned in the `Output` variable by the `InvokePowerShell<string>` activity.</span></span>  
   
- При последующем вызове `InvokePowerShell` демонстрируется передача данных действию и вывод конечных данных и ошибок.  
+ <span data-ttu-id="e58e7-161">При последующем вызове `InvokePowerShell` демонстрируется передача данных действию и вывод конечных данных и ошибок.</span><span class="sxs-lookup"><span data-stu-id="e58e7-161">The succeeding `InvokePowerShell` calls demonstrate passing data into the activity and getting outputs and errors out.</span></span>  
   
-### Использование конструкторского клиентского проекта.  
- Проект DesignerClient состоит из набора пользовательских действий, большинство из которых содержат действие `InvokePowerShell`.Большинство действий вызывают нестандартную версию действия `InvokePowerShell` и не ожидают возвращаемого значения.Прочие действия применяют стандартную версию действия `InvokePowerShell` и аргумент `InitializationAction` для последующей обработки результатов.  
+### <a name="using-the-designer-client-project"></a><span data-ttu-id="e58e7-162">Использование конструкторского клиентского проекта.</span><span class="sxs-lookup"><span data-stu-id="e58e7-162">Using the Designer Client Project</span></span>  
+ <span data-ttu-id="e58e7-163">Проект DesignerClient состоит из набора пользовательских действий, большинство из которых содержат действие `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-163">The DesignerClient project consists of a set of custom activities, almost all of which are built containing the `InvokePowerShell` activity.</span></span> <span data-ttu-id="e58e7-164">Большинство действий вызывают нестандартную версию действия `InvokePowerShell` и не ожидают возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="e58e7-164">Most of the activities call the non-generic version of the `InvokePowerShell` activity, and do not expect a return value.</span></span> <span data-ttu-id="e58e7-165">Прочие действия применяют стандартную версию действия `InvokePowerShell` и аргумент `InitializationAction` для последующей обработки результатов.</span><span class="sxs-lookup"><span data-stu-id="e58e7-165">Other activities use the generic version of the `InvokePowerShell` activity, and use the `InitializationAction` argument to post-process the results.</span></span>  
   
-## Использование проекта PowerShell  
- Главное действие действия совершается в классе `ExecutePowerShell`.Поскольку исполнение команд PowerShell не должно блокировать поток главного рабочего процесса, действие создается как асинхронное путем наследования от класса <xref:System.Activities.AsyncCodeActivity>.  
+## <a name="using-the-powershell-project"></a><span data-ttu-id="e58e7-166">Использование проекта PowerShell</span><span class="sxs-lookup"><span data-stu-id="e58e7-166">Using the PowerShell Project</span></span>  
+ <span data-ttu-id="e58e7-167">Главное действие действия совершается в классе `ExecutePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-167">The main action of the activity takes place in the `ExecutePowerShell` class.</span></span> <span data-ttu-id="e58e7-168">Поскольку исполнение команд PowerShell не должно блокировать поток главного рабочего процесса, действие создается как асинхронное путем наследования от класса <xref:System.Activities.AsyncCodeActivity>.</span><span class="sxs-lookup"><span data-stu-id="e58e7-168">Because the execution of PowerShell commands should not block the main workflow thread, the activity is created to be an asynchronous activity by inheriting from the <xref:System.Activities.AsyncCodeActivity> class.</span></span>  
   
- Метод <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> вызывается средой выполнения рабочего процесса, чтобы начать исполнение действия.Для начала вызываются методы API\-интерфейса PowerShell, чтобы создать конвейер PowerShell.  
+ <span data-ttu-id="e58e7-169">Метод <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> вызывается средой выполнения рабочего процесса, чтобы начать исполнение действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-169">The <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> method is called by the workflow runtime to begin running the activity.</span></span> <span data-ttu-id="e58e7-170">Для начала вызываются методы API-интерфейса PowerShell, чтобы создать конвейер PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-170">It starts by calling PowerShell APIs to create a PowerShell pipeline.</span></span>  
   
 ```  
 runspace = RunspaceFactory.CreateRunspace();  
 runspace.Open();  
 pipeline = runspace.CreatePipeline();  
-  
 ```  
   
- Затем создается команда PowerShell, которая заполняется параметрами и переменными.  
+ <span data-ttu-id="e58e7-171">Затем создается команда PowerShell, которая заполняется параметрами и переменными.</span><span class="sxs-lookup"><span data-stu-id="e58e7-171">It then creates a PowerShell command and populates it with parameters and variables.</span></span>  
   
 ```  
 Command cmd = new Command(this.CommandText, this.IsScript);   
 // loop over parameters and run: cmd.Parameters.Add(...)  
 // loop over variables and run: runspace.SessionStateProxy.SetVariable(...)  
 pipeline.Commands.Add(cmd);  
-  
 ```  
   
- Входящие исходные данные в этот момент также отправляются в конвейер.Наконец, конвейер получает оболочку из объекта `PipelineInvokerAsyncResult` и возвращается.Объект `PipelineInvokerAsyncResult` регистрирует прослушиватель и вызывает конвейер.  
+ <span data-ttu-id="e58e7-172">Входящие исходные данные в этот момент также отправляются в конвейер.</span><span class="sxs-lookup"><span data-stu-id="e58e7-172">The inputs piped in are also sent to the pipeline at this point.</span></span> <span data-ttu-id="e58e7-173">Наконец, конвейер получает оболочку из объекта `PipelineInvokerAsyncResult` и возвращается.</span><span class="sxs-lookup"><span data-stu-id="e58e7-173">Finally, the pipeline is wrapped in a `PipelineInvokerAsyncResult` object and returned.</span></span> <span data-ttu-id="e58e7-174">Объект `PipelineInvokerAsyncResult` регистрирует прослушиватель и вызывает конвейер.</span><span class="sxs-lookup"><span data-stu-id="e58e7-174">The `PipelineInvokerAsyncResult` object registers a listener and invokes the pipeline.</span></span>  
   
 ```  
 pipeline.InvokeAsync();  
-  
 ```  
   
- После успешного выполнения конечные данные и ошибки сохраняются в том же объекте `PipelineInvokerAsyncResult`, а контроль возвращается среде выполнения рабочего процесса путем вызова метода обратного вызова, изначально переданного через параметр <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.  
+ <span data-ttu-id="e58e7-175">После успешного выполнения конечные данные и ошибки сохраняются в том же объекте `PipelineInvokerAsyncResult`, а контроль возвращается среде выполнения рабочего процесса путем вызова метода обратного вызова, изначально переданного через параметр <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.</span><span class="sxs-lookup"><span data-stu-id="e58e7-175">When execution finishes, output and errors are stored within the same `PipelineInvokerAsyncResult` object, and control is handed back to the workflow runtime by calling the callback method originally passed to <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>.</span></span>  
   
- В конце исполнения метода среда выполнения рабочего процесса вызывает метод <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> действия.  
+ <span data-ttu-id="e58e7-176">В конце исполнения метода среда выполнения рабочего процесса вызывает метод <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-176">At the end of the method's execution, the workflow runtime calls the activity’s <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> method.</span></span>  
   
- Класс `InvokePowerShell` создает оболочку для класса `ExecutePowerShellCommand` и две версии действия: стандартную и нестандартную.Нестандартная версия возвращает конечные данные работы PowerShell непосредственно, а стандартная преобразует индивидуальные результаты в стандартный тип.  
+ <span data-ttu-id="e58e7-177">Класс `InvokePowerShell` создает оболочку для класса `ExecutePowerShellCommand` и две версии действия: стандартную и нестандартную.</span><span class="sxs-lookup"><span data-stu-id="e58e7-177">The `InvokePowerShell` class wraps the `ExecutePowerShellCommand` class and creates two versions of the activity; a generic version and a non-generic version.</span></span> <span data-ttu-id="e58e7-178">Нестандартная версия возвращает конечные данные работы PowerShell непосредственно, а стандартная преобразует индивидуальные результаты в стандартный тип.</span><span class="sxs-lookup"><span data-stu-id="e58e7-178">The non-generic version returns the output of the PowerShell execution directly, whereas the generic version transforms the individual results to the generic type.</span></span>  
   
- Стандартная версия действия реализуется как последовательный рабочий процесс, вызывающий команду `ExecutePowerShellCommand` и проводящий конечную обработку ее результатов.Для каждого элемента из коллекции результатов на стадии конечной обработки вызывается действие `InitializationAction`. если оно задано.В противном случае осуществляется простое приведение.  
+ <span data-ttu-id="e58e7-179">Стандартная версия действия реализуется как последовательный рабочий процесс, вызывающий команду `ExecutePowerShellCommand` и проводящий конечную обработку ее результатов.</span><span class="sxs-lookup"><span data-stu-id="e58e7-179">The generic version of the activity is implemented as a sequential workflow that calls `ExecutePowerShellCommand` and post-processes its results.</span></span> <span data-ttu-id="e58e7-180">Для каждого элемента из коллекции результатов на стадии конечной обработки вызывается действие `InitializationAction`. если оно задано.</span><span class="sxs-lookup"><span data-stu-id="e58e7-180">For each element in the result collection, the post-processing step calls `InitializationAction` if it is set.</span></span> <span data-ttu-id="e58e7-181">В противном случае осуществляется простое приведение.</span><span class="sxs-lookup"><span data-stu-id="e58e7-181">Otherwise, it does a simple cast.</span></span>  
   
 ```  
 new ForEach<PSObject>  
@@ -151,10 +150,9 @@ new ForEach<PSObject>
         }  
     }  
 },  
-  
 ```  
   
- Для каждого из двух действий `InvokePowerShell` \(стандартного и нестандартного\) создается конструктор.InvokePowerShellDesigner.xaml и связанный с ним CS\-файл определяют внешний вид в средстве [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] нестандартного действия `InvokePowerShell`.Внутри InvokePowerShellDesigner.xaml <xref:System.Windows.Controls.DockPanel> представляет графический интерфейс.  
+ <span data-ttu-id="e58e7-182">Для каждого из двух действий `InvokePowerShell` (стандартного и нестандартного) создается конструктор.</span><span class="sxs-lookup"><span data-stu-id="e58e7-182">For each of the two `InvokePowerShell` activities (generic, and non-generic), a designer was created.</span></span> <span data-ttu-id="e58e7-183">InvokePowerShellDesigner.xaml и связанный с ним CS-файл определяют внешний вид в средстве [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] нестандартного действия `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-183">InvokePowerShellDesigner.xaml and its associated .cs file define the appearance in [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] for the non-generic version of the `InvokePowerShell` activity.</span></span> <span data-ttu-id="e58e7-184">Внутри InvokePowerShellDesigner.xaml <xref:System.Windows.Controls.DockPanel> представляет графический интерфейс.</span><span class="sxs-lookup"><span data-stu-id="e58e7-184">Inside InvokePowerShellDesigner.xaml, a <xref:System.Windows.Controls.DockPanel> is used to represent the graphical interface.</span></span>  
   
 ```  
 <DockPanel x:Uid="DockPanel_1" LastChildFill="True">  
@@ -163,12 +161,11 @@ new ForEach<PSObject>
                  TextWrapping="WrapWithOverflow"  AcceptsReturn="True" MinLines="4" MaxLines="4"  
                  Background="{x:Null}" Margin="3" />  
     </DockPanel>  
-  
 ```  
   
- Стоит заметить, что свойство `Text` текстового поля является двусторонней привязкой, гарантирующей, что значение свойства `CommandText` действия будет эквивалентно значению, вводимому в конструктор.  
+ <span data-ttu-id="e58e7-185">Стоит заметить, что свойство `Text` текстового поля является двусторонней привязкой, гарантирующей, что значение свойства `CommandText` действия будет эквивалентно значению, вводимому в конструктор.</span><span class="sxs-lookup"><span data-stu-id="e58e7-185">Note that the `Text` property of the text box is a two-way binding that ensures that the value of the activity’s `CommandText` property is equivalent to the value input into the designer.</span></span>  
   
- GenericInvokePowerShellDesigner.xaml и связанный с ним CS\-файл определяют графический интерфейс `InvokePowerShell` нестандартного действия.Конструктор немного сложнее, поскольку позволяет пользователям задавать `InitializationAction`.Ключевой элемент применения <xref:System.Activities.Presentation.WorkflowItemPresenter> — это возможность перетаскивать дочерние действия в область конструктора `InvokePowerShell`.  
+ <span data-ttu-id="e58e7-186">GenericInvokePowerShellDesigner.xaml и связанный с ним CS-файл определяют графический интерфейс `InvokePowerShell` нестандартного действия.</span><span class="sxs-lookup"><span data-stu-id="e58e7-186">GenericInvokePowerShellDesigner.xaml and its associated .cs file define the graphical interface for the generic `InvokePowerShell` activity.</span></span> <span data-ttu-id="e58e7-187">Конструктор немного сложнее, поскольку позволяет пользователям задавать `InitializationAction`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-187">The designer is slightly more complicated because it allows users to set an `InitializationAction`.</span></span> <span data-ttu-id="e58e7-188">Ключевой элемент применения <xref:System.Activities.Presentation.WorkflowItemPresenter> - это возможность перетаскивать дочерние действия в область конструктора `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-188">The key element is the usage of <xref:System.Activities.Presentation.WorkflowItemPresenter> to allow drag and drop of child activities onto the `InvokePowerShell` designer surface.</span></span>  
   
 ```  
 <sap:WorkflowItemPresenter x:Uid="sap:WorkflowItemPresenter_1" Margin="0,10,0,10"  
@@ -176,49 +173,48 @@ new ForEach<PSObject>
     AllowedItemType="{x:Type sa:Activity}"  
     Item="{Binding Path=ModelItem.InitializationAction.Handler, Mode=TwoWay}"  
     Grid.Row="1" Grid.Column="1" />  
-  
 ```  
   
- Настройка конструктора не завершается настройкой XAML\-файлов, определяющих внешний вид действия на холсте конструктора.Диалоговые окна, используемые для отображения параметров действия, тоже можно настроить.Эти параметры и переменные PowerShell влияют на поведение команд PowerShell.Действие предоставляет их как типы <xref:System.Collections.Generic.Dictionary%601>.ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml и PropertyEditorResources.cs определяют диалоговое окно, позволяющее изменять эти типы.  
+ <span data-ttu-id="e58e7-189">Настройка конструктора не завершается настройкой XAML-файлов, определяющих внешний вид действия на холсте конструктора.</span><span class="sxs-lookup"><span data-stu-id="e58e7-189">The designer customization does not stop with the .xaml files that define the appearance of the activity on the design canvas.</span></span> <span data-ttu-id="e58e7-190">Диалоговые окна, используемые для отображения параметров действия, тоже можно настроить.</span><span class="sxs-lookup"><span data-stu-id="e58e7-190">The dialog boxes used to display the parameters of the activity can also be customized.</span></span> <span data-ttu-id="e58e7-191">Эти параметры и переменные PowerShell влияют на поведение команд PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-191">These parameters and PowerShell variables affect the behavior of PowerShell commands.</span></span> <span data-ttu-id="e58e7-192">Это действие предоставляет их в виде <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` типов.</span><span class="sxs-lookup"><span data-stu-id="e58e7-192">The activity exposes them as <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` types.</span></span> <span data-ttu-id="e58e7-193">ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml и PropertyEditorResources.cs определяют диалоговое окно, позволяющее изменять эти типы.</span><span class="sxs-lookup"><span data-stu-id="e58e7-193">ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml and PropertyEditorResources.cs define the dialog box that allows you to edit these types.</span></span>  
   
-## Настройка, построение и выполнение образца  
- Чтобы запустить этот образец, нужно установить Windows PowerShell.Установить Windows PowerShell можно отсюда: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e58e7-194">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="e58e7-194">To set up, build, and run the sample</span></span>  
+ <span data-ttu-id="e58e7-195">Чтобы запустить этот образец, нужно установить Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e58e7-195">You must install Windows PowerShell to run this sample.</span></span> <span data-ttu-id="e58e7-196">Windows PowerShell можно установить из этого расположения: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).</span><span class="sxs-lookup"><span data-stu-id="e58e7-196">Windows PowerShell can be installed from this location: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).</span></span>  
   
-#### Запуск закодированного клиента  
+#### <a name="to-run-the-coded-client"></a><span data-ttu-id="e58e7-197">Запуск закодированного клиента</span><span class="sxs-lookup"><span data-stu-id="e58e7-197">To run the coded client</span></span>  
   
-1.  Откройте файл PowerShell.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="e58e7-198">Откройте файл PowerShell.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e58e7-198">Open PowerShell.sln using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Щелкните решение правой кнопкой мыши и постройте его.  
+2.  <span data-ttu-id="e58e7-199">Щелкните решение правой кнопкой мыши и постройте его.</span><span class="sxs-lookup"><span data-stu-id="e58e7-199">Right-click the solution and build it.</span></span>  
   
-3.  Щелкните правой кнопкой мыши проект **CodedClient** и выберите пункт **Назначить запускаемым проектом**.  
+3.  <span data-ttu-id="e58e7-200">Щелкните правой кнопкой мыши **CodedClient** проект и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="e58e7-200">Right-click the **CodedClient** project and select **Set as Startup Project**.</span></span>  
   
-4.  Чтобы запустить приложение, нажмите клавиши CTRL\+F5.  
+4.  <span data-ttu-id="e58e7-201">Нажмите CTRL+F5, чтобы запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="e58e7-201">Press CTRL+F5 to run the application.</span></span>  
   
-#### Запуск конструкторского клиента  
+#### <a name="to-run-the-designer-client"></a><span data-ttu-id="e58e7-202">Запуск конструкторского клиента</span><span class="sxs-lookup"><span data-stu-id="e58e7-202">To run the designer client</span></span>  
   
-1.  Откройте файл PowerShell.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="e58e7-203">Откройте файл PowerShell.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e58e7-203">Open PowerShell.sln using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Щелкните решение правой кнопкой мыши и постройте его.  
+2.  <span data-ttu-id="e58e7-204">Щелкните решение правой кнопкой мыши и постройте его.</span><span class="sxs-lookup"><span data-stu-id="e58e7-204">Right-click the solution and build it.</span></span>  
   
-3.  Щелкните правой кнопкой мыши проект **DesignerClient** и выберите пункт **Назначить запускаемым проектом**.  
+3.  <span data-ttu-id="e58e7-205">Щелкните правой кнопкой мыши **DesignerClient** проект и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="e58e7-205">Right-click the **DesignerClient** project and select **Set as Startup Project**.</span></span>  
   
-4.  Чтобы запустить приложение, нажмите клавиши CTRL\+F5.  
+4.  <span data-ttu-id="e58e7-206">Нажмите CTRL+F5, чтобы запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="e58e7-206">Press CTRL+F5 to run the application.</span></span>  
   
-## Известные проблемы  
+## <a name="known-issues"></a><span data-ttu-id="e58e7-207">Известные проблемы</span><span class="sxs-lookup"><span data-stu-id="e58e7-207">Known Issues</span></span>  
   
-1.  Если при обращении к сборке с действиями `InvokePowerShell` или проекту от другого проекта возникает ошибка, возможно, нужно вручную добавить элемент `<SpecificVersion>True</SpecificVersion>` к CSPROJ\-файлу нового проекта под строчкой, в которой происходит обращение к `InvokePowerShell`.  
+1.  <span data-ttu-id="e58e7-208">Если при обращении к сборке с действиями `InvokePowerShell` или проекту от другого проекта возникает ошибка, возможно, нужно вручную добавить элемент `<SpecificVersion>True</SpecificVersion>` к CSPROJ-файлу нового проекта под строчкой, в которой происходит обращение к `InvokePowerShell`.</span><span class="sxs-lookup"><span data-stu-id="e58e7-208">If referencing the `InvokePowerShell` activity assembly or project from another project results in a build error, you may need to manually add the `<SpecificVersion>True</SpecificVersion>` element to the .csproj file of the new project under the line that references `InvokePowerShell`.</span></span>  
   
-2.  Если Windows PowerShell не установлен, то сразу же после добавления действия `InvokePowerShell` в рабочий процесс появится сообщение о следующей ошибке: `У конструктора рабочего процесса возникли затруднения с вашим документом. Не удалось загрузить файл или сборку "System.Management.Automation"... или одну из ее зависимостей. Не удается найти указанный файл.`  
+2.  <span data-ttu-id="e58e7-209">Если не установлена оболочка Windows PowerShell, следующее сообщение об ошибке отображается в Visual Studio, сразу после добавления `InvokePowerShell` действия в рабочий процесс:`Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`</span><span class="sxs-lookup"><span data-stu-id="e58e7-209">If Windows PowerShell is not installed, the following error message is displayed in Visual Studio as soon as you add an `InvokePowerShell` activity onto a workflow: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`</span></span>  
   
-3.  В среде Windows PowerShell 2.0 не удался вызов `$input.MoveNext()` программным образом, а в скриптах, использующих `$input.MoveNext()`, формируются непреднамеренные ошибки и результаты.Чтобы решить эту проблему, попробуйте использовать операцию PowerShell `foreach`, вместо того, чтобы вызывать `MoveNext()` при проходе по массиву.  
+3.  <span data-ttu-id="e58e7-210">В среде Windows PowerShell 2.0 не удался вызов `$input.MoveNext()` программным образом, а в скриптах, использующих `$input.MoveNext()`, формируются непреднамеренные ошибки и результаты.</span><span class="sxs-lookup"><span data-stu-id="e58e7-210">In Windows PowerShell 2.0, programmatically calling `$input.MoveNext()` fails and scripts using `$input.MoveNext()` produce unintended errors and results.</span></span> <span data-ttu-id="e58e7-211">Чтобы решить эту проблему, попробуйте использовать операцию PowerShell `foreach`, вместо того, чтобы вызывать `MoveNext()` при проходе по массиву.</span><span class="sxs-lookup"><span data-stu-id="e58e7-211">To work around this issue, consider using the PowerShell verb `foreach` instead of calling `MoveNext()` when iterating an array.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="e58e7-212">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e58e7-212">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e58e7-213">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="e58e7-213">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="e58e7-214">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e58e7-214">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e58e7-215">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="e58e7-215">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="e58e7-216">См. также</span><span class="sxs-lookup"><span data-stu-id="e58e7-216">See Also</span></span>

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - sending data
 - WebRequest class, sending and receiving data
@@ -25,34 +23,33 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c492390eb4cb27973652cc6d62f8c1da2bd1121e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: bb5c79980246a9afa5a7e5024049c26815cab49d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="requesting-data"></a>Запрос данных
-Для разработки современных интернет-приложений, выполняющихся в распределенной операционной среде, требуется простой и эффективный способ извлечения данных из ресурсов любого типа. Благодаря подключаемым протоколам можно разрабатывать приложения, использующие единый интерфейс для извлечения данных из нескольких интернет-протоколов.  
+# <a name="requesting-data"></a><span data-ttu-id="7895d-102">Запрос данных</span><span class="sxs-lookup"><span data-stu-id="7895d-102">Requesting Data</span></span>
+<span data-ttu-id="7895d-103">Для разработки современных интернет-приложений, выполняющихся в распределенной операционной среде, требуется простой и эффективный способ извлечения данных из ресурсов любого типа.</span><span class="sxs-lookup"><span data-stu-id="7895d-103">Developing applications that run in the distributed operating environment of today's Internet requires an efficient, easy-to-use method for retrieving data from resources of all types.</span></span> <span data-ttu-id="7895d-104">Благодаря подключаемым протоколам можно разрабатывать приложения, использующие единый интерфейс для извлечения данных из нескольких интернет-протоколов.</span><span class="sxs-lookup"><span data-stu-id="7895d-104">Pluggable protocols let you develop applications that use a single interface to retrieve data from multiple Internet protocols.</span></span>  
   
-## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Загрузка и скачивание данных с интернет-сервера  
- Для реализации простых операций запроса и ответа класс <xref:System.Net.WebClient> предоставляет простейший способ загрузки данных на интернет-сервер или скачивания с него. В классе **WebClient** представлены методы для скачивания и загрузки файлов, отправки и получения потоков, а также отправки буфера данных на сервер и получения ответа от него. Класс **WebClient** использует классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> для установления фактических подключений к интернет-ресурсу, что позволяет использовать любой зарегистрированный подключаемый протокол.  
+## <a name="uploading-and-downloading-data-from-an-internet-server"></a><span data-ttu-id="7895d-105">Загрузка и скачивание данных с интернет-сервера</span><span class="sxs-lookup"><span data-stu-id="7895d-105">Uploading and Downloading Data from an Internet Server</span></span>  
+ <span data-ttu-id="7895d-106">Для реализации простых операций запроса и ответа класс <xref:System.Net.WebClient> предоставляет простейший способ загрузки данных на интернет-сервер или скачивания с него.</span><span class="sxs-lookup"><span data-stu-id="7895d-106">For simple request and response transactions, the <xref:System.Net.WebClient> class provides the easiest method for uploading data to or downloading data from an Internet server.</span></span> <span data-ttu-id="7895d-107">В классе **WebClient** представлены методы для скачивания и загрузки файлов, отправки и получения потоков, а также отправки буфера данных на сервер и получения ответа от него.</span><span class="sxs-lookup"><span data-stu-id="7895d-107">**WebClient** provides methods for uploading and downloading files, sending and receiving streams, and sending a data buffer to the server and receiving a response.</span></span> <span data-ttu-id="7895d-108">Класс **WebClient** использует классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> для установления фактических подключений к интернет-ресурсу, что позволяет использовать любой зарегистрированный подключаемый протокол.</span><span class="sxs-lookup"><span data-stu-id="7895d-108">**WebClient** uses the <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes to make the actual connections to the Internet resource, so any registered pluggable protocol is available for use.</span></span>  
   
- Клиентские приложения, которые выполняют более сложные транзакции, используют для запроса данных с серверов класс **WebRequest** и его потомки. Класс **WebRequest** инкапсулирует сведения о подключении к серверу, отправке запроса и получении ответа. **WebRequest** — это абстрактный класс, в котором определяется набор свойств и методов, доступных всем приложениям, использующим подключаемые протоколы. Потомки класса **WebRequest**, такие как <xref:System.Net.HttpWebRequest>, реализуют свойства и методы, определенные в **WebRequest**, в соответствии с особенностями базового протокола.  
+ <span data-ttu-id="7895d-109">Клиентские приложения, которые выполняют более сложные транзакции, используют для запроса данных с серверов класс **WebRequest** и его потомки.</span><span class="sxs-lookup"><span data-stu-id="7895d-109">Client applications that need to make more complex transactions request data from servers using the **WebRequest** class and its descendants.</span></span> <span data-ttu-id="7895d-110">Класс **WebRequest** инкапсулирует сведения о подключении к серверу, отправке запроса и получении ответа.</span><span class="sxs-lookup"><span data-stu-id="7895d-110">**WebRequest** encapsulates the details of connecting to the server, sending the request, and receiving the response.</span></span> <span data-ttu-id="7895d-111">**WebRequest** — это абстрактный класс, в котором определяется набор свойств и методов, доступных всем приложениям, использующим подключаемые протоколы.</span><span class="sxs-lookup"><span data-stu-id="7895d-111">**WebRequest** is an abstract class that defines a set of properties and methods that are available to all applications that use pluggable protocols.</span></span> <span data-ttu-id="7895d-112">Потомки класса **WebRequest**, такие как <xref:System.Net.HttpWebRequest>, реализуют свойства и методы, определенные в **WebRequest**, в соответствии с особенностями базового протокола.</span><span class="sxs-lookup"><span data-stu-id="7895d-112">Descendants of **WebRequest**, such as <xref:System.Net.HttpWebRequest>, implement the properties and methods defined by **WebRequest** in a way that is consistent with the underlying protocol.</span></span>  
   
- Класс **WebRequest** создает экземпляры потомков **WebRequest** для определенных протоколов, используя значение URI, которое передано в его метод <xref:System.Net.WebRequest.Create%2A> и определяет конкретный создаваемый экземпляр производного класса. Приложения указывают, какой потомок класса **WebRequest** необходимо использовать для обработки запроса, регистрируя конструктор такого потомка с помощью метода <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
+ <span data-ttu-id="7895d-113">Класс **WebRequest** создает экземпляры потомков **WebRequest** для определенных протоколов, используя значение URI, которое передано в его метод <xref:System.Net.WebRequest.Create%2A> и определяет конкретный создаваемый экземпляр производного класса.</span><span class="sxs-lookup"><span data-stu-id="7895d-113">The **WebRequest** class creates protocol-specific instances of **WebRequest** descendants, using the value of the URI passed to its <xref:System.Net.WebRequest.Create%2A> method to determine the specific derived-class instance to create.</span></span> <span data-ttu-id="7895d-114">Приложения указывают, какой потомок класса **WebRequest** необходимо использовать для обработки запроса, регистрируя конструктор такого потомка с помощью метода <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7895d-114">Applications indicate which **WebRequest** descendant should be used to handle a request by registering the descendant's constructor with the <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> method.</span></span>  
   
- Запрос к интернет-ресурсу выполняется посредством вызова метода <xref:System.Net.WebRequest.GetResponse%2A> для **WebRequest**. Метод **GetResponse** создает запрос для определенного протокола на основании свойств **WebRequest**, устанавливает подключение TCP или UDP к сокету сервера и отправляет запрос. Для запросов, которые отправляют данные на сервер, таких как HTTP-запрос **Post** или FTP-запрос **Put**, метод <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> предоставляет сетевой поток для отправки данных.  
+ <span data-ttu-id="7895d-115">Запрос к интернет-ресурсу выполняется посредством вызова метода <xref:System.Net.WebRequest.GetResponse%2A> для **WebRequest**.</span><span class="sxs-lookup"><span data-stu-id="7895d-115">A request is made to the Internet resource by calling the <xref:System.Net.WebRequest.GetResponse%2A> method on the **WebRequest**.</span></span> <span data-ttu-id="7895d-116">Метод **GetResponse** создает запрос для определенного протокола на основании свойств **WebRequest**, устанавливает подключение TCP или UDP к сокету сервера и отправляет запрос.</span><span class="sxs-lookup"><span data-stu-id="7895d-116">The **GetResponse** method constructs the protocol-specific request from the properties of the **WebRequest**, makes the TCP or UDP socket connection to the server, and sends the request.</span></span> <span data-ttu-id="7895d-117">Для запросов, которые отправляют данные на сервер, таких как HTTP-запрос **Post** или FTP-запрос **Put**, метод <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> предоставляет сетевой поток для отправки данных.</span><span class="sxs-lookup"><span data-stu-id="7895d-117">For requests that send data to the server, such as HTTP **Post** or FTP **Put** requests, the <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> method provides a network stream in which to send the data.</span></span>  
   
- Метод **GetResponse** возвращает **WebResponse** для определенного протокола, соответствующий **WebRequest.**  
+ <span data-ttu-id="7895d-118">Метод **GetResponse** возвращает **WebResponse** для определенного протокола, соответствующий **WebRequest.**</span><span class="sxs-lookup"><span data-stu-id="7895d-118">The **GetResponse** method returns a protocol-specific **WebResponse** that matches the **WebRequest.**</span></span>  
   
- **WebResponse** — это также абстрактный класс, в котором определяются свойства и методы, доступные всем приложениям, использующим подключаемые протоколы. Потомки класса **WebResponse** реализуют эти свойства и методы для соответствующих базовых протоколов. Например, класс <xref:System.Net.HttpWebResponse> реализует класс **WebResponse** для протокола HTTP.  
+ <span data-ttu-id="7895d-119">**WebResponse** — это также абстрактный класс, в котором определяются свойства и методы, доступные всем приложениям, использующим подключаемые протоколы.</span><span class="sxs-lookup"><span data-stu-id="7895d-119">The **WebResponse** class is also an abstract class that defines properties and methods that are available to all applications that use pluggable protocols.</span></span> <span data-ttu-id="7895d-120">Потомки класса **WebResponse** реализуют эти свойства и методы для соответствующих базовых протоколов.</span><span class="sxs-lookup"><span data-stu-id="7895d-120">**WebResponse** descendants implement these properties and methods for the underlying protocol.</span></span> <span data-ttu-id="7895d-121">Например, класс <xref:System.Net.HttpWebResponse> реализует класс **WebResponse** для протокола HTTP.</span><span class="sxs-lookup"><span data-stu-id="7895d-121">The <xref:System.Net.HttpWebResponse> class, for example, implements the **WebResponse** class for HTTP.</span></span>  
   
- Возвращаемые сервером данные предоставляются приложению в потоке, который возвращается методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>. Этот поток используется так же, как и любые другие, что показано в следующем примере.  
+ <span data-ttu-id="7895d-122">Возвращаемые сервером данные предоставляются приложению в потоке, который возвращается методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7895d-122">The data returned by the server is presented to the application in the stream returned by the <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="7895d-123">Этот поток используется так же, как и любые другие, что показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="7895d-123">You can use this stream like any other, as shown in the following example.</span></span>  
   
 ```csharp  
 StreamReader sr =  
@@ -64,8 +61,7 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Практическое руководство. Запрос веб-страницы и получение результатов в виде потока](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
- [Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
-
+## <a name="see-also"></a><span data-ttu-id="7895d-124">См. также</span><span class="sxs-lookup"><span data-stu-id="7895d-124">See Also</span></span>  
+ [<span data-ttu-id="7895d-125">Сетевое программирование в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7895d-125">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+ [<span data-ttu-id="7895d-126">Практическое руководство. Запрос веб-страницы и получение результатов в виде потока</span><span class="sxs-lookup"><span data-stu-id="7895d-126">How to: Request a Web Page and Retrieve the Results as a Stream</span></span>](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
+ [<span data-ttu-id="7895d-127">Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола</span><span class="sxs-lookup"><span data-stu-id="7895d-127">How to: Retrieve a Protocol-Specific WebResponse that Matches a WebRequest</span></span>](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

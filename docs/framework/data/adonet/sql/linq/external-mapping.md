@@ -1,48 +1,51 @@
 ---
-title: "Внешние сопоставления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Внешнее сопоставление"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7a0650f444f901d37797ca81343f06cb566f8112
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Внешние сопоставления
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает *внешнее сопоставление* \- процесс, в котором отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной моделью.  Файл внешнего сопоставления имеет следующие преимущества.  
+# <a name="external-mapping"></a><span data-ttu-id="2d234-102">Внешнее сопоставление</span><span class="sxs-lookup"><span data-stu-id="2d234-102">External Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="2d234-103">поддерживает *внешнего сопоставления*, по которому отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной модели процесса.</span><span class="sxs-lookup"><span data-stu-id="2d234-103"> supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="2d234-104">Файл внешнего сопоставления имеет следующие преимущества.</span><span class="sxs-lookup"><span data-stu-id="2d234-104">Advantages of using an external mapping file include the following:</span></span>  
   
--   Код сопоставления можно хранить вне кода приложения.  Этот подход уменьшает перегруженность кода приложения.  
+-   <span data-ttu-id="2d234-105">Код сопоставления можно хранить вне кода приложения.</span><span class="sxs-lookup"><span data-stu-id="2d234-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="2d234-106">Этот подход уменьшает перегруженность кода приложения.</span><span class="sxs-lookup"><span data-stu-id="2d234-106">This approach reduces clutter in your application code.</span></span>  
   
--   Файл внешнего сопоставления можно считать подобным файлу конфигурации.  Например, можно изменить поведение приложения после предоставления двоичных файлов, просто выгрузив файл внешнего сопоставления.  
+-   <span data-ttu-id="2d234-107">Файл внешнего сопоставления можно считать подобным файлу конфигурации.</span><span class="sxs-lookup"><span data-stu-id="2d234-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="2d234-108">Например, можно изменить поведение приложения после предоставления двоичных файлов, просто выгрузив файл внешнего сопоставления.</span><span class="sxs-lookup"><span data-stu-id="2d234-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
   
-## Требования  
- Файл сопоставления должен быть XML\-файлом и проверен на соответствие файлу определения схемы \(XSD\) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="requirements"></a><span data-ttu-id="2d234-109">Требования</span><span class="sxs-lookup"><span data-stu-id="2d234-109">Requirements</span></span>  
+ <span data-ttu-id="2d234-110">Файл сопоставления должен быть XML-файла и проверен на соответствие [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] файл схемы определения (.xsd).</span><span class="sxs-lookup"><span data-stu-id="2d234-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
   
- Действуют следующие правила.  
+ <span data-ttu-id="2d234-111">Действуют следующие правила.</span><span class="sxs-lookup"><span data-stu-id="2d234-111">The following rules apply:</span></span>  
   
--   Файл сопоставления должен быть файлом XML.  
+-   <span data-ttu-id="2d234-112">Файл сопоставления должен быть файлом XML.</span><span class="sxs-lookup"><span data-stu-id="2d234-112">The mapping file must be an XML file.</span></span>  
   
--   Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML.  Для получения дополнительной информации см. [Как проверить DBML\-файлы и внешние файлы сопоставлений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+-   <span data-ttu-id="2d234-113">Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML.</span><span class="sxs-lookup"><span data-stu-id="2d234-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="2d234-114">Дополнительные сведения см. в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="2d234-114">For more information, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
--   Внешнее сопоставление переопределяет сопоставление на основе атрибутов.  Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления.  Данная модель работает, если класс включен в файл внешнего сопоставления.  
+-   <span data-ttu-id="2d234-115">Внешнее сопоставление переопределяет сопоставление на основе атрибутов.</span><span class="sxs-lookup"><span data-stu-id="2d234-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="2d234-116">Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления.</span><span class="sxs-lookup"><span data-stu-id="2d234-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="2d234-117">Данная модель работает, если класс включен в файл внешнего сопоставления.</span><span class="sxs-lookup"><span data-stu-id="2d234-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает комбинированное использование двух типов сопоставлений \(на основе атрибутов и внешнее\).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="2d234-118"> не поддерживает комбинированное использование двух типов сопоставлений (на основе атрибутов и внешнее).</span><span class="sxs-lookup"><span data-stu-id="2d234-118"> does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
   
-## Файл определения схемы XML  
- Внешнее сопоставление в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] должно быть проверено на соответствие определению схемы XML.  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="2d234-119">Файл определения схемы XML</span><span class="sxs-lookup"><span data-stu-id="2d234-119">XML Schema Definition File</span></span>  
+ <span data-ttu-id="2d234-120">Внешнее сопоставление в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] должно быть проверено на соответствие определению схемы XML.</span><span class="sxs-lookup"><span data-stu-id="2d234-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
   
- Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML\-файла.  Дополнительные сведения см. в разделе [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ <span data-ttu-id="2d234-121">Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла.</span><span class="sxs-lookup"><span data-stu-id="2d234-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="2d234-122">Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span><span class="sxs-lookup"><span data-stu-id="2d234-122">For more information, see [Code Generation in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span></span>  
   
 > [!NOTE]
->  Пользователи [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] также найдут этот файл XSD в диалоговом окне схем XML под именем "LinqToSqlMapping.xsd".  Сведения о правильном использовании этого файла для проверки файла внешнего сопоставления см. в разделе [Как проверить DBML\-файлы и внешние файлы сопоставлений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  <span data-ttu-id="2d234-123">Пользователи [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] также найдут этот файл XSD в диалоговом окне схем XML под именем "LinqToSqlMapping.xsd".</span><span class="sxs-lookup"><span data-stu-id="2d234-123">[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="2d234-124">Правильно использовать этот файл для проверки внешнего файла сопоставления, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span><span class="sxs-lookup"><span data-stu-id="2d234-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -148,7 +151,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## См. также  
- [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [Как сформировать модель объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a><span data-ttu-id="2d234-125">См. также</span><span class="sxs-lookup"><span data-stu-id="2d234-125">See Also</span></span>  
+ [<span data-ttu-id="2d234-126">Создание кода в LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="2d234-126">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [<span data-ttu-id="2d234-127">Ссылки</span><span class="sxs-lookup"><span data-stu-id="2d234-127">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="2d234-128">Как: создать модель объектов в виде внешнего файла</span><span class="sxs-lookup"><span data-stu-id="2d234-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

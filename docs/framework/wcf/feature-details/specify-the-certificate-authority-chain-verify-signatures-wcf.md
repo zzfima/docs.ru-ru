@@ -1,44 +1,47 @@
 ---
-title: "Как указать цепочку сертификатов центра сертификации, используемую для проверки сигнатур (WCF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сертификаты [WCF], указание цепочки сертификатов центра сертификации"
-  - "сертификаты [WCF], проверка сигнатур"
+title: "Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- certificates [WCF], specifying the certificate authority certificate chain
+- certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce846d5637c6d49b4a3b1c6f28ae533e4900f696
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как указать цепочку сертификатов центра сертификации, используемую для проверки сигнатур (WCF)
-Когда [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получает сообщение SOAP, подписанное с помощью сертификата X.509, по умолчанию проверяется, выдан ли сертификат X.509 надежным центром сертификации.Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный.Для выполнения этой проверки, осуществляемой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], цепочка сертификатов центра сертификации должна быть установлена в надлежащем хранилище сертификатов.  
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a><span data-ttu-id="38d4f-102">Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)</span><span class="sxs-lookup"><span data-stu-id="38d4f-102">How to: Specify the Certificate Authority Certificate Chain Used to Verify Signatures (WCF)</span></span>
+<span data-ttu-id="38d4f-103">Когда [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] получает сообщение SOAP, подписанное с помощью сертификата X.509, по умолчанию проверяется, что сертификат X.509 выдан надежным центром сертификации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-103">When [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] receives a SOAP message signed using an X.509 certificate, by default it verifies that the X.509 certificate was issued by a trusted certification authority.</span></span> <span data-ttu-id="38d4f-104">Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный.</span><span class="sxs-lookup"><span data-stu-id="38d4f-104">This is done by looking in a certificate store and determining if the certificate for that certification authority has been designated as trusted.</span></span> <span data-ttu-id="38d4f-105">Для выполнения этой проверки, осуществляемой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], цепь сертификатов центра сертификации должна быть установлена в надлежащем хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="38d4f-105">In order for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to make this determination, the certification authority certificate chain must be installed in the correct certificate store.</span></span>  
   
-### Установка цепочки сертификатов центра сертификации  
+### <a name="to-install-a-certification-authority-certificate-chain"></a><span data-ttu-id="38d4f-106">Установка цепи сертификатов центра сертификации</span><span class="sxs-lookup"><span data-stu-id="38d4f-106">To install a certification authority certificate chain</span></span>  
   
--   Для каждого центра сертификации, чьи сертификаты X.509 получатель сообщения SOAP должен считать надежными, установите цепочку сертификатов центра сертификации в хранилище сертификатов, из которого [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] извлекает сертификаты X.509 \(согласно заданным настройкам\).  
+-   <span data-ttu-id="38d4f-107">Для каждого центра сертификации, чьи сертификаты X.509 получатель сообщения SOAP должен считать надежными, установите цепь сертификатов центра сертификации в хранилище сертификатов, из которого [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] извлекает сертификаты X.509 (согласно заданным настройкам).</span><span class="sxs-lookup"><span data-stu-id="38d4f-107">For each certification authority that a SOAP message recipient intends to trust X.509 certificates issued from, install the certification authority certificate chain into the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from.</span></span>  
   
-     Например, чтобы получатель сообщений SOAP считал надежными сертификаты X.509, выданные Майкрософт, необходимо, чтобы цепочка сертификатов центра сертификации Майкрософт была установлена в хранилище сертификатов, в котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполняет поиск сертификатов X.509 \(согласно заданным настройкам\).Хранилище сертификатов, в котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполняет поиск сертификатов X.509, можно указать в коде или конфигурации.Например, его можно указать в коде с помощью метода <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> или в конфигурации \(несколькими способами, в том числе [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)\).  
+     <span data-ttu-id="38d4f-108">Например, чтобы получатель сообщений SOAP считал надежными сертификаты X.509, выданные Microsoft, необходимо, чтобы цепь сертификатов центра сертификации Microsoft была установлена в хранилище сертификатов, в котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполняет поиск сертификатов X.509 (согласно заданным настройкам).</span><span class="sxs-lookup"><span data-stu-id="38d4f-108">For instance, if a SOAP message recipient intends to trust X.509 certificates issued by Microsoft, the certification authority certificate chain for Microsoft must be installed in the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is set up to look for X.509 certificates from.</span></span> <span data-ttu-id="38d4f-109">Хранилище сертификатов, в котором [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] выполняет поиск сертификатов X.509, можно указать в коде или конфигурации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-109">The certificate store in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] looks for X.509 certificates can be specified in code or configuration.</span></span> <span data-ttu-id="38d4f-110">Например, здесь можно задать в коде с помощью <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> метода или в конфигурации с несколькими способами, включая [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span><span class="sxs-lookup"><span data-stu-id="38d4f-110">For example, this can be specified in code using the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method or in configuration a few ways, including the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span></span>  
   
-     Поскольку Windows поставляется с комплектом цепочек сертификатов по умолчанию для надежных центров сертификации, в некоторых случаях не требуется устанавливать цепочки сертификатов для всех центров сертификации.  
+     <span data-ttu-id="38d4f-111">Поскольку Windows поставляется с комплектом цепочек сертификатов по умолчанию для надежных центров сертификации, в некоторых случаях не требуется устанавливать цепочки сертификатов для всех центров сертификации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-111">Because Windows ships with a set of default certificate chains for trusted certificate authorities, it may not be necessary to install the certificate chain for all certificate authorities.</span></span>  
   
-    1.  Экспортируйте цепочку сертификатов центра сертификации.  
+    1.  <span data-ttu-id="38d4f-112">Экспорт цепи сертификатов центра сертификации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-112">Export the certification authority certificate chain.</span></span>  
   
-         Конкретный способ экспорта зависит от центра сертификации.Если центр сертификации использует службы сертификации Майкрософт, выберите **Загрузка сертификата ЦС, цепочки сертификатов или CRL**, а затем **Загрузка сертификата ЦС**.  
+         <span data-ttu-id="38d4f-113">Конкретный способ экспорта зависит от центра сертификации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-113">Exactly how this is done depends on the certification authority.</span></span> <span data-ttu-id="38d4f-114">Если центр сертификации использует службы сертификации Microsoft, выберите **Загрузка сертификата ЦС, цепочки сертификатов или CRL**, а затем выберите **Загрузка сертификата ЦС**.</span><span class="sxs-lookup"><span data-stu-id="38d4f-114">If the certification authority is running Microsoft Certificate Services, select **Download a CA certificate, certificate chain, or CRL**, and then choose **Download CA certificate**.</span></span>  
   
-    2.  Импортируйте цепочку сертификатов центра сертификации.  
+    2.  <span data-ttu-id="38d4f-115">Импорт цепи сертификатов центра сертификации.</span><span class="sxs-lookup"><span data-stu-id="38d4f-115">Import the certification authority certificate chain.</span></span>  
   
-         В консоли управления \(MMC\), откройте оснастку диспетчера сертификатов.Чтобы воспользоваться хранилищем сертификатов, из которого [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \(согласно настройкам\) извлекает сертификаты X.509, выберите папку **Доверенные корневые** **центры сертификации**.В папке **Доверенные корневые центры сертификации** щелкните папку **Сертификаты**правой кнопкой мыши, выберите **Все задачи** и щелкните **Импорт**.Укажите файл, экспортированный на предыдущем этапе.  
+         <span data-ttu-id="38d4f-116">В консоли управления (MMC), откройте оснастку диспетчера сертификатов.</span><span class="sxs-lookup"><span data-stu-id="38d4f-116">In the Microsoft Management Console (MMC), open the Certificates snap-in.</span></span> <span data-ttu-id="38d4f-117">Для сертификата хранилища, на который [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] настроен для получения сертификатов X.509 из выберите **доверенных корневых** **центры сертификации**папки.</span><span class="sxs-lookup"><span data-stu-id="38d4f-117">For the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from, select the **Trusted Root** **Certification Authorities**folder.</span></span> <span data-ttu-id="38d4f-118">В разделе **доверенные корневые центры сертификации** папку, щелкните правой кнопкой мыши **сертификаты**папку, выберите пункт **все задачи**и нажмите кнопку **импорта** .</span><span class="sxs-lookup"><span data-stu-id="38d4f-118">Under the **Trusted Root Certification Authorities** folder, right-click the **Certificates**folder, point to **All Tasks**, and then click **Import**.</span></span> <span data-ttu-id="38d4f-119">Укажите файл, экспортированный на предыдущем этапе.</span><span class="sxs-lookup"><span data-stu-id="38d4f-119">Provide the file exported in step a.</span></span>  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании оснастки диспетчера сертификатов с помощью консоли управления \(MMC\) см. в разделе [Как просматривать сертификаты с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="38d4f-120">используя оснастку «Сертификаты» с помощью консоли MMC в разделе [как: Просмотр сертификатов с помощью оснастки MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span><span class="sxs-lookup"><span data-stu-id="38d4f-120"> using the Certificates snap-in with MMC, see [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span></span>  
   
-## См. также  
- [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="38d4f-121">См. также</span><span class="sxs-lookup"><span data-stu-id="38d4f-121">See Also</span></span>  
+ [<span data-ttu-id="38d4f-122">Работа с сертификатами</span><span class="sxs-lookup"><span data-stu-id="38d4f-122">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -1,52 +1,56 @@
 ---
-title: "Базовая проверка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Базовая проверка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba1343cc-aaab-4ade-b0c0-1dd5063bf4ad
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d388b3d6acad28e4ff952f72aa64a607d745f307
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Базовая проверка
-Этот образец демонстрирует действие `CreateProduct`, проверяющее, что аргумент `Cost` меньше аргумента `Price` или равен ему.  
+# <a name="basic-validation"></a><span data-ttu-id="366d4-102">Базовая проверка</span><span class="sxs-lookup"><span data-stu-id="366d4-102">Basic Validation</span></span>
+<span data-ttu-id="366d4-103">Этот образец демонстрирует действие `CreateProduct`, проверяющее, что аргумент `Cost` меньше аргумента `Price` или равен ему.</span><span class="sxs-lookup"><span data-stu-id="366d4-103">This sample consists of an activity, `CreateProduct`, which validates that its `Cost` argument is smaller than or equal to its `Price` argument.</span></span>  
   
-## Подробные сведения об образце  
- Проверку осуществляют два создателя: создатель действия \(создает логику проверки для действия\) и создатель рабочего процесса, вызывающий службы проверки для конкретного рабочего процесса.В этом сценарии создатель действия желает обеспечить стоимость каждого экземпляра действия, которая меньше цены или равна ей.  
+## <a name="sample-details"></a><span data-ttu-id="366d4-104">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="366d4-104">Sample Details</span></span>  
+ <span data-ttu-id="366d4-105">Проверку осуществляют два создателя: создатель действия (создает логику проверки для действия) и создатель рабочего процесса, вызывающий службы проверки для конкретного рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="366d4-105">There are two authors that use validation, the activity author (creates the validation logic for the activity) and the workflow author that calls validation services on a specific workflow.</span></span> <span data-ttu-id="366d4-106">В этом сценарии создатель действия желает обеспечить стоимость каждого экземпляра действия, которая меньше цены или равна ей.</span><span class="sxs-lookup"><span data-stu-id="366d4-106">In this scenario, the activity author wants to enforce that every instance of his activity must have a smaller or equal cost than that of the price.</span></span>  
   
- Создатель действия \(внутри действия\) должен:  
+ <span data-ttu-id="366d4-107">Создатель действия (внутри действия) должен:</span><span class="sxs-lookup"><span data-stu-id="366d4-107">The activity author (inside the activity) must:</span></span>  
   
--   Создайте ограничение \(`PriceGreaterThanCost`\).Здесь размещается вся логика проверки.  
+-   <span data-ttu-id="366d4-108">Создайте ограничение (`PriceGreaterThanCost`).</span><span class="sxs-lookup"><span data-stu-id="366d4-108">Create a constraint (`PriceGreaterThanCost`).</span></span> <span data-ttu-id="366d4-109">Здесь размещается вся логика проверки.</span><span class="sxs-lookup"><span data-stu-id="366d4-109">This is where all the validation logic resides.</span></span>  
   
--   Переопределите <xref:System.Activities.CodeActivity%601.OnGetConstraints%2A> и добавьте ограничение \(`PriceGreaterThanCost`\) в список ограничений <xref:System.Collections.IList>.  
+-   <span data-ttu-id="366d4-110">Переопределите `System.Activities.CodeActivity.OnGetConstraints()` и добавьте ограничение (`PriceGreaterThanCost`) в список ограничений <xref:System.Collections.IList>.</span><span class="sxs-lookup"><span data-stu-id="366d4-110">Override `System.Activities.CodeActivity.OnGetConstraints()` and add the constraint (`PriceGreaterThanCost`) to the constraints <xref:System.Collections.IList>.</span></span>  
   
- Создатель рабочего процесса \(главная программа\) должен:  
+ <span data-ttu-id="366d4-111">Создатель рабочего процесса (главная программа) должен:</span><span class="sxs-lookup"><span data-stu-id="366d4-111">The workflow author (main program) must:</span></span>  
   
--   Создайте рабочий процесс с экземпляром действия для проверки \(`CreateProduct`\).  
+-   <span data-ttu-id="366d4-112">Создайте рабочий процесс с экземпляром действия для проверки (`CreateProduct`).</span><span class="sxs-lookup"><span data-stu-id="366d4-112">Create a workflow with an instance of the activity to validate (`CreateProduct`).</span></span>  
   
--   Вызывает метод <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, возвращающий коллекцию <xref:System.Activities.Validation.ValidationResults> объектов <xref:System.Activities.Validation.ConstraintViolation>.  
+-   <span data-ttu-id="366d4-113">Вызывает метод <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, возвращающий коллекцию <xref:System.Activities.Validation.ValidationResults> объектов <xref:System.Activities.Validation.ValidationError>.</span><span class="sxs-lookup"><span data-stu-id="366d4-113">Call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, which returns a <xref:System.Activities.Validation.ValidationResults> collection of <xref:System.Activities.Validation.ValidationError>.</span></span>  
   
--   Напечатайте объекты <xref:System.Activities.Validation.ConstraintViolation> \(необязательно\).  
+-   <span data-ttu-id="366d4-114">Напечатайте объекты <xref:System.Activities.Validation.ValidationError> (необязательно).</span><span class="sxs-lookup"><span data-stu-id="366d4-114">(Optional) Print the <xref:System.Activities.Validation.ValidationError> objects.</span></span>  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="366d4-115">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="366d4-115">To set up, build, and run the sample</span></span>  
   
-1.  Откройте образец решения BasicValidation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="366d4-116">Откройте образец решения BasicValidation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="366d4-116">Open the BasicValidation.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Постройте и запустите решение.  
+2.  <span data-ttu-id="366d4-117">Постройте и запустите это решение.</span><span class="sxs-lookup"><span data-stu-id="366d4-117">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="366d4-118">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="366d4-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="366d4-119">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="366d4-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="366d4-120">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="366d4-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="366d4-121">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="366d4-121">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_управления>:\WF_WCF_Samples\WF\Basic\Validation\BasicValidation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\BasicValidation`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="366d4-122">См. также</span><span class="sxs-lookup"><span data-stu-id="366d4-122">See Also</span></span>

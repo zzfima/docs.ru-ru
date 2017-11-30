@@ -1,87 +1,90 @@
 ---
-title: "Control Pattern Mapping for UI Automation Clients | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, for UI Automation clients"
-  - "UI Automation, clients, control patterns for"
+title: "Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, for UI Automation clients
+- UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Control Pattern Mapping for UI Automation Clients
+# <a name="control-pattern-mapping-for-ui-automation-clients"></a><span data-ttu-id="29796-102">Сопоставление шаблона элемента управления для клиентов автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="29796-102">Control Pattern Mapping for UI Automation Clients</span></span>
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], заданные в пространстве имен <xref:System.Windows.Automation>. Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="29796-103">Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> .</span><span class="sxs-lookup"><span data-stu-id="29796-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="29796-104">Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="29796-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- В этом разделе перечислены типы элементов управления и связанные с ними шаблоны элементов управления.  
+ <span data-ttu-id="29796-105">В этом разделе перечислены типы элементов управления и связанные с ними шаблоны элементов управления.</span><span class="sxs-lookup"><span data-stu-id="29796-105">This topic lists control types and their associated control patterns.</span></span>  
   
- В таблице ниже шаблоны элементов управления распределены по следующим категориям.  
+ <span data-ttu-id="29796-106">В таблице ниже шаблоны элементов управления распределены по следующим категориям.</span><span class="sxs-lookup"><span data-stu-id="29796-106">The following table organizes the control patterns into the following categories:</span></span>  
   
--   Поддерживается. Элемент управления должен поддерживать этот шаблон элемента управления.  
+-   <span data-ttu-id="29796-107">Поддерживается.</span><span class="sxs-lookup"><span data-stu-id="29796-107">Supported.</span></span> <span data-ttu-id="29796-108">Элемент управления должен поддерживать этот шаблон элемента управления.</span><span class="sxs-lookup"><span data-stu-id="29796-108">The control must support this control pattern.</span></span>  
   
--   Условно поддерживается. Элемент управления может поддерживать этот шаблон элемента управления в зависимости от состояния элемента управления.  
+-   <span data-ttu-id="29796-109">Условно поддерживается.</span><span class="sxs-lookup"><span data-stu-id="29796-109">Conditional support.</span></span> <span data-ttu-id="29796-110">Элемент управления может поддерживать этот шаблон элемента управления в зависимости от состояния элемента управления.</span><span class="sxs-lookup"><span data-stu-id="29796-110">The control may support this control pattern depending on the state of the control.</span></span>  
   
--   Не поддерживается. Элемент управления не поддерживает этот шаблон элемента управления; пользовательские элементы управления могут поддерживать этот шаблон элемента управления.  
+-   <span data-ttu-id="29796-111">Не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="29796-111">Not supported.</span></span> <span data-ttu-id="29796-112">Элемент управления не поддерживает этот шаблон элемента управления; пользовательские элементы управления могут поддерживать этот шаблон элемента управления.</span><span class="sxs-lookup"><span data-stu-id="29796-112">The control does not support this control pattern; custom controls may support this control pattern.</span></span>  
   
 > [!NOTE]
->  Некоторые элементы управления имеют условную поддержку нескольких шаблонов элементов управления, в зависимости от функциональности этих элементов управления. Например, элемент управления "Пункт меню" имеет условную поддержку шаблона элемента управления <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern> или <xref:System.Windows.Automation.SelectionItemPattern>, в зависимости от его функции в элементе управления "Меню".  
+>  <span data-ttu-id="29796-113">Некоторые элементы управления имеют условную поддержку нескольких шаблонов элементов управления, в зависимости от функциональности этих элементов управления.</span><span class="sxs-lookup"><span data-stu-id="29796-113">Some controls have conditional support for several control patterns depending on the functionality of the control.</span></span> <span data-ttu-id="29796-114">Например, элемент управления "Пункт меню" имеет условную поддержку шаблона элемента управления <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>или <xref:System.Windows.Automation.SelectionItemPattern> , в зависимости от его функции в элементе управления "Меню".</span><span class="sxs-lookup"><span data-stu-id="29796-114">For example, the menu item control has conditional support for the <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, or <xref:System.Windows.Automation.SelectionItemPattern> control pattern, depending on its function in the menu control.</span></span>  
   
 <a name="control_mapping_clients"></a>   
-## Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов  
+## <a name="ui-automation-control-patterns-for-clients"></a><span data-ttu-id="29796-115">Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов</span><span class="sxs-lookup"><span data-stu-id="29796-115">UI Automation Control Patterns for Clients</span></span>  
   
-|Тип элемента управления|Поддерживается|Условно поддерживается|Не поддерживается|  
-|-----------------------------|--------------------|----------------------------|-----------------------|  
-|Кнопка|Нет|Invoke, Toggle, Expand Collapse|Нет|  
-|Календарь|Grid, Table|Selection, Scroll|Значение|  
-|Флажок|Toggle|Нет|Нет|  
-|Combo Box|Развернуть свернуть|Selection, Value|Scroll|  
-|Data Grid|Grid|Scroll, Selection, Table|Нет|  
-|Data Item|Selection Item|Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value|Нет|  
-|Document|Text|Scroll, Value|Нет|  
-|Правка|Нет|Text, Range Value, Value|Нет|  
-|Группа|Нет|Развернуть свернуть|Нет|  
-|Header|Нет|Transform|Нет|  
-|элемент заголовка|Нет|Transform, Invoke|Нет|  
-|Гиперссылка|Вызвать|Значение|Нет|  
-|Изображение|Нет|Grid Item, Table Item|Invoke, Selection Item|  
-|Список|Нет|Grid, Multiple View, Scroll, Selection|Таблица|  
-|List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|Нет|  
-|Меню|Нет|Нет|Нет|  
-|Menu Bar|Нет|Expand Collapse, Dock, Transform|Нет|  
-|Menu Item|Нет|Expand Collapse, Invoke, Selection Item, Toggle|Нет|  
-|Панель|Нет|Dock Scroll, Transform|Окно|  
-|Progress Bar|Нет|Range Value, Value|Нет|  
-|Radio Button|Selection Item|Нет|Toggle|  
-|Scroll Bar|Нет|Range Value|Scroll|  
-|Separator|Нет|Нет|Нет|  
-|Slider|Нет|Range Value, Selection, Value|Нет|  
-|Spinner|Нет|Range Value, Selection, Value|Нет|  
-|Разворачивающаяся кнопка|Invoke, Expand Collapse|Нет|Нет|  
-|Status Bar|Нет|Grid|Нет|  
-|Вкладка|Выбранное|Scroll|Нет|  
-|Tab Item|Selection Item|Нет|Вызвать|  
-|Таблица|Grid, Grid Item, Table, Table Item|Нет|Нет|  
-|Text|Нет|Grid Item, Table Item, Text|Значение|  
-|Бегунок|Transform|Нет|Нет|  
-|Title Bar|Нет|Нет|Нет|  
-|Tool Bar|Нет|Dock, Expand Collapse, Transform|Нет|  
-|Tool Tip|Нет|Text, Window|Нет|  
-|Дерево|Нет|Scroll, Selection|Нет|  
-|Tree Item|Развернуть свернуть|Invoke, Scroll Item, Selection Item, Toggle|Нет|  
-|Окно|Transform, Window|Закрепить|Нет|  
+|<span data-ttu-id="29796-116">Тип элемента управления</span><span class="sxs-lookup"><span data-stu-id="29796-116">Control Type</span></span>|<span data-ttu-id="29796-117">Поддерживается</span><span class="sxs-lookup"><span data-stu-id="29796-117">Supported</span></span>|<span data-ttu-id="29796-118">Условно поддерживается</span><span class="sxs-lookup"><span data-stu-id="29796-118">Conditional Support</span></span>|<span data-ttu-id="29796-119">Не поддерживается</span><span class="sxs-lookup"><span data-stu-id="29796-119">Not Supported</span></span>|  
+|------------------|---------------|-------------------------|-------------------|  
+|<span data-ttu-id="29796-120">Кнопка</span><span class="sxs-lookup"><span data-stu-id="29796-120">Button</span></span>|<span data-ttu-id="29796-121">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-121">None</span></span>|<span data-ttu-id="29796-122">Invoke, Toggle, Expand Collapse</span><span class="sxs-lookup"><span data-stu-id="29796-122">Invoke, Toggle, Expand Collapse</span></span>|<span data-ttu-id="29796-123">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-123">None</span></span>|  
+|<span data-ttu-id="29796-124">Календарь</span><span class="sxs-lookup"><span data-stu-id="29796-124">Calendar</span></span>|<span data-ttu-id="29796-125">Grid, Table</span><span class="sxs-lookup"><span data-stu-id="29796-125">Grid, Table</span></span>|<span data-ttu-id="29796-126">Selection, Scroll</span><span class="sxs-lookup"><span data-stu-id="29796-126">Selection, Scroll</span></span>|<span data-ttu-id="29796-127">Значение</span><span class="sxs-lookup"><span data-stu-id="29796-127">Value</span></span>|  
+|<span data-ttu-id="29796-128">Флажок</span><span class="sxs-lookup"><span data-stu-id="29796-128">Check Box</span></span>|<span data-ttu-id="29796-129">Toggle</span><span class="sxs-lookup"><span data-stu-id="29796-129">Toggle</span></span>|<span data-ttu-id="29796-130">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-130">None</span></span>|<span data-ttu-id="29796-131">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-131">None</span></span>|  
+|<span data-ttu-id="29796-132">Combo Box</span><span class="sxs-lookup"><span data-stu-id="29796-132">Combo Box</span></span>|<span data-ttu-id="29796-133">Развернуть свернуть</span><span class="sxs-lookup"><span data-stu-id="29796-133">Expand Collapse</span></span>|<span data-ttu-id="29796-134">Selection, Value</span><span class="sxs-lookup"><span data-stu-id="29796-134">Selection, Value</span></span>|<span data-ttu-id="29796-135">Scroll</span><span class="sxs-lookup"><span data-stu-id="29796-135">Scroll</span></span>|  
+|<span data-ttu-id="29796-136">Data Grid</span><span class="sxs-lookup"><span data-stu-id="29796-136">Data Grid</span></span>|<span data-ttu-id="29796-137">Grid</span><span class="sxs-lookup"><span data-stu-id="29796-137">Grid</span></span>|<span data-ttu-id="29796-138">Scroll, Selection, Table</span><span class="sxs-lookup"><span data-stu-id="29796-138">Scroll, Selection, Table</span></span>|<span data-ttu-id="29796-139">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-139">None</span></span>|  
+|<span data-ttu-id="29796-140">Data Item</span><span class="sxs-lookup"><span data-stu-id="29796-140">Data Item</span></span>|<span data-ttu-id="29796-141">Selection Item</span><span class="sxs-lookup"><span data-stu-id="29796-141">Selection Item</span></span>|<span data-ttu-id="29796-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="29796-142">Expand Collapse, Grid Item, Scroll Item, Table, Toggle, Value</span></span>|<span data-ttu-id="29796-143">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-143">None</span></span>|  
+|<span data-ttu-id="29796-144">Document</span><span class="sxs-lookup"><span data-stu-id="29796-144">Document</span></span>|<span data-ttu-id="29796-145">Text</span><span class="sxs-lookup"><span data-stu-id="29796-145">Text</span></span>|<span data-ttu-id="29796-146">Scroll, Value</span><span class="sxs-lookup"><span data-stu-id="29796-146">Scroll, Value</span></span>|<span data-ttu-id="29796-147">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-147">None</span></span>|  
+|<span data-ttu-id="29796-148">Правка</span><span class="sxs-lookup"><span data-stu-id="29796-148">Edit</span></span>|<span data-ttu-id="29796-149">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-149">None</span></span>|<span data-ttu-id="29796-150">Text, Range Value, Value</span><span class="sxs-lookup"><span data-stu-id="29796-150">Text, Range Value, Value</span></span>|<span data-ttu-id="29796-151">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-151">None</span></span>|  
+|<span data-ttu-id="29796-152">Группа</span><span class="sxs-lookup"><span data-stu-id="29796-152">Group</span></span>|<span data-ttu-id="29796-153">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-153">None</span></span>|<span data-ttu-id="29796-154">Развернуть свернуть</span><span class="sxs-lookup"><span data-stu-id="29796-154">Expand Collapse</span></span>|<span data-ttu-id="29796-155">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-155">None</span></span>|  
+|<span data-ttu-id="29796-156">Header</span><span class="sxs-lookup"><span data-stu-id="29796-156">Header</span></span>|<span data-ttu-id="29796-157">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-157">None</span></span>|<span data-ttu-id="29796-158">Transform</span><span class="sxs-lookup"><span data-stu-id="29796-158">Transform</span></span>|<span data-ttu-id="29796-159">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-159">None</span></span>|  
+|<span data-ttu-id="29796-160">элемент заголовка</span><span class="sxs-lookup"><span data-stu-id="29796-160">Header Item</span></span>|<span data-ttu-id="29796-161">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-161">None</span></span>|<span data-ttu-id="29796-162">Transform, Invoke</span><span class="sxs-lookup"><span data-stu-id="29796-162">Transform, Invoke</span></span>|<span data-ttu-id="29796-163">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-163">None</span></span>|  
+|<span data-ttu-id="29796-164">Гиперссылка</span><span class="sxs-lookup"><span data-stu-id="29796-164">Hyperlink</span></span>|<span data-ttu-id="29796-165">Вызвать</span><span class="sxs-lookup"><span data-stu-id="29796-165">Invoke</span></span>|<span data-ttu-id="29796-166">Значение</span><span class="sxs-lookup"><span data-stu-id="29796-166">Value</span></span>|<span data-ttu-id="29796-167">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-167">None</span></span>|  
+|<span data-ttu-id="29796-168">Изображение</span><span class="sxs-lookup"><span data-stu-id="29796-168">Image</span></span>|<span data-ttu-id="29796-169">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-169">None</span></span>|<span data-ttu-id="29796-170">Grid Item, Table Item</span><span class="sxs-lookup"><span data-stu-id="29796-170">Grid Item, Table Item</span></span>|<span data-ttu-id="29796-171">Invoke, Selection Item</span><span class="sxs-lookup"><span data-stu-id="29796-171">Invoke, Selection Item</span></span>|  
+|<span data-ttu-id="29796-172">Список</span><span class="sxs-lookup"><span data-stu-id="29796-172">List</span></span>|<span data-ttu-id="29796-173">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-173">None</span></span>|<span data-ttu-id="29796-174">Grid, Multiple View, Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="29796-174">Grid, Multiple View, Scroll, Selection</span></span>|<span data-ttu-id="29796-175">Таблица</span><span class="sxs-lookup"><span data-stu-id="29796-175">Table</span></span>|  
+|<span data-ttu-id="29796-176">List Item</span><span class="sxs-lookup"><span data-stu-id="29796-176">List Item</span></span>|<span data-ttu-id="29796-177">Selection Item</span><span class="sxs-lookup"><span data-stu-id="29796-177">Selection Item</span></span>|<span data-ttu-id="29796-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span><span class="sxs-lookup"><span data-stu-id="29796-178">Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value</span></span>|<span data-ttu-id="29796-179">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-179">None</span></span>|  
+|<span data-ttu-id="29796-180">Меню</span><span class="sxs-lookup"><span data-stu-id="29796-180">Menu</span></span>|<span data-ttu-id="29796-181">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-181">None</span></span>|<span data-ttu-id="29796-182">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-182">None</span></span>|<span data-ttu-id="29796-183">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-183">None</span></span>|  
+|<span data-ttu-id="29796-184">Menu Bar</span><span class="sxs-lookup"><span data-stu-id="29796-184">Menu Bar</span></span>|<span data-ttu-id="29796-185">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-185">None</span></span>|<span data-ttu-id="29796-186">Expand Collapse, Dock, Transform</span><span class="sxs-lookup"><span data-stu-id="29796-186">Expand Collapse, Dock, Transform</span></span>|<span data-ttu-id="29796-187">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-187">None</span></span>|  
+|<span data-ttu-id="29796-188">Menu Item</span><span class="sxs-lookup"><span data-stu-id="29796-188">Menu Item</span></span>|<span data-ttu-id="29796-189">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-189">None</span></span>|<span data-ttu-id="29796-190">Expand Collapse, Invoke, Selection Item, Toggle</span><span class="sxs-lookup"><span data-stu-id="29796-190">Expand Collapse, Invoke, Selection Item, Toggle</span></span>|<span data-ttu-id="29796-191">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-191">None</span></span>|  
+|<span data-ttu-id="29796-192">Панель</span><span class="sxs-lookup"><span data-stu-id="29796-192">Pane</span></span>|<span data-ttu-id="29796-193">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-193">None</span></span>|<span data-ttu-id="29796-194">Dock</span><span class="sxs-lookup"><span data-stu-id="29796-194">Dock.</span></span> <span data-ttu-id="29796-195">Scroll, Transform</span><span class="sxs-lookup"><span data-stu-id="29796-195">Scroll, Transform</span></span>|<span data-ttu-id="29796-196">Окно</span><span class="sxs-lookup"><span data-stu-id="29796-196">Window</span></span>|  
+|<span data-ttu-id="29796-197">Progress Bar</span><span class="sxs-lookup"><span data-stu-id="29796-197">Progress Bar</span></span>|<span data-ttu-id="29796-198">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-198">None</span></span>|<span data-ttu-id="29796-199">Range Value, Value</span><span class="sxs-lookup"><span data-stu-id="29796-199">Range Value, Value</span></span>|<span data-ttu-id="29796-200">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-200">None</span></span>|  
+|<span data-ttu-id="29796-201">Radio Button</span><span class="sxs-lookup"><span data-stu-id="29796-201">Radio Button</span></span>|<span data-ttu-id="29796-202">Selection Item</span><span class="sxs-lookup"><span data-stu-id="29796-202">Selection Item</span></span>|<span data-ttu-id="29796-203">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-203">None</span></span>|<span data-ttu-id="29796-204">Toggle</span><span class="sxs-lookup"><span data-stu-id="29796-204">Toggle</span></span>|  
+|<span data-ttu-id="29796-205">Scroll Bar</span><span class="sxs-lookup"><span data-stu-id="29796-205">Scroll Bar</span></span>|<span data-ttu-id="29796-206">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-206">None</span></span>|<span data-ttu-id="29796-207">Range Value</span><span class="sxs-lookup"><span data-stu-id="29796-207">Range Value</span></span>|<span data-ttu-id="29796-208">Scroll</span><span class="sxs-lookup"><span data-stu-id="29796-208">Scroll</span></span>|  
+|<span data-ttu-id="29796-209">Separator</span><span class="sxs-lookup"><span data-stu-id="29796-209">Separator</span></span>|<span data-ttu-id="29796-210">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-210">None</span></span>|<span data-ttu-id="29796-211">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-211">None</span></span>|<span data-ttu-id="29796-212">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-212">None</span></span>|  
+|<span data-ttu-id="29796-213">Slider</span><span class="sxs-lookup"><span data-stu-id="29796-213">Slider</span></span>|<span data-ttu-id="29796-214">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-214">None</span></span>|<span data-ttu-id="29796-215">Range Value, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="29796-215">Range Value, Selection, Value</span></span>|<span data-ttu-id="29796-216">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-216">None</span></span>|  
+|<span data-ttu-id="29796-217">Spinner</span><span class="sxs-lookup"><span data-stu-id="29796-217">Spinner</span></span>|<span data-ttu-id="29796-218">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-218">None</span></span>|<span data-ttu-id="29796-219">Range Value, Selection, Value</span><span class="sxs-lookup"><span data-stu-id="29796-219">Range Value, Selection, Value</span></span>|<span data-ttu-id="29796-220">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-220">None</span></span>|  
+|<span data-ttu-id="29796-221">Разворачивающаяся кнопка</span><span class="sxs-lookup"><span data-stu-id="29796-221">Split Button</span></span>|<span data-ttu-id="29796-222">Invoke, Expand Collapse</span><span class="sxs-lookup"><span data-stu-id="29796-222">Invoke, Expand Collapse</span></span>|<span data-ttu-id="29796-223">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-223">None</span></span>|<span data-ttu-id="29796-224">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-224">None</span></span>|  
+|<span data-ttu-id="29796-225">Status Bar</span><span class="sxs-lookup"><span data-stu-id="29796-225">Status Bar</span></span>|<span data-ttu-id="29796-226">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-226">None</span></span>|<span data-ttu-id="29796-227">Grid</span><span class="sxs-lookup"><span data-stu-id="29796-227">Grid</span></span>|<span data-ttu-id="29796-228">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-228">None</span></span>|  
+|<span data-ttu-id="29796-229">Вкладка</span><span class="sxs-lookup"><span data-stu-id="29796-229">Tab</span></span>|<span data-ttu-id="29796-230">Выбранное</span><span class="sxs-lookup"><span data-stu-id="29796-230">Selection</span></span>|<span data-ttu-id="29796-231">Scroll</span><span class="sxs-lookup"><span data-stu-id="29796-231">Scroll</span></span>|<span data-ttu-id="29796-232">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-232">None</span></span>|  
+|<span data-ttu-id="29796-233">Tab Item</span><span class="sxs-lookup"><span data-stu-id="29796-233">Tab Item</span></span>|<span data-ttu-id="29796-234">Selection Item</span><span class="sxs-lookup"><span data-stu-id="29796-234">Selection Item</span></span>|<span data-ttu-id="29796-235">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-235">None</span></span>|<span data-ttu-id="29796-236">Вызвать</span><span class="sxs-lookup"><span data-stu-id="29796-236">Invoke</span></span>|  
+|<span data-ttu-id="29796-237">Таблица</span><span class="sxs-lookup"><span data-stu-id="29796-237">Table</span></span>|<span data-ttu-id="29796-238">Grid, Grid Item, Table, Table Item</span><span class="sxs-lookup"><span data-stu-id="29796-238">Grid, Grid Item, Table, Table Item</span></span>|<span data-ttu-id="29796-239">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-239">None</span></span>|<span data-ttu-id="29796-240">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-240">None</span></span>|  
+|<span data-ttu-id="29796-241">Text</span><span class="sxs-lookup"><span data-stu-id="29796-241">Text</span></span>|<span data-ttu-id="29796-242">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-242">None</span></span>|<span data-ttu-id="29796-243">Grid Item, Table Item, Text</span><span class="sxs-lookup"><span data-stu-id="29796-243">Grid Item, Table Item, Text</span></span>|<span data-ttu-id="29796-244">Значение</span><span class="sxs-lookup"><span data-stu-id="29796-244">Value</span></span>|  
+|<span data-ttu-id="29796-245">Бегунок</span><span class="sxs-lookup"><span data-stu-id="29796-245">Thumb</span></span>|<span data-ttu-id="29796-246">Transform</span><span class="sxs-lookup"><span data-stu-id="29796-246">Transform</span></span>|<span data-ttu-id="29796-247">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-247">None</span></span>|<span data-ttu-id="29796-248">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-248">None</span></span>|  
+|<span data-ttu-id="29796-249">Title Bar</span><span class="sxs-lookup"><span data-stu-id="29796-249">Title Bar</span></span>|<span data-ttu-id="29796-250">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-250">None</span></span>|<span data-ttu-id="29796-251">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-251">None</span></span>|<span data-ttu-id="29796-252">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-252">None</span></span>|  
+|<span data-ttu-id="29796-253">Tool Bar</span><span class="sxs-lookup"><span data-stu-id="29796-253">Tool Bar</span></span>|<span data-ttu-id="29796-254">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-254">None</span></span>|<span data-ttu-id="29796-255">Dock, Expand Collapse, Transform</span><span class="sxs-lookup"><span data-stu-id="29796-255">Dock, Expand Collapse, Transform</span></span>|<span data-ttu-id="29796-256">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-256">None</span></span>|  
+|<span data-ttu-id="29796-257">Tool Tip</span><span class="sxs-lookup"><span data-stu-id="29796-257">Tool Tip</span></span>|<span data-ttu-id="29796-258">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-258">None</span></span>|<span data-ttu-id="29796-259">Text, Window</span><span class="sxs-lookup"><span data-stu-id="29796-259">Text, Window</span></span>|<span data-ttu-id="29796-260">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-260">None</span></span>|  
+|<span data-ttu-id="29796-261">Дерево</span><span class="sxs-lookup"><span data-stu-id="29796-261">Tree</span></span>|<span data-ttu-id="29796-262">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-262">None</span></span>|<span data-ttu-id="29796-263">Scroll, Selection</span><span class="sxs-lookup"><span data-stu-id="29796-263">Scroll, Selection</span></span>|<span data-ttu-id="29796-264">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-264">None</span></span>|  
+|<span data-ttu-id="29796-265">Tree Item</span><span class="sxs-lookup"><span data-stu-id="29796-265">Tree Item</span></span>|<span data-ttu-id="29796-266">Развернуть свернуть</span><span class="sxs-lookup"><span data-stu-id="29796-266">Expand Collapse</span></span>|<span data-ttu-id="29796-267">Invoke, Scroll Item, Selection Item, Toggle</span><span class="sxs-lookup"><span data-stu-id="29796-267">Invoke, Scroll Item, Selection Item, Toggle</span></span>|<span data-ttu-id="29796-268">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-268">None</span></span>|  
+|<span data-ttu-id="29796-269">Окно</span><span class="sxs-lookup"><span data-stu-id="29796-269">Window</span></span>|<span data-ttu-id="29796-270">Transform, Window</span><span class="sxs-lookup"><span data-stu-id="29796-270">Transform, Window</span></span>|<span data-ttu-id="29796-271">Закрепить</span><span class="sxs-lookup"><span data-stu-id="29796-271">Dock</span></span>|<span data-ttu-id="29796-272">Нет</span><span class="sxs-lookup"><span data-stu-id="29796-272">None</span></span>|  
   
 > [!NOTE]
->  Если тип элемента управления не имеет поддерживаемых шаблонов элементов управления в списке, но имеет один или несколько условно поддерживаемых шаблонов элементов управления, то один из этих условных шаблонов элементов управления будет поддерживаться все время.  
+>  <span data-ttu-id="29796-273">Если тип элемента управления не имеет поддерживаемых шаблонов элементов управления в списке, но имеет один или несколько условно поддерживаемых шаблонов элементов управления, то один из этих условных шаблонов элементов управления будет поддерживаться все время.</span><span class="sxs-lookup"><span data-stu-id="29796-273">If a control type has no supported control patterns listed but has one or more conditionally-supported control patterns, then one of those conditional control patterns will be supported at all times.</span></span>  
   
-## См. также  
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="29796-274">См. также</span><span class="sxs-lookup"><span data-stu-id="29796-274">See Also</span></span>  
+ [<span data-ttu-id="29796-275">Общие сведения о модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="29796-275">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

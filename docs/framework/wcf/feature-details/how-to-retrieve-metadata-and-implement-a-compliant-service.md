@@ -1,72 +1,70 @@
 ---
-title: "Практическое руководство. Извлечение данных и реализация совместимой службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Извлечение данных и реализация совместимой службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: adb1cb9006c6f0e01008dd5f610c4c340c7ddbff
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Извлечение данных и реализация совместимой службы
-Часто разработку и реализацию служб выполняют разные люди. В средах, в которых приложения с возможностью взаимодействия имеют большое значение, контракты можно разработать или описать на языке WSDL, и разработчик должен реализовать службу, соответствующую предоставляемому контракту. Также может возникнуть необходимость мигрировать существующую службу в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с сохранением формата подключения. Кроме того, дуплексные контракты требуют, чтобы вызывающие стороны также реализовывали контракт обратного вызова.  
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a><span data-ttu-id="41c4f-102">Практическое руководство. Извлечение данных и реализация совместимой службы</span><span class="sxs-lookup"><span data-stu-id="41c4f-102">How to: Retrieve Metadata and Implement a Compliant Service</span></span>
+<span data-ttu-id="41c4f-103">Часто разработку и реализацию служб выполняют разные люди.</span><span class="sxs-lookup"><span data-stu-id="41c4f-103">Often, the same person does not design and implement services.</span></span> <span data-ttu-id="41c4f-104">В средах, в которых приложения с возможностью взаимодействия имеют большое значение, контракты можно разработать или описать на языке WSDL, и разработчик должен реализовать службу, соответствующую предоставляемому контракту.</span><span class="sxs-lookup"><span data-stu-id="41c4f-104">In environments where interoperating applications are important, contracts can be designed or described in Web Services Description Language (WSDL) and a developer must implement a service that complies with the provided contract.</span></span> <span data-ttu-id="41c4f-105">Также может возникнуть необходимость мигрировать существующую службу в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с сохранением формата подключения.</span><span class="sxs-lookup"><span data-stu-id="41c4f-105">You may also want to migrate an existing service to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] but preserve the wire format.</span></span> <span data-ttu-id="41c4f-106">Кроме того, дуплексные контракты требуют, чтобы вызывающие стороны также реализовывали контракт обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="41c4f-106">In addition, duplex contracts require callers to implement a callback contract as well.</span></span>  
   
- В этих случаях необходимо использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (или эквивалентное средство) для создания интерфейса контракта службы на управляемом языке, который можно реализовать для выполнения требований контракта. Обычно [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) используется для получения контракт службы, используемый с фабрикой каналов или [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] тип клиента, а также файл конфигурации клиента, который устанавливает правильную привязку и адрес. Чтобы использовать созданный файл конфигурации, следует изменить его на файл конфигурации службы. Также может возникнуть необходимость в изменении контракта службы.  
+ <span data-ttu-id="41c4f-107">В этих случаях необходимо использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (или аналогичный инструмент) для создания интерфейса контракта службы на управляемом языке, который можно реализовать для выполнения требований контракт.</span><span class="sxs-lookup"><span data-stu-id="41c4f-107">In these cases, you must use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (or an equivalent tool) to generate a service contract interface in a managed language that you can implement to fulfill the requirements of the contract.</span></span> <span data-ttu-id="41c4f-108">Обычно [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) используется для получения контракта службы, который используется с фабрикой каналов или [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] а также файл конфигурации клиента, который устанавливает тип клиента правильную привязку и адрес.</span><span class="sxs-lookup"><span data-stu-id="41c4f-108">Typically the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) is used to acquire a service contract that is used with a channel factory or a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client type as well as with a client configuration file that sets up the correct binding and address.</span></span> <span data-ttu-id="41c4f-109">Чтобы использовать созданный файл конфигурации, следует изменить его на файл конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-109">To use the generated configuration file, you must change it into a service configuration file.</span></span> <span data-ttu-id="41c4f-110">Также может возникнуть необходимость в изменении контракта службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-110">You may also need to modify the service contract.</span></span>  
   
-### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Извлечение данных и реализация совместимой службы  
+### <a name="to-retrieve-data-and-implement-a-compliant-service"></a><span data-ttu-id="41c4f-111">Извлечение данных и реализация совместимой службы</span><span class="sxs-lookup"><span data-stu-id="41c4f-111">To retrieve data and implement a compliant service</span></span>  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для файлов метаданных или конечную точку метаданных для создания файла кода.  
+1.  <span data-ttu-id="41c4f-112">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) от файлов метаданных или конечную точку метаданных для создания файла кода.</span><span class="sxs-lookup"><span data-stu-id="41c4f-112">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) against metadata files or a metadata endpoint to generate a code file.</span></span>  
   
-2.  Найдите часть выходного файла кода, содержащий интерфейс (если имеется более одного), помеченный атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=fullName> атрибута. В следующем примере кода показаны два интерфейса, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Первый интерфейс (`ISampleService`) представляет собой интерфейс контракта службы, который реализуется, чтобы создать совместимую службу. Второй (`ISampleServiceChannel`) представляет собой вспомогательный интерфейс для использования клиентом, который расширяет и интерфейс контракта службы и <xref:System.ServiceModel.IClientChannel?displayProperty=fullName> и предназначен для использования в клиентском приложении.  
+2.  <span data-ttu-id="41c4f-113">Найдите часть выходного файла кода, содержащую требуемый интерфейс (если имеется более одного), отмеченный атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="41c4f-113">Search for the portion of the output code file that contains the interface of interest (in case there is more than one) that is marked with the <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> attribute.</span></span> <span data-ttu-id="41c4f-114">В следующем примере кода показаны два интерфейса, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="41c4f-114">The following code example shows the two interfaces generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="41c4f-115">Первый интерфейс (`ISampleService`) представляет собой интерфейс контракта службы, который реализуется, чтобы создать совместимую службу.</span><span class="sxs-lookup"><span data-stu-id="41c4f-115">The first (`ISampleService`) is the service contract interface that you implement to create a compliant service.</span></span> <span data-ttu-id="41c4f-116">Второй интерфейс (`ISampleServiceChannel`) представляет собой вспомогательный интерфейс, используемый для клиентов и расширяющий как интерфейс контракта службы, так и канал <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, и используется в клиентском приложении.</span><span class="sxs-lookup"><span data-stu-id="41c4f-116">The second (`ISampleServiceChannel`) is a helper interface for client use that extends both the service contract interface and <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> and is for use in a client application.</span></span>  
   
      [!code-csharp[ClientProxyCodeSample#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#2)]  
   
-3.  Если в языке WSDL не указано ответное действие для всех операций, созданных контрактов операций может быть <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> свойство подстановочный знак (*). Удалите этот параметр свойства. В противном случае при реализации метаданных контракта службы метаданные невозможно будет экспортировать для этих операций.  
+3.  <span data-ttu-id="41c4f-117">Если в языке WSDL не указано ответное действие для всех операций, свойству <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> созданных контрактов операций может быть присвоено значение подстановочного знака (*).</span><span class="sxs-lookup"><span data-stu-id="41c4f-117">If the WSDL does not specify a reply action for all of the operations, the generated operation contracts may have the <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> property set to the wildcard character (*).</span></span> <span data-ttu-id="41c4f-118">Удалите этот параметр свойства.</span><span class="sxs-lookup"><span data-stu-id="41c4f-118">Remove this property setting.</span></span> <span data-ttu-id="41c4f-119">В противном случае при реализации метаданных контракта службы метаданные невозможно будет экспортировать для этих операций.</span><span class="sxs-lookup"><span data-stu-id="41c4f-119">Otherwise, when you implement the service contract metadata, the metadata cannot be exported for those operations.</span></span>  
   
-4.  Реализуйте интерфейс для класса и разместите службу. Пример см. в разделе [как: реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или см. ниже в разделе пример простой реализации.  
+4.  <span data-ttu-id="41c4f-120">Реализуйте интерфейс для класса и разместите службу.</span><span class="sxs-lookup"><span data-stu-id="41c4f-120">Implement the interface on a class and host the service.</span></span> <span data-ttu-id="41c4f-121">Пример см. в разделе [как: реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или в разделе простая реализация ниже в разделе "Пример".</span><span class="sxs-lookup"><span data-stu-id="41c4f-121">For an example, see [How to: Implement a Service Contract](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), or see a simple implementation below in the Example section.</span></span>  
   
-5.  В конфигурации клиента, файл, [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) приводит к возникновению ошибки, измените [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) раздел конфигурации для [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации. (Пример созданного файла конфигурации клиентского приложения см. в следующем разделе "Пример".)  
+5.  <span data-ttu-id="41c4f-122">Файл, который в конфигурации клиента [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) приводит к возникновению ошибки, измените [ \<клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) раздел конфигурации для [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации.</span><span class="sxs-lookup"><span data-stu-id="41c4f-122">In the client configuration file that the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates, change the [\<client>](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) configuration section to a [\<services>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) configuration section.</span></span> <span data-ttu-id="41c4f-123">(Пример созданного файла конфигурации клиентского приложения см. в следующем разделе "Пример".)</span><span class="sxs-lookup"><span data-stu-id="41c4f-123">(For an example of a generated client application configuration file, see the following "Example" section.)</span></span>  
   
-6.  В [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) конфигурации создайте `name` атрибут в [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации для реализации службы.  
+6.  <span data-ttu-id="41c4f-124">В пределах [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) конфигурации создайте `name` атрибута в [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации для службы Реализация.</span><span class="sxs-lookup"><span data-stu-id="41c4f-124">Within the [\<services>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) configuration section, create a `name` attribute in the [\<services>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) configuration section for your service implementation.</span></span>  
   
-7.  Присвойте атрибуту `name` службы имя конфигурации для реализации службы.  
+7.  <span data-ttu-id="41c4f-125">Присвойте атрибуту `name` службы имя конфигурации для реализации службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-125">Set the service `name` attribute to the configuration name for your service implementation.</span></span>  
   
-8.  Добавьте элементы конфигурации конечной точки, использующие реализованный контракт службы, в раздел конфигурации службы.  
+8.  <span data-ttu-id="41c4f-126">Добавьте элементы конфигурации конечной точки, использующие реализованный контракт службы, в раздел конфигурации службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-126">Add the endpoint configuration elements that use the implemented service contract to the service configuration section.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере кода показан файл кода, созданные при выполнении большинства [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для файлов метаданных.  
+## <a name="example"></a><span data-ttu-id="41c4f-127">Пример</span><span class="sxs-lookup"><span data-stu-id="41c4f-127">Example</span></span>  
+ <span data-ttu-id="41c4f-128">В следующем примере кода показано, большая часть файла кода, созданные при выполнении [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) файлов метаданных.</span><span class="sxs-lookup"><span data-stu-id="41c4f-128">The following code example shows the majority of a code file generated by running the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) against metadata files.</span></span>  
   
- В коде демонстрируется следующее.  
+ <span data-ttu-id="41c4f-129">В коде демонстрируется следующее.</span><span class="sxs-lookup"><span data-stu-id="41c4f-129">The following code shows:</span></span>  
   
--   Интерфейс контракта службы, который после реализации отвечает требованиям контракта (`ISampleService`).  
+-   <span data-ttu-id="41c4f-130">Интерфейс контракта службы, который после реализации отвечает требованиям контракта (`ISampleService`).</span><span class="sxs-lookup"><span data-stu-id="41c4f-130">The service contract interface that, when implemented, complies with the contract requirements (`ISampleService`).</span></span>  
   
--   Вспомогательный интерфейс для использования клиентом, который расширяет и интерфейс контракта службы и <xref:System.ServiceModel.IClientChannel?displayProperty=fullName> и предназначен для использования в клиентском приложении (`ISampleServiceChannel`).  
+-   <span data-ttu-id="41c4f-131">Вспомогательный интерфейс, используемый для клиентов и расширяющий как интерфейс контракта службы, так и канал <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>. Этот интерфейс используется в клиентском приложении (`ISampleServiceChannel`).</span><span class="sxs-lookup"><span data-stu-id="41c4f-131">The helper interface for client use that extends both the service contract interface and <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> and is for use in a client application (`ISampleServiceChannel`).</span></span>  
   
--   Вспомогательный класс, который расширяет <xref:System.ServiceModel.ClientBase%601?displayProperty=fullName> и предназначен для использования в клиентском приложении (`SampleServiceClient`).  
+-   <span data-ttu-id="41c4f-132">Вспомогательный класс, расширяющий класс <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> и используемый в клиентском приложении (`SampleServiceClient`).</span><span class="sxs-lookup"><span data-stu-id="41c4f-132">The helper class that extends <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> and is for use in a client application (`SampleServiceClient`).</span></span>  
   
--   Файл конфигурации, созданный из службы.  
+-   <span data-ttu-id="41c4f-133">Файл конфигурации, созданный из службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-133">The configuration file generated from the service.</span></span>  
   
--   Простая реализация службы `ISampleService`.  
+-   <span data-ttu-id="41c4f-134">Простая реализация службы `ISampleService`.</span><span class="sxs-lookup"><span data-stu-id="41c4f-134">A simple `ISampleService` service implementation.</span></span>  
   
--   Преобразование файла конфигурации на стороне клиента в версию на стороне службы.  
+-   <span data-ttu-id="41c4f-135">Преобразование файла конфигурации на стороне клиента в версию на стороне службы.</span><span class="sxs-lookup"><span data-stu-id="41c4f-135">A conversion of the client-side configuration file to a service-side version.</span></span>  
   
- [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]  
+ [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]    
+ [!code-xml[ClientProxyCodeSample#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/client.exe.config#10)]     
+ [!code-csharp[ClientProxyCodeSample#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.cs#5)]    
+ [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
- <!-- TODO: review snippet reference [!code[ClientProxyCodeSample#10](../../../../samples/snippets/common/VS_Snippets_CFX/clientproxycodesample/common/client.exe.config#10)]  -->
- <!-- TODO: review snippet reference [!code-csharp[ClientProxyCodeSample#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/client.exe.config#10)]  -->  
-  
- [!code-csharp[ClientProxyCodeSample#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.cs#5)]  
-  
- <!-- TODO: review snippet reference [!code[ClientProxyCodeSample#20](../../../../samples/snippets/common/VS_Snippets_CFX/clientproxycodesample/common/hostapplication.exe.config#20)]  -->
- <!-- TODO: review snippet reference [!code-csharp[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]  -->  
-  
-## <a name="see-also"></a>См. также  
- [Средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="41c4f-136">См. также</span><span class="sxs-lookup"><span data-stu-id="41c4f-136">See Also</span></span>  
+ [<span data-ttu-id="41c4f-137">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="41c4f-137">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

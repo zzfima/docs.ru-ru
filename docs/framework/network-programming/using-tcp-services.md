@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, TCP
 - receiving data, TCP
@@ -24,25 +22,24 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f560ae08c928e9f21def9f69950efbd72ccb6b88
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="using-tcp-services"></a>Использование служб TCP
-Класс <xref:System.Net.Sockets.TcpClient> запрашивает данные из ресурса в Интернете по протоколу TCP. Методы и свойства **TcpClient** абстрагируют сведения для создания <xref:System.Net.Sockets.Socket> с целью запроса и получения данных по протоколу TCP. Так как подключение к удаленному устройству представлено в виде потока, данные можно считывать и записывать с помощью методов работы с потоками платформы .NET Framework.  
+# <a name="using-tcp-services"></a><span data-ttu-id="f4bef-102">Использование служб TCP</span><span class="sxs-lookup"><span data-stu-id="f4bef-102">Using TCP Services</span></span>
+<span data-ttu-id="f4bef-103">Класс <xref:System.Net.Sockets.TcpClient> запрашивает данные из ресурса в Интернете по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="f4bef-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="f4bef-104">Методы и свойства **TcpClient** абстрагируют сведения для создания <xref:System.Net.Sockets.Socket> с целью запроса и получения данных по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="f4bef-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="f4bef-105">Так как подключение к удаленному устройству представлено в виде потока, данные можно считывать и записывать с помощью методов работы с потоками платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f4bef-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
   
- Протокол TCP устанавливает соединение с удаленной конечной точкой, а затем использует его для отправки и получения пакетов данных. Протокол TCP отвечает за отправку пакетов данных в конечную точку и их сборку в правильном порядке после доставки.  
+ <span data-ttu-id="f4bef-106">Протокол TCP устанавливает соединение с удаленной конечной точкой, а затем использует его для отправки и получения пакетов данных.</span><span class="sxs-lookup"><span data-stu-id="f4bef-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="f4bef-107">Протокол TCP отвечает за отправку пакетов данных в конечную точку и их сборку в правильном порядке после доставки.</span><span class="sxs-lookup"><span data-stu-id="f4bef-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
   
- Чтобы установить подключение TCP, необходимо знать адрес сетевого устройства, в котором размещается нужная служба, и порт TCP, который служба использует для обмена данными. Номера портов для основных служб определяются организацией IANA (Администрация адресного пространства Интернет). См. страницу www.iana.org/assignments/port-numbers. Службы, отсутствующие в списке IANA, могут иметь номера портов в диапазоне от 1024 до 65535.  
+ <span data-ttu-id="f4bef-108">Чтобы установить подключение TCP, необходимо знать адрес сетевого устройства, в котором размещается нужная служба, и порт TCP, который служба использует для обмена данными.</span><span class="sxs-lookup"><span data-stu-id="f4bef-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="f4bef-109">Номера портов для основных служб определяются организацией IANA (Администрация адресного пространства Интернет). См. страницу www.iana.org/assignments/port-numbers.</span><span class="sxs-lookup"><span data-stu-id="f4bef-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see www.iana.org/assignments/port-numbers).</span></span> <span data-ttu-id="f4bef-110">Службы, отсутствующие в списке IANA, могут иметь номера портов в диапазоне от 1024 до 65535.</span><span class="sxs-lookup"><span data-stu-id="f4bef-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
   
- В приведенном ниже примере показано, как настроить **TcpClient** для подключения к серверу времени через порт TCP 13.  
+ <span data-ttu-id="f4bef-111">В приведенном ниже примере показано, как настроить **TcpClient** для подключения к серверу времени через порт TCP 13.</span><span class="sxs-lookup"><span data-stu-id="f4bef-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
   
 ```vb  
 Imports System  
@@ -112,9 +109,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> используется для отслеживания входящих запросов на порте и последующего создания объекта **Socket** или **TcpClient**, который управляет подключением к клиенту. Метод <xref:System.Net.Sockets.TcpListener.Start%2A> включает прослушивание порта, а метод <xref:System.Net.Sockets.TcpListener.Stop%2A> отключает его. Метод <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> принимает входящие запросы на подключение и создает **TcpClient** для их обработки, а метод <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> делает то же самое, но создает **Socket**.  
+ <span data-ttu-id="f4bef-112"><xref:System.Net.Sockets.TcpListener> используется для отслеживания входящих запросов на порте и последующего создания объекта **Socket** или **TcpClient**, который управляет подключением к клиенту.</span><span class="sxs-lookup"><span data-stu-id="f4bef-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="f4bef-113">Метод <xref:System.Net.Sockets.TcpListener.Start%2A> включает прослушивание порта, а метод <xref:System.Net.Sockets.TcpListener.Stop%2A> отключает его.</span><span class="sxs-lookup"><span data-stu-id="f4bef-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="f4bef-114">Метод <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> принимает входящие запросы на подключение и создает **TcpClient** для их обработки, а метод <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> делает то же самое, но создает **Socket**.</span><span class="sxs-lookup"><span data-stu-id="f4bef-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
   
- В приведенном ниже примере показано создание сервера времени в сети с использованием **TcpListener** для наблюдения за портом TCP 13. При получении входящего запроса на подключение сервер времени сообщает в ответ текущую дату и время с сервера узла.  
+ <span data-ttu-id="f4bef-115">В приведенном ниже примере показано создание сервера времени в сети с использованием **TcpListener** для наблюдения за портом TCP 13.</span><span class="sxs-lookup"><span data-stu-id="f4bef-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="f4bef-116">При получении входящего запроса на подключение сервер времени сообщает в ответ текущую дату и время с сервера узла.</span><span class="sxs-lookup"><span data-stu-id="f4bef-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
   
 ```vb  
 Imports System  
@@ -206,6 +203,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a><span data-ttu-id="f4bef-117">См. также</span><span class="sxs-lookup"><span data-stu-id="f4bef-117">See Also</span></span>  
  
-

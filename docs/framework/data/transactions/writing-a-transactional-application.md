@@ -1,48 +1,52 @@
 ---
-title: "Создание транзакционного приложения  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание транзакционного приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ec8537c4fdf80ffe448bba1376eacf519d67bcbe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Создание транзакционного приложения 
-Пространство имен <xref:System.Transactions> предоставляет разработчикам транзакционных приложений две модели программирования для создания транзакций.Можно использовать модель явного программирования, применяя класс <xref:System.Transactions.Transaction>, или модель неявного программирования, в которой транзакции автоматически управляются инфраструктурой, применяя класс <xref:System.Transactions.TransactionScope>.Для разработки рекомендуется использовать модель неявного программирования транзакций.Дополнительные сведения об использовании области транзакции см. в разделе [Реализация неявной транзакции с использованием области транзакции ](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md).  
+# <a name="writing-a-transactional-application"></a><span data-ttu-id="5a5e3-102">Создание транзакционного приложения</span><span class="sxs-lookup"><span data-stu-id="5a5e3-102">Writing a Transactional Application</span></span>
+<span data-ttu-id="5a5e3-103">Пространство имен <xref:System.Transactions> предоставляет разработчикам транзакционных приложений две модели программирования для создания транзакций.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-103">As a transactional application programmer, you can take advantage of the two programming models provided by the <xref:System.Transactions> namespace to create a transaction.</span></span> <span data-ttu-id="5a5e3-104">Можно использовать модель явного программирования, с помощью <xref:System.Transactions.Transaction> класса или неявное модель программирования, в котором транзакции автоматически управляются инфраструктурой, с помощью <xref:System.Transactions.TransactionScope> класса.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-104">You can utilize the explicit programming model by using the <xref:System.Transactions.Transaction> class, or the implicit programming model in which transactions are automatically managed by the infrastructure, by using the <xref:System.Transactions.TransactionScope> class.</span></span> <span data-ttu-id="5a5e3-105">Рекомендуется использовать модель неявной транзакции для разработки приложений.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-105">We recommend that you use the implicit transaction model for development.</span></span> <span data-ttu-id="5a5e3-106">Можно найти дополнительные сведения о том, как использовать область транзакции в [реализации неявную транзакцию с помощью области транзакции](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-106">You can find more information on how to use a transaction scope in the [Implementing an Implicit Transaction using Transaction Scope](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) topic.</span></span>  
   
- Обе модели поддерживают фиксацию транзакции при достижении программой согласованного состояния.При успешной фиксации выполненные в ходе транзакции изменения становятся постоянными.Если фиксация завершается неудачей, транзакция прерывается.Если приложение не может успешно завершить транзакцию, оно пытается прервать ее выполнение и отменить произведенные в ходе транзакции изменения.  
+ <span data-ttu-id="5a5e3-107">Обе модели поддерживают фиксацию транзакции при достижении программой согласованного состояния.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-107">Both models support committing a transaction when the program reaches a consistent state.</span></span> <span data-ttu-id="5a5e3-108">При успешной фиксации выполненные в ходе транзакции изменения становятся постоянными.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-108">If the commit succeeds, the transaction is durably committed.</span></span> <span data-ttu-id="5a5e3-109">Если фиксация завершается неудачей, транзакция прерывается.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-109">If the commit fails, the transaction aborts.</span></span> <span data-ttu-id="5a5e3-110">Если приложение не может успешно завершить транзакцию, оно пытается прервать ее выполнение и отменить произведенные в ходе транзакции изменения.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-110">If the application program cannot successfully complete the transaction, it attempts to abort and undo the transaction's effects.</span></span>  
   
-## В этом разделе  
+## <a name="in-this-section"></a><span data-ttu-id="5a5e3-111">Содержание</span><span class="sxs-lookup"><span data-stu-id="5a5e3-111">In This Section</span></span>  
   
-### Создание транзакции  
- Пространство имен <xref:System.Transactions> предоставляет две модели для создания транзакций.Эти модели рассматриваются в следующих разделах.  
+### <a name="creating-a-transaction"></a><span data-ttu-id="5a5e3-112">Создание транзакции</span><span class="sxs-lookup"><span data-stu-id="5a5e3-112">Creating a Transaction</span></span>  
+ <span data-ttu-id="5a5e3-113">Пространство имен <xref:System.Transactions> предоставляет две модели для создания транзакций.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-113">The <xref:System.Transactions> namespace provides two models for creating a transaction.</span></span> <span data-ttu-id="5a5e3-114">Эти модели рассматриваются в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-114">These models are covered in the following topics.</span></span>  
   
- [Реализация неявной транзакции с использованием области транзакции ](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [<span data-ttu-id="5a5e3-115">Реализация неявную транзакцию с помощью области транзакций</span><span class="sxs-lookup"><span data-stu-id="5a5e3-115">Implementing an Implicit Transaction using Transaction Scope</span></span>](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
- Описывает, как пространство имен <xref:System.Transactions> поддерживает создание неявных транзакций с использованием класса <xref:System.Transactions.TransactionScope>.  
+ <span data-ttu-id="5a5e3-116">Описывает, как пространство имен <xref:System.Transactions> поддерживает создание неявных транзакций с использованием класса <xref:System.Transactions.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-116">Describes how the <xref:System.Transactions> namespace supports creating implicit transactions using the <xref:System.Transactions.TransactionScope> class.</span></span>  
   
- [Реализация явной транзакции с помощью класса CommittableTransaction ](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [<span data-ttu-id="5a5e3-117">Реализация явной транзакции с помощью CommittableTransaction</span><span class="sxs-lookup"><span data-stu-id="5a5e3-117">Implementing an Explicit Transaction using CommittableTransaction</span></span>](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
- Описывает, как пространство имен <xref:System.Transactions> поддерживает создание явных транзакций с использованием класса <xref:System.Transactions.CommittableTransaction>.  
+ <span data-ttu-id="5a5e3-118">Описывает, как пространство имен <xref:System.Transactions> поддерживает создание явных транзакций с использованием класса <xref:System.Transactions.CommittableTransaction>.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-118">Describes how the <xref:System.Transactions> namespace supports creating explicit transactions using the <xref:System.Transactions.CommittableTransaction> class.</span></span>  
   
-### Передача управления транзакцией на следующий уровень иерархии  
- Если транзакции необходим доступ к ресурсу в другом домене приложения или требуется прикрепить другой диспетчер устойчивых ресурсов, управление транзакцией автоматически передается координатору MSDTC.Порядок передачи транзакции на следующий уровень иерархии рассматривается в разделе [Передача управления транзакцией на следующий уровень иерархии ](../../../../docs/framework/data/transactions/transaction-management-escalation.md).  
+### <a name="escalating-transaction-management"></a><span data-ttu-id="5a5e3-119">Передача управления транзакцией на следующий уровень иерархии</span><span class="sxs-lookup"><span data-stu-id="5a5e3-119">Escalating Transaction Management</span></span>  
+ <span data-ttu-id="5a5e3-120">Если транзакции необходим доступ к ресурсу в другом домене приложения или требуется зачислить другой диспетчер устойчивых ресурсов, управление транзакцией автоматически передается координатору MSDTC.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-120">When a transaction needs to access a resource in another application domain, or if you want to enlist in another durable resource manager, the transaction is automatically escalated to be managed by the MSDTC.</span></span> <span data-ttu-id="5a5e3-121">Распространение транзакции, описанные в [эскалации управления транзакцией](../../../../docs/framework/data/transactions/transaction-management-escalation.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-121">Transaction escalation is covered in the [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md) topic.</span></span>  
   
-### Параллелизм  
- В разделе [Управление параллелизмом с помощью класса DependentTransaction ](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) описывается порядок обеспечения параллельного выполнения асинхронных задач с помощью класса <xref:System.Transactions.DependentTransaction>.  
+### <a name="concurrency"></a><span data-ttu-id="5a5e3-122">параллелизм</span><span class="sxs-lookup"><span data-stu-id="5a5e3-122">Concurrency</span></span>  
+ <span data-ttu-id="5a5e3-123">Раздел [управление параллелизмом с DependentTransaction](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) показано, как можно достичь параллелизма между асинхронных задач с помощью <xref:System.Transactions.DependentTransaction> класса.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-123">The topic [Managing Concurrency with DependentTransaction](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) demonstrates how concurrency can be achieved between asynchronous tasks by using the <xref:System.Transactions.DependentTransaction> class.</span></span>  
   
-### Взаимодействие с транзакциями COM\+  
- В разделе [Взаимодействие с транзакциями Enterprise Services и COM\+ ](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) описывается порядок обеспечения взаимодействия распределенных транзакций с транзакциями COM\+.  
+### <a name="com-interop"></a><span data-ttu-id="5a5e3-124">Взаимодействие с транзакциями COM+</span><span class="sxs-lookup"><span data-stu-id="5a5e3-124">COM+ Interop</span></span>  
+ <span data-ttu-id="5a5e3-125">Раздел [взаимодействие с Enterprise Services и транзакции COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) показано, как сделать в распределенных транзакциях, которые взаимодействуют с транзакциями COM +.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-125">The topic [Interoperability with Enterprise Services and COM+ Transactions](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) illustrates how you can make your distributed transactions interact with COM+ transactions.</span></span>  
   
-### Диагностика  
- В разделе [Диагностическая трассировка ](../../../../docs/framework/data/transactions/diagnostic-traces.md) описывается порядок использования кодов трассировки, создаваемых инфраструктурой <xref:System.Transactions>, для устранения неполадок приложений.  
+### <a name="diagnostics"></a><span data-ttu-id="5a5e3-126">Диагностика</span><span class="sxs-lookup"><span data-stu-id="5a5e3-126">Diagnostics</span></span>  
+ <span data-ttu-id="5a5e3-127">[Диагностические трассировки](../../../../docs/framework/data/transactions/diagnostic-traces.md) описывает, как можно использовать коды трассировки, созданные <xref:System.Transactions> инфраструктуры для устранения неполадок в приложениях.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-127">[Diagnostic Traces](../../../../docs/framework/data/transactions/diagnostic-traces.md) describes how you can use the trace codes that are generated by the <xref:System.Transactions> infrastructure to troubleshoot errors in your applications.</span></span>  
   
-### Работа в среде ASP.NET  
- В разделе [Использование инфраструктуры System.Transactions в среде ASP.NET](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) описывается, как можно успешно использовать инфраструктуру <xref:System.Transactions> в приложении ASP.NET.
+### <a name="working-within-aspnet"></a><span data-ttu-id="5a5e3-128">Работа в среде ASP.NET</span><span class="sxs-lookup"><span data-stu-id="5a5e3-128">Working within ASP.NET</span></span>  
+ <span data-ttu-id="5a5e3-129">[С помощью System.Transactions в ASP.NET](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) разделе описывается, как можно успешно использовать <xref:System.Transactions> внутри приложения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="5a5e3-129">The [Using System.Transactions in ASP.NET](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) topic describes how you can successfully use <xref:System.Transactions> inside an ASP.NET application.</span></span>

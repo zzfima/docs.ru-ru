@@ -1,42 +1,46 @@
 ---
-title: "Выражения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Expressions2
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c988f41966f6e7bbd87fc4552de15b28117ecde5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выражения
-В этом образце демонстрируется использование в рабочем процессе базовых выражений.Образец содержит рабочий процесс, который рассчитывает статистику по базовой заработной плате для двух служащих вымышленной компании.Два класса — `Employee` и `SalaryStats` — определяются в файлах Employee.cs и SalaryStats.cs.Эти классы используются в рабочем процессе, который показывает, как выполнять простые арифметические и строковые операции над свойствами переменных сложных типов.  
+# <a name="expressions"></a><span data-ttu-id="5adc0-102">Выражения</span><span class="sxs-lookup"><span data-stu-id="5adc0-102">Expressions</span></span>
+<span data-ttu-id="5adc0-103">В этом образце демонстрируется использование в рабочем процессе базовых выражений.</span><span class="sxs-lookup"><span data-stu-id="5adc0-103">This sample demonstrates how to use basic expressions in a workflow.</span></span> <span data-ttu-id="5adc0-104">Образец содержит рабочий процесс, который рассчитывает статистику по базовой заработной плате для двух служащих вымышленной компании.</span><span class="sxs-lookup"><span data-stu-id="5adc0-104">It consists of a workflow that calculates basic salary statistics for two employees of a fictitious company.</span></span> <span data-ttu-id="5adc0-105">Два класса - `Employee` и `SalaryStats` - определяются в файлах Employee.cs и SalaryStats.cs.</span><span class="sxs-lookup"><span data-stu-id="5adc0-105">Two classes, `Employee` and `SalaryStats`, are defined in Employee.cs and SalaryStats.cs.</span></span> <span data-ttu-id="5adc0-106">Эти классы используются в рабочем процессе, который показывает, как выполнять простые арифметические и строковые операции над свойствами переменных сложных типов.</span><span class="sxs-lookup"><span data-stu-id="5adc0-106">These classes are used in a workflow that shows how to perform simple arithmetic and string operations on properties of variables of complex types.</span></span>  
   
- Рабочий процесс вычисления заработной платы определяется и в XAML, и на C\#, чтобы продемонстрировать два стиля разработки.XAML\-версия содержится в файле SalaryCalculation.xaml. Ее можно просмотреть и изменить в конструкторе рабочих процессов.Версия на C\# находится в файле Program.cs.Выражения, используемые в XAML, соответствуют синтаксису Visual Basic и используют для выполнения действия выражений <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> и <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] выражениях Visual Basic см. в разделе [Выражения Visual Basic](http://go.microsoft.com/fwlink/?LinkId=165912).С другой стороны, выражения на C\# записываются в виде лямбда\-выражений и используют действия выражений <xref:System.Activities.Expressions.LambdaValue%601> и <xref:System.Activities.Expressions.LambdaReference%601>.Написание выражений в форме лямбда\-выражений позволяет компилятору C\# выполнять подсветку синтаксиса и статическую проверку.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] лямбда\-выражения в C\# см. в разделе [Руководство по программированию лямбда\-выражений \(C\#\)](http://go.microsoft.com/fwlink/?LinkId=182082).Если рабочий процесс создается в коде на Visual Basic, используются лямбда\-выражения Visual Basic.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] лямбда\-выражения в Visual Basic см. в разделе [Лямбда\-выражения \(Visual Basic\)](http://go.microsoft.com/fwlink/?LinkId=152437).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] разработка рабочих процессов с помощью кода см. в разделе [Разработка рабочих процессов, действий и выражений с помощью императивного кода](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ <span data-ttu-id="5adc0-107">Рабочий процесс вычисления заработной платы определяется и в XAML, и на C#, чтобы продемонстрировать два стиля разработки.</span><span class="sxs-lookup"><span data-stu-id="5adc0-107">The salary calculation workflow is defined both in XAML and in C# to demonstrate the two authoring styles.</span></span> <span data-ttu-id="5adc0-108">XAML-версия содержится в файле SalaryCalculation.xaml. Ее можно просмотреть и изменить в конструкторе рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="5adc0-108">The XAML version is contained in SalaryCalculation.xaml and can be viewed and edited in the workflow designer.</span></span> <span data-ttu-id="5adc0-109">Версия на C# находится в файле Program.cs.</span><span class="sxs-lookup"><span data-stu-id="5adc0-109">The C# version resides in Program.cs.</span></span> <span data-ttu-id="5adc0-110">Выражения, используемые в XAML, соответствуют синтаксису Visual Basic и используют для выполнения действия выражений <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> и <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>.</span><span class="sxs-lookup"><span data-stu-id="5adc0-110">The expressions used in XAML conform to Visual Basic syntax, and use <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> expression activities to execute.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5adc0-111">В разделе выражения Visual Basic, [выражения Visual Basic](http://go.microsoft.com/fwlink/?LinkId=165912).</span><span class="sxs-lookup"><span data-stu-id="5adc0-111"> Visual Basic expressions see, [Visual Basic Expressions](http://go.microsoft.com/fwlink/?LinkId=165912).</span></span> <span data-ttu-id="5adc0-112">С другой стороны, выражения на C# записываются в виде лямбда-выражений и используют действия выражений <xref:System.Activities.Expressions.LambdaValue%601> и <xref:System.Activities.Expressions.LambdaReference%601>.</span><span class="sxs-lookup"><span data-stu-id="5adc0-112">On the other hand, expressions in C# are written as lambda expressions and use <xref:System.Activities.Expressions.LambdaValue%601> and <xref:System.Activities.Expressions.LambdaReference%601> expression activities.</span></span> <span data-ttu-id="5adc0-113">Написание выражений в форме лямбда-выражений позволяет компилятору C# выполнять подсветку синтаксиса и статическую проверку.</span><span class="sxs-lookup"><span data-stu-id="5adc0-113">Writing expressions as lambda expressions allows the C# compiler to provide syntax highlighting and static verification.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5adc0-114">лямбда-выражения в C#, в разделе [лямбда-выражения (руководство по программированию на C#)](http://go.microsoft.com/fwlink/?LinkId=182082).</span><span class="sxs-lookup"><span data-stu-id="5adc0-114"> lambda expressions in C#, see [Lambda Expressions (C# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=182082).</span></span> <span data-ttu-id="5adc0-115">Если рабочий процесс создается в коде на Visual Basic, используются лямбда-выражения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5adc0-115">If a workflow is authored in code using Visual Basic, then Visual Basic lambda expressions are used.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5adc0-116">лямбда-выражения в Visual Basic. в разделе [лямбда-выражения (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437).</span><span class="sxs-lookup"><span data-stu-id="5adc0-116"> lambda expressions in Visual Basic, see [Lambda Expressions (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5adc0-117">о создании рабочих процессов с помощью кода, в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span><span class="sxs-lookup"><span data-stu-id="5adc0-117"> about authoring workflows using code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>  
   
-#### Запуск образца  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="5adc0-118">Выполнение образца</span><span class="sxs-lookup"><span data-stu-id="5adc0-118">To run the sample</span></span>  
   
-1.  Откройте решение Expressions.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="5adc0-119">Откройте решение Expressions.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5adc0-119">Open the Expressions.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Чтобы построить решение, нажмите клавиши CTRL\+SHIFT\+B или выберите команду **Построить решение** в меню **Построение**.  
+2.  <span data-ttu-id="5adc0-120">Нажмите клавиши CTRL + SHIFT + B для построения решения или выберите **построить решение** из **построения** меню.</span><span class="sxs-lookup"><span data-stu-id="5adc0-120">Press CTRL+SHIFT+B to build the solution or select **Build Solution** from the **Build** menu.</span></span>  
   
     > [!NOTE]
-    >  Чтобы открыть файл SalaryCalculation.xaml в конструкторе Visual Studio, необходимо сначала скомпилировать проект, чтобы классы `Employee` и `SalaryStats` были доступны конструктору.  
+    >  <span data-ttu-id="5adc0-121">Чтобы открыть файл SalaryCalculation.xaml в конструкторе Visual Studio, необходимо сначала скомпилировать проект, чтобы классы `Employee` и `SalaryStats` были доступны конструктору.</span><span class="sxs-lookup"><span data-stu-id="5adc0-121">To open SalaryCalculation.xaml in the Visual Studio designer, you must first compile your project to ensure that `Employee` and `SalaryStats` classes are available to the designer.</span></span>  
   
-3.  После успешного построения нажмите клавишу F5 или выберите команду **Начать отладку** в меню **Отладка**.Также вы можете нажать клавиши CTRL\+F5 или выбрать команду **Запуск без отладки** в меню **Отладка**, чтобы запустить выполнение без отладки.  
+3.  <span data-ttu-id="5adc0-122">После успешного построения нажмите клавишу F5 или выберите **начать отладку** из **отладки** меню.</span><span class="sxs-lookup"><span data-stu-id="5adc0-122">Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="5adc0-123">Также нажмите клавиши Ctrl + F5 или выбрать команду **Запуск без отладки** из **отладки** меню для запуска без отладки.</span><span class="sxs-lookup"><span data-stu-id="5adc0-123">Alternatively you can press Ctrl+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="5adc0-124">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="5adc0-124">The samples may already be installed on your computer.</span></span> <span data-ttu-id="5adc0-125">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="5adc0-125">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="5adc0-126">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5adc0-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5adc0-127">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="5adc0-127">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Expressions`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Expressions`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="5adc0-128">См. также</span><span class="sxs-lookup"><span data-stu-id="5adc0-128">See Also</span></span>

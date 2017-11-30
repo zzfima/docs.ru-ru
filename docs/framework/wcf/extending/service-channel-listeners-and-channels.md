@@ -1,48 +1,51 @@
 ---
-title: "Служба: прослушиватели каналов и каналы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Служба: прослушиватели каналов и каналы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f991ebe2be79313bbcf51b41944f84886b1a0b8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Служба: прослушиватели каналов и каналы
-Есть три категории объектов каналов: каналы, прослушиватели каналов и фабрики каналов.Каналы — это интерфейс между приложением и стеком канала.Прослушиватели каналов отвечают за создание каналов на принимающей \(ожидающей передачи данных\) стороне, обычно в ответ на новое входящее сообщение или подключение.Фабрики каналов отвечают за создание каналов на передающей стороне для инициации связи с конечной точкой.  
+# <a name="service-channel-listeners-and-channels"></a><span data-ttu-id="a9b9b-102">Служба: прослушиватели каналов и каналы</span><span class="sxs-lookup"><span data-stu-id="a9b9b-102">Service: Channel Listeners and Channels</span></span>
+<span data-ttu-id="a9b9b-103">Есть три категории объектов каналов: каналы, прослушиватели каналов и фабрики каналов.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-103">There are three categories of channel objects: channels, channel listeners and channel factories.</span></span> <span data-ttu-id="a9b9b-104">Каналы - это интерфейс между приложением и стеком канала.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-104">Channels are the interface between the application and the channel stack.</span></span> <span data-ttu-id="a9b9b-105">Прослушиватели каналов отвечают за создание каналов на принимающей (ожидающей передачи данных) стороне, обычно в ответ на новое входящее сообщение или подключение.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-105">Channel listeners are responsible for creating channels on the receive (or listen) side, typically in response to a new incoming message or connection.</span></span> <span data-ttu-id="a9b9b-106">Фабрики каналов отвечают за создание каналов на передающей стороне для инициации связи с конечной точкой.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-106">Channel factories are responsible for creating channels on the send side to initiate communication with an endpoint.</span></span>  
   
-## Прослушиватели каналов и каналы  
- Прослушиватели каналов отвечают за создание каналов и прием сообщений с более низкого уровня или из сети.Принятые сообщения доставляются на уровень выше с помощью канала, созданного прослушивателем каналов.  
+## <a name="channel-listeners-and-channels"></a><span data-ttu-id="a9b9b-107">Прослушиватели каналов и каналы</span><span class="sxs-lookup"><span data-stu-id="a9b9b-107">Channel Listeners and Channels</span></span>  
+ <span data-ttu-id="a9b9b-108">Прослушиватели каналов отвечают за создание каналов и прием сообщений с более низкого уровня или из сети.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-108">Channel listeners are responsible for creating channels and receiving messages from the layer below or from the network.</span></span> <span data-ttu-id="a9b9b-109">Принятые сообщения доставляются на уровень выше с помощью канала, созданного прослушивателем каналов.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-109">Received messages are delivered to the layer above using a channel that is created by the channel listener.</span></span>  
   
- Следующая схема показывает процесс приема сообщения и доставки его на уровень выше.  
+ <span data-ttu-id="a9b9b-110">Следующая схема показывает процесс приема сообщения и доставки его на уровень выше.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-110">The following diagram illustrates the process of receiving messages and delivering them to the layer above.</span></span>  
   
- ![Прослушиватели каналов и каналы](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure1highlevelc.gif "wcfc\_WCFChannelsigure1HighLevelc")  
-Прослушиватель каналов принимает сообщения и доставляет их на уровень выше через каналы.  
+ <span data-ttu-id="a9b9b-111">![Прослушиватели каналов и каналы](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure1highlevelc.gif "wcfc_WCFChannelsigure1HighLevelc")</span><span class="sxs-lookup"><span data-stu-id="a9b9b-111">![Channel listeners and channels](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure1highlevelc.gif "wcfc_WCFChannelsigure1HighLevelc")</span></span>  
+<span data-ttu-id="a9b9b-112">Прослушиватель каналов принимает сообщения и доставляет их на уровень выше через каналы.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-112">A channel listener receiving messages and delivering to the layer above through channels.</span></span>  
   
- Процесс можно концептуально представить в виде очереди внутри каждого канала, хотя реализация может не использовать очередь.Прослушиватель канала отвечает за прием сообщений с более низкого уровня или из сети и добавление их в очередь.Канал отвечает за получение сообщений из очереди и передачу их на уровень выше, откуда приходит запрос на сообщение, например вызовом команды `Receive` для данного канала.  
+ <span data-ttu-id="a9b9b-113">Процесс можно концептуально представить в виде очереди внутри каждого канала, хотя реализация может не использовать очередь.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-113">The process can be conceptually modeled as a queue inside each channel although the implementation may not actually use a queue.</span></span> <span data-ttu-id="a9b9b-114">Прослушиватель канала отвечает за прием сообщений с более низкого уровня или из сети и добавление их в очередь.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-114">The channel listener is responsible for receiving messages from the layer below or the network and putting them in the queue.</span></span> <span data-ttu-id="a9b9b-115">Канал отвечает за получение сообщений из очереди и передачу их на уровень выше, откуда приходит запрос на сообщение, например вызовом команды `Receive` для данного канала.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-115">The channel is responsible for getting messages from the queue and handing them to the layer above when that layer asks for a message, for example by calling `Receive` on the channel.</span></span>  
   
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены вспомогательные базовые классы для этого процесса.\(Схему обсуждаемых здесь вспомогательных классов каналов см. в разделе [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md).\)  
+ <span data-ttu-id="a9b9b-116">В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены вспомогательные базовые классы для этого процесса.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-116">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides base class helpers for this process.</span></span> <span data-ttu-id="a9b9b-117">(Схема канала вспомогательных классов, описанных в этом разделе, см. [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md).)</span><span class="sxs-lookup"><span data-stu-id="a9b9b-117">(For a diagram of the channel helper classes discussed in this topic, see [Channel Model Overview](../../../../docs/framework/wcf/extending/channel-model-overview.md).)</span></span>  
   
--   Класс <xref:System.ServiceModel.Channels.CommunicationObject> реализует интерфейс <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный в пункте 2 раздела [Разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).  
+-   <span data-ttu-id="a9b9b-118"><xref:System.ServiceModel.Channels.CommunicationObject> Класс реализует <xref:System.ServiceModel.ICommunicationObject> и вводит в действие конечного автомата, описанной на шаге 2 [разработка каналов](../../../../docs/framework/wcf/extending/developing-channels.md).</span><span class="sxs-lookup"><span data-stu-id="a9b9b-118">The <xref:System.ServiceModel.Channels.CommunicationObject> class implements <xref:System.ServiceModel.ICommunicationObject> and enforces the state machine described in step 2 of [Developing Channels](../../../../docs/framework/wcf/extending/developing-channels.md).</span></span>  
   
--   Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> реализует объект <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>.Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> — базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.  
+-   <span data-ttu-id="a9b9b-119"><xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет единый базовый класс для <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-119">The <xref:System.ServiceModel.Channels.ChannelManagerBase> class implements <xref:System.ServiceModel.Channels.CommunicationObject> and provides a unified base class for <xref:System.ServiceModel.Channels.ChannelFactoryBase> and <xref:System.ServiceModel.Channels.ChannelListenerBase>.</span></span> <span data-ttu-id="a9b9b-120">Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-120">The <xref:System.ServiceModel.Channels.ChannelManagerBase> class works in conjunction with <xref:System.ServiceModel.Channels.ChannelBase>, which is a base class that implements <xref:System.ServiceModel.Channels.IChannel>.</span></span>  
   
--   Класс``<xref:System.ServiceModel.Channels.ChannelFactoryBase> реализует класс <xref:System.ServiceModel.Channels.ChannelManagerBase> и интерфейс <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет перегрузки `CreateChannel` в один абстрактный метод `OnCreateChannel`.  
+-   <span data-ttu-id="a9b9b-121">''<xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` в одну из перегруженных функций `OnCreateChannel` абстрактный метод.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-121">The``<xref:System.ServiceModel.Channels.ChannelFactoryBase> class implements <xref:System.ServiceModel.Channels.ChannelManagerBase> and <xref:System.ServiceModel.Channels.IChannelFactory> and consolidates the `CreateChannel` overloads into one `OnCreateChannel` abstract method.</span></span>  
   
--   Класс <xref:System.ServiceModel.Channels.ChannelListenerBase> реализует интерфейс <xref:System.ServiceModel.Channels.IChannelListener>.Он отвечает за базовое управление состоянием.  
+-   <span data-ttu-id="a9b9b-122"><xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-122">The <xref:System.ServiceModel.Channels.ChannelListenerBase> class implements <xref:System.ServiceModel.Channels.IChannelListener>.</span></span> <span data-ttu-id="a9b9b-123">Он отвечает за базовое управление состоянием.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-123">It takes care of basic state management.</span></span>  
   
- Дальнейшее обсуждение основано на примере [Транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+ <span data-ttu-id="a9b9b-124">Следующее обсуждение создается на основе [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-124">The following discussion is based upon the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span>  
   
-## Создание прослушивателя каналов  
- Класс``UdpChannelListener, реализованный в образце, унаследован от класса <xref:System.ServiceModel.Channels.ChannelListenerBase>.Он использует один UDP\-сокет для приема датаграмм.Метод `OnOpen` принимает данные через UDP\-сокет в асинхронном цикле.Затем данные преобразуются в сообщения с помощью системы кодирования:  
+## <a name="creating-a-channel-listener"></a><span data-ttu-id="a9b9b-125">Создание прослушивателя каналов</span><span class="sxs-lookup"><span data-stu-id="a9b9b-125">Creating a Channel Listener</span></span>  
+ <span data-ttu-id="a9b9b-126">"Класс UdpChannelListener, образец реализует является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> класса.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-126">The``UdpChannelListener that the sample implements derives from the <xref:System.ServiceModel.Channels.ChannelListenerBase> class.</span></span> <span data-ttu-id="a9b9b-127">Он использует один UDP-сокет для приема датаграмм.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-127">It uses a single UDP socket to receive datagrams.</span></span> <span data-ttu-id="a9b9b-128">Метод `OnOpen` принимает данные через UDP-сокет в асинхронном цикле.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-128">The `OnOpen` method receives data using the UDP socket in an asynchronous loop.</span></span> <span data-ttu-id="a9b9b-129">Затем данные преобразуются в сообщения с помощью системы кодирования:</span><span class="sxs-lookup"><span data-stu-id="a9b9b-129">The data are then converted into messages using the message encoding system:</span></span>  
   
 ```  
 message = UdpConstants.MessageEncoder.ReadMessage(  
@@ -51,7 +54,7 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );  
 ```  
   
- Поскольку один канал датаграмм представляет сообщения, приходящие из нескольких источников, `UdpChannelListener` — одноэлементный прослушиватель.С этим прослушивателем в каждый момент времени может быть связано не более одного активного интерфейса <xref:System.ServiceModel.Channels.IChannel>``.В примере создается новый экземпляр только в том случае, если канал, возвращенный методом <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A>, был впоследствии освобожден.Когда сообщение принято, оно ставится в очередь в этот одноэлементный канал.  
+ <span data-ttu-id="a9b9b-130">Поскольку один канал датаграмм представляет сообщения, приходящие из нескольких источников, `UdpChannelListener` - одноэлементный прослушиватель.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-130">Because the same datagram channel represents messages that arrive from a number of sources, the `UdpChannelListener` is a singleton listener.</span></span> <span data-ttu-id="a9b9b-131">В большинстве один активный <xref:System.ServiceModel.Channels.IChannel>'' связанный с данным прослушивателем одновременно.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-131">There is at most one active <xref:System.ServiceModel.Channels.IChannel>``associated with this listener at a time.</span></span> <span data-ttu-id="a9b9b-132">В образце создается новый экземпляр только в том случае, если канал, возвращенный методом <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A>, был впоследствии освобожден.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-132">The sample generates another one only if a channel that is returned by the <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> method is subsequently disposed.</span></span> <span data-ttu-id="a9b9b-133">Когда сообщение принято, оно ставится в очередь в этот одноэлементный канал.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-133">When a message is received, it is enqueued into this singleton channel.</span></span>  
   
-### UdpInputChannel  
- Класс `UdpInputChannel` реализует интерфейс <xref:System.ServiceModel.Channels.IInputChannel>.Он состоит из очереди входящих сообщений, которая заполняется сокетом прослушивателя `UdpChannelListener`.Эти сообщения удаляются из очереди с помощью метода <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A>.
+### <a name="udpinputchannel"></a><span data-ttu-id="a9b9b-134">UdpInputChannel</span><span class="sxs-lookup"><span data-stu-id="a9b9b-134">UdpInputChannel</span></span>  
+ <span data-ttu-id="a9b9b-135">`UdpInputChannel` Класс реализует <xref:System.ServiceModel.Channels.IInputChannel>.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-135">The `UdpInputChannel` class implements <xref:System.ServiceModel.Channels.IInputChannel>.</span></span> <span data-ttu-id="a9b9b-136">Он состоит из очереди входящих сообщений, которая заполняется сокетом прослушивателя `UdpChannelListener`.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-136">It consists of a queue of incoming messages that is populated by the `UdpChannelListener`'s socket.</span></span> <span data-ttu-id="a9b9b-137">Эти сообщения будут извлечены <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="a9b9b-137">These messages are dequeued by the <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> method.</span></span>

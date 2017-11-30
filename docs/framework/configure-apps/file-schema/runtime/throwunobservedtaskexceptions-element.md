@@ -1,99 +1,103 @@
 ---
-title: "Элемент &lt;ThrowUnobservedTaskExceptions&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Элемент <ThrowUnobservedTaskExceptions>"
-  - "Элемент ThrowUnobservedTaskExceptions"
+title: "&lt;ThrowUnobservedTaskExceptions&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ThrowUnobservedTaskExceptions element
+- <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d171c2058a79476d99c5952cc6a697f126af81c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;ThrowUnobservedTaskExceptions&gt;
-Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
+# <a name="ltthrowunobservedtaskexceptionsgt-element"></a><span data-ttu-id="e482f-102">&lt;ThrowUnobservedTaskExceptions&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="e482f-102">&lt;ThrowUnobservedTaskExceptions&gt; Element</span></span>
+<span data-ttu-id="e482f-103">Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.</span><span class="sxs-lookup"><span data-stu-id="e482f-103">Specifies whether unhandled task exceptions should terminate a running process.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="e482f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e482f-104">\<configuration></span></span>  
+<span data-ttu-id="e482f-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="e482f-105">\<runtime></span></span>  
+<span data-ttu-id="e482f-106">\<ThrowUnobservedTaskExceptions ></span><span class="sxs-lookup"><span data-stu-id="e482f-106">\<ThrowUnobservedTaskExceptions></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="e482f-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e482f-107">Syntax</span></span>  
+  
+```xml  
 <ThrowUnobservedTaskExceptions  
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e482f-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e482f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e482f-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e482f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="e482f-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e482f-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.|  
+|<span data-ttu-id="e482f-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e482f-111">Attribute</span></span>|<span data-ttu-id="e482f-112">Описание</span><span class="sxs-lookup"><span data-stu-id="e482f-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="e482f-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="e482f-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="e482f-114">Указывает, будут ли необработанные исключения задачи завершать выполняющийся процесс.</span><span class="sxs-lookup"><span data-stu-id="e482f-114">Specifies whether unhandled task exceptions should terminate the running process.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="e482f-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="e482f-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Не завершает выполняющийся процесс при необработанных исключениях задачи.  Это значение по умолчанию.|  
-|`true`|Завершает выполняющийся процесс при необработанных исключениях задачи.|  
+|<span data-ttu-id="e482f-116">Значение</span><span class="sxs-lookup"><span data-stu-id="e482f-116">Value</span></span>|<span data-ttu-id="e482f-117">Описание</span><span class="sxs-lookup"><span data-stu-id="e482f-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="e482f-118">Не завершает выполняющийся процесс для необработанное исключение задачи.</span><span class="sxs-lookup"><span data-stu-id="e482f-118">Does not terminate the running process for an unhandled task exception.</span></span> <span data-ttu-id="e482f-119">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e482f-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="e482f-120">Завершает выполняющийся процесс для необработанное исключение задачи.</span><span class="sxs-lookup"><span data-stu-id="e482f-120">Terminates the running process for an unhandled task exception.</span></span>|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a><span data-ttu-id="e482f-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e482f-121">Child Elements</span></span>  
+ <span data-ttu-id="e482f-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="e482f-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="e482f-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e482f-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
+|<span data-ttu-id="e482f-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="e482f-124">Element</span></span>|<span data-ttu-id="e482f-125">Описание</span><span class="sxs-lookup"><span data-stu-id="e482f-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="e482f-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e482f-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e482f-127">Содержит сведения о параметрах инициализации среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="e482f-127">Contains information about runtime initialization options.</span></span>|  
 |||  
   
-## Заметки  
- Если исключение, связанное с <xref:System.Threading.Tasks.Task> не контролировалось, нет операции <xref:System.Threading.Tasks.Task.Wait%2A>, родительский элемент не присоединен и свойство <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=fullName> не считывалось, исключение задачи считается неконтролируемым.  
+## <a name="remarks"></a><span data-ttu-id="e482f-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="e482f-128">Remarks</span></span>  
+ <span data-ttu-id="e482f-129">Если исключение, связанное со <xref:System.Threading.Tasks.Task> не было соблюдено, имеется не <xref:System.Threading.Tasks.Task.Wait%2A> операции родительского не подключен и <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> свойство не было прочитано рассматривается как непредвиденное исключение задачи.</span><span class="sxs-lookup"><span data-stu-id="e482f-129">If an exception that is associated with a <xref:System.Threading.Tasks.Task> has not been observed, there is no <xref:System.Threading.Tasks.Task.Wait%2A> operation, the parent is not attached, and the <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> property was not read the task exception is considered to be unobserved.</span></span>  
   
- По умолчанию, если в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] <xref:System.Threading.Tasks.Task> с неконтролируемым исключением обрабатывается сборщиком мусора, метод завершения генерирует исключение и завершает процесс.  Завершение процесса определяется временем сборки мусора и завершения.  
+ <span data-ttu-id="e482f-130">В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по умолчанию, если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение сбора мусора, метод завершения создает исключение и завершает процесс.</span><span class="sxs-lookup"><span data-stu-id="e482f-130">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], by default, if a <xref:System.Threading.Tasks.Task> that has an unobserved exception is garbage collected, the finalizer throws an exception and terminates the process.</span></span> <span data-ttu-id="e482f-131">Завершение процесса определяется временем сбора мусора и завершения.</span><span class="sxs-lookup"><span data-stu-id="e482f-131">The termination of the process is determined by the timing of garbage collection and finalization.</span></span>  
   
- Чтобы упростить разработчикам написание асинхронного кода на основе задач, в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] изменена реакция по умолчанию на неконтролируемые исключения.  Неконтролируемые исключения по\-прежнему инициируют событие <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>, но по умолчанию процесс не завершится.  Вместо этого исключение игнорируется после того, как событие происходит, вне зависимости от того, проверяет ли обработчик событий исключение.  
+ <span data-ttu-id="e482f-132">Чтобы упростить разработчикам в создании асинхронного кода на основе задач, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] изменяет это поведение по умолчанию для непредвиденное исключений.</span><span class="sxs-lookup"><span data-stu-id="e482f-132">To make it easier for developers to write asynchronous code based on tasks, the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] changes this default behavior for unobserved exceptions.</span></span> <span data-ttu-id="e482f-133">Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс.</span><span class="sxs-lookup"><span data-stu-id="e482f-133">Unobserved exceptions still cause the <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> event to be raised, but by default, the process does not terminate.</span></span> <span data-ttu-id="e482f-134">Вместо этого исключение игнорируется после возникновения события независимо от того, обнаруживает ли обработчик событий, исключение.</span><span class="sxs-lookup"><span data-stu-id="e482f-134">Instead, the exception is ignored after the event is raised, regardless of whether an event handler observes the exception.</span></span>  
   
- В [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] можно использовать элемент [\<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения для активации поведения [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] при генерации исключений.  
+ <span data-ttu-id="e482f-135">В [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], можно использовать [ \<ThrowUnobservedTaskExceptions > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения, чтобы включить [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] поведение создания исключения.</span><span class="sxs-lookup"><span data-stu-id="e482f-135">In the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], you can use the [\<ThrowUnobservedTaskExceptions> element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in an application configuration file to enable the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] behavior of throwing an exception.</span></span>  
   
- Можно также указать поведение при исключении одним из следующих способов:  
+ <span data-ttu-id="e482f-136">Можно также задать поведение исключения в одной из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="e482f-136">You can also specify the exception behavior in one of the following ways:</span></span>  
   
--   Установкой переменной среды `COMPlus_ThrowUnobservedTaskExceptions` \(`set COMPlus_ThrowUnobservedTaskExceptions=1`\).  
+-   <span data-ttu-id="e482f-137">Задав переменную среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span><span class="sxs-lookup"><span data-stu-id="e482f-137">By setting the environment variable `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).</span></span>  
   
--   Задав значение DWORD ThrowUnobservedTaskExceptions реестра \= 1 в ключе HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework.  
+-   <span data-ttu-id="e482f-138">Задав значение DWORD реестра значение ThrowUnobservedTaskExceptions = 1 в реестр\\. Ключ NETFramework.</span><span class="sxs-lookup"><span data-stu-id="e482f-138">By setting the registry DWORD value ThrowUnobservedTaskExceptions = 1 in the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework key.</span></span>  
   
-## Пример  
- В следующем примере показано, как включить генерацию исключений в задачах с помощью файла конфигурации приложения.  
+## <a name="example"></a><span data-ttu-id="e482f-139">Пример</span><span class="sxs-lookup"><span data-stu-id="e482f-139">Example</span></span>  
+ <span data-ttu-id="e482f-140">В следующем примере показано включение возникновение исключений в задачах с помощью файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="e482f-140">The following example shows how to enable the throwing of exceptions in tasks by using an application configuration file.</span></span>  
   
-```  
+```xml  
 <configuration>   
     <runtime>   
         <ThrowUnobservedTaskExceptions enabled="true"/>   
     </runtime>   
 </configuration>  
-  
 ```  
   
-## Пример  
- В следующем примере показано, как неконтролируемое исключение генерируется в задаче.  Код должен быть выполнен как окончательная версия программы для корректной работы.  
+## <a name="example"></a><span data-ttu-id="e482f-141">Пример</span><span class="sxs-lookup"><span data-stu-id="e482f-141">Example</span></span>  
+ <span data-ttu-id="e482f-142">В следующем примере показано, как непредвиденное исключение из задачи.</span><span class="sxs-lookup"><span data-stu-id="e482f-142">The following example demonstrates how an unobserved exception is thrown from a task.</span></span> <span data-ttu-id="e482f-143">Код должен выполняться как выпущено для правильной работы программы.</span><span class="sxs-lookup"><span data-stu-id="e482f-143">The code must be run as a released program to work correctly.</span></span>  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="e482f-144">См. также</span><span class="sxs-lookup"><span data-stu-id="e482f-144">See Also</span></span>  
+ [<span data-ttu-id="e482f-145">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="e482f-145">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="e482f-146">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="e482f-146">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

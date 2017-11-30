@@ -1,105 +1,103 @@
 ---
-title: "Элемент &lt;gcConcurrent&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcConcurrent> - элемент"
-  - "теги контейнеров, <gcConcurrent> - элемент"
-  - "gcConcurrent - элемент"
+title: "&lt;gcConcurrent&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
+helpviewer_keywords:
+- container tags, <gcConcurrent> element
+- gcConcurrent element
+- <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;gcConcurrent&gt;
-Указывает, выполняет ли среда CLR сборку мусора в отдельном потоке.  
+# <a name="ltgcconcurrentgt-element"></a><span data-ttu-id="ff1da-102">&lt;gcConcurrent&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="ff1da-102">&lt;gcConcurrent&gt; Element</span></span>
+<span data-ttu-id="ff1da-103">Указывает, выполняет ли среда CLR сборку мусора в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="ff1da-103">Specifies whether the common language runtime runs garbage collection on a separate thread.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="ff1da-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ff1da-104">\<configuration></span></span>  
+<span data-ttu-id="ff1da-105">\<Среда выполнения ></span><span class="sxs-lookup"><span data-stu-id="ff1da-105">\<runtime></span></span>  
+<span data-ttu-id="ff1da-106">\<gcConcurrent ></span><span class="sxs-lookup"><span data-stu-id="ff1da-106">\<gcConcurrent></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ff1da-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff1da-107">Syntax</span></span>  
+  
+```xml  
 <gcConcurrent    
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ff1da-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="ff1da-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="ff1da-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="ff1da-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="ff1da-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="ff1da-110">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, выполняет ли среда выполнения сборку мусора параллельно.|  
+|<span data-ttu-id="ff1da-111">Атрибут</span><span class="sxs-lookup"><span data-stu-id="ff1da-111">Attribute</span></span>|<span data-ttu-id="ff1da-112">Описание</span><span class="sxs-lookup"><span data-stu-id="ff1da-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="ff1da-113">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="ff1da-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="ff1da-114">Указывает, выполняет ли среда выполнения сборку мусора параллельно.</span><span class="sxs-lookup"><span data-stu-id="ff1da-114">Specifies whether the runtime runs garbage collection concurrently.</span></span>|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="ff1da-115">Атрибут enabled</span><span class="sxs-lookup"><span data-stu-id="ff1da-115">enabled Attribute</span></span>  
   
-|Значение|Описание|  
-|--------------|--------------|  
-|`false`|Сборка мусора не выполняется параллельно.|  
-|`true`|Сборка мусора выполняется параллельно.  Это значение по умолчанию.|  
+|<span data-ttu-id="ff1da-116">Значение</span><span class="sxs-lookup"><span data-stu-id="ff1da-116">Value</span></span>|<span data-ttu-id="ff1da-117">Описание</span><span class="sxs-lookup"><span data-stu-id="ff1da-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="ff1da-118">Сборка мусора не выполняется параллельно.</span><span class="sxs-lookup"><span data-stu-id="ff1da-118">Does not run garbage collection concurrently.</span></span>|  
+|`true`|<span data-ttu-id="ff1da-119">Сборка мусора выполняется параллельно.</span><span class="sxs-lookup"><span data-stu-id="ff1da-119">Runs garbage collection concurrently.</span></span> <span data-ttu-id="ff1da-120">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ff1da-120">This is the default.</span></span>|  
   
-### Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="ff1da-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="ff1da-121">Child Elements</span></span>  
+ <span data-ttu-id="ff1da-122">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="ff1da-122">None.</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="ff1da-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="ff1da-123">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
-|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
+|<span data-ttu-id="ff1da-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="ff1da-124">Element</span></span>|<span data-ttu-id="ff1da-125">Описание</span><span class="sxs-lookup"><span data-stu-id="ff1da-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ff1da-126">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff1da-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="ff1da-127">Содержит сведения о привязке сборок и сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="ff1da-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Заметки  
- До .NET Framework 4 сборка мусора рабочей станции поддерживала параллельную сборку мусора, которая выполнялась в фоновом режиме в отдельном потоке.  В .NET Framework 4 параллельная сборка мусора была заменена фоновой сборкой мусора, которая также выполняется в фоновом режиме в отдельном потоке.  Начиная с .NET Framework 4.5 фоновая сборка мусора стала доступна для сборки мусора сервера.  Элемент `<gcConcurrent>` управляет тем, какую сборку мусора выполняет среда выполнения —параллельную или фоновую сборку мусора, если она доступна, либо сборку мусора на переднем плане.  
+## <a name="remarks"></a><span data-ttu-id="ff1da-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff1da-128">Remarks</span></span>  
+ <span data-ttu-id="ff1da-129">До .NET Framework 4 сборка мусора рабочей станции поддерживала параллельную сборку мусора, которая выполнялась в фоновом режиме в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="ff1da-129">Prior to the .NET Framework 4, workstation garbage collection supported concurrent garbage collection, which performed garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="ff1da-130">В .NET Framework 4 параллельная сборка мусора была заменена фоновой сборкой мусора, которая также выполняется в фоновом режиме в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="ff1da-130">In the .NET Framework 4, concurrent garbage collection was replaced by background GC, which also performs garbage collection in the background on a separate thread.</span></span> <span data-ttu-id="ff1da-131">Начиная с .NET Framework 4.5 фоновая сборка мусора стала доступна для сборки мусора сервера.</span><span class="sxs-lookup"><span data-stu-id="ff1da-131">Starting with the .NET Framework 4.5, background collection became available in server garbage collection.</span></span> <span data-ttu-id="ff1da-132">Элемент `<gcConcurrent>` управляет тем, какую сборку мусора выполняет среда выполнения —параллельную или фоновую сборку мусора, если она доступна, либо сборку мусора на переднем плане.</span><span class="sxs-lookup"><span data-stu-id="ff1da-132">The `<gcConcurrent>` element controls whether the runtime performs either concurrent or background garbage collection, if it is available, or whether it performs garbage collection in the foreground.</span></span>  
   
 > [!WARNING]
->  Начиная с .NET Framework 4, параллельная сборка мусора заменена на фоновую сборку мусора.  В документации платформы .NET Framework термины *параллельная* и *фоновая* взаимозаменяемы.  Чтобы отключить фоновую сборку мусора, используйте элемент `<gcConcurrent>`, как описано в этом разделе.  
+>  <span data-ttu-id="ff1da-133">Начиная с .NET Framework 4, параллельная сборка мусора заменена на фоновую сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="ff1da-133">Starting with the .NET Framework 4, concurrent garbage collection is replaced by background garbage collection.</span></span> <span data-ttu-id="ff1da-134">Условия *параллельных* и *фона* взаимозаменяемы в документации по платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff1da-134">The terms *concurrent* and *background* are used interchangeably in the .NET Framework documentation.</span></span> <span data-ttu-id="ff1da-135">Чтобы отключить фоновую сборку мусора, используйте элемент `<gcConcurrent>`, как описано в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="ff1da-135">To disable background garbage collection, use the `<gcConcurrent>` element, as discussed in this article.</span></span>  
   
- По умолчанию среда выполнения использует параллельную или фоновую сборку мусора, которая оптимизирована по задержкам.  Если приложение подразумевает активное взаимодействие с пользователем, рекомендуется использовать параллельную сборку мусора, чтобы сократить паузы в работе приложения, возникающие при сборке мусора.  Если атрибут `enabled` элемента `<gcConcurrent>` имеет значение `false`, среда выполнения использует непараллельную сборку мусора, которая оптимизирована по производительности.  В следующем файле конфигурации отключается фоновая сборка мусора.  
+ <span data-ttu-id="ff1da-136">По умолчанию среда выполнения использует параллельную или фоновую сборку мусора, которая оптимизирована по задержкам.</span><span class="sxs-lookup"><span data-stu-id="ff1da-136">By default, the runtime uses concurrent or background garbage collection, which is optimized for latency.</span></span> <span data-ttu-id="ff1da-137">Если приложение подразумевает активное взаимодействие с пользователем, рекомендуется использовать параллельную сборку мусора, чтобы сократить паузы в работе приложения, возникающие при сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="ff1da-137">If your application involves heavy user interaction, leave concurrent garbage collection enabled to minimize the application's pause time to perform garbage collection.</span></span> <span data-ttu-id="ff1da-138">Если атрибут `enabled` элемента `<gcConcurrent>` имеет значение `false`, среда выполнения использует непараллельную сборку мусора, которая оптимизирована по производительности.</span><span class="sxs-lookup"><span data-stu-id="ff1da-138">If you set the `enabled` attribute of the `<gcConcurrent>` element to `false`, the runtime uses non-concurrent garbage collection, which is optimized for throughput.</span></span> <span data-ttu-id="ff1da-139">В следующем файле конфигурации отключается фоновая сборка мусора.</span><span class="sxs-lookup"><span data-stu-id="ff1da-139">The following configuration file disables background garbage collection.</span></span>  
   
 ```xml  
-  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="false"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
- Если в файле конфигурации компьютера имеется параметр `<gcConcurrentSetting>`, он определяет значение по умолчанию для всех приложений .NET Framework.  Параметр в файле конфигурации компьютера переопределяет параметр в файле конфигурации приложения.  
+ <span data-ttu-id="ff1da-140">Если в файле конфигурации компьютера имеется параметр `<gcConcurrentSetting>`, он определяет значение по умолчанию для всех приложений .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ff1da-140">If there is a `<gcConcurrentSetting>` setting in the machine configuration file, it defines the default value for all .NET Framework applications.</span></span> <span data-ttu-id="ff1da-141">Параметр в файле конфигурации компьютера переопределяет параметр в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="ff1da-141">The machine configuration file setting overrides the application configuration file setting.</span></span>  
   
- Дополнительные сведения о параллельной и фоновой сборке мусора, см. в разделе «Параллельная сборка мусора» статьи [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md).  
+ <span data-ttu-id="ff1da-142">Дополнительные сведения о параллельной и фоновой сборке мусора см. в разделе «параллельная сборка мусора» [основы сборки мусора](../../../../../docs/standard/garbage-collection/fundamentals.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="ff1da-142">For more information on concurrent and background garbage collection, see the "Concurrent garbage collection" section in the [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) topic.</span></span>  
   
-## Пример  
- В следующем примере включается параллельная сборка мусора.  
+## <a name="example"></a><span data-ttu-id="ff1da-143">Пример</span><span class="sxs-lookup"><span data-stu-id="ff1da-143">Example</span></span>  
+ <span data-ttu-id="ff1da-144">В следующем примере включается параллельная сборка мусора.</span><span class="sxs-lookup"><span data-stu-id="ff1da-144">The following example enables concurrent garbage collection.</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcConcurrent enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+## <a name="see-also"></a><span data-ttu-id="ff1da-145">См. также</span><span class="sxs-lookup"><span data-stu-id="ff1da-145">See Also</span></span>  
+ [<span data-ttu-id="ff1da-146">Схема параметров среды выполнения</span><span class="sxs-lookup"><span data-stu-id="ff1da-146">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="ff1da-147">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="ff1da-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ff1da-148">Основы сборки мусора</span><span class="sxs-lookup"><span data-stu-id="ff1da-148">Fundamentals of Garbage Collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md)

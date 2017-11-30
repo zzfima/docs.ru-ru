@@ -5,160 +5,157 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="jit-tracing-etw-events"></a>События трассировки JIT-компилятора (трассировка событий Windows)
-<a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.  
+# <a name="jit-tracing-etw-events"></a><span data-ttu-id="6da98-102">События трассировки JIT-компилятора (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="6da98-102">JIT Tracing ETW Events</span></span>
+<span data-ttu-id="6da98-103"><a name="top"></a> Эти события собирают сведения, относящиеся к успешному или неудачному встраиванию кода JIT и вызовам с префиксом tail в JIT.</span><span class="sxs-lookup"><span data-stu-id="6da98-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
- Существует две категории событий трассировки JIT:  
+ <span data-ttu-id="6da98-104">Существует две категории событий трассировки JIT:</span><span class="sxs-lookup"><span data-stu-id="6da98-104">JIT tracing events consist of the following two categories:</span></span>  
   
--   [События встраивания кода JIT](#jit_inlining_events)  
+-   [<span data-ttu-id="6da98-105">События встраивания кода JIT</span><span class="sxs-lookup"><span data-stu-id="6da98-105">JIT Inlining Events</span></span>](#jit_inlining_events)  
   
--   [События вызовов с префиксом tail в JIT](#jit_tail_call_events)  
+-   [<span data-ttu-id="6da98-106">События вызовов с префиксом tail в JIT</span><span class="sxs-lookup"><span data-stu-id="6da98-106">JIT Tail Call Events</span></span>](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>События встраивания кода JIT  
+## <a name="jit-inlining-events"></a><span data-ttu-id="6da98-107">События встраивания кода JIT</span><span class="sxs-lookup"><span data-stu-id="6da98-107">JIT Inlining Events</span></span>  
   
-### <a name="methodjitinliningfailed-event"></a>Событие MethodJitInliningFailed  
- В таблице ниже показаны ключевое слово и уровень. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
+### <a name="methodjitinliningfailed-event"></a><span data-ttu-id="6da98-108">Событие MethodJitInliningFailed</span><span class="sxs-lookup"><span data-stu-id="6da98-108">MethodJitInliningFailed Event</span></span>  
+ <span data-ttu-id="6da98-109">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="6da98-109">The following table shows the keyword and level.</span></span> <span data-ttu-id="6da98-110">(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span><span class="sxs-lookup"><span data-stu-id="6da98-110">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="6da98-111">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="6da98-111">Keyword for raising the event</span></span>|<span data-ttu-id="6da98-112">Уровень</span><span class="sxs-lookup"><span data-stu-id="6da98-112">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Подробный (5)|  
+|<span data-ttu-id="6da98-113">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="6da98-113">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="6da98-114">Подробный (5)</span><span class="sxs-lookup"><span data-stu-id="6da98-114">Verbose (5)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="6da98-115">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="6da98-115">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="6da98-116">Событие</span><span class="sxs-lookup"><span data-stu-id="6da98-116">Event</span></span>|<span data-ttu-id="6da98-117">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="6da98-117">Event ID</span></span>|<span data-ttu-id="6da98-118">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="6da98-118">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningFailed`|186|Встраивание кода JIT не удалось.|  
+|`MethodJitInliningFailed`|<span data-ttu-id="6da98-119">186</span><span class="sxs-lookup"><span data-stu-id="6da98-119">186</span></span>|<span data-ttu-id="6da98-120">Встраивание кода JIT не удалось.</span><span class="sxs-lookup"><span data-stu-id="6da98-120">The JIT inlining failed.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="6da98-121">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="6da98-121">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="6da98-122">Имя поля</span><span class="sxs-lookup"><span data-stu-id="6da98-122">Field name</span></span>|<span data-ttu-id="6da98-123">Тип данных</span><span class="sxs-lookup"><span data-stu-id="6da98-123">Data type</span></span>|<span data-ttu-id="6da98-124">Описание</span><span class="sxs-lookup"><span data-stu-id="6da98-124">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|Пространство имен компилируемого метода.|  
-|MethodBeingCompiledName|win:UnicodeString|Имя компилируемого метода.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|Сигнатура компилируемого метода.|  
-|InlinerNamespace|win:UnicodeString|Пространство имен метода, для которого JIT-компилятор пытается создать код.|  
-|InlinerName|win:UnicodeString|Имя метода, для которого компилятор пытается создать код. Может отличаться от `MethodBeingCompiledName` , если компилятор пытается встроить код в `MethodBeingCompiledName` вместо создания вызова `InlinerName`.|  
-|InlinerNameSignature|win:UnicodeString|Сигнатура для метода встраивания.|  
-|InlineeNamespace|win:UnicodeString|Пространство имен встраиваемого метода.|  
-|InlineeName|win:UnicodeString|Метод, который компилятор пытается встроить (а не создать для него вызов).|  
-|InlineeNameSignature|win:UnicodeString|Сигнатура для встраиваемого метода.|  
-|FailAlways|win:Boolean|Подсказка JIT-компилятору, что встраивание этого метода всегда будет заканчиваться неудачей.|  
-|FailReason|win:UnicodeString|INLINE_NEVER означает, что предыдущая попытка встраивания кода определила, что встраивание по какой-то причине никогда не закончится успехом; в противном случае — текст в свободной форме.|  
-|ClrInstanceID|win:UnicodeString|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="6da98-125">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="6da98-125">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="6da98-126">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-126">win:UnicodeString</span></span>|<span data-ttu-id="6da98-127">Пространство имен компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-127">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-128">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="6da98-128">MethodBeingCompiledName</span></span>|<span data-ttu-id="6da98-129">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-129">win:UnicodeString</span></span>|<span data-ttu-id="6da98-130">Имя компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-130">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-131">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-131">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="6da98-132">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-132">win:UnicodeString</span></span>|<span data-ttu-id="6da98-133">Сигнатура компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-133">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-134">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-134">InlinerNamespace</span></span>|<span data-ttu-id="6da98-135">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-135">win:UnicodeString</span></span>|<span data-ttu-id="6da98-136">Пространство имен метода, для которого JIT-компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-136">The namespace of the method the JIT compiler is trying to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-137">InlinerName</span><span class="sxs-lookup"><span data-stu-id="6da98-137">InlinerName</span></span>|<span data-ttu-id="6da98-138">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-138">win:UnicodeString</span></span>|<span data-ttu-id="6da98-139">Имя метода, для которого компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-139">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="6da98-140">Может отличаться от `MethodBeingCompiledName` , если компилятор пытается встроить код в `MethodBeingCompiledName` вместо создания вызова `InlinerName`.</span><span class="sxs-lookup"><span data-stu-id="6da98-140">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="6da98-141">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-141">InlinerNameSignature</span></span>|<span data-ttu-id="6da98-142">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-142">win:UnicodeString</span></span>|<span data-ttu-id="6da98-143">Сигнатура для метода встраивания.</span><span class="sxs-lookup"><span data-stu-id="6da98-143">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="6da98-144">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-144">InlineeNamespace</span></span>|<span data-ttu-id="6da98-145">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-145">win:UnicodeString</span></span>|<span data-ttu-id="6da98-146">Пространство имен встраиваемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-146">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="6da98-147">InlineeName</span><span class="sxs-lookup"><span data-stu-id="6da98-147">InlineeName</span></span>|<span data-ttu-id="6da98-148">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-148">win:UnicodeString</span></span>|<span data-ttu-id="6da98-149">Метод, который компилятор пытается встроить (а не создать для него вызов).</span><span class="sxs-lookup"><span data-stu-id="6da98-149">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="6da98-150">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-150">InlineeNameSignature</span></span>|<span data-ttu-id="6da98-151">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-151">win:UnicodeString</span></span>|<span data-ttu-id="6da98-152">Сигнатура для встраиваемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-152">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="6da98-153">FailAlways</span><span class="sxs-lookup"><span data-stu-id="6da98-153">FailAlways</span></span>|<span data-ttu-id="6da98-154">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="6da98-154">win:Boolean</span></span>|<span data-ttu-id="6da98-155">Подсказка JIT-компилятору, что встраивание этого метода всегда будет заканчиваться неудачей.</span><span class="sxs-lookup"><span data-stu-id="6da98-155">A hint to the JIT compiler that inlining will always fail for the inlinee.</span></span>|  
+|<span data-ttu-id="6da98-156">FailReason</span><span class="sxs-lookup"><span data-stu-id="6da98-156">FailReason</span></span>|<span data-ttu-id="6da98-157">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-157">win:UnicodeString</span></span>|<span data-ttu-id="6da98-158">INLINE_NEVER означает, что предыдущая попытка встраивания кода определила, что встраивание по какой-то причине никогда не закончится успехом; в противном случае — текст в свободной форме.</span><span class="sxs-lookup"><span data-stu-id="6da98-158">INLINE_NEVER means a previous inlining attempt determined that inlining will never succeed for some other reason; otherwise, free-form text.</span></span>|  
+|<span data-ttu-id="6da98-159">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="6da98-159">ClrInstanceID</span></span>|<span data-ttu-id="6da98-160">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-160">win:UnicodeString</span></span>|<span data-ttu-id="6da98-161">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="6da98-161">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="methodjitinliningsucceeded-event"></a>Событие MethodJitInliningSucceeded  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="methodjitinliningsucceeded-event"></a><span data-ttu-id="6da98-162">Событие MethodJitInliningSucceeded</span><span class="sxs-lookup"><span data-stu-id="6da98-162">MethodJitInliningSucceeded Event</span></span>  
+ <span data-ttu-id="6da98-163">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="6da98-163">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="6da98-164">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="6da98-164">Keyword for raising the event</span></span>|<span data-ttu-id="6da98-165">Уровень</span><span class="sxs-lookup"><span data-stu-id="6da98-165">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Подробный (5)|  
+|<span data-ttu-id="6da98-166">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="6da98-166">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="6da98-167">Подробный (5)</span><span class="sxs-lookup"><span data-stu-id="6da98-167">Verbose (5)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="6da98-168">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="6da98-168">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="6da98-169">Событие</span><span class="sxs-lookup"><span data-stu-id="6da98-169">Event</span></span>|<span data-ttu-id="6da98-170">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="6da98-170">Event ID</span></span>|<span data-ttu-id="6da98-171">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="6da98-171">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningSucceeded`|185|Встраивание метода выполнено успешно.|  
+|`MethodJitInliningSucceeded`|<span data-ttu-id="6da98-172">185</span><span class="sxs-lookup"><span data-stu-id="6da98-172">185</span></span>|<span data-ttu-id="6da98-173">Встраивание метода выполнено успешно.</span><span class="sxs-lookup"><span data-stu-id="6da98-173">The method inlining succeeded.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="6da98-174">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="6da98-174">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="6da98-175">Имя поля</span><span class="sxs-lookup"><span data-stu-id="6da98-175">Field name</span></span>|<span data-ttu-id="6da98-176">Тип данных</span><span class="sxs-lookup"><span data-stu-id="6da98-176">Data type</span></span>|<span data-ttu-id="6da98-177">Описание</span><span class="sxs-lookup"><span data-stu-id="6da98-177">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|Пространство имен компилируемого метода.|  
-|MethodBeingCompiledName|win:UnicodeString|Имя компилируемого метода.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|Сигнатура компилируемого метода.|  
-|InlinerNamespace|win:UnicodeString|Пространство имен метода, для которого JIT-компилятор пытается создать код.|  
-|InlinerName|win:UnicodeString|Имя метода, для которого компилятор пытается создать код. Может отличаться от `MethodBeingCompiledName` , если компилятор пытается встроить код в `MethodBeingCompiledName` вместо создания вызова `InlinerName`.|  
-|InlinerNameSignature|win:UnicodeString|Сигнатура для метода встраивания.|  
-|InlineeNamespace|win:UnicodeString|Пространство имен встраиваемого метода.|  
-|InlineeName|win:UnicodeString|Метод, который компилятор пытается встроить (а не создать для него вызов).|  
-|InlineeNameSignature|win:UnicodeString|Сигнатура для встраиваемого метода.|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="6da98-178">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="6da98-178">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="6da98-179">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-179">win:UnicodeString</span></span>|<span data-ttu-id="6da98-180">Пространство имен компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-180">The namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-181">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="6da98-181">MethodBeingCompiledName</span></span>|<span data-ttu-id="6da98-182">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-182">win:UnicodeString</span></span>|<span data-ttu-id="6da98-183">Имя компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-183">The name of the method being that is compiled.</span></span>|  
+|<span data-ttu-id="6da98-184">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-184">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="6da98-185">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-185">win:UnicodeString</span></span>|<span data-ttu-id="6da98-186">Сигнатура компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-186">The signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-187">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-187">InlinerNamespace</span></span>|<span data-ttu-id="6da98-188">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-188">win:UnicodeString</span></span>|<span data-ttu-id="6da98-189">Пространство имен метода, для которого JIT-компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-189">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-190">InlinerName</span><span class="sxs-lookup"><span data-stu-id="6da98-190">InlinerName</span></span>|<span data-ttu-id="6da98-191">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-191">win:UnicodeString</span></span>|<span data-ttu-id="6da98-192">Имя метода, для которого компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-192">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="6da98-193">Может отличаться от `MethodBeingCompiledName` , если компилятор пытается встроить код в `MethodBeingCompiledName` вместо создания вызова `InlinerName`.</span><span class="sxs-lookup"><span data-stu-id="6da98-193">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="6da98-194">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-194">InlinerNameSignature</span></span>|<span data-ttu-id="6da98-195">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-195">win:UnicodeString</span></span>|<span data-ttu-id="6da98-196">Сигнатура для метода встраивания.</span><span class="sxs-lookup"><span data-stu-id="6da98-196">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="6da98-197">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-197">InlineeNamespace</span></span>|<span data-ttu-id="6da98-198">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-198">win:UnicodeString</span></span>|<span data-ttu-id="6da98-199">Пространство имен встраиваемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-199">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="6da98-200">InlineeName</span><span class="sxs-lookup"><span data-stu-id="6da98-200">InlineeName</span></span>|<span data-ttu-id="6da98-201">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-201">win:UnicodeString</span></span>|<span data-ttu-id="6da98-202">Метод, который компилятор пытается встроить (а не создать для него вызов).</span><span class="sxs-lookup"><span data-stu-id="6da98-202">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="6da98-203">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-203">InlineeNameSignature</span></span>|<span data-ttu-id="6da98-204">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-204">win:UnicodeString</span></span>|<span data-ttu-id="6da98-205">Сигнатура для встраиваемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-205">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="6da98-206">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="6da98-206">ClrInstanceID</span></span>|<span data-ttu-id="6da98-207">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="6da98-207">win:UInt16</span></span>|<span data-ttu-id="6da98-208">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="6da98-208">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [К началу](#top)  
+ [<span data-ttu-id="6da98-209">К началу</span><span class="sxs-lookup"><span data-stu-id="6da98-209">Back to top</span></span>](#top)  
   
 <a name="jit_tail_call_events"></a>   
-## <a name="jit-tail-call-events"></a>События вызовов с префиксом tail в JIT  
+## <a name="jit-tail-call-events"></a><span data-ttu-id="6da98-210">События вызовов с префиксом tail в JIT</span><span class="sxs-lookup"><span data-stu-id="6da98-210">JIT Tail Call Events</span></span>  
   
-### <a name="methodjittailcallfailed-event"></a>Событие MethodJITTailCallFailed  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="methodjittailcallfailed-event"></a><span data-ttu-id="6da98-211">Событие MethodJITTailCallFailed</span><span class="sxs-lookup"><span data-stu-id="6da98-211">MethodJITTailCallFailed Event</span></span>  
+ <span data-ttu-id="6da98-212">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="6da98-212">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="6da98-213">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="6da98-213">Keyword for raising the event</span></span>|<span data-ttu-id="6da98-214">Уровень</span><span class="sxs-lookup"><span data-stu-id="6da98-214">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Подробный (5)|  
+|<span data-ttu-id="6da98-215">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="6da98-215">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="6da98-216">Подробный (5)</span><span class="sxs-lookup"><span data-stu-id="6da98-216">Verbose (5)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="6da98-217">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="6da98-217">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="6da98-218">Событие</span><span class="sxs-lookup"><span data-stu-id="6da98-218">Event</span></span>|<span data-ttu-id="6da98-219">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="6da98-219">Event ID</span></span>|<span data-ttu-id="6da98-220">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="6da98-220">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitTailCallFailed`|189|Сбой вызова метода с префиксом tail.|  
+|`MethodJitTailCallFailed`|<span data-ttu-id="6da98-221">189</span><span class="sxs-lookup"><span data-stu-id="6da98-221">189</span></span>|<span data-ttu-id="6da98-222">Сбой вызова метода с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-222">The method tail call failed.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="6da98-223">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="6da98-223">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="6da98-224">Имя поля</span><span class="sxs-lookup"><span data-stu-id="6da98-224">Field name</span></span>|<span data-ttu-id="6da98-225">Тип данных</span><span class="sxs-lookup"><span data-stu-id="6da98-225">Data type</span></span>|<span data-ttu-id="6da98-226">Описание</span><span class="sxs-lookup"><span data-stu-id="6da98-226">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|Пространство имен компилируемого метода.|  
-|MethodBeingCompiledName|win:UnicodeString|Имя компилируемого метода.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|Сигнатура компилируемого метода.|  
-|CallerNamespace|win:UnicodeString|Пространство имен метода, для которого JIT-компилятор пытается создать код.|  
-|CallerName|win:UnicodeString|Имя метода, для которого компилятор пытается создать код.|  
-|CallerNameSignature|win:UnicodeString|Сигнатура для вызывающего объекта.|  
-|CalleeNamespace|win:UnicodeString|Пространство имен для вызываемого метода.|  
-|CalleeName|win:UnicodeString|Метод, который компилятор пытается вызвать с префиксом tail (а не создать для него вызов).|  
-|CalleeNameSignature|win:UnicodeString|Сигнатура для вызываемого метода.|  
-|TailPrefix|win:Boolean|Префикс для вызова с префиксом tail.|  
-|FailReason|win:UnicodeString|Причина сбоя вызова с префиксом tail.|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="6da98-227">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="6da98-227">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="6da98-228">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-228">win:UnicodeString</span></span>|<span data-ttu-id="6da98-229">Пространство имен компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-229">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-230">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="6da98-230">MethodBeingCompiledName</span></span>|<span data-ttu-id="6da98-231">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-231">win:UnicodeString</span></span>|<span data-ttu-id="6da98-232">Имя компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-232">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-233">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-233">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="6da98-234">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-234">win:UnicodeString</span></span>|<span data-ttu-id="6da98-235">Сигнатура компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-235">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-236">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-236">CallerNamespace</span></span>|<span data-ttu-id="6da98-237">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-237">win:UnicodeString</span></span>|<span data-ttu-id="6da98-238">Пространство имен метода, для которого JIT-компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-238">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-239">CallerName</span><span class="sxs-lookup"><span data-stu-id="6da98-239">CallerName</span></span>|<span data-ttu-id="6da98-240">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-240">win:UnicodeString</span></span>|<span data-ttu-id="6da98-241">Имя метода, для которого компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-241">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-242">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-242">CallerNameSignature</span></span>|<span data-ttu-id="6da98-243">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-243">win:UnicodeString</span></span>|<span data-ttu-id="6da98-244">Сигнатура для вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="6da98-244">The signature for the caller.</span></span>|  
+|<span data-ttu-id="6da98-245">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-245">CalleeNamespace</span></span>|<span data-ttu-id="6da98-246">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-246">win:UnicodeString</span></span>|<span data-ttu-id="6da98-247">Пространство имен для вызываемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-247">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="6da98-248">CalleeName</span><span class="sxs-lookup"><span data-stu-id="6da98-248">CalleeName</span></span>|<span data-ttu-id="6da98-249">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-249">win:UnicodeString</span></span>|<span data-ttu-id="6da98-250">Метод, который компилятор пытается вызвать с префиксом tail (а не создать для него вызов).</span><span class="sxs-lookup"><span data-stu-id="6da98-250">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="6da98-251">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-251">CalleeNameSignature</span></span>|<span data-ttu-id="6da98-252">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-252">win:UnicodeString</span></span>|<span data-ttu-id="6da98-253">Сигнатура для вызываемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-253">The signature for the callee.</span></span>|  
+|<span data-ttu-id="6da98-254">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="6da98-254">TailPrefix</span></span>|<span data-ttu-id="6da98-255">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="6da98-255">win:Boolean</span></span>|<span data-ttu-id="6da98-256">Префикс для вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-256">The prefix for the tail call</span></span>|  
+|<span data-ttu-id="6da98-257">FailReason</span><span class="sxs-lookup"><span data-stu-id="6da98-257">FailReason</span></span>|<span data-ttu-id="6da98-258">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-258">win:UnicodeString</span></span>|<span data-ttu-id="6da98-259">Причина сбоя вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-259">The reason the tail call failed.</span></span>|  
+|<span data-ttu-id="6da98-260">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="6da98-260">ClrInstanceID</span></span>|<span data-ttu-id="6da98-261">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="6da98-261">win:UInt16</span></span>|<span data-ttu-id="6da98-262">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="6da98-262">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="methodjittailcallsucceeded-event"></a>Событие MethodJITTailCallSucceeded  
- В таблице ниже показаны ключевое слово и уровень.  
+### <a name="methodjittailcallsucceeded-event"></a><span data-ttu-id="6da98-263">Событие MethodJITTailCallSucceeded</span><span class="sxs-lookup"><span data-stu-id="6da98-263">MethodJITTailCallSucceeded Event</span></span>  
+ <span data-ttu-id="6da98-264">В таблице ниже показаны ключевое слово и уровень.</span><span class="sxs-lookup"><span data-stu-id="6da98-264">The following table shows the keyword and level.</span></span>  
   
-|Ключевое слово для вызова события|Уровень|  
+|<span data-ttu-id="6da98-265">Ключевое слово для вызова события</span><span class="sxs-lookup"><span data-stu-id="6da98-265">Keyword for raising the event</span></span>|<span data-ttu-id="6da98-266">Уровень</span><span class="sxs-lookup"><span data-stu-id="6da98-266">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Подробный (5)|  
+|<span data-ttu-id="6da98-267">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="6da98-267">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="6da98-268">Подробный (5)</span><span class="sxs-lookup"><span data-stu-id="6da98-268">Verbose (5)</span></span>|  
   
- В таблице ниже представлены сведения о событии.  
+ <span data-ttu-id="6da98-269">В таблице ниже представлены сведения о событии.</span><span class="sxs-lookup"><span data-stu-id="6da98-269">The following table shows the event information.</span></span>  
   
-|Событие|Идентификатор события|Условие вызова|  
+|<span data-ttu-id="6da98-270">Событие</span><span class="sxs-lookup"><span data-stu-id="6da98-270">Event</span></span>|<span data-ttu-id="6da98-271">Идентификатор события</span><span class="sxs-lookup"><span data-stu-id="6da98-271">Event ID</span></span>|<span data-ttu-id="6da98-272">Условие вызова</span><span class="sxs-lookup"><span data-stu-id="6da98-272">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitTailCallSucceeded`|188|Успешное завершение вызова метода с префиксом tail.|  
+|`MethodJitTailCallSucceeded`|<span data-ttu-id="6da98-273">188</span><span class="sxs-lookup"><span data-stu-id="6da98-273">188</span></span>|<span data-ttu-id="6da98-274">Успешное завершение вызова метода с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-274">The method tail call succeeded.</span></span>|  
   
- В таблице ниже представлены данные события.  
+ <span data-ttu-id="6da98-275">В таблице ниже представлены данные события.</span><span class="sxs-lookup"><span data-stu-id="6da98-275">The following table shows the event data.</span></span>  
   
-|Имя поля|Тип данных|Описание|  
+|<span data-ttu-id="6da98-276">Имя поля</span><span class="sxs-lookup"><span data-stu-id="6da98-276">Field name</span></span>|<span data-ttu-id="6da98-277">Тип данных</span><span class="sxs-lookup"><span data-stu-id="6da98-277">Data type</span></span>|<span data-ttu-id="6da98-278">Описание</span><span class="sxs-lookup"><span data-stu-id="6da98-278">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|Пространство имен компилируемого метода.|  
-|MethodBeingCompiledName|win:UnicodeString|Имя компилируемого метода.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|Сигнатура компилируемого метода.|  
-|CallerNamespace|win:UnicodeString|Пространство имен метода, для которого JIT-компилятор пытается создать код.|  
-|CallerName|win:UnicodeString|Имя метода, для которого компилятор пытается создать код.|  
-|CallerNameSignature|win:UnicodeString|Сигнатура для вызывающего объекта.|  
-|CalleeNamespace|win:UnicodeString|Пространство имен для вызываемого метода.|  
-|CalleeName|win:UnicodeString|Метод, который компилятор пытается вызвать с префиксом tail (а не создать для него вызов).|  
-|CalleeNameSignature|win:UnicodeString|Сигнатура для вызываемого метода.|  
-|TailPrefix|win:Boolean|Префикс для вызова с префиксом tail.|  
-|TailCallType|win:UnicodeString|Тип вызова с префиксом tail.|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|<span data-ttu-id="6da98-279">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="6da98-279">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="6da98-280">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-280">win:UnicodeString</span></span>|<span data-ttu-id="6da98-281">Пространство имен компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-281">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-282">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="6da98-282">MethodBeingCompiledName</span></span>|<span data-ttu-id="6da98-283">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-283">win:UnicodeString</span></span>|<span data-ttu-id="6da98-284">Имя компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-284">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-285">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-285">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="6da98-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-286">win:UnicodeString</span></span>|<span data-ttu-id="6da98-287">Сигнатура компилируемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-287">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="6da98-288">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-288">CallerNamespace</span></span>|<span data-ttu-id="6da98-289">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-289">win:UnicodeString</span></span>|<span data-ttu-id="6da98-290">Пространство имен метода, для которого JIT-компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-290">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-291">CallerName</span><span class="sxs-lookup"><span data-stu-id="6da98-291">CallerName</span></span>|<span data-ttu-id="6da98-292">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-292">win:UnicodeString</span></span>|<span data-ttu-id="6da98-293">Имя метода, для которого компилятор пытается создать код.</span><span class="sxs-lookup"><span data-stu-id="6da98-293">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="6da98-294">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-294">CallerNameSignature</span></span>|<span data-ttu-id="6da98-295">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-295">win:UnicodeString</span></span>|<span data-ttu-id="6da98-296">Сигнатура для вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="6da98-296">The signature for the caller.</span></span>|  
+|<span data-ttu-id="6da98-297">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="6da98-297">CalleeNamespace</span></span>|<span data-ttu-id="6da98-298">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-298">win:UnicodeString</span></span>|<span data-ttu-id="6da98-299">Пространство имен для вызываемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-299">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="6da98-300">CalleeName</span><span class="sxs-lookup"><span data-stu-id="6da98-300">CalleeName</span></span>|<span data-ttu-id="6da98-301">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-301">win:UnicodeString</span></span>|<span data-ttu-id="6da98-302">Метод, который компилятор пытается вызвать с префиксом tail (а не создать для него вызов).</span><span class="sxs-lookup"><span data-stu-id="6da98-302">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="6da98-303">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="6da98-303">CalleeNameSignature</span></span>|<span data-ttu-id="6da98-304">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-304">win:UnicodeString</span></span>|<span data-ttu-id="6da98-305">Сигнатура для вызываемого метода.</span><span class="sxs-lookup"><span data-stu-id="6da98-305">The signature for the callee.</span></span>|  
+|<span data-ttu-id="6da98-306">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="6da98-306">TailPrefix</span></span>|<span data-ttu-id="6da98-307">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="6da98-307">win:Boolean</span></span>|<span data-ttu-id="6da98-308">Префикс для вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-308">The prefix for the tail call.</span></span>|  
+|<span data-ttu-id="6da98-309">TailCallType</span><span class="sxs-lookup"><span data-stu-id="6da98-309">TailCallType</span></span>|<span data-ttu-id="6da98-310">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="6da98-310">win:UnicodeString</span></span>|<span data-ttu-id="6da98-311">Тип вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="6da98-311">The type of the tail call.</span></span>|  
+|<span data-ttu-id="6da98-312">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="6da98-312">ClrInstanceID</span></span>|<span data-ttu-id="6da98-313">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="6da98-313">win:UInt16</span></span>|<span data-ttu-id="6da98-314">Уникальный идентификатор экземпляра CLR или CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="6da98-314">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="6da98-315">См. также</span><span class="sxs-lookup"><span data-stu-id="6da98-315">See Also</span></span>  
+ [<span data-ttu-id="6da98-316">События трассировки событий Windows в среде CLR</span><span class="sxs-lookup"><span data-stu-id="6da98-316">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

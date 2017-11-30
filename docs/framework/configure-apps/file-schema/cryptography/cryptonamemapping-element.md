@@ -1,69 +1,71 @@
 ---
-title: "Элемент &lt;cryptoNameMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoNameMapping> - элемент"
-  - "cryptoNameMapping - элемент"
+title: "&lt;cryptoNameMapping&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping
+helpviewer_keywords:
+- <cryptoNameMapping> element
+- cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 2156c6441190b530c48a70e67e93e4806d20b199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;cryptoNameMapping&gt;
-Сопоставление классов с понятными именами.  
+# <a name="ltcryptonamemappinggt-element"></a><span data-ttu-id="fccdc-102">&lt;cryptoNameMapping&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="fccdc-102">&lt;cryptoNameMapping&gt; Element</span></span>
+<span data-ttu-id="fccdc-103">Содержит сопоставления классов с понятными именами.</span><span class="sxs-lookup"><span data-stu-id="fccdc-103">Contains mappings of classes to friendly names.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="fccdc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fccdc-104">\<configuration></span></span>  
+<span data-ttu-id="fccdc-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="fccdc-105">\<mscorlib></span></span>  
+<span data-ttu-id="fccdc-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="fccdc-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="fccdc-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="fccdc-107">\<cryptoNameMapping></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fccdc-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fccdc-108">Syntax</span></span>  
   
-      <cryptoNameMapping>   
+```xml  
+      <cryptoNameMapping>   
 </cryptoNameMapping>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fccdc-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="fccdc-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="fccdc-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="fccdc-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a><span data-ttu-id="fccdc-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="fccdc-111">Attributes</span></span>  
+ <span data-ttu-id="fccdc-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fccdc-112">None.</span></span>  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="fccdc-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="fccdc-113">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`cryptoClasses`|Содержит список криптографических классов, сопоставленных с понятными именами, указанным в элементе **\<nameEntry\>**.|  
-|`nameEntry`|Сопоставление имени класса с понятным именем алгоритма, позволяющим одному классу иметь несколько понятных имен.|  
+|<span data-ttu-id="fccdc-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="fccdc-114">Element</span></span>|<span data-ttu-id="fccdc-115">Описание</span><span class="sxs-lookup"><span data-stu-id="fccdc-115">Description</span></span>|  
+|-------------|-----------------|  
+|`cryptoClasses`|<span data-ttu-id="fccdc-116">Содержит список криптографических классов, сопоставленных с понятными именами, указанными в элементе **\<nameEntry>**.</span><span class="sxs-lookup"><span data-stu-id="fccdc-116">Contains a list of cryptography classes that have a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|`nameEntry`|<span data-ttu-id="fccdc-117">Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.</span><span class="sxs-lookup"><span data-stu-id="fccdc-117">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="fccdc-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="fccdc-118">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`cryptographySettings`|Этот элемент содержит параметры криптографии.|  
-|`cryptoNameMapping`|Сопоставление классов с понятными именами.|  
-|`mscorlib`|Содержит элемент \<cryptographySettings\>.|  
+|<span data-ttu-id="fccdc-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="fccdc-119">Element</span></span>|<span data-ttu-id="fccdc-120">Описание</span><span class="sxs-lookup"><span data-stu-id="fccdc-120">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="fccdc-121">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fccdc-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="fccdc-122">Содержит параметры шифрования.</span><span class="sxs-lookup"><span data-stu-id="fccdc-122">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="fccdc-123">Содержит сопоставления классов с понятными именами.</span><span class="sxs-lookup"><span data-stu-id="fccdc-123">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="fccdc-124">Содержит \<cryptographySettings > элемент.</span><span class="sxs-lookup"><span data-stu-id="fccdc-124">Contains the \<cryptographySettings> element.</span></span>|  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<cryptoNameMapping\>** для создания ссылки на криптографический класс и конфигурирования среды выполнения.  В этом случае можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для получения объекта `MyCryptoRSAClass`.  
+## <a name="example"></a><span data-ttu-id="fccdc-125">Пример</span><span class="sxs-lookup"><span data-stu-id="fccdc-125">Example</span></span>  
+ <span data-ttu-id="fccdc-126">В следующем примере показано, как использовать  **\<cryptoNameMapping >** для ссылки на криптографический класс и настройки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="fccdc-126">The following example shows how to use the **\<cryptoNameMapping>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="fccdc-127">Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.</span><span class="sxs-lookup"><span data-stu-id="fccdc-127">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -82,8 +84,8 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="fccdc-128">См. также</span><span class="sxs-lookup"><span data-stu-id="fccdc-128">See Also</span></span>  
+ [<span data-ttu-id="fccdc-129">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="fccdc-129">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="fccdc-130">Схема параметров шифрования</span><span class="sxs-lookup"><span data-stu-id="fccdc-130">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="fccdc-131">Службы криптографии</span><span class="sxs-lookup"><span data-stu-id="fccdc-131">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="fccdc-132">Настройка криптографических классов</span><span class="sxs-lookup"><span data-stu-id="fccdc-132">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

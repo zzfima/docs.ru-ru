@@ -1,35 +1,38 @@
 ---
-title: "3815 - RoutingServiceProcessingMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3815 - RoutingServiceProcessingMessage
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c632b4a6-31f2-4f81-a484-02eb340ae951
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6de746af29cb73d56db83b484bc63be92195b7dc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3815 - RoutingServiceProcessingMessage
-## Свойства  
+# <a name="3815---routingserviceprocessingmessage"></a><span data-ttu-id="a4f9c-102">3815 - RoutingServiceProcessingMessage</span><span class="sxs-lookup"><span data-stu-id="a4f9c-102">3815 - RoutingServiceProcessingMessage</span></span>
+## <a name="properties"></a><span data-ttu-id="a4f9c-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="a4f9c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|3815|  
-|Ключевые слова|Службы маршрутизации|  
-|Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="a4f9c-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="a4f9c-104">ID</span></span>|<span data-ttu-id="a4f9c-105">3815</span><span class="sxs-lookup"><span data-stu-id="a4f9c-105">3815</span></span>|  
+|<span data-ttu-id="a4f9c-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="a4f9c-106">Keywords</span></span>|<span data-ttu-id="a4f9c-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="a4f9c-107">RoutingServices</span></span>|  
+|<span data-ttu-id="a4f9c-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="a4f9c-108">Level</span></span>|<span data-ttu-id="a4f9c-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="a4f9c-109">Information</span></span>|  
+|<span data-ttu-id="a4f9c-110">Канал</span><span class="sxs-lookup"><span data-stu-id="a4f9c-110">Channel</span></span>|<span data-ttu-id="a4f9c-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="a4f9c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Описание  
- Это событие отправляется в том случае, когда служба маршрутизации обрабатывает сообщение.  
+## <a name="description"></a><span data-ttu-id="a4f9c-112">Описание</span><span class="sxs-lookup"><span data-stu-id="a4f9c-112">Description</span></span>  
+ <span data-ttu-id="a4f9c-113">Это событие отправляется в том случае, когда служба маршрутизации обрабатывает сообщение.</span><span class="sxs-lookup"><span data-stu-id="a4f9c-113">This event is emitted when the Routing Service is processing a message.</span></span>  
   
-## Сообщение  
- Служба маршрутизации обрабатывает сообщение с идентификатором «%1», действие «%2», URL\-адрес «%3», получено в рамках транзакции %4.  
+## <a name="message"></a><span data-ttu-id="a4f9c-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="a4f9c-114">Message</span></span>  
+ <span data-ttu-id="a4f9c-115">Служба маршрутизации обрабатывает сообщение с идентификатором «%1», действие «%2», URL-адрес «%3», получено в рамках транзакции %4.</span><span class="sxs-lookup"><span data-stu-id="a4f9c-115">The Routing Service is processing a message with ID: '%1', Action: '%2', Inbound URL: '%3' Received in Transaction: %4.</span></span>  
   
-## Подробные сведения
+## <a name="details"></a><span data-ttu-id="a4f9c-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="a4f9c-116">Details</span></span>

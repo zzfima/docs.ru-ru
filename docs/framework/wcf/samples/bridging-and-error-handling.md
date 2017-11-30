@@ -1,81 +1,83 @@
 ---
-title: "Использование моста и обработка ошибок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Использование моста и обработка ошибок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eec60855dc8ce3c611fa0fe3c8668973b43099b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Использование моста и обработка ошибок
-В этом образце демонстрируется использование службы маршрутизации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для обеспечения связи между клиентом и службой, которые используют разные привязки.В этом образце также показано, как использовать резервную службу в случае перехода на другой ресурс.Служба маршрутизации — это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение.В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации.  
+# <a name="bridging-and-error-handling"></a><span data-ttu-id="3e3c6-102">Использование моста и обработка ошибок</span><span class="sxs-lookup"><span data-stu-id="3e3c6-102">Bridging and Error Handling</span></span>
+<span data-ttu-id="3e3c6-103">В этом образце демонстрируется использование службы маршрутизации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для обеспечения связи между клиентом и службой, которые используют разные привязки.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-103">This sample demonstrates how the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] routing service is used for bridging communication between a client and a service that use different bindings.</span></span> <span data-ttu-id="3e3c6-104">В этом образце также показано, как использовать резервную службу в случае перехода на другой ресурс.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-104">This sample also shows how to use a back-up service for failover scenarios.</span></span> <span data-ttu-id="3e3c6-105">Служба маршрутизации - это компонент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который упрощает включение маршрутизатора на основе содержимого в приложение.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-105">The routing service is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="3e3c6-106">В этом образце стандартный образец [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator применяется для связи с использованием службы маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-106">This sample adapts the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator Sample to communicate using the routing service.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="3e3c6-107">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="3e3c6-108">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="3e3c6-108">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="3e3c6-109">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3e3c6-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3e3c6-110">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-110">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
-## Подробные сведения об образце  
- В этом образце клиент ская часть калькулятора настраивается для отправки сообщений в конечную точку, доступ к которой предоставляется маршрутизатором.Служба маршрутизации настроена на прием всех отправляемых ей сообщений и перенаправление их в конечную точку, которая соответствует службе калькулятора.Далее приведено описание конфигурации основной службы калькулятора, резервной службы калькулятора и клиентской части калькулятора, а также обеспечения связи между клиентом и службой с помощью службы маршрутизации.  
+## <a name="sample-details"></a><span data-ttu-id="3e3c6-111">Подробные сведения об образце</span><span class="sxs-lookup"><span data-stu-id="3e3c6-111">Sample Details</span></span>  
+ <span data-ttu-id="3e3c6-112">В этом образце клиент ская часть калькулятора настраивается для отправки сообщений в конечную точку, доступ к которой предоставляется маршрутизатором.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-112">In this sample, the Calculator client is configured to send messages to an endpoint exposed by the router.</span></span> <span data-ttu-id="3e3c6-113">Служба маршрутизации настроена на прием всех отправляемых ей сообщений и перенаправление их в конечную точку, которая соответствует службе калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-113">The routing service is configured to accept all messages sent to it and to forward them to an endpoint that corresponds to the Calculator service.</span></span> <span data-ttu-id="3e3c6-114">Далее приведено описание конфигурации основной службы калькулятора, резервной службы калькулятора и клиентской части калькулятора, а также обеспечения связи между клиентом и службой с помощью службы маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-114">The following points describe the configuration of the primary Calculator service, the back-up Calculator service, and the Calculator client and how the communication between the client and the service happens using the routing service:</span></span>  
   
--   Клиентская часть калькулятора настроена для использования BasicHttpBinding, а служба калькулятора — NetTcpBinding.По необходимости служба маршрутизации автоматически преобразует сообщения перед их отправкой службе калькулятора. Она также преобразует ответы с тем, чтобы клиентская часть калькулятора могла получить к ним доступ.  
+-   <span data-ttu-id="3e3c6-115">Клиентская часть калькулятора настроена для использования BasicHttpBinding, а служба калькулятора - NetTcpBinding.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-115">The Calculator client is configured to use BasicHttpBinding while the Calculator service is configured to use NetTcpBinding.</span></span> <span data-ttu-id="3e3c6-116">По необходимости служба маршрутизации автоматически преобразует сообщения перед их отправкой службе калькулятора. Она также преобразует ответы с тем, чтобы клиентская часть калькулятора могла получить к ним доступ.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-116">The routing service automatically converts the messages as necessary before sending them to the Calculator service and it also converts the responses so that the Calculator client can access them.</span></span>  
   
--   Службе маршрутизации известны две службы калькулятора: основная служба калькулятора и резервная служба калькулятора.Сначала служба маршрутизации пытается связаться с конечной точкой основной службы калькулятора.Если эта попытка завершается неудачей, поскольку конечная точка остановлена, то служба маршрутизации пытается связаться с конечной точкой резервной службы калькулятора.  
+-   <span data-ttu-id="3e3c6-117">Службе маршрутизации известны две службы калькулятора: основная служба калькулятора и резервная служба калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-117">The routing service knows about two Calculator services: the primary Calculator service and the back-up Calculator service.</span></span> <span data-ttu-id="3e3c6-118">Сначала служба маршрутизации пытается связаться с конечной точкой основной службы калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-118">The routing service first attempts to communicate with the primary Calculator service endpoint.</span></span> <span data-ttu-id="3e3c6-119">Если эта попытка завершается неудачей, поскольку конечная точка остановлена, то служба маршрутизации пытается связаться с конечной точкой резервной службы калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-119">If this attempt fails due to the endpoint being down, the routing service then tries to communicate with the back-up Calculator service endpoint.</span></span>  
   
- Таким образом сообщения, отправленные клиентом и полученные маршрутизатором, перенаправляются фактической службе калькулятора.Если конечная точка службы калькулятора остановлена, служба маршрутизации направляет сообщение конечной точке резервной службы калькулятора.Сообщения от резервной службы калькулятора отправляются назад службе маршрутизатора, которая, в свою очередь, передает их клиентской части калькулятора.  
+ <span data-ttu-id="3e3c6-120">Таким образом сообщения, отправленные клиентом и полученные маршрутизатором, перенаправляются фактической службе калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-120">Thus messages sent from the client are received by the router and are rerouted to the actual Calculator service.</span></span> <span data-ttu-id="3e3c6-121">Если конечная точка службы калькулятора остановлена, служба маршрутизации направляет сообщение конечной точке резервной службы калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-121">If the Calculator service endpoint is down, the routing service routes the message to the back-up Calculator service endpoint.</span></span> <span data-ttu-id="3e3c6-122">Сообщения от резервной службы калькулятора отправляются назад службе маршрутизатора, которая, в свою очередь, передает их клиентской части калькулятора.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-122">Messages from the back-up Calculator service are sent back to the service router, which in turn passes them back to the Calculator client.</span></span>  
   
 > [!NOTE]
->  В списке резервных служб можно указать несколько конечных точек.В этом случае, если конечная точка резервной службы остановлена, служба маршрутизации пытается подключиться к следующей резервной конечной точкой из списка, пока соединение ни будет успешно установлено.  
+>  <span data-ttu-id="3e3c6-123">В списке резервных служб можно указать несколько конечных точек.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-123">A back-up list can have more than one endpoint defined.</span></span> <span data-ttu-id="3e3c6-124">В этом случае, если конечная точка резервной службы остановлена, служба маршрутизации пытается подключиться к следующей резервной конечной точкой из списка, пока соединение ни будет успешно установлено.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-124">In this case if the back-up service endpoint is down, the routing service attempts to connect to the next back-up endpoint in the list until a successful connection occurs.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="3e3c6-125">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="3e3c6-125">To use this sample</span></span>  
   
-1.  Откройте файл RouterBridgingAndErrorHandling.sln с помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="3e3c6-126">Откройте файл RouterBridgingAndErrorHandling.sln с помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e3c6-126">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open RouterBridgingAndErrorHandling.sln.</span></span>  
   
-2.  В среде Visual Studio нажмите клавишу F5 или сочетание клавиш CTRL\+SHIFT\+B  
+2.  <span data-ttu-id="3e3c6-127">В среде Visual Studio нажмите клавишу F5 или сочетание клавиш CTRL+SHIFT+B</span><span class="sxs-lookup"><span data-stu-id="3e3c6-127">Press F5 or CTRL+SHIFT+B in Visual Studio</span></span>  
   
-    1.  Если требуется автоматически запускать необходимые проекты при нажатии клавиши F5, щелкните решение правой кнопкой мыши, выберите команду **Свойства**, а затем в узле **Запускаемый проект** в пункте **Общие свойства** выберите **Несколько запускаемых проектов** и всем проектам задайте значение **Пуск**.  
+    1.  <span data-ttu-id="3e3c6-128">Если вы хотите автоматически загружались все необходимые проекты при нажатии клавиши F5, щелкните правой кнопкой мыши решение, выберите **свойства**и в **запускаемый проект** узле **общие свойства**выберите **несколько запускаемых проектов**и всем проектам задайте значение **запустить**.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-128">If you would like to auto-launch the necessary projects when you press F5, right-click the solution, select **Properties**, and in the **Startup Project** node under **Common Properties**, select **Multiple Startup Projects**, and set all projects to **Start**.</span></span>  
   
-    2.  Если проект строится при помощи клавиш CTRL\+SHIFT\+B, запустите следующие приложения.  
+    2.  <span data-ttu-id="3e3c6-129">Если проект строится при помощи клавиш CTRL+SHIFT+B, запустите следующие приложения.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-129">If you build the project with CTRL+SHIFT+B, start the following applications:</span></span>  
   
-        1.  Клиентская часть калькулятора \(.\/CalculatorClient\/bin\/client.exe\)  
+        1.  <span data-ttu-id="3e3c6-130">Клиентская часть калькулятора (./CalculatorClient/bin/client.exe)</span><span class="sxs-lookup"><span data-stu-id="3e3c6-130">Calculator client (./CalculatorClient/bin/client.exe)</span></span>  
   
-        2.  Служба калькулятора \(.\/CalculatorService\/bin\/service.exe\)  
+        2.  <span data-ttu-id="3e3c6-131">Служба калькулятора (./CalculatorService/bin/service.exe)</span><span class="sxs-lookup"><span data-stu-id="3e3c6-131">Calculator service (./CalculatorService/bin/service.exe)</span></span>  
   
-        3.  Служба маршрутизации \(.\/RoutingService\/bin\/RoutingService.exe\)  
+        3.  <span data-ttu-id="3e3c6-132">Служба маршрутизации (./RoutingService/bin/RoutingService.exe)</span><span class="sxs-lookup"><span data-stu-id="3e3c6-132">Routing Service (./RoutingService/bin/RoutingService.exe)</span></span>  
   
-3.  В клиентской части калькулятора нажмите клавишу ВВОД, чтобы запустить клиент.  
+3.  <span data-ttu-id="3e3c6-133">В клиентской части калькулятора нажмите клавишу ВВОД, чтобы запустить клиент.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-133">In the Calculator Client, press ENTER to start the client.</span></span>  
   
-     Должны выводиться следующие данные:  
+     <span data-ttu-id="3e3c6-134">Должны выводиться следующие данные:</span><span class="sxs-lookup"><span data-stu-id="3e3c6-134">You should see the following output:</span></span>  
   
     ```Output  
     Add(100,15.99) = 115.99  
     Subtract(145,76.54) = 68.46  
     Multiply(9,81.25) = 731.25  
     Divide(22,7) = 3.14285714285714  
-  
     ```  
   
-## Настраивается в коде или в файле App.config  
- В поставляемой конфигурации образца поведение маршрутизатора определяется в файле App.config.Кроме того, можно изменить имя файла App.config на другое, чтобы он не был распознан, и удалить метки комментария с вызова метода `ConfigureRouterViaCode()`.Поведение маршрутизатора будет одинаковым для обоих методов.  
+## <a name="configurable-via-code-or-appconfig"></a><span data-ttu-id="3e3c6-135">Настраивается в коде или в файле App.config</span><span class="sxs-lookup"><span data-stu-id="3e3c6-135">Configurable Via Code or App.config</span></span>  
+ <span data-ttu-id="3e3c6-136">В поставляемой конфигурации образца поведение маршрутизатора определяется в файле App.config.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-136">The sample ships configured to use an App.config file to define the router’s behavior.</span></span> <span data-ttu-id="3e3c6-137">Кроме того, можно изменить имя файла App.config на другое, чтобы он не был распознан, и удалить метки комментария с вызова метода `ConfigureRouterViaCode()`.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-137">You can also change the name of the App.config file to something else so that it is not recognized and uncomment the method call to `ConfigureRouterViaCode()`.</span></span> <span data-ttu-id="3e3c6-138">Поведение маршрутизатора будет одинаковым для обоих методов.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-138">Either method results in the same behavior from the router.</span></span>  
   
-### Сценарий  
- В этом образце демонстрируется маршрутизатор служб, действующий как мост между протоколами и обработчиком ошибок.В этом случае маршрутизация на основе содержимого не выполняется. Служба маршрутизации действует, как прозрачный узел\-посредник, настроенный передавать сообщения непосредственно заданному набору конечных точек назначения.Кроме того, служба маршрутизации выполняет дополнительные действия по прозрачной обработке ошибок, возникающих при попытке отправить сообщение в заданные конечные точки.Действуя как мост между протоколами, служба маршрутизации позволяет пользователю определять один протокол для внешней связи, а другой протокол — для внутренней.  
+### <a name="scenario"></a><span data-ttu-id="3e3c6-139">Сценарий</span><span class="sxs-lookup"><span data-stu-id="3e3c6-139">Scenario</span></span>  
+ <span data-ttu-id="3e3c6-140">В этом образце демонстрируется маршрутизатор служб, действующий как мост между протоколами и обработчиком ошибок.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-140">This sample demonstrates the service router acting as a protocol bridge and error handler.</span></span> <span data-ttu-id="3e3c6-141">В этом случае маршрутизация на основе содержимого не выполняется. Служба маршрутизации действует, как прозрачный узел-посредник, настроенный передавать сообщения непосредственно заданному набору конечных точек назначения.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-141">In this scenario, no content-based routing occurs; the routing service acts as a transparent proxy node configured to pass messages directly to a preconfigured set of destination endpoints.</span></span> <span data-ttu-id="3e3c6-142">Кроме того, служба маршрутизации выполняет дополнительные действия по прозрачной обработке ошибок, возникающих при попытке отправить сообщение в заданные конечные точки.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-142">The routing service also performs the additional steps of transparently handling errors that occur when it tries to send to the endpoints that it is configured to communicate with.</span></span> <span data-ttu-id="3e3c6-143">Действуя как мост между протоколами, служба маршрутизации позволяет пользователю определять один протокол для внешней связи, а другой протокол - для внутренней.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-143">By acting as a protocol bridge, the routing service enables the user to define one protocol for external communication and another for internal communication.</span></span>  
   
-### Реальный сценарий  
- Компании Contoso требуется предоставить конечную точку службы для взаимодействия с внешним миром, обеспечив при этом оптимизацию производительности внутри организации.Так, компания предоставляет доступ к своим службам для внешнего мира через конечную точку с использованием BasicHttpBinding. Внутри же организации используется служба маршрутизации для установления соединения с конечной точкой NetTcpBinding, которую используют службы компании.Более того, компания Contoso хочет, чтобы временные сбои не отражались на ее предложении услуг внешним пользователям. Для этого компания виртуализует несколько конечных точек за службой маршрутизации с помощью ее функций обработки ошибок для автоматического перехода на другой ресурс к резервным конечным точкам, когда это необходимо.  
+### <a name="real-world-scenario"></a><span data-ttu-id="3e3c6-144">Реальный сценарий</span><span class="sxs-lookup"><span data-stu-id="3e3c6-144">Real World Scenario</span></span>  
+ <span data-ttu-id="3e3c6-145">Компании Contoso требуется предоставить конечную точку службы для взаимодействия с внешним миром, обеспечив при этом оптимизацию производительности внутри организации.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-145">Contoso wants to provide an interoperable service endpoint to the world, while optimizing performance internally.</span></span> <span data-ttu-id="3e3c6-146">Так, компания предоставляет доступ к своим службам для внешнего мира через конечную точку с использованием BasicHttpBinding. Внутри же организации используется служба маршрутизации для установления соединения с конечной точкой NetTcpBinding, которую используют службы компании.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-146">Thus it exposes its services to the world through an endpoint using the BasicHttpBinding, while internally using the routing service to bridge that connection to the endpoint using NetTcpBinding, which its services use.</span></span> <span data-ttu-id="3e3c6-147">Более того, компания Contoso хочет, чтобы временные сбои не отражались на ее предложении услуг внешним пользователям. Для этого компания виртуализует несколько конечных точек за службой маршрутизации с помощью ее функций обработки ошибок для автоматического перехода на другой ресурс к резервным конечным точкам, когда это необходимо.</span><span class="sxs-lookup"><span data-stu-id="3e3c6-147">Furthermore, Contoso wants its service offering to be tolerant of temporary outages in any one of their production services and thus virtualizes multiple endpoints behind the router service using the ’s error handling capabilities to automatically failover to back-up endpoints when necessary.</span></span>  
   
-## См. также  
- [Образцы размещения и сохраняемости AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="3e3c6-148">См. также</span><span class="sxs-lookup"><span data-stu-id="3e3c6-148">See Also</span></span>  
+ [<span data-ttu-id="3e3c6-149">Образцы размещения и сохраняемости образцы</span><span class="sxs-lookup"><span data-stu-id="3e3c6-149">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

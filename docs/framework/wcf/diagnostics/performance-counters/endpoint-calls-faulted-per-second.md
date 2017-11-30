@@ -1,32 +1,35 @@
 ---
-title: "Конечная точка: количество сбоев вызовов в секунду | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Конечная точка: количество сбоев вызовов в секунду"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4f52a0f0b44a788bd5c2d34c125e31884c2a9afb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Конечная точка: количество сбоев вызовов в секунду
-Имя счетчика: Calls Faulted Per Second.  
+# <a name="endpoint-calls-faulted-per-second"></a><span data-ttu-id="f2b12-102">Конечная точка: количество сбоев вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="f2b12-102">Endpoint: Calls Faulted Per Second</span></span>
+<span data-ttu-id="f2b12-103">Имя счетчика: Calls Faulted Per Second.</span><span class="sxs-lookup"><span data-stu-id="f2b12-103">Counter Name: Calls Faulted Per Second.</span></span>  
   
-## Описание  
- Количество вызовов, которые возвратили сбой данной конечной точке в секунду.  
+## <a name="description"></a><span data-ttu-id="f2b12-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f2b12-104">Description</span></span>  
+ <span data-ttu-id="f2b12-105">Количество вызовов, которые возвратили сбой данной конечной точке в секунду.</span><span class="sxs-lookup"><span data-stu-id="f2b12-105">Number of calls that have returned faults to this endpoint in a second.</span></span>  
   
- Этот счетчик является счетчиком производительности типа [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по указанной ниже формуле.  
+ <span data-ttu-id="f2b12-106">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="f2b12-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)  
+ <span data-ttu-id="f2b12-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="f2b12-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- В приложениях [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] методы служб передают информацию об ошибках обработки с помощью сообщений об ошибках SOAP.Сообщения об ошибках SOAP — это типы сообщений, которые включаются в метаданные, связанные с операцией службы, и таким образом создают контракт ошибок, который клиенты могут использовать для повышения надежности и интерактивности своей работы.Поскольку сообщения об ошибках SOAP передаются клиентам в формате XML, они поддерживают возможность взаимодействия.  
+ <span data-ttu-id="f2b12-108">В приложениях [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] методы служб передают информацию об ошибках обработки с помощью сообщений об ошибках SOAP.</span><span class="sxs-lookup"><span data-stu-id="f2b12-108">In [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="f2b12-109">Сообщения об ошибках SOAP - это типы сообщений, которые включаются в метаданные, связанные с операцией службы, и таким образом создают контракт ошибок, который клиенты могут использовать для повышения надежности и интерактивности своей работы.</span><span class="sxs-lookup"><span data-stu-id="f2b12-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="f2b12-110">Поскольку сообщения об ошибках SOAP передаются клиентам в формате XML, они поддерживают возможность взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="f2b12-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## См. также  
- [Задание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="f2b12-111">См. также</span><span class="sxs-lookup"><span data-stu-id="f2b12-111">See Also</span></span>  
+ [<span data-ttu-id="f2b12-112">Указание и обработка сбоев в контрактах и службах</span><span class="sxs-lookup"><span data-stu-id="f2b12-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

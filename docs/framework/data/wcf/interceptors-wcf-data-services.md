@@ -1,56 +1,62 @@
 ---
-title: "Перехватчики (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "перехватчики запросов [службы WCF Data Services]"
-  - "Службы WCF Data Services, настройка"
+title: "Перехватчики (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, customizing
+- query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7aad516b819723c97a40a016a46ddcbe0fcdf4d2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Перехватчики (службы WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют приложению перехватывать сообщения запросов, что дает возможность добавить в операцию специализированную логику.  Эта логика может применяться для проверки данных во входящих сообщениях.  Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.  
+# <a name="interceptors-wcf-data-services"></a><span data-ttu-id="9da0b-102">Перехватчики (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="9da0b-102">Interceptors (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="9da0b-103">позволяет приложению перехватывать сообщения запросов, так что можно добавить пользовательскую логику в операцию.</span><span class="sxs-lookup"><span data-stu-id="9da0b-103"> enables an application to intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="9da0b-104">Эта пользовательская логика можно использовать для проверки данных во входящих сообщениях.</span><span class="sxs-lookup"><span data-stu-id="9da0b-104">You can use this custom logic to validate data in incoming messages.</span></span> <span data-ttu-id="9da0b-105">Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.</span><span class="sxs-lookup"><span data-stu-id="9da0b-105">You can also use it to further restrict the scope of a query request, such as to insert a custom authorization policy on a per request basis.</span></span>  
   
- Перехват выполняется методами службы данных со специальными атрибутами.  Эти методы вызываются службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в соответствующие моменты обработки сообщений.  Перехватчики определяются индивидуально для наборов сущностей. Методы перехватчика, в отличие от операций службы, не принимают параметры из запроса.  Методы перехвата запросов, которые вызываются при обработке запросов HTTP GET, должны возвращать лямбда\-выражение, определяющее, должен ли экземпляр набора сущностей перехватчика возвращаться в результатах запроса.  Это выражение используется службой данных для дальнейшего уточнения запрошенного действия.  В следующем примере рассмотрено определение перехватчика запроса.  
+ <span data-ttu-id="9da0b-106">Перехват выполняется методами службы данных со специальными атрибутами.</span><span class="sxs-lookup"><span data-stu-id="9da0b-106">Interception is performed by specially attributed methods in the data service.</span></span> <span data-ttu-id="9da0b-107">Эти методы вызываются службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в соответствующие моменты обработки сообщений.</span><span class="sxs-lookup"><span data-stu-id="9da0b-107">These methods are called by [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] at the appropriate point in message processing.</span></span> <span data-ttu-id="9da0b-108">Перехватчики определяются на основе набора сущностей и методы перехватчика не принимают параметры из запроса, как операции службы.</span><span class="sxs-lookup"><span data-stu-id="9da0b-108">Interceptors are defined on a per-entity set basis, and interceptor methods cannot accept parameters from the request like service operations can.</span></span> <span data-ttu-id="9da0b-109">Методы перехвата запросов, которые вызываются при обработке запросов HTTP GET, должны возвращать лямбда-выражение, определяющее, является ли экземпляр сущностей перехватчика набора должны возвращаться в результатах запроса.</span><span class="sxs-lookup"><span data-stu-id="9da0b-109">Query interceptor methods, which are called when processing an HTTP GET request, must return a lambda expression that determines whether an instance of the interceptor's entity set should be returned by the query results.</span></span> <span data-ttu-id="9da0b-110">Это выражение используется службой данных для дальнейшего уточнения запрошенного действия.</span><span class="sxs-lookup"><span data-stu-id="9da0b-110">This expression is used by the data service to further refine the requested operation.</span></span> <span data-ttu-id="9da0b-111">В следующем примере рассмотрено определение перехватчика запроса.</span><span class="sxs-lookup"><span data-stu-id="9da0b-111">The following is an example definition of a query interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Для получения дополнительной информации см. [Как перехватить сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="9da0b-112">Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9da0b-112">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- Перехватчики изменений, которые вызываются при обработке операций, не связанных с запросами, должны возвращать значение `void` \(`Nothing` в коде Visual Basic\).  Методы перехватчика изменений должны принимать следующие два параметра.  
+ <span data-ttu-id="9da0b-113">Перехватчики изменений, которые вызываются при обработке операций, не связанных с запросами, должны возвращать значение `void` (`Nothing` в коде Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="9da0b-113">Change interceptors, which are called when processing non-query operations, must return `void` (`Nothing` in Visual Basic).</span></span> <span data-ttu-id="9da0b-114">Методы перехватчика изменений должны принимать следующие два параметра.</span><span class="sxs-lookup"><span data-stu-id="9da0b-114">Change interceptor methods must accept the following two parameters:</span></span>  
   
-1.  Параметр типа, совместимого с типом сущностей в наборе сущностей.  При вызове службой данных перехватчика изменений значение этого параметра будет отражать сведения о сущности, отправленные в запросе.  
+1.  <span data-ttu-id="9da0b-115">Параметр типа, совместимого с типом сущностей в наборе сущностей.</span><span class="sxs-lookup"><span data-stu-id="9da0b-115">A parameter of a type that is compatible with the entity type of the entity set.</span></span> <span data-ttu-id="9da0b-116">При вызове службой данных перехватчика изменений значение этого параметра будет отражать сведения о сущности, отправленные в запросе.</span><span class="sxs-lookup"><span data-stu-id="9da0b-116">When the data service invokes the change interceptor, the value of this parameter will reflect the entity information that is sent by the request.</span></span>  
   
-2.  Параметр типа <xref:System.Data.Services.UpdateOperations>.  При вызове службой данных перехватчика изменений значение этого параметра будет отражать операцию, которую пытается выполнить запрос.  
+2.  <span data-ttu-id="9da0b-117">Параметр типа <xref:System.Data.Services.UpdateOperations>.</span><span class="sxs-lookup"><span data-stu-id="9da0b-117">A parameter of type <xref:System.Data.Services.UpdateOperations>.</span></span> <span data-ttu-id="9da0b-118">При вызове службой данных перехватчика изменений значение этого параметра будет отражать операцию, которую пытается выполнить запрос.</span><span class="sxs-lookup"><span data-stu-id="9da0b-118">When the data service invokes the change interceptor, the value of this parameter will reflect the operation that the request is trying to perform.</span></span>  
   
- В следующем примере рассмотрено определение перехватчика изменений.  
+ <span data-ttu-id="9da0b-119">В следующем примере рассмотрено определение перехватчика изменений.</span><span class="sxs-lookup"><span data-stu-id="9da0b-119">The following is an example definition of a change interceptor.</span></span>  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Для получения дополнительной информации см. [Как перехватить сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="9da0b-120">Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9da0b-120">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
- Для перехватчиков поддерживаются следующие атрибуты.  
+ <span data-ttu-id="9da0b-121">Для перехватчиков поддерживаются следующие атрибуты.</span><span class="sxs-lookup"><span data-stu-id="9da0b-121">The following attributes are supported for interception.</span></span>  
   
- **\[QueryInterceptor\(** *EnitySetName* **\)\]**  
- Методы с атрибутом <xref:System.Data.Services.QueryInterceptorAttribute> вызываются при получении запроса HTTP GET к целевому ресурсу набора сущностей.  Эти методы всегда должны возвращать лямбда\-выражение в форме `Expression<Func<T,bool>>`.  
+ <span data-ttu-id="9da0b-122">**[QueryInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="9da0b-122">**[QueryInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="9da0b-123">Методы с атрибутом <xref:System.Data.Services.QueryInterceptorAttribute> вызываются при получении запроса HTTP GET к целевому ресурсу набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="9da0b-123">Methods with the <xref:System.Data.Services.QueryInterceptorAttribute> attribute applied are called when an HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="9da0b-124">Эти методы всегда должны возвращать лямбда-выражение в форме `Expression<Func<T,bool>>`.</span><span class="sxs-lookup"><span data-stu-id="9da0b-124">These methods must always return a lambda expression in the form of `Expression<Func<T,bool>>`.</span></span>  
   
- **\[ChangeInterceptor\(** *EnitySetName* **\)\]**  
- Методы с атрибутом <xref:System.Data.Services.ChangeInterceptorAttribute> вызываются при получении запроса HTTP, отличного от HTTP GET, к целевому ресурсу набора сущностей.  Эти методы должны всегда возвращать значение `void` \(`Nothing` в коде Visual Basic\).  
+ <span data-ttu-id="9da0b-125">**[ChangeInterceptor (** *EnitySetName* **)]**</span><span class="sxs-lookup"><span data-stu-id="9da0b-125">**[ChangeInterceptor(** *EnitySetName* **)]**</span></span>  
+ <span data-ttu-id="9da0b-126">Методы с атрибутом <xref:System.Data.Services.ChangeInterceptorAttribute> вызываются при получении запроса HTTP, отличного от HTTP GET, к целевому ресурсу набора сущностей.</span><span class="sxs-lookup"><span data-stu-id="9da0b-126">Methods with the <xref:System.Data.Services.ChangeInterceptorAttribute> attribute applied are called when an HTTP request other than HTTP GET request is received for the targeted entity set resource.</span></span> <span data-ttu-id="9da0b-127">Эти методы должны всегда возвращать значение `void` (`Nothing` в коде Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="9da0b-127">These methods must always return `void` (`Nothing` in Visual Basic).</span></span>  
   
- Для получения дополнительной информации см. [Как перехватить сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ <span data-ttu-id="9da0b-128">Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="9da0b-128">For more information, see [How to: Intercept Data Service Messages](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).</span></span>  
   
-## См. также  
- [Операции служб](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="9da0b-129">См. также</span><span class="sxs-lookup"><span data-stu-id="9da0b-129">See Also</span></span>  
+ [<span data-ttu-id="9da0b-130">Операции службы</span><span class="sxs-lookup"><span data-stu-id="9da0b-130">Service Operations</span></span>](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

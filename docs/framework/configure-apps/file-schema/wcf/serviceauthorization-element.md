@@ -1,31 +1,36 @@
 ---
-title: "Элемент &lt;serviceAuthorization&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "Элемент &lt;serviceAuthorization&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cdbe676fa73c040737c947902d64b2c0e689e2a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;serviceAuthorization&gt;
-Задает параметры авторизации доступа к операциям службы.  
+# <a name="ltserviceauthorizationgt-element"></a><span data-ttu-id="29d48-102">Элемент &lt;serviceAuthorization&gt;</span><span class="sxs-lookup"><span data-stu-id="29d48-102">&lt;serviceAuthorization&gt; element</span></span>
+<span data-ttu-id="29d48-103">Задает параметры авторизации доступа к операциям службы.</span><span class="sxs-lookup"><span data-stu-id="29d48-103">Specifies settings that authorize access to service operations</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="29d48-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="29d48-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="29d48-105">\<поведения ></span><span class="sxs-lookup"><span data-stu-id="29d48-105">\<behaviors></span></span>  
+<span data-ttu-id="29d48-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="29d48-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="29d48-107">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="29d48-107">\<behavior></span></span>  
+<span data-ttu-id="29d48-108">\<serviceAuthorization ></span><span class="sxs-lookup"><span data-stu-id="29d48-108">\<serviceAuthorization></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="29d48-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="29d48-109">Syntax</span></span>  
   
+```xml  
 <serviceAuthorization  
      impersonateCallerForAllOperations="Boolean"  
       principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"  
@@ -37,36 +42,36 @@ caps.handback.revision: 26
 </serviceAuthorization>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="29d48-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="29d48-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="29d48-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="29d48-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="29d48-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="29d48-112">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|impersonateCallerForAllOperations|Логическое значение, которое определяет, должны ли все операции службы олицетворять вызывающий объект.  Значение по умолчанию — `false`.<br /><br /> Если конкретная операция службы олицетворяет вызывающий объект, контекст потока переключается на контекст вызывающего объекта перед выполнением указанной службы.|  
-|principalPermissionMode|Определяет участников, используемых для выполнения операций на сервере.  В эти значения входят:<br /><br /> -   Нет<br />-   UseWindowsGroups<br />-   UseAspNetRoles<br />-   Другой<br /><br /> Значение по умолчанию \- «UseWindowsGroups».  Это значение типа <xref:System.ServiceModel.Description.PrincipalPermissionMode>.  Дополнительные сведения об использовании этого атрибута см. в разделе [Как ограничить доступ с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
-|roleProviderName|Строка, указывающая имя поставщика роли, который предоставляет сведения о роли для приложения Windows Communication Foundation \(WCF\).  Значение по умолчанию \- пустая строка.|  
-|ServiceAuthorizationManagerType|Строка, содержащая имя типа диспетчера авторизации служб.  Для получения дополнительной информации см. <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
+|<span data-ttu-id="29d48-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="29d48-113">Attribute</span></span>|<span data-ttu-id="29d48-114">Описание</span><span class="sxs-lookup"><span data-stu-id="29d48-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="29d48-115">impersonateCallerForAllOperations</span><span class="sxs-lookup"><span data-stu-id="29d48-115">impersonateCallerForAllOperations</span></span>|<span data-ttu-id="29d48-116">Логическое значение, которое определяет, должны ли все операции службы олицетворять вызывающий объект.</span><span class="sxs-lookup"><span data-stu-id="29d48-116">A Boolean value that specifies if all the operations in the service impersonate the caller.</span></span> <span data-ttu-id="29d48-117">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="29d48-117">The default is `false`.</span></span><br /><br /> <span data-ttu-id="29d48-118">Если конкретная операция службы олицетворяет вызывающий объект, контекст потока переключается на контекст вызывающего объекта перед выполнением указанной службы.</span><span class="sxs-lookup"><span data-stu-id="29d48-118">When a specific service operation impersonates the caller, the thread context is switched to the caller context before executing the specified service.</span></span>|  
+|<span data-ttu-id="29d48-119">principalPermissionMode</span><span class="sxs-lookup"><span data-stu-id="29d48-119">principalPermissionMode</span></span>|<span data-ttu-id="29d48-120">Определяет участников, используемых для выполнения операций на сервере.</span><span class="sxs-lookup"><span data-stu-id="29d48-120">Sets the principal used to carry out operations on the server.</span></span> <span data-ttu-id="29d48-121">В эти значения входят:</span><span class="sxs-lookup"><span data-stu-id="29d48-121">Values include the following:</span></span><br /><br /> <span data-ttu-id="29d48-122">— None</span><span class="sxs-lookup"><span data-stu-id="29d48-122">-   None</span></span><br /><span data-ttu-id="29d48-123">-«Usewindowsgroups»</span><span class="sxs-lookup"><span data-stu-id="29d48-123">-   UseWindowsGroups</span></span><br /><span data-ttu-id="29d48-124">-UseAspNetRoles</span><span class="sxs-lookup"><span data-stu-id="29d48-124">-   UseAspNetRoles</span></span><br /><span data-ttu-id="29d48-125">-Custom</span><span class="sxs-lookup"><span data-stu-id="29d48-125">-   Custom</span></span><br /><br /> <span data-ttu-id="29d48-126">Значение по умолчанию - «UseWindowsGroups».</span><span class="sxs-lookup"><span data-stu-id="29d48-126">The default value is UseWindowsGroups.</span></span> <span data-ttu-id="29d48-127">Это значение типа <xref:System.ServiceModel.Description.PrincipalPermissionMode>.</span><span class="sxs-lookup"><span data-stu-id="29d48-127">The value is of type <xref:System.ServiceModel.Description.PrincipalPermissionMode>.</span></span> <span data-ttu-id="29d48-128">Дополнительные сведения об использовании этого атрибута см. в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).</span><span class="sxs-lookup"><span data-stu-id="29d48-128">For more information on using this attribute, see [How to: Restrict Access with the PrincipalPermissionAttribute Class](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).</span></span>|  
+|<span data-ttu-id="29d48-129">roleProviderName</span><span class="sxs-lookup"><span data-stu-id="29d48-129">roleProviderName</span></span>|<span data-ttu-id="29d48-130">Строка, указывающая имя поставщика роли, который предоставляет сведения о роли для приложения Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="29d48-130">A string that specifies the name of the role provider, which provides role information for a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="29d48-131">Значение по умолчанию - пустая строка.</span><span class="sxs-lookup"><span data-stu-id="29d48-131">The default is an empty string.</span></span>|  
+|<span data-ttu-id="29d48-132">ServiceAuthorizationManagerType</span><span class="sxs-lookup"><span data-stu-id="29d48-132">ServiceAuthorizationManagerType</span></span>|<span data-ttu-id="29d48-133">Строка, содержащая имя типа диспетчера авторизации служб.</span><span class="sxs-lookup"><span data-stu-id="29d48-133">A string containing the type of the service authorization manager.</span></span> <span data-ttu-id="29d48-134">Для получения дополнительной информации см. <xref:System.ServiceModel.ServiceAuthorizationManager>.</span><span class="sxs-lookup"><span data-stu-id="29d48-134">For more information, see <xref:System.ServiceModel.ServiceAuthorizationManager>.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="29d48-135">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="29d48-135">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|authorizationPolicies|Содержит коллекцию типов политик авторизации, которые можно добавить с помощью ключевого слова`add`.  Каждая политика авторизации содержит один обязательный атрибут `policyType`, который имеет строковый тип.  Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований.  В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом.  Для получения дополнительной информации см. <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.|  
+|<span data-ttu-id="29d48-136">Элемент</span><span class="sxs-lookup"><span data-stu-id="29d48-136">Element</span></span>|<span data-ttu-id="29d48-137">Описание</span><span class="sxs-lookup"><span data-stu-id="29d48-137">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="29d48-138">authorizationPolicies</span><span class="sxs-lookup"><span data-stu-id="29d48-138">authorizationPolicies</span></span>|<span data-ttu-id="29d48-139">Содержит коллекцию типов политик авторизации, которые можно добавить с помощью ключевого слова`add`.</span><span class="sxs-lookup"><span data-stu-id="29d48-139">Contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="29d48-140">Каждая политика авторизации содержит один обязательный атрибут `policyType`, который имеет строковый тип.</span><span class="sxs-lookup"><span data-stu-id="29d48-140">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="29d48-141">Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований.</span><span class="sxs-lookup"><span data-stu-id="29d48-141">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="29d48-142">В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом.</span><span class="sxs-lookup"><span data-stu-id="29d48-142">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="29d48-143">Для получения дополнительной информации см. <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.</span><span class="sxs-lookup"><span data-stu-id="29d48-143">For more information, see <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="29d48-144">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="29d48-144">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<поведение\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Содержит коллекцию параметров для поведения службы.|  
+|<span data-ttu-id="29d48-145">Элемент</span><span class="sxs-lookup"><span data-stu-id="29d48-145">Element</span></span>|<span data-ttu-id="29d48-146">Описание</span><span class="sxs-lookup"><span data-stu-id="29d48-146">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="29d48-147">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="29d48-147">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="29d48-148">Содержит коллекцию параметров для поведения службы.</span><span class="sxs-lookup"><span data-stu-id="29d48-148">Contains a collection of settings for the behavior of a service.</span></span>|  
   
-## Заметки  
- Этот раздел содержит элементы, влияющие на авторизацию, поставщики пользовательских ролей и олицетворение.  
+## <a name="remarks"></a><span data-ttu-id="29d48-149">Примечания</span><span class="sxs-lookup"><span data-stu-id="29d48-149">Remarks</span></span>  
+ <span data-ttu-id="29d48-150">Этот раздел содержит элементы, влияющие на авторизацию, поставщики пользовательских ролей и олицетворение.</span><span class="sxs-lookup"><span data-stu-id="29d48-150">This section contains elements affecting authorization, custom role providers, and impersonation.</span></span>  
   
- Атрибут `principalPermissionMode` указывает группы пользователей, которые следует использовать при авторизации использования защищенного метода.  Значение по умолчанию \- `UseWindowsGroups`. Оно указывает, что при попытке доступа к ресурсу поиск удостоверения выполняется в таких группах Windows, как «Администраторы» или «Пользователи».  Также можно задать атрибут `UseAspNetRoles` для использования поставщика пользовательской роли, который настроен в элементе \<system.web\>, как показано в приведенном ниже коде.  
+ <span data-ttu-id="29d48-151">Атрибут `principalPermissionMode` указывает группы пользователей, которые следует использовать при авторизации использования защищенного метода.</span><span class="sxs-lookup"><span data-stu-id="29d48-151">The `principalPermissionMode` attribute specifies the groups of users to use when authorizing use of a protected method.</span></span> <span data-ttu-id="29d48-152">Значение по умолчанию - `UseWindowsGroups`. Оно указывает, что при попытке доступа к ресурсу поиск удостоверения выполняется в таких группах Windows, как «Администраторы» или «Пользователи».</span><span class="sxs-lookup"><span data-stu-id="29d48-152">The default value is `UseWindowsGroups` and specifies that Windows groups, such as "Administrators" or "Users," are searched for an identity trying to access a resource.</span></span> <span data-ttu-id="29d48-153">Можно также указать `UseAspNetRoles` для использования поставщика пользовательской роли, который настроен в \<system.web > элемента, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="29d48-153">You can also specify `UseAspNetRoles` to use a custom role provider that is configured under the \<system.web> element, as shown in the following code.</span></span>  
   
-```  
+```xml  
 <system.web>  
   <membership defaultProvider="SqlProvider"   
    userIsOnlineTimeWindow="15">  
@@ -88,9 +93,9 @@ caps.handback.revision: 26
 </system.web>  
 ```  
   
- В следующем примере показано использование элемента `roleProviderName` с атрибутом `principalPermissionMode`.  
+ <span data-ttu-id="29d48-154">В следующем примере показано использование элемента `roleProviderName` с атрибутом `principalPermissionMode`.</span><span class="sxs-lookup"><span data-stu-id="29d48-154">The following code shows the `roleProviderName` used with the `principalPermissionMode` attribute.</span></span>  
   
-```  
+```xml  
 <behaviors>  
    <behavior name="ServiceBehaviour">  
      <serviceAuthorization principalPermissionMode ="UseAspNetRoles"   
@@ -100,13 +105,13 @@ caps.handback.revision: 26
 </behaviors>  
 ```  
   
- Подробный пример с иллюстрацией использования данного элемента конфигурации представлен в разделах [Авторизация доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) и [Политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ <span data-ttu-id="29d48-155">Подробный пример использования этого элемента конфигурации см. в разделе [авторизации доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) и [политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span><span class="sxs-lookup"><span data-stu-id="29d48-155">For a detailed example of using this configuration element, see [Authorizing Access to Service Operations](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>   
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>   
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Авторизация доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)   
- [Как создавать пользовательский диспетчер авторизации для службы](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)   
- [Как ограничить доступ с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)   
- [Политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a><span data-ttu-id="29d48-156">См. также</span><span class="sxs-lookup"><span data-stu-id="29d48-156">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
+ <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
+ [<span data-ttu-id="29d48-157">Поведения безопасности</span><span class="sxs-lookup"><span data-stu-id="29d48-157">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="29d48-158">Авторизация доступа к операциям службы</span><span class="sxs-lookup"><span data-stu-id="29d48-158">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [<span data-ttu-id="29d48-159">Как: Создание пользовательского диспетчера авторизации для службы</span><span class="sxs-lookup"><span data-stu-id="29d48-159">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [<span data-ttu-id="29d48-160">Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute</span><span class="sxs-lookup"><span data-stu-id="29d48-160">How to: Restrict Access with the PrincipalPermissionAttribute Class</span></span>](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [<span data-ttu-id="29d48-161">Политика авторизации</span><span class="sxs-lookup"><span data-stu-id="29d48-161">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)

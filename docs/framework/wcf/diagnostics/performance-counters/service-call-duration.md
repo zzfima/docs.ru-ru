@@ -1,26 +1,29 @@
 ---
-title: "Служба: длительность обработки вызова | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Служба: длительность обработки вызова"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4f9a40157741968222945e00919f727b33a0b221
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Служба: длительность обработки вызова
-Имя счетчика: Call Duration  
+# <a name="service-call-duration"></a><span data-ttu-id="284e4-102">Служба: длительность обработки вызова</span><span class="sxs-lookup"><span data-stu-id="284e4-102">Service: Call Duration</span></span>
+<span data-ttu-id="284e4-103">Имя счетчика: Call Duration</span><span class="sxs-lookup"><span data-stu-id="284e4-103">Counter Name: Call Duration</span></span>  
   
-## Описание  
- Средняя длительность вызовов к этой службе.  Средняя длительность вычисляется по следующей формуле: \(N1\-N0\)\/\(D1\-D0\).  
+## <a name="description"></a><span data-ttu-id="284e4-104">Описание</span><span class="sxs-lookup"><span data-stu-id="284e4-104">Description</span></span>  
+ <span data-ttu-id="284e4-105">Средняя длительность вызовов к этой службе.</span><span class="sxs-lookup"><span data-stu-id="284e4-105">The average duration of calls to this service.</span></span> <span data-ttu-id="284e4-106">Средняя длительность вычисляется по следующей формуле: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="284e4-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
-## См. также  
- [PERF\_AVERAGE\_TIMER](http://go.microsoft.com/fwlink/?LinkID=95015)
+## <a name="see-also"></a><span data-ttu-id="284e4-107">См. также</span><span class="sxs-lookup"><span data-stu-id="284e4-107">See Also</span></span>  
+ [<span data-ttu-id="284e4-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="284e4-108">PERF_AVERAGE_TIMER</span></span>](http://go.microsoft.com/fwlink/?LinkID=95015)

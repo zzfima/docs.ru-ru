@@ -1,35 +1,38 @@
 ---
-title: "3810 - RoutingServiceConfigurationApplied | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3810 - RoutingServiceConfigurationApplied
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bef4b66-6a63-4f42-8396-6e21510fa4fb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 710b55f641ef22a9909a58c94abf001d2a019091
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3810 - RoutingServiceConfigurationApplied
-## Свойства  
+# <a name="3810---routingserviceconfigurationapplied"></a><span data-ttu-id="d719b-102">3810 - RoutingServiceConfigurationApplied</span><span class="sxs-lookup"><span data-stu-id="d719b-102">3810 - RoutingServiceConfigurationApplied</span></span>
+## <a name="properties"></a><span data-ttu-id="d719b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="d719b-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Идентификатор|3810|  
-|Ключевые слова|Службы маршрутизации|  
-|Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="d719b-104">Идентификатор</span><span class="sxs-lookup"><span data-stu-id="d719b-104">ID</span></span>|<span data-ttu-id="d719b-105">3810</span><span class="sxs-lookup"><span data-stu-id="d719b-105">3810</span></span>|  
+|<span data-ttu-id="d719b-106">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="d719b-106">Keywords</span></span>|<span data-ttu-id="d719b-107">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="d719b-107">RoutingServices</span></span>|  
+|<span data-ttu-id="d719b-108">Уровень</span><span class="sxs-lookup"><span data-stu-id="d719b-108">Level</span></span>|<span data-ttu-id="d719b-109">Сведения</span><span class="sxs-lookup"><span data-stu-id="d719b-109">Information</span></span>|  
+|<span data-ttu-id="d719b-110">Канал</span><span class="sxs-lookup"><span data-stu-id="d719b-110">Channel</span></span>|<span data-ttu-id="d719b-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="d719b-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Описание  
- Это событие создается при применении конфигурации маршрутизации к службе маршрутизации.  
+## <a name="description"></a><span data-ttu-id="d719b-112">Описание</span><span class="sxs-lookup"><span data-stu-id="d719b-112">Description</span></span>  
+ <span data-ttu-id="d719b-113">Это событие создается при применении конфигурации маршрутизации к службе маршрутизации.</span><span class="sxs-lookup"><span data-stu-id="d719b-113">This event is emitted when the routing configuration has been applied to the Routing Service.</span></span>  
   
-## Сообщение  
- Новая конфигурация RoutingConfiguration применена к службе Routing Service.  
+## <a name="message"></a><span data-ttu-id="d719b-114">Сообщение</span><span class="sxs-lookup"><span data-stu-id="d719b-114">Message</span></span>  
+ <span data-ttu-id="d719b-115">Новая конфигурация RoutingConfiguration применена к службе Routing Service.</span><span class="sxs-lookup"><span data-stu-id="d719b-115">A new RoutingConfiguration has been applied to the Routing Service.</span></span>  
   
-## Подробные сведения
+## <a name="details"></a><span data-ttu-id="d719b-116">Подробные сведения</span><span class="sxs-lookup"><span data-stu-id="d719b-116">Details</span></span>

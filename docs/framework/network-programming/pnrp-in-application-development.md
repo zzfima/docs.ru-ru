@@ -7,33 +7,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 752b354df897fa37bc45c1bbd1969cf93aac87ed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="pnrp-in-application-development"></a>PNRP в разработке приложений
-В ОС Windows Vista сетевые приложения могут получать доступ к функциям публикации и разрешения имен через упрощенный программный интерфейс (API) PNRP.  
+# <a name="pnrp-in-application-development"></a><span data-ttu-id="3dcc2-102">PNRP в разработке приложений</span><span class="sxs-lookup"><span data-stu-id="3dcc2-102">PNRP in Application Development</span></span>
+<span data-ttu-id="3dcc2-103">В ОС Windows Vista сетевые приложения могут получать доступ к функциям публикации и разрешения имен через упрощенный программный интерфейс (API) PNRP.</span><span class="sxs-lookup"><span data-stu-id="3dcc2-103">In Windows Vista, networking applications can access name publication and resolution functions through a simplified PNRP application programming interface (API).</span></span>  
   
-## <a name="implementing-the-peer-name-resolution-protocol"></a>Реализация протокола PNRP  
- С помощью упрощенного API PNRP не задаются явно облака для регистрации имен и адресов. Компонент PNRP автоматически определяет соответствующие облака, к которым требуется присоединиться, и адреса для публикации в них.  
+## <a name="implementing-the-peer-name-resolution-protocol"></a><span data-ttu-id="3dcc2-104">Реализация протокола PNRP</span><span class="sxs-lookup"><span data-stu-id="3dcc2-104">Implementing the Peer Name Resolution Protocol</span></span>  
+ <span data-ttu-id="3dcc2-105">С помощью упрощенного API PNRP не задаются явно облака для регистрации имен и адресов. Компонент PNRP автоматически определяет соответствующие облака, к которым требуется присоединиться, и адреса для публикации в них.</span><span class="sxs-lookup"><span data-stu-id="3dcc2-105">With the simplified PNRP API, clouds are not explicitly specified to register the name and addresses; the PNRP component automatically determines the appropriate clouds to join and the addresses to publish within the clouds.</span></span>  
   
- В оптимально упрощенном разрешении имен PNRP в системе Windows Vista PNRP-имена теперь интегрированы в функцию Windows Sockets getaddrinfo(). При использовании PNRP для преобразования имени в IPv6-адрес приложения могут пользоваться функцией getaddrinfo() для преобразования полного доменного имени (FQDN) name.prnp.net, в котором name — это имя однорангового узла, которое преобразуется. Домен pnrp.net — это зарезервированный домен в Windows Vista для разрешения имен PNRP.  
+ <span data-ttu-id="3dcc2-106">В оптимально упрощенном разрешении имен PNRP в системе Windows Vista PNRP-имена теперь интегрированы в функцию Windows Sockets getaddrinfo().</span><span class="sxs-lookup"><span data-stu-id="3dcc2-106">For highly simplified PNRP name resolution in Windows Vista, PNRP names are now integrated into the getaddrinfo() Windows Sockets function.</span></span> <span data-ttu-id="3dcc2-107">При использовании PNRP для преобразования имени в IPv6-адрес приложения могут пользоваться функцией getaddrinfo() для преобразования полного доменного имени (FQDN) name.prnp.net, в котором name — это имя однорангового узла, которое преобразуется.</span><span class="sxs-lookup"><span data-stu-id="3dcc2-107">To use PNRP to resolve a name to an IPv6 address, applications can use the getaddrinfo() function to resolve the Fully Qualified Domain Name (FQDN) name.prnp.net, in which name is peer name being resolved.</span></span> <span data-ttu-id="3dcc2-108">Домен pnrp.net — это зарезервированный домен в Windows Vista для разрешения имен PNRP.</span><span class="sxs-lookup"><span data-stu-id="3dcc2-108">The pnrp.net domain is a reserved domain in Windows Vista for PNRP name resolution.</span></span>  
   
- Передача сообщений между одноранговыми приложениями по-прежнему осуществляется с применением базовых архитектур, таких как PeerChannel и [Большие наборы данных и потоковая передача](http://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
+ <span data-ttu-id="3dcc2-109">Передача сообщений между одноранговыми приложениями по-прежнему осуществляется с применением базовых архитектур, таких как PeerChannel и [Большие наборы данных и потоковая передача](http://go.microsoft.com/fwlink/?LinkID=179652) WCF.</span><span class="sxs-lookup"><span data-stu-id="3dcc2-109">Message passing between PeerToPeer applications is still handled by underlying architectures such as PeerChannel and WCF [Large Data and Streaming](http://go.microsoft.com/fwlink/?LinkID=179652).</span></span>  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a><span data-ttu-id="3dcc2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="3dcc2-110">See Also</span></span>  
  <xref:System.Net.PeerToPeer>
-

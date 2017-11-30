@@ -1,33 +1,36 @@
 ---
-title: "Пользовательская привязка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательская привязка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0df615d0320c769aa986e8cca5d272ab6df4ad2d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Пользовательская привязка
-Этот раздел содержит образцы, которые демонстрируют использование атрибутов пользовательской привязки элемента конечной точки.  
+# <a name="custom-binding"></a><span data-ttu-id="83090-102">Пользовательская привязка</span><span class="sxs-lookup"><span data-stu-id="83090-102">Custom Binding</span></span>
+<span data-ttu-id="83090-103">Этот раздел содержит образцы, которые демонстрируют использование атрибутов пользовательской привязки элемента конечной точки.</span><span class="sxs-lookup"><span data-stu-id="83090-103">This section contains samples that demonstrate using a custom binding attribute of an endpoint element.</span></span>  
   
-## В этом подразделе  
- [Императивные пользовательские привязки](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
- Показывает, как писать императивный код для определения и использования пользовательских привязок, не применяя файл конфигурации или клиент, созданный [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="83090-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="83090-104">In This Section</span></span>  
+ [<span data-ttu-id="83090-105">Императивные пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="83090-105">Custom Binding Imperative</span></span>](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  
+ <span data-ttu-id="83090-106">Показывает, как писать императивный код для определения и использования пользовательских привязок, не применяя файл конфигурации или клиент, созданный [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83090-106">Demonstrates how to write imperative code to define and use custom bindings without using a configuration file or a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] generated client.</span></span>  
   
- [Транспорт и кодировка пользовательской привязки](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
- Демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений.  
+ [<span data-ttu-id="83090-107">И кодировка пользовательской привязки транспорта</span><span class="sxs-lookup"><span data-stu-id="83090-107">Custom Binding Transport and Encoding</span></span>](../../../../docs/framework/wcf/samples/custom-binding-transport-and-encoding.md)  
+ <span data-ttu-id="83090-108">Демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений.</span><span class="sxs-lookup"><span data-stu-id="83090-108">Demonstrates how to configure a custom binding with various transport and message encoding elements.</span></span>  
   
- [Надежный сеанс с использованием пользовательской привязки](../../../../docs/framework/wcf/samples/custom-binding-reliable-session.md)  
- Демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений, особенно включая надежные сеансы.  
+ [<span data-ttu-id="83090-109">Пользовательской привязки надежного сеанса</span><span class="sxs-lookup"><span data-stu-id="83090-109">Custom Binding Reliable Session</span></span>](../../../../docs/framework/wcf/samples/custom-binding-reliable-session.md)  
+ <span data-ttu-id="83090-110">Демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений, особенно включая надежные сеансы.</span><span class="sxs-lookup"><span data-stu-id="83090-110">Demonstrates how to configure a custom binding with various transport and message encoding elements, especially enabling reliable sessions.</span></span>  
   
- [Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)  
- Демонстрирует использование безопасности транспорта SSL с надежными сеансами.
+ [<span data-ttu-id="83090-111">Пользовательская привязка надежный сеанс по протоколу HTTPS</span><span class="sxs-lookup"><span data-stu-id="83090-111">Custom Binding Reliable Session over HTTPS</span></span>](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)  
+ <span data-ttu-id="83090-112">Демонстрирует использование безопасности транспорта SSL с надежными сеансами.</span><span class="sxs-lookup"><span data-stu-id="83090-112">Demonstrates the use of SSL transport security with Reliable Sessions.</span></span>

@@ -5,91 +5,89 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Практическое руководство. Включение WIF для приложения веб-службы WCF
-## <a name="applies-to"></a>Применение  
+# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a><span data-ttu-id="e9887-102">Практическое руководство. Включение WIF для приложения веб-службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-102">How To: Enable WIF for a WCF Web Service Application</span></span>
+## <a name="applies-to"></a><span data-ttu-id="e9887-103">Применение</span><span class="sxs-lookup"><span data-stu-id="e9887-103">Applies To</span></span>  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+-   <span data-ttu-id="e9887-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="e9887-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+-   <span data-ttu-id="e9887-105">Microsoft® Windows® Communication Foundation (WCF)</span><span class="sxs-lookup"><span data-stu-id="e9887-105">Microsoft® Windows® Communication Foundation (WCF)</span></span>  
   
-## <a name="summary"></a>Сводка  
- Это практическое руководство содержит пошаговые инструкции по включению WIF в веб-службе WCF. Оно также содержит инструкции по тестированию приложения для проверки того, что веб-служба правильно представляет утверждения во время выполнения приложения. В этом практическом руководстве нет подробных инструкций по созданию службы токенов безопасности (STS); вместо этого используется служба Development STS, входящая в состав средства Identity and Access Tool. Служба Development STS не выполняет фактическую аутентификацию и предназначена только для тестирования. Для выполнения этого практического руководства необходимо установить средство Identity and Access Tool. Его можно скачать на следующей странице: [Средство Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+## <a name="summary"></a><span data-ttu-id="e9887-106">Сводка</span><span class="sxs-lookup"><span data-stu-id="e9887-106">Summary</span></span>  
+ <span data-ttu-id="e9887-107">Это практическое руководство содержит пошаговые инструкции по включению WIF в веб-службе WCF.</span><span class="sxs-lookup"><span data-stu-id="e9887-107">This How-To provides detailed step-by-step procedures for enabling WIF in a WCF web service.</span></span> <span data-ttu-id="e9887-108">Оно также содержит инструкции по тестированию приложения для проверки того, что веб-служба правильно представляет утверждения во время выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="e9887-108">It also provides instructions for how to test the application to verify that the web service is correctly presenting claims when the application is run.</span></span> <span data-ttu-id="e9887-109">В этом практическом руководстве нет подробных инструкций по созданию службы токенов безопасности (STS); вместо этого используется служба Development STS, входящая в состав средства Identity and Access Tool.</span><span class="sxs-lookup"><span data-stu-id="e9887-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and instead uses the Development STS that comes with the Identity and Access tool.</span></span> <span data-ttu-id="e9887-110">Служба Development STS не выполняет фактическую аутентификацию и предназначена только для тестирования.</span><span class="sxs-lookup"><span data-stu-id="e9887-110">The Development STS does not perform real authentication and is intended for testing purposes only.</span></span> <span data-ttu-id="e9887-111">Для выполнения этого практического руководства необходимо установить средство Identity and Access Tool.</span><span class="sxs-lookup"><span data-stu-id="e9887-111">You will need to install the Identity and Access tool to complete this How-To.</span></span> <span data-ttu-id="e9887-112">Его можно скачать на следующей странице: [Средство Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)</span><span class="sxs-lookup"><span data-stu-id="e9887-112">It can be downloaded from the following location: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)</span></span>  
   
-## <a name="contents"></a>Описание  
+## <a name="contents"></a><span data-ttu-id="e9887-113">Описание</span><span class="sxs-lookup"><span data-stu-id="e9887-113">Contents</span></span>  
   
--   Цели  
+-   <span data-ttu-id="e9887-114">Цели</span><span class="sxs-lookup"><span data-stu-id="e9887-114">Objectives</span></span>  
   
--   Обзор  
+-   <span data-ttu-id="e9887-115">Обзор</span><span class="sxs-lookup"><span data-stu-id="e9887-115">Overview</span></span>  
   
--   Сводка действий  
+-   <span data-ttu-id="e9887-116">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="e9887-116">Summary of Steps</span></span>  
   
--   Шаг 1. Создание простой службы WCF  
+-   <span data-ttu-id="e9887-117">Шаг 1. Создание простой службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-117">Step 1 – Create a Simple WCF Service</span></span>  
   
--   Шаг 2. Создание клиентского приложения для службы WCF  
+-   <span data-ttu-id="e9887-118">Шаг 2. Создание клиентского приложения для службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-118">Step 2 – Create a Client Application for the WCF Service</span></span>  
   
--   Шаг 3. Тестирование решения  
+-   <span data-ttu-id="e9887-119">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="e9887-119">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a>Цели  
+## <a name="objectives"></a><span data-ttu-id="e9887-120">Цели</span><span class="sxs-lookup"><span data-stu-id="e9887-120">Objectives</span></span>  
   
--   Создание службы WCF, требующей выданных токенов  
+-   <span data-ttu-id="e9887-121">Создание службы WCF, требующей выданных токенов</span><span class="sxs-lookup"><span data-stu-id="e9887-121">Create a WCF service that requires issued tokens</span></span>  
   
--   Создание клиента WCF, который запрашивает токен у службы STS и передает его в службу WCF  
+-   <span data-ttu-id="e9887-122">Создание клиента WCF, который запрашивает токен у службы STS и передает его в службу WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-122">Create a WCF client that requests a token from an STS and passes it to the WCF service</span></span>  
   
-## <a name="overview"></a>Обзор  
- Это практические предназначено для демонстрации порядка использования федеративной аутентификации при разработке служб WCF. К преимуществам использования федерации в службах WCF относятся:  
+## <a name="overview"></a><span data-ttu-id="e9887-123">Обзор</span><span class="sxs-lookup"><span data-stu-id="e9887-123">Overview</span></span>  
+ <span data-ttu-id="e9887-124">Это практические предназначено для демонстрации порядка использования федеративной аутентификации при разработке служб WCF.</span><span class="sxs-lookup"><span data-stu-id="e9887-124">This How-To is intended to demonstrate how a developer can use federated authentication when developing WCF services.</span></span> <span data-ttu-id="e9887-125">К преимуществам использования федерации в службах WCF относятся:</span><span class="sxs-lookup"><span data-stu-id="e9887-125">Some of the benefits of using federation in WCF services include:</span></span>  
   
-1.  Факторизация логики аутентификации из кода службы WCF  
+1.  <span data-ttu-id="e9887-126">Факторизация логики аутентификации из кода службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-126">Factoring authentication logic out of WCF service code</span></span>  
   
-2.  Повторное использование существующих решений для управления удостоверениями  
+2.  <span data-ttu-id="e9887-127">Повторное использование существующих решений для управления удостоверениями</span><span class="sxs-lookup"><span data-stu-id="e9887-127">Re-using existing identity management solutions</span></span>  
   
-3.  Взаимодействие с другими решениями для работы с удостоверениями  
+3.  <span data-ttu-id="e9887-128">Взаимодействие с другими решениями для работы с удостоверениями</span><span class="sxs-lookup"><span data-stu-id="e9887-128">Interoperability with other identity solutions</span></span>  
   
-4.  Гибкость и адаптивность к будущим изменениям  
+4.  <span data-ttu-id="e9887-129">Гибкость и адаптивность к будущим изменениям</span><span class="sxs-lookup"><span data-stu-id="e9887-129">Flexibility and resilience to future changes</span></span>  
   
- Платформа WIF и связанное с ней средство Identity and Access Tool упрощают разработку и тестирование службы WCF, использующей федеративную аутентификацию, как показано ниже.  
+ <span data-ttu-id="e9887-130">Платформа WIF и связанное с ней средство Identity and Access Tool упрощают разработку и тестирование службы WCF, использующей федеративную аутентификацию, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="e9887-130">WIF and the associated Identity and Access tool make it easier to develop and test a WCF service using federated authentication, as the following steps demonstrate.</span></span>  
   
-## <a name="summary-of-steps"></a>Сводка действий  
+## <a name="summary-of-steps"></a><span data-ttu-id="e9887-131">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="e9887-131">Summary of Steps</span></span>  
   
--   Шаг 1. Создание простой службы WCF  
+-   <span data-ttu-id="e9887-132">Шаг 1. Создание простой службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-132">Step 1 – Create a Simple WCF Service</span></span>  
   
--   Шаг 2. Создание клиентского приложения для службы WCF  
+-   <span data-ttu-id="e9887-133">Шаг 2. Создание клиентского приложения для службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-133">Step 2 – Create a Client Application for the WCF Service</span></span>  
   
--   Шаг 3. Тестирование решения  
+-   <span data-ttu-id="e9887-134">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="e9887-134">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-wcf-service"></a>Шаг 1. Создание простой службы WCF  
- На этом шаге необходимо создать новую службу WCF, которая использует службу Development STS, входящую в средство Identity and Access Tool.  
+## <a name="step-1--create-a-simple-wcf-service"></a><span data-ttu-id="e9887-135">Шаг 1. Создание простой службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-135">Step 1 – Create a Simple WCF Service</span></span>  
+ <span data-ttu-id="e9887-136">На этом шаге необходимо создать новую службу WCF, которая использует службу Development STS, входящую в средство Identity and Access Tool.</span><span class="sxs-lookup"><span data-stu-id="e9887-136">In this step, you will create a new WCF service that uses the Development STS that is included with the Identity and Access tool.</span></span>  
   
-#### <a name="to-create-a-simple-wcf-service"></a>Создание простой службы WCF  
+#### <a name="to-create-a-simple-wcf-service"></a><span data-ttu-id="e9887-137">Создание простой службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-137">To create a simple WCF service</span></span>  
   
-1.  Запустите Visual Studio от имени администратора.  
+1.  <span data-ttu-id="e9887-138">Запустите Visual Studio от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="e9887-138">Start Visual Studio in elevated mode as administrator.</span></span>  
   
-2.  В Visual Studio в меню **Файл** последовательно выберите пункты **Создать** и **Проект**.  
+2.  <span data-ttu-id="e9887-139">В Visual Studio в меню **Файл** последовательно выберите пункты **Создать** и **Проект**.</span><span class="sxs-lookup"><span data-stu-id="e9887-139">In Visual Studio, click **File**, click **New**, and then click **Project**.</span></span>  
   
-3.  В окне **Новый проект** выберите **Приложение службы WCF**.  
+3.  <span data-ttu-id="e9887-140">В окне **Новый проект** выберите **Приложение службы WCF**.</span><span class="sxs-lookup"><span data-stu-id="e9887-140">In the **New Project** window, click **WCF Service Application**.</span></span>  
   
-4.  В поле **Имя** введите `TestService` и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="e9887-141">В поле **Имя** введите `TestService` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e9887-141">In **Name**, enter `TestService` and press **OK**.</span></span>  
   
-5.  В **обозревателе решений** щелкните правой кнопкой мыши проект **TestService**, а затем выберите **Идентификация и доступ**.  
+5.  <span data-ttu-id="e9887-142">В **обозревателе решений** щелкните правой кнопкой мыши проект **TestService**, а затем выберите **Идентификация и доступ**.</span><span class="sxs-lookup"><span data-stu-id="e9887-142">Right-click the **TestService** project under **Solution Explorer**, then select **Identity and Access**.</span></span>  
   
-6.  Откроется окно **Идентификация и доступ**. В поле **Поставщики** выберите **Протестировать приложение с помощью локальной службы Development STS** и нажмите кнопку **Применить**. Средство Identity and Access Tool настроит службу для использования WIF и передачи проверки подлинности локальной службе Development STS (**LocalSTS**), добавив необходимые параметры в файл конфигурации *Web.config*.  
+6.  <span data-ttu-id="e9887-143">Откроется окно **Идентификация и доступ**.</span><span class="sxs-lookup"><span data-stu-id="e9887-143">The **Identity and Access** window appears.</span></span> <span data-ttu-id="e9887-144">В поле **Поставщики** выберите **Протестировать приложение с помощью локальной службы Development STS** и нажмите кнопку **Применить**.</span><span class="sxs-lookup"><span data-stu-id="e9887-144">Under **Providers**, select **Test your application with the Local Development STS**, then click **Apply**.</span></span> <span data-ttu-id="e9887-145">Средство Identity and Access Tool настроит службу для использования WIF и передачи проверки подлинности локальной службе Development STS (**LocalSTS**), добавив необходимые параметры в файл конфигурации *Web.config*.</span><span class="sxs-lookup"><span data-stu-id="e9887-145">The Identity and Access Tool configures the service to use WIF and to outsource authentication to the local development STS (**LocalSTS**) by adding configuration elements to the *Web.config* file.</span></span>  
   
-7.  В файле *Service1.svc.cs* добавьте директиву `using` для пространства имен **System.Security.Claims** и замените существующий код на следующий, а затем сохраните файл:  
+7.  <span data-ttu-id="e9887-146">В файле *Service1.svc.cs* добавьте директиву `using` для пространства имен **System.Security.Claims** и замените существующий код на следующий, а затем сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="e9887-146">In the *Service1.svc.cs* file, add a `using` directive for the **System.Security.Claims** namespace and replace the existing code with the following, then save the file:</span></span>  
   
     ```csharp  
     public class Service1 : IService1  
@@ -124,9 +122,9 @@ ms.lasthandoff: 08/21/2017
     }  
     ```  
   
-     Метод `ComputeResponse` используется для отображения свойств различных утверждений, выдаваемых службой **LocalSTS**.  
+     <span data-ttu-id="e9887-147">Метод `ComputeResponse` используется для отображения свойств различных утверждений, выдаваемых службой **LocalSTS**.</span><span class="sxs-lookup"><span data-stu-id="e9887-147">The `ComputeResponse` method displays the properties of various claims that are issued by **LocalSTS**.</span></span>  
   
-8.  В файле *IService1.cs* замените существующий код на следующий, а затем сохраните файл:  
+8.  <span data-ttu-id="e9887-148">В файле *IService1.cs* замените существующий код на следующий, а затем сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="e9887-148">In the *IService1.cs* file, replace the existing code with the following, then save the file:</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -137,30 +135,30 @@ ms.lasthandoff: 08/21/2017
     }  
     ```  
   
-9. Выполните построение проекта.  
+9. <span data-ttu-id="e9887-149">Выполните построение проекта.</span><span class="sxs-lookup"><span data-stu-id="e9887-149">Build the project.</span></span>  
   
-10. Нажмите **CTRL+F5**, чтобы запустить службу без запуска отладчика. Должна открыться веб-страница службы; в области уведомлений можно убедиться, что запущена служба **LocalSTS**.  
-  
-    > [!IMPORTANT]
-    >  Службы **TestService** и **LocalSTS** должны быть запущены во время добавления ссылки на службу в клиентское приложение на следующем шаге.  
-  
-## <a name="step-2--create-a-client-application-for-the-wcf-service"></a>Шаг 2. Создание клиентского приложения для службы WCF  
- На этом шаге вы создадите консольное приложение, которое использует службу Development STS для аутентификации с использованием службы WCF, созданной на предыдущем шаге.  
-  
-#### <a name="to-create-a-client-application"></a>Создание клиентского приложения  
-  
-1.  В Visual Studio щелкните решение правой кнопкой мыши, выберите **Добавить** и затем **Новый проект**.  
-  
-2.  В окне **Добавление нового проекта** выберите **Консольное приложение** в списке шаблонов **Visual C#**, введите `Client` и нажмите кнопку **ОК**. В папке решения будет создан новый проект.  
-  
-3.  Щелкните правой кнопкой мыши элемент **Ссылки** в проекте **Клиент** и выберите **Добавить ссылку на службу**.  
-  
-4.  В окне **Добавление ссылки на службу** щелкните стрелку раскрывающегося списка на кнопке **Найти** и выберите **Службы в решении**. В поле **Адрес** будет автоматически указана созданная ранее служба WCF, а в поле **Пространство имен** будет указано значение **ServiceReference1**. Нажмите кнопку **ОК**.  
+10. <span data-ttu-id="e9887-150">Нажмите **CTRL+F5**, чтобы запустить службу без запуска отладчика.</span><span class="sxs-lookup"><span data-stu-id="e9887-150">Press **Ctrl-F5** to run the service without starting the debugger.</span></span> <span data-ttu-id="e9887-151">Должна открыться веб-страница службы; в области уведомлений можно убедиться, что запущена служба **LocalSTS**.</span><span class="sxs-lookup"><span data-stu-id="e9887-151">A Web page should open for the service and you can verify that **LocalSTS** is running by looking in the notification area (system tray).</span></span>  
   
     > [!IMPORTANT]
-    >  Службы **TestService** и **LocalSTS** должны быть запущены во время добавления ссылки на службу в клиентское приложение.  
+    >  <span data-ttu-id="e9887-152">Службы **TestService** и **LocalSTS** должны быть запущены во время добавления ссылки на службу в клиентское приложение на следующем шаге.</span><span class="sxs-lookup"><span data-stu-id="e9887-152">Both **TestService** and **LocalSTS** must be running when you add the service reference to the client application in the next step.</span></span>  
   
-5.  Среда Visual Studio создаст прокси-классы для службы WCF и добавит все необходимые ссылки. Она также добавит необходимые параметры в файл *App.config*, чтобы клиент получал маркер у службы STS для проверки подлинности в службе. После окончания этого процесса будет открыт файл **Program.cs**. Добавьте директиву `using` для пространств имен **System.ServiceModel** и **Client.ServiceReference1**, замените метод **Main** на следующий код, а затем сохраните файл:  
+## <a name="step-2--create-a-client-application-for-the-wcf-service"></a><span data-ttu-id="e9887-153">Шаг 2. Создание клиентского приложения для службы WCF</span><span class="sxs-lookup"><span data-stu-id="e9887-153">Step 2 – Create a Client Application for the WCF Service</span></span>  
+ <span data-ttu-id="e9887-154">На этом шаге вы создадите консольное приложение, которое использует службу Development STS для аутентификации с использованием службы WCF, созданной на предыдущем шаге.</span><span class="sxs-lookup"><span data-stu-id="e9887-154">In this step, you will create a console application that uses the Development STS to authenticate with the WCF service you created in the previous step.</span></span>  
+  
+#### <a name="to-create-a-client-application"></a><span data-ttu-id="e9887-155">Создание клиентского приложения</span><span class="sxs-lookup"><span data-stu-id="e9887-155">To create a client application</span></span>  
+  
+1.  <span data-ttu-id="e9887-156">В Visual Studio щелкните решение правой кнопкой мыши, выберите **Добавить** и затем **Новый проект**.</span><span class="sxs-lookup"><span data-stu-id="e9887-156">In Visual Studio, right-click on the solution, click **Add**, and then click **New Project**.</span></span>  
+  
+2.  <span data-ttu-id="e9887-157">В окне **Добавление нового проекта** выберите **Консольное приложение** в списке шаблонов **Visual C#**, введите `Client` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e9887-157">In the **Add New Project** window, select **Console Application** from the **Visual C#** templates list, enter `Client`, and then press **OK**.</span></span> <span data-ttu-id="e9887-158">В папке решения будет создан новый проект.</span><span class="sxs-lookup"><span data-stu-id="e9887-158">The new project will be created in your solution folder.</span></span>  
+  
+3.  <span data-ttu-id="e9887-159">Щелкните правой кнопкой мыши элемент **Ссылки** в проекте **Клиент** и выберите **Добавить ссылку на службу**.</span><span class="sxs-lookup"><span data-stu-id="e9887-159">Right-click on **References** under the **Client** project, and then click **Add Service Reference**.</span></span>  
+  
+4.  <span data-ttu-id="e9887-160">В окне **Добавление ссылки на службу** щелкните стрелку раскрывающегося списка на кнопке **Найти** и выберите **Службы в решении**.</span><span class="sxs-lookup"><span data-stu-id="e9887-160">In the **Add Service Reference** window, click the drop-down arrow on the **Discover** button and click **Services in Solution**.</span></span> <span data-ttu-id="e9887-161">В поле **Адрес** будет автоматически указана созданная ранее служба WCF, а в поле **Пространство имен** будет указано значение **ServiceReference1**.</span><span class="sxs-lookup"><span data-stu-id="e9887-161">The **Address** will automatically populate with the WCF service you created earlier, and the **Namespace** will be set to **ServiceReference1**.</span></span> <span data-ttu-id="e9887-162">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e9887-162">Click **OK**.</span></span>  
+  
+    > [!IMPORTANT]
+    >  <span data-ttu-id="e9887-163">Службы **TestService** и **LocalSTS** должны быть запущены во время добавления ссылки на службу в клиентское приложение.</span><span class="sxs-lookup"><span data-stu-id="e9887-163">Both **TestService** and **LocalSTS** must be running when you add the service reference to the client.</span></span>  
+  
+5.  <span data-ttu-id="e9887-164">Среда Visual Studio создаст прокси-классы для службы WCF и добавит все необходимые ссылки.</span><span class="sxs-lookup"><span data-stu-id="e9887-164">Visual Studio will generate proxy classes for the WCF service, and add all of the necessary reference information.</span></span> <span data-ttu-id="e9887-165">Она также добавит необходимые параметры в файл *App.config*, чтобы клиент получал маркер у службы STS для проверки подлинности в службе.</span><span class="sxs-lookup"><span data-stu-id="e9887-165">It will also add elements to the *App.config* file to configure the client to get a token from the STS to authenticate with the service.</span></span> <span data-ttu-id="e9887-166">После окончания этого процесса будет открыт файл **Program.cs**.</span><span class="sxs-lookup"><span data-stu-id="e9887-166">When this process is finished, the **Program.cs** file will open.</span></span> <span data-ttu-id="e9887-167">Добавьте директиву `using` для пространств имен **System.ServiceModel** и **Client.ServiceReference1**, замените метод **Main** на следующий код, а затем сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="e9887-167">Add a `using` directive for **System.ServiceModel** and another for **Client.ServiceReference1**, replace the **Main** method with the following code, then save the file:</span></span>  
   
     ```csharp  
     static void Main(string[] args)  
@@ -220,7 +218,7 @@ ms.lasthandoff: 08/21/2017
     }  
     ```  
   
-6.  Откройте файл *App.config* и добавьте следующий код XML в качестве первого дочернего элемента внутри элемента `<system.serviceModel>`, а затем сохраните файл:  
+6.  <span data-ttu-id="e9887-168">Откройте файл *App.config* и добавьте следующий код XML в качестве первого дочернего элемента внутри элемента `<system.serviceModel>`, а затем сохраните файл:</span><span class="sxs-lookup"><span data-stu-id="e9887-168">Open the *App.config* file and add the following XML as the first child element under the `<system.serviceModel>` element, then save the file:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -236,20 +234,20 @@ ms.lasthandoff: 08/21/2017
      </behaviors>  
     ```  
   
-     Это приведет к отключению проверки сертификата.  
+     <span data-ttu-id="e9887-169">Это приведет к отключению проверки сертификата.</span><span class="sxs-lookup"><span data-stu-id="e9887-169">This disables certificate validation.</span></span>  
   
-7.  Щелкните правой кнопкой мыши решение **TestService**, а затем выберите команду **Назначить запускаемые проекты**. Будет открыта страница свойств **Запускаемый проект**. На странице свойств **Запускаемый проект** выберите **Несколько запускаемых проектов**, затем щелкните поле **Действие** для каждого проекта и выберите **Запуск** в раскрывающемся меню. Нажмите кнопку **ОК**, чтобы сохранить параметры.  
+7.  <span data-ttu-id="e9887-170">Щелкните правой кнопкой мыши решение **TestService**, а затем выберите команду **Назначить запускаемые проекты**.</span><span class="sxs-lookup"><span data-stu-id="e9887-170">Right-click the **TestService** solution and click on **Set StartUp Projects**.</span></span> <span data-ttu-id="e9887-171">Будет открыта страница свойств **Запускаемый проект**.</span><span class="sxs-lookup"><span data-stu-id="e9887-171">The **Startup Project** property page opens.</span></span> <span data-ttu-id="e9887-172">На странице свойств **Запускаемый проект** выберите **Несколько запускаемых проектов**, затем щелкните поле **Действие** для каждого проекта и выберите **Запуск** в раскрывающемся меню.</span><span class="sxs-lookup"><span data-stu-id="e9887-172">In the **Startup Project** property page, select **Multiple startup projects** then click in the **Action** field for each project and select **Start** from the drop-down menu.</span></span> <span data-ttu-id="e9887-173">Нажмите кнопку **ОК**, чтобы сохранить параметры.</span><span class="sxs-lookup"><span data-stu-id="e9887-173">Click **OK** to save the settings.</span></span>  
   
-8.  Постройте решение.  
+8.  <span data-ttu-id="e9887-174">Постройте решение.</span><span class="sxs-lookup"><span data-stu-id="e9887-174">Build the solution.</span></span>  
   
-## <a name="step-3--test-your-solution"></a>Шаг 3. Тестирование решения  
- На этом шаге вам предстоит протестировать приложение WCF с поддержкой WIF и убедиться, что утверждения представляются.  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="e9887-175">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="e9887-175">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="e9887-176">На этом шаге вам предстоит протестировать приложение WCF с поддержкой WIF и убедиться, что утверждения представляются.</span><span class="sxs-lookup"><span data-stu-id="e9887-176">In this step you will test your WIF-enabled WCF application and verify that claims are presented.</span></span>  
   
-#### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>Тестирование приложения WCF с поддержкой WIF на наличие утверждений  
+#### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a><span data-ttu-id="e9887-177">Тестирование приложения WCF с поддержкой WIF на наличие утверждений</span><span class="sxs-lookup"><span data-stu-id="e9887-177">To test your WIF-enabled WCF application for claims</span></span>  
   
-1.  Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его. Должно появиться окно консоли со следующим текстом: **Нажмите клавишу ВВОД, чтобы вызвать службу, или любую другую клавишу для выхода из приложения:**  
+1.  <span data-ttu-id="e9887-178">Нажмите клавишу **F5**, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="e9887-178">Press **F5** to build and run the application.</span></span> <span data-ttu-id="e9887-179">Должно появиться окно консоли со следующим текстом: **Нажмите клавишу ВВОД, чтобы вызвать службу, или любую другую клавишу для выхода из приложения:**</span><span class="sxs-lookup"><span data-stu-id="e9887-179">You should be presented with a console window, and the following text: **Press Enter key to invoke service, any other key to quit application:**</span></span>  
   
-2.  Нажмите клавишу **ВВОД**, и в окне консоли появится следующая информация об утверждениях:  
+2.  <span data-ttu-id="e9887-180">Нажмите клавишу **ВВОД**, и в окне консоли появится следующая информация об утверждениях:</span><span class="sxs-lookup"><span data-stu-id="e9887-180">Press **Enter**, and the following claims information should appear in the console:</span></span>  
   
     ```  
     Computed by Service1  
@@ -264,7 +262,6 @@ ms.lasthandoff: 08/21/2017
     ```  
   
     > [!IMPORTANT]
-    >  Перед нажатием клавиши **ВВОД** должны быть запущены службы **TestService** и **LocalSTS**. Должна открыться веб-страница службы; в области уведомлений можно убедиться, что запущена служба **LocalSTS**.  
+    >  <span data-ttu-id="e9887-181">Перед нажатием клавиши **ВВОД** должны быть запущены службы **TestService** и **LocalSTS**.</span><span class="sxs-lookup"><span data-stu-id="e9887-181">Both **TestService** and **LocalSTS** must be running before you press **Enter**.</span></span> <span data-ttu-id="e9887-182">Должна открыться веб-страница службы; в области уведомлений можно убедиться, что запущена служба **LocalSTS**.</span><span class="sxs-lookup"><span data-stu-id="e9887-182">A Web page should open for the service and you can verify that **LocalSTS** is running by looking in the notification area (system tray).</span></span>  
   
-3.  Если эти утверждения службы WCF отображаются на консоли, аутентификация в службе STS прошла успешно.
-
+3.  <span data-ttu-id="e9887-183">Если эти утверждения службы WCF отображаются на консоли, аутентификация в службе STS прошла успешно.</span><span class="sxs-lookup"><span data-stu-id="e9887-183">If these claims appear in the console, you have successfully authenticated with the STS to display claims from the WCF service.</span></span>
