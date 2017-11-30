@@ -1,58 +1,66 @@
 ---
-title: "&lt;tokenReplayDetection&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;tokenReplayDetection&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
-caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f95d200f74621a40d2987acf68bc554df8d17ab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;tokenReplayDetection&gt;
-Включает обнаружение воспроизведения токена и определяет время окончания срока действия для маркеров.  
+# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+Включает обнаружение воспроизведения токенов и определяет время жизни токенов.  
   
-## Синтаксис  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<tokenReplayDetection >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
-    </tokenReplayDetection>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <tokenReplayDetection enabled=xs:boolean expirationPeriod=TimeSpan>  
+    </tokenReplayDetection>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Тип  
+## <a name="type"></a>Тип  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|enabled|Значение, указывающее, разрешено ли обнаружение воспроизведения токена. «true» включить обнаружение воспроизведения токена.|  
-|expirationPeriod|<xref:System.TimeSpan>, который указывает максимальное количество времени перед элементом считается expired и удаляется из кэша.  Дополнительные сведения о способах указания значений <xref:System.TimeSpan> см. в разделе [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).|  
+|---------------|-----------------|  
+|enabled|Значение, указывающее, включено ли обнаружение воспроизведения токенов; «true», чтобы включить токен обнаружения воспроизведения.|  
+|expirationPeriod|Объект <xref:System.TimeSpan> , указывающее максимальное количество времени, прежде чем элемент считается истек и удаляется из кэша.  Дополнительные сведения о способах указания <xref:System.TimeSpan> значения, в разделе [значения Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
-### Дочерние элементы  
- None  
+### <a name="child-elements"></a>Дочерние элементы  
+ Нет  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Задает параметры идентификатора уровня обслуживания.|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию коллекции обработчиков маркера безопасности.|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы удостоверений.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Обеспечивает настройку для коллекции безопасности обработчиков маркеров.|  
   
-## Заметки  
- Элемент `<tokenReplayDetection>` можно определить на уровне службы под элементом `<identityConfiguration>` или в коллекцию обработчиков маркеров безопасности уровня под элементом `<securityTokenHandlerConfiguration>`.  Параметры в коллекции обработчика токена переопределяют те, определенной в службе.  
+## <a name="remarks"></a>Примечания  
+ A `<tokenReplayDetection>` элемент можно задать на уровне службы под `<identityConfiguration>` элемент, либо на уровне коллекции обработчик маркеров безопасности в разделе `<securityTokenHandlerConfiguration>` элемента. Параметры в коллекцию обработчика токенов переопределяют алгоритмам, заданным в службе.  
   
- Тип кэша воспроизведения токена определяется [\<tokenReplayCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) элементом.
+ Тип кэша воспроизведения токена определяется [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) элемента.

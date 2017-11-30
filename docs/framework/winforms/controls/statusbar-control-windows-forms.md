@@ -1,55 +1,56 @@
 ---
-title: "Элемент управления StatusBar (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "строки состояния, создание"
-  - "StatusBar - элемент управления [Windows Forms]"
+title: "Элемент управления StatusBar (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- StatusBar control [Windows Forms]
+- status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 775d1a350075811dc02ae33efd1a6ae05328c4ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Элемент управления StatusBar (Windows Forms)
+# <a name="statusbar-control-windows-forms"></a>Элемент управления StatusBar (Windows Forms)
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.StatusBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- Элемент управления <xref:System.Windows.Forms.StatusBar> Windows Forms используется в формах в виде области внизу окна, в которой приложение отображает различную информацию о состоянии.  Элементы управления <xref:System.Windows.Forms.StatusBar> могут включать панели строки состояния, на которых выводятся значки, показывающие состояние, или анимированный набор значков, показывающий выполнения процесса \(например, такие как при сохранении документа в приложении Microsoft Word\).  
+ Элемент управления Windows Forms <xref:System.Windows.Forms.StatusBar> используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. <xref:System.Windows.Forms.StatusBar>элементы управления могут включать панели строки состояния, на которых отображаются значки, показывающие состояние, или набор значков в анимации, указывающие, что процесс работает; например Microsoft Word, означает, что документ сохраняется.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
- Общие понятия об элементе управления <xref:System.Windows.Forms.StatusBar>, с помощью которого пользователи могут видеть соответствующие сведения для элемента управления, который находится в фокусе.  
+ Основные понятия <xref:System.Windows.Forms.StatusBar> элемента управления, который позволяет пользователям видеть соответствующие сведения для элемента управления, который имеет фокус.  
   
  [Практическое руководство. Добавление панелей в элемент управления StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- Объяснение способов добавления программируемых панелей в элемент управления <xref:System.Windows.Forms.StatusBar>.  
+ Описание способов добавления программируемых панелей в <xref:System.Windows.Forms.StatusBar> элемента управления.  
   
  [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- Объяснение способов обработки события <xref:System.Windows.Forms.Control.Click>, вызванного элементом управления <xref:System.Windows.Forms.StatusBar>.  
+ Описание способов обработки <xref:System.Windows.Forms.Control.Click> события из <xref:System.Windows.Forms.StatusBar> элемента управления.  
   
  [Практическое руководство. Определение размера панелей строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- Подробные сведения о свойствах, с помощью которых можно управлять шириной панелей строки состояния и их поведением при изменении размера во время выполнения.  
+ Подробные сведения о свойствах, которые можно задать ширину и размеров панели строки состояния во время выполнения.  
   
  [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  Описание способов программного управления данными на панелях строки состояния.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.StatusBar>  
- Справочные сведения о данном классе и его членах.  
+ Справочная информация о классе и его членах.  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- Заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности.  
+ Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.StatusBar> элемента управления.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

@@ -1,58 +1,67 @@
 ---
-title: "&lt;sessionSecurityTokenCache&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;sessionSecurityTokenCache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a1d1af398073e15ce7f73b3359366df9e5629ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;sessionSecurityTokenCache&gt;
-Регистрирует кэша маркеров сеанса службы или коллекции обработчик маркеров безопасности.  
+# <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
+Регистрирует кэша для маркеров сеанса службы или коллекции обработчик маркеров безопасности.  
   
-## Синтаксис  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<кэширует >  
+\<sessionSecurityTokenCache >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <caches>  
-      <sessionSecurityTokenCache type=xs:string>  
-      </sessionSecurityTokenCache>  
-    </caches>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <caches>  
+      <sessionSecurityTokenCache type=xs:string>  
+      </sessionSecurityTokenCache>  
+    </caches>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|type|Тип, производный от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> класса.  Дополнительные сведения об указании пользовательского `type`, см. [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|---------------|-----------------|  
+|type|Тип, который является производным от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> класса.|  
   
-### Дочерние элементы  
- None  
+### <a name="child-elements"></a>Дочерние элементы  
+ Нет  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэшей, службы или коллекции обработчик маркеров безопасности.|  
+|-------------|-----------------|  
+|[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши, используемая службой или коллекцию обработчика токенов безопасности.|  
   
-## Пример  
- Следующий XML показывает конфигурацию пользовательского кэша для хранения сеанса маркеров безопасности \(<xref:System.IdentityModel.Tokens.SessionSecurityToken>\).  Конфигурация берется из `ClaimsAwareWebFarm` образца.  Дополнительные сведения об этом примере см. [Индекс образцов кода WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
+## <a name="example"></a>Пример  
+ Следующий код XML показана конфигурация пользовательского кэша для хранения токенов безопасности сеанса (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Конфигурации берется из `ClaimsAwareWebFarm` образца. Дополнительные сведения об этом образце см. в разделе [индекс образцов кода WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
   
-```  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  
@@ -61,5 +70,5 @@ caps.handback.revision: 7
 </caches>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

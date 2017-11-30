@@ -1,29 +1,35 @@
 ---
-title: "Как извлечь несколько объектов одновременно | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Извлечение нескольких объектов одновременно"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c5ae3ace43aeaf13f26724f5edb88dd447603161
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как извлечь несколько объектов одновременно
+# <a name="how-to-retrieve-many-objects-at-once"></a>Практическое руководство. Извлечение нескольких объектов одновременно
 Для извлечения нескольких объектов из одного запроса используется <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
   
-## Пример  
- В следующем коде для извлечения объекта `Customer` и `Order` используется метод <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
+## <a name="example"></a>Пример  
+ В следующем коде для извлечения объекта <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> и `Customer` используется метод `Order`.  
   
  [!code-csharp[DLinqQueryConcepts#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#9)]
  [!code-vb[DLinqQueryConcepts#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#9)]  
   
-## См. также  
- [Основные понятия о запросах](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>См. также  
+ [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

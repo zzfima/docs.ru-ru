@@ -1,37 +1,36 @@
 ---
-title: "Объект My.User | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.User - объект"
-  - "My.User - свойство"
+title: "Объект My.User"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- My.User property
+- My.User object
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5c905ad1f0f9efcfbf4341b96d057af4dc16d6b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Объект My.User
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="myuser-object"></a>Объект My.User
 Предоставляет доступ к сведениям о текущем пользователе.  
   
-## Заметки  
- Дополнительные сведения о доступных методах и свойствах объекта `My.User` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=fullName>.  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о методах и свойствах `My.User` см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- Дополнительные сведения см. в разделе [Доступ к данным пользователя](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Дополнительные сведения см. в разделе [доступ к данным пользователя](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
-## Требования  
- **Сборка:** библиотека времени выполнения Visual Basic \(в Microsoft.VisualBasic.dll\)  
+## <a name="requirements"></a>Требования  
+ **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
   
-## См. также  
- <xref:System.Security.Principal.IPrincipal>   
- <xref:System.Threading.Thread.CurrentPrincipal%2A>   
- <xref:System.Web.HttpContext.User%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Security.Principal.IPrincipal>  
+ <xref:System.Threading.Thread.CurrentPrincipal%2A>  
+ <xref:System.Web.HttpContext.User%2A>  
  <xref:System.Web.HttpContext.Current%2A>

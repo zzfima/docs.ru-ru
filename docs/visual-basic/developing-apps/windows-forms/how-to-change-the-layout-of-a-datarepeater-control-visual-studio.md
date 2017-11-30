@@ -1,59 +1,61 @@
 ---
-title: "Практическое руководство. Изменение структуры элемента управления DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, изменение стиля макета"
-  - "DataRepeater, изменение ориентации"
+title: "Практическое руководство. Изменение структуры элемента управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataRepeater, changing layout style
+- DataRepeater, changing orientation
 ms.assetid: 33aa8fd5-ac63-4bd0-ba13-8c2ab17e7824
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 94c5f8f5e83578ca0a82b479ef5ef359738df5f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение структуры элемента управления DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> можно отобразить либо вертикально \(элементы прокручиваются вертикально\), либо горизонтально \(элементы прокручиваются горизонтально\).  Можно изменить ориентацию на этапе разработки или во время выполнения, изменив свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>.  Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> изменяется во время выполнения, можно также изменить размеры <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и расположение дочерних элементов управления.  
+# <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>Практическое руководство. Изменение структуры элемента управления DataRepeater (Visual Studio)
+<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Управления могут быть отображены в либо вертикально (элементы прокрутки по вертикали), либо горизонтально (элементы прокрутки по горизонтали) ориентации. Вы можете изменить ориентацию во время разработки или во время выполнения, изменив <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойство. При изменении <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойства во время выполнения можно также для изменения размера <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и положение дочерних элементов управления.  
   
 > [!NOTE]
->  При перемещении элементов управления на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> во время выполнения, потребуется вызвать методы <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> и <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> в начале и в конце блока кода, отвечающего за перемещение элементов управления.  
+>  При перемещении элементов управления на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> во время выполнения, необходимо вызвать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> и <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> методы в начале и в конце блока кода, который перемещает элементы управления.  
   
-### Чтобы изменить макет во время выполнения  
+### <a name="to-change-the-layout-at-design-time"></a>Изменение макета во время разработки  
   
-1.  В конструкторе Windows Forms выберите элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+1.  В конструкторе Windows Forms выберите <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
     > [!NOTE]
-    >  Необходимо выделить внешнюю границу элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, нажав на нижнюю область этого элемента управления, а не на верхнюю область <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>.  
+    >  Необходимо выбрать внешней границы <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления, щелкнув в нижней области элемента управления, не в правом верхнем <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> области.  
   
-2.  В окне "Свойства" присвойте свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> значение либо <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>, либо <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>.  
+2.  В окне свойств задайте <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> значение <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> или <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>.  
   
-### Чтобы изменить структуру во время выполнения  
+### <a name="to-change-the-layout-at-run-time"></a>Изменение макета во время выполнения  
   
-1.  Добавьте следующий код в обработчик событий кнопки `Click`:  
+1.  Добавьте следующий код для кнопки или меню `Click` обработчик событий:  
   
-     [!code-cs[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-csharp[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.vb)]  
   
-2.  В большинстве случаев, нужно будет добавить код, похожий на тот, который приведен в подразделе "Пример" для уменьшения размеров <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и переупорядочения управляющих элементов для соответствия новой ориентации.  
+2.  В большинстве случаев необходимо добавить код, как показано в следующем примере для изменения размера <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и расположение элементов управления в соответствии с новой ориентации.  
   
-## Пример  
- В следующем примере показан ответ на событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyleChanged> в обработчике событий.  Для этого примера необходим элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> с именем `DataRepeater1`, который находится в форме, и <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> содержит два элемента управления <xref:System.Windows.Forms.TextBox> с именами `TextBox1` и `TextBox2`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как реагировать на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyleChanged> событий в обработчике событий. В этом примере требуется наличие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления с именем `DataRepeater1` в форме и его <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> содержат два <xref:System.Windows.Forms.TextBox> элементов управления с именем `TextBox1` и `TextBox2`.  
   
- [!code-cs[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.cs)]
+ [!code-csharp[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.cs)]
  [!code-vb[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>   
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>  
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
  [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)

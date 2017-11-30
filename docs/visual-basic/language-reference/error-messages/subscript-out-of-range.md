@@ -1,31 +1,29 @@
 ---
-title: "Индекс вне диапазона (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID9"
-dev_langs: 
-  - "VB"
+title: "Индекс вне диапазона (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID9
 ms.assetid: d0344a65-ec02-4caf-8d3c-9977392ca353
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a3c7f596af55508d31a576778b36c8b214fe6511
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Индекс вне диапазона (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Индекс массива является недопустимым, т.к. не попадает в разрешенный диапазон.  Нижний индекс измерения всегда равен 0, а верхний индекс возвращается методом `GetUpperBound` для этого измерения.  
+# <a name="subscript-out-of-range-visual-basic"></a>Индекс вне диапазона (Visual Basic)
+Индекс массива является недопустимым, поскольку она находится за пределами допустимого диапазона. Нижний индекс измерения всегда равен 0, а наибольшее значение индекса возвращается `GetUpperBound` метода для этого измерения.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Измените индекс таким образом, чтобы он попадал в допустимый диапазон.  
+-   Измените индекс, поэтому он попадает в допустимый диапазон.  
   
-## См. также  
- <xref:System.Array.GetUpperBound%2A?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>  
  [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)

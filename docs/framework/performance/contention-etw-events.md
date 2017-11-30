@@ -5,27 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contention events [.NET Framework]
 - ETW, contention events (CLR)
 ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 931a3f7d5cbc441a3cae2b7359d129dff02afd44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6d739eaf73ff8336e74130d7176697229fdffd12
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="contention-etw-events"></a>События конфликтов (трассировка событий Windows)
-События конфликтов возникают каждый раз при обнаружении конфликта за блокировки <xref:System.Threading.Monitor?displayProperty=fullName> или блокировки машинного кода, используемые средой выполнения. Конфликт происходит, когда поток ожидает блокировку, которая обрабатывается другим потоком.  
+События конфликтов возникают каждый раз при обнаружении конфликта за блокировки <xref:System.Threading.Monitor?displayProperty=nameWithType> или блокировки машинного кода, используемые средой выполнения. Конфликт происходит, когда поток ожидает блокировку, которая обрабатывается другим потоком.  
   
  В следующей таблице показаны ключевое слово, в котором возникает событие конфликта, а также уровень события. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>См. также  
  [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
-

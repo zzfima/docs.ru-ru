@@ -1,56 +1,53 @@
 ---
-title: "Приступая к работе со службами WCF Data Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "HTML"
-  - "VB"
-  - "CSharp"
-  - "C++"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, начало работы"
+title: "Начало работы со службами данных WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 124e0fe04293c52fb152ef76e7f93f00c679c9f8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Приступая к работе со службами WCF Data Services
-Подразделы этого раздела содержат описание базовых технологий и помогают получить сведения о [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] и способах использования служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления и получения каналов [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  Этот раздел включает как концептуальное содержимое, так и учебник [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+# <a name="getting-started-with-wcf-data-services"></a>Начало работы со службами данных WCF
+В подразделах этого раздела помогут быстро понять [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] и способ использования [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] каналов Описание базовых технологий. Этот раздел включает как концептуальное содержимое и [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) учебника.  
   
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  В следующих разделах описывается создание служб данных с использованием служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Представление данных в виде службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Описывает этапы создания службы данных с помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Доступ к ресурсам службы данных](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- Описывает методику работы с каналами [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ Описывает, как работать с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.  
   
- [Использование службы данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
- Описывает методику работы с каналами [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении .NET Framework.  
+ [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ Описывает, как работать с [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в клиентском приложении .NET Framework.  
   
  [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- Иллюстрирует создание и обращение к простой службе данных на основе [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], которая предоставляет канал на основе образца базы данных Northwind.  
+ Показано, как создавать и использовать простой [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-на основе службы, которая предоставляет канал на основе на образце базы данных "Борей".  
   
- [Сценарии приложений](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ [Сценарии приложения](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Описывает базовый набор сценариев [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], поддерживаемых службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Ресурсы](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
- Предоставляет ссылки на другие ресурсы, посвященные службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
+ Содержит ссылки на [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ресурсов.  
   
-## Связанные разделы  
- [Службы WCF Data Services \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=143149)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Службы WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
   
- [Приступая к работе](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [Начало работы](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248)
