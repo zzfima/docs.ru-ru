@@ -1,44 +1,25 @@
 ---
 title: "virtual (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- virtual keyword [C#]
+helpviewer_keywords: virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24ca77a0a645a17c0223437e73539bc04ba80f23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="virtual-c-reference"></a>virtual (Справочник по C#)
-Ключевое слово `virtual` используется для изменения объявлений методов, свойств, индексаторов и событий и разрешения их переопределения в производном классе. Например, этот метод может быть переопределен любым наследующим его классом:  
+# <a name="virtual-c-reference"></a><span data-ttu-id="7a566-102">virtual (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7a566-102">virtual (C# Reference)</span></span>
+<span data-ttu-id="7a566-103">Ключевое слово `virtual` используется для изменения объявлений методов, свойств, индексаторов и событий и разрешения их переопределения в производном классе.</span><span class="sxs-lookup"><span data-stu-id="7a566-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="7a566-104">Например, этот метод может быть переопределен любым наследующим его классом:</span><span class="sxs-lookup"><span data-stu-id="7a566-104">For example, this method can be overridden by any class that inherits it:</span></span>  
   
 ```  
 public virtual double Area()   
@@ -47,46 +28,45 @@ public virtual double Area()
 }  
 ```  
   
- Реализацию виртуального члена можно изменить путем [переопределения члена](../../../csharp/language-reference/keywords/override.md) в производном классе. Дополнительные сведения об использовании ключевого слова `virtual` см. в разделах [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) и [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
+ <span data-ttu-id="7a566-105">Реализацию виртуального члена можно изменить путем [переопределения члена](../../../csharp/language-reference/keywords/override.md) в производном классе.</span><span class="sxs-lookup"><span data-stu-id="7a566-105">The implementation of a virtual member can be changed by an [overriding member](../../../csharp/language-reference/keywords/override.md) in a derived class.</span></span> <span data-ttu-id="7a566-106">Дополнительные сведения об использовании ключевого слова `virtual` см. в разделах [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) и [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="7a566-106">For more information about how to use the `virtual` keyword, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="remarks"></a>Примечания  
- При вызове виртуального метода тип времени выполнения объекта проверяется на переопределение члена. Вызывается переопределение члена в самом дальнем классе. Это может быть исходный член, если никакой производный класс не выполнял переопределение этого члена.  
+## <a name="remarks"></a><span data-ttu-id="7a566-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="7a566-107">Remarks</span></span>  
+ <span data-ttu-id="7a566-108">При вызове виртуального метода тип времени выполнения объекта проверяется на переопределение члена.</span><span class="sxs-lookup"><span data-stu-id="7a566-108">When a virtual method is invoked, the run-time type of the object is checked for an overriding member.</span></span> <span data-ttu-id="7a566-109">Вызывается переопределение члена в самом дальнем классе. Это может быть исходный член, если никакой производный класс не выполнял переопределение этого члена.</span><span class="sxs-lookup"><span data-stu-id="7a566-109">The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.</span></span>  
   
- По умолчанию методы не являются виртуальными. Такой метод переопределить невозможно.  
+ <span data-ttu-id="7a566-110">По умолчанию методы не являются виртуальными.</span><span class="sxs-lookup"><span data-stu-id="7a566-110">By default, methods are non-virtual.</span></span> <span data-ttu-id="7a566-111">Такой метод переопределить невозможно.</span><span class="sxs-lookup"><span data-stu-id="7a566-111">You cannot override a non-virtual method.</span></span>  
   
- Модификатор `virtual` нельзя использовать с модификаторами `static`, `abstract, private` или `override`. В следующем примере показано виртуальное свойство.  
+ <span data-ttu-id="7a566-112">Нельзя использовать `virtual` модификатор `static`, `abstract`, `private`, или `override` модификаторы.</span><span class="sxs-lookup"><span data-stu-id="7a566-112">You cannot use the `virtual` modifier with the `static`, `abstract`, `private`, or `override` modifiers.</span></span> <span data-ttu-id="7a566-113">В следующем примере показано виртуальное свойство.</span><span class="sxs-lookup"><span data-stu-id="7a566-113">The following example shows a virtual property:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
- Действие виртуальных свойств аналогично абстрактным методам, за исключением отличий в синтаксисе объявлений и вызовов.  
+ <span data-ttu-id="7a566-114">Действие виртуальных свойств аналогично абстрактным методам, за исключением отличий в синтаксисе объявлений и вызовов.</span><span class="sxs-lookup"><span data-stu-id="7a566-114">Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   Использование модификатора `virtual` в статическом свойстве является недопустимым.  
+-   <span data-ttu-id="7a566-115">Использование модификатора `virtual` в статическом свойстве является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="7a566-115">It is an error to use the `virtual` modifier on a static property.</span></span>  
   
--   Виртуальное наследуемое свойство может быть переопределено в производном классе путем включения объявления свойства, которое использует модификатор `override`.  
+-   <span data-ttu-id="7a566-116">Виртуальное наследуемое свойство может быть переопределено в производном классе путем включения объявления свойства, которое использует модификатор `override`.</span><span class="sxs-lookup"><span data-stu-id="7a566-116">A virtual inherited property can be overridden in a derived class by including a property declaration that uses the `override` modifier.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере класс `Shape` содержит две координаты `x`, `y` и виртуальный метод `Area()`. Различные классы фигур, такие как `Circle`, `Cylinder` и `Sphere`, наследуют класс `Shape`, и для каждой фигуры вычисляется площадь поверхности. Каждый производный класс обладает собственной реализацией переопределения метода `Area()`.  
+## <a name="example"></a><span data-ttu-id="7a566-117">Пример</span><span class="sxs-lookup"><span data-stu-id="7a566-117">Example</span></span>  
+ <span data-ttu-id="7a566-118">В этом примере класс `Shape` содержит две координаты `x`, `y` и виртуальный метод `Area()`.</span><span class="sxs-lookup"><span data-stu-id="7a566-118">In this example, the `Shape` class contains the two coordinates `x`, `y`, and the `Area()` virtual method.</span></span> <span data-ttu-id="7a566-119">Различные классы фигур, такие как `Circle`, `Cylinder` и `Sphere`, наследуют класс `Shape`, и для каждой фигуры вычисляется площадь поверхности.</span><span class="sxs-lookup"><span data-stu-id="7a566-119">Different shape classes such as `Circle`, `Cylinder`, and `Sphere` inherit the `Shape` class, and the surface area is calculated for each figure.</span></span> <span data-ttu-id="7a566-120">Каждый производный класс обладает собственной реализацией переопределения метода `Area()`.</span><span class="sxs-lookup"><span data-stu-id="7a566-120">Each derived class has it own override implementation of `Area()`.</span></span>  
   
- Обратите внимание, что наследуемые классы `Circle`, `Sphere` и `Cylinder` используют конструкторы, которые инициализируют базовый класс, как показано в следующем объявлении.  
+ <span data-ttu-id="7a566-121">Обратите внимание, что наследуемые классы `Circle`, `Sphere` и `Cylinder` используют конструкторы, которые инициализируют базовый класс, как показано в следующем объявлении.</span><span class="sxs-lookup"><span data-stu-id="7a566-121">Notice that the inherited classes `Circle`, `Sphere`, and `Cylinder` all use constructors that initialize the base class, as shown in the following declaration.</span></span>  
   
 ```  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   
- Следующая программа вычисляет и отображает соответствующую область для каждой фигуры путем вызова нужной реализации метода `Area()` в соответствии с объектом, связанным с методом.  
+ <span data-ttu-id="7a566-122">Следующая программа вычисляет и отображает соответствующую область для каждой фигуры путем вызова нужной реализации метода `Area()` в соответствии с объектом, связанным с методом.</span><span class="sxs-lookup"><span data-stu-id="7a566-122">The following program calculates and displays the appropriate area for each figure by invoking the appropriate implementation of the `Area()` method, according to the object that is associated with the method.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="7a566-123">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="7a566-123">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [new](../../../csharp/language-reference/keywords/new.md)
-
+## <a name="see-also"></a><span data-ttu-id="7a566-124">См. также</span><span class="sxs-lookup"><span data-stu-id="7a566-124">See Also</span></span>  
+ [<span data-ttu-id="7a566-125">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="7a566-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="7a566-126">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="7a566-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="7a566-127">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="7a566-127">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="7a566-128">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="7a566-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="7a566-129">Полиморфизм</span><span class="sxs-lookup"><span data-stu-id="7a566-129">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [<span data-ttu-id="7a566-130">abstract</span><span class="sxs-lookup"><span data-stu-id="7a566-130">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
+ [<span data-ttu-id="7a566-131">override</span><span class="sxs-lookup"><span data-stu-id="7a566-131">override</span></span>](../../../csharp/language-reference/keywords/override.md)  
+ [<span data-ttu-id="7a566-132">new</span><span class="sxs-lookup"><span data-stu-id="7a566-132">new</span></span>](../../../csharp/language-reference/keywords/new.md)

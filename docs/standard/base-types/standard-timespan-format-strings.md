@@ -1,137 +1,143 @@
 ---
-title: "Строки стандартного формата TimeSpan | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "описатели формата, стандартный интервал времени"
-  - "описатели формата, интервалы времени"
-  - "строки формата"
-  - "форматирование [платформа .NET Framework], время"
-  - "форматирование [платформа .NET Framework], интервалы времени"
-  - "строки стандартного формата, интервалы времени"
-  - "строки стандартного формата интервалов времени"
-  - "строки стандартного формата TimeSpan"
-  - "время [платформа .NET Framework], форматирование"
-  - "интервалы времени [.NET Framework], форматирование"
+title: "Строки стандартного формата TimeSpan"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- format specifiers, standard time interval
+- format strings
+- standard time interval format strings
+- standard format strings, time intervals
+- format specifiers, time intervals
+- time intervals [.NET Framework], formatting
+- time [.NET Framework], formatting
+- formatting [.NET Framework], time
+- standard TimeSpan format strings
+- formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Строки стандартного формата TimeSpan
-Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования.  Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>.  Для получения дополнительной информации см. [Строки пользовательского формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+# <a name="standard-timespan-format-strings"></a><span data-ttu-id="df1fb-102">Строки стандартного формата TimeSpan</span><span class="sxs-lookup"><span data-stu-id="df1fb-102">Standard TimeSpan Format Strings</span></span>
+<span data-ttu-id="df1fb-103"><a name="Top"></a>Стандартный <xref:System.TimeSpan> строка форматирования использует один описатель формата для определения текстового представления <xref:System.TimeSpan> значение, полученное в результате операции форматирования.</span><span class="sxs-lookup"><span data-stu-id="df1fb-103"><a name="Top"></a> A standard <xref:System.TimeSpan> format string uses a single format specifier to define the text representation of a <xref:System.TimeSpan> value that results from a formatting operation.</span></span> <span data-ttu-id="df1fb-104">Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="df1fb-104">Any format string that contains more than one character, including white space, is interpreted as a custom <xref:System.TimeSpan> format string.</span></span> <span data-ttu-id="df1fb-105">Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).</span><span class="sxs-lookup"><span data-stu-id="df1fb-105">For more information, see [Custom TimeSpan Format Strings](../../../docs/standard/base-types/custom-timespan-format-strings.md) .</span></span>  
   
- Строковые представления значений <xref:System.TimeSpan> создаются вызовами перегрузок метода <xref:System.TimeSpan.ToString%2A?displayProperty=fullName>, а также методами, поддерживающими составное форматирование, такими как <xref:System.String.Format%2A?displayProperty=fullName>.  Дополнительные сведения см. в разделах [Типы форматирования](../../../docs/standard/base-types/formatting-types.md) и [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md).  В следующем примере показано использование строк стандартного формата в операциях форматирования.  
+ <span data-ttu-id="df1fb-106">Строковые представления значений <xref:System.TimeSpan> создаются вызовами перегрузок метода <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, а также методами, поддерживающими составное форматирование, такими как <xref:System.String.Format%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="df1fb-106">The string representations of <xref:System.TimeSpan> values are produced by calls to the overloads of the <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> method, as well as by methods that support composite formatting, such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="df1fb-107">Дополнительные сведения см. в разделах [Типы форматирования](../../../docs/standard/base-types/formatting-types.md) и [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md).</span><span class="sxs-lookup"><span data-stu-id="df1fb-107">For more information, see [Formatting Types](../../../docs/standard/base-types/formatting-types.md) and [Composite Formatting](../../../docs/standard/base-types/composite-formatting.md).</span></span> <span data-ttu-id="df1fb-108">В следующем примере показано использование строк стандартного формата в операциях форматирования.</span><span class="sxs-lookup"><span data-stu-id="df1fb-108">The following example illustrates the use of standard format strings in formatting operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- Строки стандартного формата <xref:System.TimeSpan> также используется методами <xref:System.TimeSpan.ParseExact%2A?displayProperty=fullName> и <xref:System.TimeSpan.TryParseExact%2A?displayProperty=fullName> для определения необходимого формата входных строк для операций анализа.  \(Анализ преобразует строковое представление значения в это значение\). В следующем примере показано использование строк стандартного формата в операциях анализа.  
+ <span data-ttu-id="df1fb-109">Строки стандартного формата <xref:System.TimeSpan> также используется методами <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> и <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> для определения необходимого формата входных строк для операций анализа.</span><span class="sxs-lookup"><span data-stu-id="df1fb-109">Standard <xref:System.TimeSpan> format strings are also used by the <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> and <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> methods to define the required format of input strings for parsing operations.</span></span> <span data-ttu-id="df1fb-110">(Анализ преобразует строковое представление значения в это значение). В следующем примере показано использование строк стандартного формата в операциях анализа.</span><span class="sxs-lookup"><span data-stu-id="df1fb-110">(Parsing converts the string representation of a value to that value.) The following example illustrates the use of standard format strings in parsing operations.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> В следующей таблице перечислены описатели стандартного формата временных интервалов.  
+<span data-ttu-id="df1fb-111"><a name="top"></a> В следующей таблице перечислены описатели стандартного формата временных интервалов.</span><span class="sxs-lookup"><span data-stu-id="df1fb-111"><a name="top"></a> The following table lists the standard time interval format specifiers.</span></span>  
   
-|Описатель формата|Имя|Описание|Примеры|  
-|-----------------------|---------|--------------|-------------|  
-|"c"|Постоянный \(инвариантный\) формат|Этот описатель не учитывает язык и региональные параметры.  Он принимает форму `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> \(Строки формата "t" и "T" дают одинаковые результаты\).<br /><br /> Дополнительная информация: [Описатель постоянного \("c"\) формата](#Constant).|`TimeSpan.Zero` \-\> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` \-\> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` \-\> 3.17:25:30.5000000|  
-|"g"|Общий короткий формат|Этот описатель выводит только необходимые данные.  Он зависит от языка и региональных параметров и принимает форму `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Дополнительная информация: [Описатель общего короткого \("g"\) формата](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50.5 \(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` \-\> 1:3:16:50,5 \(fr\-FR\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50.599 \(en\-US\)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` \-\> 1:3:16:50,599 \(fr\-FR\)|  
-|"G"|Общий длинный формат|Этот описатель всегда отображает дни и семь цифр после запятой.  Он зависит от языка и региональных параметров и принимает форму `[-]d’:’hh’:’mm’:’ss.fffffff`.<br /><br /> Дополнительная информация: [Описатель общего длинного \("G"\) формата](#GeneralLong).|`New TimeSpan(18, 30, 0)` \-\> 0:18:30:00.0000000 \(en\-US\)<br /><br /> `New TimeSpan(18, 30, 0)` \-\> 0:18:30:00,0000000 \(fr\-FR\)|  
+|<span data-ttu-id="df1fb-112">Описатель формата</span><span class="sxs-lookup"><span data-stu-id="df1fb-112">Format specifier</span></span>|<span data-ttu-id="df1fb-113">Имя</span><span class="sxs-lookup"><span data-stu-id="df1fb-113">Name</span></span>|<span data-ttu-id="df1fb-114">Описание</span><span class="sxs-lookup"><span data-stu-id="df1fb-114">Description</span></span>|<span data-ttu-id="df1fb-115">Примеры</span><span class="sxs-lookup"><span data-stu-id="df1fb-115">Examples</span></span>|  
+|----------------------|----------|-----------------|--------------|  
+|<span data-ttu-id="df1fb-116">"c"</span><span class="sxs-lookup"><span data-stu-id="df1fb-116">"c"</span></span>|<span data-ttu-id="df1fb-117">Постоянный (инвариантный) формат</span><span class="sxs-lookup"><span data-stu-id="df1fb-117">Constant (invariant) format</span></span>|<span data-ttu-id="df1fb-118">Этот описатель не учитывает язык и региональные параметры.</span><span class="sxs-lookup"><span data-stu-id="df1fb-118">This specifier is not culture-sensitive.</span></span> <span data-ttu-id="df1fb-119">Он принимает форму `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.</span><span class="sxs-lookup"><span data-stu-id="df1fb-119">It takes the form `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.</span></span><br /><br /> <span data-ttu-id="df1fb-120">(Строки формата "t" и "T" дают одинаковые результаты).</span><span class="sxs-lookup"><span data-stu-id="df1fb-120">(The "t" and "T" format strings produce the same results.)</span></span><br /><br /> <span data-ttu-id="df1fb-121">Дополнительные сведения см. в подразделе [Описатель формата константы (c)](#Constant).</span><span class="sxs-lookup"><span data-stu-id="df1fb-121">More information: [The Constant ("c") Format Specifier](#Constant).</span></span>|<span data-ttu-id="df1fb-122">`TimeSpan.Zero` -> 00:00:00</span><span class="sxs-lookup"><span data-stu-id="df1fb-122">`TimeSpan.Zero` -> 00:00:00</span></span><br /><br /> <span data-ttu-id="df1fb-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span><span class="sxs-lookup"><span data-stu-id="df1fb-123">`New TimeSpan(0, 0, 30, 0)` -> 00:30:00</span></span><br /><br /> <span data-ttu-id="df1fb-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span><span class="sxs-lookup"><span data-stu-id="df1fb-124">`New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000</span></span>|  
+|<span data-ttu-id="df1fb-125">"g"</span><span class="sxs-lookup"><span data-stu-id="df1fb-125">"g"</span></span>|<span data-ttu-id="df1fb-126">Общий короткий формат</span><span class="sxs-lookup"><span data-stu-id="df1fb-126">General short format</span></span>|<span data-ttu-id="df1fb-127">Этот описатель выводит только необходимые данные.</span><span class="sxs-lookup"><span data-stu-id="df1fb-127">This specifier outputs only what is needed.</span></span> <span data-ttu-id="df1fb-128">Он зависит от языка и региональных параметров и принимает форму `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.</span><span class="sxs-lookup"><span data-stu-id="df1fb-128">It is culture-sensitive and takes the form `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.</span></span><br /><br /> <span data-ttu-id="df1fb-129">Дополнительные сведения см. в подразделе [Описатель общего короткого формата (g)](#GeneralShort).</span><span class="sxs-lookup"><span data-stu-id="df1fb-129">More information: [The General Short ("g") Format Specifier](#GeneralShort).</span></span>|<span data-ttu-id="df1fb-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)</span><span class="sxs-lookup"><span data-stu-id="df1fb-130">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)</span></span><br /><br /> <span data-ttu-id="df1fb-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="df1fb-131">`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)</span></span><br /><br /> <span data-ttu-id="df1fb-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)</span><span class="sxs-lookup"><span data-stu-id="df1fb-132">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)</span></span><br /><br /> <span data-ttu-id="df1fb-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="df1fb-133">`New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)</span></span>|  
+|<span data-ttu-id="df1fb-134">"G"</span><span class="sxs-lookup"><span data-stu-id="df1fb-134">"G"</span></span>|<span data-ttu-id="df1fb-135">Общий длинный формат</span><span class="sxs-lookup"><span data-stu-id="df1fb-135">General long format</span></span>|<span data-ttu-id="df1fb-136">Этот описатель всегда отображает дни и семь цифр после запятой.</span><span class="sxs-lookup"><span data-stu-id="df1fb-136">This specifier always outputs days and seven fractional digits.</span></span> <span data-ttu-id="df1fb-137">Он зависит от языка и региональных параметров и принимает форму `[-]d’:’hh’:’mm’:’ss.fffffff`.</span><span class="sxs-lookup"><span data-stu-id="df1fb-137">It is culture-sensitive and takes the form `[-]d’:’hh’:’mm’:’ss.fffffff`.</span></span><br /><br /> <span data-ttu-id="df1fb-138">Дополнительные сведения см. в подразделе [Описатель общего длинного формата (G)](#GeneralLong).</span><span class="sxs-lookup"><span data-stu-id="df1fb-138">More information: [The General Long ("G") Format Specifier](#GeneralLong).</span></span>|<span data-ttu-id="df1fb-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)</span><span class="sxs-lookup"><span data-stu-id="df1fb-139">`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)</span></span><br /><br /> <span data-ttu-id="df1fb-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="df1fb-140">`New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)</span></span>|  
   
 <a name="Constant"></a>   
-## Описатель постоянного \("c"\) формата.  
- Описатель формата "c" возвращает строковое представление значения <xref:System.TimeSpan> в следующем виде:  
+## <a name="the-constant-c-format-specifier"></a><span data-ttu-id="df1fb-141">Описатель постоянного ("c") формата.</span><span class="sxs-lookup"><span data-stu-id="df1fb-141">The Constant ("c") Format Specifier</span></span>  
+ <span data-ttu-id="df1fb-142">Описатель формата "c" возвращает строковое представление значения <xref:System.TimeSpan> в следующем виде:</span><span class="sxs-lookup"><span data-stu-id="df1fb-142">The "c" format specifier returns the string representation of a <xref:System.TimeSpan> value in the following form:</span></span>  
   
- \[\-\]\[*д*.\]*чч*:*мм*:*сс*\[.*fffffff*\]  
+ <span data-ttu-id="df1fb-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span><span class="sxs-lookup"><span data-stu-id="df1fb-143">[-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]</span></span>  
   
- Элементы в квадратных скобках \(\[и\]\) являются необязательными.  Точка \(.\) и двоеточие \(:\) являются литеральными символами.  В следующей таблице описываются остальные элементы.  
+ <span data-ttu-id="df1fb-144">Элементы в квадратных скобках ([и]) являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="df1fb-144">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="df1fb-145">Точка (.) и двоеточие (:) являются литеральными символами.</span><span class="sxs-lookup"><span data-stu-id="df1fb-145">The period (.) and colon (:) are literal symbols.</span></span> <span data-ttu-id="df1fb-146">В следующей таблице описываются остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="df1fb-146">The following table describes the remaining elements.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|*\-*|Необязательный знак минуса, который означает отрицательный интервал времени.|  
-|*d*|Необязательное число дней без предшествующих нулей.|  
-|*hh*|Количество часов в диапазоне от "00" до "23".|  
-|*mm*|Количество минут в диапазоне от "00" до "59".|  
-|*ss*|Количество секунд в диапазоне от "0" до "59".|  
-|*fffffff*|Необязательная доля секунды.  Это значение может входит в диапазон от "0000001» \(от одной десятимиллионной секунды\) до "9999999" \(до 9 999 999 десятимиллионных секунды\).|  
+|<span data-ttu-id="df1fb-147">Элемент</span><span class="sxs-lookup"><span data-stu-id="df1fb-147">Element</span></span>|<span data-ttu-id="df1fb-148">Описание</span><span class="sxs-lookup"><span data-stu-id="df1fb-148">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="df1fb-149">Необязательный знак минуса, который означает отрицательный интервал времени.</span><span class="sxs-lookup"><span data-stu-id="df1fb-149">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="df1fb-150">*d*</span><span class="sxs-lookup"><span data-stu-id="df1fb-150">*d*</span></span>|<span data-ttu-id="df1fb-151">Необязательное число дней без предшествующих нулей.</span><span class="sxs-lookup"><span data-stu-id="df1fb-151">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="df1fb-152">*hh*</span><span class="sxs-lookup"><span data-stu-id="df1fb-152">*hh*</span></span>|<span data-ttu-id="df1fb-153">Количество часов в диапазоне от "00" до "23".</span><span class="sxs-lookup"><span data-stu-id="df1fb-153">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="df1fb-154">*mm*</span><span class="sxs-lookup"><span data-stu-id="df1fb-154">*mm*</span></span>|<span data-ttu-id="df1fb-155">Количество минут в диапазоне от "00" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-155">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="df1fb-156">*ss*</span><span class="sxs-lookup"><span data-stu-id="df1fb-156">*ss*</span></span>|<span data-ttu-id="df1fb-157">Количество секунд в диапазоне от "0" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-157">The number of seconds, which ranges from "0" to "59".</span></span>|  
+|<span data-ttu-id="df1fb-158">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="df1fb-158">*fffffff*</span></span>|<span data-ttu-id="df1fb-159">Необязательная доля секунды.</span><span class="sxs-lookup"><span data-stu-id="df1fb-159">The optional fractional portion of a second.</span></span>  <span data-ttu-id="df1fb-160">Это значение может входит в диапазон от "0000001» (от одной десятимиллионной секунды) до "9999999" (до 9 999 999 десятимиллионных секунды).</span><span class="sxs-lookup"><span data-stu-id="df1fb-160">Its value can range from "0000001" (one tick, or one ten-millionth of a second)  to "9999999" (9,999,999 ten-millionths of a second, or one second less one tick).</span></span>|  
   
- В отличие от описателей формата "g" и "G" описатель формата "c" не учитывает язык и региональные параметры.  Он создает строковое представление значения <xref:System.TimeSpan>, которое является инвариантным и общим для всех предыдущих версий платформы .NET Framework до выхода [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "  c" является строкой формата <xref:System.TimeSpan> по умолчанию. Метод <xref:System.TimeSpan.ToString?displayProperty=fullName> форматирует значение временного интервала с помощью строки формата "c".  
+ <span data-ttu-id="df1fb-161">В отличие от описателей формата "g" и "G" описатель формата "c" не учитывает язык и региональные параметры.</span><span class="sxs-lookup"><span data-stu-id="df1fb-161">Unlike the "g" and "G" format specifiers, the "c" format specifier is not culture-sensitive.</span></span> <span data-ttu-id="df1fb-162">Он создает строковое представление значения <xref:System.TimeSpan>, которое является инвариантным и общим для всех предыдущих версий платформы .NET Framework до выхода [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="df1fb-162">It produces the string representation of a <xref:System.TimeSpan> value that is invariant and that is common to all previous versions of the .NET Framework before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="df1fb-163">значение по умолчанию — «c» <xref:System.TimeSpan> строка формата; <xref:System.TimeSpan.ToString?displayProperty=nameWithType> метод форматирует значение временного интервала, используя строку формата «c».</span><span class="sxs-lookup"><span data-stu-id="df1fb-163">"c" is the default <xref:System.TimeSpan> format string; the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method formats a time interval value by using the "c" format string.</span></span>  
   
 > [!NOTE]
->  <xref:System.TimeSpan> также поддерживает строки стандартного формата "t" и "T", которые идентичны поведению строки стандартного формата "c".  
+>  <span data-ttu-id="df1fb-164"><xref:System.TimeSpan> также поддерживает строки стандартного формата "t" и "T", которые идентичны поведению строки стандартного формата "c".</span><span class="sxs-lookup"><span data-stu-id="df1fb-164"><xref:System.TimeSpan> also supports the "t" and "T" standard format strings, which are identical in behavior to the "c" standard format string.</span></span>  
   
- В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.  В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "c".  
+ <span data-ttu-id="df1fb-165">В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.</span><span class="sxs-lookup"><span data-stu-id="df1fb-165">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="df1fb-166">В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "c".</span><span class="sxs-lookup"><span data-stu-id="df1fb-166">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "c" format specifier.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
   
- [К таблице](#Top)  
+ [<span data-ttu-id="df1fb-167">К таблице</span><span class="sxs-lookup"><span data-stu-id="df1fb-167">Back to table</span></span>](#Top)  
   
 <a name="GeneralShort"></a>   
-## Описатель общего короткого \("g"\) формата  
- Описатель формата "g" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в компактной форме, включая только необходимые элементы.  Представление имеет следующую форму:  
+## <a name="the-general-short-g-format-specifier"></a><span data-ttu-id="df1fb-168">Описатель общего короткого ("g") формата</span><span class="sxs-lookup"><span data-stu-id="df1fb-168">The General Short ("g") Format Specifier</span></span>  
+ <span data-ttu-id="df1fb-169">Описатель формата "g" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в компактной форме, включая только необходимые элементы.</span><span class="sxs-lookup"><span data-stu-id="df1fb-169">The "g" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a compact form by including only the elements that are necessary.</span></span> <span data-ttu-id="df1fb-170">Представление имеет следующую форму:</span><span class="sxs-lookup"><span data-stu-id="df1fb-170">It has the following form:</span></span>  
   
- \[\-\]\[*д*.\]*ч*:*мм*:*сс*\[.*fffffff*\]  
+ <span data-ttu-id="df1fb-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span><span class="sxs-lookup"><span data-stu-id="df1fb-171">[-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]</span></span>  
   
- Элементы в квадратных скобках \(\[и\]\) являются необязательными.  Двоеточие \(:\) является литеральным символом.  В следующей таблице описываются остальные элементы.  
+ <span data-ttu-id="df1fb-172">Элементы в квадратных скобках ([и]) являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="df1fb-172">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="df1fb-173">Двоеточие (:) является литеральным символом.</span><span class="sxs-lookup"><span data-stu-id="df1fb-173">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="df1fb-174">В следующей таблице описываются остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="df1fb-174">The following table describes the remaining elements.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|*\-*|Необязательный знак минуса, который означает отрицательный интервал времени.|  
-|*d*|Необязательное число дней без предшествующих нулей.|  
-|*h*|Количество часов в диапазоне от "0" до "23" без предшествующих нулей.|  
-|*mm*|Количество минут в диапазоне от "00" до "59".|  
-|*ss*|Количество секунд в диапазоне от "00" до "59".|  
-|*.*|Разделитель долей секунд.  Является эквивалентом для свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров без переопределения пользователем.|  
-|*FFFFFFF*|Доли секунд.  Отображается как можно меньше цифр.|  
+|<span data-ttu-id="df1fb-175">Элемент</span><span class="sxs-lookup"><span data-stu-id="df1fb-175">Element</span></span>|<span data-ttu-id="df1fb-176">Описание</span><span class="sxs-lookup"><span data-stu-id="df1fb-176">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="df1fb-177">Необязательный знак минуса, который означает отрицательный интервал времени.</span><span class="sxs-lookup"><span data-stu-id="df1fb-177">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="df1fb-178">*d*</span><span class="sxs-lookup"><span data-stu-id="df1fb-178">*d*</span></span>|<span data-ttu-id="df1fb-179">Необязательное число дней без предшествующих нулей.</span><span class="sxs-lookup"><span data-stu-id="df1fb-179">The optional number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="df1fb-180">*h*</span><span class="sxs-lookup"><span data-stu-id="df1fb-180">*h*</span></span>|<span data-ttu-id="df1fb-181">Количество часов в диапазоне от "0" до "23" без предшествующих нулей.</span><span class="sxs-lookup"><span data-stu-id="df1fb-181">The number of hours, which ranges from "0" to "23", with no leading zeros.</span></span>|  
+|<span data-ttu-id="df1fb-182">*mm*</span><span class="sxs-lookup"><span data-stu-id="df1fb-182">*mm*</span></span>|<span data-ttu-id="df1fb-183">Количество минут в диапазоне от "00" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-183">The number of minutes, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="df1fb-184">*ss*</span><span class="sxs-lookup"><span data-stu-id="df1fb-184">*ss*</span></span>|<span data-ttu-id="df1fb-185">Количество секунд в диапазоне от "00" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-185">The number of seconds, which ranges from "00" to "59"..</span></span>|  
+|<span data-ttu-id="df1fb-186">*.*</span><span class="sxs-lookup"><span data-stu-id="df1fb-186">*.*</span></span>|<span data-ttu-id="df1fb-187">Разделитель долей секунд.</span><span class="sxs-lookup"><span data-stu-id="df1fb-187">The fractional seconds separator.</span></span> <span data-ttu-id="df1fb-188">Является эквивалентом для свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров без переопределения пользователем.</span><span class="sxs-lookup"><span data-stu-id="df1fb-188">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="df1fb-189">*FFFFFFF*</span><span class="sxs-lookup"><span data-stu-id="df1fb-189">*FFFFFFF*</span></span>|<span data-ttu-id="df1fb-190">Доли секунд.</span><span class="sxs-lookup"><span data-stu-id="df1fb-190">The fractional seconds.</span></span> <span data-ttu-id="df1fb-191">Отображается как можно меньше цифр.</span><span class="sxs-lookup"><span data-stu-id="df1fb-191">As few digits as possible are displayed.</span></span>|  
   
- Как и описатель формата "G", описатель формата "g" является локализуемым.  Его разделитель долей секунд зависит от текущего языка и региональных параметров или свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров.  
+ <span data-ttu-id="df1fb-192">Как и описатель формата "G", описатель формата "g" является локализуемым.</span><span class="sxs-lookup"><span data-stu-id="df1fb-192">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="df1fb-193">Его разделитель долей секунд зависит от текущего языка и региональных параметров или свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="df1fb-193">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.  В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "g".  Кроме того, он форматирует значение <xref:System.TimeSpan> с использованием соглашений о форматировании текущего системного языка и региональных параметров \(в данном случае это английский язык, США или en\-US\) и французского языка, Франция \(fr\-FR\).  
+ <span data-ttu-id="df1fb-194">В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.</span><span class="sxs-lookup"><span data-stu-id="df1fb-194">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="df1fb-195">В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "g".</span><span class="sxs-lookup"><span data-stu-id="df1fb-195">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "g" format specifier.</span></span> <span data-ttu-id="df1fb-196">Кроме того, он форматирует значение <xref:System.TimeSpan> с использованием соглашений о форматировании текущего системного языка и региональных параметров (в данном случае это английский язык, США или en-US) и французского языка, Франция (fr-FR).</span><span class="sxs-lookup"><span data-stu-id="df1fb-196">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
   
- [К таблице](#Top)  
+ [<span data-ttu-id="df1fb-197">К таблице</span><span class="sxs-lookup"><span data-stu-id="df1fb-197">Back to table</span></span>](#Top)  
   
 <a name="GeneralLong"></a>   
-## Описатель общего длинного \("G"\) формата  
- Описатель формата "G" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в длинной форме, которая всегда включает и дни, и доли секунд.  Строка, которая является результатом описателя стандартного формата "G" имеет следующий вид:  
+## <a name="the-general-long-g-format-specifier"></a><span data-ttu-id="df1fb-198">Описатель общего длинного ("G") формата</span><span class="sxs-lookup"><span data-stu-id="df1fb-198">The General Long ("G") Format Specifier</span></span>  
+ <span data-ttu-id="df1fb-199">Описатель формата "G" <xref:System.TimeSpan> возвращает строковое представление значения <xref:System.TimeSpan> в длинной форме, которая всегда включает и дни, и доли секунд.</span><span class="sxs-lookup"><span data-stu-id="df1fb-199">The "G" <xref:System.TimeSpan> format specifier returns the string representation of a <xref:System.TimeSpan> value in a long form that always includes both days and fractional seconds.</span></span> <span data-ttu-id="df1fb-200">Строка, которая является результатом описателя стандартного формата "G" имеет следующий вид:</span><span class="sxs-lookup"><span data-stu-id="df1fb-200">The string that results from the "G" standard format specifier has the following form:</span></span>  
   
- \[\-\]*д*.\]*чч*:*мм*:*сс*\[.*fffffff*\]  
+ <span data-ttu-id="df1fb-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span><span class="sxs-lookup"><span data-stu-id="df1fb-201">[-]*d*:*hh*:*mm*:*ss*.*fffffff*</span></span>  
   
- Элементы в квадратных скобках \(\[и\]\) являются необязательными.  Двоеточие \(:\) является литеральным символом.  В следующей таблице описываются остальные элементы.  
+ <span data-ttu-id="df1fb-202">Элементы в квадратных скобках ([и]) являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="df1fb-202">Elements in square brackets ([ and ]) are optional.</span></span> <span data-ttu-id="df1fb-203">Двоеточие (:) является литеральным символом.</span><span class="sxs-lookup"><span data-stu-id="df1fb-203">The colon (:) is a literal symbol.</span></span> <span data-ttu-id="df1fb-204">В следующей таблице описываются остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="df1fb-204">The following table describes the remaining elements.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|*\-*|Необязательный знак минуса, который означает отрицательный интервал времени.|  
-|*d*|Число дней без предшествующих нулей.|  
-|*hh*|Количество часов в диапазоне от "00" до "23".|  
-|*mm*|Количество минут в диапазоне от "00" до "59".|  
-|*ss*|Количество секунд в диапазоне от "00" до "59".|  
-|*.*|Разделитель долей секунд.  Является эквивалентом для свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров без переопределения пользователем.|  
-|*fffffff*|Доли секунд.|  
+|<span data-ttu-id="df1fb-205">Элемент</span><span class="sxs-lookup"><span data-stu-id="df1fb-205">Element</span></span>|<span data-ttu-id="df1fb-206">Описание</span><span class="sxs-lookup"><span data-stu-id="df1fb-206">Description</span></span>|  
+|-------------|-----------------|  
+|*-*|<span data-ttu-id="df1fb-207">Необязательный знак минуса, который означает отрицательный интервал времени.</span><span class="sxs-lookup"><span data-stu-id="df1fb-207">An optional negative sign, which indicates a negative time interval.</span></span>|  
+|<span data-ttu-id="df1fb-208">*d*</span><span class="sxs-lookup"><span data-stu-id="df1fb-208">*d*</span></span>|<span data-ttu-id="df1fb-209">Число дней без предшествующих нулей.</span><span class="sxs-lookup"><span data-stu-id="df1fb-209">The number of days, with no leading zeros.</span></span>|  
+|<span data-ttu-id="df1fb-210">*hh*</span><span class="sxs-lookup"><span data-stu-id="df1fb-210">*hh*</span></span>|<span data-ttu-id="df1fb-211">Количество часов в диапазоне от "00" до "23".</span><span class="sxs-lookup"><span data-stu-id="df1fb-211">The number of hours, which ranges from "00" to "23".</span></span>|  
+|<span data-ttu-id="df1fb-212">*mm*</span><span class="sxs-lookup"><span data-stu-id="df1fb-212">*mm*</span></span>|<span data-ttu-id="df1fb-213">Количество минут в диапазоне от "00" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-213">The number of minutes, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="df1fb-214">*ss*</span><span class="sxs-lookup"><span data-stu-id="df1fb-214">*ss*</span></span>|<span data-ttu-id="df1fb-215">Количество секунд в диапазоне от "00" до "59".</span><span class="sxs-lookup"><span data-stu-id="df1fb-215">The number of seconds, which ranges from "00" to "59".</span></span>|  
+|<span data-ttu-id="df1fb-216">*.*</span><span class="sxs-lookup"><span data-stu-id="df1fb-216">*.*</span></span>|<span data-ttu-id="df1fb-217">Разделитель долей секунд.</span><span class="sxs-lookup"><span data-stu-id="df1fb-217">The fractional seconds separator.</span></span> <span data-ttu-id="df1fb-218">Является эквивалентом для свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров без переопределения пользователем.</span><span class="sxs-lookup"><span data-stu-id="df1fb-218">It is equivalent to the specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property without user overrides.</span></span>|  
+|<span data-ttu-id="df1fb-219">*fffffff*</span><span class="sxs-lookup"><span data-stu-id="df1fb-219">*fffffff*</span></span>|<span data-ttu-id="df1fb-220">Доли секунд.</span><span class="sxs-lookup"><span data-stu-id="df1fb-220">The fractional seconds.</span></span>|  
   
- Как и описатель формата "G", описатель формата "g" является локализуемым.  Его разделитель долей секунд зависит от текущего языка и региональных параметров или свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров.  
+ <span data-ttu-id="df1fb-221">Как и описатель формата "G", описатель формата "g" является локализуемым.</span><span class="sxs-lookup"><span data-stu-id="df1fb-221">Like the "G" format specifier, the "g" format specifier is localized.</span></span> <span data-ttu-id="df1fb-222">Его разделитель долей секунд зависит от текущего языка и региональных параметров или свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> указанного языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="df1fb-222">Its fractional seconds separator is based on either the current culture or a specified culture's <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> property.</span></span>  
   
- В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.  В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "G".  Кроме того, он форматирует значение <xref:System.TimeSpan> с использованием соглашений о форматировании текущего системного языка и региональных параметров \(в данном случае это английский язык, США или en\-US\) и французского языка, Франция \(fr\-FR\).  
+ <span data-ttu-id="df1fb-223">В следующем примере создаются два объекта <xref:System.TimeSpan>, которые используются для выполнения арифметических операций, после чего выводится результат.</span><span class="sxs-lookup"><span data-stu-id="df1fb-223">The following example instantiates two <xref:System.TimeSpan> objects, uses them to perform arithmetic operations, and displays the result.</span></span> <span data-ttu-id="df1fb-224">В каждом случае используется составное форматирование для отображения значения <xref:System.TimeSpan> с помощью описателя формата "G".</span><span class="sxs-lookup"><span data-stu-id="df1fb-224">In each case, it uses composite formatting to display the <xref:System.TimeSpan> value by using the "G" format specifier.</span></span> <span data-ttu-id="df1fb-225">Кроме того, он форматирует значение <xref:System.TimeSpan> с использованием соглашений о форматировании текущего системного языка и региональных параметров (в данном случае это английский язык, США или en-US) и французского языка, Франция (fr-FR).</span><span class="sxs-lookup"><span data-stu-id="df1fb-225">In addition, it formats the <xref:System.TimeSpan> value by using the formatting conventions of the current system culture (which, in this case, is English - United States or en-US) and the French - France (fr-FR) culture.</span></span>  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
   
- [К таблице](#Top)  
+ [<span data-ttu-id="df1fb-226">К таблице</span><span class="sxs-lookup"><span data-stu-id="df1fb-226">Back to table</span></span>](#Top)  
   
-## См. также  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)   
- [Строки пользовательского формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)   
- [Разбор строк](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a><span data-ttu-id="df1fb-227">См. также</span><span class="sxs-lookup"><span data-stu-id="df1fb-227">See Also</span></span>  
+ [<span data-ttu-id="df1fb-228">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="df1fb-228">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ [<span data-ttu-id="df1fb-229">Строки настраиваемого формата TimeSpan</span><span class="sxs-lookup"><span data-stu-id="df1fb-229">Custom TimeSpan Format Strings</span></span>](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+ [<span data-ttu-id="df1fb-230">Анализ строк в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="df1fb-230">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)

@@ -1,74 +1,80 @@
 ---
-title: "Escape-знаки в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, escape-знаки"
-  - "знаки, escape-знаки"
-  - "конструкции, escape-знаки"
-  - "escape-знаки"
-  - "регулярные выражения, escape-знаки"
-  - "шаблоны для замены"
-  - "знаки без escape-знака"
+title: "Escape-знаки в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- unescaped characters
+- replacement patterns
+- characters, escapes
+- regular expressions, character escapes
+- escape characters
+- .NET Framework regular expressions, character escapes
+- constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: 31
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 29
+caps.latest.revision: "31"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0149bd97b997da8b29e225a7a1aeda17a6ffa226
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Escape-знаки в регулярных выражениях
-Обратная косая черта \(\\\) в регулярном выражении имеет одно из указанных ниже значений.  
+# <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="2bd8b-102">Escape-знаки в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="2bd8b-102">Character Escapes in Regular Expressions</span></span>
+<span data-ttu-id="2bd8b-103">Обратная косая черта (\\) в регулярном выражении может означать следующее.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  
   
--   Следующий за ней символ является специальным, как показано в таблице в следующем разделе.  Например, `\b` — это привязка, указывающая, что сопоставление регулярного выражения должно начинаться на границе слова, `\t` представляет знак табуляции, а `\x020` соответствует пробелу.  
+-   <span data-ttu-id="2bd8b-104">Следующий за ней символ является специальным, как показано в таблице в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-104">The character that follows it is a special character, as shown in the table in the following section.</span></span> <span data-ttu-id="2bd8b-105">Например, `\b` — это привязка, указывающая, что сопоставление регулярного выражения должно начинаться на границе слова, `\t` представляет знак табуляции, а `\x020` соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-105">For example, `\b` is an anchor that indicates that a regular expression match should begin on a word boundary, `\t` represents a tab, and `\x020` represents a space.</span></span>  
   
--   Символ, который в противном случае интерпретировался бы как неэкранированная языковая конструкция, следует интерпретировать буквально.  Например, с фигурной скобки \(`{`\) начинается определение квантификатора, однако обратная косая черта, за которой следует фигурная скобка, \(`\{`\) указывает, что обработчик регулярных выражений должен искать саму фигурную скобку.  Аналогичным образом, одиночная обратная косая черта служит escape\-символом, отмечающим начало языковой конструкции, а две обратные косые черты \(`\\`\) указывают, что обработчик регулярных выражений должен поставить им в соответствие обратную косую черту.  
+-   <span data-ttu-id="2bd8b-106">Символ, который в противном случае интерпретировался бы как неэкранированная языковая конструкция, следует интерпретировать буквально.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-106">A character that otherwise would be interpreted as an unescaped language construct should be interpreted literally.</span></span> <span data-ttu-id="2bd8b-107">Например, с фигурной скобки (`{`) начинается определение квантификатора, однако обратная косая черта, за которой следует фигурная скобка, (`\{`) указывает, что обработчик регулярных выражений должен искать саму фигурную скобку.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-107">For example, a brace (`{`) begins the definition of a quantifier, but a backslash followed by a brace (`\{`) indicates that the regular expression engine should match the brace.</span></span> <span data-ttu-id="2bd8b-108">Аналогичным образом, одиночная обратная косая черта служит escape-символом, отмечающим начало языковой конструкции, а две обратные косые черты (`\\`) указывают, что обработчик регулярных выражений должен поставить им в соответствие обратную косую черту.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-108">Similarly, a single backslash marks the beginning of an escaped language construct, but two backslashes (`\\`) indicate that the regular expression engine should match the backslash.</span></span>  
   
 > [!NOTE]
->  Escape\-символы распознаются в шаблонах регулярных выражений, но не в шаблонах замены.  
+>  <span data-ttu-id="2bd8b-109">Escape-символы распознаются в шаблонах регулярных выражений, но не в шаблонах замены.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-109">Character escapes are recognized in regular expression patterns but not in replacement patterns.</span></span>  
   
-## Escape\-последовательности в .NET Framework  
- В таблице ниже перечислены escape\-последовательности, поддерживаемые регулярными выражениями в .NET Framework.  
+## <a name="character-escapes-in-net"></a><span data-ttu-id="2bd8b-110">Escape-знаки в NET</span><span class="sxs-lookup"><span data-stu-id="2bd8b-110">Character Escapes in .NET</span></span>  
+ <span data-ttu-id="2bd8b-111">В таблице ниже перечислены escape-последовательности, поддерживаемые регулярными выражениями в .NET.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-111">The following table lists the character escapes supported by regular expressions in .NET.</span></span>  
   
-|Символ или последовательность|Описание|  
-|-----------------------------------|--------------|  
-|Все символы, за исключением следующих:<br /><br /> .  $ ^ { \[ \( &#124; \) \* \+ ?  \\|Символы, не перечисленные в столбце **Символ или последовательность**, не имеют особого значения в регулярных выражениях и соответствуют сами себе.<br /><br /> Символы, включенные в столбец **Символ или последовательность**, являются специальными языковыми элементами регулярных выражений.  Для сопоставления с ними в регулярном выражении их необходимо экранировать или включить в [группу символов ppositive](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  Например, регулярное выражение `\$\d+` или `[$]\d+` соответствует "$1200".|  
-|`\a`|Соответствует символу колокольчика \(будильника\), `\u0007`.|  
-|`\b`|В классе символов `[`*\[группа\_символов\]*`]` соответствует знаку BACKSPACE, `\u0008`.  \(См. раздел [Классы знаков](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).\) За пределами класса символов `\b` является привязкой, соответствующей границе слова.  \(См. раздел [Привязки](../../../docs/standard/base-types/anchors-in-regular-expressions.md).\)|  
-|`\t`|Соответствует знаку табуляции, `\u0009`.|  
-|`\r`|Соответствует знаку возврата каретки, `\u000D`.  Учтите, что `\r` не эквивалентно символу новой строки `\n`.|  
-|`\v`|Соответствует знаку вертикальной табуляции, `\u000B`.|  
-|`\f`|Соответствует знаку перевода страницы, `\u000C`.|  
-|`\n`|Соответствует знаку новой строки, `\u000A`.|  
-|`\e`|Соответствует escape\-символу, `\u001B`.|  
-|`\` *nnn*|Соответствует символу ASCII, где *nnn* может содержать две или три цифры, представляющие восьмеричный код символа.  Например, `\040` соответствует символу пробела.  Эта конструкция интерпретируется как обратная ссылка, если она содержит только одну цифру \(например, `\2`\) или соответствует номеру группы записи.  \(См. раздел [Конструкции обратных ссылок](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).\)|  
-|`\x` *nn*|Соответствует символу ASCII, где *nn* — двузначный шестнадцатеричный код символа.|  
-|`\c` *X*|Соответствует управляющему символу ASCII, где X — буква управляющего символа.  Например, `\cC` означает CTRL\-C.|  
-|`\u` *nnnn*|Соответствует элементу кода UTF\-16, значение которого является шестнадцатеричным значением *nnnn*. **Note:**  Escape\-символ из Perl 5, который используется для указания Юникода, не поддерживается в .NET Framework.  Escape\-символ из Perl 5 имеет форму `\x{`*\#\#\#\#*`…}`, где *\#\#\#\#*`…` — последовательность шестнадцатеричных цифр.  Взамен следует использовать `\u`*nnnn*.|  
-|`\`|Со следующим знаком, который не распознается как escape\-символ, соответствует этому знаку.  Например, `\*` обозначает звездочку \(\*\) и совпадает с `\x2A`.|  
+|<span data-ttu-id="2bd8b-112">Символ или последовательность</span><span class="sxs-lookup"><span data-stu-id="2bd8b-112">Character or sequence</span></span>|<span data-ttu-id="2bd8b-113">Описание</span><span class="sxs-lookup"><span data-stu-id="2bd8b-113">Description</span></span>|  
+|---------------------------|-----------------|  
+|<span data-ttu-id="2bd8b-114">Все символы, за исключением следующих:</span><span class="sxs-lookup"><span data-stu-id="2bd8b-114">All characters except for the following:</span></span><br /><br /> <span data-ttu-id="2bd8b-115">.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-115">.</span></span> <span data-ttu-id="2bd8b-116">$ ^ { [ ( &#124; ) * + ?</span><span class="sxs-lookup"><span data-stu-id="2bd8b-116">$ ^ { [ ( &#124; ) * + ?</span></span> \|<span data-ttu-id="2bd8b-117">Символы, не перечисленные в столбце **Символ или последовательность**, не имеют особого значения в регулярных выражениях и соответствуют сами себе.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-117">Characters other than those listed in the **Character or sequence** column have no special meaning in regular expressions; they match themselves.</span></span><br /><br /> <span data-ttu-id="2bd8b-118">Символы, включенные в столбец **Символ или последовательность**, являются специальными языковыми элементами регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-118">The characters included in the **Character or sequence** column are special regular expression language elements.</span></span> <span data-ttu-id="2bd8b-119">Для сопоставления с ними в регулярном выражении их необходимо экранировать или включить в [положительную группу символов](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2bd8b-119">To match them in a regular expression, they must be escaped or included in a [positive character group](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span> <span data-ttu-id="2bd8b-120">Например, регулярное выражение `\$\d+` или `[$]\d+` соответствует "$1200".</span><span class="sxs-lookup"><span data-stu-id="2bd8b-120">For example, the regular expression `\$\d+` or `[$]\d+` matches "$1200".</span></span>|  
+|`\a`|<span data-ttu-id="2bd8b-121">Соответствует символу колокольчика (будильника), `\u0007`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-121">Matches a bell (alarm) character, `\u0007`.</span></span>|  
+|`\b`|<span data-ttu-id="2bd8b-122">В классе символов `[`*character_group*`]` соответствует символу возврата на одну позицию назад с удалением символа (BACKSPACE), `\u0008`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-122">In a `[`*character_group*`]` character class, matches a backspace, `\u0008`.</span></span>  <span data-ttu-id="2bd8b-123">(См. раздел [Классы символов](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) За пределами класса символов `\b` является привязкой, соответствующей границе слова.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-123">(See [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Outside a character class, `\b` is an anchor that matches a word boundary.</span></span> <span data-ttu-id="2bd8b-124">(См. раздел [Привязки](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)</span><span class="sxs-lookup"><span data-stu-id="2bd8b-124">(See [Anchors](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)</span></span>|  
+|`\t`|<span data-ttu-id="2bd8b-125">Соответствует знаку табуляции, `\u0009`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-125">Matches a tab, `\u0009`.</span></span>|  
+|`\r`|<span data-ttu-id="2bd8b-126">Соответствует знаку возврата каретки, `\u000D`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-126">Matches a carriage return, `\u000D`.</span></span> <span data-ttu-id="2bd8b-127">Учтите, что `\r` не эквивалентно символу новой строки `\n`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-127">Note that `\r` is not equivalent to the newline character, `\n`.</span></span>|  
+|`\v`|<span data-ttu-id="2bd8b-128">Соответствует знаку вертикальной табуляции, `\u000B`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-128">Matches a vertical tab, `\u000B`.</span></span>|  
+|`\f`|<span data-ttu-id="2bd8b-129">Соответствует знаку перевода страницы, `\u000C`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-129">Matches a form feed, `\u000C`.</span></span>|  
+|`\n`|<span data-ttu-id="2bd8b-130">Соответствует знаку новой строки, `\u000A`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-130">Matches a new line, `\u000A`.</span></span>|  
+|`\e`|<span data-ttu-id="2bd8b-131">Соответствует escape-символу, `\u001B`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-131">Matches an escape, `\u001B`.</span></span>|  
+|<span data-ttu-id="2bd8b-132">`\` *nnn*</span><span class="sxs-lookup"><span data-stu-id="2bd8b-132">`\` *nnn*</span></span>|<span data-ttu-id="2bd8b-133">Соответствует символу ASCII, где  *nnn*  состоит из двух или трех цифр, представляющих восьмеричный код символа.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-133">Matches an ASCII character, where *nnn* consists of two or three digits that represent the octal character code.</span></span> <span data-ttu-id="2bd8b-134">Например, `\040` соответствует символу пробела.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-134">For example, `\040` represents a space character.</span></span> <span data-ttu-id="2bd8b-135">Эта конструкция интерпретируется как обратная ссылка, если она содержит только одну цифру (например, `\2`) или соответствует номеру группы записи.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-135">This construct is interpreted as a backreference if it has only one digit (for example, `\2`) or if it corresponds to the number of a capturing group.</span></span> <span data-ttu-id="2bd8b-136">(См. раздел [Конструкции обратных ссылок](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)</span><span class="sxs-lookup"><span data-stu-id="2bd8b-136">(See [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)</span></span>|  
+|<span data-ttu-id="2bd8b-137">`\x` *nn*</span><span class="sxs-lookup"><span data-stu-id="2bd8b-137">`\x` *nn*</span></span>|<span data-ttu-id="2bd8b-138">Соответствует символу ASCII, где  *nn*  — двузначный шестнадцатеричный код символа.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-138">Matches an ASCII character, where *nn* is a two-digit hexadecimal character code.</span></span>|  
+|<span data-ttu-id="2bd8b-139">`\c` *X*</span><span class="sxs-lookup"><span data-stu-id="2bd8b-139">`\c` *X*</span></span>|<span data-ttu-id="2bd8b-140">Соответствует управляющему символу ASCII, где X — буква управляющего символа.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-140">Matches an ASCII control character, where X is the letter of the control character.</span></span> <span data-ttu-id="2bd8b-141">Например, `\cC` означает CTRL-C.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-141">For example, `\cC` is CTRL-C.</span></span>|  
+|<span data-ttu-id="2bd8b-142">`\u` *nnnn*</span><span class="sxs-lookup"><span data-stu-id="2bd8b-142">`\u` *nnnn*</span></span>|<span data-ttu-id="2bd8b-143">Единица кода UTF-16, значение которого является соответствует  *nnnn*  шестнадцатеричное.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-143">Matches a UTF-16 code unit whose value is *nnnn* hexadecimal.</span></span> <span data-ttu-id="2bd8b-144">**Примечание:** escape символ из Perl 5, который используется для указания Юникода не поддерживается в .NET.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-144">**Note:**  The Perl 5 character escape that is used to specify Unicode is not supported by .NET.</span></span> <span data-ttu-id="2bd8b-145">Escape-символ из Perl 5 имеет форму `\x{`*####*`…}`, где *####*`…` — последовательность шестнадцатеричных цифр.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-145">The Perl 5 character escape has the form `\x{`*####*`…}`, where *####*`…` is a series of hexadecimal digits.</span></span> <span data-ttu-id="2bd8b-146">Вместо этого используйте `\u`  *nnnn* .</span><span class="sxs-lookup"><span data-stu-id="2bd8b-146">Instead, use `\u`*nnnn*.</span></span>|  
+|`\`|<span data-ttu-id="2bd8b-147">Со следующим знаком, который не распознается как escape-символ, соответствует этому знаку.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-147">When followed by a character that is not recognized as an escaped character, matches that character.</span></span> <span data-ttu-id="2bd8b-148">Например, `\*` обозначает звездочку (*) и совпадает с `\x2A`.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-148">For example, `\*` matches an asterisk (*) and is the same as `\x2A`.</span></span>|  
   
-## Пример  
- В приведенном ниже примере показано использование escape\-последовательностей в регулярном выражении.  В нем анализируется строка, содержащая названия крупнейших городов мира и их население в 2009 г.  Название каждого города отделено от его населения символом табуляции \(`\t`\) или вертикальной чертой \(&#124; или `\u007c`\).  Отдельные города и их население разделяются символами возврата каретки и перевода строки.  
+## <a name="an-example"></a><span data-ttu-id="2bd8b-149">Пример</span><span class="sxs-lookup"><span data-stu-id="2bd8b-149">An Example</span></span>  
+ <span data-ttu-id="2bd8b-150">В приведенном ниже примере показано использование escape-последовательностей в регулярном выражении.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-150">The following example illustrates the use of character escapes in a regular expression.</span></span> <span data-ttu-id="2bd8b-151">В нем анализируется строка, содержащая названия крупнейших городов мира и их население в 2009 г.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-151">It parses a string that contains the names of the world's largest cities and their populations in 2009.</span></span> <span data-ttu-id="2bd8b-152">Название каждого города отделено от его населения символом табуляции (`\t`) или вертикальной чертой (| или `\u007c`).</span><span class="sxs-lookup"><span data-stu-id="2bd8b-152">Each city name is separated from its population by a tab (`\t`) or a vertical bar (&#124; or `\u007c`).</span></span> <span data-ttu-id="2bd8b-153">Отдельные города и их население разделяются символами возврата каретки и перевода строки.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-153">Individual cities and their populations are separated from each other by a carriage return and line feed.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]
  [!code-vb[RegularExpressions.Language.Escapes#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.escapes/vb/escape1.vb#1)]  
   
- Возможные интерпретации регулярного выражения `\G(.+)[\t|\u007c](../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels)\r?\n` показаны в следующей таблице.  
+ <span data-ttu-id="2bd8b-154">Возможные интерпретации регулярного выражения `\G(.+)[\t|\u007c](.+)\r?\n` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-154">The regular expression `\G(.+)[\t|\u007c](.+)\r?\n` is interpreted as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\G`|Начать сопоставление там, где закончилось последнее соответствие.|  
-|`(.+)`|Сопоставление любого символа один или более раз.  Это первая группа записи.|  
-|`[\t\u007c]`|Соответствует символу табуляции \(`\t`\) или вертикальной черте \(&#124;\).|  
-|`(.+)`|Сопоставление любого символа один или более раз.  Это вторая группа записи.|  
-|`\r?  \n`|Соответствует отсутствию или одному вхождению символа возврата каретки, за которым следует новая строка.|  
+|<span data-ttu-id="2bd8b-155">Шаблон</span><span class="sxs-lookup"><span data-stu-id="2bd8b-155">Pattern</span></span>|<span data-ttu-id="2bd8b-156">Описание</span><span class="sxs-lookup"><span data-stu-id="2bd8b-156">Description</span></span>|  
+|-------------|-----------------|  
+|`\G`|<span data-ttu-id="2bd8b-157">Начать сопоставление там, где закончилось последнее соответствие.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-157">Begin the match where the last match ended.</span></span>|  
+|`(.+)`|<span data-ttu-id="2bd8b-158">Сопоставление любого символа один или более раз.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-158">Match any character one or more times.</span></span> <span data-ttu-id="2bd8b-159">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-159">This is the first capturing group.</span></span>|  
+|`[\t\u007c]`|<span data-ttu-id="2bd8b-160">Соответствует символу табуляции (`\t`) или вертикальной черте (|).</span><span class="sxs-lookup"><span data-stu-id="2bd8b-160">Match a tab (`\t`) or a vertical bar (&#124;).</span></span>|  
+|`(.+)`|<span data-ttu-id="2bd8b-161">Сопоставление любого символа один или более раз.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-161">Match any character one or more times.</span></span> <span data-ttu-id="2bd8b-162">Это вторая группа записи.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-162">This is the second capturing group.</span></span>|  
+|`\r?\n`|<span data-ttu-id="2bd8b-163">Соответствует отсутствию или одному вхождению символа возврата каретки, за которым следует новая строка.</span><span class="sxs-lookup"><span data-stu-id="2bd8b-163">Match zero or one occurrence of a carriage return followed by a new line.</span></span>|  
   
-## См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="2bd8b-164">См. также</span><span class="sxs-lookup"><span data-stu-id="2bd8b-164">See Also</span></span>  
+ [<span data-ttu-id="2bd8b-165">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="2bd8b-165">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

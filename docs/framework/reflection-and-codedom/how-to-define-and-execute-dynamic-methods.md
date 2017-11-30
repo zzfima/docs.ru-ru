@@ -5,109 +5,132 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 52f6b425ae4df138a843c6a790f10f78dc5a2b40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67e909a7b64500bba533290061652e82ffde07a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Практическое руководство. Определение и выполнение динамических методов
-В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса. Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
+# <a name="how-to-define-and-execute-dynamic-methods"></a><span data-ttu-id="5ecfa-102">Практическое руководство. Определение и выполнение динамических методов</span><span class="sxs-lookup"><span data-stu-id="5ecfa-102">How to: Define and Execute Dynamic Methods</span></span>
+<span data-ttu-id="5ecfa-103">В следующих процедурах показаны способы определения и выполнения простого динамического метода и динамического метода, привязанного к экземпляру класса.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-103">The following procedures show how to define and execute a simple dynamic method and a dynamic method bound to an instance of a class.</span></span> <span data-ttu-id="5ecfa-104">Дополнительные сведения о динамических методах см. в описании класса <xref:System.Reflection.Emit.DynamicMethod> и в разделе [Сценарии динамических методов порождаемого отражения](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).</span><span class="sxs-lookup"><span data-stu-id="5ecfa-104">For more information on dynamic methods, see the <xref:System.Reflection.Emit.DynamicMethod> class and [Reflection Emit Dynamic Method Scenarios](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).</span></span>  
   
-### <a name="to-define-and-execute-a-dynamic-method"></a>Определение и выполнение динамического метода  
+### <a name="to-define-and-execute-a-dynamic-method"></a><span data-ttu-id="5ecfa-105">Определение и выполнение динамического метода</span><span class="sxs-lookup"><span data-stu-id="5ecfa-105">To define and execute a dynamic method</span></span>  
   
-1.  Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем коде объявляются два типа делегата, которые могут быть использованы для метода `SquareIt`.  
+1.  <span data-ttu-id="5ecfa-106">Объявите тип делегата для выполнения метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-106">Declare a delegate type to execute the method.</span></span> <span data-ttu-id="5ecfa-107">Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-107">Consider using a generic delegate to minimize the number of delegate types you need to declare.</span></span> <span data-ttu-id="5ecfa-108">В следующем коде объявляются два типа делегата, которые могут быть использованы для метода `SquareIt`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-108">The following code declares two delegate types that could be used for the `SquareIt` method, and one of them is generic.</span></span>  
   
-     [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]  [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]  [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
+     [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
+     [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
+     [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  Создайте массив, в котором будут указаны типы параметров динамического метода. В этом примере единственным параметром является `int` (`Integer` в Visual Basic), поэтому массив содержит только один элемент.  
+2.  <span data-ttu-id="5ecfa-109">Создайте массив, в котором будут указаны типы параметров динамического метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-109">Create an array that specifies the parameter types for the dynamic method.</span></span> <span data-ttu-id="5ecfa-110">В этом примере единственным параметром является `int` (`Integer` в Visual Basic), поэтому массив содержит только один элемент.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-110">In this example, the only parameter is an `int` (`Integer` in Visual Basic), so the array has only one element.</span></span>  
   
-     [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]  [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]  [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
+     [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
+     [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
+     [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере метод называется `SquareIt`.  
-  
-    > [!NOTE]
-    >  Нет необходимости предоставлять имена динамических методов, они не могут быть вызваны по именам. Несколько динамических методов могут иметь одинаковое имя. Но это имя отображается в стеках вызовов и может оказаться полезным при отладке.  
-  
-     Тип возвращаемого значения указан как `long`. Этот метод связан с модулем, содержащим класс `Example`, в котором расположен код примера. Может быть указан любой загруженный модуль. Динамический метод выполняется как метод `static` уровня модуля (`Shared` в Visual Basic).  
-  
-     [!code-cpp[DynamicMethodHowTo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#4)]  [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]  [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
-  
-4.  Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
-  
-     В этом примере MSIL загружает аргумент, который является `int`, в стек, преобразует его в `long`, дублирует `long` и умножает два значения. Эти действия приводят к появлению в стеке возведенного в квадрат значения, поэтому методу остается только вернуться.  
-  
-     [!code-cpp[DynamicMethodHowTo#5](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#5)]  [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]  [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
-  
-5.  Создайте экземпляр делегата (объявлен на этапе 1), который представляет динамический метод посредством вызова метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться. В следующем коде создается и вызывается делегат с помощью универсального делегата.  
-  
-     [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]  [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]  [!code-vb[DynamicMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#6)]  
-  
-### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>Определение и выполнение динамического метода, привязанного к объекту  
-  
-1.  Объявите тип делегата для выполнения метода. Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять. В следующем примере кода объявляется делегат универсального типа, который может быть использован для выполнения любого метода с одним параметром и возвращаемым значением или метода с двумя параметрами и возвращаемым значением, если делегат привязан к объекту.  
-  
-     [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]  [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]  [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
-  
-2.  Создайте массив, в котором будут указаны типы параметров динамического метода. Если делегат, представляющий метод, должен быть привязан к объекту, первый параметр должен соответствовать типу, к которому привязывается делегат. В этом примере есть два параметра: один типа `Example`, а другой — типа `int` (`Integer` в Visual Basic).  
-  
-     [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]  [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]  [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
-  
-3.  Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>. В этом примере не задано имя для данного метода. Тип возвращаемого значения указан как `int` (`Integer` в Visual Basic). Этот метод имеет доступ к закрытым и защищенным элементам класса `Example`.  
-  
-     [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]  [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]  [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
-  
-4.  Выпустите основную часть метода. В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL. В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.  
-  
-     В этом примере MSIL загружает первый аргумент, которым является экземпляр класса `Example`, и использует его для загрузки значения закрытого поля экземпляра типа `int`. Загружается второй аргумент, после чего два числа перемножаются. Если результат превышает значение `int`, то он усекается и отбрасываются старшие разряды. Метод возвращается с возвращаемым значением, содержащимся в стеке.  
-  
-     [!code-cpp[DynamicMethodHowTo#15](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#15)]  [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]  [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
-  
-5.  Создайте экземпляр делегата (объявленного на этапе 1), который представляет динамический метод посредством вызова перегрузки метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>. Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться.  
+3.  <span data-ttu-id="5ecfa-111">Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-111">Create a <xref:System.Reflection.Emit.DynamicMethod>.</span></span> <span data-ttu-id="5ecfa-112">В этом примере метод называется `SquareIt`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-112">In this example the method is named `SquareIt`.</span></span>  
   
     > [!NOTE]
-    >  Можно вызвать метод <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> несколько раз для создания делегатов, привязанных к другим экземплярам целевого типа.  
+    >  <span data-ttu-id="5ecfa-113">Нет необходимости предоставлять имена динамических методов, они не могут быть вызваны по именам.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-113">It is not necessary to give dynamic methods names, and they cannot be invoked by name.</span></span> <span data-ttu-id="5ecfa-114">Несколько динамических методов могут иметь одинаковое имя.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-114">Multiple dynamic methods can have the same name.</span></span> <span data-ttu-id="5ecfa-115">Но это имя отображается в стеках вызовов и может оказаться полезным при отладке.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-115">However, the name appears in call stacks and can be useful for debugging.</span></span>  
   
-     В следующем примере кода показано, как выполнить привязку метода к новому экземпляру класса `Example`, закрытое свойство проверки которого равняется 42. Т. е. при каждом вызове делегата экземпляр `Example` передается первому параметру метода.  
+     <span data-ttu-id="5ecfa-116">Тип возвращаемого значения указан как `long`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-116">The type of the return value is specified as `long`.</span></span> <span data-ttu-id="5ecfa-117">Этот метод связан с модулем, содержащим класс `Example`, в котором расположен код примера.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-117">The method is associated with the module that contains the `Example` class, which contains the example code.</span></span> <span data-ttu-id="5ecfa-118">Может быть указан любой загруженный модуль.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-118">Any loaded module could be specified.</span></span> <span data-ttu-id="5ecfa-119">Динамический метод выполняется как метод `static` уровня модуля (`Shared` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="5ecfa-119">The dynamic method acts like a module-level `static` method (`Shared` in Visual Basic).</span></span>  
   
-     Делегат `OneParameter` используется, так как первый параметр метода всегда получает экземпляр `Example`. При вызове делегата требуется только второй параметр.  
+     [!code-cpp[DynamicMethodHowTo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#4)]
+     [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
+     [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-     [!code-cpp[DynamicMethodHowTo#16](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#16)]  [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]  [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
+4.  <span data-ttu-id="5ecfa-120">Выпустите основную часть метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-120">Emit the method body.</span></span> <span data-ttu-id="5ecfa-121">В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-121">In this example, an <xref:System.Reflection.Emit.ILGenerator> object is used to emit the Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="5ecfa-122">В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-122">Alternatively, a <xref:System.Reflection.Emit.DynamicILInfo> object can be used in conjunction with unmanaged code generators to emit the method body for a <xref:System.Reflection.Emit.DynamicMethod>.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере кода показано выполнение простого динамического метода и динамического метода, привязанного к экземпляру класса.  
+     <span data-ttu-id="5ecfa-123">В этом примере MSIL загружает аргумент, который является `int`, в стек, преобразует его в `long`, дублирует `long` и умножает два значения.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-123">The MSIL in this example loads the argument, which is an `int`, onto the stack, converts it to a `long`, duplicates the `long`, and multiplies the two numbers.</span></span> <span data-ttu-id="5ecfa-124">Эти действия приводят к появлению в стеке возведенного в квадрат значения, поэтому методу остается только вернуться.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-124">This leaves the squared result on the stack, and all the method has to do is return.</span></span>  
   
- Простой динамический метод принимает один аргумент, 32-разрядное целое число, и возвращает 64-разрядное значение квадрата этого целого числа. Для вызова этого метода используется универсальный делегат.  
+     [!code-cpp[DynamicMethodHowTo#5](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#5)]
+     [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
+     [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
- Во втором динамическом методе содержится два параметра типа `Example` и `int` (`Integer` в Visual Basic). При создании динамического метода он привязывается к экземпляру `Example` с помощью универсального делегата, который имеет только один аргумент типа `int`. Делегат не имеет аргумента типа `Example`, потому что первый параметр метода всегда получает привязанный экземпляр `Example`. При вызове делегата предоставляется только аргумент `int`. Этот динамический метод получает доступ к закрытому полю класса `Example` и возвращает результат закрытого поля и аргумента `int`.  
+5.  <span data-ttu-id="5ecfa-125">Создайте экземпляр делегата (объявлен на этапе 1), который представляет динамический метод посредством вызова метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-125">Create an instance of the delegate (declared in step 1) that represents the dynamic method by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method.</span></span> <span data-ttu-id="5ecfa-126">Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-126">Creating the delegate completes the method, and any further attempts to change the method — for example, adding more MSIL — are ignored.</span></span> <span data-ttu-id="5ecfa-127">В следующем коде создается и вызывается делегат с помощью универсального делегата.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-127">The following code creates the delegate and invokes it, using a generic delegate.</span></span>  
   
- В этом примере кода определяются делегаты, которые могут быть использованы для выполнения методов.  
+     [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
+     [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
+     [!code-vb[DynamicMethodHowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#6)]  
   
- [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)] [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)] [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
+### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a><span data-ttu-id="5ecfa-128">Определение и выполнение динамического метода, привязанного к объекту</span><span class="sxs-lookup"><span data-stu-id="5ecfa-128">To define and execute a dynamic method that is bound to an object</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+1.  <span data-ttu-id="5ecfa-129">Объявите тип делегата для выполнения метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-129">Declare a delegate type to execute the method.</span></span> <span data-ttu-id="5ecfa-130">Рассмотрите возможность использования универсального делегата для уменьшения числа типов делегата, которые необходимо будет объявлять.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-130">Consider using a generic delegate to minimize the number of delegate types you need to declare.</span></span> <span data-ttu-id="5ecfa-131">В следующем примере кода объявляется делегат универсального типа, который может быть использован для выполнения любого метода с одним параметром и возвращаемым значением или метода с двумя параметрами и возвращаемым значением, если делегат привязан к объекту.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-131">The following code declares a generic delegate type that can be used to execute any method with one parameter and a return value, or a method with two parameters and a return value if the delegate is bound to an object.</span></span>  
   
--   Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.  
+     [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
+     [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
+     [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
--   Дополнительные ссылки на сборки не требуются.  
+2.  <span data-ttu-id="5ecfa-132">Создайте массив, в котором будут указаны типы параметров динамического метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-132">Create an array that specifies the parameter types for the dynamic method.</span></span> <span data-ttu-id="5ecfa-133">Если делегат, представляющий метод, должен быть привязан к объекту, первый параметр должен соответствовать типу, к которому привязывается делегат.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-133">If the delegate representing the method is to be bound to an object, the first parameter must match the type the delegate is bound to.</span></span> <span data-ttu-id="5ecfa-134">В этом примере есть два параметра: один типа `Example`, а другой — типа `int` (`Integer` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="5ecfa-134">In this example, there are two parameters, of type `Example` and type `int` (`Integer` in Visual Basic).</span></span>  
   
--   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
+     [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
+     [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
+     [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection.Emit.DynamicMethod>   
- [Использование порождаемого отражения](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)   
- [Сценарии динамических методов порождаемого отражения](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
-
+3.  <span data-ttu-id="5ecfa-135">Создайте таблицу <xref:System.Reflection.Emit.DynamicMethod>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-135">Create a <xref:System.Reflection.Emit.DynamicMethod>.</span></span> <span data-ttu-id="5ecfa-136">В этом примере не задано имя для данного метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-136">In this example the method has no name.</span></span> <span data-ttu-id="5ecfa-137">Тип возвращаемого значения указан как `int` (`Integer` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="5ecfa-137">The type of the return value is specified as `int` (`Integer` in Visual Basic).</span></span> <span data-ttu-id="5ecfa-138">Этот метод имеет доступ к закрытым и защищенным элементам класса `Example`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-138">The method has access to the private and protected members of the `Example` class.</span></span>  
+  
+     [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
+     [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
+     [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
+  
+4.  <span data-ttu-id="5ecfa-139">Выпустите основную часть метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-139">Emit the method body.</span></span> <span data-ttu-id="5ecfa-140">В этом примере объект <xref:System.Reflection.Emit.ILGenerator> используется для выпуска MSIL.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-140">In this example, an <xref:System.Reflection.Emit.ILGenerator> object is used to emit the Microsoft intermediate language (MSIL).</span></span> <span data-ttu-id="5ecfa-141">В качестве альтернативы объект <xref:System.Reflection.Emit.DynamicILInfo> может быть использован вместе с генераторами неуправляемого кода для выпуска основной части метода для <xref:System.Reflection.Emit.DynamicMethod>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-141">Alternatively, a <xref:System.Reflection.Emit.DynamicILInfo> object can be used in conjunction with unmanaged code generators to emit the method body for a <xref:System.Reflection.Emit.DynamicMethod>.</span></span>  
+  
+     <span data-ttu-id="5ecfa-142">В этом примере MSIL загружает первый аргумент, которым является экземпляр класса `Example`, и использует его для загрузки значения закрытого поля экземпляра типа `int`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-142">The MSIL in this example loads the first argument, which is an instance of the `Example` class, and uses it to load the value of a private instance field of type `int`.</span></span> <span data-ttu-id="5ecfa-143">Загружается второй аргумент, после чего два числа перемножаются.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-143">The second argument is loaded, and the two numbers are multiplied.</span></span> <span data-ttu-id="5ecfa-144">Если результат превышает значение `int`, то он усекается и отбрасываются старшие разряды.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-144">If the result is larger than `int`, the value is truncated and the most significant bits are discarded.</span></span> <span data-ttu-id="5ecfa-145">Метод возвращается с возвращаемым значением, содержащимся в стеке.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-145">The method returns, with the return value on the stack.</span></span>  
+  
+     [!code-cpp[DynamicMethodHowTo#15](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#15)]
+     [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
+     [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
+  
+5.  <span data-ttu-id="5ecfa-146">Создайте экземпляр делегата (объявленного на этапе 1), который представляет динамический метод посредством вызова перегрузки метода <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29>.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-146">Create an instance of the delegate (declared in step 1) that represents the dynamic method by calling the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> method overload.</span></span> <span data-ttu-id="5ecfa-147">Создание делегата завершает этот метод, любые дальнейшие попытки изменить этот метод, например добавить MSIL, будут игнорироваться.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-147">Creating the delegate completes the method, and any further attempts to change the method — for example, adding more MSIL — are ignored.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="5ecfa-148">Можно вызвать метод <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> несколько раз для создания делегатов, привязанных к другим экземплярам целевого типа.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-148">You can call the <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> method multiple times to create delegates bound to other instances of the target type.</span></span>  
+  
+     <span data-ttu-id="5ecfa-149">В следующем примере кода показано, как выполнить привязку метода к новому экземпляру класса `Example`, закрытое свойство проверки которого равняется 42.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-149">The following code binds the method to a new instance of the `Example` class whose private test field is set to 42.</span></span> <span data-ttu-id="5ecfa-150">Т. е. при каждом вызове делегата экземпляр `Example` передается первому параметру метода.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-150">That is, each time the delegate is invoked the instance of `Example` is passed to the first parameter of the method.</span></span>  
+  
+     <span data-ttu-id="5ecfa-151">Делегат `OneParameter` используется, так как первый параметр метода всегда получает экземпляр `Example`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-151">The delegate `OneParameter` is used because the first parameter of the method always receives the instance of `Example`.</span></span> <span data-ttu-id="5ecfa-152">При вызове делегата требуется только второй параметр.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-152">When the delegate is invoked, only the second parameter is required.</span></span>  
+  
+     [!code-cpp[DynamicMethodHowTo#16](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#16)]
+     [!code-csharp[DynamicMethodHowTo#16](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#16)]
+     [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
+  
+## <a name="example"></a><span data-ttu-id="5ecfa-153">Пример</span><span class="sxs-lookup"><span data-stu-id="5ecfa-153">Example</span></span>  
+ <span data-ttu-id="5ecfa-154">В следующем примере кода показано выполнение простого динамического метода и динамического метода, привязанного к экземпляру класса.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-154">The following code example demonstrates a simple dynamic method and a dynamic method bound to an instance of a class.</span></span>  
+  
+ <span data-ttu-id="5ecfa-155">Простой динамический метод принимает один аргумент, 32-разрядное целое число, и возвращает 64-разрядное значение квадрата этого целого числа.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-155">The simple dynamic method takes one argument, a 32-bit integer, and returns the 64-bit square of that integer.</span></span> <span data-ttu-id="5ecfa-156">Для вызова этого метода используется универсальный делегат.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-156">A generic delegate is used to invoke the method.</span></span>  
+  
+ <span data-ttu-id="5ecfa-157">Во втором динамическом методе содержится два параметра типа `Example` и `int` (`Integer` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="5ecfa-157">The second dynamic method has two parameters, of type `Example` and type `int` (`Integer` in Visual Basic).</span></span> <span data-ttu-id="5ecfa-158">При создании динамического метода он привязывается к экземпляру `Example` с помощью универсального делегата, который имеет только один аргумент типа `int`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-158">When the dynamic method has been created, it is bound to an instance of `Example`, using a generic delegate that has one argument of type `int`.</span></span> <span data-ttu-id="5ecfa-159">Делегат не имеет аргумента типа `Example`, потому что первый параметр метода всегда получает привязанный экземпляр `Example`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-159">The delegate does not have an argument of type `Example` because the first parameter of the method always receives the bound instance of `Example`.</span></span> <span data-ttu-id="5ecfa-160">При вызове делегата предоставляется только аргумент `int`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-160">When the delegate is invoked, only the `int` argument is supplied.</span></span> <span data-ttu-id="5ecfa-161">Этот динамический метод получает доступ к закрытому полю класса `Example` и возвращает результат закрытого поля и аргумента `int`.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-161">This dynamic method accesses a private field of the `Example` class and returns the product of the private field and the `int` argument.</span></span>  
+  
+ <span data-ttu-id="5ecfa-162">В этом примере кода определяются делегаты, которые могут быть использованы для выполнения методов.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-162">The code example defines delegates that can be used to execute the methods.</span></span>  
+  
+ [!code-cpp[DynamicMethodHowTo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#1)]
+ [!code-csharp[DynamicMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#1)]
+ [!code-vb[DynamicMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#1)]  
+  
+## <a name="compiling-the-code"></a><span data-ttu-id="5ecfa-163">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="5ecfa-163">Compiling the Code</span></span>  
+  
+-   <span data-ttu-id="5ecfa-164">Код содержит операторы C# `using` (`Imports` в Visual Basic), необходимые для компиляции.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-164">The code contains the C# `using` statements (`Imports` in Visual Basic) necessary for compilation.</span></span>  
+  
+-   <span data-ttu-id="5ecfa-165">Дополнительные ссылки на сборки не требуются.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-165">No additional assembly references are required.</span></span>  
+  
+-   <span data-ttu-id="5ecfa-166">Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-166">Compile the code at the command line using csc.exe, vbc.exe, or cl.exe.</span></span> <span data-ttu-id="5ecfa-167">Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.</span><span class="sxs-lookup"><span data-stu-id="5ecfa-167">To compile the code in Visual Studio, place it in a console application project template.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="5ecfa-168">См. также</span><span class="sxs-lookup"><span data-stu-id="5ecfa-168">See Also</span></span>  
+ <xref:System.Reflection.Emit.DynamicMethod>  
+ [<span data-ttu-id="5ecfa-169">Использование порожденного отражения</span><span class="sxs-lookup"><span data-stu-id="5ecfa-169">Using Reflection Emit</span></span>](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [<span data-ttu-id="5ecfa-170">Сценарии динамических методов порождаемого отражения</span><span class="sxs-lookup"><span data-stu-id="5ecfa-170">Reflection Emit Dynamic Method Scenarios</span></span>](http://msdn.microsoft.com/en-us/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)

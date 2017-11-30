@@ -2,227 +2,267 @@
 title: "Создание образов Docker для .NET Core"
 description: "Общие сведения об образах Docker и .NET Core"
 keywords: .NET, .NET Core, Docker
-author: spboyer
-ms.author: shboyer
-ms.date: 09/06/2017
-ms.topic: article
+author: jralexander
+ms.author: johalex
+ms.date: 11/06/2017
+ms.topic: tutorial
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
+ms.custom: mvc
+manager: wpickett
+ms.openlocfilehash: 3ec2d5a58b46e332de41b618f1c3fac663b29bee
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
-ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/08/2017
 ---
+# <a name="building-docker-images-for-net-core-applications"></a><span data-ttu-id="aab68-104">Создание образов Docker для приложений .NET Core</span><span class="sxs-lookup"><span data-stu-id="aab68-104">Building Docker Images for .NET Core Applications</span></span>
 
-#<a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
+ <span data-ttu-id="aab68-105">В этом учебнике рассматривается использование .NET Core на Docker.</span><span class="sxs-lookup"><span data-stu-id="aab68-105">In this tutorial, We focus on how to use .NET Core on Docker.</span></span> <span data-ttu-id="aab68-106">Во-первых мы исследуем различные изображения Docker предлагаемых и поддерживаются корпорацией Майкрософт и вариантов использования.</span><span class="sxs-lookup"><span data-stu-id="aab68-106">First, we explore the different Docker images offered and maintained by Microsoft, and use cases.</span></span> <span data-ttu-id="aab68-107">Затем рассказано способ построения и dockerize приложения ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="aab68-107">We then learn how to build and dockerize an ASP.NET Core app.</span></span>
 
- 
-> [!IMPORTANT]
-> Мы работаем над обновлением этой статьи в связи с выходом .NET Core 2.0. Приведенные ниже инструкции являются устаревшими. Приносим свои искренние извинения за неудобства.
+<span data-ttu-id="aab68-108">В ходе этого учебника вы узнаете:</span><span class="sxs-lookup"><span data-stu-id="aab68-108">During the course of this tutorial, you learn:</span></span>
+> [!div class="checklist"]
+> * <span data-ttu-id="aab68-109">Дополнительные сведения о Microsoft .NET Core Docker images</span><span class="sxs-lookup"><span data-stu-id="aab68-109">Learn about Microsoft .NET Core Docker images</span></span> 
+> * <span data-ttu-id="aab68-110">Получить ASP.NET Core примера приложения для Dockerize</span><span class="sxs-lookup"><span data-stu-id="aab68-110">Get an ASP.NET Core sample app to Dockerize</span></span>
+> * <span data-ttu-id="aab68-111">Пример приложения ASP.NET запускаются</span><span class="sxs-lookup"><span data-stu-id="aab68-111">Run the ASP.NET sample app locally</span></span>
+> * <span data-ttu-id="aab68-112">Построение и запуск образца с помощью Docker для контейнеров Linux</span><span class="sxs-lookup"><span data-stu-id="aab68-112">Build and run the sample with Docker for Linux containers</span></span>
+> * <span data-ttu-id="aab68-113">Построение и запуск образца с помощью контейнеров Docker для Windows</span><span class="sxs-lookup"><span data-stu-id="aab68-113">Build and run the sample with Docker for Windows containers</span></span>
 
-Чтобы понять, как можно использовать .NET Core и Docker вместе, сначала нужно ознакомиться с различными образами Docker и подходящими ситуациями для их применения. В этой статье мы по порядку разберем предлагаемые варианты, создадим веб-интерфейс API ASP.NET Core, используем средства Yeoman Docker для создания отлаживаемого контейнера, а также посмотрим, как Visual Studio Code может помочь нам в решении этих задач. 
+## <a name="docker-image-optimizations"></a><span data-ttu-id="aab68-114">Оптимизация образов Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-114">Docker Image Optimizations</span></span>
 
-## <a name="docker-image-optimizations"></a>Оптимизация образов Docker
+<span data-ttu-id="aab68-115">При создании образов Docker для разработчиков мы сосредоточились на трех основных сценариях:</span><span class="sxs-lookup"><span data-stu-id="aab68-115">When building Docker images for developers, we focused on three main scenarios:</span></span>
 
-При создании образов Docker для разработчиков мы сосредоточились на трех основных сценариях:
+* <span data-ttu-id="aab68-116">образы, используемые для разработки приложений .NET Core;</span><span class="sxs-lookup"><span data-stu-id="aab68-116">Images used to develop .NET Core apps</span></span>
+* <span data-ttu-id="aab68-117">образы, используемые для сборки приложений .NET Core;</span><span class="sxs-lookup"><span data-stu-id="aab68-117">Images used to build .NET Core apps</span></span>
+* <span data-ttu-id="aab68-118">образы, используемые для выполнения приложений .NET Core.</span><span class="sxs-lookup"><span data-stu-id="aab68-118">Images used to run .NET Core apps</span></span>
 
-- образы, используемые для разработки приложений .NET Core;
-- образы, используемые для сборки приложений .NET Core;
-- образы, используемые для выполнения приложений .NET Core.
+<span data-ttu-id="aab68-119">Зачем нужны три образа</span><span class="sxs-lookup"><span data-stu-id="aab68-119">Why three images?</span></span>
+<span data-ttu-id="aab68-120">При разработке, построении и запуске приложений в контейнерах, у нас есть различные приоритеты.</span><span class="sxs-lookup"><span data-stu-id="aab68-120">When developing, building, and running containerized applications, we have different priorities.</span></span>
 
-Зачем нужны три образа
-При разработке, сборке и выполнении приложений в контейнерах приоритеты будут разными.
-- **Разработка**. Как быстро может осуществляться итерация и отладка изменений. Размер образа не так важен, как возможность быстро вносить изменения в код и просматривать их. Некоторые из наших средств, например [yo docker](https://aka.ms/yodocker) для использования в Visual Studio Code, применяют этот образ во время разработки. 
-- **Сборка**. Что нужно для компиляции приложения. Сюда относятся компилятор и другие зависимости для оптимизации двоичных файлов. Это не тот образ, который вы развертываете, а образ, который вы используете для сборки содержимого, помещаемого в рабочий образ. Этот образ будет применяться при непрерывной интеграции или в среде сборки. Например, вместо установки всех зависимостей непосредственно в агенте сборки этот агент создаст экземпляр образа сборки, чтобы скомпилировать приложение со всеми зависимостями, которые необходимы для сборки приложения, содержащегося в образе. Агенту сборки необходимо знать только, как запускать этот образ Docker. 
-- **Рабочая среда**. Как быстро можно развернуть и запустить образ. Этот образ имеет небольшой размер, поэтому может быстро передаваться по сети из реестра Docker на узлы Docker. Содержимое готово к запуску, поэтому период времени от запуска Docker до обработки результатов минимален. В неизменяемой модели Docker нет потребности в динамической компиляции кода. Содержимое, помещаемое в этот образ, ограничено двоичными файлами и содержимым, которые необходимы для работы приложения. Например, это могут быть выходные данные, опубликованные с помощью команды `dotnet publish` и содержащие скомпилированные двоичные файлы, изображения, файлы JS и CSS. Со временем появятся образы, которые содержат пакеты, предварительно скомпилированные JIT-компилятором.  
+* <span data-ttu-id="aab68-121">**Разработка:** приоритет уделяется быстро перечисления изменений, а также возможность отладки изменения.</span><span class="sxs-lookup"><span data-stu-id="aab68-121">**Development:**  The priority focuses on quickly iterate changes, and the ability to debug the changes.</span></span> <span data-ttu-id="aab68-122">Размер изображения не столь важно, вместо этого можно внести изменения в код и быстро просматривать их?</span><span class="sxs-lookup"><span data-stu-id="aab68-122">The size of the image isn't as important, rather can you make changes to your code and see them quickly?</span></span>
 
-Хотя существует несколько версий образа .NET Core, они все имеют один или несколько общих уровней. Объем дискового пространства для хранения или размер разностных данных, которые нужно извлечь из реестра, гораздо меньше общего размера, так как все образы имеют общий базовый и, возможно, другие общие уровни.  
+* <span data-ttu-id="aab68-123">**Сборка:** этот образ содержит все необходимое для компиляции приложения, включая компилятор и другие зависимости, для оптимизации двоичных файлов.</span><span class="sxs-lookup"><span data-stu-id="aab68-123">**Build:** This image contains everything needed to compile your app, which includes the compiler and any other dependencies to optimize the binaries.</span></span>  <span data-ttu-id="aab68-124">Вы используете образ сборки для создания активов, размещаемых в рабочей среде образ.</span><span class="sxs-lookup"><span data-stu-id="aab68-124">You use the build image to create the assets you place into a production image.</span></span> <span data-ttu-id="aab68-125">Образ сборки будет использоваться для непрерывной интеграции или в среде построения.</span><span class="sxs-lookup"><span data-stu-id="aab68-125">The build image would be used for continuous integration, or in a build environment.</span></span> <span data-ttu-id="aab68-126">Такой подход позволяет агент сборки для компиляции и построения приложения (с необходимые зависимости) в экземпляре сборки образа.</span><span class="sxs-lookup"><span data-stu-id="aab68-126">This approach allows a build agent to compile and build the application (with all the required dependencies) in a build image instance.</span></span> <span data-ttu-id="aab68-127">Агенту сборки необходимо знать только, как запускать этот образ Docker.</span><span class="sxs-lookup"><span data-stu-id="aab68-127">Your build agent only needs to know how to run this Docker image.</span></span>
 
-## <a name="docker-image-variations"></a>Варианты образов Docker
+* <span data-ttu-id="aab68-128">**Порождение:** как быстро развернуть и запустить образ?</span><span class="sxs-lookup"><span data-stu-id="aab68-128">**Production:** How fast you can deploy and start your image?</span></span> <span data-ttu-id="aab68-129">Этот образ мал, поэтому производительность сети из реестра Docker на узлах Docker оптимизирован.</span><span class="sxs-lookup"><span data-stu-id="aab68-129">This image is small so network performance from your Docker Registry to your Docker hosts is optimized.</span></span> <span data-ttu-id="aab68-130">Содержимое готово к запуску, поэтому период времени от запуска Docker до обработки результатов минимален.</span><span class="sxs-lookup"><span data-stu-id="aab68-130">The contents are ready to run enabling the fastest time from Docker run to processing results.</span></span> <span data-ttu-id="aab68-131">В модели Docker динамической компиляции кода не требуется.</span><span class="sxs-lookup"><span data-stu-id="aab68-131">Dynamic code compilation isn't needed in the Docker model.</span></span> <span data-ttu-id="aab68-132">Содержимое, помещаемое в этот образ, ограничено двоичными файлами и содержимым, которые необходимы для работы приложения.</span><span class="sxs-lookup"><span data-stu-id="aab68-132">The content you place in this image would be limited to the binaries and content needed to run the application.</span></span>
 
-Для достижения указанных выше целей мы предоставляет варианты образов в [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
+    <span data-ttu-id="aab68-133">Например `dotnet publish` содержит выходные данные:</span><span class="sxs-lookup"><span data-stu-id="aab68-133">For example, the `dotnet publish` output contains:</span></span>
 
-- `microsoft/dotnet:<version>-sdk`, то есть **microsoft/dotnet:1.0.0-preview2-sdk** — этот образ содержит пакет SDK для .NET Core, который включает платформу .NET Core и программы командной строки (CLI). Этот образ соответствует **сценарию развертывания**. Он используется для локальной разработки, отладки и модульного тестирования, например для всех задач разработки, выполняемых до возврата кода. Этот образ также можно использовать для сценариев **сборки**.
+    * <span data-ttu-id="aab68-134">скомпилированные двоичные файлы</span><span class="sxs-lookup"><span data-stu-id="aab68-134">the compiled binaries</span></span>
+    * <span data-ttu-id="aab68-135">.js и CSS-файлы</span><span class="sxs-lookup"><span data-stu-id="aab68-135">.js and .css files</span></span>
 
-- `microsoft/dotnet:<version>-core`, то есть **microsoft/dotnet:1.0.0-core** — образ, который выполняет [переносимые приложения .NET Core](../deploying/index.md) и оптимизирован для выполнения приложений в **рабочей среде**. Он не содержит пакета SDK и предназначен для получения оптимизированных выходных данных команды `dotnet publish`. Переносимая среда выполнения хорошо подходит для сценариев с контейнерами Docker, так как использование нескольких контейнеров позволяет реализовать преимущество общих уровней образов.  
 
-## <a name="alternative-images"></a>Альтернативные образы
+<span data-ttu-id="aab68-136">Причина для включения `dotnet publish` будут сохранены выходные данные команды в рабочей среде образ его "размер до минимума.</span><span class="sxs-lookup"><span data-stu-id="aab68-136">The reason to include the `dotnet publish` command output in your production image is to keep its' size to a minimum.</span></span>
 
-Помимо образов, оптимизированных для разработки, сборки и рабочей среды, мы предоставляем дополнительные образы.
+<span data-ttu-id="aab68-137">Некоторые образы .NET Core Общие слои между различия в тегах, загружает последние тег является довольно простой.</span><span class="sxs-lookup"><span data-stu-id="aab68-137">Some .NET Core images share layers between different tags so downloading the latest tag is a relatively lightweight process.</span></span> <span data-ttu-id="aab68-138">Если уже имеется более старой версии на компьютере, эта архитектура снижает необходимое дисковое пространство.</span><span class="sxs-lookup"><span data-stu-id="aab68-138">If you already have an older version on your machine, this architecture decreases the needed disk space.</span></span>
 
-- `microsoft/dotnet:<version>-onbuild`, то есть **microsoft/dotnet:1.0.0-preview2-onbuild**, содержит триггеры [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild). Сборка копирует ([COPY](https://docs.docker.com/engine/reference/builder/#/copy)) приложение, выполняет команду `dotnet restore` и создает инструкцию [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` для запуска приложения при запуске образа Docker. Хотя этот образ не оптимизирован для рабочей среды, кому-то он может быть полезен для упрощения копирования исходного кода в образ и его выполнения. 
+<span data-ttu-id="aab68-139">Если несколько приложений используют общие образы на том же компьютере, память распределяется между общие образы.</span><span class="sxs-lookup"><span data-stu-id="aab68-139">When multiple applications use common images on the same machine, memory is shared between the common images.</span></span> <span data-ttu-id="aab68-140">Изображения должны совпадать для совместного использования.</span><span class="sxs-lookup"><span data-stu-id="aab68-140">The images must be the same to be shared.</span></span>
 
-- `microsoft/dotnet:<version>-core-deps`, то есть **microsoft/dotnet:1.0.0-core-deps** — используйте этот образ для выполнения автономных приложений. Он содержит операционную систему со всеми собственными зависимостями, требуемыми платформе .NET Core. Кроме того, этот образ можно использовать в качестве базового для собственных сборок CoreFX или CoreCLR. Вариант **onbuild** оптимизирован для простого добавления кода в образ и его выполнения, а образ оптимизирован так, что вы получаете только те зависимости операционной системы, которые необходимы для выполнения приложений .NET Core, в состав которых входит упакованная среда выполнения .NET. Этот образ, как правило, не оптимизирован для запуска нескольких контейнеров .NET Core на одном узле, так как каждый образ содержит среду выполнения .NET Core в приложении и вы не получите преимущество от наличия общих уровней образов.   
+## <a name="docker-image-variations"></a><span data-ttu-id="aab68-141">Варианты образов Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-141">Docker image variations</span></span>
 
-Последние версии каждого варианта:
+<span data-ttu-id="aab68-142">Для достижения целей выше, мы предоставляем варианты образа в разделе [ `microsoft/dotnet` ](https://hub.docker.com/r/microsoft/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="aab68-142">To achieve the goals above, we provide image variants under [`microsoft/dotnet`](https://hub.docker.com/r/microsoft/dotnet/).</span></span>
 
-- `microsoft/dotnet` или `microsoft/dotnet:latest` (включает пакет SDK)
-- `microsoft/dotnet:onbuild`
-- `microsoft/dotnet:core`
-- `microsoft/dotnet:core-deps`
+* <span data-ttu-id="aab68-143">`microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) Этот образ содержит Core SDK .NET, включая .NET Core и средства командной строки (CLI).</span><span class="sxs-lookup"><span data-stu-id="aab68-143">`microsoft/dotnet:<version>-sdk`(`microsoft/dotnet:2.0.0-sdk`) This image contains the .NET Core SDK, which includes the .NET Core and Command Line Tools (CLI).</span></span> <span data-ttu-id="aab68-144">Этот образ соответствует **сценарию развертывания**.</span><span class="sxs-lookup"><span data-stu-id="aab68-144">This image maps to the **development scenario**.</span></span> <span data-ttu-id="aab68-145">Использование этого образа для локальной разработки, отладки и тестирования модулей.</span><span class="sxs-lookup"><span data-stu-id="aab68-145">You use this image for local development, debugging, and unit testing.</span></span> <span data-ttu-id="aab68-146">Этот образ также можно использовать для сценариев **сборки**.</span><span class="sxs-lookup"><span data-stu-id="aab68-146">This image can also be used for your **build** scenarios.</span></span> <span data-ttu-id="aab68-147">С помощью `microsoft/dotnet:sdk` всегда позволяет получить последнюю версию.</span><span class="sxs-lookup"><span data-stu-id="aab68-147">Using `microsoft/dotnet:sdk` always gives you the latest version.</span></span>
 
-Ниже приведен список образов после выполнения команды `docker pull <imagename>` на компьютере разработки и их размеры. Обратите внимание на то, что вариант для разработки и сборки (`microsoft/dotnet:1.0.0-preview2-sdk`) больше, так как он содержит пакет SDK для разработки и сборки приложения. Вариант для рабочей среды (`microsoft/dotnet:core`) меньше, так как он содержит только среду выполнения .NET Core. Минимальный образ `core-deps`, пригодный для использования в Linux, существенно меньше по размеру, но с ним вашему приложению нужно иметь собственную копию среды выполнения .NET. Так как контейнеры уже обеспечивают изоляцию, это преимущество теряется при выполнении нескольких контейнеров на основе .NET. 
+> [!TIP]
+> <span data-ttu-id="aab68-148">Если вы не знаете о вашим потребностям, вы хотите использовать `microsoft/dotnet:<version>-sdk` изображения.</span><span class="sxs-lookup"><span data-stu-id="aab68-148">If you are unsure about your needs, you want to use the `microsoft/dotnet:<version>-sdk` image.</span></span> <span data-ttu-id="aab68-149">Как «фактически» изображение, она предназначена для использования в качестве исключения размещения контейнера (подключить исходный код и запустите контейнер для запуска приложения) и в качестве базового образа для создания других образов из.</span><span class="sxs-lookup"><span data-stu-id="aab68-149">As the "de facto" image, it's designed to be used as a throw away container (mount your source code and start the container to start your app), and as the base image to build other images from.</span></span>
 
-```
-REPOSITORY          TAG                     IMAGE ID            SIZE
-microsoft/dotnet    1.0.0-preview2-onbuild  19b6a6c4b1db        540.4 MB
-microsoft/dotnet    onbuild                 19b6a6c4b1db        540.4 MB
-microsoft/dotnet    1.0.0-preview2-sdk      a92c3d9ad0e7        540.4 MB
-microsoft/dotnet    core                    5224a9f2a2aa        253.2 MB
-microsoft/dotnet    1.0.0-core-deps         c981a2eebe0e        166.2 MB
-microsoft/dotnet    core-deps               c981a2eebe0e        166.2 MB
-microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
-microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
-```
+* <span data-ttu-id="aab68-150">`microsoft/dotnet:<version>-runtime`: Этот образ содержит основные функции .NET (среды выполнения и библиотек) и оптимизирован для запущенных приложений .NET Core **рабочей**.</span><span class="sxs-lookup"><span data-stu-id="aab68-150">`microsoft/dotnet:<version>-runtime`: This image contains the .NET Core (runtime and libraries) and is optimized for running .NET Core apps in **production**.</span></span>
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="alternative-images"></a><span data-ttu-id="aab68-151">Альтернативные образы</span><span class="sxs-lookup"><span data-stu-id="aab68-151">Alternative images</span></span>
 
-Для сборки и запуска необходимо установить несколько компонентов.
+<span data-ttu-id="aab68-152">Помимо образов, оптимизированных для разработки, сборки и рабочей среды, мы предоставляем дополнительные образы.</span><span class="sxs-lookup"><span data-stu-id="aab68-152">In addition to the optimized scenarios of development, build and production, we provide additional images:</span></span>
 
-- [.NET Core](http://dot.net)
-- [Docker](https://www.docker.com/products/docker) для локального выполнения контейнеров Docker
-- [Node.js](https://nodejs.org/)
-- [Генератор Yeoman для ASP.NET](https://github.com/omnisharp/generator-aspnet) для создания приложения веб-интерфейса API
-- [Генератор Yeoman для Docker](http://aka.ms/yodocker) от корпорации Майкрософт
+* <span data-ttu-id="aab68-153">`microsoft/dotnet:<version>-runtime-deps`: **Deps среды выполнения** образ содержит операционную систему с все собственного зависимости, необходимые для .NET Core.</span><span class="sxs-lookup"><span data-stu-id="aab68-153">`microsoft/dotnet:<version>-runtime-deps`: The **runtime-deps** image contains the operating system with all of the native dependencies needed by .NET Core.</span></span> <span data-ttu-id="aab68-154">Этот образ является для [автономные приложения](https://docs.microsoft.com/dotnet/core/deploying/index).</span><span class="sxs-lookup"><span data-stu-id="aab68-154">This image is for [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/index).</span></span>
 
-Установите генераторы Yeoman для ASP.NET Core и Docker с помощью npm. 
+<span data-ttu-id="aab68-155">Последние версии каждого варианта:</span><span class="sxs-lookup"><span data-stu-id="aab68-155">Latest versions of each variant:</span></span>
 
-```
-npm install -g yo generator-aspnet generator-docker
-```
+* <span data-ttu-id="aab68-156">`microsoft/dotnet`или `microsoft/dotnet:latest` (псевдоним для образа SDK)</span><span class="sxs-lookup"><span data-stu-id="aab68-156">`microsoft/dotnet` or `microsoft/dotnet:latest` (alias for the SDK image)</span></span>
+* `microsoft/dotnet:sdk`
+* `microsoft/dotnet:runtime`
+* `microsoft/dotnet:runtime-deps`
 
-> [!NOTE]
-> В этом примере в качестве редактора будет использоваться [Visual Studio Code](http://code.visualstudio.com).
+## <a name="samples-to-explore"></a><span data-ttu-id="aab68-157">Образцы для исследования</span><span class="sxs-lookup"><span data-stu-id="aab68-157">Samples to explore</span></span>
 
-## <a name="creating-the-web-api-application"></a>Создание приложения веб-интерфейса API
+* <span data-ttu-id="aab68-158">[В этом примере ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) показан шаблон лучший подход для создания образов Docker для ASP.NET Core приложений для рабочей среды.</span><span class="sxs-lookup"><span data-stu-id="aab68-158">[This ASP.NET Core Docker sample](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) demonstrates a best practice pattern for building Docker images for ASP.NET Core apps for production.</span></span> <span data-ttu-id="aab68-159">Образец работает с контейнерами Windows и Linux.</span><span class="sxs-lookup"><span data-stu-id="aab68-159">The sample works with both Linux and Windows containers.</span></span>
 
-Чтобы получить ориентир, перед упаковкой приложения в контейнер запустите его локально. 
+* <span data-ttu-id="aab68-160">В этом примере .NET Core Docker демонстрируется лучше всего рекомендаций для [построения образов Docker для приложений .NET Core для рабочей среды.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)</span><span class="sxs-lookup"><span data-stu-id="aab68-160">This .NET Core Docker sample demonstrates a best practice pattern for [building Docker images for .NET Core apps for production.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)</span></span>
 
-Готовое приложение находится в [репозитории dotnet/docs на сайте GitHub](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images). Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+## <a name="your-first-aspnet-core-docker-app"></a><span data-ttu-id="aab68-161">Своего первого приложения ASP.NET Core Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-161">Your first ASP.NET Core Docker app</span></span>
 
-Создайте каталог для приложения.
+<span data-ttu-id="aab68-162">В этом учебнике позволяет использовать образец приложения ASP.NET Core Docker для приложения, которое мы хотим dockerize.</span><span class="sxs-lookup"><span data-stu-id="aab68-162">For this tutorial, lets use an ASP.NET Core Docker sample application for the app we want to dockerize.</span></span> <span data-ttu-id="aab68-163">В этом образце приложения ASP.NET Core Docker показан шаблон лучший подход для создания образов Docker для ASP.NET Core приложений для рабочей среды.</span><span class="sxs-lookup"><span data-stu-id="aab68-163">This ASP.NET Core Docker sample application demonstrates a best practice pattern for building Docker images for ASP.NET Core apps for production.</span></span> <span data-ttu-id="aab68-164">Образец работает с контейнерами Windows и Linux.</span><span class="sxs-lookup"><span data-stu-id="aab68-164">The sample works with both Linux and Windows containers.</span></span>
 
-Откройте сеанс выполнения команд или сеанс терминала в этом каталоге и используйте генератор Yeoman для ASP.NET, введя следующую команду:
-```
-yo aspnet
-```
+<span data-ttu-id="aab68-165">В образце Dockerfile создается образ Docker приложения ASP.NET Core на основе этих базового образа Docker среды выполнения ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="aab68-165">The sample Dockerfile creates an ASP.NET Core application Docker image based off of the ASP.NET Core Runtime Docker base image.</span></span>
 
-Выберите **Приложение веб-интерфейса API**, введите **api** в качестве имени приложения и нажмите клавишу ВВОД.  После создания приложения по шаблону перейдите в каталог `/api` и восстановите зависимости NuGet с помощью команды `dotnet restore`.
+<span data-ttu-id="aab68-166">Она использует [Docker многоэтапным построения функции](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) для:</span><span class="sxs-lookup"><span data-stu-id="aab68-166">It uses the [Docker multi-stage build feature](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) to:</span></span>
 
-```
-cd api
-dotnet restore
-```
+* <span data-ttu-id="aab68-167">Построение образца в контейнере на основе **больше** базового образа Docker сборки ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="aab68-167">build the sample in a container based on the **larger** ASP.NET Core Build Docker base image</span></span> 
+* <span data-ttu-id="aab68-168">копирует результат последнего построения в Docker изображение на основе **меньше** базового образа среды выполнения ASP.NET Core Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-168">copies the final build result into a Docker image based on the **smaller** ASP.NET Core Docker Runtime base image</span></span>
 
-Протестируйте приложение, выполнив команду `dotnet run` и перейдя по адресу **http://localhost:5000/api/values**.
+> [!Note]
+> <span data-ttu-id="aab68-169">Образ сборки содержит необходимые средства для создания приложений, а образа среды выполнения — нет.</span><span class="sxs-lookup"><span data-stu-id="aab68-169">The build image contains required tools to build applications while the runtime image does not.</span></span>
 
-```javascript
-[
-    "value1",
-    "value2"
-]
-```
+### <a name="prerequisites"></a><span data-ttu-id="aab68-170">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="aab68-170">Prerequisites</span></span>
 
-Чтобы остановить приложение, нажмите клавишу `Ctrl+C`.
+<span data-ttu-id="aab68-171">Построение и запуск, установите следующие элементы:</span><span class="sxs-lookup"><span data-stu-id="aab68-171">To build and run, install the following items:</span></span>
 
-## <a name="adding-docker-support"></a>Добавление поддержки Docker
+#### <a name="net-core-20-sdk"></a><span data-ttu-id="aab68-172">.NET core 2.0 SDK</span><span class="sxs-lookup"><span data-stu-id="aab68-172">.NET Core 2.0 SDK</span></span>
 
-Добавление поддержки Docker в проект осуществляется посредством генератора Yeoman от корпорации Майкрософт. В настоящее время он поддерживает проекты .NET Core, Node.js и Go путем создания файла Dockerfile и скриптов, помогающих собирать и выполнять проекты в контейнерах. Также добавляются файлы, относящиеся к Visual Studio Code (launch.json, tasks.json), для поддержки отладки и палитры команд редактора.
+* <span data-ttu-id="aab68-173">Установка [.NET Core SDK 2.0](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="aab68-173">Install [.NET Core SDK 2.0](https://www.microsoft.com/net/core).</span></span>
+
+* <span data-ttu-id="aab68-174">Если это еще не сделано, установите редактора избранные кода.</span><span class="sxs-lookup"><span data-stu-id="aab68-174">Install your favorite code editor, if you haven't already.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="aab68-175">Необходимо установить редактор кода?</span><span class="sxs-lookup"><span data-stu-id="aab68-175">Need to install a code editor?</span></span> <span data-ttu-id="aab68-176">Повторите [Visual Studio](https://visualstudio.com/downloads)!</span><span class="sxs-lookup"><span data-stu-id="aab68-176">Try [Visual Studio](https://visualstudio.com/downloads)!</span></span>
+
+#### <a name="installing-docker-client"></a><span data-ttu-id="aab68-177">Установка клиента Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-177">Installing Docker Client</span></span>
+
+<span data-ttu-id="aab68-178">Установка [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) или более поздней версии клиента Docker.</span><span class="sxs-lookup"><span data-stu-id="aab68-178">Install [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) or later of the Docker client.</span></span>
+
+<span data-ttu-id="aab68-179">В можно установить клиента Docker.</span><span class="sxs-lookup"><span data-stu-id="aab68-179">The Docker client can be installed in:</span></span>
+
+* <span data-ttu-id="aab68-180">Дистрибутивы Linux</span><span class="sxs-lookup"><span data-stu-id="aab68-180">Linux distributions</span></span>
+
+   * [<span data-ttu-id="aab68-181">CentOS</span><span class="sxs-lookup"><span data-stu-id="aab68-181">CentOS</span></span>](https://www.docker.com/docker-centos-distribution)
+
+   * [<span data-ttu-id="aab68-182">Debian</span><span class="sxs-lookup"><span data-stu-id="aab68-182">Debian</span></span>](https://www.docker.com/docker-debian)
+
+   * [<span data-ttu-id="aab68-183">Fedora</span><span class="sxs-lookup"><span data-stu-id="aab68-183">Fedora</span></span>](https://www.docker.com/docker-fedora)
+
+   * [<span data-ttu-id="aab68-184">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="aab68-184">Ubuntu</span></span>](https://www.docker.com/docker-ubuntu)
+
+* [<span data-ttu-id="aab68-185">macOS</span><span class="sxs-lookup"><span data-stu-id="aab68-185">macOS</span></span>](https://docs.docker.com/docker-for-mac/)
+
+* <span data-ttu-id="aab68-186">[Windows](https://docs.docker.com/docker-for-windows/).</span><span class="sxs-lookup"><span data-stu-id="aab68-186">[Windows](https://docs.docker.com/docker-for-windows/).</span></span>
+
+#### <a name="installing-git-for-sample-repository"></a><span data-ttu-id="aab68-187">Установка Git для образца репозитория</span><span class="sxs-lookup"><span data-stu-id="aab68-187">Installing Git for sample repository</span></span>
+
+* <span data-ttu-id="aab68-188">Установка [git](https://git-scm.com/download) чтобы клонировать репозиторий.</span><span class="sxs-lookup"><span data-stu-id="aab68-188">Install [git](https://git-scm.com/download) if you wish to clone the repository.</span></span>
+
+### <a name="getting-the-sample-application"></a><span data-ttu-id="aab68-189">Получение примера приложения</span><span class="sxs-lookup"><span data-stu-id="aab68-189">Getting the sample application</span></span>
+
+<span data-ttu-id="aab68-190">Самый простой способ получить образец — путем клонирования [репозитории samples](https://github.com/dotnet/dotnet-docker-samples) с git, выполнив следующие инструкции:</span><span class="sxs-lookup"><span data-stu-id="aab68-190">The easiest way to get the sample is by cloning the [samples repository](https://github.com/dotnet/dotnet-docker-samples) with git, using the following instructions:</span></span> 
 
 ```console
-$ yo docker
-
-     _-----_     ╭──────────────────────────╮
-    |       |    │   Welcome to the Docker  │
-    |--(o)--|    │        generator!        │
-   `---------´   │     Let's add Docker     │
-    ( _´U`_ )    │  container magic to your │
-    /___A___\   /│           app!           │
-     |  ~  |     ╰──────────────────────────╯
-   __'.___.'__
- ´   `  |° ´ Y `
-
-? What language is your project using? (Use arrow keys)
-❯ .NET Core
-  Golang
-  Node.js
+git clone https://github.com/dotnet/dotnet-docker-samples/
 ```
 
-- В качестве типа проекта выберите `.NET Core`.
-- `rtm` — версия .NET Core
-- `Y` — проект использует веб-сервер
-- `5000` — порт, который прослушивает приложение веб-интерфейса API (http://localhost:5000)
-- `api` — имя образа
-- `api` — имя службы
-- `api` — составной проект 
-- `Y` — перезапись текущего файла Dockerfile
+<span data-ttu-id="aab68-191">Можно также загрузить хранилище (небольшой) как ZIP-файл, из репозитория примеров .NET Core Docker.</span><span class="sxs-lookup"><span data-stu-id="aab68-191">You can also download the repository (it is small) as a zip from the .NET Core Docker samples repository.</span></span>
 
-Когда работа генератора завершится, в проект будут добавлены следующие файлы.
+### <a name="run-the-aspnet-app-locally"></a><span data-ttu-id="aab68-192">Приложение ASP.NET запускается локально</span><span class="sxs-lookup"><span data-stu-id="aab68-192">Run the ASP.NET app locally</span></span>
 
-- .vscode/launch.json
-- Dockerfile.debug
-- Dockerfile
-- docker-compose.debug.yml
-- docker-compose.yml
-- dockerTask.ps1
-- dockerTask.sh
-- .vscode/tasks.json
+<span data-ttu-id="aab68-193">Чтобы получить ориентир, перед упаковкой приложения в контейнер запустите его локально.</span><span class="sxs-lookup"><span data-stu-id="aab68-193">For a reference point, before we containerize the application, first run the application locally.</span></span>
 
-Генератор создает два файла Dockerfile.
+<span data-ttu-id="aab68-194">Можно построить и запустите приложение локально с 2.0 SDK .NET Core с помощью следующих команд (инструкции предполагают корень репозитория):</span><span class="sxs-lookup"><span data-stu-id="aab68-194">You can build and run the application locally with the .NET Core 2.0 SDK using the following commands (The instructions assume the root of the repository):</span></span>
 
-**Dockerfile.debug** — этот файл основан на образе **microsoft/dotnet:1.0.0-preview2-sdk**, который, как можно видеть в списке вариантов образов, включает пакет SDK, интерфейс CLI и платформу .NET Core и будет образом, используемым для разработки и отладки (F5). Включение всех этих компонентов увеличивает размер образа приблизительно до 540 МБ.
+```console
+cd aspnetapp
+dotnet run
+```
 
-**Dockerfile** — это образ выпуска, основанный на **microsoft/dotnet:1.0.0-core**, который следует использовать для рабочей среды. После сборки его размер составляет приблизительно 253 МБ.
+<span data-ttu-id="aab68-195">После запуска приложения, посетите **http://localhost: 5000** в веб-браузере.</span><span class="sxs-lookup"><span data-stu-id="aab68-195">After the application starts, visit **http://localhost:5000** in your web browser.</span></span>
 
-### <a name="creating-the-docker-images"></a>Создание образов Docker
-С помощью скрипта `dockerTask.sh` или `dockerTask.ps1` можно выполнить сборку или компоновку образа и контейнера для приложения **api** для определенной среды. Выполните сборку образа **debug**, выполнив приведенную ниже команду.
+### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a><span data-ttu-id="aab68-196">Построение и запуск образца с помощью Docker для контейнеров Linux</span><span class="sxs-lookup"><span data-stu-id="aab68-196">Build and run the sample with Docker for Linux containers</span></span>
+
+<span data-ttu-id="aab68-197">Можно построить и запустите образец в Docker с контейнерами Linux с помощью следующих команд (инструкции предполагают корень репозитория):</span><span class="sxs-lookup"><span data-stu-id="aab68-197">You can build and run the sample in Docker using Linux containers using the following commands (The instructions assume the root of the repository):</span></span>
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
+```
+
+> [!Note] <span data-ttu-id="aab68-198">`docker run` "-P" аргумент сопоставления порта 5000 на локальном компьютере для порта 80 в контейнере (форма сопоставления порта `host:container`).</span><span class="sxs-lookup"><span data-stu-id="aab68-198">The `docker run` '-p' argument maps port 5000 on your local machine to port 80 in the container (the port mapping form is `host:container`).</span></span> <span data-ttu-id="aab68-199">Дополнительные сведения см. в разделе [запуска docker](https://docs.docker.com/engine/reference/commandline/exec/) ссылки на параметры командной строки.</span><span class="sxs-lookup"><span data-stu-id="aab68-199">For more information, see the [docker run](https://docs.docker.com/engine/reference/commandline/exec/) reference on command-line parameters.</span></span>
+
+<span data-ttu-id="aab68-200">После запуска приложения, посетите **http://localhost: 5000** в веб-браузере.</span><span class="sxs-lookup"><span data-stu-id="aab68-200">After the application starts, visit **http://localhost:5000** in your web browser.</span></span>
+
+### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a><span data-ttu-id="aab68-201">Построение и запуск образца с помощью контейнеров Docker для Windows</span><span class="sxs-lookup"><span data-stu-id="aab68-201">Build and run the sample with Docker for Windows containers</span></span>
+
+<span data-ttu-id="aab68-202">Можно построить и запустите образец в Docker с помощью контейнеров Windows, с помощью следующих команд (инструкции предполагают корень репозитория):</span><span class="sxs-lookup"><span data-stu-id="aab68-202">You can build and run the sample in Docker using Windows containers using the following commands (The instructions assume the root of the repository):</span></span>
+
+```console
+cd aspnetapp
+docker build -t aspnetapp .
+docker run -it --rm --name aspnetcore_sample aspnetapp
+```
+
+> [!IMPORTANT]
+> <span data-ttu-id="aab68-203">Необходимо перейти **IP-адрес контейнера** (в отличие от «http://localhost») в браузере напрямую при использовании контейнеров Windows.</span><span class="sxs-lookup"><span data-stu-id="aab68-203">You must navigate to the **container IP address** (as opposed to http://localhost) in your browser directly when using Windows containers.</span></span> <span data-ttu-id="aab68-204">Можно получить IP-адрес контейнера с помощью следующих действий:</span><span class="sxs-lookup"><span data-stu-id="aab68-204">You can get the IP address of your container with the following steps:</span></span>
+
+* <span data-ttu-id="aab68-205">Откройте другую командную строку.</span><span class="sxs-lookup"><span data-stu-id="aab68-205">Open up another command prompt.</span></span>
+* <span data-ttu-id="aab68-206">Запустите `docker ps` для просмотра вашего запущенные контейнеры.</span><span class="sxs-lookup"><span data-stu-id="aab68-206">Run `docker ps` to see your running containers.</span></span> <span data-ttu-id="aab68-207">Контейнер «aspnetcore_sample» должно быть существует.</span><span class="sxs-lookup"><span data-stu-id="aab68-207">The "aspnetcore_sample" container should be there.</span></span>
+* <span data-ttu-id="aab68-208">Запустите `docker exec aspnetcore_sample ipconfig`.</span><span class="sxs-lookup"><span data-stu-id="aab68-208">Run `docker exec aspnetcore_sample ipconfig`.</span></span>
+* <span data-ttu-id="aab68-209">IP-адрес контейнера, скопируйте и вставьте в адресную строку браузера (например, 172.29.245.43).</span><span class="sxs-lookup"><span data-stu-id="aab68-209">Copy the container IP address and paste into your browser (for example, 172.29.245.43).</span></span>
+
+> [!Note]
+> <span data-ttu-id="aab68-210">Docker exec поддерживает идентифицирующие контейнеры с именем или hash.</span><span class="sxs-lookup"><span data-stu-id="aab68-210">Docker exec supports identifying containers with name or hash.</span></span> <span data-ttu-id="aab68-211">В нашем примере используется имя (aspnetcore_sample).</span><span class="sxs-lookup"><span data-stu-id="aab68-211">The name (aspnetcore_sample) is used in our example.</span></span>
+
+<span data-ttu-id="aab68-212">См. следующий пример того, как получить IP-адрес из запущенного контейнера Windows.</span><span class="sxs-lookup"><span data-stu-id="aab68-212">See the following example of how to get the IP address of a running Windows container.</span></span>
+
+```console
+docker exec aspnetcore_sample ipconfig
+
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : contoso.com
+   Link-local IPv6 Address . . . . . : fe80::1967:6598:124:cfa3%4
+   IPv4 Address. . . . . . . . . . . : 172.29.245.43
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 172.29.240.1
+```
+
+> [!Note]
+> <span data-ttu-id="aab68-213">Docker exec запускает новую команду в запущенного контейнера.</span><span class="sxs-lookup"><span data-stu-id="aab68-213">Docker exec runs a new command in a running container.</span></span> <span data-ttu-id="aab68-214">Дополнительные сведения см. в разделе [docker exec ссылка](https://docs.docker.com/engine/reference/commandline/exec/) о параметрах командной строки.</span><span class="sxs-lookup"><span data-stu-id="aab68-214">For more information, see the [docker exec reference](https://docs.docker.com/engine/reference/commandline/exec/) on command-line parameters.</span></span>
+
+<span data-ttu-id="aab68-215">Вы можете создавать приложения, которое будет готово к развертыванию в рабочей среде локально с помощью [публикации dotnet](../tools/dotnet-publish.md) команды.</span><span class="sxs-lookup"><span data-stu-id="aab68-215">You can produce an application that is ready to deploy to production locally using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span>
+
+```console
+dotnet publish -c release -o published
+```
+
+> [!Note]
+> <span data-ttu-id="aab68-216">Аргумент - c выпуска построения приложения в режиме выпуска (по умолчанию используется режим отладки).</span><span class="sxs-lookup"><span data-stu-id="aab68-216">The -c release argument builds the application in release mode (the default is debug mode).</span></span> <span data-ttu-id="aab68-217">Дополнительные сведения см. в разделе [dotnet запуска ссылку](../tools/dotnet-run.md) о параметрах командной строки.</span><span class="sxs-lookup"><span data-stu-id="aab68-217">For more information, see the [dotnet run reference](../tools/dotnet-run.md) on command-line parameters.</span></span>
+
+<span data-ttu-id="aab68-218">Приложение можно запустить **Windows** с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="aab68-218">You can run the application on **Windows** using the following command.</span></span>
+
+```console
+dotnet published\aspnetapp.dll
+```
+
+<span data-ttu-id="aab68-219">Приложение можно запустить **Linux** или **macOS** с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="aab68-219">You can run the application on **Linux** or **macOS** using the following command.</span></span>
 
 ```bash
-./dockerTask.sh build debug
+dotnet published/aspnetapp.dll
 ```
 
-Образ выполнит сборку приложения ASP.NET, вызовет команду `dotnet restore`, добавит отладчик в образ, задаст `ENTRYPOINT` и, наконец, скопирует приложение в образ. Результатом будет образ Docker с именем *api* и с тегом (`TAG`) *debug*.  Просмотреть образы на компьютере можно с помощью команды `docker images`.
+### <a name="docker-images-used-in-this-sample"></a><span data-ttu-id="aab68-220">Docker изображений, используемых в этом образце</span><span class="sxs-lookup"><span data-stu-id="aab68-220">Docker Images used in this sample</span></span>
 
-```bash
-docker images
+<span data-ttu-id="aab68-221">В этом образце используются следующие образы Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-221">The following Docker images are used in this sample</span></span>
 
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        a few seconds ago   779.8 MB
-```
+* `microsoft/aspnetcore-build:2.0`
+* `microsoft/aspnetcore:2.0`
 
-Другой способ создать образ и запустить приложение в контейнере Docker — открыть приложение в Visual Studio Code и воспользоваться средствами отладки. 
-
-Щелкните значок отладки на панели представлений в левой части окна Visual Studio Code.
-
-![Значок отладки VS Code](./media/building-net-docker-images/debugging_debugicon.png)
-
-Затем щелкните значок воспроизведения или нажмите клавишу F5, чтобы создать образ и запустить приложение в контейнере. Приложение веб-интерфейса API будет запущено с помощью веб-браузера по умолчанию по адресу http://localhost:5000.
-
-![Средства отладки VS Code для Docker](./media/building-net-docker-images/docker-tools-vscode-f5.png)
-
-Вы можете устанавливать точки останова в приложении, выполнять его пошагово и выполнять другие действия, как если бы приложение выполнялось локально на компьютере разработки, а не в контейнере. Преимущество отладки в контейнере в том, что это тот же образ, который будет развертываться в рабочей среде.
-
-Чтобы создать образ выпуска или рабочий образ, достаточно просто выполнить команду в терминале, указав имя среды `release`.
-
-```bash
-./dockerTask build release
-```
-
-Команда создает образ на основе базового образа **microsoft/dotnet:core** меньшего размера, открывает ([EXPOSE](https://docs.docker.com/engine/reference/builder/#/expose)) порт 5000, задает точку входа ([ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint)) для `dotnet api.dll` и копирует ее в каталог `/app`. Нет отладчика, пакета SDK, и не выполняется команда `dotnet restore`, благодаря чему размер образа гораздо меньше. Образ имеет имя **api** и тег (`TAG`) **latest**.
-
-```
-REPOSITORY          TAG                  IMAGE ID            CREATED             SIZE
-api                 debug                70e89fbc5dbe        1 hour ago        779.8 MB
-api                 latest               ef17184c8de6        1 hour ago        260.7 MB
-```
-
-## <a name="summary"></a>Сводка
-
-Использование генератора Docker для добавления необходимых файлов в приложение веб-интерфейса API упростило создание версий образов для разработки и рабочей среды.  Кроссплатформенность средств также достигается с помощью скрипта PowerShell, который позволяет получить те же результаты в Windows, а интеграция с Visual Studio Code дает возможность пошаговой отладки приложения в контейнере. Понимая назначение вариантов образов и целевые сценарии, вы можете оптимизировать внутренний цикл разработки и получить более эффективные образы для рабочих развертываний.  
+<span data-ttu-id="aab68-222">Поздравляем!</span><span class="sxs-lookup"><span data-stu-id="aab68-222">Congratulations!</span></span> <span data-ttu-id="aab68-223">у вас есть только:</span><span class="sxs-lookup"><span data-stu-id="aab68-223">you have just:</span></span>
+> [!div class="checklist"]
+> * <span data-ttu-id="aab68-224">Узнали о Microsoft .NET Core Docker images</span><span class="sxs-lookup"><span data-stu-id="aab68-224">Learned about Microsoft .NET Core Docker images</span></span>
+> * <span data-ttu-id="aab68-225">Получить ASP.NET Core примера приложения для Dockerize</span><span class="sxs-lookup"><span data-stu-id="aab68-225">Got an ASP.NET Core sample app to Dockerize</span></span>
+> * <span data-ttu-id="aab68-226">Запускался локально в пример приложения ASP.NET</span><span class="sxs-lookup"><span data-stu-id="aab68-226">Ran the ASP.NET sample app locally</span></span>
+> * <span data-ttu-id="aab68-227">Построения и запуска образца с помощью Docker для контейнеров Linux</span><span class="sxs-lookup"><span data-stu-id="aab68-227">Built and ran the sample with Docker for Linux containers</span></span>
+> * <span data-ttu-id="aab68-228">Построения и запуска образца с помощью контейнеров Docker для Windows</span><span class="sxs-lookup"><span data-stu-id="aab68-228">Built and ran the sample with Docker for Windows containers</span></span>
 
 
+<span data-ttu-id="aab68-229">**Дальнейшие действия**</span><span class="sxs-lookup"><span data-stu-id="aab68-229">**Next Steps**</span></span>
 
+<span data-ttu-id="aab68-230">Ниже приведены действия, которые можно предпринять.</span><span class="sxs-lookup"><span data-stu-id="aab68-230">Here are some next steps you can take:</span></span>
+
+* [<span data-ttu-id="aab68-231">Работа со средствами Visual Studio Docker</span><span class="sxs-lookup"><span data-stu-id="aab68-231">Working with Visual Studio Docker Tools</span></span>](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
+* [<span data-ttu-id="aab68-232">Развертывание образов Docker из реестра контейнер Azure с экземплярами Azure контейнера</span><span class="sxs-lookup"><span data-stu-id="aab68-232">Deploying Docker Images from the Azure Container Registry to Azure Container Instances</span></span>](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
+* [<span data-ttu-id="aab68-233">Отладка с кодом Visual Studio</span><span class="sxs-lookup"><span data-stu-id="aab68-233">Debugging with Visual Studio Code</span></span>](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) 
+* [<span data-ttu-id="aab68-234">Получение руки по с помощью Visual Studio для Mac, контейнеры и без сервера кода в облаке</span><span class="sxs-lookup"><span data-stu-id="aab68-234">Getting hands on with Visual Studio for Mac, containers, and serverless code in the cloud</span></span>](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
+* [<span data-ttu-id="aab68-235">Начало работы с Docker и Visual Studio для Mac лаборатории</span><span class="sxs-lookup"><span data-stu-id="aab68-235">Getting Started with Docker and Visual Studio for Mac Lab</span></span>](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
+
+> [!Note]
+> <span data-ttu-id="aab68-236">Если у вас подписка на Azure, [Зарегистрируйтесь](https://azure.microsoft.com/free/?b=16.48) для бесплатной 30-дневной учетной записи и get 200 в кредиты Azure, чтобы испытать любое сочетание служб Azure.</span><span class="sxs-lookup"><span data-stu-id="aab68-236">If you do not have an Azure subscription, [sign up today](https://azure.microsoft.com/free/?b=16.48) for a free 30-day account and get $200 in Azure Credits to try out any combination of Azure services.</span></span>

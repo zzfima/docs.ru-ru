@@ -1,126 +1,132 @@
 ---
-title: "Регулярные выражения в .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework"
-  - "регулярные выражения .NET Framework, сведения"
-  - "знаки [платформа .NET Framework], регулярные выражения"
-  - "разбор текста с регулярными выражениями"
-  - "разбор текста с регулярными выражениями, общие сведения"
-  - "синтаксис соответствия шаблону с регулярными выражениями"
-  - "синтаксис соответствия шаблону с регулярными выражениями, о подборе шаблонов"
-  - "регулярные выражения [платформа .NET Framework]"
-  - "регулярные выражения [платформа .NET Framework], сведения о регулярных выражениях"
-  - "поиск с регулярными выражениями"
-  - "поиск с регулярными выражениями, сведения о регулярных выражениях"
-  - "строки [платформа .NET Framework], регулярные выражения"
-  - "подстроки"
+title: "Регулярные выражения в .NET Framework"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- pattern-matching with regular expressions, about pattern-matching
+- substrings
+- searching with regular expressions, about regular expressions
+- pattern-matching with regular expressions
+- searching with regular expressions
+- parsing text with regular expressions
+- regular expressions [.NET Framework], about regular expressions
+- regular expressions [.NET Framework]
+- .NET Framework regular expressions, about
+- characters [.NET Framework], regular expressions
+- parsing text with regular expressions, overview
+- .NET Framework regular expressions
+- strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cb612d524f32eb4a97ac358d6deb8d2889ee5391
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Регулярные выражения в .NET Framework
-Регулярные выражения предоставляют мощный, гибкий и эффективный способ обработки текста.  Комплексная нотация сопоставления шаблонов регулярных выражений позволяет быстро анализировать большие объемы текста для поиска определенных шаблонов символов, проверять текст на соответствие предопределенному шаблону \(например, адресу электронной почты, извлекать, изменять, заменять и удалять текстовые подстроки, а также добавлять извлеченные строки в коллекцию для создания отчета.  Для многих приложений, которые работают со строками или анализируют большие блоки текста, регулярные выражения — незаменимый инструмент.  
+# <a name="net-regular-expressions"></a><span data-ttu-id="ee901-102">Регулярные выражения .NET</span><span class="sxs-lookup"><span data-stu-id="ee901-102">.NET Regular Expressions</span></span>
+<span data-ttu-id="ee901-103">Регулярные выражения предоставляют мощный, гибкий и эффективный способ обработки текста.</span><span class="sxs-lookup"><span data-stu-id="ee901-103">Regular expressions provide a powerful, flexible, and efficient method for processing text.</span></span> <span data-ttu-id="ee901-104">Комплексная нотация сопоставления шаблонов регулярных выражений позволяет быстро анализировать большие объемы текста для поиска определенных шаблонов символов, проверять текст на соответствие предопределенному шаблону (например, адресу электронной почты, извлекать, изменять, заменять и удалять текстовые подстроки, а также добавлять извлеченные строки в коллекцию для создания отчета.</span><span class="sxs-lookup"><span data-stu-id="ee901-104">The extensive pattern-matching notation of regular expressions enables you to quickly parse large amounts of text to find specific character patterns; to validate text to ensure that it matches a predefined pattern (such as an e-mail address); to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection in order to generate a report.</span></span> <span data-ttu-id="ee901-105">Для многих приложений, которые работают со строками или анализируют большие блоки текста, регулярные выражения — незаменимый инструмент.</span><span class="sxs-lookup"><span data-stu-id="ee901-105">For many applications that deal with strings or that parse large blocks of text, regular expressions are an indispensable tool.</span></span>  
   
-## Принцип работы регулярных выражений  
- Главный компонент обработки текста с помощью регулярных выражений — это механизм регулярных выражений, представленный в платформе .NET Framework объектом <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>.  Как минимум, для обработки текста с использованием в регулярных выражений механизму регулярных выражений необходимо предоставить два следующих элемента:  
+## <a name="how-regular-expressions-work"></a><span data-ttu-id="ee901-106">Принцип работы регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="ee901-106">How Regular Expressions Work</span></span>  
+ <span data-ttu-id="ee901-107">Обработчик регулярных выражений, которое представляется является краеугольным камнем обработки текста с помощью регулярных выражений <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> в .NET.</span><span class="sxs-lookup"><span data-stu-id="ee901-107">The centerpiece of text processing with regular expressions is the regular expression engine, which is represented by the <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> object in .NET.</span></span> <span data-ttu-id="ee901-108">Как минимум, для обработки текста с использованием в регулярных выражений механизму регулярных выражений необходимо предоставить два следующих элемента:</span><span class="sxs-lookup"><span data-stu-id="ee901-108">At a minimum, processing text using regular expressions requires that the regular expression engine be provided with the following two items of information:</span></span>  
   
--   Шаблон регулярного выражения для определения текста.  
+-   <span data-ttu-id="ee901-109">Шаблон регулярного выражения для определения текста.</span><span class="sxs-lookup"><span data-stu-id="ee901-109">The regular expression pattern to identify in the text.</span></span>  
   
-     В .NET Framework шаблоны регулярных выражений определяются специальным синтаксисом или языком, который совместим с регулярными выражениями Perl 5 и добавляет дополнительные функции, например сопоставление справа налево.  Дополнительные сведения см. в разделе [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).  
+     <span data-ttu-id="ee901-110">В .NET шаблоны регулярных выражений определяются специальным синтаксисом или языком, который совместим с регулярными выражениями Perl 5 и добавляет дополнительные возможности, например сопоставление справа налево.</span><span class="sxs-lookup"><span data-stu-id="ee901-110">In .NET, regular expression patterns are defined by a special syntax or language, which is compatible with Perl 5 regular expressions and adds some additional features such as right-to-left matching.</span></span> <span data-ttu-id="ee901-111">Дополнительные сведения см. в разделе [Элементы языка регулярных выражений. Краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).</span><span class="sxs-lookup"><span data-stu-id="ee901-111">For more information, see [Regular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md).</span></span>  
   
--   Текст, который будет проанализирован на соответствие шаблону регулярного выражения.  
+-   <span data-ttu-id="ee901-112">Текст, который будет проанализирован на соответствие шаблону регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="ee901-112">The text to parse for the regular expression pattern.</span></span>  
   
- Методы класса <xref:System.Text.RegularExpressions.Regex> позволяют выполнять следующие операции:  
+ <span data-ttu-id="ee901-113">Методы класса <xref:System.Text.RegularExpressions.Regex> позволяют выполнять следующие операции:</span><span class="sxs-lookup"><span data-stu-id="ee901-113">The methods of the <xref:System.Text.RegularExpressions.Regex> class let you perform the following operations:</span></span>  
   
--   Определить, входит ли шаблон регулярного выражения во входной текст, с помощью метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName>.  Пример, в котором для проверки текста используется метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>, см. в разделе [Практическое руководство. Проверка строк на соответствие формату электронной почты](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+-   <span data-ttu-id="ee901-114">Определить, входит ли шаблон регулярного выражения во входной текст, с помощью метода <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ee901-114">Determine whether the regular expression pattern occurs in the input text by calling the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ee901-115">Пример, использующий <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> для проверки текста, см. в разделе [как: строки проверка на соответствие формату электронной почты](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).</span><span class="sxs-lookup"><span data-stu-id="ee901-115">For an example that uses the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method for validating text, see [How to: Verify that Strings Are in Valid Email Format](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).</span></span>  
   
--   Получить один или все экземпляры текста, соответствующего шаблону регулярного выражения с помощью метода <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=fullName> или <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName>.  Первый метод возвращает объект <xref:System.Text.RegularExpressions.Match?displayProperty=fullName>, который предоставляет сведения о соответствующем тексте.  Второй метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий один объект <xref:System.Text.RegularExpressions.Match?displayProperty=fullName> для каждого соответствия, обнаруженного в обработанном тексте.  
+-   <span data-ttu-id="ee901-116">Получить один или все экземпляры текста, соответствующего шаблону регулярного выражения с помощью метода <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> или <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ee901-116">Retrieve one or all occurrences of text that matches the regular expression pattern by calling the <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> or <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ee901-117">Первый метод возвращает объект <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>, который предоставляет сведения о соответствующем тексте.</span><span class="sxs-lookup"><span data-stu-id="ee901-117">The former method returns a <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> object that provides information about the matching text.</span></span> <span data-ttu-id="ee901-118">Второй метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий один объект <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> для каждого соответствия, обнаруженного в обработанном тексте.</span><span class="sxs-lookup"><span data-stu-id="ee901-118">The latter returns a <xref:System.Text.RegularExpressions.MatchCollection> object that contains one <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> object for each match found in the parsed text.</span></span>  
   
--   Заменить текст, соответствующий шаблону регулярного выражения, с помощью метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName>.  Примеры использования метода <xref:System.Text.RegularExpressions.Regex.Replace%2A> для изменения форматов даты и удаления недопустимых символов из строки см. в разделах [Практическое руководство. Исключение недопустимых символов из строки](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) и [Пример. Изменение форматов даты](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).  
+-   <span data-ttu-id="ee901-119">Заменить текст, соответствующий шаблону регулярного выражения, с помощью метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ee901-119">Replace text that matches the regular expression pattern by calling the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ee901-120">Примеры использования <xref:System.Text.RegularExpressions.Regex.Replace%2A> для изменения формата даты и удаления недопустимых символов из строки, см. в разделе [как: исключение недопустимых символов из строки](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) и [пример: изменение форматов даты](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).</span><span class="sxs-lookup"><span data-stu-id="ee901-120">For examples that use the <xref:System.Text.RegularExpressions.Regex.Replace%2A> method to change date formats and remove invalid characters from a string, see [How to: Strip Invalid Characters from a String](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md) and [Example: Changing Date Formats](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md).</span></span>  
   
- Обзор объектной модели регулярных выражений см. в разделе [Объектная модель регулярных выражений](../../../docs/standard/base-types/the-regular-expression-object-model.md).  
+ <span data-ttu-id="ee901-121">Обзор объектной модели регулярных выражений см. в разделе [Объектная модель регулярных выражений](../../../docs/standard/base-types/the-regular-expression-object-model.md).</span><span class="sxs-lookup"><span data-stu-id="ee901-121">For an overview of the regular expression object model, see [The Regular Expression Object Model](../../../docs/standard/base-types/the-regular-expression-object-model.md).</span></span>  
   
- Дополнительные сведения о языке регулярных выражений см. в разделе [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) или в одной из этих доступных для скачивания и печати брошюр:  
+ <span data-ttu-id="ee901-122">Дополнительные сведения о языке регулярных выражений см. в разделе [языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) или загрузить и распечатать одну из следующих брошюр:</span><span class="sxs-lookup"><span data-stu-id="ee901-122">For more information about the regular expression language, see [Regular Expression Language - Quick Reference](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) or download and print one of these brochures:</span></span>  
   
- [Краткий справочник в формате Word \(DOCX\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)   
- [Краткий справочник в формате PDF](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [<span data-ttu-id="ee901-123">Краткий справочник в формате Word (DOCX)</span><span class="sxs-lookup"><span data-stu-id="ee901-123">Quick Reference in Word (.docx) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="ee901-124">Краткий справочник в формате PDF (PDF)</span><span class="sxs-lookup"><span data-stu-id="ee901-124">Quick Reference in PDF (.pdf) format</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-## Примеры регулярных выражений  
- Класс <xref:System.String> содержит ряд методов для поиска и замены строк, которые можно использовать для поиска строковых литералов в длинных строках.  Регулярные выражения максимально полезны, если требуется найти одну из нескольких подстрок в длинной строке или определить шаблоны в строке, как показано в следующих примерах.  
+## <a name="regular-expression-examples"></a><span data-ttu-id="ee901-125">Примеры регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="ee901-125">Regular Expression Examples</span></span>  
+ <span data-ttu-id="ee901-126">Класс <xref:System.String> содержит ряд методов для поиска и замены строк, которые можно использовать для поиска строковых литералов в длинных строках.</span><span class="sxs-lookup"><span data-stu-id="ee901-126">The <xref:System.String> class includes a number of string search and replacement methods that you can use when you want to locate literal strings in a larger string.</span></span> <span data-ttu-id="ee901-127">Регулярные выражения максимально полезны, если требуется найти одну из нескольких подстрок в длинной строке или определить шаблоны в строке, как показано в следующих примерах.</span><span class="sxs-lookup"><span data-stu-id="ee901-127">Regular expressions are most useful either when you want to locate one of several substrings in a larger string, or when you want to identify patterns in a string, as the following examples illustrate.</span></span>  
   
-### Пример 1. Замена подстрок  
- Предположим, что список рассылки содержит имена, в которые иногда входит обращение \(Mr., Mrs., Miss или Ms.\) в дополнение к имени и фамилии.  Если вы не хотите включать обращения при создании этикеток для конвертов из списка, с помощью регулярного выражения их можно удалить, как показано в следующем примере.  
+### <a name="example-1-replacing-substrings"></a><span data-ttu-id="ee901-128">Пример 1. Замена подстрок</span><span class="sxs-lookup"><span data-stu-id="ee901-128">Example 1: Replacing Substrings</span></span>  
+ <span data-ttu-id="ee901-129">Предположим, что список рассылки содержит имена, в которые иногда входит обращение (Mr., Mrs., Miss или Ms.) в дополнение к имени и фамилии.</span><span class="sxs-lookup"><span data-stu-id="ee901-129">Assume that a mailing list contains names that sometimes include a title (Mr., Mrs., Miss, or Ms.) along with a first and last name.</span></span> <span data-ttu-id="ee901-130">Если вы не хотите включать обращения при создании этикеток для конвертов из списка, с помощью регулярного выражения их можно удалить, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ee901-130">If you do not want to include the titles when you generate envelope labels from the list, you can use a regular expression to remove the titles, as the following example illustrates.</span></span>  
   
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- Шаблон регулярного выражения `(Mr\.? |Mrs\.? |Miss |Ms\.? )` сопоставляет все вхождения строк "Mr ", "Mr. "  , "Mrs ", "Mrs. "  , "Miss ", "Ms или "Ms. "  .  После вызова метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> сопоставленная строка заменяется на <xref:System.String.Empty?displayProperty=fullName>; другими словами, она удаляется из исходной строки.  
+ <span data-ttu-id="ee901-131">Шаблон регулярного выражения`(Mr\.? |Mrs\.? |Miss |Ms\.? )` сопоставляет все вхождения «Mr», «Mr.», «Mrs», «Миссис», «Miss», «Ms или «Ms.».</span><span class="sxs-lookup"><span data-stu-id="ee901-131">The regular expression pattern`(Mr\.? |Mrs\.? |Miss |Ms\.? )` matches any occurrence of "Mr ", "Mr. ", "Mrs ", "Mrs. ", "Miss ", "Ms or "Ms. ".</span></span> <span data-ttu-id="ee901-132">После вызова метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> сопоставленная строка заменяется на <xref:System.String.Empty?displayProperty=nameWithType>; другими словами, она удаляется из исходной строки.</span><span class="sxs-lookup"><span data-stu-id="ee901-132">The call to the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method replaces the matched string with <xref:System.String.Empty?displayProperty=nameWithType>; in other words, it removes it from the original string.</span></span>  
   
-### Пример 2. Поиск повторяющихся слов  
- Случайный повтор слов — это распространенная ошибка при написании текстов.  Регулярное выражение можно использовать для определения повторяющихся слов, как показано в следующем примере.  
+### <a name="example-2-identifying-duplicated-words"></a><span data-ttu-id="ee901-133">Пример 2. Поиск повторяющихся слов</span><span class="sxs-lookup"><span data-stu-id="ee901-133">Example 2: Identifying Duplicated Words</span></span>  
+ <span data-ttu-id="ee901-134">Случайный повтор слов — это распространенная ошибка при написании текстов.</span><span class="sxs-lookup"><span data-stu-id="ee901-134">Accidentally duplicating words is a common error that writers make.</span></span> <span data-ttu-id="ee901-135">Регулярное выражение можно использовать для определения повторяющихся слов, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="ee901-135">A regular expression can be used to identify duplicated words, as the following example shows.</span></span>  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
- Шаблон регулярного выражения `\b(\w+?)\s\1\b` интерпретируется следующим образом:  
+ <span data-ttu-id="ee901-136">Шаблон регулярного выражения `\b(\w+?)\s\1\b` интерпретируется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="ee901-136">The regular expression pattern `\b(\w+?)\s\1\b` can be interpreted as follows:</span></span>  
   
 |||  
 |-|-|  
-|`\b`|Начало на границе слова.|  
-|\(\\w\+?\)|Соответствует одному или нескольким символам слова \(как можно меньшему количеству\).  Вместе они формируют группу, к которой можно обращаться как к `\1`.|  
-|`\s`|Соответствует пробелу.|  
-|`\1`|Сопоставление подстроки, равной группе с именем `\1`.|  
-|`\b`|Соответствует границе слова.|  
+|`\b`|<span data-ttu-id="ee901-137">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="ee901-137">Start at a word boundary.</span></span>|  
+|<span data-ttu-id="ee901-138">(\w+?)</span><span class="sxs-lookup"><span data-stu-id="ee901-138">(\w+?)</span></span>|<span data-ttu-id="ee901-139">Соответствует одному или нескольким символам слова (как можно меньшему количеству).</span><span class="sxs-lookup"><span data-stu-id="ee901-139">Match one or more word characters, but as few characters as possible.</span></span> <span data-ttu-id="ee901-140">Вместе они формируют группу, к которой можно обращаться как к `\1`.</span><span class="sxs-lookup"><span data-stu-id="ee901-140">Together, they form a group that can be referred to as `\1`.</span></span>|  
+|`\s`|<span data-ttu-id="ee901-141">Соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="ee901-141">Match a white-space character.</span></span>|  
+|`\1`|<span data-ttu-id="ee901-142">Сопоставление подстроки, равной группе с именем `\1`.</span><span class="sxs-lookup"><span data-stu-id="ee901-142">Match the substring that is equal to the group named `\1`.</span></span>|  
+|`\b`|<span data-ttu-id="ee901-143">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="ee901-143">Match a word boundary.</span></span>|  
   
- Метод <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=fullName> вызывается с параметрами регулярного выражения <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  Поэтому операция сопоставления учитывает регистр, а пример указывает, что подстрока "This this" является повтором.  
+ <span data-ttu-id="ee901-144">Метод <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> вызывается с параметрами регулярного выражения <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ee901-144">The <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> method is called with regular expression options set to <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ee901-145">Поэтому операция сопоставления учитывает регистр, а пример указывает, что подстрока "This this" является повтором.</span><span class="sxs-lookup"><span data-stu-id="ee901-145">Therefore, the match operation is case-insensitive, and the example identifies the substring "This this" as a duplication.</span></span>  
   
- Обратите внимание, что входная строка содержит подстроку "this?  This".  Но из\-за знака пунктуации она не считается повторением.  
+ <span data-ttu-id="ee901-146">Обратите внимание, что входная строка содержит подстроку "this?</span><span class="sxs-lookup"><span data-stu-id="ee901-146">Note that the input string includes the substring "this?</span></span> <span data-ttu-id="ee901-147">This".</span><span class="sxs-lookup"><span data-stu-id="ee901-147">This".</span></span> <span data-ttu-id="ee901-148">Но из-за знака пунктуации она не считается повторением.</span><span class="sxs-lookup"><span data-stu-id="ee901-148">However, because of the intervening punctuation mark, it is not identified as a duplication.</span></span>  
   
-### Пример 3. Динамическое создание регулярного выражения с учетом языка и региональных параметров  
- Следующий пример демонстрирует преимущества использования регулярных выражений с гибкими функциями глобализации .NET Framework.  В примере объект <xref:System.Globalization.NumberFormatInfo> применяется для определения формата денежных значений в текущих региональных стандартах системы.  Затем эти данные используются для динамического создания регулярного выражения, которое извлекает денежные значения из текста.  Для каждого совпадения извлекается подгруппа, содержащая только числовые строки, которая преобразуется в значение <xref:System.Decimal>, после чего рассчитывается промежуточный итог.  
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a><span data-ttu-id="ee901-149">Пример 3. Динамическое создание регулярного выражения с учетом языка и региональных параметров</span><span class="sxs-lookup"><span data-stu-id="ee901-149">Example 3: Dynamically Building a Culture-Sensitive Regular Expression</span></span>  
+ <span data-ttu-id="ee901-150">Следующий пример демонстрирует преимущества использования регулярных выражений с гибкими возможностями глобализации .NET.</span><span class="sxs-lookup"><span data-stu-id="ee901-150">The following example illustrates the power of regular expressions combined with the flexibility offered by .NET's globalization features.</span></span> <span data-ttu-id="ee901-151">В примере объект <xref:System.Globalization.NumberFormatInfo> применяется для определения формата денежных значений в текущих региональных стандартах системы.</span><span class="sxs-lookup"><span data-stu-id="ee901-151">It uses the <xref:System.Globalization.NumberFormatInfo> object to determine the format of currency values in the system's current culture.</span></span> <span data-ttu-id="ee901-152">Затем эти данные используются для динамического создания регулярного выражения, которое извлекает денежные значения из текста.</span><span class="sxs-lookup"><span data-stu-id="ee901-152">It then uses that information to dynamically construct a regular expression that extracts currency values from the text.</span></span> <span data-ttu-id="ee901-153">Для каждого совпадения извлекается подгруппа, содержащая только числовые строки, которая преобразуется в значение <xref:System.Decimal>, после чего рассчитывается промежуточный итог.</span><span class="sxs-lookup"><span data-stu-id="ee901-153">For each match, it extracts the subgroup that contains the numeric string only, converts it to a <xref:System.Decimal> value, and calculates a running total.</span></span>  
   
  [!code-csharp[Conceptual.Regex#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
  [!code-vb[Conceptual.Regex#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
   
- На компьютере с региональными параметрами "English \- United States \(en\-US\)" пример динамически создает регулярное выражение `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`.  Шаблон регулярного выражения интерпретируется следующим образом:  
+ <span data-ttu-id="ee901-154">На компьютере с региональными параметрами "English - United States (en-US)" пример динамически создает регулярное выражение `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`.</span><span class="sxs-lookup"><span data-stu-id="ee901-154">On a computer whose current culture is English - United States (en-US), the example dynamically builds the regular expression `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`.</span></span> <span data-ttu-id="ee901-155">Шаблон регулярного выражения интерпретируется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="ee901-155">This regular expression pattern can be interpreted as follows:</span></span>  
   
 |||  
 |-|-|  
-|`\$`|Выполняется поиск одного вхождения символа доллара \($\) во входной строке.  Строка шаблона регулярного выражения содержит обратную косую черту, что говорит о том, что символ доллара интерпретируется буквально, а не как привязка регулярного выражения.  \(Отдельный символ $ указывает, что механизм регулярных выражений должен начинать сопоставление с конца строки.\) Чтобы правильно обработать текущий символ валюты, в примере вызывается метод <xref:System.Text.RegularExpressions.Regex.Escape%2A>, который экранирует символ.|  
-|`\s*`|Поиск нуля или нескольких вхождений пробела.|  
-|`[-+]?`|Поиск нуля или нескольких вхождений знака плюс или минус.|  
-|`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Внешние круглые скобки вокруг этого выражения делают его захватываемой группой или частью выражения.  Если найдено соответствие, сведения об этой части строки можно получить из второго объекта <xref:System.Text.RegularExpressions.Group> в объекте <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=fullName>.  \(Первый элемент в коллекции представляет все сопоставление.\)|  
-|`[0-9]{0,3}`|Поиск 0\-3 вхождений десятичных цифр \(0\-9\).|  
-|`(,[0-9]{3})*`|Поиск нуля или нескольких вхождений разделителя группы, за которыми следуют три десятичные цифры.|  
-|`\.`|Поиск одного вхождения десятичного разделителя.|  
-|`[0-9]+`|Поиск одной или нескольких десятичных цифр.|  
-|`(\.[0-9]+)?`|Поиск нуля или одного вхождения десятичного разделителя, за которым следует по крайней мере одна десятичная цифра.|  
+|`\$`|<span data-ttu-id="ee901-156">Выполняется поиск одного вхождения символа доллара ($) во входной строке.</span><span class="sxs-lookup"><span data-stu-id="ee901-156">Look for a single occurrence of the dollar symbol ($) in the input string.</span></span> <span data-ttu-id="ee901-157">Строка шаблона регулярного выражения содержит обратную косую черту, что говорит о том, что символ доллара интерпретируется буквально, а не как привязка регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="ee901-157">The regular expression pattern string includes a backslash to indicate that the dollar symbol is to be interpreted literally rather than as a regular expression anchor.</span></span> <span data-ttu-id="ee901-158">(Отдельный символ $ указывает, что механизм регулярных выражений должен начинать сопоставление с конца строки.) Чтобы правильно обработать текущий символ валюты, в примере вызывается метод <xref:System.Text.RegularExpressions.Regex.Escape%2A>, который экранирует символ.</span><span class="sxs-lookup"><span data-stu-id="ee901-158">(The $ symbol alone would indicate that the regular expression engine should try to begin its match at the end of a string.) To ensure that the current culture's currency symbol is not misinterpreted as a regular expression symbol, the example calls the <xref:System.Text.RegularExpressions.Regex.Escape%2A> method to escape the character.</span></span>|  
+|`\s*`|<span data-ttu-id="ee901-159">Поиск нуля или нескольких вхождений пробела.</span><span class="sxs-lookup"><span data-stu-id="ee901-159">Look for zero or more occurrences of a white-space character.</span></span>|  
+|`[-+]?`|<span data-ttu-id="ee901-160">Поиск нуля или нескольких вхождений знака плюс или минус.</span><span class="sxs-lookup"><span data-stu-id="ee901-160">Look for zero or one occurrence of either a positive sign or a negative sign.</span></span>|  
+|`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|<span data-ttu-id="ee901-161">Внешние круглые скобки вокруг этого выражения делают его захватываемой группой или частью выражения.</span><span class="sxs-lookup"><span data-stu-id="ee901-161">The outer parentheses around this expression define it as a capturing group or a subexpression.</span></span> <span data-ttu-id="ee901-162">Если найдено соответствие, сведения об этой части строки можно получить из второго объекта <xref:System.Text.RegularExpressions.Group> в объекте <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ee901-162">If a match is found, information about this part of the matching string can be retrieved from the second <xref:System.Text.RegularExpressions.Group> object in the <xref:System.Text.RegularExpressions.GroupCollection> object returned by the <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="ee901-163">(Первый элемент в коллекции представляет все сопоставление.)</span><span class="sxs-lookup"><span data-stu-id="ee901-163">(The first element in the collection represents the entire match.)</span></span>|  
+|`[0-9]{0,3}`|<span data-ttu-id="ee901-164">Поиск 0-3 вхождений десятичных цифр (0-9).</span><span class="sxs-lookup"><span data-stu-id="ee901-164">Look for zero to three occurrences of the decimal digits 0 through 9.</span></span>|  
+|`(,[0-9]{3})*`|<span data-ttu-id="ee901-165">Поиск нуля или нескольких вхождений разделителя группы, за которыми следуют три десятичные цифры.</span><span class="sxs-lookup"><span data-stu-id="ee901-165">Look for zero or more occurrences of a group separator followed by three decimal digits.</span></span>|  
+|`\.`|<span data-ttu-id="ee901-166">Поиск одного вхождения десятичного разделителя.</span><span class="sxs-lookup"><span data-stu-id="ee901-166">Look for a single occurrence of the decimal separator.</span></span>|  
+|`[0-9]+`|<span data-ttu-id="ee901-167">Поиск одной или нескольких десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="ee901-167">Look for one or more decimal digits.</span></span>|  
+|`(\.[0-9]+)?`|<span data-ttu-id="ee901-168">Поиск нуля или одного вхождения десятичного разделителя, за которым следует по крайней мере одна десятичная цифра.</span><span class="sxs-lookup"><span data-stu-id="ee901-168">Look for zero or one occurrence of the decimal separator followed by at least one decimal digit.</span></span>|  
   
- Если каждый из этих подшаблонов найден во входной строке, сопоставление является успешным, а объект <xref:System.Text.RegularExpressions.Match> с информацией о сопоставлении добавляется в объект <xref:System.Text.RegularExpressions.MatchCollection>.  
+ <span data-ttu-id="ee901-169">Если каждый из этих подшаблонов найден во входной строке, сопоставление является успешным, а объект <xref:System.Text.RegularExpressions.Match> с информацией о сопоставлении добавляется в объект <xref:System.Text.RegularExpressions.MatchCollection>.</span><span class="sxs-lookup"><span data-stu-id="ee901-169">If each of these subpatterns is found in the input string, the match succeeds, and a <xref:System.Text.RegularExpressions.Match> object that contains information about the match is added to the <xref:System.Text.RegularExpressions.MatchCollection> object.</span></span>  
   
-## Связанные разделы  
+## <a name="related-topics"></a><span data-ttu-id="ee901-170">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ee901-170">Related Topics</span></span>  
   
-|Заголовок|Описание|  
-|---------------|--------------|  
-|[Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Сведения о наборе символов, операторов и конструкций, которые можно использовать для определения регулярных выражений.|  
-|[Объектная модель регулярных выражений](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Сведения об использовании классов регулярных выражений и примеры кода.|  
-|[Подробные сведения о поведении регулярных выражений](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Сведения о возможностях и поведении регулярных выражений платформы .NET Framework.|  
-|[Примеры регулярных выражений](../../../docs/standard/base-types/regular-expression-examples.md)|Примеры кода, демонстрирующие типичное применение регулярных выражений.|  
+|<span data-ttu-id="ee901-171">Заголовок</span><span class="sxs-lookup"><span data-stu-id="ee901-171">Title</span></span>|<span data-ttu-id="ee901-172">Описание</span><span class="sxs-lookup"><span data-stu-id="ee901-172">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="ee901-173">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="ee901-173">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|<span data-ttu-id="ee901-174">Сведения о наборе символов, операторов и конструкций, которые можно использовать для определения регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="ee901-174">Provides information on the set of characters, operators, and constructs that you can use to define regular expressions.</span></span>|  
+|[<span data-ttu-id="ee901-175">Объектная модель регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="ee901-175">The Regular Expression Object Model</span></span>](../../../docs/standard/base-types/the-regular-expression-object-model.md)|<span data-ttu-id="ee901-176">Сведения об использовании классов регулярных выражений и примеры кода.</span><span class="sxs-lookup"><span data-stu-id="ee901-176">Provides information and code examples that illustrate how to use the regular expression classes.</span></span>|  
+|[<span data-ttu-id="ee901-177">Подробные сведения о поведении регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="ee901-177">Details of Regular Expression Behavior</span></span>](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|<span data-ttu-id="ee901-178">Сведения о возможностях и поведении регулярных выражений .NET.</span><span class="sxs-lookup"><span data-stu-id="ee901-178">Provides information about the capabilities and behavior of .NET regular expressions.</span></span>|  
+|[<span data-ttu-id="ee901-179">Примеры регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="ee901-179">Regular Expression Examples</span></span>](../../../docs/standard/base-types/regular-expression-examples.md)|<span data-ttu-id="ee901-180">Примеры кода, демонстрирующие типичное применение регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="ee901-180">Provides code examples that illustrate typical uses of regular expressions.</span></span>|  
   
-## Ссылка  
- <xref:System.Text.RegularExpressions?displayProperty=fullName>   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>  
- [Краткий справочник по регулярным выражениям \(загрузить в формате Word\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Краткий справочник по регулярным выражениям \(загрузить в формате PDF\)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="reference"></a><span data-ttu-id="ee901-181">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ee901-181">Reference</span></span>  
+ <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+ <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
+ [<span data-ttu-id="ee901-182">Регулярные выражения — краткий справочник (загрузить в формате Word)</span><span class="sxs-lookup"><span data-stu-id="ee901-182">Regular Expressions - Quick Reference (download in Word format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [<span data-ttu-id="ee901-183">Регулярные выражения — краткий справочник (загрузить в формате PDF)</span><span class="sxs-lookup"><span data-stu-id="ee901-183">Regular Expressions - Quick Reference (download in PDF format)</span></span>](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

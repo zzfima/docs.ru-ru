@@ -1,86 +1,89 @@
 ---
-title: "Exceptions in Managed Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "unhandled exceptions,in managed threads"
-  - "threading [.NET Framework],unhandled exceptions"
-  - "threading [.NET Framework],exceptions in managed threads"
-  - "managed threading"
+title: "Исключения в управляемых потоках"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unhandled exceptions,in managed threads
+- threading [.NET Framework],unhandled exceptions
+- threading [.NET Framework],exceptions in managed threads
+- managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Exceptions in Managed Threads
-Начиная с версии 2.0 платформы .NET Framework, среда CLR позволяет большинству необработанных исключений в потоках обрабатываться естественным образом.  В большинстве случаев это означает, что необработанное исключение приведет к завершению приложения.  
+# <a name="exceptions-in-managed-threads"></a><span data-ttu-id="3dde7-102">Исключения в управляемых потоках</span><span class="sxs-lookup"><span data-stu-id="3dde7-102">Exceptions in Managed Threads</span></span>
+<span data-ttu-id="3dde7-103">Начиная с .NET Framework версии 2.0, среда CLR позволяет большинству необработанных исключений выполняться в потоках.</span><span class="sxs-lookup"><span data-stu-id="3dde7-103">Starting with the .NET Framework version 2.0, the common language runtime allows most unhandled exceptions in threads to proceed naturally.</span></span> <span data-ttu-id="3dde7-104">Как правило, это означает, что необработанное исключение будет вызывать завершение работы приложения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-104">In most cases this means that the unhandled exception causes the application to terminate.</span></span>  
   
 > [!NOTE]
->  Это значительное изменение по сравнению с .NET Framework версии 1.0 и 1.1, которое предоставляет поддержку для многих необработанных исключений, например для необработанных исключений в потоках пула потоков.  См. подраздел [Отличия от предыдущих версий](#ChangeFromPreviousVersions) далее в этом разделе.  
+>  <span data-ttu-id="3dde7-105">Это значительное изменение по сравнению с .NET Framework 1.0 и 1.1, в которых поддерживались многие необработанные исключения, например необработанные исключения в потоках из пула потоков.</span><span class="sxs-lookup"><span data-stu-id="3dde7-105">This is a significant change from the .NET Framework versions 1.0 and 1.1, which provide a backstop for many unhandled exceptions — for example, unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="3dde7-106">См. [Отличия от предыдущих версий](#ChangeFromPreviousVersions) ниже в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="3dde7-106">See [Change from Previous Versions](#ChangeFromPreviousVersions) later in this topic.</span></span>  
   
- Среда CLR предоставляет поддержку для определенных необработанных исключений, которые используются для управления выполнением программы:  
+ <span data-ttu-id="3dde7-107">Среда CLR предоставляет поддержку для определенных необработанных исключений, которые используются для управления потоком выполнения программы:</span><span class="sxs-lookup"><span data-stu-id="3dde7-107">The common language runtime provides a backstop for certain unhandled exceptions that are used for controlling program flow:</span></span>  
   
--   Исключение <xref:System.Threading.ThreadAbortException> создается в потоке, потому что была вызвана перегрузка <xref:System.Threading.Thread.Abort%2A>.  
+-   <span data-ttu-id="3dde7-108">Объект <xref:System.Threading.ThreadAbortException> создается исключение в потоке, так как <xref:System.Threading.Thread.Abort%2A> был вызван.</span><span class="sxs-lookup"><span data-stu-id="3dde7-108">A <xref:System.Threading.ThreadAbortException> is thrown in a thread because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   Исключение <xref:System.AppDomainUnloadedException> создается в потоке, потому что выгружается домен приложения, в котором выполняется поток.  
+-   <span data-ttu-id="3dde7-109"><xref:System.AppDomainUnloadedException> Создается исключение в потоке, так как выгрузка домена приложения, в котором выполняется поток.</span><span class="sxs-lookup"><span data-stu-id="3dde7-109">An <xref:System.AppDomainUnloadedException> is thrown in a thread because the application domain in which the thread is executing is being unloaded.</span></span>  
   
--   Среда CLR или ведущий процесс завершает поток путем создания внутреннего исключения.  
+-   <span data-ttu-id="3dde7-110">Среда CLR или ведущий процесс прерывает выполнение потока путем создания внутреннего исключения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-110">The common language runtime or a host process terminates the thread by throwing an internal exception.</span></span>  
   
- Если любые исключения являются необработанными в потоках, созданных в среде CLR, исключение завершает поток, однако среда CLR не позволяет исключению выполнять какие\-либо дополнительные действия.  
+ <span data-ttu-id="3dde7-111">Если любые из этих исключений не обрабатываются в потоках, созданных в среде CLR, исключение завершает поток, однако среда CLR не позволяет исключению выполнять какие-либо дополнительные действия.</span><span class="sxs-lookup"><span data-stu-id="3dde7-111">If any of these exceptions are unhandled in threads created by the common language runtime, the exception terminates the thread, but the common language runtime does not allow the exception to proceed further.</span></span>  
   
- Если эти исключения не обрабатываются в основном потоке или в потоках, которые перешли в среду выполнения из неуправляемого кода, они продолжают выполнение, что приводит к завершению работы приложения.  
+ <span data-ttu-id="3dde7-112">Если эти исключения не обрабатываются в главном потоке или в потоках, которые перешли в среду выполнения из неуправляемого кода, они продолжают выполнение, что приводит к завершению работы приложения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-112">If these exceptions are unhandled in the main thread, or in threads that entered the runtime from unmanaged code, they proceed normally, resulting in termination of the application.</span></span>  
   
 > [!NOTE]
->  Среда выполнения может создавать необрабатываемое исключение до того, как любой управляемый код сможет установить обработчик исключения.  Даже если управляемый код не может обработать такое исключение, исключение может продолжить работу.  
+>  <span data-ttu-id="3dde7-113">Среда выполнения может создать необработанное исключение до того, как любой управляемый код сможет установить обработчик исключения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-113">It is possible for the runtime to throw an unhandled exception before any managed code has had a chance to install an exception handler.</span></span> <span data-ttu-id="3dde7-114">Даже если управляемый код не в состоянии обработать такое исключение, исключение может продолжать выполняться.</span><span class="sxs-lookup"><span data-stu-id="3dde7-114">Even though managed code had no chance to handle such an exception, the exception is allowed to proceed naturally.</span></span>  
   
-## Нахождение проблем, связанных с поточностью, во время разработки  
- Если потоки могут завершаться со сбоем без уведомления и без завершения работы приложения, серьезные ошибки при программировании могут остаться незамеченными.  Эта проблема касается служб и других приложений, которые работают в течение продолжительного времени.  При сбое потока состояние программы постепенно становится поврежденным.  Производительность приложения может снизиться, или приложение может зависнуть.  
+## <a name="exposing-threading-problems-during-development"></a><span data-ttu-id="3dde7-115">Создание проблем при работе с потоками во время разработки</span><span class="sxs-lookup"><span data-stu-id="3dde7-115">Exposing Threading Problems During Development</span></span>  
+ <span data-ttu-id="3dde7-116">Если потоки могут завершаться сбоем без уведомления и без завершения работы приложения, при программировании могут оставаться незамеченными серьезные ошибки.</span><span class="sxs-lookup"><span data-stu-id="3dde7-116">When threads are allowed to fail silently, without terminating the application, serious programming problems can go undetected.</span></span> <span data-ttu-id="3dde7-117">Это создает серьезную проблему для служб и других приложений, которые выполняются продолжительное время.</span><span class="sxs-lookup"><span data-stu-id="3dde7-117">This is a particular problem for services and other applications which run for extended periods.</span></span> <span data-ttu-id="3dde7-118">В случае сбоя потоков состояние программы постепенно нарушается.</span><span class="sxs-lookup"><span data-stu-id="3dde7-118">As threads fail, program state gradually becomes corrupted.</span></span> <span data-ttu-id="3dde7-119">Производительность приложения может ухудшаться, или приложение может перестать отвечать на запросы.</span><span class="sxs-lookup"><span data-stu-id="3dde7-119">Application performance may degrade, or the application might hang.</span></span>  
   
- Разрешение необрабатываемым исключениям в потоках выполнять свои действия до прерывания программы операционной системой, приведет к выявлению таких проблем во время разработки и тестирования.  Отчеты об ошибках при прерывании программы поддерживают отладку.  
+ <span data-ttu-id="3dde7-120">Предоставление возможности необработанным исключениям продолжать выполняться в потоках, пока операционная система не завершит программу, создает проблемы во время разработки и тестирования.</span><span class="sxs-lookup"><span data-stu-id="3dde7-120">Allowing unhandled exceptions in threads to proceed naturally, until the operating system terminates the program, exposes such problems during development and testing.</span></span> <span data-ttu-id="3dde7-121">Отчеты об ошибках при завершении программы поддерживают процесс отладки.</span><span class="sxs-lookup"><span data-stu-id="3dde7-121">Error reports on program terminations support debugging.</span></span>  
   
 <a name="ChangeFromPreviousVersions"></a>   
-## Отличия от предыдущих версий  
- Самое большое отличие связано с управляемыми потоками.  В .NET Framework версии 1.0 и 1.1 среда CLR предоставляет поддержку для необрабатываемых исключений в следующих случаях:  
+## <a name="change-from-previous-versions"></a><span data-ttu-id="3dde7-122">Отличия от предыдущих версий</span><span class="sxs-lookup"><span data-stu-id="3dde7-122">Change from Previous Versions</span></span>  
+ <span data-ttu-id="3dde7-123">Наиболее существенное изменение связано с управляемыми потоками.</span><span class="sxs-lookup"><span data-stu-id="3dde7-123">The most significant change pertains to managed threads.</span></span> <span data-ttu-id="3dde7-124">В .NET Framework версий 1.0 и 1.1 среда CLR обеспечивает поддержку для необработанных исключений в следующих ситуациях.</span><span class="sxs-lookup"><span data-stu-id="3dde7-124">In the .NET Framework versions 1.0 and 1.1, the common language runtime provides a backstop for unhandled exceptions in the following situations:</span></span>  
   
--   В потоке из пула потоков вообще не существует необрабатываемых исключений.  Если задача создает исключение, которое не обрабатывается этой задачей, среда выполнения отображает в консоли трассировку стека исключения и возвращает поток в пул потоков.  
+-   <span data-ttu-id="3dde7-125">В потоке пула потоков необработанные исключения больше не могут существовать.</span><span class="sxs-lookup"><span data-stu-id="3dde7-125">There is no such thing as an unhandled exception on a thread pool thread.</span></span> <span data-ttu-id="3dde7-126">Если задача создает исключение, которое остается необработанным, среда выполнения отображает трассировку стека исключений на консоли, а затем возвращает поток в пул потоков.</span><span class="sxs-lookup"><span data-stu-id="3dde7-126">When a task throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then returns the thread to the thread pool.</span></span>  
   
--   В потоке, созданном с помощью метода <xref:System.Threading.Thread.Start%2A> класса <xref:System.Threading.Thread> необрабатываемые исключения отсутствуют.  При выполнении кода в таком потоке создается исключение, которое не обрабатывается этой задачей, среда выполнения отображает в консоли трассировку стека исключения и возвращает поток в пул потоков.  
+-   <span data-ttu-id="3dde7-127">Нет не рассылается как необработанное исключение в потоке, созданных с помощью <xref:System.Threading.Thread.Start%2A> метод <xref:System.Threading.Thread> класса.</span><span class="sxs-lookup"><span data-stu-id="3dde7-127">There is no such thing as an unhandled exception on a thread created with the <xref:System.Threading.Thread.Start%2A> method of the <xref:System.Threading.Thread> class.</span></span> <span data-ttu-id="3dde7-128">Если код, выполняемый в таком потоке, создает исключение, которое остается необработанным, среда выполнения отображает трассировку стека исключений на консоли и корректно завершает поток.</span><span class="sxs-lookup"><span data-stu-id="3dde7-128">When code running on such a thread throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then gracefully terminates the thread.</span></span>  
   
--   В потоке метода завершения вообще не существует необрабатываемых исключений.  При создании исключения методом завершения, которое им не обрабатывается, среда выполнения отображает в консоли трассировку стека исключения и позволяет потоку методов завершения возобновить выполнение методов завершения.  
+-   <span data-ttu-id="3dde7-129">В потоке метода завершения необработанные исключения больше не могут существовать.</span><span class="sxs-lookup"><span data-stu-id="3dde7-129">There is no such thing as an unhandled exception on the finalizer thread.</span></span> <span data-ttu-id="3dde7-130">Если метод завершения создает исключение, которое остается необработанным, среда выполнения отображает трассировку стека исключений на консоли и позволяет потоку метода завершения продолжить выполнение работающих методов завершения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-130">When a finalizer throws an exception that it does not handle, the runtime prints the exception stack trace to the console and then allows the finalizer thread to resume running finalizers.</span></span>  
   
- Основное или фоновое состояние управляемого потока не влияет на это поведение.  
+ <span data-ttu-id="3dde7-131">Основное или фоновое состояние управляемого потока не влияет на такое поведение.</span><span class="sxs-lookup"><span data-stu-id="3dde7-131">The foreground or background status of a managed thread does not affect this behavior.</span></span>  
   
- В необрабатываемых исключениях в потоках, исходящих из неуправляемого кода отличие менее заметно.  Диалоговое окно JIT\-присоединения во время выполнения предваряет диалоговое окно операционной системы для управляемых исключений или машинных исключений в потоках, которые прошли через машинный код.  Процесс прерывается в любых случаях.  
+ <span data-ttu-id="3dde7-132">Для необработанных исключений в потоках, происходящих в неуправляемом коде, существует не такая заметная разница.</span><span class="sxs-lookup"><span data-stu-id="3dde7-132">For unhandled exceptions on threads originating in unmanaged code, the difference is more subtle.</span></span> <span data-ttu-id="3dde7-133">Диалог с JIT-присоединением среды выполнения выгружает диалог операционной системы для управляемых или собственных исключений в потоках, которые прошли через машинный код.</span><span class="sxs-lookup"><span data-stu-id="3dde7-133">The runtime JIT-attach dialog preempts the operating system dialog for managed exceptions or native exceptions on threads that have passed through native code.</span></span> <span data-ttu-id="3dde7-134">Процесс завершается во всех случаях.</span><span class="sxs-lookup"><span data-stu-id="3dde7-134">The process terminates in all cases.</span></span>  
   
-### Перенос кода  
- В целом, это изменение выявит ранее неопределяемые проблемы программирования для их скорейшего разрешения.  Однако в некоторых случаях программисты могут воспользоваться поддержкой средой выполнения, например для прерывания потоков.  В зависимости от ситуации они должны учесть одни из следующих стратегий переноса кода:  
+### <a name="migrating-code"></a><span data-ttu-id="3dde7-135">Перенос кода</span><span class="sxs-lookup"><span data-stu-id="3dde7-135">Migrating Code</span></span>  
+ <span data-ttu-id="3dde7-136">В общем случае изменение позволит выявлять проблемы при программировании, которые ранее обнаруживать не удавалось, для их последующего устранения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-136">In general, the change will expose previously unrecognized programming problems so that they can be fixed.</span></span> <span data-ttu-id="3dde7-137">Однако в некоторых случаях программисты могут использовать возможность поддержки среды выполнения, например для завершения потоков.</span><span class="sxs-lookup"><span data-stu-id="3dde7-137">In some cases, however, programmers might have taken advantage of the runtime backstop, for example to terminate threads.</span></span> <span data-ttu-id="3dde7-138">В зависимости от ситуации они должны использовать одну из следующих стратегий миграции.</span><span class="sxs-lookup"><span data-stu-id="3dde7-138">Depending on the situation, they should consider one of the following migration strategies:</span></span>  
   
--   Реструктурировать код, чтобы поток корректно завершал работу при получении сигнала.  
+-   <span data-ttu-id="3dde7-139">Реструктурируйте код, чтобы при получении сигнала поток корректно выполнял выход.</span><span class="sxs-lookup"><span data-stu-id="3dde7-139">Restructure the code so the thread exits gracefully when a signal is received.</span></span>  
   
--   Использовать метод <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> для отмены потока.  
+-   <span data-ttu-id="3dde7-140">Использование <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> метода для отмены потока.</span><span class="sxs-lookup"><span data-stu-id="3dde7-140">Use the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method to abort the thread.</span></span>  
   
--   Если поток должен быть остановлен, чтобы завершилось прерывание процесса, следует сделать поток фоновым потоком, чтобы он автоматически завершался при выходе из процесса.  
+-   <span data-ttu-id="3dde7-141">Если поток необходимо остановить, чтобы было можно продолжить завершение процесса, сделайте поток фоновым, чтобы он автоматически завершался при выходе процесса.</span><span class="sxs-lookup"><span data-stu-id="3dde7-141">If a thread must be stopped so that process termination can proceed, make the thread a background thread so that it is automatically terminated on process exit.</span></span>  
   
- Во всех случаях стратегия должна придерживаться правилам разработки исключений.  См. раздел [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md).  
+ <span data-ttu-id="3dde7-142">Во всех случаях стратегия должна соответствовать правилам разработки исключений.</span><span class="sxs-lookup"><span data-stu-id="3dde7-142">In all cases, the strategy should follow the design guidelines for exceptions.</span></span> <span data-ttu-id="3dde7-143">См. раздел [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="3dde7-143">See [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md).</span></span>  
   
-### Флаг совместимости приложений  
- В качестве временной меры обеспечения совместимости администраторы могут поместить флаг совместимости в раздел `<runtime>` файла конфигурации приложения.  Это приведет к возврату средой CLR к поведению версий 1.0 и 1.1.  
+### <a name="application-compatibility-flag"></a><span data-ttu-id="3dde7-144">Флаг совместимости приложений</span><span class="sxs-lookup"><span data-stu-id="3dde7-144">Application Compatibility Flag</span></span>  
+ <span data-ttu-id="3dde7-145">В качестве временной меры обеспечения совместимости администраторы могут поместить флаг совместимости в раздел `<runtime>` файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="3dde7-145">As a temporary compatibility measure, administrators can place a compatibility flag in the `<runtime>` section of the application configuration file.</span></span> <span data-ttu-id="3dde7-146">Это приведет к возврату среды CLR к поведению версий 1.0 и 1.1.</span><span class="sxs-lookup"><span data-stu-id="3dde7-146">This causes the common language runtime to revert to the behavior of versions 1.0 and 1.1.</span></span>  
   
-```  
+```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## Переопределение основным приложением  
- В .NET Framework версии 2.0 неуправляемое основное приложение может использовать интерфейс [ICLRPolicyManager](../../../ocs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) для переопределения политики необрабатываемых исключений по умолчанию в среде CLR.  Функция [ICLRPolicyManager::SetUnhandledExceptionPolicy](../Topic/ICLRPolicyManager::SetUnhandledExceptionPolicy%20Method.md) используется для установки политики для необрабатываемых исключений.  
+## <a name="host-override"></a><span data-ttu-id="3dde7-147">Переопределение узла</span><span class="sxs-lookup"><span data-stu-id="3dde7-147">Host Override</span></span>  
+ <span data-ttu-id="3dde7-148">В платформе .NET Framework версии 2.0 неуправляемый узел может использовать интерфейс [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) в API размещения для переопределения политики необработанных исключений по умолчанию среды CLR.</span><span class="sxs-lookup"><span data-stu-id="3dde7-148">In the .NET Framework version 2.0, an unmanaged host can use the [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) interface in the Hosting API to override the default unhandled exception policy of the common language runtime.</span></span> <span data-ttu-id="3dde7-149">Чтобы задать политику для необработанных исключений, используется функция [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md).</span><span class="sxs-lookup"><span data-stu-id="3dde7-149">The [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) function is used to set the policy for unhandled exceptions.</span></span>  
   
-## См. также  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a><span data-ttu-id="3dde7-150">См. также</span><span class="sxs-lookup"><span data-stu-id="3dde7-150">See Also</span></span>  
+ [<span data-ttu-id="3dde7-151">Основы управляемых потоков</span><span class="sxs-lookup"><span data-stu-id="3dde7-151">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)

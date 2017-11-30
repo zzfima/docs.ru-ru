@@ -1,95 +1,98 @@
 ---
-title: "Deciding When to Implement the Event-based Asynchronous Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Event-based Asynchronous Pattern"
-  - "ProgressChangedEventArgs class"
-  - "BackgroundWorker component"
-  - "events [.NET Framework], asynchronous"
-  - "AsyncOperationManager class"
-  - "threading [.NET Framework], asynchronous features"
-  - "AsyncOperation class"
-  - "AsyncCompletedEventArgs class"
+title: "Определение, когда следует реализовать асинхронную модель, основанную на событиях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48de1b736c251a61a2ad34975c77bc2bca139626
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Deciding When to Implement the Event-based Asynchronous Pattern
-Асинхронная модель, основанная на событиях, предоставляет модель предоставления асинхронного поведения класса.  При представлении этой модели [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для представления асинхронного поведения: асинхронную модель, основанную на интерфейсе <xref:System.IAsyncResult?displayProperty=fullName>, и модель, основанную на событиях.  В этом разделе описаны случаи, в которых применима реализация обоих моделей.  
+# <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a><span data-ttu-id="ed08a-102">Определение, когда следует реализовать асинхронную модель, основанную на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-102">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="ed08a-103">В асинхронную модель на основе событий предоставляет шаблон для предоставления асинхронного поведения класса.</span><span class="sxs-lookup"><span data-stu-id="ed08a-103">The Event-based Asynchronous Pattern provides a pattern for exposing the asynchronous behavior of a class.</span></span> <span data-ttu-id="ed08a-104">С появлением этого шаблона [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для представления асинхронного поведения: асинхронную модель, основанную на <xref:System.IAsyncResult?displayProperty=nameWithType> интерфейс и модель на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-104">With the introduction of this pattern, the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] defines two patterns for exposing asynchronous behavior: the Asynchronous Pattern based on the <xref:System.IAsyncResult?displayProperty=nameWithType> interface, and the event-based pattern.</span></span> <span data-ttu-id="ed08a-105">Описывается, когда это подходит для реализации обоих шаблонов.</span><span class="sxs-lookup"><span data-stu-id="ed08a-105">This topic describes when it is appropriate for you to implement both patterns.</span></span>  
   
- Дополнительные сведения об асинхронном программировании с помощью интерфейса <xref:System.IAsyncResult> см. в разделе [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ <span data-ttu-id="ed08a-106">Дополнительные сведения об асинхронном программировании с <xref:System.IAsyncResult> интерфейса см. в разделе [на основе событий асинхронного шаблона (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span><span class="sxs-lookup"><span data-stu-id="ed08a-106">For more information about asynchronous programming with the <xref:System.IAsyncResult> interface, see [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  
   
-## Общие принципы  
- В целом, следует предоставлять асинхронные функциональные возможности с помощью асинхронной модели, основанной на событиях, когда это возможно.  Однако существует ряд требований, которым модель, основанная на событиях, соответствовать не будет.  В этих случаях может понадобиться реализовать модель <xref:System.IAsyncResult> помимо модели, основанной на событиях.  
+## <a name="general-principles"></a><span data-ttu-id="ed08a-107">Общие принципы</span><span class="sxs-lookup"><span data-stu-id="ed08a-107">General Principles</span></span>  
+ <span data-ttu-id="ed08a-108">Как правило можно предоставить асинхронные функции с помощью на основе событий асинхронного шаблона при возможности.</span><span class="sxs-lookup"><span data-stu-id="ed08a-108">In general, you should expose asynchronous features using the Event-based Asynchronous Pattern whenever possible.</span></span> <span data-ttu-id="ed08a-109">Однако существуют некоторые требования, которые не соответствуют шаблон на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-109">However, there are some requirements that the event-based pattern cannot meet.</span></span> <span data-ttu-id="ed08a-110">В таких случаях может потребоваться реализовать <xref:System.IAsyncResult> шаблон помимо шаблон на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-110">In those cases, you may need to implement the <xref:System.IAsyncResult> pattern in addition to the event-based pattern.</span></span>  
   
 > [!NOTE]
->  Очень редко модель <xref:System.IAsyncResult> реализуется без реализации модели, основанной на событиях.  
+>  <span data-ttu-id="ed08a-111">Редко <xref:System.IAsyncResult> шаблона для реализации без также реализован шаблон на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-111">It is rare for the <xref:System.IAsyncResult> pattern to be implemented without the event-based pattern also being implemented.</span></span>  
   
-## Рекомендации  
- В следующем списке описаны правила по реализации асинхронной модели, основанной на событиях:  
+## <a name="guidelines"></a><span data-ttu-id="ed08a-112">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="ed08a-112">Guidelines</span></span>  
+ <span data-ttu-id="ed08a-113">Ниже приводятся рекомендации по реализации асинхронной модели на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-113">The following list describes the guidelines for when you should implement Event-based Asynchronous Pattern:</span></span>  
   
--   Используйте модель, основанную на событиях, в качестве интерфейса API по умолчанию для предоставления асинхронного поведения в классе.  
+-   <span data-ttu-id="ed08a-114">Используйте схему на основе событий API по умолчанию для предоставления асинхронного поведения класса.</span><span class="sxs-lookup"><span data-stu-id="ed08a-114">Use the event-based pattern as the default API to expose asynchronous behavior for your class.</span></span>  
   
--   Не предоставляйте модель <xref:System.IAsyncResult>, если класс используется, в основном, в клиентском приложении, например в Windows Forms.  
+-   <span data-ttu-id="ed08a-115">Не предоставляйте <xref:System.IAsyncResult> шаблона, если ваш класс в основном используется в клиентском приложении, например Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="ed08a-115">Do not expose the <xref:System.IAsyncResult> pattern when your class is primarily used in a client application, for example Windows Forms.</span></span>  
   
--   Предоставляйте модель <xref:System.IAsyncResult> только в том случае, если это необходимо для выполнения требований.  Например, для совместимости с существующим API может потребоваться предоставление модели <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-116">Предоставляют только <xref:System.IAsyncResult> шаблона, когда это необходимо для выполнения требований.</span><span class="sxs-lookup"><span data-stu-id="ed08a-116">Only expose the <xref:System.IAsyncResult> pattern when it is necessary for meeting your requirements.</span></span> <span data-ttu-id="ed08a-117">Например, совместимости с существующим API может потребоваться предоставление <xref:System.IAsyncResult> шаблон.</span><span class="sxs-lookup"><span data-stu-id="ed08a-117">For example, compatibility with an existing API may require you to expose the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Не предоставляйте модель <xref:System.IAsyncResult> без предоставления модели, основанной на событиях.  
+-   <span data-ttu-id="ed08a-118">Не предоставляйте <xref:System.IAsyncResult> шаблон без предоставления модели, основанной на событиях.</span><span class="sxs-lookup"><span data-stu-id="ed08a-118">Do not expose the <xref:System.IAsyncResult> pattern without also exposing the event-based pattern.</span></span>  
   
--   Если необходимо предоставить модель <xref:System.IAsyncResult>, выполните это в качестве дополнительной возможности.  Например, если был создан объект прокси, создайте модель, основанную на событиях, по умолчанию с возможностью создания модели <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-119">Если необходимо предоставить <xref:System.IAsyncResult> шаблона, выполните это в качестве дополнительной возможности.</span><span class="sxs-lookup"><span data-stu-id="ed08a-119">If you must expose the <xref:System.IAsyncResult> pattern, do so as an advanced option.</span></span> <span data-ttu-id="ed08a-120">Например, при создании прокси-объект, создать шаблон на основе событий, по умолчанию с возможностью создания <xref:System.IAsyncResult> шаблон.</span><span class="sxs-lookup"><span data-stu-id="ed08a-120">For example, if you generate a proxy object, generate the event-based pattern by default, with an option to generate the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Постройте собственную реализацию модели, основанной на событиях, для реализации модели <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-121">Постройте собственную реализацию модели, основанной вашей <xref:System.IAsyncResult> реализацию модели.</span><span class="sxs-lookup"><span data-stu-id="ed08a-121">Build your event-based pattern implementation on your <xref:System.IAsyncResult> pattern implementation.</span></span>  
   
--   Избегайте предоставления модели, основанной на событиях, и модели <xref:System.IAsyncResult> в одном классе.  Предоставьте шаблон, основанный на событиях, в классах более высокого уровня, а шаблон <xref:System.IAsyncResult> — в классах более низкого уровня.  Например, сравните модель, основанную на событиях, в компоненте <xref:System.Net.WebClient> с моделью <xref:System.IAsyncResult> в классе <xref:System.Web.HttpRequest>.  
+-   <span data-ttu-id="ed08a-122">Избегайте использования обоих шаблон на основе событий и <xref:System.IAsyncResult> шаблона в том же классе.</span><span class="sxs-lookup"><span data-stu-id="ed08a-122">Avoid exposing both the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class.</span></span> <span data-ttu-id="ed08a-123">Предоставлять шаблон на основе событий в классах «более высокого уровня» и <xref:System.IAsyncResult> на «более низкого уровня» классов шаблонов.</span><span class="sxs-lookup"><span data-stu-id="ed08a-123">Expose the event-based pattern on "higher level" classes and the <xref:System.IAsyncResult> pattern on "lower level" classes.</span></span> <span data-ttu-id="ed08a-124">Например, сравнить модели, основанной на <xref:System.Net.WebClient> компонент с <xref:System.IAsyncResult> шаблона на <xref:System.Web.HttpRequest> класса.</span><span class="sxs-lookup"><span data-stu-id="ed08a-124">For example, compare the event-based pattern on the <xref:System.Net.WebClient> component with the <xref:System.IAsyncResult> pattern on the <xref:System.Web.HttpRequest> class.</span></span>  
   
-    -   Предоставьте модель, основанную на событиях, и модель <xref:System.IAsyncResult> для одного и того же класса, если это необходимо для совместимости.  Например, если интерфейс API, использующий модель <xref:System.IAsyncResult>, уже освобожден, необходимо оставить модель <xref:System.IAsyncResult> для обратной совместимости.  
+    -   <span data-ttu-id="ed08a-125">Предоставьте модель на основе событий и <xref:System.IAsyncResult> шаблон для одного класса, если это необходимо для совместимости.</span><span class="sxs-lookup"><span data-stu-id="ed08a-125">Expose the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class when compatibility requires it.</span></span> <span data-ttu-id="ed08a-126">Например, если уже освобожден API, который использует <xref:System.IAsyncResult> шаблон, потребуется сохранить <xref:System.IAsyncResult> шаблон для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="ed08a-126">For example, if you have already released an API that uses the <xref:System.IAsyncResult> pattern, you would need to retain the <xref:System.IAsyncResult> pattern for backward compatibility.</span></span>  
   
-    -   Предоставьте модель, на основе события, и модель <xref:System.IAsyncResult> для одного и того же класса, если сложность результирующей модели объекта превосходит преимущества разделения реализаций.  Лучше предоставить обе модели в одном классе, чем избегать предоставления модели, основанной на событиях.  
+    -   <span data-ttu-id="ed08a-127">Предоставьте модель на основе событий и <xref:System.IAsyncResult> шаблона для одного класса, если сложность результирующей модели объекта превосходит преимущества разделения реализаций.</span><span class="sxs-lookup"><span data-stu-id="ed08a-127">Expose the event-based pattern and the <xref:System.IAsyncResult> pattern on the same class if the resulting object model complexity outweighs the benefit of separating the implementations.</span></span> <span data-ttu-id="ed08a-128">Лучше предоставить обе модели в одном классе, чем избегать предоставления шаблон на основе событий.</span><span class="sxs-lookup"><span data-stu-id="ed08a-128">It is better to expose both patterns on a single class than to avoid exposing the event-based pattern.</span></span>  
   
-    -   Если необходимо предоставить обе модели <xref:System.IAsyncResult> и модели, основанной на событиях, используйте объект <xref:System.ComponentModel.EditorBrowsableAttribute>, заданный как <xref:System.ComponentModel.EditorBrowsableState>, для отметки реализации модели <xref:System.IAsyncResult> как дополнительной функциональной возможности.  Это указывает средам проектирования, таким как [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, что не следует отображать свойства и методы <xref:System.IAsyncResult>.  Эти свойства и методы все еще можно использовать в полной мере, однако разработчик, работающий в IntelliSense, более ясно представляет интерфейс API.  
+    -   <span data-ttu-id="ed08a-129">Если необходимо предоставить обе модели на основе событий и <xref:System.IAsyncResult> шаблон для одного класса, используйте <xref:System.ComponentModel.EditorBrowsableAttribute> значение <xref:System.ComponentModel.EditorBrowsableState.Advanced> пометить <xref:System.IAsyncResult> реализацию модели как дополнительные функции.</span><span class="sxs-lookup"><span data-stu-id="ed08a-129">If you must expose both the event-based pattern and <xref:System.IAsyncResult> pattern on a single class, use <xref:System.ComponentModel.EditorBrowsableAttribute> set to <xref:System.ComponentModel.EditorBrowsableState.Advanced> to mark the <xref:System.IAsyncResult> pattern implementation as an advanced feature.</span></span> <span data-ttu-id="ed08a-130">Это значит, что сред разработки, таких как [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, чтобы не отображать <xref:System.IAsyncResult> свойства и методы.</span><span class="sxs-lookup"><span data-stu-id="ed08a-130">This indicates to design environments, such as [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, not to display the <xref:System.IAsyncResult> properties and methods.</span></span> <span data-ttu-id="ed08a-131">Эти свойства и методы используются по-прежнему полностью, но разработчик, работающий в IntelliSense имеет более четкое представление API-интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ed08a-131">These properties and methods are still fully usable, but the developer working through IntelliSense has a clearer view of the API.</span></span>  
   
-## Критерии предоставления модели IAsyncResult как дополнения к модели, основанной на событиях  
- Хотя асинхронная модель, основанная на событиях, имеет целый ряд преимуществ в сценариях, указанных выше, она содержит и ряд недостатков, о которых необходимо знать на тот случай, если производительность будет являться самым важным требованием.  
+## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a><span data-ttu-id="ed08a-132">Критерии для предоставления модели IAsyncResult, помимо модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-132">Criteria for Exposing the IAsyncResult Pattern in Addition to the Event-based Pattern</span></span>  
+ <span data-ttu-id="ed08a-133">Хотя в асинхронную модель на основе событий имеет целый ряд преимуществ в сценариях, указанных выше, она имеет некоторые недостатки, которые следует иметь в виду при к самым важным требованием производительности.</span><span class="sxs-lookup"><span data-stu-id="ed08a-133">While the Event-based Asynchronous Pattern has many benefits under the previously mentioned scenarios, it does have some drawbacks, which you should be aware of if performance is your most important requirement.</span></span>  
   
- Существует три случая, в которых модель, основанная на событиях, работает хуже, чем модель <xref:System.IAsyncResult>:  
+ <span data-ttu-id="ed08a-134">Существуют три сценария, шаблон на основе событий не предусматривает а также <xref:System.IAsyncResult> шаблон:</span><span class="sxs-lookup"><span data-stu-id="ed08a-134">There are three scenarios that the event-based pattern does not address as well as the <xref:System.IAsyncResult> pattern:</span></span>  
   
--   Блокировка ожидания для одного объекта <xref:System.IAsyncResult>  
+-   <span data-ttu-id="ed08a-135">Блокировка ожидания для одного<xref:System.IAsyncResult></span><span class="sxs-lookup"><span data-stu-id="ed08a-135">Blocking wait on one <xref:System.IAsyncResult></span></span>  
   
--   Блокировка ожидания на нескольких объектах <xref:System.IAsyncResult>  
+-   <span data-ttu-id="ed08a-136">Блокировка ожидания на нескольких <xref:System.IAsyncResult> объектов</span><span class="sxs-lookup"><span data-stu-id="ed08a-136">Blocking wait on many <xref:System.IAsyncResult> objects</span></span>  
   
--   Запрос завершения для объекта <xref:System.IAsyncResult>  
+-   <span data-ttu-id="ed08a-137">Запрос завершения для<xref:System.IAsyncResult></span><span class="sxs-lookup"><span data-stu-id="ed08a-137">Polling for completion on the <xref:System.IAsyncResult></span></span>  
   
- В этих случаях можно использовать и модель, основанную на событиях, однако это будет более громоздким, чем использование модели <xref:System.IAsyncResult>.  
+ <span data-ttu-id="ed08a-138">Эти сценарии можно обратиться, используя шаблон на основе событий, но при этом является более громоздким, чем использование <xref:System.IAsyncResult> шаблон.</span><span class="sxs-lookup"><span data-stu-id="ed08a-138">You can address these scenarios by using the event-based pattern, but doing so is more cumbersome than using the <xref:System.IAsyncResult> pattern.</span></span>  
   
- Разработчики часто используют модель <xref:System.IAsyncResult> для служб, требования к производительности которых очень высоки.  Например, в случае запроса завершения используется высокопроизводительный сервер.  
+ <span data-ttu-id="ed08a-139">Разработчики часто используют <xref:System.IAsyncResult> шаблон для служб, которые обычно имеют очень высокая производительность требования.</span><span class="sxs-lookup"><span data-stu-id="ed08a-139">Developers often use the <xref:System.IAsyncResult> pattern for services that typically have very high performance requirements.</span></span> <span data-ttu-id="ed08a-140">Например опрос для завершения сценария методика высокой производительности сервера.</span><span class="sxs-lookup"><span data-stu-id="ed08a-140">For example, the polling for completion scenario is a high-performance server technique.</span></span>  
   
- Кроме того, модель, основанная на событиях, менее эффективна по сравнению с моделью <xref:System.IAsyncResult>, так как создает большее количество объектов, особенно <xref:System.EventArgs>, и синхронизируется между потоками.  
+ <span data-ttu-id="ed08a-141">Кроме того, шаблон на основе событий является менее эффективным, чем <xref:System.IAsyncResult> шаблона, так как он создает несколько объектов, особенно <xref:System.EventArgs>, и синхронизируется по потокам.</span><span class="sxs-lookup"><span data-stu-id="ed08a-141">Additionally, the event-based pattern is less efficient than the <xref:System.IAsyncResult> pattern because it creates more objects, especially <xref:System.EventArgs>, and because it synchronizes across threads.</span></span>  
   
- В следующем списке приведены некоторые рекомендации, которым стоит придерживаться, если необходимо использовать модель <xref:System.IAsyncResult>:  
+ <span data-ttu-id="ed08a-142">Ниже приведены некоторые рекомендации для выполнения, если вы решили использовать <xref:System.IAsyncResult> шаблон:</span><span class="sxs-lookup"><span data-stu-id="ed08a-142">The following list shows some recommendations to follow if you decide to use the <xref:System.IAsyncResult> pattern:</span></span>  
   
--   Предоставляйте модель <xref:System.IAsyncResult>, только если напрямую необходима поддержка объектов <xref:System.Threading.WaitHandle> or <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-143">Предоставляют только <xref:System.IAsyncResult> шаблона, если напрямую необходима поддержка <xref:System.Threading.WaitHandle> или <xref:System.IAsyncResult> объектов.</span><span class="sxs-lookup"><span data-stu-id="ed08a-143">Only expose the <xref:System.IAsyncResult> pattern when you specifically require support for <xref:System.Threading.WaitHandle> or <xref:System.IAsyncResult> objects.</span></span>  
   
--   Предоставляйте шаблон <xref:System.IAsyncResult> только при наличии интерфейса API, который использует <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-144">Предоставляют только <xref:System.IAsyncResult> шаблонов при наличии существующих API, который использует <xref:System.IAsyncResult> шаблон.</span><span class="sxs-lookup"><span data-stu-id="ed08a-144">Only expose the <xref:System.IAsyncResult> pattern when you have an existing API that uses the <xref:System.IAsyncResult> pattern.</span></span>  
   
--   Если имеется интерфейс API, основанный на модели <xref:System.IAsyncResult>, рассмотрите возможность предоставления модели, основанной на событиях, в следующем выпуске приложения.  
+-   <span data-ttu-id="ed08a-145">При наличии существующих API на основе <xref:System.IAsyncResult> шаблона, рассмотрите возможность предоставления модели, основанной на событиях, в следующем выпуске.</span><span class="sxs-lookup"><span data-stu-id="ed08a-145">If you have an existing API based on the <xref:System.IAsyncResult> pattern, consider also exposing the event-based pattern in your next release.</span></span>  
   
--   Предоставляйте модель <xref:System.IAsyncResult>, только если существуют требования к высокой производительности, которые не могут быть выполнены с помощью модели, основанной на событиях, а только с помощью модели <xref:System.IAsyncResult>.  
+-   <span data-ttu-id="ed08a-146">Предоставляют только <xref:System.IAsyncResult> шаблон, если у вас есть требования к высокой производительности, которые могут быть выполнены с помощью модели, основанной на событиях, а также могут быть выполнены с <xref:System.IAsyncResult> шаблон.</span><span class="sxs-lookup"><span data-stu-id="ed08a-146">Only expose <xref:System.IAsyncResult> pattern if you have high performance requirements which you have verified cannot be met by the event-based pattern but can be met by the <xref:System.IAsyncResult> pattern.</span></span>  
   
-## См. также  
- [Walkthrough: Implementing a Component That Supports the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)   
- [Multithreaded Programming with the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Implementing the Event\-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)   
- [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)   
- [Event\-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ed08a-147">См. также</span><span class="sxs-lookup"><span data-stu-id="ed08a-147">See Also</span></span>  
+ [<span data-ttu-id="ed08a-148">Пошаговое руководство. Реализация компонента, поддерживающего асинхронную модель, основанную на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-148">Walkthrough: Implementing a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="ed08a-149">Асинхронная модель на основе событий (EAP)</span><span class="sxs-lookup"><span data-stu-id="ed08a-149">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [<span data-ttu-id="ed08a-150">Многопоточное программирование с использованием асинхронной модели на основе событий</span><span class="sxs-lookup"><span data-stu-id="ed08a-150">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="ed08a-151">Реализация асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-151">Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="ed08a-152">Рекомендации по реализации асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-152">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="ed08a-153">Обзор асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="ed08a-153">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

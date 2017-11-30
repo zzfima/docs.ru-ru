@@ -1,224 +1,230 @@
 ---
-title: "Подстановки в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, подстановки"
-  - "конструкции, подстановки"
-  - "метазнаки, подстановки"
-  - "регулярные выражения, подстановки"
-  - "шаблоны для замены"
-  - "подстановки"
+title: "Подстановки в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- regular expressions, substitutions
+- replacement patterns
+- metacharacters, substitutions
+- .NET Framework regular expressions, substitutions
+- constructs, substitutions
+- substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Подстановки в регулярных выражениях
-<a name="Top"></a> Подстановки — это языковые элементы, которые распознаются только в шаблонах замены. Они используют шаблон регулярного выражения для определения всего текста или его части, предназначенной для замены совпадающего текста во входной строке. Шаблон замены может включать одну или несколько подстановок вместе с литеральными символами. Для перегруженных версий метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName>, имеющих параметр `replacement`, и для метода <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=fullName> предоставляются шаблоны замены. Эти методы заменяют совпавший шаблон шаблоном, определенным параметром `replacement`.  
+# <a name="substitutions-in-regular-expressions"></a><span data-ttu-id="5aec5-102">Подстановки в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="5aec5-102">Substitutions in Regular Expressions</span></span>
+<span data-ttu-id="5aec5-103"><a name="Top"></a> Подстановки — это языковые элементы, которые распознаются только в шаблонах замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-103"><a name="Top"></a> Substitutions are language elements that are recognized only within replacement patterns.</span></span> <span data-ttu-id="5aec5-104">Они используют шаблон регулярного выражения для определения всего текста или его части, предназначенной для замены совпадающего текста во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-104">They use a regular expression pattern to define all or part of the text that is to replace matched text in the input string.</span></span> <span data-ttu-id="5aec5-105">Шаблон замены может включать одну или несколько подстановок вместе с литеральными символами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-105">The replacement pattern can consist of one or more substitutions along with literal characters.</span></span> <span data-ttu-id="5aec5-106">Для перегруженных версий метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>, имеющих параметр `replacement`, и для метода <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> предоставляются шаблоны замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-106">Replacement patterns are provided to overloads of the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method that have a `replacement` parameter and to the <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="5aec5-107">Эти методы заменяют совпавший шаблон шаблоном, определенным параметром `replacement` .</span><span class="sxs-lookup"><span data-stu-id="5aec5-107">The methods replace the matched pattern with the pattern that is defined by the `replacement` parameter.</span></span>  
   
- Платформа .NET Framework определяет элементы подстановки, перечисленные в следующей таблице.  
+ <span data-ttu-id="5aec5-108">Платформа .NET Framework определяет элементы подстановки, перечисленные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-108">The .NET Framework defines the substitution elements listed in the following table.</span></span>  
   
-|Подстановка|Описание|  
-|-----------------|--------------|  
-|`$` *number*|Включает в строку замены последнюю подстроку, соответствующую группе записи, которая идентифицируется как *number*, где *number* — десятичное значение. Дополнительные сведения см. в разделе [Подстановка нумерованной группы](#Numbered).|  
-|`${` *имя* `}`|Включает в строку замены последнюю подстроку, соответствующую именованной группе, обозначаемой как `(?<`*name*`> )`. Дополнительные сведения см. в разделе [Подстановка именованной группы](#Named).|  
-|`$$`|Включает один литерал "$" в строку замены. Дополнительные сведения см. в разделе [Подстановка символа "$"](#DollarSign).|  
-|`$&`|Включает копию всего соответствия в строку замены. Дополнительные сведения см. в разделе [Подстановка всего соответствия](#EntireMatch).|  
-|`$``|Включает весь текст входной строки до соответствия в строку замены. Дополнительные сведения см. в разделе [Подстановка текста до соответствия](#BeforeMatch).|  
-|`$'`|Включает весь текст входной строки после соответствия в строку замены. Дополнительные сведения см. в разделе [Подстановка текста после соответствия](#AfterMatch).|  
-|`$+`|Включает последнюю записанную группу в строку замены. Дополнительные сведения см. в разделе [Подстановка последней записанной группы](#LastGroup).|  
-|`$_`|Включает всю входную строку в строку замены. Дополнительные сведения см. в разделе [Замена всей входной строки](#EntireString).|  
+|<span data-ttu-id="5aec5-109">Подстановка</span><span class="sxs-lookup"><span data-stu-id="5aec5-109">Substitution</span></span>|<span data-ttu-id="5aec5-110">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-110">Description</span></span>|  
+|------------------|-----------------|  
+|<span data-ttu-id="5aec5-111">`$` *number*</span><span class="sxs-lookup"><span data-stu-id="5aec5-111">`$` *number*</span></span>|<span data-ttu-id="5aec5-112">Включает в строку замены последнюю подстроку, соответствующую группе записи, которая идентифицируется как *number*, где *number* — десятичное значение.</span><span class="sxs-lookup"><span data-stu-id="5aec5-112">Includes the last substring matched by the capturing group that is identified by *number*, where *number* is a decimal value, in the replacement string.</span></span> <span data-ttu-id="5aec5-113">Дополнительные сведения см. в разделе [Подстановка нумерованной группы](#Numbered).</span><span class="sxs-lookup"><span data-stu-id="5aec5-113">For more information, see [Substituting a Numbered Group](#Numbered).</span></span>|  
+|<span data-ttu-id="5aec5-114">`${` *имя* `}`</span><span class="sxs-lookup"><span data-stu-id="5aec5-114">`${` *name* `}`</span></span>|<span data-ttu-id="5aec5-115">Включает в строку замены последнюю подстроку, соответствующую именованной группе, обозначаемой как `(?<`*name*`> )` .</span><span class="sxs-lookup"><span data-stu-id="5aec5-115">Includes the last substring matched by the named group that is designated by `(?<`*name*`> )` in the replacement string.</span></span> <span data-ttu-id="5aec5-116">Дополнительные сведения см. в разделе [Подстановка именованной группы](#Named).</span><span class="sxs-lookup"><span data-stu-id="5aec5-116">For more information, see [Substituting a Named Group](#Named).</span></span>|  
+|`$$`|<span data-ttu-id="5aec5-117">Включает один литерал "$" в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-117">Includes a single "$" literal in the replacement string.</span></span> <span data-ttu-id="5aec5-118">Дополнительные сведения см. в разделе [Подстановка символа "$"](#DollarSign).</span><span class="sxs-lookup"><span data-stu-id="5aec5-118">For more information, see [Substituting a "$" Symbol](#DollarSign).</span></span>|  
+|`$&`|<span data-ttu-id="5aec5-119">Включает копию всего соответствия в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-119">Includes a copy of the entire match in the replacement string.</span></span> <span data-ttu-id="5aec5-120">Дополнительные сведения см. в разделе [Подстановка всего соответствия](#EntireMatch).</span><span class="sxs-lookup"><span data-stu-id="5aec5-120">For more information, see [Substituting the Entire Match](#EntireMatch).</span></span>|  
+|<code>$\`</code>|<span data-ttu-id="5aec5-121">Включает весь текст входной строки до соответствия в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-121">Includes all the text of the input string before the match in the replacement string.</span></span> <span data-ttu-id="5aec5-122">Дополнительные сведения см. в разделе [Подстановка текста до соответствия](#BeforeMatch).</span><span class="sxs-lookup"><span data-stu-id="5aec5-122">For more information, see [Substituting the Text before the Match](#BeforeMatch).</span></span>|  
+|`$'`|<span data-ttu-id="5aec5-123">Включает весь текст входной строки после соответствия в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-123">Includes all the text of the input string after the match in the replacement string.</span></span> <span data-ttu-id="5aec5-124">Дополнительные сведения см. в разделе [Подстановка текста после соответствия](#AfterMatch).</span><span class="sxs-lookup"><span data-stu-id="5aec5-124">For more information, see [Substituting the Text after the Match](#AfterMatch).</span></span>|  
+|`$+`|<span data-ttu-id="5aec5-125">Включает последнюю записанную группу в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-125">Includes the last group captured in the replacement string.</span></span> <span data-ttu-id="5aec5-126">Дополнительные сведения см. в разделе [Подстановка последней записанной группы](#LastGroup).</span><span class="sxs-lookup"><span data-stu-id="5aec5-126">For more information, see [Substituting the Last Captured Group](#LastGroup).</span></span>|  
+|`$_`|<span data-ttu-id="5aec5-127">Включает всю входную строку в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-127">Includes the entire input string in the replacement string.</span></span> <span data-ttu-id="5aec5-128">Дополнительные сведения см. в разделе [Замена всей входной строки](#EntireString).</span><span class="sxs-lookup"><span data-stu-id="5aec5-128">For more information, see [Substituting the Entire Input String](#EntireString).</span></span>|  
   
-## Элементы подстановки и шаблонов замены  
- В шаблонах замены распознается только одна специальная конструкция: подстановки. Ни один из остальных элементов языка регулярных выражений, включая escape\-символы и точку \(`.`\), которая соответствует любому знаку, не поддерживается. Аналогичным образом, подставляемые элементы языка распознаются только в шаблонах замены и никогда не являются допустимыми в шаблоны регулярных выражений.  
+## <a name="substitution-elements-and-replacement-patterns"></a><span data-ttu-id="5aec5-129">Элементы подстановки и шаблонов замены</span><span class="sxs-lookup"><span data-stu-id="5aec5-129">Substitution Elements and Replacement Patterns</span></span>  
+ <span data-ttu-id="5aec5-130">В шаблонах замены распознается только одна специальная конструкция: подстановки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-130">Substitutions are the only special constructs recognized in a replacement pattern.</span></span> <span data-ttu-id="5aec5-131">Ни один из остальных элементов языка регулярных выражений, включая escape-символы и точку (`.`), которая соответствует любому знаку, не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="5aec5-131">None of the other regular expression language elements, including character escapes and the period (`.`), which matches any character, are supported.</span></span> <span data-ttu-id="5aec5-132">Аналогичным образом, подставляемые элементы языка распознаются только в шаблонах замены и никогда не являются допустимыми в шаблоны регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="5aec5-132">Similarly, substitution language elements are recognized only in replacement patterns and are never valid in regular expression patterns.</span></span>  
   
- Единственный знак, который может встречаться в шаблоне регулярного выражения либо в подстановке, — это знак `$`, хотя он в разных случаях имеет разное значение. В шаблоне регулярного выражения `$` является привязкой, совпадающей с концом строки. В шаблоне замены `$` указывает начало подстановки.  
+ <span data-ttu-id="5aec5-133">Единственный знак, который может встречаться в шаблоне регулярного выражения либо в подстановке, — это знак `$` , хотя он в разных случаях имеет разное значение.</span><span class="sxs-lookup"><span data-stu-id="5aec5-133">The only character that can appear either in a regular expression pattern or in a substitution is the `$` character, although it has a different meaning in each context.</span></span> <span data-ttu-id="5aec5-134">В шаблоне регулярного выражения `$` является привязкой, совпадающей с концом строки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-134">In a regular expression pattern, `$` is an anchor that matches the end of the string.</span></span> <span data-ttu-id="5aec5-135">В шаблоне замены `$` указывает начало подстановки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-135">In a replacement pattern, `$` indicates the beginning of a substitution.</span></span>  
   
 > [!NOTE]
->  Для получения возможностей, подобных шаблону замены в регулярном выражении, используйте обратную ссылку. Дополнительные сведения об обратных ссылках см. в разделе [Конструкции обратных ссылок](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+>  <span data-ttu-id="5aec5-136">Для получения возможностей, подобных шаблону замены в регулярном выражении, используйте обратную ссылку.</span><span class="sxs-lookup"><span data-stu-id="5aec5-136">For functionality similar to a replacement pattern within a regular expression, use a backreference.</span></span> <span data-ttu-id="5aec5-137">Дополнительные сведения об обратных ссылках см. в разделе [Конструкции обратных ссылок](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5aec5-137">For more information about backreferences, see [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).</span></span>  
   
 <a name="Numbered"></a>   
-## Подстановка нумерованной группы  
- Языковой элемент `$`*number* включает последнюю подстроку, сопоставленную по группе записи *number* в строке замены, где *number* — это индекс группы записи. Например, шаблон замены `$1` указывает, что совпадающая подстрока будет заменена первой группой записи. Дополнительные сведения о нумерованных группах записи см. в разделе [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+## <a name="substituting-a-numbered-group"></a><span data-ttu-id="5aec5-138">Подстановка нумерованной группы</span><span class="sxs-lookup"><span data-stu-id="5aec5-138">Substituting a Numbered Group</span></span>  
+ <span data-ttu-id="5aec5-139">Языковой элемент `$`*number* включает последнюю подстроку, сопоставленную по группе записи *number* в строке замены, где *number* — это индекс группы записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-139">The `$`*number* language element includes the last substring matched by the *number* capturing group in the replacement string, where *number* is the index of the capturing group.</span></span> <span data-ttu-id="5aec5-140">Например, шаблон замены `$1` указывает, что совпадающая подстрока будет заменена первой группой записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-140">For example, the replacement pattern `$1` indicates that the matched substring is to be replaced by the first captured group.</span></span> <span data-ttu-id="5aec5-141">Дополнительные сведения о нумерованных группах записи см. в разделе [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5aec5-141">For more information about numbered capturing groups, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
- Все цифры, указанные после `$`, интерпретируются как относящиеся к группе *number*. Если это не соответствует вашим намерениям, можно вместо этого подставить именованную группу. Например, можно использовать строку замены `${1}1` вместо `$11`, чтобы определить строку замены как значение первой записанной группы вместе с номером "1". Дополнительные сведения см. в разделе [Подстановка именованной группы](#Named).  
+ <span data-ttu-id="5aec5-142">Все цифры, указанные после `$` , интерпретируются как относящиеся к группе *number* .</span><span class="sxs-lookup"><span data-stu-id="5aec5-142">All digits that follow `$` are interpreted as belonging to the *number* group.</span></span> <span data-ttu-id="5aec5-143">Если это не соответствует вашим намерениям, можно вместо этого подставить именованную группу.</span><span class="sxs-lookup"><span data-stu-id="5aec5-143">If this is not your intent, you can substitute a named group instead.</span></span> <span data-ttu-id="5aec5-144">Например, можно использовать строку замены `${1}1` вместо `$11` , чтобы определить строку замены как значение первой записанной группы вместе с номером "1".</span><span class="sxs-lookup"><span data-stu-id="5aec5-144">For example, you can use the replacement string `${1}1` instead of `$11` to define the replacement string as the value of the first captured group along with the number "1".</span></span> <span data-ttu-id="5aec5-145">Дополнительные сведения см. в разделе [Подстановка именованной группы](#Named).</span><span class="sxs-lookup"><span data-stu-id="5aec5-145">For more information, see [Substituting a Named Group](#Named).</span></span>  
   
- Группы записи, которым явно не назначены имена с помощью синтаксиса `(?<`*name*`>)`, нумеруются слева направо, начиная с единицы. Именованные группы также нумеруются слева направо, начиная с номера, превышающего индекс последней неименованной группы. Например, в регулярном выражении `(\w)(?<digit>\d)` индекс именованной группы `digit` — 2.  
+ <span data-ttu-id="5aec5-146">Группы записи, которым явно не назначены имена с помощью синтаксиса `(?<`*name*`>)` , нумеруются слева направо, начиная с единицы.</span><span class="sxs-lookup"><span data-stu-id="5aec5-146">Capturing groups that are not explicitly assigned names using the `(?<`*name*`>)` syntax are numbered from left to right starting at one.</span></span> <span data-ttu-id="5aec5-147">Именованные группы также нумеруются слева направо, начиная с номера, превышающего индекс последней неименованной группы.</span><span class="sxs-lookup"><span data-stu-id="5aec5-147">Named groups are also numbered from left to right, starting at one greater than the index of the last unnamed group.</span></span> <span data-ttu-id="5aec5-148">Например, в регулярном выражении `(\w)(?<digit>\d)`индекс именованной группы `digit` — 2.</span><span class="sxs-lookup"><span data-stu-id="5aec5-148">For example, in the regular expression `(\w)(?<digit>\d)`, the index of the `digit` named group is 2.</span></span>  
   
- Если *number* не соответствует допустимой группе записи, определенной в шаблоне регулярного выражения, `$`*number* интерпретируется как последовательность литеральных символов, используемая для замены каждого соответствия.  
+ <span data-ttu-id="5aec5-149">Если *number* не соответствует допустимой группе записи, определенной в шаблоне регулярного выражения, `$`*number* интерпретируется как последовательность литеральных символов, используемая для замены каждого соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-149">If *number* does not specify a valid capturing group defined in the regular expression pattern, `$`*number* is interpreted as a literal character sequence that is used to replace each match.</span></span>  
   
- В следующем примере подстановка `$`*number* используется для удаления символа валюты из десятичного значения. Она удаляет символы денежной единицы, найденные в начале или конце денежного значения, и распознает два наиболее распространенных десятичных разделителя \("." и ","\).  
+ <span data-ttu-id="5aec5-150">В следующем примере подстановка `$`*number* используется для удаления символа валюты из десятичного значения.</span><span class="sxs-lookup"><span data-stu-id="5aec5-150">The following example uses the `$`*number* substitution to strip the currency symbol from a decimal value.</span></span> <span data-ttu-id="5aec5-151">Она удаляет символы денежной единицы, найденные в начале или конце денежного значения, и распознает два наиболее распространенных десятичных разделителя ("." и ",").</span><span class="sxs-lookup"><span data-stu-id="5aec5-151">It removes currency symbols found at the beginning or end of a monetary value, and recognizes the two most common decimal separators ("." and ",").</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/numberedgroup1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/numberedgroup1.vb#1)]  
   
- Шаблон регулярного выражения `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="5aec5-152">Шаблон регулярного выражения `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-152">The regular expression pattern `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\p{Sc}*`|Совпадение с нулем или более символами денежной единицы.|  
-|`\s?`|Совпадение с нулем или одним символом пробела.|  
-|`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
-|`[.,]?`|Совпадение с нулем или одной точкой либо запятой.|  
-|`\d*`|Соответствует нулю или нескольким десятичным числам.|  
-|`(\s?\d+[.,]?\d*)`|Совпадение с пробелом, за которым следует одна или несколько десятичных цифр, после которых идет ноль или одна точка либо запятая, а за ними — ноль или более десятичных цифр. Это первая группа записи. Так как шаблон замены имеет вид `$1`, вызов метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> заменяет всю совпадающую подстроку данной группой записи.|  
+|<span data-ttu-id="5aec5-153">Шаблон</span><span class="sxs-lookup"><span data-stu-id="5aec5-153">Pattern</span></span>|<span data-ttu-id="5aec5-154">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-154">Description</span></span>|  
+|-------------|-----------------|  
+|`\p{Sc}*`|<span data-ttu-id="5aec5-155">Совпадение с нулем или более символами денежной единицы.</span><span class="sxs-lookup"><span data-stu-id="5aec5-155">Match zero or more currency symbol characters.</span></span>|  
+|`\s?`|<span data-ttu-id="5aec5-156">Совпадение с нулем или одним символом пробела.</span><span class="sxs-lookup"><span data-stu-id="5aec5-156">Match zero or one white-space characters.</span></span>|  
+|`\d+`|<span data-ttu-id="5aec5-157">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-157">Match one or more decimal digits.</span></span>|  
+|`[.,]?`|<span data-ttu-id="5aec5-158">Совпадение с нулем или одной точкой либо запятой.</span><span class="sxs-lookup"><span data-stu-id="5aec5-158">Match zero or one period or comma.</span></span>|  
+|`\d*`|<span data-ttu-id="5aec5-159">Соответствует нулю или нескольким десятичным числам.</span><span class="sxs-lookup"><span data-stu-id="5aec5-159">Match zero or more decimal digits.</span></span>|  
+|`(\s?\d+[.,]?\d*)`|<span data-ttu-id="5aec5-160">Совпадение с пробелом, за которым следует одна или несколько десятичных цифр, после которых идет ноль или одна точка либо запятая, а за ними — ноль или более десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="5aec5-160">Match a white space followed by one or more decimal digits, followed by zero or one period or comma, followed by zero or more decimal digits.</span></span> <span data-ttu-id="5aec5-161">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-161">This is the first capturing group.</span></span> <span data-ttu-id="5aec5-162">Так как шаблон замены имеет вид `$1`, вызов метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> заменяет всю совпадающую подстроку данной группой записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-162">Because the replacement pattern is `$1`, the call to the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method replaces the entire matched substring with this captured group.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-163">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-163">Back to top</span></span>](#Top)  
   
 <a name="Named"></a>   
-## Подстановка именованной группы  
- Языковой элемент `${`*name*`}` замещает последнюю подстроку, сопоставленную по группе записи *name*, где *name* — это имя группы записи, определенной в языковом элементе `(?<`*name*`>)`. Дополнительные сведения об именованных группах записи см. в разделе [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+## <a name="substituting-a-named-group"></a><span data-ttu-id="5aec5-164">Подстановка именованной группы</span><span class="sxs-lookup"><span data-stu-id="5aec5-164">Substituting a Named Group</span></span>  
+ <span data-ttu-id="5aec5-165">Языковой элемент `${`*name*`}` замещает последнюю подстроку, сопоставленную по группе записи *name* , где *name* — это имя группы записи, определенной в языковом элементе `(?<`*name*`>)` .</span><span class="sxs-lookup"><span data-stu-id="5aec5-165">The `${`*name*`}` language element substitutes the last substring matched by the *name* capturing group, where *name* is the name of a capturing group defined by the `(?<`*name*`>)` language element.</span></span> <span data-ttu-id="5aec5-166">Дополнительные сведения об именованных группах записи см. в разделе [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="5aec5-166">For more information about named capturing groups, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
- Если *name* не соответствует допустимой именованной группе записи, определенной в регулярном выражении, и состоит из цифр, то `${`*name*`}` интерпретируется как нумерованная группа.  
+ <span data-ttu-id="5aec5-167">Если *name* не соответствует допустимой именованной группе записи, определенной в регулярном выражении, и состоит из цифр, то `${`*name*`}` интерпретируется как нумерованная группа.</span><span class="sxs-lookup"><span data-stu-id="5aec5-167">If *name* doesn't specify a valid named capturing group defined in the regular expression pattern but consists of digits, `${`*name*`}` is interpreted as a numbered group.</span></span>  
   
- Если *name* не соответствует ни допустимой именованной группе записи, ни допустимой нумерованной группе записи, определенной в шаблоне регулярного выражения, `${`*name*`}` интерпретируется как последовательность литеральных символов, используемая для замены каждого соответствия.  
+ <span data-ttu-id="5aec5-168">Если *name* не соответствует ни допустимой именованной группе записи, ни допустимой нумерованной группе записи, определенной в шаблоне регулярного выражения, `${`*name*`}` интерпретируется как последовательность литеральных символов, используемая для замены каждого соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-168">If *name* specifies neither a valid named capturing group nor a valid numbered capturing group defined in the regular expression pattern, `${`*name*`}` is interpreted as a literal character sequence that is used to replace each match.</span></span>  
   
- В следующем примере подстановка `${`*name*`}` используется для удаления символа валюты из десятичного значения. Она удаляет символы денежной единицы, найденные в начале или конце денежного значения, и распознает два наиболее распространенных десятичных разделителя \("." и ","\).  
+ <span data-ttu-id="5aec5-169">В следующем примере подстановка `${`*name*`}` используется для удаления символа валюты из десятичного значения.</span><span class="sxs-lookup"><span data-stu-id="5aec5-169">The following example uses the `${`*name*`}` substitution to strip the currency symbol from a decimal value.</span></span> <span data-ttu-id="5aec5-170">Она удаляет символы денежной единицы, найденные в начале или конце денежного значения, и распознает два наиболее распространенных десятичных разделителя ("." и ",").</span><span class="sxs-lookup"><span data-stu-id="5aec5-170">It removes currency symbols found at the beginning or end of a monetary value, and recognizes the two most common decimal separators ("." and ",").</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/namedgroup1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/namedgroup1.vb#2)]  
   
- Шаблон регулярного выражения `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="5aec5-171">Шаблон регулярного выражения `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-171">The regular expression pattern `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\p{Sc}*`|Совпадение с нулем или более символами денежной единицы.|  
-|`\s?`|Совпадение с нулем или одним символом пробела.|  
-|`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
-|`[.,]?`|Совпадение с нулем или одной точкой либо запятой.|  
-|`\d*`|Соответствует нулю или нескольким десятичным числам.|  
-|`(?<amount>\s?\d[.,]?\d*)`|Совпадение с пробелом, за которым следует одна или несколько десятичных цифр, после которых идет ноль или одна точка либо запятая, а за ними — ноль или более десятичных цифр. Это группа записи с именем `amount`. Так как шаблон замены имеет вид `${amount}`, вызов метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=fullName> заменяет всю совпадающую подстроку данной группой записи.|  
+|<span data-ttu-id="5aec5-172">Шаблон</span><span class="sxs-lookup"><span data-stu-id="5aec5-172">Pattern</span></span>|<span data-ttu-id="5aec5-173">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-173">Description</span></span>|  
+|-------------|-----------------|  
+|`\p{Sc}*`|<span data-ttu-id="5aec5-174">Совпадение с нулем или более символами денежной единицы.</span><span class="sxs-lookup"><span data-stu-id="5aec5-174">Match zero or more currency symbol characters.</span></span>|  
+|`\s?`|<span data-ttu-id="5aec5-175">Совпадение с нулем или одним символом пробела.</span><span class="sxs-lookup"><span data-stu-id="5aec5-175">Match zero or one white-space characters.</span></span>|  
+|`\d+`|<span data-ttu-id="5aec5-176">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-176">Match one or more decimal digits.</span></span>|  
+|`[.,]?`|<span data-ttu-id="5aec5-177">Совпадение с нулем или одной точкой либо запятой.</span><span class="sxs-lookup"><span data-stu-id="5aec5-177">Match zero or one period or comma.</span></span>|  
+|`\d*`|<span data-ttu-id="5aec5-178">Соответствует нулю или нескольким десятичным числам.</span><span class="sxs-lookup"><span data-stu-id="5aec5-178">Match zero or more decimal digits.</span></span>|  
+|`(?<amount>\s?\d[.,]?\d*)`|<span data-ttu-id="5aec5-179">Совпадение с пробелом, за которым следует одна или несколько десятичных цифр, после которых идет ноль или одна точка либо запятая, а за ними — ноль или более десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="5aec5-179">Match a white space, followed by one or more decimal digits, followed by zero or one period or comma, followed by zero or more decimal digits.</span></span> <span data-ttu-id="5aec5-180">Это группа записи с именем `amount`.</span><span class="sxs-lookup"><span data-stu-id="5aec5-180">This is the capturing group named `amount`.</span></span> <span data-ttu-id="5aec5-181">Так как шаблон замены имеет вид `${amount}`, вызов метода <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> заменяет всю совпадающую подстроку данной группой записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-181">Because the replacement pattern is `${amount}`, the call to the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method replaces the entire matched substring with this captured group.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-182">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-182">Back to top</span></span>](#Top)  
   
 <a name="DollarSign"></a>   
-## Подстановка знака "$"  
- Подстановка `$$` вставляет символ литерала "$"в строку замены.  
+## <a name="substituting-a--character"></a><span data-ttu-id="5aec5-183">Подстановка знака "$"</span><span class="sxs-lookup"><span data-stu-id="5aec5-183">Substituting a "$" Character</span></span>  
+ <span data-ttu-id="5aec5-184">Подстановка `$$` вставляет символ литерала "$"в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-184">The `$$` substitution inserts a literal "$" character in the replaced string.</span></span>  
   
- В следующем примере объект <xref:System.Globalization.NumberFormatInfo> используется для определения символа валюты для текущего языка и региональных параметров и его размещения в строке валюты. Затем он динамически создает как шаблон регулярного выражения, так и шаблон замены. Если пример выполняется на компьютере, где в качестве языка и региональных параметров задано значение «Английский — США» \(en\-US\), будет создан шаблон регулярного выражения `\b(\d+)(\.(\d+))?` и шаблон замены `$$ $1$2`. Шаблон замены замещает совпавший текст символом валюты и пробелом после первой и второй записанной группы.  
+ <span data-ttu-id="5aec5-185">В следующем примере объект <xref:System.Globalization.NumberFormatInfo> используется для определения символа валюты для текущего языка и региональных параметров и его размещения в строке валюты.</span><span class="sxs-lookup"><span data-stu-id="5aec5-185">The following example uses the <xref:System.Globalization.NumberFormatInfo> object to determine the current culture's currency symbol and its placement in a currency string.</span></span> <span data-ttu-id="5aec5-186">Затем он динамически создает как шаблон регулярного выражения, так и шаблон замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-186">It then builds both a regular expression pattern and a replacement pattern dynamically.</span></span> <span data-ttu-id="5aec5-187">Если пример выполняется на компьютере, где в качестве языка и региональных параметров задано значение «Английский — США» (en-US), будет создан шаблон регулярного выражения `\b(\d+)(\.(\d+))?` и шаблон замены `$$ $1$2`.</span><span class="sxs-lookup"><span data-stu-id="5aec5-187">If the example is run on a computer whose current culture is en-US, it generates the regular expression pattern `\b(\d+)(\.(\d+))?` and the replacement pattern `$$ $1$2`.</span></span> <span data-ttu-id="5aec5-188">Шаблон замены замещает совпавший текст символом валюты и пробелом после первой и второй записанной группы.</span><span class="sxs-lookup"><span data-stu-id="5aec5-188">The replacement pattern replaces the matched text with a currency symbol and a space followed by the first and second captured groups.</span></span>  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/dollarsign1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/dollarsign1.vb#8)]  
   
- Шаблон регулярного выражения `\b(\d+)(\.(\d+))?` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="5aec5-189">Шаблон регулярного выражения `\b(\d+)(\.(\d+))?` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-189">The regular expression pattern `\b(\d+)(\.(\d+))?` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало соответствия в начале границы слова.|  
-|`(\d+)`|Совпадение с одной или несколькими десятичными цифрами. Это первая группа записи.|  
-|`\.`|Совпадение с точкой \(десятичным разделителем\).|  
-|`(\d+)`|Совпадение с одной или несколькими десятичными цифрами. Это третья группа записи.|  
-|`(\.(\d+))?`|Совпадение с нулем или одним вхождением точки, за которой следует одна или несколько десятичных цифр. Это вторая группа записи.|  
+|<span data-ttu-id="5aec5-190">Шаблон</span><span class="sxs-lookup"><span data-stu-id="5aec5-190">Pattern</span></span>|<span data-ttu-id="5aec5-191">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-191">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="5aec5-192">Начало соответствия в начале границы слова.</span><span class="sxs-lookup"><span data-stu-id="5aec5-192">Start the match at the beginning of a word boundary.</span></span>|  
+|`(\d+)`|<span data-ttu-id="5aec5-193">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-193">Match one or more decimal digits.</span></span> <span data-ttu-id="5aec5-194">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-194">This is the first capturing group.</span></span>|  
+|`\.`|<span data-ttu-id="5aec5-195">Совпадение с точкой (десятичным разделителем).</span><span class="sxs-lookup"><span data-stu-id="5aec5-195">Match a period (the decimal separator).</span></span>|  
+|`(\d+)`|<span data-ttu-id="5aec5-196">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-196">Match one or more decimal digits.</span></span> <span data-ttu-id="5aec5-197">Это третья группа записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-197">This is the third capturing group.</span></span>|  
+|`(\.(\d+))?`|<span data-ttu-id="5aec5-198">Совпадение с нулем или одним вхождением точки, за которой следует одна или несколько десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="5aec5-198">Match zero or one occurrence of a period followed by one or more decimal digits.</span></span> <span data-ttu-id="5aec5-199">Это вторая группа записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-199">This is the second capturing group.</span></span>|  
   
 <a name="EntireMatch"></a>   
-## Подстановка всего совпадения  
- Подстановка `$&` включает все соответствие в строку замены. Часто она используется для добавления подстроки в начало или в конец совпадающей строки. Например, шаблон замены `($&)` добавляет скобки в начало и в конец каждого соответствия. Если нет соответствия, подстановка `$&` не оказывает влияния.  
+## <a name="substituting-the-entire-match"></a><span data-ttu-id="5aec5-200">Подстановка всего соответствия</span><span class="sxs-lookup"><span data-stu-id="5aec5-200">Substituting the Entire Match</span></span>  
+ <span data-ttu-id="5aec5-201">Подстановка `$&` включает все соответствие в строку замены.</span><span class="sxs-lookup"><span data-stu-id="5aec5-201">The `$&` substitution includes the entire match in the replacement string.</span></span> <span data-ttu-id="5aec5-202">Часто она используется для добавления подстроки в начало или в конец совпадающей строки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-202">Often, it is used to add a substring to the beginning or end of the matched string.</span></span> <span data-ttu-id="5aec5-203">Например, шаблон замены `($&)` добавляет скобки в начало и в конец каждого соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-203">For example, the `($&)` replacement pattern adds parentheses to the beginning and end of each match.</span></span> <span data-ttu-id="5aec5-204">Если нет соответствия, подстановка `$&` не оказывает влияния.</span><span class="sxs-lookup"><span data-stu-id="5aec5-204">If there is no match, the `$&` substitution has no effect.</span></span>  
   
- В следующем примере используется подстановка `$&` для добавления кавычек в начало и в конец названий книг, хранящихся в строковом массиве.  
+ <span data-ttu-id="5aec5-205">В следующем примере используется подстановка `$&` для добавления кавычек в начало и в конец названий книг, хранящихся в строковом массиве.</span><span class="sxs-lookup"><span data-stu-id="5aec5-205">The following example uses the `$&` substitution to add quotation marks at the beginning and end of book titles stored in a string array.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/entirematch1.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/entirematch1.vb#3)]  
   
- Шаблон регулярного выражения `^(\w+\s?)+$` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="5aec5-206">Шаблон регулярного выражения `^(\w+\s?)+$` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-206">The regular expression pattern `^(\w+\s?)+$` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`^`|Начало соответствия в начале входной строки.|  
-|`(\w+\s?)+`|Выделяет один или несколько раз шаблон из одного или нескольких словообразующих символов, за которыми следует ноль или один символ пробела.|  
-|`$`|Соответствует концу входной строки.|  
+|<span data-ttu-id="5aec5-207">Шаблон</span><span class="sxs-lookup"><span data-stu-id="5aec5-207">Pattern</span></span>|<span data-ttu-id="5aec5-208">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-208">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="5aec5-209">Начало соответствия в начале входной строки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-209">Start the match at the beginning of the input string.</span></span>|  
+|`(\w+\s?)+`|<span data-ttu-id="5aec5-210">Выделяет один или несколько раз шаблон из одного или нескольких словообразующих символов, за которыми следует ноль или один символ пробела.</span><span class="sxs-lookup"><span data-stu-id="5aec5-210">Match the pattern of one or more word characters followed by zero or one white-space characters one or more times.</span></span>|  
+|`$`|<span data-ttu-id="5aec5-211">Соответствует концу входной строки.</span><span class="sxs-lookup"><span data-stu-id="5aec5-211">Match the end of the input string.</span></span>|  
   
- Шаблон замены `"$&"` добавляет литеральные кавычки в начало и в конец каждого соответствия.  
+ <span data-ttu-id="5aec5-212">Шаблон замены `"$&"` добавляет литеральные кавычки в начало и в конец каждого соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-212">The `"$&"` replacement pattern adds a literal quotation mark to the beginning and end of each match.</span></span>  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-213">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-213">Back to top</span></span>](#Top)  
   
 <a name="BeforeMatch"></a>   
-## Подстановка текста до соответствия  
- Подстановка `$`` заменяет совпадающую строку всей входной строкой до соответствия. То есть она дублирует входную строку вплоть до соответствия, удаляя совпадающий текст. Любой текст, следующий за совпадающим текстом, не изменяется в результирующей строке. Если во входной строке несколько соответствий, текст замены выводится из исходной входной строки, а не из строки, в которой текст был заменен более ранними совпадениями. \(иллюстрация приведена в следующем примере\). Если нет соответствия, подстановка `$`` не оказывает влияния.  
+## <a name="substituting-the-text-before-the-match"></a><span data-ttu-id="5aec5-214">Подстановка текста до соответствия</span><span class="sxs-lookup"><span data-stu-id="5aec5-214">Substituting the Text Before the Match</span></span>  
+ <span data-ttu-id="5aec5-215">Подстановка <code>$\\`</code> заменяет совпадающую строку всей входной строкой до соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-215">The <code>$\\`</code> substitution replaces the matched string with the entire input string before the match.</span></span> <span data-ttu-id="5aec5-216">То есть она дублирует входную строку вплоть до соответствия, удаляя совпадающий текст.</span><span class="sxs-lookup"><span data-stu-id="5aec5-216">That is, it duplicates the input string up to the match while removing the matched text.</span></span> <span data-ttu-id="5aec5-217">Любой текст, следующий за совпадающим текстом, не изменяется в результирующей строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-217">Any text that follows the matched text is unchanged in the result string.</span></span> <span data-ttu-id="5aec5-218">Если во входной строке несколько соответствий, текст замены выводится из исходной входной строки, а не из строки, в которой текст был заменен более ранними совпадениями.</span><span class="sxs-lookup"><span data-stu-id="5aec5-218">If there are multiple matches in an input string, the replacement text is derived from the original input string, rather than from the string in which text has been replaced by earlier matches.</span></span> <span data-ttu-id="5aec5-219">\(Иллюстрация приведена в примере.\) Если нет соответствия, подстановка <code>$\\`</code> не оказывает влияния.</span><span class="sxs-lookup"><span data-stu-id="5aec5-219">\(The example provides an illustration.\) If there is no match, the <code>$\\`</code> substitution has no effect.</span></span>  
   
- В следующем примере шаблон регулярного выражения `\d+` используется для сопоставления последовательности из одной или нескольких цифр десятичного числа во входной строке. Строка замены `$`` заменяет эти цифры текстом, который предшествует совпадению.  
+ <span data-ttu-id="5aec5-220">В следующем примере шаблон регулярного выражения `\d+` используется для сопоставления последовательности из одной или нескольких цифр десятичного числа во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-220">The following example uses the regular expression pattern `\d+` to match a sequence of one or more decimal digits in the input string.</span></span> <span data-ttu-id="5aec5-221">Строка замены <code>$\`</code> заменяет эти цифры текстом, который предшествует совпадению.</span><span class="sxs-lookup"><span data-stu-id="5aec5-221">The replacement string <code>$\`</code> replaces these digits with the text that precedes the match.</span></span>  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- В этом примере входная строка `"aa1bb2cc3dd4ee5"` содержит пять совпадений. В следующей таблице показано, как подстановка `$`` вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке. Вставленный текст отображается в столбце результатов полужирным шрифтом.  
+ <span data-ttu-id="5aec5-222">В этом примере входная строка `"aa1bb2cc3dd4ee5"` содержит пять совпадений.</span><span class="sxs-lookup"><span data-stu-id="5aec5-222">In this example, the input string `"aa1bb2cc3dd4ee5"` contains five matches.</span></span> <span data-ttu-id="5aec5-223">В следующей таблице показано, как подстановка <code>$\`</code> вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-223">The following table illustrates how the <code>$\`</code> substitution causes the regular expression engine to replace each match in the input string.</span></span> <span data-ttu-id="5aec5-224">Вставленный текст отображается в столбце результатов полужирным шрифтом.</span><span class="sxs-lookup"><span data-stu-id="5aec5-224">Inserted text is shown in bold in the results column.</span></span>  
   
-|Соответствие|Положение|Строка до соответствия|Результирующая строка|  
-|------------------|---------------|----------------------------|---------------------------|  
-|1|2|aa|aa`aa`bb2cc3dd4ee5|  
-|2|5|aa1bb|aaaabb`aa1bb`cc3dd4ee5|  
-|3|8|aa1bb2cc|aaaabbaa1bbcc`aa1bb2cc`dd4ee5|  
-|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd`aa1bb2cc3dd`ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee `aa1bb2cc3dd4ee`|  
+|<span data-ttu-id="5aec5-225">Соответствие</span><span class="sxs-lookup"><span data-stu-id="5aec5-225">Match</span></span>|<span data-ttu-id="5aec5-226">Положение</span><span class="sxs-lookup"><span data-stu-id="5aec5-226">Position</span></span>|<span data-ttu-id="5aec5-227">Строка до соответствия</span><span class="sxs-lookup"><span data-stu-id="5aec5-227">String before match</span></span>|<span data-ttu-id="5aec5-228">Результирующая строка</span><span class="sxs-lookup"><span data-stu-id="5aec5-228">Result string</span></span>|  
+|-----------|--------------|-------------------------|-------------------|  
+|<span data-ttu-id="5aec5-229">1</span><span class="sxs-lookup"><span data-stu-id="5aec5-229">1</span></span>|<span data-ttu-id="5aec5-230">2</span><span class="sxs-lookup"><span data-stu-id="5aec5-230">2</span></span>|<span data-ttu-id="5aec5-231">aa</span><span class="sxs-lookup"><span data-stu-id="5aec5-231">aa</span></span>|<span data-ttu-id="5aec5-232">aa**aa**bb2cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-232">aa**aa**bb2cc3dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-233">2</span><span class="sxs-lookup"><span data-stu-id="5aec5-233">2</span></span>|<span data-ttu-id="5aec5-234">5</span><span class="sxs-lookup"><span data-stu-id="5aec5-234">5</span></span>|<span data-ttu-id="5aec5-235">aa1bb</span><span class="sxs-lookup"><span data-stu-id="5aec5-235">aa1bb</span></span>|<span data-ttu-id="5aec5-236">aaaabb**aa1bb**cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-236">aaaabb**aa1bb**cc3dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-237">3</span><span class="sxs-lookup"><span data-stu-id="5aec5-237">3</span></span>|<span data-ttu-id="5aec5-238">8</span><span class="sxs-lookup"><span data-stu-id="5aec5-238">8</span></span>|<span data-ttu-id="5aec5-239">aa1bb2cc</span><span class="sxs-lookup"><span data-stu-id="5aec5-239">aa1bb2cc</span></span>|<span data-ttu-id="5aec5-240">aaaabbaa1bbcc**aa1bb2cc**dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-240">aaaabbaa1bbcc**aa1bb2cc**dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-241">4</span><span class="sxs-lookup"><span data-stu-id="5aec5-241">4</span></span>|<span data-ttu-id="5aec5-242">11</span><span class="sxs-lookup"><span data-stu-id="5aec5-242">11</span></span>|<span data-ttu-id="5aec5-243">aa1bb2cc3dd</span><span class="sxs-lookup"><span data-stu-id="5aec5-243">aa1bb2cc3dd</span></span>|<span data-ttu-id="5aec5-244">aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-244">aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5</span></span>|  
+|<span data-ttu-id="5aec5-245">5</span><span class="sxs-lookup"><span data-stu-id="5aec5-245">5</span></span>|<span data-ttu-id="5aec5-246">14</span><span class="sxs-lookup"><span data-stu-id="5aec5-246">14</span></span>|<span data-ttu-id="5aec5-247">aa1bb2cc3dd4ee</span><span class="sxs-lookup"><span data-stu-id="5aec5-247">aa1bb2cc3dd4ee</span></span>|<span data-ttu-id="5aec5-248">aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**</span><span class="sxs-lookup"><span data-stu-id="5aec5-248">aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-249">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-249">Back to top</span></span>](#Top)  
   
 <a name="AfterMatch"></a>   
-## Подстановка текста после соответствия  
- Подстановка `$'` заменяет совпадающую строку всей входной строкой после соответствия. То есть входная строка после соответствия дублируется с удалением совпадающего текста. Любой текст, который предшествует совпадающему тексту, не изменяется в результирующей строке. Если нет соответствия, подстановка `$'` не оказывает влияния.  
+## <a name="substituting-the-text-after-the-match"></a><span data-ttu-id="5aec5-250">Подстановка текста после соответствия</span><span class="sxs-lookup"><span data-stu-id="5aec5-250">Substituting the Text After the Match</span></span>  
+ <span data-ttu-id="5aec5-251">Подстановка `$'` заменяет совпадающую строку всей входной строкой после соответствия.</span><span class="sxs-lookup"><span data-stu-id="5aec5-251">The `$'` substitution replaces the matched string with the entire input string after the match.</span></span> <span data-ttu-id="5aec5-252">То есть входная строка после соответствия дублируется с удалением совпадающего текста.</span><span class="sxs-lookup"><span data-stu-id="5aec5-252">That is, it duplicates the input string after the match while removing the matched text.</span></span> <span data-ttu-id="5aec5-253">Любой текст, который предшествует совпадающему тексту, не изменяется в результирующей строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-253">Any text that precedes the matched text is unchanged in the result string.</span></span> <span data-ttu-id="5aec5-254">Если нет соответствия, подстановка  `$'` не оказывает влияния.</span><span class="sxs-lookup"><span data-stu-id="5aec5-254">If there is no match, the  `$'` substitution has no effect.</span></span>  
   
- В следующем примере шаблон регулярного выражения `\d+` используется для сопоставления последовательности из одной или нескольких цифр десятичного числа во входной строке. Строка замены `$'` заменяет эти цифры текстом, который следует за соответствием.  
+ <span data-ttu-id="5aec5-255">В следующем примере шаблон регулярного выражения `\d+` используется для сопоставления последовательности из одной или нескольких цифр десятичного числа во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-255">The following example uses the regular expression pattern `\d+` to match a sequence of one or more decimal digits in the input string.</span></span> <span data-ttu-id="5aec5-256">Строка замены `$'` заменяет эти цифры текстом, который следует за соответствием.</span><span class="sxs-lookup"><span data-stu-id="5aec5-256">The replacement string `$'` replaces these digits with the text that follows the match.</span></span>  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/after1.cs#5)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/after1.vb#5)]  
   
- В этом примере входная строка `"aa1bb2cc3dd4ee5"` содержит пять совпадений. В следующей таблице показано, как подстановка `$'` вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке. Вставленный текст отображается в столбце результатов полужирным шрифтом.  
+ <span data-ttu-id="5aec5-257">В этом примере входная строка `"aa1bb2cc3dd4ee5"` содержит пять совпадений.</span><span class="sxs-lookup"><span data-stu-id="5aec5-257">In this example, the input string `"aa1bb2cc3dd4ee5"` contains five matches.</span></span> <span data-ttu-id="5aec5-258">В следующей таблице показано, как подстановка `$'` вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-258">The following table illustrates how the `$'` substitution causes the regular expression engine to replace each match in the input string.</span></span> <span data-ttu-id="5aec5-259">Вставленный текст отображается в столбце результатов полужирным шрифтом.</span><span class="sxs-lookup"><span data-stu-id="5aec5-259">Inserted text is shown in bold in the results column.</span></span>  
   
-|Соответствие|Положение|Строка после соответствия|Результирующая строка|  
-|------------------|---------------|-------------------------------|---------------------------|  
-|1|2|bb2cc3dd4ee5|aa`bb2cc3dd4ee5`bb2cc3dd4ee5|  
-|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb`cc3dd4ee5`cc3dd4ee5|  
-|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc`dd4ee5`dd4ee5|  
-|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd`ee5`ee5|  
-|5|14|<xref:System.String.Empty?displayProperty=fullName>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
+|<span data-ttu-id="5aec5-260">Соответствие</span><span class="sxs-lookup"><span data-stu-id="5aec5-260">Match</span></span>|<span data-ttu-id="5aec5-261">Положение</span><span class="sxs-lookup"><span data-stu-id="5aec5-261">Position</span></span>|<span data-ttu-id="5aec5-262">Строка после соответствия</span><span class="sxs-lookup"><span data-stu-id="5aec5-262">String after match</span></span>|<span data-ttu-id="5aec5-263">Результирующая строка</span><span class="sxs-lookup"><span data-stu-id="5aec5-263">Result string</span></span>|  
+|-----------|--------------|------------------------|-------------------|  
+|<span data-ttu-id="5aec5-264">1</span><span class="sxs-lookup"><span data-stu-id="5aec5-264">1</span></span>|<span data-ttu-id="5aec5-265">2</span><span class="sxs-lookup"><span data-stu-id="5aec5-265">2</span></span>|<span data-ttu-id="5aec5-266">bb2cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-266">bb2cc3dd4ee5</span></span>|<span data-ttu-id="5aec5-267">aa**bb2cc3dd4ee5**bb2cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-267">aa**bb2cc3dd4ee5**bb2cc3dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-268">2</span><span class="sxs-lookup"><span data-stu-id="5aec5-268">2</span></span>|<span data-ttu-id="5aec5-269">5</span><span class="sxs-lookup"><span data-stu-id="5aec5-269">5</span></span>|<span data-ttu-id="5aec5-270">cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-270">cc3dd4ee5</span></span>|<span data-ttu-id="5aec5-271">aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-271">aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-272">3</span><span class="sxs-lookup"><span data-stu-id="5aec5-272">3</span></span>|<span data-ttu-id="5aec5-273">8</span><span class="sxs-lookup"><span data-stu-id="5aec5-273">8</span></span>|<span data-ttu-id="5aec5-274">dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-274">dd4ee5</span></span>|<span data-ttu-id="5aec5-275">aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-275">aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5</span></span>|  
+|<span data-ttu-id="5aec5-276">4</span><span class="sxs-lookup"><span data-stu-id="5aec5-276">4</span></span>|<span data-ttu-id="5aec5-277">11</span><span class="sxs-lookup"><span data-stu-id="5aec5-277">11</span></span>|<span data-ttu-id="5aec5-278">ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-278">ee5</span></span>|<span data-ttu-id="5aec5-279">aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5</span><span class="sxs-lookup"><span data-stu-id="5aec5-279">aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5</span></span>|  
+|<span data-ttu-id="5aec5-280">5</span><span class="sxs-lookup"><span data-stu-id="5aec5-280">5</span></span>|<span data-ttu-id="5aec5-281">14</span><span class="sxs-lookup"><span data-stu-id="5aec5-281">14</span></span>|<xref:System.String.Empty?displayProperty=nameWithType>|<span data-ttu-id="5aec5-282">aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee</span><span class="sxs-lookup"><span data-stu-id="5aec5-282">aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-283">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-283">Back to top</span></span>](#Top)  
   
 <a name="LastGroup"></a>   
-## Подстановка последней группы записи  
- Подстановка `$+` заменяет совпадающую строку всей последней группой записи. Если группы записи отсутствуют или значение последней захваченной группы равно <xref:System.String.Empty?displayProperty=fullName>, подстановка `$+` не оказывает влияния.  
+## <a name="substituting-the-last-captured-group"></a><span data-ttu-id="5aec5-284">Подстановка последней записанной группы</span><span class="sxs-lookup"><span data-stu-id="5aec5-284">Substituting the Last Captured Group</span></span>  
+ <span data-ttu-id="5aec5-285">Подстановка `$+` заменяет совпадающую строку всей последней группой записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-285">The `$+` substitution replaces the matched string with the last captured group.</span></span> <span data-ttu-id="5aec5-286">Если группы записи отсутствуют или значение последней захваченной группы равно <xref:System.String.Empty?displayProperty=nameWithType>, подстановка `$+` не оказывает влияния.</span><span class="sxs-lookup"><span data-stu-id="5aec5-286">If there are no captured groups or if the value of the last captured group is <xref:System.String.Empty?displayProperty=nameWithType>, the `$+` substitution has no effect.</span></span>  
   
- В следующем примере в строке определяются повторяющиеся слова и используется подстановка `$+` для их замены одним вхождением слова. Параметр <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> позволяет  убедиться, что слова, отличающиеся регистром, но идентичные во всем остальном, считаются дубликатами.  
+ <span data-ttu-id="5aec5-287">В следующем примере в строке определяются повторяющиеся слова и используется подстановка `$+` для их замены одним вхождением слова.</span><span class="sxs-lookup"><span data-stu-id="5aec5-287">The following example identifies duplicate words in a string and uses the `$+` substitution to replace them with a single occurrence of the word.</span></span> <span data-ttu-id="5aec5-288">Параметр <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> позволяет  убедиться, что слова, отличающиеся регистром, но идентичные во всем остальном, считаются дубликатами.</span><span class="sxs-lookup"><span data-stu-id="5aec5-288">The <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> option is used to ensure that words that differ in case but that are otherwise identical are considered duplicates.</span></span>  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/lastmatch1.cs#6)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/lastmatch1.vb#6)]  
   
- Шаблон регулярного выражения `\b(\w+)\s\1\b` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="5aec5-289">Шаблон регулярного выражения `\b(\w+)\s\1\b` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="5aec5-289">The regular expression pattern `\b(\w+)\s\1\b` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Совпадение должно начинаться на границе слова.|  
-|`(\w+)`|Совпадение с одним или несколькими символами слова. Это первая группа записи.|  
-|`\s`|Соответствует пробелу.|  
-|`\1`|Соответствует первой группе записи.|  
-|`\b`|Совпадение должно заканчиваться на границе слова.|  
+|<span data-ttu-id="5aec5-290">Шаблон</span><span class="sxs-lookup"><span data-stu-id="5aec5-290">Pattern</span></span>|<span data-ttu-id="5aec5-291">Описание</span><span class="sxs-lookup"><span data-stu-id="5aec5-291">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="5aec5-292">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="5aec5-292">Begin the match at a word boundary.</span></span>|  
+|`(\w+)`|<span data-ttu-id="5aec5-293">Совпадение с одним или несколькими символами слова.</span><span class="sxs-lookup"><span data-stu-id="5aec5-293">Match one or more word characters.</span></span> <span data-ttu-id="5aec5-294">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-294">This is the first capturing group.</span></span>|  
+|`\s`|<span data-ttu-id="5aec5-295">Соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="5aec5-295">Match a white-space character.</span></span>|  
+|`\1`|<span data-ttu-id="5aec5-296">Соответствует первой группе записи.</span><span class="sxs-lookup"><span data-stu-id="5aec5-296">Match the first captured group.</span></span>|  
+|`\b`|<span data-ttu-id="5aec5-297">Совпадение должно заканчиваться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="5aec5-297">End the match at a word boundary.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="5aec5-298">К началу</span><span class="sxs-lookup"><span data-stu-id="5aec5-298">Back to top</span></span>](#Top)  
   
 <a name="EntireString"></a>   
-## Замена всей входной строки  
- Подстановка `$_` заменяет совпадающую строку всей входной строкой. То есть совпадающий текст удаляется и заменяется всей строкой, включая совпадающий текст.  
+## <a name="substituting-the-entire-input-string"></a><span data-ttu-id="5aec5-299">Замена всей входной строки</span><span class="sxs-lookup"><span data-stu-id="5aec5-299">Substituting the Entire Input String</span></span>  
+ <span data-ttu-id="5aec5-300">Подстановка `$_` заменяет совпадающую строку всей входной строкой.</span><span class="sxs-lookup"><span data-stu-id="5aec5-300">The `$_` substitution replaces the matched string with the entire input string.</span></span> <span data-ttu-id="5aec5-301">То есть совпадающий текст удаляется и заменяется всей строкой, включая совпадающий текст.</span><span class="sxs-lookup"><span data-stu-id="5aec5-301">That is, it removes the matched text and replaces it with the entire string, including the matched text.</span></span>  
   
- В следующем примере сопоставляется одна или несколько цифр десятичного числа во входной строке. При этом используется подстановка `$_` для их замены входной строкой.  
+ <span data-ttu-id="5aec5-302">В следующем примере сопоставляется одна или несколько цифр десятичного числа во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-302">The following example matches one or more decimal digits in the input string.</span></span> <span data-ttu-id="5aec5-303">При этом используется подстановка `$_` для их замены входной строкой.</span><span class="sxs-lookup"><span data-stu-id="5aec5-303">It uses the `$_` substitution to replace them with the entire input string.</span></span>  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/entire1.cs#7)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/entire1.vb#7)]  
   
- В этом примере входная строка `"ABC123DEF456"` содержит два совпадения. В следующей таблице показано, как подстановка `$_` вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке. Вставленный текст отображается в столбце результатов полужирным шрифтом.  
+ <span data-ttu-id="5aec5-304">В этом примере входная строка `"ABC123DEF456"` содержит два совпадения.</span><span class="sxs-lookup"><span data-stu-id="5aec5-304">In this example, the input string `"ABC123DEF456"` contains two matches.</span></span> <span data-ttu-id="5aec5-305">В следующей таблице показано, как подстановка `$_` вызывает замену обработчиком регулярных выражений каждого соответствия во входной строке.</span><span class="sxs-lookup"><span data-stu-id="5aec5-305">The following table illustrates how the `$_` substitution causes the regular expression engine to replace each match in the input string.</span></span> <span data-ttu-id="5aec5-306">Вставленный текст отображается в столбце результатов полужирным шрифтом.</span><span class="sxs-lookup"><span data-stu-id="5aec5-306">Inserted text is shown in bold in the results column.</span></span>  
   
-|Соответствие|Положение|Соответствие|Результирующая строка|  
-|------------------|---------------|------------------|---------------------------|  
-|1|3|123|ABC`ABC123DEF456`DEF456|  
-|2|5|456|ABCABC123DEF456DEF`ABC123DEF456`|  
+|<span data-ttu-id="5aec5-307">Соответствие</span><span class="sxs-lookup"><span data-stu-id="5aec5-307">Match</span></span>|<span data-ttu-id="5aec5-308">Положение</span><span class="sxs-lookup"><span data-stu-id="5aec5-308">Position</span></span>|<span data-ttu-id="5aec5-309">Соответствие</span><span class="sxs-lookup"><span data-stu-id="5aec5-309">Match</span></span>|<span data-ttu-id="5aec5-310">Результирующая строка</span><span class="sxs-lookup"><span data-stu-id="5aec5-310">Result string</span></span>|  
+|-----------|--------------|-----------|-------------------|  
+|<span data-ttu-id="5aec5-311">1</span><span class="sxs-lookup"><span data-stu-id="5aec5-311">1</span></span>|<span data-ttu-id="5aec5-312">3</span><span class="sxs-lookup"><span data-stu-id="5aec5-312">3</span></span>|<span data-ttu-id="5aec5-313">123</span><span class="sxs-lookup"><span data-stu-id="5aec5-313">123</span></span>|<span data-ttu-id="5aec5-314">ABC**ABC123DEF456**DEF456</span><span class="sxs-lookup"><span data-stu-id="5aec5-314">ABC**ABC123DEF456**DEF456</span></span>|  
+|<span data-ttu-id="5aec5-315">2</span><span class="sxs-lookup"><span data-stu-id="5aec5-315">2</span></span>|<span data-ttu-id="5aec5-316">5</span><span class="sxs-lookup"><span data-stu-id="5aec5-316">5</span></span>|<span data-ttu-id="5aec5-317">456</span><span class="sxs-lookup"><span data-stu-id="5aec5-317">456</span></span>|<span data-ttu-id="5aec5-318">ABCABC123DEF456DEF**ABC123DEF456**</span><span class="sxs-lookup"><span data-stu-id="5aec5-318">ABCABC123DEF456DEF**ABC123DEF456**</span></span>|  
   
-## См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="5aec5-319">См. также</span><span class="sxs-lookup"><span data-stu-id="5aec5-319">See Also</span></span>  
+ [<span data-ttu-id="5aec5-320">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="5aec5-320">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

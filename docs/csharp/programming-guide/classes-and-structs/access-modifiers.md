@@ -1,110 +1,93 @@
 ---
 title: "Модификаторы доступа (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 38b259b4d85d54467cd15cd49e5987f6198e8d99
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="access-modifiers-c-programming-guide"></a>Модификаторы доступа (Руководство по программированию в C#)
-Все типы и члены имеют уровень доступности, определяющий возможность их использования из другого кода в вашей или в других сборках. Следующие модификаторы доступа позволяют указать доступность типа или члена при объявлении:  
+# <a name="access-modifiers-c-programming-guide"></a><span data-ttu-id="7bd9f-102">Модификаторы доступа (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="7bd9f-102">Access Modifiers (C# Programming Guide)</span></span>
+<span data-ttu-id="7bd9f-103">Все типы и члены имеют уровень доступности, определяющий возможность их использования из другого кода в вашей или в других сборках.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-103">All types and type members have an accessibility level, which controls whether they can be used from other code in your assembly or other assemblies.</span></span> <span data-ttu-id="7bd9f-104">Следующие модификаторы доступа позволяют указать доступность типа или члена при объявлении:</span><span class="sxs-lookup"><span data-stu-id="7bd9f-104">You can use the following access modifiers to specify the accessibility of a type or member when you declare it:</span></span>  
   
- [public](../../../csharp/language-reference/keywords/public.md)  
- Доступ к типу или члену возможен из любого другого кода в той же сборке или другой сборке, ссылающейся на него.  
+ [<span data-ttu-id="7bd9f-105">public</span><span class="sxs-lookup"><span data-stu-id="7bd9f-105">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
+ <span data-ttu-id="7bd9f-106">Доступ к типу или члену возможен из любого другого кода в той же сборке или другой сборке, ссылающейся на него.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-106">The type or member can be accessed by any other code in the same assembly or another assembly that references it.</span></span> 
   
- [private](../../../csharp/language-reference/keywords/private.md)  
- Доступ к типу или члену возможен только из кода в том же классе или структуре.  
+ [<span data-ttu-id="7bd9f-107">private</span><span class="sxs-lookup"><span data-stu-id="7bd9f-107">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+ <span data-ttu-id="7bd9f-108">Доступ к типу или члену возможен только из кода в том же классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-108">The type or member can be accessed only by code in the same class or struct.</span></span>  
   
- [protected](../../../csharp/language-reference/keywords/protected.md)  
- Доступ к типу или члену возможен только из кода в том же классе или структуре либо в классе, производном от этого класса.  
+ [<span data-ttu-id="7bd9f-109">protected</span><span class="sxs-lookup"><span data-stu-id="7bd9f-109">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+ <span data-ttu-id="7bd9f-110">Тип или член может осуществляться только из кода в том же классе или в класс, производный от этого класса.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-110">The type or member can be accessed only by code in the same class, or in a class that is derived from that class.</span></span>  
+ [<span data-ttu-id="7bd9f-111">internal</span><span class="sxs-lookup"><span data-stu-id="7bd9f-111">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)  
+ <span data-ttu-id="7bd9f-112">Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-112">The type or member can be accessed by any code in the same assembly, but not from another assembly.</span></span>  
   
- [internal](../../../csharp/language-reference/keywords/internal.md)  
- Доступ к типу или члену возможен из любого кода в той же сборке, но не из другой сборки.  
+ <span data-ttu-id="7bd9f-113">[защищенные внутренние](../../../csharp/language-reference/keywords/protected-internal.md) тип или член может осуществляться из любого кода в сборке, в котором она объявлена или из производного класса в другой сборке.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-113">[protected internal](../../../csharp/language-reference/keywords/protected-internal.md) The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly.</span></span> 
+
+ <span data-ttu-id="7bd9f-114">[защищенный закрытый](../../../csharp/language-reference/keywords/private-protected.md) тип или член может осуществляться только в пределах его объявляющей сборки кода в том же классе или в тип, производный от этого класса.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-114">[private protected](../../../csharp/language-reference/keywords/private-protected.md) The type or member can be accessed only within its declaring assembly, by code in the same class or in a type that is derived from that class.</span></span>
   
- `protected internal`  
- Доступ к типу или члену возможен из любого кода в той сборке, где он был объявлен, или из производного класса в другой сборке. Доступ из другой сборки должен осуществляться в объявлении класса, производного от класса, в котором объявлен защищенный внутренний элемент, и через экземпляр типа производного класса.  
+ <span data-ttu-id="7bd9f-115">В следующих примерах показано, как изменить модификаторы доступа для типа или члена типа:</span><span class="sxs-lookup"><span data-stu-id="7bd9f-115">The following examples demonstrate how to specify access modifiers on a type and member:</span></span>  
   
- В следующих примерах показано, как изменить модификаторы доступа для типа или члена типа:  
+ [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ <span data-ttu-id="7bd9f-116">Не все модификаторы доступа могут использоваться всеми типами или членами типов во всех контекстах, а в некоторых случаях доступность члена типа ограничивается доступностью типа, в котором он содержится.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-116">Not all access modifiers can be used by all types or members in all contexts, and in some cases the accessibility of a type member is constrained by the accessibility of its containing type.</span></span> <span data-ttu-id="7bd9f-117">Следующие подразделы содержат дополнительные сведения о доступности.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-117">The following sections provide more details about accessibility.</span></span>  
   
- Не все модификаторы доступа могут использоваться всеми типами или членами типов во всех контекстах, а в некоторых случаях доступность члена типа ограничивается доступностью типа, в котором он содержится. Следующие подразделы содержат дополнительные сведения о доступности.  
+## <a name="class-and-struct-accessibility"></a><span data-ttu-id="7bd9f-118">Доступность классов и структур</span><span class="sxs-lookup"><span data-stu-id="7bd9f-118">Class and Struct Accessibility</span></span>  
+ <span data-ttu-id="7bd9f-119">Классы и структуры, объявленные непосредственно в пространстве имен (другими словами, не вложенные в другие классы или структуры), могут быть открытыми или внутренними.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-119">Classes and structs that are declared directly within a namespace (in other words, that are not nested within other classes or structs) can be either public or internal.</span></span> <span data-ttu-id="7bd9f-120">Если модификатор доступа не указан, по умолчанию используется внутренний тип.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-120">Internal is the default if no access modifier is specified.</span></span>  
   
-## <a name="class-and-struct-accessibility"></a>Доступность классов и структур  
- Классы и структуры, объявленные непосредственно в пространстве имен (другими словами, не вложенные в другие классы или структуры), могут быть открытыми или внутренними. Если модификатор доступа не указан, по умолчанию используется внутренний тип.  
+ <span data-ttu-id="7bd9f-121">Члены структуры, включая вложенные классы и структуры, могут объявляться как открытые, внутренние или закрытые.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-121">Struct members, including nested classes and structs, can be declared as public, internal, or private.</span></span> <span data-ttu-id="7bd9f-122">Класс членов, включая вложенные классы и структуры, может быть открытым, защищенные внутренние, защищенные, внутренние, private protected или private.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-122">Class members, including nested classes and structs, can be public, protected internal, protected, internal, private protected or private.</span></span> <span data-ttu-id="7bd9f-123">По умолчанию уровень доступа к членам класса и членам структуры, включая вложенные классы и структуры, является закрытым.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-123">The access level for class members and struct members, including nested classes and structs, is private by default.</span></span> <span data-ttu-id="7bd9f-124">Закрытые вложенные типы недоступны за пределами типа, в котором содержатся.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-124">Private nested types are not accessible from outside the containing type.</span></span>  
   
- Члены структуры, включая вложенные классы и структуры, могут объявляться как открытые, внутренние или закрытые. Члены класса, включая вложенные классы и структуры, могут объявляться как открытые, защищенные внутренние, защищенные, внутренние или закрытые. По умолчанию уровень доступа к членам класса и членам структуры, включая вложенные классы и структуры, является закрытым. Закрытые вложенные типы недоступны за пределами типа, в котором содержатся.  
+ <span data-ttu-id="7bd9f-125">Производные классы не могут быть более доступны, чем соответствующие базовые типы.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-125">Derived classes cannot have greater accessibility than their base types.</span></span> <span data-ttu-id="7bd9f-126">Другими словами, нельзя иметь открытый класс `B`, производный от внутреннего класса `A`.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-126">In other words, you cannot have a public class `B` that derives from an internal class `A`.</span></span> <span data-ttu-id="7bd9f-127">Если бы это было возможно, класс `A` стал бы открытым, поскольку все защищенные или внутренние члены класса `A` были бы доступны из производного класса.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-127">If this were allowed, it would have the effect of making `A` public, because all protected or internal members of `A` are accessible from the derived class.</span></span>  
   
- Производные классы не могут быть более доступны, чем соответствующие базовые типы. Другими словами, нельзя иметь открытый класс `B`, производный от внутреннего класса `A`. Если бы это было возможно, класс `A` стал бы открытым, поскольку все защищенные или внутренние члены класса `A` были бы доступны из производного класса.  
+ <span data-ttu-id="7bd9f-128">Доступ к внутренним типам можно предоставить некоторым другим сборкам с помощью класса InternalsVisibleToAttribute.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-128">You can enable specific other assemblies to access your internal types by using the InternalsVisibleToAttribute.</span></span> <span data-ttu-id="7bd9f-129">Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span><span class="sxs-lookup"><span data-stu-id="7bd9f-129">For more information, see [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span></span>  
   
- Доступ к внутренним типам можно предоставить некоторым другим сборкам с помощью класса InternalsVisibleToAttribute. Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+## <a name="class-and-struct-member-accessibility"></a><span data-ttu-id="7bd9f-130">Доступность членов классов и структур</span><span class="sxs-lookup"><span data-stu-id="7bd9f-130">Class and Struct Member Accessibility</span></span>  
+ <span data-ttu-id="7bd9f-131">Члены класса (включая вложенные классы и структуры) можно объявлять с любым из пяти типов доступа.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-131">Class members (including nested classes and structs) can be declared with any of the five types of access.</span></span> <span data-ttu-id="7bd9f-132">Члены структуры нельзя объявлять как защищенные, поскольку структуры не поддерживают наследование.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-132">Struct members cannot be declared as protected because structs do not support inheritance.</span></span>  
   
-## <a name="class-and-struct-member-accessibility"></a>Доступность членов классов и структур  
- Члены класса (включая вложенные классы и структуры) можно объявлять с любым из пяти типов доступа. Члены структуры нельзя объявлять как защищенные, поскольку структуры не поддерживают наследование.  
+ <span data-ttu-id="7bd9f-133">Как правило, уровень доступности члена не может быть выше уровня доступности типа, в который он входит.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-133">Normally, the accessibility of a member is not greater than the accessibility of the type that contains it.</span></span> <span data-ttu-id="7bd9f-134">При этом открытый член внутреннего класса может быть доступен за пределами сборки, если он реализует методы интерфейса или переопределяет виртуальные методы, определенные в открытом базовом классе.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-134">However, a public member of an internal class might be accessible from outside the assembly if the member implements interface methods or overrides virtual methods that are defined in a public base class.</span></span>  
   
- Как правило, уровень доступности члена не может быть выше уровня доступности типа, в который он входит. При этом открытый член внутреннего класса может быть доступен за пределами сборки, если он реализует методы интерфейса или переопределяет виртуальные методы, определенные в открытом базовом классе.  
+ <span data-ttu-id="7bd9f-135">Тип любого члена, который является полем, свойством или событием, должен иметь, как минимум, такой же уровень доступности, как у самого члена.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-135">The type of any member that is a field, property, or event must be at least as accessible as the member itself.</span></span> <span data-ttu-id="7bd9f-136">Точно так же тип возвращаемого значения и типы параметров любого члена, который является методом, индексатором или делегатом, должен иметь, как минимум, такой же уровень доступности, как у самого члена.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-136">Similarly, the return type and the parameter types of any member that is a method, indexer, or delegate must be at least as accessible as the member itself.</span></span> <span data-ttu-id="7bd9f-137">Например, нельзя иметь открытый метод `M`, возвращающий класс `C`, если `C` не является также открытым.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-137">For example, you cannot have a public method `M` that returns a class `C` unless `C` is also public.</span></span> <span data-ttu-id="7bd9f-138">Аналогичным образом нельзя иметь защищенное свойство типа `A`, если `A` объявлен как закрытый.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-138">Likewise, you cannot have a protected property of type `A` if `A` is declared as private.</span></span>  
   
- Тип любого члена, который является полем, свойством или событием, должен иметь, как минимум, такой же уровень доступности, как у самого члена. Точно так же тип возвращаемого значения и типы параметров любого члена, который является методом, индексатором или делегатом, должен иметь, как минимум, такой же уровень доступности, как у самого члена. Например, нельзя иметь открытый метод `M`, возвращающий класс `C`, если `C` не является также открытым. Аналогичным образом нельзя иметь защищенное свойство типа `A`, если `A` объявлен как закрытый.  
+ <span data-ttu-id="7bd9f-139">Пользовательские операторы всегда должны объявляться как открытые.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-139">User-defined operators must always be declared as public.</span></span> <span data-ttu-id="7bd9f-140">Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="7bd9f-140">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
   
- Пользовательские операторы всегда должны объявляться как открытые. Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).  
+ <span data-ttu-id="7bd9f-141">Методы завершения не могут иметь модификаторы доступа.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-141">Finalizers cannot have accessibility modifiers.</span></span>  
   
- Методы завершения не могут иметь модификаторы доступа.  
+ <span data-ttu-id="7bd9f-142">Чтобы настроить уровень доступа для члена класса или структуры, добавьте в объявление этого члена соответствующее ключевое слово, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-142">To set the access level for a class or struct member, add the appropriate keyword to the member declaration, as shown in the following example.</span></span>  
   
- Чтобы настроить уровень доступа для члена класса или структуры, добавьте в объявление этого члена соответствующее ключевое слово, как показано в следующем примере.  
-  
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  Защищенный внутренний уровень доступности означает защищенный ИЛИ внутренний доступ, а не защищенный И внутренний. Другими словами, защищенный внутренний член доступен из любого класса в той же сборке, включая производные классы. Чтобы сделать его доступным только для производных классов в той же сборке, объявите сам класс как внутренний, а его члены как защищенные.  
+>  <span data-ttu-id="7bd9f-143">Защищенный внутренний уровень доступности означает защищенный ИЛИ внутренний доступ, а не защищенный И внутренний.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-143">The protected internal accessibility level means protected OR internal, not protected AND internal.</span></span> <span data-ttu-id="7bd9f-144">Другими словами, защищенный внутренний член доступен из любого класса в той же сборке, включая производные классы.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-144">In other words, a protected internal member can be accessed from any class in the same assembly, including derived classes.</span></span> <span data-ttu-id="7bd9f-145">Чтобы сделать его доступным только для производных классов в той же сборке, объявите сам класс как внутренний, а его члены как защищенные.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-145">To limit accessibility to only derived classes in the same assembly, declare the class itself internal, and declare its members as protected.</span></span> <span data-ttu-id="7bd9f-146">Кроме того начиная с C# 7.2, можно использовать защищенный доступ к закрытому модификатор для достижения такого же результата, без необходимости вносить внутренней содержащего класса.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-146">Also, starting with C# 7.2, you can use the private protected access modifier to achieve the same result without need to make the containing class internal.</span></span>  
   
-## <a name="other-types"></a>Другие типы  
- Интерфейсы, объявляемые непосредственно в пространстве имен, могут быть объявлены как открытые или внутренние. Равно как и в случае с классами и структурами, для интерфейсов по умолчанию задается внутренний доступ. Члены интерфейса всегда открыты, поскольку интерфейс как раз и создан для того, чтобы обеспечить доступ к классу или структуре для других типов. Модификаторы доступа к членам интерфейса не применяются.  
+## <a name="other-types"></a><span data-ttu-id="7bd9f-147">Другие типы</span><span class="sxs-lookup"><span data-stu-id="7bd9f-147">Other Types</span></span>  
+ <span data-ttu-id="7bd9f-148">Интерфейсы, объявляемые непосредственно в пространстве имен, могут быть объявлены как открытые или внутренние. Равно как и в случае с классами и структурами, для интерфейсов по умолчанию задается внутренний доступ.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-148">Interfaces declared directly within a namespace can be declared as public or internal and, just like classes and structs, interfaces default to internal access.</span></span> <span data-ttu-id="7bd9f-149">Члены интерфейса всегда открыты, поскольку интерфейс как раз и создан для того, чтобы обеспечить доступ к классу или структуре для других типов.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-149">Interface members are always public because the purpose of an interface is to enable other types to access a class or struct.</span></span> <span data-ttu-id="7bd9f-150">Модификаторы доступа к членам интерфейса не применяются.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-150">No access modifiers can be applied to interface members.</span></span>  
   
- Члены перечисления всегда открыты, и модификаторы доступа к ним не применяются.  
+ <span data-ttu-id="7bd9f-151">Члены перечисления всегда открыты, и модификаторы доступа к ним не применяются.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-151">Enumeration members are always public, and no access modifiers can be applied.</span></span>  
   
- Делегаты ведут себя как классы и структуры. По умолчанию они имеют внутренний доступ, если объявляются непосредственно в пространстве имен, и закрытый доступ, если являются вложенными.  
+ <span data-ttu-id="7bd9f-152">Делегаты ведут себя как классы и структуры.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-152">Delegates behave like classes and structs.</span></span> <span data-ttu-id="7bd9f-153">По умолчанию они имеют внутренний доступ, если объявляются непосредственно в пространстве имен, и закрытый доступ, если являются вложенными.</span><span class="sxs-lookup"><span data-stu-id="7bd9f-153">By default, they have internal access when declared directly within a namespace, and private access when nested.</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="7bd9f-154">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="7bd9f-154">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [internal](../../../csharp/language-reference/keywords/internal.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
- [interface](../../../csharp/language-reference/keywords/interface.md)
-
+## <a name="see-also"></a><span data-ttu-id="7bd9f-155">См. также</span><span class="sxs-lookup"><span data-stu-id="7bd9f-155">See Also</span></span>  
+ [<span data-ttu-id="7bd9f-156">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="7bd9f-156">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="7bd9f-157">Классы и структуры</span><span class="sxs-lookup"><span data-stu-id="7bd9f-157">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="7bd9f-158">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="7bd9f-158">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
+ [<span data-ttu-id="7bd9f-159">private</span><span class="sxs-lookup"><span data-stu-id="7bd9f-159">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+ [<span data-ttu-id="7bd9f-160">public</span><span class="sxs-lookup"><span data-stu-id="7bd9f-160">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
+ [<span data-ttu-id="7bd9f-161">internal</span><span class="sxs-lookup"><span data-stu-id="7bd9f-161">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)  
+ [<span data-ttu-id="7bd9f-162">protected</span><span class="sxs-lookup"><span data-stu-id="7bd9f-162">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+ [<span data-ttu-id="7bd9f-163">защищенные внутренние</span><span class="sxs-lookup"><span data-stu-id="7bd9f-163">protected internal</span></span>](../../../csharp/language-reference/keywords/protected-internal.md)  
+ [<span data-ttu-id="7bd9f-164">protected Private</span><span class="sxs-lookup"><span data-stu-id="7bd9f-164">private protected</span></span>](../../../csharp/language-reference/keywords/private-protected.md)  
+ [<span data-ttu-id="7bd9f-165">class</span><span class="sxs-lookup"><span data-stu-id="7bd9f-165">class</span></span>](../../../csharp/language-reference/keywords/class.md)  
+ [<span data-ttu-id="7bd9f-166">struct</span><span class="sxs-lookup"><span data-stu-id="7bd9f-166">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+ [<span data-ttu-id="7bd9f-167">interface</span><span class="sxs-lookup"><span data-stu-id="7bd9f-167">interface</span></span>](../../../csharp/language-reference/keywords/interface.md)

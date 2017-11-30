@@ -1,54 +1,52 @@
 ---
-title: "Выбор, вычисление и отбор XML-данных с помощью XPathNavigator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Выбор, вычисление и отбор XML-данных с помощью XPathNavigator"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7a86fb36d367342ea0c5bc4968bdd5744bd0524e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Выбор, вычисление и отбор XML-данных с помощью XPathNavigator
-Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для выбора узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью запроса XPath, проверки и анализа результатов выражения XPath и определения соответствия узла в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> данному выражению XPath.  Эти и другие основные понятия, связанные с выбором, оценкой и сопоставлением узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>, описаны в следующих разделах.  
+# <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a><span data-ttu-id="bd14c-102">Выбор, вычисление и отбор XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-102">Selecting, Evaluating and Matching XML Data using XPathNavigator</span></span>
+<span data-ttu-id="bd14c-103">Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет методы для выбора узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью запроса XPath, проверки и анализа результатов выражения XPath и определения соответствия узла в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> данному выражению XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-103">The <xref:System.Xml.XPath.XPathNavigator> class provides methods to select nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath query, evaluate and examine the results of an XPath expression, and determine if a node in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object matches a given XPath expression.</span></span> <span data-ttu-id="bd14c-104">Эти и другие основные понятия, связанные с выбором, оценкой и сопоставлением узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>, описаны в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="bd14c-104">These and other concepts that relate to selecting, evaluating and matching nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object are described in the following topics.</span></span>  
   
-## Содержание  
- [Выборка XML\-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- Описывает набор методов класса <xref:System.Xml.XPath.XPathNavigator>, используемых для выбора набора узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью выражения XPath.  
+## <a name="in-this-section"></a><span data-ttu-id="bd14c-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="bd14c-105">In This Section</span></span>  
+ [<span data-ttu-id="bd14c-106">Выберите XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-106">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ <span data-ttu-id="bd14c-107">Описывает набор методов класса <xref:System.Xml.XPath.XPathNavigator>, используемых для выбора набора узлов в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument> с помощью выражения XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-107">Describes the set of <xref:System.Xml.XPath.XPathNavigator> class methods used to select a set of nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using an XPath expression.</span></span>  
   
- [Вычисление выражения XPath с помощью класса XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- Описывает метод <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> класса <xref:System.Xml.XPath.XPathNavigator>, используемый для оценки выражения XPath.  
+ [<span data-ttu-id="bd14c-108">Вычисление выражения XPath с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-108">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ <span data-ttu-id="bd14c-109">Описывает метод <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> класса <xref:System.Xml.XPath.XPathNavigator>, используемый для оценки выражения XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-109">Describes the <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to evaluate an XPath expression.</span></span>  
   
- [Соответствие узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- Описывает метод <xref:System.Xml.XPath.XPathNavigator.Matches%2A> класса <xref:System.Xml.XPath.XPathNavigator>, используемый, чтобы определить соответствие узла выражению XPath.  
+ [<span data-ttu-id="bd14c-110">Соответствие узлов с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-110">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ <span data-ttu-id="bd14c-111">Описывает метод <xref:System.Xml.XPath.XPathNavigator.Matches%2A> класса <xref:System.Xml.XPath.XPathNavigator>, используемый, чтобы определить соответствие узла выражению XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-111">Describes the <xref:System.Xml.XPath.XPathNavigator.Matches%2A> method of the <xref:System.Xml.XPath.XPathNavigator> class used to determine if a node matches an XPath expression.</span></span>  
   
- [Типы узлов, распознаваемые запросами XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- Описывает типы узлов, распознаваемых в запросе XPath.  
+ [<span data-ttu-id="bd14c-112">Типы узлов, распознаваемые запросами XPath</span><span class="sxs-lookup"><span data-stu-id="bd14c-112">Node Types Recognized with XPath Queries</span></span>](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ <span data-ttu-id="bd14c-113">Описывает типы узлов, распознаваемых в запросе XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-113">Describes the types of nodes recognized in an XPath query.</span></span>  
   
- [Запросы XPath и пространства имен](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
- Описывает типы пространств имен в запросе XPath.  
+ [<span data-ttu-id="bd14c-114">Запросы XPath и пространства имен</span><span class="sxs-lookup"><span data-stu-id="bd14c-114">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+ <span data-ttu-id="bd14c-115">Описывает типы пространств имен в запросе XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-115">Describes the use of namespaces in an XPath query.</span></span>  
   
- [Скомпилированные выражения XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
- Описывает класс <xref:System.Xml.XPath.XPathExpression>, который представляет скомпилированный запрос XPath.  
+ [<span data-ttu-id="bd14c-116">Скомпилированные выражения XPath</span><span class="sxs-lookup"><span data-stu-id="bd14c-116">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
+ <span data-ttu-id="bd14c-117">Описывает класс <xref:System.Xml.XPath.XPathExpression>, который представляет скомпилированный запрос XPath.</span><span class="sxs-lookup"><span data-stu-id="bd14c-117">Describes the <xref:System.Xml.XPath.XPathExpression> class that represents a compiled XPath query.</span></span>  
   
-## См. также  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Обработка XML\-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Чтение XML\-данных с помощью XPathDocument и XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)   
- [Доступ к XML\-данным с помощью класса XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)   
- [Изменение XML\-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)   
- [Проверка по схеме с помощью XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+## <a name="see-also"></a><span data-ttu-id="bd14c-118">См. также</span><span class="sxs-lookup"><span data-stu-id="bd14c-118">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="bd14c-119">Обработка XML-данных с использованием модели данных XPath</span><span class="sxs-lookup"><span data-stu-id="bd14c-119">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="bd14c-120">Чтение XML-данных с помощью XPathDocument и XmlDocument</span><span class="sxs-lookup"><span data-stu-id="bd14c-120">Reading XML Data using XPathDocument and XmlDocument</span></span>](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ [<span data-ttu-id="bd14c-121">Доступ к данным XML с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-121">Accessing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="bd14c-122">Изменение XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-122">Editing XML Data using XPathNavigator</span></span>](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="bd14c-123">Проверка схемы с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bd14c-123">Schema Validation using XPathNavigator</span></span>](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

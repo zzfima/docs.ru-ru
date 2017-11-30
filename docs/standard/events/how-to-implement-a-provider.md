@@ -1,68 +1,74 @@
 ---
-title: "Практическое руководство. Реализация поставщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шаблон разработки наблюдателя [платформа .NET Framework], реализация поставщиков"
-  - "поставщики [платформа .NET Framework], в шаблоне разработки наблюдателя"
-  - "наблюдаемые объекты [платформа .NET Framework], в шаблоне разработки наблюдателя"
+title: "Практическое руководство. Реализация поставщика"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- observer design pattern [.NET Framework], implementing providers
+- providers [.NET Framework], in observer design pattern
+- observables [.NET Framework], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b9d8f96de8cb3d13568e755f1d5e885e0474d891
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Реализация поставщика
-Шаблон разработки наблюдателя требует различения поставщика, который проверяет данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают уведомления \(обратные вызовы\) от поставщика.  В данном разделе рассматривается способ создания поставщика.  В связанном разделе, [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md), рассматривается способ создания наблюдателя.  
+# <a name="how-to-implement-a-provider"></a><span data-ttu-id="ae094-102">Практическое руководство. Реализация поставщика</span><span class="sxs-lookup"><span data-stu-id="ae094-102">How to: Implement a Provider</span></span>
+<span data-ttu-id="ae094-103">Шаблон разработки наблюдателя требует различения поставщика, который проверяет данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают уведомления (обратные вызовы) от поставщика.</span><span class="sxs-lookup"><span data-stu-id="ae094-103">The observer design pattern requires a division between a provider, which monitors data and sends notifications, and one or more observers, which receive notifications (callbacks) from the provider.</span></span> <span data-ttu-id="ae094-104">В этом разделе описывается создание поставщика.</span><span class="sxs-lookup"><span data-stu-id="ae094-104">This topic discusses how to create a provider.</span></span> <span data-ttu-id="ae094-105">Связанный раздел, [как: реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md), рассматривается способ создания наблюдателя.</span><span class="sxs-lookup"><span data-stu-id="ae094-105">A related topic, [How to: Implement an Observer](../../../docs/standard/events/how-to-implement-an-observer.md), discusses how to create an observer.</span></span>  
   
-### Создание поставщика  
+### <a name="to-create-a-provider"></a><span data-ttu-id="ae094-106">Для создания поставщика</span><span class="sxs-lookup"><span data-stu-id="ae094-106">To create a provider</span></span>  
   
-1.  Определите данные, за отправку которых наблюдателям отвечает поставщик.  Хотя поставщик и данные, отправляемые им наблюдателям, могут относиться к одному типу, обычно они представлены различными типами.  Например, в приложении контроля температуры структура `Temperature` определяет данные, которые поставщик \(представленный классом `TemperatureMonitor`, определенным в следующем пункте\) проверяет и на которые подписываются наблюдатели.  
+1.  <span data-ttu-id="ae094-107">Определяют данные, которые поставщик отвечает за отправку наблюдателям.</span><span class="sxs-lookup"><span data-stu-id="ae094-107">Define the data that the provider is responsible for sending to observers.</span></span> <span data-ttu-id="ae094-108">Несмотря на то, что поставщик и данные, отправляемые им наблюдателям могут быть одного типа, они обычно представлены различные типы.</span><span class="sxs-lookup"><span data-stu-id="ae094-108">Although the provider and the data that it sends to observers can be a single type, they are generally represented by different types.</span></span> <span data-ttu-id="ae094-109">Например, в приложении контроля температуры `Temperature` структура определяет данные, поставщик (представленный `TemperatureMonitor` класс, определенный в следующем шаге) отслеживает и на которые подписываются наблюдатели.</span><span class="sxs-lookup"><span data-stu-id="ae094-109">For example, in a temperature monitoring application, the `Temperature` structure defines the data that the provider (which is represented by the `TemperatureMonitor` class defined in the next step) monitors and to which observers subscribe.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2.  Определите поставщик данных, то есть тип, реализующий интерфейс <xref:System.IObservable%601?displayProperty=fullName>.  Аргумент универсального типа поставщика является типом, отправляемым поставщиком наблюдателям.  В следующем примере определяется класс `TemperatureMonitor`, представляющий собой созданную реализацию <xref:System.IObservable%601?displayProperty=fullName> с аргументом универсального типа `Temperature`.  
+2.  <span data-ttu-id="ae094-110">Определите поставщик данных, то есть тип, реализующий <xref:System.IObservable%601?displayProperty=nameWithType> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ae094-110">Define the data provider, which is a type that implements the <xref:System.IObservable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="ae094-111">Аргумент универсального типа поставщика является типом, которые поставщик отправляет наблюдателям.</span><span class="sxs-lookup"><span data-stu-id="ae094-111">The provider's generic type argument is the type that the provider sends to observers.</span></span> <span data-ttu-id="ae094-112">В следующем примере определяется `TemperatureMonitor` класс, представляющий собой созданную <xref:System.IObservable%601?displayProperty=nameWithType> реализации с помощью аргумента универсального типа `Temperature`.</span><span class="sxs-lookup"><span data-stu-id="ae094-112">The following example defines a `TemperatureMonitor` class, which is a constructed <xref:System.IObservable%601?displayProperty=nameWithType> implementation with a generic type argument of `Temperature`.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3.  Определите способ хранения поставщиком ссылок на наблюдатели, чтобы каждый наблюдатель мог быть оповещен, когда это необходимо.  Чаще всего для этого используется объект коллекции, такой как универсальный объект <xref:System.Collections.Generic.List%601>.  В следующем примере определяется закрытый объект <xref:System.Collections.Generic.List%601>, экземпляр которого создается в конструкторе класса `TemperatureMonitor`.  
+3.  <span data-ttu-id="ae094-113">Определите способ хранения поставщиком ссылок на наблюдатели, чтобы каждого наблюдателя можно получать уведомления, когда это необходимо.</span><span class="sxs-lookup"><span data-stu-id="ae094-113">Determine how the provider will store references to observers so that each observer can be notified when appropriate.</span></span> <span data-ttu-id="ae094-114">Чаще всего объект коллекции, например универсальный <xref:System.Collections.Generic.List%601> объект используется для этой цели.</span><span class="sxs-lookup"><span data-stu-id="ae094-114">Most commonly, a collection object such as a generic <xref:System.Collections.Generic.List%601> object is used for this purpose.</span></span> <span data-ttu-id="ae094-115">В следующем примере определяется закрытый <xref:System.Collections.Generic.List%601> объекта, экземпляр которого создается в `TemperatureMonitor` конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="ae094-115">The following example defines a private <xref:System.Collections.Generic.List%601> object that is instantiated in the `TemperatureMonitor` class constructor.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
   
-4.  Определите реализацию <xref:System.IDisposable>, которую поставщик может возвращать подписчикам, чтобы они могли прекратить получение уведомлений в любой момент.  В следующем примере определяется вложенный класс `Unsubscriber`, который передается в качестве ссылки на коллекцию подписчиков и на подписчика, когда создается экземпляр класса.  Этот код позволяет подписчику вызвать реализацию объекта <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> для удаления себя из коллекции подписчиков.  
+4.  <span data-ttu-id="ae094-116">Определение <xref:System.IDisposable> реализацию, поставщик может возвращать подписчикам, чтобы они могли прекратить получение уведомлений в любое время.</span><span class="sxs-lookup"><span data-stu-id="ae094-116">Define an <xref:System.IDisposable> implementation that the provider can return to subscribers so that they can stop receiving notifications at any time.</span></span> <span data-ttu-id="ae094-117">В следующем примере определяется вложенный `Unsubscriber` класс, который передается ссылка на коллекцию подписчиков и подписчика, когда экземпляр класса.</span><span class="sxs-lookup"><span data-stu-id="ae094-117">The following example defines a nested `Unsubscriber` class that is passed a reference to the subscribers collection and to the subscriber when the class is instantiated.</span></span> <span data-ttu-id="ae094-118">Этот код позволяет подписчику вызвать объекта <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> реализацию, чтобы удалить себя из коллекции подписчиков.</span><span class="sxs-lookup"><span data-stu-id="ae094-118">This code enables the subscriber to call the object's <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementation to remove itself from the subscribers collection.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5.  Реализуйте метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=fullName>.  Этот метод передается в качестве ссылки на интерфейс <xref:System.IObserver%601?displayProperty=fullName> и должен храниться в объекте, созданном для этой цели на этапе 3.  Затем этот метод должен вернуть реализацию <xref:System.IDisposable>, разработанную на этапе 4.  В следующем примере показана реализация метода <xref:System.IObservable%601.Subscribe%2A> в классе `TemperatureMonitor`.  
+5.  <span data-ttu-id="ae094-119">Выполните метод <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ae094-119">Implement the <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="ae094-120">Метод передает ссылку на <xref:System.IObserver%601?displayProperty=nameWithType> интерфейс и должны быть сохранены в объекте, созданном для этой цели в шаге 3.</span><span class="sxs-lookup"><span data-stu-id="ae094-120">The method is passed a reference to the <xref:System.IObserver%601?displayProperty=nameWithType> interface and should be stored in the object designed for that purpose in step 3.</span></span> <span data-ttu-id="ae094-121">Затем следует вернуть метод <xref:System.IDisposable> реализацию, разработанных на шаге 4.</span><span class="sxs-lookup"><span data-stu-id="ae094-121">The method should then return the <xref:System.IDisposable> implementation developed in step 4.</span></span> <span data-ttu-id="ae094-122">В следующем примере показана реализация <xref:System.IObservable%601.Subscribe%2A> метод `TemperatureMonitor` класса.</span><span class="sxs-lookup"><span data-stu-id="ae094-122">The following example shows the implementation of the <xref:System.IObservable%601.Subscribe%2A> method in the `TemperatureMonitor` class.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
   
-6.  Уведомите наблюдатели соответствующим образом, вызвав их реализации <xref:System.IObserver%601.OnNext%2A?displayProperty=fullName>, <xref:System.IObserver%601.OnError%2A?displayProperty=fullName> и <xref:System.IObserver%601.OnCompleted%2A?displayProperty=fullName>.  В некоторых случаях поставщик может не вызывать метод <xref:System.IObserver%601.OnError%2A> при возникновении ошибки.  Например, следующий метод `GetTemperature` моделирует монитор, считывающий температурные данные каждые пять секунд и уведомляющий наблюдатели, если температура изменилась хотя бы на 0,1 градуса с момента предыдущего измерения.  Если это устройство не сообщает температуру \(то есть, если его значением является NULL\), поставщик уведомляет наблюдатели, что передача завершена.  Обратите внимание, что в дополнение к вызову метода <xref:System.IObserver%601.OnCompleted%2A> каждого наблюдателя метод `GetTemperature` очищает коллекцию <xref:System.Collections.Generic.List%601>.  В данном случае поставщик не производит вызовы метода <xref:System.IObserver%601.OnError%2A> его наблюдателей.  
+6.  <span data-ttu-id="ae094-123">Уведомите наблюдатели соответствующим образом, вызвав их <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, и <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> реализации.</span><span class="sxs-lookup"><span data-stu-id="ae094-123">Notify observers as appropriate by calling their <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>, and <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> implementations.</span></span> <span data-ttu-id="ae094-124">В некоторых случаях поставщик может не вызывать <xref:System.IObserver%601.OnError%2A> метод при возникновении ошибки.</span><span class="sxs-lookup"><span data-stu-id="ae094-124">In some cases, a provider may not call the <xref:System.IObserver%601.OnError%2A> method when an error occurs.</span></span> <span data-ttu-id="ae094-125">Например, следующая `GetTemperature` метод моделирует монитор, считывающий температурные данные каждые пять секунд и уведомляющий наблюдатели, если температура изменилась по крайней мере.1 градусов с момента предыдущего измерения.</span><span class="sxs-lookup"><span data-stu-id="ae094-125">For example, the following `GetTemperature` method simulates a monitor that reads temperature data every five seconds and notifies observers if the temperature has changed by at least .1 degree since the previous reading.</span></span> <span data-ttu-id="ae094-126">Если устройство не сообщает температуру (то есть, если его значение равно null), поставщик уведомляет наблюдатели, что передача завершена.</span><span class="sxs-lookup"><span data-stu-id="ae094-126">If the device does not report a temperature (that is, if its value is null), the provider notifies observers that the transmission is complete.</span></span> <span data-ttu-id="ae094-127">Обратите внимание, что, помимо вызова каждого наблюдателя <xref:System.IObserver%601.OnCompleted%2A> метода `GetTemperature` метод очищает <xref:System.Collections.Generic.List%601> коллекции.</span><span class="sxs-lookup"><span data-stu-id="ae094-127">Note that, in addition to calling each observer's <xref:System.IObserver%601.OnCompleted%2A> method, the `GetTemperature` method clears the <xref:System.Collections.Generic.List%601> collection.</span></span> <span data-ttu-id="ae094-128">В этом случае поставщик не производит вызовы <xref:System.IObserver%601.OnError%2A> метод своих наблюдателей.</span><span class="sxs-lookup"><span data-stu-id="ae094-128">In this case, the provider makes no calls to the <xref:System.IObserver%601.OnError%2A> method of its observers.</span></span>  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#6)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
-## Пример  
- В следующем примере полностью приводится исходный код для определения реализации <xref:System.IObservable%601> для приложения, контролирующего температуру.  Сюда включается структура `Temperature`, то есть данные, отправляемые наблюдателям, и класс `TemperatureMonitor`, представляющий собой реализацию <xref:System.IObservable%601>.  
+## <a name="example"></a><span data-ttu-id="ae094-129">Пример</span><span class="sxs-lookup"><span data-stu-id="ae094-129">Example</span></span>  
+ <span data-ttu-id="ae094-130">В следующем примере содержится полный исходный код для определения <xref:System.IObservable%601> реализацию для приложения контроля температуры.</span><span class="sxs-lookup"><span data-stu-id="ae094-130">The following example contains the complete source code for defining an <xref:System.IObservable%601> implementation for a temperature monitoring application.</span></span> <span data-ttu-id="ae094-131">Он включает `Temperature` структуру, которая представляет собой данные, отправляемые наблюдателям, и `TemperatureMonitor` класса, который является <xref:System.IObservable%601> реализации.</span><span class="sxs-lookup"><span data-stu-id="ae094-131">It includes the `Temperature` structure, which is the data sent to observers, and the `TemperatureMonitor` class, which is the <xref:System.IObservable%601> implementation.</span></span>  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#7)]  
   
-## См. также  
- <xref:System.IObservable%601>   
- [Шаблон разработки Observer](../../../docs/standard/events/observer-design-pattern.md)   
- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)   
- [Рекомендации по шаблону разработки Observer](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a><span data-ttu-id="ae094-132">См. также</span><span class="sxs-lookup"><span data-stu-id="ae094-132">See Also</span></span>  
+ <xref:System.IObservable%601>  
+ [<span data-ttu-id="ae094-133">Шаблон разработки наблюдателя</span><span class="sxs-lookup"><span data-stu-id="ae094-133">Observer Design Pattern</span></span>](../../../docs/standard/events/observer-design-pattern.md)  
+ [<span data-ttu-id="ae094-134">Практическое руководство. Реализация объекта Observer</span><span class="sxs-lookup"><span data-stu-id="ae094-134">How to: Implement an Observer</span></span>](../../../docs/standard/events/how-to-implement-an-observer.md)  
+ [<span data-ttu-id="ae094-135">Рекомендации по шаблону разработки Observer</span><span class="sxs-lookup"><span data-stu-id="ae094-135">Observer Design Pattern Best Practices</span></span>](../../../docs/standard/events/observer-design-pattern-best-practices.md)

@@ -1,44 +1,42 @@
 ---
-title: "Обработка XML-данных в памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Обработка XML-данных в памяти"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ec4ccbff095071b279e07cee6a1aab3ca830423f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обработка XML-данных в памяти
-Платформа Microsoft .NET Framework предусматривает три модели обработки XML\-данных: класс <xref:System.Xml.XmlDocument>, класс <xref:System.Xml.XPath.XPathDocument> и [LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
+# <a name="processing-xml-data-in-memory"></a><span data-ttu-id="8b5b1-102">Обработка XML-данных в памяти</span><span class="sxs-lookup"><span data-stu-id="8b5b1-102">Processing XML Data In-Memory</span></span>
+<span data-ttu-id="8b5b1-103">Microsoft .NET Framework включает три модели для обработки XML-данных: <xref:System.Xml.XmlDocument> класса <xref:System.Xml.XPath.XPathDocument> класса, и [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span><span class="sxs-lookup"><span data-stu-id="8b5b1-103">The Microsoft .NET Framework includes three models for processing XML data: the <xref:System.Xml.XmlDocument> class, the <xref:System.Xml.XPath.XPathDocument> class, and [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).</span></span>  
   
- Класс <xref:System.Xml.XmlDocument> реализует базовую модель DOM W3C 1\-го уровня и базовые рекомендации объекта DOM 2\-го уровня.  DOM \- древовидное представление XML\-документа в памяти \(кэш\).  С помощью <xref:System.Xml.XmlDocument> и связанных классов можно конструировать XML\-документы, загружать данные и обращаться к ним, изменять данные и сохранять изменения.  
+ <span data-ttu-id="8b5b1-104">Класс <xref:System.Xml.XmlDocument> реализует базовую модель DOM W3C 1-го уровня и базовые рекомендации объекта DOM 2-го уровня.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-104">The <xref:System.Xml.XmlDocument> class implements the W3C document object model (DOM) level 1 core and the core DOM level 2 recommendations.</span></span> <span data-ttu-id="8b5b1-105">DOM - древовидное представление XML-документа в памяти (кэш).</span><span class="sxs-lookup"><span data-stu-id="8b5b1-105">The DOM is an in-memory (cache) tree representation of an XML document.</span></span> <span data-ttu-id="8b5b1-106">С помощью <xref:System.Xml.XmlDocument> и связанных классов можно конструировать XML-документы, загружать данные и обращаться к ним, изменять данные и сохранять изменения.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-106">With the <xref:System.Xml.XmlDocument> and its related classes, you can construct XML documents, load and access data, modify data, and save changes.</span></span>  
   
- Класс <xref:System.Xml.XPath.XPathDocument> \- доступное только для чтения хранилище данных в памяти, на базе модели данных XPath.  В классе <xref:System.Xml.XPath.XPathNavigator> предусмотрено несколько вариантов редактирования и способов навигации с помощью модели курсора для XML\-документов в доступном только для чтения классе <xref:System.Xml.XPath.XPathDocument>, а также в классе <xref:System.Xml.XmlDocument>.  
+ <span data-ttu-id="8b5b1-107">Класс <xref:System.Xml.XPath.XPathDocument> - доступное только для чтения хранилище данных в памяти, на базе модели данных XPath.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-107">The <xref:System.Xml.XPath.XPathDocument> class is a read-only, in-memory data store that is based on the XPath data model.</span></span> <span data-ttu-id="8b5b1-108">В классе <xref:System.Xml.XPath.XPathNavigator> предусмотрено несколько вариантов редактирования и способов навигации с помощью модели курсора для XML-документов в доступном только для чтения классе <xref:System.Xml.XPath.XPathDocument>, а также в классе <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-108">The <xref:System.Xml.XPath.XPathNavigator> class offers several editing options and navigation capabilities using a cursor model over XML documents contained in the read-only <xref:System.Xml.XPath.XPathDocument> class as well as the <xref:System.Xml.XmlDocument> class.</span></span>  
   
- [LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) \- новая модель в платформе .NET Framework версии 3.5 для обработки XML\-данных.  Это размещаемая в памяти модель, использующая [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md).  LINQ расширяет синтаксис C\# и Visual Basic, обеспечивая новые возможности запросов.  
+ <span data-ttu-id="8b5b1-109">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) — это новая модель в .NET Framework версии 3.5 для обработки XML-данных.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-109">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) is the new model in the .NET Framework version 3.5 for processing XML data.</span></span> <span data-ttu-id="8b5b1-110">Это модель в памяти, которую использует [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).</span><span class="sxs-lookup"><span data-stu-id="8b5b1-110">It is an in-memory model that leverages [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).</span></span> <span data-ttu-id="8b5b1-111">LINQ расширяет синтаксис C# и Visual Basic, обеспечивая новые возможности запросов.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-111">LINQ extends the language syntax of C# and Visual Basic to provide new query capabilities.</span></span>  
   
-## В этом подразделе  
- [Обработка XML\-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- Описывает использование класса <xref:System.Xml.XmlDocument> и связанных с ним классов для обработки XML\-данных.  
+## <a name="in-this-section"></a><span data-ttu-id="8b5b1-112">Содержание</span><span class="sxs-lookup"><span data-stu-id="8b5b1-112">In This Section</span></span>  
+ [<span data-ttu-id="8b5b1-113">Обработка XML-данных с помощью модели DOM</span><span class="sxs-lookup"><span data-stu-id="8b5b1-113">Process XML Data Using the DOM Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ <span data-ttu-id="8b5b1-114">Описывает использование класса <xref:System.Xml.XmlDocument> и связанных с ним классов для обработки XML-данных.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-114">Discusses using the <xref:System.Xml.XmlDocument>, and its related classes to process XML data.</span></span>  
   
- [Обработка XML\-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- Описывает использование классов <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument> и <xref:System.Xml.XPath.XPathNavigator> для обработки XML\-данных.  
+ [<span data-ttu-id="8b5b1-115">Обработка XML-данных с использованием модели данных XPath</span><span class="sxs-lookup"><span data-stu-id="8b5b1-115">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ <span data-ttu-id="8b5b1-116">Описывает использование классов <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument> и <xref:System.Xml.XPath.XPathNavigator> для обработки XML-данных.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-116">Discusses using the <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument>, and <xref:System.Xml.XPath.XPathNavigator> classes to process XML data.</span></span>  
   
- [Обработка XML\-данных с помощью LINQ to XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
- Содержит краткие общие сведения о LINQ to XML и ссылки на документацию LINQ to XML.  
+ [<span data-ttu-id="8b5b1-117">Обработка XML-данных с помощью LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="8b5b1-117">Process XML Data Using LINQ to XML</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
+ <span data-ttu-id="8b5b1-118">Содержит краткие общие сведения о LINQ to XML и ссылки на документацию LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="8b5b1-118">Provides a brief overview of LINQ to XML and provides links to the LINQ to XML documentation.</span></span>  
   
-## Связанные подразделы  
- [XML\-документы и данные](../../../../docs/standard/data/xml/index.md)
+## <a name="related-sections"></a><span data-ttu-id="8b5b1-119">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8b5b1-119">Related Sections</span></span>  
+ [<span data-ttu-id="8b5b1-120">XML-документы и данные</span><span class="sxs-lookup"><span data-stu-id="8b5b1-120">XML Documents and Data</span></span>](../../../../docs/standard/data/xml/index.md)

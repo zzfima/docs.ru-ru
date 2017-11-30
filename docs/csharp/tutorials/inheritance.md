@@ -7,64 +7,66 @@ manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
+ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
-ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="inheritance-in-c-and-net"></a>Наследование в C# и .NET
+# <a name="inheritance-in-c-and-net"></a><span data-ttu-id="2a6ad-104">Наследование в C# и .NET</span><span class="sxs-lookup"><span data-stu-id="2a6ad-104">Inheritance in C# and .NET</span></span>
 
-В этом руководстве вы познакомитесь с концепцией наследования в C#. Наследование является ключевой функцией объектно-ориентированных языков программирования. Оно позволяет определить базовый класс для определенных функций (доступа к данным или действий), а затем создавать производные классы, которые наследуют или переопределяют функции базового класса.
+<span data-ttu-id="2a6ad-105">В этом руководстве вы познакомитесь с концепцией наследования в C#.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-105">This tutorial introduces you to inheritance in C#.</span></span> <span data-ttu-id="2a6ad-106">Наследование является ключевой функцией объектно-ориентированных языков программирования. Оно позволяет определить базовый класс для определенных функций (доступа к данным или действий), а затем создавать производные классы, которые наследуют или переопределяют функции базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-106">Inheritance is a feature of object-oriented programming languages that allows you to define a base class that provides specific functionality (data and behavior) and to define derived classes that either inherit or override that functionality.</span></span>
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a><span data-ttu-id="2a6ad-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="2a6ad-107">Prerequisites</span></span>
 
-В этом руководстве предполагается, что вы уже установили .NET Core. Инструкции по установке см. в [руководстве по установке .NET Core](https://www.microsoft.com/net/core). Также вам потребуется редактор кода. В этом руководстве используется [Visual Studio Code](https://code.visualstudio.com), но вы можете использовать любой другой редактор на свой выбор.
+<span data-ttu-id="2a6ad-108">В этом руководстве предполагается, что вы уже установили .NET Core.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-108">This tutorial assumes that you've installed .NET Core.</span></span> <span data-ttu-id="2a6ad-109">Инструкции по установке см. в [руководстве по установке .NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-109">For installation instructions, see [.NET Core installation guide](https://www.microsoft.com/net/core).</span></span> <span data-ttu-id="2a6ad-110">Также вам потребуется редактор кода.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-110">You also need a code editor.</span></span> <span data-ttu-id="2a6ad-111">В этом руководстве используется [Visual Studio Code](https://code.visualstudio.com), но вы можете использовать любой другой редактор на свой выбор.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-111">This tutorial uses [Visual Studio Code](https://code.visualstudio.com), although you can use any code editor of your choice.</span></span>
 
-## <a name="running-the-examples"></a>Выполнение примеров
+## <a name="running-the-examples"></a><span data-ttu-id="2a6ad-112">Выполнение примеров</span><span class="sxs-lookup"><span data-stu-id="2a6ad-112">Running the examples</span></span>
 
-Чтобы создать и запустить примеры, представленные в этом руководстве, используйте служебную программу [dotnet](../../core/tools/dotnet.md), выполняемую из командной строки. Выполните следующие действия для каждого примера.
+<span data-ttu-id="2a6ad-113">Чтобы создать и запустить примеры, представленные в этом руководстве, используйте служебную программу [dotnet](../../core/tools/dotnet.md), выполняемую из командной строки.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-113">To create and run the examples in this tutorial, you use the [dotnet](../../core/tools/dotnet.md) utility from the command line.</span></span> <span data-ttu-id="2a6ad-114">Выполните следующие действия для каждого примера.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-114">Follow these steps for each example:</span></span>
 
-1. Создайте каталог для хранения примера.
-1. Введите в командной строке команду [dotnet new console](../../core/tools/dotnet-new.md), чтобы создать новый проект .NET Core.
-1. Скопируйте код примера и вставьте его в файл с помощью редактора кода.
-1. Введите в командной строке команду [dotnet restore](../../core/tools/dotnet-restore.md), чтобы загрузить или восстановить зависимости проекта.
-1. Введите команду [dotnet run](../../core/tools/dotnet-run.md), чтобы скомпилировать и выполнить пример.
+1. <span data-ttu-id="2a6ad-115">Создайте каталог для хранения примера.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-115">Create a directory to store the example.</span></span>
+1. <span data-ttu-id="2a6ad-116">Введите в командной строке команду [dotnet new console](../../core/tools/dotnet-new.md), чтобы создать новый проект .NET Core.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-116">Enter the [dotnet new console](../../core/tools/dotnet-new.md) command at a command prompt to create a new .NET Core project.</span></span>
+1. <span data-ttu-id="2a6ad-117">Скопируйте код примера и вставьте его в файл с помощью редактора кода.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-117">Copy and paste the code from the example into your code editor.</span></span>
+1. <span data-ttu-id="2a6ad-118">Введите в командной строке команду [dotnet restore](../../core/tools/dotnet-restore.md), чтобы загрузить или восстановить зависимости проекта.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-118">Enter the [dotnet restore](../../core/tools/dotnet-restore.md) command from the command line to load or restore the project's dependencies.</span></span>
 
-## <a name="background-what-is-inheritance"></a>Справочная информация. Что такое наследование?
+  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-*Наследование* является одним из фундаментальных атрибутов объектно-ориентированного программирования. Оно позволяет определить дочерний класс, который использует (наследует), расширяет или изменяет возможности родительского класса. Класс, члены которого наследуются, называется *базовым классом*. Класс, который наследует члены базового класса, называется *производным классом*.
+1. <span data-ttu-id="2a6ad-119">Введите команду [dotnet run](../../core/tools/dotnet-run.md), чтобы скомпилировать и выполнить пример.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-119">Enter the [dotnet run](../../core/tools/dotnet-run.md) command to compile and execute the example.</span></span>
 
-C# и .NET поддерживают только *одиночное наследование*. Это означает, что каждый класс может наследовать члены только одного класса. Но зато поддерживается транзитивное наследование, которое позволяет определить иерархию наследования для набора типов. Другими словами, тип `D` может наследовать возможности типа `C`, который в свою очередь наследует от типа `B`, который наследует от базового класса `A`. Благодаря транзитивности наследования члены типа `A` будут доступны для типа `D`.
 
-Не все члены базового класса наследуются производными классами. Следующие члены не наследуются.
+## <a name="background-what-is-inheritance"></a><span data-ttu-id="2a6ad-120">Справочная информация. Что такое наследование?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-120">Background: What is inheritance?</span></span>
 
-- [Статические конструкторы](../programming-guide/classes-and-structs/static-constructors.md), которые инициализируют статические данные класса.
+<span data-ttu-id="2a6ad-121">*Наследование* является одним из фундаментальных атрибутов объектно-ориентированного программирования.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-121">*Inheritance* is one of the fundamental attributes of object-oriented programming.</span></span> <span data-ttu-id="2a6ad-122">Оно позволяет определить дочерний класс, который использует (наследует), расширяет или изменяет возможности родительского класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-122">It allows you to define a child class that reuses (inherits), extends, or modifies the behavior of a parent class.</span></span> <span data-ttu-id="2a6ad-123">Класс, члены которого наследуются, называется *базовым классом*.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-123">The class whose members are inherited is called the *base class*.</span></span> <span data-ttu-id="2a6ad-124">Класс, который наследует члены базового класса, называется *производным классом*.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-124">The class that inherits the members of the base class is called the *derived class*.</span></span>
 
-- [Конструкторы экземпляров](../programming-guide/classes-and-structs/constructors.md), которые вызываются для создания нового экземпляра класса. Каждый класс должен определять собственные конструкторы.
+<span data-ttu-id="2a6ad-125">C# и .NET поддерживают только *одиночное наследование*.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-125">C# and .NET support *single inheritance* only.</span></span> <span data-ttu-id="2a6ad-126">Это означает, что каждый класс может наследовать члены только одного класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-126">That is, a class can only inherit from a single class.</span></span> <span data-ttu-id="2a6ad-127">Но зато поддерживается транзитивное наследование, которое позволяет определить иерархию наследования для набора типов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-127">However, inheritance is transitive, which allows you to define an inheritance hierarchy for a set of types.</span></span> <span data-ttu-id="2a6ad-128">Другими словами, тип `D` может наследовать возможности типа `C`, который в свою очередь наследует от типа `B`, который наследует от базового класса `A`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-128">In other words, type `D` can inherit from type `C`, which inherits from type `B`, which inherits from the base class type `A`.</span></span> <span data-ttu-id="2a6ad-129">Благодаря транзитивности наследования члены типа `A` будут доступны для типа `D`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-129">Because inheritance is transitive, the members of type `A` are available to type `D`.</span></span>
 
-- [Методы завершения](../programming-guide/classes-and-structs/destructors.md), которые вызываются сборщиком мусора среды выполнения для уничтожения экземпляров класса.
+<span data-ttu-id="2a6ad-130">Не все члены базового класса наследуются производными классами.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-130">Not all members of a base class are inherited by derived classes.</span></span> <span data-ttu-id="2a6ad-131">Следующие члены не наследуются.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-131">The following members are not inherited:</span></span>
 
-Все остальные члены базового класса наследуются производными классами, но их видимость не зависит от доступности. Доступность членов влияет на видимость для производных классов следующим образом.
+- <span data-ttu-id="2a6ad-132">[Статические конструкторы](../programming-guide/classes-and-structs/static-constructors.md), которые инициализируют статические данные класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-132">[Static constructors](../programming-guide/classes-and-structs/static-constructors.md), which initialize the static data of a class.</span></span>
 
-- [Закрытые](../language-reference/keywords/private.md) члены являются видимыми только в производных классах, которые вложены в базовый класс. Для других производных классов они невидимы. В следующем примере класс `A.B` является вложенным и производным от `A`, а `C` является производным от `A`. Закрытое поле `A.value` является видимым в классе A.B. Но если раскомментировать строки метода `C.GetValue`, то при компиляции этого примера возникнет ошибка CS0122: "'A.value' недоступен из-за его уровня защиты".
+- <span data-ttu-id="2a6ad-133">[Конструкторы экземпляров](../programming-guide/classes-and-structs/constructors.md), которые вызываются для создания нового экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-133">[Instance constructors](../programming-guide/classes-and-structs/constructors.md), which you call to create a new instance of the class.</span></span> <span data-ttu-id="2a6ad-134">Каждый класс должен определять собственные конструкторы.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-134">Each class must define its own constructors.</span></span>
 
-  [!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+- <span data-ttu-id="2a6ad-135">[Методы завершения](../programming-guide/classes-and-structs/destructors.md), которые вызываются сборщиком мусора среды выполнения для уничтожения экземпляров класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-135">[Finalizers](../programming-guide/classes-and-structs/destructors.md), which are called by the runtime's garbage collector to destroy instances of a class.</span></span>
 
-- [Защищенные](../language-reference/keywords/protected.md) члены являются видимыми только в производных классах.
+<span data-ttu-id="2a6ad-136">Все остальные члены базового класса наследуются производными классами, но их видимость не зависит от доступности.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-136">While all other members of a base class are inherited by derived classes, whether they are visible or not depends on their accessibility.</span></span> <span data-ttu-id="2a6ad-137">Доступность членов влияет на видимость для производных классов следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-137">A member's accessibility affects its visibility for derived classes as follows:</span></span>
 
-- [Внутренние](../language-reference/keywords/protected.md) члены являются видимыми только в производных классах, которые находятся в той же сборке, что и базовый класс. Они не будут видимыми в производных классах, расположенных в других сборках.
+- <span data-ttu-id="2a6ad-138">[Закрытые](../language-reference/keywords/private.md) члены являются видимыми только в производных классах, которые вложены в базовый класс.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-138">[Private](../language-reference/keywords/private.md) members are visible only in derived classes that are nested in their base class.</span></span> <span data-ttu-id="2a6ad-139">Для других производных классов они невидимы.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-139">Otherwise, they are not visible in derived classes.</span></span> <span data-ttu-id="2a6ad-140">В следующем примере класс `A.B` является вложенным и производным от `A`, а `C` является производным от `A`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-140">In the following example, `A.B` is a nested class that derives from `A`, and `C` derives from `A`.</span></span> <span data-ttu-id="2a6ad-141">Закрытое поле `A.value` является видимым в классе A.B.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-141">The private `A.value` field is visible in A.B.</span></span> <span data-ttu-id="2a6ad-142">Но если раскомментировать строки метода `C.GetValue`, то при компиляции этого примера возникнет ошибка CS0122: "'A.value' недоступен из-за его уровня защиты".</span><span class="sxs-lookup"><span data-stu-id="2a6ad-142">However, if you remove the comments from the `C.GetValue` method and attempt to compile the example, it produces compiler error CS0122: "'A.value' is inaccessible due to its protection level."</span></span>
 
-- [Открытые] (.. / language-reference/keywords/protected.md) члены являются видимыми в производных классах, а также частью открытого интерфейса производных классов. Унаследованные открытые члены можно вызывать так же, как если бы они были определены в самом производном классе. В следующем примере класс `A` определяет метод с именем `Method1`, а класс `B` наследует от класса `A`. В нашем примере `Method1` вызывается так, как если бы это был метод класса `B`.
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+- <span data-ttu-id="2a6ad-143">[Защищенные](../language-reference/keywords/protected.md) члены являются видимыми только в производных классах.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-143">[Protected](../language-reference/keywords/protected.md) members are visible only in derived classes.</span></span>
 
-Производные классы могут также *переопределять* унаследованные члены, то есть предоставлять альтернативную реализацию. Переопределить можно только те члены, которые в базовом классе отмечены ключевым словом [virtual](../language-reference/keywords/virtual.md) (виртуальный). По умолчанию нельзя переопределять члены базового класса, не отмеченные ключевым словом `virtual`. Попытка переопределить член, не являющийся виртуальным, как в следующем примере, вызывает ошибку компилятора CS0506: "<member> : невозможно переопределить наследуемый член <member>, так как он не помечен как virtual, abstract или override".
+- <span data-ttu-id="2a6ad-144">[Внутренние](../language-reference/keywords/internal.md) члены являются видимыми только в производных классах, которые находятся в той же сборке, что и базовый класс.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-144">[Internal](../language-reference/keywords/internal.md) members are visible only in derived classes that are located in the same assembly as the base class.</span></span> <span data-ttu-id="2a6ad-145">Они не будут видимыми в производных классах, расположенных в других сборках.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-145">They are not visible in derived classes located in a different assembly from the base class.</span></span>
+
+- <span data-ttu-id="2a6ad-146">[Открытый](../language-reference/keywords/public.md) элементы являются видимыми в производных классах и являются частью открытого интерфейса производного класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-146">[Public](../language-reference/keywords/public.md) members are visible in derived classes and are part of the derived class' public interface.</span></span> <span data-ttu-id="2a6ad-147">Унаследованные открытые члены можно вызывать так же, как если бы они были определены в самом производном классе.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-147">Public inherited members can be called just as if they were defined in the derived class.</span></span> <span data-ttu-id="2a6ad-148">В следующем примере класс `A` определяет метод с именем `Method1`, а класс `B` наследует от класса `A`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-148">In the following example, class `A` defines a method named `Method1`, and class `B` inherits from class `A`.</span></span> <span data-ttu-id="2a6ad-149">В нашем примере `Method1` вызывается так, как если бы это был метод класса `B`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-149">The example then calls `Method1` as if it were an instance method on `B`.</span></span>
+
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+
+<span data-ttu-id="2a6ad-150">Производные классы могут также *переопределять* унаследованные члены, то есть предоставлять альтернативную реализацию.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-150">Derived classes can also *override* inherited members by providing an alternate implementation.</span></span> <span data-ttu-id="2a6ad-151">Переопределить можно только те члены, которые в базовом классе отмечены ключевым словом [virtual](../language-reference/keywords/virtual.md) (виртуальный).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-151">In order to be able to override a member, the member in the base class must be marked with the [virtual](../language-reference/keywords/virtual.md) keyword.</span></span> <span data-ttu-id="2a6ad-152">По умолчанию нельзя переопределять члены базового класса, не отмеченные ключевым словом `virtual`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-152">By default, base class members are not marked as `virtual` and cannot be overridden.</span></span> <span data-ttu-id="2a6ad-153">Попытка переопределить член, не являющийся виртуальным, как в следующем примере, вызывает ошибку компилятора CS0506: "<member> : невозможно переопределить наследуемый член <member>, так как он не помечен как virtual, abstract или override".</span><span class="sxs-lookup"><span data-stu-id="2a6ad-153">Attempting to override a non-virtual member, as the following example does, generates compiler error CS0506: "<member> cannot override inherited member <member> because it is not marked virtual, abstract, or override.</span></span>
 
 ```csharp
 public class A
@@ -84,7 +86,7 @@ public class B : A
 }
 ```
 
-В некоторых случаях производный класс *обязан* переопределять реализацию базового класса. Члены базового класса, отмеченные ключевым словом [abstract](../language-reference/keywords/abstract.md) (абстрактный), обязательно должны переопределяться в производных классах. При попытке компиляции следующего примера возникнет ошибка компилятора CS0534, "<class> не реализует наследуемый абстрактный член <member>", поскольку класс `B` не предоставляет реализации для `A.Method1`.
+<span data-ttu-id="2a6ad-154">В некоторых случаях производный класс *обязан* переопределять реализацию базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-154">In some cases, a derived class *must* override the base class implementation.</span></span> <span data-ttu-id="2a6ad-155">Члены базового класса, отмеченные ключевым словом [abstract](../language-reference/keywords/abstract.md) (абстрактный), обязательно должны переопределяться в производных классах.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-155">Base class members marked with the [abstract](../language-reference/keywords/abstract.md) keyword require that derived classes override them.</span></span> <span data-ttu-id="2a6ad-156">При попытке компиляции следующего примера возникнет ошибка компилятора CS0534, "<class> не реализует наследуемый абстрактный член <member>", поскольку класс `B` не предоставляет реализации для `A.Method1`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-156">Attempting to compile the following example generates compiler error CS0534, "<class> does not implement inherited abstract member <member>', because class `B` provides no implementation for `A.Method1`.</span></span>
 
 ```csharp
 public abstract class A
@@ -101,7 +103,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Наследование применяется только для классов и интерфейсов. Другие категории типов (структуры, делегаты и перечисления) не поддерживают наследование. По этой причине попытка компиляции кода из следующего примера приводит к ошибке компилятора CS0527: "Тип 'ValueType' в списке интерфейсов не является интерфейсом". Такое сообщение об ошибке означает, что наследование не поддерживается, несмотря на возможность определить интерфейсы, реализуемые в структуре.
+<span data-ttu-id="2a6ad-157">Наследование применяется только для классов и интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-157">Inheritance applies only to classes and interfaces.</span></span> <span data-ttu-id="2a6ad-158">Другие категории типов (структуры, делегаты и перечисления) не поддерживают наследование.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-158">Other type categories (structs, delegates, and enums) do not support inheritance.</span></span> <span data-ttu-id="2a6ad-159">По этой причине попытка компиляции кода из следующего примера приводит к ошибке компилятора CS0527: "Тип 'ValueType' в списке интерфейсов не является интерфейсом".</span><span class="sxs-lookup"><span data-stu-id="2a6ad-159">Because of this, attempting to compile code like the following produces compiler error CS0527: "Type 'ValueType' in interface list is not an interface."</span></span> <span data-ttu-id="2a6ad-160">Такое сообщение об ошибке означает, что наследование не поддерживается, несмотря на возможность определить интерфейсы, реализуемые в структуре.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-160">The error message indicates that, although you can define the interfaces that a struct implements, inheritance is not supported.</span></span>
 
 ```csharp
 using System;
@@ -111,476 +113,193 @@ public struct ValueStructure : ValueType // Generates CS0527.
 }
 ```
 
-## <a name="implicit-inheritance"></a>Неявное наследование
+## <a name="implicit-inheritance"></a><span data-ttu-id="2a6ad-161">Неявное наследование</span><span class="sxs-lookup"><span data-stu-id="2a6ad-161">Implicit inheritance</span></span>
 
-Помимо тех типов, которые наследуются через механизм одиночного наследования, все типы в системе типов .NET неявно наследуются от типа <xref:System.Object> или его производного типа. Это позволяет предоставить всем типам некоторые общие функции.
+<span data-ttu-id="2a6ad-162">Помимо тех типов, которые наследуются через механизм одиночного наследования, все типы в системе типов .NET неявно наследуются от типа <xref:System.Object> или его производного типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-162">Besides any types that they may inherit from through single inheritance, all types in the .NET type system implicitly inherit from <xref:System.Object> or a type derived from it.</span></span> <span data-ttu-id="2a6ad-163">Это позволяет предоставить всем типам некоторые общие функции.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-163">This ensures that common functionality is available to any type.</span></span>
 
-Чтобы продемонстрировать неявное наследование, давайте определим новый класс `SimpleClass`, определение которого будет пустым.
+<span data-ttu-id="2a6ad-164">Чтобы продемонстрировать неявное наследование, давайте определим новый класс `SimpleClass`, определение которого будет пустым.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-164">To see what implicit inheritance means, let's define a new class, `SimpleClass`, that is simply an empty class definition:</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-После этого с помощью отражения (которое позволяет проверить метаданные типа для получения сведений о нем) мы получим список членов, принадлежащих типу `SimpleClass`. Выходные данные этого примера возвращают нам девять членов класса `SimpleClass`, хотя мы не определяли ни одного из них. Один из них является вызываемым без параметров конструктором по умолчанию, который автоматически предоставляется для типа `SimpleClass` компилятором C#. Остальные восемь являются членами типа <xref:System.Object>, от которого неявным образом наследуются все классы и интерфейсы в системе типов .NET.
+<span data-ttu-id="2a6ad-165">После этого с помощью отражения (которое позволяет проверить метаданные типа для получения сведений о нем) мы получим список членов, принадлежащих типу `SimpleClass`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-165">We can then use reflection (which lets us inspect a type's metadata to get information about that type) to get a list of the members that belong to the `SimpleClass` type.</span></span> <span data-ttu-id="2a6ad-166">Выходные данные этого примера возвращают нам девять членов класса `SimpleClass`, хотя мы не определяли ни одного из них.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-166">Although we haven't defined any members in our `SimpleClass` class, output from the example indicates that it actually has nine members.</span></span> <span data-ttu-id="2a6ad-167">Один из них является вызываемым без параметров конструктором по умолчанию, который автоматически предоставляется для типа `SimpleClass` компилятором C#.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-167">One of these is a parameterless (or default) constructor that is automatically supplied for the `SimpleClass` type by the C# compiler.</span></span> <span data-ttu-id="2a6ad-168">Остальные восемь являются членами типа <xref:System.Object>, от которого неявным образом наследуются все классы и интерфейсы в системе типов .NET.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-168">The remaining eight are members of <xref:System.Object>, the type from which all classes and interfaces in the .NET type system ultimately implicitly inherit.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
-Неявное наследование от класса <xref:System.Object> делает доступными для класса `SimpleClass` следующие методы.
+<span data-ttu-id="2a6ad-169">Неявное наследование от класса <xref:System.Object> делает доступными для класса `SimpleClass` следующие методы.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-169">Implicit inheritance from the <xref:System.Object> class makes these methods available to the `SimpleClass` class:</span></span>
 
-- Открытый метод `ToString`, который преобразует объект `SimpleClass` в строковое представление, возвращает полное имя типа. В нашем примере метод `ToString` возвращает строку SimpleClass.
+- <span data-ttu-id="2a6ad-170">Открытый метод `ToString`, который преобразует объект `SimpleClass` в строковое представление, возвращает полное имя типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-170">The public `ToString` method, which converts a `SimpleClass` object to its string representation, returns the fully qualified type name.</span></span> <span data-ttu-id="2a6ad-171">В нашем примере метод `ToString` возвращает строку SimpleClass.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-171">In this case, the `ToString` method returns the string "SimpleClass".</span></span>
 
-- Три метода, которые проверяют равенство двух объектов: открытый метод экземпляра `Equals(Object)`, открытый статический метод `Equals(Object, Object)` и открытый статический метод `ReferenceEquals(Object, Object)`. По умолчанию эти методы проверяют ссылочное равенство. Это означает, что две переменные, содержащие объекты, должны ссылаться на один и тот же объект, чтобы считаться равными.
+- <span data-ttu-id="2a6ad-172">Три метода, которые проверяют равенство двух объектов: открытый метод экземпляра `Equals(Object)`, открытый статический метод `Equals(Object, Object)` и открытый статический метод `ReferenceEquals(Object, Object)`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-172">Three methods that test for equality of two objects: the public instance `Equals(Object)` method, the public static `Equals(Object, Object)` method, and the public static `ReferenceEquals(Object, Object)` method.</span></span> <span data-ttu-id="2a6ad-173">По умолчанию эти методы проверяют ссылочное равенство. Это означает, что две переменные, содержащие объекты, должны ссылаться на один и тот же объект, чтобы считаться равными.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-173">By default, these methods test for reference equality; that is, to be equal, two object variables must refer to the same object.</span></span>
 
-- Открытый метод `GetHashCode`, который вычисляет значение, позволяющее использовать экземпляр типа в хэшированных коллекциях.
+- <span data-ttu-id="2a6ad-174">Открытый метод `GetHashCode`, который вычисляет значение, позволяющее использовать экземпляр типа в хэшированных коллекциях.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-174">The public `GetHashCode` method, which computes a value that allows an instance of the type to be used in hashed collections.</span></span>
 
-- Открытый метод `GetType`, который возвращает объект <xref:System.Type>, представляющий тип `SimpleClass`.
+- <span data-ttu-id="2a6ad-175">Открытый метод `GetType`, который возвращает объект <xref:System.Type>, представляющий тип `SimpleClass`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-175">The public `GetType` method, which returns a <xref:System.Type> object that represents the `SimpleClass` type.</span></span>
 
-- Защищенный метод <xref:System.Object.Finalize%2A>, который должен освобождать неуправляемые ресурсы перед тем, как сборщик мусора освободит память объекта.
+- <span data-ttu-id="2a6ad-176">Защищенный метод <xref:System.Object.Finalize%2A>, который должен освобождать неуправляемые ресурсы перед тем, как сборщик мусора освободит память объекта.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-176">The protected <xref:System.Object.Finalize%2A> method, which is designed to release unmanaged resources before an object's memory is reclaimed by the garbage collector.</span></span>
 
-- Защищенный метод <xref:System.Object.MemberwiseClone%2A>, который создает неполную копию текущего объекта.
+- <span data-ttu-id="2a6ad-177">Защищенный метод <xref:System.Object.MemberwiseClone%2A>, который создает неполную копию текущего объекта.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-177">The protected <xref:System.Object.MemberwiseClone%2A> method, which creates a shallow clone of the current object.</span></span>
 
-Неявное наследование позволяет вызвать любой наследуемый член объекта `SimpleClass` точно так же, как если бы он был определен в самом классе `SimpleClass`. Например, следующий пример вызывает метод `SimpleClass.ToString`, который `SimpleClass` наследует от <xref:System.Object>.
+<span data-ttu-id="2a6ad-178">Неявное наследование позволяет вызвать любой наследуемый член объекта `SimpleClass` точно так же, как если бы он был определен в самом классе `SimpleClass`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-178">Because of implicit inheritance, we can call any inherited member from a `SimpleClass` object just as if it was actually a member defined in the `SimpleClass` class.</span></span> <span data-ttu-id="2a6ad-179">Например, следующий пример вызывает метод `SimpleClass.ToString`, который `SimpleClass` наследует от <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-179">For instance, the following example calls the `SimpleClass.ToString` method, which `SimpleClass` inherits from <xref:System.Object>.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
-В следующей таблице перечислены категории типов, которые можно создавать на языке C#, и указаны типы, от которых они неявно наследуют. Каждый из базовых типов предоставляет всем типам, которые неявно наследуют от него, разные наборы членов.
+<span data-ttu-id="2a6ad-180">В следующей таблице перечислены категории типов, которые можно создавать на языке C#, и указаны типы, от которых они неявно наследуют.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-180">The following table lists the categories of types that you can create in C# and the types from which they implicitly inherit.</span></span> <span data-ttu-id="2a6ad-181">Каждый из базовых типов предоставляет всем типам, которые неявно наследуют от него, разные наборы членов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-181">Each base type makes a different set of members available through inheritance to implicitly derived types.</span></span>
 
-| Категория типа | Неявно наследует от                                                      |
+| <span data-ttu-id="2a6ad-182">Категория типа</span><span class="sxs-lookup"><span data-stu-id="2a6ad-182">Type category</span></span> | <span data-ttu-id="2a6ad-183">Неявно наследует от</span><span class="sxs-lookup"><span data-stu-id="2a6ad-183">Implicitly inherits from</span></span>                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| класс         | <xref:System.Object>                                                          |
-| структура        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| делегат      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
+| <span data-ttu-id="2a6ad-184">класс</span><span class="sxs-lookup"><span data-stu-id="2a6ad-184">class</span></span>         | <xref:System.Object>                                                          |
+| <span data-ttu-id="2a6ad-185">структура</span><span class="sxs-lookup"><span data-stu-id="2a6ad-185">struct</span></span>        | <span data-ttu-id="2a6ad-186"><xref:System.ValueType>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="2a6ad-186"><xref:System.ValueType>, <xref:System.Object></span></span>                                 |
+| <span data-ttu-id="2a6ad-187">enum</span><span class="sxs-lookup"><span data-stu-id="2a6ad-187">enum</span></span>          | <span data-ttu-id="2a6ad-188"><xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="2a6ad-188"><xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object></span></span>             |
+| <span data-ttu-id="2a6ad-189">делегат</span><span class="sxs-lookup"><span data-stu-id="2a6ad-189">delegate</span></span>      | <span data-ttu-id="2a6ad-190"><xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object></span><span class="sxs-lookup"><span data-stu-id="2a6ad-190"><xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object></span></span> |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Наследование и связь "является"
+## <a name="inheritance-and-an-is-a-relationship"></a><span data-ttu-id="2a6ad-191">Наследование и связь "является"</span><span class="sxs-lookup"><span data-stu-id="2a6ad-191">Inheritance and an "is a" relationship</span></span>
 
-Обычно наследование выражает связь вида "is a" (является) между базовым классом и одним или несколькими производными классами. Производные классы рассматриваются как специализированные версии базового класса, то есть как подтипы базового класса. Например класс `Publication` представляет публикации любого рода, а классы `Book` и `Magazine` представляют публикации определенных типов.
+<span data-ttu-id="2a6ad-192">Обычно наследование выражает связь вида "is a" (является) между базовым классом и одним или несколькими производными классами. Производные классы рассматриваются как специализированные версии базового класса, то есть как подтипы базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-192">Ordinarily, inheritance is used to express an "is a" relationship between a base class and one or more derived classes, where the derived classes are specialized versions of the base class; the derived class is a type of the base class.</span></span> <span data-ttu-id="2a6ad-193">Например класс `Publication` представляет публикации любого рода, а классы `Book` и `Magazine` представляют публикации определенных типов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-193">For example, the `Publication` class represents a publication of any kind, and the `Book` and `Magazine` classes represent specific types of publications.</span></span>
 
 > [!NOTE]
-> Класс или структура могут реализовывать несколько интерфейсов. Реализация интерфейсов часто рассматривается как метод для обхода ограничений одиночного наследования или для реализации наследования структур. Но его основным назначением является выражение связи другого рода между интерфейсом и реализующим его типом. Эта связь называется "can do" (может выполнять) и она отличается от связи наследования. Интерфейс определяет подмножество функций (например, проверка равенства, сравнение и сортировка объектов, или поддержка синтаксического анализа и форматирования с учетом языка и региональных параметров). Интерфейс предоставляет эти функции всем типам, которые его реализуют.
+> <span data-ttu-id="2a6ad-194">Класс или структура могут реализовывать несколько интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-194">A class or struct can implement one more interfaces.</span></span> <span data-ttu-id="2a6ad-195">Реализация интерфейсов часто рассматривается как метод для обхода ограничений одиночного наследования или для реализации наследования структур. Но его основным назначением является выражение связи другого рода между интерфейсом и реализующим его типом. Эта связь называется "can do" (может выполнять) и она отличается от связи наследования.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-195">While interface implementation is often presented as a workaround for single inheritance or as a way of using inheritance with structs, it is intended to express a different relationship (a "can do" relationship) between an interface and its implementing type than inheritance.</span></span> <span data-ttu-id="2a6ad-196">Интерфейс определяет подмножество функций (например, проверка равенства, сравнение и сортировка объектов, или поддержка синтаксического анализа и форматирования с учетом языка и региональных параметров). Интерфейс предоставляет эти функции всем типам, которые его реализуют.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-196">An interface defines a subset of functionality (such as the ability to test for equality, to compare or sort objects, or to support culture-sensitive parsing and formatting) that the interface makes available to its implementing types.</span></span>
 
-Обратите внимание, что связь "является" выражает также связь между типом и конкретным экземпляром этого типа. В следующем примере представлен класс `Automobile` с тремя уникальными свойствами только для чтения: `Make` определяет производителя автомобиля, `Model` определяет тип автомобиля, а `Year` — год выпуска. Этот класс `Automobile` также содержит конструктор, аргументы которого назначаются значениям свойств. Еще в нем переопределен метод <xref:System.Object.ToString%2A?displayProperty=fullName>, который теперь возвращает строку, однозначно определяющую экземпляр `Automobile`, а не класс `Automobile`.
+<span data-ttu-id="2a6ad-197">Обратите внимание, что связь "является" выражает также связь между типом и конкретным экземпляром этого типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-197">Note that "is a" also expresses the relationship between a type and a specific instantiation of that type.</span></span> <span data-ttu-id="2a6ad-198">В следующем примере представлен класс `Automobile` с тремя уникальными свойствами только для чтения: `Make` определяет производителя автомобиля, `Model` определяет тип автомобиля, а `Year` — год выпуска.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-198">In the following example, `Automobile` is a class that has three unique read-only properties: `Make`, the manufacturer of the automobile; `Model`, the kind of automobile; and `Year`, its year of manufacture.</span></span> <span data-ttu-id="2a6ad-199">Этот класс `Automobile` также содержит конструктор, аргументы которого назначаются значениям свойств. Еще в нем переопределен метод <xref:System.Object.ToString%2A?displayProperty=nameWithType>, который теперь возвращает строку, однозначно определяющую экземпляр `Automobile`, а не класс `Automobile`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-199">Our `Automobile` class also has a constructor whose arguments are assigned to the property values, and it overrides the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to produce a string that uniquely identifies the `Automobile` instance rather than the `Automobile` class.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
-В этом примере не следует использовать наследование для представления определенных производителей и моделей автомобилей. Например, нам не нужно определять тип `Packard`, который будет представлять автомобили, произведенные компанией Packard Motor Car. Для этого представления мы создадим объект `Automobile` и передадим конструктору этого класса соответствующие значения, как показано в следующем примере.
+<span data-ttu-id="2a6ad-200">В этом примере не следует использовать наследование для представления определенных производителей и моделей автомобилей.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-200">In this case, we should not rely on inheritance to represent specific car makes and models.</span></span> <span data-ttu-id="2a6ad-201">Например, нам не нужно определять тип `Packard`, который будет представлять автомобили, произведенные компанией Packard Motor Car.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-201">For example, we do not need to define a `Packard` type to represent automobiles manufactured by the Packard Motor Car Company.</span></span> <span data-ttu-id="2a6ad-202">Для этого представления мы создадим объект `Automobile` и передадим конструктору этого класса соответствующие значения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-202">Instead, we can represent them by creating an `Automobile` object with the appropriate values passed to its class constructor, as the following example does.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
-Основанную на наследовании связь "является" лучше всего использовать для базовых классов и производных классов, которые добавляют дополнительные члены или используют дополнительные функции, отсутствующие в базовом классе.
+<span data-ttu-id="2a6ad-203">Основанную на наследовании связь "является" лучше всего использовать для базовых классов и производных классов, которые добавляют дополнительные члены или используют дополнительные функции, отсутствующие в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-203">An is-a relationship based on inheritance is best applied to a base class and to derived classes that add additional members to the base class or that require additional functionality not present in the base class.</span></span>
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Разработка базового класса и его производных классов
+## <a name="designing-the-base-class-and-derived-classes"></a><span data-ttu-id="2a6ad-204">Разработка базового класса и его производных классов</span><span class="sxs-lookup"><span data-stu-id="2a6ad-204">Designing the base class and derived classes</span></span>
 
-Давайте рассмотрим процесс создания базового класса и его производных классов. В этом разделе мы определим базовый класс `Publication`, который представляет публикацию любого типа (книга, журнал, газета, статья и т. д.). Также мы определим класс `Book`, который наследует от класса `Publication`. Этот пример легко расширить, определив другие производные классы, например `Magazine`, `Journal`, `Newspaper` и `Article`.
+<span data-ttu-id="2a6ad-205">Давайте рассмотрим процесс создания базового класса и его производных классов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-205">Let's look at the process of designing a base class and its derived classes.</span></span> <span data-ttu-id="2a6ad-206">В этом разделе мы определим базовый класс `Publication`, который представляет публикацию любого типа (книга, журнал, газета, статья и т. д.). Также мы определим класс `Book`, который наследует от класса `Publication`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-206">In this section, we'll define a base class, `Publication`, which represents a publication of any kind, such as a book, a magazine, a newspaper, a journal, an article, etc. We'll also define a `Book` class that derives from `Publication`.</span></span> <span data-ttu-id="2a6ad-207">Этот пример легко расширить, определив другие производные классы, например `Magazine`, `Journal`, `Newspaper` и `Article`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-207">We could easily extend the example to define other derived classes, such as `Magazine`, `Journal`, `Newspaper`, and `Article`.</span></span>
 
-### <a name="the-base-publication-class"></a>Базовый класс Publication
+### <a name="the-base-publication-class"></a><span data-ttu-id="2a6ad-208">Базовый класс Publication</span><span class="sxs-lookup"><span data-stu-id="2a6ad-208">The base Publication class</span></span>
 
-При разработке класса `Publication` нужно принять несколько решений по его структуре.
+<span data-ttu-id="2a6ad-209">При разработке класса `Publication` нужно принять несколько решений по его структуре.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-209">In designing our `Publication` class, we need to make several design decisions:</span></span>
 
-- Какие члены следует включить в базовый класс `Publication`, и будут ли члены `Publication` реализовывать нужные методы? Или же базовый класс `Publication` лучше сделать абстрактным, то есть шаблоном для производных классов?
+- <span data-ttu-id="2a6ad-210">Какие члены следует включить в базовый класс `Publication`, и будут ли члены `Publication` реализовывать нужные методы? Или же базовый класс `Publication` лучше сделать абстрактным, то есть шаблоном для производных классов?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-210">What members to include in our base `Publication` class, and whether the `Publication` members provide method implementations, or whether `Publication` is an abstract base class that serves as a template for its derived classes.</span></span>
 
-  В нашем примере класс `Publication` будет предоставлять реализации методов. Раздел [Разработка абстрактных базовых классов и их производных классов](#abstract) содержит пример, в котором абстрактный базовый класс определяет методы, переопределяемые в производных классах. Производные классы могут использовать любую реализацию, применимую для конкретного производного типа.
+  <span data-ttu-id="2a6ad-211">В нашем примере класс `Publication` будет предоставлять реализации методов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-211">In this case, the `Publication` class will provide method implementations.</span></span> <span data-ttu-id="2a6ad-212">Раздел [Разработка абстрактных базовых классов и их производных классов](#abstract) содержит пример, в котором абстрактный базовый класс определяет методы, переопределяемые в производных классах.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-212">The [Designing abstract base classes amd their derived classes](#abstract) section contains an example that uses an abstract base class to define the methods that derived classes must override.</span></span> <span data-ttu-id="2a6ad-213">Производные классы могут использовать любую реализацию, применимую для конкретного производного типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-213">Derived classes are free to provide any implementation that is suitable for the derived type.</span></span>
 
-  Важным преимуществом неабстрактных базовых классов является возможность повторно использовать код (несколько производных классов используют объявления и реализации методов из базового класса, и могут не переопределять их). Таким образом, в `Publication` следует включать такие члены, которые с высокой долей вероятности будут использоваться в неизменном виде несколькими специализированными типами `Publication`. Если этот выбор будет неправильным, нам придется создавать идентичные реализации членов в производных классах вместо того, чтобы использовать одну реализацию в базовом классе. Необходимость поддерживать несколько копий идентичного кода в нескольких местах станет потенциальным источником ошибок.
+  <span data-ttu-id="2a6ad-214">Важным преимуществом неабстрактных базовых классов является возможность повторно использовать код (несколько производных классов используют объявления и реализации методов из базового класса, и могут не переопределять их).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-214">The ability to reuse code (that is, multiple derived classes share the declaration and implementation of base class methods and do not need to override them) is an advantage of non-abstract base classes.</span></span> <span data-ttu-id="2a6ad-215">Таким образом, в `Publication` следует включать такие члены, которые с высокой долей вероятности будут использоваться в неизменном виде несколькими специализированными типами `Publication`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-215">Therefore, we should add members to `Publication` if their code is likely to be shared by some or most specialized `Publication` types.</span></span> <span data-ttu-id="2a6ad-216">Если этот выбор будет неправильным, нам придется создавать идентичные реализации членов в производных классах вместо того, чтобы использовать одну реализацию в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-216">If we fail to do this efficiently, we'll end up having to provide largely identical member implementations in derived classes rather a single implementation in the base class.</span></span> <span data-ttu-id="2a6ad-217">Необходимость поддерживать несколько копий идентичного кода в нескольких местах станет потенциальным источником ошибок.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-217">The need to maintain duplicated code in multiple locations is a potential source of bugs.</span></span>
 
-  Чтобы оптимизировать повторное использование кода и создать логичную и интуитивно понятную иерархию наследования, необходимо включать в класс `Publication` только такие данные и функции, которые используются для большинства публикаций. Затем в производных классах реализуются уникальные члены для каждого вида публикаций, которые они представляют.
+  <span data-ttu-id="2a6ad-218">Чтобы оптимизировать повторное использование кода и создать логичную и интуитивно понятную иерархию наследования, необходимо включать в класс `Publication` только такие данные и функции, которые используются для большинства публикаций.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-218">Both to maximize code reuse and to create a logical and intuitive inheritance hierarchy, we want to be sure that we include in the `Publication` class only the data and functionality that is common to all or to most publications.</span></span> <span data-ttu-id="2a6ad-219">Затем в производных классах реализуются уникальные члены для каждого вида публикаций, которые они представляют.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-219">Derived classes then implement members that are unique to the particular kinds of publication that they represent.</span></span>
 
-- Насколько глубокой будет иерархия классов? Хотим ли мы включить в иерархию три или больше уровней классов, или обойдемся одним базовым классом с несколькими производными? Например `Publication` может являться базовым классом для `Periodical`, от которого будут наследовать классы `Magazine`, `Journal` и `Newspaper`.
+- <span data-ttu-id="2a6ad-220">Насколько глубокой будет иерархия классов?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-220">How far to extend our class hierarchy.</span></span> <span data-ttu-id="2a6ad-221">Хотим ли мы включить в иерархию три или больше уровней классов, или обойдемся одним базовым классом с несколькими производными?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-221">Do we want to develop a hierarchy of three or more classes, rather than simply a base class and one or more derived classes?</span></span> <span data-ttu-id="2a6ad-222">Например `Publication` может являться базовым классом для `Periodical`, от которого будут наследовать классы `Magazine`, `Journal` и `Newspaper`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-222">For example, `Publication` could be a base class of `Periodical`, which in turn is a base class of `Magazine`, `Journal` and `Newspaper`.</span></span>
 
-  В нашем примере мы остановимся на простой иерархии, состоящей из одного базового класса `Publication` и одного производного класса `Book`. Мы можем легко расширить пример, включив несколько дополнительных производных от `Publication` классов, например `Magazine` и `Article`.
+  <span data-ttu-id="2a6ad-223">В нашем примере мы остановимся на простой иерархии, состоящей из одного базового класса `Publication` и одного производного класса `Book`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-223">For our example, we'll use the simple hierarchy of a `Publication` class and a single derived classes, `Book`.</span></span> <span data-ttu-id="2a6ad-224">Мы можем легко расширить пример, включив несколько дополнительных производных от `Publication` классов, например `Magazine` и `Article`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-224">We could easily extend the example to create a number of additional   classes that derive from `Publication`, such as `Magazine` and `Article`.</span></span>
 
-- Нужны ли нам экземпляры базового класса? Если нет, то для этого класса следует указать ключевое слово [abstract](../language-reference/keywords/abstract.md). При попытке создать экземпляр класса с ключевым словом `abstract` путем прямого вызова конструктора класса компилятор C# возвращает ошибку CS0144: "Не удается создать экземпляр абстрактного класса или интерфейса". Если попытаться создать экземпляр такого класса с помощью отражения, метод отражения создает исключение <xref:System.MemberAccessException>. В противном случае можно будет создать экземпляр класса `Publication`, вызвав конструктор этого класса.
+- <span data-ttu-id="2a6ad-225">Нужны ли нам экземпляры базового класса?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-225">Whether it makes sense to instantiate the base class.</span></span> <span data-ttu-id="2a6ad-226">Если нет, то для этого класса следует указать ключевое слово [abstract](../language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-226">If it does not, we should apply the [abstract](../language-reference/keywords/abstract.md) keyword to the class.</span></span> <span data-ttu-id="2a6ad-227">При попытке создать экземпляр класса с ключевым словом `abstract` путем прямого вызова конструктора класса компилятор C# возвращает ошибку CS0144: "Не удается создать экземпляр абстрактного класса или интерфейса".</span><span class="sxs-lookup"><span data-stu-id="2a6ad-227">If an attempt is made to instantiate a class marked with the `abstract` keyword by a direct call to its class constructor, the C# compiler generates error CS0144, "Cannot create an instance of the abstract class or interface."</span></span> <span data-ttu-id="2a6ad-228">Если попытаться создать экземпляр такого класса с помощью отражения, метод отражения создает исключение <xref:System.MemberAccessException>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-228">If an attempt is made to instantiate the class by using reflection, the reflection method throws a <xref:System.MemberAccessException>.</span></span> <span data-ttu-id="2a6ad-229">В противном случае можно будет создать экземпляр класса `Publication`, вызвав конструктор этого класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-229">Otherwise, our `Publication` class can be instantiated by calling its class constructor.</span></span>
 
-  По умолчанию есть возможность создать экземпляр, вызвав конструктор базового класса. Обратите внимание, что конструктор класса необязательно определять явным образом. Если конструктор отсутствует в исходном коде базового класса, компилятор C# автоматически предоставляет конструктор по умолчанию (без параметров).
+  <span data-ttu-id="2a6ad-230">По умолчанию есть возможность создать экземпляр, вызвав конструктор базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-230">By default, a base class can be instantiated by calling its class constructor.</span></span> <span data-ttu-id="2a6ad-231">Обратите внимание, что конструктор класса необязательно определять явным образом.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-231">Note that we do not have to explicitly define a class constructor.</span></span> <span data-ttu-id="2a6ad-232">Если конструктор отсутствует в исходном коде базового класса, компилятор C# автоматически предоставляет конструктор по умолчанию (без параметров).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-232">If one is not present in the base class' source code, the C# compiler automatically provides a default (parameterless) constructor.</span></span>
 
-  В нашем примере мы обозначим класс `Publication` как [абстрактный](../language-reference/keywords/abstract.md), и для него нельзя будет создавать экземпляры.
+  <span data-ttu-id="2a6ad-233">В нашем примере мы обозначим класс `Publication` как [абстрактный](../language-reference/keywords/abstract.md), и для него нельзя будет создавать экземпляры.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-233">For our example, we'll mark the `Publication` class as [abstract](../language-reference/keywords/abstract.md) so that it cannot be instantiated.</span></span>
 
-- Должны ли производные классы наследовать реализацию членов базового класса? Или же они могут переопределить реализацию базового класса? Чтобы производные классы могли переопределять методы базового класса, для него нужно указать ключевое слово [virtual](../language-reference/keywords/virtual.md) (виртуальный). По умолчанию методы, определенные в базовом классе, переопределять *нельзя*.
+- <span data-ttu-id="2a6ad-234">Должны ли производные классы наследовать реализацию членов базового класса? Или же они могут переопределить реализацию базового класса?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-234">Whether derived classes must inherit the base class implementation of a particular members, or whether they have the option to override the base class implementation.</span></span> <span data-ttu-id="2a6ad-235">Чтобы производные классы могли переопределять методы базового класса, для него нужно указать ключевое слово [virtual](../language-reference/keywords/virtual.md) (виртуальный).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-235">We have to use the [virtual](../language-reference/keywords/virtual.md) keyword to allow derived classes to override a base class method.</span></span> <span data-ttu-id="2a6ad-236">По умолчанию методы, определенные в базовом классе, переопределять *нельзя*.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-236">By default, methods defined in the base class are *not* overridable.</span></span>
 
-- Будет ли производный класс последним в иерархии наследования (то есть его нельзя будет использовать в качестве базового класса для дополнительных производных классов)? По умолчанию любой класс можно использовать в качестве базового класса. Если указать ключевое слово [sealed](../language-reference/keywords/sealed.md) (запечатан), то класс нельзя будет использовать как базовый класс для дополнительных производных классов. При попытке наследовать запечатанный класс создается ошибка компилятора CS0509: "нельзя наследовать от запечатанного типа <typeName>".
+- <span data-ttu-id="2a6ad-237">Будет ли производный класс последним в иерархии наследования (то есть его нельзя будет использовать в качестве базового класса для дополнительных производных классов)?</span><span class="sxs-lookup"><span data-stu-id="2a6ad-237">Whether a derived class represents the final class in the inheritance hierarchy and cannot itself be used as a base class for additional derived classes.</span></span> <span data-ttu-id="2a6ad-238">По умолчанию любой класс можно использовать в качестве базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-238">By default, any class can serve as a base class.</span></span> <span data-ttu-id="2a6ad-239">Если указать ключевое слово [sealed](../language-reference/keywords/sealed.md) (запечатан), то класс нельзя будет использовать как базовый класс для дополнительных производных классов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-239">We can apply the [sealed](../language-reference/keywords/sealed.md) keyword to indicate that a class cannot serve as a base class for any additional classes.</span></span> <span data-ttu-id="2a6ad-240">При попытке наследовать запечатанный класс создается ошибка компилятора CS0509: "нельзя наследовать от запечатанного типа <typeName>".</span><span class="sxs-lookup"><span data-stu-id="2a6ad-240">Attempting to derive from a sealed class generated compiler error CS0509, "cannot derive from sealed type <typeName>".</span></span>
 
-  В нашем примере мы укажем ключевое слово `sealed` для производного класса.
+  <span data-ttu-id="2a6ad-241">В нашем примере мы укажем ключевое слово `sealed` для производного класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-241">For our example, we'll mark our derived class as `sealed`.</span></span>
 
-В следующем примере представлен исходный код для класса `Publication`, а также перечисление `PublicationType`, возвращаемое свойством `Publication.PublicationType`. Помимо элементов, которые он наследует от <xref:System.Object>, класс `Publication` определяет и переопределяет следующие члены.
+<span data-ttu-id="2a6ad-242">В следующем примере представлен исходный код для класса `Publication`, а также перечисление `PublicationType`, возвращаемое свойством `Publication.PublicationType`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-242">The following example shows the source code for the `Publication` class, as well as a `PublicationType` enumeration that is returned by the `Publication.PublicationType` property.</span></span> <span data-ttu-id="2a6ad-243">Помимо элементов, которые он наследует от <xref:System.Object>, класс `Publication` определяет и переопределяет следующие члены.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-243">In addition to the members that it inherits from <xref:System.Object>, the `Publication` class defines the following unique members and member overrides:</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
-- Конструктор
+- <span data-ttu-id="2a6ad-244">Конструктор</span><span class="sxs-lookup"><span data-stu-id="2a6ad-244">A constructor</span></span>
 
-  Поскольку класс `Publication` имеет обозначение `abstract`, для него нельзя напрямую создать объект следующим образом:
+  <span data-ttu-id="2a6ad-245">Поскольку класс `Publication` имеет обозначение `abstract`, для него нельзя напрямую создать объект следующим образом:</span><span class="sxs-lookup"><span data-stu-id="2a6ad-245">Because the `Publication` class is `abstract`, it cannot be instantiated directly from code like the following:</span></span>
 
   ```csharp
   var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
                                     PublicationType.Book);
   ```
 
-  Но при этом его конструктор для создания экземпляров можно напрямую вызвать из конструкторов производных классов, как показано в исходном коде для класса `Book`.
+  <span data-ttu-id="2a6ad-246">Но при этом его конструктор для создания экземпляров можно напрямую вызвать из конструкторов производных классов, как показано в исходном коде для класса `Book`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-246">However, its instance constructor can be called directly from derived class constructors, as the source code for the `Book` class shows.</span></span>
 
-- Два свойства, относящиеся к публикации
+- <span data-ttu-id="2a6ad-247">Два свойства, относящиеся к публикации</span><span class="sxs-lookup"><span data-stu-id="2a6ad-247">Two publication-related properties</span></span>
 
-  Свойство `Title` доступно только для чтения и имеет тип <xref:System.String>. Его значение предоставляется путем вызова конструктора `Publication`.
+  <span data-ttu-id="2a6ad-248">Свойство `Title` доступно только для чтения и имеет тип <xref:System.String>. Его значение предоставляется путем вызова конструктора `Publication`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-248">`Title` is a read-only <xref:System.String> property whose value is supplied by calling the `Publication` constructor.</span></span>
 
-  Свойство `Pages` доступно для чтения и записи и имеет тип <xref:System.Int32>. Значение этого свойства показывает, сколько всего страниц имеет эта публикация. Это значение хранится в скрытом поле с именем `totalPages`. В качестве значения принимается положительное число. В противном случае создается исключение <xref:System.ArgumentOutOfRangeException>.
+  <span data-ttu-id="2a6ad-249">Свойство `Pages` доступно для чтения и записи и имеет тип <xref:System.Int32>. Значение этого свойства показывает, сколько всего страниц имеет эта публикация.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-249">`Pages` is a read-write <xref:System.Int32> property that indicates how many total pages the publication has.</span></span> <span data-ttu-id="2a6ad-250">Это значение хранится в скрытом поле с именем `totalPages`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-250">The value is stored in a private field named `totalPages`.</span></span> <span data-ttu-id="2a6ad-251">В качестве значения принимается положительное число. В противном случае создается исключение <xref:System.ArgumentOutOfRangeException>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-251">It must be a positive number or an <xref:System.ArgumentOutOfRangeException> is thrown.</span></span>
 
-- Члены, связанные с издателем
+- <span data-ttu-id="2a6ad-252">Члены, связанные с издателем</span><span class="sxs-lookup"><span data-stu-id="2a6ad-252">Publisher-related members</span></span>
 
-  Два свойства только для чтения: `Publisher` и `Type`. Эти значения изначально предоставляются путем вызова конструктора класса `Publication`.
+  <span data-ttu-id="2a6ad-253">Два свойства только для чтения: `Publisher` и `Type`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-253">Two read-only properties, `Publisher` and `Type`.</span></span> <span data-ttu-id="2a6ad-254">Эти значения изначально предоставляются путем вызова конструктора класса `Publication`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-254">The values are originally supplied by the call to the `Publication` class constructor.</span></span>
 
-- Элементы, связанные с публикацией
+- <span data-ttu-id="2a6ad-255">Элементы, связанные с публикацией</span><span class="sxs-lookup"><span data-stu-id="2a6ad-255">Publishing-related members</span></span>
 
-  Два метода, `Publish` и `GetPublicationDate`, которые устанавливают и возвращают дату публикации. Метод `Publish` устанавливает закрытый флаг `published` в значение `true` и присваивает переданную ему дату в качестве аргумента для закрытого поля `datePublished`. Метод `GetPublicationDate` возвращает строку "NYP", если флаг `published` имеет значение `false`, или значение поля `datePublished`, если флаг имеет значение `true`.
+  <span data-ttu-id="2a6ad-256">Два метода, `Publish` и `GetPublicationDate`, которые устанавливают и возвращают дату публикации.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-256">Two methods, `Publish` and `GetPublicationDate`, set and return the publication date.</span></span> <span data-ttu-id="2a6ad-257">Метод `Publish` устанавливает закрытый флаг `published` в значение `true` и присваивает переданную ему дату в качестве аргумента для закрытого поля `datePublished`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-257">The `Publish` method sets a private  `published` flag to `true` when it is called and assigns the date passed to it as an argument to the private `datePublished` field.</span></span> <span data-ttu-id="2a6ad-258">Метод `GetPublicationDate` возвращает строку "NYP", если флаг `published` имеет значение `false`, или значение поля `datePublished`, если флаг имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-258">The `GetPublicationDate` method returns the string "NYP" if the `published` flag is `false`, and the value of the `datePublished` field if it is `true`.</span></span>
 
-- Члены, связанные с авторскими правами
+- <span data-ttu-id="2a6ad-259">Члены, связанные с авторскими правами</span><span class="sxs-lookup"><span data-stu-id="2a6ad-259">Copyright-related members</span></span>
 
-  Метод `Copyright` принимает в качестве аргументов имя владельца авторских прав и год создания авторских прав, и назначает их свойствам `CopyrightName` и `CopyrightDate`.
+  <span data-ttu-id="2a6ad-260">Метод `Copyright` принимает в качестве аргументов имя владельца авторских прав и год создания авторских прав, и назначает их свойствам `CopyrightName` и `CopyrightDate`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-260">The `Copyright` method takes the name of the copyright holder and the year of the copyright as arguments and assigns them to the `CopyrightName` and `CopyrightDate` properties.</span></span>
 
-- Переопределение метода `ToString`
+- <span data-ttu-id="2a6ad-261">Переопределение метода `ToString`</span><span class="sxs-lookup"><span data-stu-id="2a6ad-261">An override of the `ToString` method</span></span>
 
-  Если метод <xref:System.Object.ToString%2A?displayProperty=fullName> не переопределяется в типе, он возвращает полное имя типа, которое не позволяет отличать экземпляры друг от друга. Класс `Publication` переопределяет метод <xref:System.Object.ToString%2A?displayProperty=fullName>, чтобы он возвращал значение свойства `Title`.
+  <span data-ttu-id="2a6ad-262">Если метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> не переопределяется в типе, он возвращает полное имя типа, которое не позволяет отличать экземпляры друг от друга.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-262">If a type does not override the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method, it returns the fully qualified name of the type, which is of little use in differentiating one instance from another.</span></span> <span data-ttu-id="2a6ad-263">Класс `Publication` переопределяет метод <xref:System.Object.ToString%2A?displayProperty=nameWithType>, чтобы он возвращал значение свойства `Title`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-263">The `Publication` class overrides <xref:System.Object.ToString%2A?displayProperty=nameWithType> to return the value of the `Title` property.</span></span>
 
-Следующий рисунок иллюстрирует связь между базовым классом `Publication` и неявно унаследованным от него классом <xref:System.Object>.
+<span data-ttu-id="2a6ad-264">Следующий рисунок иллюстрирует связь между базовым классом `Publication` и неявно унаследованным от него классом <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-264">The following figure illustrates the relationship between our base `Publication` class and its implicitly inherited <xref:System.Object> class.</span></span>
 
 ![Классы Object и Publication](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>Класс `Book`
+### <a name="the-book-class"></a><span data-ttu-id="2a6ad-266">Класс `Book`</span><span class="sxs-lookup"><span data-stu-id="2a6ad-266">The `Book` class</span></span>
 
-Класс `Book` представляет книгу как специализированный тип публикации. В следующем примере показан исходный код класса `Book`.
+<span data-ttu-id="2a6ad-267">Класс `Book` представляет книгу как специализированный тип публикации.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-267">The `Book` class represents a book as a specialized type of publication.</span></span> <span data-ttu-id="2a6ad-268">В следующем примере показан исходный код класса `Book`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-268">The following example shows the source code for the `Book` class.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
-Помимо элементов, которые он наследует от `Publication`, класс `Book` определяет и переопределяет следующие члены.
+<span data-ttu-id="2a6ad-269">Помимо элементов, которые он наследует от `Publication`, класс `Book` определяет и переопределяет следующие члены.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-269">In addition to the members that it inherits from `Publication`, the `Book` class defines the following unique members and member overrides:</span></span>
 
-- Два конструктора
+- <span data-ttu-id="2a6ad-270">Два конструктора</span><span class="sxs-lookup"><span data-stu-id="2a6ad-270">Two constructors</span></span>
 
-  Два конструктора `Book` используют три общих параметра. Два из них, *header* и *publisher*, соответствуют параметрам конструктора `Publication`. Третий — это *author*, который хранится в закрытом поле `authorName`. Один конструктор использует параметр *isbn*, который хранится в автосвойстве `ISBN`.
+  <span data-ttu-id="2a6ad-271">Два конструктора `Book` используют три общих параметра.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-271">The two `Book` constructors share three common parameters.</span></span> <span data-ttu-id="2a6ad-272">Два из них, *header* и *publisher*, соответствуют параметрам конструктора `Publication`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-272">Two, *title* and *publisher*, correspond to parameters of the `Publication` constructor.</span></span> <span data-ttu-id="2a6ad-273">Третий — это *author*, который хранится в закрытом поле `authorName`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-273">The third is *author*, which is stored to a private `authorName` field.</span></span> <span data-ttu-id="2a6ad-274">Один конструктор использует параметр *isbn*, который хранится в автосвойстве `ISBN`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-274">One constructor includes an *isbn* parameter, which is stored in the `ISBN` auto-property.</span></span>
 
-  Первый конструктор использует ключевое слово [this](../language-reference/keywords/this.md) для вызова второго конструктора. Это стандартная практика при создании конструкторов. Конструкторы с меньшим числом параметров используют значения по умолчанию, вызывая конструкторы с большим числом параметров.
+  <span data-ttu-id="2a6ad-275">Первый конструктор использует ключевое слово [this](../language-reference/keywords/this.md) для вызова второго конструктора.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-275">The first constructor uses the [this](../language-reference/keywords/this.md) keyword to call the other constructor.</span></span> <span data-ttu-id="2a6ad-276">Это стандартная практика при создании конструкторов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-276">This is a common pattern in defining constructors.</span></span> <span data-ttu-id="2a6ad-277">Конструкторы с меньшим числом параметров используют значения по умолчанию, вызывая конструкторы с большим числом параметров.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-277">Constructors with fewer parameters provide default values when calling the constructor with the greatest number of parameters.</span></span>
 
-  Второй конструктор использует ключевое слово [base](../language-reference/keywords/base.md), чтобы передать заголовок и имя издателя в конструктор базового класса. Если вы не используете явный вызов конструктора базового класса в исходном коде, компилятор C# автоматически добавляет вызов конструктора по умолчанию (без параметров) для базового класса.
+  <span data-ttu-id="2a6ad-278">Второй конструктор использует ключевое слово [base](../language-reference/keywords/base.md), чтобы передать заголовок и имя издателя в конструктор базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-278">The second constructor uses the [base](../language-reference/keywords/base.md) keyword to pass the title and publisher name to the base class constructor.</span></span> <span data-ttu-id="2a6ad-279">Если вы не используете явный вызов конструктора базового класса в исходном коде, компилятор C# автоматически добавляет вызов конструктора по умолчанию (без параметров) для базового класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-279">If you don't make an explicit call to a base class constructor in your source code, the C# compiler automatically supplies a call to the base class' default or parameterless constructor.</span></span>
 
-- Свойство `ISBN`, доступное только для чтения, которое возвращает международный стандартный номер книги (уникальное 10- или 13-значное число) для объекта `Book`. Номер ISBN передается в качестве аргумента одному из конструкторов `Book`. Он сохраняется в закрытом резервном поле, автоматически создаваемым компилятором.
+- <span data-ttu-id="2a6ad-280">Свойство `ISBN`, доступное только для чтения, которое возвращает международный стандартный номер книги (уникальное 10- или 13-значное число) для объекта `Book`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-280">A read-only `ISBN` property, which returns the `Book` object's International Standard Book Number, a unique 10- or 13-digit number.</span></span> <span data-ttu-id="2a6ad-281">Номер ISBN передается в качестве аргумента одному из конструкторов `Book`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-281">The ISBN is supplied as an argument to one of the `Book` constructors.</span></span> <span data-ttu-id="2a6ad-282">Он сохраняется в закрытом резервном поле, автоматически создаваемым компилятором.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-282">The ISBN is stored in a private backing field, which is auto-generated by the compiler.</span></span>
 
-- Свойство `Author`, доступное только для чтения. Имя автора передается в качестве аргумента обоим конструкторам `Book` и сохраняется в закрытом поле `authorName`.
+- <span data-ttu-id="2a6ad-283">Свойство `Author`, доступное только для чтения.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-283">A read-only `Author` property.</span></span> <span data-ttu-id="2a6ad-284">Имя автора передается в качестве аргумента обоим конструкторам `Book` и сохраняется в закрытом поле `authorName`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-284">The author name is supplied as an argument to both `Book` constructors and is stored in the private `authorName` field.</span></span>
 
-- Два свойства, `Price` и `Currency`, с информацией о цене, доступные только для чтения. Значения этих свойств передаются в качестве аргументов при вызове метода `SetPrice`. Цена хранится в закрытом поле с именем `bookPrice`. Свойство `Currency` содержит трехзначное обозначение валюты по стандарту ISO (например, USD обозначает доллар США), которое хранится в закрытом поле `ISOCurrencySymbol`. Обозначение валюты по стандарту ISO можно получить из свойства <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
+- <span data-ttu-id="2a6ad-285">Два свойства, `Price` и `Currency`, с информацией о цене, доступные только для чтения.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-285">Two read-only price-related properties, `Price` and `Currency`.</span></span> <span data-ttu-id="2a6ad-286">Значения этих свойств передаются в качестве аргументов при вызове метода `SetPrice`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-286">Their values are provided as arguments in a `SetPrice` method call.</span></span> <span data-ttu-id="2a6ad-287">Цена хранится в закрытом поле с именем `bookPrice`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-287">The price is stored in a private field, `bookPrice`.</span></span> <span data-ttu-id="2a6ad-288">Свойство `Currency` содержит трехзначное обозначение валюты по стандарту ISO (например, USD обозначает доллар США), которое хранится в закрытом поле `ISOCurrencySymbol`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-288">The `Currency` property is the three-digit ISO currency symbol (for example, USD for the U.S. dollar) and is stored in the private `ISOCurrencySymbol` field.</span></span> <span data-ttu-id="2a6ad-289">Обозначение валюты по стандарту ISO можно получить из свойства <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-289">ISO currency symbols can be retrieved from the <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> property.</span></span>
 
-- Метод `SetPrice`, который задает значения для полей `bookPrice` и `ISOCurrencySymbol`. Ниже приведены значения, возвращаемые свойствами `Price` и `Currency`.
+- <span data-ttu-id="2a6ad-290">Метод `SetPrice`, который задает значения для полей `bookPrice` и `ISOCurrencySymbol`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-290">A `SetPrice` method, which sets the values of the `bookPrice` and `ISOCurrencySymbol` fields.</span></span> <span data-ttu-id="2a6ad-291">Ниже приведены значения, возвращаемые свойствами `Price` и `Currency`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-291">These are the values returned by the `Price` and `Currency` properties.</span></span>
 
-- Переопределение метода `ToString`, унаследованного от `Publication`, а также методов <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> и <xref:System.Object.GetHashCode%2A>, унаследованных от <xref:System.Object>.
+- <span data-ttu-id="2a6ad-292">Переопределение метода `ToString`, унаследованного от `Publication`, а также методов <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> и <xref:System.Object.GetHashCode%2A>, унаследованных от <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-292">Overrides to the `ToString` method (inherited from `Publication`) and the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> and <xref:System.Object.GetHashCode%2A> methods (inherited from <xref:System.Object>).</span></span>
 
-  Если метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> не переопределен, он проверяет ссылочное равенство. Это означает, что две объектные переменные считаются равными, если ссылаются на один и тот же объект. Но когда мы используем класс `Book`, два объекта `Book` должны считаться равными, если они имеют одинаковые номера ISBN.
+  <span data-ttu-id="2a6ad-293">Если метод <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> не переопределен, он проверяет ссылочное равенство.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-293">Unless it is overridden, the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method tests for reference equality.</span></span> <span data-ttu-id="2a6ad-294">Это означает, что две объектные переменные считаются равными, если ссылаются на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-294">That is, two object variables are considered to be equal if they refer to the same object.</span></span> <span data-ttu-id="2a6ad-295">Но когда мы используем класс `Book`, два объекта `Book` должны считаться равными, если они имеют одинаковые номера ISBN.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-295">In the case of the `Book` class, on the other hand, two `Book` objects should be equal if they have the same ISBN.</span></span>
 
-  Переопределив метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>, необходимо также переопределить метод <xref:System.Object.GetHashCode%2A>, который возвращает значение, используемое средой выполнения для хранения элементов в хэшированных коллекциях для быстрого извлечения. Возвращаемое значение хэш-кода должно согласовываться с проверкой на равенство. Поскольку теперь новый метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> возвращает `true`, если у двух объектов `Book` равны свойства ISBN, при расчете хэш-кода мы будем вызывать метод <xref:System.String.GetHashCode%2A> для строки, полученной из свойства `ISBN`.
+  <span data-ttu-id="2a6ad-296">Переопределив метод <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, необходимо также переопределить метод <xref:System.Object.GetHashCode%2A>, который возвращает значение, используемое средой выполнения для хранения элементов в хэшированных коллекциях для быстрого извлечения.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-296">When you override the <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> method, you must also override the <xref:System.Object.GetHashCode%2A> method, which returns a value that the runtime uses to store items in hashed collections for efficient retrieval.</span></span> <span data-ttu-id="2a6ad-297">Возвращаемое значение хэш-кода должно согласовываться с проверкой на равенство.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-297">The hash code should return a value that's consistent with the test for equality.</span></span> <span data-ttu-id="2a6ad-298">Поскольку теперь новый метод <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> возвращает `true`, если у двух объектов `Book` равны свойства ISBN, при расчете хэш-кода мы будем вызывать метод <xref:System.String.GetHashCode%2A> для строки, полученной из свойства `ISBN`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-298">Since we've overridden <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> to return `true` if the ISBN properties of two `Book` objects are equal, we return the hash code computed by calling the <xref:System.String.GetHashCode%2A> method of the string returned by the `ISBN` property.</span></span>
 
-Следующий рисунок иллюстрирует связь между классом `Book` и классом `Publication`, который является для него базовым.
+<span data-ttu-id="2a6ad-299">Следующий рисунок иллюстрирует связь между классом `Book` и классом `Publication`, который является для него базовым.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-299">The following figure illustrates the relationship between the `Book` class and `Publication`, its base class.</span></span>
 
 ![Классы Publication и Book](media/book-class.jpg)
 
-Теперь мы можем создавать экземпляры объекта `Book`, вызывать его уникальные и унаследованные члены, а также передавать его в качестве аргумента в любой метод, принимающий параметры типа `Publication` или `Book`, как показано в следующем примере.
+<span data-ttu-id="2a6ad-301">Теперь мы можем создавать экземпляры объекта `Book`, вызывать его уникальные и унаследованные члены, а также передавать его в качестве аргумента в любой метод, принимающий параметры типа `Publication` или `Book`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-301">We can now instantiate a `Book` object, invoke both its unique and inherited members, and pass it as an argument to a method that expects a parameter of type `Publication` or of type `Book`, as the following example shows.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
-## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Разработка абстрактных базовых классов и их производных классов
+## <a name="designing-abstract-base-classes-and-their-derived-classes"></a><span data-ttu-id="2a6ad-302">Разработка абстрактных базовых классов и их производных классов</span><span class="sxs-lookup"><span data-stu-id="2a6ad-302">Designing abstract base classes and their derived classes</span></span>
 <a name="abstract"></a>
 
-В предыдущем примере мы определили базовый класс, который предоставляет реализацию нескольких методов, обеспечивая совместное использование кода в производных классах. Но во многих случаях базовый класс не должен предоставлять реализацию. Такой базовый класс будет являться *абстрактным классом*. Он выступает в качестве шаблона и определяет члены, которые каждый производный класс должен реализовывать самостоятельно. При использовании абстрактного базового класса реализация каждого из производных типов обычно уникальна для конкретного типа.
+<span data-ttu-id="2a6ad-303">В предыдущем примере мы определили базовый класс, который предоставляет реализацию нескольких методов, обеспечивая совместное использование кода в производных классах.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-303">In the previous example, we defined a base class that provided an implementation for a number of methods to allow derived classes to share code.</span></span> <span data-ttu-id="2a6ad-304">Но во многих случаях базовый класс не должен предоставлять реализацию.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-304">In many cases, however, the base class is not expected to provide an implementation.</span></span> <span data-ttu-id="2a6ad-305">Такой базовый класс будет являться *абстрактным классом*. Он выступает в качестве шаблона и определяет члены, которые каждый производный класс должен реализовывать самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-305">Instead, the base class is an *abstract class*; it serves as a template that defines the members that each derived class must implement.</span></span> <span data-ttu-id="2a6ad-306">При использовании абстрактного базового класса реализация каждого из производных типов обычно уникальна для конкретного типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-306">Typically in the case of an abstract base class, the implementation of each derived type is unique to that type.</span></span>
 
-Например, каждая замкнутая геометрическая фигура в двумерном пространстве имеет два свойства: площадь внутренней поверхности и длину ее границ (периметр). Но при этом методы вычисления этих свойств полностью зависят от конкретной фигуры. Например, формула вычисления периметра (длины окружности) для круга существенно отличается формулы для треугольника.
+<span data-ttu-id="2a6ad-307">Например, каждая замкнутая геометрическая фигура в двумерном пространстве имеет два свойства: площадь внутренней поверхности и длину ее границ (периметр).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-307">For example, each closed two-dimensional geometric shape includes two properties: area, the inner extent of the shape; and perimeter, or the distance along the edges of the shape.</span></span> <span data-ttu-id="2a6ad-308">Но при этом методы вычисления этих свойств полностью зависят от конкретной фигуры.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-308">The way in which these properties are calculated, however, depends completely on the specific shape.</span></span> <span data-ttu-id="2a6ad-309">Например, формула вычисления периметра (длины окружности) для круга существенно отличается формулы для треугольника.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-309">The formula for calculating the perimeter (or circumference) of a circle, for example, is very different from that of a triangle.</span></span>
 
-Следующий пример определяет абстрактный базовый класс с именем `Shape` и два его свойства: `Area` и `Perimeter`. Обратите внимание, что ключевое слово [abstract](../language-reference/keywords/abstract.md) применяется здесь не только для класса в целом, но и для каждого члена его объектов[](../language-reference/keywords/abstract.md). Кроме того, в классе `Shape` мы снова переопределяем метод <xref:System.Object.ToString%2A?displayProperty=fullName>, чтобы он возвращал имя типа, а не полное имя типа. Еще мы определяем два статических члена `GetArea` и `GetPerimeter`, которые позволяют вызывающим объектам легко получить площадь и периметр для конкретного экземпляра любого производного класса. Когда мы передаем в любой из этих методов экземпляр производного класса, среда выполнения вызывает переопределенные методы из соответствующего производного класса.
+<span data-ttu-id="2a6ad-310">Следующий пример определяет абстрактный базовый класс с именем `Shape` и два его свойства: `Area` и `Perimeter`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-310">The following example defines an abstract base class named `Shape` that defines two properties: `Area` and `Perimeter`.</span></span> <span data-ttu-id="2a6ad-311">Обратите внимание, что ключевое слово [abstract](../language-reference/keywords/abstract.md) применяется здесь не только для класса в целом, но и для каждого члена его объектов[abstract](../language-reference/keywords/abstract.md).</span><span class="sxs-lookup"><span data-stu-id="2a6ad-311">Note that, in addition to marking the class with the [abstract](../language-reference/keywords/abstract.md) keyword, each instance member is also marked with the [abstract](../language-reference/keywords/abstract.md) keyword.</span></span> <span data-ttu-id="2a6ad-312">Кроме того, в классе `Shape` мы снова переопределяем метод <xref:System.Object.ToString%2A?displayProperty=nameWithType>, чтобы он возвращал имя типа, а не полное имя типа.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-312">In this case, `Shape` also overrides the <xref:System.Object.ToString%2A?displayProperty=nameWithType> method to return the name of the type, rather than its fully qualified name.</span></span> <span data-ttu-id="2a6ad-313">Еще мы определяем два статических члена `GetArea` и `GetPerimeter`, которые позволяют вызывающим объектам легко получить площадь и периметр для конкретного экземпляра любого производного класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-313">And it defines two static members, `GetArea` and `GetPerimeter`, that allow callers to easily retrieve the area and perimeter of an instance of any derived class.</span></span> <span data-ttu-id="2a6ad-314">Когда мы передаем в любой из этих методов экземпляр производного класса, среда выполнения вызывает переопределенные методы из соответствующего производного класса.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-314">When we pass an instance of a derived class to either of these methods, the runtime calls the method override of the derived class.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-Теперь мы можем создать несколько классов, производных от `Shape`, которые будут представлять разные геометрические фигуры. В следующем примере определяются три класса: `Triangle`, `Rectangle` и `Circle`. В каждом из них используются уникальные формулы для вычисления площади и периметра, соответствующие типу фигуры. Также некоторые из производных классов определяют дополнительные свойства, например `Rectangle.Diagonal` и `Circle.Diameter`, которые уникальны для фигуры, представляемой этим классом.
+<span data-ttu-id="2a6ad-315">Теперь мы можем создать несколько классов, производных от `Shape`, которые будут представлять разные геометрические фигуры.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-315">We can then derive some classes from `Shape` that represent specific shapes.</span></span> <span data-ttu-id="2a6ad-316">В следующем примере определяются три класса: `Triangle`, `Rectangle` и `Circle`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-316">The following example defines three classes, `Triangle`, `Rectangle`, and `Circle`.</span></span> <span data-ttu-id="2a6ad-317">В каждом из них используются уникальные формулы для вычисления площади и периметра, соответствующие типу фигуры.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-317">Each uses a formula unique for that particular shape to compute the area and perimeter.</span></span> <span data-ttu-id="2a6ad-318">Также некоторые из производных классов определяют дополнительные свойства, например `Rectangle.Diagonal` и `Circle.Diameter`, которые уникальны для фигуры, представляемой этим классом.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-318">Some of the derived classes also define properties, such as `Rectangle.Diagonal` and `Circle.Diameter`, that are unique to the shape that they represent.</span></span>
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Следующий пример использует объекты, производные от `Shape`. Он создает массив объектов, производных от `Shape`, и вызывает статические методы для класса `Shape`, которые служат оболочкой для обращения к значениям свойств `Shape`. Обратите внимание, что среда выполнения извлекает значения переопределенных свойств для производных типов. Также в этом примере каждый объект `Shape` из созданного массива приводится к производному типу. Если это приведение выполняется успешно, выполняется обращение к свойствам, определенным для конкретного подкласса базового класса `Shape`. 
+<span data-ttu-id="2a6ad-319">Следующий пример использует объекты, производные от `Shape`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-319">The following example uses objects derived from `Shape`.</span></span> <span data-ttu-id="2a6ad-320">Он создает массив объектов, производных от `Shape`, и вызывает статические методы для класса `Shape`, которые служат оболочкой для обращения к значениям свойств `Shape`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-320">It instantiates an array of objects derived from `Shape` and calls the static methods of the `Shape` class, which wraps return `Shape` property values.</span></span> <span data-ttu-id="2a6ad-321">Обратите внимание, что среда выполнения извлекает значения переопределенных свойств для производных типов.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-321">Note that the runtime retrieves values from the overridden properties of the derived types.</span></span> <span data-ttu-id="2a6ad-322">Также в этом примере каждый объект `Shape` из созданного массива приводится к производному типу. Если это приведение выполняется успешно, выполняется обращение к свойствам, определенным для конкретного подкласса базового класса `Shape`.</span><span class="sxs-lookup"><span data-stu-id="2a6ad-322">The example also casts each `Shape` object in the array to its derived type and, if the cast succeeds, retrieves properties of that particular subclass of `Shape`.</span></span> 
 
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a><span data-ttu-id="2a6ad-323">См. также</span><span class="sxs-lookup"><span data-stu-id="2a6ad-323">See also</span></span>
 
-[Классы и объекты](../tour-of-csharp/classes-and-objects.md)   
-[Наследование (руководство по программированию на C#)](../programming-guide/classes-and-structs/inheritance.md)
-
-
-В этом руководстве вы познакомитесь с концепцией наследования в C#. Наследование является ключевой функцией объектно-ориентированных языков программирования. Оно позволяет определить базовый класс для определенных функций (доступа к данным или действий), а затем создавать производные классы, которые наследуют или переопределяют функции базового класса.
-
-## <a name="prerequisites"></a>Предварительные требования
-
-В этом руководстве предполагается, что вы уже установили .NET Core. Инструкции по установке см. в [руководстве по установке .NET Core](https://www.microsoft.com/net/core). Также вам потребуется редактор кода. В этом руководстве используется [Visual Studio Code](https://code.visualstudio.com), но вы можете использовать любой другой редактор на свой выбор.
-
-## <a name="running-the-examples"></a>Выполнение примеров
-
-Чтобы создать и запустить примеры, представленные в этом руководстве, используйте служебную программу [dotnet](../../core/tools/dotnet.md), выполняемую из командной строки. Выполните следующие действия для каждого примера.
-
-1. Создайте каталог для хранения примера.
-1. Введите в командной строке команду [dotnet new console](../../core/tools/dotnet-new.md), чтобы создать новый проект .NET Core.
-1. Скопируйте код примера и вставьте его в файл с помощью редактора кода.
-1. Введите в командной строке команду [dotnet restore](../../core/tools/dotnet-restore.md), чтобы загрузить или восстановить зависимости проекта.
-1. Введите команду [dotnet run](../../core/tools/dotnet-run.md), чтобы скомпилировать и выполнить пример.
-
-## <a name="background-what-is-inheritance"></a>Справочная информация. Что такое наследование?
-
-*Наследование* является одним из фундаментальных атрибутов объектно-ориентированного программирования. Оно позволяет определить дочерний класс, который использует (наследует), расширяет или изменяет возможности родительского класса. Класс, члены которого наследуются, называется *базовым классом*. Класс, который наследует члены базового класса, называется *производным классом*.
-
-C# и .NET поддерживают только *одиночное наследование*. Это означает, что каждый класс может наследовать члены только одного класса. Но зато поддерживается транзитивное наследование, которое позволяет определить иерархию наследования для набора типов. Другими словами, тип `D` может наследовать возможности типа `C`, который в свою очередь наследует от типа `B`, который наследует от базового класса `A`. Благодаря транзитивности наследования члены типа `A` будут доступны для типа `D`.
-
-Не все члены базового класса наследуются производными классами. Следующие члены не наследуются.
-
-- [Статические конструкторы](../programming-guide/classes-and-structs/static-constructors.md), которые инициализируют статические данные класса.
-
-- [Конструкторы экземпляров](../programming-guide/classes-and-structs/constructors.md), которые вызываются для создания нового экземпляра класса. Каждый класс должен определять собственные конструкторы.
-
-- [Методы завершения](../programming-guide/classes-and-structs/destructors.md), которые вызываются сборщиком мусора среды выполнения для уничтожения экземпляров класса.
-
-Все остальные члены базового класса наследуются производными классами, но их видимость не зависит от доступности. Доступность членов влияет на видимость для производных классов следующим образом.
-
-- [Закрытые](../language-reference/keywords/private.md) члены являются видимыми только в производных классах, которые вложены в базовый класс. Для других производных классов они невидимы. В следующем примере класс `A.B` является вложенным и производным от `A`, а `C` является производным от `A`. Закрытое поле `A.value` является видимым в классе A.B. Но если раскомментировать строки метода `C.GetValue`, то при компиляции этого примера возникнет ошибка CS0122: "'A.value' недоступен из-за его уровня защиты".
-
-  [!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
-
-- [Защищенные](../language-reference/keywords/protected.md) члены являются видимыми только в производных классах.
-
-- [Внутренние](../language-reference/keywords/protected.md) члены являются видимыми только в производных классах, которые находятся в той же сборке, что и базовый класс. Они не будут видимыми в производных классах, расположенных в других сборках.
-
-- [Открытые] (.. / language-reference/keywords/protected.md) члены являются видимыми в производных классах, а также частью открытого интерфейса производных классов. Унаследованные открытые члены можно вызывать так же, как если бы они были определены в самом производном классе. В следующем примере класс `A` определяет метод с именем `Method1`, а класс `B` наследует от класса `A`. В нашем примере `Method1` вызывается так, как если бы это был метод класса `B`.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
-
-Производные классы могут также *переопределять* унаследованные члены, то есть предоставлять альтернативную реализацию. Переопределить можно только те члены, которые в базовом классе отмечены ключевым словом [virtual](../language-reference/keywords/virtual.md) (виртуальный). По умолчанию нельзя переопределять члены базового класса, не отмеченные ключевым словом `virtual`. Попытка переопределить член, не являющийся виртуальным, как в следующем примере, вызывает ошибку компилятора CS0506: "<member> : невозможно переопределить наследуемый член <member>, так как он не помечен как virtual, abstract или override".
-
-```csharp
-public class A
-{
-    public void Method1()
-    {
-        // Do something.
-    }
-}
-
-public class B : A
-{
-    public override void Method1() // Generates CS0506.
-    {
-        // Do something else.
-    }
-}
-```
-
-В некоторых случаях производный класс *обязан* переопределять реализацию базового класса. Члены базового класса, отмеченные ключевым словом [abstract](../language-reference/keywords/abstract.md) (абстрактный), обязательно должны переопределяться в производных классах. При попытке компиляции следующего примера возникнет ошибка компилятора CS0534, "<class> не реализует наследуемый абстрактный член <member>", поскольку класс `B` не предоставляет реализации для `A.Method1`.
-
-```csharp
-public abstract class A
-{
-    public abstract void Method1();
-}
-
-public class B : A // Generates CS0534.
-{
-    public void Method3()
-    {
-        // Do something.
-    }
-}
-```
-
-Наследование применяется только для классов и интерфейсов. Другие категории типов (структуры, делегаты и перечисления) не поддерживают наследование. По этой причине попытка компиляции кода из следующего примера приводит к ошибке компилятора CS0527: "Тип 'ValueType' в списке интерфейсов не является интерфейсом". Такое сообщение об ошибке означает, что наследование не поддерживается, несмотря на возможность определить интерфейсы, реализуемые в структуре.
-
-```csharp
-using System;
-
-public struct ValueStructure : ValueType // Generates CS0527.
-{
-}
-```
-
-## <a name="implicit-inheritance"></a>Неявное наследование
-
-Помимо тех типов, которые наследуются через механизм одиночного наследования, все типы в системе типов .NET неявно наследуются от типа <xref:System.Object> или его производного типа. Это позволяет предоставить всем типам некоторые общие функции.
-
-Чтобы продемонстрировать неявное наследование, давайте определим новый класс `SimpleClass`, определение которого будет пустым.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
-
-После этого с помощью отражения (которое позволяет проверить метаданные типа для получения сведений о нем) мы получим список членов, принадлежащих типу `SimpleClass`. Выходные данные этого примера возвращают нам девять членов класса `SimpleClass`, хотя мы не определяли ни одного из них. Один из них является вызываемым без параметров конструктором по умолчанию, который автоматически предоставляется для типа `SimpleClass` компилятором C#. Остальные восемь являются членами типа <xref:System.Object>, от которого неявным образом наследуются все классы и интерфейсы в системе типов .NET.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
-
-Неявное наследование от класса <xref:System.Object> делает доступными для класса `SimpleClass` следующие методы.
-
-- Открытый метод `ToString`, который преобразует объект `SimpleClass` в строковое представление, возвращает полное имя типа. В нашем примере метод `ToString` возвращает строку SimpleClass.
-
-- Три метода, которые проверяют равенство двух объектов: открытый метод экземпляра `Equals(Object)`, открытый статический метод `Equals(Object, Object)` и открытый статический метод `ReferenceEquals(Object, Object)`. По умолчанию эти методы проверяют ссылочное равенство. Это означает, что две переменные, содержащие объекты, должны ссылаться на один и тот же объект, чтобы считаться равными.
-
-- Открытый метод `GetHashCode`, который вычисляет значение, позволяющее использовать экземпляр типа в хэшированных коллекциях.
-
-- Открытый метод `GetType`, который возвращает объект <xref:System.Type>, представляющий тип `SimpleClass`.
-
-- Защищенный метод <xref:System.Object.Finalize%2A>, который должен освобождать неуправляемые ресурсы перед тем, как сборщик мусора освободит память объекта.
-
-- Защищенный метод <xref:System.Object.MemberwiseClone%2A>, который создает неполную копию текущего объекта.
-
-Неявное наследование позволяет вызвать любой наследуемый член объекта `SimpleClass` точно так же, как если бы он был определен в самом классе `SimpleClass`. Например, следующий пример вызывает метод `SimpleClass.ToString`, который `SimpleClass` наследует от <xref:System.Object>.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
-
-В следующей таблице перечислены категории типов, которые можно создавать на языке C#, и указаны типы, от которых они неявно наследуют. Каждый из базовых типов предоставляет всем типам, которые неявно наследуют от него, разные наборы членов.
-
-| Категория типа | Неявно наследует от                                                      |
-| ------------- | ----------------------------------------------------------------------------- |
-| класс         | <xref:System.Object>                                                          |
-| структура        | <xref:System.ValueType>, <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
-| делегат      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
-
-## <a name="inheritance-and-an-is-a-relationship"></a>Наследование и связь "является"
-
-Обычно наследование выражает связь вида "is a" (является) между базовым классом и одним или несколькими производными классами. Производные классы рассматриваются как специализированные версии базового класса, то есть как подтипы базового класса. Например класс `Publication` представляет публикации любого рода, а классы `Book` и `Magazine` представляют публикации определенных типов.
-
-> [!NOTE]
-> Класс или структура могут реализовывать несколько интерфейсов. Реализация интерфейсов часто рассматривается как метод для обхода ограничений одиночного наследования или для реализации наследования структур. Но его основным назначением является выражение связи другого рода между интерфейсом и реализующим его типом. Эта связь называется "can do" (может выполнять) и она отличается от связи наследования. Интерфейс определяет подмножество функций (например, проверка равенства, сравнение и сортировка объектов, или поддержка синтаксического анализа и форматирования с учетом языка и региональных параметров). Интерфейс предоставляет эти функции всем типам, которые его реализуют.
-
-Обратите внимание, что связь "является" выражает также связь между типом и конкретным экземпляром этого типа. В следующем примере представлен класс `Automobile` с тремя уникальными свойствами только для чтения: `Make` определяет производителя автомобиля, `Model` определяет тип автомобиля, а `Year` — год выпуска. Этот класс `Automobile` также содержит конструктор, аргументы которого назначаются значениям свойств. Еще в нем переопределен метод <xref:System.Object.ToString%2A?displayProperty=fullName>, который теперь возвращает строку, однозначно определяющую экземпляр `Automobile`, а не класс `Automobile`.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
-
-В этом примере не следует использовать наследование для представления определенных производителей и моделей автомобилей. Например, нам не нужно определять тип `Packard`, который будет представлять автомобили, произведенные компанией Packard Motor Car. Для этого представления мы создадим объект `Automobile` и передадим конструктору этого класса соответствующие значения, как показано в следующем примере.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
-
-Основанную на наследовании связь "является" лучше всего использовать для базовых классов и производных классов, которые добавляют дополнительные члены или используют дополнительные функции, отсутствующие в базовом классе.
-
-## <a name="designing-the-base-class-and-derived-classes"></a>Разработка базового класса и его производных классов
-
-Давайте рассмотрим процесс создания базового класса и его производных классов. В этом разделе мы определим базовый класс `Publication`, который представляет публикацию любого типа (книга, журнал, газета, статья и т. д.). Также мы определим класс `Book`, который наследует от класса `Publication`. Этот пример легко расширить, определив другие производные классы, например `Magazine`, `Journal`, `Newspaper` и `Article`.
-
-### <a name="the-base-publication-class"></a>Базовый класс Publication
-
-При разработке класса `Publication` нужно принять несколько решений по его структуре.
-
-- Какие члены следует включить в базовый класс `Publication`, и будут ли члены `Publication` реализовывать нужные методы? Или же базовый класс `Publication` лучше сделать абстрактным, то есть шаблоном для производных классов?
-
-  В нашем примере класс `Publication` будет предоставлять реализации методов. Раздел [Разработка абстрактных базовых классов и их производных классов](#abstract) содержит пример, в котором абстрактный базовый класс определяет методы, переопределяемые в производных классах. Производные классы могут использовать любую реализацию, применимую для конкретного производного типа.
-
-  Важным преимуществом неабстрактных базовых классов является возможность повторно использовать код (несколько производных классов используют объявления и реализации методов из базового класса, и могут не переопределять их). Таким образом, в `Publication` следует включать такие члены, которые с высокой долей вероятности будут использоваться в неизменном виде несколькими специализированными типами `Publication`. Если этот выбор будет неправильным, нам придется создавать идентичные реализации членов в производных классах вместо того, чтобы использовать одну реализацию в базовом классе. Необходимость поддерживать несколько копий идентичного кода в нескольких местах станет потенциальным источником ошибок.
-
-  Чтобы оптимизировать повторное использование кода и создать логичную и интуитивно понятную иерархию наследования, необходимо включать в класс `Publication` только такие данные и функции, которые используются для большинства публикаций. Затем в производных классах реализуются уникальные члены для каждого вида публикаций, которые они представляют.
-
-- Насколько глубокой будет иерархия классов? Хотим ли мы включить в иерархию три или больше уровней классов, или обойдемся одним базовым классом с несколькими производными? Например `Publication` может являться базовым классом для `Periodical`, от которого будут наследовать классы `Magazine`, `Journal` и `Newspaper`.
-
-  В нашем примере мы остановимся на простой иерархии, состоящей из одного базового класса `Publication` и одного производного класса `Book`. Мы можем легко расширить пример, включив несколько дополнительных производных от `Publication` классов, например `Magazine` и `Article`.
-
-- Нужны ли нам экземпляры базового класса? Если нет, то для этого класса следует указать ключевое слово [abstract](../language-reference/keywords/abstract.md). При попытке создать экземпляр класса с ключевым словом `abstract` путем прямого вызова конструктора класса компилятор C# возвращает ошибку CS0144: "Не удается создать экземпляр абстрактного класса или интерфейса". Если попытаться создать экземпляр такого класса с помощью отражения, метод отражения создает исключение <xref:System.MemberAccessException>. В противном случае можно будет создать экземпляр класса `Publication`, вызвав конструктор этого класса.
-
-  По умолчанию есть возможность создать экземпляр, вызвав конструктор базового класса. Обратите внимание, что конструктор класса необязательно определять явным образом. Если конструктор отсутствует в исходном коде базового класса, компилятор C# автоматически предоставляет конструктор по умолчанию (без параметров).
-
-  В нашем примере мы обозначим класс `Publication` как [абстрактный](../language-reference/keywords/abstract.md), и для него нельзя будет создавать экземпляры.
-
-- Должны ли производные классы наследовать реализацию членов базового класса? Или же они могут переопределить реализацию базового класса? Чтобы производные классы могли переопределять методы базового класса, для него нужно указать ключевое слово [virtual](../language-reference/keywords/virtual.md) (виртуальный). По умолчанию методы, определенные в базовом классе, переопределять *нельзя*.
-
-- Будет ли производный класс последним в иерархии наследования (то есть его нельзя будет использовать в качестве базового класса для дополнительных производных классов)? По умолчанию любой класс можно использовать в качестве базового класса. Если указать ключевое слово [sealed](../language-reference/keywords/sealed.md) (запечатан), то класс нельзя будет использовать как базовый класс для дополнительных производных классов. При попытке наследовать запечатанный класс создается ошибка компилятора CS0509: "нельзя наследовать от запечатанного типа <typeName>".
-
-  В нашем примере мы укажем ключевое слово `sealed` для производного класса.
-
-В следующем примере представлен исходный код для класса `Publication`, а также перечисление `PublicationType`, возвращаемое свойством `Publication.PublicationType`. Помимо элементов, которые он наследует от <xref:System.Object>, класс `Publication` определяет и переопределяет следующие члены.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
-
-- Конструктор
-
-  Поскольку класс `Publication` имеет обозначение `abstract`, для него нельзя напрямую создать объект следующим образом:
-
-  ```csharp
-  var publication = new Publication("Tiddlywinks for Experts", "Fun and Games",
-                                    PublicationType.Book);
-  ```
-
-  Но при этом его конструктор для создания экземпляров можно напрямую вызвать из конструкторов производных классов, как показано в исходном коде для класса `Book`.
-
-- Два свойства, относящиеся к публикации
-
-  Свойство `Title` доступно только для чтения и имеет тип <xref:System.String>. Его значение предоставляется путем вызова конструктора `Publication`.
-
-  Свойство `Pages` доступно для чтения и записи и имеет тип <xref:System.Int32>. Значение этого свойства показывает, сколько всего страниц имеет эта публикация. Это значение хранится в скрытом поле с именем `totalPages`. В качестве значения принимается положительное число. В противном случае создается исключение <xref:System.ArgumentOutOfRangeException>.
-
-- Члены, связанные с издателем
-
-  Два свойства только для чтения: `Publisher` и `Type`. Эти значения изначально предоставляются путем вызова конструктора класса `Publication`.
-
-- Элементы, связанные с публикацией
-
-  Два метода, `Publish` и `GetPublicationDate`, которые устанавливают и возвращают дату публикации. Метод `Publish` устанавливает закрытый флаг `published` в значение `true` и присваивает переданную ему дату в качестве аргумента для закрытого поля `datePublished`. Метод `GetPublicationDate` возвращает строку "NYP", если флаг `published` имеет значение `false`, или значение поля `datePublished`, если флаг имеет значение `true`.
-
-- Члены, связанные с авторскими правами
-
-  Метод `Copyright` принимает в качестве аргументов имя владельца авторских прав и год создания авторских прав, и назначает их свойствам `CopyrightName` и `CopyrightDate`.
-
-- Переопределение метода `ToString`
-
-  Если метод <xref:System.Object.ToString%2A?displayProperty=fullName> не переопределяется в типе, он возвращает полное имя типа, которое не позволяет отличать экземпляры друг от друга. Класс `Publication` переопределяет метод <xref:System.Object.ToString%2A?displayProperty=fullName>, чтобы он возвращал значение свойства `Title`.
-
-Следующий рисунок иллюстрирует связь между базовым классом `Publication` и неявно унаследованным от него классом <xref:System.Object>.
-
-![Классы Object и Publication](media/publication-class.jpg)
-
-### <a name="the-book-class"></a>Класс `Book`
-
-Класс `Book` представляет книгу как специализированный тип публикации. В следующем примере показан исходный код класса `Book`.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
-
-Помимо элементов, которые он наследует от `Publication`, класс `Book` определяет и переопределяет следующие члены.
-
-- Два конструктора
-
-  Два конструктора `Book` используют три общих параметра. Два из них, *header* и *publisher*, соответствуют параметрам конструктора `Publication`. Третий — это *author*, который хранится в закрытом поле `authorName`. Один конструктор использует параметр *isbn*, который хранится в автосвойстве `ISBN`.
-
-  Первый конструктор использует ключевое слово [this](../language-reference/keywords/this.md) для вызова второго конструктора. Это стандартная практика при создании конструкторов. Конструкторы с меньшим числом параметров используют значения по умолчанию, вызывая конструкторы с большим числом параметров.
-
-  Второй конструктор использует ключевое слово [base](../language-reference/keywords/base.md), чтобы передать заголовок и имя издателя в конструктор базового класса. Если вы не используете явный вызов конструктора базового класса в исходном коде, компилятор C# автоматически добавляет вызов конструктора по умолчанию (без параметров) для базового класса.
-
-- Свойство `ISBN`, доступное только для чтения, которое возвращает международный стандартный номер книги (уникальное 10- или 13-значное число) для объекта `Book`. Номер ISBN передается в качестве аргумента одному из конструкторов `Book`. Он сохраняется в закрытом резервном поле, автоматически создаваемым компилятором.
-
-- Свойство `Author`, доступное только для чтения. Имя автора передается в качестве аргумента обоим конструкторам `Book` и сохраняется в закрытом поле `authorName`.
-
-- Два свойства, `Price` и `Currency`, с информацией о цене, доступные только для чтения. Значения этих свойств передаются в качестве аргументов при вызове метода `SetPrice`. Цена хранится в закрытом поле с именем `bookPrice`. Свойство `Currency` содержит трехзначное обозначение валюты по стандарту ISO (например, USD обозначает доллар США), которое хранится в закрытом поле `ISOCurrencySymbol`. Обозначение валюты по стандарту ISO можно получить из свойства <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
-
-- Метод `SetPrice`, который задает значения для полей `bookPrice` и `ISOCurrencySymbol`. Ниже приведены значения, возвращаемые свойствами `Price` и `Currency`.
-
-- Переопределение метода `ToString`, унаследованного от `Publication`, а также методов <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> и <xref:System.Object.GetHashCode%2A>, унаследованных от <xref:System.Object>.
-
-  Если метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> не переопределен, он проверяет ссылочное равенство. Это означает, что две объектные переменные считаются равными, если ссылаются на один и тот же объект. Но когда мы используем класс `Book`, два объекта `Book` должны считаться равными, если они имеют одинаковые номера ISBN.
-
-  Переопределив метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>, необходимо также переопределить метод <xref:System.Object.GetHashCode%2A>, который возвращает значение, используемое средой выполнения для хранения элементов в хэшированных коллекциях для быстрого извлечения. Возвращаемое значение хэш-кода должно согласовываться с проверкой на равенство. Поскольку теперь новый метод <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> возвращает `true`, если у двух объектов `Book` равны свойства ISBN, при расчете хэш-кода мы будем вызывать метод <xref:System.String.GetHashCode%2A> для строки, полученной из свойства `ISBN`.
-
-Следующий рисунок иллюстрирует связь между классом `Book` и классом `Publication`, который является для него базовым.
-
-![Классы Publication и Book](media/book-class.jpg)
-
-Теперь мы можем создавать экземпляры объекта `Book`, вызывать его уникальные и унаследованные члены, а также передавать его в качестве аргумента в любой метод, принимающий параметры типа `Publication` или `Book`, как показано в следующем примере.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
-
-## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Разработка абстрактных базовых классов и их производных классов
-<a name="abstract"></a>
-
-В предыдущем примере мы определили базовый класс, который предоставляет реализацию нескольких методов, обеспечивая совместное использование кода в производных классах. Но во многих случаях базовый класс не должен предоставлять реализацию. Такой базовый класс будет являться *абстрактным классом*. Он выступает в качестве шаблона и определяет члены, которые каждый производный класс должен реализовывать самостоятельно. При использовании абстрактного базового класса реализация каждого из производных типов обычно уникальна для конкретного типа.
-
-Например, каждая замкнутая геометрическая фигура в двумерном пространстве имеет два свойства: площадь внутренней поверхности и длину ее границ (периметр). Но при этом методы вычисления этих свойств полностью зависят от конкретной фигуры. Например, формула вычисления периметра (длины окружности) для круга существенно отличается формулы для треугольника.
-
-Следующий пример определяет абстрактный базовый класс с именем `Shape` и два его свойства: `Area` и `Perimeter`. Обратите внимание, что ключевое слово [abstract](../language-reference/keywords/abstract.md) применяется здесь не только для класса в целом, но и для каждого члена его объектов[](../language-reference/keywords/abstract.md). Кроме того, в классе `Shape` мы снова переопределяем метод <xref:System.Object.ToString%2A?displayProperty=fullName>, чтобы он возвращал имя типа, а не полное имя типа. Еще мы определяем два статических члена `GetArea` и `GetPerimeter`, которые позволяют вызывающим объектам легко получить площадь и периметр для конкретного экземпляра любого производного класса. Когда мы передаем в любой из этих методов экземпляр производного класса, среда выполнения вызывает переопределенные методы из соответствующего производного класса.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
-
-Теперь мы можем создать несколько классов, производных от `Shape`, которые будут представлять разные геометрические фигуры. В следующем примере определяются три класса: `Triangle`, `Rectangle` и `Circle`. В каждом из них используются уникальные формулы для вычисления площади и периметра, соответствующие типу фигуры. Также некоторые из производных классов определяют дополнительные свойства, например `Rectangle.Diagonal` и `Circle.Diameter`, которые уникальны для фигуры, представляемой этим классом.
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
-
-Следующий пример использует объекты, производные от `Shape`. Он создает массив объектов, производных от `Shape`, и вызывает статические методы для класса `Shape`, которые служат оболочкой для обращения к значениям свойств `Shape`. Обратите внимание, что среда выполнения извлекает значения переопределенных свойств для производных типов. Также в этом примере каждый объект `Shape` из созданного массива приводится к производному типу. Если это приведение выполняется успешно, выполняется обращение к свойствам, определенным для конкретного подкласса базового класса `Shape`. 
-
-[!code-csharp[Наследование](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
-
-## <a name="see-also"></a>См. также
-
-[Классы и объекты](../tour-of-csharp/classes-and-objects.md)   
-[Наследование (руководство по программированию на C#)](../programming-guide/classes-and-structs/inheritance.md)
+<span data-ttu-id="2a6ad-324">[Классы и объекты](../tour-of-csharp/classes-and-objects.md) </span><span class="sxs-lookup"><span data-stu-id="2a6ad-324">[Classes and objects](../tour-of-csharp/classes-and-objects.md) </span></span>  
+[<span data-ttu-id="2a6ad-325">Наследование (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="2a6ad-325">Inheritance (C# Programming Guide)</span></span>](../programming-guide/classes-and-structs/inheritance.md)

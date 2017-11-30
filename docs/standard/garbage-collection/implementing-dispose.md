@@ -1,168 +1,179 @@
 ---
-title: "Реализация метода Dispose | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/07/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Dispose - метод"
-  - "сборщик мусора, метод Dispose"
+title: "Реализация метода Dispose"
+ms.custom: 
+ms.date: 04/07/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Dispose method
+- garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: 44
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 44
+caps.latest.revision: "44"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Реализация метода Dispose
-Вы реализуете метод <xref:System.IDisposable.Dispose%2A> для выпуска неуправляемых ресурсов, которые используются вашим приложением. Сборщик мусора .NET Framework не выделяет и не выпускает неуправляемую память.  
+# <a name="implementing-a-dispose-method"></a><span data-ttu-id="d1cfb-102">Реализация метода Dispose</span><span class="sxs-lookup"><span data-stu-id="d1cfb-102">Implementing a Dispose method</span></span>
+
+<span data-ttu-id="d1cfb-103">Реализации <xref:System.IDisposable.Dispose%2A> метод для освобождения неуправляемых ресурсов, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-103">You implement a <xref:System.IDisposable.Dispose%2A> method to release unmanaged resources used by your application.</span></span> <span data-ttu-id="d1cfb-104">Сборщик мусора .NET не выделяет и не выпускает неуправляемую память.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-104">The .NET garbage collector does not allocate or release unmanaged memory.</span></span>  
   
- Шаблон удаления объекта, называют [шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md), упорядочивает жизненный цикл объекта. Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и канала, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти. Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.  
+<span data-ttu-id="d1cfb-105">Шаблон удаления объекта, называют [шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md), упорядочивает жизненный цикл объекта.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-105">The pattern for disposing an object, referred to as a [dispose pattern](../../../docs/standard/design-guidelines/dispose-pattern.md), imposes order on the lifetime of an object.</span></span> <span data-ttu-id="d1cfb-106">Шаблон удаления используется только для объектов, осуществляющих доступ к неуправляемым ресурсам, таких как дескрипторы файлов и канала, дескрипторы реестра, дескрипторы ожидания и указатели на блоки неуправляемой памяти.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-106">The dispose pattern is used only for objects that access unmanaged resources, such as file and pipe handles, registry handles, wait handles, or pointers to blocks of unmanaged memory.</span></span> <span data-ttu-id="d1cfb-107">Это вызвано тем, что сборщик мусора очень эффективно удаляет неиспользуемые управляемые объекты, но не может удалить неуправляемые объекты.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-107">This is because the garbage collector is very efficient at reclaiming unused managed objects, but it is unable to reclaim unmanaged objects.</span></span>  
   
- Существует два варианта шаблона удаления:  
+<span data-ttu-id="d1cfb-108">Существует два варианта шаблона удаления:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-108">The dispose pattern has two variations:</span></span>  
   
--   Заключение в оболочку каждого неуправляемого ресурса, используемого типом в безопасном дескрипторе (то есть в классе, производном от <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName>). В этом случае необходимо реализовать интерфейс <xref:System.IDisposable> и дополнительный метод `Dispose(Boolean)`. Это рекомендуемый вариант, не требующий переопределения метода <xref:System.Object.Finalize%2A?displayProperty=fullName>.  
+* <span data-ttu-id="d1cfb-109">Заключение в оболочку каждого неуправляемого ресурса, используемого типом в безопасном дескрипторе (то есть в классе, производном от <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="d1cfb-109">You wrap each unmanaged resource that a type uses in a safe handle (that is, in a class derived from <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>).</span></span> <span data-ttu-id="d1cfb-110">В этом случае необходимо реализовать интерфейс <xref:System.IDisposable> и дополнительный метод `Dispose(Boolean)`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-110">In this case, you implement the <xref:System.IDisposable> interface and an additional `Dispose(Boolean)` method.</span></span> <span data-ttu-id="d1cfb-111">Это рекомендуемый вариант, не требующий переопределения метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-111">This is the recommended variation and doesn't require overriding the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> method.</span></span>  
   
-    > [!NOTE]
-    >  Пространство имен The <xref:Microsoft.Win32.SafeHandles?displayProperty=fullName> содержит набор классов, производный от <xref:System.Runtime.InteropServices.SafeHandle>; эти классы перечислены в разделе [Использование безопасных дескрипторов](#SafeHandles). Если не удается найти класс, способный освободить неуправляемый ресурс, можно реализовать собственный подкласс <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > [!NOTE]
+  > <span data-ttu-id="d1cfb-112"><xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Пространство имен предоставляет набор классов, производных от <xref:System.Runtime.InteropServices.SafeHandle>, перечислены в [использование безопасных дескрипторов](#SafeHandles) раздела.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-112">The <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> namespace provides a set of classes derived from <xref:System.Runtime.InteropServices.SafeHandle>, which are listed in the [Using safe handles](#SafeHandles) section.</span></span> <span data-ttu-id="d1cfb-113">Если не удается найти класс, способный освободить неуправляемый ресурс, можно реализовать собственный подкласс <xref:System.Runtime.InteropServices.SafeHandle>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-113">If you can't find a class that is suitable for releasing your unmanaged resource, you can implement your own subclass of <xref:System.Runtime.InteropServices.SafeHandle>.</span></span>  
   
--   Необходимо реализовать <xref:System.IDisposable> интерфейс и дополнительный `Dispose(Boolean)` метода, а также переопределение <xref:System.Object.Finalize%2A?displayProperty=fullName> метод. Необходимо переопределить метод <xref:System.Object.Finalize%2A>, чтобы убедиться, что неуправляемые ресурсы удаляются, если реализация <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> не вызывается объектом-получателем типа. При использовании рекомендуемого метода, описанного в предыдущем пункте, класс <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName> делает это от вашего имени.  
+* <span data-ttu-id="d1cfb-114">Реализация интерфейса <xref:System.IDisposable> и дополнительного метода `Dispose(Boolean)`, а также переопределение метода <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-114">You implement the <xref:System.IDisposable> interface and an additional `Dispose(Boolean)` method, and you also override the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d1cfb-115">Необходимо переопределить метод <xref:System.Object.Finalize%2A>, чтобы убедиться, что неуправляемые ресурсы удаляются, если реализация <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> не вызывается объектом-получателем типа.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-115">You must override <xref:System.Object.Finalize%2A> to ensure that unmanaged resources are disposed of if your <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementation is not called by a consumer of your type.</span></span> <span data-ttu-id="d1cfb-116">При использовании рекомендуемого метода, описанного в предыдущем пункте, класс <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> делает это от вашего имени.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-116">If you use the recommended technique discussed in the previous bullet, the <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> class does this on your behalf.</span></span>  
   
- Чтобы обеспечить соответствующую очистку ресурсов, метод <xref:System.IDisposable.Dispose%2A> должен быть доступен для многократного вызова без выдачи исключения.  
+<span data-ttu-id="d1cfb-117">Чтобы обеспечить соответствующую очистку ресурсов, метод <xref:System.IDisposable.Dispose%2A> должен быть доступен для многократного вызова без выдачи исключения.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-117">To help ensure that resources are always cleaned up appropriately, a <xref:System.IDisposable.Dispose%2A> method should be callable multiple times without throwing an exception.</span></span>  
+  
+<span data-ttu-id="d1cfb-118">В приведенном для метода <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> примере показано, как чрезмерно активная сборка мусора может привести к выполнению финализатора до завершения выполнения утилизируемого объекта.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-118">The code example provided for the <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> method shows how aggressive garbage collection can cause a finalizer to run while a member of the reclaimed object is still executing.</span></span> <span data-ttu-id="d1cfb-119">Рекомендуется вызывать метод <xref:System.GC.KeepAlive%2A> в конце большого метода <xref:System.IDisposable.Dispose%2A>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-119">It is a good idea to call the <xref:System.GC.KeepAlive%2A> method at the end of a lengthy <xref:System.IDisposable.Dispose%2A> method.</span></span>  
+  
+<a name="Dispose2"></a>
+## <a name="dispose-and-disposeboolean"></a><span data-ttu-id="d1cfb-120">Dispose() и Dispose(Boolean)</span><span class="sxs-lookup"><span data-stu-id="d1cfb-120">Dispose() and Dispose(Boolean)</span></span>  
+
+<span data-ttu-id="d1cfb-121">Интерфейс <xref:System.IDisposable> требует реализации одного метода <xref:System.IDisposable.Dispose%2A> без параметров.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-121">The <xref:System.IDisposable> interface requires the implementation of a single parameterless method, <xref:System.IDisposable.Dispose%2A>.</span></span> <span data-ttu-id="d1cfb-122">Однако шаблон удаления требует реализации двух методов `Dispose`:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-122">However, the dispose pattern requires two `Dispose` methods to be implemented:</span></span>  
+  
+* <span data-ttu-id="d1cfb-123">Реализация открытого невиртуального (в Visual Basic — `NonInheritable`) метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> без параметров.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-123">A public non-virtual (`NonInheritable` in Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementation that has no parameters.</span></span>  
+  
+* <span data-ttu-id="d1cfb-124">Защищенный виртуальный (в Visual Basic — `Overridable`) метод `Dispose` со следующей подписью:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-124">A protected virtual (`Overridable` in Visual Basic) `Dispose` method whose signature is:</span></span>  
+  
+  [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
+  [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
+  
+### <a name="the-dispose-overload"></a><span data-ttu-id="d1cfb-125">Перегрузка Dispose()</span><span class="sxs-lookup"><span data-stu-id="d1cfb-125">The Dispose() overload</span></span>
+
+<span data-ttu-id="d1cfb-126">Поскольку открытый невиртуальный (`NonInheritable` в Visual Basic) метод `Dispose` без параметров вызывается объектом-получателем типа, его назначение состоит в том, чтобы освободить неуправляемые ресурсы и указать, что метод завершения, если он задан, не должен выполняться.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-126">Because the public, non-virtual (`NonInheritable` in Visual Basic), parameterless `Dispose` method is called by a consumer of the type, its purpose is to free unmanaged resources and to indicate that the finalizer, if one is present, doesn't have to run.</span></span> <span data-ttu-id="d1cfb-127">Он имеет стандартную реализацию:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-127">Because of this, it has a standard implementation:</span></span>  
+  
+[!code-csharp[Conceptual.Disposable#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#7)]
+[!code-vb[Conceptual.Disposable#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#7)]  
+  
+<span data-ttu-id="d1cfb-128">Метод `Dispose` полностью выполняет очистку объектов, поэтому сборщику мусора не требуется вызывать переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-128">The `Dispose` method performs all object cleanup, so the garbage collector no longer needs to call the objects' <xref:System.Object.Finalize%2A?displayProperty=nameWithType> override.</span></span> <span data-ttu-id="d1cfb-129">Таким образом, вызов метода <xref:System.GC.SuppressFinalize%2A> не позволит сборщику мусора запустить метод завершения.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-129">Therefore, the call to the <xref:System.GC.SuppressFinalize%2A> method prevents the garbage collector from running the finalizer.</span></span> <span data-ttu-id="d1cfb-130">Если тип не имеет метода завершения, вызов метода <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> не имеет силы.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-130">If the type has no finalizer, the call to <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> has no effect.</span></span> <span data-ttu-id="d1cfb-131">Обратите внимание, что фактическая работа по освобождению неуправляемых ресурсов выполняется вторым перегруженным методом `Dispose`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-131">Note that the actual work of releasing unmanaged resources is performed by the second overload of the `Dispose` method.</span></span>  
+  
+### <a name="the-disposeboolean-overload"></a><span data-ttu-id="d1cfb-132">Перегрузка Dispose(Boolean)</span><span class="sxs-lookup"><span data-stu-id="d1cfb-132">The Dispose(Boolean) overload</span></span>
+
+<span data-ttu-id="d1cfb-133">Во второй перегрузке *disposing* параметр <xref:System.Boolean> , указывающее, является ли метод вызывается из <xref:System.IDisposable.Dispose%2A> метода (его значением является `true`) или из метода завершения (его значение равно `false`).</span><span class="sxs-lookup"><span data-stu-id="d1cfb-133">In the second overload, the *disposing* parameter is a <xref:System.Boolean> that indicates whether the method call comes from a <xref:System.IDisposable.Dispose%2A> method (its value is `true`) or from a finalizer (its value is `false`).</span></span>  
+  
+<span data-ttu-id="d1cfb-134">Тело метода состоит из двух блоков кода:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-134">The body of the method consists of two blocks of code:</span></span>  
+  
+* <span data-ttu-id="d1cfb-135">Блок, который освобождает неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-135">A block that frees unmanaged resources.</span></span> <span data-ttu-id="d1cfb-136">Этот блок выполняется вне зависимости от значения параметра `disposing`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-136">This block executes regardless of the value of the `disposing` parameter.</span></span>  
+  
+* <span data-ttu-id="d1cfb-137">Условный блок, который освобождает управляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-137">A conditional block that frees managed resources.</span></span> <span data-ttu-id="d1cfb-138">Этот блок выполняется, если параметр `disposing` имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-138">This block executes if the value of `disposing` is `true`.</span></span> <span data-ttu-id="d1cfb-139">К управляемым ресурсам, которые он освобождает, могут относиться:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-139">The managed resources that it frees can include:</span></span>  
+  
+  <span data-ttu-id="d1cfb-140">**Управляемые объекты, реализующие <xref:System.IDisposable>.**</span><span class="sxs-lookup"><span data-stu-id="d1cfb-140">**Managed objects that implement <xref:System.IDisposable>.**</span></span> <span data-ttu-id="d1cfb-141">Условный блок может использоваться для вызова реализации <xref:System.IDisposable.Dispose%2A>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-141">The conditional block can be used to call their <xref:System.IDisposable.Dispose%2A> implementation.</span></span> <span data-ttu-id="d1cfb-142">При использовании безопасного дескриптора в качестве оболочки для неуправляемого ресурса необходимо вызвать реализацию <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-142">If you have used a safe handle to wrap your unmanaged resource, you should call the <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> implementation here.</span></span>  
+  
+  <span data-ttu-id="d1cfb-143">**Управляемые объекты, которые используют большие объемы памяти или дефицитные ресурсы**.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-143">**Managed objects that consume large amounts of memory or consume scarce resources.**</span></span> <span data-ttu-id="d1cfb-144">При использовании метода `Dispose` эти объекты освобождаются быстрее, чем при недетерминированной очистке сборщиком мусора.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-144">Freeing these objects explicitly in the `Dispose` method releases them faster than if they were reclaimed non-deterministically by the garbage collector.</span></span>  
+  
+<span data-ttu-id="d1cfb-145">Если метод вызывается из метода завершения (т. е. если свойство *disposing* имеет значение `false`), выполняется только тот код, который освобождает неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-145">If the method call comes from a finalizer (that is, if *disposing* is `false`), only the code that frees unmanaged resources executes.</span></span> <span data-ttu-id="d1cfb-146">Поскольку порядок уничтожения управляемых объектов сборщиком мусора во время завершения не определен, вызов этой перегрузки `Dispose` со значением `false` предотвращает попытки метода завершения освободить управляемые ресурсы, которые уже могли быть освобождены.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-146">Because the order in which the garbage collector destroys managed objects during finalization is not defined, calling this `Dispose` overload with a value of `false` prevents the finalizer from trying to release managed resources that may have already been reclaimed.</span></span>  
+  
+## <a name="implementing-the-dispose-pattern-for-a-base-class"></a><span data-ttu-id="d1cfb-147">Реализация шаблона удаления для базового класса</span><span class="sxs-lookup"><span data-stu-id="d1cfb-147">Implementing the dispose pattern for a base class</span></span>
+
+<span data-ttu-id="d1cfb-148">При реализации шаблона удаления для базового класса необходимо следующее:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-148">If you implement the dispose pattern for a base class, you must provide the following:</span></span>  
   
 > [!IMPORTANT]
->  Если вы программируете на C++, не реализуют <xref:System.IDisposable.Dispose%2A> метод. Вместо этого следуйте инструкциям в разделе «Деструкторы и методы завершения» [Практическое руководство: определение и использование классов и структур (C + +/ CLI)](../Topic/How%20to:%20Define%20and%20Consume%20Classes%20and%20Structs%20\(C++-CLI\).md). Начиная с .NET Framework 2.0 компилятор C++ поддерживает детерминированную утилизацию ресурсов и не позволяет реализовать <xref:System.IDisposable.Dispose%2A> метод.  
+> <span data-ttu-id="d1cfb-149">Вам следует реализовать этот шаблон для всех базовых классов, которые реализуют <xref:System.IDisposable.Dispose> и не являются `sealed` (`NotInheritable` в Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="d1cfb-149">You should implement this pattern for all base classes that implement <xref:System.IDisposable.Dispose> and are not `sealed` (`NotInheritable` in Visual Basic).</span></span>  
   
- В приведенном для метода <xref:System.GC.KeepAlive%2A?displayProperty=fullName> примере показано, как чрезмерно активная сборка мусора может привести к выполнению финализатора до завершения выполнения утилизируемого объекта. Рекомендуется вызывать <xref:System.GC.KeepAlive%2A> метод в конце большого <xref:System.IDisposable.Dispose%2A> метод.  
+* <span data-ttu-id="d1cfb-150">Реализация <xref:System.IDisposable.Dispose%2A>, которая вызывает метод `Dispose(Boolean)`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-150">A <xref:System.IDisposable.Dispose%2A> implementation that calls the `Dispose(Boolean)` method.</span></span>  
   
-<a name="Dispose2"></a>   
-## <a name="dispose-and-disposeboolean"></a>Dispose() и Dispose(Boolean)  
- Интерфейс <xref:System.IDisposable> требует реализации одного метода <xref:System.IDisposable.Dispose%2A> без параметров. Однако шаблон удаления требует реализации двух методов `Dispose`:  
+* <span data-ttu-id="d1cfb-151">Метод `Dispose(Boolean)`, который выполняет фактическую работу по освобождению ресурсов.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-151">A `Dispose(Boolean)` method that performs the actual work of releasing resources.</span></span>  
   
--   Реализация открытого невиртуального (в Visual Basic — `NonInheritable`) метода <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> без параметров.  
+* <span data-ttu-id="d1cfb-152">Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-152">Either a class derived from <xref:System.Runtime.InteropServices.SafeHandle> that wraps your unmanaged resource (recommended), or an override to the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d1cfb-153">Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-153">The <xref:System.Runtime.InteropServices.SafeHandle> class provides a finalizer that frees you from having to code one.</span></span>  
   
--   Защищенный виртуальный (в Visual Basic — `Overridable`) метод `Dispose` со следующей подписью:  
+<span data-ttu-id="d1cfb-154">Вот общий шаблон реализации шаблона удаления для базового класса, который использует безопасный дескриптор.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-154">Here's the general pattern for implementing the dispose pattern for a base class that uses a safe handle.</span></span>  
   
-     [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
-     [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
-  
-### <a name="the-dispose-overload"></a>Перегрузка Dispose()  
- Поскольку открытый невиртуальный (`NonInheritable` в Visual Basic) метод `Dispose` без параметров вызывается объектом-получателем типа, его назначение состоит в том, чтобы освободить неуправляемые ресурсы и указать, что метод завершения, если он задан, не должен выполняться. Он имеет стандартную реализацию:  
-  
- [!code-csharp[Conceptual.Disposable#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#7)]
- [!code-vb[Conceptual.Disposable#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#7)]  
-  
- Метод `Dispose` полностью выполняет очистку объектов, поэтому сборщику мусора не требуется вызывать переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=fullName> объекта. Следовательно, вызов <xref:System.GC.SuppressFinalize%2A> метод не позволяет сборщику мусора запустить метод завершения. Если тип не имеет метода завершения, вызов <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> не влияет. Обратите внимание, что фактическая работа по освобождению неуправляемых ресурсов выполняется вторым перегруженным методом `Dispose`.  
-  
-### <a name="the-disposeboolean-overload"></a>Перегрузка Dispose(Boolean)  
- Во второй перегрузке `disposing` параметр <xref:System.Boolean> , указывающее, является ли метод вызывается из <xref:System.IDisposable.Dispose%2A> метод (его значение равно `true`) или из метода завершения (значение `false`).  
-  
- Тело метода состоит из двух блоков кода:  
-  
--   Блок, который освобождает неуправляемые ресурсы. Этот блок выполняется вне зависимости от значения параметра `disposing`.  
-  
--   Условный блок, который освобождает управляемые ресурсы. Этот блок выполняется, если параметр `disposing` имеет значение `true`. К управляемым ресурсам, которые он освобождает, могут относиться:  
-  
-     **Управляемые объекты, реализующие <xref:System.IDisposable>.**  
-     Условный блок может использоваться для вызова реализации <xref:System.IDisposable.Dispose%2A>. При использовании безопасного дескриптора в качестве оболочки для неуправляемого ресурса необходимо вызвать <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=fullName> реализацию.  
-  
-     **Управляемые объекты, которые используют большие объемы памяти или дефицитные ресурсы**.  
-     При использовании метода `Dispose` эти объекты освобождаются быстрее, чем при недетерминированной очистке сборщиком мусора.  
-  
- Если метод вызывается из метода завершения (т. е. если свойство `disposing` имеет значение `false`), выполняется только тот код, который освобождает неуправляемые ресурсы. Поскольку порядок уничтожения управляемых объектов сборщиком мусора во время завершения не определен, вызов этой перегрузки `Dispose` со значением `false` предотвращает попытки метода завершения освободить управляемые ресурсы, которые уже могли быть освобождены.  
-  
-## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Реализация шаблона удаления для базового класса  
- При реализации шаблона удаления для базового класса необходимо следующее:  
-  
-> [!IMPORTANT]
->  Следует реализовать этот шаблон для всех базовых классов, реализующих <xref:System.IDisposable> и не `sealed` (`NotInheritable` в Visual Basic).  
-  
--   Реализация <xref:System.IDisposable.Dispose%2A>, которая вызывает метод `Dispose(Boolean)`.  
-  
--   Метод `Dispose(Boolean)`, который выполняет фактическую работу по освобождению ресурсов.  
-  
--   Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=fullName>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную.  
-  
- Вот общий шаблон реализации шаблона удаления для базового класса, который использует безопасный дескриптор.  
-  
- [!code-csharp[System.IDisposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base1.cs#3)]
- [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
+[!code-csharp[System.IDisposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base1.cs#3)]
+[!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
->  В предыдущем примере используется объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для иллюстрации шаблона. Вместо него может использоваться любой объект, производный от <xref:System.Runtime.InteropServices.SafeHandle>. Обратите внимание, что в этом примере неправильно создаются экземпляры объекта <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
+> <span data-ttu-id="d1cfb-155">В предыдущем примере используется объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для иллюстрации шаблона. Вместо него может использоваться любой объект, производный от <xref:System.Runtime.InteropServices.SafeHandle>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-155">The previous example uses a <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> object to illustrate the pattern; any object derived from <xref:System.Runtime.InteropServices.SafeHandle> could be used instead.</span></span> <span data-ttu-id="d1cfb-156">Обратите внимание, что в этом примере неправильно создаются экземпляры объекта <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-156">Note that the example does not properly instantiate its <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> object.</span></span>  
   
- Вот общий шаблон реализации шаблона удаления для базового класса, который переопределяет метод <xref:System.Object.Finalize%2A?displayProperty=fullName>.  
+<span data-ttu-id="d1cfb-157">Вот общий шаблон реализации шаблона удаления для базового класса, который переопределяет метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-157">Here's the general pattern for implementing the dispose pattern for a base class that overrides <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span></span>  
   
- [!code-csharp[System.IDisposable#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
- [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
-  
-> [!NOTE]
->  Переопределение в C# <xref:System.Object.Finalize%2A?displayProperty=fullName> , определив [деструктор](../Topic/Destructors%20\(C%23%20Programming%20Guide\).md).  
-  
-## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Реализация шаблона удаления для производного класса  
- Класс, производный от класса, реализующего интерфейс <xref:System.IDisposable>, не должен реализовывать интерфейс <xref:System.IDisposable>, поскольку реализация метода <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> базового класса наследуется производными классами. Вместо этого, чтобы реализовать шаблон удаления для базового класса, необходимо следующее:  
-  
--   Метод `protected``Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса. Этот метод должен также вызывать метод `Dispose(Boolean)` базового класса и передавать в него значение `true` для аргумента `disposing`.  
-  
--   Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=fullName>. Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную. Если есть метод завершения, он должен вызывать перегруженный метод `Dispose(Boolean)`, указывая при этом аргумент `disposing` со значением `false`.  
-  
- Вот общий шаблон реализации шаблона удаления для производного класса, который использует безопасный дескриптор:  
-  
- [!code-csharp[System.IDisposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived1.cs#4)]
- [!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
+[!code-csharp[System.IDisposable#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/base2.cs#5)]
+[!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
->  В предыдущем примере используется объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для иллюстрации шаблона. Вместо него может использоваться любой объект, производный от <xref:System.Runtime.InteropServices.SafeHandle>. Обратите внимание, что в этом примере неправильно создаются экземпляры объекта <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
+> <span data-ttu-id="d1cfb-158">В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> путем определения [деструктор](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).</span><span class="sxs-lookup"><span data-stu-id="d1cfb-158">In C#, you override <xref:System.Object.Finalize%2A?displayProperty=nameWithType> by defining a [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).</span></span>  
   
- Вот общий шаблон реализации шаблона удаления для производного класса, который переопределяет метод <xref:System.Object.Finalize%2A?displayProperty=fullName>:  
+## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a><span data-ttu-id="d1cfb-159">Реализация шаблона удаления для производного класса</span><span class="sxs-lookup"><span data-stu-id="d1cfb-159">Implementing the dispose pattern for a derived class</span></span>
+
+<span data-ttu-id="d1cfb-160">Класс, производный от класса, реализующего интерфейс <xref:System.IDisposable>, не должен реализовывать интерфейс <xref:System.IDisposable>, поскольку реализация метода <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> базового класса наследуется производными классами.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-160">A class derived from a class that implements the <xref:System.IDisposable> interface shouldn't implement <xref:System.IDisposable>, because the base class implementation of <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> is inherited by its derived classes.</span></span> <span data-ttu-id="d1cfb-161">Вместо этого, чтобы реализовать шаблон удаления для базового класса, необходимо следующее:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-161">Instead, to implement the dispose pattern for a derived class, you provide the following:</span></span>  
   
- [!code-csharp[System.IDisposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived2.cs#6)]
- [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
+* <span data-ttu-id="d1cfb-162">Метод `protected``Dispose(Boolean)`, который переопределяет метод базового класса и выполняет фактическую работу по освобождению ресурсов производного класса.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-162">A `protected``Dispose(Boolean)` method that overrides the base class method and performs the actual work of releasing the resources of the derived class.</span></span> <span data-ttu-id="d1cfb-163">Этот метод должен также вызывать метод `Dispose(Boolean)` базового класса и передавать в него значение `true` для аргумента *disposing*.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-163">This method should also call the `Dispose(Boolean)` method of the base class and pass it a value of `true` for the *disposing* argument.</span></span>  
+  
+* <span data-ttu-id="d1cfb-164">Любой класс, производный от класса <xref:System.Runtime.InteropServices.SafeHandle>, который создает оболочку для неуправляемого ресурс (рекомендуется), или переопределенный метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-164">Either a class derived from <xref:System.Runtime.InteropServices.SafeHandle> that wraps your unmanaged resource (recommended), or an override to the <xref:System.Object.Finalize%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d1cfb-165">Класс <xref:System.Runtime.InteropServices.SafeHandle> содержит метод завершения, что освобождает разработчика от необходимости создавать его вручную.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-165">The <xref:System.Runtime.InteropServices.SafeHandle> class provides a finalizer that frees you from having to code one.</span></span> <span data-ttu-id="d1cfb-166">Если есть метод завершения, он должен вызывать перегруженный метод `Dispose(Boolean)`, указывая при этом аргумент *disposing* со значением `false`.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-166">If you do provide a finalizer, it should call the `Dispose(Boolean)` overload with a *disposing* argument of `false`.</span></span>  
+  
+<span data-ttu-id="d1cfb-167">Вот общий шаблон реализации шаблона удаления для производного класса, который использует безопасный дескриптор:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-167">Here's the general pattern for implementing the dispose pattern for a derived class that uses a safe handle:</span></span>  
+  
+[!code-csharp[System.IDisposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived1.cs#4)]
+[!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
   
 > [!NOTE]
->  Переопределение в C# <xref:System.Object.Finalize%2A?displayProperty=fullName> , определив [деструктор](../Topic/Destructors%20\(C%23%20Programming%20Guide\).md).  
+> <span data-ttu-id="d1cfb-168">В предыдущем примере используется объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для иллюстрации шаблона. Вместо него может использоваться любой объект, производный от <xref:System.Runtime.InteropServices.SafeHandle>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-168">The previous example uses a <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> object to illustrate the pattern; any object derived from <xref:System.Runtime.InteropServices.SafeHandle> could be used instead.</span></span> <span data-ttu-id="d1cfb-169">Обратите внимание, что в этом примере неправильно создаются экземпляры объекта <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-169">Note that the example does not properly instantiate its <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> object.</span></span>  
+  
+<span data-ttu-id="d1cfb-170">Вот общий шаблон реализации шаблона удаления для производного класса, который переопределяет метод <xref:System.Object.Finalize%2A?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-170">Here's the general pattern for implementing the dispose pattern for a derived class that overrides <xref:System.Object.Finalize%2A?displayProperty=nameWithType>:</span></span>  
+  
+[!code-csharp[System.IDisposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.idisposable/cs/derived2.cs#6)]
+[!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
+  
+> [!NOTE]
+> <span data-ttu-id="d1cfb-171">В C# переопределение <xref:System.Object.Finalize%2A?displayProperty=nameWithType> путем определения [деструктор](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).</span><span class="sxs-lookup"><span data-stu-id="d1cfb-171">In C#, you override <xref:System.Object.Finalize%2A?displayProperty=nameWithType> by defining a [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).</span></span>  
   
 <a name="SafeHandles"></a>   
-## <a name="using-safe-handles"></a>Использование безопасных дескрипторов  
- Написание кода для метода завершения объекта является сложной задачей, которая может вызвать проблемы при неправильном выполнении. Поэтому вместо реализации метода завершения рекомендуется создавать объекты <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName>.  
+## <a name="using-safe-handles"></a><span data-ttu-id="d1cfb-172">Использование безопасных дескрипторов</span><span class="sxs-lookup"><span data-stu-id="d1cfb-172">Using safe handles</span></span>
+
+<span data-ttu-id="d1cfb-173">Написание кода для метода завершения объекта является сложной задачей, которая может вызвать проблемы при неправильном выполнении.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-173">Writing code for an object's finalizer is a complex task that can cause problems if not done correctly.</span></span> <span data-ttu-id="d1cfb-174">Поэтому вместо реализации метода завершения рекомендуется создавать объекты <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-174">Therefore, we recommend that you construct <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> objects instead of implementing a finalizer.</span></span>  
   
- Классы, производные от класса <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName>, упрощают проблемы времени существования объекта путем назначения и освобождения дескрипторов без прерываний. Они содержат критический метод завершения, который обязательно выполняется во время выгрузки домена приложения. Дополнительные сведения о преимуществах использования безопасного дескриптора см. в разделе <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName>. Безопасные дескрипторы предоставляются следующими производными классами в пространстве имен <xref:Microsoft.Win32.SafeHandles>:  
+<span data-ttu-id="d1cfb-175">Классы, производные от класса <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>, упрощают проблемы времени существования объекта путем назначения и освобождения дескрипторов без прерываний.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-175">Classes derived from the <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> class simplify object lifetime issues by assigning and releasing handles without interruption.</span></span> <span data-ttu-id="d1cfb-176">Они содержат критический метод завершения, который обязательно выполняется во время выгрузки домена приложения.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-176">They contain a critical finalizer that is guaranteed to run while an application domain is unloading.</span></span> <span data-ttu-id="d1cfb-177">Дополнительные сведения о преимуществах использования безопасного дескриптора см. в разделе <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-177">For more information about the advantages of using a safe handle, see <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>.</span></span> <span data-ttu-id="d1cfb-178">Безопасные дескрипторы предоставляются следующими производными классами в пространстве имен <xref:Microsoft.Win32.SafeHandles>:</span><span class="sxs-lookup"><span data-stu-id="d1cfb-178">The following derived classes in the <xref:Microsoft.Win32.SafeHandles> namespace provide safe handles:</span></span>  
   
--   Классы <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> и <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> для файлов, сопоставленных в памяти файлов и каналов.  
+* <span data-ttu-id="d1cfb-179">Классы <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> и <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> — для файлов, файлов сопоставления памяти и каналов.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-179">The <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>, and <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> class, for files, memory mapped files, and pipes.</span></span>  
   
--   Класс <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> для представлений памяти.  
+* <span data-ttu-id="d1cfb-180">Класс <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> — для представлений памяти.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-180">The <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> class, for memory views.</span></span>  
   
--   Классы <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> и <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> для конструкций шифрования.  
+* <span data-ttu-id="d1cfb-181">Классы <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> и <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> — для конструкций шифрования.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-181">The <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle>, and <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> classes, for cryptography constructs.</span></span>  
   
--   Класс <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> для разделов реестра.  
+* <span data-ttu-id="d1cfb-182">Класс <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> — для разделов реестра.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-182">The <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> class, for registry keys.</span></span>  
   
--   Класс <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> для дескрипторов ожидания.  
+* <span data-ttu-id="d1cfb-183">Класс <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> — для дескрипторов ожидания.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-183">The <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> class, for wait handles.</span></span>  
   
 <a name="base"></a>   
-## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Использование безопасного дескриптора для реализации шаблона удаления для базового класса  
- В следующем примере показан шаблон удаления для базового класса `DisposableStreamResource`, который использует безопасный дескриптор для инкапсуляции неуправляемых ресурсов. Он определяет класс `DisposableResource`, который использует <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра объекта <xref:System.IO.Stream>, который представляет открытый файл. Метод `DisposableResource` также включает свойство `Size`, которое возвращает общее количество байтов в файловом потоке.  
+## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a><span data-ttu-id="d1cfb-184">Использование безопасного дескриптора для реализации шаблона удаления для базового класса</span><span class="sxs-lookup"><span data-stu-id="d1cfb-184">Using a safe handle to implement the dispose pattern for a base class</span></span>
+
+<span data-ttu-id="d1cfb-185">В следующем примере показан шаблон удаления для базового класса `DisposableStreamResource`, который использует безопасный дескриптор для инкапсуляции неуправляемых ресурсов.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-185">The following example illustrates the dispose pattern for a base class, `DisposableStreamResource`, that uses a safe handle to encapsulate unmanaged resources.</span></span> <span data-ttu-id="d1cfb-186">Он определяет класс `DisposableResource`, который использует <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра объекта <xref:System.IO.Stream>, который представляет открытый файл.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-186">It defines a `DisposableResource` class that uses a <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> to wrap a <xref:System.IO.Stream> object that represents an open file.</span></span> <span data-ttu-id="d1cfb-187">Метод `DisposableResource` также включает свойство `Size`, которое возвращает общее количество байтов в файловом потоке.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-187">The `DisposableResource` method also includes a single property, `Size`, that returns the total number of bytes in the file stream.</span></span>  
   
- [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
- [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
+[!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
+[!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
 <a name="derived"></a>   
-## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Использование безопасного дескриптора для реализации шаблона удаления для производного класса  
- В следующем примере показан шаблон удаления для производного класса `DisposableStreamResource2`, унаследованного от класса `DisposableStreamResource`, представленного в предыдущем примере. Класс добавляет дополнительный метод `WriteFileInfo` и использует объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра дескриптора записываемого файла.  
+## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a><span data-ttu-id="d1cfb-188">Использование безопасного дескриптора для реализации шаблона удаления для производного класса</span><span class="sxs-lookup"><span data-stu-id="d1cfb-188">Using a safe handle to implement the dispose pattern for a derived class</span></span>
+
+<span data-ttu-id="d1cfb-189">В следующем примере показан шаблон удаления для производного класса `DisposableStreamResource2`, унаследованного от класса `DisposableStreamResource`, представленного в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-189">The following example illustrates the dispose pattern for a derived class, `DisposableStreamResource2`, that inherits from the `DisposableStreamResource` class presented in the previous example.</span></span> <span data-ttu-id="d1cfb-190">Класс добавляет дополнительный метод `WriteFileInfo` и использует объект <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> для создания экземпляра дескриптора записываемого файла.</span><span class="sxs-lookup"><span data-stu-id="d1cfb-190">The class adds an additional method, `WriteFileInfo`, and uses a <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> object to wrap the handle of the writable file.</span></span>  
   
- [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
- [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
+[!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
+[!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.GC.SuppressFinalize%2A>   
- <xref:System.IDisposable>   
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>   
- <xref:Microsoft.Win32.SafeHandles>   
- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=fullName>   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>   
- [Практическое руководство: определение и использование классов и структур (C + +/ CLI)](../Topic/How%20to:%20Define%20and%20Consume%20Classes%20and%20Structs%20\(C++-CLI\).md)   
- [Шаблон удаления](../../../docs/standard/design-guidelines/dispose-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="d1cfb-191">См. также</span><span class="sxs-lookup"><span data-stu-id="d1cfb-191">See also</span></span>
+
+<span data-ttu-id="d1cfb-192"><xref:System.GC.SuppressFinalize%2A></span><span class="sxs-lookup"><span data-stu-id="d1cfb-192"><xref:System.GC.SuppressFinalize%2A></span></span>   
+<span data-ttu-id="d1cfb-193"><xref:System.IDisposable></span><span class="sxs-lookup"><span data-stu-id="d1cfb-193"><xref:System.IDisposable></span></span>   
+<span data-ttu-id="d1cfb-194"><xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d1cfb-194"><xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType></span></span>   
+<span data-ttu-id="d1cfb-195"><xref:Microsoft.Win32.SafeHandles></span><span class="sxs-lookup"><span data-stu-id="d1cfb-195"><xref:Microsoft.Win32.SafeHandles></span></span>   
+<span data-ttu-id="d1cfb-196"><xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d1cfb-196"><xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType></span></span>   
+<span data-ttu-id="d1cfb-197"><xref:System.Object.Finalize%2A?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d1cfb-197"><xref:System.Object.Finalize%2A?displayProperty=nameWithType></span></span>   
+<span data-ttu-id="d1cfb-198">[Как: определение и использование классов и структур (C + +/ CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli) </span><span class="sxs-lookup"><span data-stu-id="d1cfb-198">[How to: Define and Consume Classes and Structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli) </span></span>  
+[<span data-ttu-id="d1cfb-199">Шаблон удаления</span><span class="sxs-lookup"><span data-stu-id="d1cfb-199">Dispose Pattern</span></span>](../../../docs/standard/design-guidelines/dispose-pattern.md)

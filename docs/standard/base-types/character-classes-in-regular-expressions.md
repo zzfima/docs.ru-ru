@@ -1,592 +1,603 @@
 ---
-title: "Классы знаков в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, классы знаков"
-  - "классы знаков"
-  - "знаки, синтаксис сопоставления"
-  - "регулярные выражения, классы знаков"
+title: "Классы знаков в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- character classes
+- regular expressions, character classes
+- characters, matching syntax
+- .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 58
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 52
+caps.latest.revision: "58"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Классы знаков в регулярных выражениях
-Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления.  Язык регулярных выражений в .NET Framework поддерживает следующие классы символов:  
+# <a name="character-classes-in-regular-expressions"></a><span data-ttu-id="29645-102">Классы знаков в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="29645-102">Character Classes in Regular Expressions</span></span>
+<span data-ttu-id="29645-103"><a name="Top"></a> Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="29645-103"><a name="Top"></a> A character class defines a set of characters, any one of which can occur in an input string for a match to succeed.</span></span> <span data-ttu-id="29645-104">Язык регулярных выражений в .NET поддерживает следующие классы символов:</span><span class="sxs-lookup"><span data-stu-id="29645-104">The regular expression language in .NET supports the following character classes:</span></span>  
   
--   Положительные группы символов.  Входная строка должна содержать символ из указанного набора.  Дополнительные сведения см. в разделе [Положительная группа символов](#PositiveGroup).  
+-   <span data-ttu-id="29645-105">Положительные группы символов.</span><span class="sxs-lookup"><span data-stu-id="29645-105">Positive character groups.</span></span> <span data-ttu-id="29645-106">Входная строка должна содержать символ из указанного набора.</span><span class="sxs-lookup"><span data-stu-id="29645-106">A character in the input string must match one of a specified set of characters.</span></span> <span data-ttu-id="29645-107">Дополнительные сведения см. в разделе [Положительная группа символов](#PositiveGroup).</span><span class="sxs-lookup"><span data-stu-id="29645-107">For more information, see [Positive Character Group](#PositiveGroup).</span></span>  
   
--   Отрицательные группы символов.  Входная строка не должна содержать символ из указанного набора.  Дополнительные сведения см. в разделе [Отрицательная группа символов](#NegativeGroup).  
+-   <span data-ttu-id="29645-108">Отрицательные группы символов.</span><span class="sxs-lookup"><span data-stu-id="29645-108">Negative character groups.</span></span> <span data-ttu-id="29645-109">Входная строка не должна содержать символ из указанного набора.</span><span class="sxs-lookup"><span data-stu-id="29645-109">A character in the input string must not match one of a specified set of characters.</span></span> <span data-ttu-id="29645-110">Дополнительные сведения см. в разделе [Отрицательная группа символов](#NegativeGroup).</span><span class="sxs-lookup"><span data-stu-id="29645-110">For more information, see [Negative Character Group](#NegativeGroup).</span></span>  
   
--   Любой символ.  Символ `.` \(точка\) в регулярных выражениях является подстановочным знаком, который соответствует всем символам, кроме `\n`.  Дополнительные сведения см. в разделе [Любой символ](#AnyCharacter).  
+-   <span data-ttu-id="29645-111">Любой символ.</span><span class="sxs-lookup"><span data-stu-id="29645-111">Any character.</span></span> <span data-ttu-id="29645-112">Символ `.` (точка) в регулярных выражениях является подстановочным знаком, который соответствует всем символам, кроме `\n`.</span><span class="sxs-lookup"><span data-stu-id="29645-112">The `.` (dot or period) character in a regular expression is a wildcard character that matches any character except `\n`.</span></span> <span data-ttu-id="29645-113">Дополнительные сведения см. в разделе [Любой символ](#AnyCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-113">For more information, see [Any Character](#AnyCharacter).</span></span>  
   
--   Общая категория Юникода или именованный блок.  Входная строка должна содержать символ из определенной категории Юникода или непрерывного диапазона символов Юникода.  Дополнительные сведения см. в разделе [Категория Юникода или блок Юникода](#CategoryOrBlock).  
+-   <span data-ttu-id="29645-114">Общая категория Юникода или именованный блок.</span><span class="sxs-lookup"><span data-stu-id="29645-114">A general Unicode category or named block.</span></span> <span data-ttu-id="29645-115">Входная строка должна содержать символ из определенной категории Юникода или непрерывного диапазона символов Юникода.</span><span class="sxs-lookup"><span data-stu-id="29645-115">A character in the input string must be a member of a particular Unicode category or must fall within a contiguous range of Unicode characters for a match to succeed.</span></span> <span data-ttu-id="29645-116">Дополнительные сведения см. в разделе [Категория Юникода или блок Юникода](#CategoryOrBlock).</span><span class="sxs-lookup"><span data-stu-id="29645-116">For more information, see [Unicode Category or Unicode Block](#CategoryOrBlock).</span></span>  
   
--   Отрицательная общая категория Юникода или именованный блок.  Входная строка не должна содержать символ из определенной категории Юникода или непрерывного диапазона символов Юникода.  Дополнительные сведения см. в разделе [Отрицательная категория Юникода или блок Юникода](#NegativeCategoryOrBlock).  
+-   <span data-ttu-id="29645-117">Отрицательная общая категория Юникода или именованный блок.</span><span class="sxs-lookup"><span data-stu-id="29645-117">A negative general Unicode category or named block.</span></span> <span data-ttu-id="29645-118">Входная строка не должна содержать символ из определенной категории Юникода или непрерывного диапазона символов Юникода.</span><span class="sxs-lookup"><span data-stu-id="29645-118">A character in the input string must not be a member of a particular Unicode category or must not fall within a contiguous range of Unicode characters for a match to succeed.</span></span> <span data-ttu-id="29645-119">Дополнительные сведения см. в разделе [Отрицательная категория Юникода или блок Юникода](#NegativeCategoryOrBlock).</span><span class="sxs-lookup"><span data-stu-id="29645-119">For more information, see [Negative Unicode Category or Unicode Block](#NegativeCategoryOrBlock).</span></span>  
   
--   Словообразующий символ.  Входная строка может содержать символ, относящийся к любой категории Юникода, соответствующей символам в словах.  Дополнительные сведения см. в разделе [Словообразующий символ](#WordCharacter).  
+-   <span data-ttu-id="29645-120">Словообразующий символ.</span><span class="sxs-lookup"><span data-stu-id="29645-120">A word character.</span></span> <span data-ttu-id="29645-121">Входная строка может содержать символ, относящийся к любой категории Юникода, соответствующей символам в словах.</span><span class="sxs-lookup"><span data-stu-id="29645-121">A character in the input string can belong to any of the Unicode categories that are appropriate for characters in words.</span></span> <span data-ttu-id="29645-122">Дополнительные сведения см. в разделе [Словообразующий символ](#WordCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-122">For more information, see [Word Character](#WordCharacter).</span></span>  
   
--   Несловообразующий символ.  Входная строка может содержать символ, относящийся к любой категории Юникода, не соответствующей словообразующим символам.  Дополнительные сведения см. в разделе [Несловообразующий символ](#NonWordCharacter).  
+-   <span data-ttu-id="29645-123">Несловообразующий символ.</span><span class="sxs-lookup"><span data-stu-id="29645-123">A non-word character.</span></span> <span data-ttu-id="29645-124">Входная строка может содержать символ, относящийся к любой категории Юникода, не соответствующей словообразующим символам.</span><span class="sxs-lookup"><span data-stu-id="29645-124">A character in the input string can belong to any Unicode category that is not a word character.</span></span> <span data-ttu-id="29645-125">Дополнительные сведения см. в разделе [Несловообразующий символ](#NonWordCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-125">For more information, see [Non-Word Character](#NonWordCharacter).</span></span>  
   
--   Символ пробела.  Входная строка может содержать любой разделитель Юникода, а также любой из множества управляющих символов.  Дополнительные сведения см. в разделе [Символ пробела](#WhitespaceCharacter).  
+-   <span data-ttu-id="29645-126">Символ пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-126">A white-space character.</span></span> <span data-ttu-id="29645-127">Входная строка может содержать любой разделитель Юникода, а также любой из множества управляющих символов.</span><span class="sxs-lookup"><span data-stu-id="29645-127">A character in the input string can be any Unicode separator character, as well as any one of a number of control characters.</span></span> <span data-ttu-id="29645-128">Дополнительные сведения см. в разделе [Символ пробела](#WhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-128">For more information, see [White-Space Character](#WhitespaceCharacter).</span></span>  
   
--   Символ, не являющийся пробелом.  Входная строка может содержать любой символ, кроме пробела.  Дополнительные сведения см. в разделе [Символ, не являющийся пробелом](#NonWhitespaceCharacter).  
+-   <span data-ttu-id="29645-129">Символ, не являющийся пробелом.</span><span class="sxs-lookup"><span data-stu-id="29645-129">A non-white-space character.</span></span> <span data-ttu-id="29645-130">Входная строка может содержать любой символ, кроме пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-130">A character in the input string can be any character that is not a white-space character.</span></span> <span data-ttu-id="29645-131">Дополнительные сведения см. в разделе [Символ, не являющийся пробелом](#NonWhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-131">For more information, see [Non-White-Space Character](#NonWhitespaceCharacter).</span></span>  
   
--   Десятичная цифра.  Входная строка может содержать любой набор знаков, классифицируемых как десятичные цифры Юникода.  Дополнительные сведения см. в разделе [Десятичная цифра](#DigitCharacter).  
+-   <span data-ttu-id="29645-132">Десятичная цифра.</span><span class="sxs-lookup"><span data-stu-id="29645-132">A decimal digit.</span></span> <span data-ttu-id="29645-133">Входная строка может содержать любой набор знаков, классифицируемых как десятичные цифры Юникода.</span><span class="sxs-lookup"><span data-stu-id="29645-133">A character in the input string can be any of a number of characters classified as Unicode decimal digits.</span></span> <span data-ttu-id="29645-134">Дополнительные сведения см. в разделе [Десятичная цифра](#DigitCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-134">For more information, see [Decimal Digit Character](#DigitCharacter).</span></span>  
   
--   Недесятичная цифра.  Входная строка может содержать любой символ, кроме десятичных цифр Юникода.  Дополнительные сведения см. в разделе [Десятичная цифра](#NonDigitCharacter).  
+-   <span data-ttu-id="29645-135">Недесятичная цифра.</span><span class="sxs-lookup"><span data-stu-id="29645-135">A non-decimal digit.</span></span> <span data-ttu-id="29645-136">Входная строка может содержать любой символ, кроме десятичных цифр Юникода.</span><span class="sxs-lookup"><span data-stu-id="29645-136">A character in the input string can be anything other than a Unicode decimal digit.</span></span> <span data-ttu-id="29645-137">Дополнительные сведения см. в разделе [Десятичная цифра](#NonDigitCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-137">For more information, see [Decimal Digit Character](#NonDigitCharacter).</span></span>  
   
- Платформа .NET Framework поддерживает выражения вычитания в классах знаков, которые позволяют в результате исключения одного класса знаков из другого класса знаков определить набор знаков.  Дополнительные сведения см. в разделе [Вычитание класса знаков](#CharacterClassSubtraction).  
+ <span data-ttu-id="29645-138">Платформа .NET поддерживает выражения вычитания в классах знаков, которые позволяют в результате исключения одного класса знаков из другого класса знаков определить набор знаков.</span><span class="sxs-lookup"><span data-stu-id="29645-138">.NET supports character class subtraction expressions, which enables you to define a set of characters as the result of excluding one character class from another character class.</span></span> <span data-ttu-id="29645-139">Дополнительные сведения см. в разделе [Вычитание класса знаков](#CharacterClassSubtraction).</span><span class="sxs-lookup"><span data-stu-id="29645-139">For more information, see [Character Class Subtraction](#CharacterClassSubtraction).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="29645-140">Классы, соответствующие символы, категории, такие как символов [\w](#WordCharacter) для сопоставления символов слова или [\p {}](#CategoryOrBlock) для сопоставления категории Юникода, полагаться на <xref:System.Globalization.CharUnicodeInfo> класса для предоставления сведений о символе категории.</span><span class="sxs-lookup"><span data-stu-id="29645-140">Character classes that match characters by category, such as [\w](#WordCharacter) to match word characters or [\p{}](#CategoryOrBlock) to match a Unicode category, rely on the <xref:System.Globalization.CharUnicodeInfo> class to provide information about character categories.</span></span>  <span data-ttu-id="29645-141">Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], категории символов основаны на [Стандарте Юникода, версия 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/).</span><span class="sxs-lookup"><span data-stu-id="29645-141">Starting with the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], character categories are based on [The Unicode Standard, Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/).</span></span> <span data-ttu-id="29645-142">В версиях с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] по [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] они основаны на [Стандарте Юникода, версия 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).</span><span class="sxs-lookup"><span data-stu-id="29645-142">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] through the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], they are based on [The Unicode Standard, Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).</span></span>  
   
 <a name="PositiveGroup"></a>   
-## Положительная группа символов: \[ \]  
- Положительная группа символов задает список символов, один из которых должен присутствовать во входной строке для успешного сопоставления.  Символы можно задать по отдельности или в виде диапазона.  
+## <a name="positive-character-group--"></a><span data-ttu-id="29645-143">Положительная группа символов: [ ]</span><span class="sxs-lookup"><span data-stu-id="29645-143">Positive Character Group: [ ]</span></span>  
+ <span data-ttu-id="29645-144">Положительная группа символов задает список символов, один из которых должен присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="29645-144">A positive character group specifies a list of characters, any one of which may appear in an input string for a match to occur.</span></span> <span data-ttu-id="29645-145">Символы можно задать по отдельности или в виде диапазона.</span><span class="sxs-lookup"><span data-stu-id="29645-145">This list of characters may be specified individually, as a range, or both.</span></span>  
   
- Синтаксис для указания списка отдельных символов выглядит следующим образом:  
+ <span data-ttu-id="29645-146">Синтаксис для указания списка отдельных символов выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="29645-146">The syntax for specifying a list of individual characters is as follows:</span></span>  
   
- \[*character\_group*\]  
+ <span data-ttu-id="29645-147">[*character_group*]</span><span class="sxs-lookup"><span data-stu-id="29645-147">[*character_group*]</span></span>  
   
- Здесь *character\_group* — это список отдельных символов, которые могут присутствовать во входной строке для успешного сопоставления.  *character\_group* может включать в себя любое сочетание литеральных символов, [escape\-символов](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) или классов символов.  
+ <span data-ttu-id="29645-148">Здесь *character_group* — это список отдельных символов, которые могут присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="29645-148">where *character_group* is a list of the individual characters that can appear in the input string for a match to succeed.</span></span> <span data-ttu-id="29645-149">*character_group* может включать в себя любое сочетание литеральных символов, [escape-символов](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) или классов символов.</span><span class="sxs-lookup"><span data-stu-id="29645-149">*character_group* can consist of any combination of one or more literal characters, [escape characters](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), or character classes.</span></span>  
   
- Синтаксис для указания диапазона символов выглядит следующим образом:  
+ <span data-ttu-id="29645-150">Синтаксис для указания диапазона символов выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="29645-150">The syntax for specifying a range of characters is as follows:</span></span>  
   
 ```  
 [firstCharacter-lastCharacter]  
 ```  
   
- Здесь *firstCharacter* — это символ, с которого начинается диапазон, а *lastCharacter* — символ, которым он заканчивается.  Диапазон символов — это непрерывная последовательность знаков, которая задается указанием первого и последнего знака в последовательности и дефиса между ними.  Два знака являются смежными, если они имеют соседние кодовые точки в Юникоде.  
+ <span data-ttu-id="29645-151">Здесь *firstCharacter* — это символ, с которого начинается диапазон, а *lastCharacter* — символ, которым он заканчивается.</span><span class="sxs-lookup"><span data-stu-id="29645-151">where *firstCharacter* is the character that begins the range and *lastCharacter* is the character that ends the range.</span></span> <span data-ttu-id="29645-152">Диапазон символов — это непрерывная последовательность знаков, которая задается указанием первого и последнего знака в последовательности и дефиса между ними.</span><span class="sxs-lookup"><span data-stu-id="29645-152">A character range is a contiguous series of characters defined by specifying the first character in the series, a hyphen (-), and then the last character in the series.</span></span> <span data-ttu-id="29645-153">Два знака являются смежными, если они имеют соседние кодовые точки в Юникоде.</span><span class="sxs-lookup"><span data-stu-id="29645-153">Two characters are contiguous if they have adjacent Unicode code points.</span></span>  
   
- В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие классы положительных символов.  
+ <span data-ttu-id="29645-154">В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие классы положительных символов.</span><span class="sxs-lookup"><span data-stu-id="29645-154">Some common regular expression patterns that contain positive character classes are listed in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`[aeiou]`|Соответствует всем гласным.|  
-|`[\p{P}\d]`|Соответствует всем знакам препинания и десятичным цифрам.|  
-|`[\s\p{P}]`|Соответствует всем символам пробела и знакам препинания.|  
+|<span data-ttu-id="29645-155">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-155">Pattern</span></span>|<span data-ttu-id="29645-156">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-156">Description</span></span>|  
+|-------------|-----------------|  
+|`[aeiou]`|<span data-ttu-id="29645-157">Соответствует всем гласным.</span><span class="sxs-lookup"><span data-stu-id="29645-157">Match all vowels.</span></span>|  
+|`[\p{P}\d]`|<span data-ttu-id="29645-158">Соответствует всем знакам препинания и десятичным цифрам.</span><span class="sxs-lookup"><span data-stu-id="29645-158">Match all punctuation and decimal digit characters.</span></span>|  
+|`[\s\p{P}]`|<span data-ttu-id="29645-159">Соответствует всем символам пробела и знакам препинания.</span><span class="sxs-lookup"><span data-stu-id="29645-159">Match all white-space and punctuation.</span></span>|  
   
- В следующем примере определена положительная группа знаков, которая содержит символы "a" и "e", таким образом, чтобы входная строка содержала слова grey или gray и еще одно слово.  
+ <span data-ttu-id="29645-160">В следующем примере определена положительная группа знаков, которая содержит символы "a" и "e", таким образом, чтобы входная строка содержала слова grey или gray и еще одно слово.</span><span class="sxs-lookup"><span data-stu-id="29645-160">The following example defines a positive character group that contains the characters "a" and "e" so that the input string must contain the words "grey" or "gray" followed by another word for a match to occur.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/positivecharclasses.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/positivecharclasses.vb#1)]  
   
- Регулярное выражение `gr[ae]y\s\S+?[\s|\p{P}]` определяется следующим образом:  
+ <span data-ttu-id="29645-161">Регулярное выражение `gr[ae]y\s\S+?[\s|\p{P}]` определяется следующим образом:</span><span class="sxs-lookup"><span data-stu-id="29645-161">The regular expression `gr[ae]y\s\S+?[\s|\p{P}]` is defined as follows:</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`gr`|Соответствует буквенным символам "gr".|  
-|`[ae]`|Соответствует букве "a" или "e".|  
-|`y\s`|Соответствует буквенному символу "y", за которым следует пробел.|  
-|`\S+?`|Соответствует одному или нескольким символам, отличным от пробела.|  
-|`[\s\p{P}]`|Соответствует символу пробела или знаку препинания.|  
+|<span data-ttu-id="29645-162">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-162">Pattern</span></span>|<span data-ttu-id="29645-163">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-163">Description</span></span>|  
+|-------------|-----------------|  
+|`gr`|<span data-ttu-id="29645-164">Соответствует буквенным символам "gr".</span><span class="sxs-lookup"><span data-stu-id="29645-164">Match the literal characters "gr".</span></span>|  
+|`[ae]`|<span data-ttu-id="29645-165">Соответствует букве "a" или "e".</span><span class="sxs-lookup"><span data-stu-id="29645-165">Match either an "a" or an "e".</span></span>|  
+|`y\s`|<span data-ttu-id="29645-166">Соответствует буквенному символу "y", за которым следует пробел.</span><span class="sxs-lookup"><span data-stu-id="29645-166">Match the literal character "y" followed by a white-space character.</span></span>|  
+|`\S+?`|<span data-ttu-id="29645-167">Соответствует одному или нескольким символам, отличным от пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-167">Match one or more non-white-space characters, but as few as possible.</span></span>|  
+|`[\s\p{P}]`|<span data-ttu-id="29645-168">Соответствует символу пробела или знаку препинания.</span><span class="sxs-lookup"><span data-stu-id="29645-168">Match either a white-space character or a punctuation mark.</span></span>|  
   
- В следующем примере выделяются слова, начинающиеся с любой прописной буквы.  Вложенное выражение `[A-Z]` представляет диапазон прописных букв от A до Z.  
+ <span data-ttu-id="29645-169">В следующем примере выделяются слова, начинающиеся с любой прописной буквы.</span><span class="sxs-lookup"><span data-stu-id="29645-169">The following example matches words that begin with any capital letter.</span></span> <span data-ttu-id="29645-170">Вложенное выражение `[A-Z]` представляет диапазон прописных букв от A до Z.</span><span class="sxs-lookup"><span data-stu-id="29645-170">It uses the subexpression `[A-Z]` to represent the range of capital letters from A to Z.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/range.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/range.vb#3)]  
   
- Определение регулярного выражения `\b[A-Z]\w*\b` показано в таблице ниже.  
+ <span data-ttu-id="29645-171">Определение регулярного выражения `\b[A-Z]\w*\b` показано в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="29645-171">The regular expression `\b[A-Z]\w*\b` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`[A-Z]`|Соответствует любому символу верхнего регистра от А до Z.|  
-|`\w*`|Совпадение с нулем или большим числом буквенных символов.|  
-|`\b`|Соответствует границе слова.|  
+|<span data-ttu-id="29645-172">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-172">Pattern</span></span>|<span data-ttu-id="29645-173">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-173">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="29645-174">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-174">Start at a word boundary.</span></span>|  
+|`[A-Z]`|<span data-ttu-id="29645-175">Соответствует любому символу верхнего регистра от А до Z.</span><span class="sxs-lookup"><span data-stu-id="29645-175">Match any uppercase character from A to Z.</span></span>|  
+|`\w*`|<span data-ttu-id="29645-176">Совпадение с нулем или большим числом буквенных символов.</span><span class="sxs-lookup"><span data-stu-id="29645-176">Match zero or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="29645-177">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-177">Match a word boundary.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-178">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-178">Back to Top</span></span>](#Top)  
   
 <a name="NegativeGroup"></a>   
-## Отрицательная группа символов: \[^\]  
- Отрицательная группа символов задает список символов, которые не должны присутствовать во входной строке для успешного сопоставления.  Символы можно задать по отдельности или в виде диапазона.  
+## <a name="negative-character-group-"></a><span data-ttu-id="29645-179">Отрицательная группа символов: [^]</span><span class="sxs-lookup"><span data-stu-id="29645-179">Negative Character Group: [^]</span></span>  
+ <span data-ttu-id="29645-180">Отрицательная группа символов задает список символов, которые не должны присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="29645-180">A negative character group specifies a list of characters that must not appear in an input string for a match to occur.</span></span> <span data-ttu-id="29645-181">Символы можно задать по отдельности или в виде диапазона.</span><span class="sxs-lookup"><span data-stu-id="29645-181">The list of characters may be specified individually, as a range, or both.</span></span>  
   
- Синтаксис для указания списка отдельных символов выглядит следующим образом:  
+ <span data-ttu-id="29645-182">Синтаксис для указания списка отдельных символов выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="29645-182">The syntax for specifying a list of individual characters is as follows:</span></span>  
   
- \[*^ character\_group*\]  
+ <span data-ttu-id="29645-183">[*^character_group*]</span><span class="sxs-lookup"><span data-stu-id="29645-183">[*^character_group*]</span></span>  
   
- Здесь *character\_group* — это список отдельных символов, которые не могут присутствовать во входной строке для успешного сопоставления.  *character\_group* может включать в себя любое сочетание литеральных символов, [escape\-символов](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) или классов символов.  
+ <span data-ttu-id="29645-184">Здесь *character_group* — это список отдельных символов, которые не могут присутствовать во входной строке для успешного сопоставления.</span><span class="sxs-lookup"><span data-stu-id="29645-184">where *character_group* is a list of the individual characters that cannot appear in the input string for a match to succeed.</span></span> <span data-ttu-id="29645-185">*character_group* может включать в себя любое сочетание литеральных символов, [escape-символов](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) или классов символов.</span><span class="sxs-lookup"><span data-stu-id="29645-185">*character_group* can consist of any combination of one or more literal characters, [escape characters](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), or character classes.</span></span>  
   
- Синтаксис для указания диапазона символов выглядит следующим образом:  
+ <span data-ttu-id="29645-186">Синтаксис для указания диапазона символов выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="29645-186">The syntax for specifying a range of characters is as follows:</span></span>  
   
- \[^*firstCharacter*\-*lastCharacter*\]  
+ <span data-ttu-id="29645-187">[^*firstCharacter*-*lastCharacter*]</span><span class="sxs-lookup"><span data-stu-id="29645-187">[^*firstCharacter*-*lastCharacter*]</span></span>  
   
- Здесь *firstCharacter* — это символ, с которого начинается диапазон, а *lastCharacter* — символ, которым он заканчивается.  Диапазон символов — это непрерывная последовательность знаков, которая задается указанием первого и последнего знака в последовательности и дефиса между ними.  Два знака являются смежными, если они имеют соседние кодовые точки в Юникоде.  
+ <span data-ttu-id="29645-188">Здесь *firstCharacter* — это символ, с которого начинается диапазон, а *lastCharacter* — символ, которым он заканчивается.</span><span class="sxs-lookup"><span data-stu-id="29645-188">where *firstCharacter* is the character that begins the range, and *lastCharacter* is the character that ends the range.</span></span> <span data-ttu-id="29645-189">Диапазон символов — это непрерывная последовательность знаков, которая задается указанием первого и последнего знака в последовательности и дефиса между ними.</span><span class="sxs-lookup"><span data-stu-id="29645-189">A character range is a contiguous series of characters defined by specifying the first character in the series, a hyphen (-), and then the last character in the series.</span></span> <span data-ttu-id="29645-190">Два знака являются смежными, если они имеют соседние кодовые точки в Юникоде.</span><span class="sxs-lookup"><span data-stu-id="29645-190">Two characters are contiguous if they have adjacent Unicode code points.</span></span>  
   
- Два или более диапазона знаков могут быть объединены.  Например, чтобы задать диапазон десятичных цифр от "0" до "9", диапазон строчных букв от "a" до "f" и диапазон прописных букв от "A" до "F" используйте строку `[0-9a-fA-F]`.  
+ <span data-ttu-id="29645-191">Два или более диапазона знаков могут быть объединены.</span><span class="sxs-lookup"><span data-stu-id="29645-191">Two or more character ranges can be concatenated.</span></span> <span data-ttu-id="29645-192">Например, чтобы задать диапазон десятичных цифр от "0" до "9", диапазон строчных букв от "a" до "f" и диапазон прописных букв от "A" до "F" используйте строку `[0-9a-fA-F]`.</span><span class="sxs-lookup"><span data-stu-id="29645-192">For example, to specify the range of decimal digits from "0" through "9", the range of lowercase letters from "a" through "f", and the range of uppercase letters from "A" through "F", use `[0-9a-fA-F]`.</span></span>  
   
- Начальный знак \(`^`\) отрицательной группы символов является обязательным и указывает на то, что группа знаков является отрицательной, а не положительной.  
+ <span data-ttu-id="29645-193">Начальный знак (`^`) отрицательной группы символов является обязательным и указывает на то, что группа знаков является отрицательной, а не положительной.</span><span class="sxs-lookup"><span data-stu-id="29645-193">The leading carat character (`^`) in a negative character group is mandatory and indicates the character group is a negative character group instead of a positive character group.</span></span>  
   
 > [!IMPORTANT]
->  Отрицательная группа символов в больших шаблонах регулярных выражений не является утверждением нулевой ширины.  То есть после оценки отрицательной группы символов обработчик регулярных выражений перемещает один символ во входную строку.  
+>  <span data-ttu-id="29645-194">Отрицательная группа символов в больших шаблонах регулярных выражений не является утверждением нулевой ширины.</span><span class="sxs-lookup"><span data-stu-id="29645-194">A negative character group in a larger regular expression pattern is not a zero-width assertion.</span></span> <span data-ttu-id="29645-195">То есть после оценки отрицательной группы символов обработчик регулярных выражений перемещает один символ во входную строку.</span><span class="sxs-lookup"><span data-stu-id="29645-195">That is, after evaluating the negative character group, the regular expression engine advances one character in the input string.</span></span>  
   
- В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие отрицательные группы символов.  
+ <span data-ttu-id="29645-196">В следующей таблице перечислены некоторые распространенные шаблоны регулярных выражений, содержащие отрицательные группы символов.</span><span class="sxs-lookup"><span data-stu-id="29645-196">Some common regular expression patterns that contain negative character groups are listed in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`[^aeiou]`|Соответствует всем символам, кроме гласных.|  
-|`[^\p{P}\d]`|Соответствует всем символам, кроме знаков препинания и десятичных цифр.|  
+|<span data-ttu-id="29645-197">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-197">Pattern</span></span>|<span data-ttu-id="29645-198">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-198">Description</span></span>|  
+|-------------|-----------------|  
+|`[^aeiou]`|<span data-ttu-id="29645-199">Соответствует всем символам, кроме гласных.</span><span class="sxs-lookup"><span data-stu-id="29645-199">Match all characters except vowels.</span></span>|  
+|`[^\p{P}\d]`|<span data-ttu-id="29645-200">Соответствует всем символам, кроме знаков препинания и десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="29645-200">Match all characters except punctuation and decimal digit characters.</span></span>|  
   
- Следующий пример соответствует любому слову, начинающемуся с символов "th", за которыми нет символа "o".  
+ <span data-ttu-id="29645-201">Следующий пример соответствует любому слову, начинающемуся с символов "th", за которыми нет символа "o".</span><span class="sxs-lookup"><span data-stu-id="29645-201">The following example matches any word that begins with the characters "th" and is not followed by an "o".</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/negativecharclasses.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/negativecharclasses.vb#2)]  
   
- Определение регулярного выражения `\bth[^o]\w+\b` показано в таблице ниже.  
+ <span data-ttu-id="29645-202">Определение регулярного выражения `\bth[^o]\w+\b` показано в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="29645-202">The regular expression `\bth[^o]\w+\b` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`th`|Соответствует буквенным символам "th".|  
-|`[^o]`|Соответствует любому символу, отличающемуся от "o".|  
-|`\w+`|Совпадение с одним или несколькими символами слова.|  
-|`\b`|Конец на границе слова.|  
+|<span data-ttu-id="29645-203">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-203">Pattern</span></span>|<span data-ttu-id="29645-204">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-204">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="29645-205">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-205">Start at a word boundary.</span></span>|  
+|`th`|<span data-ttu-id="29645-206">Соответствует буквенным символам "th".</span><span class="sxs-lookup"><span data-stu-id="29645-206">Match the literal characters "th".</span></span>|  
+|`[^o]`|<span data-ttu-id="29645-207">Соответствует любому символу, отличающемуся от "o".</span><span class="sxs-lookup"><span data-stu-id="29645-207">Match any character that is not an "o".</span></span>|  
+|`\w+`|<span data-ttu-id="29645-208">Совпадение с одним или несколькими символами слова.</span><span class="sxs-lookup"><span data-stu-id="29645-208">Match one or more word characters.</span></span>|  
+|`\b`|<span data-ttu-id="29645-209">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-209">End at a word boundary.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-210">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-210">Back to Top</span></span>](#Top)  
   
 <a name="AnyCharacter"></a>   
-## Любой символ: .  
- Символ точки \(.\) соответствует любому символу, кроме `\n` \(символ перевода строки, \\u000A\), с использованием указанных ниже двух квалификаторов.  
+## <a name="any-character-"></a><span data-ttu-id="29645-211">Любой символ: .</span><span class="sxs-lookup"><span data-stu-id="29645-211">Any Character: .</span></span>  
+ <span data-ttu-id="29645-212">Символ точки (.) соответствует любому символу, кроме `\n` (символ перевода строки, \u000A), с использованием указанных ниже двух квалификаторов.</span><span class="sxs-lookup"><span data-stu-id="29645-212">The period character (.) matches any character except `\n` (the newline character, \u000A), with the following two qualifications:</span></span>  
   
--   Если шаблон регулярного выражения изменяется параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> или если часть этого шаблона, содержащая класс символов `.`, изменяется параметром `s`, то `.` соответствует любому символу.  Подробнее см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+-   <span data-ttu-id="29645-213">Если шаблон регулярного выражения изменяется параметром <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> или если часть этого шаблона, содержащая класс символов `.`, изменяется параметром `s`, то `.` соответствует любому символу.</span><span class="sxs-lookup"><span data-stu-id="29645-213">If a regular expression pattern is modified by the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option, or if the portion of the pattern that contains the `.` character class is modified by the `s` option, `.` matches any character.</span></span> <span data-ttu-id="29645-214">Дополнительные сведения см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-214">For more information, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
-     В следующем примере показано различное поведение класса символов `.` по умолчанию и с параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  Регулярное выражение `^.+` начинается с начала строки и соответствует любому знаку.  По умолчанию соответствие заканчивается в конце первой строки; шаблон регулярного выражения соответствует символу возврата каретки, `\r` или \\u000D, но не соответствует `\n`.  Поскольку параметр <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> интерпретирует всю входную строку как единую строку, он сопоставляет каждый символ в строке ввода, включая `\n`.  
+     <span data-ttu-id="29645-215">В следующем примере показано различное поведение класса символов `.` по умолчанию и с параметром <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="29645-215">The following example illustrates the different behavior of the `.` character class by default and with the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option.</span></span> <span data-ttu-id="29645-216">Регулярное выражение `^.+` начинается с начала строки и соответствует любому знаку.</span><span class="sxs-lookup"><span data-stu-id="29645-216">The regular expression `^.+` starts at the beginning of the string and matches every character.</span></span> <span data-ttu-id="29645-217">По умолчанию соответствие заканчивается в конце первой строки; шаблон регулярного выражения соответствует символу возврата каретки, `\r` или \u000D, но не соответствует `\n`.</span><span class="sxs-lookup"><span data-stu-id="29645-217">By default, the match ends at the end of the first line; the regular expression pattern matches the carriage return character, `\r` or \u000D, but it does not match `\n`.</span></span> <span data-ttu-id="29645-218">Поскольку параметр <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> интерпретирует всю входную строку как единую строку, он сопоставляет каждый символ в строке ввода, включая `\n`.</span><span class="sxs-lookup"><span data-stu-id="29645-218">Because the <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> option interprets the entire input string as a single line, it matches every character in the input string, including `\n`.</span></span>  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
   
 > [!NOTE]
->  Так как класс символов `.` соответствует любому символу, кроме `\n`, он также соответствует символу `\r` \(символ возврата каретки, \\u000D\).  
+>  <span data-ttu-id="29645-219">Так как класс символов `.` соответствует любому символу, кроме `\n`, он также соответствует символу `\r` (символ возврата каретки, \u000D).</span><span class="sxs-lookup"><span data-stu-id="29645-219">Because it matches any character except `\n`, the `.` character class also matches `\r` (the carriage return character, \u000D).</span></span>  
   
--   Точка в положительной или отрицательной группе символов рассматривается как литеральный символ точки, а не как класс символов.  Дополнительные сведения см. в разделах [Положительная группа символов](#PositiveGroup) и [Отрицательная группа символов](#NegativeGroup) выше.  В следующем примере представлено определение регулярного выражения, содержащее символ точки \(`.`\) как класс символов и как член положительной группы символов.  Регулярное выражение `\b.*[.?!;:](\s|\z)` начинается на границе слова, выделяет все символы, пока не встретится один из четырех знаков препинания \(включая точку\), после чего выделяет символ пробела или конца строки.  
+-   <span data-ttu-id="29645-220">Точка в положительной или отрицательной группе символов рассматривается как литеральный символ точки, а не как класс символов.</span><span class="sxs-lookup"><span data-stu-id="29645-220">In a positive or negative character group, a period is treated as a literal period character, and not as a character class.</span></span> <span data-ttu-id="29645-221">Дополнительные сведения см. в разделах [Положительная группа символов](#PositiveGroup) и [Отрицательная группа символов](#NegativeGroup) ранее в этой статье.</span><span class="sxs-lookup"><span data-stu-id="29645-221">For more information, see [Positive Character Group](#PositiveGroup) and [Negative Character Group](#NegativeGroup) earlier in this topic.</span></span> <span data-ttu-id="29645-222">В следующем примере представлено определение регулярного выражения, содержащее символ точки (`.`) как класс символов и как член положительной группы символов.</span><span class="sxs-lookup"><span data-stu-id="29645-222">The following example provides an illustration by defining a regular expression that includes the period character (`.`) both as a character class and as a member of a positive character group.</span></span> <span data-ttu-id="29645-223">Регулярное выражение `\b.*[.?!;:](\s|\z)` начинается на границе слова, выделяет все символы, пока не встретится один из четырех знаков препинания (включая точку), после чего выделяет символ пробела или конца строки.</span><span class="sxs-lookup"><span data-stu-id="29645-223">The regular expression `\b.*[.?!;:](\s|\z)` begins at a word boundary, matches any character until it encounters one of four punctuation marks, including a period, and then matches either a white-space character or the end of the string.</span></span>  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Поскольку элемент языка `.` соответствует любому символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому символу.  Подробнее см. в разделе [Кванторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="29645-224">Поскольку элемент языка `.` соответствует любому символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому символу.</span><span class="sxs-lookup"><span data-stu-id="29645-224">Because it matches any character, the `.` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any character multiple times.</span></span> <span data-ttu-id="29645-225">Дополнительные сведения см. в разделе [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="29645-225">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-226">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-226">Back to Top</span></span>](#Top)  
   
 <a name="CategoryOrBlock"></a>   
-## Категория Юникода или блок Юникода: \\p{}  
- В стандарте Юникода каждому символу присваивается общая категория.  Например, определенный символ может быть прописной буквой \(категория `Lu`\), десятичной цифрой \(категория `Nd`\), математическим символом \(категория `Sm`\) или разделителем абзацев \(категория `Zl`\).  Определенные наборы символов стандарта Юникод также занимают некоторый диапазон или блок последовательных кодовых точек.  Например, базовая латинская кодировка находится в диапазоне от \\u0000 до \\u007F, а арабская кодировка находится в диапазоне от \\u0600 до \\u06FF.  
+## <a name="unicode-category-or-unicode-block-p"></a><span data-ttu-id="29645-227">Категория Юникода или блок Юникода: \p{}</span><span class="sxs-lookup"><span data-stu-id="29645-227">Unicode Category or Unicode Block: \p{}</span></span>  
+ <span data-ttu-id="29645-228">В стандарте Юникода каждому символу присваивается общая категория.</span><span class="sxs-lookup"><span data-stu-id="29645-228">The Unicode standard assigns each character a general category.</span></span> <span data-ttu-id="29645-229">Например, определенный символ может быть прописной буквой (категория `Lu`), десятичной цифрой (категория `Nd`), математическим символом (категория `Sm`) или разделителем абзацев (категория `Zl`).</span><span class="sxs-lookup"><span data-stu-id="29645-229">For example, a particular character can be an uppercase letter (represented by the `Lu` category), a decimal digit (the `Nd` category), a math symbol (the `Sm` category), or a paragraph separator (the `Zl` category).</span></span> <span data-ttu-id="29645-230">Определенные наборы символов стандарта Юникод также занимают некоторый диапазон или блок последовательных кодовых точек.</span><span class="sxs-lookup"><span data-stu-id="29645-230">Specific character sets in the Unicode standard also occupy a specific range or block of consecutive code points.</span></span> <span data-ttu-id="29645-231">Например, базовая латинская кодировка находится в диапазоне от \u0000 до \u007F, а арабская кодировка находится в диапазоне от \u0600 до \u06FF.</span><span class="sxs-lookup"><span data-stu-id="29645-231">For example, the basic Latin character set is found from \u0000 through \u007F, while the Arabic character set is found from \u0600 through \u06FF.</span></span>  
   
- Конструкция регулярного выражения  
+ <span data-ttu-id="29645-232">Конструкция регулярного выражения</span><span class="sxs-lookup"><span data-stu-id="29645-232">The regular expression construct</span></span>  
   
- `\p{` *name* `}`  
+ <span data-ttu-id="29645-233">`\p{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="29645-233">`\p{` *name* `}`</span></span>  
   
- соответствует любым символам, которые относятся к общей категории Юникода или именованному блоку, где *name* — сокращенное название категории или имя блока.  Список сокращений категорий см. в разделе [Поддерживаемые общие категории Юникода](#SupportedUnicodeGeneralCategories) далее в этой теме.  Список именованных блоков см. в разделе [Поддерживаемые именованные блоки](#SupportedNamedBlocks) далее в этой теме.  
+ <span data-ttu-id="29645-234">соответствует любым символам, которые относятся к общей категории Юникода или именованному блоку, где *name* — сокращенное название категории или имя блока.</span><span class="sxs-lookup"><span data-stu-id="29645-234">matches any character that belongs to a Unicode general category or named block, where *name* is the category abbreviation or named block name.</span></span> <span data-ttu-id="29645-235">Список сокращений категорий см. в подразделе [Поддерживаемые общие категории Юникода](#SupportedUnicodeGeneralCategories) далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="29645-235">For a list of category abbreviations, see the [Supported Unicode General Categories](#SupportedUnicodeGeneralCategories) section later in this topic.</span></span> <span data-ttu-id="29645-236">Список именованных блоков см. в подразделе [Поддерживаемые именованные блоки](#SupportedNamedBlocks) далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="29645-236">For a list of named blocks, see the [Supported Named Blocks](#SupportedNamedBlocks) section later in this topic.</span></span>  
   
- В примере ниже конструкция `\p{`*name*`}` используется для выделения общей категории Юникода \(в данном случае `Pd`, т. е. категории знаков препинания и тире\) и именованного блока \(`IsGreek` и `IsBasicLatin`\).  
+ <span data-ttu-id="29645-237">В примере ниже конструкция `\p{`*name*`}` используется для выделения общей категории Юникода (в данном случае `Pd`, т. е. категории знаков препинания и тире) и именованного блока (`IsGreek` и `IsBasicLatin`).</span><span class="sxs-lookup"><span data-stu-id="29645-237">The following example uses the `\p{`*name*`}` construct to match both a Unicode general category (in this case, the `Pd`, or Punctuation,Dash category) and a named block (the `IsGreek` and `IsBasicLatin` named blocks).</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
   
- Определение регулярного выражения `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` показано в таблице ниже.  
+ <span data-ttu-id="29645-238">Определение регулярного выражения `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` показано в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="29645-238">The regular expression `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`\p{IsGreek}+`|Соответствует одному или нескольким греческим символам.|  
-|`(\s)?`|Совпадение с нулем или одним символом пробела.|  
-|`(\p{IsGreek}+(\s)?)+`|Выделяет один или несколько раз шаблон из одного или нескольких греческих символов, за которыми следует ноль или один символ пробела.|  
-|`\p{Pd}`|Соответствует знакам препинания и тире.|  
-|`\s`|Соответствует пробелу.|  
-|`\p{IsBasicLatin}+`|Соответствует одному или нескольким базовым латинским символам.|  
-|`(\s)?`|Совпадение с нулем или одним символом пробела.|  
-|`(\p{IsBasicLatin}+(\s)?)+`|Выделяет один или несколько раз шаблон из одного или нескольких базовых латинских символов, за которыми следует ноль или один символ пробела.|  
+|<span data-ttu-id="29645-239">Шаблон</span><span class="sxs-lookup"><span data-stu-id="29645-239">Pattern</span></span>|<span data-ttu-id="29645-240">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-240">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="29645-241">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-241">Start at a word boundary.</span></span>|  
+|`\p{IsGreek}+`|<span data-ttu-id="29645-242">Соответствует одному или нескольким греческим символам.</span><span class="sxs-lookup"><span data-stu-id="29645-242">Match one or more Greek characters.</span></span>|  
+|`(\s)?`|<span data-ttu-id="29645-243">Совпадение с нулем или одним символом пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-243">Match zero or one white-space character.</span></span>|  
+|`(\p{IsGreek}+(\s)?)+`|<span data-ttu-id="29645-244">Выделяет один или несколько раз шаблон из одного или нескольких греческих символов, за которыми следует ноль или один символ пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-244">Match the pattern of one or more Greek characters followed by zero or one white-space characters one or more times.</span></span>|  
+|`\p{Pd}`|<span data-ttu-id="29645-245">Соответствует знакам препинания и тире.</span><span class="sxs-lookup"><span data-stu-id="29645-245">Match a Punctuation, Dash character.</span></span>|  
+|`\s`|<span data-ttu-id="29645-246">Соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="29645-246">Match a white-space character.</span></span>|  
+|`\p{IsBasicLatin}+`|<span data-ttu-id="29645-247">Соответствует одному или нескольким базовым латинским символам.</span><span class="sxs-lookup"><span data-stu-id="29645-247">Match one or more basic Latin characters.</span></span>|  
+|`(\s)?`|<span data-ttu-id="29645-248">Совпадение с нулем или одним символом пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-248">Match zero or one white-space character.</span></span>|  
+|`(\p{IsBasicLatin}+(\s)?)+`|<span data-ttu-id="29645-249">Выделяет один или несколько раз шаблон из одного или нескольких базовых латинских символов, за которыми следует ноль или один символ пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-249">Match the pattern of one or more basic Latin characters followed by zero or one white-space characters one or more times.</span></span>|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-250">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-250">Back to Top</span></span>](#Top)  
   
 <a name="NegativeCategoryOrBlock"></a>   
-## Отрицательные категории Юникода или блоков Юникода: \\P{}  
- В стандарте Юникода каждому символу присваивается общая категория.  Например, определенный символ может быть прописной буквой \(категория `Lu`\), десятичной цифрой \(категория `Nd`\), математическим символом \(категория `Sm`\) или разделителем абзацев \(категория `Zl`\).  Определенные наборы символов стандарта Юникод также занимают некоторый диапазон или блок последовательных кодовых точек.  Например, базовая латинская кодировка находится в диапазоне от \\u0000 до \\u007F, а арабская кодировка находится в диапазоне от \\u0600 до \\u06FF.  
+## <a name="negative-unicode-category-or-unicode-block-p"></a><span data-ttu-id="29645-251">Отрицательные категории Юникода или блоков Юникода: \P{}</span><span class="sxs-lookup"><span data-stu-id="29645-251">Negative Unicode Category or Unicode Block: \P{}</span></span>  
+ <span data-ttu-id="29645-252">В стандарте Юникода каждому символу присваивается общая категория.</span><span class="sxs-lookup"><span data-stu-id="29645-252">The Unicode standard assigns each character a general category.</span></span> <span data-ttu-id="29645-253">Например, определенный символ может быть прописной буквой (категория `Lu`), десятичной цифрой (категория `Nd`), математическим символом (категория `Sm`) или разделителем абзацев (категория `Zl`).</span><span class="sxs-lookup"><span data-stu-id="29645-253">For example, a particular character can be an uppercase letter (represented by the `Lu` category), a decimal digit (the `Nd` category), a math symbol (the `Sm` category), or a paragraph separator (the `Zl` category).</span></span> <span data-ttu-id="29645-254">Определенные наборы символов стандарта Юникод также занимают некоторый диапазон или блок последовательных кодовых точек.</span><span class="sxs-lookup"><span data-stu-id="29645-254">Specific character sets in the Unicode standard also occupy a specific range or block of consecutive code points.</span></span> <span data-ttu-id="29645-255">Например, базовая латинская кодировка находится в диапазоне от \u0000 до \u007F, а арабская кодировка находится в диапазоне от \u0600 до \u06FF.</span><span class="sxs-lookup"><span data-stu-id="29645-255">For example, the basic Latin character set is found from \u0000 through \u007F, while the Arabic character set is found from \u0600 through \u06FF.</span></span>  
   
- Конструкция регулярного выражения  
+ <span data-ttu-id="29645-256">Конструкция регулярного выражения</span><span class="sxs-lookup"><span data-stu-id="29645-256">The regular expression construct</span></span>  
   
- `\P{` *name* `}`  
+ <span data-ttu-id="29645-257">`\P{` *name* `}`</span><span class="sxs-lookup"><span data-stu-id="29645-257">`\P{` *name* `}`</span></span>  
   
- соответствует любым символам, которые не относятся к общей категории Юникода или именованному блоку, где *name* — сокращенное название категории или имя блока.  Список сокращений категорий см. в разделе [Поддерживаемые общие категории Юникода](#SupportedUnicodeGeneralCategories) далее в этой теме.  Список именованных блоков см. в разделе [Поддерживаемые именованные блоки](#SupportedNamedBlocks) далее в этой теме.  
+ <span data-ttu-id="29645-258">соответствует любым символам, которые не относятся к общей категории Юникода или именованному блоку, где *name* — сокращенное название категории или имя блока.</span><span class="sxs-lookup"><span data-stu-id="29645-258">matches any character that does not belong to a Unicode general category or named block, where *name* is the category abbreviation or named block name.</span></span> <span data-ttu-id="29645-259">Список сокращений категорий см. в подразделе [Поддерживаемые общие категории Юникода](#SupportedUnicodeGeneralCategories) далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="29645-259">For a list of category abbreviations, see the [Supported Unicode General Categories](#SupportedUnicodeGeneralCategories) section later in this topic.</span></span> <span data-ttu-id="29645-260">Список именованных блоков см. в подразделе [Поддерживаемые именованные блоки](#SupportedNamedBlocks) далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="29645-260">For a list of named blocks, see the [Supported Named Blocks](#SupportedNamedBlocks) section later in this topic.</span></span>  
   
- В примере ниже конструкция `\P{`*name*`}` используется для удаления любых символов валют \(в данном случае `Sc`, т. е. категории символов и валют\) из числовых строк.  
+ <span data-ttu-id="29645-261">В примере ниже конструкция `\P{`*name*`}` используется для удаления любых символов валют (в данном случае `Sc`, т. е. категории символов и валют) из числовых строк.</span><span class="sxs-lookup"><span data-stu-id="29645-261">The following example uses the `\P{`*name*`}` construct to remove any currency symbols (in this case, the `Sc`, or Symbol, Currency category) from numeric strings.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
- Шаблон регулярного выражения `(\P{Sc})+` выделяет один или несколько символов, которые не являются символами валют. Это позволяет удалить любой символ валюты из строки результата.  
+ <span data-ttu-id="29645-262">Шаблон регулярного выражения `(\P{Sc})+` выделяет один или несколько символов, которые не являются символами валют. Это позволяет удалить любой символ валюты из строки результата.</span><span class="sxs-lookup"><span data-stu-id="29645-262">The regular expression pattern `(\P{Sc})+` matches one or more characters that are not currency symbols; it effectively strips any currency symbol from the result string.</span></span>  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-263">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-263">Back to Top</span></span>](#Top)  
   
 <a name="WordCharacter"></a>   
-## Словообразующий символ: \\w  
- `\w` соответствует любому словообразующему символу.  Словообразующий символ входит во все категории Юникода, перечисленные в следующей таблице.  
+## <a name="word-character-w"></a><span data-ttu-id="29645-264">Словообразующий символ: \w</span><span class="sxs-lookup"><span data-stu-id="29645-264">Word Character: \w</span></span>  
+ <span data-ttu-id="29645-265">`\w` соответствует любому словообразующему символу.</span><span class="sxs-lookup"><span data-stu-id="29645-265">`\w` matches any word character.</span></span> <span data-ttu-id="29645-266">Словообразующий символ входит во все категории Юникода, перечисленные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-266">A word character is a member of any of the Unicode categories listed in the following table.</span></span>  
   
-|Категория|Описание|  
-|---------------|--------------|  
-|Ll|Буква: строчные буквы|  
-|Lu|Буква: прописные буквы|  
-|Lt|Буква: заглавный регистр|  
-|Lo|Буква: другие|  
-|Lm|Буква: модификатор|  
-|Nd|Число: десятичная цифра|  
-|Pc|Пунктуация, соединитель.  Эта категория включает десять символов, наиболее часто используемым из которых является знак подчеркивания \(\_\), u\+005F.|  
+|<span data-ttu-id="29645-267">Категория</span><span class="sxs-lookup"><span data-stu-id="29645-267">Category</span></span>|<span data-ttu-id="29645-268">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-268">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="29645-269">Ll</span><span class="sxs-lookup"><span data-stu-id="29645-269">Ll</span></span>|<span data-ttu-id="29645-270">Буква: строчные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-270">Letter, Lowercase</span></span>|  
+|<span data-ttu-id="29645-271">Lu</span><span class="sxs-lookup"><span data-stu-id="29645-271">Lu</span></span>|<span data-ttu-id="29645-272">Буква: прописные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-272">Letter, Uppercase</span></span>|  
+|<span data-ttu-id="29645-273">Lt</span><span class="sxs-lookup"><span data-stu-id="29645-273">Lt</span></span>|<span data-ttu-id="29645-274">Буква: заглавный регистр</span><span class="sxs-lookup"><span data-stu-id="29645-274">Letter, Titlecase</span></span>|  
+|<span data-ttu-id="29645-275">Lo</span><span class="sxs-lookup"><span data-stu-id="29645-275">Lo</span></span>|<span data-ttu-id="29645-276">Буква: другие</span><span class="sxs-lookup"><span data-stu-id="29645-276">Letter, Other</span></span>|  
+|<span data-ttu-id="29645-277">Lm</span><span class="sxs-lookup"><span data-stu-id="29645-277">Lm</span></span>|<span data-ttu-id="29645-278">Буква: модификатор</span><span class="sxs-lookup"><span data-stu-id="29645-278">Letter, Modifier</span></span>|  
+|<span data-ttu-id="29645-279">Mn</span><span class="sxs-lookup"><span data-stu-id="29645-279">Mn</span></span>|<span data-ttu-id="29645-280">Метка: не занимающая место</span><span class="sxs-lookup"><span data-stu-id="29645-280">Mark, Nonspacing</span></span>|  
+|<span data-ttu-id="29645-281">Nd</span><span class="sxs-lookup"><span data-stu-id="29645-281">Nd</span></span>|<span data-ttu-id="29645-282">Число: десятичная цифра</span><span class="sxs-lookup"><span data-stu-id="29645-282">Number, Decimal Digit</span></span>|  
+|<span data-ttu-id="29645-283">Pc</span><span class="sxs-lookup"><span data-stu-id="29645-283">Pc</span></span>|<span data-ttu-id="29645-284">Пунктуация, соединитель.</span><span class="sxs-lookup"><span data-stu-id="29645-284">Punctuation, Connector.</span></span> <span data-ttu-id="29645-285">Эта категория включает десять символов, наиболее часто используемым из которых является знак подчеркивания (_), u+005F.</span><span class="sxs-lookup"><span data-stu-id="29645-285">This category includes ten characters, the most commonly used of which is the LOWLINE character (_), u+005F.</span></span>|  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\w` эквивалентен `[a-zA-Z_0-9]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-286">Если задано поведение, совместимое с ECMAScript, то параметр `\w` эквивалентен `[a-zA-Z_0-9]`.</span><span class="sxs-lookup"><span data-stu-id="29645-286">If ECMAScript-compliant behavior is specified, `\w` is equivalent to `[a-zA-Z_0-9]`.</span></span> <span data-ttu-id="29645-287">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-287">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
 > [!NOTE]
->  Так как элемент языка `\w` соответствует любому словообразующему символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому словообразующему символу, за которым следует определенный словообразующий символ.  Подробнее см. в разделе [Кванторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="29645-288">Так как элемент языка `\w` соответствует любому словообразующему символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому словообразующему символу, за которым следует определенный словообразующий символ.</span><span class="sxs-lookup"><span data-stu-id="29645-288">Because it matches any word character, the `\w` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any word character multiple times, followed by a specific word character.</span></span> <span data-ttu-id="29645-289">Дополнительные сведения см. в разделе [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="29645-289">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- В примере ниже элемент языка `\w` используется для выделения повторяющихся символов в слове.  В примере определяется шаблон регулярного выражения `(\w)\1`, который можно интерпретировать указанным ниже образом.  
+ <span data-ttu-id="29645-290">В примере ниже элемент языка `\w` используется для выделения повторяющихся символов в слове.</span><span class="sxs-lookup"><span data-stu-id="29645-290">The following example uses the `\w` language element to match duplicate characters in a word.</span></span> <span data-ttu-id="29645-291">В примере определяется шаблон регулярного выражения `(\w)\1`, который можно интерпретировать указанным ниже образом.</span><span class="sxs-lookup"><span data-stu-id="29645-291">The example defines a regular expression pattern, `(\w)\1`, which can be interpreted as follows.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|\(\\w\)|Соответствует словообразующему символу.  Это первая группа записи.|  
-|\\1|Соответствует значению первой записи.|  
+|<span data-ttu-id="29645-292">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-292">Element</span></span>|<span data-ttu-id="29645-293">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-293">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="29645-294">(\w)</span><span class="sxs-lookup"><span data-stu-id="29645-294">(\w)</span></span>|<span data-ttu-id="29645-295">Соответствует словообразующему символу.</span><span class="sxs-lookup"><span data-stu-id="29645-295">Match a word character.</span></span> <span data-ttu-id="29645-296">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="29645-296">This is the first capturing group.</span></span>|  
+|<span data-ttu-id="29645-297">\1</span><span class="sxs-lookup"><span data-stu-id="29645-297">\1</span></span>|<span data-ttu-id="29645-298">Соответствует значению первой записи.</span><span class="sxs-lookup"><span data-stu-id="29645-298">Match the value of the first capture.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-299">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-299">Back to Top</span></span>](#Top)  
   
 <a name="NonWordCharacter"></a>   
-## Несловообразующий символ: \\W  
- `\W` соответствует любому несловообразующему символу.  Элемент языка \\W эквивалентен следующему классу символов:  
+## <a name="non-word-character-w"></a><span data-ttu-id="29645-300">Несловообразующий символ: \W</span><span class="sxs-lookup"><span data-stu-id="29645-300">Non-Word Character: \W</span></span>  
+ <span data-ttu-id="29645-301">`\W` соответствует любому несловообразующему символу.</span><span class="sxs-lookup"><span data-stu-id="29645-301">`\W` matches any non-word character.</span></span> <span data-ttu-id="29645-302">Элемент языка \W эквивалентен следующему классу символов:</span><span class="sxs-lookup"><span data-stu-id="29645-302">The \W language element is equivalent to the following character class:</span></span>  
   
 ```  
 [^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
 ```  
   
- Другими словами, он соответствует любому символу, за исключением перечисленных в следующей таблице.  
+ <span data-ttu-id="29645-303">Другими словами, он соответствует любому символу, за исключением символов в категории Юникода, перечисленных в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-303">In other words, it matches any character except for those in the Unicode categories listed in the following table.</span></span>  
   
-|Категория|Описание|  
-|---------------|--------------|  
-|Ll|Буква: строчные буквы|  
-|Lu|Буква: прописные буквы|  
-|Lt|Буква: заглавный регистр|  
-|Lo|Буква: другие|  
-|Lm|Буква: модификатор|  
-|Nd|Число: десятичная цифра|  
-|Pc|Пунктуация, соединитель.  Эта категория включает десять символов, наиболее часто используемым из которых является знак подчеркивания \(\_\), u\+005F.|  
+|<span data-ttu-id="29645-304">Категория</span><span class="sxs-lookup"><span data-stu-id="29645-304">Category</span></span>|<span data-ttu-id="29645-305">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-305">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="29645-306">Ll</span><span class="sxs-lookup"><span data-stu-id="29645-306">Ll</span></span>|<span data-ttu-id="29645-307">Буква: строчные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-307">Letter, Lowercase</span></span>|  
+|<span data-ttu-id="29645-308">Lu</span><span class="sxs-lookup"><span data-stu-id="29645-308">Lu</span></span>|<span data-ttu-id="29645-309">Буква: прописные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-309">Letter, Uppercase</span></span>|  
+|<span data-ttu-id="29645-310">Lt</span><span class="sxs-lookup"><span data-stu-id="29645-310">Lt</span></span>|<span data-ttu-id="29645-311">Буква: заглавный регистр</span><span class="sxs-lookup"><span data-stu-id="29645-311">Letter, Titlecase</span></span>|  
+|<span data-ttu-id="29645-312">Lo</span><span class="sxs-lookup"><span data-stu-id="29645-312">Lo</span></span>|<span data-ttu-id="29645-313">Буква: другие</span><span class="sxs-lookup"><span data-stu-id="29645-313">Letter, Other</span></span>|  
+|<span data-ttu-id="29645-314">Lm</span><span class="sxs-lookup"><span data-stu-id="29645-314">Lm</span></span>|<span data-ttu-id="29645-315">Буква: модификатор</span><span class="sxs-lookup"><span data-stu-id="29645-315">Letter, Modifier</span></span>|  
+|<span data-ttu-id="29645-316">Mn</span><span class="sxs-lookup"><span data-stu-id="29645-316">Mn</span></span>|<span data-ttu-id="29645-317">Метка: не занимающая место</span><span class="sxs-lookup"><span data-stu-id="29645-317">Mark, Nonspacing</span></span>|  
+|<span data-ttu-id="29645-318">Nd</span><span class="sxs-lookup"><span data-stu-id="29645-318">Nd</span></span>|<span data-ttu-id="29645-319">Число: десятичная цифра</span><span class="sxs-lookup"><span data-stu-id="29645-319">Number, Decimal Digit</span></span>|  
+|<span data-ttu-id="29645-320">Pc</span><span class="sxs-lookup"><span data-stu-id="29645-320">Pc</span></span>|<span data-ttu-id="29645-321">Пунктуация, соединитель.</span><span class="sxs-lookup"><span data-stu-id="29645-321">Punctuation, Connector.</span></span> <span data-ttu-id="29645-322">Эта категория включает десять символов, наиболее часто используемым из которых является знак подчеркивания (_), u+005F.</span><span class="sxs-lookup"><span data-stu-id="29645-322">This category includes ten characters, the most commonly used of which is the LOWLINE character (_), u+005F.</span></span>|  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\W` эквивалентен `[^a-zA-Z_0-9]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-323">Если задано поведение, совместимое с ECMAScript, то параметр `\W` эквивалентен `[^a-zA-Z_0-9]`.</span><span class="sxs-lookup"><span data-stu-id="29645-323">If ECMAScript-compliant behavior is specified, `\W` is equivalent to `[^a-zA-Z_0-9]`.</span></span> <span data-ttu-id="29645-324">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-324">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
 > [!NOTE]
->  Так как элемент языка `\W` соответствует любому несловообразующему символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому несловообразующему символу, за которым следует определенный несловообразующий символ.  Подробнее см. в разделе [Кванторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  <span data-ttu-id="29645-325">Так как элемент языка `\W` соответствует любому несловообразующему символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому несловообразующему символу, за которым следует определенный несловообразующий символ.</span><span class="sxs-lookup"><span data-stu-id="29645-325">Because it matches any non-word character, the `\W` language element is often used with a lazy quantifier if a regular expression pattern attempts to match any non-word character multiple times followed by a specific non-word character.</span></span> <span data-ttu-id="29645-326">Дополнительные сведения см. в разделе [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="29645-326">For more information, see [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).</span></span>  
   
- В примере ниже показан класс символов `\W`.  Он определяет шаблон регулярного выражения `\b(\w+)(\W){1,2}`, выделяющий слово, за которым следует один или два несловообразующих символа, например пробелы или знаки препинания.  Возможные интерпретации регулярного выражения показаны в следующей таблице.  
+ <span data-ttu-id="29645-327">В примере ниже показан класс символов `\W`.</span><span class="sxs-lookup"><span data-stu-id="29645-327">The following example illustrates the `\W` character class.</span></span>  <span data-ttu-id="29645-328">Он определяет шаблон регулярного выражения `\b(\w+)(\W){1,2}`, выделяющий слово, за которым следует один или два несловообразующих символа, например пробелы или знаки препинания.</span><span class="sxs-lookup"><span data-stu-id="29645-328">It defines a regular expression pattern, `\b(\w+)(\W){1,2}`, that matches a word followed by one or two non-word characters, such as white space or punctuation.</span></span> <span data-ttu-id="29645-329">Возможные интерпретации регулярного выражения показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-329">The regular expression is interpreted as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|\\b|Совпадение должно начинаться на границе слова.|  
-|\(\\w\+\)|Совпадение с одним или несколькими символами слова.  Это первая группа записи.|  
-|\(\\W\){1,2}|Выделяет несловообразующий символ один или два раза.  Это вторая группа записи.|  
+|<span data-ttu-id="29645-330">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-330">Element</span></span>|<span data-ttu-id="29645-331">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-331">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="29645-332">\b</span><span class="sxs-lookup"><span data-stu-id="29645-332">\b</span></span>|<span data-ttu-id="29645-333">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-333">Begin the match at a word boundary.</span></span>|  
+|<span data-ttu-id="29645-334">(\w+)</span><span class="sxs-lookup"><span data-stu-id="29645-334">(\w+)</span></span>|<span data-ttu-id="29645-335">Совпадение с одним или несколькими символами слова.</span><span class="sxs-lookup"><span data-stu-id="29645-335">Match one or more word characters.</span></span> <span data-ttu-id="29645-336">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="29645-336">This is the first capturing group.</span></span>|  
+|<span data-ttu-id="29645-337">(\W){1,2}</span><span class="sxs-lookup"><span data-stu-id="29645-337">(\W){1,2}</span></span>|<span data-ttu-id="29645-338">Выделяет несловообразующий символ один или два раза.</span><span class="sxs-lookup"><span data-stu-id="29645-338">Match a non-word character either one or two times.</span></span> <span data-ttu-id="29645-339">Это вторая группа записи.</span><span class="sxs-lookup"><span data-stu-id="29645-339">This is the second capturing group.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwordchar1.vb#9)]  
   
- Поскольку объект <xref:System.Text.RegularExpressions.Group> для второй группы записи содержит только один захваченный несловообразующий символ, в примере извлекаются все захваченные несловообразующие символы из объекта <xref:System.Text.RegularExpressions.CaptureCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=fullName>.  
+ <span data-ttu-id="29645-340">Поскольку объект <xref:System.Text.RegularExpressions.Group> для второй группы записи содержит только один захваченный несловообразующий символ, в примере извлекаются все захваченные несловообразующие символы из объекта <xref:System.Text.RegularExpressions.CaptureCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="29645-340">Because the <xref:System.Text.RegularExpressions.Group> object for the second capturing group contains only a single captured non-word character, the example retrieves all captured non-word characters from the <xref:System.Text.RegularExpressions.CaptureCollection> object that is returned by the <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> property.</span></span>  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-341">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-341">Back to Top</span></span>](#Top)  
   
 <a name="WhitespaceCharacter"></a>   
-## Символ пробела: \\s  
- `\s` соответствует любому знаку пробела.  Это эквивалентно управляющим последовательностям и категориям Юникода, перечисленным в следующей таблице.  
+## <a name="white-space-character-s"></a><span data-ttu-id="29645-342">Символ пробела: \s</span><span class="sxs-lookup"><span data-stu-id="29645-342">White-Space Character: \s</span></span>  
+ <span data-ttu-id="29645-343">`\s` соответствует любому знаку пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-343">`\s` matches any white-space character.</span></span> <span data-ttu-id="29645-344">Это эквивалентно управляющим последовательностям и категориям Юникода, перечисленным в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-344">It is equivalent to the escape sequences and Unicode categories listed in the following table.</span></span>  
   
-|Категория|Описание|  
-|---------------|--------------|  
-|`\f`|Символ перевода страницы, \\u000C.|  
-|`\n`|Символ новой строки, \\u000A.|  
-|`\r`|Символ возврата каретки, \\u000D.|  
-|`\t`|Символ табуляции, \\u0009.|  
-|`\v`|Символ вертикальной табуляции, \\u000B.|  
-|`\x85`|Многоточие или символ NEXT LINE \(NEL\) \(…\), \\u0085.|  
-|`\p{Z}`|Соответствует любому разделительному символу.|  
+|<span data-ttu-id="29645-345">Категория</span><span class="sxs-lookup"><span data-stu-id="29645-345">Category</span></span>|<span data-ttu-id="29645-346">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-346">Description</span></span>|  
+|--------------|-----------------|  
+|`\f`|<span data-ttu-id="29645-347">Символ перевода страницы, \u000C.</span><span class="sxs-lookup"><span data-stu-id="29645-347">The form feed character, \u000C.</span></span>|  
+|`\n`|<span data-ttu-id="29645-348">Символ новой строки, \u000A.</span><span class="sxs-lookup"><span data-stu-id="29645-348">The newline character, \u000A.</span></span>|  
+|`\r`|<span data-ttu-id="29645-349">Символ возврата каретки, \u000D.</span><span class="sxs-lookup"><span data-stu-id="29645-349">The carriage return character, \u000D.</span></span>|  
+|`\t`|<span data-ttu-id="29645-350">Символ табуляции, \u0009.</span><span class="sxs-lookup"><span data-stu-id="29645-350">The tab character, \u0009.</span></span>|  
+|`\v`|<span data-ttu-id="29645-351">Символ вертикальной табуляции, \u000B.</span><span class="sxs-lookup"><span data-stu-id="29645-351">The vertical tab character, \u000B.</span></span>|  
+|`\x85`|<span data-ttu-id="29645-352">Многоточие или символ NEXT LINE (NEL) (…), \u0085.</span><span class="sxs-lookup"><span data-stu-id="29645-352">The ellipsis or NEXT LINE (NEL) character (…), \u0085.</span></span>|  
+|`\p{Z}`|<span data-ttu-id="29645-353">Соответствует любому разделительному символу.</span><span class="sxs-lookup"><span data-stu-id="29645-353">Matches any separator character.</span></span>|  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\s` эквивалентен `[\f\n\r\t\v]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-354">Если задано поведение, совместимое с ECMAScript, то параметр `\s` эквивалентен `[ \f\n\r\t\v]`.</span><span class="sxs-lookup"><span data-stu-id="29645-354">If ECMAScript-compliant behavior is specified, `\s` is equivalent to `[ \f\n\r\t\v]`.</span></span> <span data-ttu-id="29645-355">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-355">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- В примере ниже показан класс символов `\s`.  Он определяет шаблон регулярного выражения `\b\w+(e)?s(\s|$)`, выделяющий слово, заканчивающееся на "s" или "es", за которым следует знак пробела или конец входной строки.  Возможные интерпретации регулярного выражения показаны в следующей таблице.  
+ <span data-ttu-id="29645-356">В примере ниже показан класс символов `\s`.</span><span class="sxs-lookup"><span data-stu-id="29645-356">The following example illustrates the `\s` character class.</span></span> <span data-ttu-id="29645-357">Он определяет шаблон регулярного выражения `\b\w+(e)?s(\s|$)`, выделяющий слово, заканчивающееся на "s" или "es", за которым следует знак пробела или конец входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-357">It defines a regular expression pattern, `\b\w+(e)?s(\s|$)`, that matches a word ending in either "s" or "es" followed by either a white-space character or the end of the input string.</span></span> <span data-ttu-id="29645-358">Возможные интерпретации регулярного выражения показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-358">The regular expression is interpreted as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|\\b|Совпадение должно начинаться на границе слова.|  
-|\\w\+|Совпадение с одним или несколькими символами слова.|  
-|\(e\)?|Выделяет "e" ноль или один раз.|  
-|s|Выделяет "s".|  
-|\(\\s&#124;$\)|Совпадает с символом пробела или концом входной строки.|  
+|<span data-ttu-id="29645-359">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-359">Element</span></span>|<span data-ttu-id="29645-360">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-360">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="29645-361">\b</span><span class="sxs-lookup"><span data-stu-id="29645-361">\b</span></span>|<span data-ttu-id="29645-362">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-362">Begin the match at a word boundary.</span></span>|  
+|<span data-ttu-id="29645-363">\w+</span><span class="sxs-lookup"><span data-stu-id="29645-363">\w+</span></span>|<span data-ttu-id="29645-364">Совпадение с одним или несколькими символами слова.</span><span class="sxs-lookup"><span data-stu-id="29645-364">Match one or more word characters.</span></span>|  
+|<span data-ttu-id="29645-365">(e)?</span><span class="sxs-lookup"><span data-stu-id="29645-365">(e)?</span></span>|<span data-ttu-id="29645-366">Выделяет "e" ноль или один раз.</span><span class="sxs-lookup"><span data-stu-id="29645-366">Match an "e" either zero or one time.</span></span>|  
+|<span data-ttu-id="29645-367">s</span><span class="sxs-lookup"><span data-stu-id="29645-367">s</span></span>|<span data-ttu-id="29645-368">Выделяет "s".</span><span class="sxs-lookup"><span data-stu-id="29645-368">Match an "s".</span></span>|  
+|<span data-ttu-id="29645-369">(\s|$)</span><span class="sxs-lookup"><span data-stu-id="29645-369">(\s&#124;$)</span></span>|<span data-ttu-id="29645-370">Совпадает с символом пробела или концом входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-370">Match either a whitespace character or the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-371">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-371">Back to Top</span></span>](#Top)  
   
 <a name="NonWhitespaceCharacter"></a>   
-## Символ, не являющийся пробелом: \\S  
- `\S` соответствует любому символу, не являющемуся пробелом.  Он эквивалентен шаблону регулярного выражения `[^\f\n\r\t\v\x85\p{Z}]` или противоположному шаблону, эквивалентному `\s`, выделяющему символы пробела.  Дополнительные сведения см. в разделе [Символ пробела: \\s](#WhitespaceCharacter).  
+## <a name="non-white-space-character-s"></a><span data-ttu-id="29645-372">Символ, не являющийся пробелом: \S</span><span class="sxs-lookup"><span data-stu-id="29645-372">Non-White-Space Character: \S</span></span>  
+ <span data-ttu-id="29645-373">`\S` соответствует любому символу, не являющемуся пробелом.</span><span class="sxs-lookup"><span data-stu-id="29645-373">`\S` matches any non-white-space character.</span></span> <span data-ttu-id="29645-374">Он эквивалентен шаблону регулярного выражения `[^\f\n\r\t\v\x85\p{Z}]` или противоположному шаблону, эквивалентному `\s`, выделяющему символы пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-374">It is equivalent to the `[^\f\n\r\t\v\x85\p{Z}]` regular expression pattern, or the opposite of the regular expression pattern that is equivalent to `\s`, which matches white-space characters.</span></span> <span data-ttu-id="29645-375">Дополнительные сведения см. в разделе [Символ пробела: \s](#WhitespaceCharacter).</span><span class="sxs-lookup"><span data-stu-id="29645-375">For more information, see [White-Space Character: \s](#WhitespaceCharacter).</span></span>  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\S` эквивалентен `[^ \f\n\r\t\v]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-376">Если задано поведение, совместимое с ECMAScript, то параметр `\S` эквивалентен `[^ \f\n\r\t\v]`.</span><span class="sxs-lookup"><span data-stu-id="29645-376">If ECMAScript-compliant behavior is specified, `\S` is equivalent to  `[^ \f\n\r\t\v]`.</span></span> <span data-ttu-id="29645-377">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-377">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- В примере ниже показан элемент языка `\S`.  Шаблон регулярного выражения `\b(\S+)\s?` выделяет строки, разделенные символами пробела.  Второй элемент в объекте <xref:System.Text.RegularExpressions.GroupCollection> содержит совпадающую строку.  Возможные интерпретации регулярного выражения показаны в следующей таблице.  
+ <span data-ttu-id="29645-378">В примере ниже показан элемент языка `\S`.</span><span class="sxs-lookup"><span data-stu-id="29645-378">The following example illustrates the `\S` language element.</span></span> <span data-ttu-id="29645-379">Шаблон регулярного выражения `\b(\S+)\s?` выделяет строки, разделенные символами пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-379">The regular expression pattern `\b(\S+)\s?` matches strings that are delimited by white-space characters.</span></span> <span data-ttu-id="29645-380">Второй элемент в объекте <xref:System.Text.RegularExpressions.GroupCollection> содержит совпадающую строку.</span><span class="sxs-lookup"><span data-stu-id="29645-380">The second element in the match's <xref:System.Text.RegularExpressions.GroupCollection> object contains the matched string.</span></span> <span data-ttu-id="29645-381">Возможные интерпретации регулярного выражения показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-381">The regular expression can be interpreted as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`\b`|Совпадение должно начинаться на границе слова.|  
-|`(\S+)`|Соответствует одному или нескольким символам, которые не являются пробелами.  Это первая группа записи.|  
-|`\s?`|Совпадение с нулем или одним символом пробела.|  
+|<span data-ttu-id="29645-382">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-382">Element</span></span>|<span data-ttu-id="29645-383">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-383">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="29645-384">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="29645-384">Begin the match at a word boundary.</span></span>|  
+|`(\S+)`|<span data-ttu-id="29645-385">Соответствует одному или нескольким символам, которые не являются пробелами.</span><span class="sxs-lookup"><span data-stu-id="29645-385">Match one or more non-white-space characters.</span></span> <span data-ttu-id="29645-386">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="29645-386">This is the first capturing group.</span></span>|  
+|`\s?`|<span data-ttu-id="29645-387">Совпадение с нулем или одним символом пробела.</span><span class="sxs-lookup"><span data-stu-id="29645-387">Match zero or one white-space character.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-388">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-388">Back to Top</span></span>](#Top)  
   
 <a name="DigitCharacter"></a>   
-## Десятичная цифра: \\d  
- `\d` соответствует любой десятичной цифре.  Он эквивалентен шаблону регулярного выражения `\p{Nd}`, который включает стандартные десятичные цифры 0–9, а также десятичные цифры из некоторых других наборов символов.  
+## <a name="decimal-digit-character-d"></a><span data-ttu-id="29645-389">Десятичная цифра: \d</span><span class="sxs-lookup"><span data-stu-id="29645-389">Decimal Digit Character: \d</span></span>  
+ <span data-ttu-id="29645-390">`\d` соответствует любой десятичной цифре.</span><span class="sxs-lookup"><span data-stu-id="29645-390">`\d` matches any decimal digit.</span></span> <span data-ttu-id="29645-391">Он эквивалентен шаблону регулярного выражения `\p{Nd}`, который включает стандартные десятичные цифры 0–9, а также десятичные цифры из некоторых других наборов символов.</span><span class="sxs-lookup"><span data-stu-id="29645-391">It is equivalent to the `\p{Nd}` regular expression pattern, which includes the standard decimal digits 0-9 as well as the decimal digits of a number of other character sets.</span></span>  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\d` эквивалентен `[0-9]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-392">Если задано поведение, совместимое с ECMAScript, то параметр `\d` эквивалентен `[0-9]`.</span><span class="sxs-lookup"><span data-stu-id="29645-392">If ECMAScript-compliant behavior is specified, `\d` is equivalent to  `[0-9]`.</span></span> <span data-ttu-id="29645-393">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-393">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- В примере ниже показан элемент языка `\d`.  Проверяет, представляет ли входная строка допустимый телефонный номер в США и Канаде.  Шаблон регулярного выражения `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="29645-394">В примере ниже показан элемент языка `\d`.</span><span class="sxs-lookup"><span data-stu-id="29645-394">The following example illustrates the `\d` language element.</span></span> <span data-ttu-id="29645-395">Проверяет, представляет ли входная строка допустимый телефонный номер в США и Канаде.</span><span class="sxs-lookup"><span data-stu-id="29645-395">It tests whether an input string represents a valid telephone number in the United States and Canada.</span></span> <span data-ttu-id="29645-396">Шаблон регулярного выражения `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-396">The regular expression pattern `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` is defined as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`^`|Начало совпадения в начале входной строки.|  
-|`\(?`|Выделяет ноль или один символ "\(".|  
-|`\d{3}`|Совпадение с тремя десятичными цифрами.|  
-|`\)?`|Выделяет ноль или один символ "\)".|  
-|`[\s-]`|Выделяет дефис или пробел.|  
-|`(\(?  \d{3}\)?[\s-])?`|Выделяет несколько раз необязательные открывающие скобки с последующими тремя десятичными цифрами, необязательную закрывающую скобку, а также знак пробела или дефис \(если они есть\).  Это первая группа записи.|  
-|`\d{3}-\d{4}`|Выделяет три десятичных цифры, следующий за ними дефис и еще четыре десятичные цифры.|  
-|`$`|Соответствует концу входной строки.|  
+|<span data-ttu-id="29645-397">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-397">Element</span></span>|<span data-ttu-id="29645-398">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-398">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="29645-399">Начало совпадения в начале входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-399">Begin the match at the beginning of the input string.</span></span>|  
+|`\(?`|<span data-ttu-id="29645-400">Выделяет ноль или один символ "(".</span><span class="sxs-lookup"><span data-stu-id="29645-400">Match zero or one literal "(" character.</span></span>|  
+|`\d{3}`|<span data-ttu-id="29645-401">Совпадение с тремя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="29645-401">Match three decimal digits.</span></span>|  
+|`\)?`|<span data-ttu-id="29645-402">Выделяет ноль или один символ ")".</span><span class="sxs-lookup"><span data-stu-id="29645-402">Match zero or one literal ")" character.</span></span>|  
+|`[\s-]`|<span data-ttu-id="29645-403">Выделяет дефис или пробел.</span><span class="sxs-lookup"><span data-stu-id="29645-403">Match a hyphen or a white-space character.</span></span>|  
+|`(\(?\d{3}\)?[\s-])?`|<span data-ttu-id="29645-404">Выделяет несколько раз необязательные открывающие скобки с последующими тремя десятичными цифрами, необязательную закрывающую скобку, а также знак пробела или дефис (если они есть).</span><span class="sxs-lookup"><span data-stu-id="29645-404">Match an optional opening parenthesis followed by three decimal digits, an optional closing parenthesis, and either a white-space character or a hyphen zero or one time.</span></span> <span data-ttu-id="29645-405">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="29645-405">This is the first capturing group.</span></span>|  
+|`\d{3}-\d{4}`|<span data-ttu-id="29645-406">Выделяет три десятичных цифры, следующий за ними дефис и еще четыре десятичные цифры.</span><span class="sxs-lookup"><span data-stu-id="29645-406">Match three decimal digits followed by a hyphen and four more decimal digits.</span></span>|  
+|`$`|<span data-ttu-id="29645-407">Соответствует концу входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-407">Match the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-408">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-408">Back to Top</span></span>](#Top)  
   
 <a name="NonDigitCharacter"></a>   
-## Символ, не являющийся цифрой: \\D  
- `\D` соответствует любому символу, не являющемуся цифрой.  Он эквивалентен шаблону регулярного выражения `\P{Nd}`.  
+## <a name="non-digit-character-d"></a><span data-ttu-id="29645-409">Символ, не являющийся цифрой: \D</span><span class="sxs-lookup"><span data-stu-id="29645-409">Non-Digit Character: \D</span></span>  
+ <span data-ttu-id="29645-410">`\D` соответствует любому символу, не являющемуся цифрой.</span><span class="sxs-lookup"><span data-stu-id="29645-410">`\D` matches any non-digit character.</span></span> <span data-ttu-id="29645-411">Он эквивалентен шаблону регулярного выражения `\P{Nd}`.</span><span class="sxs-lookup"><span data-stu-id="29645-411">It is equivalent to the `\P{Nd}` regular expression pattern.</span></span>  
   
- Если задано поведение, совместимое с ECMAScript, то параметр `\D` эквивалентен `[^0-9]`.  Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="29645-412">Если задано поведение, совместимое с ECMAScript, то параметр `\D` эквивалентен `[^0-9]`.</span><span class="sxs-lookup"><span data-stu-id="29645-412">If ECMAScript-compliant behavior is specified, `\D` is equivalent to  `[^0-9]`.</span></span> <span data-ttu-id="29645-413">Информацию о регулярных выражениях ECMAScript см. в подразделе "Поведение сопоставления ECMAScript" раздела [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="29645-413">For information on ECMAScript regular expressions, see the "ECMAScript Matching Behavior" section in [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
- В следующем примере показан элемент языка \\D.  Он проверяет, включает ли строка \(например, номер продукта\) соответствующее сочетание десятичных и недесятичных символов.  Шаблон регулярного выражения `^\D\d{1,5}\D*$` определяется, как показано в следующей таблице.  
+ <span data-ttu-id="29645-414">В следующем примере показан элемент языка \D.</span><span class="sxs-lookup"><span data-stu-id="29645-414">The following example illustrates the \D language element.</span></span> <span data-ttu-id="29645-415">Он проверяет, включает ли строка (например, номер продукта) соответствующее сочетание десятичных и недесятичных символов.</span><span class="sxs-lookup"><span data-stu-id="29645-415">It tests whether a string such as a part number consists of the appropriate combination of decimal and non-decimal characters.</span></span> <span data-ttu-id="29645-416">Шаблон регулярного выражения `^\D\d{1,5}\D*$` определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-416">The regular expression pattern `^\D\d{1,5}\D*$` is defined as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`^`|Начало совпадения в начале входной строки.|  
-|`\D`|Выделяет любой символ, не являющийся цифрой.|  
-|`\d{1,5}`|Выделяет от одной до пяти десятичных цифр.|  
-|`\D*`|Выделяет нуль, одну или несколько недесятичных цифр.|  
-|`$`|Соответствует концу входной строки.|  
+|<span data-ttu-id="29645-417">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-417">Element</span></span>|<span data-ttu-id="29645-418">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-418">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="29645-419">Начало совпадения в начале входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-419">Begin the match at the beginning of the input string.</span></span>|  
+|`\D`|<span data-ttu-id="29645-420">Выделяет любой символ, не являющийся цифрой.</span><span class="sxs-lookup"><span data-stu-id="29645-420">Match a non-digit character.</span></span>|  
+|`\d{1,5}`|<span data-ttu-id="29645-421">Выделяет от одной до пяти десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="29645-421">Match from one to five decimal digits.</span></span>|  
+|`\D*`|<span data-ttu-id="29645-422">Выделяет нуль, одну или несколько недесятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="29645-422">Match zero, one, or more non-decimal characters.</span></span>|  
+|`$`|<span data-ttu-id="29645-423">Соответствует концу входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-423">Match the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-424">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-424">Back to Top</span></span>](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
-## Поддерживаемые общие категории Юникода  
- В Юникоде определяются общие категории, приведенные в следующей таблице.  Подробнее см. в подразделах "Формат файлов UCD" и "Значения общих категорий" описания [базы данных символов Юникода](http://go.microsoft.com/fwlink/?LinkId=57650).  
+## <a name="supported-unicode-general-categories"></a><span data-ttu-id="29645-425">Поддерживаемые общие категории Юникода</span><span class="sxs-lookup"><span data-stu-id="29645-425">Supported Unicode General Categories</span></span>  
+ <span data-ttu-id="29645-426">В Юникоде определяются общие категории, приведенные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-426">Unicode defines the general categories listed in the following table.</span></span> <span data-ttu-id="29645-427">Дополнительные сведения см. в подразделах "Формат файлов UCD" и "Значения общих категорий" в разделе [База данных символов Юникода](http://go.microsoft.com/fwlink/?LinkId=57650).</span><span class="sxs-lookup"><span data-stu-id="29645-427">For more information, see the "UCD File Format" and "General Category Values" subtopics at the [Unicode Character Database](http://go.microsoft.com/fwlink/?LinkId=57650).</span></span>  
   
-|Категория|Описание|  
-|---------------|--------------|  
-|`Lu`|Буква: прописные буквы|  
-|`Ll`|Буква: строчные буквы|  
-|`Lt`|Буква: заглавный регистр|  
-|`Lm`|Буква: модификатор|  
-|`Lo`|Буква: другие|  
-|`L`|Все буквенные символы.  Включает символы `Lu`, `Ll`, `Lt`, `Lm` и `Lo`|  
-|`Mn`|Метка: не занимающая место|  
-|`Mc`|Метка: комбинированная|  
-|`Me`|Метка: вложенная|  
-|`M`|Все диакритические знаки.  Включает категории `Mn`, `Mc` и `Me`.|  
-|`Nd`|Число: десятичная цифра|  
-|`Nl`|Число: буква|  
-|`No`|Число: другое|  
-|`N`|Все числа.  Включает категории `Nd`, `Nl` и `No`.|  
-|`Pc`|Пунктуация: соединитель|  
-|`Pd`|Пунктуация: тире|  
-|`Ps`|Пунктуация: открывающий знак пунктуации|  
-|`Pe`|Пунктуация: закрывающий знак пунктуации|  
-|`Pi`|Пунктуация: открывающая кавычка \(в зависимости от использования поведение может быть аналогичным Ps или Pe\)|  
-|`Pf`|Пунктуация: закрывающая кавычка \(в зависимости от использования поведение может быть аналогичным Ps или Pe\)|  
-|`Po`|Пунктуация: другие знаки пунктуации|  
-|`P`|Все знаки препинания.  Включает категории `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf` и `Po`.|  
-|`Sm`|Символ: математический|  
-|`Sc`|Символ денежной единицы|  
-|`Sk`|Символ: модификатор|  
-|`So`|Символ: другие|  
-|`S`|Все символы.  Включает категории `Sm`, `Sc`, `Sk` и `So`.|  
-|`Zs`|Разделитель: пробел|  
-|`Zl`|Разделитель: строка|  
-|`Zp`|Разделитель: абзац|  
-|`Z`|Все знаки разделения.  Включает категории `Zs`, `Zl` и `Zp`.|  
-|`Cc`|Другое: управляющий символ|  
-|`Cf`|Другое: формат|  
-|`Cs`|Другое: заменяющий символ|  
-|`Co`|Другое: индивидуальное использование|  
-|`Cn`|Другое: неназначенные символы \(ни один символ не имеет этого свойства\)|  
-|`C`|Все управляющие символы.  Включает категории `Cc`, `Cf`, `Cs`, `Co` и `Cn`.|  
+|<span data-ttu-id="29645-428">Категория</span><span class="sxs-lookup"><span data-stu-id="29645-428">Category</span></span>|<span data-ttu-id="29645-429">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-429">Description</span></span>|  
+|--------------|-----------------|  
+|`Lu`|<span data-ttu-id="29645-430">Буква: прописные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-430">Letter, Uppercase</span></span>|  
+|`Ll`|<span data-ttu-id="29645-431">Буква: строчные буквы</span><span class="sxs-lookup"><span data-stu-id="29645-431">Letter, Lowercase</span></span>|  
+|`Lt`|<span data-ttu-id="29645-432">Буква: заглавный регистр</span><span class="sxs-lookup"><span data-stu-id="29645-432">Letter, Titlecase</span></span>|  
+|`Lm`|<span data-ttu-id="29645-433">Буква: модификатор</span><span class="sxs-lookup"><span data-stu-id="29645-433">Letter, Modifier</span></span>|  
+|`Lo`|<span data-ttu-id="29645-434">Буква: другие</span><span class="sxs-lookup"><span data-stu-id="29645-434">Letter, Other</span></span>|  
+|`L`|<span data-ttu-id="29645-435">Все буквенные символы.</span><span class="sxs-lookup"><span data-stu-id="29645-435">All letter characters.</span></span> <span data-ttu-id="29645-436">Включает символы `Lu`, `Ll`, `Lt`, `Lm` и `Lo`</span><span class="sxs-lookup"><span data-stu-id="29645-436">This includes the `Lu`, `Ll`, `Lt`, `Lm`, and `Lo` characters.</span></span>|  
+|`Mn`|<span data-ttu-id="29645-437">Метка: не занимающая место</span><span class="sxs-lookup"><span data-stu-id="29645-437">Mark, Nonspacing</span></span>|  
+|`Mc`|<span data-ttu-id="29645-438">Метка: комбинированная</span><span class="sxs-lookup"><span data-stu-id="29645-438">Mark, Spacing Combining</span></span>|  
+|`Me`|<span data-ttu-id="29645-439">Метка: вложенная</span><span class="sxs-lookup"><span data-stu-id="29645-439">Mark, Enclosing</span></span>|  
+|`M`|<span data-ttu-id="29645-440">Все диакритические знаки.</span><span class="sxs-lookup"><span data-stu-id="29645-440">All diacritic marks.</span></span> <span data-ttu-id="29645-441">Включает категории `Mn`, `Mc` и `Me`.</span><span class="sxs-lookup"><span data-stu-id="29645-441">This includes the `Mn`, `Mc`, and `Me` categories.</span></span>|  
+|`Nd`|<span data-ttu-id="29645-442">Число: десятичная цифра</span><span class="sxs-lookup"><span data-stu-id="29645-442">Number, Decimal Digit</span></span>|  
+|`Nl`|<span data-ttu-id="29645-443">Число: буква</span><span class="sxs-lookup"><span data-stu-id="29645-443">Number, Letter</span></span>|  
+|`No`|<span data-ttu-id="29645-444">Число: другое</span><span class="sxs-lookup"><span data-stu-id="29645-444">Number, Other</span></span>|  
+|`N`|<span data-ttu-id="29645-445">Все числа.</span><span class="sxs-lookup"><span data-stu-id="29645-445">All numbers.</span></span> <span data-ttu-id="29645-446">Включает категории `Nd`, `Nl` и `No`.</span><span class="sxs-lookup"><span data-stu-id="29645-446">This includes the `Nd`, `Nl`, and `No` categories.</span></span>|  
+|`Pc`|<span data-ttu-id="29645-447">Пунктуация: соединитель</span><span class="sxs-lookup"><span data-stu-id="29645-447">Punctuation, Connector</span></span>|  
+|`Pd`|<span data-ttu-id="29645-448">Пунктуация: тире</span><span class="sxs-lookup"><span data-stu-id="29645-448">Punctuation, Dash</span></span>|  
+|`Ps`|<span data-ttu-id="29645-449">Пунктуация: открывающий знак пунктуации</span><span class="sxs-lookup"><span data-stu-id="29645-449">Punctuation, Open</span></span>|  
+|`Pe`|<span data-ttu-id="29645-450">Пунктуация: закрывающий знак пунктуации</span><span class="sxs-lookup"><span data-stu-id="29645-450">Punctuation, Close</span></span>|  
+|`Pi`|<span data-ttu-id="29645-451">Пунктуация: открывающая кавычка (в зависимости от использования поведение может быть аналогичным Ps или Pe)</span><span class="sxs-lookup"><span data-stu-id="29645-451">Punctuation, Initial quote (may behave like Ps or Pe depending on usage)</span></span>|  
+|`Pf`|<span data-ttu-id="29645-452">Пунктуация: закрывающая кавычка (в зависимости от использования поведение может быть аналогичным Ps или Pe)</span><span class="sxs-lookup"><span data-stu-id="29645-452">Punctuation, Final quote (may behave like Ps or Pe depending on usage)</span></span>|  
+|`Po`|<span data-ttu-id="29645-453">Пунктуация: другие знаки пунктуации</span><span class="sxs-lookup"><span data-stu-id="29645-453">Punctuation, Other</span></span>|  
+|`P`|<span data-ttu-id="29645-454">Все знаки препинания.</span><span class="sxs-lookup"><span data-stu-id="29645-454">All punctuation characters.</span></span> <span data-ttu-id="29645-455">Включает категории `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf` и `Po`.</span><span class="sxs-lookup"><span data-stu-id="29645-455">This includes the `Pc`, `Pd`, `Ps`, `Pe`, `Pi`, `Pf`, and `Po` categories.</span></span>|  
+|`Sm`|<span data-ttu-id="29645-456">Символ: математический</span><span class="sxs-lookup"><span data-stu-id="29645-456">Symbol, Math</span></span>|  
+|`Sc`|<span data-ttu-id="29645-457">Символ денежной единицы</span><span class="sxs-lookup"><span data-stu-id="29645-457">Symbol, Currency</span></span>|  
+|`Sk`|<span data-ttu-id="29645-458">Символ: модификатор</span><span class="sxs-lookup"><span data-stu-id="29645-458">Symbol, Modifier</span></span>|  
+|`So`|<span data-ttu-id="29645-459">Символ: другие</span><span class="sxs-lookup"><span data-stu-id="29645-459">Symbol, Other</span></span>|  
+|`S`|<span data-ttu-id="29645-460">Все символы.</span><span class="sxs-lookup"><span data-stu-id="29645-460">All symbols.</span></span> <span data-ttu-id="29645-461">Включает категории `Sm`, `Sc`, `Sk` и `So`.</span><span class="sxs-lookup"><span data-stu-id="29645-461">This includes the `Sm`, `Sc`, `Sk`, and `So` categories.</span></span>|  
+|`Zs`|<span data-ttu-id="29645-462">Разделитель: пробел</span><span class="sxs-lookup"><span data-stu-id="29645-462">Separator, Space</span></span>|  
+|`Zl`|<span data-ttu-id="29645-463">Разделитель: строка</span><span class="sxs-lookup"><span data-stu-id="29645-463">Separator, Line</span></span>|  
+|`Zp`|<span data-ttu-id="29645-464">Разделитель: абзац</span><span class="sxs-lookup"><span data-stu-id="29645-464">Separator, Paragraph</span></span>|  
+|`Z`|<span data-ttu-id="29645-465">Все знаки разделения.</span><span class="sxs-lookup"><span data-stu-id="29645-465">All separator characters.</span></span> <span data-ttu-id="29645-466">Включает категории `Zs`, `Zl` и `Zp`.</span><span class="sxs-lookup"><span data-stu-id="29645-466">This includes the `Zs`, `Zl`, and `Zp` categories.</span></span>|  
+|`Cc`|<span data-ttu-id="29645-467">Другое: управляющий символ</span><span class="sxs-lookup"><span data-stu-id="29645-467">Other, Control</span></span>|  
+|`Cf`|<span data-ttu-id="29645-468">Другое: формат</span><span class="sxs-lookup"><span data-stu-id="29645-468">Other, Format</span></span>|  
+|`Cs`|<span data-ttu-id="29645-469">Другое: заменяющий символ</span><span class="sxs-lookup"><span data-stu-id="29645-469">Other, Surrogate</span></span>|  
+|`Co`|<span data-ttu-id="29645-470">Другое: индивидуальное использование</span><span class="sxs-lookup"><span data-stu-id="29645-470">Other, Private Use</span></span>|  
+|`Cn`|<span data-ttu-id="29645-471">Другое: неназначенные символы (ни один символ не имеет этого свойства)</span><span class="sxs-lookup"><span data-stu-id="29645-471">Other, Not Assigned (no characters have this property)</span></span>|  
+|`C`|<span data-ttu-id="29645-472">Все управляющие символы.</span><span class="sxs-lookup"><span data-stu-id="29645-472">All control characters.</span></span> <span data-ttu-id="29645-473">Включает категории `Cc`, `Cf`, `Cs`, `Co` и `Cn`.</span><span class="sxs-lookup"><span data-stu-id="29645-473">This includes the `Cc`, `Cf`, `Cs`, `Co`, and `Cn` categories.</span></span>|  
   
- Можно определить категорию Юникода для любого отдельного символа, передав его в метод <xref:System.Char.GetUnicodeCategory%2A>.  В следующем примере метод <xref:System.Char.GetUnicodeCategory%2A> используется для определения категории каждого элемента в массиве, содержащем выбранные латинские символы.  
+ <span data-ttu-id="29645-474">Можно определить категорию Юникода для любого отдельного символа, передав его в метод <xref:System.Char.GetUnicodeCategory%2A>.</span><span class="sxs-lookup"><span data-stu-id="29645-474">You can determine the Unicode category of any particular character by passing that character to the <xref:System.Char.GetUnicodeCategory%2A> method.</span></span> <span data-ttu-id="29645-475">В следующем примере метод <xref:System.Char.GetUnicodeCategory%2A> используется для определения категории каждого элемента в массиве, содержащем выбранные латинские символы.</span><span class="sxs-lookup"><span data-stu-id="29645-475">The following example uses the <xref:System.Char.GetUnicodeCategory%2A> method to determine the category of each element in an array that contains selected Latin characters.</span></span>  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-476">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-476">Back to Top</span></span>](#Top)  
   
 <a name="SupportedNamedBlocks"></a>   
-## Поддерживаемые именованные блоки  
- Платформа .NET Framework предоставляет именованные блоки, перечисленные в следующей таблице.  Набор поддерживаемых именованных блоков составлен на основе Юникода версии 4.0 и Perl версии 5.6.  
+## <a name="supported-named-blocks"></a><span data-ttu-id="29645-477">Поддерживаемые именованные блоки</span><span class="sxs-lookup"><span data-stu-id="29645-477">Supported Named Blocks</span></span>  
+ <span data-ttu-id="29645-478">Платформа .NET предоставляет именованные блоки, перечисленные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-478">.NET provides the named blocks listed in the following table.</span></span> <span data-ttu-id="29645-479">Набор поддерживаемых именованных блоков составлен на основе Юникода версии 4.0 и Perl версии 5.6.</span><span class="sxs-lookup"><span data-stu-id="29645-479">The set of supported named blocks is based on Unicode 4.0 and Perl 5.6.</span></span>  
   
-|Диапазон кодовых точек|Имя блока|  
-|----------------------------|---------------|  
-|0000 \- 007F|`IsBasicLatin`|  
-|0080 \- 00FF|`IsLatin-1Supplement`|  
-|0100 \- 017F|`IsLatinExtended-A`|  
-|0180 \- 024F|`IsLatinExtended-B`|  
-|0250 \- 02AF|`IsIPAExtensions`|  
-|02B0 \- 02FF|`IsSpacingModifierLetters`|  
-|0300 \- 036F|`IsCombiningDiacriticalMarks`|  
-|0370 \- 03FF|`IsGreek`<br /><br /> \-или\-<br /><br /> `IsGreekandCoptic`|  
-|0400 \- 04FF|`IsCyrillic`|  
-|0500 \- 052F|`IsCyrillicSupplement`|  
-|0530 \- 058F|`IsArmenian`|  
-|0590 \- 05FF|`IsHebrew`|  
-|0600 \- 06FF|`IsArabic`|  
-|0700 \- 074F|`IsSyriac`|  
-|0780 \- 07BF|`IsThaana`|  
-|0900 \- 097F|`IsDevanagari`|  
-|0980 \- 09FF|`IsBengali`|  
-|0A00 \- 0A7F|`IsGurmukhi`|  
-|0A80 \- 0AFF|`IsGujarati`|  
-|0B00 \- 0B7F|`IsOriya`|  
-|0B80 \- 0BFF|`IsTamil`|  
-|0C00 \- 0C7F|`IsTelugu`|  
-|0C80 \- 0CFF|`IsKannada`|  
-|0D00 \- 0D7F|`IsMalayalam`|  
-|0D80 \- 0DFF|`IsSinhala`|  
-|0E00 \- 0E7F|`IsThai`|  
-|0E80 \- 0EFF|`IsLao`|  
-|0F00 \- 0FFF|`IsTibetan`|  
-|1000 \- 109F|`IsMyanmar`|  
-|10A0 \- 10FF|`IsGeorgian`|  
-|1100 \- 11FF|`IsHangulJamo`|  
-|1200 \- 137F|`IsEthiopic`|  
-|13A0 \- 13FF|`IsCherokee`|  
-|1400 \- 167F|`IsUnifiedCanadianAboriginalSyllabics`|  
-|1680 \- 169F|`IsOgham`|  
-|16A0 \- 16FF|`IsRunic`|  
-|1700 \- 171F|`IsTagalog`|  
-|1720 \- 173F|`IsHanunoo`|  
-|1740 \- 175F|`IsBuhid`|  
-|1760 \- 177F|`IsTagbanwa`|  
-|1780 \- 17FF|`IsKhmer`|  
-|1800 \- 18AF|`IsMongolian`|  
-|1900 \- 194F|`IsLimbu`|  
-|1950 \- 197F|`IsTaiLe`|  
-|19E0 \- 19FF|`IsKhmerSymbols`|  
-|1D00 \- 1D7F|`IsPhoneticExtensions`|  
-|1E00 \- 1EFF|`IsLatinExtendedAdditional`|  
-|1F00 \- 1FFF|`IsGreekExtended`|  
-|2000 \- 206F|`IsGeneralPunctuation`|  
-|2070 \- 209F|`IsSuperscriptsandSubscripts`|  
-|20A0 \- 20CF|`IsCurrencySymbols`|  
-|20D0 \- 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \-или\-<br /><br /> `IsCombiningMarksforSymbols`|  
-|2100 \- 214F|`IsLetterlikeSymbols`|  
-|2150 \- 218F|`IsNumberForms`|  
-|2190 \- 21FF|`IsArrows`|  
-|2200 \- 22FF|`IsMathematicalOperators`|  
-|2300 \- 23FF|`IsMiscellaneousTechnical`|  
-|2400 \- 243F|`IsControlPictures`|  
-|2440 \- 245F|`IsOpticalCharacterRecognition`|  
-|2460 \- 24FF|`IsEnclosedAlphanumerics`|  
-|2500 \- 257F|`IsBoxDrawing`|  
-|2580 \- 259F|`IsBlockElements`|  
-|25A0 \- 25FF|`IsGeometricShapes`|  
-|2600 \- 26FF|`IsMiscellaneousSymbols`|  
-|2700 \- 27BF|`IsDingbats`|  
-|27C0 \- 27EF|`IsMiscellaneousMathematicalSymbols-A`|  
-|27F0 \- 27FF|`IsSupplementalArrows-A`|  
-|2800 \- 28FF|`IsBraillePatterns`|  
-|2900 \- 297F|`IsSupplementalArrows-B`|  
-|2980 \- 29FF|`IsMiscellaneousMathematicalSymbols-B`|  
-|2A00 \- 2AFF|`IsSupplementalMathematicalOperators`|  
-|2B00 \- 2BFF|`IsMiscellaneousSymbolsandArrows`|  
-|2E80 \- 2EFF|`IsCJKRadicalsSupplement`|  
-|2F00 \- 2FDF|`IsKangxiRadicals`|  
-|2FF0 \- 2FFF|`IsIdeographicDescriptionCharacters`|  
-|3000 \- 303F|`IsCJKSymbolsandPunctuation`|  
-|3040 \- 309F|`IsHiragana`|  
-|30A0 \- 30FF|`IsKatakana`|  
-|3100 \- 312F|`IsBopomofo`|  
-|3130 \- 318F|`IsHangulCompatibilityJamo`|  
-|3190 \- 319F|`IsKanbun`|  
-|31A0 \- 31BF|`IsBopomofoExtended`|  
-|31F0 \- 31FF|`IsKatakanaPhoneticExtensions`|  
-|3200 \- 32FF|`IsEnclosedCJKLettersandMonths`|  
-|3300 \- 33FF|`IsCJKCompatibility`|  
-|3400 \- 4DBF|`IsCJKUnifiedIdeographsExtensionA`|  
-|4DC0 \- 4DFF|`IsYijingHexagramSymbols`|  
-|4E00 \- 9FFF|`IsCJKUnifiedIdeographs`|  
-|A000 \- A48F|`IsYiSyllables`|  
-|A490 \- A4CF|`IsYiRadicals`|  
-|AC00 \- D7AF|`IsHangulSyllables`|  
-|D800 \- DB7F|`IsHighSurrogates`|  
-|DB80 \- DBFF|`IsHighPrivateUseSurrogates`|  
-|DC00 \- DFFF|`IsLowSurrogates`|  
-|E000 \- F8FF|`IsPrivateUse` или `IsPrivateUseArea`|  
-|F900 \- FAFF|`IsCJKCompatibilityIdeographs`|  
-|FB00 \- FB4F|`IsAlphabeticPresentationForms`|  
-|FB50 \- FDFF|`IsArabicPresentationForms-A`|  
-|FE00 \- FE0F|`IsVariationSelectors`|  
-|FE20 \- FE2F|`IsCombiningHalfMarks`|  
-|FE30 \- FE4F|`IsCJKCompatibilityForms`|  
-|FE50 \- FE6F|`IsSmallFormVariants`|  
-|FE70 \- FEFF|`IsArabicPresentationForms-B`|  
-|FF00 \- FFEF|`IsHalfwidthandFullwidthForms`|  
-|FFF0 \- FFFF|`IsSpecials`|  
+|<span data-ttu-id="29645-480">Диапазон кодовых точек</span><span class="sxs-lookup"><span data-stu-id="29645-480">Code point range</span></span>|<span data-ttu-id="29645-481">Имя блока</span><span class="sxs-lookup"><span data-stu-id="29645-481">Block name</span></span>|  
+|----------------------|----------------|  
+|<span data-ttu-id="29645-482">0000 - 007F</span><span class="sxs-lookup"><span data-stu-id="29645-482">0000 - 007F</span></span>|`IsBasicLatin`|  
+|<span data-ttu-id="29645-483">0080 - 00FF</span><span class="sxs-lookup"><span data-stu-id="29645-483">0080 - 00FF</span></span>|`IsLatin-1Supplement`|  
+|<span data-ttu-id="29645-484">0100 - 017F</span><span class="sxs-lookup"><span data-stu-id="29645-484">0100 - 017F</span></span>|`IsLatinExtended-A`|  
+|<span data-ttu-id="29645-485">0180 - 024F</span><span class="sxs-lookup"><span data-stu-id="29645-485">0180 - 024F</span></span>|`IsLatinExtended-B`|  
+|<span data-ttu-id="29645-486">0250 - 02AF</span><span class="sxs-lookup"><span data-stu-id="29645-486">0250 - 02AF</span></span>|`IsIPAExtensions`|  
+|<span data-ttu-id="29645-487">02B0 - 02FF</span><span class="sxs-lookup"><span data-stu-id="29645-487">02B0 - 02FF</span></span>|`IsSpacingModifierLetters`|  
+|<span data-ttu-id="29645-488">0300 - 036F</span><span class="sxs-lookup"><span data-stu-id="29645-488">0300 - 036F</span></span>|`IsCombiningDiacriticalMarks`|  
+|<span data-ttu-id="29645-489">0370 - 03FF</span><span class="sxs-lookup"><span data-stu-id="29645-489">0370 - 03FF</span></span>|`IsGreek`<br /><br /> <span data-ttu-id="29645-490">-или-</span><span class="sxs-lookup"><span data-stu-id="29645-490">-or-</span></span><br /><br /> `IsGreekandCoptic`|  
+|<span data-ttu-id="29645-491">0400 - 04FF</span><span class="sxs-lookup"><span data-stu-id="29645-491">0400 - 04FF</span></span>|`IsCyrillic`|  
+|<span data-ttu-id="29645-492">0500 - 052F</span><span class="sxs-lookup"><span data-stu-id="29645-492">0500 - 052F</span></span>|`IsCyrillicSupplement`|  
+|<span data-ttu-id="29645-493">0530 - 058F</span><span class="sxs-lookup"><span data-stu-id="29645-493">0530 - 058F</span></span>|`IsArmenian`|  
+|<span data-ttu-id="29645-494">0590 - 05FF</span><span class="sxs-lookup"><span data-stu-id="29645-494">0590 - 05FF</span></span>|`IsHebrew`|  
+|<span data-ttu-id="29645-495">0600 - 06FF</span><span class="sxs-lookup"><span data-stu-id="29645-495">0600 - 06FF</span></span>|`IsArabic`|  
+|<span data-ttu-id="29645-496">0700 - 074F</span><span class="sxs-lookup"><span data-stu-id="29645-496">0700 - 074F</span></span>|`IsSyriac`|  
+|<span data-ttu-id="29645-497">0780 - 07BF</span><span class="sxs-lookup"><span data-stu-id="29645-497">0780 - 07BF</span></span>|`IsThaana`|  
+|<span data-ttu-id="29645-498">0900 - 097F</span><span class="sxs-lookup"><span data-stu-id="29645-498">0900 - 097F</span></span>|`IsDevanagari`|  
+|<span data-ttu-id="29645-499">0980 - 09FF</span><span class="sxs-lookup"><span data-stu-id="29645-499">0980 - 09FF</span></span>|`IsBengali`|  
+|<span data-ttu-id="29645-500">0A00 - 0A7F</span><span class="sxs-lookup"><span data-stu-id="29645-500">0A00 - 0A7F</span></span>|`IsGurmukhi`|  
+|<span data-ttu-id="29645-501">0A80 - 0AFF</span><span class="sxs-lookup"><span data-stu-id="29645-501">0A80 - 0AFF</span></span>|`IsGujarati`|  
+|<span data-ttu-id="29645-502">0B00 - 0B7F</span><span class="sxs-lookup"><span data-stu-id="29645-502">0B00 - 0B7F</span></span>|`IsOriya`|  
+|<span data-ttu-id="29645-503">0B80 - 0BFF</span><span class="sxs-lookup"><span data-stu-id="29645-503">0B80 - 0BFF</span></span>|`IsTamil`|  
+|<span data-ttu-id="29645-504">0C00 - 0C7F</span><span class="sxs-lookup"><span data-stu-id="29645-504">0C00 - 0C7F</span></span>|`IsTelugu`|  
+|<span data-ttu-id="29645-505">0C80 - 0CFF</span><span class="sxs-lookup"><span data-stu-id="29645-505">0C80 - 0CFF</span></span>|`IsKannada`|  
+|<span data-ttu-id="29645-506">0D00 - 0D7F</span><span class="sxs-lookup"><span data-stu-id="29645-506">0D00 - 0D7F</span></span>|`IsMalayalam`|  
+|<span data-ttu-id="29645-507">0D80 - 0DFF</span><span class="sxs-lookup"><span data-stu-id="29645-507">0D80 - 0DFF</span></span>|`IsSinhala`|  
+|<span data-ttu-id="29645-508">0E00 - 0E7F</span><span class="sxs-lookup"><span data-stu-id="29645-508">0E00 - 0E7F</span></span>|`IsThai`|  
+|<span data-ttu-id="29645-509">0E80 - 0EFF</span><span class="sxs-lookup"><span data-stu-id="29645-509">0E80 - 0EFF</span></span>|`IsLao`|  
+|<span data-ttu-id="29645-510">0F00 - 0FFF</span><span class="sxs-lookup"><span data-stu-id="29645-510">0F00 - 0FFF</span></span>|`IsTibetan`|  
+|<span data-ttu-id="29645-511">1000 - 109F</span><span class="sxs-lookup"><span data-stu-id="29645-511">1000 - 109F</span></span>|`IsMyanmar`|  
+|<span data-ttu-id="29645-512">10A0 - 10FF</span><span class="sxs-lookup"><span data-stu-id="29645-512">10A0 - 10FF</span></span>|`IsGeorgian`|  
+|<span data-ttu-id="29645-513">1100 - 11FF</span><span class="sxs-lookup"><span data-stu-id="29645-513">1100 - 11FF</span></span>|`IsHangulJamo`|  
+|<span data-ttu-id="29645-514">1200 - 137F</span><span class="sxs-lookup"><span data-stu-id="29645-514">1200 - 137F</span></span>|`IsEthiopic`|  
+|<span data-ttu-id="29645-515">13A0 - 13FF</span><span class="sxs-lookup"><span data-stu-id="29645-515">13A0 - 13FF</span></span>|`IsCherokee`|  
+|<span data-ttu-id="29645-516">1400 - 167F</span><span class="sxs-lookup"><span data-stu-id="29645-516">1400 - 167F</span></span>|`IsUnifiedCanadianAboriginalSyllabics`|  
+|<span data-ttu-id="29645-517">1680 - 169F</span><span class="sxs-lookup"><span data-stu-id="29645-517">1680 - 169F</span></span>|`IsOgham`|  
+|<span data-ttu-id="29645-518">16A0 - 16FF</span><span class="sxs-lookup"><span data-stu-id="29645-518">16A0 - 16FF</span></span>|`IsRunic`|  
+|<span data-ttu-id="29645-519">1700 - 171F</span><span class="sxs-lookup"><span data-stu-id="29645-519">1700 - 171F</span></span>|`IsTagalog`|  
+|<span data-ttu-id="29645-520">1720 - 173F</span><span class="sxs-lookup"><span data-stu-id="29645-520">1720 - 173F</span></span>|`IsHanunoo`|  
+|<span data-ttu-id="29645-521">1740 - 175F</span><span class="sxs-lookup"><span data-stu-id="29645-521">1740 - 175F</span></span>|`IsBuhid`|  
+|<span data-ttu-id="29645-522">1760 - 177F</span><span class="sxs-lookup"><span data-stu-id="29645-522">1760 - 177F</span></span>|`IsTagbanwa`|  
+|<span data-ttu-id="29645-523">1780 - 17FF</span><span class="sxs-lookup"><span data-stu-id="29645-523">1780 - 17FF</span></span>|`IsKhmer`|  
+|<span data-ttu-id="29645-524">1800 - 18AF</span><span class="sxs-lookup"><span data-stu-id="29645-524">1800 - 18AF</span></span>|`IsMongolian`|  
+|<span data-ttu-id="29645-525">1900 - 194F</span><span class="sxs-lookup"><span data-stu-id="29645-525">1900 - 194F</span></span>|`IsLimbu`|  
+|<span data-ttu-id="29645-526">1950 - 197F</span><span class="sxs-lookup"><span data-stu-id="29645-526">1950 - 197F</span></span>|`IsTaiLe`|  
+|<span data-ttu-id="29645-527">19E0 - 19FF</span><span class="sxs-lookup"><span data-stu-id="29645-527">19E0 - 19FF</span></span>|`IsKhmerSymbols`|  
+|<span data-ttu-id="29645-528">1D00 - 1D7F</span><span class="sxs-lookup"><span data-stu-id="29645-528">1D00 - 1D7F</span></span>|`IsPhoneticExtensions`|  
+|<span data-ttu-id="29645-529">1E00 - 1EFF</span><span class="sxs-lookup"><span data-stu-id="29645-529">1E00 - 1EFF</span></span>|`IsLatinExtendedAdditional`|  
+|<span data-ttu-id="29645-530">1F00 - 1FFF</span><span class="sxs-lookup"><span data-stu-id="29645-530">1F00 - 1FFF</span></span>|`IsGreekExtended`|  
+|<span data-ttu-id="29645-531">2000 - 206F</span><span class="sxs-lookup"><span data-stu-id="29645-531">2000 - 206F</span></span>|`IsGeneralPunctuation`|  
+|<span data-ttu-id="29645-532">2070 - 209F</span><span class="sxs-lookup"><span data-stu-id="29645-532">2070 - 209F</span></span>|`IsSuperscriptsandSubscripts`|  
+|<span data-ttu-id="29645-533">20A0 - 20CF</span><span class="sxs-lookup"><span data-stu-id="29645-533">20A0 - 20CF</span></span>|`IsCurrencySymbols`|  
+|<span data-ttu-id="29645-534">20D0 - 20FF</span><span class="sxs-lookup"><span data-stu-id="29645-534">20D0 - 20FF</span></span>|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> <span data-ttu-id="29645-535">-или-</span><span class="sxs-lookup"><span data-stu-id="29645-535">-or-</span></span><br /><br /> `IsCombiningMarksforSymbols`|  
+|<span data-ttu-id="29645-536">2100 - 214F</span><span class="sxs-lookup"><span data-stu-id="29645-536">2100 - 214F</span></span>|`IsLetterlikeSymbols`|  
+|<span data-ttu-id="29645-537">2150 - 218F</span><span class="sxs-lookup"><span data-stu-id="29645-537">2150 - 218F</span></span>|`IsNumberForms`|  
+|<span data-ttu-id="29645-538">2190 - 21FF</span><span class="sxs-lookup"><span data-stu-id="29645-538">2190 - 21FF</span></span>|`IsArrows`|  
+|<span data-ttu-id="29645-539">2200 - 22FF</span><span class="sxs-lookup"><span data-stu-id="29645-539">2200 - 22FF</span></span>|`IsMathematicalOperators`|  
+|<span data-ttu-id="29645-540">2300 - 23FF</span><span class="sxs-lookup"><span data-stu-id="29645-540">2300 - 23FF</span></span>|`IsMiscellaneousTechnical`|  
+|<span data-ttu-id="29645-541">2400 - 243F</span><span class="sxs-lookup"><span data-stu-id="29645-541">2400 - 243F</span></span>|`IsControlPictures`|  
+|<span data-ttu-id="29645-542">2440 - 245F</span><span class="sxs-lookup"><span data-stu-id="29645-542">2440 - 245F</span></span>|`IsOpticalCharacterRecognition`|  
+|<span data-ttu-id="29645-543">2460 - 24FF</span><span class="sxs-lookup"><span data-stu-id="29645-543">2460 - 24FF</span></span>|`IsEnclosedAlphanumerics`|  
+|<span data-ttu-id="29645-544">2500 - 257F</span><span class="sxs-lookup"><span data-stu-id="29645-544">2500 - 257F</span></span>|`IsBoxDrawing`|  
+|<span data-ttu-id="29645-545">2580 - 259F</span><span class="sxs-lookup"><span data-stu-id="29645-545">2580 - 259F</span></span>|`IsBlockElements`|  
+|<span data-ttu-id="29645-546">25A0 - 25FF</span><span class="sxs-lookup"><span data-stu-id="29645-546">25A0 - 25FF</span></span>|`IsGeometricShapes`|  
+|<span data-ttu-id="29645-547">2600 - 26FF</span><span class="sxs-lookup"><span data-stu-id="29645-547">2600 - 26FF</span></span>|`IsMiscellaneousSymbols`|  
+|<span data-ttu-id="29645-548">2700 - 27BF</span><span class="sxs-lookup"><span data-stu-id="29645-548">2700 - 27BF</span></span>|`IsDingbats`|  
+|<span data-ttu-id="29645-549">27C0 - 27EF</span><span class="sxs-lookup"><span data-stu-id="29645-549">27C0 - 27EF</span></span>|`IsMiscellaneousMathematicalSymbols-A`|  
+|<span data-ttu-id="29645-550">27F0 - 27FF</span><span class="sxs-lookup"><span data-stu-id="29645-550">27F0 - 27FF</span></span>|`IsSupplementalArrows-A`|  
+|<span data-ttu-id="29645-551">2800 - 28FF</span><span class="sxs-lookup"><span data-stu-id="29645-551">2800 - 28FF</span></span>|`IsBraillePatterns`|  
+|<span data-ttu-id="29645-552">2900 - 297F</span><span class="sxs-lookup"><span data-stu-id="29645-552">2900 - 297F</span></span>|`IsSupplementalArrows-B`|  
+|<span data-ttu-id="29645-553">2980 - 29FF</span><span class="sxs-lookup"><span data-stu-id="29645-553">2980 - 29FF</span></span>|`IsMiscellaneousMathematicalSymbols-B`|  
+|<span data-ttu-id="29645-554">2A00 - 2AFF</span><span class="sxs-lookup"><span data-stu-id="29645-554">2A00 - 2AFF</span></span>|`IsSupplementalMathematicalOperators`|  
+|<span data-ttu-id="29645-555">2B00 - 2BFF</span><span class="sxs-lookup"><span data-stu-id="29645-555">2B00 - 2BFF</span></span>|`IsMiscellaneousSymbolsandArrows`|  
+|<span data-ttu-id="29645-556">2E80 - 2EFF</span><span class="sxs-lookup"><span data-stu-id="29645-556">2E80 - 2EFF</span></span>|`IsCJKRadicalsSupplement`|  
+|<span data-ttu-id="29645-557">2F00 - 2FDF</span><span class="sxs-lookup"><span data-stu-id="29645-557">2F00 - 2FDF</span></span>|`IsKangxiRadicals`|  
+|<span data-ttu-id="29645-558">2FF0 - 2FFF</span><span class="sxs-lookup"><span data-stu-id="29645-558">2FF0 - 2FFF</span></span>|`IsIdeographicDescriptionCharacters`|  
+|<span data-ttu-id="29645-559">3000 - 303F</span><span class="sxs-lookup"><span data-stu-id="29645-559">3000 - 303F</span></span>|`IsCJKSymbolsandPunctuation`|  
+|<span data-ttu-id="29645-560">3040 - 309F</span><span class="sxs-lookup"><span data-stu-id="29645-560">3040 - 309F</span></span>|`IsHiragana`|  
+|<span data-ttu-id="29645-561">30A0 - 30FF</span><span class="sxs-lookup"><span data-stu-id="29645-561">30A0 - 30FF</span></span>|`IsKatakana`|  
+|<span data-ttu-id="29645-562">3100 - 312F</span><span class="sxs-lookup"><span data-stu-id="29645-562">3100 - 312F</span></span>|`IsBopomofo`|  
+|<span data-ttu-id="29645-563">3130 - 318F</span><span class="sxs-lookup"><span data-stu-id="29645-563">3130 - 318F</span></span>|`IsHangulCompatibilityJamo`|  
+|<span data-ttu-id="29645-564">3190 - 319F</span><span class="sxs-lookup"><span data-stu-id="29645-564">3190 - 319F</span></span>|`IsKanbun`|  
+|<span data-ttu-id="29645-565">31A0 - 31BF</span><span class="sxs-lookup"><span data-stu-id="29645-565">31A0 - 31BF</span></span>|`IsBopomofoExtended`|  
+|<span data-ttu-id="29645-566">31F0 - 31FF</span><span class="sxs-lookup"><span data-stu-id="29645-566">31F0 - 31FF</span></span>|`IsKatakanaPhoneticExtensions`|  
+|<span data-ttu-id="29645-567">3200 - 32FF</span><span class="sxs-lookup"><span data-stu-id="29645-567">3200 - 32FF</span></span>|`IsEnclosedCJKLettersandMonths`|  
+|<span data-ttu-id="29645-568">3300 - 33FF</span><span class="sxs-lookup"><span data-stu-id="29645-568">3300 - 33FF</span></span>|`IsCJKCompatibility`|  
+|<span data-ttu-id="29645-569">3400 - 4DBF</span><span class="sxs-lookup"><span data-stu-id="29645-569">3400 - 4DBF</span></span>|`IsCJKUnifiedIdeographsExtensionA`|  
+|<span data-ttu-id="29645-570">4DC0 - 4DFF</span><span class="sxs-lookup"><span data-stu-id="29645-570">4DC0 - 4DFF</span></span>|`IsYijingHexagramSymbols`|  
+|<span data-ttu-id="29645-571">4E00 - 9FFF</span><span class="sxs-lookup"><span data-stu-id="29645-571">4E00 - 9FFF</span></span>|`IsCJKUnifiedIdeographs`|  
+|<span data-ttu-id="29645-572">A000 - A48F</span><span class="sxs-lookup"><span data-stu-id="29645-572">A000 - A48F</span></span>|`IsYiSyllables`|  
+|<span data-ttu-id="29645-573">A490 - A4CF</span><span class="sxs-lookup"><span data-stu-id="29645-573">A490 - A4CF</span></span>|`IsYiRadicals`|  
+|<span data-ttu-id="29645-574">AC00 - D7AF</span><span class="sxs-lookup"><span data-stu-id="29645-574">AC00 - D7AF</span></span>|`IsHangulSyllables`|  
+|<span data-ttu-id="29645-575">D800 - DB7F</span><span class="sxs-lookup"><span data-stu-id="29645-575">D800 - DB7F</span></span>|`IsHighSurrogates`|  
+|<span data-ttu-id="29645-576">DB80 - DBFF</span><span class="sxs-lookup"><span data-stu-id="29645-576">DB80 - DBFF</span></span>|`IsHighPrivateUseSurrogates`|  
+|<span data-ttu-id="29645-577">DC00 - DFFF</span><span class="sxs-lookup"><span data-stu-id="29645-577">DC00 - DFFF</span></span>|`IsLowSurrogates`|  
+|<span data-ttu-id="29645-578">E000 - F8FF</span><span class="sxs-lookup"><span data-stu-id="29645-578">E000 - F8FF</span></span>|<span data-ttu-id="29645-579">`IsPrivateUse` или `IsPrivateUseArea`</span><span class="sxs-lookup"><span data-stu-id="29645-579">`IsPrivateUse` or `IsPrivateUseArea`</span></span>|  
+|<span data-ttu-id="29645-580">F900 - FAFF</span><span class="sxs-lookup"><span data-stu-id="29645-580">F900 - FAFF</span></span>|`IsCJKCompatibilityIdeographs`|  
+|<span data-ttu-id="29645-581">FB00 - FB4F</span><span class="sxs-lookup"><span data-stu-id="29645-581">FB00 - FB4F</span></span>|`IsAlphabeticPresentationForms`|  
+|<span data-ttu-id="29645-582">FB50 - FDFF</span><span class="sxs-lookup"><span data-stu-id="29645-582">FB50 - FDFF</span></span>|`IsArabicPresentationForms-A`|  
+|<span data-ttu-id="29645-583">FE00 - FE0F</span><span class="sxs-lookup"><span data-stu-id="29645-583">FE00 - FE0F</span></span>|`IsVariationSelectors`|  
+|<span data-ttu-id="29645-584">FE20 - FE2F</span><span class="sxs-lookup"><span data-stu-id="29645-584">FE20 - FE2F</span></span>|`IsCombiningHalfMarks`|  
+|<span data-ttu-id="29645-585">FE30 - FE4F</span><span class="sxs-lookup"><span data-stu-id="29645-585">FE30 - FE4F</span></span>|`IsCJKCompatibilityForms`|  
+|<span data-ttu-id="29645-586">FE50 - FE6F</span><span class="sxs-lookup"><span data-stu-id="29645-586">FE50 - FE6F</span></span>|`IsSmallFormVariants`|  
+|<span data-ttu-id="29645-587">FE70 - FEFF</span><span class="sxs-lookup"><span data-stu-id="29645-587">FE70 - FEFF</span></span>|`IsArabicPresentationForms-B`|  
+|<span data-ttu-id="29645-588">FF00 - FFEF</span><span class="sxs-lookup"><span data-stu-id="29645-588">FF00 - FFEF</span></span>|`IsHalfwidthandFullwidthForms`|  
+|<span data-ttu-id="29645-589">FFF0 - FFFF</span><span class="sxs-lookup"><span data-stu-id="29645-589">FFF0 - FFFF</span></span>|`IsSpecials`|  
   
- [К началу](#Top)  
+ [<span data-ttu-id="29645-590">К началу</span><span class="sxs-lookup"><span data-stu-id="29645-590">Back to Top</span></span>](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
-## Вычитание класса знаков: \[базовая\_группа \- \[исключенная\_группа\]\]  
- Класс знаков определяет набор знаков.  Результатом вычитания класса знаков является набор знаков, полученный в результате исключения одного класса знаков из другого класса знаков.  
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a><span data-ttu-id="29645-591">Вычитание класса знаков: [базовая_группа - [исключенная_группа]]</span><span class="sxs-lookup"><span data-stu-id="29645-591">Character Class Subtraction: [base_group - [excluded_group]]</span></span>  
+ <span data-ttu-id="29645-592">Класс знаков определяет набор знаков.</span><span class="sxs-lookup"><span data-stu-id="29645-592">A character class defines a set of characters.</span></span> <span data-ttu-id="29645-593">Результатом вычитания класса знаков является набор знаков, полученный в результате исключения одного класса знаков из другого класса знаков.</span><span class="sxs-lookup"><span data-stu-id="29645-593">Character class subtraction yields a set of characters that is the result of excluding the characters in one character class from another character class.</span></span>  
   
- Выражение вычитания класса знаков имеет следующий вид:  
+ <span data-ttu-id="29645-594">Выражение вычитания класса знаков имеет следующий вид:</span><span class="sxs-lookup"><span data-stu-id="29645-594">A character class subtraction expression has the following form:</span></span>  
   
- `[` *base\_group* `-[` *excluded\_group* `]]`  
+ <span data-ttu-id="29645-595">`[` *base_group* `-[` *excluded_group* `]]`</span><span class="sxs-lookup"><span data-stu-id="29645-595">`[` *base_group* `-[` *excluded_group* `]]`</span></span>  
   
- Квадратные скобки \(`[]`\) и дефис \(`-`\) являются обязательными.  *base\_group* представляет собой [положительную](#PositiveGroup) или [отрицательную](#NegativeGroup) группу символов.  Компонент *excluded\_group* — это другая положительная или отрицательная группа символов или другое выражение вычитания класса символов \(то есть можно осуществлять вложение выражений вычитания класса символов\).  
+ <span data-ttu-id="29645-596">Квадратные скобки (`[]`) и дефис (`-`) являются обязательными.</span><span class="sxs-lookup"><span data-stu-id="29645-596">The square brackets (`[]`) and hyphen (`-`) are mandatory.</span></span> <span data-ttu-id="29645-597">*base_group* представляет собой [положительную](#PositiveGroup) или [отрицательную](#NegativeGroup) группу символов.</span><span class="sxs-lookup"><span data-stu-id="29645-597">The *base_group* is a [positive character group](#PositiveGroup) or a [negative character group](#NegativeGroup).</span></span> <span data-ttu-id="29645-598">Компонент *excluded_group* — это другая положительная или отрицательная группа символов или другое выражение вычитания класса символов (то есть можно осуществлять вложение выражений вычитания класса символов).</span><span class="sxs-lookup"><span data-stu-id="29645-598">The *excluded_group* component is another positive or negative character group, or another character class subtraction expression (that is, you can nest character class subtraction expressions).</span></span>  
   
- Например, предположим, что имеется базовая группа, состоящая из диапазона знаков от "а" до "z".  Чтобы задать набор знаков, состоящий из базовой группы за исключением знака "m", используйте команду `[a-z-[m]]`.  Чтобы задать набор знаков, состоящий из базовой группы за исключением знаков "d", "j", и "p", используйте команду `[a-z-[djp]]`.  Чтобы определить набор знаков, состоящий из базовой группы за исключением диапазона знаков от "m" до "p", используйте команду `[a-z-[m-p]]`.  
+ <span data-ttu-id="29645-599">Например, предположим, что имеется базовая группа, состоящая из диапазона знаков от "а" до "z".</span><span class="sxs-lookup"><span data-stu-id="29645-599">For example, suppose you have a base group that consists of the character range from "a" through "z".</span></span> <span data-ttu-id="29645-600">Чтобы задать набор знаков, состоящий из базовой группы за исключением знака "m", используйте команду `[a-z-[m]]`.</span><span class="sxs-lookup"><span data-stu-id="29645-600">To define the set of characters that consists of the base group except for the character "m", use `[a-z-[m]]`.</span></span> <span data-ttu-id="29645-601">Чтобы задать набор знаков, состоящий из базовой группы за исключением знаков "d", "j", и "p", используйте команду `[a-z-[djp]]`.</span><span class="sxs-lookup"><span data-stu-id="29645-601">To define the set of characters that consists of the base group except for the set of characters "d", "j", and "p", use `[a-z-[djp]]`.</span></span> <span data-ttu-id="29645-602">Чтобы определить набор знаков, состоящий из базовой группы за исключением диапазона знаков от "m" до "p", используйте команду `[a-z-[m-p]]`.</span><span class="sxs-lookup"><span data-stu-id="29645-602">To define the set of characters that consists of the base group except for the character range from "m" through "p", use `[a-z-[m-p]]`.</span></span>  
   
- Рассмотрим вложенное выражение вычитания классов знаков `[a-z-[d-w-[m-o]]]`.  Вычисление выражения начинается из самого внутреннего диапазона знаков.  Сначала диапазон знаков от "m" до "o" вычитается из диапазона знаков от "d" до "w", в результате чего остается набор знаков от "d" до "i" и от "p" до "w".  Затем этот набор вычитается из диапазона знаков от "a" до "z", вследствие чего получается набор знаков `[abcmnoxyz]`.  
+ <span data-ttu-id="29645-603">Рассмотрим вложенное выражение вычитания классов знаков `[a-z-[d-w-[m-o]]]`.</span><span class="sxs-lookup"><span data-stu-id="29645-603">Consider the nested character class subtraction expression, `[a-z-[d-w-[m-o]]]`.</span></span> <span data-ttu-id="29645-604">Вычисление выражения начинается из самого внутреннего диапазона знаков.</span><span class="sxs-lookup"><span data-stu-id="29645-604">The expression is evaluated from the innermost character range outward.</span></span> <span data-ttu-id="29645-605">Сначала диапазон знаков от "m" до "o" вычитается из диапазона знаков от "d" до "w", в результате чего остается набор знаков от "d" до "i" и от "p" до "w".</span><span class="sxs-lookup"><span data-stu-id="29645-605">First, the character range from "m" through "o" is subtracted from the character range "d" through "w", which yields the set of characters from "d" through "l" and "p" through "w".</span></span> <span data-ttu-id="29645-606">Затем этот набор вычитается из диапазона знаков от "a" до "z", вследствие чего получается набор знаков `[abcmnoxyz]`.</span><span class="sxs-lookup"><span data-stu-id="29645-606">That set is then subtracted from the character range from "a" through "z", which yields the set of characters `[abcmnoxyz]`.</span></span>  
   
- При вычитании класса знаков можно использовать любой класс знаков.  Чтобы определить набор символов, состоящий из всех символов Юникода от \\u0000 до \\uFFFF, за исключением пробела \(`\s`\), знаков препинания в общей категории \(`\p{P}`\), символов в именованном блоке `IsGreek` \(`\p{IsGreek}`\) и управляющего символа Юникода "следующая строка" \(\\x85\), используйте `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.  
+ <span data-ttu-id="29645-607">При вычитании класса знаков можно использовать любой класс знаков.</span><span class="sxs-lookup"><span data-stu-id="29645-607">You can use any character class with character class subtraction.</span></span> <span data-ttu-id="29645-608">Чтобы определить набор символов, состоящий из всех символов Юникода от \u0000 до \uFFFF, за исключением пробела (`\s`), знаков препинания в общей категории (`\p{P}`), символов в именованном блоке `IsGreek` (`\p{IsGreek}`) и управляющего символа Юникода "следующая строка" (\x85), используйте `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.</span><span class="sxs-lookup"><span data-stu-id="29645-608">To define the set of characters that consists of all Unicode characters from \u0000 through \uFFFF except white-space characters (`\s`), the characters in the punctuation general category (`\p{P}`), the characters in the `IsGreek` named block (`\p{IsGreek}`), and the Unicode NEXT LINE control character (\x85), use `[\u0000-\uFFFF-[\s\p{P}\p{IsGreek}\x85]]`.</span></span>  
   
- Выберите классы знаков для выражения вычитания класса знаков, которое возвратит полезные результаты.  Избегайте выражений, в результате которых возвращается пустой набор знаков, который ничему не соответствует, и выражений, эквивалентных исходной базовой группе.  Например, пустой набор является результатом выражения `[\p{IsBasicLatin}-[\x00-\x7F]]`, которое вычитает все символы диапазона `IsBasicLatin` из общей категории `IsBasicLatin`.  Аналогично, результатом выражения `[a-z-[0-9]]` является исходная базовая группа.  Это происходит из\-за того, что базовая группа, которая является диапазоном букв от "a" до "z", не содержит знаков исключаемой группы, которая является диапазоном десятичных цифр от "0" до "9".  
+ <span data-ttu-id="29645-609">Выберите классы знаков для выражения вычитания класса знаков, которое возвратит полезные результаты.</span><span class="sxs-lookup"><span data-stu-id="29645-609">Choose character classes for a character class subtraction expression that will yield useful results.</span></span> <span data-ttu-id="29645-610">Избегайте выражений, в результате которых возвращается пустой набор знаков, который ничему не соответствует, и выражений, эквивалентных исходной базовой группе.</span><span class="sxs-lookup"><span data-stu-id="29645-610">Avoid an expression that yields an empty set of characters, which cannot match anything, or an expression that is equivalent to the original base group.</span></span> <span data-ttu-id="29645-611">Например, пустой набор является результатом выражения `[\p{IsBasicLatin}-[\x00-\x7F]]`, которое вычитает все символы диапазона `IsBasicLatin` из общей категории `IsBasicLatin`.</span><span class="sxs-lookup"><span data-stu-id="29645-611">For example, the empty set is the result of the expression `[\p{IsBasicLatin}-[\x00-\x7F]]`, which subtracts all characters in the `IsBasicLatin` character range from the `IsBasicLatin` general category.</span></span> <span data-ttu-id="29645-612">Аналогично, результатом выражения `[a-z-[0-9]]` является исходная базовая группа.</span><span class="sxs-lookup"><span data-stu-id="29645-612">Similarly, the original base group is the result of the expression `[a-z-[0-9]]`.</span></span>  <span data-ttu-id="29645-613">Это происходит из-за того, что базовая группа, которая является диапазоном букв от "a" до "z", не содержит знаков исключаемой группы, которая является диапазоном десятичных цифр от "0" до "9".</span><span class="sxs-lookup"><span data-stu-id="29645-613">This is because the base group, which is the character range of letters from "a" through "z", does not contain any characters in the excluded group, which is the character range of decimal digits from "0" through "9".</span></span>  
   
- В следующем примере определяется регулярное выражение `^[0-9-[2468]]+$`, которое выделяет ноль и нечетные цифры во входной строке.  Возможные интерпретации регулярного выражения показаны в следующей таблице.  
+ <span data-ttu-id="29645-614">В следующем примере определяется регулярное выражение `^[0-9-[2468]]+$`, которое выделяет ноль и нечетные цифры во входной строке.</span><span class="sxs-lookup"><span data-stu-id="29645-614">The following example defines a regular expression, `^[0-9-[2468]]+$`, that matches zero and odd digits in an input string.</span></span>  <span data-ttu-id="29645-615">Возможные интерпретации регулярного выражения показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="29645-615">The regular expression is interpreted as shown in the following table.</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|^|Соответствие должно обнаруживаться в начале входной строки.|  
-|`[0-9-[2468]]+`|Соответствует одному или нескольким вхождениям любого символа от 0 до 9, за исключением 2, 4, 6 и 8.  Другими словами, выделяется одно или несколько вхождений нуля или нечетной цифры.|  
-|$|Совпадение должно заканчиваться в конце входной строки.|  
+|<span data-ttu-id="29645-616">Элемент</span><span class="sxs-lookup"><span data-stu-id="29645-616">Element</span></span>|<span data-ttu-id="29645-617">Описание</span><span class="sxs-lookup"><span data-stu-id="29645-617">Description</span></span>|  
+|-------------|-----------------|  
+|^|<span data-ttu-id="29645-618">Соответствие должно обнаруживаться в начале входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-618">Begin the match at the start of the input string.</span></span>|  
+|`[0-9-[2468]]+`|<span data-ttu-id="29645-619">Соответствует одному или нескольким вхождениям любого символа от 0 до 9, за исключением 2, 4, 6 и 8.</span><span class="sxs-lookup"><span data-stu-id="29645-619">Match one or more occurrences of any character from 0 to 9 except for 2, 4, 6, and 8.</span></span> <span data-ttu-id="29645-620">Другими словами, выделяется одно или несколько вхождений нуля или нечетной цифры.</span><span class="sxs-lookup"><span data-stu-id="29645-620">In other words, match one or more occurrences of zero or an odd digit.</span></span>|  
+|$|<span data-ttu-id="29645-621">Совпадение должно заканчиваться в конце входной строки.</span><span class="sxs-lookup"><span data-stu-id="29645-621">End the match at the end of the input string.</span></span>|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## См. также  
- <xref:System.Char.GetUnicodeCategory%2A>   
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a><span data-ttu-id="29645-622">См. также</span><span class="sxs-lookup"><span data-stu-id="29645-622">See Also</span></span>  
+ <xref:System.Char.GetUnicodeCategory%2A>  
+ [<span data-ttu-id="29645-623">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="29645-623">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="29645-624">Параметры регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="29645-624">Regular Expression Options</span></span>](../../../docs/standard/base-types/regular-expression-options.md)

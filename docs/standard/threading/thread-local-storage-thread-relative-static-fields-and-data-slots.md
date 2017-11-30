@@ -1,69 +1,72 @@
 ---
-title: "Thread Local Storage: Thread-Relative Static Fields and Data Slots | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], local storage"
-  - "threading [.NET Framework], thread-relative static fields"
-  - "local thread storage"
-  - "TLS"
+title: "Локальное хранилище потока: статические поля потока и области данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], local storage
+- threading [.NET Framework], thread-relative static fields
+- local thread storage
+- TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 39dd80d378171563f2aadadaa146278e8a417d32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Thread Local Storage: Thread-Relative Static Fields and Data Slots
-Для хранения данных, уникально относящихся к потоку и домену приложения, служит управляемое локальное хранилище потока \(TLS\).  Платформа .NET Framework предоставляет два метода для использования локального хранилища потока: статические поля потока и области данных.  
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="3914a-102">Локальное хранилище потока: статические поля потока и области данных</span><span class="sxs-lookup"><span data-stu-id="3914a-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
+<span data-ttu-id="3914a-103">Можно использовать локальное хранилище управляемого потока (TLS) для хранения данных, уникальное для потока и домена приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="3914a-104">Платформа .NET Framework предоставляет два способа использования локального Хранилища: потока статические поля и ячейки данных.</span><span class="sxs-lookup"><span data-stu-id="3914a-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  
   
--   Если фактические требования к приложению можно определить во время компиляции, следует использовать статические поля потока \(поля `Shared` для потока в Visual Basic\).  Статические поля потока обеспечивают самую высокую производительность.  Они также дают преимущества проверки типов во время компиляции.  
+-   <span data-ttu-id="3914a-105">Используйте статические поля потоков (потока `Shared` поля в Visual Basic), если предполагается свои конкретные нужды во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="3914a-105">Use thread-relative static fields (thread-relative `Shared` fields in Visual Basic) if you can anticipate your exact needs at compile time.</span></span> <span data-ttu-id="3914a-106">Статические поля потока обеспечивает улучшенную производительность.</span><span class="sxs-lookup"><span data-stu-id="3914a-106">Thread-relative static fields provide the best performance.</span></span> <span data-ttu-id="3914a-107">Они также дают преимущества проверки типов во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="3914a-107">They also give you the benefits of compile-time type checking.</span></span>  
   
--   Если фактические требования могут определяться только во время выполнения, следует использовать области данных.  Области данных работают медленнее и не столь удобны в применении по сравнению со статическими полями потока, а данные хранятся с типом <xref:System.Object>, поэтому перед использованием их необходимо привести к правильному типу.  
+-   <span data-ttu-id="3914a-108">Если фактические требования могут определяться только во время выполнения, следует используйте области данных.</span><span class="sxs-lookup"><span data-stu-id="3914a-108">Use data slots when your actual requirements might be discovered only at run time.</span></span> <span data-ttu-id="3914a-109">Области данных работают медленнее и более удобны в использовании, чем статические поля потока и данные хранятся в виде типа <xref:System.Object>, поэтому перед использованием их необходимо привести к правильному типу.</span><span class="sxs-lookup"><span data-stu-id="3914a-109">Data slots are slower and more awkward to use than thread-relative static fields, and data is stored as type <xref:System.Object>, so you must cast it to the correct type before you use it.</span></span>  
   
- В неуправляемом коде C\+\+ функция `TlsAlloc` используется для динамического выделения областей, а функция `__declspec(thread)` объявляет, что в хранилище потока необходимо выделить переменную.  Статические поля потока и области данных предоставляют управляемую версию этих функций.  
+ <span data-ttu-id="3914a-110">В неуправляемом коде C++ используйте `TlsAlloc` выделения ячеек и `__declspec(thread)` объявить, что в хранилище потока необходимо выделить переменную.</span><span class="sxs-lookup"><span data-stu-id="3914a-110">In unmanaged C++, you use `TlsAlloc` to allocate slots dynamically and `__declspec(thread)` to declare that a variable should be allocated in thread-relative storage.</span></span> <span data-ttu-id="3914a-111">Потока статические поля и области данных предоставляют управляемую версию этого поведения.</span><span class="sxs-lookup"><span data-stu-id="3914a-111">Thread-relative static fields and data slots provide the managed version of this behavior.</span></span>  
   
- В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно использовать класс <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> для создания локальных объектов потока, с отложенной инициализацией при первом использовании объекта.  Для получения дополнительной информации см. [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+ <span data-ttu-id="3914a-112">В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], можно использовать <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> класс для создания объектов локального потока, инициализацией при первом использовании объекта.</span><span class="sxs-lookup"><span data-stu-id="3914a-112">In the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to create thread-local objects that are initialized lazily when the object is first consumed.</span></span> <span data-ttu-id="3914a-113">Дополнительные сведения см. в статье [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="3914a-113">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## Уникальность данных в управляемом локальном хранилище потока  
- При использовании статических полей потока или областей данных управляемое локальное хранилище потока будет содержать данные, уникальные относительно сочетания потока и домена приложения.  
+## <a name="uniqueness-of-data-in-managed-tls"></a><span data-ttu-id="3914a-114">Уникальность данных в управляемом TLS</span><span class="sxs-lookup"><span data-stu-id="3914a-114">Uniqueness of Data in Managed TLS</span></span>  
+ <span data-ttu-id="3914a-115">Используется ли статические поля потока и области данных, данных управляемое локальное хранилище потока является уникальным для сочетания потока и домена приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-115">Whether you use thread-relative static fields or data slots, data in managed TLS is unique to the combination of thread and application domain.</span></span>  
   
--   Один поток не может изменять данные из другого потока в пределах домена приложений, даже если оба потока используют одно поле или одну область данных.  
+-   <span data-ttu-id="3914a-116">В домене приложения один поток не могут изменять данные из другого потока, даже в том случае, если оба потока используют одно поле или области памяти.</span><span class="sxs-lookup"><span data-stu-id="3914a-116">Within an application domain, one thread cannot modify data from another thread, even when both threads use the same field or slot.</span></span>  
   
--   Если поток получает доступ к одному потоку или области данных из нескольких доменов приложений, в каждом домене приложения хранится отдельное значение.  
+-   <span data-ttu-id="3914a-117">Когда поток обращается к одному потоку или области из нескольких доменов приложений, в каждом домене приложения хранится отдельное значение.</span><span class="sxs-lookup"><span data-stu-id="3914a-117">When a thread accesses the same field or slot from multiple application domains, a separate value is maintained in each application domain.</span></span>  
   
- Например, если поток устанавливает значение статического поля потока, входит в другой домен приложения и запрашивает значение этого поля, то значение, возвращаемое во втором домене приложения, отличается от значения в первом домене.  Задание нового значения для поля во втором домене приложения не затрагивает значение поля в первом домене.  
+ <span data-ttu-id="3914a-118">Например если поток устанавливает значение статического поля потока, переходит в другом домене приложения, а затем извлекает значение поля, значение, возвращаемое во втором домене приложения, отличается от значения в первом домене приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-118">For example, if a thread sets the value of a thread-relative static field, enters another application domain, and then retrieves the value of the field, the value retrieved in the second application domain differs from the value in the first application domain.</span></span> <span data-ttu-id="3914a-119">Задав новое значение для поля во втором домене приложения не влияет на значение поля в первом домене приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-119">Setting a new value for the field in the second application domain does not affect the field's value in the first application domain.</span></span>  
   
- Аналогично, когда поток получает доступ к области данных, имеющей одинаковое имя в двух доменах приложения, данные в первом домене приложения остаются независимыми от данных во втором домене.  
+ <span data-ttu-id="3914a-120">Аналогичным образом когда поток получает же именованную область данных в двух разных доменах приложений, данные в первом домене остается независимо от данных во втором домене приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-120">Similarly, when a thread gets the same named data slot in two different application domains, the data in the first application domain remains independent of the data in the second application domain.</span></span>  
   
-## Статические поля потока  
- Если известно, что некоторый фрагмент данных всегда является уникальным для сочетания потока и домена приложения, примените к статическому полю атрибут <xref:System.ThreadStaticAttribute>.  Это поле можно использовать аналогично любому другому статическому полю.  Данные в этом поле являются уникальными для каждого потока, использующего поле.  
+## <a name="thread-relative-static-fields"></a><span data-ttu-id="3914a-121">Статические поля потоков</span><span class="sxs-lookup"><span data-stu-id="3914a-121">Thread-Relative Static Fields</span></span>  
+ <span data-ttu-id="3914a-122">Если вы знаете, что часть данных всегда является уникальным для потока и домену приложения, применить <xref:System.ThreadStaticAttribute> атрибут для статического поля.</span><span class="sxs-lookup"><span data-stu-id="3914a-122">If you know that a piece of data is always unique to a thread and application-domain combination, apply the <xref:System.ThreadStaticAttribute> attribute to the static field.</span></span> <span data-ttu-id="3914a-123">Используйте поле при использовании статического поля.</span><span class="sxs-lookup"><span data-stu-id="3914a-123">Use the field as you would use any other static field.</span></span> <span data-ttu-id="3914a-124">Данные в поле является уникальным для каждого потока, который его использует.</span><span class="sxs-lookup"><span data-stu-id="3914a-124">The data in the field is unique to each thread that uses it.</span></span>  
   
- Статические поля потоков обеспечивают более высокую производительность, чем области данных, и дают преимущества проверки типов во время компиляции.  
+ <span data-ttu-id="3914a-125">Статические поля потока обеспечивают более высокую производительность, чем области данных и воспользоваться преимуществами проверки типов во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="3914a-125">Thread-relative static fields provide better performance than data slots and have the benefit of compile-time type checking.</span></span>  
   
- Следует учитывать, что любой код конструктора класса будет работать с первым потоком в первом контексте, получающим доступ к полю.  Поля во всех других потоках и во всех других контекстах в пределах того же домена приложения будут инициализированы значением `null` \(`Nothing` в Visual Basic\), если они имеют ссылочные типы, или значениями по умолчанию, если они имеют типы значения.  Поэтому не следует полагаться на инициализацию статических полей потока конструкторами классов.  Напротив, следует избегать инициализации статических полей потока и предполагать, что они инициализированы значениями `null` \(`Nothing`\) или значениями по умолчанию.  
+ <span data-ttu-id="3914a-126">Имейте в виду, что любой код конструктора класса будет запускаться на первый поток в первом контексте, который обращается к полю.</span><span class="sxs-lookup"><span data-stu-id="3914a-126">Be aware that any class constructor code will run on the first thread in the first context that accesses the field.</span></span> <span data-ttu-id="3914a-127">Во всех других потоков или контекстов в том же домене приложения, поля будут присвоены `null` (`Nothing` в Visual Basic) или если они являются ссылочными типами по умолчанию значения, если они являются типами значений.</span><span class="sxs-lookup"><span data-stu-id="3914a-127">In all other threads or contexts in the same application domain, the fields will be initialized to `null` (`Nothing` in Visual Basic) if they are reference types, or to their default values if they are value types.</span></span> <span data-ttu-id="3914a-128">Таким образом не следует полагаться на конструкторы класса, чтобы инициализировать статические поля потока.</span><span class="sxs-lookup"><span data-stu-id="3914a-128">Therefore, you should not rely on class constructors to initialize thread-relative static fields.</span></span> <span data-ttu-id="3914a-129">Вместо этого следует избегать инициализации статические поля потока и предполагается, что они инициализируются `null` (`Nothing`) или значениями по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3914a-129">Instead, avoid initializing thread-relative static fields and assume that they are initialized to `null` (`Nothing`) or to their default values.</span></span>  
   
-## Области данных  
- Платформа .NET Framework предоставляет динамические области данных, которые являются уникальными для сочетания потока и домена приложения.  Существует два типа областей данных: именованные и безымянные.  Оба типа реализуются с помощью структуры <xref:System.LocalDataStoreSlot>.  
+## <a name="data-slots"></a><span data-ttu-id="3914a-130">Области данных</span><span class="sxs-lookup"><span data-stu-id="3914a-130">Data Slots</span></span>  
+ <span data-ttu-id="3914a-131">Платформа .NET Framework предоставляет ячейки данных, которые являются уникальными для сочетания потока и домена приложения.</span><span class="sxs-lookup"><span data-stu-id="3914a-131">The .NET Framework provides dynamic data slots that are unique to a combination of thread and application-domain.</span></span> <span data-ttu-id="3914a-132">Существует два типа областей данных: именованные и безымянные.</span><span class="sxs-lookup"><span data-stu-id="3914a-132">There are two types of data slots: named slots and unnamed slots.</span></span> <span data-ttu-id="3914a-133">Оба реализуются с помощью <xref:System.LocalDataStoreSlot> структуры.</span><span class="sxs-lookup"><span data-stu-id="3914a-133">Both are implemented by using the <xref:System.LocalDataStoreSlot> structure.</span></span>  
   
--   Для создания именованной области данных служит метод <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=fullName> или <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=fullName>.  Чтобы получить ссылку на существующую именованную область, передайте ее имя методу <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
+-   <span data-ttu-id="3914a-134">Чтобы создать именованную область данных, используйте <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> или <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> метод.</span><span class="sxs-lookup"><span data-stu-id="3914a-134">To create a named data slot, use the <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> or <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="3914a-135">Чтобы получить ссылку на существующую именованную область, передайте ее имя на <xref:System.Threading.Thread.GetNamedDataSlot%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="3914a-135">To get a reference to an existing named slot, pass its name to the <xref:System.Threading.Thread.GetNamedDataSlot%2A> method.</span></span>  
   
--   Для создания безымянной области данных служит метод <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="3914a-136">Чтобы создать неименованную область данных, используйте <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> метод.</span><span class="sxs-lookup"><span data-stu-id="3914a-136">To create an unnamed data slot, use the <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> method.</span></span>  
   
- Методы <xref:System.Threading.Thread.SetData%2A?displayProperty=fullName> и <xref:System.Threading.Thread.GetData%2A?displayProperty=fullName> используются для задания и получения данных в областях обоих типов.  Эти статические методы всегда работают с данными в потоке, который выполняет их в текущий момент.  
+ <span data-ttu-id="3914a-137">Для обоих именованные и неименованные слотов, используйте <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> методы задания и получения данных в областях.</span><span class="sxs-lookup"><span data-stu-id="3914a-137">For both named and unnamed slots, use the <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> and <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> methods to set and retrieve the information in the slot.</span></span> <span data-ttu-id="3914a-138">Это статические методы, которые всегда работают с данными потока, который в данный момент их.</span><span class="sxs-lookup"><span data-stu-id="3914a-138">These are static methods that always act on the data for the thread that is currently executing them.</span></span>  
   
- Использование именованных областей может быть удобным, поскольку позволяет получить необходимую область, передав ее имя методу <xref:System.Threading.Thread.GetNamedDataSlot%2A>, а не хранить ссылку на безымянную область.  Однако если в другом компоненте для хранилища потока используется то же имя, и поток выполняет код из обоих компонентов, то эти компоненты могут повредить данные друг друга. \(В этом сценарии предполагается, что оба компонента работают в одном домене приложения и не рассчитаны на совместное использование данных.\)  
+ <span data-ttu-id="3914a-139">Именованных областей может быть удобным, поскольку позволяет получить необходимую область, при необходимости, передав его имя <xref:System.Threading.Thread.GetNamedDataSlot%2A> метода, а не хранить ссылку на безымянную область.</span><span class="sxs-lookup"><span data-stu-id="3914a-139">Named slots can be convenient, because you can retrieve the slot when you need it by passing its name to the <xref:System.Threading.Thread.GetNamedDataSlot%2A> method, instead of maintaining a reference to an unnamed slot.</span></span> <span data-ttu-id="3914a-140">Тем не менее если другой компонент использует то же имя для его хранения потока и поток выполняет код из компонента и других компонентов, эти компоненты могут повредить данные друг друга.</span><span class="sxs-lookup"><span data-stu-id="3914a-140">However, if another component uses the same name for its thread-relative storage and a thread executes code from both your component and the other component, the two components might corrupt each other's data.</span></span> <span data-ttu-id="3914a-141">(Этот сценарий предполагает, что оба компонента работают в одном домене приложения, и что они не предназначены для совместного использования тех же данных.)</span><span class="sxs-lookup"><span data-stu-id="3914a-141">(This scenario assumes that both components are running in the same application domain, and that they are not designed to share the same data.)</span></span>  
   
-## См. также  
- <xref:System.ContextStaticAttribute>   
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=fullName>   
- <xref:System.ThreadStaticAttribute>   
- <xref:System.Runtime.Remoting.Messaging.CallContext>   
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a><span data-ttu-id="3914a-142">См. также</span><span class="sxs-lookup"><span data-stu-id="3914a-142">See Also</span></span>  
+ <xref:System.ContextStaticAttribute>  
+ <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+ <xref:System.ThreadStaticAttribute>  
+ <xref:System.Runtime.Remoting.Messaging.CallContext>  
+ [<span data-ttu-id="3914a-143">Работа с потоками</span><span class="sxs-lookup"><span data-stu-id="3914a-143">Threading</span></span>](../../../docs/standard/threading/index.md)

@@ -1,90 +1,88 @@
 ---
-title: "Правила выведения простых типов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Правила выведения простых типов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 9a74d111720eb9436f0cd71fd5acef7ea10939c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Правила выведения простых типов
-Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.  
+# <a name="rules-for-inferring-simple-types"></a><span data-ttu-id="024a9-102">Правила выведения простых типов</span><span class="sxs-lookup"><span data-stu-id="024a9-102">Rules for Inferring Simple Types</span></span>
+<span data-ttu-id="024a9-103">Описывает, как класс <xref:System.Xml.Schema.XmlSchemaInference> выводит тип данных для атрибутов и элементов.</span><span class="sxs-lookup"><span data-stu-id="024a9-103">Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.</span></span>  
   
- Класс <xref:System.Xml.Schema.XmlSchemaInference> выводит типы данных для атрибутов и элементов как простые типы данных.  В этом разделе описываются возможные выводимые типы, приведение нескольких различных значений к одному типу, а также обработка задающих схему атрибутов `xsi`.  
+ <span data-ttu-id="024a9-104">Класс <xref:System.Xml.Schema.XmlSchemaInference> выводит типы данных для атрибутов и элементов как простые типы данных.</span><span class="sxs-lookup"><span data-stu-id="024a9-104">The <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements as simple types.</span></span> <span data-ttu-id="024a9-105">В этом разделе описываются возможные выводимые типы, приведение нескольких различных значений к одному типу, а также обработка задающих схему атрибутов `xsi`.</span><span class="sxs-lookup"><span data-stu-id="024a9-105">This section describes the potential inferred types, how multiple differing values are reconciled to a single type, and how schema-defining `xsi` attributes are handled.</span></span>  
   
-## Выводимые типы  
- Класс <xref:System.Xml.Schema.XmlSchemaInference> выводит значения элемента и атрибута в виде простых типов и включает атрибут типа в результирующую схему.  Выводимые типы являются простыми типами.  Никакие базовые типы или аспекты не включаются в результирующую схему.  
+## <a name="inferred-types"></a><span data-ttu-id="024a9-106">Выводимые типы</span><span class="sxs-lookup"><span data-stu-id="024a9-106">Inferred Types</span></span>  
+ <span data-ttu-id="024a9-107">Класс <xref:System.Xml.Schema.XmlSchemaInference> выводит значения элемента и атрибута в виде простых типов и включает атрибут типа в результирующую схему.</span><span class="sxs-lookup"><span data-stu-id="024a9-107">The <xref:System.Xml.Schema.XmlSchemaInference> class infers element and attribute values as simple types and includes a type attribute in the resulting schema.</span></span> <span data-ttu-id="024a9-108">Выводимые типы являются простыми типами.</span><span class="sxs-lookup"><span data-stu-id="024a9-108">All inferred types are simple types.</span></span> <span data-ttu-id="024a9-109">Никакие базовые типы или аспекты не включаются в результирующую схему.</span><span class="sxs-lookup"><span data-stu-id="024a9-109">No base types or facets are included as part of the resulting schema.</span></span>  
   
- Значения проверяются отдельно по мере того, как они обнаруживаются в XML\-документе.  Во время проверки значения выводится его тип.  Если для атрибута или элемента был выведен тип, а значение обнаруженного атрибута или элемента не соответствует текущему выведенному типу, то класс <xref:System.Xml.Schema.XmlSchemaInference> повышает тип для каждого набора правил.  Эти правила обсуждаются в подразделе «Повышение типа», далее в этом разделе.  
+ <span data-ttu-id="024a9-110">Значения проверяются отдельно по мере того, как они обнаруживаются в XML-документе.</span><span class="sxs-lookup"><span data-stu-id="024a9-110">Values are examined individually as they are encountered in the XML document.</span></span> <span data-ttu-id="024a9-111">Во время проверки значения выводится его тип.</span><span class="sxs-lookup"><span data-stu-id="024a9-111">The type is inferred for a value at the time it is examined.</span></span> <span data-ttu-id="024a9-112">Если для атрибута или элемента был выведен тип, а значение обнаруженного атрибута или элемента не соответствует текущему выведенному типу, то класс <xref:System.Xml.Schema.XmlSchemaInference> повышает тип для каждого набора правил.</span><span class="sxs-lookup"><span data-stu-id="024a9-112">If a type has been inferred for an attribute or element, and a value for the attribute or element is encountered that does not match the currently inferred type, the <xref:System.Xml.Schema.XmlSchemaInference> class promotes the type for each of a set of rules.</span></span> <span data-ttu-id="024a9-113">Эти правила обсуждаются в подразделе «Повышение типа», далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="024a9-113">These rules are discussed in the Type Promotion section, later in this topic.</span></span>  
   
- В следующей таблице перечислены возможные выводимые типы для результирующей схемы.  
+ <span data-ttu-id="024a9-114">В следующей таблице перечислены возможные выводимые типы для результирующей схемы.</span><span class="sxs-lookup"><span data-stu-id="024a9-114">The following table lists the possible inferred types for the resulting schema.</span></span>  
   
-|Простой тип|Описание|  
-|-----------------|--------------|  
-|boolean|True, false, 0, 1.|  
-|byte|Целые числа в диапазоне от \-128 до 127.|  
-|unsignedByte|Целые числа в диапазоне от 0 до 255.|  
-|short|Целые числа в диапазоне от \-32768 до 32767.|  
-|unsignedShort|Целые числа в диапазоне от 0 до 65535.|  
-|int|Целые числа в диапазоне от \-2147483648 до 2147483647.|  
-|unsignedInt|Целые числа в диапазоне от 0 до 4 294 967 295.|  
-|long|Целые числа в диапазоне от \-9223372036854775808 до 9223372036854775807.|  
-|unsignedLong|Целые числа в диапазоне от 0 до 18446744073709551615.|  
-|целочисленный|Определенное количество цифр, возможно с префиксом «\-».|  
-|decimal|Числовые значения с точностью, содержащей от 0 до 28 десятичных знаков.|  
-|float|Десятичные дроби, за которыми следует символ «e» или «E» и целое число, представляющее экспоненту.  Десятичные значения могут находиться в диапазоне от \-16777216 до 16777216.  Значения экспоненты могут находиться в диапазоне от –149 до 104.<br /><br /> Тип Float позволяет с помощью специальных значений представлять бесконечность и нечисловые значения.  Специальными значениями для типа float являются: 0, \-0, INF, \-INF, NaN.|  
-|double|То же, что и float, но десятичные значения могут находиться в диапазоне от  \-9 007 199 254 740 992 до 9 007 199 254 740 992, а значения экспоненты — в диапазоне от \-1075 до 970.<br /><br /> Тип Double позволяет с помощью специальных значений представлять бесконечность и нечисловые значения.  Специальными значениями для типа float являются: 0, \-0, INF, \-INF, NaN.|  
-|duration|Формат длительности консорциума W3C.|  
-|dateTime|Формат dateTime консорциума W3C.|  
-|время|Формат time консорциума W3C.|  
-|date|Значение года ограничиваются значениями от 1 до 9 999.|  
-|gYearMonth|Григорианский месяц и год в формате консорциума W3C.|  
-|string|Один или несколько символов Юникода.|  
+|<span data-ttu-id="024a9-115">Простой тип</span><span class="sxs-lookup"><span data-stu-id="024a9-115">Simple Type</span></span>|<span data-ttu-id="024a9-116">Описание</span><span class="sxs-lookup"><span data-stu-id="024a9-116">Description</span></span>|  
+|-----------------|-----------------|  
+|<span data-ttu-id="024a9-117">boolean</span><span class="sxs-lookup"><span data-stu-id="024a9-117">boolean</span></span>|<span data-ttu-id="024a9-118">True, false, 0, 1.</span><span class="sxs-lookup"><span data-stu-id="024a9-118">True, false, 0, 1.</span></span>|  
+|<span data-ttu-id="024a9-119">byte</span><span class="sxs-lookup"><span data-stu-id="024a9-119">byte</span></span>|<span data-ttu-id="024a9-120">Целые числа в диапазоне от -128 до 127.</span><span class="sxs-lookup"><span data-stu-id="024a9-120">Integers in the range of –128 to 127.</span></span>|  
+|<span data-ttu-id="024a9-121">unsignedByte</span><span class="sxs-lookup"><span data-stu-id="024a9-121">unsignedByte</span></span>|<span data-ttu-id="024a9-122">Целые числа в диапазоне от 0 до 255.</span><span class="sxs-lookup"><span data-stu-id="024a9-122">Integers in the range of 0 to 255.</span></span>|  
+|<span data-ttu-id="024a9-123">short</span><span class="sxs-lookup"><span data-stu-id="024a9-123">short</span></span>|<span data-ttu-id="024a9-124">Целые числа в диапазоне от -32768 до 32767.</span><span class="sxs-lookup"><span data-stu-id="024a9-124">Integers in the range of –32768 to 32767.</span></span>|  
+|<span data-ttu-id="024a9-125">unsignedShort</span><span class="sxs-lookup"><span data-stu-id="024a9-125">unsignedShort</span></span>|<span data-ttu-id="024a9-126">Целые числа в диапазоне от 0 до 65535.</span><span class="sxs-lookup"><span data-stu-id="024a9-126">Integers in the range of 0 to 65535.</span></span>|  
+|<span data-ttu-id="024a9-127">int</span><span class="sxs-lookup"><span data-stu-id="024a9-127">int</span></span>|<span data-ttu-id="024a9-128">Целые числа в диапазоне от -2147483648 до 2147483647.</span><span class="sxs-lookup"><span data-stu-id="024a9-128">Integers in the range of –2147483648 to 2147483647.</span></span>|  
+|<span data-ttu-id="024a9-129">unsignedInt</span><span class="sxs-lookup"><span data-stu-id="024a9-129">unsignedInt</span></span>|<span data-ttu-id="024a9-130">Целые числа в диапазоне от 0 до 4 294 967 295.</span><span class="sxs-lookup"><span data-stu-id="024a9-130">Integers in the range of 0 to 4294967295.</span></span>|  
+|<span data-ttu-id="024a9-131">long</span><span class="sxs-lookup"><span data-stu-id="024a9-131">long</span></span>|<span data-ttu-id="024a9-132">Целые числа в диапазоне от -9223372036854775808 до 9223372036854775807.</span><span class="sxs-lookup"><span data-stu-id="024a9-132">Integers in the range of –9223372036854775808 to 9223372036854775807.</span></span>|  
+|<span data-ttu-id="024a9-133">unsignedLong</span><span class="sxs-lookup"><span data-stu-id="024a9-133">unsignedLong</span></span>|<span data-ttu-id="024a9-134">Целые числа в диапазоне от 0 до 18446744073709551615.</span><span class="sxs-lookup"><span data-stu-id="024a9-134">Integers in the range of 0 to 18446744073709551615.</span></span>|  
+|<span data-ttu-id="024a9-135">целочисленный</span><span class="sxs-lookup"><span data-stu-id="024a9-135">integer</span></span>|<span data-ttu-id="024a9-136">Определенное количество цифр, возможно с префиксом «-».</span><span class="sxs-lookup"><span data-stu-id="024a9-136">A finite number of digits possibly prefixed with "-".</span></span>|  
+|<span data-ttu-id="024a9-137">decimal</span><span class="sxs-lookup"><span data-stu-id="024a9-137">decimal</span></span>|<span data-ttu-id="024a9-138">Числовые значения с точностью, содержащей от 0 до 28 десятичных знаков.</span><span class="sxs-lookup"><span data-stu-id="024a9-138">Numerical values that contain from 0 to 28 digits of precision.</span></span>|  
+|<span data-ttu-id="024a9-139">float</span><span class="sxs-lookup"><span data-stu-id="024a9-139">float</span></span>|<span data-ttu-id="024a9-140">Десятичные дроби, за которыми следует символ «e» или «E» и целое число, представляющее экспоненту.</span><span class="sxs-lookup"><span data-stu-id="024a9-140">Decimals optionally followed by "E" or "e" followed by an integer value representing the exponent.</span></span> <span data-ttu-id="024a9-141">Десятичные значения могут находиться в диапазоне от -16777216 до 16777216.</span><span class="sxs-lookup"><span data-stu-id="024a9-141">Decimal values can be in the range of -16777216 to 16777216.</span></span> <span data-ttu-id="024a9-142">Значения экспоненты могут находиться в диапазоне от –149 до 104.</span><span class="sxs-lookup"><span data-stu-id="024a9-142">Exponent values can be in the range of –149 to 104.</span></span><br /><br /> <span data-ttu-id="024a9-143">Тип Float позволяет с помощью специальных значений представлять бесконечность и нечисловые значения.</span><span class="sxs-lookup"><span data-stu-id="024a9-143">Float allows for special values to represent infinity and non-numeric values.</span></span> <span data-ttu-id="024a9-144">Специальными значениями для типа float являются: 0, -0, INF, -INF, NaN.</span><span class="sxs-lookup"><span data-stu-id="024a9-144">Special values for float are: 0, -0, INF, -INF, NaN.</span></span>|  
+|<span data-ttu-id="024a9-145">double</span><span class="sxs-lookup"><span data-stu-id="024a9-145">double</span></span>|<span data-ttu-id="024a9-146">То же, что и float, но десятичные значения могут находиться в диапазоне от  -9 007 199 254 740 992 до 9 007 199 254 740 992, а значения экспоненты — в диапазоне от -1075 до 970.</span><span class="sxs-lookup"><span data-stu-id="024a9-146">The same as float except decimal values can be in the range of -9007199254740992 to 9007199254740992, and exponent values can be in the range of –1075 to 970.</span></span><br /><br /> <span data-ttu-id="024a9-147">Тип Double позволяет с помощью специальных значений представлять бесконечность и нечисловые значения.</span><span class="sxs-lookup"><span data-stu-id="024a9-147">Double allows for special values to represent infinity and non-numeric values.</span></span> <span data-ttu-id="024a9-148">Специальными значениями для типа float являются: 0, -0, INF, -INF, NaN.</span><span class="sxs-lookup"><span data-stu-id="024a9-148">Special values for float are: 0, -0, INF, -INF, NaN.</span></span>|  
+|<span data-ttu-id="024a9-149">duration</span><span class="sxs-lookup"><span data-stu-id="024a9-149">duration</span></span>|<span data-ttu-id="024a9-150">Формат длительности консорциума W3C.</span><span class="sxs-lookup"><span data-stu-id="024a9-150">The W3C duration format.</span></span>|  
+|<span data-ttu-id="024a9-151">dateTime</span><span class="sxs-lookup"><span data-stu-id="024a9-151">dateTime</span></span>|<span data-ttu-id="024a9-152">Формат dateTime консорциума W3C.</span><span class="sxs-lookup"><span data-stu-id="024a9-152">The W3C dateTime format.</span></span>|  
+|<span data-ttu-id="024a9-153">время</span><span class="sxs-lookup"><span data-stu-id="024a9-153">time</span></span>|<span data-ttu-id="024a9-154">Формат time консорциума W3C.</span><span class="sxs-lookup"><span data-stu-id="024a9-154">The W3C time format.</span></span>|  
+|<span data-ttu-id="024a9-155">date</span><span class="sxs-lookup"><span data-stu-id="024a9-155">date</span></span>|<span data-ttu-id="024a9-156">Значение года ограничиваются значениями от 1 до 9 999.</span><span class="sxs-lookup"><span data-stu-id="024a9-156">Year values are restricted from 0001 to 9999.</span></span>|  
+|<span data-ttu-id="024a9-157">gYearMonth</span><span class="sxs-lookup"><span data-stu-id="024a9-157">gYearMonth</span></span>|<span data-ttu-id="024a9-158">Григорианский месяц и год в формате консорциума W3C.</span><span class="sxs-lookup"><span data-stu-id="024a9-158">The W3C Gregorian month and year format.</span></span>|  
+|<span data-ttu-id="024a9-159">string</span><span class="sxs-lookup"><span data-stu-id="024a9-159">string</span></span>|<span data-ttu-id="024a9-160">Один или несколько символов Юникода.</span><span class="sxs-lookup"><span data-stu-id="024a9-160">One or more Unicode characters.</span></span>|  
   
-## Повышение типа  
- Класс <xref:System.Xml.Schema.XmlSchemaInference> проверяет одновременно значения элемента и атрибута.  По мере обнаружения значений, выводится наиболее ограниченный тип без знака.  Если для атрибута или элемента уже был выведен тип, а новое обнаруженное значение не соответствует текущему выведенному типу, то выведенный тип повышается до нового типа, который применим как текущему выведенному типу, так и к новому значению.  Класс <xref:System.Xml.Schema.XmlSchemaInference> не рассматривает предыдущие значения при повышении выведенного типа.  
+## <a name="type-promotion"></a><span data-ttu-id="024a9-161">Повышение типа</span><span class="sxs-lookup"><span data-stu-id="024a9-161">Type Promotion</span></span>  
+ <span data-ttu-id="024a9-162">Класс <xref:System.Xml.Schema.XmlSchemaInference> проверяет одновременно значения элемента и атрибута.</span><span class="sxs-lookup"><span data-stu-id="024a9-162">The <xref:System.Xml.Schema.XmlSchemaInference> class examines attribute and element values one at a time.</span></span> <span data-ttu-id="024a9-163">По мере обнаружения значений, выводится наиболее ограниченный тип без знака.</span><span class="sxs-lookup"><span data-stu-id="024a9-163">As values are encountered, the most restrictive, unsigned type is inferred.</span></span> <span data-ttu-id="024a9-164">Если для атрибута или элемента уже был выведен тип, а новое обнаруженное значение не соответствует текущему выведенному типу, то выведенный тип повышается до нового типа, который применим как текущему выведенному типу, так и к новому значению.</span><span class="sxs-lookup"><span data-stu-id="024a9-164">If a type has been inferred for an attribute or element, and a new value is encountered that does not match the currently inferred type, the inferred type is promoted to a new type that applies to both the currently inferred type and the new value.</span></span> <span data-ttu-id="024a9-165">Класс <xref:System.Xml.Schema.XmlSchemaInference> не рассматривает предыдущие значения при повышении выведенного типа.</span><span class="sxs-lookup"><span data-stu-id="024a9-165">The <xref:System.Xml.Schema.XmlSchemaInference> class does consider previous values when promoting the inferred type.</span></span>  
   
- Например, рассмотрим следующие фрагменты XML их двух XML\-документов.  
+ <span data-ttu-id="024a9-166">Например, рассмотрим следующие фрагменты XML их двух XML-документов.</span><span class="sxs-lookup"><span data-stu-id="024a9-166">For example, consider the following XML fragments from two XML documents:</span></span>  
   
  `<MyElement1 attr1="12" />`  
   
  `<MyElement1 attr1="52344" />`  
   
- При обнаружении первого значения `attr1` тип `attr1` выводится как `unsignedByte` на основе значения `12`.  Когда обнаруживается второе значение `attr1`, тип повышается до `unsignedShort` на основе текущего выведенного типа `unsignedByte` и текущего значения `52344`.  
+ <span data-ttu-id="024a9-167">При обнаружении первого значения `attr1` тип `attr1` выводится как `unsignedByte` на основе значения `12`.</span><span class="sxs-lookup"><span data-stu-id="024a9-167">When the first `attr1` value is encountered, the type of `attr1` is inferred as `unsignedByte` based on the value `12`.</span></span> <span data-ttu-id="024a9-168">Когда обнаруживается второе значение `attr1`, тип повышается до `unsignedShort` на основе текущего выведенного типа `unsignedByte` и текущего значения `52344`.</span><span class="sxs-lookup"><span data-stu-id="024a9-168">When the second `attr1` is encountered, the type is promoted to `unsignedShort` based on the currently inferred type of `unsignedByte` and the current value `52344`.</span></span>  
   
- Теперь рассмотрим следующий XML из двух XML\-документов.  
+ <span data-ttu-id="024a9-169">Теперь рассмотрим следующий XML из двух XML-документов.</span><span class="sxs-lookup"><span data-stu-id="024a9-169">Now, consider the following XML from two XML documents:</span></span>  
   
  `<MyElement2 attr2="0" />`  
   
  `<MyElement2 attr2="true" />`  
   
- При обнаружении первого значения `attr2` тип `attr2` выводится как `unsignedByte` на основе значения `0`.  При обнаружении второго значения `attr2` тип повышается до `string` на основе текущего выведенного типа `unsignedByte` и текущего значения `true`, потому что класс <xref:System.Xml.Schema.XmlSchemaInference> не учитывает предыдущие значения при повышении выводимого типа.  Однако если оба экземпляра `attr2` были обнаружены в одном XML\-документе, а не в двух различных XML\-документах, как показано выше, то `attr2` выведется как `boolean`.  
+ <span data-ttu-id="024a9-170">При обнаружении первого значения `attr2` тип `attr2` выводится как `unsignedByte` на основе значения `0`.</span><span class="sxs-lookup"><span data-stu-id="024a9-170">When the first `attr2` value is encountered, the type of `attr2` is inferred as `unsignedByte` based on the value `0`.</span></span> <span data-ttu-id="024a9-171">При обнаружении второго значения `attr2` тип повышается до `string` на основе текущего выведенного типа `unsignedByte` и текущего значения `true`, потому что класс <xref:System.Xml.Schema.XmlSchemaInference> не учитывает предыдущие значения при повышении выводимого типа.</span><span class="sxs-lookup"><span data-stu-id="024a9-171">When the second `attr2` is encountered, the type is promoted to `string` based on the currently inferred type of `unsignedByte` and the current value `true` because the <xref:System.Xml.Schema.XmlSchemaInference> class does consider previous values when promoting the inferred type.</span></span> <span data-ttu-id="024a9-172">Однако если оба экземпляра `attr2` были обнаружены в одном XML-документе, а не в двух различных XML-документах, как показано выше, то `attr2` выведется как `boolean`.</span><span class="sxs-lookup"><span data-stu-id="024a9-172">However, if both instances of `attr2` were encountered in the same XML document and not in two different XML documents as illustrated above, `attr2` would have been inferred as `boolean`.</span></span>  
   
-### Не обрабатываемые атрибуты из пространства имен http:\/\/www.w3.org\/2001\/XMLSchema\-instance  
- Далее перечислены атрибуты схемы, которые не обрабатываются при выведении схемы.  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a><span data-ttu-id="024a9-173">Не обрабатываемые атрибуты из пространства имен http://www.w3.org/2001/XMLSchema-instance</span><span class="sxs-lookup"><span data-stu-id="024a9-173">Ignored Attributes from the http://www.w3.org/2001/XMLSchema-instance Namespace</span></span>  
+ <span data-ttu-id="024a9-174">Далее перечислены атрибуты схемы, которые не обрабатываются при выведении схемы.</span><span class="sxs-lookup"><span data-stu-id="024a9-174">The following are schema-defining attributes that are ignored during schema inference.</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|`xsi:type`|Если обнаруживается элемент с указанным атрибутом `xsi:type`, этот атрибут `xsi:type` не обрабатывается.|  
-|`xsi:nil`|Если обнаруживается элемент с атрибутом `xsi:nil`, то декларация элемента в выводимой схеме имеет значение `nillable="true"`.  Элемент с атрибутом `xsi:nil`, установленным в значение `true`, не может иметь дочерние элементы.|  
-|`xsi:schemaLocation`|При обнаружении `xsi:schemaLocation` он не учитывается.|  
-|`xsi:noNamespaceSchemaLocation`|При обнаружении `xsi:noNamespaceSchemaLocation` он не учитывается.|  
+|<span data-ttu-id="024a9-175">Атрибут</span><span class="sxs-lookup"><span data-stu-id="024a9-175">Attribute</span></span>|<span data-ttu-id="024a9-176">Описание</span><span class="sxs-lookup"><span data-stu-id="024a9-176">Description</span></span>|  
+|---------------|-----------------|  
+|`xsi:type`|<span data-ttu-id="024a9-177">Если обнаруживается элемент с указанным атрибутом `xsi:type`, этот атрибут `xsi:type` не обрабатывается.</span><span class="sxs-lookup"><span data-stu-id="024a9-177">If an element is encountered with `xsi:type` specified, the `xsi:type` is ignored.</span></span>|  
+|`xsi:nil`|<span data-ttu-id="024a9-178">Если обнаруживается элемент с атрибутом `xsi:nil`, то декларация элемента в выводимой схеме имеет значение `nillable="true"`.</span><span class="sxs-lookup"><span data-stu-id="024a9-178">If an element with an `xsi:nil` attribute is encountered, its element declaration in the inferred schema has the value of `nillable="true"`.</span></span> <span data-ttu-id="024a9-179">Элемент с атрибутом `xsi:nil`, установленным в значение `true`, не может иметь дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="024a9-179">An element with an `xsi:nil` attribute set to `true` cannot have child elements.</span></span>|  
+|`xsi:schemaLocation`|<span data-ttu-id="024a9-180">При обнаружении `xsi:schemaLocation` он не учитывается.</span><span class="sxs-lookup"><span data-stu-id="024a9-180">If `xsi:schemaLocation` is encountered, it is ignored.</span></span>|  
+|`xsi:noNamespaceSchemaLocation`|<span data-ttu-id="024a9-181">При обнаружении `xsi:noNamespaceSchemaLocation` он не учитывается.</span><span class="sxs-lookup"><span data-stu-id="024a9-181">If `xsi:noNamespaceSchemaLocation` is encountered, it is ignored.</span></span>|  
   
-## См. также  
- [Модель объектов схемы XML \(SOM\)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)   
- [Выведение схем из XML\-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)   
- [Правила выведения структуры и типов узлов схемы](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a><span data-ttu-id="024a9-182">См. также</span><span class="sxs-lookup"><span data-stu-id="024a9-182">See Also</span></span>  
+ [<span data-ttu-id="024a9-183">Модель объектов схемы XML (SOM)</span><span class="sxs-lookup"><span data-stu-id="024a9-183">XML Schema Object Model (SOM)</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [<span data-ttu-id="024a9-184">Выведение схем из XML-документов</span><span class="sxs-lookup"><span data-stu-id="024a9-184">Inferring Schemas from XML Documents</span></span>](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [<span data-ttu-id="024a9-185">Правила выведения структуры и типов узлов схемы</span><span class="sxs-lookup"><span data-stu-id="024a9-185">Rules for Inferring Schema Node Types and Structure</span></span>](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

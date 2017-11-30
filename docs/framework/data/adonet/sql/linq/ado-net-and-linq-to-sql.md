@@ -1,66 +1,72 @@
 ---
-title: "ADO.NET и LINQ to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO.NET и LINQ to SQL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 97cf55419c6e13a497264bcbaa3a546eac37f982
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET и LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] является частью семейства технологий [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  Он основан на службах, предоставленных моделью поставщика [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  Поэтому код [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно сочетать с существующими приложениями [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] и выполнять переход с текущих решений [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] на [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  На следующем рисунке показано общее представление связи.  
+# <a name="adonet-and-linq-to-sql"></a><span data-ttu-id="2d5ce-102">ADO.NET и LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="2d5ce-102">ADO.NET and LINQ to SQL</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="2d5ce-103">является частью [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] семейства технологий.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-103"> is part of the [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] family of technologies.</span></span> <span data-ttu-id="2d5ce-104">Он основан на службах, предоставленных моделью поставщика [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2d5ce-104">It is based on services provided by the [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] provider model.</span></span> <span data-ttu-id="2d5ce-105">Таким образом можно смешивать [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] кода с существующими [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] приложений и выполнять переход с текущих [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] решения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2d5ce-105">You can therefore mix [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] code with existing [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] applications and migrate current [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] solutions to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="2d5ce-106">На следующем рисунке показано общее представление связи.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-106">The following illustration provides a high-level view of the relationship.</span></span>  
   
- ![LINQ в SQL и ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq\_3")  
+ <span data-ttu-id="2d5ce-107">![LINQ to SQL и ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")</span><span class="sxs-lookup"><span data-stu-id="2d5ce-107">![LINQ to SQL and ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")</span></span>  
   
-## Подключения  
- При создании <xref:System.Data.Linq.DataContext> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно использовать существующее подключение [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  Оно будет использоваться для выполнения всех операций относительно <xref:System.Data.Linq.DataContext> \(включая запросы\).  Если подключение уже открыто, по завершении работы с ним [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] оставит его без изменений.  
+## <a name="connections"></a><span data-ttu-id="2d5ce-108">Подключения</span><span class="sxs-lookup"><span data-stu-id="2d5ce-108">Connections</span></span>  
+ <span data-ttu-id="2d5ce-109">Можно использовать существующее [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] при создании соединения [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-109">You can supply an existing [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] connection when you create a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>.</span></span> <span data-ttu-id="2d5ce-110">Все операции с <xref:System.Data.Linq.DataContext> (включая запросы) использоваться.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-110">All operations against the <xref:System.Data.Linq.DataContext> (including queries) use this provided connection.</span></span> <span data-ttu-id="2d5ce-111">Если соединение уже открыто, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] оставит его как при завершении работы с ним.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-111">If the connection is already open, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] leaves it as is when you are finished with it.</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
   
- Для постоянного доступа к подключению и его закрытия можно использовать свойство <xref:System.Data.Linq.DataContext.Connection%2A>, как показано в следующем коде.  
+ <span data-ttu-id="2d5ce-112">Для постоянного доступа к подключению и его закрытия можно использовать свойство <xref:System.Data.Linq.DataContext.Connection%2A>, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-112">You can always access the connection and close it yourself by using the <xref:System.Data.Linq.DataContext.Connection%2A> property, as in the following code:</span></span>  
   
  [!code-csharp[DLinqAdoNet#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#1)]
  [!code-vb[DLinqAdoNet#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#1)]  
   
-## Транзакции  
- Когда приложение уже инициировало транзакцию и в нее требуется включить <xref:System.Data.Linq.DataContext>, его можно добавить в собственную транзакцию базы данных.  
+## <a name="transactions"></a><span data-ttu-id="2d5ce-113">Транзакции</span><span class="sxs-lookup"><span data-stu-id="2d5ce-113">Transactions</span></span>  
+ <span data-ttu-id="2d5ce-114">Когда приложение уже инициировало транзакцию и в нее требуется включить <xref:System.Data.Linq.DataContext>, его можно добавить в собственную транзакцию базы данных<xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-114">You can supply your <xref:System.Data.Linq.DataContext> with your own database transaction when your application has already initiated the transaction and you want your <xref:System.Data.Linq.DataContext> to be involved.</span></span>  
   
- Рекомендуемым методом выполнения транзакций с [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] является использование объекта <xref:System.Transactions.TransactionScope>.  Благодаря этому способу можно выполнить распределенные транзакции, работающие в базах данных и других находящихся в памяти диспетчерах ресурсов.  Для запуска транзакций требуется незначительное количество ресурсов.  Они преобразуются в распределенные транзакции только при наличии в области действия транзакции нескольких подключений.  
+ <span data-ttu-id="2d5ce-115">Рекомендуемым методом выполнения транзакций с [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] является использование объекта <xref:System.Transactions.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-115">The preferred method of doing transactions with the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] is to use the <xref:System.Transactions.TransactionScope> object.</span></span> <span data-ttu-id="2d5ce-116">Благодаря этому способу можно выполнить распределенные транзакции, работающие в базах данных и других находящихся в памяти диспетчерах ресурсов.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-116">By using this approach, you can make distributed transactions that work across databases and other memory-resident resource managers.</span></span> <span data-ttu-id="2d5ce-117">Для запуска транзакций требуется незначительное количество ресурсов.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-117">Transaction scopes require few resources to start.</span></span> <span data-ttu-id="2d5ce-118">Они преобразуются в распределенные транзакции только при наличии в области действия транзакции нескольких подключений.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-118">They promote themselves to distributed transactions only when there are multiple connections within the scope of the transaction.</span></span>  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- Этот способ не подходит для всех баз данных.  Например, подключение SqlClient не может повысить уровень системных транзакций, если используется на сервере [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].  Наоборот, оно автоматически включается в полную, распределенную транзакцию при каждом обнаружении используемой области действия транзакции.  
+ <span data-ttu-id="2d5ce-119">Этот способ не подходит для всех баз данных.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-119">You cannot use this approach for all databases.</span></span> <span data-ttu-id="2d5ce-120">Например, подключение SqlClient не может повысить уровень системных транзакций, если используется на сервере [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2d5ce-120">For example, the SqlClient connection cannot promote system transactions when it works against a [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] server.</span></span> <span data-ttu-id="2d5ce-121">Наоборот, оно автоматически включается в полную, распределенную транзакцию при каждом обнаружении используемой области действия транзакции.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-121">Instead, it automatically enlists to a full, distributed transaction whenever it sees a transaction scope being used.</span></span>  
   
-## Прямые команды SQL  
- Иногда могут возникать ситуации, когда возможность <xref:System.Data.Linq.DataContext> осуществлять запросы или отправлять изменения будет недостаточной для выполнения специализированной задачи.  В подобных случаях, чтобы запустить команды SQL в базе данных и преобразовать результаты запроса в объекты, можно использовать метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A>.  
+## <a name="direct-sql-commands"></a><span data-ttu-id="2d5ce-122">Прямые команды SQL</span><span class="sxs-lookup"><span data-stu-id="2d5ce-122">Direct SQL Commands</span></span>  
+ <span data-ttu-id="2d5ce-123">Иногда могут возникать ситуации, когда возможность <xref:System.Data.Linq.DataContext> осуществлять запросы или отправлять изменения будет недостаточной для выполнения специализированной задачи.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-123">At times you can encounter situations where the ability of the <xref:System.Data.Linq.DataContext> to query or submit changes is insufficient for the specialized task you want to perform.</span></span> <span data-ttu-id="2d5ce-124">В подобных случаях, чтобы запустить команды SQL в базе данных и преобразовать результаты запроса в объекты, можно использовать метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A>.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-124">In these circumstances you can use the <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> method to issue SQL commands to the database and convert the query results to objects.</span></span>  
   
- Например, предположим, что данные для класса `Customer` распределены по двум таблицам \(customer1 и customer2\).  Следующий запрос возвращает последовательность двух объектов `Customer`.  
+ <span data-ttu-id="2d5ce-125">Например, предположим, что данные для класса `Customer` распределены по двум таблицам (customer1 и customer2).</span><span class="sxs-lookup"><span data-stu-id="2d5ce-125">For example, assume that the data for the `Customer` class is spread over two tables (customer1 and customer2).</span></span> <span data-ttu-id="2d5ce-126">Следующий запрос возвращает последовательность двух объектов `Customer`.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-126">The following query returns a sequence of `Customer` objects:</span></span>  
   
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Если имена столбцов в табличных результатах соответствуют свойствам столбцов класса сущностей, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объекты вне запроса SQL.  
+ <span data-ttu-id="2d5ce-127">При условии, что имена столбцов в табличных результатах соответствуют свойствам столбцов класса сущностей, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объекты вне запроса SQL.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-127">As long as the column names in the tabular results match column properties of your entity class, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates your objects out of any SQL query.</span></span>  
   
-### Параметры  
- Метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> допускает использование параметров.  В следующем коде выполняется параметризованный запрос.  
+### <a name="parameters"></a><span data-ttu-id="2d5ce-128">Параметры</span><span class="sxs-lookup"><span data-stu-id="2d5ce-128">Parameters</span></span>  
+ <span data-ttu-id="2d5ce-129">Метод <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> допускает использование параметров.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-129">The <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> method accepts parameters.</span></span> <span data-ttu-id="2d5ce-130">В следующем коде выполняется параметризованный запрос.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-130">The following code executes a parameterized query:</span></span>  
   
  [!code-csharp[DlinqAdoNet#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#4)]
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Параметры записываются в тексте запроса с использованием той же нотации с фигурными скобками, что и в методах `Console.WriteLine()` и `String.Format()`.  Метод `String.Format()` принимает указанную строку запроса и заменяет параметры в фигурных скобках на автоматически созданные имена, такие как `@p0`, `@p1`…, `@p(n)`.  
+>  <span data-ttu-id="2d5ce-131">Параметры записываются в тексте запроса с использованием той же нотации с фигурными скобками, что и в методах `Console.WriteLine()` и `String.Format()`.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-131">Parameters are expressed in the query text by using the same curly notation used by `Console.WriteLine()` and `String.Format()`.</span></span> <span data-ttu-id="2d5ce-132">Метод `String.Format()` принимает указанную строку запроса и заменяет параметры в фигурных скобках на автоматически созданные имена, такие как `@p0`, `@p1`…, `@p(n)`.</span><span class="sxs-lookup"><span data-stu-id="2d5ce-132">`String.Format()` takes the query string you provide and substitutes the curly-braced parameters with generated parameter names such as `@p0`, `@p1` …, `@p(n)`.</span></span>  
   
-## См. также  
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [Как повторно использовать соединение между командой ADO.NET и DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+## <a name="see-also"></a><span data-ttu-id="2d5ce-133">См. также</span><span class="sxs-lookup"><span data-stu-id="2d5ce-133">See Also</span></span>  
+ [<span data-ttu-id="2d5ce-134">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="2d5ce-134">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="2d5ce-135">Как: повторного использования подключения между командой ADO.NET и контекстом DataContext</span><span class="sxs-lookup"><span data-stu-id="2d5ce-135">How to: Reuse a Connection Between an ADO.NET Command and a DataContext</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

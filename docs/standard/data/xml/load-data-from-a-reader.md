@@ -1,42 +1,40 @@
 ---
-title: "Загрузка данных из модуля чтения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Загрузка данных из модуля чтения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Загрузка данных из модуля чтения
-Если XML\-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов.  Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
+# <a name="load-data-from-a-reader"></a><span data-ttu-id="61cb2-102">Загрузка данных из модуля чтения</span><span class="sxs-lookup"><span data-stu-id="61cb2-102">Load Data from a Reader</span></span>
+<span data-ttu-id="61cb2-103">Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов.</span><span class="sxs-lookup"><span data-stu-id="61cb2-103">If an XML document is loaded using the <xref:System.Xml.XmlDocument.Load%2A> method and a parameter of an <xref:System.Xml.XmlReader>, there are differences in the behavior that occurs when compared to the behavior of loading data from the other formats.</span></span> <span data-ttu-id="61cb2-104">Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.</span><span class="sxs-lookup"><span data-stu-id="61cb2-104">If the reader is in its initial state, <xref:System.Xml.XmlDocument.Load%2A> consumes the entire contents from the reader and builds the XML Document Object Model (DOM) from all the data in the reader.</span></span>  
   
- Если модуль чтения уже позиционирован на одном из узлов документа и передается методу <xref:System.Xml.XmlDocument.Load%2A>, то метод <xref:System.Xml.XmlDocument.Load%2A> пытается считать текущий узел и все его одноуровневые элементы вплоть до закрывающего тега, закрывающего текущую глубину в памяти.  Успех попытки метода <xref:System.Xml.XmlDocument.Load%2A> зависит от узла, на котором находится модуль чтения при попытке загрузки, когда метод <xref:System.Xml.XmlDocument.Load%2A> проверяет, что XML\-документ из модуля чтения правильного формата.  Если XML\-документ неправильного формата, метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  Например, следующий набор узлов содержит два корневых элемента, XML\-документ неправильного формата, и метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  
+ <span data-ttu-id="61cb2-105">Если модуль чтения уже позиционирован на одном из узлов документа и передается методу <xref:System.Xml.XmlDocument.Load%2A>, то метод <xref:System.Xml.XmlDocument.Load%2A> пытается считать текущий узел и все его одноуровневые элементы вплоть до закрывающего тега, закрывающего текущую глубину в памяти.</span><span class="sxs-lookup"><span data-stu-id="61cb2-105">If the reader is already positioned on a node somewhere in the document, and the reader is then passed to the <xref:System.Xml.XmlDocument.Load%2A> method, <xref:System.Xml.XmlDocument.Load%2A> attempts to read the current node and all of its siblings, up to the end tag that closes the current depth into memory.</span></span> <span data-ttu-id="61cb2-106">Успех попытки метода <xref:System.Xml.XmlDocument.Load%2A> зависит от узла, на котором находится модуль чтения при попытке загрузки, когда метод <xref:System.Xml.XmlDocument.Load%2A> проверяет, что XML-документ из модуля чтения правильного формата.</span><span class="sxs-lookup"><span data-stu-id="61cb2-106">The success of the attempted <xref:System.Xml.XmlDocument.Load%2A> depends on the node that the reader is on when the load is attempted, as <xref:System.Xml.XmlDocument.Load%2A> verifies that the XML from the reader is well-formed.</span></span> <span data-ttu-id="61cb2-107">Если XML-документ неправильного формата, метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.</span><span class="sxs-lookup"><span data-stu-id="61cb2-107">If the XML is not well-formed, the <xref:System.Xml.XmlDocument.Load%2A> throws an exception.</span></span> <span data-ttu-id="61cb2-108">Например, следующий набор узлов содержит два корневых элемента, XML-документ неправильного формата, и метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.</span><span class="sxs-lookup"><span data-stu-id="61cb2-108">For example, the following set of nodes contain two root-level elements, the XML is not well-formed, and <xref:System.Xml.XmlDocument.Load%2A> throws an exception.</span></span>  
   
--   Узел Comment, за которым следует узел Element, еще один узел Element и узел EndElement.  
+-   <span data-ttu-id="61cb2-109">Узел Comment, за которым следует узел Element, еще один узел Element и узел EndElement.</span><span class="sxs-lookup"><span data-stu-id="61cb2-109">Comment node, followed by an Element node, followed by an Element node, followed by an EndElement node.</span></span>  
   
- Следующий набор узлов создает неполную модель DOM, поскольку отсутствует корневой элемент.  
+ <span data-ttu-id="61cb2-110">Следующий набор узлов создает неполную модель DOM, поскольку отсутствует корневой элемент.</span><span class="sxs-lookup"><span data-stu-id="61cb2-110">The following set of nodes creates an incomplete DOM, because there is no root-level element.</span></span>  
   
--   Узел Comment, за которым следует узел ProcessingInstruction, еще один узел Comment и узел EndElement.  
+-   <span data-ttu-id="61cb2-111">Узел Comment, за которым следует узел ProcessingInstruction, еще один узел Comment и узел EndElement.</span><span class="sxs-lookup"><span data-stu-id="61cb2-111">Comment node followed by a ProcessingInstruction node followed by a Comment node followed by an EndElement node.</span></span>  
   
- В этом случае исключения не возникает, и данные загружаются.  В верхнюю часть этих узлов можно добавить корневой элемент и создать XML\-документ правильного формата, который можно сохранить без ошибки.  
+ <span data-ttu-id="61cb2-112">В этом случае исключения не возникает, и данные загружаются.</span><span class="sxs-lookup"><span data-stu-id="61cb2-112">This does not throw an exception, and the data is loaded.</span></span> <span data-ttu-id="61cb2-113">В верхнюю часть этих узлов можно добавить корневой элемент и создать XML-документ правильного формата, который можно сохранить без ошибки.</span><span class="sxs-lookup"><span data-stu-id="61cb2-113">You can add a root element to the top of these nodes and create well-formed XML that can be saved without error.</span></span>  
   
- Если модуль чтения расположен на конечном узле, недопустимом для корневого уровня документа \(например, пробел или узел атрибута\), он продолжает читать, пока не окажется на узле, который можно использовать в качестве корневого.  Документ начинает загружаться в этой точке.  
+ <span data-ttu-id="61cb2-114">Если модуль чтения расположен на конечном узле, недопустимом для корневого уровня документа (например, пробел или узел атрибута), он продолжает читать, пока не окажется на узле, который можно использовать в качестве корневого.</span><span class="sxs-lookup"><span data-stu-id="61cb2-114">If the reader is positioned on a leaf node that is invalid for the root level of a document (for example, a white space or attribute node), the reader continues to read until it is positioned on a node that can be used for the root.</span></span> <span data-ttu-id="61cb2-115">Документ начинает загружаться в этой точке.</span><span class="sxs-lookup"><span data-stu-id="61cb2-115">The document begins loading at this point.</span></span>  
   
- По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа \(DTD\) или проверки схемы.  Он только проверяет правильность формата XML\-документа.  Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>.  Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD\-схемы.  Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку.  Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.  
+ <span data-ttu-id="61cb2-116">По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа (DTD) или проверки схемы.</span><span class="sxs-lookup"><span data-stu-id="61cb2-116">By default, <xref:System.Xml.XmlDocument.Load%2A> does not verify whether the XML is valid using document type definition (DTD) or schema validation.</span></span> <span data-ttu-id="61cb2-117">Он только проверяет правильность формата XML-документа.</span><span class="sxs-lookup"><span data-stu-id="61cb2-117">It only verifies whether the XML is well-formed.</span></span> <span data-ttu-id="61cb2-118">Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>.</span><span class="sxs-lookup"><span data-stu-id="61cb2-118">In order for validation to occur, you need to create an <xref:System.Xml.XmlReader> using the <xref:System.Xml.XmlReaderSettings> class.</span></span> <span data-ttu-id="61cb2-119">Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD-схемы.</span><span class="sxs-lookup"><span data-stu-id="61cb2-119">The <xref:System.Xml.XmlReader> class can enforce validation using a DTD or Schema definition language (XSD) schema.</span></span> <span data-ttu-id="61cb2-120">Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку.</span><span class="sxs-lookup"><span data-stu-id="61cb2-120">The <xref:System.Xml.ValidationType> property on the <xref:System.Xml.XmlReaderSettings> class determines whether the <xref:System.Xml.XmlReader> instance enforces validation.</span></span> <span data-ttu-id="61cb2-121">Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="61cb2-121">For more information about validating XML data, see the Remarks section of the <xref:System.Xml.XmlReader> reference page.</span></span>  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="61cb2-122">См. также</span><span class="sxs-lookup"><span data-stu-id="61cb2-122">See Also</span></span>  
+ [<span data-ttu-id="61cb2-123">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="61cb2-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

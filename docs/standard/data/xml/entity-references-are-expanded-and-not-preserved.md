@@ -1,53 +1,51 @@
 ---
-title: "Разворачиваемые и не сохраняемые ссылки на сущности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Разворачиваемые и не сохраняемые ссылки на сущности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 069d3b94a0269917400e75fdbe975ec39dcfdb71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Разворачиваемые и не сохраняемые ссылки на сущности
-Если ссылка на сущность разворачивается и заменяется текстом, который она представляет, узел **XmlEntityReference** не создается.  Вместо этого декларация сущности проходит синтаксический анализ, и узлы, созданные из содержимого декларации, копируются вместо **XmlEntityReference**.  Таким образом, в примере `&publisher;` ссылка `&publisher;` не сохраняется, а создается узел **XmlText**.  
+# <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="16a3f-102">Разворачиваемые и не сохраняемые ссылки на сущности</span><span class="sxs-lookup"><span data-stu-id="16a3f-102">Entity References are Expanded and Not Preserved</span></span>
+<span data-ttu-id="16a3f-103">При ссылке на сущность разворачивается и заменяется текстом, он представляет **XmlEntityReference** узел не создается.</span><span class="sxs-lookup"><span data-stu-id="16a3f-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="16a3f-104">Вместо этого разбирается объявление сущности и узлы, созданные на основе содержимого в декларации, копируются вместо **XmlEntityReference**.</span><span class="sxs-lookup"><span data-stu-id="16a3f-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="16a3f-105">Таким образом, в `&publisher;` примере `&publisher;` не сохраняется, но вместо этого **XmlText** создается узел.</span><span class="sxs-lookup"><span data-stu-id="16a3f-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  
   
- ![развернутая структура дерева](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.png "xmlentityref\_expanded\_nodes")  
-Древовидная структура для разворачиваемых ссылок на сущности  
+ <span data-ttu-id="16a3f-106">![развернуты древовидная структура](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="16a3f-106">![expanded tree structure](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span></span>  
+<span data-ttu-id="16a3f-107">Древовидная структура для разворачиваемых ссылок на сущности</span><span class="sxs-lookup"><span data-stu-id="16a3f-107">Tree structure for entity references that are expanded</span></span>  
   
- Сущности\-символы, такие как `B` и `<`, не сохраняются.  Вместо этого они всегда разворачиваются и представляются в виде текстовых узлов.  
+ <span data-ttu-id="16a3f-108">Сущности-символы, такие как `B` и `<`, не сохраняются.</span><span class="sxs-lookup"><span data-stu-id="16a3f-108">Character entities such as `B` or `<` are not preserved.</span></span> <span data-ttu-id="16a3f-109">Вместо этого они всегда разворачиваются и представляются в виде текстовых узлов.</span><span class="sxs-lookup"><span data-stu-id="16a3f-109">Instead, they are always expanded and represented as text nodes.</span></span>  
   
- Чтобы сохранить узлы **XmlEntityReference** и дочерние узлы ссылки на сущности, присоединенные к ней, установите флаг **EntityHandling** в значение **ExpandCharEntities**.  В противном случае оставьте для флага **EntityHandling** значение по умолчанию \- **ExpandEntities**.  В этом случае узлы ссылок на сущности не будут отображаться в модели DOM.  Эти узлы замещаются узлами\-копиями дочерних узлов декларации сущности.  
+ <span data-ttu-id="16a3f-110">Чтобы сохранить **XmlEntityReference** узлы и дочерние узлы ссылки на сущность, присоединенные к ней, установите **EntityHandling** флаг **ExpandCharEntities**.</span><span class="sxs-lookup"><span data-stu-id="16a3f-110">To preserve **XmlEntityReference** nodes and child nodes of the entity reference attached to it, set the **EntityHandling** flag to **ExpandCharEntities**.</span></span> <span data-ttu-id="16a3f-111">В противном случае оставьте **EntityHandling** флаг значение по умолчанию — **ExpandEntities**.</span><span class="sxs-lookup"><span data-stu-id="16a3f-111">Otherwise, leave the **EntityHandling** flag at the default, which is to **ExpandEntities**.</span></span> <span data-ttu-id="16a3f-112">В этом случае узлы ссылок на сущности не будут отображаться в модели DOM.</span><span class="sxs-lookup"><span data-stu-id="16a3f-112">In this case, you will not see entity reference nodes in the DOM.</span></span> <span data-ttu-id="16a3f-113">Эти узлы замещаются узлами-копиями дочерних узлов декларации сущности.</span><span class="sxs-lookup"><span data-stu-id="16a3f-113">The nodes are replaced by the nodes that are copies of the child nodes of the entity declaration.</span></span>  
   
- Один побочный эффект от несохранения ссылок на сущности состоит в том, что после сохранения документа и передачи его в другое приложение этому приложению будет неизвестно, что узлы были порождены ссылкой на сущность.  Если же ссылки на сущности сохраняются, то принимающее приложение, обнаружив ссылку на сущность, считает ее дочерние узлы.  Очевидно, что дочерние узлы представляют данные, находившиеся в декларации сущности.  Например, модель DOM в случае сохранения ссылок на сущности теоретически имела бы следующую структуру.  
+ <span data-ttu-id="16a3f-114">Один побочный эффект от несохранения ссылок на сущности состоит в том, что после сохранения документа и передачи его в другое приложение этому приложению будет неизвестно, что узлы были порождены ссылкой на сущность.</span><span class="sxs-lookup"><span data-stu-id="16a3f-114">One side effect of not preserving entity references is that when the document is saved and passed on to another application, the receiving application does not know that the nodes were generated by an entity reference.</span></span> <span data-ttu-id="16a3f-115">Если же ссылки на сущности сохраняются, то принимающее приложение, обнаружив ссылку на сущность, считает ее дочерние узлы.</span><span class="sxs-lookup"><span data-stu-id="16a3f-115">However, when entity references are preserved, a receiving application sees an entity reference and reads the child nodes.</span></span> <span data-ttu-id="16a3f-116">Очевидно, что дочерние узлы представляют данные, находившиеся в декларации сущности.</span><span class="sxs-lookup"><span data-stu-id="16a3f-116">It is apparent that the child nodes represent the information that was in the entity declaration.</span></span> <span data-ttu-id="16a3f-117">Например, модель DOM в случае сохранения ссылок на сущности теоретически имела бы следующую структуру.</span><span class="sxs-lookup"><span data-stu-id="16a3f-117">For example, the DOM theoretically has the following structure if entity references are preserved.</span></span>  
   
- XmlElement: publisher  
+ <span data-ttu-id="16a3f-118">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="16a3f-118">XmlElement: publisher</span></span>  
   
- XmlEntityReference: `&publisher;`  
+ <span data-ttu-id="16a3f-119">XmlEntityReference: `&publisher;`</span><span class="sxs-lookup"><span data-stu-id="16a3f-119">XmlEntityReference: `&publisher;`</span></span>  
   
- XmlText: Microsoft Press  
+ <span data-ttu-id="16a3f-120">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="16a3f-120">XmlText: Microsoft Press</span></span>  
   
- Если ссылки на сущности разворачиваются в модели DOM \(метод по умолчанию\), древовидная структура имеет следующий вид:  
+ <span data-ttu-id="16a3f-121">Если ссылки на сущности разворачиваются в модели DOM (метод по умолчанию), древовидная структура имеет следующий вид:</span><span class="sxs-lookup"><span data-stu-id="16a3f-121">If entity references are expanded in the DOM, which is the default method, the structure has this type of tree:</span></span>  
   
- XmlElement: publisher  
+ <span data-ttu-id="16a3f-122">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="16a3f-122">XmlElement: publisher</span></span>  
   
- XmlText: Microsoft Press  
+ <span data-ttu-id="16a3f-123">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="16a3f-123">XmlText: Microsoft Press</span></span>  
   
- Обратите внимание, что ссылка на сущность отсутствует и принимающее приложение не может определить, что узел **XmlText** со значением «Microsoft Press» создан из декларации сущности.  
+ <span data-ttu-id="16a3f-124">Обратите внимание, что узла ссылки на сущность отсутствует и принимающее приложение не может определить, что **XmlText** узел, содержащий «Microsoft Press» создан из декларации сущности.</span><span class="sxs-lookup"><span data-stu-id="16a3f-124">Notice that the entity reference node is gone, and the receiving application cannot tell that the **XmlText** node containing "Microsoft Press" was created from an entity declaration.</span></span>  
   
- Если используется модуль чтения, который не может разрешать сущности, метод **Load** создает исключение, когда обнаруживается ссылка на сущность.  
+ <span data-ttu-id="16a3f-125">Если вы используете средство чтения, которое не может разрешать сущности, **нагрузки** метод создает исключение, когда он встречает ссылку на сущность.</span><span class="sxs-lookup"><span data-stu-id="16a3f-125">If you use a reader that cannot resolve entities, the **Load** method throws an exception when it encounters an entity reference.</span></span>  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="16a3f-126">См. также</span><span class="sxs-lookup"><span data-stu-id="16a3f-126">See Also</span></span>  
+ [<span data-ttu-id="16a3f-127">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="16a3f-127">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

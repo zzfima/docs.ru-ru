@@ -1,71 +1,76 @@
 ---
-title: "Merge Options in PLINQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PLINQ queries, merge options"
+title: "Параметры слияние в PLINQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e9bf586c1805fc5b5f1cc5f96f4e6b08d80c199a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Merge Options in PLINQ
-Если запрос выполняется как параллельный, PLINQ разделяет исходную последовательность, чтобы несколько потоков могли работать с различными частями параллельно, обычно в отдельных потоках.  Если результаты необходимо получить в одном потоке, например в цикле `foreach` \(`For Each` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), результаты из каждого потока должны быть объединены в одну последовательность.  Тип слияния, выполняемого PLINQ, зависит от операторов, которые присутствуют в запросе.  Например, операторы, указывающие новую последовательность результатов, должны помещать в буфер все элементы из всех потоков.  Для потока\-потребителя \(который также является потоком пользователя приложения\) полностью буферизованный запрос может выполняться в течение значительного периода времени до момента создания первого результата.  Другие операторы по умолчанию являются частично буферизованными. Они выдают результаты в пакетах.  Один оператор, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, не буферизован по умолчанию.  Он выдает все элементы из всех потоков немедленно.  
+# <a name="merge-options-in-plinq"></a><span data-ttu-id="a59c7-102">Параметры слияние в PLINQ</span><span class="sxs-lookup"><span data-stu-id="a59c7-102">Merge Options in PLINQ</span></span>
+<span data-ttu-id="a59c7-103">Когда запрос выполняется как параллельный, PLINQ разделяет исходной последовательности, чтобы несколько потоков могли работать с разными частями параллельно, обычно в отдельных потоках.</span><span class="sxs-lookup"><span data-stu-id="a59c7-103">When a query is executing as parallel, PLINQ partitions the source sequence so that multiple threads can work on different parts concurrently, typically on separate threads.</span></span> <span data-ttu-id="a59c7-104">Если результаты будут использоваться в одном потоке, например, в `foreach` (`For Each` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) цикла, а затем результаты из каждого потока необходимо объединить в одну последовательность.</span><span class="sxs-lookup"><span data-stu-id="a59c7-104">If the results are to be consumed on one thread, for example, in a `foreach` (`For Each` in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) loop, then the results from every thread must be merged back into one sequence.</span></span> <span data-ttu-id="a59c7-105">Тип слияния, выполняемого PLINQ, зависит от операторов, которые присутствуют в запросе.</span><span class="sxs-lookup"><span data-stu-id="a59c7-105">The kind of merge that PLINQ performs depends on the operators that are present in the query.</span></span> <span data-ttu-id="a59c7-106">Например операторы, указывающие новый заказ на результаты должны буфер все элементы из всех потоков.</span><span class="sxs-lookup"><span data-stu-id="a59c7-106">For example, operators that impose a new order on the results must buffer all elements from all threads.</span></span> <span data-ttu-id="a59c7-107">С точки зрения потоке-потребителе (который также является пользователя приложения) полностью буферизованный запрос может выполняться в течение значительного периода времени до момента создания первого результата.</span><span class="sxs-lookup"><span data-stu-id="a59c7-107">From the perspective of the consuming thread (which is also that of the application user) a fully buffered query might run for a noticeable period of time before it produces its first result.</span></span> <span data-ttu-id="a59c7-108">Другие операторы по умолчанию являются частично буферизованными. они возвращают результаты в пакетах.</span><span class="sxs-lookup"><span data-stu-id="a59c7-108">Other operators, by default, are partially buffered; they yield their results in batches.</span></span> <span data-ttu-id="a59c7-109">Один оператор, <xref:System.Linq.ParallelEnumerable.ForAll%2A> не буферизуется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a59c7-109">One operator, <xref:System.Linq.ParallelEnumerable.ForAll%2A> is not buffered by default.</span></span> <span data-ttu-id="a59c7-110">Он выдает все элементы из всех потоков немедленно.</span><span class="sxs-lookup"><span data-stu-id="a59c7-110">It yields all elements from all threads immediately.</span></span>  
   
- С помощью метода <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>, как показано в следующем примере, можно предоставить подсказку PLINQ, указывающую тип выполняемого слияния.  
+ <span data-ttu-id="a59c7-111">С помощью <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> метода, как показано в следующем примере, можно предоставлять подсказку PLINQ, указывающую тип выполняемого слияния.</span><span class="sxs-lookup"><span data-stu-id="a59c7-111">By using the <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> method, as shown in the following example, you can provide a hint to PLINQ that indicates what kind of merging to perform.</span></span>  
   
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Полный пример см. в разделе [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ <span data-ttu-id="a59c7-112">Полный пример см. в разделе [как: задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).</span><span class="sxs-lookup"><span data-stu-id="a59c7-112">For the complete example, see [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).</span></span>  
   
- Если определенный запрос не поддерживает запрошенный параметр, параметр просто будет игнорироваться.  В большинстве случаев нет необходимости указывать параметр слияния для запроса PLINQ.  Однако в некоторых случаях в результате тестирования и измерения можно обнаружить, что запрос выполняется быстрее в режиме, который не задан по умолчанию.  Этот параметр обычно используется для указания оператору слияния блоков выдавать результаты в потоке, чтобы сократить время ответа пользовательского интерфейса.  
+ <span data-ttu-id="a59c7-113">Если определенный запрос не поддерживает запрошенный параметр, параметр просто быть обрабатывается.</span><span class="sxs-lookup"><span data-stu-id="a59c7-113">If the particular query cannot support the requested option, then the option will just be ignored.</span></span> <span data-ttu-id="a59c7-114">В большинстве случаев не нужно указывать параметр слияния для запроса PLINQ.</span><span class="sxs-lookup"><span data-stu-id="a59c7-114">In most cases, you do not have to specify a merge option for a PLINQ query.</span></span> <span data-ttu-id="a59c7-115">Однако в некоторых случаях, возможно, тестирования и измерения, что запрос выполняется в режиме не по умолчанию наилучшим образом.</span><span class="sxs-lookup"><span data-stu-id="a59c7-115">However, in some cases you may find by testing and measurement that a query executes best in a non-default mode.</span></span> <span data-ttu-id="a59c7-116">Этот параметр обычно используется для принудительного оператор слияния блоков выдавать результаты в потоке, чтобы обеспечить отклика пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="a59c7-116">A common use of this option is to force a chunk-merging operator to stream its results in order to provide a more responsive user interface.</span></span>  
   
-## ParallelMergeOptions  
- Перечисление <xref:System.Linq.ParallelMergeOptions> включает следующие параметры, указывающие поддерживаемым формам запроса, как выдаются конечные результаты запроса, если они используются в одном потоке.  
+## <a name="parallelmergeoptions"></a><span data-ttu-id="a59c7-117">ParallelMergeOptions</span><span class="sxs-lookup"><span data-stu-id="a59c7-117">ParallelMergeOptions</span></span>  
+ <span data-ttu-id="a59c7-118"><xref:System.Linq.ParallelMergeOptions> Перечисление включает следующие параметры, указывающие поддерживаемым формам запроса, как упорядочиваются конечного результата запроса, если они используются в одном потоке:</span><span class="sxs-lookup"><span data-stu-id="a59c7-118">The <xref:System.Linq.ParallelMergeOptions> enumeration includes the following options that specify, for supported query shapes, how the final output of the query is yielded when the results are consumed on one thread:</span></span>  
   
 -   `Not Buffered`  
   
-     Параметр <xref:System.Linq.ParallelMergeOptions> приводит к возврату каждого обработанного элемента из каждого потока сразу после его создания.  Такое поведение аналогично потоковой передаче выходных данных.  При наличии в запросе оператора <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> параметр `NotBuffered` сохраняет порядок исходных элементов.  Несмотря на то что параметр `NotBuffered` начинается возвращать результаты, как только они становятся доступными, общее время для получения всех результатов может по\-прежнему быть больше по сравнению с использованием других параметров слияния.  
+     <span data-ttu-id="a59c7-119"><xref:System.Linq.ParallelMergeOptions.NotBuffered> Вынуждает каждого обработанного элемента должны быть возвращены из каждого потока сразу же после его создания.</span><span class="sxs-lookup"><span data-stu-id="a59c7-119">The <xref:System.Linq.ParallelMergeOptions.NotBuffered> option causes each processed element to be returned from each thread as soon as it is produced.</span></span> <span data-ttu-id="a59c7-120">Это поведение аналогично «streaming» выходные данные.</span><span class="sxs-lookup"><span data-stu-id="a59c7-120">This behavior is analogous to "streaming" the output.</span></span> <span data-ttu-id="a59c7-121">Если <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> оператор присутствует в запросе, `NotBuffered` сохраняет порядок исходных элементов.</span><span class="sxs-lookup"><span data-stu-id="a59c7-121">If the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator is present in the query, `NotBuffered` preserves the order of the source elements.</span></span> <span data-ttu-id="a59c7-122">Несмотря на то что `NotBuffered` начинает возвращать результаты, как только они становятся доступными, общее время для получения всех результатов может по-прежнему превышать с помощью одного из других параметров слияния.</span><span class="sxs-lookup"><span data-stu-id="a59c7-122">Although `NotBuffered` starts yielding results as soon as they're available,, the total time to produce all the results might still be longer than using one of the other merge options.</span></span>  
   
 -   `Auto Buffered`  
   
-     При использовании параметра <xref:System.Linq.ParallelMergeOptions> запрос собирает элементы в буфер и затем периодически выдает все содержимое буфера сразу в поток\-потребитель.  Это аналогично выдаче исходных данных в блоках вместо использования поведения потоковой передачи `NotBuffered`.  Параметру `AutoBuffered` может потребоваться больше времени, чем параметру `NotBuffered`, чтобы сделать первый элемент доступным в потоке\-потребителе.  Размер буфера и точное поведение выдачи не настраиваются и могут различаться в зависимости от различных факторов, относящихся к запросу.  
+     <span data-ttu-id="a59c7-123">При использовании параметра <xref:System.Linq.ParallelMergeOptions.AutoBuffered> запрос собирает элементы в буфер и затем периодически выдает все содержимое буфера сразу потоку-потребителю.</span><span class="sxs-lookup"><span data-stu-id="a59c7-123">The <xref:System.Linq.ParallelMergeOptions.AutoBuffered> option causes the query to collect elements into a buffer and then periodically yield the buffer contents all at once to the consuming thread.</span></span> <span data-ttu-id="a59c7-124">Это аналогично выдаче исходных данных в виде «фрагментов» вместо «потоковой передачи» поведение `NotBuffered`.</span><span class="sxs-lookup"><span data-stu-id="a59c7-124">This is analogous to yielding the source data in "chunks" instead of using the "streaming" behavior of `NotBuffered`.</span></span> <span data-ttu-id="a59c7-125">`AutoBuffered`может занять больше времени, чем `NotBuffered` чтобы сделать доступным на первый элемент в потоке-потребителе.</span><span class="sxs-lookup"><span data-stu-id="a59c7-125">`AutoBuffered` may take longer than `NotBuffered` to make the first element available on the consuming thread.</span></span> <span data-ttu-id="a59c7-126">Размер буфера и точное поведение выдачи не могут быть изменены и может различаться в зависимости от различных факторов, относящихся к запросу.</span><span class="sxs-lookup"><span data-stu-id="a59c7-126">The size of the buffer and the exact yielding behavior are not configurable and may vary, depending on various factors that relate to the query.</span></span>  
   
 -   `FullyBuffered`  
   
-     При выборе параметра <xref:System.Linq.ParallelMergeOptions> выходные данные всего запроса буферизуются до выдачи какого\-либо элемента.  При использовании этого параметра может потребоваться больше времени для того, чтобы сделать первый элемент доступным в потоке\-потребителе, но полные результаты по\-прежнему могут производиться быстрее по сравнению с использованием других параметров.  
+     <span data-ttu-id="a59c7-127"><xref:System.Linq.ParallelMergeOptions.FullyBuffered> Параметр в результате выходные данные всего запроса буферизуются до любого элемента, формируется.</span><span class="sxs-lookup"><span data-stu-id="a59c7-127">The <xref:System.Linq.ParallelMergeOptions.FullyBuffered> option causes the output of the whole query to be buffered before any of the elements are yielded.</span></span> <span data-ttu-id="a59c7-128">При использовании этого параметра может занять больше времени, до первого элемента можно найти в потоке-потребителе, но полные результаты по-прежнему могут производиться быстрее по сравнению с использованием других параметров.</span><span class="sxs-lookup"><span data-stu-id="a59c7-128">When you use this option, it can take longer before the first element is available on the consuming thread, but the complete results might still be produced faster than by using the other options.</span></span>  
   
-## Операторы запроса, поддерживающие параметры слияния  
- В следующей таблице перечислены операторы, поддерживающие все режимы параметров слияния в зависимости от указанных ограничений.  
+## <a name="query-operators-that-support-merge-options"></a><span data-ttu-id="a59c7-129">Операторы запроса, поддерживающие параметры слияния</span><span class="sxs-lookup"><span data-stu-id="a59c7-129">Query Operators that Support Merge Options</span></span>  
+ <span data-ttu-id="a59c7-130">В следующей таблице перечислены операторы, которые поддерживают все режимы параметров слияния в зависимости от указанных ограничений.</span><span class="sxs-lookup"><span data-stu-id="a59c7-130">The following table lists the operators that support all merge option modes, subject to the specified restrictions.</span></span>  
   
-|Оператор|Ограничения|  
-|--------------|-----------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Неупорядоченные запросы, содержащие только массив или источник списка.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Неупорядоченные запросы, содержащие только массив или источник списка.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Нет|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Нет|  
+|<span data-ttu-id="a59c7-131">Оператор</span><span class="sxs-lookup"><span data-stu-id="a59c7-131">Operator</span></span>|<span data-ttu-id="a59c7-132">Ограничения</span><span class="sxs-lookup"><span data-stu-id="a59c7-132">Restrictions</span></span>|  
+|--------------|------------------|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|<span data-ttu-id="a59c7-133">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-133">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|<span data-ttu-id="a59c7-134">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-134">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|<span data-ttu-id="a59c7-135">Неупорядоченные запросы, имеющие массива или списка источники.</span><span class="sxs-lookup"><span data-stu-id="a59c7-135">Non-ordered queries that have an Array or List source only.</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|<span data-ttu-id="a59c7-136">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-136">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|<span data-ttu-id="a59c7-137">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-137">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Reverse%2A>|<span data-ttu-id="a59c7-138">Неупорядоченные запросы, имеющие массива или списка источники.</span><span class="sxs-lookup"><span data-stu-id="a59c7-138">Non-ordered queries that have an Array or List source only.</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|<span data-ttu-id="a59c7-139">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-139">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|<span data-ttu-id="a59c7-140">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-140">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|<span data-ttu-id="a59c7-141">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-141">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|<span data-ttu-id="a59c7-142">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-142">None</span></span>|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|<span data-ttu-id="a59c7-143">Нет</span><span class="sxs-lookup"><span data-stu-id="a59c7-143">None</span></span>|  
   
- Все другие операторы запроса PLINQ могут игнорировать параметры слияния, предоставленные пользователем.  Некоторые операторы запроса, например <xref:System.Linq.ParallelEnumerable.Reverse%2A> и <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, не могут выдавать какие\-либо элементы, пока не будут созданы и переупорядочены все элементы.  Таким образом, при использовании <xref:System.Linq.ParallelMergeOptions> в запросе, в котором также содержится оператор, например <xref:System.Linq.ParallelEnumerable.Reverse%2A>, поведение слияния не будет применяться в запросе, пока этот оператор не создаст все результаты.  
+ <span data-ttu-id="a59c7-144">Все остальные операторы запроса PLINQ может игнорировать параметры слияния, предоставленные пользователем.</span><span class="sxs-lookup"><span data-stu-id="a59c7-144">All other PLINQ query operators might ignore user-provided merge options.</span></span> <span data-ttu-id="a59c7-145">Некоторые операторы запроса, например, <xref:System.Linq.ParallelEnumerable.Reverse%2A> и <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, нельзя использовать оператор yield какие-либо элементы, пока все созданные и переупорядочены.</span><span class="sxs-lookup"><span data-stu-id="a59c7-145">Some query operators, for example, <xref:System.Linq.ParallelEnumerable.Reverse%2A> and <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, cannot yield any elements until all have been produced and reordered.</span></span> <span data-ttu-id="a59c7-146">Таким образом, когда <xref:System.Linq.ParallelMergeOptions> используется в запросе, который также содержится оператор, такой как <xref:System.Linq.ParallelEnumerable.Reverse%2A>, поведение при объединении не применяются в запросе, пока после этот оператор создаст его результаты.</span><span class="sxs-lookup"><span data-stu-id="a59c7-146">Therefore, when <xref:System.Linq.ParallelMergeOptions> is used in a query that also contains an operator such as <xref:System.Linq.ParallelEnumerable.Reverse%2A>, the merge behavior will not be applied in the query until after that operator has produced its results.</span></span>  
   
- Возможность некоторых операторов обрабатывать параметры слияния зависит от типа исходной последовательности и от того, использовался ли оператор <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> ранее в запросе.  Метод <xref:System.Linq.ParallelEnumerable.ForAll%2A> всегда является <xref:System.Linq.ParallelMergeOptions>, он выдает элементы немедленно.  Метод <xref:System.Linq.ParallelEnumerable.OrderBy%2A> всегда является <xref:System.Linq.ParallelMergeOptions>, он должен сортировать весь список перед выдачей.  
+ <span data-ttu-id="a59c7-147">Возможность некоторых операторов обрабатывать параметры слияния зависит от типа исходной последовательности и является ли <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> использован оператор ранее в запросе.</span><span class="sxs-lookup"><span data-stu-id="a59c7-147">The ability of some operators to handle merge options depends on the type of the source sequence, and whether the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operator was used earlier in the query.</span></span> <span data-ttu-id="a59c7-148"><xref:System.Linq.ParallelEnumerable.ForAll%2A>всегда <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; он возвращает его элементы немедленно.</span><span class="sxs-lookup"><span data-stu-id="a59c7-148"><xref:System.Linq.ParallelEnumerable.ForAll%2A> is always <xref:System.Linq.ParallelMergeOptions.NotBuffered> ; it yields its elements immediately.</span></span> <span data-ttu-id="a59c7-149"><xref:System.Linq.ParallelEnumerable.OrderBy%2A>всегда <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; прежде чем он возвращает его нужно отсортировать весь список.</span><span class="sxs-lookup"><span data-stu-id="a59c7-149"><xref:System.Linq.ParallelEnumerable.OrderBy%2A> is always <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; it must sort the whole list before it yields.</span></span>  
   
-## См. также  
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)   
- [How to: Specify Merge Options in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="a59c7-150">См. также</span><span class="sxs-lookup"><span data-stu-id="a59c7-150">See Also</span></span>  
+ [<span data-ttu-id="a59c7-151">Parallel LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="a59c7-151">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ [<span data-ttu-id="a59c7-152">Практическое руководство. Задание параметров слияния в PLINQ</span><span class="sxs-lookup"><span data-stu-id="a59c7-152">How to: Specify Merge Options in PLINQ</span></span>](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

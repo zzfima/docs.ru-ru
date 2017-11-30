@@ -1,151 +1,158 @@
 ---
-title: "The Managed Thread Pool | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "thread pooling [.NET Framework]"
-  - "thread pools [.NET Framework]"
-  - "threading [.NET Framework], thread pool"
-  - "threading [.NET Framework], pooling"
+title: "Пул управляемых потоков"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- thread pooling [.NET Framework]
+- thread pools [.NET Framework]
+- threading [.NET Framework], thread pool
+- threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# The Managed Thread Pool
-Класс <xref:System.Threading.ThreadPool> обеспечивает приложение пулом рабочих потоков, управляемых системой, позволяя пользователю сосредоточиться на выполнении задач приложения, а не на управлении потоками.  Если имеются небольшие задачи, которые требуют фоновой обработки, пул управляемых потоков — это самый простой способ воспользоваться преимуществами нескольких потоков.  Например, начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно создавать объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, выполняющие асинхронные задачи в потоках из пула потоков.  
+# <a name="the-managed-thread-pool"></a><span data-ttu-id="68d3f-102">Пул управляемых потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-102">The Managed Thread Pool</span></span>
+<span data-ttu-id="68d3f-103">Класс <xref:System.Threading.ThreadPool> обеспечивает приложение пулом рабочих потоков, управляемых системой, позволяя пользователю сосредоточиться на выполнении задач приложения, а не на управлении потоками.</span><span class="sxs-lookup"><span data-stu-id="68d3f-103">The <xref:System.Threading.ThreadPool> class provides your application with a pool of worker threads that are managed by the system, allowing you to concentrate on application tasks rather than thread management.</span></span> <span data-ttu-id="68d3f-104">Если имеются небольшие задачи, которые требуют фоновой обработки, пул управляемых потоков — это самый простой способ воспользоваться преимуществами нескольких потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-104">If you have short tasks that require background processing, the managed thread pool is an easy way to take advantage of multiple threads.</span></span> <span data-ttu-id="68d3f-105">Например, начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] можно создавать объекты <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, выполняющие асинхронные задачи в потоках из пула потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-105">For example, beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] you can create <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects, which perform asynchronous tasks on thread pool threads.</span></span>  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] пропускная способность пула потоков значительно увеличилась в трех ключевых областях, которые считались узкими местами в предыдущих выпусках [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: постановка задач в очередь, диспетчеризация потоков в пуле и диспетчеризация потоков завершения ввода\-вывода.  Для применения этих функциональных возможностей приложение должно использовать [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] или более поздние версии.  
+>  <span data-ttu-id="68d3f-106">Начиная с [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] пропускная способность пула потоков значительно увеличилась в трех ключевых областях, которые считались узкими местами в предыдущих выпусках [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: постановка задач в очередь, диспетчеризация потоков в пуле и диспетчеризация потоков завершения ввода-вывода.</span><span class="sxs-lookup"><span data-stu-id="68d3f-106">Starting with the [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], the throughput of the thread pool is significantly improved in three key areas that were identified as bottlenecks in previous releases of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: queuing tasks, dispatching thread pool threads, and dispatching I/O completion threads.</span></span> <span data-ttu-id="68d3f-107">Для применения этих функциональных возможностей приложение должно использовать [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] или более поздние версии.</span><span class="sxs-lookup"><span data-stu-id="68d3f-107">To use this functionality, your application should target the [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] or later.</span></span>  
   
- Для фоновых задач, взаимодействующих с пользовательским интерфейсом, платформа .NET Framework версии 2.0 также предоставляет класс <xref:System.ComponentModel.BackgroundWorker>, который работает с помощью событий, возникающих в потоке пользовательского интерфейса.  
+ <span data-ttu-id="68d3f-108">Для фоновых задач, взаимодействующих с пользовательским интерфейсом, платформа .NET Framework версии 2.0 также предоставляет класс <xref:System.ComponentModel.BackgroundWorker>, который работает с помощью событий, возникающих в потоке пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="68d3f-108">For background tasks that interact with the user interface, the .NET Framework version 2.0 also provides the <xref:System.ComponentModel.BackgroundWorker> class, which communicates using events raised on the user interface thread.</span></span>  
   
- Платформа .NET Framework использует потоки из пула потоков в различных целях, включая завершение асинхронного ввода\-вывода, обратные вызовы таймера, зарегистрированные операции ожидания, асинхронные вызовы методов с использованием делегатов и подключения к сокетам <xref:System.Net>.  
+ <span data-ttu-id="68d3f-109">Платформа .NET Framework использует потоки из пула потоков в различных целях, включая завершение асинхронного ввода-вывода, обратные вызовы таймера, зарегистрированные операции ожидания, асинхронные вызовы методов с использованием делегатов и подключения к сокетам <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-109">The .NET Framework uses thread pool threads for many purposes, including asynchronous I/O completion, timer callbacks, registered wait operations, asynchronous method calls using delegates, and <xref:System.Net> socket connections.</span></span>  
   
-## Когда не следует использовать потоки из пула потоков  
- Существует ряд сценариев, в которых следует создавать собственные потоки и управлять ими, а не использовать потоки из пула потоков.  
+## <a name="when-not-to-use-thread-pool-threads"></a><span data-ttu-id="68d3f-110">Когда не следует использовать потоки из пула потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-110">When Not to Use Thread Pool Threads</span></span>  
+ <span data-ttu-id="68d3f-111">Существует ряд сценариев, в которых следует создавать собственные потоки и управлять ими, а не использовать потоки из пула потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-111">There are several scenarios in which it is appropriate to create and manage your own threads instead of using thread pool threads:</span></span>  
   
--   Необходим основной поток.  
+-   <span data-ttu-id="68d3f-112">Необходим основной поток.</span><span class="sxs-lookup"><span data-stu-id="68d3f-112">You require a foreground thread.</span></span>  
   
--   Поток должен иметь определенный приоритет.  
+-   <span data-ttu-id="68d3f-113">Поток должен иметь определенный приоритет.</span><span class="sxs-lookup"><span data-stu-id="68d3f-113">You require a thread to have a particular priority.</span></span>  
   
--   Имеются задачи, которые приводят к блокировке потока на длительное время.  Для пула потоков определено максимальное количество потоков, поэтому большое число заблокированных потоков в пуле может препятствовать запуску задач.  
+-   <span data-ttu-id="68d3f-114">Имеются задачи, которые приводят к блокировке потока на длительное время.</span><span class="sxs-lookup"><span data-stu-id="68d3f-114">You have tasks that cause the thread to block for long periods of time.</span></span> <span data-ttu-id="68d3f-115">Для пула потоков определено максимальное количество потоков, поэтому большое число заблокированных потоков в пуле может препятствовать запуску задач.</span><span class="sxs-lookup"><span data-stu-id="68d3f-115">The thread pool has a maximum number of threads, so a large number of blocked thread pool threads might prevent tasks from starting.</span></span>  
   
--   Необходимо поместить потоки в однопотоковое подразделение.  Все потоки <xref:System.Threading.ThreadPool> находятся в многопотоковом подразделении.  
+-   <span data-ttu-id="68d3f-116">Необходимо поместить потоки в однопотоковое подразделение.</span><span class="sxs-lookup"><span data-stu-id="68d3f-116">You need to place threads into a single-threaded apartment.</span></span> <span data-ttu-id="68d3f-117">Все потоки <xref:System.Threading.ThreadPool> находятся в многопотоковом подразделении.</span><span class="sxs-lookup"><span data-stu-id="68d3f-117">All <xref:System.Threading.ThreadPool> threads are in the multithreaded apartment.</span></span>  
   
--   Необходимо иметь постоянное удостоверение, сопоставленное с потоком, или назначить поток задаче.  
+-   <span data-ttu-id="68d3f-118">Необходимо иметь постоянное удостоверение, сопоставленное с потоком, или назначить поток задаче.</span><span class="sxs-lookup"><span data-stu-id="68d3f-118">You need to have a stable identity associated with the thread, or to dedicate a thread to a task.</span></span>  
   
-## Характеристики пула потоков  
- Потоки из пула потоков являются фоновыми.  См. раздел [Foreground and Background Threads](../../../docs/standard/threading/foreground-and-background-threads.md).  Для каждого потока используется размер стека по умолчанию, поток запускается с приоритетом по умолчанию и находится в многопотоковом подразделении.  
+## <a name="thread-pool-characteristics"></a><span data-ttu-id="68d3f-119">Характеристики пула потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-119">Thread Pool Characteristics</span></span>  
+ <span data-ttu-id="68d3f-120">Потоки из пула потоков являются фоновыми.</span><span class="sxs-lookup"><span data-stu-id="68d3f-120">Thread pool threads are background threads.</span></span> <span data-ttu-id="68d3f-121">В разделе [основные и фоновые потоки](../../../docs/standard/threading/foreground-and-background-threads.md).</span><span class="sxs-lookup"><span data-stu-id="68d3f-121">See [Foreground and Background Threads](../../../docs/standard/threading/foreground-and-background-threads.md).</span></span> <span data-ttu-id="68d3f-122">Для каждого потока используется размер стека по умолчанию, поток запускается с приоритетом по умолчанию и находится в многопотоковом подразделении.</span><span class="sxs-lookup"><span data-stu-id="68d3f-122">Each thread uses the default stack size, runs at the default priority, and is in the multithreaded apartment.</span></span>  
   
- Для каждого процесса существует только один пул потоков.  
+ <span data-ttu-id="68d3f-123">Для каждого процесса существует только один пул потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-123">There is only one thread pool per process.</span></span>  
   
-### Исключения в потоках из пула потоков  
- Необработанные исключения в потоках из пула потоков приводят к завершению процесса.  Существует три исключения из этого правила.  
+### <a name="exceptions-in-thread-pool-threads"></a><span data-ttu-id="68d3f-124">Исключения в потоках из пула потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-124">Exceptions in Thread Pool Threads</span></span>  
+ <span data-ttu-id="68d3f-125">Необработанные исключения в потоках из пула потоков приводят к завершению процесса.</span><span class="sxs-lookup"><span data-stu-id="68d3f-125">Unhandled exceptions on thread pool threads terminate the process.</span></span> <span data-ttu-id="68d3f-126">Существует три исключения из этого правила.</span><span class="sxs-lookup"><span data-stu-id="68d3f-126">There are three exceptions to this rule:</span></span>  
   
--   Исключение <xref:System.Threading.ThreadAbortException> создается в потоке пула потоков вследствие вызова <xref:System.Threading.Thread.Abort%2A>.  
+-   <span data-ttu-id="68d3f-127">Исключение <xref:System.Threading.ThreadAbortException> создается в потоке пула потоков вследствие вызова <xref:System.Threading.Thread.Abort%2A>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-127">A <xref:System.Threading.ThreadAbortException> is thrown in a thread pool thread, because <xref:System.Threading.Thread.Abort%2A> was called.</span></span>  
   
--   Исключение <xref:System.AppDomainUnloadedException> создается в потоке пула потоков вследствие выгрузки домена приложения.  
+-   <span data-ttu-id="68d3f-128">Исключение <xref:System.AppDomainUnloadedException> создается в потоке пула потоков вследствие выгрузки домена приложения.</span><span class="sxs-lookup"><span data-stu-id="68d3f-128">An <xref:System.AppDomainUnloadedException> is thrown in a thread pool thread, because the application domain is being unloaded.</span></span>  
   
--   Среда CLR или процесс основного приложения прерывает выполнение потока.  
+-   <span data-ttu-id="68d3f-129">Среда CLR или процесс ведущего приложения прерывает выполнение потока.</span><span class="sxs-lookup"><span data-stu-id="68d3f-129">The common language runtime or a host process terminates the thread.</span></span>  
   
- Подробнее см. в разделе [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
-  
-> [!NOTE]
->  В .NET Framework версии 1.0 и 1.1 среда CLR перехватывает необработанные исключения в потоках из пула потоков без вывода оповещения.  Это может повредить состояние приложения и в итоге привести к его "зависанию", отладить которое может быть очень сложно.  
-  
-### Максимальное количество потоков в пуле потоков  
- Количество операций, которое можно поместить в очередь пула потоков, ограничено только объемом памяти; однако пул потоков ограничивает количество потоков, которые могут быть одновременно активны в процессе.  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] размер по умолчанию пула потоков для процесса зависит от нескольких факторов, таких как размер виртуального адресного пространства.  Процесс может вызвать метод <xref:System.Threading.ThreadPool.GetMaxThreads%2A> для определения количества потоков.  
-  
- Вы можете управлять максимальным количеством потоков с помощью методов <xref:System.Threading.ThreadPool.GetMaxThreads%2A> и <xref:System.Threading.ThreadPool.SetMaxThreads%2A>.  
+ <span data-ttu-id="68d3f-130">Дополнительные сведения см. в разделе [исключения в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span><span class="sxs-lookup"><span data-stu-id="68d3f-130">For more information, see [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
 > [!NOTE]
->  В .NET Framework версии 1.0 и 1.1 размер пула потоков нельзя задать в управляемом коде.  В коде, содержащем среду CLR, этот размер может задаваться с помощью объекта `CorSetMaxThreads`, определенного в mscoree.h.  
+>  <span data-ttu-id="68d3f-131">В .NET Framework версии 1.0 и 1.1 среда CLR перехватывает необработанные исключения в потоках из пула потоков без вывода оповещения.</span><span class="sxs-lookup"><span data-stu-id="68d3f-131">In the .NET Framework versions 1.0 and 1.1, the common language runtime silently traps unhandled exceptions in thread pool threads.</span></span> <span data-ttu-id="68d3f-132">Это может повредить состояние приложения и в итоге привести к его "зависанию", отладить которое может быть очень сложно.</span><span class="sxs-lookup"><span data-stu-id="68d3f-132">This might corrupt application state and eventually cause applications to hang, which might be very difficult to debug.</span></span>  
   
-### Минимальные значения пула потоков  
- Пул потоков предоставляет новые рабочие потоки или потоки завершения ввода\-вывода по запросу, пока не будет достигнут заданный минимум для каждой категории.  Для получения этих минимальных значений можно использовать метод <xref:System.Threading.ThreadPool.GetMinThreads%2A>.  
+### <a name="maximum-number-of-thread-pool-threads"></a><span data-ttu-id="68d3f-133">Максимальное количество потоков в пуле потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-133">Maximum Number of Thread Pool Threads</span></span>  
+ <span data-ttu-id="68d3f-134">Количество операций, которое можно поместить в очередь пула потоков, ограничено только объемом памяти; однако пул потоков ограничивает количество потоков, которые могут быть одновременно активны в процессе.</span><span class="sxs-lookup"><span data-stu-id="68d3f-134">The number of operations that can be queued to the thread pool is limited only by available memory; however, the thread pool limits the number of threads that can be active in the process simultaneously.</span></span> <span data-ttu-id="68d3f-135">Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] размер по умолчанию пула потоков для процесса зависит от нескольких факторов, таких как размер виртуального адресного пространства.</span><span class="sxs-lookup"><span data-stu-id="68d3f-135">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the default size of the thread pool for a process depends on several factors, such as the size of the virtual address space.</span></span> <span data-ttu-id="68d3f-136">Процесс может вызвать метод <xref:System.Threading.ThreadPool.GetMaxThreads%2A> для определения количества потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-136">A process can call the <xref:System.Threading.ThreadPool.GetMaxThreads%2A> method to determine the number of threads.</span></span>  
+  
+ <span data-ttu-id="68d3f-137">Вы можете управлять максимальным количеством потоков с помощью методов <xref:System.Threading.ThreadPool.GetMaxThreads%2A> и <xref:System.Threading.ThreadPool.SetMaxThreads%2A>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-137">You can control the maximum number of threads by using the <xref:System.Threading.ThreadPool.GetMaxThreads%2A> and <xref:System.Threading.ThreadPool.SetMaxThreads%2A> methods.</span></span>  
   
 > [!NOTE]
->  Если потребность низкая, фактическое количество потоков из пула потоков может быть ниже минимальных значений.  
+>  <span data-ttu-id="68d3f-138">В .NET Framework версии 1.0 и 1.1 размер пула потоков нельзя задать в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="68d3f-138">In the .NET Framework versions 1.0 and 1.1, the size of the thread pool cannot be set from managed code.</span></span> <span data-ttu-id="68d3f-139">В коде, содержащем среду CLR, этот размер может задаваться с помощью объекта `CorSetMaxThreads`, определенного в mscoree.h.</span><span class="sxs-lookup"><span data-stu-id="68d3f-139">Code that hosts the common language runtime can set the size using `CorSetMaxThreads`, defined in mscoree.h.</span></span>  
   
- При достижении минимума пул потоков может создавать дополнительные потоки или ожидать завершения некоторых задач.  Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] пул потоков создает и уничтожает рабочие потоки в целях оптимизации пропускной способности, которая определяется как количество задач, завершаемых за единицу времени.  Слишком малое количество потоков может препятствовать оптимальному использованию доступных ресурсов, тогда как слишком большое их количество может усиливать конкуренцию за ресурсы.  
+### <a name="thread-pool-minimums"></a><span data-ttu-id="68d3f-140">Минимальные значения пула потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-140">Thread Pool Minimums</span></span>  
+ <span data-ttu-id="68d3f-141">Пул потоков предоставляет новые рабочие потоки или потоки завершения ввода-вывода по запросу, пока не будет достигнут заданный минимум для каждой категории.</span><span class="sxs-lookup"><span data-stu-id="68d3f-141">The thread pool provides new worker threads or I/O completion threads on demand until it reaches a specified minimum for each category.</span></span> <span data-ttu-id="68d3f-142">Для получения этих минимальных значений можно использовать метод <xref:System.Threading.ThreadPool.GetMinThreads%2A>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-142">You can use the <xref:System.Threading.ThreadPool.GetMinThreads%2A> method to obtain these minimum values.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="68d3f-143">Если потребность низкая, фактическое количество потоков из пула потоков может быть ниже минимальных значений.</span><span class="sxs-lookup"><span data-stu-id="68d3f-143">When demand is low, the actual number of thread pool threads can fall below the minimum values.</span></span>  
+  
+ <span data-ttu-id="68d3f-144">При достижении минимума пул потоков может создавать дополнительные потоки или ожидать завершения некоторых задач.</span><span class="sxs-lookup"><span data-stu-id="68d3f-144">When a minimum is reached, the thread pool can create additional threads or wait until some tasks complete.</span></span> <span data-ttu-id="68d3f-145">Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] пул потоков создает и уничтожает рабочие потоки в целях оптимизации пропускной способности, которая определяется как количество задач, завершаемых за единицу времени.</span><span class="sxs-lookup"><span data-stu-id="68d3f-145">Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the thread pool creates and destroys worker threads in order to optimize throughput, which is defined as the number of tasks that complete per unit of time.</span></span> <span data-ttu-id="68d3f-146">Слишком малое количество потоков может препятствовать оптимальному использованию доступных ресурсов, тогда как слишком большое их количество может усиливать конкуренцию за ресурсы.</span><span class="sxs-lookup"><span data-stu-id="68d3f-146">Too few threads might not make optimal use of available resources, whereas too many threads could increase resource contention.</span></span>  
   
 > [!CAUTION]
->  Для увеличения минимального количества бездействующих потоков можно использовать метод <xref:System.Threading.ThreadPool.SetMinThreads%2A>.  Однако необоснованное увеличение этих значений может привести к снижению производительности.  Если одновременно запускается слишком много задач, все они могут выполняться слишком медленно.  В большинстве случаев пул потоков работает наилучшим образом, если он использует собственный алгоритм выделения потоков.  
+>  <span data-ttu-id="68d3f-147">Для увеличения минимального количества бездействующих потоков можно использовать метод <xref:System.Threading.ThreadPool.SetMinThreads%2A>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-147">You can use the <xref:System.Threading.ThreadPool.SetMinThreads%2A> method to increase the minimum number of idle threads.</span></span> <span data-ttu-id="68d3f-148">Однако необоснованное увеличение этих значений может привести к снижению производительности.</span><span class="sxs-lookup"><span data-stu-id="68d3f-148">However, unnecessarily increasing these values can cause performance problems.</span></span> <span data-ttu-id="68d3f-149">Если одновременно запускается слишком много задач, все они могут выполняться слишком медленно.</span><span class="sxs-lookup"><span data-stu-id="68d3f-149">If too many tasks start at the same time, all of them might appear to be slow.</span></span> <span data-ttu-id="68d3f-150">В большинстве случаев пул потоков работает наилучшим образом, если он использует собственный алгоритм выделения потоков.</span><span class="sxs-lookup"><span data-stu-id="68d3f-150">In most cases the thread pool will perform better with its own algorithm for allocating threads.</span></span>  
   
-## Пропуск проверок безопасности  
- Пул потоков также предоставляет методы <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=fullName> и <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=fullName>.  Используйте эти методы только в том случае, если вы уверены, что стек вызывающего объекта не важен для проверок безопасности, осуществляемых во время выполнения задачи в очереди.  Обе перегрузки, <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>и <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>, перехватывают стек вызывающего объекта, который объединяется со стеком потока из пула потоков, когда поток начинает выполнять задачу.  Если требуется проверка безопасности, проверяется весь стек.  Несмотря на обеспечение безопасности, такая проверка также влияет на производительность.  
+## <a name="skipping-security-checks"></a><span data-ttu-id="68d3f-151">Пропуск проверок безопасности</span><span class="sxs-lookup"><span data-stu-id="68d3f-151">Skipping Security Checks</span></span>  
+ <span data-ttu-id="68d3f-152">Пул потоков также предоставляет методы <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> и <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-152">The thread pool also provides the <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> and <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="68d3f-153">Используйте эти методы только в том случае, если вы уверены, что стек вызывающего объекта не важен для проверок безопасности, осуществляемых во время выполнения задачи в очереди.</span><span class="sxs-lookup"><span data-stu-id="68d3f-153">Use these methods only when you are certain that the caller's stack is irrelevant to any security checks performed during the execution of the queued task.</span></span> <span data-ttu-id="68d3f-154"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>и <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> оба захвата стек вызывающего объекта, который объединяется со стеком потока из пула потоков, когда поток начинает выполнять задачу.</span><span class="sxs-lookup"><span data-stu-id="68d3f-154"><xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> and <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> both capture the caller's stack, which is merged into the stack of the thread pool thread when the thread begins to execute a task.</span></span> <span data-ttu-id="68d3f-155">Если требуется проверка безопасности, проверяется весь стек.</span><span class="sxs-lookup"><span data-stu-id="68d3f-155">If a security check is required, the entire stack must be checked.</span></span> <span data-ttu-id="68d3f-156">Несмотря на обеспечение безопасности, такая проверка также влияет на производительность.</span><span class="sxs-lookup"><span data-stu-id="68d3f-156">Although the check provides safety, it also has a performance cost.</span></span>  
   
-## Использование пула потоков  
- Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] самым простым способом использования пула потоков является применение [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).  По умолчанию такие типы параллельных библиотек, как <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, используют потоки из пула потоков для выполнения задач.  Пул потоков также можно использовать путем вызова <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> из управляемого кода \(или `CorQueueUserWorkItem` из неуправляемого кода\) и передачи делегата <xref:System.Threading.WaitCallback>, представляющего метод, который выполняет задачу.  Другим способом использования пула потоков является помещение в очередь рабочих элементов, которые имеют отношение к операции ожидания, с помощью метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=fullName> и передача дескриптора <xref:System.Threading.WaitHandle>, который вызывает метод, представленный делегатом <xref:System.Threading.WaitOrTimerCallback>, при получении сигнала или истечении времени ожидания.  Потоки из пула потоков используются для вызова методов обратного вызова.  
+## <a name="using-the-thread-pool"></a><span data-ttu-id="68d3f-157">Использование пула потоков</span><span class="sxs-lookup"><span data-stu-id="68d3f-157">Using the Thread Pool</span></span>  
+ <span data-ttu-id="68d3f-158">Начиная с версии [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], самым простым способом использования пула потоков является использование [библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).</span><span class="sxs-lookup"><span data-stu-id="68d3f-158">Beginning with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], the easiest way to use the thread pool is to use the [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md).</span></span> <span data-ttu-id="68d3f-159">По умолчанию такие типы параллельных библиотек, как <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>, используют потоки из пула потоков для выполнения задач.</span><span class="sxs-lookup"><span data-stu-id="68d3f-159">By default, parallel library types like <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> use thread pool threads to run tasks.</span></span> <span data-ttu-id="68d3f-160">Пул потоков также можно использовать путем вызова <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> из управляемого кода (или `CorQueueUserWorkItem` из неуправляемого кода) и передачи делегата <xref:System.Threading.WaitCallback>, представляющего метод, который выполняет задачу.</span><span class="sxs-lookup"><span data-stu-id="68d3f-160">You can also use the thread pool by calling <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> from managed code (or `CorQueueUserWorkItem` from unmanaged code) and passing a <xref:System.Threading.WaitCallback> delegate representing the method that performs the task.</span></span> <span data-ttu-id="68d3f-161">Другим способом использования пула потоков является помещение в очередь рабочих элементов, которые имеют отношение к операции ожидания, с помощью метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> и передача дескриптора <xref:System.Threading.WaitHandle>, который вызывает метод, представленный делегатом <xref:System.Threading.WaitOrTimerCallback>, при получении сигнала или истечении времени ожидания.</span><span class="sxs-lookup"><span data-stu-id="68d3f-161">Another way to use the thread pool is to queue work items that are related to a wait operation by using the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> method and passing a <xref:System.Threading.WaitHandle> that, when signaled or when timed out, calls the method represented by the <xref:System.Threading.WaitOrTimerCallback> delegate.</span></span> <span data-ttu-id="68d3f-162">Потоки из пула потоков используются для вызова методов обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="68d3f-162">Thread pool threads are used to invoke callback methods.</span></span>  
   
-## Примеры ThreadPool  
- В примерах кода в этом разделе пул потоков демонстрируется путем использования класса <xref:System.Threading.Tasks.Task>, метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> и метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=fullName>.  
+## <a name="threadpool-examples"></a><span data-ttu-id="68d3f-163">Примеры ThreadPool</span><span class="sxs-lookup"><span data-stu-id="68d3f-163">ThreadPool Examples</span></span>  
+ <span data-ttu-id="68d3f-164">В примерах кода в этом разделе пул потоков демонстрируется путем использования класса <xref:System.Threading.Tasks.Task>, метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> и метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-164">The code examples in this section demonstrate the thread pool by using the <xref:System.Threading.Tasks.Task> class, the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> method, and the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> method.</span></span>  
   
--   [Выполнение асинхронных задач с помощью библиотеки параллельных задач](#TaskParallelLibrary)  
+-   [<span data-ttu-id="68d3f-165">Выполнение асинхронных задач с помощью библиотеки параллельных задач</span><span class="sxs-lookup"><span data-stu-id="68d3f-165">Executing Asynchronous Tasks with the Task Parallel Library</span></span>](#TaskParallelLibrary)  
   
--   [Асинхронное выполнение кода с помощью QueueUserWorkItem](#ExecuteCodeWithQUWI)  
+-   [<span data-ttu-id="68d3f-166">Асинхронное выполнение кода с помощью QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="68d3f-166">Executing Code Asynchronously with QueueUserWorkItem</span></span>](#ExecuteCodeWithQUWI)  
   
--   [Предоставление данных задачи методу QueueUserWorkItem](#TaskDataForQUWI)  
+-   [<span data-ttu-id="68d3f-167">Предоставление данных задачи методу QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="68d3f-167">Supplying Task Data for QueueUserWorkItem</span></span>](#TaskDataForQUWI)  
   
--   [Использование RegisterWaitForSingleObject](#RegisterWaitForSingleObject)  
+-   [<span data-ttu-id="68d3f-168">Использование RegisterWaitForSingleObject</span><span class="sxs-lookup"><span data-stu-id="68d3f-168">Using RegisterWaitForSingleObject</span></span>](#RegisterWaitForSingleObject)  
   
 <a name="TaskParallelLibrary"></a>   
-### Выполнение асинхронных задач с помощью библиотеки параллельных задач  
- В примере ниже показан способ создания и использования объекта <xref:System.Threading.Tasks.Task> путем вызова метода <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=fullName>.  Пример, в котором для возвращения значения из асинхронной задачи используется класс <xref:System.Threading.Tasks.Task%601>, можно найти в разделе [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).  
+### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a><span data-ttu-id="68d3f-169">Выполнение асинхронных задач с помощью библиотеки параллельных задач</span><span class="sxs-lookup"><span data-stu-id="68d3f-169">Executing Asynchronous Tasks with the Task Parallel Library</span></span>  
+ <span data-ttu-id="68d3f-170">В примере ниже показан способ создания и использования объекта <xref:System.Threading.Tasks.Task> путем вызова метода <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-170">The following example shows how to create and use a <xref:System.Threading.Tasks.Task> object by calling the <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="68d3f-171">Пример, использующий <xref:System.Threading.Tasks.Task%601> класса для возвращения значения из асинхронной задачи см. в разделе [как: возвращение значения из задачи](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).</span><span class="sxs-lookup"><span data-stu-id="68d3f-171">For an example that uses the <xref:System.Threading.Tasks.Task%601> class to return a value from an asynchronous task, see [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).</span></span>  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
   
 <a name="ExecuteCodeWithQUWI"></a>   
-### Асинхронное выполнение кода с помощью QueueUserWorkItem  
- В примере ниже с помощью метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> в очередь помещается очень простая задача, представленная методом `ThreadProc`.  
+### <a name="executing-code-asynchronously-with-queueuserworkitem"></a><span data-ttu-id="68d3f-172">Асинхронное выполнение кода с помощью QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="68d3f-172">Executing Code Asynchronously with QueueUserWorkItem</span></span>  
+ <span data-ttu-id="68d3f-173">В примере ниже с помощью метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> в очередь помещается очень простая задача, представленная методом `ThreadProc`.</span><span class="sxs-lookup"><span data-stu-id="68d3f-173">The following example queues a very simple task, represented by the `ThreadProc` method, using the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source1.cpp#1)]
  [!code-csharp[Conceptual.ThreadPool#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source1.cs#1)]
  [!code-vb[Conceptual.ThreadPool#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source1.vb#1)]  
   
 <a name="TaskDataForQUWI"></a>   
-### Предоставление данных задачи методу QueueUserWorkItem  
- В примере ниже с помощью метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> в очередь помещается задача, а затем для нее предоставляются данные.  
+### <a name="supplying-task-data-for-queueuserworkitem"></a><span data-ttu-id="68d3f-174">Предоставление данных задачи методу QueueUserWorkItem</span><span class="sxs-lookup"><span data-stu-id="68d3f-174">Supplying Task Data for QueueUserWorkItem</span></span>  
+ <span data-ttu-id="68d3f-175">В примере ниже с помощью метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> в очередь помещается задача, а затем для нее предоставляются данные.</span><span class="sxs-lookup"><span data-stu-id="68d3f-175">The following code example uses the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method to queue a task and supply the data for the task.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source2.cpp#2)]
  [!code-csharp[Conceptual.ThreadPool#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source2.cs#2)]
  [!code-vb[Conceptual.ThreadPool#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source2.vb#2)]  
   
 <a name="RegisterWaitForSingleObject"></a>   
-### Использование RegisterWaitForSingleObject  
- В примере ниже показаны некоторые возможности потоков:  
+### <a name="using-registerwaitforsingleobject"></a><span data-ttu-id="68d3f-176">Использование RegisterWaitForSingleObject</span><span class="sxs-lookup"><span data-stu-id="68d3f-176">Using RegisterWaitForSingleObject</span></span>  
+ <span data-ttu-id="68d3f-177">В примере ниже показаны некоторые возможности потоков:</span><span class="sxs-lookup"><span data-stu-id="68d3f-177">The following example demonstrates several threading features.</span></span>  
   
--   помещение задачи в очередь для выполнения с помощью потоков <xref:System.Threading.ThreadPool> с использованием метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>;  
+-   <span data-ttu-id="68d3f-178">помещение задачи в очередь для выполнения с помощью потоков <xref:System.Threading.ThreadPool> с использованием метода <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>;</span><span class="sxs-lookup"><span data-stu-id="68d3f-178">Queuing a task for execution by <xref:System.Threading.ThreadPool> threads, with the <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> method.</span></span>  
   
--   отправка задаче сигнала о выполнении с помощью <xref:System.Threading.AutoResetEvent>;  см. раздел [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md);  
+-   <span data-ttu-id="68d3f-179">отправка задаче сигнала о выполнении с помощью <xref:System.Threading.AutoResetEvent>;</span><span class="sxs-lookup"><span data-stu-id="68d3f-179">Signaling a task to execute, with <xref:System.Threading.AutoResetEvent>.</span></span> <span data-ttu-id="68d3f-180">В разделе [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span><span class="sxs-lookup"><span data-stu-id="68d3f-180">See [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).</span></span>  
   
--   обработка тайм\-аутов и сигналов с помощью делегата <xref:System.Threading.WaitOrTimerCallback>;  
+-   <span data-ttu-id="68d3f-181">обработка тайм-аутов и сигналов с помощью делегата <xref:System.Threading.WaitOrTimerCallback>;</span><span class="sxs-lookup"><span data-stu-id="68d3f-181">Handling both time-outs and signals with a <xref:System.Threading.WaitOrTimerCallback> delegate.</span></span>  
   
--   отмена задачи в очереди с помощью <xref:System.Threading.RegisteredWaitHandle>.  
+-   <span data-ttu-id="68d3f-182">отмена задачи в очереди с помощью <xref:System.Threading.RegisteredWaitHandle>.</span><span class="sxs-lookup"><span data-stu-id="68d3f-182">Canceling a queued task with <xref:System.Threading.RegisteredWaitHandle>.</span></span>  
   
  [!code-cpp[Conceptual.ThreadPool#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.threadpool/cpp/source3.cpp#3)]
  [!code-csharp[Conceptual.ThreadPool#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source3.cs#3)]
  [!code-vb[Conceptual.ThreadPool#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source3.vb#3)]  
   
-## См. также  
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.Tasks.Task>   
- <xref:System.Threading.Tasks.Task%601>   
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
- [Task Parallel Library \(TPL\)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)   
- [How to: Return a Value from a Task](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)   
- [Асинхронный файловый ввод\-вывод](../../../docs/standard/io/асинхронный-файловый-ввод-вывод.md)   
- [Timers](../../../docs/standard/threading/timers.md)
+## <a name="see-also"></a><span data-ttu-id="68d3f-183">См. также</span><span class="sxs-lookup"><span data-stu-id="68d3f-183">See Also</span></span>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.Tasks.Task>  
+ <xref:System.Threading.Tasks.Task%601>  
+ [<span data-ttu-id="68d3f-184">Библиотека параллельных задач (TPL)</span><span class="sxs-lookup"><span data-stu-id="68d3f-184">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [<span data-ttu-id="68d3f-185">Библиотека параллельных задач (TPL)</span><span class="sxs-lookup"><span data-stu-id="68d3f-185">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+ [<span data-ttu-id="68d3f-186">Практическое руководство. Возвращение значения из задачи</span><span class="sxs-lookup"><span data-stu-id="68d3f-186">How to: Return a Value from a Task</span></span>](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
+ [<span data-ttu-id="68d3f-187">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="68d3f-187">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [<span data-ttu-id="68d3f-188">Потоки и работа с потоками</span><span class="sxs-lookup"><span data-stu-id="68d3f-188">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)  
+ [<span data-ttu-id="68d3f-189">Асинхронный файловый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="68d3f-189">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [<span data-ttu-id="68d3f-190">Таймеры</span><span class="sxs-lookup"><span data-stu-id="68d3f-190">Timers</span></span>](../../../docs/standard/threading/timers.md)

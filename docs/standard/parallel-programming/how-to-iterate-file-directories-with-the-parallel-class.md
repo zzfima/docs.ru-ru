@@ -1,37 +1,42 @@
 ---
-title: "Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "параллельные циклы, перебор каталогов"
+title: "Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c21aadf70eaccafc8c8ec9c4efefff1c66abc6b5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса
-Во многих случаях итерация файла является операцией, которая с легкостью выполняется параллельно.  В теме [How to: Iterate File Directories with PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) показан самый простой способ выполнения этой задачи, подходящий для большинства сценариев.  Однако сложности могут возникнуть, если коду предстоит обработка многих типов исключений, которые могут создаваться при входе в файловую систему.  В следующем примере показан один из возможных способов решения этой проблемы.  Для перебора по всем файлам и папкам определенного каталога используется итерация на основе стека, и код может перехватывать и обрабатывать различных исключения.  Но, конечно же, способ обработки исключений определяет только разработчик.  
+# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a><span data-ttu-id="ed0fb-102">Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса</span><span class="sxs-lookup"><span data-stu-id="ed0fb-102">How to: Iterate File Directories with the Parallel Class</span></span>
+<span data-ttu-id="ed0fb-103">Во многих случаях итерация файла является операция, которая может быть легко параллельно.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-103">In many cases, file iteration is an operation that can be easily parallelized.</span></span> <span data-ttu-id="ed0fb-104">Раздел [как: прохода каталоги файлов с помощью PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) показан самый простой способ выполнения этой задачи во многих сценариях.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-104">The topic [How to: Iterate File Directories with PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) shows the easiest way to perform this task for many scenarios.</span></span> <span data-ttu-id="ed0fb-105">Тем не менее если код имеет дело с многих типов исключений, которые могут возникнуть при доступе к файловой системе, могут возникнуть трудности.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-105">However, complications can arise when your code has to deal with the many types of exceptions that can arise when accessing the file system.</span></span> <span data-ttu-id="ed0fb-106">В следующем примере показано одним из подходов для решения проблемы.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-106">The following example shows one approach to the problem.</span></span> <span data-ttu-id="ed0fb-107">Он использует итерация на основе стека для прохождения всех файлов и папок в указанном каталоге, и код для перехвата и обработки различных исключений.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-107">It uses a stack-based iteration to traverse all files and folders under a specified directory, and it enables your code to catch and handle various exceptions.</span></span> <span data-ttu-id="ed0fb-108">Конечно механизм обработки исключений — вы сами.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-108">Of course, the way that you handle the exceptions is up to you.</span></span>  
   
-## Пример  
- В следующем примере директории обрабатываются последовательно, а файлы \- параллельно.  Вероятно, это лучшее решение в ситуации, когда на один каталог приходится большое количество файлов.  Кроме того, возможна параллельная итерация каталога и последовательный доступ к каждому файлу.  Вполне возможно, что параллельное выполнение циклов будет неэффективным, если только не используется специальная система с большим количеством процессоров.  Однако в любом случае необходимо тщательно протестировать приложение, чтобы найти лучшее решение.  
+## <a name="example"></a><span data-ttu-id="ed0fb-109">Пример</span><span class="sxs-lookup"><span data-stu-id="ed0fb-109">Example</span></span>  
+ <span data-ttu-id="ed0fb-110">В следующем примере директории обрабатываются последовательно, а файлы — параллельно.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-110">The following example iterates the directories sequentially, but processes the files in parallel.</span></span> <span data-ttu-id="ed0fb-111">Возможно, это наилучший подход при наличии большой коэффициент каталог файлов.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-111">This is probably the best approach when you have a large file-to-directory ratio.</span></span> <span data-ttu-id="ed0fb-112">Также существует возможность параллельного выполнения итераций каталог и доступ к каждому файлу последовательно.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-112">It is also possible to parallelize the directory iteration, and access each file sequentially.</span></span> <span data-ttu-id="ed0fb-113">Скорее всего, не будет неэффективным циклов, если только создается специально для компьютера с большим числом процессоров.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-113">It is probably not efficient to parallelize both loops unless you are specifically targeting a machine with a large number of processors.</span></span> <span data-ttu-id="ed0fb-114">Тем не менее как и во всех случаях следует протестировать приложение тщательно, чтобы определить наилучший подход.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-114">However, as in all cases, you should test your application thoroughly to determine the best approach.</span></span>  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- В этом примере файловый ввод\-вывод синхронный.  При работе с большими файлами или при использовании медленного сетевого соединения, возможно, асинхронный доступ к файлам окажется более эффективным.  Методы асинхронного ввода\-вывода можно использовать совместно с параллельной итерацией.  Дополнительные сведения см. в разделе [TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).  
+ <span data-ttu-id="ed0fb-115">В этом примере файлового ввода-вывода выполняется синхронно.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-115">In this example, the file I/O is performed synchronously.</span></span> <span data-ttu-id="ed0fb-116">При работе с большими файлами или медленных сетевых подключениях, он может быть предпочтительнее асинхронного доступа к файлам.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-116">When dealing with large files or slow network connections, it might be preferable to access the files asynchronously.</span></span> <span data-ttu-id="ed0fb-117">Методики асинхронного ввода-вывода можно объединить с параллельных итерации.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-117">You can combine asynchronous I/O techniques with parallel iteration.</span></span> <span data-ttu-id="ed0fb-118">Дополнительные сведения см. в разделе [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).</span><span class="sxs-lookup"><span data-stu-id="ed0fb-118">For more information, see [TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md).</span></span>  
   
- В этом примере используется локальная переменная `fileCount` для учета общего количества обработанных файлов.  Поскольку переменная может быть использована одновременно несколькими задачами, доступ к ней синхронизирован вызовом метода <xref:System.Threading.Interlocked.Add%2A?displayProperty=fullName>.  
+ <span data-ttu-id="ed0fb-119">В этом примере используется локальная переменная `fileCount` для учета общего количества обработанных файлов.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-119">The example uses the local `fileCount` variable to maintain a count of the total number of files processed.</span></span> <span data-ttu-id="ed0fb-120">Поскольку доступ к этой переменной могут получать одновременно несколько задач, доступ к ней синхронизируется путем вызова метода <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-120">Because the variable might be accessed concurrently by multiple tasks, access to it is synchronized by calling the <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> method.</span></span>  
   
- Обратите внимание, если исключение возникает в главном потоке, потоки, запускаемые методом <xref:System.Threading.Tasks.Parallel.ForEach%2A>, могут продолжить работу.  Чтобы остановить эти потоки, можно задать логическую переменную в обработчиках исключений и проверять ее значение при каждой итерации параллельного цикла.  Если значение соответствует возникшему исключению, с помощью переменной <xref:System.Threading.Tasks.ParallelLoopState> остановите или прервите цикл.  Для получения дополнительной информации см. [How to: Stop or Break from a Parallel.For Loop](http://msdn.microsoft.com/ru-ru/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
+ <span data-ttu-id="ed0fb-121">Обратите внимание, что если исключение создается в основном потоке, потоки, которые запускаются по <xref:System.Threading.Tasks.Parallel.ForEach%2A> метод может продолжать работу.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-121">Note that if an exception is thrown on the main thread, the threads that are started by the <xref:System.Threading.Tasks.Parallel.ForEach%2A> method might continue to run.</span></span> <span data-ttu-id="ed0fb-122">Чтобы остановить эти потоки, установка значения логической переменной в обработчиков исключений и проверить свое значение при каждой итерации параллельного цикла.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-122">To stop these threads, you can set a Boolean variable in your exception handlers, and check its value on each iteration of the parallel loop.</span></span> <span data-ttu-id="ed0fb-123">Если значение указывает, что было создано исключение, используйте <xref:System.Threading.Tasks.ParallelLoopState> переменной, остановить или приостановить из цикла.</span><span class="sxs-lookup"><span data-stu-id="ed0fb-123">If the value indicates that an exception has been thrown, use the <xref:System.Threading.Tasks.ParallelLoopState> variable to stop or break from the loop.</span></span> <span data-ttu-id="ed0fb-124">Дополнительные сведения см. в разделе [как: остановка или приостановка цикла Parallel.For](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).</span><span class="sxs-lookup"><span data-stu-id="ed0fb-124">For more information, see [How to: Stop or Break from a Parallel.For Loop](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).</span></span>  
   
-## См. также  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="ed0fb-125">См. также</span><span class="sxs-lookup"><span data-stu-id="ed0fb-125">See Also</span></span>  
+ [<span data-ttu-id="ed0fb-126">Параллелизм данных</span><span class="sxs-lookup"><span data-stu-id="ed0fb-126">Data Parallelism</span></span>](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

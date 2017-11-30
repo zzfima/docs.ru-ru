@@ -1,110 +1,91 @@
 ---
 title: "Обработка XML-файла (руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 610f3ac5c88fb41a4b55f2990fecdc4c13074e19
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Обработка XML-файла (руководство по программированию на C#)
-Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию. Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.  
+# <a name="processing-the-xml-file-c-programming-guide"></a><span data-ttu-id="bc793-102">Обработка XML-файла (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="bc793-102">Processing the XML File (C# Programming Guide)</span></span>
+<span data-ttu-id="bc793-103">Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации.</span><span class="sxs-lookup"><span data-stu-id="bc793-103">The compiler generates an ID string for each construct in your code that is tagged to generate documentation.</span></span> <span data-ttu-id="bc793-104">Дополнительные сведения о разметке кода см. в статье [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md). Строка идентификатора однозначно определяет конструкцию.</span><span class="sxs-lookup"><span data-stu-id="bc793-104">(For information about how to tag your code, see [Recommended Tags for Documentation Comments](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) The ID string uniquely identifies the construct.</span></span> <span data-ttu-id="bc793-105">Программы, обрабатывающие этот XML-файл, могут с помощью строки идентификатора определить, какому элементу метаданных или отражения .NET Framework соответствует эта документация.</span><span class="sxs-lookup"><span data-stu-id="bc793-105">Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item that the documentation applies to.</span></span>  
   
- XML-файл не содержит иерархическое представление кода, а только одноуровневый список с идентификаторами всех элементов.  
+ <span data-ttu-id="bc793-106">XML-файл не содержит иерархическое представление кода, а только одноуровневый список с идентификаторами всех элементов.</span><span class="sxs-lookup"><span data-stu-id="bc793-106">The XML file is not a hierarchical representation of your code; it is a flat list that has a generated ID for each element.</span></span>  
   
- Компилятор соблюдает следующие правила при формировании строк идентификаторов.  
+ <span data-ttu-id="bc793-107">Компилятор соблюдает следующие правила при формировании строк идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="bc793-107">The compiler observes the following rules when it generates the ID strings:</span></span>  
   
--   В строке нет пробелов.  
+-   <span data-ttu-id="bc793-108">В строке нет пробелов.</span><span class="sxs-lookup"><span data-stu-id="bc793-108">No whitespace is in the string.</span></span>  
   
--   Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. Используются следующие типы элементов.  
+-   <span data-ttu-id="bc793-109">Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие.</span><span class="sxs-lookup"><span data-stu-id="bc793-109">The first part of the ID string identifies the kind of member being identified, by way of a single character followed by a colon.</span></span> <span data-ttu-id="bc793-110">Используются следующие типы элементов.</span><span class="sxs-lookup"><span data-stu-id="bc793-110">The following member types are used:</span></span>  
   
-    |Знак|Описание|  
+    |<span data-ttu-id="bc793-111">Знак</span><span class="sxs-lookup"><span data-stu-id="bc793-111">Character</span></span>|<span data-ttu-id="bc793-112">Описание</span><span class="sxs-lookup"><span data-stu-id="bc793-112">Description</span></span>|  
     |---------------|-----------------|  
-    |в|namespace<br /><br /> Вы не можете присвоить комментарий документации пространству имен, но можете создать для него cref-ссылку, если они поддерживаются.|  
-    |T|тип: класс, интерфейс, структура, перечисление, делегат|  
-    |C|поле|  
-    |С|свойство (включая индексаторы или другие индексированные свойства)|  
-    |M|метод (в том числе специальные методы, например конструкторы и операторы)|  
-    |E|событие|  
-    |!|текст ошибки<br /><br /> Остальная часть строки предоставляет сведения об ошибке. Компилятор C# создает сведения об ошибках для ссылок, которые не могут быть разрешены.|  
+    |<span data-ttu-id="bc793-113">в</span><span class="sxs-lookup"><span data-stu-id="bc793-113">N</span></span>|<span data-ttu-id="bc793-114">namespace</span><span class="sxs-lookup"><span data-stu-id="bc793-114">namespace</span></span><br /><br /> <span data-ttu-id="bc793-115">Вы не можете присвоить комментарий документации пространству имен, но можете создать для него cref-ссылку, если они поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="bc793-115">You cannot add documentation comments to a namespace, but you can make cref references to them, where supported.</span></span>|  
+    |<span data-ttu-id="bc793-116">T</span><span class="sxs-lookup"><span data-stu-id="bc793-116">T</span></span>|<span data-ttu-id="bc793-117">тип: класс, интерфейс, структура, перечисление, делегат</span><span class="sxs-lookup"><span data-stu-id="bc793-117">type: class, interface, struct, enum, delegate</span></span>|  
+    |<span data-ttu-id="bc793-118">C</span><span class="sxs-lookup"><span data-stu-id="bc793-118">F</span></span>|<span data-ttu-id="bc793-119">поле</span><span class="sxs-lookup"><span data-stu-id="bc793-119">field</span></span>|  
+    |<span data-ttu-id="bc793-120">С</span><span class="sxs-lookup"><span data-stu-id="bc793-120">P</span></span>|<span data-ttu-id="bc793-121">свойство (включая индексаторы или другие индексированные свойства)</span><span class="sxs-lookup"><span data-stu-id="bc793-121">property (including indexers or other indexed properties)</span></span>|  
+    |<span data-ttu-id="bc793-122">M</span><span class="sxs-lookup"><span data-stu-id="bc793-122">M</span></span>|<span data-ttu-id="bc793-123">метод (в том числе специальные методы, например конструкторы и операторы)</span><span class="sxs-lookup"><span data-stu-id="bc793-123">method (including such special methods as constructors, operators, and so forth)</span></span>|  
+    |<span data-ttu-id="bc793-124">E</span><span class="sxs-lookup"><span data-stu-id="bc793-124">E</span></span>|<span data-ttu-id="bc793-125">событие</span><span class="sxs-lookup"><span data-stu-id="bc793-125">event</span></span>|  
+    |<span data-ttu-id="bc793-126">!</span><span class="sxs-lookup"><span data-stu-id="bc793-126">!</span></span>|<span data-ttu-id="bc793-127">текст ошибки</span><span class="sxs-lookup"><span data-stu-id="bc793-127">error string</span></span><br /><br /> <span data-ttu-id="bc793-128">Остальная часть строки предоставляет сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="bc793-128">The rest of the string provides information about the error.</span></span> <span data-ttu-id="bc793-129">Компилятор C# создает сведения об ошибках для ссылок, которые не могут быть разрешены.</span><span class="sxs-lookup"><span data-stu-id="bc793-129">The C# compiler generates error information for links that cannot be resolved.</span></span>|  
   
--   Вторая часть строки содержит полное имя элемента, начиная от корня пространства имен. Имя элемента, включающие типы и пространства имен разделяются точками. Если в имени самого элемента есть точки, они заменяются символами решетки (#). Предполагается, что в именах элементов не может содержаться символ решетки. Например полное, полное имя конструктора для объекта String будет иметь вид System.String.#ctor.  
+-   <span data-ttu-id="bc793-130">Вторая часть строки содержит полное имя элемента, начиная от корня пространства имен.</span><span class="sxs-lookup"><span data-stu-id="bc793-130">The second part of the string is the fully qualified name of the item, starting at the root of the namespace.</span></span> <span data-ttu-id="bc793-131">Имя элемента, включающие типы и пространства имен разделяются точками.</span><span class="sxs-lookup"><span data-stu-id="bc793-131">The name of the item, its enclosing type(s), and namespace are separated by periods.</span></span> <span data-ttu-id="bc793-132">Если в имени самого элемента есть точки, они заменяются символами решетки (#).</span><span class="sxs-lookup"><span data-stu-id="bc793-132">If the name of the item itself has periods, they are replaced by the hash-sign ('#').</span></span> <span data-ttu-id="bc793-133">Предполагается, что в именах элементов не может содержаться символ решетки.</span><span class="sxs-lookup"><span data-stu-id="bc793-133">It is assumed that no item has a hash-sign directly in its name.</span></span> <span data-ttu-id="bc793-134">Например полное, полное имя конструктора для объекта String будет иметь вид System.String.#ctor.</span><span class="sxs-lookup"><span data-stu-id="bc793-134">For example, the fully qualified name of the String constructor would be "System.String.#ctor".</span></span>  
   
--   Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце. Если аргументы не используются, скобки отсутствуют. Аргументы разделяются запятыми. Кодировка каждого аргумента указывается в точности так, как она закодирована в сигнатуре .NET Framework.  
+-   <span data-ttu-id="bc793-135">Для свойств и методов, имеющих аргументы, список этих аргументов заключается в круглые скобки и указывается в конце.</span><span class="sxs-lookup"><span data-stu-id="bc793-135">For properties and methods, if there are arguments to the method, the argument list enclosed in parentheses follows.</span></span> <span data-ttu-id="bc793-136">Если аргументы не используются, скобки отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="bc793-136">If there are no arguments, no parentheses are present.</span></span> <span data-ttu-id="bc793-137">Аргументы разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="bc793-137">The arguments are separated by commas.</span></span> <span data-ttu-id="bc793-138">Кодировка каждого аргумента указывается в точности так, как она закодирована в сигнатуре .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bc793-138">The encoding of each argument follows directly how it is encoded in a .NET Framework signature:</span></span>  
   
-    -   Базовые типы. Регулярные типы (ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE) представляются полным именам типа.  
+    -   <span data-ttu-id="bc793-139">Базовые типы.</span><span class="sxs-lookup"><span data-stu-id="bc793-139">Base types.</span></span> <span data-ttu-id="bc793-140">Регулярные типы (ELEMENT_TYPE_CLASS или ELEMENT_TYPE_VALUETYPE) представляются полным именам типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-140">Regular types (ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE) are represented as the fully qualified name of the type.</span></span>  
   
-    -   Встроенные типы (например, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF и ELEMENT_TYPE_VOID) представляются полным именем соответствующего полного типа. Например, System.Int32 или System.TypedReference.  
+    -   <span data-ttu-id="bc793-141">Встроенные типы (например, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF</span><span class="sxs-lookup"><span data-stu-id="bc793-141">Intrinsic types (for example, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF.</span></span> <span data-ttu-id="bc793-142">и ELEMENT_TYPE_VOID) представляются полным именем соответствующего полного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-142">and ELEMENT_TYPE_VOID) are represented as the fully qualified name of the corresponding full type.</span></span> <span data-ttu-id="bc793-143">Например, System.Int32 или System.TypedReference.</span><span class="sxs-lookup"><span data-stu-id="bc793-143">For example, System.Int32 or System.TypedReference.</span></span>  
   
-    -   ELEMENT_TYPE_PTR представляется как "*" после имени измененного типа.  
+    -   <span data-ttu-id="bc793-144">ELEMENT_TYPE_PTR представляется как "*" после имени измененного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-144">ELEMENT_TYPE_PTR is represented as a '*' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_BYREF представляется как "@" после имени измененного типа.  
+    -   <span data-ttu-id="bc793-145">ELEMENT_TYPE_BYREF представляется как "@" после имени измененного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-145">ELEMENT_TYPE_BYREF is represented as a '@' following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_PINNED представляется как "^" после имени измененного типа. Компилятор C# никогда не создает такой текст.  
+    -   <span data-ttu-id="bc793-146">ELEMENT_TYPE_PINNED представляется как "^" после имени измененного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-146">ELEMENT_TYPE_PINNED is represented as a '^' following the modified type.</span></span> <span data-ttu-id="bc793-147">Компилятор C# никогда не создает такой текст.</span><span class="sxs-lookup"><span data-stu-id="bc793-147">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_REQ представляется как "&#124;" с указанием полного имени класса модификатора после имени измененного типа. Компилятор C# никогда не создает такой текст.  
+    -   <span data-ttu-id="bc793-148">ELEMENT_TYPE_CMOD_REQ представляется как "&#124;" с указанием полного имени класса модификатора после имени измененного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-148">ELEMENT_TYPE_CMOD_REQ is represented as a '&#124;' and the fully qualified name of the modifier class, following the modified type.</span></span> <span data-ttu-id="bc793-149">Компилятор C# никогда не создает такой текст.</span><span class="sxs-lookup"><span data-stu-id="bc793-149">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_CMOD_OPT представляется как "!" с указанием полного имени класса модификатора после имени измененного типа.  
+    -   <span data-ttu-id="bc793-150">ELEMENT_TYPE_CMOD_OPT представляется как "!" с указанием полного имени класса модификатора после имени измененного типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-150">ELEMENT_TYPE_CMOD_OPT is represented as a '!' and the fully qualified name of the modifier class, following the modified type.</span></span>  
   
-    -   ELEMENT_TYPE_SZARRAY представляется как "[]" после типа элемента для массива.  
+    -   <span data-ttu-id="bc793-151">ELEMENT_TYPE_SZARRAY представляется как "[]" после типа элемента для массива.</span><span class="sxs-lookup"><span data-stu-id="bc793-151">ELEMENT_TYPE_SZARRAY is represented as "[]" following the element type of the array.</span></span>  
   
-    -   ELEMENT_TYPE_GENERICARRAY представляется как "[?]" после типа элемента для массива. Компилятор C# никогда не создает такой текст.  
+    -   <span data-ttu-id="bc793-152">ELEMENT_TYPE_GENERICARRAY представляется как "[?]" после типа элемента для массива.</span><span class="sxs-lookup"><span data-stu-id="bc793-152">ELEMENT_TYPE_GENERICARRAY is represented as "[?]" following the element type of the array.</span></span> <span data-ttu-id="bc793-153">Компилятор C# никогда не создает такой текст.</span><span class="sxs-lookup"><span data-stu-id="bc793-153">The C# compiler never generates this.</span></span>  
   
-    -   ELEMENT_TYPE_ARRAY представляется как [*нижняя_граница*:`size`,*нижняя_граница*:`size`] где число запятых на единицу меньше размерности массива, а нижние границы и размер каждого измерения, если они известны, представлены в десятичном формате. Если нижняя граница или размер не указаны, они опускаются. Если нижняя граница и размер для определенной размерности опущены, опускается и символ ":". Например, двухмерный массив со значением 1 для нижних границ без указания размеров обозначается так: "[1:,1:]".  
+    -   <span data-ttu-id="bc793-154">ELEMENT_TYPE_ARRAY представляется как [*нижняя_граница*:`size`,*нижняя_граница*:`size`] где число запятых на единицу меньше размерности массива, а нижние границы и размер каждого измерения, если они известны, представлены в десятичном формате.</span><span class="sxs-lookup"><span data-stu-id="bc793-154">ELEMENT_TYPE_ARRAY is represented as [*lowerbound*:`size`,*lowerbound*:`size`] where the number of commas is the rank - 1, and the lower bounds and size of each dimension, if known, are represented in decimal.</span></span> <span data-ttu-id="bc793-155">Если нижняя граница или размер не указаны, они опускаются.</span><span class="sxs-lookup"><span data-stu-id="bc793-155">If a lower bound or size is not specified, it is simply omitted.</span></span> <span data-ttu-id="bc793-156">Если нижняя граница и размер для определенной размерности опущены, опускается и символ ":".</span><span class="sxs-lookup"><span data-stu-id="bc793-156">If the lower bound and size for a particular dimension are omitted, the ':' is omitted as well.</span></span> <span data-ttu-id="bc793-157">Например, двухмерный массив со значением 1 для нижних границ без указания размеров обозначается так: "[1:,1:]".</span><span class="sxs-lookup"><span data-stu-id="bc793-157">For example, a 2-dimensional array with 1 as the lower bounds and unspecified sizes is [1:,1:].</span></span>  
   
-    -   ELEMENT_TYPE_FNPTR представляется как "=FUNC:`type`(*подпись*)", где `type` обозначает возвращаемый тип, а *подпись* представляет аргументы метода. Если аргументы не используются, скобки опускаются. Компилятор C# никогда не создает такой текст.  
+    -   <span data-ttu-id="bc793-158">ELEMENT_TYPE_FNPTR представляется как "=FUNC:`type`(*подпись*)", где `type` обозначает возвращаемый тип, а *подпись* представляет аргументы метода.</span><span class="sxs-lookup"><span data-stu-id="bc793-158">ELEMENT_TYPE_FNPTR is represented as "=FUNC:`type`(*signature*)", where `type` is the return type, and *signature* is the arguments of the method.</span></span> <span data-ttu-id="bc793-159">Если аргументы не используются, скобки опускаются.</span><span class="sxs-lookup"><span data-stu-id="bc793-159">If there are no arguments, the parentheses are omitted.</span></span> <span data-ttu-id="bc793-160">Компилятор C# никогда не создает такой текст.</span><span class="sxs-lookup"><span data-stu-id="bc793-160">The C# compiler never generates this.</span></span>  
   
-     Следующие компоненты подписи не представляются, поскольку они никогда не используются для различения перегруженных методов:  
+     <span data-ttu-id="bc793-161">Следующие компоненты подписи не представляются, поскольку они никогда не используются для различения перегруженных методов:</span><span class="sxs-lookup"><span data-stu-id="bc793-161">The following signature components are not represented because they are never used for differentiating overloaded methods:</span></span>  
   
-    -   соглашение о вызовах;  
+    -   <span data-ttu-id="bc793-162">соглашение о вызовах;</span><span class="sxs-lookup"><span data-stu-id="bc793-162">calling convention</span></span>  
   
-    -   тип возвращаемого значения;  
+    -   <span data-ttu-id="bc793-163">тип возвращаемого значения;</span><span class="sxs-lookup"><span data-stu-id="bc793-163">return type</span></span>  
   
-    -   ELEMENT_TYPE_SENTINEL.  
+    -   <span data-ttu-id="bc793-164">ELEMENT_TYPE_SENTINEL.</span><span class="sxs-lookup"><span data-stu-id="bc793-164">ELEMENT_TYPE_SENTINEL</span></span>  
   
--   Только для операторов преобразования (op_Implicit и op_Explicit) возвращаемое значение метода кодируется как символ "~", за которым следует возвращаемый тип, как описано выше.  
+-   <span data-ttu-id="bc793-165">Только для операторов преобразования (op_Implicit и op_Explicit) возвращаемое значение метода кодируется как символ "~", за которым следует возвращаемый тип, как описано выше.</span><span class="sxs-lookup"><span data-stu-id="bc793-165">For conversion operators only (op_Implicit and op_Explicit), the return value of the method is encoded as a '~' followed by the return type, as encoded above.</span></span>  
   
--   Для универсальных типов имя типа завершается символом обратного апострофа и числом, которое обозначает количество параметров универсального типа.  Например:  
+-   <span data-ttu-id="bc793-166">Для универсальных типов имя типа завершается символом обратного апострофа и числом, которое обозначает количество параметров универсального типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-166">For generic types, the name of the type will be followed by a back tick and then a number that indicates the number of generic type parameters.</span></span>  <span data-ttu-id="bc793-167">Например:</span><span class="sxs-lookup"><span data-stu-id="bc793-167">For example,</span></span>  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
+     <span data-ttu-id="bc793-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`.</span><span class="sxs-lookup"><span data-stu-id="bc793-168">`<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>\`.</span></span>  
   
-     Для методов, принимающих в качестве параметров универсальные типы, параметры универсального типа указываются в виде чисел, которым предшествуют символы обратного апострофа (например, \`0,`1).  Каждое число представляет нотацию массива с отсчетом индексации для параметров универсального типа.  
+     <span data-ttu-id="bc793-169">Для методов, принимающих в качестве параметров универсальные типы, параметры универсального типа указываются в виде чисел, которым предшествуют символы обратного апострофа (например, \`0,`1).</span><span class="sxs-lookup"><span data-stu-id="bc793-169">For methods taking generic types as parameters, the generic type parameters are specified as numbers prefaced with back ticks (for example \`0,`1).</span></span>  <span data-ttu-id="bc793-170">Каждое число представляет нотацию массива с отсчетом индексации для параметров универсального типа.</span><span class="sxs-lookup"><span data-stu-id="bc793-170">Each number representing a zero-based array notation for the type's generic parameters.</span></span>  
   
-## <a name="examples"></a>Примеры  
- Следующие примеры демонстрируют, как создаются строки идентификатора для класса и его элементов:  
+## <a name="examples"></a><span data-ttu-id="bc793-171">Примеры</span><span class="sxs-lookup"><span data-stu-id="bc793-171">Examples</span></span>  
+ <span data-ttu-id="bc793-172">Следующие примеры демонстрируют, как создаются строки идентификатора для класса и его элементов:</span><span class="sxs-lookup"><span data-stu-id="bc793-172">The following examples show how the ID strings for a class and its members would be generated:</span></span>  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-
+## <a name="see-also"></a><span data-ttu-id="bc793-173">См. также</span><span class="sxs-lookup"><span data-stu-id="bc793-173">See Also</span></span>  
+ [<span data-ttu-id="bc793-174">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="bc793-174">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="bc793-175">/ doc (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="bc793-175">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [<span data-ttu-id="bc793-176">Комментарии XML-документации</span><span class="sxs-lookup"><span data-stu-id="bc793-176">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

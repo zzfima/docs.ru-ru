@@ -5,58 +5,55 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="net-core-and-open-source"></a>Ядро .NET и открытый исходный код
-В этом разделе приводится краткий обзор .NET Core и указываются ресурсы с дополнительными сведениями. Полный список разделов по .NET Core см. в [Руководстве по .NET Core](../../core/index.md).
+# <a name="net-core-and-open-source"></a><span data-ttu-id="292c8-102">Ядро .NET и открытый исходный код</span><span class="sxs-lookup"><span data-stu-id="292c8-102">.NET Core and Open-Source</span></span>
+<span data-ttu-id="292c8-103">В этом разделе приводится краткий обзор .NET Core и указываются ресурсы с дополнительными сведениями.</span><span class="sxs-lookup"><span data-stu-id="292c8-103">This topic provides a brief overview  of what .NET Core is and shows how you can find more information.</span></span> <span data-ttu-id="292c8-104">Полный список разделов по .NET Core см. в [Руководстве по .NET Core](../../core/index.md).</span><span class="sxs-lookup"><span data-stu-id="292c8-104">To find the complete list of topics for .NET Core, visit the [.NET Core Guide](../../core/index.md).</span></span>
   
 <a name="BKMK_WhatisNETCore"></a>   
-## <a name="what-is-net-core"></a>Что такое .NET Core?  
- .NET Core — это универсальная, модульная, кроссплатформенная и открытая версия платформы .NET Standard. Она содержит большую часть тех же интерфейсов API, что и платформа .NET Framework (но .NET Core включает меньший набор API) и включает компоненты среды выполнения, платформы и компилятора, а также инструменты, поддерживающие различные операционные системы и компоненты оборудования. Создание платформы .NET Core было вызвано необходимостью использовать рабочие нагрузки ASP.NET Core, а также необходимостью получить более современную реализацию платформы. Ее можно использовать при работе с устройствами, облаком, а также в сценариях внедрения и Интернета вещей.  
+## <a name="what-is-net-core"></a><span data-ttu-id="292c8-105">Что такое .NET Core?</span><span class="sxs-lookup"><span data-stu-id="292c8-105">What is .NET Core?</span></span>  
+ <span data-ttu-id="292c8-106">.NET Core — это универсальная, модульная, кроссплатформенная и открытая версия платформы .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="292c8-106">.NET Core is a general purpose, modular, cross-platform and open source implementation of the .NET Standard.</span></span> <span data-ttu-id="292c8-107">Она содержит большую часть тех же интерфейсов API, что и платформа .NET Framework (но .NET Core включает меньший набор API) и включает компоненты среды выполнения, платформы и компилятора, а также инструменты, поддерживающие различные операционные системы и компоненты оборудования.</span><span class="sxs-lookup"><span data-stu-id="292c8-107">It contains many of the same APIs as the .NET Framework (but .NET Core is a smaller set) and includes runtime, framework, compiler and tools components that support a variety of operating systems and chip targets.</span></span> <span data-ttu-id="292c8-108">Создание платформы .NET Core было вызвано необходимостью использовать рабочие нагрузки ASP.NET Core, а также необходимостью получить более современную реализацию платформы.</span><span class="sxs-lookup"><span data-stu-id="292c8-108">The .NET Core implementation was primarily driven by the ASP.NET Core workloads but also by the need and desire to have a more modern implementation.</span></span> <span data-ttu-id="292c8-109">Ее можно использовать при работе с устройствами, облаком, а также в сценариях внедрения и Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="292c8-109">It can be used in device, cloud and embedded/IoT scenarios.</span></span>  
   
- Чтобы приступить к работе с .NET Core, посетите [домашнюю страницу .NET Core](https://www.microsoft.com/net/core).  
+ <span data-ttu-id="292c8-110">Чтобы приступить к работе с .NET Core, посетите [домашнюю страницу .NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="292c8-110">To get started with .NET Core, please visit the [.NET Core homepage](https://www.microsoft.com/net/core).</span></span>  
   
- Ниже перечислены основные характеристики .NET Core.  
+ <span data-ttu-id="292c8-111">Ниже перечислены основные характеристики .NET Core.</span><span class="sxs-lookup"><span data-stu-id="292c8-111">Here are the main characteristics of .NET Core:</span></span>  
   
--   **Кроссплатформенность.** .NET Core предоставляет ключевые возможности для реализации возможностей приложений, необходимых для повторного использования этого кода независимо от целевой платформы. В настоящее время она поддерживает три основные операционные системы (ОС): Windows, Linux и Mac OS. Можно писать приложения и создавать библиотеки, которые будут выполняться на поддерживаемых операционных системах без изменений. Список поддерживаемых операционных систем см. в [плане развития .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
+-   <span data-ttu-id="292c8-112">**Кроссплатформенность.** .NET Core предоставляет ключевые возможности для реализации возможностей приложений, необходимых для повторного использования этого кода независимо от целевой платформы.</span><span class="sxs-lookup"><span data-stu-id="292c8-112">**Cross-platform:** .NET Core provides key functionality to implement the app features you need and reuse this code regardless of your platform target.</span></span> <span data-ttu-id="292c8-113">В настоящее время она поддерживает три основные операционные системы (ОС): Windows, Linux и Mac OS.</span><span class="sxs-lookup"><span data-stu-id="292c8-113">It currently supports three main operating systems (OS): Windows, Linux and macOS.</span></span> <span data-ttu-id="292c8-114">Можно писать приложения и создавать библиотеки, которые будут выполняться на поддерживаемых операционных системах без изменений.</span><span class="sxs-lookup"><span data-stu-id="292c8-114">You can write apps and libraries that run unmodified across supported operating systems.</span></span> <span data-ttu-id="292c8-115">Список поддерживаемых операционных систем см. в [плане развития .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).</span><span class="sxs-lookup"><span data-stu-id="292c8-115">To see the list of supported operating systems, visit [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).</span></span>
   
--   **Открытый исходный код.** .NET Core является одним из многих проектов под управлением [.NET Foundation](http://www.dotnetfoundation.org/) и доступна на сайте [GitHub](https://github.com/).  Наличие .NET Core в виде проекта с открытым исходным кодом обеспечивает более высокий уровень прозрачности процесса разработки и способствует привлечению активных и заинтересованных участников сообщества.  
+-   <span data-ttu-id="292c8-116">**Открытый исходный код.** .NET Core является одним из многих проектов под управлением [.NET Foundation](http://www.dotnetfoundation.org/) и доступна на сайте [GitHub](https://github.com/).</span><span class="sxs-lookup"><span data-stu-id="292c8-116">**Open source:** .NET Core is one of the many projects under the stewardship of the [.NET Foundation](http://www.dotnetfoundation.org/) and is available on [GitHub](https://github.com/).</span></span>  <span data-ttu-id="292c8-117">Наличие .NET Core в виде проекта с открытым исходным кодом обеспечивает более высокий уровень прозрачности процесса разработки и способствует привлечению активных и заинтересованных участников сообщества.</span><span class="sxs-lookup"><span data-stu-id="292c8-117">Having .NET Core as an open source project promotes a more transparent development process and promotes an active and engaged community.</span></span>  
   
--   **Гибкое развертывание.** Существует два способа развертывания приложения: зависящее от платформы и автономное. В рамках зависящего от платформы развертывания устанавливаются только ваши приложения и сторонние зависимости устанавливаются, и ваше приложения зависит от наличия системной версии .NET Core.  При автономном развертывании версия .NET Core, используемая для построения приложения, также развертывается вместе с вашим приложением и сторонними зависимостями и может выполняться параллельно с другими версиями.    Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../../core/deploying/index.md).
+-   <span data-ttu-id="292c8-118">**Гибкое развертывание.** Существует два способа развертывания приложения: зависящее от платформы и автономное.</span><span class="sxs-lookup"><span data-stu-id="292c8-118">**Flexible deployment:** there are two main ways to deploy your app: framework-dependent deployment or self-contained deployment.</span></span> <span data-ttu-id="292c8-119">В рамках зависящего от платформы развертывания устанавливаются только ваши приложения и сторонние зависимости устанавливаются, и ваше приложения зависит от наличия системной версии .NET Core.</span><span class="sxs-lookup"><span data-stu-id="292c8-119">With framework-dependent deployment, only your app and third-party dependencies are installed and your app depends on a system-wide version of .NET Core to be present.</span></span>  <span data-ttu-id="292c8-120">При автономном развертывании версия .NET Core, используемая для построения приложения, также развертывается вместе с вашим приложением и сторонними зависимостями и может выполняться параллельно с другими версиями.</span><span class="sxs-lookup"><span data-stu-id="292c8-120">With self-contained deployment, the .NET Core version used to build your application is also deployed along with your app and third-party dependencies and can run side-by-side with other versions.</span></span>    <span data-ttu-id="292c8-121">Дополнительные сведения см. в разделе [Развертывание приложений .NET Core](../../core/deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="292c8-121">For more information, see [.NET Core Application Deployment](../../core/deploying/index.md).</span></span>
 
--   **Модульность.** Среда .NET Core является модульной, так как она выпускается в NuGet в небольших пакетах сборки. .NET Core предоставляется в виде небольших пакетов с компонентами, а не в одной большой сборке, которая содержит большинство основных возможностей. В этом случае мы имеем более гибкую модель разработки, а вы можете оптимизировать приложение, чтобы включать в него только необходимые пакеты NuGet. За счет небольшого размера контактной зоны приложения доступны такие преимущества, как более высокий уровень безопасности, минимальное обслуживание, улучшенная производительность и сниженные затраты в модели оплаты только используемых ресурсов.  
+-   <span data-ttu-id="292c8-122">**Модульность.** Среда .NET Core является модульной, так как она выпускается в NuGet в небольших пакетах сборки.</span><span class="sxs-lookup"><span data-stu-id="292c8-122">**Modular:** .NET Core is modular because it's released through NuGet in smaller assembly packages.</span></span> <span data-ttu-id="292c8-123">.NET Core предоставляется в виде небольших пакетов с компонентами, а не в одной большой сборке, которая содержит большинство основных возможностей.</span><span class="sxs-lookup"><span data-stu-id="292c8-123">Rather than one large assembly that contains most of the core functionality, .NET Core is made available as smaller feature-centric packages.</span></span> <span data-ttu-id="292c8-124">В этом случае мы имеем более гибкую модель разработки, а вы можете оптимизировать приложение, чтобы включать в него только необходимые пакеты NuGet.</span><span class="sxs-lookup"><span data-stu-id="292c8-124">This enables a more agile development model for us and allows you to optimize your app to include just the NuGet packages you need.</span></span> <span data-ttu-id="292c8-125">За счет небольшого размера контактной зоны приложения доступны такие преимущества, как более высокий уровень безопасности, минимальное обслуживание, улучшенная производительность и сниженные затраты в модели оплаты только используемых ресурсов.</span><span class="sxs-lookup"><span data-stu-id="292c8-125">The benefits of a smaller app surface area include tighter security, reduced servicing, improved performance, and decreased costs in a pay-for-what-you-use model.</span></span>  
   
-## <a name="the-net-core-platform"></a>Платформа .NET Core  
- Платформа .NET Core состоит из нескольких компонентов, включая управляемые компиляторы, среду выполнения, библиотеки базовых классов и многочисленные модели приложений, такие как ASP.NET Core. Дополнительные сведения о различных компонентов см. в следующих репозиториях [GitHub](https://github.com/).  
+## <a name="the-net-core-platform"></a><span data-ttu-id="292c8-126">Платформа .NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-126">The .NET Core Platform</span></span>  
+ <span data-ttu-id="292c8-127">Платформа .NET Core состоит из нескольких компонентов, включая управляемые компиляторы, среду выполнения, библиотеки базовых классов и многочисленные модели приложений, такие как ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="292c8-127">The .NET Core platform is made of several components, which includes the managed compilers, the runtime, the base class libraries, and numerous application models, such as ASP.NET Core.</span></span> <span data-ttu-id="292c8-128">Дополнительные сведения о различных компонентов см. в следующих репозиториях [GitHub](https://github.com/).</span><span class="sxs-lookup"><span data-stu-id="292c8-128">You can learn more about the different components and get engaged, by visiting the following [GitHub](https://github.com/) repos:</span></span>  
   
--   [.NET Core](https://github.com/dotnet/core)  
+-   [<span data-ttu-id="292c8-129">.NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-129">.NET Core</span></span>](https://github.com/dotnet/core)  
   
--   [CoreFX — фундаментальные библиотеки .NET Core](https://github.com/dotnet/corefx)  
+-   [<span data-ttu-id="292c8-130">CoreFX — фундаментальные библиотеки .NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-130">CoreFX - .NET Core foundational libraries</span></span>](https://github.com/dotnet/corefx)  
   
--   [CoreCLR — среда выполнения .NET Core](https://github.com/dotnet/coreclr)  
+-   [<span data-ttu-id="292c8-131">CoreCLR — среда выполнения .NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-131">CoreCLR - .NET Core runtime</span></span>](https://github.com/dotnet/coreclr)  
   
--   [CLI — средства интерфейса командной строки .NET Core](https://github.com/dotnet/cli)  
+-   [<span data-ttu-id="292c8-132">CLI — средства интерфейса командной строки .NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-132">CLI - .NET Core command-line tools</span></span>](https://github.com/dotnet/cli)  
   
--   [Roslyn — платформа компилятора .NET](https://github.com/dotnet/roslyn)  
+-   [<span data-ttu-id="292c8-133">Roslyn — платформа компилятора .NET</span><span class="sxs-lookup"><span data-stu-id="292c8-133">Roslyn - .NET Compiler Platform</span></span>](https://github.com/dotnet/roslyn)  
   
--   [ASP.NET Core](https://github.com/aspnet/home)  
+-   [<span data-ttu-id="292c8-134">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-134">ASP.NET Core</span></span>](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>См. также  
- [Домашняя страница .NET Core](https://www.microsoft.com/net/core)   
- [Руководство по .NET Core](../../core/index.md)   
- [Документация по ASP.NET Core](/aspnet/core/)
-
+## <a name="see-also"></a><span data-ttu-id="292c8-135">См. также</span><span class="sxs-lookup"><span data-stu-id="292c8-135">See Also</span></span>  
+ [<span data-ttu-id="292c8-136">Домашняя страница .NET core</span><span class="sxs-lookup"><span data-stu-id="292c8-136">.NET Core homepage</span></span>](https://www.microsoft.com/net/core)  
+ [<span data-ttu-id="292c8-137">Руководство по .NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-137">.NET Core Guide</span></span>](../../core/index.md)  
+ [<span data-ttu-id="292c8-138">Документация по ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="292c8-138">ASP.NET Core Documentation</span></span>](/aspnet/core/)

@@ -1,28 +1,29 @@
 ---
-title: "Сравнение объектов с помощью XmlNameTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Сравнение объектов с помощью XmlNameTable"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 0cd1a3bad69499b4804299adecabad3a43b5eab1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сравнение объектов с помощью XmlNameTable
-При создании **XmlDocuments** создается таблица имен специально для этого документа.  При загрузке XML в документ создаются новые элементы и атрибуты, а их имена помещаются в объект **XmlNameTable**.  Объект **XmlDocument** можно также создать с помощью существующего объекта **NameTable** из другого документа.  При создании объекта **XmlDocuments** с помощью конструктора, который принимает параметр **XmlNameTable**, документ получает доступ к именам узлов, пространствам имен и префиксам, хранящимся в объекте **XmlNameTable**.  Независимо от того, насколько таблица имен загружена именами, после сохранения их в таблице эти имена можно быстро сравнить, используя сравнение объектов вместо сравнения строк.  Строки также могут добавляться в таблицу имен с помощью [метода NameTable.Add](frlrfSystemXmlNameTableClassAddTopic).  В следующем образце кода показано создание таблицы имен и добавление к ней строки **MyString**.  После этого с помощью этой таблицы создается объект **XmlDocument**, и к существующей таблице имен добавляются имена элементов и атрибутов из файла **Myfile.xml**.  
+# <a name="object-comparison-using-xmlnametable"></a><span data-ttu-id="fb75e-102">Сравнение объектов с помощью XmlNameTable</span><span class="sxs-lookup"><span data-stu-id="fb75e-102">Object Comparison Using XmlNameTable</span></span>
+<span data-ttu-id="fb75e-103">**XmlDocuments**при создании имеют таблицу имен, созданный специально для этого документа.</span><span class="sxs-lookup"><span data-stu-id="fb75e-103">**XmlDocuments**, when created, have a name table created specifically for that document.</span></span> <span data-ttu-id="fb75e-104">При загрузке XML в документ или создаются новые элементы и атрибуты, имена атрибутов и элементов, помещаются в **XmlNameTable**.</span><span class="sxs-lookup"><span data-stu-id="fb75e-104">When XML is loaded into the document, or new elements or attributes are created, the attribute and element names are put into the **XmlNameTable**.</span></span> <span data-ttu-id="fb75e-105">Можно также создать **XmlDocument** с помощью существующей **NameTable** из другого документа.</span><span class="sxs-lookup"><span data-stu-id="fb75e-105">You can also create an **XmlDocument** using an existing **NameTable** from another document.</span></span> <span data-ttu-id="fb75e-106">Когда **XmlDocuments** создаются с помощью конструктора, принимающего **XmlNameTable** параметра, документ имеет доступ к имена узлов, пространствам имен и префиксам, хранящимся в  **XmlNameTable**.</span><span class="sxs-lookup"><span data-stu-id="fb75e-106">When **XmlDocuments** are created with the constructor that takes an **XmlNameTable** parameter, the document has access to the node names, namespaces, and prefixes already stored in the **XmlNameTable**.</span></span> <span data-ttu-id="fb75e-107">Независимо от того, насколько таблица имен загружена именами, после сохранения их в таблице эти имена можно быстро сравнить, используя сравнение объектов вместо сравнения строк.</span><span class="sxs-lookup"><span data-stu-id="fb75e-107">Regardless of how the name table is loaded with names, once the names are stored in the table, names can be compared quickly using object comparison instead of string comparison.</span></span> <span data-ttu-id="fb75e-108">Также можно добавления строк в таблицу имен с помощью <xref:System.Xml.NameTable.Add%2A>.</span><span class="sxs-lookup"><span data-stu-id="fb75e-108">Strings can also be added to the name table using the <xref:System.Xml.NameTable.Add%2A>.</span></span> <span data-ttu-id="fb75e-109">В следующем образце кода показано создание имени таблицы и строка **MyString** , добавляемый в таблице.</span><span class="sxs-lookup"><span data-stu-id="fb75e-109">The following code sample shows a name table being created and the string **MyString** being added to the table.</span></span> <span data-ttu-id="fb75e-110">После этого **XmlDocument** создается с помощью этой таблицы и имен элементов и атрибутов в **Myfile.xml** добавляются к существующей таблице имя.</span><span class="sxs-lookup"><span data-stu-id="fb75e-110">After that, an **XmlDocument** is created using that table, and the element and attribute names in **Myfile.xml** are added to the existing name table.</span></span>  
   
 ```vb  
 Dim nt As New NameTable()  
@@ -38,7 +39,7 @@ XmlDocument doc = new XmlDocument(nt);
 doc.Load("Myfile.xml");  
 ```  
   
- В следующем примере кода показано создание документа, добавление к нему двух новых элементов, имена которых добавляются в таблицу имен, а также сравнение объектов по именам.  
+ <span data-ttu-id="fb75e-111">В следующем примере кода показано создание документа, добавление к нему двух новых элементов, имена которых добавляются в таблицу имен, а также сравнение объектов по именам.</span><span class="sxs-lookup"><span data-stu-id="fb75e-111">The following code example shows the creation of a document, two new elements being added to the document, which also adds them to the document name table, and the object comparison on the names.</span></span>  
   
 ```vb  
 Dim doc1 As XmlDocument = imp.CreateDocument()  
@@ -57,7 +58,7 @@ if (((object)node1.Name) == ((object)node2.Name))
 { ...  
 ```  
   
- Приведенный выше сценарий передачи таблицы имен между двумя документами является типичным для многократной обработки документа некоторого типа, совместимого со схемой XSD или определением DTD, в котором многократно повторяются некоторые строки, например, при обработке заказов на веб\-узле электронной торговли.  Применение таблицы имен повышает производительность, поскольку одинаковое имя элемента встречается в нескольких документах.  
+ <span data-ttu-id="fb75e-112">Приведенный выше сценарий передачи таблицы имен между двумя документами является типичным для многократной обработки документа некоторого типа, совместимого со схемой XSD или определением DTD, в котором многократно повторяются некоторые строки, например, при обработке заказов на веб-узле электронной торговли.</span><span class="sxs-lookup"><span data-stu-id="fb75e-112">The above scenario of a name table passed between two documents is typical when the same type of document is being processed repeatedly, such as order documents at an ecommerce site, which conform to an XML Schema definition language (XSD) schema or document type definition (DTD) and the same strings are repeated.</span></span> <span data-ttu-id="fb75e-113">Применение таблицы имен повышает производительность, поскольку одинаковое имя элемента встречается в нескольких документах.</span><span class="sxs-lookup"><span data-stu-id="fb75e-113">Using the same name table gives a performance improvement, as the same element name occurs in multiple documents.</span></span>  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="fb75e-114">См. также</span><span class="sxs-lookup"><span data-stu-id="fb75e-114">See Also</span></span>  
+ [<span data-ttu-id="fb75e-115">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="fb75e-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

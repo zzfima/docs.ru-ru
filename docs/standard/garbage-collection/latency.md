@@ -1,64 +1,67 @@
 ---
-title: "Latency Modes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, intrusiveness"
-  - "garbage collection, latency modes"
+title: "Режимы задержки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- garbage collection, intrusiveness
+- garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: 41
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Latency Modes
-Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения.  В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность.  Степень вмешательства сборщика мусора можно настроить, присвоив свойству <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=fullName> одно из значений <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>.  
+# <a name="latency-modes"></a><span data-ttu-id="5f2c6-102">Режимы задержки</span><span class="sxs-lookup"><span data-stu-id="5f2c6-102">Latency Modes</span></span>
+<span data-ttu-id="5f2c6-103">Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-103">To reclaim objects, the garbage collector must stop all the executing threads in an application.</span></span> <span data-ttu-id="5f2c6-104">В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-104">In some situations, such as when an application retrieves data or displays content, a full garbage collection can occur at a critical time and impede performance.</span></span> <span data-ttu-id="5f2c6-105">Степень вмешательства сборщика мусора можно настроить, присвоив свойству <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> одно из значений <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-105">You can adjust the intrusiveness of the garbage collector by setting the <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> property to one of the <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> values.</span></span>  
   
- Периоды ожидания указывает время, когда сборщик мусора может активизироваться в приложении.  В периоды небольшого времени ожидания сборщик мусора более осторожен и меньше вмешивается в освобождение объектов.  Перечисление <xref:System.Runtime.GCLatencyMode?displayProperty=fullName> предоставляет 2 параметра малого времени ожидания:  
+ <span data-ttu-id="5f2c6-106">Периоды ожидания указывает время, когда сборщик мусора может активизироваться в приложении.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-106">Latency refers to the time that the garbage collector intrudes in your application.</span></span> <span data-ttu-id="5f2c6-107">В периоды небольшого времени ожидания сборщик мусора более осторожен и меньше вмешивается в освобождение объектов.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-107">During low latency periods, the garbage collector is more conservative and less intrusive in reclaiming objects.</span></span> <span data-ttu-id="5f2c6-108">Перечисление <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> предоставляет 2 параметра малого времени ожидания:</span><span class="sxs-lookup"><span data-stu-id="5f2c6-108">The <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> enumeration provides two low latency settings:</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode> отключает сборку мусора для объектов поколения 2 и выполняет только сборку мусора для объектов поколений 0 и 1.  Его можно использовать только в течение коротких периодов времени.  Если в системе за продолжительный период возникнет нехватка памяти, сборщик мусора начнет сборку, что приведет к кратковременной остановке приложения и прервет срочную задачу.  Этот параметр доступен только для сборки мусора на рабочей станции.  
+-   <span data-ttu-id="5f2c6-109"><xref:System.Runtime.GCLatencyMode.LowLatency> отключает сборку мусора для объектов поколения 2 и выполняет только сборку мусора для объектов поколений 0 и 1.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-109"><xref:System.Runtime.GCLatencyMode.LowLatency> suppresses generation 2 collections and performs only generation 0 and 1 collections.</span></span> <span data-ttu-id="5f2c6-110">Его можно использовать только в течение коротких периодов времени.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-110">It can be used only for short periods of time.</span></span> <span data-ttu-id="5f2c6-111">Если в системе за продолжительный период возникнет нехватка памяти, сборщик мусора начнет сборку, что приведет к кратковременной остановке приложения и прервет срочную задачу.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-111">Over longer periods, if the system is under memory pressure, the garbage collector will trigger a collection, which can briefly pause the application and disrupt a time-critical operation.</span></span> <span data-ttu-id="5f2c6-112">Этот параметр доступен только для сборки мусора на рабочей станции.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-112">This setting is available only for workstation garbage collection.</span></span>  
   
--   <xref:System.Runtime.GCLatencyMode> отключает приоритетную сборку мусора для объектов поколения 2 и выполняет только сборку объектов поколений 0 и 1 и фоновую сборку объектов поколения 2.  Его можно использовать дольше и он доступен для сборки мусора как на рабочей станции, так и на сервере.  Этот параметр нельзя использовать, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) отключена.  
+-   <span data-ttu-id="5f2c6-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> отключает приоритетную сборку мусора для объектов поколения 2 и выполняет только сборку объектов поколений 0 и 1 и фоновую сборку объектов поколения 2.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-113"><xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suppresses foreground generation 2 collections and performs only generation 0, 1, and background generation 2 collections.</span></span> <span data-ttu-id="5f2c6-114">Его можно использовать дольше и он доступен для сборки мусора как на рабочей станции, так и на сервере.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-114">It can be used for longer periods of time, and is available for both workstation and server garbage collection.</span></span> <span data-ttu-id="5f2c6-115">Этот параметр нельзя использовать, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) отключена.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-115">This setting cannot be used if [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>  
   
- В периоды небольшого времени ожидания сборка мусора для объектов поколения 2 подавляется, пока не произойдет одно из следующего:  
+ <span data-ttu-id="5f2c6-116">В периоды небольшого времени ожидания сборка мусора для объектов поколения 2 подавляется, пока не произойдет одно из следующего:</span><span class="sxs-lookup"><span data-stu-id="5f2c6-116">During low latency periods, generation 2 collections are suppressed unless the following occurs:</span></span>  
   
--   система получит уведомление о нехватке памяти от операционной системы;  
+-   <span data-ttu-id="5f2c6-117">система получит уведомление о нехватке памяти от операционной системы;</span><span class="sxs-lookup"><span data-stu-id="5f2c6-117">The system receives a low memory notification from the operating system.</span></span>  
   
--   код приложения запустит сборку мусора путем вызова метода <xref:System.GC.Collect%2A?displayProperty=fullName> и укажет значение 2 для параметра `generation`.  
+-   <span data-ttu-id="5f2c6-118">код приложения запустит сборку мусора путем вызова метода <xref:System.GC.Collect%2A?displayProperty=nameWithType> и укажет значение 2 для параметра `generation`.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-118">Your application code induces a collection by calling the <xref:System.GC.Collect%2A?displayProperty=nameWithType> method and specifying 2 for the `generation` parameter.</span></span>  
   
- В следующей таблице перечислены сценарии работы приложений с использованием значений <xref:System.Runtime.GCLatencyMode>.  
+ <span data-ttu-id="5f2c6-119">В следующей таблице перечислены сценарии работы приложений с использованием значений <xref:System.Runtime.GCLatencyMode>.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-119">The following table lists the application scenarios for using the <xref:System.Runtime.GCLatencyMode> values.</span></span>  
   
-|Режим периода ожидания|Сценарии приложения|  
-|----------------------------|-------------------------|  
-|<xref:System.Runtime.GCLatencyMode>|Для приложений, которые не имеют пользовательского интерфейса или операций на стороне сервера.<br /><br /> Этот режим используется по умолчанию, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) отключена.|  
-|<xref:System.Runtime.GCLatencyMode>|Для большинства приложений, имеющих пользовательский интерфейс.<br /><br /> Этот режим используется по умолчанию, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) включена.|  
-|<xref:System.Runtime.GCLatencyMode>|Для приложений, которые осуществляют операции, чувствительные ко времени выполнения, для которых перерывы в работе из\-за сборки мусора могут иметь резко отрицательные последствия.  Например, это приложения, которые выполняют функции анимации или получения данных.|  
-|<xref:System.Runtime.GCLatencyMode>|Для приложений, которые осуществляют операции, чувствительные ко времени выполнения, время выполнения которых ограничено, но может быть достаточно продолжительным, для которых перерывы в работе из\-за сборки мусора могут иметь резко отрицательные последствия.  Например, приложения, требующие быстрого отклика при изменении рыночных показателей в торговую сессию.<br /><br /> Этот режим использует больший размер управляемой кучи, нежели другие режимы.  Так как он не сжимает управляемую кучу, возможен больший уровень фрагментации.  Необходимо обеспечить достаточный объем памяти.|  
+|<span data-ttu-id="5f2c6-120">Режим периода ожидания</span><span class="sxs-lookup"><span data-stu-id="5f2c6-120">Latency mode</span></span>|<span data-ttu-id="5f2c6-121">Сценарии приложения</span><span class="sxs-lookup"><span data-stu-id="5f2c6-121">Application scenarios</span></span>|  
+|------------------|---------------------------|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|<span data-ttu-id="5f2c6-122">Для приложений, которые не имеют пользовательского интерфейса или операций на стороне сервера.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-122">For applications that have no UI or server-side operations.</span></span><br /><br /> <span data-ttu-id="5f2c6-123">Этот режим используется по умолчанию, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) отключена.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-123">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is disabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|<span data-ttu-id="5f2c6-124">Для большинства приложений, имеющих пользовательский интерфейс.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-124">For most applications that have a UI.</span></span><br /><br /> <span data-ttu-id="5f2c6-125">Этот режим используется по умолчанию, если [параллельная сборка мусора](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) включена.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-125">This is the default mode when [concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) is enabled.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|<span data-ttu-id="5f2c6-126">Для приложений, которые осуществляют операции, чувствительные ко времени выполнения, для которых перерывы в работе из-за сборки мусора могут иметь резко отрицательные последствия.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-126">For applications that have short-term, time-sensitive operations during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="5f2c6-127">Например, это приложения, которые выполняют функции анимации или получения данных.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-127">For example, applications that do animation rendering or data acquisition functions.</span></span>|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|<span data-ttu-id="5f2c6-128">Для приложений, которые осуществляют операции, чувствительные ко времени выполнения, время выполнения которых ограничено, но может быть достаточно продолжительным, для которых перерывы в работе из-за сборки мусора могут иметь резко отрицательные последствия.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-128">For applications that have time-sensitive operations for a contained but potentially longer duration of time during which interruptions from the garbage collector could be disruptive.</span></span> <span data-ttu-id="5f2c6-129">Например, приложения, требующие быстрого отклика при изменении рыночных показателей в торговую сессию.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-129">For example, applications that need quick response times as market data changes during trading hours.</span></span><br /><br /> <span data-ttu-id="5f2c6-130">Этот режим использует больший размер управляемой кучи, нежели другие режимы.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-130">This mode results in a larger managed heap size than other modes.</span></span> <span data-ttu-id="5f2c6-131">Так как он не сжимает управляемую кучу, возможен больший уровень фрагментации.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-131">Because it does not compact the managed heap, higher fragmentation is possible.</span></span> <span data-ttu-id="5f2c6-132">Необходимо обеспечить достаточный объем памяти.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-132">Ensure that sufficient memory is available.</span></span>|  
   
-## Рекомендации по использованию режима небольшого времени ожидания  
- При использовании режима <xref:System.Runtime.GCLatencyMode> придерживайтесь следующих рекомендаций.  
+## <a name="guidelines-for-using-low-latency"></a><span data-ttu-id="5f2c6-133">Рекомендации по использованию режима небольшого времени ожидания</span><span class="sxs-lookup"><span data-stu-id="5f2c6-133">Guidelines for Using Low Latency</span></span>  
+ <span data-ttu-id="5f2c6-134">При использовании режима <xref:System.Runtime.GCLatencyMode.LowLatency> придерживайтесь следующих рекомендаций.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-134">When you use <xref:System.Runtime.GCLatencyMode.LowLatency> mode, consider the following guidelines:</span></span>  
   
--   Продолжительность периодов небольшого времени ожидания должна быть как можно более короткой.  
+-   <span data-ttu-id="5f2c6-135">Продолжительность периодов небольшого времени ожидания должна быть как можно более короткой.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-135">Keep the period of time in low latency as short as possible.</span></span>  
   
--   Избегайте выделения больших объемов памяти в периоды небольшого времени ожидания.  Могут возникать уведомления о нехватке памяти, потому что сборщик мусора освобождает меньше объектов.  
+-   <span data-ttu-id="5f2c6-136">Избегайте выделения больших объемов памяти в периоды небольшого времени ожидания.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-136">Avoid allocating high amounts of memory during low latency periods.</span></span> <span data-ttu-id="5f2c6-137">Могут возникать уведомления о нехватке памяти, потому что сборщик мусора освобождает меньше объектов.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-137">Low memory notifications can occur because garbage collection reclaims fewer objects.</span></span>  
   
--   В режиме небольшого времени ожидания необходимо свести к минимуму число выделений, в частности выделений в куче для больших объектов и закрепленных объектов.  
+-   <span data-ttu-id="5f2c6-138">В режиме небольшого времени ожидания необходимо свести к минимуму число выделений, в частности выделений в куче для больших объектов и закрепленных объектов.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-138">While in the low latency mode, minimize the number of allocations you make, in particular allocations onto the Large Object Heap and pinned objects.</span></span>  
   
--   Не забывайте про потоки, которые могут выделять память.  Поскольку свойство <xref:System.Runtime.GCSettings.LatencyMode%2A> относится ко всему процессу, то можно создать <xref:System.OutOfMemoryException> в любом потоке, выделяющем память.  
+-   <span data-ttu-id="5f2c6-139">Не забывайте про потоки, которые могут выделять память.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-139">Be aware of threads that could be allocating.</span></span> <span data-ttu-id="5f2c6-140">Поскольку свойство <xref:System.Runtime.GCSettings.LatencyMode%2A> относится ко всему процессу, то можно создать <xref:System.OutOfMemoryException> в любом потоке, выделяющем память.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-140">Because the <xref:System.Runtime.GCSettings.LatencyMode%2A> property setting is process-wide, you could generate an <xref:System.OutOfMemoryException> on any thread that may be allocating.</span></span>  
   
--   Поместите код с небольшим временем ожидания в области с ограничением выполнения \(Дополнительные сведения см. в разделе [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)\).  
+-   <span data-ttu-id="5f2c6-141">Поместите код с низкой задержкой в области с ограничением выполнения (Дополнительные сведения см. в разделе [области с ограничением выполнения](../../../docs/framework/performance/constrained-execution-regions.md)).</span><span class="sxs-lookup"><span data-stu-id="5f2c6-141">Wrap the low latency code in constrained execution regions (for more information, see [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)).</span></span>  
   
--   Можно принудительно запускать освобождение объектов поколения 2 в периоды небольшого времени ожидания путем вызова метода <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=fullName>.  
+-   <span data-ttu-id="5f2c6-142">Можно принудительно запускать освобождение объектов поколения 2 в периоды небольшого времени ожидания путем вызова метода <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5f2c6-142">You can force generation 2 collections during a low latency period by calling the <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> method.</span></span>  
   
-## См. также  
- <xref:System.GC?displayProperty=fullName>   
- [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)   
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f2c6-143">См. также</span><span class="sxs-lookup"><span data-stu-id="5f2c6-143">See Also</span></span>  
+ <xref:System.GC?displayProperty=nameWithType>  
+ [<span data-ttu-id="5f2c6-144">Индуцированные коллекции</span><span class="sxs-lookup"><span data-stu-id="5f2c6-144">Induced Collections</span></span>](../../../docs/standard/garbage-collection/induced.md)  
+ [<span data-ttu-id="5f2c6-145">Сборка мусора</span><span class="sxs-lookup"><span data-stu-id="5f2c6-145">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

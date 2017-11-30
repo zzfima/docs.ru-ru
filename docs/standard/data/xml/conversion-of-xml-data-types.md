@@ -1,47 +1,47 @@
 ---
-title: "Преобразование типов XML-данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Преобразование типов XML-данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Преобразование типов XML-данных
-Большая часть методов класса **XmlConvert** используются для преобразования данных между строками и строго типизированными форматами.  Методы не зависят от языковых стандартов.  Это означает, что при преобразовании они не принимают во внимание параметры языковых стандартов.  
+# <a name="conversion-of-xml-data-types"></a><span data-ttu-id="29e39-102">Преобразование типов XML-данных</span><span class="sxs-lookup"><span data-stu-id="29e39-102">Conversion of XML Data Types</span></span>
+<span data-ttu-id="29e39-103">Большинство методов найден в **XmlConvert** класса используются для преобразования данных между строками и строго типизированными форматами.</span><span class="sxs-lookup"><span data-stu-id="29e39-103">The majority of the methods found in an **XmlConvert** class are used to convert data between strings and strongly-typed formats.</span></span> <span data-ttu-id="29e39-104">Методы не зависят от языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="29e39-104">Methods are locale independent.</span></span> <span data-ttu-id="29e39-105">Это означает, что при преобразовании они не принимают во внимание параметры языковых стандартов.</span><span class="sxs-lookup"><span data-stu-id="29e39-105">This means that they do not take into account any locale settings when doing conversion.</span></span>  
   
-## Считывание строк как типов  
- Следующий образец считывает строку и преобразует ее в тип **DateTime**.  
+## <a name="reading-string-as-types"></a><span data-ttu-id="29e39-106">Считывание строк как типов</span><span class="sxs-lookup"><span data-stu-id="29e39-106">Reading String as types</span></span>  
+ <span data-ttu-id="29e39-107">Следующий пример считывает строку и преобразует ее в **DateTime** типа.</span><span class="sxs-lookup"><span data-stu-id="29e39-107">The following sample reads a string and converts it to a **DateTime** type.</span></span>  
   
- Заданы следующие входные XML\-данные:  
+ <span data-ttu-id="29e39-108">Заданы следующие входные XML-данные:</span><span class="sxs-lookup"><span data-stu-id="29e39-108">Given the following XML input:</span></span>  
   
- **Ввод**  
+ <span data-ttu-id="29e39-109">**Ввод**</span><span class="sxs-lookup"><span data-stu-id="29e39-109">**Input**</span></span>  
   
-```  
+```xml  
 <Element>2001-02-27T11:13:23</Element>  
 ```  
   
- Этот код преобразует строку в формат **DateTime**:  
+ <span data-ttu-id="29e39-110">Этот код преобразует строку в **DateTime** формат:</span><span class="sxs-lookup"><span data-stu-id="29e39-110">This code converts the string to the **DateTime** format:</span></span>  
   
 ```vb  
 reader.ReadStartElement()  
 Dim vDateTime As DateTime = XmlConvert.ToDateTime(reader.ReadString())  
 Console.WriteLine(vDateTime)  
-  
 ```  
   
 ```csharp  
@@ -50,23 +50,22 @@ DateTime vDateTime = XmlConvert.ToDateTime(reader.ReadString());
 Console.WriteLine(vDateTime);  
 ```  
   
-## Запись строк как типов  
- Следующий образец считывает значение типа **Int32** и преобразует его в строку.  
+## <a name="writing-strings-as-types"></a><span data-ttu-id="29e39-111">Запись строк как типов</span><span class="sxs-lookup"><span data-stu-id="29e39-111">Writing Strings as types</span></span>  
+ <span data-ttu-id="29e39-112">Следующий образец считывает **Int32** и преобразуется в строку.</span><span class="sxs-lookup"><span data-stu-id="29e39-112">The following sample reads an **Int32** and converts it to a string.</span></span>  
   
- Заданы следующие входные XML\-данные:  
+ <span data-ttu-id="29e39-113">Заданы следующие входные XML-данные:</span><span class="sxs-lookup"><span data-stu-id="29e39-113">Given the following XML input:</span></span>  
   
- **Ввод**  
+ <span data-ttu-id="29e39-114">**Ввод**</span><span class="sxs-lookup"><span data-stu-id="29e39-114">**Input**</span></span>  
   
-```  
+```xml  
 <TestInt32>-2147483648</TestInt32>  
 ```  
   
- Этот код преобразует данные типа **Int32** в **String**:  
+ <span data-ttu-id="29e39-115">Этот код преобразует **Int32** в **строка**:</span><span class="sxs-lookup"><span data-stu-id="29e39-115">This code converts the **Int32** into a **String**:</span></span>  
   
 ```vb  
 Dim vInt32 As Int32 = -2147483648  
 writer.WriteElementString("TestInt32", XmlConvert.ToString(vInt32))  
-  
 ```  
   
 ```csharp  
@@ -74,6 +73,6 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## См. также  
- [Преобразование строк в типы данных .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)   
- [Преобразование типов .NET Framework в строки](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="29e39-116">См. также</span><span class="sxs-lookup"><span data-stu-id="29e39-116">See Also</span></span>  
+ [<span data-ttu-id="29e39-117">Преобразование строк в типы данных .NET Framework</span><span class="sxs-lookup"><span data-stu-id="29e39-117">Converting Strings to .NET Framework Data Types</span></span>](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+ [<span data-ttu-id="29e39-118">Преобразование типов .NET Framework в строки</span><span class="sxs-lookup"><span data-stu-id="29e39-118">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

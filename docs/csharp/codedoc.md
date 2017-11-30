@@ -10,222 +10,219 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
+ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cb5725a70d94173c8596f818dcaa6eb2de13bcc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="documenting-your-code-with-xml-comments"></a><span data-ttu-id="771fc-104">Документирование кода с помощью XML-комментариев</span><span class="sxs-lookup"><span data-stu-id="771fc-104">Documenting your code with XML comments</span></span>
 
-# <a name="documenting-your-code-with-xml-comments"></a>Документирование кода с помощью XML-комментариев
+<span data-ttu-id="771fc-105">Комментарии к XML-документации — это особый тип комментария, добавляемого перед определением определяемого пользователем типа или члена.</span><span class="sxs-lookup"><span data-stu-id="771fc-105">XML documentation comments are a special kind of comment, added above the definition of any user-defined type or member.</span></span> <span data-ttu-id="771fc-106">Их особенность в том, что компилятор может обрабатывать их для создания XML-файла документации во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="771fc-106">They are special because they can be processed by the compiler to generate an XML documentation file at compile time.</span></span>
+<span data-ttu-id="771fc-107">Созданный компилятором XML-файл можно распространять вместе со сборкой .NET, чтобы Visual Studio и другие интегрированные среды разработки могли использовать IntelliSense для отображения кратких сведений о типах или членах.</span><span class="sxs-lookup"><span data-stu-id="771fc-107">The compiler generated XML file can be distributed alongside your .NET assembly so that Visual Studio and other IDEs can use IntelliSense to show quick information about types or members.</span></span> <span data-ttu-id="771fc-108">Кроме того, XML-файл можно запускать с помощью таких средств, как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), и создавать веб-сайты со справочными сведениями по API.</span><span class="sxs-lookup"><span data-stu-id="771fc-108">Additionally, the XML file can be run through tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to generate API reference websites.</span></span>
 
-Комментарии к XML-документации — это особый тип комментария, добавляемого перед определением определяемого пользователем типа или члена. Их особенность в том, что компилятор может обрабатывать их для создания XML-файла документации во время компиляции.
-Созданный компилятором XML-файл можно распространять вместе со сборкой .NET, чтобы Visual Studio и другие интегрированные среды разработки могли использовать IntelliSense для отображения кратких сведений о типах или членах. Кроме того, XML-файл можно запускать с помощью таких средств, как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), и создавать веб-сайты со справочными сведениями по API.
+<span data-ttu-id="771fc-109">Комментарии к XML-документации, как и все другие комментарии, пропускаются компилятором.</span><span class="sxs-lookup"><span data-stu-id="771fc-109">XML documentation comments, like all other comments, are ignored by the compiler.</span></span>
 
-Комментарии к XML-документации, как и все другие комментарии, пропускаются компилятором.
+<span data-ttu-id="771fc-110">Можно создать XML-файл во время компиляции, выполнив одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="771fc-110">You can generate the XML file at compile time by doing one of the following:</span></span>
 
-Можно создать XML-файл во время компиляции, выполнив одно из следующих действий.
-
-- Если вы разрабатываете приложение с использованием .NET Core из командной строки, добавьте [элемент DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) в раздел `<PropertyGroup>` CSPROJ-файла проекта. В следующем примере создается XML-файл в каталоге проекта с тем же именем корневого файла проекта:
+- <span data-ttu-id="771fc-111">Если вы разрабатываете приложение с использованием .NET Core из командной строки, добавьте [элемент DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) в раздел `<PropertyGroup>` CSPROJ-файла проекта.</span><span class="sxs-lookup"><span data-stu-id="771fc-111">If you are developing an application with .NET Core from the command line, you can add a [DocumentationFile element](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) to the `<PropertyGroup>` section of your .csproj project file.</span></span> <span data-ttu-id="771fc-112">Следующий пример приводит к возникновению ошибки в XML-файл в каталоге проекта с тем же именем корневого файла сборки:</span><span class="sxs-lookup"><span data-stu-id="771fc-112">The following example generates an XML file in the project directory with the same root filename as the assembly:</span></span>
 
    ```xml
-   <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+   <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-   Также можно указать точный абсолютный или относительный путь и имя XML-файла. В следующем примере создается XML-файла в одном каталоге с отладочной версией приложения:
+   <span data-ttu-id="771fc-113">Также можно указать точный абсолютный или относительный путь и имя XML-файла.</span><span class="sxs-lookup"><span data-stu-id="771fc-113">You can also specify the exact absolute or relative path and name of the XML file.</span></span> <span data-ttu-id="771fc-114">В следующем примере создается XML-файла в одном каталоге с отладочной версией приложения:</span><span class="sxs-lookup"><span data-stu-id="771fc-114">The following example generates the XML file in the same directory as the debug version of an application:</span></span>
 
     ```xml
    <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
    ```
 
-- Если вы разрабатываете приложение с помощью Visual Studio, щелкните правой кнопкой мыши проект и выберите **Свойства**. В диалоговом окне свойств откройте вкладку **Сборка** и выберите **XML-файл документации**. Можно также изменить расположение, в котором компилятор записывает файл. 
+- <span data-ttu-id="771fc-115">Если вы разрабатываете приложение с помощью Visual Studio, щелкните правой кнопкой мыши проект и выберите **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="771fc-115">If you are developing an application using Visual Studio, right-click on the project and select **Properties**.</span></span> <span data-ttu-id="771fc-116">В диалоговом окне свойств откройте вкладку **Сборка** и выберите **XML-файл документации**.</span><span class="sxs-lookup"><span data-stu-id="771fc-116">In the properties dialog, select the **Build** tab, and check **XML documentation file**.</span></span> <span data-ttu-id="771fc-117">Можно также изменить расположение, в котором компилятор записывает файл.</span><span class="sxs-lookup"><span data-stu-id="771fc-117">You can also change the location to which the compiler writes the file.</span></span> 
 
-- Если вы компилируете приложение .NET Framework из командной строки, добавьте [параметр компилятора /doc](language-reference/compiler-options/doc-compiler-option.md) во время компиляции.  
+- <span data-ttu-id="771fc-118">Если вы компилируете приложение .NET Framework из командной строки, добавьте [параметр компилятора /doc](language-reference/compiler-options/doc-compiler-option.md) во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="771fc-118">If you are compiling a .NET Framework application from the command line, add the [/doc compiler option](language-reference/compiler-options/doc-compiler-option.md) when compiling.</span></span>  
 
-Для вставки комментария к XML-документации используются три символа косой черты (`///`) и текст комментария в формате XML. Пример:
+<span data-ttu-id="771fc-119">Для вставки комментария к XML-документации используются три символа косой черты (`///`) и текст комментария в формате XML.</span><span class="sxs-lookup"><span data-stu-id="771fc-119">XML documentation comments use triple forward slashes (`///`) and an XML formatted comment body.</span></span> <span data-ttu-id="771fc-120">Пример:</span><span class="sxs-lookup"><span data-stu-id="771fc-120">For example:</span></span>
 
-[!code-csharp[Комментарии XML-документации](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
+[!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
-## <a name="walkthrough"></a>Пошаговое руководство
+## <a name="walkthrough"></a><span data-ttu-id="771fc-121">Пошаговое руководство</span><span class="sxs-lookup"><span data-stu-id="771fc-121">Walkthrough</span></span>
 
-Давайте разберем документирование простейшей математической библиотеки, чтобы новые разработчики могли без труда понимать и дополнять ее, а сторонние разработчики — легко использовать ее.
+<span data-ttu-id="771fc-122">Давайте разберем документирование простейшей математической библиотеки, чтобы новые разработчики могли без труда понимать и дополнять ее, а сторонние разработчики — легко использовать ее.</span><span class="sxs-lookup"><span data-stu-id="771fc-122">Let's walk through documenting a very basic math library to make it easy for new developers to understand/contribute and for third party developers to use.</span></span>
 
-Ниже приведен код для простой математической библиотеки.
+<span data-ttu-id="771fc-123">Ниже приведен код для простой математической библиотеки.</span><span class="sxs-lookup"><span data-stu-id="771fc-123">Here's code for the simple math library:</span></span>
 
-[!code-csharp[Пример библиотеки](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
+[!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Пример библиотеки поддерживает четыре основные арифметические операции `add`, `subtract`, `multiply` и `divide` с типами данных `int` и `double`.
+<span data-ttu-id="771fc-124">Пример библиотеки поддерживает четыре основные арифметические операции `add`, `subtract`, `multiply` и `divide` с типами данных `int` и `double`.</span><span class="sxs-lookup"><span data-stu-id="771fc-124">The sample library supports four major arithmetic operations `add`, `subtract`, `multiply` and `divide` on `int` and `double` data types.</span></span>
 
-Теперь вам нужна возможность создания справочного документа по API из кода для сторонних разработчиков, которые используют библиотеку, но не имеют доступа к исходному коду.
-Как упоминалось ранее, это можно сделать с помощью тегов XML-документации. Сейчас вы познакомитесь со стандартными XML-тегами, поддерживаемыми компилятором C#.
+<span data-ttu-id="771fc-125">Теперь вам нужна возможность создания справочного документа по API из кода для сторонних разработчиков, которые используют библиотеку, но не имеют доступа к исходному коду.</span><span class="sxs-lookup"><span data-stu-id="771fc-125">Now you want to be able to create an API reference document from your code for third party developers who use your library but don't have access to the source code.</span></span>
+<span data-ttu-id="771fc-126">Как упоминалось ранее, это можно сделать с помощью тегов XML-документации. Сейчас вы познакомитесь со стандартными XML-тегами, поддерживаемыми компилятором C#.</span><span class="sxs-lookup"><span data-stu-id="771fc-126">As mentioned earlier XML documentation tags can be used to achieve this, You will now be introduced to the standard XML tags the C# compiler supports.</span></span>
 
-### <a name="ltsummarygt"></a>&lt;summary&gt;
+### <a name="ltsummarygt"></a><span data-ttu-id="771fc-127">&lt;summary&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-127">&lt;summary&gt;</span></span>
 
-Тег `<summary>` добавляет краткие сведения о типе или члене.
-Я продемонстрирую использование тега путем его добавления в определение класса `Math` и первый метод `Add`. Кроме того, его можно применить к остальной части кода.
+<span data-ttu-id="771fc-128">Тег `<summary>` добавляет краткие сведения о типе или члене.</span><span class="sxs-lookup"><span data-stu-id="771fc-128">The `<summary>` tag adds brief information about a type or member.</span></span>
+<span data-ttu-id="771fc-129">Я продемонстрирую использование тега путем его добавления в определение класса `Math` и первый метод `Add`.</span><span class="sxs-lookup"><span data-stu-id="771fc-129">I'll demonstrate its use by adding it to the `Math` class definition and the first `Add` method.</span></span> <span data-ttu-id="771fc-130">Кроме того, его можно применить к остальной части кода.</span><span class="sxs-lookup"><span data-stu-id="771fc-130">Feel free to apply it to the rest of your code.</span></span>
 
-[!code-csharp[Тег Summary](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Тег `<summary>` имеет очень важное значение, и его рекомендуется включать, так как его содержимое является основным источником информации о типе или члене в IntelliSense или справочном документе по API.
+<span data-ttu-id="771fc-131">Тег `<summary>` имеет очень важное значение, и его рекомендуется включать, так как его содержимое является основным источником информации о типе или члене в IntelliSense или справочном документе по API.</span><span class="sxs-lookup"><span data-stu-id="771fc-131">The `<summary>` tag is very important, and we recommend that you include it because its content is the primary source of type or member information in IntelliSense or an API reference document.</span></span>
 
-### <a name="ltremarksgt"></a>&lt;remarks&gt;
+### <a name="ltremarksgt"></a><span data-ttu-id="771fc-132">&lt;remarks&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-132">&lt;remarks&gt;</span></span>
 
-Тег `<remarks>` дополняет сведения о типах или членах, предоставляемые тегом `<summary>`. В этом примере вы просто добавите его в класс.
+<span data-ttu-id="771fc-133">Тег `<remarks>` дополняет сведения о типах или членах, предоставляемые тегом `<summary>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-133">The `<remarks>` tag supplements the information about types or members that the `<summary>` tag provides.</span></span> <span data-ttu-id="771fc-134">В этом примере вы просто добавите его в класс.</span><span class="sxs-lookup"><span data-stu-id="771fc-134">In this example, you'll just add it to the class.</span></span>
 
-[!code-csharp[Тег Remarks](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="ltreturnsgt"></a>&lt;returns&gt;
+### <a name="ltreturnsgt"></a><span data-ttu-id="771fc-135">&lt;returns&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-135">&lt;returns&gt;</span></span>
 
-Тег `<returns>` описывает возвращаемое значение объявления метода.
-Как и ранее, в следующем примере демонстрируется тег `<returns>` в первом методе `Add`. То же самое можно сделать и с другими методами.
+<span data-ttu-id="771fc-136">Тег `<returns>` описывает возвращаемое значение объявления метода.</span><span class="sxs-lookup"><span data-stu-id="771fc-136">The `<returns>` tag describes the return value of a method declaration.</span></span>
+<span data-ttu-id="771fc-137">Как и ранее, в следующем примере демонстрируется тег `<returns>` в первом методе `Add`.</span><span class="sxs-lookup"><span data-stu-id="771fc-137">As before, the following example illustrates the `<returns>` tag on the first `Add` method.</span></span> <span data-ttu-id="771fc-138">То же самое можно сделать и с другими методами.</span><span class="sxs-lookup"><span data-stu-id="771fc-138">You can do the same on other methods.</span></span>
 
-[!code-csharp[Тег Returns](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;value&gt;
+### <a name="ltvaluegt"></a><span data-ttu-id="771fc-139">&lt;value&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-139">&lt;value&gt;</span></span>
 
-Тег `<value>` аналогичен тегу `<returns>`, за исключением того, что он используется для свойств.
-Если бы в библиотеке `Math` было статическое свойство `PI`, вы использовали бы этот тег следующим образом:
+<span data-ttu-id="771fc-140">Тег `<value>` аналогичен тегу `<returns>`, за исключением того, что он используется для свойств.</span><span class="sxs-lookup"><span data-stu-id="771fc-140">The `<value>` tag is similar to the `<returns>` tag, except that you use it for properties.</span></span>
+<span data-ttu-id="771fc-141">Если бы в библиотеке `Math` было статическое свойство `PI`, вы использовали бы этот тег следующим образом:</span><span class="sxs-lookup"><span data-stu-id="771fc-141">Assuming your `Math` library had a static property called `PI`, here's how you'd use this tag:</span></span>
 
-[!code-csharp[Тег Value](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;example&gt;
+### <a name="ltexamplegt"></a><span data-ttu-id="771fc-142">&lt;example&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-142">&lt;example&gt;</span></span>
 
-Тег `<example>` применяется для включения примера в XML-документацию.
-В этом случае нужно использовать дочерний тег `<code>`.
+<span data-ttu-id="771fc-143">Тег `<example>` применяется для включения примера в XML-документацию.</span><span class="sxs-lookup"><span data-stu-id="771fc-143">You use the `<example>` tag to include an example in your XML documentation.</span></span>
+<span data-ttu-id="771fc-144">В этом случае нужно использовать дочерний тег `<code>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-144">This involves using the child `<code>` tag.</span></span>
 
-[!code-csharp[Тег Example](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
-Тег `code` сохраняет разрывы строк и отступы для более длинных примеров.
+<span data-ttu-id="771fc-145">Тег `code` сохраняет разрывы строк и отступы для более длинных примеров.</span><span class="sxs-lookup"><span data-stu-id="771fc-145">The `code` tag preserves line breaks and indentation for longer examples.</span></span>
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="ltparagt"></a><span data-ttu-id="771fc-146">&lt;para&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-146">&lt;para&gt;</span></span>
 
-Тег `<para>` используется для форматирования содержимого в его родительском теге. `<para>` обычно используется внутри тега, такого как `<remarks>` или `<returns>`, чтобы разделить текст на абзацы.
-Содержимое тега `<remarks>` для определения класса можно отформатировать.
+<span data-ttu-id="771fc-147">Тег `<para>` используется для форматирования содержимого в его родительском теге.</span><span class="sxs-lookup"><span data-stu-id="771fc-147">You use the `<para>` tag to format the content within its parent tag.</span></span> <span data-ttu-id="771fc-148">`<para>` обычно используется внутри тега, такого как `<remarks>` или `<returns>`, чтобы разделить текст на абзацы.</span><span class="sxs-lookup"><span data-stu-id="771fc-148">`<para>` is usually used inside a tag, such as `<remarks>` or `<returns>`, to divide text into paragraphs.</span></span>
+<span data-ttu-id="771fc-149">Содержимое тега `<remarks>` для определения класса можно отформатировать.</span><span class="sxs-lookup"><span data-stu-id="771fc-149">You can format the contents of the `<remarks>` tag for your class definition.</span></span>
 
-[!code-csharp[Тег Para](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="ltcgt"></a>&lt;c&gt;
+### <a name="ltcgt"></a><span data-ttu-id="771fc-150">&lt;c&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-150">&lt;c&gt;</span></span>
 
-Что касается форматирования, можно использовать тег `<c>` для пометки части текста в качестве кода.
-Он подобен тегу `<code>`, но является встроенным. Он полезен, если требуется показать пример кода как часть содержимого тега.
-Давайте обновим в документацию для класса `Math`.
+<span data-ttu-id="771fc-151">Что касается форматирования, можно использовать тег `<c>` для пометки части текста в качестве кода.</span><span class="sxs-lookup"><span data-stu-id="771fc-151">Still on the topic of formatting, you use the `<c>` tag for marking part of text as code.</span></span>
+<span data-ttu-id="771fc-152">Он подобен тегу `<code>`, но является встроенным.</span><span class="sxs-lookup"><span data-stu-id="771fc-152">It's like the `<code>` tag but inline.</span></span> <span data-ttu-id="771fc-153">Он полезен, если требуется показать пример кода как часть содержимого тега.</span><span class="sxs-lookup"><span data-stu-id="771fc-153">It's useful when you want to show a quick code example as part of a tag's content.</span></span>
+<span data-ttu-id="771fc-154">Давайте обновим в документацию для класса `Math`.</span><span class="sxs-lookup"><span data-stu-id="771fc-154">Let's update the documentation for the `Math` class.</span></span>
 
-[!code-csharp[Тег C](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;exception&gt;
+### <a name="ltexceptiongt"></a><span data-ttu-id="771fc-155">&lt;exception&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-155">&lt;exception&gt;</span></span>
 
-С помощью тега `<exception>` можно сообщить разработчикам, что метод может генерировать определенные исключения.
-Если взглянуть на библиотеку `Math`, можно увидеть, что оба метода `Add` создают исключение при выполнении определенного условия. Метод `Divide` с типом integer также создает исключение (хотя и не столь очевидно), если параметр `b` равен нулю. Теперь добавьте в этот метод документацию по исключению.
+<span data-ttu-id="771fc-156">С помощью тега `<exception>` можно сообщить разработчикам, что метод может генерировать определенные исключения.</span><span class="sxs-lookup"><span data-stu-id="771fc-156">By using the `<exception>` tag, you let your developers know that a method can throw specific exceptions.</span></span>
+<span data-ttu-id="771fc-157">Если взглянуть на библиотеку `Math`, можно увидеть, что оба метода `Add` создают исключение при выполнении определенного условия.</span><span class="sxs-lookup"><span data-stu-id="771fc-157">Looking at your `Math` library, you can see that both `Add` methods throw an exception if a certain condition is met.</span></span> <span data-ttu-id="771fc-158">Метод `Divide` с типом integer также создает исключение (хотя и не столь очевидно), если параметр `b` равен нулю.</span><span class="sxs-lookup"><span data-stu-id="771fc-158">Not so obvious, though, is that integer `Divide` method throws as well if the `b` parameter is zero.</span></span> <span data-ttu-id="771fc-159">Теперь добавьте в этот метод документацию по исключению.</span><span class="sxs-lookup"><span data-stu-id="771fc-159">Now add exception documentation to this method.</span></span>
 
-[!code-csharp[Тег Exception](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
-Атрибут `cref` представляет ссылку на исключение, которое доступно из текущей среды компиляции.
-Это может быть любой тип, определенный в проекте или ссылочной сборке. Компилятор выдаст предупреждение, если его значение не может быть разрешено.
+<span data-ttu-id="771fc-160">Атрибут `cref` представляет ссылку на исключение, которое доступно из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="771fc-160">The `cref` attribute represents a reference to an exception that is available from the current compilation environment.</span></span>
+<span data-ttu-id="771fc-161">Это может быть любой тип, определенный в проекте или ссылочной сборке.</span><span class="sxs-lookup"><span data-stu-id="771fc-161">This can be any type defined in the project or a referenced assembly.</span></span> <span data-ttu-id="771fc-162">Компилятор выдаст предупреждение, если его значение не может быть разрешено.</span><span class="sxs-lookup"><span data-stu-id="771fc-162">The compiler will issue a warning if its value cannot be resolved.</span></span>
 
-### <a name="ltseegt"></a>&lt;see&gt;
+### <a name="ltseegt"></a><span data-ttu-id="771fc-163">&lt;see&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-163">&lt;see&gt;</span></span>
 
-Тег `<see>` позволяет создать активную ссылку на страницу документации по другому элементу кода. В следующем примере будет создана активная ссылка между двумя методами `Add`.
+<span data-ttu-id="771fc-164">Тег `<see>` позволяет создать активную ссылку на страницу документации по другому элементу кода.</span><span class="sxs-lookup"><span data-stu-id="771fc-164">The `<see>` tag lets you create a clickable link to a documentation page for another code element.</span></span> <span data-ttu-id="771fc-165">В следующем примере будет создана активная ссылка между двумя методами `Add`.</span><span class="sxs-lookup"><span data-stu-id="771fc-165">In our next example, we'll create a clickable link between the two `Add` methods.</span></span>
 
-[!code-csharp[Тег See](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-Атрибут `cref` является **обязательным** и представляет ссылку на тип или его член, который доступен из текущей среды компиляции. Это может быть любой тип, определенный в проекте или ссылочной сборке.
+<span data-ttu-id="771fc-166">Атрибут `cref` является **обязательным** и представляет ссылку на тип или его член, который доступен из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="771fc-166">The `cref` is a **required** attribute that represents a reference to a type or its member that is available from the current compilation environment.</span></span> <span data-ttu-id="771fc-167">Это может быть любой тип, определенный в проекте или ссылочной сборке.</span><span class="sxs-lookup"><span data-stu-id="771fc-167">This can be any type defined in the project or a referenced assembly.</span></span>
 
-### <a name="ltseealsogt"></a>&lt;seealso&gt;
+### <a name="ltseealsogt"></a><span data-ttu-id="771fc-168">&lt;seealso&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-168">&lt;seealso&gt;</span></span>
 
-Тег `<seealso>` используется так же, как тег `<see>`. Единственное различие заключается в том, что его содержимое обычно помещается в раздел "См. также". Мы добавим тег `seealso` в метод `Add` с типом integer для ссылки на другие методы в классе, принимающие параметры с типом integer:
+<span data-ttu-id="771fc-169">Тег `<seealso>` используется так же, как тег `<see>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-169">You use the `<seealso>` tag in the same way you do the `<see>` tag.</span></span> <span data-ttu-id="771fc-170">Единственное различие заключается в том, что его содержимое обычно помещается в раздел "См. также".</span><span class="sxs-lookup"><span data-stu-id="771fc-170">The only difference is that its content is typically placed in a "See Also" section.</span></span> <span data-ttu-id="771fc-171">Мы добавим тег `seealso` в метод `Add` с типом integer для ссылки на другие методы в классе, принимающие параметры с типом integer:</span><span class="sxs-lookup"><span data-stu-id="771fc-171">Here we'll add a `seealso` tag on the integer `Add` method to reference other methods in the class that accept integer parameters:</span></span>
 
-[!code-csharp[Тег Seealso](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
-Атрибут `cref` представляет ссылку на тип или его член, который доступен из текущей среды компиляции.
-Это может быть любой тип, определенный в проекте или ссылочной сборке.
+<span data-ttu-id="771fc-172">Атрибут `cref` представляет ссылку на тип или его член, который доступен из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="771fc-172">The `cref` attribute represents a reference to a type or its member that is available from the current compilation environment.</span></span>
+<span data-ttu-id="771fc-173">Это может быть любой тип, определенный в проекте или ссылочной сборке.</span><span class="sxs-lookup"><span data-stu-id="771fc-173">This can be any type defined in the project or a referenced assembly.</span></span>
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="ltparamgt"></a><span data-ttu-id="771fc-174">&lt;param&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-174">&lt;param&gt;</span></span>
 
-Тег `<param>` используется для описания параметров метода. Ниже приведен пример для метода `Add` с типом double: параметр, описываемый тегом, указан в **обязательном** атрибуте `name`.
+<span data-ttu-id="771fc-175">Тег `<param>` используется для описания параметров метода.</span><span class="sxs-lookup"><span data-stu-id="771fc-175">You use the `<param>` tag to describe a method's parameters.</span></span> <span data-ttu-id="771fc-176">Ниже приведен пример на метода `Add` с типом double: параметр, описываемый тегом, указан в **обязательном** атрибуте `name`.</span><span class="sxs-lookup"><span data-stu-id="771fc-176">Here's an example on the double `Add` method: The parameter the tag describes is specified in the **required** `name` attribute.</span></span>
 
-[!code-csharp[Тег Param](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
+### <a name="lttypeparamgt"></a><span data-ttu-id="771fc-177">&lt;typeparam&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-177">&lt;typeparam&gt;</span></span>
 
-Тег `<typeparam>` используется так же, как тег `<param>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.
-Добавьте в класс `Math` быстрый универсальный метод, чтобы проверить, что одно количество больше другого.
+<span data-ttu-id="771fc-178">Тег `<typeparam>` используется так же, как тег `<param>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.</span><span class="sxs-lookup"><span data-stu-id="771fc-178">You use `<typeparam>` tag just like the `<param>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
+<span data-ttu-id="771fc-179">Добавьте в класс `Math` быстрый универсальный метод, чтобы проверить, что одно количество больше другого.</span><span class="sxs-lookup"><span data-stu-id="771fc-179">Add a quick generic method to your `Math` class to check if one quantity is greater than another.</span></span>
 
-[!code-csharp[Тег Typeparam](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="ltparamrefgt"></a>&lt;paramref&gt;
+### <a name="ltparamrefgt"></a><span data-ttu-id="771fc-180">&lt;paramref&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-180">&lt;paramref&gt;</span></span>
 
-Иногда в процессе описания выполнения метода в теге `<summary>` может потребоваться создание ссылки на параметр. Для этого отлично подойдет тег `<paramref>`. Обновим сводку по методу `Add` с типом double. Как и для тега `<param>`, имя параметра указано в **обязательном** атрибуте `name`.
+<span data-ttu-id="771fc-181">Иногда в процессе описания выполнения метода в теге `<summary>` может потребоваться создание ссылки на параметр.</span><span class="sxs-lookup"><span data-stu-id="771fc-181">Sometimes you might be in the middle of describing what a method does in what could be a `<summary>` tag, and you might want to make a reference to a parameter.</span></span> <span data-ttu-id="771fc-182">Для этого отлично подойдет тег `<paramref>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-182">The `<paramref>` tag is great for just this.</span></span> <span data-ttu-id="771fc-183">Обновим сводку по методу `Add` с типом double.</span><span class="sxs-lookup"><span data-stu-id="771fc-183">Let's update the summary of our double based `Add` method.</span></span> <span data-ttu-id="771fc-184">Как и для тега `<param>`, имя параметра указано в **обязательном** атрибуте `name`.</span><span class="sxs-lookup"><span data-stu-id="771fc-184">Like the `<param>` tag the parameter name is specified in the **required** `name` attribute.</span></span>
 
-[!code-csharp[Тег Paramref](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
+### <a name="lttypeparamrefgt"></a><span data-ttu-id="771fc-185">&lt;typeparamref&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-185">&lt;typeparamref&gt;</span></span>
 
-Тег `<typeparamref>` используется так же, как тег `<paramref>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.
-Можно использовать созданные ранее универсальный метод.
+<span data-ttu-id="771fc-186">Тег `<typeparamref>` используется так же, как тег `<paramref>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.</span><span class="sxs-lookup"><span data-stu-id="771fc-186">You use `<typeparamref>` tag just like the `<paramref>` tag but for generic type or method declarations to describe a generic parameter.</span></span>
+<span data-ttu-id="771fc-187">Можно использовать созданные ранее универсальный метод.</span><span class="sxs-lookup"><span data-stu-id="771fc-187">You can use the same generic method you previously created.</span></span>
 
-[!code-csharp[Тег Typeparamref](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="ltlistgt"></a><span data-ttu-id="771fc-188">&lt;list&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-188">&lt;list&gt;</span></span>
 
-Тег `<list>` используется для форматирования сведений о документации в виде упорядоченного списка, неупорядоченного списка или таблицы.
-Создайте неупорядоченный список для каждой математической операции, поддерживаемой библиотекой `Math`.
+<span data-ttu-id="771fc-189">Тег `<list>` используется для форматирования сведений о документации в виде упорядоченного списка, неупорядоченного списка или таблицы.</span><span class="sxs-lookup"><span data-stu-id="771fc-189">You use the `<list>` tag to format documentation information as an ordered list, unordered list or table.</span></span>
+<span data-ttu-id="771fc-190">Создайте неупорядоченный список для каждой математической операции, поддерживаемой библиотекой `Math`.</span><span class="sxs-lookup"><span data-stu-id="771fc-190">Make an unordered list of every math operation your `Math` library supports.</span></span>
 
-[!code-csharp[Тег List](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-Упорядоченный список или таблицу можно сформировать, изменив атрибут `type` на `number` или `table` соответственно.
+<span data-ttu-id="771fc-191">Упорядоченный список или таблицу можно сформировать, изменив атрибут `type` на `number` или `table` соответственно.</span><span class="sxs-lookup"><span data-stu-id="771fc-191">You can make an ordered list or table by changing the `type` attribute to `number` or `table`, respectively.</span></span>
 
-### <a name="putting-it-all-together"></a>Заключение
+### <a name="putting-it-all-together"></a><span data-ttu-id="771fc-192">Заключение</span><span class="sxs-lookup"><span data-stu-id="771fc-192">Putting it all together</span></span>
 
-Вы выполнили инструкции в этом учебнике и включили теги в код там, где необходимо. Теперь ваш код должен иметь следующий вид:
+<span data-ttu-id="771fc-193">Вы выполнили инструкции в этом учебнике и включили теги в код там, где необходимо. Теперь ваш код должен иметь следующий вид:</span><span class="sxs-lookup"><span data-stu-id="771fc-193">If you've followed this tutorial and applied the tags to your code where necessary, your code should now look similar to the following:</span></span>
 
-[!code-csharp[Библиотека с тегами](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
-В коде можно создать подробную документацию к веб-сайту, содержащую интерактивные перекрестные ссылки. При этом вы можете столкнуться с другой проблемой — такой код очень трудно читать.
-Для любого разработчика, который хочет вносить дополнения в этот код, необходимость обработки большого количества данных становится настоящим кошмаром. К счастью, есть XML-тег, который поможет справиться с этой задачей:
+<span data-ttu-id="771fc-194">В коде можно создать подробную документацию к веб-сайту, содержащую интерактивные перекрестные ссылки.</span><span class="sxs-lookup"><span data-stu-id="771fc-194">From your code, you can generate a detailed documentation website complete with clickable cross-references.</span></span> <span data-ttu-id="771fc-195">При этом вы можете столкнуться с другой проблемой — такой код очень трудно читать.</span><span class="sxs-lookup"><span data-stu-id="771fc-195">But you're faced with another problem: your code has become hard to read.</span></span>
+<span data-ttu-id="771fc-196">Для любого разработчика, который хочет вносить дополнения в этот код, необходимость обработки большого количества данных становится настоящим кошмаром.</span><span class="sxs-lookup"><span data-stu-id="771fc-196">There's so much information to sift through that this is going to be a nightmare for any developer who wants to contribute to this code.</span></span> <span data-ttu-id="771fc-197">К счастью, есть XML-тег, который поможет справиться с этой задачей:</span><span class="sxs-lookup"><span data-stu-id="771fc-197">Thankfully there's an XML tag that can help you deal with this:</span></span>
 
-### <a name="ltincludegt"></a>&lt;include&gt;
+### <a name="ltincludegt"></a><span data-ttu-id="771fc-198">&lt;include&gt;</span><span class="sxs-lookup"><span data-stu-id="771fc-198">&lt;include&gt;</span></span>
 
-Тег `<include>` позволяет обращаться к комментариям в отдельном XML-файле, описывающем типы и члены в исходном коде, а не размещать комментарии к документации непосредственно в файле исходного кода.
+<span data-ttu-id="771fc-199">Тег `<include>` позволяет обращаться к комментариям в отдельном XML-файле, описывающем типы и члены в исходном коде, а не размещать комментарии к документации непосредственно в файле исходного кода.</span><span class="sxs-lookup"><span data-stu-id="771fc-199">The `<include>` tag lets you refer to comments in a separate XML file that describe the types and members in your source code, as opposed to placing documentation comments directly in your source code file.</span></span>
 
-Переместим все XML-теги в отдельный файл XML с именем `docs.xml`. Файлу можно задать любое имя.
+<span data-ttu-id="771fc-200">Переместим все XML-теги в отдельный файл XML с именем `docs.xml`.</span><span class="sxs-lookup"><span data-stu-id="771fc-200">Now you're going to move all your XML tags into a separate XML file named `docs.xml`.</span></span> <span data-ttu-id="771fc-201">Файлу можно задать любое имя.</span><span class="sxs-lookup"><span data-stu-id="771fc-201">Feel free to name the file whatever you want.</span></span>
 
-[!code-xml[Образец XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-В приведенном выше XML комментарии к документации по каждому члену отображаются непосредственно внутри тега с именем, соответствующим его назначению. Можно выбрать собственную стратегию. Теперь, когда комментарии XML находятся в отдельном файле, давайте посмотрим, как можно улучшить удобочитаемость кода с помощью тега `<include>`.
+<span data-ttu-id="771fc-202">В приведенном выше XML комментарии к документации по каждому члену отображаются непосредственно внутри тега с именем, соответствующим его назначению.</span><span class="sxs-lookup"><span data-stu-id="771fc-202">In the above XML, each member's documentation comments appear directly inside a tag named after what they do.</span></span> <span data-ttu-id="771fc-203">Можно выбрать собственную стратегию.</span><span class="sxs-lookup"><span data-stu-id="771fc-203">You can choose your own strategy.</span></span> <span data-ttu-id="771fc-204">Теперь, когда комментарии XML находятся в отдельном файле, давайте посмотрим, как можно улучшить удобочитаемость кода с помощью тега `<include>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-204">Now that you have your XML comments in a separate file, let's see how your code can be made more readable by using the `<include>` tag:</span></span>
 
-[!code-csharp[Тег Include](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-Сейчас чтение кода снова не вызывает сложностей, и никакие сведения не были потеряны. 
+<span data-ttu-id="771fc-205">Сейчас чтение кода снова не вызывает сложностей, и никакие сведения не были потеряны.</span><span class="sxs-lookup"><span data-stu-id="771fc-205">And there you have it: our code is back to being readable, and no documentation information has been lost.</span></span> 
 
-Атрибут `filename` представляет имя XML-файла, содержащего документацию.
+<span data-ttu-id="771fc-206">Атрибут `filename` представляет имя XML-файла, содержащего документацию.</span><span class="sxs-lookup"><span data-stu-id="771fc-206">The `filename` attribute represents the name of the XML file containing the documentation.</span></span>
 
-Атрибут `path` представляет запрос [XPath](https://msdn.microsoft.com/library/ms256115.aspx) к `tag name`, находящемуся в указанном `filename`.
+<span data-ttu-id="771fc-207">Атрибут `path` представляет запрос [XPath](https://msdn.microsoft.com/library/ms256115.aspx) к `tag name`, находящемуся в указанном `filename`.</span><span class="sxs-lookup"><span data-stu-id="771fc-207">The `path` attribute represents an [XPath](https://msdn.microsoft.com/library/ms256115.aspx) query to the `tag name` present in the specified `filename`.</span></span>
 
-Атрибут `name` представляет спецификатор имени в теге, который предшествует комментариям.
+<span data-ttu-id="771fc-208">Атрибут `name` представляет спецификатор имени в теге, который предшествует комментариям.</span><span class="sxs-lookup"><span data-stu-id="771fc-208">The `name` attribute represents the name specifier in the tag that precedes the comments.</span></span>
 
-Атрибут `id`, который может использоваться вместо `name`, представляет идентификатор для тега, предшествующего комментариям.
+<span data-ttu-id="771fc-209">Атрибут `id`, который может использоваться вместо `name`, представляет идентификатор для тега, предшествующего комментариям.</span><span class="sxs-lookup"><span data-stu-id="771fc-209">The `id` attribute which can be used in place of `name` represents the ID for the tag that precedes the comments.</span></span>
 
-### <a name="user-defined-tags"></a>Определяемые пользователем теги
+### <a name="user-defined-tags"></a><span data-ttu-id="771fc-210">Определяемые пользователем теги</span><span class="sxs-lookup"><span data-stu-id="771fc-210">User Defined Tags</span></span>
 
-Все описанные выше теги распознаются компилятором C#. Тем не менее пользователь может определять собственные теги.
-Инструменты, такие как Sandcastle, обеспечивают поддержку дополнительных тегов, например [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), и даже поддержку [пространств имен документирования](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
-Средства создания пользовательской или внутренней документации также можно использовать со стандартными тегами. Кроме того, поддерживается несколько выходных форматов — от HTML до PDF.
+<span data-ttu-id="771fc-211">Все описанные выше теги распознаются компилятором C#.</span><span class="sxs-lookup"><span data-stu-id="771fc-211">All the tags outlined above represent those that are recognized by the C# compiler.</span></span> <span data-ttu-id="771fc-212">Тем не менее пользователь может определять собственные теги.</span><span class="sxs-lookup"><span data-stu-id="771fc-212">However, a user is free to define their own tags.</span></span>
+<span data-ttu-id="771fc-213">Инструменты, такие как Sandcastle, обеспечивают поддержку дополнительных тегов, например [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), и даже поддержку [пространств имен документирования](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).</span><span class="sxs-lookup"><span data-stu-id="771fc-213">Tools like Sandcastle bring support for extra tags like [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) and even support [documenting namespaces](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).</span></span>
+<span data-ttu-id="771fc-214">Средства создания пользовательской или внутренней документации также можно использовать со стандартными тегами. Кроме того, поддерживается несколько выходных форматов — от HTML до PDF.</span><span class="sxs-lookup"><span data-stu-id="771fc-214">Custom or in-house documentation generation tools can also be used with the standard tags and multiple output formats from HTML to PDF can be supported.</span></span>
 
-## <a name="recommendations"></a>Рекомендации
+## <a name="recommendations"></a><span data-ttu-id="771fc-215">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="771fc-215">Recommendations</span></span>
 
-Документирование кода рекомендуется по многим причинам. Далее приводится ряд рекомендаций, распространенные сценарии использования и вопросы, которые нужно иметь в виду при работе с тегами XML-документации в коде C#.
+<span data-ttu-id="771fc-216">Документирование кода рекомендуется по многим причинам.</span><span class="sxs-lookup"><span data-stu-id="771fc-216">Documenting code is recommended for many reasons.</span></span> <span data-ttu-id="771fc-217">Далее приводится ряд рекомендаций, распространенные сценарии использования и вопросы, которые нужно иметь в виду при работе с тегами XML-документации в коде C#.</span><span class="sxs-lookup"><span data-stu-id="771fc-217">What follows are some best practices, general use case scenarios, and things that you should know when using XML documentation tags in your C# code.</span></span>
 
-* Для обеспечения согласованности все открытые типы и их члены должны быть задокументированы. Если это необходимо, задокументируйте их все.
-* Закрытые члены можно также задокументировать с помощью XML-комментариев. Однако это приводит к раскрытию внутренних (возможно, конфиденциальных) процессов библиотеки.
-* Как минимум, типы и их члены должен иметь тег `<summary>`, так как его содержимое требуется для IntelliSense.
-* Текст документации должны быть написан с использованием законченных предложений, в конце которых ставится точка.
-* Разделяемые классы полностью поддерживаются, и данные о документации объединяются в одну запись для этого типа.
-* Компилятор проверяет синтаксис тегов `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` и `<typeparam>`.
-- Компилятор проверяет параметры, которые содержат пути к файлам и ссылки на другие части кода.
+* <span data-ttu-id="771fc-218">Для обеспечения согласованности все открытые типы и их члены должны быть задокументированы.</span><span class="sxs-lookup"><span data-stu-id="771fc-218">For the sake of consistency, all publicly visible types and their members should be documented.</span></span> <span data-ttu-id="771fc-219">Если это необходимо, задокументируйте их все.</span><span class="sxs-lookup"><span data-stu-id="771fc-219">If you must do it, do it all.</span></span>
+* <span data-ttu-id="771fc-220">Закрытые члены можно также задокументировать с помощью XML-комментариев.</span><span class="sxs-lookup"><span data-stu-id="771fc-220">Private members can also be documented using XML comments.</span></span> <span data-ttu-id="771fc-221">Однако это приводит к раскрытию внутренних (возможно, конфиденциальных) процессов библиотеки.</span><span class="sxs-lookup"><span data-stu-id="771fc-221">However, this exposes the inner (potentially confidential) workings of your library.</span></span>
+* <span data-ttu-id="771fc-222">Как минимум, типы и их члены должен иметь тег `<summary>`, так как его содержимое требуется для IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="771fc-222">At a bare minimum, types and their members should have a `<summary>` tag because its content is needed for IntelliSense.</span></span>
+* <span data-ttu-id="771fc-223">Текст документации должны быть написан с использованием законченных предложений, в конце которых ставится точка.</span><span class="sxs-lookup"><span data-stu-id="771fc-223">Documentation text should be written using complete sentences ending with full stops.</span></span>
+* <span data-ttu-id="771fc-224">Разделяемые классы полностью поддерживаются, и данные о документации объединяются в одну запись для этого типа.</span><span class="sxs-lookup"><span data-stu-id="771fc-224">Partial classes are fully supported, and documentation information will be concatenated into a single entry for that type.</span></span>
+* <span data-ttu-id="771fc-225">Компилятор проверяет синтаксис тегов `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` и `<typeparam>`.</span><span class="sxs-lookup"><span data-stu-id="771fc-225">The compiler verifies the syntax of the `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` and `<typeparam>` tags.</span></span>
+- <span data-ttu-id="771fc-226">Компилятор проверяет параметры, которые содержат пути к файлам и ссылки на другие части кода.</span><span class="sxs-lookup"><span data-stu-id="771fc-226">The compiler validates the parameters that contain file paths and references to other parts of the code.</span></span>
 
-## <a name="see-also"></a>См. также
-[Комментарии к XML-документации (руководство по программированию на C#)](programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="771fc-227">См. также</span><span class="sxs-lookup"><span data-stu-id="771fc-227">See also</span></span>
+[<span data-ttu-id="771fc-228">Комментарии к XML-документации (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="771fc-228">XML Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/xml-documentation-comments.md)
 
-[Рекомендуемые теги для комментариев документации (руководство по программированию на C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-
+[<span data-ttu-id="771fc-229">Рекомендуемые теги для комментариев документации (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="771fc-229">Recommended Tags for Documentation Comments (C# Programming Guide)</span></span>](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

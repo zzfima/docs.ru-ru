@@ -1,55 +1,46 @@
 ---
 title: "Практическое руководство. Создание подписанных дружественных сборок (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок (C#)
-В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
+# <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="6e4a4-102">Практическое руководство. Создание подписанных дружественных сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="6e4a4-102">How to: Create Signed Friend Assemblies (C#)</span></span>
+<span data-ttu-id="6e4a4-103">В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="6e4a4-104">Обе сборки должны иметь строгое имя.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="6e4a4-105">Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
+### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="6e4a4-106">Создание подписанной и дружественной сборки</span><span class="sxs-lookup"><span data-stu-id="6e4a4-106">To create a signed assembly and a friend assembly</span></span>  
   
-1.  Откройте окно командной строки.  
+1.  <span data-ttu-id="6e4a4-107">Откройте окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-107">Open a command prompt.</span></span>  
   
-2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
+2.  <span data-ttu-id="6e4a4-108">Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="6e4a4-109">Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).</span><span class="sxs-lookup"><span data-stu-id="6e4a4-109">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
-    1.  Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:  
+    1.  <span data-ttu-id="6e4a4-110">Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:</span><span class="sxs-lookup"><span data-stu-id="6e4a4-110">Generate a strong-name key for this example and store it in the file FriendAssemblies.snk:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Извлеките открытый ключ из FriendAssemblies.snk и поместите его в файл FriendAssemblies.publickey:  
+    2.  <span data-ttu-id="6e4a4-111">Извлеките открытый ключ из FriendAssemblies.snk и поместите его в файл FriendAssemblies.publickey:</span><span class="sxs-lookup"><span data-stu-id="6e4a4-111">Extract the public key from FriendAssemblies.snk and put it into FriendAssemblies.publickey:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Выведите на экран открытый ключ, хранящийся в файле FriendAssemblies.publickey:  
+    3.  <span data-ttu-id="6e4a4-112">Выведите на экран открытый ключ, хранящийся в файле FriendAssemblies.publickey:</span><span class="sxs-lookup"><span data-stu-id="6e4a4-112">Display the public key stored in the file FriendAssemblies.publickey:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
+3.  <span data-ttu-id="6e4a4-113">Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-113">Create a C# file named `friend_signed_A` that contains the following code.</span></span> <span data-ttu-id="6e4a4-114">Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
-     Средство задания строгих имен создает новый открытый ключ при каждом запуске. Таким образом, необходимо заменить открытый ключ в следующем коде только что созданным открытым ключом, как показано в следующем примере.  
+     <span data-ttu-id="6e4a4-115">Средство задания строгих имен создает новый открытый ключ при каждом запуске.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="6e4a4-116">Таким образом, необходимо заменить открытый ключ в следующем коде только что созданным открытым ключом, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
   
     ```csharp  
     // friend_signed_A.cs  
@@ -68,13 +59,13 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-4.  Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
+4.  <span data-ttu-id="6e4a4-117">Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-117">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Создайте файл C# с именем `friend_signed_B`, содержащий следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `internal` в сборке friend_signed_A. Файл содержит следующий код.  
+5.  <span data-ttu-id="6e4a4-118">Создайте файл C# с именем `friend_signed_B`, содержащий следующий код.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-118">Create a C# file that is named `friend_signed_B` and contains the following code.</span></span> <span data-ttu-id="6e4a4-119">Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `internal` в сборке friend_signed_A.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-119">Because friend_signed_A specifies friend_signed_B as a friend assembly, the code in friend_signed_B can access `internal` types and members from friend_signed_A.</span></span> <span data-ttu-id="6e4a4-120">Файл содержит следующий код.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-120">The file contains the following code.</span></span>  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -90,28 +81,27 @@ ms.lasthandoff: 07/28/2017
     }  
     ```  
   
-6.  Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
+6.  <span data-ttu-id="6e4a4-121">Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-121">Compile and sign friend_signed_B by using the following command.</span></span>  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     <span data-ttu-id="6e4a4-122">Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="6e4a4-123">Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-123">You must explicitly specify the name of the output assembly (.exe or .dll) by using the `/out` compiler option.</span></span>  <span data-ttu-id="6e4a4-124">Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="6e4a4-124">For more information, see [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).</span></span>  
   
-7.  Запустите файл friend_signed_B.exe.  
+7.  <span data-ttu-id="6e4a4-125">Запустите файл friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-125">Run the friend_signed_B.exe file.</span></span>  
   
-     Программа выводит строку "Class1.Test".  
+     <span data-ttu-id="6e4a4-126">Программа выводит строку "Class1.Test".</span><span class="sxs-lookup"><span data-stu-id="6e4a4-126">The program prints the string "Class1.Test".</span></span>  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.  
+## <a name="net-framework-security"></a><span data-ttu-id="6e4a4-127">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6e4a4-127">.NET Framework Security</span></span>  
+ <span data-ttu-id="6e4a4-128">Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="6e4a4-129">Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.</span><span class="sxs-lookup"><span data-stu-id="6e4a4-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` types and members.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [Практическое руководство. Создание неподписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Sn.exe (средство строгих имен)](https://msdn.microsoft.com/library/k5b5tt23)   
- [Создание и использование сборок со строгими именами](https://msdn.microsoft.com/library/xwb8f617)   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="6e4a4-130">См. также</span><span class="sxs-lookup"><span data-stu-id="6e4a4-130">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [<span data-ttu-id="6e4a4-131">Сборки и глобальный кэш сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="6e4a4-131">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="6e4a4-132">Дружественные сборки (C#)</span><span class="sxs-lookup"><span data-stu-id="6e4a4-132">Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="6e4a4-133">Как: создание неподписанных дружественных сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="6e4a4-133">How to: Create Unsigned Friend Assemblies (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [<span data-ttu-id="6e4a4-134">/keyfile</span><span class="sxs-lookup"><span data-stu-id="6e4a4-134">/keyfile</span></span>](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="6e4a4-135">Sn.exe (средство строгих имен)</span><span class="sxs-lookup"><span data-stu-id="6e4a4-135">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)  
+ [<span data-ttu-id="6e4a4-136">Создание и использование сборок со строгими именами</span><span class="sxs-lookup"><span data-stu-id="6e4a4-136">Creating and Using Strong-Named Assemblies</span></span>](https://msdn.microsoft.com/library/xwb8f617)  
+ [<span data-ttu-id="6e4a4-137">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6e4a4-137">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)

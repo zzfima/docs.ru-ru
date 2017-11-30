@@ -1,35 +1,40 @@
 ---
-title: "SpinWait | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "synchronization primitives, SpinWait"
+title: SpinWait
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cfaf85c0fe1de3be89618ae540e9c183b66a11eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# SpinWait
-<xref:System.Threading.SpinWait?displayProperty=fullName> — это упрощенный тип синхронизации, который можно использовать в низкоуровневых сценариях, чтобы избежать ресурсоемких переключений контекста и переходов в режим ядра, необходимых для событий ядра.  На многоядерных компьютерах, когда не предполагается, что ресурс будет удерживаться в течение длительного времени, для ожидающего потока более эффективным решением может быть переход в цикл в пользовательском режиме на несколько десятков или сотен тактов процессора и повторная попытка получения ресурса.  Если ресурс доступен после выхода из цикла, можно сэкономить несколько тысяч тактов процессора.  Если ресурс еще недоступен, то потрачено только несколько тактов процессора и еще не поздно перейти в режим ожидания на основе ядра.  Эта комбинация, цикл с последующим ожиданием, иногда называется *двухэтапной операцией ожидания*.  
+# <a name="spinwait"></a><span data-ttu-id="d48ad-102">SpinWait</span><span class="sxs-lookup"><span data-stu-id="d48ad-102">SpinWait</span></span>
+<span data-ttu-id="d48ad-103"><xref:System.Threading.SpinWait?displayProperty=nameWithType>— Тип упрощенной синхронизации, который можно использовать в низкоуровневых сценариях, чтобы избежать ресурсоемких переключений контекста и переходов в режим ядра, необходимых для событий ядра.</span><span class="sxs-lookup"><span data-stu-id="d48ad-103"><xref:System.Threading.SpinWait?displayProperty=nameWithType> is a lightweight synchronization type that you can use in low-level scenarios to avoid the expensive context switches and kernel transitions that are required for kernel events.</span></span> <span data-ttu-id="d48ad-104">На многоядерных компьютерах при ресурса не ожидается держаться в течение длительного времени, может быть более эффективным ожидающий поток запустить в пользовательском режиме несколько десятков или сотен циклов и повторная попытка получения ресурса.</span><span class="sxs-lookup"><span data-stu-id="d48ad-104">On multicore computers, when a resource is not expected to be held for long periods of time, it can be more efficient for a waiting thread to spin in user mode for a few dozen or a few hundred cycles, and then retry to acquire the resource.</span></span> <span data-ttu-id="d48ad-105">Если ресурс доступен после выхода из цикла, можно сэкономить несколько тысяч тактов процессора.</span><span class="sxs-lookup"><span data-stu-id="d48ad-105">If the resource is available after spinning, then you have saved several thousand cycles.</span></span> <span data-ttu-id="d48ad-106">Если ресурс недоступен по-прежнему, вы потратили только несколько циклов и по-прежнему можете ввести ожидания на основе ядра.</span><span class="sxs-lookup"><span data-stu-id="d48ad-106">If the resource is still not available, then you have spent only a few cycles and can still enter a kernel-based wait.</span></span> <span data-ttu-id="d48ad-107">Это сочетание цикл последующим ожиданием, иногда называют *двухэтапной операции ожидания*.</span><span class="sxs-lookup"><span data-stu-id="d48ad-107">This spinning-then-waiting combination is sometimes referred to as a *two-phase wait operation*.</span></span>  
   
- <xref:System.Threading.SpinWait> предназначен для использования вместе с типами .NET Framework, которые служат оболочкой для событий ядра, например <xref:System.Threading.ManualResetEvent>.  <xref:System.Threading.SpinWait> также можно использовать самостоятельно для базовых функций цикла в одной программе.  
+ <span data-ttu-id="d48ad-108"><xref:System.Threading.SpinWait>предназначены для использования в сочетании с типами .NET Framework, которые являются оболочкой событий ядра, такие как <xref:System.Threading.ManualResetEvent>.</span><span class="sxs-lookup"><span data-stu-id="d48ad-108"><xref:System.Threading.SpinWait> is designed to be used in conjunction with the .NET Framework types that wrap kernel events such as <xref:System.Threading.ManualResetEvent>.</span></span> <span data-ttu-id="d48ad-109"><xref:System.Threading.SpinWait>может также использоваться сама по себе для базовых функций цикла в одной программе.</span><span class="sxs-lookup"><span data-stu-id="d48ad-109"><xref:System.Threading.SpinWait> can also be used by itself for basic spinning functionality in just one program.</span></span>  
   
- <xref:System.Threading.SpinWait> — это не просто пустой цикл.  Этот тип аккуратно реализован, чтобы обеспечить правильное циклическое поведение в общем случае, и сам будет инициировать переключения контекста, если цикл оказывается достаточно длинным \(примерно равным интервалу времени, необходимому для перехода в режим ядра\).  Например, на одноядерных компьютерах <xref:System.Threading.SpinWait> немедленно возвращает временной интервал в потоке, так как цикл блокирует дальнейшее выполнение всех потоков.  <xref:System.Threading.SpinWait> также возвращает управление даже на многоядерных компьютерах, чтобы помешать ожидающему потоку блокировать потоки с более высоким приоритетом или сборщик мусора.  Следовательно, при использовании <xref:System.Threading.SpinWait> в двухэтапной операции ожидания рекомендуется вызывать ожидание ядра до того, как <xref:System.Threading.SpinWait> сам инициирует переключение контекста.  <xref:System.Threading.SpinWait> предоставляет свойство <xref:System.Threading.SpinWait.NextSpinWillYield%2A>, которое можно проверять перед каждым вызовом метода <xref:System.Threading.SpinWait.SpinOnce%2A>.  Когда свойство возвращает значение `true`, инициируйте собственную операцию ожидания.  Пример см. в разделе [How to: Use SpinWait to Implement a Two\-Phase Wait Operation](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).  
+ <span data-ttu-id="d48ad-110"><xref:System.Threading.SpinWait>Это не просто пустой цикл.</span><span class="sxs-lookup"><span data-stu-id="d48ad-110"><xref:System.Threading.SpinWait> is more than just an empty loop.</span></span> <span data-ttu-id="d48ad-111">Он аккуратно реализован, чтобы обеспечить правильное циклическое поведение в общем случае, и сам будет инициировать переключения контекста, если цикл оказывается достаточно длинным (примерно равным интервалу времени, необходимого для перехода в режим ядра).</span><span class="sxs-lookup"><span data-stu-id="d48ad-111">It is carefully implemented to provide correct spinning behavior for the general case, and will itself initiate context switches if it spins long enough (roughly the length of time required for a kernel transition).</span></span> <span data-ttu-id="d48ad-112">Например, на одноядерных компьютерах <xref:System.Threading.SpinWait> возвращает временной интервал потока немедленно, так как цикл блокирует дальнейшее выполнение всех потоков.</span><span class="sxs-lookup"><span data-stu-id="d48ad-112">For example, on single-core computers, <xref:System.Threading.SpinWait> yields the time slice of the thread immediately because spinning blocks forward progress on all threads.</span></span> <span data-ttu-id="d48ad-113"><xref:System.Threading.SpinWait>также возвращает управление даже на многоядерных компьютерах для предотвращения блокировки потоков с более высоким приоритетом или сборщик мусора ожидающий поток.</span><span class="sxs-lookup"><span data-stu-id="d48ad-113"><xref:System.Threading.SpinWait> also yields even on multi-core machines to prevent the waiting thread from blocking higher-priority threads or the garbage collector.</span></span> <span data-ttu-id="d48ad-114">Таким образом Если вы используете <xref:System.Threading.SpinWait> в двухэтапной операции ожидания, рекомендуется вызвать ожидания ядра перед <xref:System.Threading.SpinWait> сам инициирует переключение контекста.</span><span class="sxs-lookup"><span data-stu-id="d48ad-114">Therefore, if you are using a <xref:System.Threading.SpinWait> in a two-phase wait operation, we recommend that you invoke the kernel wait before the <xref:System.Threading.SpinWait> itself initiates a context switch.</span></span> <span data-ttu-id="d48ad-115"><xref:System.Threading.SpinWait>предоставляет <xref:System.Threading.SpinWait.NextSpinWillYield%2A> свойство, которое можно проверять перед каждым вызовом <xref:System.Threading.SpinWait.SpinOnce%2A>.</span><span class="sxs-lookup"><span data-stu-id="d48ad-115"><xref:System.Threading.SpinWait> provides the <xref:System.Threading.SpinWait.NextSpinWillYield%2A> property, which you can check before every call to <xref:System.Threading.SpinWait.SpinOnce%2A>.</span></span> <span data-ttu-id="d48ad-116">Если свойство возвращает `true`, Инициируйте собственную операцию ожидания.</span><span class="sxs-lookup"><span data-stu-id="d48ad-116">When the property returns `true`, initiate your own Wait operation.</span></span> <span data-ttu-id="d48ad-117">Пример см. в разделе [как: использование объекта SpinWait для реализации операции ожидания двухфазная](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).</span><span class="sxs-lookup"><span data-stu-id="d48ad-117">For an example, see [How to: Use SpinWait to Implement a Two-Phase Wait Operation](../../../docs/standard/threading/how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md).</span></span>  
   
- Если вместо двухэтапной операции ожидания просто выполняется цикл до выполнения некоторого условия, можно разрешить объекту <xref:System.Threading.SpinWait> самому выполнять переключение контекста, чтобы он был "вежливым" в среде операционной системы Windows.  В следующем базовом примере показано применение <xref:System.Threading.SpinWait> в стеке без блокировок.  Если необходимо создать высокопроизводительный потокобезопасный стек, следует рассмотреть возможность использования <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName>.  
+ <span data-ttu-id="d48ad-118">Если вы не выполняете двухэтапной операции ожидания, но просто выполняется цикл до некоторого условия, можно включить <xref:System.Threading.SpinWait> для выполнения его контекст переключается так, чтобы он хорошо частные лица в среде операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="d48ad-118">If you are not performing a two-phase wait operation but are just spinning until some condition is true, you can enable <xref:System.Threading.SpinWait> to perform its context switches so that it is a good citizen in the Windows operating system environment.</span></span> <span data-ttu-id="d48ad-119">Следующем базовом примере показано <xref:System.Threading.SpinWait> стека, без блокировки.</span><span class="sxs-lookup"><span data-stu-id="d48ad-119">The following basic example shows a <xref:System.Threading.SpinWait> in a lock-free stack.</span></span> <span data-ttu-id="d48ad-120">Если требуется высокой производительности, поточно ориентированного стека, рассмотрите возможность использования <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d48ad-120">If you require a high-performance, thread-safe stack, consider using <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType>.</span></span>  
   
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## См. также  
- <xref:System.Threading.Thread.SpinWait%2A>   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="d48ad-121">См. также</span><span class="sxs-lookup"><span data-stu-id="d48ad-121">See Also</span></span>  
+ <xref:System.Threading.Thread.SpinWait%2A>  
+ [<span data-ttu-id="d48ad-122">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="d48ad-122">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -10,24 +10,22 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
+ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/08/2017
 ---
+# <a name="properties"></a><span data-ttu-id="99a8e-104">Свойства</span><span class="sxs-lookup"><span data-stu-id="99a8e-104">Properties</span></span>
 
-# <a name="properties"></a>Свойства
+<span data-ttu-id="99a8e-105">Свойства являются привилегированными компонентами C#.</span><span class="sxs-lookup"><span data-stu-id="99a8e-105">Properties are first class citizens in C#.</span></span> <span data-ttu-id="99a8e-106">Язык определяет синтаксис, который позволяет разработчикам писать код, отражающий цели их проекта.</span><span class="sxs-lookup"><span data-stu-id="99a8e-106">The language defines syntax that enables developers to write code that accurately expresses their design intent.</span></span>
 
-Свойства являются привилегированными компонентами C#. Язык определяет синтаксис, который позволяет разработчикам писать код, отражающий цели их проекта.
+<span data-ttu-id="99a8e-107">Свойства при обращении к ним ведут себя как поля.</span><span class="sxs-lookup"><span data-stu-id="99a8e-107">Properties behave like fields when they are accessed.</span></span>
+<span data-ttu-id="99a8e-108">Однако в отличие от полей свойства реализуются с помощью методов доступа, которые определяют инструкции, выполняемые при обращении к свойству или при его назначении.</span><span class="sxs-lookup"><span data-stu-id="99a8e-108">However, unlike fields, properties are implemented with accessors that define the statements executed when a property is accessed or assigned.</span></span>
 
-Свойства при обращении к ним ведут себя как поля.
-Однако в отличие от полей свойства реализуются с помощью методов доступа, которые определяют инструкции, выполняемые при обращении к свойству или при его назначении.
+## <a name="property-syntax"></a><span data-ttu-id="99a8e-109">Синтаксис свойства</span><span class="sxs-lookup"><span data-stu-id="99a8e-109">Property Syntax</span></span>
 
-## <a name="property-syntax"></a>Синтаксис свойства
-
-Синтаксис свойств является естественным расширением полей. Поле определяет место хранения:
+<span data-ttu-id="99a8e-110">Синтаксис свойств является естественным расширением полей.</span><span class="sxs-lookup"><span data-stu-id="99a8e-110">The syntax for properties is a natural extension to fields.</span></span> <span data-ttu-id="99a8e-111">Поле определяет место хранения:</span><span class="sxs-lookup"><span data-stu-id="99a8e-111">A field defines a storage location:</span></span>
 
 ```csharp
 public class Person
@@ -37,7 +35,7 @@ public class Person
 }
 ```
 
-Определение свойства содержит объявления для методов доступа `get` и `set`, которые получают и устанавливают значение этого свойства:
+<span data-ttu-id="99a8e-112">Определение свойства содержит объявления для методов доступа `get` и `set`, которые получают и устанавливают значение этого свойства:</span><span class="sxs-lookup"><span data-stu-id="99a8e-112">A property definition contains declarations for a `get` and `set` accessor that retrieves and assigns the value of that property:</span></span>
 
 ```csharp
 public class Person
@@ -48,9 +46,9 @@ public class Person
 }
 ```
 
-Синтаксис, показанный выше, является синтаксисом *автосвойств*. Компилятор создает место хранения для поля, поддерживающего свойство. Компилятор также реализует тело методов доступа `get` и `set`.
+<span data-ttu-id="99a8e-113">Синтаксис, показанный выше, является синтаксисом *автосвойств*.</span><span class="sxs-lookup"><span data-stu-id="99a8e-113">The syntax shown above is the *auto property* syntax.</span></span> <span data-ttu-id="99a8e-114">Компилятор создает место хранения для поля, поддерживающего свойство.</span><span class="sxs-lookup"><span data-stu-id="99a8e-114">The compiler generates the storage location for the field that backs up the property.</span></span> <span data-ttu-id="99a8e-115">Компилятор также реализует тело методов доступа `get` и `set`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-115">The compiler also implements the body of the `get` and `set` accessors.</span></span>
 
-Бывает, что свойство необходимо инициализировать со значением, отличным от значения по умолчанию для его типа.  C# позволяет это сделать, указав значение после закрывающей фигурной скобки свойства. В этом случае в качестве начального значения для свойства `FirstName` можно задать пустую строку, а не `null`. Для этого используется следующий код:
+<span data-ttu-id="99a8e-116">Бывает, что свойство необходимо инициализировать со значением, отличным от значения по умолчанию для его типа.</span><span class="sxs-lookup"><span data-stu-id="99a8e-116">Sometimes, you need to initialize a property to a value other than the default for its type.</span></span>  <span data-ttu-id="99a8e-117">C# позволяет это сделать, указав значение после закрывающей фигурной скобки свойства.</span><span class="sxs-lookup"><span data-stu-id="99a8e-117">C# enables that by setting a value after the closing brace for the property.</span></span> <span data-ttu-id="99a8e-118">В этом случае в качестве начального значения для свойства `FirstName` можно задать пустую строку, а не `null`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-118">You may prefer the initial value for the `FirstName` property to be the empty string rather than `null`.</span></span> <span data-ttu-id="99a8e-119">Для этого используется следующий код:</span><span class="sxs-lookup"><span data-stu-id="99a8e-119">You would specify that as shown below:</span></span>
 
 ```csharp
 public class Person
@@ -61,9 +59,9 @@ public class Person
 }
 ```
 
-Как вы увидите далее в этой статье, данная функция особенно полезна для свойств, предназначенных только для чтения.
+<span data-ttu-id="99a8e-120">Как вы увидите далее в этой статье, данная функция особенно полезна для свойств, предназначенных только для чтения.</span><span class="sxs-lookup"><span data-stu-id="99a8e-120">This is most useful for read-only properties, as you'll see later in this topic.</span></span>
 
-Вы можете определить хранилище самостоятельно, как показано ниже:
+<span data-ttu-id="99a8e-121">Вы можете определить хранилище самостоятельно, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="99a8e-121">You can also define the storage yourself, as shown below:</span></span>
 
 ```csharp
 public class Person
@@ -78,7 +76,7 @@ public class Person
 }
 ```
 
-Если реализация свойства представляет собой одиночное выражение, в качестве метода получения или задания можно использовать *элементы, воплощающие выражение*.
+<span data-ttu-id="99a8e-122">Если реализация свойства представляет собой одиночное выражение, в качестве метода получения или задания можно использовать *элементы, воплощающие выражение*.</span><span class="sxs-lookup"><span data-stu-id="99a8e-122">When a property implementation is a single expression, you can use *expression bodied members* for the getter or setter:</span></span>
 
 ```csharp
 public class Person
@@ -93,19 +91,19 @@ public class Person
 }
 ```
 
-Такой упрощенный синтаксис будет применяться в этом разделе везде, где это возможно.
+<span data-ttu-id="99a8e-123">Такой упрощенный синтаксис будет применяться в этом разделе везде, где это возможно.</span><span class="sxs-lookup"><span data-stu-id="99a8e-123">This simplified syntax will be used where applicable throughout this topic.</span></span>
 
-В примере выше определяется свойство для чтения и записи. Обратите внимание на ключевое слово `value` в методе доступа set. Метод доступа `set` всегда имеет один параметр с именем `value`. Метод доступа `get` должен возвращать значение, которое можно преобразовать в свойство (`string` в этом примере).
+<span data-ttu-id="99a8e-124">В примере выше определяется свойство для чтения и записи.</span><span class="sxs-lookup"><span data-stu-id="99a8e-124">The property definition shown above is a read-write property.</span></span> <span data-ttu-id="99a8e-125">Обратите внимание на ключевое слово `value` в методе доступа set.</span><span class="sxs-lookup"><span data-stu-id="99a8e-125">Notice the keyword `value` in the set accessor.</span></span> <span data-ttu-id="99a8e-126">Метод доступа `set` всегда имеет один параметр с именем `value`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-126">The `set` accessor always has a single parameter named `value`.</span></span> <span data-ttu-id="99a8e-127">Метод доступа `get` должен возвращать значение, которое можно преобразовать в свойство (`string` в этом примере).</span><span class="sxs-lookup"><span data-stu-id="99a8e-127">The `get` accessor must return a value that is convertible to the type of the property (`string` in this example).</span></span>
  
-Это основные сведения о синтаксисе. Существует множество различных вариантов, поддерживающих разные идиомы. Рассмотрим их, а также соответствующие параметры синтаксиса.
+<span data-ttu-id="99a8e-128">Это основные сведения о синтаксисе.</span><span class="sxs-lookup"><span data-stu-id="99a8e-128">That's the basics of the syntax.</span></span> <span data-ttu-id="99a8e-129">Существует множество различных вариантов, поддерживающих разные идиомы.</span><span class="sxs-lookup"><span data-stu-id="99a8e-129">There are many different variations that support a variety of different design idioms.</span></span> <span data-ttu-id="99a8e-130">Рассмотрим их, а также соответствующие параметры синтаксиса.</span><span class="sxs-lookup"><span data-stu-id="99a8e-130">Let's explore those, and learn the syntax options for each.</span></span>
 
-## <a name="scenarios"></a>Сценарии
+## <a name="scenarios"></a><span data-ttu-id="99a8e-131">Сценарии</span><span class="sxs-lookup"><span data-stu-id="99a8e-131">Scenarios</span></span>
 
-Приведенные выше примеры демонстрируют один из простейших вариантов определения свойств: свойство для чтения и записи без проверки. Путем написания нужного кода в методах доступа `get` и `set` можно реализовать много разных сценариев.
+<span data-ttu-id="99a8e-132">Приведенные выше примеры демонстрируют один из простейших вариантов определения свойств: свойство для чтения и записи без проверки.</span><span class="sxs-lookup"><span data-stu-id="99a8e-132">The examples above showed one of the simplest cases of property definition: a read-write property with no validation.</span></span> <span data-ttu-id="99a8e-133">Путем написания нужного кода в методах доступа `get` и `set` можно реализовать много разных сценариев.</span><span class="sxs-lookup"><span data-stu-id="99a8e-133">By writing the code you want in the `get` and `set` accessors, you can create many different scenarios.</span></span>
 
-### <a name="validation"></a>Проверка
+### <a name="validation"></a><span data-ttu-id="99a8e-134">Проверка</span><span class="sxs-lookup"><span data-stu-id="99a8e-134">Validation</span></span>
 
-Можно написать код в методе доступа `set`, чтобы гарантировать, что значения, представленные свойством, всегда будут допустимыми. Например, предположим, что одно правило для класса `Person` является именем, которое не может быть пустым или содержать только пробелы. Это можно реализовать следующим образом:
+<span data-ttu-id="99a8e-135">Можно написать код в методе доступа `set`, чтобы гарантировать, что значения, представленные свойством, всегда будут допустимыми.</span><span class="sxs-lookup"><span data-stu-id="99a8e-135">You can write code in the `set` accessor to ensure that the values represented by a property are always valid.</span></span> <span data-ttu-id="99a8e-136">Например, предположим, что одно правило для класса `Person` является именем, которое не может быть пустым или содержать только пробелы.</span><span class="sxs-lookup"><span data-stu-id="99a8e-136">For example, suppose one rule for the `Person` class is that the name cannot be blank, or whitespace.</span></span> <span data-ttu-id="99a8e-137">Это можно реализовать следующим образом:</span><span class="sxs-lookup"><span data-stu-id="99a8e-137">You would write that as follows:</span></span>
 
 ```csharp
 public class Person
@@ -125,20 +123,20 @@ public class Person
 }
 ```
 
-В приведенном выше примере код применяет правило о том, что имя не может быть пустым или содержать только пробелы. Если разработчик пишет
+<span data-ttu-id="99a8e-138">В приведенном выше примере код применяет правило о том, что имя не может быть пустым или содержать только пробелы.</span><span class="sxs-lookup"><span data-stu-id="99a8e-138">The example above enforces the rule that the first name must not be blank, or whitespace.</span></span> <span data-ttu-id="99a8e-139">Если разработчик пишет</span><span class="sxs-lookup"><span data-stu-id="99a8e-139">If a developer writes</span></span>
 
 ```csharp
 hero.FirstName = "";
 ```
 
-Это назначение создает исключение `ArgumentException`. Поскольку метод доступа set свойства должен иметь тип возвращаемого значения void, чтобы сообщить об ошибках в методе доступа set, создается исключение.
+<span data-ttu-id="99a8e-140">Это назначение создает исключение `ArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-140">That assignment throws an `ArgumentException`.</span></span> <span data-ttu-id="99a8e-141">Поскольку метод доступа set свойства должен иметь тип возвращаемого значения void, чтобы сообщить об ошибках в методе доступа set, создается исключение.</span><span class="sxs-lookup"><span data-stu-id="99a8e-141">Because a property set accessor must have a void return type, you report errors in the set accessor by throwing an exception.</span></span>
 
-Это простой пример проверки. Этот синтаксис можно расширить для любых компонентов в вашем сценарии. Можно проверить отношения между разными свойствами или соответствие любым внешним условиям. Любые допустимые операторы C# являются допустимыми в методе доступа свойства.
+<span data-ttu-id="99a8e-142">Это простой пример проверки.</span><span class="sxs-lookup"><span data-stu-id="99a8e-142">That is a simple case of validation.</span></span> <span data-ttu-id="99a8e-143">Этот синтаксис можно расширить для любых компонентов в вашем сценарии.</span><span class="sxs-lookup"><span data-stu-id="99a8e-143">You can extend this same syntax to anything needed in your scenario.</span></span> <span data-ttu-id="99a8e-144">Можно проверить отношения между разными свойствами или соответствие любым внешним условиям.</span><span class="sxs-lookup"><span data-stu-id="99a8e-144">You can check the relationships between different properties, or validate against any external conditions.</span></span> <span data-ttu-id="99a8e-145">Любые допустимые операторы C# являются допустимыми в методе доступа свойства.</span><span class="sxs-lookup"><span data-stu-id="99a8e-145">Any valid C# statements are valid in a property accessor.</span></span>
 
-### <a name="read-only"></a>Только чтение
+### <a name="read-only"></a><span data-ttu-id="99a8e-146">Только чтение</span><span class="sxs-lookup"><span data-stu-id="99a8e-146">Read-only</span></span>
 
-До этого момента все примеры определения свойств определяли свойства для чтения и записи с помощью открытых методов доступа. Это не единственные операции доступа для свойств.
-Можно создать свойства, доступные только для чтения, или назначить другой уровень доступа для методов set и get. Предположим, ваш класс `Person` должен допускать изменение значения свойства `FirstName` только из других методов этого класса. Вы можете предоставить методу доступа set уровень доступа `private`, а не `public`:
+<span data-ttu-id="99a8e-147">До этого момента все примеры определения свойств определяли свойства для чтения и записи с помощью открытых методов доступа.</span><span class="sxs-lookup"><span data-stu-id="99a8e-147">Up to this point, all the property definitions you have seen are read/write properties with public accessors.</span></span> <span data-ttu-id="99a8e-148">Это не единственные операции доступа для свойств.</span><span class="sxs-lookup"><span data-stu-id="99a8e-148">That's not the only valid accessibility for properties.</span></span>
+<span data-ttu-id="99a8e-149">Можно создать свойства, доступные только для чтения, или назначить другой уровень доступа для методов set и get.</span><span class="sxs-lookup"><span data-stu-id="99a8e-149">You can create read-only properties, or give different accessibility to the set and get accessors.</span></span> <span data-ttu-id="99a8e-150">Предположим, ваш класс `Person` должен допускать изменение значения свойства `FirstName` только из других методов этого класса.</span><span class="sxs-lookup"><span data-stu-id="99a8e-150">Suppose that your `Person` class should only enable changing the value of the `FirstName` property from other methods in that class.</span></span> <span data-ttu-id="99a8e-151">Вы можете предоставить методу доступа set уровень доступа `private`, а не `public`:</span><span class="sxs-lookup"><span data-stu-id="99a8e-151">You could give the set accessor `private` accessibility instead of `public`:</span></span>
 
 ```csharp
 public class Person
@@ -149,13 +147,13 @@ public class Person
 }
 ```
 
-Теперь к свойству `FirstName` можно получать доступ из любого кода, но назначить его можно только из другого кода в классе `Person`.
+<span data-ttu-id="99a8e-152">Теперь к свойству `FirstName` можно получать доступ из любого кода, но назначить его можно только из другого кода в классе `Person`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-152">Now, the `FirstName` property can be accessed from any code, but it can only be assigned from other code in the `Person` class.</span></span>
 
-Вы можете добавить любой ограничивающий модификатор доступа для методов доступа set или get. Модификатор доступа, установленный для отдельного метода доступа, должен задавать более строгие ограничения, чем модификатор доступа для определения свойства. Приведенный выше пример допустим, так как свойство `FirstName` является открытым (`public`) а метод доступа set — закрытым (`private`). Нельзя объявить свойство `private` с методом доступа `public`. Свойство также можно объявить как `protected`, `internal`, `protected internal` или даже `private`.   
+<span data-ttu-id="99a8e-153">Вы можете добавить любой ограничивающий модификатор доступа для методов доступа set или get.</span><span class="sxs-lookup"><span data-stu-id="99a8e-153">You can add any restrictive access modifier to either the set or get accessors.</span></span> <span data-ttu-id="99a8e-154">Модификатор доступа, установленный для отдельного метода доступа, должен задавать более строгие ограничения, чем модификатор доступа для определения свойства.</span><span class="sxs-lookup"><span data-stu-id="99a8e-154">Any access modifier you place on the individual accessor must be more limited than the access modifier on the property definition.</span></span> <span data-ttu-id="99a8e-155">Приведенный выше пример допустим, так как свойство `FirstName` является открытым (`public`) а метод доступа set — закрытым (`private`).</span><span class="sxs-lookup"><span data-stu-id="99a8e-155">The above is legal because the `FirstName` property is `public`, but the set accessor is `private`.</span></span> <span data-ttu-id="99a8e-156">Нельзя объявить свойство `private` с методом доступа `public`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-156">You could not declare a `private` property with a `public` accessor.</span></span> <span data-ttu-id="99a8e-157">Объявления свойств также могут быть объявлены `protected`, `internal`, `protected internal`, `private protected` или даже `private`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-157">Property declarations can also be declared `protected`, `internal`, `protected internal`, `private protected` or even `private`.</span></span>   
 
-Также допускается размещение более строгих модификаторов для метода доступа `get`. Например, свойство `public` может быть открытым, а метод доступа `get` ограничен типом `private`. Этот сценарий редко реализуется на практике.
+<span data-ttu-id="99a8e-158">Также допускается размещение более строгих модификаторов для метода доступа `get`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-158">It is also legal to place the more restrictive modifier on the `get` accessor.</span></span> <span data-ttu-id="99a8e-159">Например, свойство `public` может быть открытым, а метод доступа `get` ограничен типом `private`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-159">For example, you could have a `public` property, but restrict the `get` accessor to `private`.</span></span> <span data-ttu-id="99a8e-160">Этот сценарий редко реализуется на практике.</span><span class="sxs-lookup"><span data-stu-id="99a8e-160">That scenario is rarely done in practice.</span></span>
 
-Кроме того, можно ограничить изменения в свойстве, разрешив задавать его только в конструкторе или инициализаторе свойств. Внести соответствующие изменения в класс `Person` можно следующим образом:
+<span data-ttu-id="99a8e-161">Кроме того, можно ограничить изменения в свойстве, разрешив задавать его только в конструкторе или инициализаторе свойств.</span><span class="sxs-lookup"><span data-stu-id="99a8e-161">You can also restrict modifications to a property so that it can only be set in a constructor or a property initializer.</span></span> <span data-ttu-id="99a8e-162">Внести соответствующие изменения в класс `Person` можно следующим образом:</span><span class="sxs-lookup"><span data-stu-id="99a8e-162">You can modify the `Person` class so as follows:</span></span>
 
 ```csharp
 public class Person
@@ -171,7 +169,7 @@ public class Person
 }
 ```
 
-Эта функция чаще всего используется для инициализации коллекций, которые представляются как свойства, доступные только для чтения:
+<span data-ttu-id="99a8e-163">Эта функция чаще всего используется для инициализации коллекций, которые представляются как свойства, доступные только для чтения:</span><span class="sxs-lookup"><span data-stu-id="99a8e-163">This feature is most commonly used for initializing collections that are exposed as read-only properties:</span></span>
 
 ```csharp
 public class Measurements
@@ -180,9 +178,9 @@ public class Measurements
 }
 ```
 
-### <a name="computed-properties"></a>Вычисляемые свойства
+### <a name="computed-properties"></a><span data-ttu-id="99a8e-164">Вычисляемые свойства</span><span class="sxs-lookup"><span data-stu-id="99a8e-164">Computed Properties</span></span>
 
-Свойство не обязательно должно просто возвращать значение поля члена. Можно создать свойства, возвращающие вычисляемое значение. Расширим объект `Person` так, чтобы он возвращал полное имя, вычисляемое путем объединения имени и фамилии:
+<span data-ttu-id="99a8e-165">Свойство не обязательно должно просто возвращать значение поля члена.</span><span class="sxs-lookup"><span data-stu-id="99a8e-165">A property does not need to simply return the value of a member field.</span></span> <span data-ttu-id="99a8e-166">Можно создать свойства, возвращающие вычисляемое значение.</span><span class="sxs-lookup"><span data-stu-id="99a8e-166">You can create properties that return a computed value.</span></span> <span data-ttu-id="99a8e-167">Расширим объект `Person` так, чтобы он возвращал полное имя, вычисляемое путем объединения имени и фамилии:</span><span class="sxs-lookup"><span data-stu-id="99a8e-167">Let's expand the `Person` object to return the full name, computed by concatenating the first and last names:</span></span>
 
 ```csharp
 public class Person
@@ -195,9 +193,9 @@ public class Person
 }
 ```
 
-В примере выше используется синтаксис *интерполяции строк* для создания форматированной строки для полного имени.
+<span data-ttu-id="99a8e-168">В примере выше используется синтаксис *интерполяции строк* для создания форматированной строки для полного имени.</span><span class="sxs-lookup"><span data-stu-id="99a8e-168">The example above uses the *String Interpolation* syntax to create the formatted string for the full name.</span></span>
 
-Можно также использовать *члены, воплощающие значения*, которые обеспечивают более краткий способ создания вычисляемого свойства `FullName`:
+<span data-ttu-id="99a8e-169">Можно также использовать *члены, воплощающие значения*, которые обеспечивают более краткий способ создания вычисляемого свойства `FullName`:</span><span class="sxs-lookup"><span data-stu-id="99a8e-169">You can also use *Expression-bodied Members*, which provides a more succinct way to create the computed `FullName` property:</span></span>
 
 ```csharp
 public class Person
@@ -210,11 +208,11 @@ public class Person
 }
 ```
  
-*Члены, воплощающие значения*, используют синтаксис *лямбда-выражений* для определения метода, который содержит одно выражение. Здесь это выражение возвращает полное имя объекта person.
+<span data-ttu-id="99a8e-170">*Члены, воплощающие значения*, используют синтаксис *лямбда-выражений* для определения метода, который содержит одно выражение.</span><span class="sxs-lookup"><span data-stu-id="99a8e-170">*Expression-bodied Members* use the *lambda expression* syntax to define a method that contain a single expression.</span></span> <span data-ttu-id="99a8e-171">Здесь это выражение возвращает полное имя объекта person.</span><span class="sxs-lookup"><span data-stu-id="99a8e-171">Here, that expression returns the full name for the person object.</span></span>
 
-### <a name="lazy-evaluated-properties"></a>Свойства с отложенным вычислением
+### <a name="lazy-evaluated-properties"></a><span data-ttu-id="99a8e-172">Свойства с отложенным вычислением</span><span class="sxs-lookup"><span data-stu-id="99a8e-172">Lazy Evaluated Properties</span></span>
 
-Вы можете сочетать концепцию вычисляемого свойства с хранением и созданием *свойства с отложенным вычислением*.  Например, можно изменить свойство `FullName` таким образом, чтобы форматирование строки выполнялось только при первом доступе к нему.
+<span data-ttu-id="99a8e-173">Вы можете сочетать концепцию вычисляемого свойства с хранением и созданием *свойства с отложенным вычислением*.</span><span class="sxs-lookup"><span data-stu-id="99a8e-173">You can mix the concept of a computed property with storage and create a *lazy evaluated property*.</span></span>  <span data-ttu-id="99a8e-174">Например, можно изменить свойство `FullName` таким образом, чтобы форматирование строки выполнялось только при первом доступе к нему.</span><span class="sxs-lookup"><span data-stu-id="99a8e-174">For example, you could update the `FullName` property so that the string formatting only happened the first time it was accessed:</span></span>
 
 ```csharp
 public class Person
@@ -236,7 +234,7 @@ public class Person
 }
 ```
 
-Обратите внимание, что приведенный выше код содержит ошибку. Если код изменяет значение свойств `FirstName` или `LastName`, ранее вычисленное поле `fullName` является недопустимым. Вам потребуется изменить методы доступа `set` свойств `FirstName` и `LastName`, чтобы вычислить поле `fullName` еще раз:
+<span data-ttu-id="99a8e-175">Обратите внимание, что приведенный выше код содержит ошибку.</span><span class="sxs-lookup"><span data-stu-id="99a8e-175">The above code contains a bug though.</span></span> <span data-ttu-id="99a8e-176">Если код изменяет значение свойств `FirstName` или `LastName`, ранее вычисленное поле `fullName` является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="99a8e-176">If code updates the value of either the `FirstName` or `LastName` property, the previously evaluated `fullName` field is invalid.</span></span> <span data-ttu-id="99a8e-177">Вам потребуется изменить методы доступа `set` свойств `FirstName` и `LastName`, чтобы вычислить поле `fullName` еще раз:</span><span class="sxs-lookup"><span data-stu-id="99a8e-177">You need to update the `set` accessors of the `FirstName` and `LastName` property so that the `fullName` field is calculated again:</span></span>
 
 ```csharp
 public class Person
@@ -276,12 +274,12 @@ public class Person
 }
 ```
 
-Эта окончательная версия вычисляет свойство `FullName` только при необходимости.
-Если ранее вычисленная версия является допустимой, используется она. Если другое изменение состояния делает ранее вычисленную версию недействительной, она будет пересчитана. Разработчикам, использующим этот класс, необязательно знать детали реализации. Ни одно из этих внутренних изменений не влияет на использование объекта person. Это главная причина для использования свойств для предоставления доступа к членам данных объекта.
+<span data-ttu-id="99a8e-178">Эта окончательная версия вычисляет свойство `FullName` только при необходимости.</span><span class="sxs-lookup"><span data-stu-id="99a8e-178">This final version evaluates the `FullName` property only when needed.</span></span>
+<span data-ttu-id="99a8e-179">Если ранее вычисленная версия является допустимой, используется она.</span><span class="sxs-lookup"><span data-stu-id="99a8e-179">If the previously calculated version is valid, it's used.</span></span> <span data-ttu-id="99a8e-180">Если другое изменение состояния делает ранее вычисленную версию недействительной, она будет пересчитана.</span><span class="sxs-lookup"><span data-stu-id="99a8e-180">If another state change invalidates the previously calculated version, it will be recalculated.</span></span> <span data-ttu-id="99a8e-181">Разработчикам, использующим этот класс, необязательно знать детали реализации.</span><span class="sxs-lookup"><span data-stu-id="99a8e-181">Developers that use this class do not need to know the details of the implementation.</span></span> <span data-ttu-id="99a8e-182">Ни одно из этих внутренних изменений не влияет на использование объекта person.</span><span class="sxs-lookup"><span data-stu-id="99a8e-182">None of these internal changes affect the use of the Person object.</span></span> <span data-ttu-id="99a8e-183">Это главная причина для использования свойств для предоставления доступа к членам данных объекта.</span><span class="sxs-lookup"><span data-stu-id="99a8e-183">That's the key reason for using Properties to expose data members of an object.</span></span>
  
-### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
+### <a name="inotifypropertychanged"></a><span data-ttu-id="99a8e-184">INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="99a8e-184">INotifyPropertyChanged</span></span>
 
-Последним сценарием, где необходимо написать код в методе доступа к свойству, является поддержка интерфейса `INotifyPropertyChanged`, используемого для уведомления клиентов привязки данных об изменении значения. При изменении значения свойства объект вызывает событие `PropertyChanged`, указывающее на изменение. Библиотеки привязки данных, в свою очередь, изменяют отображаемые элементы на основе этого изменения. В следующем примере кода показано, как можно реализовать свойства `INotifyPropertyChanged` для `FirstName` этого класса person.
+<span data-ttu-id="99a8e-185">Последним сценарием, где необходимо написать код в методе доступа к свойству, является поддержка интерфейса `INotifyPropertyChanged`, используемого для уведомления клиентов привязки данных об изменении значения.</span><span class="sxs-lookup"><span data-stu-id="99a8e-185">A final scenario where you need to write code in a property accessor is to support the `INotifyPropertyChanged` interface used to notify data binding clients that a value has changed.</span></span> <span data-ttu-id="99a8e-186">При изменении значения свойства объект вызывает событие `PropertyChanged`, указывающее на изменение.</span><span class="sxs-lookup"><span data-stu-id="99a8e-186">When the value of a property changes, the object raises the `PropertyChanged` event to indicate the change.</span></span> <span data-ttu-id="99a8e-187">Библиотеки привязки данных, в свою очередь, изменяют отображаемые элементы на основе этого изменения.</span><span class="sxs-lookup"><span data-stu-id="99a8e-187">The data binding libraries, in turn, update display elements based on that change.</span></span> <span data-ttu-id="99a8e-188">В следующем примере кода показано, как можно реализовать свойства `INotifyPropertyChanged` для `FirstName` этого класса person.</span><span class="sxs-lookup"><span data-stu-id="99a8e-188">The code below shows how you would implement `INotifyPropertyChanged` for the `FirstName` property of this person class.</span></span>
 
 ```csharp
 public class Person : INotifyPropertyChanged
@@ -308,13 +306,12 @@ public class Person : INotifyPropertyChanged
 }
 ```
 
-Оператор `?.` называется оператором *объединения со значением NULL*. Он проверяет наличие пустой ссылки перед вычислением правой стороны оператора. В конечном итоге, если нет подписчиков на событие `PropertyChanged`, код для вызова события не выполняется. В этом случае без такой проверки будет создано исключение `NullReferenceException`. Дополнительные сведения см. на странице [`events`](delegates-events.md). В этом примере также используется новый оператор `nameof` для преобразования символа имени свойства в текстовое представление.
-С помощью `nameof` можно сократить количество ошибок, возникающих при неправильном вводе имени свойства.
+<span data-ttu-id="99a8e-189">Оператор `?.` называется оператором *объединения со значением NULL*.</span><span class="sxs-lookup"><span data-stu-id="99a8e-189">The `?.` operator is called the *null conditional operator*.</span></span> <span data-ttu-id="99a8e-190">Он проверяет наличие пустой ссылки перед вычислением правой стороны оператора.</span><span class="sxs-lookup"><span data-stu-id="99a8e-190">It checks for a null reference before evaluating the right side of the operator.</span></span> <span data-ttu-id="99a8e-191">В конечном итоге, если нет подписчиков на событие `PropertyChanged`, код для вызова события не выполняется.</span><span class="sxs-lookup"><span data-stu-id="99a8e-191">The end result is that if there are no subscribers to the `PropertyChanged` event, the code to raise the event doesn't execute.</span></span> <span data-ttu-id="99a8e-192">В этом случае без такой проверки будет создано исключение `NullReferenceException`.</span><span class="sxs-lookup"><span data-stu-id="99a8e-192">It would throw a `NullReferenceException` without this check in that case.</span></span> <span data-ttu-id="99a8e-193">Дополнительные сведения см. на странице [`events`](delegates-events.md).</span><span class="sxs-lookup"><span data-stu-id="99a8e-193">See the page on [`events`](delegates-events.md) for more details.</span></span> <span data-ttu-id="99a8e-194">В этом примере также используется новый оператор `nameof` для преобразования символа имени свойства в текстовое представление.</span><span class="sxs-lookup"><span data-stu-id="99a8e-194">This example also uses the new `nameof` operator to convert from the property name symbol to its text representation.</span></span>
+<span data-ttu-id="99a8e-195">С помощью `nameof` можно сократить количество ошибок, возникающих при неправильном вводе имени свойства.</span><span class="sxs-lookup"><span data-stu-id="99a8e-195">Using `nameof` can reduce errors where you have mistyped the name of the property.</span></span>
 
-Кроме того, это пример случая, когда можно писать код в методах доступа для поддержки необходимых сценариев.
+<span data-ttu-id="99a8e-196">Кроме того, это пример случая, когда можно писать код в методах доступа для поддержки необходимых сценариев.</span><span class="sxs-lookup"><span data-stu-id="99a8e-196">Again, this is an example of a case where you can write code in your accessors to support the scenarios you need.</span></span>
 
-## <a name="summing-up"></a>Заключение
+## <a name="summing-up"></a><span data-ttu-id="99a8e-197">Заключение</span><span class="sxs-lookup"><span data-stu-id="99a8e-197">Summing up</span></span>
 
-Свойства — это своего рода интеллектуальные поля в классе или объекте. Из-за пределов объекта они представляются полями в объекте. Однако для реализации свойства можно использовать полную палитру функциональных возможностей C#.
-Вы можете предоставлять разные уровни доступа, выполнять проверки, отложенное вычисление или любые другие требования, необходимые в вашем сценарии.
-
+<span data-ttu-id="99a8e-198">Свойства — это своего рода интеллектуальные поля в классе или объекте.</span><span class="sxs-lookup"><span data-stu-id="99a8e-198">Properties are a form of smart fields in a class or object.</span></span> <span data-ttu-id="99a8e-199">Из-за пределов объекта они представляются полями в объекте.</span><span class="sxs-lookup"><span data-stu-id="99a8e-199">From outside the object, they appear like fields in the object.</span></span> <span data-ttu-id="99a8e-200">Однако для реализации свойства можно использовать полную палитру функциональных возможностей C#.</span><span class="sxs-lookup"><span data-stu-id="99a8e-200">However, properties can be implemented using the full palette of C# functionality.</span></span>
+<span data-ttu-id="99a8e-201">Вы можете предоставлять разные уровни доступа, выполнять проверки, отложенное вычисление или любые другие требования, необходимые в вашем сценарии.</span><span class="sxs-lookup"><span data-stu-id="99a8e-201">You can provide validation, different accessibility, lazy evaluation, or any requirements your scenarios need.</span></span>

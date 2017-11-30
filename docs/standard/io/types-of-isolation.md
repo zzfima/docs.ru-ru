@@ -1,111 +1,118 @@
 ---
-title: "Типы изоляции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сохранение данных с помощью изолированного хранилища, доступ к изолированному хранилищу"
-  - "сохранение данных с помощью изолированного хранилища, типы изоляции"
-  - "проверка подлинности [платформа .NET Framework], изолированное хранилище"
-  - "сборки [платформа .NET Framework], удостоверение"
-  - "изолированное хранилище, доступ"
-  - "хранение данных с помощью изолированного хранилища, типы изоляции"
-  - "хранение данных с помощью изолированного хранилища, доступ к изолированному хранилищу"
-  - "идентификатор домена"
-  - "изолированное хранилище, типы"
-  - "проверка подлинности пользователя, изолированное хранилище"
+title: "Типы изоляции"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- storing data using isolated storage, accessing isolated storage
+- storing data using isolated storage, isolation types
+- authentication [.NET Framework], isolated storage
+- assemblies [.NET Framework], identity
+- isolated storage, accessing
+- data storage using isolated storage, isolation types
+- data storage using isolated storage, accessing isolated storage
+- domain identity
+- isolated storage, types
+- user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: 16
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 6b07c090a381925f5330a820214126a121d3790b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Типы изоляции
-Доступ к изолированному хранилищу всегда имеет только пользователь, создавший его.  Для реализации такого типа изоляции среда CLR использует то же обозначение идентификатора пользователя, которое распознает операционная система. Этот идентификатор привязан к процессу, в котором выполняется код, когда хранилище открыто.  Такой идентификатор является подтвержденным идентификатором пользователя, однако олицетворение может вызвать динамическое изменение идентификатора текущего пользователя.  
+# <a name="types-of-isolation"></a><span data-ttu-id="22dc7-102">Типы изоляции</span><span class="sxs-lookup"><span data-stu-id="22dc7-102">Types of Isolation</span></span>
+<span data-ttu-id="22dc7-103">Доступ к изолированному хранилищу всегда имеет только пользователь, который ее создал.</span><span class="sxs-lookup"><span data-stu-id="22dc7-103">Access to isolated storage is always restricted to the user who created it.</span></span> <span data-ttu-id="22dc7-104">Для реализации такого типа изоляции, общеязыковая среда выполнения использует то же обозначение удостоверение пользователя, который распознается операционной системы, удостоверение, связанных с процессом, в которой выполняется код при открытии хранилища.</span><span class="sxs-lookup"><span data-stu-id="22dc7-104">To implement this type of isolation, the common language runtime uses the same notion of user identity that the operating system recognizes, which is the identity associated with the process in which the code is running when the store is opened.</span></span> <span data-ttu-id="22dc7-105">Удостоверение является удостоверение пользователя, прошедшего проверку подлинности, но олицетворения может вызвать идентификатора текущего пользователя динамическое изменение.</span><span class="sxs-lookup"><span data-stu-id="22dc7-105">This identity is an authenticated user identity, but impersonation can cause the identity of the current user to change dynamically.</span></span>  
   
- Также доступ к изолированному хранилищу ограничивается в соответствии с идентификатором, связанным с доменом приложения и сборкой или только со сборкой.  Среда выполнения получает идентификаторы следующими способами.  
+ <span data-ttu-id="22dc7-106">Доступ к изолированному хранилищу также ограничивается в соответствии с идентификатором, связанным с доменом приложения и сборкой или со сборкой.</span><span class="sxs-lookup"><span data-stu-id="22dc7-106">Access to isolated storage is also restricted according to the identity associated with the application's domain and assembly, or with the assembly alone.</span></span> <span data-ttu-id="22dc7-107">Среда выполнения получает идентификаторы следующими способами:</span><span class="sxs-lookup"><span data-stu-id="22dc7-107">The runtime obtains these identities in the following ways:</span></span>  
   
--   Идентификатор домена представляет собой свидетельство приложения, которым в случае веб\-приложения может быть полный URL\-адрес.  Для кода, запускаемого из той же оболочки, идентификатором домена может служить путь к каталогу приложения.  Например, если исполняемый код запускается из приложения "C:\\Office\\MyApp.exe", то идентификатором домена будет "C:\\Office\\MyApp.exe".  
+-   <span data-ttu-id="22dc7-108">Идентификатор домена представляет свидетельство в приложение, которое в случае веб-приложения может быть полный URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="22dc7-108">Domain identity represents the evidence of the application, which in the case of a web application might be the full URL.</span></span> <span data-ttu-id="22dc7-109">Для кода, запускаемого оболочки удостоверение домена может основываться на путь к каталогу приложения.</span><span class="sxs-lookup"><span data-stu-id="22dc7-109">For shell-hosted code, the domain identity might be based on the application directory path.</span></span> <span data-ttu-id="22dc7-110">Например если исполняемый файл выполняется по пути C:\Office\MyApp.exe, удостоверение домена будет C:\Office\MyApp.exe.</span><span class="sxs-lookup"><span data-stu-id="22dc7-110">For example, if the executable runs from the path C:\Office\MyApp.exe, the domain identity would be C:\Office\MyApp.exe.</span></span>  
   
--   Идентификатор сборки — это свидетельство сборки.  Оно может быть получено из криптографической цифровой подписи, которой может являться [строгое имя](../../../docs/framework/app-domains/strong-named-assemblies.md) сборки, ее издатель или идентификатор URL\-адреса.  Если у сборки есть и строгое имя, и идентификатор издателя, то используется последний.  Если сборка получена через Интернет и у нее нет подписи, используется идентификатор URL\-адреса.  Дополнительные сведения о сборках и строгих именах см. в разделе [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+-   <span data-ttu-id="22dc7-111">Удостоверение сборки является свидетельство сборки.</span><span class="sxs-lookup"><span data-stu-id="22dc7-111">Assembly identity is the evidence of the assembly.</span></span> <span data-ttu-id="22dc7-112">Это может быть получено из криптографической цифровой подписи, который может быть сборки [строгого имени](../../../docs/framework/app-domains/strong-named-assemblies.md), сборки или его идентификатор URL-адреса издателя программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="22dc7-112">This might come from a cryptographic digital signature, which can be the assembly's [strong name](../../../docs/framework/app-domains/strong-named-assemblies.md), the software publisher of the assembly, or its URL identity.</span></span> <span data-ttu-id="22dc7-113">Если сборка имеет строгое имя и идентификатор издателя, то будет использоваться удостоверение издателя программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="22dc7-113">If an assembly has both a strong name and a software publisher identity, then the software publisher identity is used.</span></span> <span data-ttu-id="22dc7-114">Если сборка получена из Интернета и не имеет подписи, используется идентификатор URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="22dc7-114">If the assembly comes from the Internet and is unsigned, the URL identity is used.</span></span> <span data-ttu-id="22dc7-115">Дополнительные сведения о сборках и строгих имен см. в разделе [программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="22dc7-115">For more information about assemblies and strong names, see [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md).</span></span>  
   
--   Перемещаемые хранилища перемещаются вместе с пользователями, у которых есть перемещаемые профили.  Файлы записываются в сетевой каталог и передаются на любой компьютер, к которому подключается пользователь.  Дополнительные сведения о перемещаемом профиле пользователя см. в разделе <xref:System.IO.IsolatedStorage.IsolatedStorageScope?displayProperty=fullName>.  
+-   <span data-ttu-id="22dc7-116">Перемещаемые хранилища перемещаются с пользователем, который имеет перемещаемый профиль пользователя.</span><span class="sxs-lookup"><span data-stu-id="22dc7-116">Roaming stores move with a user that has a roaming user profile.</span></span> <span data-ttu-id="22dc7-117">Файлы записываются в сетевую папку и загружаются для любого компьютера, к которому подключается пользователь.</span><span class="sxs-lookup"><span data-stu-id="22dc7-117">Files are written to a network directory and are downloaded to any computer the user logs into.</span></span> <span data-ttu-id="22dc7-118">Дополнительные сведения о перемещаемых профилях пользователей см. в разделе <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="22dc7-118">For more information about roaming user profiles, see <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.</span></span>  
   
- Совмещая принципы идентификации пользователей, доменов и сборок, изолированное хранилище может отделять данные следующими способами, каждый из которых предусматривает свой сценарий применения:  
+ <span data-ttu-id="22dc7-119">Объединив понятия пользователя, домена и удостоверение сборки, изолированное хранилище можно изолировать данные следующими способами, каждый из которых имеет свои собственные сценарии использования:</span><span class="sxs-lookup"><span data-stu-id="22dc7-119">By combining the concepts of user, domain, and assembly identity, isolated storage can isolate data in the following ways, each of which has its own usage scenarios:</span></span>  
   
--   [Изоляция по пользователю и по сборке](#UserAssembly)  
+-   [<span data-ttu-id="22dc7-120">Изоляция по пользователям и сборкам</span><span class="sxs-lookup"><span data-stu-id="22dc7-120">Isolation by user and assembly</span></span>](#UserAssembly)  
   
--   [Изоляция по пользователю, домену и сборке](#UserDomainAssembly)  
+-   [<span data-ttu-id="22dc7-121">Изоляция по пользователю, домену и сборке</span><span class="sxs-lookup"><span data-stu-id="22dc7-121">Isolation by user, domain, and assembly</span></span>](#UserDomainAssembly)  
   
- Каждый из этих способов изоляции может быть совмещен с перемещаемыми профилями пользователей.  Дополнительные сведения см. в разделе [Изолированное хранение и перемещение](#Roaming).  
+ <span data-ttu-id="22dc7-122">Каждый из этих способов изоляции можно объединить с перемещаемым профилем пользователя.</span><span class="sxs-lookup"><span data-stu-id="22dc7-122">Either of these isolations can be combined with a roaming user profile.</span></span> <span data-ttu-id="22dc7-123">Дополнительные сведения см. в разделе [изолированного хранилища и перемещаемые](#Roaming).</span><span class="sxs-lookup"><span data-stu-id="22dc7-123">For more information, see the section [Isolated Storage and Roaming](#Roaming).</span></span>  
   
- В следующем примере описывается изоляция хранилищ в различных контекстах.  
+ <span data-ttu-id="22dc7-124">На следующем рисунке показано, как изоляция хранилищ в разных областях.</span><span class="sxs-lookup"><span data-stu-id="22dc7-124">The following illustration demonstrates how stores are isolated in different scopes.</span></span>  
   
- ![Изоляция по пользователям и сборкам](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Типы изолированных хранилищ  
+ <span data-ttu-id="22dc7-125">![Изоляция по пользователям и сборкам](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")</span><span class="sxs-lookup"><span data-stu-id="22dc7-125">![Isolation by user and assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")</span></span>  
+<span data-ttu-id="22dc7-126">Типы изолированного хранения</span><span class="sxs-lookup"><span data-stu-id="22dc7-126">Types of isolated storage</span></span>  
   
- Обратите внимание, что за исключением случая перемещаемых хранилищ, изолированное хранилище всегда неявно изолировано компьютером, т.к. использует средства хранения конкретного компьютера.  
+ <span data-ttu-id="22dc7-127">Обратите внимание, что за исключением перемещаемых хранилищ, изолированное хранилище всегда неявно изолируются компьютером, так как он использует средства хранения, являющиеся локальными для данного компьютера.</span><span class="sxs-lookup"><span data-stu-id="22dc7-127">Note that except for roaming stores, isolated storage is always implicitly isolated by computer because it uses the storage facilities that are local to a given computer.</span></span>  
   
 > [!IMPORTANT]
->  Изолированное хранилище не доступно для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  Вместо этого используйте классы данных приложений в пространстве имен `Windows.Storage`, включенное в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов.  Дополнительные сведения см. в разделе [Данные приложения](http://go.microsoft.com/fwlink/?LinkId=229175) центра разработки для Windows.  
+>  <span data-ttu-id="22dc7-128">Изолированное хранилище недоступно для приложений Windows [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="22dc7-128">Isolated storage is not available for [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span> <span data-ttu-id="22dc7-129">Вместо этого используйте классы данных приложений в пространствах имен `Windows.Storage` , включенных в API [!INCLUDE[wrt](../../../includes/wrt-md.md)] для хранения локальных данных и файлов.</span><span class="sxs-lookup"><span data-stu-id="22dc7-129">Instead, use the application data classes in the `Windows.Storage` namespaces included in the [!INCLUDE[wrt](../../../includes/wrt-md.md)] API to store local data and files.</span></span> <span data-ttu-id="22dc7-130">Дополнительные сведения см. в статье [Доступ к данным приложения](http://go.microsoft.com/fwlink/?LinkId=229175) в Центре разработки для Windows.</span><span class="sxs-lookup"><span data-stu-id="22dc7-130">For more information, see [Application data](http://go.microsoft.com/fwlink/?LinkId=229175) in the Windows Dev Center.</span></span>  
   
 <a name="UserAssembly"></a>   
-## Изоляция по пользователям и сборкам  
- Если сборка, использующая хранилище данных, должна быть доступна из любого домена приложения, целесообразно применение изоляции по пользователям и сборкам.  Обычно в такой ситуации изолированное хранение применяется для хранения данных, не привязанных к одному конкретному приложению и используемых несколькими приложениями, таких как имя пользователя или информация о лицензии.  Для доступа к хранилищу, изолированному по пользователям и сборкам, код должен иметь права на перемещение информации между приложениями.  Обычно изоляция по пользователям и сборкам разрешена в интрасетях, но не в Интернете.  Вызов статического метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=fullName> и передача в него пользователя, домена и сборки приводит к тому, что <xref:System.IO.IsolatedStorage.IsolatedStorageScope> возвращает хранилище с этим типом изоляции.  
+## <a name="isolation-by-user-and-assembly"></a><span data-ttu-id="22dc7-131">Изоляция по пользователям и сборкам</span><span class="sxs-lookup"><span data-stu-id="22dc7-131">Isolation by User and Assembly</span></span>  
+ <span data-ttu-id="22dc7-132">Изоляция по пользователям и сборкам подходит, если сборки, которая использует данные хранение должна быть доступна из любого домена приложения.</span><span class="sxs-lookup"><span data-stu-id="22dc7-132">When the assembly that uses the data store needs to be accessible from any application's domain, isolation by user and assembly is appropriate.</span></span> <span data-ttu-id="22dc7-133">Как правило в этом случае изолированное хранилище используется для хранения данных, используемого несколькими приложениями, который не привязан к любого приложения, такие как имя пользователя или сведения о лицензиях.</span><span class="sxs-lookup"><span data-stu-id="22dc7-133">Typically, in this situation, isolated storage is used to store data that applies across multiple applications and is not tied to any particular application, such as the user's name or license information.</span></span> <span data-ttu-id="22dc7-134">Для доступа к хранилищу, изолированного по пользователю и сборке, код должен быть доверенным для передачи данных между приложениями.</span><span class="sxs-lookup"><span data-stu-id="22dc7-134">To access storage isolated by user and assembly, code must be trusted to transfer information between applications.</span></span> <span data-ttu-id="22dc7-135">Как правило изоляция по пользователям и сборкам разрешена в интрасетях, но не в Интернете.</span><span class="sxs-lookup"><span data-stu-id="22dc7-135">Typically, isolation by user and assembly is allowed on intranets but not on the Internet.</span></span> <span data-ttu-id="22dc7-136">Вызов статического <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> метода и передачи пользователь и сборки <xref:System.IO.IsolatedStorage.IsolatedStorageScope> возвращает хранилище с этим типом изоляции.</span><span class="sxs-lookup"><span data-stu-id="22dc7-136">Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> method and passing in a user and an assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.</span></span>  
   
- В следующем примере описывается получение перемещаемого хранилища, изолированного по пользователю и сборке.  Доступ к хранилищу может осуществляться через объект `isoFile` .  
+ <span data-ttu-id="22dc7-137">В следующем примере кода извлекается хранилища, изолированного по пользователю и сборке.</span><span class="sxs-lookup"><span data-stu-id="22dc7-137">The following code example retrieves a store that is isolated by user and assembly.</span></span> <span data-ttu-id="22dc7-138">Хранилище может осуществляться через `isoFile` объекта.</span><span class="sxs-lookup"><span data-stu-id="22dc7-138">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#17)]
  [!code-csharp[Conceptual.IsolatedStorage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#17)]
  [!code-vb[Conceptual.IsolatedStorage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#17)]  
   
- Пример, использующий параметры свидетельства, см. в разделе <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.  
+ <span data-ttu-id="22dc7-139">Пример, использующий параметры свидетельства см. в разделе <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.</span><span class="sxs-lookup"><span data-stu-id="22dc7-139">For an example that uses the evidence parameters, see <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29>.</span></span>  
   
- В качестве ярлыка может использоваться метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, приведенный в следующем примере кода.  Этот ярлык не может быть использован для открытия перемещаемого хранилища. В таких случаях используйте <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
+ <span data-ttu-id="22dc7-140"><xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Метод доступен для быстрого вызова, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="22dc7-140">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> method is available as a shortcut, as shown in the following code example.</span></span> <span data-ttu-id="22dc7-141">Это сочетание клавиш не может использоваться для открытия хранилищ, способных перемещаться. использовать <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> в таких случаях.</span><span class="sxs-lookup"><span data-stu-id="22dc7-141">This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>   
-## Изоляция по пользователям, доменам и сборкам  
- Если приложение использует сборку стороннего производителя, требующую закрытого хранения данных, то для этого может использоваться изолированное хранилище.  Изоляция по пользователям, доменам и сборкам обеспечивает доступность данных лишь для кода в данной сборке только в том случае, если сборка используется приложением, которое было запущено во время создания хранилища сборкой, и только если приложение запущено пользователем, для которого было создано хранилище.  Изоляция по пользователям, доменам и сборкам препятствует утечке данных в другие приложения через сборки третьей стороны.  Этот тип изоляции следует использовать по умолчанию, если необходимо использовать изолированное хранилище, но неизвестно, какой тип изоляции выбрать.  Вызов статического метода <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> класса <xref:System.IO.IsolatedStorage.IsolatedStorageFile> и передача в него пользователя, домена и сборки приводит к тому, что <xref:System.IO.IsolatedStorage.IsolatedStorageScope> возвращает хранилище с этим типом изоляции.  
+## <a name="isolation-by-user-domain-and-assembly"></a><span data-ttu-id="22dc7-142">Изоляция по пользователю, домену и сборке</span><span class="sxs-lookup"><span data-stu-id="22dc7-142">Isolation by User, Domain, and Assembly</span></span>  
+ <span data-ttu-id="22dc7-143">Если приложение использует сторонней сборке, которая требует закрытого хранения данных, могут использовать изолированное хранилище для хранения личных данных.</span><span class="sxs-lookup"><span data-stu-id="22dc7-143">If your application uses a third-party assembly that requires a private data store, you can use isolated storage to store the private data.</span></span> <span data-ttu-id="22dc7-144">Изоляция по пользователю, домену и сборке гарантирует, что только код в определенной сборке может обращаться к данным и только в том случае, если сборка используется программой, которая была запущена в момент создания сборкой хранилища, и только в том случае, когда пользователь, для которого было создано хранилище работает  приложение.</span><span class="sxs-lookup"><span data-stu-id="22dc7-144">Isolation by user, domain, and assembly ensures that only code in a given assembly can access the data, and only when the assembly is used by the application that was running when the assembly created the store, and only when the user for whom the store was created runs the application.</span></span> <span data-ttu-id="22dc7-145">Изоляция по пользователю, домену и сборке сохраняет сторонней сборке от утечки данных другим приложениям.</span><span class="sxs-lookup"><span data-stu-id="22dc7-145">Isolation by user, domain, and assembly keeps the third-party assembly from leaking data to other applications.</span></span> <span data-ttu-id="22dc7-146">Этот тип изоляции следует использовать по умолчанию, если нужно использовать изолированное хранилище, но не уверены какой тип изоляции для использования.</span><span class="sxs-lookup"><span data-stu-id="22dc7-146">This isolation type should be your default choice if you know that you want to use isolated storage but are not sure which type of isolation to use.</span></span> <span data-ttu-id="22dc7-147">Вызов статического <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile> и передается пользователю, домену и сборке <xref:System.IO.IsolatedStorage.IsolatedStorageScope> возвращает хранилище с этим типом изоляции.</span><span class="sxs-lookup"><span data-stu-id="22dc7-147">Calling the static <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> method of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> and passing in a user, domain, and assembly <xref:System.IO.IsolatedStorage.IsolatedStorageScope> returns storage with this kind of isolation.</span></span>  
   
- В следующем примере описывается получение хранилища, изолированного по пользователю, домену и сборке.  Доступ к хранилищу может осуществляться через объект `isoFile`.  
+ <span data-ttu-id="22dc7-148">В следующем примере кода извлекается хранилища, изолированного по пользователю, домену и сборке.</span><span class="sxs-lookup"><span data-stu-id="22dc7-148">The following code example retrieves a store isolated by user, domain, and assembly.</span></span> <span data-ttu-id="22dc7-149">Хранилище может осуществляться через `isoFile` объекта.</span><span class="sxs-lookup"><span data-stu-id="22dc7-149">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#14)]
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- В качестве ярлыка может использоваться другой метод, приведенный в следующем примере кода.  Этот ярлык не может быть использован для открытия перемещаемого хранилища. В таких случаях используйте <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>.  
+ <span data-ttu-id="22dc7-150">Другой метод доступна как ярлык, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="22dc7-150">Another method is available as a shortcut, as shown in the following code example.</span></span> <span data-ttu-id="22dc7-151">Это сочетание клавиш не может использоваться для открытия хранилищ, способных перемещаться. использовать <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> в таких случаях.</span><span class="sxs-lookup"><span data-stu-id="22dc7-151">This shortcut cannot be used to open stores that are capable of roaming; use <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> in such cases.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>   
-## Изолированное хранение и перемещение  
- Перемещаемые профили пользователя — это функция Windows, позволяющая пользователю настроить свой идентификатор в сети и использовать его для входа на любой сетевой компьютер с применением всех персональных настроек.  Использующая изолированное хранение сборка может определять, что изолированное хранилище пользователя должно перемещаться вместе с перемещаемым профилем пользователя.  Перемещение может использоваться в сочетании с изоляцией по пользователям и сборкам или с изоляцией по пользователям, доменам и сборкам.  Если не применяется перемещаемая область действия, то хранилища не будут перемещаться, даже если задействованы перемещаемые профили пользователей.  
+## <a name="isolated-storage-and-roaming"></a><span data-ttu-id="22dc7-152">Изолированное хранение и перемещение</span><span class="sxs-lookup"><span data-stu-id="22dc7-152">Isolated Storage and Roaming</span></span>  
+ <span data-ttu-id="22dc7-153">Перемещаемые профили пользователя — это функция Windows, которая позволяет пользователю настроить свой идентификатор в сети и использовать его для входа на любой сетевой компьютер с применением всех персональных настроек.</span><span class="sxs-lookup"><span data-stu-id="22dc7-153">Roaming user profiles are a Windows feature that enables a user to set up an identity on a network and use that identity to log into any network computer, carrying over all personalized settings.</span></span> <span data-ttu-id="22dc7-154">Сборки, которую использует изолированное хранилище можно указать, что изолированное хранилище пользователя должно перемещаться с перемещаемым профилем пользователя.</span><span class="sxs-lookup"><span data-stu-id="22dc7-154">An assembly that uses isolated storage can specify that the user's isolated storage should move with the roaming user profile.</span></span> <span data-ttu-id="22dc7-155">Роуминг может использоваться в сочетании с изоляция по пользователям и сборкам или с изоляцией по пользователю, домену и сборке.</span><span class="sxs-lookup"><span data-stu-id="22dc7-155">Roaming can be used in conjunction with isolation by user and assembly or with isolation by user, domain, and assembly.</span></span> <span data-ttu-id="22dc7-156">Если перемещаемый области не используется, хранилища не будут перемещаться, даже при использовании перемещаемого профиля пользователя.</span><span class="sxs-lookup"><span data-stu-id="22dc7-156">If a roaming scope is not used, stores will not roam even if a roaming user profile is used.</span></span>  
   
- В следующем примере описывается получение перемещаемого хранилища, изолированного по пользователю и сборке.  Доступ к хранилищу может осуществляться через объект `isoFile` .  
+ <span data-ttu-id="22dc7-157">В следующем примере кода извлекается перемещаемого хранилища, изолированного по пользователю и сборке.</span><span class="sxs-lookup"><span data-stu-id="22dc7-157">The following code example retrieves a roaming store isolated by user and assembly.</span></span> <span data-ttu-id="22dc7-158">Хранилище может осуществляться через `isoFile` объекта.</span><span class="sxs-lookup"><span data-stu-id="22dc7-158">The store can be accessed through the `isoFile` object.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#11)]
  [!code-csharp[Conceptual.IsolatedStorage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#11)]
  [!code-vb[Conceptual.IsolatedStorage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#11)]  
   
- Для создания перемещаемого хранилища, изолированного по пользователю, домену и приложению, можно добавить область домена.  Это продемонстрировано в следующем примере.  
+ <span data-ttu-id="22dc7-159">Для создания перемещаемого хранилища, изолированного по пользователю, домену и приложения, можно добавить область домена.</span><span class="sxs-lookup"><span data-stu-id="22dc7-159">A domain scope can be added to create a roaming store isolated by user, domain, and application.</span></span> <span data-ttu-id="22dc7-160">Это показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="22dc7-160">The following code example demonstrates this.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source9.cpp#12)]
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## См. также  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>   
- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a><span data-ttu-id="22dc7-161">См. также</span><span class="sxs-lookup"><span data-stu-id="22dc7-161">See Also</span></span>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+ [<span data-ttu-id="22dc7-162">Изолированное хранилище</span><span class="sxs-lookup"><span data-stu-id="22dc7-162">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

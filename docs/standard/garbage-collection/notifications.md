@@ -1,126 +1,132 @@
 ---
-title: "Garbage Collection Notifications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "garbage collection, notifications"
+title: "Уведомления о сборке мусора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords: garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 23
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Garbage Collection Notifications
-В некоторых случаях полная сборка мусора \(сборка объектов поколения 2\) средой CLR может отрицательно сказаться на производительности.  Такая ситуация особенно часто возникает применительно к серверам, которые обрабатывают большие объемы запросов; в этом случае долгая процедура сборки мусора может вызывать задержку обработки запроса.  Чтобы избежать сборки мусора в критический интервал времени, можно использовать уведомления о приближающейся сборке мусора и принимать меры по перенаправлению нагрузки на другой экземпляр сервера.  Кроме того, можно самостоятельно вызвать сборку мусора, если не требуется обрабатывать запросы с помощью текущего экземпляра сервера.  
+# <a name="garbage-collection-notifications"></a><span data-ttu-id="545ed-102">Уведомления о сборке мусора</span><span class="sxs-lookup"><span data-stu-id="545ed-102">Garbage Collection Notifications</span></span>
+<span data-ttu-id="545ed-103">В некоторых случаях полная сборка мусора (сборка объектов поколения 2) средой CLR может отрицательно сказаться на производительности.</span><span class="sxs-lookup"><span data-stu-id="545ed-103">There are situations in which a full garbage collection (that is, a generation 2 collection) by the common language runtime may adversely affect performance.</span></span> <span data-ttu-id="545ed-104">Это может стать проблемой, особенно с серверами, которые обрабатывают большие объемы запросов; в этом случае длинное мусора может вызвать тайм-аут запроса. Чтобы предотвратить полной сборки мусора во время критического периода, чтобы настроить уведомления, приближается к полной сборкой мусора и принимать меры по перенаправлению нагрузки на другой экземпляр сервера.</span><span class="sxs-lookup"><span data-stu-id="545ed-104">This can be an issue particularly with servers that process large volumes of requests; in this case, a long garbage collection can cause a request time-out. To prevent a full collection from occurring during a critical period, you can be notified that a full garbage collection is approaching and then take action to redirect the workload to another server instance.</span></span> <span data-ttu-id="545ed-105">Вы можете также вызвать сборку мусора самостоятельно, при условии, что текущий экземпляр сервера не требуется обрабатывать запросы.</span><span class="sxs-lookup"><span data-stu-id="545ed-105">You can also induce a collection yourself, provided that the current server instance does not need to process requests.</span></span>  
   
- Метод <xref:System.GC.RegisterForFullGCNotification%2A> регистрируется для создания уведомления, когда среда выполнения получает информацию о том, что вскоре начнется сборка мусора.  Это уведомление состоит из двух частей — о приближающейся сборке мусора и о завершенной сборке мусора.  
+ <span data-ttu-id="545ed-106"><xref:System.GC.RegisterForFullGCNotification%2A> Метод регистрирует для уведомления, когда среда выполнения получает информацию, достигает полной сборкой мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-106">The <xref:System.GC.RegisterForFullGCNotification%2A> method registers for a notification to be raised when the runtime senses that a full garbage collection is approaching.</span></span> <span data-ttu-id="545ed-107">Это уведомление, состоит из двух частей: при приближении полной сборки мусора, и после завершения полной сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-107">There are two parts to this notification: when the full garbage collection is approaching and when the full garbage collection has completed.</span></span>  
   
 > [!WARNING]
->  Только блокировка сборки мусора порождает уведомления.  Если элемент конфигурации [\<gcConcurrent\>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) будет включен, фоновая сборки мусора не будет порождать уведомления.  
+>  <span data-ttu-id="545ed-108">Только блокировка сборки мусора создает уведомления.</span><span class="sxs-lookup"><span data-stu-id="545ed-108">Only blocking garbage collections raise notifications.</span></span> <span data-ttu-id="545ed-109">Когда [ \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) конфигурации элемент включен, фоновая сборка мусора не создает уведомления.</span><span class="sxs-lookup"><span data-stu-id="545ed-109">When the [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration element is enabled, background garbage collections will not raise notifications.</span></span>  
   
- Чтобы определить вариант уведомления, следует использовать методы <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A>.  Обычно они используются в цикле `while`, чтобы постоянно получать перечисление <xref:System.GCNotificationStatus>, содержащее информацию о состоянии уведомления.  Если перечисление имеет значение <xref:System.GCNotificationStatus>, можно выполнить следующие действия.  
+ <span data-ttu-id="545ed-110">Чтобы определить, когда было выведено уведомление, используйте <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A> методы.</span><span class="sxs-lookup"><span data-stu-id="545ed-110">To determine when a notification has been raised, use the <xref:System.GC.WaitForFullGCApproach%2A> and <xref:System.GC.WaitForFullGCComplete%2A> methods.</span></span> <span data-ttu-id="545ed-111">Как правило, они используются в `while` цикла, чтобы постоянно получать <xref:System.GCNotificationStatus> перечисления, которое показывает состояние уведомления.</span><span class="sxs-lookup"><span data-stu-id="545ed-111">Typically, you use these methods in a `while` loop to continually obtain a <xref:System.GCNotificationStatus> enumeration that shows the status of the notification.</span></span> <span data-ttu-id="545ed-112">Если это значение равно <xref:System.GCNotificationStatus.Succeeded>, можно сделать следующее:</span><span class="sxs-lookup"><span data-stu-id="545ed-112">If that value is <xref:System.GCNotificationStatus.Succeeded>, you can do the following:</span></span>  
   
--   В ответ на уведомление, полученное с помощью метода <xref:System.GC.WaitForFullGCApproach%2A>, можно перенаправить нагрузку или попытаться самостоятельно вызвать сборку мусора.  
+-   <span data-ttu-id="545ed-113">В ответ на уведомление, полученное с <xref:System.GC.WaitForFullGCApproach%2A> метод, можно перенаправить нагрузку и возможно вызвать сборку мусора самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="545ed-113">In response to a notification obtained with the <xref:System.GC.WaitForFullGCApproach%2A> method, you can redirect the workload and possibly induce a collection yourself.</span></span>  
   
--   В ответ на уведомление, полученное с помощью метода <xref:System.GC.WaitForFullGCComplete%2A>, можно сделать текущий экземпляр сервера снова доступным для обработки запросов.  Кроме того, можно собирать информацию.  Например, с помощью метода <xref:System.GC.CollectionCount%2A> можно фиксировать количество процедур сборки мусора.  
+-   <span data-ttu-id="545ed-114">В ответ на уведомление, полученное с <xref:System.GC.WaitForFullGCComplete%2A> метод, можно сделать текущий экземпляр сервера, доступных для обработки запросов еще раз.</span><span class="sxs-lookup"><span data-stu-id="545ed-114">In response to a notification obtained with the <xref:System.GC.WaitForFullGCComplete%2A> method, you can make the current server instance available to process requests again.</span></span> <span data-ttu-id="545ed-115">Вы также можете собирать сведения.</span><span class="sxs-lookup"><span data-stu-id="545ed-115">You can also gather information.</span></span> <span data-ttu-id="545ed-116">Например, можно использовать <xref:System.GC.CollectionCount%2A> метода для записи номера коллекций.</span><span class="sxs-lookup"><span data-stu-id="545ed-116">For example, you can use the <xref:System.GC.CollectionCount%2A> method to record the number of collections.</span></span>  
   
- Методы <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A> должны использоваться вместе.  Применение только одного из них может привести к непредсказуемым результатам.  
+ <span data-ttu-id="545ed-117"><xref:System.GC.WaitForFullGCApproach%2A> И <xref:System.GC.WaitForFullGCComplete%2A> методы предназначены для совместной работы.</span><span class="sxs-lookup"><span data-stu-id="545ed-117">The <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods are designed to work together.</span></span> <span data-ttu-id="545ed-118">С помощью одного из них может привести к неопределенным результатам.</span><span class="sxs-lookup"><span data-stu-id="545ed-118">Using one without the other can produce indeterminate results.</span></span>  
   
-## Полная сборка мусора  
- Среда выполнения запускает полную сборку мусора в следующих случаях.  
+## <a name="full-garbage-collection"></a><span data-ttu-id="545ed-119">Полная сборка мусора</span><span class="sxs-lookup"><span data-stu-id="545ed-119">Full Garbage Collection</span></span>  
+ <span data-ttu-id="545ed-120">Полная сборка мусора средой выполнения, если выполняется одно из следующих сценариев:</span><span class="sxs-lookup"><span data-stu-id="545ed-120">The runtime causes a full garbage collection when any of the following scenarios are true:</span></span>  
   
--   В состояние поколения 2 перешел объем памяти, достаточный для сборки мусора следующего поколения 2.  
+-   <span data-ttu-id="545ed-121">Недостаточно памяти в состояние поколения 2 сборки мусора следующего поколения 2.</span><span class="sxs-lookup"><span data-stu-id="545ed-121">Enough memory has been promoted into generation 2 to cause the next generation 2 collection.</span></span>  
   
--   В состояние кучи больших объектов перешел объем памяти, достаточный для сборки мусора следующего поколения 2.  
+-   <span data-ttu-id="545ed-122">Недостаточно памяти в состояние кучи больших объектов для сборки мусора следующего поколения 2.</span><span class="sxs-lookup"><span data-stu-id="545ed-122">Enough memory has been promoted into the large object heap to cause the next generation 2 collection.</span></span>  
   
--   Сборка мусора поколения 1 перешла в сборку мусора поколения 2 по другим причинам.  
+-   <span data-ttu-id="545ed-123">Для поколения 1 перешла мусора поколения 2 из-за других факторов.</span><span class="sxs-lookup"><span data-stu-id="545ed-123">A collection of generation 1 is escalated to a collection of generation 2 due to other factors.</span></span>  
   
- Указываемые в методе <xref:System.GC.RegisterForFullGCNotification%2A> пороговые значения относятся к первым двум случаям.  Однако в первом случае необходимо всегда получать уведомления за время, пропорциональное заданным пороговым значениями. На это есть две причины.  
+ <span data-ttu-id="545ed-124">Пороговые значения, указанные в <xref:System.GC.RegisterForFullGCNotification%2A> метод применяются к первые два сценария.</span><span class="sxs-lookup"><span data-stu-id="545ed-124">The thresholds you specify in the <xref:System.GC.RegisterForFullGCNotification%2A> method apply to the first two scenarios.</span></span> <span data-ttu-id="545ed-125">Однако в первом сценарии вы не всегда получит уведомление во время пропорционально пороговые значения, заданные по двум причинам:</span><span class="sxs-lookup"><span data-stu-id="545ed-125">However, in the first scenario you will not always receive the notification at the time proportional to the threshold values you specify for two reasons:</span></span>  
   
--   Среда выполнения не проверяет выделение памяти для каждого небольшого объекта \(по соображениям производительности\).  
+-   <span data-ttu-id="545ed-126">Среда выполнения не проверяет каждое выделение небольших объектов (по соображениям производительности).</span><span class="sxs-lookup"><span data-stu-id="545ed-126">The runtime does not check each small object allocation (for performance reasons).</span></span>  
   
--   Только сборка мусора поколения 1 переводит память в поколение 2.  
+-   <span data-ttu-id="545ed-127">Только мусора поколения 1 переводит память в поколение 2.</span><span class="sxs-lookup"><span data-stu-id="545ed-127">Only generation 1 collections promote memory into generation 2.</span></span>  
   
- Третий случай также объясняет неопределенность времени получения уведомления.  Хотя этот способ и не дает стопроцентной гарантии, он оказывается достаточно эффективным для минимизации последствий несвоевременной сборки мусора путем перенаправления запросов на это время или самостоятельного вызова сборки в более удобное время.  
+ <span data-ttu-id="545ed-128">Третий сценарий также объясняет неопределенность времени получения уведомления.</span><span class="sxs-lookup"><span data-stu-id="545ed-128">The third scenario also contributes to the uncertainty of when you will receive the notification.</span></span> <span data-ttu-id="545ed-129">Несмотря на то, что это не является гарантией его оказаться полезный способ устранить последствия неподходящие полную сборку мусора путем перенаправления запросов в течение этого времени или самостоятельного при лучше удовлетворяются.</span><span class="sxs-lookup"><span data-stu-id="545ed-129">Although this is not a guarantee, it does prove to be a useful way to mitigate the effects of an inopportune full garbage collection by redirecting the requests during this time or inducing the collection yourself when it can be better accommodated.</span></span>  
   
-## Пороговые параметры уведомления  
- У метода <xref:System.GC.RegisterForFullGCNotification%2A> имеется два параметра для задания пороговых значений объектов поколения 2 и кучи больших объектов.  Уведомление создается в тот момент, когда достигаются эти значения.  Данные параметры описаны в следующей таблице.  
+## <a name="notification-threshold-parameters"></a><span data-ttu-id="545ed-130">Пороговые параметры уведомления</span><span class="sxs-lookup"><span data-stu-id="545ed-130">Notification Threshold Parameters</span></span>  
+ <span data-ttu-id="545ed-131"><xref:System.GC.RegisterForFullGCNotification%2A> Метод имеет два параметра, чтобы задать пороговые значения для объектов поколения 2 и кучи больших объектов.</span><span class="sxs-lookup"><span data-stu-id="545ed-131">The <xref:System.GC.RegisterForFullGCNotification%2A> method has two parameters to specify the threshold values of the generation 2 objects and the large object heap.</span></span> <span data-ttu-id="545ed-132">При соблюдении этих значений, должно вызываться уведомление о сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-132">When those values are met, a garbage collection notification should be raised.</span></span> <span data-ttu-id="545ed-133">В следующей таблице описаны эти параметры.</span><span class="sxs-lookup"><span data-stu-id="545ed-133">The following table describes these parameters.</span></span>  
   
-|Параметр|Описание|  
-|--------------|--------------|  
-|`maxGenerationThreshold`|Число от 1 до 99, указывающее условия создания уведомления в зависимости от объектов, перешедших в поколение 2.|  
-|`largeObjectHeapThreshold`|Число от 1 до 99, указывающее условия создания уведомления в зависимости от объектов, помещенных в кучу больших объектов.|  
+|<span data-ttu-id="545ed-134">Параметр</span><span class="sxs-lookup"><span data-stu-id="545ed-134">Parameter</span></span>|<span data-ttu-id="545ed-135">Описание</span><span class="sxs-lookup"><span data-stu-id="545ed-135">Description</span></span>|  
+|---------------|-----------------|  
+|`maxGenerationThreshold`|<span data-ttu-id="545ed-136">Число от 1 до 99, указывающее условия уведомления на основе объектов, перешедших в поколение 2.</span><span class="sxs-lookup"><span data-stu-id="545ed-136">A number between 1 and 99 that specifies when the notification should be raised based on the objects promoted in generation 2.</span></span>|  
+|`largeObjectHeapThreshold`|<span data-ttu-id="545ed-137">Число от 1 до 99, указывающее условия уведомления на основе объектов, выделенных в куче больших объектов.</span><span class="sxs-lookup"><span data-stu-id="545ed-137">A number between 1 and 99 that specifies when the notification should be raised based on the objects that are allocated in the large object heap.</span></span>|  
   
- Если указать слишком большое значение, то вероятность получения уведомления будет высокой, однако придется долго ждать, пока среда выполнения вызовет сборку мусора.  Если вызвать сборку мусора самостоятельно, можно освободить больше объектов, чем было бы освобождено при запуске сборки мусора средой выполнения.  
+ <span data-ttu-id="545ed-138">Если указать значение слишком велико, нет высокой степенью вероятности, вы получите уведомление, что это может быть долго ждать, пока среда выполнения вызовет сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-138">If you specify a value that is too high, there is a high probability that you will receive a notification, but it could be too long a period to wait before the runtime causes a collection.</span></span> <span data-ttu-id="545ed-139">Если вы вызвать сборку мусора самостоятельно, можно освободить больше объектов, чем будет удален, если среда выполнения вызывает коллекции.</span><span class="sxs-lookup"><span data-stu-id="545ed-139">If you induce a collection yourself, you may reclaim more objects than would be reclaimed if the runtime causes the collection.</span></span>  
   
- Если указать слишком маленькое значение, среда выполнения может вызвать сборку мусора раньше получения уведомления.  
+ <span data-ttu-id="545ed-140">Если указать значение, которое слишком мало, среда выполнения может привести к коллекции до появления достаточное время, чтобы получать уведомления.</span><span class="sxs-lookup"><span data-stu-id="545ed-140">If you specify a value that is too low, the runtime may cause the collection before you have had sufficient time to be notified.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="545ed-141">Пример</span><span class="sxs-lookup"><span data-stu-id="545ed-141">Example</span></span>  
   
-### Описание  
- В следующем примере группа серверов обрабатывает входящие веб\-запросы.  Чтобы имитировать нагрузку, создаваемую при обработке запросов, в коллекцию <xref:System.Collections.Generic.List%601> добавляются массивы байтов.  Каждый сервер регистрируется на получение уведомления о сборке мусора и запускает поток для метода пользователя `WaitForFullGCProc`, чтобы постоянно контролировать значение перечисления <xref:System.GCNotificationStatus>, возвращаемого методами <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A>.  
+### <a name="description"></a><span data-ttu-id="545ed-142">Описание</span><span class="sxs-lookup"><span data-stu-id="545ed-142">Description</span></span>  
+ <span data-ttu-id="545ed-143">В следующем примере группа серверов службы входящих веб-запросов.</span><span class="sxs-lookup"><span data-stu-id="545ed-143">In the following example, a group of servers service incoming Web requests.</span></span> <span data-ttu-id="545ed-144">Для имитации рабочей нагрузки по обработке запросов, массивы байтов добавляются <xref:System.Collections.Generic.List%601> коллекции.</span><span class="sxs-lookup"><span data-stu-id="545ed-144">To simulate the workload of processing requests, byte arrays are added to a <xref:System.Collections.Generic.List%601> collection.</span></span> <span data-ttu-id="545ed-145">Каждый сервер регистрирует уведомление о сборке мусора и запускает поток на `WaitForFullGCProc` пользовательского метода для постоянного наблюдения за <xref:System.GCNotificationStatus> перечисления, возвращенный <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A> методы.</span><span class="sxs-lookup"><span data-stu-id="545ed-145">Each server registers for a garbage collection notification and then starts a thread on the `WaitForFullGCProc` user method to continuously monitor the <xref:System.GCNotificationStatus> enumeration that is returned by the <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods.</span></span>  
   
- При получении уведомления методы <xref:System.GC.WaitForFullGCApproach%2A> и <xref:System.GC.WaitForFullGCComplete%2A> запускают соответствующие пользовательские методы для обработки событий.  
+ <span data-ttu-id="545ed-146"><xref:System.GC.WaitForFullGCApproach%2A> И <xref:System.GC.WaitForFullGCComplete%2A> методы вызывать их соответствующие методы обработки событий пользователя при получении уведомления:</span><span class="sxs-lookup"><span data-stu-id="545ed-146">The <xref:System.GC.WaitForFullGCApproach%2A> and the <xref:System.GC.WaitForFullGCComplete%2A> methods call their respective event-handling user methods when a notification is raised:</span></span>  
   
 -   `OnFullGCApproachNotify`  
   
-     Этот метод вызывает пользовательский метод `RedirectRequests`, который отдает серверу очереди команду приостановить отправку запросов на данный сервер.  Для имитации такой ситуации переменной уровня класса `bAllocate` присваивается значение `false`, чтобы память для новых объектов не выделялась.  
+     <span data-ttu-id="545ed-147">Этот метод вызывает метод `RedirectRequests` метод пользователя, который указывает, что серверу очереди приостановить отправку запросов на сервер.</span><span class="sxs-lookup"><span data-stu-id="545ed-147">This method calls the `RedirectRequests` user method, which instructs the request queuing server to suspend sending requests to the server.</span></span> <span data-ttu-id="545ed-148">Это моделируется посредством задания переменной уровня класса `bAllocate` для `false` , чтобы дополнительные объекты не выделяются.</span><span class="sxs-lookup"><span data-stu-id="545ed-148">This is simulated by setting the class-level variable `bAllocate` to `false` so that no more objects are allocated.</span></span>  
   
-     Затем вызывается пользовательский метод `FinishExistingRequests`, который завершает обработку находящихся в очереди запросов сервера.  Для имитации этой ситуации коллекция <xref:System.Collections.Generic.List%601> очищается.  
+     <span data-ttu-id="545ed-149">Далее, `FinishExistingRequests` вызывается пользовательский метод, чтобы завершить обработку запросов сервера.</span><span class="sxs-lookup"><span data-stu-id="545ed-149">Next, the `FinishExistingRequests` user method is called to finish processing the pending server requests.</span></span> <span data-ttu-id="545ed-150">Это симуляции, сняв <xref:System.Collections.Generic.List%601> коллекции.</span><span class="sxs-lookup"><span data-stu-id="545ed-150">This is simulated by clearing the <xref:System.Collections.Generic.List%601> collection.</span></span>  
   
-     Наконец, вызывается сборка мусора, поскольку нагрузка невелика.  
+     <span data-ttu-id="545ed-151">Наконец вызывается сборка мусора, поскольку нагрузка невелика.</span><span class="sxs-lookup"><span data-stu-id="545ed-151">Finally, a garbage collection is induced because the workload is light.</span></span>  
   
 -   `OnFullGCCompleteNotify`  
   
-     Этот метод вызывает пользовательский метод `AcceptRequests`, чтобы возобновить прием запросов, поскольку сервер больше не ожидает полной сборки мусора.  Для имитации этой операции переменной `bAllocate` присваивается значение `true`, чтобы возобновить добавление объектов в коллекцию <xref:System.Collections.Generic.List%601>.  
+     <span data-ttu-id="545ed-152">Этот метод вызывает пользовательский метод `AcceptRequests` возобновить прием запросов, поскольку сервер больше не подвержен атакам с полной сборкой мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-152">This method calls the user method `AcceptRequests` to resume accepting requests because the server is no longer susceptible to a full garbage collection.</span></span> <span data-ttu-id="545ed-153">Имитации этой операции, установив `bAllocate` переменной `true` , чтобы объекты можно возобновить, добавляемый <xref:System.Collections.Generic.List%601> коллекции.</span><span class="sxs-lookup"><span data-stu-id="545ed-153">This action is simulated by setting the `bAllocate` variable to `true` so that objects can resume being added to the <xref:System.Collections.Generic.List%601> collection.</span></span>  
   
- Ниже показан код метода `Main` этого примера.  
+ <span data-ttu-id="545ed-154">Следующий код содержит `Main` метод примера.</span><span class="sxs-lookup"><span data-stu-id="545ed-154">The following code contains the `Main` method of the example.</span></span>  
   
  [!code-cpp[GCNotification#2](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#2)]
  [!code-csharp[GCNotification#2](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#2)]
  [!code-vb[GCNotification#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#2)]  
   
- Ниже показан код пользовательского метода `WaitForFullGCProc`, содержащий выполняющийся непрерывно цикл проверки уведомлений о сборке мусора.  
+ <span data-ttu-id="545ed-155">Следующий код содержит `WaitForFullGCProc` пользовательский метод, содержащий непрерывно цикл проверки о сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-155">The following code contains the `WaitForFullGCProc` user method, that contains a continuous while loop to check for garbage collection notifications.</span></span>  
   
  [!code-cpp[GCNotification#8](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#8)]
  [!code-csharp[GCNotification#8](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#8)]
  [!code-vb[GCNotification#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#8)]  
   
- Ниже показан код метода `OnFullGCApproachNotify`, вызываемого из метода  
+ <span data-ttu-id="545ed-156">Следующий код содержит `OnFullGCApproachNotify` метода, вызываемого из</span><span class="sxs-lookup"><span data-stu-id="545ed-156">The following code contains the `OnFullGCApproachNotify` method as called from the</span></span>  
   
- `WaitForFullGCProc`.  
+ <span data-ttu-id="545ed-157">Метод `WaitForFullGCProc`.</span><span class="sxs-lookup"><span data-stu-id="545ed-157">`WaitForFullGCProc` method.</span></span>  
   
  [!code-cpp[GCNotification#5](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#5)]
  [!code-csharp[GCNotification#5](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#5)]
  [!code-vb[GCNotification#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#5)]  
   
- Ниже показан код метода `OnFullGCApproachComplete`, вызываемого из метода  
+ <span data-ttu-id="545ed-158">Следующий код содержит `OnFullGCApproachComplete` метода, вызываемого из</span><span class="sxs-lookup"><span data-stu-id="545ed-158">The following code contains the `OnFullGCApproachComplete` method as called from the</span></span>  
   
- `WaitForFullGCProc`.  
+ <span data-ttu-id="545ed-159">Метод `WaitForFullGCProc`.</span><span class="sxs-lookup"><span data-stu-id="545ed-159">`WaitForFullGCProc` method.</span></span>  
   
  [!code-cpp[GCNotification#6](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#6)]
  [!code-csharp[GCNotification#6](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#6)]
  [!code-vb[GCNotification#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#6)]  
   
- Ниже показан код пользовательских методов, вызываемых из методов `OnFullGCApproachNotify` и `OnFullGCCompleteNotify`.  Пользовательские методы перенаправляют запросы, завершают обработку уже полученных запросов и возобновляют прием запросов по завершении полной сборки мусора.  
+ <span data-ttu-id="545ed-160">В следующем коде содержатся методы пользователя, которые вызываются из `OnFullGCApproachNotify` и `OnFullGCCompleteNotify` методы.</span><span class="sxs-lookup"><span data-stu-id="545ed-160">The following code contains the user methods that are called from the `OnFullGCApproachNotify` and `OnFullGCCompleteNotify` methods.</span></span> <span data-ttu-id="545ed-161">Пользовательские методы перенаправляют запросы, Готово существующие запросы и возобновите запросов после полной сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="545ed-161">The user methods redirect requests, finish existing requests, and then resume requests after a full garbage collection has occurred.</span></span>  
   
  [!code-cpp[GCNotification#9](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#9)]
  [!code-csharp[GCNotification#9](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#9)]
  [!code-vb[GCNotification#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#9)]  
   
- Ниже приведен код всего примера.  
+ <span data-ttu-id="545ed-162">Полный пример кода выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="545ed-162">The entire code sample is as follows:</span></span>  
   
  [!code-cpp[GCNotification#1](../../../samples/snippets/cpp/VS_Snippets_CLR/GCNotification/cpp/program.cpp#1)]
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## См. также  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a><span data-ttu-id="545ed-163">См. также</span><span class="sxs-lookup"><span data-stu-id="545ed-163">See Also</span></span>  
+ [<span data-ttu-id="545ed-164">Сборка мусора</span><span class="sxs-lookup"><span data-stu-id="545ed-164">Garbage Collection</span></span>](../../../docs/standard/garbage-collection/index.md)

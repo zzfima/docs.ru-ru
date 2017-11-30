@@ -6,22 +6,21 @@ ms.author: wiwagn
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a><span data-ttu-id="9c5f4-103">Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit</span><span class="sxs-lookup"><span data-stu-id="9c5f4-103">Unit testing C# in .NET Core using dotnet test and xUnit</span></span>
 
-Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="9c5f4-104">Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-104">This tutorial takes you through an interactive experience building a sample solution step-by-step to learn unit testing concepts.</span></span> <span data-ttu-id="9c5f4-105">Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) перед началом работы.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-105">If you prefer to follow the tutorial using a pre-built solution, [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) before you begin.</span></span> <span data-ttu-id="9c5f4-106">Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="9c5f4-106">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="creating-the-source-project"></a>Создание исходного проекта
+## <a name="creating-the-source-project"></a><span data-ttu-id="9c5f4-107">Создание исходного проекта</span><span class="sxs-lookup"><span data-stu-id="9c5f4-107">Creating the source project</span></span>
 
-Откройте окно оболочки. Создайте каталог с именем *unit-testing-using-dotnet-test* для хранения решения.
-В этом каталоге выполните команду выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать решение. Это упрощает управление библиотекой классов и проектом модульного теста.
-В каталоге решения создайте каталог *PrimeService*. Актуальная структура каталогов и файлов приведена ниже:
+<span data-ttu-id="9c5f4-108">Откройте окно оболочки.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-108">Open a shell window.</span></span> <span data-ttu-id="9c5f4-109">Создайте каталог с именем *unit-testing-using-dotnet-test* для хранения решения.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-109">Create a directory called *unit-testing-using-dotnet-test* to hold the solution.</span></span>
+<span data-ttu-id="9c5f4-110">В этом каталоге выполните команду выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать решение.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-110">Inside this new directory, run [`dotnet new sln`](../tools/dotnet-new.md) to create a new solution.</span></span> <span data-ttu-id="9c5f4-111">Это упрощает управление библиотекой классов и проектом модульного теста.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-111">This makes it easier to manage both the class library and the unit test project.</span></span>
+<span data-ttu-id="9c5f4-112">В каталоге решения создайте каталог *PrimeService*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-112">Inside the solution directory, create a *PrimeService* directory.</span></span> <span data-ttu-id="9c5f4-113">Актуальная структура каталогов и файлов приведена ниже:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-113">The directory and file structure thus far is shown below:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -29,7 +28,7 @@ ms.lasthandoff: 09/14/2017
     /PrimeService
 ```
 
-Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.cs* в *PrimeService.cs*. Чтобы использовать разработку на основе тестирования (TDD), вы создадите сбойную реализацию класса `PrimeService`:
+<span data-ttu-id="9c5f4-114">Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib`](../tools/dotnet-new.md), чтобы создать исходный проект.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-114">Make *PrimeService* the current directory and run [`dotnet new classlib`](../tools/dotnet-new.md) to create the source project.</span></span> <span data-ttu-id="9c5f4-115">Переименуйте *Class1.cs* в *PrimeService.cs*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-115">Rename *Class1.cs* to *PrimeService.cs*.</span></span> <span data-ttu-id="9c5f4-116">Чтобы использовать разработку на основе тестирования (TDD), вы создадите сбойную реализацию класса `PrimeService`:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-116">To use test-driven development (TDD), you'll create a failing implementation of the `PrimeService` class:</span></span>
 
 ```csharp
 using System;
@@ -46,11 +45,11 @@ namespace Prime.Services
 }
 ```
 
-Вернитесь в каталог *unit-testing-using-dotnet-test*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md).
+<span data-ttu-id="9c5f4-117">Вернитесь в каталог *unit-testing-using-dotnet-test*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-117">Change the directory back to the *unit-testing-using-dotnet-test* directory.</span></span> <span data-ttu-id="9c5f4-118">Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md).</span><span class="sxs-lookup"><span data-stu-id="9c5f4-118">Run [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md) to add the class library project to the solution.</span></span>
 
-## <a name="creating-the-test-project"></a>Создание тестового проекта
+## <a name="creating-the-test-project"></a><span data-ttu-id="9c5f4-119">Создание тестового проекта</span><span class="sxs-lookup"><span data-stu-id="9c5f4-119">Creating the test project</span></span>
 
-Затем создайте каталог *PrimeService.Tests*. Ниже представлена структура каталогов:
+<span data-ttu-id="9c5f4-120">Затем создайте каталог *PrimeService.Tests*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-120">Next, create the *PrimeService.Tests* directory.</span></span> <span data-ttu-id="9c5f4-121">Ниже представлена структура каталогов:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-121">The following outline shows the directory structure:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -61,7 +60,7 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-Перейдите в каталог *PrimeService.Tests* и создайте проект с помощью [`dotnet new xunit`](../tools/dotnet-new.md). Эта команда создает тестовый проект, использующий xUnit в качестве библиотеки тестов. Созданный шаблон настраивает средство запуска тестов в файле *PrimeServiceTests.csproj*:
+<span data-ttu-id="9c5f4-122">Перейдите в каталог *PrimeService.Tests* и создайте проект с помощью [`dotnet new xunit`](../tools/dotnet-new.md).</span><span class="sxs-lookup"><span data-stu-id="9c5f4-122">Make the *PrimeService.Tests* directory the current directory and create a new project using [`dotnet new xunit`](../tools/dotnet-new.md).</span></span> <span data-ttu-id="9c5f4-123">Эта команда создает тестовый проект, использующий xUnit в качестве библиотеки тестов.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-123">This creates a test project that uses xUnit as the test library.</span></span> <span data-ttu-id="9c5f4-124">Созданный шаблон настраивает средство запуска тестов в файле *PrimeServiceTests.csproj*:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-124">The generated template configures the test runner in the *PrimeServiceTests.csproj*:</span></span>
 
 ```xml
 <ItemGroup>
@@ -71,15 +70,15 @@ namespace Prime.Services
 </ItemGroup>
 ```
 
-Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда В предыдущем шаге `dotnet new` добавила пакет xUnit и средство запуска xUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
+<span data-ttu-id="9c5f4-125">Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда</span><span class="sxs-lookup"><span data-stu-id="9c5f4-125">The test project requires other packages to create and run unit tests.</span></span> <span data-ttu-id="9c5f4-126">В предыдущем шаге `dotnet new` добавила пакет xUnit и средство запуска xUnit.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-126">`dotnet new` in the previous step added xUnit and the xUnit runner.</span></span> <span data-ttu-id="9c5f4-127">Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-127">Now, add the `PrimeService` class library as another dependency to the project.</span></span> <span data-ttu-id="9c5f4-128">Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):</span><span class="sxs-lookup"><span data-stu-id="9c5f4-128">Use the [`dotnet add reference`](../tools/dotnet-add-reference.md) command:</span></span>
 
 ```
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-Все содержимое файла можно просмотреть в [репозитории образцов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) на сайте GitHub.
+<span data-ttu-id="9c5f4-129">Все содержимое файла можно просмотреть в [репозитории образцов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-129">You can see the entire file in the [samples repository](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) on GitHub.</span></span>
 
-Ниже показан окончательный макет решения:
+<span data-ttu-id="9c5f4-130">Ниже показан окончательный макет решения:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-130">The following shows the final solution layout:</span></span>
 
 ```
 /unit-testing-using-dotnet-test
@@ -92,11 +91,11 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-using-dotnet-test*. 
+<span data-ttu-id="9c5f4-131">Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-using-dotnet-test*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-131">Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) in the *unit-testing-using-dotnet-test* directory.</span></span> 
 
-## <a name="creating-the-first-test"></a>Создание первого теста
+## <a name="creating-the-first-test"></a><span data-ttu-id="9c5f4-132">Создание первого теста</span><span class="sxs-lookup"><span data-stu-id="9c5f4-132">Creating the first test</span></span>
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Удалите файл *UnitTest1.cs* из каталога *PrimeService.Tests* и создайте новый файл C# с именем *PrimeService_IsPrimeShould.cs*. Добавьте следующий код:
+<span data-ttu-id="9c5f4-133">Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-133">The TDD approach calls for writing one failing test, making it pass, then repeating the process.</span></span> <span data-ttu-id="9c5f4-134">Удалите файл *UnitTest1.cs* из каталога *PrimeService.Tests* и создайте новый файл C# с именем *PrimeService_IsPrimeShould.cs*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-134">Remove *UnitTest1.cs* from the *PrimeService.Tests* directory and create a new C# file named *PrimeService_IsPrimeShould.cs*.</span></span> <span data-ttu-id="9c5f4-135">Добавьте следующий код:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-135">Add the following code:</span></span>
 
 ```csharp
 using Xunit;
@@ -124,9 +123,9 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Атрибут `[Fact]` обозначает метод теста, который выполняется с помощью средства выполнения тестов. Из каталога *unit-testing-using-dotnet-test* выполните команду [`dotnet test`](../tools/dotnet-test.md) для создания тестов и библиотеки классов, а затем выполните тесты. Средство запуска тестов xUnit содержит точку входа в программу для выполнения тестов. `dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.
+<span data-ttu-id="9c5f4-136">Атрибут `[Fact]` обозначает метод теста, который выполняется с помощью средства выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-136">The `[Fact]` attribute indicates a test method that is run by the test runner.</span></span> <span data-ttu-id="9c5f4-137">Из каталога *unit-testing-using-dotnet-test* выполните команду [`dotnet test`](../tools/dotnet-test.md) для создания тестов и библиотеки классов, а затем выполните тесты.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-137">From the *unit-testing-using-dotnet-test*, execute [`dotnet test`](../tools/dotnet-test.md) to build the tests and the class library and then run the tests.</span></span> <span data-ttu-id="9c5f4-138">Средство запуска тестов xUnit содержит точку входа в программу для выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-138">The xUnit test runner contains the program entry point to run your tests.</span></span> <span data-ttu-id="9c5f4-139">`dotnet test` запускает средство выполнения тестов с помощью проекта модульного теста, который вы создали.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-139">`dotnet test` starts the test runner using the unit test project you've created.</span></span>
 
-Тест не будет пройден. Вы еще не создали реализацию. Чтобы тест был пройден, напишите простейший код в классе `PrimeService`, который работает:
+<span data-ttu-id="9c5f4-140">Тест не будет пройден.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-140">Your test fails.</span></span> <span data-ttu-id="9c5f4-141">Вы еще не создали реализацию.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-141">You haven't created the implementation yet.</span></span> <span data-ttu-id="9c5f4-142">Чтобы тест был пройден, напишите простейший код в классе `PrimeService`, который работает:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-142">Make this test by writing the simplest code in the `PrimeService` class that works:</span></span>
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -139,23 +138,24 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Выполните команду `dotnet test` еще раз в каталоге *unit-testing-using-dotnet-test*. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
+<span data-ttu-id="9c5f4-143">Выполните команду `dotnet test` еще раз в каталоге *unit-testing-using-dotnet-test*.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-143">In the *unit-testing-using-dotnet-test* directory, run `dotnet test` again.</span></span> <span data-ttu-id="9c5f4-144">Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-144">The `dotnet test` command runs a build for the `PrimeService` project and then for the `PrimeService.Tests` project.</span></span> <span data-ttu-id="9c5f4-145">После сборки обоих проектов она запускает этот отдельный тест.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-145">After building both projects, it runs this single test.</span></span> <span data-ttu-id="9c5f4-146">Он выполняется.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-146">It passes.</span></span>
 
-## <a name="adding-more-features"></a>Добавление дополнительных возможностей
+## <a name="adding-more-features"></a><span data-ttu-id="9c5f4-147">Добавление дополнительных возможностей</span><span class="sxs-lookup"><span data-stu-id="9c5f4-147">Adding more features</span></span>
 
-Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами: 0, -1. Можно добавить их в качестве тестов с помощью атрибута `[Fact]`, но это скоро станет утомительным. Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `[Theory]` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `[InlineData]` можно указать значения для этих входных аргументов.
+<span data-ttu-id="9c5f4-148">Теперь, когда тест проходит успешно, пора создать дополнительные тесты.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-148">Now that you've made one test pass, it's time to write more.</span></span> <span data-ttu-id="9c5f4-149">Есть еще ряд элементарных случаев с простыми числами: 0, -1.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-149">There are a few other simple cases for prime numbers: 0, -1.</span></span> <span data-ttu-id="9c5f4-150">Можно добавить их в качестве тестов с помощью атрибута `[Fact]`, но это скоро станет утомительным.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-150">You could add those cases as new tests with the `[Fact]` attribute, but that quickly becomes tedious.</span></span> <span data-ttu-id="9c5f4-151">Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-151">There are other xUnit attributes that enable you to write a suite of similar tests.</span></span>  <span data-ttu-id="9c5f4-152">Атрибут `[Theory]` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-152">A `[Theory]` attribute represents a suite of tests that execute the same code but have different input arguments.</span></span> <span data-ttu-id="9c5f4-153">С помощью атрибута `[InlineData]` можно указать значения для этих входных аргументов.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-153">You can use the `[InlineData]` attribute to specify values for those inputs.</span></span>
 
-Вместо того чтобы создавать новые тесты, используйте эти два атрибута, чтобы создать единый алгоритм, который проверяет несколько значений меньше 2, то есть наименьшего простого числа:
+<span data-ttu-id="9c5f4-154">Вместо того чтобы создавать новые тесты, используйте эти два атрибута, чтобы создать единый алгоритм,</span><span class="sxs-lookup"><span data-stu-id="9c5f4-154">Instead of creating new tests, apply these two attributes to create a single theory.</span></span> <span data-ttu-id="9c5f4-155">который проверяет несколько значений меньше 2, то есть наименьшего простого числа:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-155">The theory is a method that tests several values less than two, which is the lowest prime number:</span></span>
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой. Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода:
+<span data-ttu-id="9c5f4-156">Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-156">Run `dotnet test`, and two of these tests fail.</span></span> <span data-ttu-id="9c5f4-157">Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода:</span><span class="sxs-lookup"><span data-stu-id="9c5f4-157">To make all of the tests pass, change the `if` clause at the beginning of the method:</span></span>
 
 ```csharp
 if (candidate < 2)
 ```
 
-Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке. В результате вы получите [готовую версию тестов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) и [полную реализацию библиотеки](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
+<span data-ttu-id="9c5f4-158">Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке.</span><span class="sxs-lookup"><span data-stu-id="9c5f4-158">Continue to iterate by adding more tests, more theories, and more code in the main library.</span></span> <span data-ttu-id="9c5f4-159">В результате вы получите [готовую версию тестов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) и [полную реализацию библиотеки](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).</span><span class="sxs-lookup"><span data-stu-id="9c5f4-159">You have the [finished version of the tests](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) and the [complete implementation of the library](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).</span></span>
 
-Вы создали небольшую библиотеку и набор модульных тестов для нее. Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью текущего рабочего процесса и получить возможность сосредоточиться на задачах приложения.
+### <a name="additional-resources"></a><span data-ttu-id="9c5f4-160">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="9c5f4-160">Additional resources</span></span>
 
+[<span data-ttu-id="9c5f4-161">Тестирование логики контроллер в ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="9c5f4-161">Testing controller logic in ASP.NET Core</span></span>](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)

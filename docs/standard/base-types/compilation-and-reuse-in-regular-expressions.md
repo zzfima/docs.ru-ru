@@ -1,57 +1,57 @@
 ---
-title: "Компиляция и многократное использование в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, компиляция"
-  - "регулярные выражения .NET Framework, обработчики"
-  - "компиляция, регулярные выражения"
-  - "разбор текста с регулярными выражениями, компиляция"
-  - "синтаксис соответствия шаблону с регулярными выражениями, компиляция"
-  - "регулярные выражения, компиляция"
-  - "регулярные выражения, обработчики"
-  - "поиск с регулярными выражениями, компиляция"
+title: "Компиляция и многократное использование в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parsing text with regular expressions, compilation
+- searching with regular expressions, compilation
+- .NET Framework regular expressions, engines
+- .NET Framework regular expressions, compilation
+- regular expressions, compilation
+- compilation, regular expressions
+- pattern-matching with regular expressions, compilation
+- regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 76acdf2d0d2f7805ec78ea44136bfc63441b9bc9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Компиляция и многократное использование в регулярных выражениях
-Производительность приложений, активно использующих регулярные выражения можно оптимизировать, если понимать, каким образом обработчик регулярных выражений компилирует выражения и каким образом кэшируются регулярные выражения.  В этом разделе описаны и компиляция, и кэширование.  
+# <a name="compilation-and-reuse-in-regular-expressions"></a><span data-ttu-id="085bc-102">Компиляция и многократное использование в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="085bc-102">Compilation and Reuse in Regular Expressions</span></span>
+<span data-ttu-id="085bc-103">Производительность приложений, активно использующих регулярные выражения, можно оптимизировать, если понимать, каким образом обработчик регулярных выражений компилирует выражения и как кэшируются регулярные выражения.</span><span class="sxs-lookup"><span data-stu-id="085bc-103">You can optimize the performance of applications that make extensive use of regular expressions by understanding how the regular expression engine compiles expressions and by understanding how regular expressions are cached.</span></span> <span data-ttu-id="085bc-104">В этом разделе описаны и компиляция, и кэширование.</span><span class="sxs-lookup"><span data-stu-id="085bc-104">This topic discusses both compilation and caching.</span></span>  
   
-## скомпилированные регулярные выражения  
- По умолчанию обработчик регулярных выражений компилирует регулярные выражения в последовательность внутренних инструкций \(это коды высокого уровня, которые отличаются от языка MSIL\).  Когда обработчик выполняет регулярное выражение, он преобразовывает внутренние коды.  
+## <a name="compiled-regular-expressions"></a><span data-ttu-id="085bc-105">Скомпилированные регулярные выражения</span><span class="sxs-lookup"><span data-stu-id="085bc-105">Compiled Regular Expressions</span></span>  
+ <span data-ttu-id="085bc-106">По умолчанию обработчик регулярных выражений компилирует регулярные выражения в последовательность внутренних инструкций (это коды высокого уровня, которые отличаются от языка MSIL).</span><span class="sxs-lookup"><span data-stu-id="085bc-106">By default, the regular expression engine compiles a regular expression to a sequence of internal instructions (these are high-level codes that are different from Microsoft intermediate language, or MSIL).</span></span> <span data-ttu-id="085bc-107">Когда обработчик выполняет регулярное выражение, он преобразовывает внутренние коды.</span><span class="sxs-lookup"><span data-stu-id="085bc-107">When the engine executes a regular expression, it interprets the internal codes.</span></span>  
   
- Если объект <xref:System.Text.RegularExpressions.Regex> создается с параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>, то регулярное выражение явно компилируется в язык MSIL вместо внутренних инструкций высокого уровня.  Это позволяет JIT\-компилятору платформы .NET Framework преобразовывать выражение в изначальный машинный код данного объекта для повышения производительности.  
+ <span data-ttu-id="085bc-108">Если <xref:System.Text.RegularExpressions.Regex> объект создан с <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> параметр компиляции регулярного выражения для явного код MSIL вместо внутренних инструкций высокого уровня регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="085bc-108">If a <xref:System.Text.RegularExpressions.Regex> object is constructed with the <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option, it compiles the regular expression to explicit MSIL code instead of high-level regular expression internal instructions.</span></span> <span data-ttu-id="085bc-109">Это позволяет JIT-компилятору платформы .NET преобразовывать выражение в изначальный машинный код данного объекта для повышения производительности.</span><span class="sxs-lookup"><span data-stu-id="085bc-109">This allows .NET's just-in-time (JIT) compiler to convert the expression to native machine code for higher performance.</span></span>  
   
- Однако созданный язык MSIL выгрузить невозможно.  Выгрузить код можно, только выгрузив весь домен приложения \(т.е. выгрузив весь код приложения\).  Фактически если регулярное выражение компилируется с параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>, то платформа .NET Framework никогда не высвобождает ресурсы, использованные скомпилированным выражением, даже если регулярное выражение было создано объектом <xref:System.Text.RegularExpressions.Regex>, который сам готов для сборки мусора.  
+<span data-ttu-id="085bc-110">Однако созданный язык MSIL выгрузить невозможно.</span><span class="sxs-lookup"><span data-stu-id="085bc-110">However, generated MSIL cannot be unloaded.</span></span> <span data-ttu-id="085bc-111">Выгрузить код можно, только выгрузив весь домен приложения (т. е. выгрузив весь код приложения).</span><span class="sxs-lookup"><span data-stu-id="085bc-111">The only way to unload code is to unload an entire application domain (that is, to unload all of your application's code.).</span></span> <span data-ttu-id="085bc-112">По сути когда регулярное выражение компилируется с <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> никогда не освобождает ресурсы, используемые скомпилированное выражение, даже если была создана регулярного выражения, то <xref:System.Text.RegularExpressions.Regex> объект, который сам готов для сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="085bc-112">Effectively, once a regular expression is compiled with the <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option,   never releases the resources used by the compiled expression, even if the regular expression was created by a <xref:System.Text.RegularExpressions.Regex> object that is itself released to garbage collection.</span></span>  
   
- Необходимо соблюдать осторожность и ограничить число различных регулярных выражений, компилируемых с параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>, чтобы избежать потребления слишком большого количества ресурсов.  Если в приложении необходимо использовать большое или неограниченное число регулярных выражений, то необходимо их преобразовывать, а не компилировать.  Если же нужно многократно использовать небольшое число регулярных выражений, то их следует компилировать с параметром <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> для повышения производительности.  Альтернативой является предварительная компиляция регулярных выражений.  Можно скомпилировать все выражения в многократно используемую библиотеку DLL с помощью метода <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>.  Это устранит необходимость компиляции в режиме выполнения и сохранит скорость как преимущество скомпилированных регулярных выражений.  
+ <span data-ttu-id="085bc-113">Будьте внимательны, чтобы ограничить число различных регулярных выражений, при компиляции <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> параметр, чтобы не потребляет слишком много ресурсов.</span><span class="sxs-lookup"><span data-stu-id="085bc-113">You must be careful to limit the number of different regular expressions you compile with the <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option to avoid consuming too many resources.</span></span> <span data-ttu-id="085bc-114">Если в приложении необходимо использовать большое или неограниченное число регулярных выражений, их необходимо преобразовывать, а не компилировать.</span><span class="sxs-lookup"><span data-stu-id="085bc-114">If an application must use a large or unbounded number of regular expressions, each expression should be interpreted, not compiled.</span></span> <span data-ttu-id="085bc-115">Тем не менее, при повторном использовании небольшое количество регулярных выражений они должны быть скомпилированы с <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> для повышения производительности.</span><span class="sxs-lookup"><span data-stu-id="085bc-115">However, if a small number of regular expressions are used repeatedly, they should be compiled with <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> for better performance.</span></span> <span data-ttu-id="085bc-116">Альтернативой является использование предварительно скомпилированных регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="085bc-116">An alternative is to use precompiled regular expressions.</span></span> <span data-ttu-id="085bc-117">Все выражения в повторно используемую DLL можно скомпилировать с помощью <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="085bc-117">You can compile all of your expressions into a reusable DLL by using the <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> method.</span></span> <span data-ttu-id="085bc-118">Это исключает необходимость компиляции во время выполнения при сохранит скорость скомпилированных регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="085bc-118">This avoids the need to compile at runtime while still benefiting from the speed of compiled regular expressions.</span></span>  
   
-## Кэш регулярных выражений  
- Для повышения производительности обработчик регулярных выражений поддерживает кэш скомпилированных регулярных выражений на уровне приложения.  Кэш хранит шаблоны регулярных выражений, которые используются только при вызове статических методов \(шаблоны регулярных выражений, предоставляемые методами экземпляра, не кэшируются\). Это устраняет потребность в повторном разборе выражения в байт\-код высокого уровня при каждом его использовании.  
+## <a name="the-regular-expressions-cache"></a><span data-ttu-id="085bc-119">Кэш регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="085bc-119">The Regular Expressions Cache</span></span>  
+ <span data-ttu-id="085bc-120">Для повышения производительности обработчик регулярных выражений поддерживает кэш скомпилированных регулярных выражений на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="085bc-120">To improve performance, the regular expression engine maintains an application-wide cache of compiled regular expressions.</span></span> <span data-ttu-id="085bc-121">Кэш хранит шаблоны регулярных выражений, которые используются только при вызове статических методов.</span><span class="sxs-lookup"><span data-stu-id="085bc-121">The cache stores regular expression patterns that are used only in static method calls.</span></span> <span data-ttu-id="085bc-122">(Шаблоны регулярных выражений, предоставляемые методами экземпляра, не кэшируются.) Это устраняет потребность в повторном разборе выражения в байт-код высокого уровня при каждом его использовании.</span><span class="sxs-lookup"><span data-stu-id="085bc-122">(Regular expression patterns supplied to instance methods are not cached.) This avoids the need to reparse an expression into high-level byte code each time it is used.</span></span>  
   
- Максимальное число кэшированных регулярных выражений определяется значением `static` \(`Shared` в Visual Basic\) свойства <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=fullName>.  По умолчанию обработчик регулярных выражений кэширует до 15 скомпилированных регулярных выражений.  Если число скомпилированных регулярных выражений превышает размер кэша, то из него удаляется наиболее давнее по использованию регулярное выражение и кэшируется новое регулярное выражение.  
+ <span data-ttu-id="085bc-123">Максимальное число кэшированных регулярных выражений определяется по значению `static` (`Shared` в Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> свойство.</span><span class="sxs-lookup"><span data-stu-id="085bc-123">The maximum number of cached regular expressions is determined by the value of the `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="085bc-124">По умолчанию обработчик регулярных выражений кэширует до 15 скомпилированных регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="085bc-124">By default, the regular expression engine caches up to 15 compiled regular expressions.</span></span> <span data-ttu-id="085bc-125">Если число скомпилированных регулярных выражений превышает размер кэша, из него удаляется наиболее давнее по использованию регулярное выражение и кэшируется новое регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="085bc-125">If the number of compiled regular expressions exceeds the cache size, the least recently used regular expression is discarded and the new regular expression is cached.</span></span>  
   
-> [!IMPORTANT]
->  Принцип кэширования регулярных выражений в .NET Framework версии 2.0 значительно отличается от принципов, применявшихся в версиях 1.0 и 1.1.  В .NET Framework версий 1.0 и 1.1 кэшировались все регулярные выражения, вызываемые как статическими методами, так и методами экземпляров.  Кэш автоматически расширялся для хранения новых регулярных выражений.  В платформе .NET Framework 2.0 кэшируются только регулярные выражения, используемые в вызовах статических методов.  По умолчанию кэшируются последние 15 регулярных выражений, хотя размер кэша может быть задан значением свойства <xref:System.Text.RegularExpressions.Regex.CacheSize%2A>.  
+ <span data-ttu-id="085bc-126">Приложение может воспользоваться преимуществом заранее скомпилированных регулярных выражений одним из указанных далее двух способов.</span><span class="sxs-lookup"><span data-stu-id="085bc-126">Your application can take advantage of precompiled regular expressions in one of the following two ways:</span></span>  
   
- Приложение может воспользоваться преимуществом заранее скомпилированных регулярных выражений одним из следующих двух способов:  
+-   <span data-ttu-id="085bc-127">С помощью статического метода <xref:System.Text.RegularExpressions.Regex> объекта для определения регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="085bc-127">By using a static method of the <xref:System.Text.RegularExpressions.Regex> object to define the regular expression.</span></span> <span data-ttu-id="085bc-128">Если используется шаблон регулярного выражения, который уже был определен при вызове другого статического метода, обработчик регулярных выражений будет извлекать его из кэша.</span><span class="sxs-lookup"><span data-stu-id="085bc-128">If you are using a regular expression pattern that has already been defined in another static method call, the regular expression engine will retrieve it from the cache.</span></span> <span data-ttu-id="085bc-129">Если нет, обработчик скомпилирует регулярное выражение и добавит его в кэш.</span><span class="sxs-lookup"><span data-stu-id="085bc-129">If not, the engine will compile the regular expression and add it to the cache.</span></span>  
   
--   Используя статический метод объекта <xref:System.Text.RegularExpressions.Regex> для определения регулярного выражения.  Если используется шаблон регулярного выражения, который уже был определен при вызове другого статического метода, то обработчик регулярных выражений будет извлекать его из кэша.  Если нет, то обработчик скомпилирует регулярное выражение и добавит его в кэш.  
+-   <span data-ttu-id="085bc-130">Повторное использование существующего <xref:System.Text.RegularExpressions.Regex> объекта, при условии, что требуется шаблон регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="085bc-130">By reusing an existing <xref:System.Text.RegularExpressions.Regex> object as long as its regular expression pattern is needed.</span></span>  
   
--   Путем многократного использования существующих объектов <xref:System.Text.RegularExpressions.Regex> до тех пор, пока необходим шаблон регулярного выражения.  
+ <span data-ttu-id="085bc-131">Из-за издержек при создании объектов и компиляции регулярных выражений, создание и быстрое уничтожение многочисленных <xref:System.Text.RegularExpressions.Regex> объекты — это процесс, очень дорого.</span><span class="sxs-lookup"><span data-stu-id="085bc-131">Because of the overhead of object instantiation and regular expression compilation, creating and rapidly destroying numerous <xref:System.Text.RegularExpressions.Regex> objects is a very expensive process.</span></span> <span data-ttu-id="085bc-132">Для приложений, использующих большое количество различных регулярных выражений, производительность можно оптимизировать с помощью вызова статических `Regex` методы и возможно, путем увеличения размера кэша регулярных выражений.</span><span class="sxs-lookup"><span data-stu-id="085bc-132">For applications that use a large number of different regular expressions, you can optimize performance by using calls to static `Regex` methods and possibly by increasing the size of the regular expression cache.</span></span>  
   
- Из\-за высоких издержек при создании объектов и компиляции регулярных выражений создание и быстрое уничтожение многочисленных объектов <xref:System.Text.RegularExpressions.Regex> представляет собой очень ресурсоемкий процесс.  Для приложений, использующих большое количество различных регулярных выражений, производительность можно оптимизировать с помощью вызова статических методов `Regex` и, возможно, путем увеличения размера кэша регулярных выражений.  
-  
-## См. также  
- [Регулярные выражения в .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="085bc-133">См. также</span><span class="sxs-lookup"><span data-stu-id="085bc-133">See Also</span></span>  
+ [<span data-ttu-id="085bc-134">Регулярные выражения .NET</span><span class="sxs-lookup"><span data-stu-id="085bc-134">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

@@ -1,55 +1,60 @@
 ---
-title: "How to: Write a Parallel.ForEach Loop with Thread-Local Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parallel foreach loop, how to use local state"
+title: "Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Write a Parallel.ForEach Loop with Thread-Local Variables
-В следующем примере описывается порядок написания метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>, использующего локальные переменные потока.  Когда выполняется цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A>, он делит свою исходную коллекцию на несколько разделов.  Каждый раздел получает свою копию локальной переменной потока.  \(Термин локальная переменная потока употребляется здесь немного неточно, так как в некоторых случаях два раздела могут выполняться в одном потоке.\)  
+# <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a><span data-ttu-id="058a9-102">Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока</span><span class="sxs-lookup"><span data-stu-id="058a9-102">How to: Write a Parallel.ForEach Loop with Thread-Local Variables</span></span>
+<span data-ttu-id="058a9-103">В следующем примере описывается порядок написания метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>, использующего локальные переменные потока.</span><span class="sxs-lookup"><span data-stu-id="058a9-103">The following example shows how to write a <xref:System.Threading.Tasks.Parallel.ForEach%2A> method that uses thread-local variables.</span></span> <span data-ttu-id="058a9-104">Когда выполняется цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A>, он делит свою исходную коллекцию на несколько разделов.</span><span class="sxs-lookup"><span data-stu-id="058a9-104">When a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop executes, it divides its source collection into multiple partitions.</span></span> <span data-ttu-id="058a9-105">Каждый раздел получает свою копию локальной переменной потока.</span><span class="sxs-lookup"><span data-stu-id="058a9-105">Each partition will get its own copy of the "thread-local" variable.</span></span> <span data-ttu-id="058a9-106">(Термин локальная переменная потока употребляется здесь немного неточно, так как в некоторых случаях два раздела могут выполняться в одном потоке.)</span><span class="sxs-lookup"><span data-stu-id="058a9-106">(The term "thread-local" is slightly inaccurate here, because in some cases two partitions may run on the same thread.)</span></span>  
   
- Код и параметры в примере в значительной степени напоминают соответствующий метод <xref:System.Threading.Tasks.Parallel.For%2A>.  Для получения дополнительной информации см. [How to: Write a Parallel.For Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).  
+ <span data-ttu-id="058a9-107">Код и параметры в примере в значительной степени напоминают соответствующий метод <xref:System.Threading.Tasks.Parallel.For%2A>.</span><span class="sxs-lookup"><span data-stu-id="058a9-107">The code and parameters in this example closely resemble the corresponding <xref:System.Threading.Tasks.Parallel.For%2A> method.</span></span> <span data-ttu-id="058a9-108">Дополнительные сведения см. в разделе [как: написание цикла Parallel.For локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="058a9-108">For more information, see [How to: Write a Parallel.For Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).</span></span>  
   
- Чтобы использовать локальную переменную потока в цикле <xref:System.Threading.Tasks.Parallel.ForEach%2A>, следует вызвать одну из перегрузок метода, принимающую два параметра типа.  Первый параметр типа `TSource` указывает тип исходного элемента, а второй параметр типа `TLocal` указывает тип локальной переменной в потоке.  
+ <span data-ttu-id="058a9-109">Чтобы использовать локальную переменную потока в цикле <xref:System.Threading.Tasks.Parallel.ForEach%2A>, следует вызвать одну из перегрузок метода, принимающую два параметра типа.</span><span class="sxs-lookup"><span data-stu-id="058a9-109">To use a thread-local variable in a <xref:System.Threading.Tasks.Parallel.ForEach%2A> loop, you must call one of the method overloads that takes two type parameters.</span></span> <span data-ttu-id="058a9-110">Первый параметр типа `TSource` указывает тип исходного элемента, а второй параметр типа `TLocal` указывает тип локальной переменной в потоке.</span><span class="sxs-lookup"><span data-stu-id="058a9-110">The first type parameter, `TSource`, specifies the type of the source element, and the second type parameter, `TLocal`, specifies the type of the thread-local variable.</span></span>  
   
-## Пример  
- В следующем примере выполняется вызов перегрузки <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=fullName> для вычисления суммы массива, состоящего из одного миллиона элементов.  Эта перегрузка имеет четыре параметра:  
+## <a name="example"></a><span data-ttu-id="058a9-111">Пример</span><span class="sxs-lookup"><span data-stu-id="058a9-111">Example</span></span>  
+ <span data-ttu-id="058a9-112">В следующем примере выполняется вызов перегрузки <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> для вычисления суммы массива, состоящего из одного миллиона элементов.</span><span class="sxs-lookup"><span data-stu-id="058a9-112">The following example calls <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> overload to compute the sum of an array of one million elements.</span></span> <span data-ttu-id="058a9-113">Эта перегрузка имеет четыре параметра:</span><span class="sxs-lookup"><span data-stu-id="058a9-113">This overload has four parameters:</span></span>  
   
--   `source`, который обозначает источник данных.  Он должен реализовать <xref:System.Collections.Generic.IEnumerable%601>.  Источником данных в нашем примере является объект миллионного члена `IEnumerable<Int32>`, возвращенный методом <xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="058a9-114">`source`, который обозначает источник данных.</span><span class="sxs-lookup"><span data-stu-id="058a9-114">`source`, which is the data source.</span></span> <span data-ttu-id="058a9-115">Он должен реализовать <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="058a9-115">It must implement <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="058a9-116">Источником данных в нашем примере является объект миллионного члена `IEnumerable<Int32>`, возвращенный методом <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="058a9-116">The data source in our example is the one million member `IEnumerable<Int32>` object returned by the <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> method.</span></span>  
   
--   `localInit` или функция, инициализирующая локальную переменную потока.  Эта функция вызывается для каждого раздела, где выполняется операция <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName>.  В нашем примере локальная переменная потока инициализируется с нулевым значением.  
+-   <span data-ttu-id="058a9-117">`localInit` или функция, инициализирующая локальную переменную потока.</span><span class="sxs-lookup"><span data-stu-id="058a9-117">`localInit`, or the function that initializes the thread-local variable.</span></span> <span data-ttu-id="058a9-118">Эта функция вызывается для каждого раздела, где выполняется операция <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="058a9-118">This function is called once for each partition in which the <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> operation executes.</span></span> <span data-ttu-id="058a9-119">В нашем примере локальная переменная потока инициализируется с нулевым значением.</span><span class="sxs-lookup"><span data-stu-id="058a9-119">Our example initializes the thread-local variable to zero.</span></span>  
   
--   `body` — это делегат <xref:System.Func%604>, который вызывается параллельным циклом на каждой итерации данного цикла.  Он имеет сигнатуру `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.  Вы указываете код для делегата, а цикл передает следующие входные параметры:  
+-   <span data-ttu-id="058a9-120">`body` — это делегат <xref:System.Func%604>, который вызывается параллельным циклом на каждой итерации данного цикла.</span><span class="sxs-lookup"><span data-stu-id="058a9-120">`body`, a <xref:System.Func%604> that is invoked by the parallel loop on each iteration of the loop.</span></span> <span data-ttu-id="058a9-121">Он имеет сигнатуру `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.</span><span class="sxs-lookup"><span data-stu-id="058a9-121">Its signature is `Func\<TSource, ParallelLoopState, TLocal, TLocal>`.</span></span> <span data-ttu-id="058a9-122">Вы указываете код для делегата, а цикл передает следующие входные параметры:</span><span class="sxs-lookup"><span data-stu-id="058a9-122">You supply the code for the delegate, and the loop passes in the input parameters, which are:</span></span>  
   
-    -   Текущий элемент интерфейса <xref:System.Collections.Generic.IEnumerable%601>.  
+    -   <span data-ttu-id="058a9-123">Текущий элемент интерфейса <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="058a9-123">The current element of the <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
   
-    -   Переменная <xref:System.Threading.Tasks.ParallelLoopState>, которую можно использовать в коде делегата, чтобы определить состояние цикла.  
+    -   <span data-ttu-id="058a9-124">Переменная <xref:System.Threading.Tasks.ParallelLoopState>, которую можно использовать в коде делегата, чтобы определить состояние цикла.</span><span class="sxs-lookup"><span data-stu-id="058a9-124">A <xref:System.Threading.Tasks.ParallelLoopState> variable that you can use in your delegate's code to examine the state of the loop.</span></span>  
   
-    -   Локальная переменная потока.  
+    -   <span data-ttu-id="058a9-125">Локальная переменная потока.</span><span class="sxs-lookup"><span data-stu-id="058a9-125">The thread-local variable.</span></span>  
   
-     Ваш делегат возвращает локальную переменную потока, которая затем передается в следующую итерацию цикла, выполняемого в данном конкретном разделе.  Каждый раздел цикла сохраняет отдельный экземпляр данной переменной.  
+     <span data-ttu-id="058a9-126">Ваш делегат возвращает локальную переменную потока, которая затем передается в следующую итерацию цикла, выполняемого в данном конкретном разделе.</span><span class="sxs-lookup"><span data-stu-id="058a9-126">Your delegate returns the thread-local variable, which is then passed to the next iteration of the loop that executes in that particular partition.</span></span> <span data-ttu-id="058a9-127">Каждый раздел цикла сохраняет отдельный экземпляр данной переменной.</span><span class="sxs-lookup"><span data-stu-id="058a9-127">Each loop partition maintains a separate instance of this variable.</span></span>  
   
-     В этом примере делегат добавляет значение каждого целого числа в локальную переменную потока, где сохраняется промежуточная сумма значений целочисленных элементов в этом разделе.  
+     <span data-ttu-id="058a9-128">В этом примере делегат добавляет значение каждого целого числа в локальную переменную потока, где сохраняется промежуточная сумма значений целочисленных элементов в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="058a9-128">In the example, the delegate adds the value of each integer to the thread-local variable, which maintains a running total of the values of the integer elements in that partition.</span></span>  
   
--   `localFinally`, делегат `Action<TLocal>`, вызываемый <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> после завершения операций цикла в каждом разделе.  Метод <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=fullName> передает вашему делегату `Action<TLocal>` окончательное значение локальной переменной потока для данного потока \(или раздела цикла\), а вы указываете код, который выполняет требуемое действие для объединения результата из данного раздела с результатами из других разделов.  Этот делегат может быть одновременно вызван несколькими задачами.  В связи с этим в примере используется метод <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=fullName> для синхронизации доступа к переменной `total`.  Поскольку делегат имеет тип <xref:System.Action%601>, возвращаемое значение отсутствует.  
+-   <span data-ttu-id="058a9-129">`localFinally`, делегат `Action<TLocal>`, вызываемый <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> после завершения операций цикла в каждом разделе.</span><span class="sxs-lookup"><span data-stu-id="058a9-129">`localFinally`, an `Action<TLocal>` delegate that the <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> invokes when the looping operations in each partition have completed.</span></span> <span data-ttu-id="058a9-130">Метод <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> передает вашему делегату `Action<TLocal>` окончательное значение локальной переменной потока для данного потока (или раздела цикла), а вы указываете код, который выполняет требуемое действие для объединения результата из данного раздела с результатами из других разделов.</span><span class="sxs-lookup"><span data-stu-id="058a9-130">The <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> method passes your `Action<TLocal>` delegate the final value of the thread-local variable for this thread (or loop partition), and you provide the code that performs the required action for combining the result from this partition with the results from the other partitions.</span></span> <span data-ttu-id="058a9-131">Этот делегат может быть одновременно вызван несколькими задачами.</span><span class="sxs-lookup"><span data-stu-id="058a9-131">This delegate can be invoked concurrently by multiple tasks.</span></span> <span data-ttu-id="058a9-132">В связи с этим в примере используется метод <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> для синхронизации доступа к переменной `total`.</span><span class="sxs-lookup"><span data-stu-id="058a9-132">Because of this, the example uses the <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> method to synchronize access to the `total` variable.</span></span> <span data-ttu-id="058a9-133">Поскольку делегат имеет тип <xref:System.Action%601>, возвращаемое значение отсутствует.</span><span class="sxs-lookup"><span data-stu-id="058a9-133">Because the delegate type is an <xref:System.Action%601>, there is no return value.</span></span>  
   
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
-## См. также  
- [Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)   
- [How to: Write a Parallel.For Loop with Thread\-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)   
- [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a><span data-ttu-id="058a9-134">См. также</span><span class="sxs-lookup"><span data-stu-id="058a9-134">See Also</span></span>  
+ [<span data-ttu-id="058a9-135">Параллелизм данных</span><span class="sxs-lookup"><span data-stu-id="058a9-135">Data Parallelism</span></span>](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+ [<span data-ttu-id="058a9-136">Практическое руководство. Написание цикла Parallel.For и локальными переменными потока</span><span class="sxs-lookup"><span data-stu-id="058a9-136">How to: Write a Parallel.For Loop with Thread-Local Variables</span></span>](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+ [<span data-ttu-id="058a9-137">Лямбда-выражения в PLINQ и TPL</span><span class="sxs-lookup"><span data-stu-id="058a9-137">Lambda Expressions in PLINQ and TPL</span></span>](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

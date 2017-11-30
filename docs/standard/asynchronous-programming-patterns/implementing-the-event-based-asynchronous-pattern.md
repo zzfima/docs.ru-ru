@@ -1,84 +1,90 @@
 ---
-title: "Реализация асинхронной модели, основанной на событиях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "асинхронная модель на основе событий"
-  - "ProgressChangedEventArgs - класс"
-  - "BackgroundWorker - компонент"
-  - "события [платформа .NET Framework], асинхронные"
-  - "асинхронная модель"
-  - "AsyncOperationManager - класс"
-  - "работа с потоками [платформа .NET Framework], асинхронные функции"
-  - "асинхронные компоненты [платформа .NET Framework]"
-  - "AsyncOperation - класс"
-  - "AsyncCompletedEventArgs - класс"
+title: "Реализация асинхронной модели, основанной на событиях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Event-based Asynchronous Pattern
+- ProgressChangedEventArgs class
+- BackgroundWorker component
+- events [.NET Framework], asynchronous
+- Asynchronous Pattern
+- AsyncOperationManager class
+- threading [.NET Framework], asynchronous features
+- components [.NET Framework], asynchronous
+- AsyncOperation class
+- AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b4df5e4df914d932c7413e9330e8663753456c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Реализация асинхронной модели, основанной на событиях
-При создании класса с некоторыми операциями, которые могут привести к значительным задержкам, рассмотрите возможность предоставления асинхронных функциональных возможностей посредством реализации [Обзор асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+# <a name="implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="a3c76-102">Реализация асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="a3c76-102">Implementing the Event-based Asynchronous Pattern</span></span>
+<span data-ttu-id="a3c76-103">Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать асинхронные функции для этого класса с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-103">If you are writing a class with some operations that may incur noticeable delays, consider giving it asynchronous functionality by implementing [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).</span></span>  
   
- Асинхронная модель на основе событий предоставляет стандартизированный способ упаковки класса, поддерживающего асинхронные функции. Если реализуется с помощью вспомогательных классов, например <xref:System.ComponentModel.AsyncOperationManager>, класс будет правильно работать в любой модели приложения, включая [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], приложения Windows Forms и консольных приложений.  
+ <span data-ttu-id="a3c76-104">Асинхронная модель на основе событий предоставляет стандартизированный способ упаковки класса, в котором есть асинхронные функции.</span><span class="sxs-lookup"><span data-stu-id="a3c76-104">The Event-based Asynchronous Pattern provides a standardized way to package a class that has asynchronous features.</span></span> <span data-ttu-id="a3c76-105">Если реализуется с помощью вспомогательных классов, например <xref:System.ComponentModel.AsyncOperationManager>, класс будет правильно работать в любой модели приложения, включая [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], приложения Windows Forms и консольных приложений.</span><span class="sxs-lookup"><span data-stu-id="a3c76-105">If implemented with helper classes like <xref:System.ComponentModel.AsyncOperationManager>, your class will work correctly under any application model, including [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], Console applications, and Windows Forms applications.</span></span>  
   
- Пример реализации асинхронной модели, основанной на событиях, в разделе [как: реализация компонента, который поддерживает асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-106">Пример реализации асинхронной модели на основе событий см. в разделе [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-106">For an example that implements the Event-based Asynchronous Pattern, see [How to: Implement a Component That Supports the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).</span></span>  
   
- Для простых асинхронных операций может оказаться <xref:System.ComponentModel.BackgroundWorker> подходящий компонент. Дополнительные сведения о <xref:System.ComponentModel.BackgroundWorker>, в разделе [Практическое руководство: выполнение операции в фоновом режиме](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ <span data-ttu-id="a3c76-107">Для простых асинхронных операций, возможно, вам <xref:System.ComponentModel.BackgroundWorker> подходящий компонент.</span><span class="sxs-lookup"><span data-stu-id="a3c76-107">For simple asynchronous operations, you may find the <xref:System.ComponentModel.BackgroundWorker> component suitable.</span></span> <span data-ttu-id="a3c76-108">Дополнительные сведения о <xref:System.ComponentModel.BackgroundWorker>, в разделе [как: выполнение операции в фоновом режиме](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-108">For more information about <xref:System.ComponentModel.BackgroundWorker>, see [How to: Run an Operation in the Background](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).</span></span>  
   
- Ниже перечислены функции, основанной на событиях асинхронной модели, описанных в этом разделе.  
+ <span data-ttu-id="a3c76-109">Ниже перечислены функции асинхронной модели на основе событий, описанные в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="a3c76-109">The following list describes the features of the Event-based Asynchronous Pattern discussed in this topic.</span></span>  
   
--   Возможности для реализации асинхронной модели, основанной на событиях  
+-   <span data-ttu-id="a3c76-110">Возможности для реализации асинхронной модели на основе событий</span><span class="sxs-lookup"><span data-stu-id="a3c76-110">Opportunities for Implementing the Event-based Asynchronous Pattern</span></span>  
   
--   Именование асинхронных методов  
+-   <span data-ttu-id="a3c76-111">Именование асинхронных методов</span><span class="sxs-lookup"><span data-stu-id="a3c76-111">Naming Asynchronous Methods</span></span>  
   
--   Дополнительная поддержка отмены  
+-   <span data-ttu-id="a3c76-112">Возможная поддержка отмены</span><span class="sxs-lookup"><span data-stu-id="a3c76-112">Optionally Support Cancellation</span></span>  
   
--   При необходимости поддерживать свойство IsBusy  
+-   <span data-ttu-id="a3c76-113">Возможная поддержка свойства IsBusy</span><span class="sxs-lookup"><span data-stu-id="a3c76-113">Optionally Support the IsBusy Property</span></span>  
   
--   При необходимости обеспечения поддержки отчета о ходе выполнения  
+-   <span data-ttu-id="a3c76-114">Возможная поддержка отчетов о ходе выполнения</span><span class="sxs-lookup"><span data-stu-id="a3c76-114">Optionally Provide Support for Progress Reporting</span></span>  
   
--   Дополнительное Предоставление поддержки для возврата добавочных результатов  
+-   <span data-ttu-id="a3c76-115">Возможная поддержка возврата добавочных результатов</span><span class="sxs-lookup"><span data-stu-id="a3c76-115">Optionally Provide Support for Returning Incremental Results</span></span>  
   
--   Обработка Out и Ref параметрам в методах  
+-   <span data-ttu-id="a3c76-116">Обработка выходных и ссылочных параметров в методах</span><span class="sxs-lookup"><span data-stu-id="a3c76-116">Handling Out and Ref Parameters in Methods</span></span>  
   
-## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>Возможности для реализации асинхронной модели, основанной на событиях  
- Рассмотрите возможность реализации асинхронной модели, основанной на событиях при:  
+## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a><span data-ttu-id="a3c76-117">Возможности для реализации асинхронной модели на основе событий</span><span class="sxs-lookup"><span data-stu-id="a3c76-117">Opportunities for Implementing the Event-based Asynchronous Pattern</span></span>  
+ <span data-ttu-id="a3c76-118">Подумайте о реализации асинхронной модели на основе событий при следующих условиях.</span><span class="sxs-lookup"><span data-stu-id="a3c76-118">Consider implementing the Event-based Asynchronous Pattern when:</span></span>  
   
--   Клиенты вашего класса не требуется <xref:System.Threading.WaitHandle> и <xref:System.IAsyncResult> объектов, доступных для асинхронных операций, это означает, что опроса и <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> потребуется строится на клиенте.  
+-   <span data-ttu-id="a3c76-119">Клиенты вашего класса не обязательно <xref:System.Threading.WaitHandle> и <xref:System.IAsyncResult> объектов, доступных для асинхронных операций, это означает, что опроса и <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> будет необходимо создавать с помощью клиента.</span><span class="sxs-lookup"><span data-stu-id="a3c76-119">Clients of your class do not need <xref:System.Threading.WaitHandle> and <xref:System.IAsyncResult> objects available for asynchronous operations, meaning that polling and <xref:System.Threading.WaitHandle.WaitAll%2A> or <xref:System.Threading.WaitHandle.WaitAny%2A> will need to be built up by the client.</span></span>  
   
--   Вы хотите асинхронных операций, управляемых с помощью клиента с помощью модели знакомые события и делегата.  
+-   <span data-ttu-id="a3c76-120">Асинхронными операциями должен управлять клиент с использованием известной модели событий или делегатов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-120">You want asynchronous operations to be managed by the client with the familiar event/delegate model.</span></span>  
   
- Любая операция является кандидатом на асинхронную реализацию, но следует учитывать те предполагается длительные задержки. Наиболее допустимы операции, в которых клиенты вызова метода и уведомление о завершении, без дальнейшего вмешательства. Также допустимы операции, которые работают постоянно, периодически уведомляя клиентов о ходе выполнения, добавочных результатов или изменения состояния.  
+ <span data-ttu-id="a3c76-121">Любую операцию можно реализовать асинхронно, но следует выбирать те операции, которые будут включать большие задержки.</span><span class="sxs-lookup"><span data-stu-id="a3c76-121">Any operation is a candidate for an asynchronous implementation, but those you expect to incur long latencies should be considered.</span></span> <span data-ttu-id="a3c76-122">Особенно подходят те операции, при которых клиенты вызывают метод и получают оповещение о его выполнении и никакого другого вмешательства в работу метода не требуется.</span><span class="sxs-lookup"><span data-stu-id="a3c76-122">Especially appropriate are operations in which clients call a method and are notified on completion, with no further intervention required.</span></span> <span data-ttu-id="a3c76-123">Также подходят операции, которые работают постоянно и периодически уведомляют клиентов о ходе выполнения, об изменении состояния или отправляют им промежуточные результаты.</span><span class="sxs-lookup"><span data-stu-id="a3c76-123">Also appropriate are operations which run continuously, periodically notifying clients of progress, incremental results, or state changes.</span></span>  
   
- Дополнительные сведения об определении времени поддержки асинхронной модели, основанной на событиях см. в разделе [решить, когда следует реализовать асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-124">Дополнительные сведения о выборе асинхронной модели на основе событий см. в разделе [Выбор асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-124">For more information on deciding when to support the Event-based Asynchronous Pattern, see [Deciding When to Implement the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="naming-asynchronous-methods"></a>Именование асинхронных методов  
- Для каждого синхронного метода *ИмяМетода* для которого необходимо предоставить асинхронный эквивалент:  
+## <a name="naming-asynchronous-methods"></a><span data-ttu-id="a3c76-125">Именование асинхронных методов</span><span class="sxs-lookup"><span data-stu-id="a3c76-125">Naming Asynchronous Methods</span></span>  
+ <span data-ttu-id="a3c76-126">Для каждого синхронного метода *имя_метода*, для которого необходимо предоставить асинхронный эквивалент, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a3c76-126">For each synchronous method *MethodName* for which you want to provide an asynchronous counterpart:</span></span>  
   
- Определение *ИмяМетода* `Async` метод:  
+ <span data-ttu-id="a3c76-127">Определите метод *имя_метода*`Async`, который:</span><span class="sxs-lookup"><span data-stu-id="a3c76-127">Define a *MethodName*`Async` method that:</span></span>  
   
--   Возвращает `void`.  
+-   <span data-ttu-id="a3c76-128">Возвращает `void`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-128">Returns `void`.</span></span>  
   
--   Принимает те же параметры, что *ИмяМетода* метод.  
+-   <span data-ttu-id="a3c76-129">принимает те же параметры, что и метод *имя_метода*;</span><span class="sxs-lookup"><span data-stu-id="a3c76-129">Takes the same parameters as the *MethodName* method.</span></span>  
   
--   Принимает несколько вызовов.  
+-   <span data-ttu-id="a3c76-130">поддерживает несколько вызовов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-130">Accepts multiple invocations.</span></span>  
   
- Дополнительно определить *ИмяМетода* `Async` перегрузку, идентичен *ИмяМетода*`Async`, но с дополнительным параметром, зависящим от объекта вызывается `userState`. Выполните это, если следует управлять несколькими параллельными вызовами метода, в этом случае `userState` значение будут доставляться обратно все обработчики событий, чтобы различать вызовы метода. Можно также выбрать для этого просто как место для размещения пользовательского состояния для последующего извлечения.  
+ <span data-ttu-id="a3c76-131">Также можно определить перегрузку *имя_метода*`Async`. Эта перегрузка идентична *имя_метода*`Async`, но включает дополнительный параметр `userState`, в качестве которого передается объект.</span><span class="sxs-lookup"><span data-stu-id="a3c76-131">Optionally define a *MethodName*`Async` overload, identical to *MethodName*`Async`, but with an additional object-valued parameter called `userState`.</span></span> <span data-ttu-id="a3c76-132">Реализуйте эту перегрузку, если необходимо управлять несколькими параллельными вызовами метода. В этом случае значение `userState` будет отправляться обратно во все обработчики событий, чтобы различать вызовы метода.</span><span class="sxs-lookup"><span data-stu-id="a3c76-132">Do this if you're prepared to manage multiple concurrent invocations of your method, in which case the `userState` value will be delivered back to all event handlers to distinguish invocations of the method.</span></span> <span data-ttu-id="a3c76-133">Такую перегрузку также можно использовать для хранения и последующего извлечения состояния пользователя.</span><span class="sxs-lookup"><span data-stu-id="a3c76-133">You may also choose to do this simply as a place to store user state for later retrieval.</span></span>  
   
- Для каждого отдельного *ИмяМетода* `Async` сигнатуру метода:  
+ <span data-ttu-id="a3c76-134">Для каждой отдельной сигнатуры метода *имя_метода*`Async` выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a3c76-134">For each separate *MethodName*`Async` method signature:</span></span>  
   
-1.  Определите следующее событие в том же классе как метод:  
+1.  <span data-ttu-id="a3c76-135">Определите следующее событие в том же классе, в котором находится метод.</span><span class="sxs-lookup"><span data-stu-id="a3c76-135">Define the following event in the same class as the method:</span></span>  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -88,7 +94,7 @@ caps.handback.revision: 20
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Определить следующий делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs>. Они скорее всего будет определяться, вне самого класса, но в то же пространство имен.  
+2.  <span data-ttu-id="a3c76-136">Определить следующий делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="a3c76-136">Define the following delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs>.</span></span> <span data-ttu-id="a3c76-137">Обычно они определяются за пределами класса, но в том же пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="a3c76-137">These will likely be defined outside of the class itself, but in the same namespace.</span></span>  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -111,108 +117,108 @@ caps.handback.revision: 20
     }  
     ```  
   
-    -   Убедитесь, что *ИмяМетода* `CompletedEventArgs` предоставляет свои члены как свойства только для чтения, а не полей, как поля предотвращают привязку данных.  
+    -   <span data-ttu-id="a3c76-138">Убедитесь, что члены класса *имя_метода*`CompletedEventArgs` предоставляются в качестве свойств, доступных только для чтения, а не полей, так как к полям нельзя выполнить привязку данных.</span><span class="sxs-lookup"><span data-stu-id="a3c76-138">Ensure that the *MethodName*`CompletedEventArgs` class exposes its members as read-only properties, and not fields, as fields prevent data binding.</span></span>  
   
-    -   Не определяйте любые <xref:System.ComponentModel.AsyncCompletedEventArgs>-производные классы для методов, которые не дают результатов. Просто используйте экземпляр <xref:System.ComponentModel.AsyncCompletedEventArgs> сам.  
+    -   <span data-ttu-id="a3c76-139">Не определяйте любые <xref:System.ComponentModel.AsyncCompletedEventArgs>-производные классы для методов, которые не дают результатов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-139">Do not define any <xref:System.ComponentModel.AsyncCompletedEventArgs>-derived classes for methods that do not produce results.</span></span> <span data-ttu-id="a3c76-140">Просто используйте экземпляр <xref:System.ComponentModel.AsyncCompletedEventArgs> сам.</span><span class="sxs-lookup"><span data-stu-id="a3c76-140">Simply use an instance of <xref:System.ComponentModel.AsyncCompletedEventArgs> itself.</span></span>  
   
         > [!NOTE]
-        >  Это приемлемо, когда это возможно и уместно, чтобы повторно использовать делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs> типов. В этом случае именование не будет согласовываться с именем метода, поскольку данный делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs> не будут привязаны к одному методу.  
+        >  <span data-ttu-id="a3c76-141">Это полностью допустимо, когда это возможно и уместно, чтобы повторно использовать делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs> типов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-141">It is perfectly acceptable, when feasible and appropriate, to reuse delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs> types.</span></span> <span data-ttu-id="a3c76-142">В этом случае именование не будет согласовываться с именем метода, так как заданный делегат и <xref:System.ComponentModel.AsyncCompletedEventArgs> не будут привязаны к одному методу.</span><span class="sxs-lookup"><span data-stu-id="a3c76-142">In this case, the naming will not be as consistent with the method name, since a given delegate and <xref:System.ComponentModel.AsyncCompletedEventArgs> won't be tied to a single method.</span></span>  
   
-## <a name="optionally-support-cancellation"></a>Дополнительная поддержка отмены  
- Если пользовательский класс будет поддерживать отмену асинхронных операций, отмену должен предоставляться клиенту, как описано ниже. Обратите внимание, что существуют две точки принятия решения, которые необходимо разрешить, прежде чем определять поддержку отмены:  
+## <a name="optionally-support-cancellation"></a><span data-ttu-id="a3c76-143">Возможная поддержка отмены</span><span class="sxs-lookup"><span data-stu-id="a3c76-143">Optionally Support Cancellation</span></span>  
+ <span data-ttu-id="a3c76-144">Если ваш класс будет поддерживать отмену асинхронных операций, возможность отмены должна быть предоставлена клиенту, как описано ниже.</span><span class="sxs-lookup"><span data-stu-id="a3c76-144">If your class will support canceling asynchronous operations, cancellation should be exposed to the client as described below.</span></span> <span data-ttu-id="a3c76-145">Перед тем как определить, будет ли реализована возможность отмены, необходимо ответить на два вопроса.</span><span class="sxs-lookup"><span data-stu-id="a3c76-145">Note that there are two decision points that need to be reached before defining your cancellation support:</span></span>  
   
--   Класс, включая возможные добавления к нему, имеет только одну асинхронную операцию, поддерживающую отмену?  
+-   <span data-ttu-id="a3c76-146">Будет ли в вашем классе и во всех его будущих версиях всего одна асинхронная операция, которая поддерживает отмену?</span><span class="sxs-lookup"><span data-stu-id="a3c76-146">Does your class, including future anticipated additions to it, have only one asynchronous operation that supports cancellation?</span></span>  
   
--   Можно ли асинхронные операции, поддерживающие отмену, обрабатывать несколько операций ожидания? То есть, принимает *ИмяМетода* `Async` метод `userState` параметра, и допускающие несколько вызовов до завершения какого-либо?  
+-   <span data-ttu-id="a3c76-147">Может ли асинхронная операция с возможностью отмены поддерживать несколько ожидающих операций?</span><span class="sxs-lookup"><span data-stu-id="a3c76-147">Can the asynchronous operations that support cancellation support multiple pending operations?</span></span> <span data-ttu-id="a3c76-148">То есть принимает ли метод *имя_метода*`Async` параметр `userState` и поддерживает ли он несколько вызовов, чтобы затем ожидать завершения любого из них?</span><span class="sxs-lookup"><span data-stu-id="a3c76-148">That is, does the *MethodName*`Async` method take a `userState` parameter, and does it allow multiple invocations before waiting for any to finish?</span></span>  
   
- Ответы на эти два вопроса в приведенной ниже таблице можно используйте для определения должен использовать метод отмены подписи.  
+ <span data-ttu-id="a3c76-149">С помощью ответов на эти вопросы и приведенной ниже таблицы определите сигнатуру метода отмены.</span><span class="sxs-lookup"><span data-stu-id="a3c76-149">Use the answers to these two questions in the table below to determine what the signature for your cancellation method should be.</span></span>  
   
-### <a name="visual-basic"></a>Visual Basic  
+### <a name="visual-basic"></a><span data-ttu-id="a3c76-150">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a3c76-150">Visual Basic</span></span>  
   
-||Поддерживается несколько одновременных операций|Только одна операция единовременно|  
+||<span data-ttu-id="a3c76-151">Поддерживается несколько одновременных операций</span><span class="sxs-lookup"><span data-stu-id="a3c76-151">Multiple Simultaneous Operations Supported</span></span>|<span data-ttu-id="a3c76-152">Только одна операция в один момент времени</span><span class="sxs-lookup"><span data-stu-id="a3c76-152">Only One Operation at a Time</span></span>|  
 |------|------------------------------------------------|----------------------------------|  
-|Одна асинхронная операция во всем классе|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
-|Несколько асинхронных операций в классе|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
+|<span data-ttu-id="a3c76-153">Одна асинхронная операция во всем классе</span><span class="sxs-lookup"><span data-stu-id="a3c76-153">One Async Operation in entire class</span></span>|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
+|<span data-ttu-id="a3c76-154">Несколько асинхронных операций в классе</span><span class="sxs-lookup"><span data-stu-id="a3c76-154">Multiple Async Operations in class</span></span>|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>C#  
+### <a name="c"></a><span data-ttu-id="a3c76-155">C#</span><span class="sxs-lookup"><span data-stu-id="a3c76-155">C#</span></span>  
   
-||Поддерживается несколько одновременных операций|Только одна операция единовременно|  
+||<span data-ttu-id="a3c76-156">Поддерживается несколько одновременных операций</span><span class="sxs-lookup"><span data-stu-id="a3c76-156">Multiple Simultaneous Operations Supported</span></span>|<span data-ttu-id="a3c76-157">Только одна операция в один момент времени</span><span class="sxs-lookup"><span data-stu-id="a3c76-157">Only One Operation at a Time</span></span>|  
 |------|------------------------------------------------|----------------------------------|  
-|Одна асинхронная операция во всем классе|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
-|Несколько асинхронных операций в классе|`void CancelAsync(object userState);`|`void CancelAsync();`|  
+|<span data-ttu-id="a3c76-158">Одна асинхронная операция во всем классе</span><span class="sxs-lookup"><span data-stu-id="a3c76-158">One Async Operation in entire class</span></span>|`void MethodNameAsyncCancel(object userState);`|`void MethodNameAsyncCancel();`|  
+|<span data-ttu-id="a3c76-159">Несколько асинхронных операций в классе</span><span class="sxs-lookup"><span data-stu-id="a3c76-159">Multiple Async Operations in class</span></span>|`void CancelAsync(object userState);`|`void CancelAsync();`|  
   
- Если определить `CancelAsync(object userState)` метод, клиенты должны быть внимательны при выборе значений состояния, чтобы различать все асинхронные методы, вызванные для объекта, а не только все вызовы отдельного асинхронного метода.  
+ <span data-ttu-id="a3c76-160">При определении метода `CancelAsync(object userState)` следует быть внимательным при выборе значений состояния клиента. Эти значения должны различаться не только для всех вызовов одного асинхронного метода, но и для всех вызываемых асинхронных методов объекта.</span><span class="sxs-lookup"><span data-stu-id="a3c76-160">If you define the `CancelAsync(object userState)` method, clients must be careful when choosing their state values to make them capable of distinguishing among all asynchronous methods invoked on the object, and not just between all invocations of a single asynchronous method.</span></span>  
   
- Решение об именовании версии одной асинхронной операцией *ИмяМетода* `AsyncCancel` основан на возможности более быстрого обнаружения метода в среде разработки, такой как IntelliSense в Visual Studio. Это группирует связанные элементы и отличает их от других членов, которые не работают с асинхронными функциональными возможностями. Если предполагается, что могут существовать дополнительные асинхронных операций добавлены в последующих версиях, рекомендуется определить `CancelAsync`.  
+ <span data-ttu-id="a3c76-161">При выборе имени для метода с одной асинхронной операцией *имя_метода*`AsyncCancel` учитывалось удобство поиска этого метода по имени в среде разработки, например в IntelliSense в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a3c76-161">The decision to name the single-async-operation version *MethodName*`AsyncCancel` is based on being able to more easily discover the method in a design environment like Visual Studio's IntelliSense.</span></span> <span data-ttu-id="a3c76-162">При этом связанные элементы группируются и отделяются от других элементов, которые не связаны с асинхронными операциями.</span><span class="sxs-lookup"><span data-stu-id="a3c76-162">This groups the related members and distinguishes them from other members that have nothing to do with asynchronous functionality.</span></span> <span data-ttu-id="a3c76-163">Если в дальнейшем могут быть добавлены новые асинхронные операции, рекомендуется определить `CancelAsync`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-163">If you expect that there may be additional asynchronous operations added in subsequent versions, it is better to define `CancelAsync`.</span></span>  
   
- Не определяйте несколько методов из приведенной выше таблицы в том же классе. Не будет иметь смысла или он будет загромождать интерфейс класса с увеличением числа методов.  
+ <span data-ttu-id="a3c76-164">Не определяйте несколько методов из приведенной выше таблицы в одном и том же классе.</span><span class="sxs-lookup"><span data-stu-id="a3c76-164">Do not define multiple methods from the table above in the same class.</span></span> <span data-ttu-id="a3c76-165">В этом не будет никакого смысла, к тому же интерфейс класса будет загроможден лишними методами.</span><span class="sxs-lookup"><span data-stu-id="a3c76-165">That will not make sense, or it will clutter the class interface with a proliferation of methods.</span></span>  
   
- Эти методы обычно возвращают немедленно, и операция может или не может отменить на самом деле. В обработчике событий для *ИмяМетода* `Completed` событий, *ИмяМетода* `CompletedEventArgs` объект содержит `Cancelled` поле, которое клиенты могут использовать для определения, произошла ли Отмена.  
+ <span data-ttu-id="a3c76-166">Эти методы обычно возвращают управление немедленно, и на самом деле операция может не быть отменена.</span><span class="sxs-lookup"><span data-stu-id="a3c76-166">These methods typically will return immediately, and the operation may or may not actually cancel.</span></span> <span data-ttu-id="a3c76-167">В обработчике события *имя_метода*`Completed` объект *имя_метода*`CompletedEventArgs` содержит поле `Cancelled`, с помощью которого клиенты могут определить, была ли отменена операция.</span><span class="sxs-lookup"><span data-stu-id="a3c76-167">In the event handler for the *MethodName*`Completed` event, the *MethodName*`CompletedEventArgs` object contains a `Cancelled` field, which clients can use to determine whether the cancellation occurred.</span></span>  
   
- Придерживайтесь семантике отмены, описанной в [советы и рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-168">Придерживайтесь семантики отмены, которая описана в разделе [Рекомендации по реализации асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-168">Abide by the cancellation semantics described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-support-the-isbusy-property"></a>При необходимости поддерживать свойство IsBusy  
- Если ваш класс поддерживает несколько одновременных вызовов, рассмотрите возможность предоставления `IsBusy` свойство. Это позволяет разработчикам определять ли *ИмяМетода* `Async` метод выполняется без перехвата исключения из *ИмяМетода* `Async` метод.  
+## <a name="optionally-support-the-isbusy-property"></a><span data-ttu-id="a3c76-169">Возможная поддержка свойства IsBusy</span><span class="sxs-lookup"><span data-stu-id="a3c76-169">Optionally Support the IsBusy Property</span></span>  
+ <span data-ttu-id="a3c76-170">Если ваш класс поддерживает несколько одновременных вызовов, попробуйте предоставить свойство `IsBusy`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-170">If your class does not support multiple concurrent invocations, consider exposing an `IsBusy` property.</span></span> <span data-ttu-id="a3c76-171">Это позволяет разработчикам определить, выполняется ли метод *имя_метода*`Async`, не перехватывая исключение из метода *имя_метода*`Async`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-171">This allows developers to determine whether a *MethodName*`Async` method is running without catching an exception from the *MethodName*`Async` method.</span></span>  
   
- Соблюдать `IsBusy` семантику описано в [советы и рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-172">Придерживайтесь семантики `IsBusy`, которая описана в разделе [Рекомендации по реализации асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-172">Abide by the `IsBusy` semantics described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-provide-support-for-progress-reporting"></a>При необходимости обеспечения поддержки отчета о ходе выполнения  
- Часто желательно для отчета о состоянии асинхронной операции во время его работы. Асинхронная модель на основе событий предоставляет рекомендации для этого.  
+## <a name="optionally-provide-support-for-progress-reporting"></a><span data-ttu-id="a3c76-173">Возможная поддержка отчетов о ходе выполнения</span><span class="sxs-lookup"><span data-stu-id="a3c76-173">Optionally Provide Support for Progress Reporting</span></span>  
+ <span data-ttu-id="a3c76-174">Часто желательно, чтобы асинхронная операция сообщала о ходе своего выполнения.</span><span class="sxs-lookup"><span data-stu-id="a3c76-174">It is frequently desirable for an asynchronous operation to report progress during its operation.</span></span> <span data-ttu-id="a3c76-175">При использовании асинхронной модели на основе событий это можно реализовать.</span><span class="sxs-lookup"><span data-stu-id="a3c76-175">The Event-based Asynchronous Pattern provides a guideline for doing so.</span></span>  
   
--   При необходимости определите событие возникает при асинхронной операции и вызывается в соответствующем потоке. <xref:System.ComponentModel.ProgressChangedEventArgs> объект передает индикатор выполнения целочисленный, который должен быть в диапазоне от 0 до 100.  
+-   <span data-ttu-id="a3c76-176">При необходимости определите событие, которое будет выдаваться асинхронной операцией и вызываться в соответствующем потоке.</span><span class="sxs-lookup"><span data-stu-id="a3c76-176">Optionally define an event to be raised by the asynchronous operation and invoked on the appropriate thread.</span></span> <span data-ttu-id="a3c76-177"><xref:System.ComponentModel.ProgressChangedEventArgs> Объект передает индикатор хода выполнения на целочисленный, которая должна быть в диапазоне от 0 до 100.</span><span class="sxs-lookup"><span data-stu-id="a3c76-177">The <xref:System.ComponentModel.ProgressChangedEventArgs> object carries an integer-valued progress indicator that is expected to be between 0 and 100.</span></span>  
   
--   Назовите это событие следующим образом:  
+-   <span data-ttu-id="a3c76-178">Укажите следующее имя для этого события:</span><span class="sxs-lookup"><span data-stu-id="a3c76-178">Name this event as follows:</span></span>  
   
-    -   `ProgressChanged`Если класс имеет несколько асинхронных операций (или ожидается, будет содержать несколько асинхронных операций в будущих версиях);  
+    -   <span data-ttu-id="a3c76-179">`ProgressChanged`, если в классе есть несколько асинхронных операций (или ожидается в будущих версиях);</span><span class="sxs-lookup"><span data-stu-id="a3c76-179">`ProgressChanged` if the class has multiple asynchronous operations (or is expected to grow to include multiple asynchronous operations in future versions);</span></span>  
   
-    -   *MethodName* `ProgressChanged` класс содержит одну асинхронную операцию.  
+    -   <span data-ttu-id="a3c76-180">*имя_метода* `ProgressChanged`, если в классе есть одна асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="a3c76-180">*MethodName* `ProgressChanged` if the class has a single asynchronous operation.</span></span>  
   
-     Этот выбор имен соответствует выбору, для метода отмены, как описано в разделе дополнительной поддержке отмены.  
+     <span data-ttu-id="a3c76-181">Выбор имени события соответствует выбору имени для метода отмены, как описано в разделе "Возможная поддержка отмены".</span><span class="sxs-lookup"><span data-stu-id="a3c76-181">This naming choice parallels that made for the cancellation method, as described in the Optionally Support Cancellation section.</span></span>  
   
- Это событие следует использовать <xref:System.ComponentModel.ProgressChangedEventHandler> сигнатуре делегата и <xref:System.ComponentModel.ProgressChangedEventArgs> класса. Кроме того, если можно предоставить более доменный индикатор хода выполнения (для экземпляра, количество прочитанных байтов и общее количество байтов в операции загрузки), то следует определить класс, производный от <xref:System.ComponentModel.ProgressChangedEventArgs>.  
+ <span data-ttu-id="a3c76-182">Это событие следует использовать <xref:System.ComponentModel.ProgressChangedEventHandler> сигнатура делегата и <xref:System.ComponentModel.ProgressChangedEventArgs> класса.</span><span class="sxs-lookup"><span data-stu-id="a3c76-182">This event should use the <xref:System.ComponentModel.ProgressChangedEventHandler> delegate signature and the <xref:System.ComponentModel.ProgressChangedEventArgs> class.</span></span> <span data-ttu-id="a3c76-183">Кроме того, если индикатор выполнения более специфические для домена могут быть предоставлены (для экземпляра, количество прочитанных байтов и общее количество байтов в операции загрузки), то следует определить производный класс <xref:System.ComponentModel.ProgressChangedEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="a3c76-183">Alternatively, if a more domain-specific progress indicator can be provided (for instance, bytes read and total bytes for a download operation), then you should define a derived class of <xref:System.ComponentModel.ProgressChangedEventArgs>.</span></span>  
   
- Обратите внимание, что только один `ProgressChanged` или *ИмяМетода* `ProgressChanged` события для класса, независимо от количества поддерживаемых им асинхронных методов. Клиенты должны использовать `userState` объект, передаваемый в *ИмяМетода* `Async` методы для различения обновлений хода выполнения в нескольких одновременных операциях.  
+ <span data-ttu-id="a3c76-184">Обратите внимание, что для класса существует только одно событие `ProgressChanged` или *имя_метода*`ProgressChanged` независимо от количества поддерживаемых им асинхронных методов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-184">Note that there is only one `ProgressChanged` or *MethodName*`ProgressChanged` event for the class, regardless of the number of asynchronous methods it supports.</span></span> <span data-ttu-id="a3c76-185">Чтобы различить изменения хода выполнения в нескольких одновременных операциях, клиенты должны использовать объект `userState`, который передается в метод *имя_метода*`Async`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-185">Clients are expected to use the `userState` object that is passed to the *MethodName*`Async` methods to distinguish among progress updates on multiple concurrent operations.</span></span>  
   
- Возможны ситуации, в которых несколько операций поддерживают ход выполнения и каждая возвращает собственный индикатор хода выполнения. В этом случае одна `ProgressChanged` событий не подходит, и следует рассмотреть возможность поддержки нескольких `ProgressChanged` события. В этом случае используйте шаблон именования *ИмяМетода* `ProgressChanged` для каждого *ИмяМетода* `Async` метод.  
+ <span data-ttu-id="a3c76-186">Возможны ситуации, при которых несколько операций поддерживают ход выполнения и каждая операция возвращает собственный индикатор хода выполнения.</span><span class="sxs-lookup"><span data-stu-id="a3c76-186">There may be situations in which multiple operations support progress and each returns a different indicator for progress.</span></span> <span data-ttu-id="a3c76-187">В этом случае одним событием `ProgressChanged` не обойтись и необходимо рассмотреть поддержку нескольких событий `ProgressChanged`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-187">In this case, a single `ProgressChanged` event is not appropriate, and you may consider supporting multiple `ProgressChanged` events.</span></span> <span data-ttu-id="a3c76-188">В этом случае используйте шаблон именования *имя_метода*`ProgressChanged` для каждого метода *имя_метода*`Async`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-188">In this case use a naming pattern of *MethodName*`ProgressChanged` for each *MethodName*`Async` method.</span></span>  
   
- Придерживайтесь семантике отчета о ходе выполнения описанных [советы и рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-189">Придерживайтесь семантики отчета о ходе выполнения, которая описана в разделе [Рекомендации по реализации асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-189">Abide by the progress-reporting semantics described [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="optionally-provide-support-for-returning-incremental-results"></a>Дополнительное Предоставление поддержки для возврата добавочных результатов  
- Иногда асинхронная операция может возвратить добавочные результаты до завершения. Существует ряд параметров, которые могут использоваться для поддержки этого сценария. Ниже приведены некоторые примеры.  
+## <a name="optionally-provide-support-for-returning-incremental-results"></a><span data-ttu-id="a3c76-190">Возможная поддержка возврата добавочных результатов</span><span class="sxs-lookup"><span data-stu-id="a3c76-190">Optionally Provide Support for Returning Incremental Results</span></span>  
+ <span data-ttu-id="a3c76-191">Иногда асинхронная операция может возвращать добавочные результаты до своего завершения.</span><span class="sxs-lookup"><span data-stu-id="a3c76-191">Sometimes an asynchronous operation can return incremental results prior to completion.</span></span> <span data-ttu-id="a3c76-192">Поддержку этого сценария можно реализовать различными способами.</span><span class="sxs-lookup"><span data-stu-id="a3c76-192">There are a number of options that can be used to support this scenario.</span></span> <span data-ttu-id="a3c76-193">Ниже приведены некоторые примеры.</span><span class="sxs-lookup"><span data-stu-id="a3c76-193">Some examples follow.</span></span>  
   
-### <a name="single-operation-class"></a>Класс с одной операцией  
- Если ваш класс поддерживает только одну асинхронную операцию и эта операция может возвращать добавочные результаты, затем:  
+### <a name="single-operation-class"></a><span data-ttu-id="a3c76-194">Класс с одной операцией</span><span class="sxs-lookup"><span data-stu-id="a3c76-194">Single-operation Class</span></span>  
+ <span data-ttu-id="a3c76-195">Если ваш класс поддерживает только одну асинхронную операцию и эта операция может возвращать добавочные результаты, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a3c76-195">If your class only supports a single asynchronous operation, and that operation is able to return incremental results, then:</span></span>  
   
--   Расширить <xref:System.ComponentModel.ProgressChangedEventArgs> введите для доставки данных добавочных результатов и определите *ИмяМетода* `ProgressChanged` событий с помощью этих расширенных данных.  
+-   <span data-ttu-id="a3c76-196">Расширить <xref:System.ComponentModel.ProgressChangedEventArgs> введите для переноса данных добавочных результатов и определите *имя_метода* `ProgressChanged` событий с помощью этих расширенных данных.</span><span class="sxs-lookup"><span data-stu-id="a3c76-196">Extend the <xref:System.ComponentModel.ProgressChangedEventArgs> type to carry the incremental result data, and define a *MethodName*`ProgressChanged` event with this extended data.</span></span>  
   
--   Вызвать это *ИмяМетода* `ProgressChanged` событие, если имеется добавочный результат для отчета.  
+-   <span data-ttu-id="a3c76-197">Выдавайте это событие *имя_метода*`ProgressChanged` при появлении добавочного результата, который следует отобразить.</span><span class="sxs-lookup"><span data-stu-id="a3c76-197">Raise this *MethodName*`ProgressChanged` event when there is an incremental result to report.</span></span>  
   
- Это решение применимо специально к классу с одной асинхронной операцией, так как нет никаких проблем с тем же событием добавочных результатов по «всем операциям», как *ИмяМетода* `ProgressChanged` событием.  
+ <span data-ttu-id="a3c76-198">Это решение можно применять к классам с одной асинхронной операцией, так как в этом случае отсутствуют трудности с тем, что для одного и того же события возвращаются добавочные результаты для всех операций, как происходит в случае с событием *имя_метода*`ProgressChanged`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-198">This solution applies specifically to a single-async-operation class because there is no problem with the same event occurring to return incremental results on "all operations", as the *MethodName*`ProgressChanged` event does.</span></span>  
   
-### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Класс несколькими операциями, предоставляющий однородные добавочные результаты  
- В этом случае ваш класс поддерживает несколько асинхронных методов, каждый из которых может возвращать добавочные результаты, а эти добавочные результаты имеют одинаковый тип данных.  
+### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a><span data-ttu-id="a3c76-199">Класс с несколькими операциями, предоставляющий однородные добавочные результаты</span><span class="sxs-lookup"><span data-stu-id="a3c76-199">Multiple-operation Class with Homogeneous Incremental Results</span></span>  
+ <span data-ttu-id="a3c76-200">В данном случае класс поддерживает несколько асинхронных методов, каждый из которых может возвращать добавочные результаты, и эти добавочные результаты имеют одинаковый тип данных.</span><span class="sxs-lookup"><span data-stu-id="a3c76-200">In this case, your class supports multiple asynchronous methods, each capable of returning incremental results, and these incremental results all have the same type of data.</span></span>  
   
- Следуйте приведенной выше модели для классов с одной операцией, тем же <xref:System.EventArgs> структура будет работать для всех добавочных результатов. Определение `ProgressChanged` событий вместо *ИмяМетода* `ProgressChanged` событие, так как оно применимо к нескольким асинхронным методам.  
+ <span data-ttu-id="a3c76-201">Следуйте приведенной выше модели для классов с одной операцией, тем же <xref:System.EventArgs> структура будет работать для всех добавочных результатов.</span><span class="sxs-lookup"><span data-stu-id="a3c76-201">Follow the model described above for single-operation classes, as the same <xref:System.EventArgs> structure will work for all incremental results.</span></span> <span data-ttu-id="a3c76-202">Определите событие `ProgressChanged` вместо события *имя_метода*`ProgressChanged`, так как оно применяется к нескольким асинхронным методам.</span><span class="sxs-lookup"><span data-stu-id="a3c76-202">Define a `ProgressChanged` event instead of a *MethodName*`ProgressChanged` event, since it applies to multiple asynchronous methods.</span></span>  
   
-### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Класс с несколькими операциями с разнородными добавочных результатов  
- Если ваш класс поддерживает несколько асинхронных методов, каждый из которых возвращает другой тип данных, необходимо:  
+### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a><span data-ttu-id="a3c76-203">Класс с несколькими операциями, предоставляющий неоднородные добавочные результаты</span><span class="sxs-lookup"><span data-stu-id="a3c76-203">Multiple-operation Class with Heterogeneous Incremental Results</span></span>  
+ <span data-ttu-id="a3c76-204">Если ваш класс поддерживает несколько асинхронных методов, которые возвращают данные различных типов, необходимо сделать следующее.</span><span class="sxs-lookup"><span data-stu-id="a3c76-204">If your class supports multiple asynchronous methods, each returning a different type of data, you should:</span></span>  
   
--   Отдельные добавочных результатах и отчет о ходе выполнения.  
+-   <span data-ttu-id="a3c76-205">Разделите отправляемые отчеты о добавочных результатах и отчеты о ходе выполнения.</span><span class="sxs-lookup"><span data-stu-id="a3c76-205">Separate your incremental result reporting from your progress reporting.</span></span>  
   
--   Определить отдельные *ИмяМетода* `ProgressChanged` событий с соответствующих <xref:System.EventArgs> для каждого асинхронного метода обрабатывать данные добавочных результатов этого метода.  
+-   <span data-ttu-id="a3c76-206">Определена отдельная *имя_метода* `ProgressChanged` событий с соответствующих <xref:System.EventArgs> для каждого асинхронного метода обрабатывать данные добавочных результатов этого метода.</span><span class="sxs-lookup"><span data-stu-id="a3c76-206">Define a separate *MethodName*`ProgressChanged` event with appropriate <xref:System.EventArgs> for each asynchronous method to handle that method's incremental result data.</span></span>  
   
- Вызовите этот обработчик события в соответствующем потоке, как описано в [советы и рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
+ <span data-ttu-id="a3c76-207">Вызовите этот обработчик события в соответствующем потоке, как описано в разделе [Рекомендации по реализации асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="a3c76-207">Invoke that event handler on the appropriate thread as described in [Best Practices for Implementing the Event-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## <a name="handling-out-and-ref-parameters-in-methods"></a>Обработка Out и Ref параметрам в методах  
- Хотя использование `out` и `ref` , как правило, не рекомендуется в .NET Framework, ниже приведены правила, если они присутствуют, выполните:  
+## <a name="handling-out-and-ref-parameters-in-methods"></a><span data-ttu-id="a3c76-208">Обработка выходных и ссылочных параметров в методах</span><span class="sxs-lookup"><span data-stu-id="a3c76-208">Handling Out and Ref Parameters in Methods</span></span>  
+ <span data-ttu-id="a3c76-209">Хотя на платформе .NET Framework в целом не рекомендуется использовать `out` или `ref`, это можно сделать при соблюдении некоторых правил.</span><span class="sxs-lookup"><span data-stu-id="a3c76-209">Although the use of `out` and `ref` is, in general, discouraged in the .NET Framework, here are the rules to follow when they are present:</span></span>  
   
- Синхронного метода *ИмяМетода*:  
+ <span data-ttu-id="a3c76-210">Для данного синхронного метода *имя_метода*:</span><span class="sxs-lookup"><span data-stu-id="a3c76-210">Given a synchronous method *MethodName*:</span></span>  
   
--   `out`параметры для *ИмяМетода* не должно быть частью *ИмяМетода*`Async`. Вместо этого они должны быть частью *ИмяМетода* `CompletedEventArgs` с тем же именем, как его параметра-эквивалента в *ИмяМетода* (если не существует более подходящего имени).  
+-   <span data-ttu-id="a3c76-211">параметры `out` метода *имя_метода* не должны быть частью метода *имя_метода*`Async`.</span><span class="sxs-lookup"><span data-stu-id="a3c76-211">`out` parameters to *MethodName* should not be part of *MethodName*`Async`.</span></span> <span data-ttu-id="a3c76-212">Вместо этого они должны быть частью метода *имя_метода*`CompletedEventArgs` с тем же именем, что и у метода с эквивалентными параметрами *имя_метода* (при отсутствии более подходящего имени).</span><span class="sxs-lookup"><span data-stu-id="a3c76-212">Instead, they should be part of *MethodName*`CompletedEventArgs` with the same name as its parameter equivalent in *MethodName* (unless there is a more appropriate name).</span></span>  
   
--   `ref`параметры для *ИмяМетода* должны отображаться как часть *ИмяМетода*`Async`и как часть *ИмяМетода* `CompletedEventArgs` с тем же именем, как его параметра-эквивалента в *ИмяМетода* (если не существует более подходящего имени).  
+-   <span data-ttu-id="a3c76-213">Параметры `ref` метода *имя_метода* должны быть частью метода *имя_метода*`Async` и частью метода *имя_метода*`CompletedEventArgs` с тем же именем, что и у метода с эквивалентными параметрами *имя_метода* (при отсутствии более подходящего имени).</span><span class="sxs-lookup"><span data-stu-id="a3c76-213">`ref` parameters to *MethodName* should appear as part of *MethodName*`Async`, and as part of *MethodName*`CompletedEventArgs` with the same name as its parameter equivalent in *MethodName* (unless there is a more appropriate name).</span></span>  
   
- Например если:  
+ <span data-ttu-id="a3c76-214">Например, если учитывать, что:</span><span class="sxs-lookup"><span data-stu-id="a3c76-214">For example, given:</span></span>  
   
 ```vb  
 Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg3 As String) As Integer  
@@ -222,7 +228,7 @@ Public Function MethodName(ByVal arg1 As String, ByRef arg2 As String, ByRef arg
 public int MethodName(string arg1, ref string arg2, out string arg3);  
 ```  
   
- Асинхронный метод и его <xref:System.ComponentModel.AsyncCompletedEventArgs> класс будет выглядеть следующим образом:  
+ <span data-ttu-id="a3c76-215">Асинхронный метод и его <xref:System.ComponentModel.AsyncCompletedEventArgs> класса будет выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="a3c76-215">Your asynchronous method and its <xref:System.ComponentModel.AsyncCompletedEventArgs> class would look like this:</span></span>  
   
 ```vb  
 Public Sub MethodNameAsync(ByVal arg1 As String, ByVal arg2 As String)  
@@ -249,12 +255,12 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.ProgressChangedEventArgs>   
- <xref:System.ComponentModel.AsyncCompletedEventArgs>   
- [Практическое руководство: реализация компонента, который поддерживает асинхронную модель, основанную на событиях](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)   
- [Практическое руководство: выполнение операции в фоновом режиме](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [Практическое руководство: реализация формы, в которой фоновая операция](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [Определение, когда следует реализовать асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)   
- [Многопоточное программирование с использованием асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)   
- [Советы и рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a><span data-ttu-id="a3c76-216">См. также</span><span class="sxs-lookup"><span data-stu-id="a3c76-216">See Also</span></span>  
+ <xref:System.ComponentModel.ProgressChangedEventArgs>  
+ <xref:System.ComponentModel.AsyncCompletedEventArgs>  
+ [<span data-ttu-id="a3c76-217">Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий</span><span class="sxs-lookup"><span data-stu-id="a3c76-217">How to: Implement a Component That Supports the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="a3c76-218">Практическое руководство. Фоновое выполнение операции</span><span class="sxs-lookup"><span data-stu-id="a3c76-218">How to: Run an Operation in the Background</span></span>](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="a3c76-219">Практическое руководство. Реализация формы, в которой выполняется фоновая операция</span><span class="sxs-lookup"><span data-stu-id="a3c76-219">How to: Implement a Form That Uses a Background Operation</span></span>](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [<span data-ttu-id="a3c76-220">Определение, когда следует реализовать асинхронную модель, основанную на событиях</span><span class="sxs-lookup"><span data-stu-id="a3c76-220">Deciding When to Implement the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="a3c76-221">Многопоточное программирование с использованием асинхронной модели на основе событий</span><span class="sxs-lookup"><span data-stu-id="a3c76-221">Multithreaded Programming with the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  
+ [<span data-ttu-id="a3c76-222">Рекомендации по реализации асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="a3c76-222">Best Practices for Implementing the Event-based Asynchronous Pattern</span></span>](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)

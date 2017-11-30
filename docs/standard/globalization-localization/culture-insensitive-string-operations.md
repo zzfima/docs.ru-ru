@@ -1,40 +1,43 @@
 ---
-title: "Строковые операции, не зависящие от языка и региональных параметров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сравнения с учетом регистра"
-  - "язык и региональные параметры, операции со строками без учета языка и региональных параметров"
-  - "операции со строками без учета языка и региональных параметров"
-  - "операции со строками с учетом языка и региональных параметров"
-  - "глобализация [платформа .NET Framework], операции со строками без учета языка и региональных параметров"
-  - "локализация [платформа .NET Framework], операции со строками без учета языка и региональных параметров"
-  - "строки [платформа .NET Framework], операции со строками без учета языка и региональных параметров"
-  - "международные приложения, операции со строками без учета языка и региональных параметров"
+title: "Строковые операции, не зависящие от языка и региональных параметров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- culture, culture-insensitive string operations
+- case-sensitive comparisons
+- globalization [.NET Framework], culture-insensitive string operations
+- strings [.NET Framework], culture-insensitive string operations
+- localization [.NET Framework], culture-insensitive string operations
+- world-ready applications, culture-insensitive string operations
+- culture-sensitive string operations
+- culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Строковые операции, не зависящие от языка и региональных параметров
-Строковые операции с учетом языка и региональных параметров могут представлять преимущество для разработчиков, которые создают приложения, предназначенные для отображения пользователям результатов в зависимости от языка и региона.  По умолчанию методы, зависящие от языка и региона, используют значение среды, содержащееся в свойстве <xref:System.Globalization.CultureInfo.CurrentCulture%2A> для текущего потока.  
+# <a name="culture-insensitive-string-operations"></a><span data-ttu-id="c81b5-102">Строковые операции, не зависящие от языка и региональных параметров</span><span class="sxs-lookup"><span data-stu-id="c81b5-102">Culture-Insensitive String Operations</span></span>
+<span data-ttu-id="c81b5-103">Строковые операции с учетом языка и региональных параметров могут представлять преимущество для разработчиков, которые создают приложения, предназначенные для отображения пользователям результатов в зависимости от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="c81b5-104">По умолчанию методы, зависящие от языка и региона, используют значение среды, содержащееся в свойстве <xref:System.Globalization.CultureInfo.CurrentCulture%2A> для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="c81b5-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  
   
- Обратите внимание, что строковые операции с учетом языка и региона не всегда возвращают ожидаемый результат.  При выполнении операций с учетом языка и региональных параметров, если результат не должен зависеть от параметров, возможен сбой кода приложения при работе с параметрами, к которым применяются особые правила сопоставления регистра и сортировки.  Пример см. в разделе "Сравнения строк, использующие текущие язык и региональные параметры" в статье [Рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md).  
+ <span data-ttu-id="c81b5-105">Обратите внимание, что строковые операции с учетом языка и региона не всегда возвращают ожидаемый результат.</span><span class="sxs-lookup"><span data-stu-id="c81b5-105">Note that culture-sensitive string operations are not always the desired behavior.</span></span> <span data-ttu-id="c81b5-106">При выполнении операций с учетом языка и региональных параметров, если результат не должен зависеть от параметров, возможен сбой кода приложения при работе с параметрами, к которым применяются особые правила сопоставления регистра и сортировки.</span><span class="sxs-lookup"><span data-stu-id="c81b5-106">Using culture-sensitive operations when results should be independent of culture can cause application code to fail on cultures with custom case mappings and sorting rules.</span></span> <span data-ttu-id="c81b5-107">Пример, см. в подразделе «Строка сравнения, текущего языка и региональных параметров» [советы и рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md) статьи.</span><span class="sxs-lookup"><span data-stu-id="c81b5-107">For an example, see the "String Comparisons that Use the Current Culture" section in the [Best Practices for Using Strings](../../../docs/standard/base-types/best-practices-strings.md) article.</span></span>  
   
- Должны ли строковые операции зависеть от языка и региона определяется тем, как приложение использует результаты этих операций.  Обычно строковые операции, отображающие результат конечному пользователю, должны зависеть от языка и региона.  Например, если в приложении отображается отсортированный список локализованных строк, то сортировка должна выполняться с учетом языка и региональных параметров.  
+ <span data-ttu-id="c81b5-108">Должны ли строковые операции зависеть от языка и региона определяется тем, как приложение использует результаты этих операций.</span><span class="sxs-lookup"><span data-stu-id="c81b5-108">Whether string operations should be culture-sensitive or culture-insensitive depends on how your application uses the results.</span></span> <span data-ttu-id="c81b5-109">Обычно строковые операции, отображающие результат конечному пользователю, должны зависеть от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-109">String operations that display results to the user should typically be culture-sensitive.</span></span> <span data-ttu-id="c81b5-110">Например, если в приложении отображается отсортированный список локализованных строк, то сортировка должна выполняться с учетом языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="c81b5-110">For example, if an application displays a sorted list of localized strings in a list box, the application should perform a culture-sensitive sort.</span></span>  
   
- Результаты строковых операций, используемые внутри кода, обычно не должны зависеть от языка и региона.  В общем случае при работе с именами файлов, форматами хранения или символьными данными, которые не отображаются конечному пользователю, результаты строковых операций не должны зависеть от языка и региона.  Например, если в приложении выполняется сравнение строки, чтобы определить, является ли она тегом XML, то сравнение не должно зависеть от языка и региона.  Кроме того, если решение, влияющее на безопасность, основано на результате операций сравнения строк или изменения регистра, они не должны зависеть от языка и региона, чтобы гарантировать, что на результат не повлияет значение параметра <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.  
+ <span data-ttu-id="c81b5-111">Результаты строковых операций, используемые внутри кода, обычно не должны зависеть от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-111">Results of string operations that are used internally should typically be culture-insensitive.</span></span> <span data-ttu-id="c81b5-112">В общем случае при работе с именами файлов, форматами хранения или символьными данными, которые не отображаются конечному пользователю, результаты строковых операций не должны зависеть от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-112">In general, if the application is working with file names, persistence formats, or symbolic information that is not displayed to the user, results of string operations should not vary by culture.</span></span> <span data-ttu-id="c81b5-113">Например, если в приложении выполняется сравнение строки, чтобы определить, является ли она тегом XML, то сравнение не должно зависеть от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-113">For example, if an application compares a string to determine whether it is a recognized XML tag, the comparison should not be culture-sensitive.</span></span> <span data-ttu-id="c81b5-114">Кроме того, если решение, влияющее на безопасность, основано на результате операций сравнения строк или изменения регистра, они не должны зависеть от языка и региона, чтобы гарантировать, что на результат не повлияет значение параметра <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.</span><span class="sxs-lookup"><span data-stu-id="c81b5-114">In addition, if a security decision is based on the result of a string comparison or case change operation, the operation should be culture-insensitive to ensure that the result is not affected by the value of <xref:System.Globalization.CultureInfo.CurrentCulture%2A>.</span></span>  
   
- Независимо от того, содержит ли разрабатываемое приложение код для проведения локализации и глобализации, следует осторожно работать с методами .NET Framework, результат работы которых по умолчанию зависит от языка и региона.  Цель этого раздела — показать правильный порядок использования этих методов для получения результатов, не зависящих от языка и региона.  
+ <span data-ttu-id="c81b5-115">Независимо от того, содержит ли разрабатываемое приложение код для проведения локализации и глобализации, следует осторожно работать с методами .NET Framework, результат работы которых по умолчанию зависит от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-115">Whether or not you are developing an application that includes code to handle localization and globalization issues, you should be aware of the .NET Framework methods that retrieve culture-sensitive results by default.</span></span> <span data-ttu-id="c81b5-116">Цель этого раздела — показать правильный порядок использования этих методов для получения результатов, не зависящих от языка и региона.</span><span class="sxs-lookup"><span data-stu-id="c81b5-116">The purpose of this topic is to illustrate the correct way for your applications to use these methods to obtain culture-insensitive results.</span></span>  
   
-## См. также  
- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a><span data-ttu-id="c81b5-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c81b5-117">See Also</span></span>  
+ [<span data-ttu-id="c81b5-118">Глобализация и локализация</span><span class="sxs-lookup"><span data-stu-id="c81b5-118">Globalization and Localization</span></span>](../../../docs/standard/globalization-localization/index.md)

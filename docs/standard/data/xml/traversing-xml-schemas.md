@@ -1,82 +1,84 @@
 ---
-title: "Обход XML-схем | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Обход XML-схем"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обход XML-схем
-Обзор схемы XML с помощью API\-интерфейса объектной модели схемы XML \(SOM\) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM.  Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
+# <a name="traversing-xml-schemas"></a><span data-ttu-id="3ff6d-102">Обход XML-схем</span><span class="sxs-lookup"><span data-stu-id="3ff6d-102">Traversing XML Schemas</span></span>
+<span data-ttu-id="3ff6d-103">Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-103">Traversing an XML schema using the Schema Object Model (SOM) API provides access to the elements, attributes, and types stored in the SOM.</span></span> <span data-ttu-id="3ff6d-104">Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-104">Traversing an XML schema loaded into the SOM is also the first step in editing an XML schema using the SOM API.</span></span>  
   
-## Обзор схемы XML  
- Следующие свойства класса <xref:System.Xml.Schema.XmlSchema> предоставляют доступ к коллекции глобальных объектов, добавляемых к схеме XML.  
+## <a name="traversing-an-xml-schema"></a><span data-ttu-id="3ff6d-105">Обзор схемы XML</span><span class="sxs-lookup"><span data-stu-id="3ff6d-105">Traversing an XML Schema</span></span>  
+ <span data-ttu-id="3ff6d-106">Следующие свойства класса <xref:System.Xml.Schema.XmlSchema> предоставляют доступ к коллекции глобальных объектов, добавляемых к схеме XML.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-106">The following properties of the <xref:System.Xml.Schema.XmlSchema> class provide access to the collection of all global items added to the XML schema.</span></span>  
   
-|Свойство|Тип объекта, хранимого в коллекции или массиве|  
-|--------------|----------------------------------------------------|  
+|<span data-ttu-id="3ff6d-107">Свойство</span><span class="sxs-lookup"><span data-stu-id="3ff6d-107">Property</span></span>|<span data-ttu-id="3ff6d-108">Тип объекта, хранимого в коллекции или массиве</span><span class="sxs-lookup"><span data-stu-id="3ff6d-108">Object type stored in the collection or array</span></span>|  
+|--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
-|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> или <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> \(предоставляет доступ ко всем элементам, атрибутам и типам глобального уровня\).|  
+|<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<span data-ttu-id="3ff6d-109"><xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> или <xref:System.Xml.Schema.XmlSchemaRedefine></span><span class="sxs-lookup"><span data-stu-id="3ff6d-109"><xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport>, or <xref:System.Xml.Schema.XmlSchemaRedefine></span></span>|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<span data-ttu-id="3ff6d-110"><xref:System.Xml.Schema.XmlSchemaObject> (предоставляет доступ ко всем элементам, атрибутам и типам глобального уровня).</span><span class="sxs-lookup"><span data-stu-id="3ff6d-110"><xref:System.Xml.Schema.XmlSchemaObject> (provides access to all global level elements, attributes, and types).</span></span>|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> \(предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы\).|  
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<span data-ttu-id="3ff6d-111"><xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType></span><span class="sxs-lookup"><span data-stu-id="3ff6d-111"><xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType></span></span>|  
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<span data-ttu-id="3ff6d-112"><xref:System.Xml.XmlAttribute> (предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы).</span><span class="sxs-lookup"><span data-stu-id="3ff6d-112"><xref:System.Xml.XmlAttribute> (provides access to attributes that do not belong to the schema namespace)</span></span>|  
   
 > [!NOTE]
->  Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post\-Schema\-Compilation\-Infoset \(PSCI\), доступными только после компиляции схемы.  Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.  
+>  <span data-ttu-id="3ff6d-113">Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post-Schema-Compilation-Infoset (PSCI), доступными только после компиляции схемы.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-113">All of the properties listed in the table above, except for the <xref:System.Xml.Schema.XmlSchema.Items%2A> property, are Post-Schema-Compilation-Infoset (PSCI) properties that are not available until the schema has been compiled.</span></span> <span data-ttu-id="3ff6d-114">Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-114">The <xref:System.Xml.Schema.XmlSchema.Items%2A> property is a pre-schema-compilation property that can be used before the schema has been compiled to access and edit all global level elements, attributes, and types.</span></span>  
 >   
->  Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы.  Эти атрибуты не обрабатываются обработчиком схемы.  
+>  <span data-ttu-id="3ff6d-115">Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-115">The <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> property provides access to all the attributes that do not belong to the schema namespace.</span></span> <span data-ttu-id="3ff6d-116">Эти атрибуты не обрабатываются обработчиком схемы.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-116">These attributes are not processed by the schema processor.</span></span>  
   
- Ниже приведен пример кода, демонстрирующий обзор схемы Customer, созданной в разделе [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md).  Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.  
+ <span data-ttu-id="3ff6d-117">В примере кода ниже просматривается пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-117">The code example that follows demonstrates traversing the customer schema created in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic.</span></span> <span data-ttu-id="3ff6d-118">Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-118">The code example demonstrates traversing the schema using the collections described above and writes all the elements and attributes in the schema to the console.</span></span>  
   
- В данном примере схема Customer просматривается с помощью следующих шагов.  
+ <span data-ttu-id="3ff6d-119">В данном примере схема Customer просматривается с помощью следующих шагов.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-119">The sample traverses the customer schema in the following steps.</span></span>  
   
-1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция.  Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
+1.  <span data-ttu-id="3ff6d-120">Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-120">Adds the customer schema to a new <xref:System.Xml.Schema.XmlSchemaSet> object and then compiles it.</span></span> <span data-ttu-id="3ff6d-121">Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-121">Any schema validation warnings and errors encountered reading or compiling the schema are handled by the <xref:System.Xml.Schema.ValidationEventHandler> delegate.</span></span>  
   
-2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.  Так как схема компилируется, свойства Post\-Schema\-Compilation\-Infoset \(PSCI\) доступны.  
+2.  <span data-ttu-id="3ff6d-122">Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-122">Retrieves the compiled <xref:System.Xml.Schema.XmlSchema> object from the <xref:System.Xml.Schema.XmlSchemaSet> by iterating over the <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> property.</span></span> <span data-ttu-id="3ff6d-123">Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-123">Because the schema is compiled, Post-Schema-Compilation-Infoset (PSCI) properties are accessible.</span></span>  
   
-3.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName> и выводится имя каждого элемента в консоль.  
+3.  <span data-ttu-id="3ff6d-124">Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-124">Iterates over each <xref:System.Xml.Schema.XmlSchemaElement> in the <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> collection of the post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> collection writing the name of each element to the console.</span></span>  
   
-4.  Возвращается сложный тип элемента `Customer` с помощью класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+4.  <span data-ttu-id="3ff6d-125">Возвращается сложный тип элемента `Customer` с помощью класса <xref:System.Xml.Schema.XmlSchemaComplexType>.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-125">Gets the complex type of the `Customer` element using the <xref:System.Xml.Schema.XmlSchemaComplexType> class.</span></span>  
   
-5.  Если у сложного типа есть атрибуты, возвращается объект <xref:System.Collections.IDictionaryEnumerator> для перечисления всех атрибутов <xref:System.Xml.Schema.XmlSchemaAttribute> и вывода их имен в консоль.  
+5.  <span data-ttu-id="3ff6d-126">Если у сложного типа есть атрибуты, возвращается объект <xref:System.Collections.IDictionaryEnumerator> для перечисления всех атрибутов <xref:System.Xml.Schema.XmlSchemaAttribute> и вывода их имен в консоль.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-126">If the complex type has any attributes, gets an <xref:System.Collections.IDictionaryEnumerator> to enumerate over each <xref:System.Xml.Schema.XmlSchemaAttribute> and writes its name to the console.</span></span>  
   
-6.  Возвращается примитив sequence сложного типа с помощью класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
+6.  <span data-ttu-id="3ff6d-127">Возвращается примитив sequence сложного типа с помощью класса <xref:System.Xml.Schema.XmlSchemaSequence>.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-127">Gets the sequence particle of the complex type using the <xref:System.Xml.Schema.XmlSchemaSequence> class.</span></span>  
   
-7.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=fullName> и выводится имя каждого элемента в консоль.  
+7.  <span data-ttu-id="3ff6d-128">Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-128">Iterates over each <xref:System.Xml.Schema.XmlSchemaElement> in the <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> collection writing the name of each child element to the console.</span></span>  
   
- Ниже приведен полный пример кода.  
+ <span data-ttu-id="3ff6d-129">Ниже приведен полный пример кода.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-129">The following is the complete code example.</span></span>  
   
  [!code-cpp[XmlSchemaTraverseExample#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaTraverseExample/CPP/XmlSchemaTraverseExample.cpp#1)]
  [!code-csharp[XmlSchemaTraverseExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaTraverseExample/CS/XmlSchemaTraverseExample.cs#1)]
  [!code-vb[XmlSchemaTraverseExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaTraverseExample/VB/XmlSchemaTraverseExample.vb#1)]  
   
- Свойство <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=fullName> может иметь тип <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType> если это определенный пользователем простой тип или сложный тип.  Оно может также иметь тип <xref:System.Xml.Schema.XmlSchemaDatatype>, если это один из встроенных типов данных, описанных в рекомендациях схемы XML W3C.  В схеме «Заказчик» тип <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> элемента `Customer` представляет собой <xref:System.Xml.Schema.XmlSchemaComplexType>, а тип элементов `FirstName` и `LastName` \- <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
+ <span data-ttu-id="3ff6d-130">Свойство <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> может иметь тип <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType> если это определенный пользователем простой тип или сложный тип.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-130">The <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> property can be <xref:System.Xml.Schema.XmlSchemaSimpleType>, or <xref:System.Xml.Schema.XmlSchemaComplexType> if it is a user-defined simple type or a complex type.</span></span> <span data-ttu-id="3ff6d-131">Оно может также иметь тип <xref:System.Xml.Schema.XmlSchemaDatatype>, если это один из встроенных типов данных, описанных в рекомендациях схемы XML W3C.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-131">It can also be <xref:System.Xml.Schema.XmlSchemaDatatype> if it is one of the built-in datatypes defined in the W3C XML Schema Recommendation.</span></span> <span data-ttu-id="3ff6d-132">В схеме «Заказчик» тип <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> элемента `Customer` представляет собой <xref:System.Xml.Schema.XmlSchemaComplexType>, а тип элементов `FirstName` и `LastName` - <xref:System.Xml.Schema.XmlSchemaSimpleType>.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-132">In the customer schema, the <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> of the `Customer` element is <xref:System.Xml.Schema.XmlSchemaComplexType>, and the `FirstName` and `LastName` elements are <xref:System.Xml.Schema.XmlSchemaSimpleType>.</span></span>  
   
- Пример кода в разделе [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) использовал коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=fullName> для добавления атрибута `CustomerId` к элементу `Customer`.  Это свойство доступно до компиляции схемы.  Соответствующее свойство PSCI \(доступное только после компиляции схемы\) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=fullName>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
+ <span data-ttu-id="3ff6d-133">В примере кода в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) разделе используется <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> коллекции для добавления атрибута `CustomerId` для `Customer` элемента.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-133">The code example in the [Building XML Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md) topic used the <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> collection to add the attribute `CustomerId` to the `Customer` element.</span></span> <span data-ttu-id="3ff6d-134">Это свойство доступно до компиляции схемы.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-134">This is a pre-schema-compilation property.</span></span> <span data-ttu-id="3ff6d-135">Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.</span><span class="sxs-lookup"><span data-stu-id="3ff6d-135">The corresponding Post-Schema-Compilation-Infoset property is the <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> collection, which holds all the attributes of the complex type, including the ones that are inherited through type derivation.</span></span>  
   
-## См. также  
- [Общие сведения об модели объектов XML\-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)   
- [Чтение и запись XML\-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [Изменение XML\-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [Включение или импорт XML\-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)   
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)   
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a><span data-ttu-id="3ff6d-136">См. также</span><span class="sxs-lookup"><span data-stu-id="3ff6d-136">See Also</span></span>  
+ [<span data-ttu-id="3ff6d-137">Общие сведения о модели объектов схемы XML</span><span class="sxs-lookup"><span data-stu-id="3ff6d-137">XML Schema Object Model Overview</span></span>](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [<span data-ttu-id="3ff6d-138">Чтение и запись XML-схем</span><span class="sxs-lookup"><span data-stu-id="3ff6d-138">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="3ff6d-139">Построение XML-схем</span><span class="sxs-lookup"><span data-stu-id="3ff6d-139">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="3ff6d-140">Изменение XML-схем</span><span class="sxs-lookup"><span data-stu-id="3ff6d-140">Editing XML Schemas</span></span>](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [<span data-ttu-id="3ff6d-141">Включение или импорт XML-схем</span><span class="sxs-lookup"><span data-stu-id="3ff6d-141">Including or Importing XML Schemas</span></span>](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [<span data-ttu-id="3ff6d-142">XmlSchemaSet для компиляции схемы</span><span class="sxs-lookup"><span data-stu-id="3ff6d-142">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [<span data-ttu-id="3ff6d-143">Информационный набор после компиляции схемы</span><span class="sxs-lookup"><span data-stu-id="3ff6d-143">Post-Schema Compilation Infoset</span></span>](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

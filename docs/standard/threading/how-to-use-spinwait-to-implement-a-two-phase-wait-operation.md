@@ -1,36 +1,41 @@
 ---
-title: "How to: Use SpinWait to Implement a Two-Phase Wait Operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SpinWait, how to synchronize two-phase wait"
+title: "Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2717ba2d63e4ecf40638c369b66f2c696e396a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Use SpinWait to Implement a Two-Phase Wait Operation
-Следующий пример показывает, как использовать объект <xref:System.Threading.SpinWait?displayProperty=fullName> для реализации двухэтапной операции ожидания.  На первом этапе объект синхронизации, `Latch`, выполняет несколько циклов, проверяя, стала ли блокировка доступной.  На втором этапе, если блокировка становится доступной, метод `Wait` возвращает управление без использования события <xref:System.Threading.ManualResetEvent?displayProperty=fullName> для выполнения ожидания, в противном случае метод `Wait` выполняет операцию ожидания.  
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a><span data-ttu-id="9823a-102">Практическое руководство. Использование объекта SpinWait для реализации двухэтапной операции ожидания</span><span class="sxs-lookup"><span data-stu-id="9823a-102">How to: Use SpinWait to Implement a Two-Phase Wait Operation</span></span>
+<span data-ttu-id="9823a-103">В следующем примере показано, как использовать <xref:System.Threading.SpinWait?displayProperty=nameWithType> объекта для реализации двухэтапной операции ожидания.</span><span class="sxs-lookup"><span data-stu-id="9823a-103">The following example shows how to use a <xref:System.Threading.SpinWait?displayProperty=nameWithType> object to implement a two-phase wait operation.</span></span> <span data-ttu-id="9823a-104">На первом этапе объект синхронизации, `Latch`, выполняет несколько циклов, пока он проверяет, является ли блокировка станет доступным.</span><span class="sxs-lookup"><span data-stu-id="9823a-104">In the first phase, the synchronization object, a `Latch`, spins for a few cycles while it checks whether the lock has become available.</span></span> <span data-ttu-id="9823a-105">На втором этапе, если блокировка не станет доступной то `Wait` метод возвращает без использования <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> для выполнения его ожидания; в противном случае `Wait` выполняет ожидание.</span><span class="sxs-lookup"><span data-stu-id="9823a-105">In the second phase, if the lock becomes available, then the `Wait` method returns without using the <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> to perform its wait; otherwise, `Wait` performs the wait.</span></span>  
   
-## Пример  
- В этом примере показана самая базовая реализация примитива синхронизации кратковременной блокировки.  Эту структуру данных можно использовать, когда предполагается, что времена ожидания будут очень короткими.  Этот пример используется только в качестве демонстрации.  Если в программе требуется использование возможности, похожей на защелку \(Latch\), рассмотрите возможность использования типа <xref:System.Threading.ManualResetEventSlim?displayProperty=fullName>.  
+## <a name="example"></a><span data-ttu-id="9823a-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9823a-106">Example</span></span>  
+ <span data-ttu-id="9823a-107">В этом примере показана очень простая реализация синхронизации кратковременной блокировки примитивов.</span><span class="sxs-lookup"><span data-stu-id="9823a-107">This example shows a very basic implementation of a Latch synchronization primitive.</span></span> <span data-ttu-id="9823a-108">Эта структура данных можно использовать, когда предполагается, что времена ожидания будут очень короткими.</span><span class="sxs-lookup"><span data-stu-id="9823a-108">You can use this data structure when wait times are expected to be very short.</span></span> <span data-ttu-id="9823a-109">Данный пример является исключительно для демонстрационных целей.</span><span class="sxs-lookup"><span data-stu-id="9823a-109">This example is for demonstration purposes only.</span></span> <span data-ttu-id="9823a-110">Если требуются функциональные возможности типа кратковременной блокировки в приложении, рассмотрите возможность использования <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9823a-110">If you require latch-type functionality in your program, consider using <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>.</span></span>  
   
  [!code-csharp[CDS_SpinWait#03](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait03.cs#03)]
  [!code-vb[CDS_SpinWait#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/spinwait2.vb#03)]  
   
- Защелка использует объект <xref:System.Threading.SpinWait>, чтобы быть установленной до тех пор, пока следующий вызов `SpinOnce` не заставит <xref:System.Threading.SpinWait> получить временной интервал в потоке.  В этот момент защелка переключает свой контекст, вызывая <xref:System.Threading.WaitHandle.WaitOne%2A> для <xref:System.Threading.ManualResetEvent> и передавая оставшуюся часть значения времени ожидания.  
+ <span data-ttu-id="9823a-111">Защелка использует <xref:System.Threading.SpinWait> объекта, чтобы только до следующего вызова `SpinOnce` вызывает <xref:System.Threading.SpinWait> для временной интервал потока.</span><span class="sxs-lookup"><span data-stu-id="9823a-111">The latch uses the <xref:System.Threading.SpinWait> object to spin in place only until the next call to `SpinOnce` causes the <xref:System.Threading.SpinWait> to yield the time slice of the thread.</span></span> <span data-ttu-id="9823a-112">На этом этапе кратковременная блокировка вызывает собственный переключение контекста, вызвав <xref:System.Threading.WaitHandle.WaitOne%2A> на <xref:System.Threading.ManualResetEvent> и передачи в оставшейся части значение времени ожидания.</span><span class="sxs-lookup"><span data-stu-id="9823a-112">At that point, the latch causes its own context switch by calling <xref:System.Threading.WaitHandle.WaitOne%2A> on the <xref:System.Threading.ManualResetEvent> and passing in the remainder of the time-out value.</span></span>  
   
- Выходные данные журнала показывают, как часто кратковременная блокировка могла повысить производительность, устанавливая блокировку без использования <xref:System.Threading.ManualResetEvent>.  
+ <span data-ttu-id="9823a-113">Выходные данные журнала показывают, как часто кратковременная блокировка могла для повышения производительности путем запроса на блокировку без использования <xref:System.Threading.ManualResetEvent>.</span><span class="sxs-lookup"><span data-stu-id="9823a-113">The logging output shows how often the Latch was able to increase performance by acquiring the lock without using the <xref:System.Threading.ManualResetEvent>.</span></span>  
   
-## См. также  
- [SpinWait](../../../docs/standard/threading/spinwait.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="9823a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9823a-114">See Also</span></span>  
+ [<span data-ttu-id="9823a-115">SpinWait</span><span class="sxs-lookup"><span data-stu-id="9823a-115">SpinWait</span></span>](../../../docs/standard/threading/spinwait.md)  
+ [<span data-ttu-id="9823a-116">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="9823a-116">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)

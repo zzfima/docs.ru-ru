@@ -1,102 +1,98 @@
 ---
-title: "Начало работы с C# и Visual Studio Code — руководство по языку C# | Документация Майкрософт"
+title: "Начало работы с C# и Visual Studio Code - руководство по C#"
 description: "Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#."
 keywords: "C#, приступая к работе, получение, установка, Visual Studio Code, кроссплатформенный"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 8/01/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
+ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: a10fda5663f0a49069388ee8ee7a9ebb575cd549
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/15/2017
 ---
+# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="9f29a-104">Начало работы с C# и Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="9f29a-104">Get Started with C# and Visual Studio Code</span></span>
 
-# <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
+<span data-ttu-id="9f29a-105">.NET Core предcтавляет собой быструю модульную платформу для создания приложений, работающих на ОС Windows, Linux и macOS.</span><span class="sxs-lookup"><span data-stu-id="9f29a-105">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="9f29a-106">Visual Studio Code с расширением C# позволяет эффективно работать с кодом, а также обеспечивает полную поддержку IntelliSense (интеллектуальное завершение кода) и отладки для языка C#.</span><span class="sxs-lookup"><span data-stu-id="9f29a-106">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
 
-.NET Core предcтавляет собой быструю модульную платформу для создания приложений, работающих на ОС Windows, Linux и macOS. Visual Studio Code с расширением C# позволяет эффективно работать с кодом, а также обеспечивает полную поддержку IntelliSense (интеллектуальное завершение кода) и отладки для языка C#.
+## <a name="prerequisites"></a><span data-ttu-id="9f29a-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="9f29a-107">Prerequisites</span></span>
 
-## <a name="prerequisites"></a>Предварительные требования
+1. <span data-ttu-id="9f29a-108">Установите [Visual Studio Code](https://code.visualstudio.com/).</span><span class="sxs-lookup"><span data-stu-id="9f29a-108">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
+2. <span data-ttu-id="9f29a-109">Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="9f29a-109">Install the [.NET Core SDK](https://www.microsoft.com/net/download/core).</span></span>
+3. <span data-ttu-id="9f29a-110">Установите [расширение C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) из Marketplace для Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="9f29a-110">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) from the Visual Studio Code Marketplace.</span></span>
 
-1. Установите [Visual Studio Code](https://code.visualstudio.com/).
-2. Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/download/core).
-3. Установите [расширение C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) из Marketplace для Visual Studio Code.
+## <a name="hello-world"></a><span data-ttu-id="9f29a-111">Hello World</span><span class="sxs-lookup"><span data-stu-id="9f29a-111">Hello World</span></span>
 
-## <a name="hello-world"></a>Hello World
+<span data-ttu-id="9f29a-112">Давайте начнем с создания простой программы Hello World для .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9f29a-112">Let's get started with a simple "Hello World" program on .NET Core:</span></span>
 
-Давайте начнем с создания простой программы Hello World для .NET Core.
+1. <span data-ttu-id="9f29a-113">Откройте проект.</span><span class="sxs-lookup"><span data-stu-id="9f29a-113">Open a project:</span></span>
 
-1. Откройте проект.
+    * <span data-ttu-id="9f29a-114">Откройте Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="9f29a-114">Open Visual Studio Code.</span></span>
+    * <span data-ttu-id="9f29a-115">Щелкните значок обозревателя в расположенном слева меню, затем щелкните**Открыть папку**.</span><span class="sxs-lookup"><span data-stu-id="9f29a-115">Click on the Explorer icon on the left menu and then click **Open Folder**.</span></span>
+    * <span data-ttu-id="9f29a-116">Выберите **файл** > **открыть папку** в главном меню, чтобы открыть папку нужно проект C# в и нажмите кнопку **Выбор папки**.</span><span class="sxs-lookup"><span data-stu-id="9f29a-116">Select **File** > **Open Folder** from the main menu to open the folder you want your C# project to be in and click **Select Folder**.</span></span> <span data-ttu-id="9f29a-117">В нашем примере мы создаем папку для проекта с именем *HelloWorld*.</span><span class="sxs-lookup"><span data-stu-id="9f29a-117">For our example, we're creating a folder for our project named *HelloWorld*.</span></span>
 
-    * Откройте Visual Studio Code.
-    * Щелкните значок обозревателя в расположенном слева меню, затем щелкните**Открыть папку**.
-    * Выберите папку, в которой вы хотите разместить проект C#, и щелкните **Выбрать папку**. В нашем примере мы создадим для проекта новую папку с именем HelloWorld. 
+      ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
-  ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
+2. <span data-ttu-id="9f29a-119">Инициализируйте проект C#.</span><span class="sxs-lookup"><span data-stu-id="9f29a-119">Initialize a C# project:</span></span>
+    * <span data-ttu-id="9f29a-120">Откройте интеграции терминалов из кода Visual Studio, выбрав **представление** > **интеграции терминалов** в главном меню.</span><span class="sxs-lookup"><span data-stu-id="9f29a-120">Open the Integrated Terminal from Visual Studio Code by selecting **View** > **Integrated Terminal** from the main menu.</span></span>
+    * <span data-ttu-id="9f29a-121">В окне терминала введите `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="9f29a-121">In the terminal window, type `dotnet new console`.</span></span>
+    * <span data-ttu-id="9f29a-122">Эта команда создает `Program.cs` файл в папке с программой простой «Hello World», уже написанный вместе с файлом проекта C# с именем `HelloWorld.csproj`.</span><span class="sxs-lookup"><span data-stu-id="9f29a-122">This command creates a `Program.cs` file in your folder with a simple "Hello World" program already written, along with a C# project file named `HelloWorld.csproj`.</span></span>
 
-    * Также вы можете открыть уже существующую папку проекта, используя пункт **Файл** > **Открыть папку** из главного меню.
+      ![Команда dotnet new](media/with-visual-studio-code/dotnetnew.png)
 
-2. Инициализируйте проект C#.
-    * Откройте в Visual Studio Code встроенный терминал, нажав клавиши <kbd>CTRL</kbd>+<kbd>\`</kbd> (обратный апостроф). Также можно выбрать в главном меню пункты **Просмотр** > **Встроенный терминал**.
-    * В окне терминала введите `dotnet new console`.
-    * Эта команда создает в выбранной папке файл `Program.cs` с уже готовой простой программой Hello World, а также файл проекта C# с именем `HelloWorld.csproj`.
+3. <span data-ttu-id="9f29a-124">Выполните разрешение для средств сборки:</span><span class="sxs-lookup"><span data-stu-id="9f29a-124">Resolve the build assets:</span></span>
 
-  ![Команда dotnet new](media/with-visual-studio-code/dotnetnew.png)
+    * <span data-ttu-id="9f29a-125">Для **.NET Core 1.x**, тип `dotnet restore`.</span><span class="sxs-lookup"><span data-stu-id="9f29a-125">For **.NET Core 1.x**, type `dotnet restore`.</span></span> <span data-ttu-id="9f29a-126">Команда `dotnet restore` предоставляет доступ к пакетам .NET Core, которые необходимы для сборки этого проекта.</span><span class="sxs-lookup"><span data-stu-id="9f29a-126">Running `dotnet restore` gives you access to the  required .NET Core packages that are needed to build your project.</span></span>
 
-3. Выполните разрешение для средств сборки:
+      ![Команда dotnet restore](media/with-visual-studio-code/dotnetrestore.png)
 
-    * Для **.NET Core 1.1** введите `dotnet restore`. Команда `dotnet restore` предоставляет доступ к пакетам .NET Core, которые необходимы для сборки этого проекта.
+      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   ![Команда dotnet restore](media/with-visual-studio-code/dotnetrestore.png)
+4. <span data-ttu-id="9f29a-128">Запустите программу Hello World.</span><span class="sxs-lookup"><span data-stu-id="9f29a-128">Run the "Hello World" program:</span></span>
 
-    * Для **.NET Core 2.0** этот этап является необязательным. Команда `dotnet restore` выполняется автоматически при создании нового проекта.
+    * <span data-ttu-id="9f29a-129">Введите `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="9f29a-129">Type `dotnet run`.</span></span> 
 
-4. Запустите программу Hello World.
+      ![Команда dotnet run](media/with-visual-studio-code/dotnetrun.png)
 
-    * Введите `dotnet run`. 
+<span data-ttu-id="9f29a-131">Вы можете просмотреть небольшие видеоматериалы с информацией о процессе настройки для [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), или [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span><span class="sxs-lookup"><span data-stu-id="9f29a-131">You can also watch a short video tutorial for further setup help on [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), or [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).</span></span>
 
-  ![Команда dotnet run](media/with-visual-studio-code/dotnetrun.png)
+## <a name="debug"></a><span data-ttu-id="9f29a-132">Отладка</span><span class="sxs-lookup"><span data-stu-id="9f29a-132">Debug</span></span>
 
-Вы можете просмотреть небольшие видеоматериалы с информацией о процессе настройки для [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), или [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
+1. <span data-ttu-id="9f29a-133">Откройте файл *Program.cs*, щелкнув его.</span><span class="sxs-lookup"><span data-stu-id="9f29a-133">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="9f29a-134">При первом открытии файла C# в Visual Studio Code [OmniSharp](http://www.omnisharp.net/) загружает в редакторе.</span><span class="sxs-lookup"><span data-stu-id="9f29a-134">The first time you open a C# file in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) loads in the editor.</span></span>
 
-## <a name="debug"></a>Отладка
-1. Откройте файл *Program.cs*, щелкнув его. Когда вы в первый раз открываете файл C# в Visual Studio Code, в редакторе загружается [OmniSharp](http://www.omnisharp.net/).
+    ![Откройте файл Program.cs](media/with-visual-studio-code/opencs.png)
 
-  ![Откройте файл Program.cs](media/with-visual-studio-code/opencs.png)
+2. <span data-ttu-id="9f29a-136">Visual Studio Code запросит отсутствующих ресурсов для построения и отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="9f29a-136">Visual Studio Code should prompt you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="9f29a-137">Выберите ответ **Да**.</span><span class="sxs-lookup"><span data-stu-id="9f29a-137">Select **Yes**.</span></span> 
 
-2. Visual Studio Code предложит добавить недостающие ресурсы для сборки и отладки приложения. Выберите ответ **Да**. 
+    ![Предупреждение о недостающих ресурсах](media/with-visual-studio-code/missing-assets.png)
 
-  ![Предупреждение о недостающих ресурсах](media/with-visual-studio-code/missing-assets.png)
+3. <span data-ttu-id="9f29a-139">Чтобы открыть окно отладки, щелкните значок "Отладка" в меню слева.</span><span class="sxs-lookup"><span data-stu-id="9f29a-139">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
 
-3. Чтобы открыть окно отладки, щелкните значок "Отладка" в меню слева.
+    ![Откройте вкладку "Отладка"](media/with-visual-studio-code/opendebug.png)
 
-  ![Откройте вкладку "Отладка"](media/with-visual-studio-code/opendebug.png)
+4. <span data-ttu-id="9f29a-141">Найдите зеленую стрелку в верхней части панели.</span><span class="sxs-lookup"><span data-stu-id="9f29a-141">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="9f29a-142">Убедитесь, что в раскрывающемся списке рядом с ней выбран вариант `.NET Core Launch (console)`.</span><span class="sxs-lookup"><span data-stu-id="9f29a-142">Make sure the drop-down next to it has `.NET Core Launch (console)` selected.</span></span>
 
-4. Найдите зеленую стрелку в верхней части панели. Убедитесь, что в раскрывающемся списке рядом с ней выбран вариант `.NET Core Launch (console)`.
+    ![Выбор .NET Core](media/with-visual-studio-code/selectcore.png)
 
-  ![Выбор .NET Core](media/with-visual-studio-code/selectcore.png)
+5. <span data-ttu-id="9f29a-144">Добавьте точку останова в проект, щелкнув **поле редактора**, это место в левой части номера строк в редакторе, рядом с строке 9.</span><span class="sxs-lookup"><span data-stu-id="9f29a-144">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9.</span></span>
 
-5. Добавьте в проект точку останова, щелкнув **левое поле редактора кода** (пустое пространство слева от номера строк) в строке 9.
+    ![Установка точки останова](media/with-visual-studio-code/setbreakpoint.png)
 
-  ![Установка точки останова](media/with-visual-studio-code/setbreakpoint.png)
+6. <span data-ttu-id="9f29a-146">Чтобы начать отладку, выберите <kbd>F5</kbd> или зеленой стрелкой.</span><span class="sxs-lookup"><span data-stu-id="9f29a-146">To start debugging, select <kbd>F5</kbd> or the green arrow.</span></span> <span data-ttu-id="9f29a-147">Отладчик останавливает выполнение программы, когда достигнет точки останова, которую вы только что установили.</span><span class="sxs-lookup"><span data-stu-id="9f29a-147">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
+    * <span data-ttu-id="9f29a-148">Во время отладки можно просматривать локальных переменных в левой верхней панели или с помощью консоли отладки.</span><span class="sxs-lookup"><span data-stu-id="9f29a-148">While debugging, you can view your local variables in the top left pane or use the debug console.</span></span>
 
-6. Нажмите клавишу <kbd>F5</kbd> или щелкните зеленую стрелку, чтобы начать отладку. Отладчик останавливает выполнение программы, когда достигнет точки останова, которую вы только что установили.
-    * Во время отладки вы можете просматривать локальные переменные в верхней левой области или в консоли отладки.
+    ![Запуск и отладка](media/with-visual-studio-code/rundebug.png)
 
-  ![Запуск и отладка](media/with-visual-studio-code/rundebug.png)
-
-7. Выберите зеленую стрелку в верхней части, чтобы продолжить отладку, или выберите красный квадрат в верхней части, чтобы остановить процесс.
+7. <span data-ttu-id="9f29a-150">Выберите зеленую стрелку в верхней части, чтобы продолжить отладку, или выберите красный квадрат в верхней части, чтобы остановить процесс.</span><span class="sxs-lookup"><span data-stu-id="9f29a-150">Select the green arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
 
 > [!TIP] 
-> Дополнительные сведения и советы по отладке .NET Core в Visual Studio Code с помощью OmniSharp см. в разделе [Инструкции по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+> <span data-ttu-id="9f29a-151">Дополнительные сведения и советы по отладке .NET Core в Visual Studio Code с помощью OmniSharp см. в разделе [Инструкции по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span><span class="sxs-lookup"><span data-stu-id="9f29a-151">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
 
-## <a name="see-also"></a>См. также
-[Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
-
+## <a name="see-also"></a><span data-ttu-id="9f29a-152">См. также</span><span class="sxs-lookup"><span data-stu-id="9f29a-152">See also</span></span>
+<span data-ttu-id="9f29a-153">[Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span><span class="sxs-lookup"><span data-stu-id="9f29a-153">[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) </span></span>  
+<span data-ttu-id="9f29a-154">[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)</span><span class="sxs-lookup"><span data-stu-id="9f29a-154">[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)</span></span>

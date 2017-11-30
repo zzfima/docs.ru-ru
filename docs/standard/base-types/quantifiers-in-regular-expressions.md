@@ -1,277 +1,283 @@
 ---
-title: "Кванторы в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения, квантификаторы"
-  - "метасимволы, квантификаторы"
-  - "минимальные кванторы сопоставления"
-  - "кванторы в регулярных выражениях"
-  - "регулярные выражения .NET Framework, квантификаторы"
-  - "кванторы"
-  - "ленивые кванторы"
+title: "кванторы в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- regular expressions, quantifiers
+- metacharacters, quantifiers
+- minimal matching quantifiers
+- quantifiers in regular expressions
+- .NET Framework regular expressions, quantifiers
+- quantifiers
+- lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 22
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ab06aa0c331c8cbd4c8986cced29334046f30264
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Кванторы в регулярных выражениях
-Кванторы определяют количество экземпляров символа, группы или класса символов, которое должно присутствовать во входных данных, чтобы было зафиксировано совпадение.  В следующей таблице перечислены кванторы, поддерживаемые платформой .NET Framework.  
+# <a name="quantifiers-in-regular-expressions"></a><span data-ttu-id="28d05-102">кванторы в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="28d05-102">Quantifiers in Regular Expressions</span></span>
+<span data-ttu-id="28d05-103">Квантификаторы определяют количество экземпляров символа, группы или класса символов, которое должно присутствовать во входных данных, чтобы было зафиксировано совпадение.</span><span class="sxs-lookup"><span data-stu-id="28d05-103">Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found.</span></span>  <span data-ttu-id="28d05-104">В приведенной ниже таблице перечислены квантификаторы, поддерживаемые платформой .NET.</span><span class="sxs-lookup"><span data-stu-id="28d05-104">The following table lists the quantifiers supported by .NET.</span></span>  
   
-|Жадный квантор|Ленивый квантор|Описание|  
-|--------------------|---------------------|--------------|  
-|`*`|`*?`|Выделить ноль или несколько раз.|  
-|`+`|`+?`|Выделить один или несколько.|  
-|`?`|`??`|Выделить ноль или один раз.|  
-|`{` *n* `}`|`{` *n* `}?`|Выделяет строго *n* раз.|  
-|`{` *n* `,}`|`{` *n* `,}?`|Выделяет как минимум *n* раз.|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Выделяет от *n* до *m* раз.|  
+|<span data-ttu-id="28d05-105">Жадный квантификатор</span><span class="sxs-lookup"><span data-stu-id="28d05-105">Greedy quantifier</span></span>|<span data-ttu-id="28d05-106">Ленивый квантификатор</span><span class="sxs-lookup"><span data-stu-id="28d05-106">Lazy quantifier</span></span>|<span data-ttu-id="28d05-107">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-107">Description</span></span>|  
+|-----------------------|---------------------|-----------------|  
+|`*`|`*?`|<span data-ttu-id="28d05-108">Совпадение ноль или несколько раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-108">Match zero or more times.</span></span>|  
+|`+`|`+?`|<span data-ttu-id="28d05-109">Совпадение один или несколько раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-109">Match one or more times.</span></span>|  
+|`?`|`??`|<span data-ttu-id="28d05-110">Совпадение ноль или один раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-110">Match zero or one time.</span></span>|  
+|<span data-ttu-id="28d05-111">`{` *n* `}`</span><span class="sxs-lookup"><span data-stu-id="28d05-111">`{` *n* `}`</span></span>|<span data-ttu-id="28d05-112">`{` *n* `}?`</span><span class="sxs-lookup"><span data-stu-id="28d05-112">`{` *n* `}?`</span></span>|<span data-ttu-id="28d05-113">Точное соответствие  *n*  раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-113">Match exactly *n* times.</span></span>|  
+|<span data-ttu-id="28d05-114">`{` *n* `,}`</span><span class="sxs-lookup"><span data-stu-id="28d05-114">`{` *n* `,}`</span></span>|<span data-ttu-id="28d05-115">`{` *n* `,}?`</span><span class="sxs-lookup"><span data-stu-id="28d05-115">`{` *n* `,}?`</span></span>|<span data-ttu-id="28d05-116">По крайней мере соответствует  *n*  раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-116">Match at least *n* times.</span></span>|  
+|<span data-ttu-id="28d05-117">`{` *n* `,` *м* `}`</span><span class="sxs-lookup"><span data-stu-id="28d05-117">`{` *n* `,` *m* `}`</span></span>|<span data-ttu-id="28d05-118">`{` *n* `,` *м* `}?`</span><span class="sxs-lookup"><span data-stu-id="28d05-118">`{` *n* `,` *m* `}?`</span></span>|<span data-ttu-id="28d05-119">Выделяет от  *n*  для *m* раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-119">Match from *n* to *m* times.</span></span>|  
   
- Количества `n` и `m` являются целочисленными константами.  Обычно кванторы "жадные"; они заставляют обработчик регулярных выражений выделить максимально возможное число вхождений определенного шаблона.  Добавление символа `?` в квантор делает его отложенным; это приводит к тому, что обработчик регулярных выражений пытается искать так мало вхождений, как это возможно.  Полное описание различий между "жадными" и "ленивыми" кванторами см. в разделе [Жадные и ленивые кванторы](#Greedy) далее в этой теме.  
+ <span data-ttu-id="28d05-120">Количества `n` и `m` являются целочисленными константами.</span><span class="sxs-lookup"><span data-stu-id="28d05-120">The quantities `n` and `m` are integer constants.</span></span> <span data-ttu-id="28d05-121">Обычно квантификаторы "жадные" — они заставляют обработчик регулярных выражений выделить максимально возможное число вхождений определенного шаблона.</span><span class="sxs-lookup"><span data-stu-id="28d05-121">Ordinarily, quantifiers are greedy; they cause the regular expression engine to match as many occurrences of particular patterns as possible.</span></span> <span data-ttu-id="28d05-122">Добавление символа `?` в квантификатор делает его отложенным (или ленивым). Это приводит к тому, что обработчик регулярных выражений пытается сопоставить так мало вхождений, как это возможно.</span><span class="sxs-lookup"><span data-stu-id="28d05-122">Appending the `?` character to a quantifier makes it lazy; it causes the regular expression engine to match as few occurrences as possible.</span></span> <span data-ttu-id="28d05-123">Полное описание различий между "жадными" и "ленивыми" квантификаторами см. в разделе [Жадные и ленивые квантификаторы](#Greedy) далее в этой статье.</span><span class="sxs-lookup"><span data-stu-id="28d05-123">For a complete description of the difference between greedy and lazy quantifiers, see the section [Greedy and Lazy Quantifiers](#Greedy) later in this topic.</span></span>  
   
 > [!IMPORTANT]
->  Квантификаторы вложенности \(например, шаблон регулярного выражения `(a*)*`\) могут увеличить количество сравнений, которые должен выполнять обработчик регулярных выражений, как экспоненциальная функция количества символов во входной строке.  Дополнительные сведения об этом поведении и способах его обхода см. в разделе [Поиск с возвратом](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+>  <span data-ttu-id="28d05-124">Вложенные квантификаторы (например, шаблон регулярного выражения `(a*)*`) могут увеличить количество сравнений, которые должен выполнять обработчик регулярных выражений, как экспоненциальная функция количества символов во входной строке.</span><span class="sxs-lookup"><span data-stu-id="28d05-124">Nesting quantifiers (for example, as the regular expression pattern `(a*)*` does) can increase the number of comparisons that the regular expression engine must perform, as an exponential function of the number of characters in the input string.</span></span> <span data-ttu-id="28d05-125">Дополнительные сведения о это поведение и его обходные пути см. в разделе [поиск с возвратом](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="28d05-125">For more information about this behavior and its workarounds, see [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).</span></span>  
   
-## Кванторы регулярных выражений  
- В следующих разделах перечислены кванторы, поддерживаемые регулярными выражениями платформы .NET Framework.  
+## <a name="regular-expression-quantifiers"></a><span data-ttu-id="28d05-126">Квантификаторы регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="28d05-126">Regular Expression Quantifiers</span></span>  
+ <span data-ttu-id="28d05-127">В следующих разделах перечислены квантификаторы, поддерживаемые регулярными выражениями платформы .NET.</span><span class="sxs-lookup"><span data-stu-id="28d05-127">The following sections list the quantifiers supported by .NET regular expressions.</span></span>  
   
 > [!NOTE]
->  Если в шаблоне регулярных выражений встречаются символы \*, \+, ?, { и }, то обработчик регулярных выражений интерпретирует их как кванторы или как часть конструкций кванторов, если только они не включаются в [класс символов](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  Чтобы они интерпретировались как символы\-литералы за пределами класса символов, необходимо ставить перед ними escape\-символ — обратную косую черту.  Например, строка `\*` в шаблоне регулярного выражения интерпретируется как литеральный символ звездочки \("\*"\).  
+>  <span data-ttu-id="28d05-128">Если *, +,?, {, и} символы встречаются в шаблоне регулярного выражения, обработчик регулярных выражений интерпретирует их как кванторы или как часть конструкции квантификатор, если они включены в [класс символов](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="28d05-128">If the *, +, ?, {, and } characters are encountered in a regular expression pattern, the regular expression engine interprets them as quantifiers or part of quantifier constructs unless they are included in a [character class](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).</span></span> <span data-ttu-id="28d05-129">Чтобы они интерпретировались как символы-литералы за пределами класса символов, необходимо ставить перед ними escape-символ — обратную косую черту.</span><span class="sxs-lookup"><span data-stu-id="28d05-129">To interpret these as literal characters outside a character class, you must escape them by preceding them with a backslash.</span></span> <span data-ttu-id="28d05-130">Например, строка `\*` в регулярном выражении шаблон интерпретируется как символ звездочки («\*») символов.</span><span class="sxs-lookup"><span data-stu-id="28d05-130">For example, the string `\*` in a regular expression pattern is interpreted as a literal asterisk ("\*") character.</span></span>  
   
-### Выделить ноль или несколько раз: \*  
- Квантор `*` выделяет предыдущие элементы, повторяющиеся ноль или несколько раз.  Это свойство эквивалентно квантору `{0,}`.  `*` — жадный квантор, отложенным эквивалентом которого является квантор `*?`.  
+### <a name="match-zero-or-more-times-"></a><span data-ttu-id="28d05-131">Совпадение ноль или несколько раз: *</span><span class="sxs-lookup"><span data-stu-id="28d05-131">Match Zero or More Times: *</span></span>  
+ <span data-ttu-id="28d05-132">Квалификатор `*` выделяет предыдущий элемент, повторяющийся ноль или более раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-132">The `*` quantifier matches the preceding element zero or more times.</span></span> <span data-ttu-id="28d05-133">Это эквивалентно `{0,}` квантификатор.</span><span class="sxs-lookup"><span data-stu-id="28d05-133">It is equivalent to the `{0,}` quantifier.</span></span> <span data-ttu-id="28d05-134">`*`является жадный квантор, отложенным эквивалентом является `*?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-134">`*` is a greedy quantifier whose lazy equivalent is `*?`.</span></span>  
   
- В следующем примере показано, как использовать это регулярное выражение.  Пять из девяти чисел в исходной строке соответствуют заданному шаблону, четыре числа \(`95`, `929`, `9129` и `9919`\) ему не соответствуют.  
+ <span data-ttu-id="28d05-135">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-135">The following example illustrates this regular expression.</span></span> <span data-ttu-id="28d05-136">Пять из девяти чисел в исходной строке соответствуют заданному шаблону, четыре числа (`95`, `929`, `9129` и `9919`) — нет.</span><span class="sxs-lookup"><span data-stu-id="28d05-136">Of the nine digits in the input string, five match the pattern and four (`95`, `929`, `9129`, and `9919`) do not.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-137">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-137">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`91*`|Выделяет "9" с последующими символами "1" \(если они есть\).|  
-|`9*`|Выделить ноль или больше символов "9\).|  
-|`\b`|Конец на границе слова.|  
+|<span data-ttu-id="28d05-138">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-138">Pattern</span></span>|<span data-ttu-id="28d05-139">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-139">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-140">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-140">Start at a word boundary.</span></span>|  
+|`91*`|<span data-ttu-id="28d05-141">Совпадение с символом "9", за которыми следует ноль или более символов "1".</span><span class="sxs-lookup"><span data-stu-id="28d05-141">Match a "9" followed by zero or more "1" characters.</span></span>|  
+|`9*`|<span data-ttu-id="28d05-142">Выделить ноль или больше символов "9".</span><span class="sxs-lookup"><span data-stu-id="28d05-142">Match zero or more "9" characters.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-143">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-143">End at a word boundary.</span></span>|  
   
-### Выделить один или несколько: \+  
- Квантор `+` выделяет предыдущие элементы, повторяющиеся один или несколько раз.  Этот параметр аналогичен параметру `{1,}`.  `+` — жадный квантор, отложенным эквивалентом которого является квантор `+?`.  
+### <a name="match-one-or-more-times-"></a><span data-ttu-id="28d05-144">Совпадение один или несколько раз: +</span><span class="sxs-lookup"><span data-stu-id="28d05-144">Match One or More Times: +</span></span>  
+ <span data-ttu-id="28d05-145">`+` Квантификатор соответствует предыдущий элемент повторяется один или несколько раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-145">The `+` quantifier matches the preceding element one or more times.</span></span> <span data-ttu-id="28d05-146">Это эквивалентно `{1,}`.</span><span class="sxs-lookup"><span data-stu-id="28d05-146">It is equivalent to `{1,}`.</span></span> <span data-ttu-id="28d05-147">`+`является жадный квантор, отложенным эквивалентом является `+?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-147">`+` is a greedy quantifier whose lazy equivalent is `+?`.</span></span>  
   
- Например, с помощью регулярного выражения `\ban+\w*?\b` осуществляется поиск целых слов, которые начинаются с буквы `a`, за которой следует одна или несколько букв `n`.  В следующем примере показано, как использовать это регулярное выражение.  Регулярное выражение соответствует словам `an`, `annual`, `announcement` и `antique` и не соответствует словам `autumn` и `all`.  
+ <span data-ttu-id="28d05-148">Например, с помощью регулярного выражения `\ban+\w*?\b` осуществляется сопоставление целых слов, начинающихся с буквы `a`, за которой следует одна или несколько букв `n`.</span><span class="sxs-lookup"><span data-stu-id="28d05-148">For example, the regular expression `\ban+\w*?\b` tries to match entire words that begin with the letter `a` followed by one or more instances of the letter `n`.</span></span> <span data-ttu-id="28d05-149">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-149">The following example illustrates this regular expression.</span></span> <span data-ttu-id="28d05-150">Регулярное выражение соответствует словам `an`, `annual`, `announcement` и `antique` и не соответствует словам `autumn` и `all`.</span><span class="sxs-lookup"><span data-stu-id="28d05-150">The regular expression matches the words `an`, `annual`, `announcement`, and `antique`, and correctly fails to match `autumn` and `all`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#2)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-151">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-151">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`an+`|Выделяет "a" с последующими символами "n" один или несколько раз.|  
-|`\w*?`|Выделяет буквенный символа минимальное количество раз \(если они есть\).|  
-|`\b`|Конец на границе слова.|  
+|<span data-ttu-id="28d05-152">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-152">Pattern</span></span>|<span data-ttu-id="28d05-153">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-153">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-154">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-154">Start at a word boundary.</span></span>|  
+|`an+`|<span data-ttu-id="28d05-155">Совпадение с "a"с последующим одним или несколькими символами "n".</span><span class="sxs-lookup"><span data-stu-id="28d05-155">Match an "a" followed by one or more "n" characters.</span></span>|  
+|`\w*?`|<span data-ttu-id="28d05-156">Совпадение со словообразующим символом ноль или несколько раз (по возможности минимальное количество раз).</span><span class="sxs-lookup"><span data-stu-id="28d05-156">Match a word character zero or more times, but as few times as possible.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-157">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-157">End at a word boundary.</span></span>|  
   
-### Выделить ноль или один раз: ?  
- Квантор `?` выделяет предыдущие элементы, повторяющиеся ноль или один раз.  Этот параметр аналогичен параметру `{0,1}`.  `?` — жадный квантор, отложенным эквивалентом которого является квантор `??`.  
+### <a name="match-zero-or-one-time-"></a><span data-ttu-id="28d05-158">Совпадение ноль или один раз: ?</span><span class="sxs-lookup"><span data-stu-id="28d05-158">Match Zero or One Time: ?</span></span>  
+ <span data-ttu-id="28d05-159">`?` Квантор выделяет предыдущий элемент ноль или один раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-159">The `?` quantifier matches the preceding element zero or one time.</span></span> <span data-ttu-id="28d05-160">Это эквивалентно `{0,1}`.</span><span class="sxs-lookup"><span data-stu-id="28d05-160">It is equivalent to `{0,1}`.</span></span> <span data-ttu-id="28d05-161">`?`является жадный квантор, отложенным эквивалентом является `??`.</span><span class="sxs-lookup"><span data-stu-id="28d05-161">`?` is a greedy quantifier whose lazy equivalent is `??`.</span></span>  
   
- Например, с помощью регулярного выражения `\ban?\b` осуществляется поиск целых слов, которые начинаются с буквы `a`, за которой следует одна буква `n` или не следует ни одной такой буквы.  Иными словами, предпринимается попытка найти слова `a` и `an`.  В следующем примере показано, как использовать это регулярное выражение.  
+ <span data-ttu-id="28d05-162">Например, с помощью регулярного выражения `\ban?\b` осуществляется сопоставление целых слов, начинающихся с буквы `a`, за которой следует одна буква `n` или не следует ни одной такой буквы.</span><span class="sxs-lookup"><span data-stu-id="28d05-162">For example, the regular expression `\ban?\b` tries to match entire words that begin with the letter `a` followed by zero or one instances of the letter `n`.</span></span> <span data-ttu-id="28d05-163">Иными словами, предпринимается попытка найти слова `a` и `an`.</span><span class="sxs-lookup"><span data-stu-id="28d05-163">In other words, it tries to match the words `a` and `an`.</span></span> <span data-ttu-id="28d05-164">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-164">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#3)]
  [!code-vb[RegularExpressions.Quantifiers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#3)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-165">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-165">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`an?`|Выделяет "a" с последующими символами "n" \(если они есть\).|  
-|`\b`|Конец на границе слова.|  
+|<span data-ttu-id="28d05-166">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-166">Pattern</span></span>|<span data-ttu-id="28d05-167">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-167">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-168">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-168">Start at a word boundary.</span></span>|  
+|`an?`|<span data-ttu-id="28d05-169">Совпадение с "a"с последующими символами "n" (при их наличии).</span><span class="sxs-lookup"><span data-stu-id="28d05-169">Match an "a" followed by zero or one "n" character.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-170">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-170">End at a word boundary.</span></span>|  
   
-### Выделяет строго n раз: {n}  
- Квантор `{`*n*`}` выделяет предыдущий элемент ровно *n* раз, где *n* — это любое целое число.  `{`*n*`}` — жадный квантор, отложенным эквивалентом которого является квантор `{`*n*`}?`.  
+### <a name="match-exactly-n-times-n"></a><span data-ttu-id="28d05-171">Совпадение ровно n раз: {n}</span><span class="sxs-lookup"><span data-stu-id="28d05-171">Match Exactly n Times: {n}</span></span>  
+ <span data-ttu-id="28d05-172">`{`  *n*  `}` Квантор выделяет предыдущий элемент повторяется ровно  *n*  раз, где  *n* — любое целое число.</span><span class="sxs-lookup"><span data-stu-id="28d05-172">The `{`*n*`}` quantifier matches the preceding element exactly *n* times, where *n* is any integer.</span></span> <span data-ttu-id="28d05-173">`{`*n*`}`является жадный квантор, отложенным эквивалентом является `{`  *n*  `}?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-173">`{`*n*`}` is a greedy quantifier whose lazy equivalent is `{`*n*`}?`.</span></span>  
   
- Например, с помощью регулярного выражения `\b\d+\,\d{3}\b` осуществляется поиск границы слова, за которой следует один или более десятичных знаков, еще три десятичных знака и граница слова.  В следующем примере показано, как использовать это регулярное выражение.  
+ <span data-ttu-id="28d05-174">Например, с помощью регулярного выражения `\b\d+\,\d{3}\b` осуществляется поиск границы слова, за которой следует один или более десятичных знаков, еще три десятичных знака и граница слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-174">For example, the regular expression `\b\d+\,\d{3}\b` tries to match a word boundary followed by one or more decimal digits followed by three decimal digits followed by a word boundary.</span></span> <span data-ttu-id="28d05-175">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-175">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#4](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#4)]
  [!code-vb[RegularExpressions.Quantifiers#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#4)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-176">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-176">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
-|`\,`|Выделяет символ запятой.|  
-|`\d{3}`|Совпадение с тремя десятичными цифрами.|  
-|`\b`|Конец на границе слова.|  
+|<span data-ttu-id="28d05-177">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-177">Pattern</span></span>|<span data-ttu-id="28d05-178">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-178">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-179">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-179">Start at a word boundary.</span></span>|  
+|`\d+`|<span data-ttu-id="28d05-180">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="28d05-180">Match one or more decimal digits.</span></span>|  
+|`\,`|<span data-ttu-id="28d05-181">Совпадение с символом запятой.</span><span class="sxs-lookup"><span data-stu-id="28d05-181">Match a comma character.</span></span>|  
+|`\d{3}`|<span data-ttu-id="28d05-182">Совпадение с тремя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="28d05-182">Match three decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-183">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-183">End at a word boundary.</span></span>|  
   
-### Выделяет как минимум n раз: {n,}  
- Квантор `{`*n*`,}` выделяет предыдущий элемент хотя бы *n* раз, где *n* — это любое целое число.  `{`*n*`,}` — жадный квантор, отложенным эквивалентом которого является квантор `{`*n*`}?`.  
+### <a name="match-at-least-n-times-n"></a><span data-ttu-id="28d05-184">Совпадение как минимум n раз: {n,}</span><span class="sxs-lookup"><span data-stu-id="28d05-184">Match at Least n Times: {n,}</span></span>  
+ <span data-ttu-id="28d05-185">`{`  *n*  `,}` Квантор выделяет предыдущий элемент повторяется по крайней мере  *n*  раз, где  *n* — любое целое число.</span><span class="sxs-lookup"><span data-stu-id="28d05-185">The `{`*n*`,}` quantifier matches the preceding element at least *n* times, where *n* is any integer.</span></span> <span data-ttu-id="28d05-186">`{`*n*`,}`является жадный квантор, отложенным эквивалентом является `{`  *n*  `}?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-186">`{`*n*`,}` is a greedy quantifier whose lazy equivalent is `{`*n*`}?`.</span></span>  
   
- Например, с помощью регулярного выражения `\b\d{2,}\b\D+` осуществляется поиск границы слова, за которой следует по крайней мере два десятичных знака, граница слова и знак, не являющийся числом.  В следующем примере показано, как использовать это регулярное выражение.  Регулярное выражение не соответствует фразе `"7 days"`, потому что фраза содержит всего один десятичный знак, но соответствует фразам `"10 weeks and 300 years"`.  
+ <span data-ttu-id="28d05-187">Например, с помощью регулярного выражения `\b\d{2,}\b\D+` осуществляется поиск границы слова, за которой следует по крайней мере два десятичных знака, граница слова и знак, не являющийся числом.</span><span class="sxs-lookup"><span data-stu-id="28d05-187">For example, the regular expression `\b\d{2,}\b\D+` tries to match a word boundary followed by at least two digits followed by a word boundary and a non-digit character.</span></span> <span data-ttu-id="28d05-188">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-188">The following example illustrates this regular expression.</span></span> <span data-ttu-id="28d05-189">Регулярное выражение не соответствует фразу `"7 days"` , так как он содержит всего один десятичный знак, но соответствует фразах `"10 weeks and 300 years"`.</span><span class="sxs-lookup"><span data-stu-id="28d05-189">The regular expression fails to match the phrase `"7 days"` because it contains just one decimal digit, but it successfully matches the phrases `"10 weeks and 300 years"`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#5)]
  [!code-vb[RegularExpressions.Quantifiers#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#5)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-190">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-190">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`\d{2,}`|Выделяет хотя бы две десятичных цифры.|  
-|`\b`|Соответствует границе слова.|  
-|`\D+`|Выделяет хотя бы одну цифру, не являющуюся десятичной .|  
+|<span data-ttu-id="28d05-191">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-191">Pattern</span></span>|<span data-ttu-id="28d05-192">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-192">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-193">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-193">Start at a word boundary.</span></span>|  
+|`\d{2,}`|<span data-ttu-id="28d05-194">Совпадение как минимум с двумя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="28d05-194">Match at least two decimal digits.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-195">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-195">Match a word boundary.</span></span>|  
+|`\D+`|<span data-ttu-id="28d05-196">Совпадение как минимум с одной цифрой, не являющейся десятичной.</span><span class="sxs-lookup"><span data-stu-id="28d05-196">Match at least one non-decimal digit.</span></span>|  
   
-### Выделяет от n до m раз: {n, m}  
- Квантор `{`*n*`,`*m*`}` выделяет предыдущий элемент минимум *n* раз, но не больше *m* раз, где *n* и *m* — целые числа.  `{`*n*`,`*m*`}` — жадный квантор, отложенным эквивалентом которого является квантор `{`*n*`,`*m*`}?`.  
+### <a name="match-between-n-and-m-times-nm"></a><span data-ttu-id="28d05-197">Совпадение от n до m раз: {n,m}</span><span class="sxs-lookup"><span data-stu-id="28d05-197">Match Between n and m Times: {n,m}</span></span>  
+ <span data-ttu-id="28d05-198">`{`  *n*  `,` *m* `}` квантор выделяет предыдущий элемент повторяется по крайней мере  *n*  время, но не более чем *m* раз, где  *n*  и *m* являются целыми числами.</span><span class="sxs-lookup"><span data-stu-id="28d05-198">The `{`*n*`,`*m*`}` quantifier matches the preceding element at least *n* times, but no more than *m* times, where *n* and *m* are integers.</span></span> <span data-ttu-id="28d05-199">`{`*n*`,`*m* `}` является жадный квантор, отложенным эквивалентом является `{`  *n*  `,` *m*`}?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-199">`{`*n*`,`*m*`}` is a greedy quantifier whose lazy equivalent is `{`*n*`,`*m*`}?`.</span></span>  
   
- В следующем примере с помощью регулярного выражения `(00\s){2,4}` осуществляется поиск от двух до четырех вхождений двух нулей, за которыми следует пробел.  Обратите внимание, что в конце входной строки имеются пять вхождений этого фрагмента при максимуме в четыре вхождения.  Однако только начало этой части строки \(до пробела и пятой пары нулей\) соответствует шаблону регулярного выражения.  
+ <span data-ttu-id="28d05-200">В следующем примере с помощью регулярного выражения `(00\s){2,4}` осуществляется поиск от двух до четырех вхождений двух нулей, за которыми следует пробел.</span><span class="sxs-lookup"><span data-stu-id="28d05-200">In the following example, the regular expression `(00\s){2,4}` tries to match between two and four occurrences of two zero digits followed by a space.</span></span> <span data-ttu-id="28d05-201">Обратите внимание, что в конце входной строки имеются пять вхождений этого фрагмента при максимуме в четыре вхождения.</span><span class="sxs-lookup"><span data-stu-id="28d05-201">Note that the final portion of the input string includes this pattern five times rather than the maximum of four.</span></span> <span data-ttu-id="28d05-202">Однако только начало этой части строки (до пробела и пятой пары нулей) соответствует шаблону регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="28d05-202">However, only the initial portion of this substring (up to the space and the fifth pair of zeros) matches the regular expression pattern.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#6](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#6)]
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
-### Выделить ноль или несколько раз \(ленивое совпадение\): \*?  
- Квантор `*?` совпадает с предыдущим элементом ноль или более раз, но как можно меньшее число раз.  Это ленивый квантор, дополняющий жадный квантор `*`.  
+### <a name="match-zero-or-more-times-lazy-match-"></a><span data-ttu-id="28d05-203">Совпадение ноль или несколько раз (ленивое совпадение): *?</span><span class="sxs-lookup"><span data-stu-id="28d05-203">Match Zero or More Times (Lazy Match): *?</span></span>  
+ <span data-ttu-id="28d05-204">`*?` Квантор выделяет предыдущий элемент повторяется ноль или более раз, но как можно меньшее число раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-204">The `*?` quantifier matches the preceding element zero or more times, but as few times as possible.</span></span> <span data-ttu-id="28d05-205">Это ленивый квантор жадный квантификатор `*`.</span><span class="sxs-lookup"><span data-stu-id="28d05-205">It is the lazy counterpart of the greedy quantifier `*`.</span></span>  
   
- В следующем примере с помощью регулярного выражения `\b\w*?oo\w*?\b` осуществляется поиск всех слов, содержащих строку `oo`.  
+ <span data-ttu-id="28d05-206">В следующем примере регулярное выражение `\b\w*?oo\w*?\b` сопоставляет все слова, которые содержат строку `oo`.</span><span class="sxs-lookup"><span data-stu-id="28d05-206">In the following example, the regular expression `\b\w*?oo\w*?\b` matches all words that contain the string `oo`.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#7)]
  [!code-vb[RegularExpressions.Quantifiers#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#7)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-207">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-207">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`\w*?`|Соответствует нулю или минимально возможному числу буквенных символов.|  
-|`oo`|Выделить строку "oo".|  
-|`\w*?`|Соответствует нулю или минимально возможному числу буквенных символов.|  
-|`\b`|Завершить на границе слова.|  
+|<span data-ttu-id="28d05-208">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-208">Pattern</span></span>|<span data-ttu-id="28d05-209">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-209">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-210">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-210">Start at a word boundary.</span></span>|  
+|`\w*?`|<span data-ttu-id="28d05-211">Совпадение с нулем или минимально возможным числом словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="28d05-211">Match zero or more word characters, but as few characters as possible.</span></span>|  
+|`oo`|<span data-ttu-id="28d05-212">Совпадение со строкой "oo".</span><span class="sxs-lookup"><span data-stu-id="28d05-212">Match the string "oo".</span></span>|  
+|`\w*?`|<span data-ttu-id="28d05-213">Совпадение с нулем или минимально возможным числом словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="28d05-213">Match zero or more word characters, but as few characters as possible.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-214">Конец на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-214">End on a word boundary.</span></span>|  
   
-### Выделить один или несколько раз \(ленивое совпадение\): \+?  
- Квантор `+?` совпадает с предыдущим элементом один или несколько раз, но как можно меньшее число раз.  Это ленивый квантор, дополняющий жадный квантор `+`.  
+### <a name="match-one-or-more-times-lazy-match-"></a><span data-ttu-id="28d05-215">Совпадение один или несколько раз (ленивое совпадение): +?</span><span class="sxs-lookup"><span data-stu-id="28d05-215">Match One or More Times (Lazy Match): +?</span></span>  
+ <span data-ttu-id="28d05-216">`+?` Квантор выделяет предыдущий элемент повторяется один или несколько раз, но как можно меньшее число раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-216">The `+?` quantifier matches the preceding element one or more times, but as few times as possible.</span></span> <span data-ttu-id="28d05-217">Это ленивый квантор жадный квантификатор `+`.</span><span class="sxs-lookup"><span data-stu-id="28d05-217">It is the lazy counterpart of the greedy quantifier `+`.</span></span>  
   
- Например, с помощью регулярного выражения `\b\w+?\b` осуществляется поиск одного или нескольких символов, разделенных границами слов.  В следующем примере показано, как использовать это регулярное выражение.  
+ <span data-ttu-id="28d05-218">Например, регулярное выражение `\b\w+?\b` соответствует одному или нескольким символам, разделенным границами слов.</span><span class="sxs-lookup"><span data-stu-id="28d05-218">For example, the regular expression `\b\w+?\b` matches one or more characters separated by word boundaries.</span></span> <span data-ttu-id="28d05-219">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-219">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#8)]
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
-### Выделить ноль или один раз \(ленивое совпадение\): ??  
- Квантор `??` совпадает с предыдущим элементом 0 или 1 раз, но как можно меньшее число раз.  Это ленивый квантор, дополняющий жадный квантор `?`.  
+### <a name="match-zero-or-one-time-lazy-match-"></a><span data-ttu-id="28d05-220">Совпадение ноль или один раз (ленивое совпадение): ??</span><span class="sxs-lookup"><span data-stu-id="28d05-220">Match Zero or One Time (Lazy Match): ??</span></span>  
+ <span data-ttu-id="28d05-221">`??` Квантор выделяет предыдущий элемент ноль или один раз, но как можно меньшее число раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-221">The `??` quantifier matches the preceding element zero or one time, but as few times as possible.</span></span> <span data-ttu-id="28d05-222">Это ленивый квантор жадный квантификатор `?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-222">It is the lazy counterpart of the greedy quantifier `?`.</span></span>  
   
- Например, регулярное выражение `^\s*(System.)??Console.Write(Line)??\(??` пытается сопоставить строки "Console.Write" или "Console.WriteLine".  Строка может также включать System. перед Console, за ней может следовать открывающая скобка.  Искомый текст должен находиться в начале строки, хотя перед ним может стоять пробел.  В следующем примере показано, как использовать это регулярное выражение.  
+ <span data-ttu-id="28d05-223">Например, регулярное выражение `^\s*(System.)??Console.Write(Line)??\(??` пытается сопоставить строки "Console.Write" или "Console.WriteLine".</span><span class="sxs-lookup"><span data-stu-id="28d05-223">For example, the regular expression `^\s*(System.)??Console.Write(Line)??\(??` attempts to match the strings "Console.Write" or "Console.WriteLine".</span></span> <span data-ttu-id="28d05-224">Строка может также включать "System."</span><span class="sxs-lookup"><span data-stu-id="28d05-224">The string can also include "System."</span></span> <span data-ttu-id="28d05-225">перед "Console", за ней может следовать открывающая скобка.</span><span class="sxs-lookup"><span data-stu-id="28d05-225">before "Console", and it can be followed by an opening parenthesis.</span></span> <span data-ttu-id="28d05-226">Искомый текст должен находиться в начале строки, хотя перед ним может стоять пробел.</span><span class="sxs-lookup"><span data-stu-id="28d05-226">The string must be at the beginning of a line, although it can be preceded by white space.</span></span> <span data-ttu-id="28d05-227">В следующем примере показано, как использовать это регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="28d05-227">The following example illustrates this regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#9](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#9)]
  [!code-vb[RegularExpressions.Quantifiers#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#9)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-228">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-228">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`^`|Выделить начало входного потока.|  
-|`\s*`|Соответствует нулю или нескольким символам пробела.|  
-|`(System.)??`|Выделить ноль или одно вхождение строки "System.".|  
-|`Console.Write`|Соответствует строке "Console.Write".|  
-|`(Line)??`|Выделить ноль или одно вхождение строки "Line".|  
-|`\(??`|Выделить ноль или одно вхождение открывающей скобки.|  
+|<span data-ttu-id="28d05-229">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-229">Pattern</span></span>|<span data-ttu-id="28d05-230">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-230">Description</span></span>|  
+|-------------|-----------------|  
+|`^`|<span data-ttu-id="28d05-231">Соответствует концу входной строки.</span><span class="sxs-lookup"><span data-stu-id="28d05-231">Match the start of the input stream.</span></span>|  
+|`\s*`|<span data-ttu-id="28d05-232">Соответствует нулю или нескольким символам пробела.</span><span class="sxs-lookup"><span data-stu-id="28d05-232">Match zero or more white-space characters.</span></span>|  
+|`(System.)??`|<span data-ttu-id="28d05-233">Совпадение с нулевым или единичным вхождением строки "System.".</span><span class="sxs-lookup"><span data-stu-id="28d05-233">Match zero or one occurrence of the string "System.".</span></span>|  
+|`Console.Write`|<span data-ttu-id="28d05-234">Совпадение со строкой "Console.Write".</span><span class="sxs-lookup"><span data-stu-id="28d05-234">Match the string "Console.Write".</span></span>|  
+|`(Line)??`|<span data-ttu-id="28d05-235">Совпадение с нулевым или единичным вхождением строки "Line".</span><span class="sxs-lookup"><span data-stu-id="28d05-235">Match zero or one occurrence of the string "Line".</span></span>|  
+|`\(??`|<span data-ttu-id="28d05-236">Совпадение с нулем или одним экземпляром открывающих круглых скобок.</span><span class="sxs-lookup"><span data-stu-id="28d05-236">Match zero or one occurrence of the opening parenthesis.</span></span>|  
   
-### Выделяет строго n раз \(ленивое совпадение\): {n}?  
- Квантор `{`*n*`}?` выделяет предыдущий элемент ровно `n` раз, где *n* — это любое целое число.  Это ленивый квантор, дополняющий жадный квантор `{`*n*`}+`.  
+### <a name="match-exactly-n-times-lazy-match-n"></a><span data-ttu-id="28d05-237">Совпадение ровно n раз (ленивое совпадение): {n}?</span><span class="sxs-lookup"><span data-stu-id="28d05-237">Match Exactly n Times (Lazy Match): {n}?</span></span>  
+ <span data-ttu-id="28d05-238">`{`  *n*  `}?` Квантор выделяет предыдущий элемент повторяется ровно `n` раз, где  *n*  — любое целое число.</span><span class="sxs-lookup"><span data-stu-id="28d05-238">The `{`*n*`}?` quantifier matches the preceding element exactly `n` times, where *n* is any integer.</span></span> <span data-ttu-id="28d05-239">Это ленивый квантор жадный квантификатор `{`  *n*  `}+`.</span><span class="sxs-lookup"><span data-stu-id="28d05-239">It is the lazy counterpart of the greedy quantifier `{`*n*`}+`.</span></span>  
   
- В следующем примере регулярное выражение `\b(\w{3,}?\.){2}?\w{3,}?\b` используется для определения адреса веб\-сайта.  Обратите внимание, что есть совпадение с www.microsoft.com и msdn.microsoft.com, но нет совпадения с mywebsite или mycompany.com.  
+ <span data-ttu-id="28d05-240">В следующем примере регулярное выражение `\b(\w{3,}?\.){2}?\w{3,}?\b` используется для определения адреса веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="28d05-240">In the following example, the regular expression `\b(\w{3,}?\.){2}?\w{3,}?\b` is used to identify a Web site address.</span></span> <span data-ttu-id="28d05-241">Обратите внимание, что есть совпадение с "www.microsoft.com" и "msdn.microsoft.com", но нет совпадения с "mywebsite" или "mycompany.com".</span><span class="sxs-lookup"><span data-stu-id="28d05-241">Note that it matches "www.microsoft.com" and "msdn.microsoft.com", but does not match "mywebsite" or "mycompany.com".</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#10](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#10)]
  [!code-vb[RegularExpressions.Quantifiers#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#10)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-242">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-242">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(\w{3,}?\.)`|Выделяет по крайней мере 3 буквенных символа как можно меньшее количество раз, за которыми следует символ точки.  Это первая группа записи.|  
-|`(\w{3,}?\.){2}?`|Выделить шаблон в первой группе два раза, но как можно меньшее количество раз.|  
-|`\b`|Совпадение должно заканчиваться на границе слова.|  
+|<span data-ttu-id="28d05-243">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-243">Pattern</span></span>|<span data-ttu-id="28d05-244">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-244">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-245">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-245">Start at a word boundary.</span></span>|  
+|`(\w{3,}?\.)`|<span data-ttu-id="28d05-246">Совпадение с минимум тремя словообразующими символами как можно меньшее количество раз, зак которыми следует символ точки.</span><span class="sxs-lookup"><span data-stu-id="28d05-246">Match at least 3 word characters, but as few characters as possible, followed by a dot or period character.</span></span> <span data-ttu-id="28d05-247">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="28d05-247">This is the first capturing group.</span></span>|  
+|`(\w{3,}?\.){2}?`|<span data-ttu-id="28d05-248">Совпадение с шаблоном в первой группе два раза, но как можно меньшее количество раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-248">Match the pattern in the first group two times, but as few times as possible.</span></span>|  
+|`\b`|<span data-ttu-id="28d05-249">Сопоставление заканчивается на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-249">End the match on a word boundary.</span></span>|  
   
-### Выделяет как минимум n раз \(ленивое совпадение\): {n,}?  
- Квантор `{`*n*`,}?` выделяет предыдущий элемент хотя бы `n` раз \(где *n* — это любое целое число\), но как можно меньшее количество раз.  Это ленивый квантор, дополняющий жадный квантор `{`*n*`,}`.  
+### <a name="match-at-least-n-times-lazy-match-n"></a><span data-ttu-id="28d05-250">Совпадение как минимум n раз (ленивое совпадение): {n,}?</span><span class="sxs-lookup"><span data-stu-id="28d05-250">Match at Least n Times (Lazy Match): {n,}?</span></span>  
+ <span data-ttu-id="28d05-251">`{`  *n*  `,}?` Квантор выделяет предыдущий элемент повторяется по крайней мере `n` раз, где  *n*  — любое целое число, но как можно меньшее число раз невозможно.</span><span class="sxs-lookup"><span data-stu-id="28d05-251">The `{`*n*`,}?` quantifier matches the preceding element at least `n` times, where *n* is any integer, but as few times as possible.</span></span> <span data-ttu-id="28d05-252">Это ленивый квантор жадный квантификатор `{`  *n*  `,}`.</span><span class="sxs-lookup"><span data-stu-id="28d05-252">It is the lazy counterpart of the greedy quantifier `{`*n*`,}`.</span></span>  
   
- См. пример использования квантора `{`*n*`}?` в предыдущем разделе.  В регулярном выражении из этого примера квантор `{`*n*`,}` используется для поиска строки, состоящей по крайней мере из трех знаков, после которых стоит точка.  
+ <span data-ttu-id="28d05-253">Далее приведен пример `{`  *n*  `}?` квантификатор иллюстрация предыдущего раздела.</span><span class="sxs-lookup"><span data-stu-id="28d05-253">See the example for the `{`*n*`}?` quantifier in the previous section for an illustration.</span></span> <span data-ttu-id="28d05-254">В регулярном выражении, в этом примере используется `{`  *n*  `,}` квантификатор для сопоставления строки, которая содержит менее трех символов, за которым следует.</span><span class="sxs-lookup"><span data-stu-id="28d05-254">The regular expression in that example uses the `{`*n*`,}` quantifier to match a string that has at least three characters followed by a period.</span></span>  
   
-### Выделяет от n до m раз \(ленивое совпадение\): {n, m}?  
- Квантор `{`*n*`,`*m*`}?` выделяет предыдущий элемент от `n` до `m` раз \(где *n* и *m* — целые числа\), но как можно меньшее число раз.  Это ленивый квантор, дополняющий жадный квантор `{`*n*`,`*m*`}`.  
+### <a name="match-between-n-and-m-times-lazy-match-nm"></a><span data-ttu-id="28d05-255">Совпадение от n до m раз (ленивое совпадение): {n,m}?</span><span class="sxs-lookup"><span data-stu-id="28d05-255">Match Between n and m Times (Lazy Match): {n,m}?</span></span>  
+ <span data-ttu-id="28d05-256">`{`  *n*  `,` *m* `}?` квантификатор выделяет предыдущий элемент между `n` и `m` раз, где  *n*  и *m* — целые числа, но как можно меньшее число раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-256">The `{`*n*`,`*m*`}?` quantifier matches the preceding element between `n` and `m` times, where *n* and *m* are integers, but as few times as possible.</span></span> <span data-ttu-id="28d05-257">Это ленивый квантор жадный квантификатор `{`  *n*  `,` *m*`}`.</span><span class="sxs-lookup"><span data-stu-id="28d05-257">It is the lazy counterpart of the greedy quantifier `{`*n*`,`*m*`}`.</span></span>  
   
- В следующем примере регулярное выражение `\b[A-Z](../../../amples/snippets/visualbasic/VS_Snippets_Remoting/SoapAttributes1/VB/s.vb){1,10}?[.!?]` соответствует фразам, содержащим от одного до десяти слов.  Ему соответствуют все приложения исходной строки кроме одного предложения, длина которого составляет 18 слов.  
+ <span data-ttu-id="28d05-258">В следующем примере регулярное выражение `\b[A-Z](\w*\s+){1,10}?[.!?]` сопоставляет фразы, содержащие от одного до десяти слов.</span><span class="sxs-lookup"><span data-stu-id="28d05-258">In the following example, the regular expression `\b[A-Z](\w*\s+){1,10}?[.!?]` matches sentences that contain between one and ten words.</span></span> <span data-ttu-id="28d05-259">Ему соответствуют все предложения в исходной строке кроме одного, длина которого составляет 18 слов.</span><span class="sxs-lookup"><span data-stu-id="28d05-259">It matches all the sentences in the input string except for one sentence that contains 18 words.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
   
- В следующей таблице представлено определение шаблона регулярных выражений.  
+ <span data-ttu-id="28d05-260">Шаблон регулярного выражения определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-260">The regular expression pattern is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`[A-Z]`|Выделяет символ верхнего регистра от А до Z.|  
-|`(\w*\s+)`|Выделить ноль или несколько буквенных символов, за которыми следует один или несколько символов пробела.  Это первая группа записи.|  
-|`{1,10}?`|Выделить предыдущий шаблон от 1 до 10 раз, но как можно меньшее число раз.|  
-|`[.!?]`|Выделяет любой из знаков препинания ".", "\!" или "?".|  
+|<span data-ttu-id="28d05-261">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-261">Pattern</span></span>|<span data-ttu-id="28d05-262">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-262">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="28d05-263">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="28d05-263">Start at a word boundary.</span></span>|  
+|`[A-Z]`|<span data-ttu-id="28d05-264">Совпадение с любым символом верхнего регистра от А до Z.</span><span class="sxs-lookup"><span data-stu-id="28d05-264">Match an uppercase character from A to Z.</span></span>|  
+|`(\w*\s+)`|<span data-ttu-id="28d05-265">Совпадение с нулем или несколькими словообразующими символами, за которыми следует один или несколько символов пробела.</span><span class="sxs-lookup"><span data-stu-id="28d05-265">Match zero or more word characters, followed by one or more white-space characters.</span></span> <span data-ttu-id="28d05-266">Это первая захватываемая группа.</span><span class="sxs-lookup"><span data-stu-id="28d05-266">This is the first capture group.</span></span>|  
+|`{1,10}?`|<span data-ttu-id="28d05-267">Совпадение с предыдущим шаблоном от 1 до 10 раз, но как можно меньшее количество раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-267">Match the previous pattern between 1 and 10 times, but as few times as possible.</span></span>|  
+|`[.!?]`|<span data-ttu-id="28d05-268">Совпадение с любым из знаков препинания ".", "!" или "?".</span><span class="sxs-lookup"><span data-stu-id="28d05-268">Match any one of the punctuation characters ".", "!", or "?".</span></span>|  
   
 <a name="Greedy"></a>   
-## Жадные и ленивые квантификаторы  
- У некоторых квантификаторов есть две версии.  
+## <a name="greedy-and-lazy-quantifiers"></a><span data-ttu-id="28d05-269">Жадные и ленивые квантификаторы</span><span class="sxs-lookup"><span data-stu-id="28d05-269">Greedy and Lazy Quantifiers</span></span>  
+ <span data-ttu-id="28d05-270">У некоторых квантификаторов есть две версии.</span><span class="sxs-lookup"><span data-stu-id="28d05-270">A number of the quantifiers have two versions:</span></span>  
   
--   Жадная версия.  
+-   <span data-ttu-id="28d05-271">Жадная версия.</span><span class="sxs-lookup"><span data-stu-id="28d05-271">A greedy version.</span></span>  
   
-     Жадный квантор пытается найти максимально возможное число соответствий элемента.  
+     <span data-ttu-id="28d05-272">Жадный квантификатор пытается найти максимально возможное число соответствий элемента.</span><span class="sxs-lookup"><span data-stu-id="28d05-272">A greedy quantifier tries to match an element as many times as possible.</span></span>  
   
--   Нежадная \(ленивая\) версия.  
+-   <span data-ttu-id="28d05-273">Нежадное (ленивая) версия.</span><span class="sxs-lookup"><span data-stu-id="28d05-273">A non-greedy (or lazy) version.</span></span>  
   
-     При использовании нежадных кванторов предпринимается попытка найти минимально возможное число соответствий элемента.  Чтобы превратить "жадный" квантификатор в "отложенный" квантификатор, достаточно добавить `?`.  
+     <span data-ttu-id="28d05-274">При использовании нежадных идентификаторов предпринимается попытка найти минимально возможное число соответствий элемента.</span><span class="sxs-lookup"><span data-stu-id="28d05-274">A non-greedy quantifier tries to match an element as few times as possible.</span></span> <span data-ttu-id="28d05-275">Жадный квантификатор можно превратить в ленивый квантификатор, просто добавляя `?`.</span><span class="sxs-lookup"><span data-stu-id="28d05-275">You can turn a greedy quantifier into a lazy quantifier by simply adding a `?`.</span></span>  
   
- Представьте простое регулярное выражение, позволяющее находить последние четыре цифры в числовой строке, например в номере кредитной карты.  Версия этого выражения с жадным квантификатором `*` будет иметь вид `\b.*([0-9]{4})\b`.  Однако если строка содержит два числа, то с помощью такого регулярного выражения будут найдены только последние четыре цифры второго числа, как показано в следующем примере.  
+ <span data-ttu-id="28d05-276">Представьте простое регулярное выражение, позволяющее находить последние четыре цифры в числовой строке, например в номере кредитной карты.</span><span class="sxs-lookup"><span data-stu-id="28d05-276">Consider a simple regular expression that is intended to extract the last four digits from a string of numbers such as a credit card number.</span></span> <span data-ttu-id="28d05-277">Регулярное выражение, которое использует версию `*` — жадный квантификатор `\b.*([0-9]{4})\b`.</span><span class="sxs-lookup"><span data-stu-id="28d05-277">The version of the regular expression that uses the `*` greedy quantifier is `\b.*([0-9]{4})\b`.</span></span> <span data-ttu-id="28d05-278">Однако если строка содержит два числа, то с помощью такого регулярного выражения будут найдены только последние четыре цифры второго числа, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="28d05-278">However, if a string contains two numbers, this regular expression matches the last four digits of the second number only, as the following example shows.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#1)]  
   
- Регулярное выражение не совпадает с первым числом, поскольку при использовании квантификатора `*` предпринимается попытка найти максимально возможное число совпадений с предыдущим элементом во всей строке, и поэтому совпадение находится только в конце строки.  
+ <span data-ttu-id="28d05-279">Не удается сопоставить первое число, так как регулярное выражение `*` квантификаторов предпринимается попытка предыдущий элемент повторяется как много раз во всей строке, и поэтому совпадение в конце строки.</span><span class="sxs-lookup"><span data-stu-id="28d05-279">The regular expression fails to match the first number because the `*` quantifier tries to match the previous element as many times as possible in the entire string, and so it finds its match at the end of the string.</span></span>  
   
- Это не то, что нам нужно.  Вместо этого можно использовать ленивый квантор `*?` ``  для извлечения цифр из обоих чисел, как показано в следующем примере.  
+ <span data-ttu-id="28d05-280">Это не то, что нам нужно.</span><span class="sxs-lookup"><span data-stu-id="28d05-280">This is not the desired behavior.</span></span> <span data-ttu-id="28d05-281">Вместо этого можно использовать `*?`для извлечения цифр из обоих чисел, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="28d05-281">Instead, you can use the `*?`lazy quantifier to extract digits from both numbers, as the following example shows.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#2)]  
   
- В большинстве случаев регулярные выражения с жадными и ленивыми квантификаторами возвращают одни и те же результаты.  Результаты обычно различаются, если в регулярных выражениях используется подстановочный метазнак `.`, который соответствует любому знаку.  
+ <span data-ttu-id="28d05-282">В большинстве случаев регулярные выражения с жадными и ленивыми квантификаторами возвращают одни и те же результаты.</span><span class="sxs-lookup"><span data-stu-id="28d05-282">In most cases, regular expressions with greedy and lazy quantifiers return the same matches.</span></span> <span data-ttu-id="28d05-283">Они чаще всего возвращают различные результаты при их использовании с символом-шаблоном (`.`) метасимвол, которая соответствует любому знаку.</span><span class="sxs-lookup"><span data-stu-id="28d05-283">They most commonly return different results when they are used with the wildcard (`.`) metacharacter, which matches any character.</span></span>  
   
-## Кванторы и пустые соответствия  
- Квантификаторы `*`, `+` и `{`*n*`,`*m*`}`, а также их "отложенные" аналоги никогда не повторяются после пустого соответствия, если найдено минимальное количество фиксаций.  Это правило предотвращает вхождение квантификаторов в бесконечные циклы при пустых соответствиях частей выражений, если максимальное количество возможных фиксаций группы бесконечно или приближено к бесконечному.  
+## <a name="quantifiers-and-empty-matches"></a><span data-ttu-id="28d05-284">Квантификаторы и пустые соответствия</span><span class="sxs-lookup"><span data-stu-id="28d05-284">Quantifiers and Empty Matches</span></span>  
+ <span data-ttu-id="28d05-285">Кванторы `*`, `+`, и `{`  *n*  `,` *m* `}` и их аналогами отложенной никогда не повторять по прошествии пустой соответствует обнаружила минимальное количество записей.</span><span class="sxs-lookup"><span data-stu-id="28d05-285">The quantifiers `*`, `+`, and `{`*n*`,`*m*`}` and their lazy counterparts never repeat after an empty match when the minimum number of captures has been found.</span></span> <span data-ttu-id="28d05-286">Это правило препятствует вхождению квантификаторов в бесконечные циклы при пустых соответствиях частей выражений, если максимальное количество возможных фиксаций группы бесконечно или приближено к бесконечному.</span><span class="sxs-lookup"><span data-stu-id="28d05-286">This rule prevents quantifiers from entering infinite loops on empty subexpression matches when the maximum number of possible group captures is infinite or near infinite.</span></span>  
   
- Например, в следующем коде показан результат вызова метода <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=fullName> с шаблоном регулярного выражения `(a?)*`, который соответствует ноль или один символ "a" ноль или более раз.  Обратите внимание, что отдельная группа записи записывает каждое вхождение "а", как и <xref:System.String.Empty?displayProperty=fullName>, но второго пустого совпадения нет, потому что первое пустое совпадение предписывает квантификатору прекратить повторение.  
+ <span data-ttu-id="28d05-287">Например, в следующем коде показано результат вызова <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> метод с шаблоном регулярного выражения `(a?)*`, который сопоставляется ноль или один символ, «» ноль или более раз.</span><span class="sxs-lookup"><span data-stu-id="28d05-287">For example, the following code shows the result of a call to the <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> method with the regular expression pattern `(a?)*`, which matches zero or one "a" character zero or more times.</span></span> <span data-ttu-id="28d05-288">Обратите внимание, что одной группы записи соответствует каждая как «» как <xref:System.String.Empty?displayProperty=nameWithType>, но в этом совпадение не найдено второй пустой, так как первое совпадение пустой квантор прекратил повторы.</span><span class="sxs-lookup"><span data-stu-id="28d05-288">Note that the single capturing group captures each "a" as well as <xref:System.String.Empty?displayProperty=nameWithType>, but that there is no second empty match, because the first empty match causes the quantifier to stop repeating.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch1.vb#1)]  
   
- Чтобы увидеть практическое различие между группой фиксации, определяющей минимальное и максимальное количество фиксаций, и группой, определяющей фиксированное количество фиксаций, воспользуйтесь шаблонами регулярных выражений `(a\1|(?(1)\1)){0,2}` и `(a\1|(?(1)\1)){2}`.  Оба регулярных выражения состоят из одной группы записи, которая определяется, как показано в следующей таблице.  
+ <span data-ttu-id="28d05-289">Чтобы увидеть практическое различие между захватываемой группой, определяющей минимальное и максимальное количество записей, и группой, определяющей фиксированное количество записей, воспользуйтесь шаблонами регулярных выражений `(a\1|(?(1)\1)){0,2}` и `(a\1|(?(1)\1)){2}`.</span><span class="sxs-lookup"><span data-stu-id="28d05-289">To see the practical difference between a capturing group that defines a minimum and a maximum number of captures and one that defines a fixed number of captures, consider the regular expression patterns `(a\1|(?(1)\1)){0,2}` and `(a\1|(?(1)\1)){2}`.</span></span> <span data-ttu-id="28d05-290">Оба регулярных выражения состоят из одной захватываемой группы, которая определяется, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="28d05-290">Both regular expressions consist of a single capturing group, which is defined as shown in the following table.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`(a\1`|Каждое из выражений сопоставляет "a" вместе со значением первой группы записи ...|  
-|`&#124;(?(1)`|… или проверьте, была ли определена первая записанная группа. \(Обратите внимание, что конструкция `(?(1)` не определяет группу записи.\)|  
-|`\1))`|Если первая сохраненная группа существует, сопоставьте ее значение.  Если группа не существует, группа будет соответствовать <xref:System.String.Empty?displayProperty=fullName>.|  
+|<span data-ttu-id="28d05-291">Шаблон</span><span class="sxs-lookup"><span data-stu-id="28d05-291">Pattern</span></span>|<span data-ttu-id="28d05-292">Описание</span><span class="sxs-lookup"><span data-stu-id="28d05-292">Description</span></span>|  
+|-------------|-----------------|  
+|`(a\1`|<span data-ttu-id="28d05-293">Сопоставление "a" вместе со значением первой захваченной группы...</span><span class="sxs-lookup"><span data-stu-id="28d05-293">Either match "a" along with the value of the first captured group …</span></span>|  
+|`&#124;(?(1)`|<span data-ttu-id="28d05-294">…</span><span class="sxs-lookup"><span data-stu-id="28d05-294">…</span></span> <span data-ttu-id="28d05-295">или проверка того, была ли определена первая захваченная группа.</span><span class="sxs-lookup"><span data-stu-id="28d05-295">or test whether the first captured group has been defined.</span></span> <span data-ttu-id="28d05-296">(Обратите внимание, что `(?(1)` конструкция не определяет группы записи.)</span><span class="sxs-lookup"><span data-stu-id="28d05-296">(Note that the `(?(1)` construct does not define a capturing group.)</span></span>|  
+|`\1))`|<span data-ttu-id="28d05-297">Если первая захваченная группа существует, следует сопоставить ее значение.</span><span class="sxs-lookup"><span data-stu-id="28d05-297">If the first captured group exists, match its value.</span></span> <span data-ttu-id="28d05-298">Если группа не существует, будет соответствовать группе <xref:System.String.Empty?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="28d05-298">If the group does not exist, the group will match <xref:System.String.Empty?displayProperty=nameWithType>.</span></span>|  
   
- Первое регулярное выражение пытается сопоставить этот шаблон от 0 до двух раз; второе, ровно два раза.  Поскольку первый шаблон достигает своего минимального количества записей при первой записи значения <xref:System.String.Empty?displayProperty=fullName>, он не повторяет попытку сопоставить `a\1`; квантификатор `{0,2}` допускает только пустые соответствия в последней итерации.  Напротив, второе регулярное выражение соответствует "а", потому что оно вычисляет `a\1` второй раз; минимальное число итераций \(2\) предписывает обработчику выполнять повтор после пустого соответствия.  
+ <span data-ttu-id="28d05-299">Первое регулярное выражение пытается сопоставить этот шаблон от нуля до двух раз. Второй — ровно два раза.</span><span class="sxs-lookup"><span data-stu-id="28d05-299">The first regular expression tries to match this pattern between zero and two times; the second, exactly two times.</span></span> <span data-ttu-id="28d05-300">Так как первый шаблон достигает его минимальное число снимки с его первой записью <xref:System.String.Empty?displayProperty=nameWithType>, он никогда не повторяется, чтобы попытаться сравнить `a\1`; `{0,2}` квантификатор разрешает только пустые совпадения в последней итерации.</span><span class="sxs-lookup"><span data-stu-id="28d05-300">Because the first pattern reaches its minimum number of captures with its first capture of <xref:System.String.Empty?displayProperty=nameWithType>, it never repeats to try to match `a\1`; the `{0,2}` quantifier allows only empty matches in the last iteration.</span></span> <span data-ttu-id="28d05-301">Напротив, второе регулярное выражение соответствует "а", потому что оно вычисляет `a\1` второй раз. Минимальное число итераций (2) предписывает обработчику выполнять повтор после пустого соответствия.</span><span class="sxs-lookup"><span data-stu-id="28d05-301">In contrast, the second regular expression does match "a" because it evaluates `a\1` a second time; the minimum number of iterations, 2, forces the engine to repeat after an empty match.</span></span>  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)   
- [Поиск с возвратом](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="28d05-302">См. также</span><span class="sxs-lookup"><span data-stu-id="28d05-302">See Also</span></span>  
+ [<span data-ttu-id="28d05-303">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="28d05-303">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [<span data-ttu-id="28d05-304">Поиск с возвратом</span><span class="sxs-lookup"><span data-stu-id="28d05-304">Backtracking</span></span>](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

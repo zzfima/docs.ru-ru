@@ -1,71 +1,77 @@
 ---
-title: "How to: Write Messages to and Read Messages from a Dataflow Block | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Task Parallel Library, dataflows"
-  - "TPL dataflow library, reading and writing messages"
+title: "Практическое руководство. Запись и чтение сообщений в блоке потока данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Task Parallel Library, dataflows
+- TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: bf609a8c350a44fc802cce0ec10693431bbf4f42
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# How to: Write Messages to and Read Messages from a Dataflow Block
-В этом документе описано, как использовать библиотеку потоков данных TPL для записи сообщений в и считывания сообщения из блока потока данных.  Библиотека потоков данных TPL предоставляет синхронные и асинхронные методы для записи сообщений и чтения их из блока потока данных.  В этом документе используется класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=fullName>.  Класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> буферизирует сообщения и работает и в качестве источника сообщений, и как целевой объект сообщения.  
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a><span data-ttu-id="cf353-102">Практическое руководство. Запись и чтение сообщений в блоке потока данных</span><span class="sxs-lookup"><span data-stu-id="cf353-102">How to: Write Messages to and Read Messages from a Dataflow Block</span></span>
+<span data-ttu-id="cf353-103">В этом документе описываются способы использования библиотеки потоков данных TPL для записи сообщений в блок потока данных и считывания сообщений из него.</span><span class="sxs-lookup"><span data-stu-id="cf353-103">This document describes how to use the TPL Dataflow Library to write messages to and read messages from a dataflow block.</span></span> <span data-ttu-id="cf353-104">Библиотека потоков данных TPL предоставляет как синхронные, так и асинхронные методы для записи сообщений в блок потока данных и чтения сообщений из него.</span><span class="sxs-lookup"><span data-stu-id="cf353-104">The TPL Dataflow Library provides both synchronous and asynchronous methods for writing messages to and reading messages from a dataflow block.</span></span> <span data-ttu-id="cf353-105">В этом документе используется класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cf353-105">This document uses the <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="cf353-106">Класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> помещает сообщения в буфер и работает и в качестве источника сообщений, и как адресат сообщения.</span><span class="sxs-lookup"><span data-stu-id="cf353-106">The <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> class buffers messages and behaves as both a message source and as a message target.</span></span>  
   
 > [!TIP]
->  Библиотека потоков данных TPL \(пространство имен <xref:System.Threading.Tasks.Dataflow?displayProperty=fullName>\) не поставляется с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  Чтобы установить пространство имен <xref:System.Threading.Tasks.Dataflow>, откройте ваш проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите пункт **Manage NuGet Packages** в меню Проект и выполните поиск пакета `Microsoft.Tpl.Dataflow` в сети.  
+>  <span data-ttu-id="cf353-107">Библиотека потоков данных TPL (пространство имен <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) не поставляется с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cf353-107">The TPL Dataflow Library (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> namespace) is not distributed with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="cf353-108">Чтобы установить <xref:System.Threading.Tasks.Dataflow> пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** меню проекта и выполните поиск в Интернете `Microsoft.Tpl.Dataflow` пакета.</span><span class="sxs-lookup"><span data-stu-id="cf353-108">To install the <xref:System.Threading.Tasks.Dataflow> namespace, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the Project menu, and search online for the `Microsoft.Tpl.Dataflow` package.</span></span>  
   
-## Запись и чтение блока потока данных синхронно  
- В следующем примере используется метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> для записи в <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> блок потока данных и метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> для чтения из того же объекта.  
+## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a><span data-ttu-id="cf353-109">Синхронная запись в блок потока данных и чтение из него</span><span class="sxs-lookup"><span data-stu-id="cf353-109">Writing to and Reading from a Dataflow Block Synchronously</span></span>  
+ <span data-ttu-id="cf353-110">В следующем примере используется метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> для записи в блок потока данных <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> и метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> для чтения из того же объекта.</span><span class="sxs-lookup"><span data-stu-id="cf353-110">The following example uses the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> method to write to a <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> dataflow block and the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> method to read from the same object.</span></span>  
   
  [!code-csharp[TPLDataflow_ReadWrite#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#2)]
  [!code-vb[TPLDataflow_ReadWrite#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#2)]  
   
- Можно также использовать метод <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> для чтения из блока потока данных, как показано в следующем примере.  Метод <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> не блокирует текущий поток и удобен, если нужно периодически запрашивать данные.  
+ <span data-ttu-id="cf353-111">Можно также использовать метод <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> для чтения из блока потока данных, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="cf353-111">You can also use the <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> method to read from a dataflow block, as shown in the following example.</span></span> <span data-ttu-id="cf353-112">Метод <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> не блокирует текущий поток и удобен, если необходимо периодически запрашивать данные.</span><span class="sxs-lookup"><span data-stu-id="cf353-112">The <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> method does not block the current thread and is useful when you occasionally poll for data.</span></span>  
   
  [!code-csharp[TPLDataflow_ReadWrite#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#3)]
  [!code-vb[TPLDataflow_ReadWrite#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#3)]  
   
- Поскольку метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> действует синхронно, объект <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> в предыдущих примерах получает все данные, прежде чем второй цикл считывает данные.  Следующий пример расширяет первый пример с помощью <xref:System.Threading.Tasks.Parallel.Invoke%2A> для чтения и записи блока сообщений параллельно.  Поскольку <xref:System.Threading.Tasks.Parallel.Invoke%2A> выполняет действия параллельно, значения не записываются в объект <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> в каком\-либо определенном порядке.  
+ <span data-ttu-id="cf353-113">Поскольку метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> действует синхронно, объект <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> в предыдущих примерах получает все данные, прежде чем второй цикл считывает данные.</span><span class="sxs-lookup"><span data-stu-id="cf353-113">Because the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> method acts synchronously, the <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> object in the previous examples receives all data before the second loop reads data.</span></span> <span data-ttu-id="cf353-114">Следующий пример расширяет первый пример путем использования <xref:System.Threading.Tasks.Parallel.Invoke%2A> для чтения и записи в блок сообщений в параллельном режиме.</span><span class="sxs-lookup"><span data-stu-id="cf353-114">The following example extends the first example by using <xref:System.Threading.Tasks.Parallel.Invoke%2A> to read from and write to the message block concurrently.</span></span> <span data-ttu-id="cf353-115">Поскольку <xref:System.Threading.Tasks.Parallel.Invoke%2A> выполняет действия параллельно, значения не записываются в объект <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> в каком-либо определенном порядке.</span><span class="sxs-lookup"><span data-stu-id="cf353-115">Because <xref:System.Threading.Tasks.Parallel.Invoke%2A> performs actions concurrently, the values are not written to the <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> object in any specific order.</span></span>  
   
  [!code-csharp[TPLDataflow_ReadWrite#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#4)]
  [!code-vb[TPLDataflow_ReadWrite#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#4)]  
   
-## Запись и чтение блока потока данных асинхронно  
- В следующем примере используется метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> для асинхронной записи в <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> объект и метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> для асинхронного чтения из того же объекта.  В этом образце используются операторы [async](../Topic/async%20\(C%23%20Reference\).md) и [await](../Topic/await%20\(C%23%20Reference\).md) \([Async](../Topic/Async%20\(Visual%20Basic\).md) и [Await](../Topic/Await%20Operator%20\(Visual%20Basic\).md) в Visual Basic\) для асинхронной передачи данных и считывания их из блока целевого объекта.  Метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> рекомендуется, если необходимо обеспечить возможность отложенных сообщений для потока данных.  Метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> полезен для использования, если вы собираетесь работать с данными, когда они становятся доступны.  Дополнительные сведения о распространении сообщений среди блоков сообщений см. в разделе [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a><span data-ttu-id="cf353-116">Асинхронная запись в блок потока данных и чтение из него</span><span class="sxs-lookup"><span data-stu-id="cf353-116">Writing to and Reading from a Dataflow Block Asynchronously</span></span>  
+ <span data-ttu-id="cf353-117">В следующем примере используется метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> для асинхронной записи в объект <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> и метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> для асинхронного чтения из того же объекта.</span><span class="sxs-lookup"><span data-stu-id="cf353-117">The following example uses the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> method to asynchronously write to a <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> object and the <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> method to asynchronously read from the same object.</span></span> <span data-ttu-id="cf353-118">В этом образце используются операторы [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в Visual Basic) для асинхронной передачи данных и считывания их из блока целевого объекта.</span><span class="sxs-lookup"><span data-stu-id="cf353-118">This example uses the [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) operators ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic) to asynchronously send data to and read data from the target block.</span></span> <span data-ttu-id="cf353-119">Метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> рекомендуется, если необходимо обеспечить возможность использования отложенных сообщений для потока данных.</span><span class="sxs-lookup"><span data-stu-id="cf353-119">The <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> method is useful when you must enable a dataflow block to postpone messages.</span></span> <span data-ttu-id="cf353-120">Метод <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> полезен для использования, если вы собираетесь работать с данными, когда они становятся доступны.</span><span class="sxs-lookup"><span data-stu-id="cf353-120">The <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> method is useful when you want to act on data when that data becomes available.</span></span> <span data-ttu-id="cf353-121">Дополнительные сведения о распространении сообщений среди блоков сообщений см. в разделе "Передача сообщений" документа [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).</span><span class="sxs-lookup"><span data-stu-id="cf353-121">For more information about how messages propagate among message blocks, see the section Message Passing in [Dataflow](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).</span></span>  
   
  [!code-csharp[TPLDataflow_ReadWrite#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#5)]
  [!code-vb[TPLDataflow_ReadWrite#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#5)]  
   
-## Полный пример  
- В следующем примере приведен полный код для этого документа.  
+## <a name="a-complete-example"></a><span data-ttu-id="cf353-122">Полный пример</span><span class="sxs-lookup"><span data-stu-id="cf353-122">A Complete Example</span></span>  
+ <span data-ttu-id="cf353-123">В следующем примере приведен полный код для этого документа.</span><span class="sxs-lookup"><span data-stu-id="cf353-123">The following example shows the complete code for this document.</span></span>  
   
  [!code-csharp[TPLDataflow_ReadWrite#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#1)]
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowReadWrite.cs` \(`DataflowReadWrite.vb` для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]\), затем выполните в окне командной строки Visual Studio следующую команду.  
+## <a name="compiling-the-code"></a><span data-ttu-id="cf353-124">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="cf353-124">Compiling the Code</span></span>  
+ <span data-ttu-id="cf353-125">Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowReadWrite.cs` (`DataflowReadWrite.vb` для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), затем выполните в окне командной строки Visual Studio следующую команду.</span><span class="sxs-lookup"><span data-stu-id="cf353-125">Copy the example code and paste it in a Visual Studio project, or paste it in a file that is named `DataflowReadWrite.cs` (`DataflowReadWrite.vb` for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), and then run the following command in a Visual Studio Command Prompt window.</span></span>  
   
  [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
- **csc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
+ <span data-ttu-id="cf353-126">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**</span><span class="sxs-lookup"><span data-stu-id="cf353-126">**csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**</span></span>  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
- **vbc.exe \/r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
+ <span data-ttu-id="cf353-127">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**</span><span class="sxs-lookup"><span data-stu-id="cf353-127">**vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**</span></span>  
   
-## Следующие действия  
- В этом примере показано, как считывать и записывать в блок сообщений напрямую.  Можно также подключить блоки потока данных в для создания *конвейеров*, которые являются линейными последовательностями блоков потока данных, или *сетей*, являющихся графами блоков потоков данных.  Конвейеры или сети асинхронно распространяют данные целевым объектам, когда данные становятся доступны.  Пример, в котором создается базовый конвейер потока данных см. в разделе [Walkthrough: Creating a Dataflow Pipeline](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md).  Пример создания более сложной сети потока данных см. в разделе [Walkthrough: Using Dataflow in a Windows Forms Application](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+## <a name="next-steps"></a><span data-ttu-id="cf353-128">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="cf353-128">Next Steps</span></span>  
+ <span data-ttu-id="cf353-129">В этом примере показано, как считывать и записывать в блок сообщений напрямую.</span><span class="sxs-lookup"><span data-stu-id="cf353-129">This example shows how to read from and write to a message block directly.</span></span> <span data-ttu-id="cf353-130">Можно также подключить блоки потока данных для создания *конвейеров*, которые являются линейными последовательностями блоков потока данных, или *сетей*, являющихся графами блоков потоков данных.</span><span class="sxs-lookup"><span data-stu-id="cf353-130">You can also connect dataflow blocks to form *pipelines*, which are linear sequences of dataflow blocks, or *networks*, which are graphs of dataflow blocks.</span></span> <span data-ttu-id="cf353-131">Конвейеры или сети асинхронно распространяют исходные данные целевым объектам, когда данные становятся доступны.</span><span class="sxs-lookup"><span data-stu-id="cf353-131">In a pipeline or network, sources asynchronously propagate data to targets as that data becomes available.</span></span> <span data-ttu-id="cf353-132">Пример, в котором создается базовый конвейер потока данных, см. в разделе [Пошаговое руководство. Создание конвейера потока данных](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md).</span><span class="sxs-lookup"><span data-stu-id="cf353-132">For an example that creates a basic dataflow pipeline, see [Walkthrough: Creating a Dataflow Pipeline](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md).</span></span> <span data-ttu-id="cf353-133">Пример создания более комплексной сети потока данных см. в разделе [Пошаговое руководство. Использование потоков данных в приложении Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).</span><span class="sxs-lookup"><span data-stu-id="cf353-133">For an example that creates a more complex dataflow network, see [Walkthrough: Using Dataflow in a Windows Forms Application](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).</span></span>  
   
-## См. также  
- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a><span data-ttu-id="cf353-134">См. также</span><span class="sxs-lookup"><span data-stu-id="cf353-134">See Also</span></span>  
+ [<span data-ttu-id="cf353-135">Поток данных</span><span class="sxs-lookup"><span data-stu-id="cf353-135">Dataflow</span></span>](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -1,32 +1,30 @@
 ---
-title: "Модель DOM для XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Модель объектов XML-документов (DOM)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ff91e929876ceec8512e962b88795b6a8a29f3d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Модель DOM для XML
-Класс XML DOM является представлением XML\-документа в памяти.  Модель DOM позволяет читать, обрабатывать и изменять XML\-документ программным образом.  Класс **XmlReader** также читает XML; однако он обеспечивает некэшируемый однопроходный доступ только для чтения.  Это значит, что у **XmlReader** нет возможности изменять значения атрибута, содержимое элемента, вставлять и удалять узлы.  Изменение \- основная функция модели DOM.  Это стандартизованный, структурированный способ представления XML\-данных в памяти, хотя на самом деле данные XML хранятся в файлах и пересылаются из других объектов в строковом виде.  Далее приведен пример XML\-данных.  
+# <a name="xml-document-object-model-dom"></a><span data-ttu-id="ca9b2-102">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="ca9b2-102">XML Document Object Model (DOM)</span></span>
+<span data-ttu-id="ca9b2-103">Класс XML DOM является представлением XML-документа в памяти.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-103">The XML Document Object Model (DOM) class is an in-memory representation of an XML document.</span></span> <span data-ttu-id="ca9b2-104">Модель DOM позволяет читать, обрабатывать и изменять XML-документ программным образом.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-104">The DOM allows you to programmatically read, manipulate, and modify an XML document.</span></span> <span data-ttu-id="ca9b2-105">**XmlReader** также читает XML; однако он предоставляет доступ некэшируемый однопроходный, только для чтения.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-105">The **XmlReader** class also reads XML; however, it provides non-cached, forward-only, read-only access.</span></span> <span data-ttu-id="ca9b2-106">Это означает, что нет возможности изменять значения атрибута или содержимое элемента или возможность вставлять и удалять узлы с **XmlReader**.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-106">This means that there are no capabilities to edit the values of an attribute or content of an element, or the ability to insert and remove nodes with the **XmlReader**.</span></span> <span data-ttu-id="ca9b2-107">Изменение - основная функция модели DOM.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-107">Editing is the primary function of the DOM.</span></span> <span data-ttu-id="ca9b2-108">Это стандартизованный, структурированный способ представления XML-данных в памяти, хотя на самом деле данные XML хранятся в файлах и пересылаются из других объектов в строковом виде.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-108">It is the common and structured way that XML data is represented in memory, although the actual XML data is stored in a linear fashion when in a file or coming in from another object.</span></span> <span data-ttu-id="ca9b2-109">Далее приведен пример XML-данных.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-109">The following is XML data.</span></span>  
   
-## Ввод  
+## <a name="input"></a><span data-ttu-id="ca9b2-110">Ввод</span><span class="sxs-lookup"><span data-stu-id="ca9b2-110">Input</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
   <books>  
     <book>  
@@ -41,50 +39,50 @@ caps.handback.revision: 4
   </books>   
 ```  
   
- Далее показано, какая структура будет создана в памяти, когда эти XML\-данные считываются в модель структуры DOM.  
+ <span data-ttu-id="ca9b2-111">Далее показано, какая структура будет создана в памяти, когда эти XML-данные считываются в модель структуры DOM.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-111">The following illustration shows how memory is structured when this XML data is read into the DOM structure.</span></span>  
   
- ![Структура XML&#45;документа](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML\_To\_DOMTree")  
-Структура XML\-документа  
+ <span data-ttu-id="ca9b2-112">![Структура XML-документа](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree")</span><span class="sxs-lookup"><span data-stu-id="ca9b2-112">![XML document structure](../../../../docs/standard/data/xml/media/xml-to-domtree.gif "XML_To_DOMTree")</span></span>  
+<span data-ttu-id="ca9b2-113">Структура XML-документа</span><span class="sxs-lookup"><span data-stu-id="ca9b2-113">XML document structure</span></span>  
   
- Каждый круг в данной иллюстрации представляет собой узел в структуре XML\-документа, называемый объектом **XmlNode** .  Объект **XmlNode** является базовым объектом дерева DOM.  Класс **XmlDocument**, расширяющий класс **XmlNode**, поддерживает методы для выполнения операций над документом в целом \(например, загрузки его в память или сохранения XML в файл\).  Кроме того, **XmlDocument** предоставляет возможности для просмотра узлов всего XML\-документа и выполнения операций над ними.  И **XmlNode**, и **XmlDocument** обладают улучшенной производительностью, расширенной функциональностью и содержат методы и свойства, которые позволяют следующее.  
+ <span data-ttu-id="ca9b2-114">Представляет узел, который вызывается в структуре XML-документа, каждый круг в данной иллюстрации **XmlNode** объекта.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-114">Within the XML document structure, each circle in this illustration represents a node, which is called an **XmlNode** object.</span></span> <span data-ttu-id="ca9b2-115">**XmlNode** объект является базовым объектом дерева DOM..</span><span class="sxs-lookup"><span data-stu-id="ca9b2-115">The **XmlNode** object is the basic object in the DOM tree.</span></span> <span data-ttu-id="ca9b2-116">**XmlDocument** класс, расширяющий **XmlNode**, поддерживает методы для выполнения операций над документом в целом (например, их загрузки в память или сохранения XML в файле.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-116">The **XmlDocument** class, which extends **XmlNode**, supports methods for performing operations on the document as a whole (for example, loading it into memory or saving the XML to a file.</span></span> <span data-ttu-id="ca9b2-117">Кроме того **XmlDocument** предоставляет средства для просмотра и управления узлами во всем документе XML.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-117">In addition, **XmlDocument** provides a means to view and manipulate the nodes in the entire XML document.</span></span> <span data-ttu-id="ca9b2-118">Оба **XmlNode** и **XmlDocument** усовершенствованной производительности и удобства использования и содержат методы и свойства для:</span><span class="sxs-lookup"><span data-stu-id="ca9b2-118">Both **XmlNode** and **XmlDocument** have performance and usability enhancements and have methods and properties to:</span></span>  
   
--   Получать доступ к DOM\-специфичным узлам, например к узлам элементов, узлам ссылок на сущности и т. п., и изменять эти узлы.  
+-   <span data-ttu-id="ca9b2-119">Получать доступ к DOM-специфичным узлам, например к узлам элементов, узлам ссылок на сущности и т. п., и изменять эти узлы.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-119">Access and modify nodes specific to the DOM, such as element nodes, entity reference nodes, and so on.</span></span>  
   
--   Получать целые узлы помимо содержащейся в них информации, например текста в узле элемента.  
+-   <span data-ttu-id="ca9b2-120">Получать целые узлы помимо содержащейся в них информации, например текста в узле элемента.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-120">Retrieve entire nodes, in addition to the information the node contains, such as the text in an element node.</span></span>  
   
     > [!NOTE]
-    >  Если приложению не требуется структуризация или изменение, предоставляемые моделью DOM, классы **XmlReader** и **XmlWriter** предоставляют некэшируемый однопроходный потоковый доступ к XML.  Дополнительные сведения см. в разделах <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>.  
+    >  <span data-ttu-id="ca9b2-121">Если приложению не требуется структуризация или изменение модели DOM, предоставляемых **XmlReader** и **XmlWriter** классы предоставляют некэшируемый однопроходный потоковый доступ к XML.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-121">If an application does not require the structure or editing capabilities provided by the DOM, the **XmlReader** and **XmlWriter** classes provide non-cached, forward-only stream access to XML.</span></span> <span data-ttu-id="ca9b2-122">Дополнительные сведения см. в разделах <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-122">For more information, see <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter>.</span></span>  
   
- Объекты **Node**  обладают набором методов и свойств, а также базовых, хорошо определенных характеристик.  Вот некоторые из этих характеристик:  
+ <span data-ttu-id="ca9b2-123">**Узел** объекты имеют набор методов и свойств, а также базовых, хорошо определенных характеристик.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-123">**Node** objects have a set of methods and properties, as well as basic and well-defined characteristics.</span></span> <span data-ttu-id="ca9b2-124">Вот некоторые из этих характеристик:</span><span class="sxs-lookup"><span data-stu-id="ca9b2-124">Some of these characteristics are:</span></span>  
   
--   У каждого узла есть один родительский узел, то есть узел, находящийся непосредственно над данным.  Единственный узел, не имеющий родителя \- корневой узел документа, так как это узел верхнего уровня, содержащий сам документ и его фрагменты.  
+-   <span data-ttu-id="ca9b2-125">У каждого узла есть один родительский узел, то есть узел, находящийся непосредственно над данным.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-125">Nodes have a single parent node, a parent node being a node directly above them.</span></span> <span data-ttu-id="ca9b2-126">Единственный узел, не имеющий родителя - корневой узел документа, так как это узел верхнего уровня, содержащий сам документ и его фрагменты.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-126">The only nodes that do not have a parent is the Document root, as it is the top-level node and contains the document itself and document fragments.</span></span>  
   
--   У большинства узлов может быть несколько дочерних узлов, то есть узлов, расположенных непосредственно под ними.  Далее следует список типов узлов, которые могут иметь дочерние узлы:  
+-   <span data-ttu-id="ca9b2-127">У большинства узлов может быть несколько дочерних узлов, то есть узлов, расположенных непосредственно под ними.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-127">Most nodes can have multiple child nodes, which are nodes directly below them.</span></span> <span data-ttu-id="ca9b2-128">Далее следует список типов узлов, которые могут иметь дочерние узлы:</span><span class="sxs-lookup"><span data-stu-id="ca9b2-128">The following is a list of node types that can have child nodes.</span></span>  
   
-    -   **Документ**  
+    -   <span data-ttu-id="ca9b2-129">**Документ**</span><span class="sxs-lookup"><span data-stu-id="ca9b2-129">**Document**</span></span>  
   
-    -   **DocumentFragment**  
+    -   <span data-ttu-id="ca9b2-130">**Фрагмент документа**</span><span class="sxs-lookup"><span data-stu-id="ca9b2-130">**DocumentFragment**</span></span>  
   
-    -   **EntityReference**  
+    -   <span data-ttu-id="ca9b2-131">**EntityReference**</span><span class="sxs-lookup"><span data-stu-id="ca9b2-131">**EntityReference**</span></span>  
   
-    -   **Элемент**  
+    -   <span data-ttu-id="ca9b2-132">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="ca9b2-132">**Element**</span></span>  
   
-    -   **Атрибут**  
+    -   <span data-ttu-id="ca9b2-133">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="ca9b2-133">**Attribute**</span></span>  
   
-     Узлы **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction** и **DocumentType** не могут иметь дочерних узлов.  
+     <span data-ttu-id="ca9b2-134">**XmlDeclaration**, **нотации**, **сущности**, **CDATASection**, **текст**,  **Комментарий**, **ProcessingInstruction**, и **DocumentType** узлы не имеют дочерних узлов.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-134">The **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction**, and **DocumentType** nodes do not have child nodes.</span></span>  
   
--   Узлы, находящиеся на одном уровне, \- как узлы **book** and **pubinfo**  на схеме, \- называются одноуровневыми.  
+-   <span data-ttu-id="ca9b2-135">Узлы, находящиеся на том же уровне, на схеме, **книги** и **pubinfo** узлы, имеют общего родителя.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-135">Nodes that are at the same level, represented in the diagram by the **book** and **pubinfo** nodes, are siblings.</span></span>  
   
- Одна из характеристик модели DOM \- способ обработки атрибутов.  Атрибуты не являются узлами, состоящими в родительских, дочерних и одноуровневых связях.  Атрибуты считаются собственностью узла элемента и представляют собой пару «имя\-значение».  Например, если XML\-данные представляют собой конструкцию `format="dollar`, связанную с элементом `price`, слово `format` является именем атрибута, а значением атрибута `format` является `dollar`.  Для получения атрибута `format="dollar"` узла **price** можно воспользоваться методом **GetAttribute**, когда курсор расположен в узле элемента `price`.  Дополнительные сведения см. в разделе [Доступ к атрибутам в модели DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).  
+ <span data-ttu-id="ca9b2-136">Одна из характеристик модели DOM - способ обработки атрибутов.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-136">One characteristic of the DOM is how it handles attributes.</span></span> <span data-ttu-id="ca9b2-137">Атрибуты не являются узлами, состоящими в родительских, дочерних и одноуровневых связях.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-137">Attributes are not nodes that are part of the parent, child, and sibling relationships.</span></span> <span data-ttu-id="ca9b2-138">Атрибуты считаются собственностью узла элемента и представляют собой пару «имя-значение».</span><span class="sxs-lookup"><span data-stu-id="ca9b2-138">Attributes are considered a property of the element node and are made up of a name and a value pair.</span></span> <span data-ttu-id="ca9b2-139">Например, если XML-данные представляют собой конструкцию `format="dollar`, связанную с элементом `price`, слово `format` является именем атрибута, а значением атрибута `format` является `dollar`.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-139">For example, if you have XML data consisting of `format="dollar`" associated with the element `price`, the word `format` is the name, and the value of the `format` attribute is `dollar`.</span></span> <span data-ttu-id="ca9b2-140">Для получения `format="dollar"` атрибут **цены** узел, вызовите **GetAttribute** метод, когда курсор расположен в `price` узла элемента.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-140">To retrieve the `format="dollar"` attribute of the **price** node, you call the **GetAttribute** method when the cursor is located at the `price` element node.</span></span> <span data-ttu-id="ca9b2-141">Дополнительные сведения см. в разделе [доступ к атрибутам в модели DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).</span><span class="sxs-lookup"><span data-stu-id="ca9b2-141">For more information, see [Accessing Attributes in the DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).</span></span>  
   
- По мере считывания XML\-документа в память создаются узлы.  Узлы бывают разных типов.   Правила и синтаксис XML\-элемента отличаются от правил и синтаксиса инструкции по обработке.  Поэтому по мере считывания разнообразных данных каждому узлу присваивается тип.  Тип узла определяет его характеристики и функциональность.  
+ <span data-ttu-id="ca9b2-142">По мере считывания XML-документа в память создаются узлы.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-142">As XML is read into memory, nodes are created.</span></span> <span data-ttu-id="ca9b2-143">Узлы бывают разных типов. </span><span class="sxs-lookup"><span data-stu-id="ca9b2-143">However, not all nodes are the same type.</span></span> <span data-ttu-id="ca9b2-144">Правила и синтаксис XML-элемента отличаются от правил и синтаксиса инструкции по обработке.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-144">An element in XML has different rules and syntax than a processing instruction.</span></span> <span data-ttu-id="ca9b2-145">Поэтому по мере считывания разнообразных данных каждому узлу присваивается тип.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-145">Therefore, as various data is read, a node type is assigned to each node.</span></span> <span data-ttu-id="ca9b2-146">Тип узла определяет его характеристики и функциональность.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-146">This node type determines the characteristics and functionality of the node.</span></span>  
   
- Дополнительные сведения о типах узлов, создаваемых в памяти, см. в разделе [Типы XML\-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md).  Дополнительные сведения об объектах, создаваемых в дереве узлов, см. в разделе [Сопоставление объектной иерархии с XML\-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
+ <span data-ttu-id="ca9b2-147">Дополнительные сведения о типах узлов, созданных в памяти см. в разделе [типы узлов XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md).</span><span class="sxs-lookup"><span data-stu-id="ca9b2-147">For more information on the types of nodes generated in memory, see [Types of XML Nodes](../../../../docs/standard/data/xml/types-of-xml-nodes.md).</span></span> <span data-ttu-id="ca9b2-148">Дополнительные сведения об объектах, создаваемых в дереве узлов см. в разделе [сопоставление объектной иерархии с XML-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).</span><span class="sxs-lookup"><span data-stu-id="ca9b2-148">For more information on the objects created in the node tree, see [Mapping the Object Hierarchy to XML Data](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).</span></span>  
   
- Корпорация Майкрософт расширила API\-интерфейсы, доступные в DOM уровней 1 и 2 W3C, чтобы облегчить работу с XML\-документами.  Дополнительные классы, методы и свойства полностью совместимы со стандартами W3C и добавляют дополнительную функциональность по сравнению с возможностями W3C XML DOM.  Новые классы позволяют получить доступ к реляционным данным, предоставляют методы синхронизации с данными ADO.NET, одновременно делая эти данные доступными в виде XML.  Дополнительные сведения см. в разделе [Синхронизация DataSet с XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
+ <span data-ttu-id="ca9b2-149">Корпорация Майкрософт расширила API-интерфейсы, доступные в DOM уровней 1 и 2 W3C, чтобы облегчить работу с XML-документами.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-149">Microsoft has extended the APIs that are available in the World Wide Web Consortium (W3C) DOM Level 1 and Level 2 to make it easier to work with an XML document.</span></span> <span data-ttu-id="ca9b2-150">Дополнительные классы, методы и свойства полностью совместимы со стандартами W3C и добавляют дополнительную функциональность по сравнению с возможностями W3C XML DOM.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-150">While fully supporting the W3C standards, the additional classes, methods, and properties add functionality beyond what can be done using the W3C XML DOM.</span></span> <span data-ttu-id="ca9b2-151">Новые классы позволяют получить доступ к реляционным данным, предоставляют методы синхронизации с данными ADO.NET, одновременно делая эти данные доступными в виде XML.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-151">New classes enable you to access relational data, giving you methods for synchronizing with ADO.NET data, simultaneously exposing data as XML.</span></span> <span data-ttu-id="ca9b2-152">Дополнительные сведения см. в разделе [синхронизация DataSet с XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span><span class="sxs-lookup"><span data-stu-id="ca9b2-152">For more information, see [Synchronizing a DataSet with an XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).</span></span>  
   
- Модель DOM чрезвычайно полезна для считывания XML\-данных в память, изменения их структуры, добавления и удаления узлов, изменения данных, принадлежащих узлу \(например, текста, содержащегося в документе\).  Однако существуют и другие классы, которые в некоторых ситуациях работают быстрее модели DOM.  Классы **XmlReader** и **XmlWriter** предоставляют быстрый некэшируемый однопроходный потоковый доступ к XML.  Если нужен произвольный доступ с моделью курсора и **XPath**, используется класс **XPathNavigator**.  
+ <span data-ttu-id="ca9b2-153">Модель DOM чрезвычайно полезна для считывания XML-данных в память, изменения их структуры, добавления и удаления узлов, изменения данных, принадлежащих узлу (например, текста, содержащегося в документе).</span><span class="sxs-lookup"><span data-stu-id="ca9b2-153">The DOM is most useful for reading XML data into memory to change its structure, to add or remove nodes, or to modify the data held by a node as in the text contained by an element.</span></span> <span data-ttu-id="ca9b2-154">Однако существуют и другие классы, которые в некоторых ситуациях работают быстрее модели DOM.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-154">However, other classes are available that are faster than the DOM in other scenarios.</span></span> <span data-ttu-id="ca9b2-155">Быстрое без кэширования, однопроходный потоковый доступ к XML, используйте **XmlReader** и **XmlWriter**.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-155">For fast, non-cached, forward-only stream access to XML, use the **XmlReader** and **XmlWriter**.</span></span> <span data-ttu-id="ca9b2-156">Если нужен произвольный доступ с моделью курсора и **XPath**, используйте **XPathNavigator** класса.</span><span class="sxs-lookup"><span data-stu-id="ca9b2-156">If you need random access with a cursor model and **XPath**, use the **XPathNavigator** class.</span></span>  
   
-## См. также  
- [Типы XML\-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md)   
- [Сопоставление объектной иерархии с XML\-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a><span data-ttu-id="ca9b2-157">См. также</span><span class="sxs-lookup"><span data-stu-id="ca9b2-157">See Also</span></span>  
+ [<span data-ttu-id="ca9b2-158">Типы XML-узлов</span><span class="sxs-lookup"><span data-stu-id="ca9b2-158">Types of XML Nodes</span></span>](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+ [<span data-ttu-id="ca9b2-159">Сопоставление объектной иерархии с XML-данными</span><span class="sxs-lookup"><span data-stu-id="ca9b2-159">Mapping the Object Hierarchy to XML Data</span></span>](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

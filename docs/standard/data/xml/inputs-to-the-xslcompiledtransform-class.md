@@ -1,64 +1,65 @@
 ---
-title: "Входные данные для класса XslCompiledTransform | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Входные данные для класса XslCompiledTransform"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 97d636583393ab856a9c17af4c974c53fbde5767
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Входные данные для класса XslCompiledTransform
-Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> принимает три входных типа для документа источника: объект, реализующий интерфейс <xref:System.Xml.XPath.IXPathNavigable>, объект <xref:System.Xml.XmlReader>, который считывает документ источника, и строку URI.  
+# <a name="inputs-to-the-xslcompiledtransform-class"></a><span data-ttu-id="83620-102">Входные данные для класса XslCompiledTransform</span><span class="sxs-lookup"><span data-stu-id="83620-102">Inputs to the XslCompiledTransform Class</span></span>
+<span data-ttu-id="83620-103">Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> принимает три входных типа для документа источника: объект, реализующий интерфейс <xref:System.Xml.XPath.IXPathNavigable>, объект <xref:System.Xml.XmlReader>, который считывает документ источника, и строку URI.</span><span class="sxs-lookup"><span data-stu-id="83620-103">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method accepts three input types for the source document: an object that implements the <xref:System.Xml.XPath.IXPathNavigable> interface, an <xref:System.Xml.XmlReader> object that reads the source document, or a string URI.</span></span>  
   
 > [!NOTE]
->  Класс <xref:System.Xml.Xsl.XslCompiledTransform> сохраняет пробелы по умолчанию.  Это соответствует разделу 3.4 рекомендации W3C XSLT 1.0 \(раздел 3.4, http:\/\/www.w3.org\/TR\/xslt.html\#strip\).  
+>  <span data-ttu-id="83620-104">Класс <xref:System.Xml.Xsl.XslCompiledTransform> сохраняет пробелы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="83620-104">The <xref:System.Xml.Xsl.XslCompiledTransform> class preserves white space by default.</span></span> <span data-ttu-id="83620-105">Это соответствует разделу 3.4 рекомендации W3C XSLT 1.0 (раздел 3.4, http://www.w3.org/TR/xslt.html#strip).</span><span class="sxs-lookup"><span data-stu-id="83620-105">This is in accordance with section 3.4 of the W3C XSLT 1.0 recommendation (section 3.4, http://www.w3.org/TR/xslt.html#strip).</span></span>  
   
-## Интерфейс IXPathNavigable  
- Интерфейс <xref:System.Xml.XPath.IXPathNavigable> реализован в классах <xref:System.Xml.XmlNode> и <xref:System.Xml.XPath.XPathDocument>.  Эти классы представляют хранящийся в памяти кэш XML\-данных.  
+## <a name="ixpathnavigable-interface"></a><span data-ttu-id="83620-106">Интерфейс IXPathNavigable</span><span class="sxs-lookup"><span data-stu-id="83620-106">IXPathNavigable Interface</span></span>  
+ <span data-ttu-id="83620-107">Интерфейс <xref:System.Xml.XPath.IXPathNavigable> реализован в классах <xref:System.Xml.XmlNode> и <xref:System.Xml.XPath.XPathDocument>.</span><span class="sxs-lookup"><span data-stu-id="83620-107">The <xref:System.Xml.XPath.IXPathNavigable> interface is implemented in the <xref:System.Xml.XmlNode> and <xref:System.Xml.XPath.XPathDocument> classes.</span></span> <span data-ttu-id="83620-108">Эти классы представляют хранящийся в памяти кэш XML-данных.</span><span class="sxs-lookup"><span data-stu-id="83620-108">These classes represent an in-memory cache of XML data.</span></span>  
   
--   Класс <xref:System.Xml.XmlNode> основан на модели W3C DOM и позволяет вносить изменения.  
+-   <span data-ttu-id="83620-109">Класс <xref:System.Xml.XmlNode> основан на модели W3C DOM и позволяет вносить изменения.</span><span class="sxs-lookup"><span data-stu-id="83620-109">The <xref:System.Xml.XmlNode> class is based on the W3C Document Object Model (DOM) and includes editing capabilities.</span></span>  
   
--   Класс <xref:System.Xml.XPath.XPathDocument> представляет собой доступное только для чтения хранилище данных на основе модели данных XPath.  Класс <xref:System.Xml.XPath.XPathDocument> рекомендуется для обработки XSLT.  Он обеспечивает более высокую производительность по сравнению с классом <xref:System.Xml.XmlNode>.  
+-   <span data-ttu-id="83620-110">Класс <xref:System.Xml.XPath.XPathDocument> представляет собой доступное только для чтения хранилище данных на основе модели данных XPath.</span><span class="sxs-lookup"><span data-stu-id="83620-110">The <xref:System.Xml.XPath.XPathDocument> class is a read-only data store based on the XPath data model.</span></span> <span data-ttu-id="83620-111">Класс <xref:System.Xml.XPath.XPathDocument> рекомендуется для обработки XSLT.</span><span class="sxs-lookup"><span data-stu-id="83620-111"><xref:System.Xml.XPath.XPathDocument> is the recommended class for XSLT processing.</span></span> <span data-ttu-id="83620-112">Он обеспечивает более высокую производительность по сравнению с классом <xref:System.Xml.XmlNode>.</span><span class="sxs-lookup"><span data-stu-id="83620-112">It provides faster performance when compared to the <xref:System.Xml.XmlNode> class.</span></span>  
   
 > [!NOTE]
->  Преобразования применяются к документу в целом.  Иными словами, если передать узел, отличный от корневого узла документа, это не помешает процессу преобразования обратиться ко всем узлам загружаемого документа.  Чтобы преобразовать фрагмент узла, необходимо создать объект, содержащий только фрагмент этого узла, и передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  Для получения дополнительной информации см. [Как преобразовать фрагмент узла](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).  
+>  <span data-ttu-id="83620-113">Преобразования применяются к документу в целом.</span><span class="sxs-lookup"><span data-stu-id="83620-113">Transformations apply to the document as a whole.</span></span> <span data-ttu-id="83620-114">Иными словами, если передать узел, отличный от корневого узла документа, это не помешает процессу преобразования обратиться ко всем узлам загружаемого документа.</span><span class="sxs-lookup"><span data-stu-id="83620-114">In other words, if you pass in a node other than the document root node, this does not prevent the transformation process from accessing all nodes in the loaded document.</span></span> <span data-ttu-id="83620-115">Чтобы преобразовать фрагмент узла, необходимо создать объект, содержащий только фрагмент этого узла, и передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="83620-115">To transform a node fragment, you must create an object containing just the node fragment, and pass that object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="83620-116">Дополнительные сведения см. в разделе [как: преобразовать фрагмент узла](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).</span><span class="sxs-lookup"><span data-stu-id="83620-116">For more information, see [How to: Transform a Node Fragment](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md).</span></span>  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.  Файлы books.xml и transform.xsl можно найти в разделе [Как выполнить XSLT\-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="83620-117">В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="83620-117">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="83620-118">В этом разделе можно найти файлы books.xml и transform.xsl: [как: выполнить XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="83620-118">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
-## Объект XmlReader  
- Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> загружает из текущего узла объекта <xref:System.Xml.XmlReader> всех его потомков.  Это позволяет использовать фрагмент документа в качестве контекстного документа.  После возвращения метода <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> объект <xref:System.Xml.XmlReader> позиционируется на следующем узле за контекстным документом.  По достижении конца документа объект <xref:System.Xml.XmlReader> позиционируется в конец файла \(EOF\).  
+## <a name="xmlreader-object"></a><span data-ttu-id="83620-119">Объект XmlReader</span><span class="sxs-lookup"><span data-stu-id="83620-119">XmlReader Object</span></span>  
+ <span data-ttu-id="83620-120">Метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> загружает из текущего узла объекта <xref:System.Xml.XmlReader> всех его потомков.</span><span class="sxs-lookup"><span data-stu-id="83620-120">The <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method loads from the current node of the <xref:System.Xml.XmlReader> through all its children.</span></span> <span data-ttu-id="83620-121">Это позволяет использовать фрагмент документа в качестве контекстного документа.</span><span class="sxs-lookup"><span data-stu-id="83620-121">This enables you to use a portion of a document as the context document.</span></span> <span data-ttu-id="83620-122">После возвращения метода <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> объект <xref:System.Xml.XmlReader> позиционируется на следующем узле за контекстным документом.</span><span class="sxs-lookup"><span data-stu-id="83620-122">After the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method returns, the <xref:System.Xml.XmlReader> is positioned on the next node after the end of the context document.</span></span> <span data-ttu-id="83620-123">По достижении конца документа объект <xref:System.Xml.XmlReader> позиционируется в конец файла (EOF).</span><span class="sxs-lookup"><span data-stu-id="83620-123">If the end of the document is reached, the <xref:System.Xml.XmlReader> is positioned at the end of file (EOF).</span></span>  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.  Файлы books.xml и transform.xsl можно найти в разделе [Как выполнить XSLT\-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="83620-124">В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="83620-124">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="83620-125">В этом разделе можно найти файлы books.xml и transform.xsl: [как: выполнить XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="83620-125">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
-## Строковые URI  
- Можно также указать URI исходного документа в виде входных данных XSLT.  Для разрешения URI используется объект <xref:System.Xml.XmlResolver>.  Чтобы использовать объект <xref:System.Xml.XmlResolver>, нужно передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  Если объект <xref:System.Xml.XmlResolver> не указан, метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> использует объект <xref:System.Xml.XmlUrlResolver> по умолчанию без учетных данных.  
+## <a name="string-uri"></a><span data-ttu-id="83620-126">Строковые URI</span><span class="sxs-lookup"><span data-stu-id="83620-126">String URI</span></span>  
+ <span data-ttu-id="83620-127">Можно также указать URI исходного документа в виде входных данных XSLT.</span><span class="sxs-lookup"><span data-stu-id="83620-127">You can also specify the source document URI as your XSLT input.</span></span> <span data-ttu-id="83620-128">Для разрешения URI используется объект <xref:System.Xml.XmlResolver>.</span><span class="sxs-lookup"><span data-stu-id="83620-128">An <xref:System.Xml.XmlResolver> is used to resolve the URI.</span></span> <span data-ttu-id="83620-129">Чтобы использовать объект <xref:System.Xml.XmlResolver>, нужно передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="83620-129">You can specify the <xref:System.Xml.XmlResolver> to use by passing it to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span> <span data-ttu-id="83620-130">Если объект <xref:System.Xml.XmlResolver> не указан, метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> использует объект <xref:System.Xml.XmlUrlResolver> по умолчанию без учетных данных.</span><span class="sxs-lookup"><span data-stu-id="83620-130">If an <xref:System.Xml.XmlResolver> is not specified, the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method uses a default <xref:System.Xml.XmlUrlResolver> with no credentials.</span></span>  
   
- В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=fullName> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.  Файлы books.xml и transform.xsl можно найти в разделе [Как выполнить XSLT\-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
+ <span data-ttu-id="83620-131">В следующем примере метод <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> используется для преобразования файла books.xml в books.html с помощью таблицы стилей transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="83620-131">The following example uses the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> method to transform the books.xml file to the books.html file using the transform.xsl style sheet.</span></span> <span data-ttu-id="83620-132">В этом разделе можно найти файлы books.xml и transform.xsl: [как: выполнить XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="83620-132">The books.xml and transform.xsl files can be found in this topic: [How to: Perform an XSLT Transformation by Using an Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md).</span></span>  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  
   
- Для получения дополнительной информации см. [Разрешение внешних ресурсов в ходе обработки XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).  
+ <span data-ttu-id="83620-133">Дополнительные сведения см. в разделе [разрешении внешних ресурсов во время XSLT обработки](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).</span><span class="sxs-lookup"><span data-stu-id="83620-133">For more information, see [Resolving External Resources During XSLT Processing](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).</span></span>  
   
-## См. также  
- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="83620-134">См. также</span><span class="sxs-lookup"><span data-stu-id="83620-134">See Also</span></span>  
+ [<span data-ttu-id="83620-135">Преобразования XSLT</span><span class="sxs-lookup"><span data-stu-id="83620-135">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)

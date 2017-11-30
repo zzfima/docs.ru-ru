@@ -1,75 +1,60 @@
 ---
 title: "ushort (справочник по C#)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - ushort
 - ushort_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- ushort keyword [C#]
+helpviewer_keywords: ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 83fa657303e8392997b04b7d80cdbcdbf39de887
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b067a2ffd0fbffe06dc5c9f2a9910c9563eec4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ushort-c-reference"></a>ushort (справочник по C#)
+# <a name="ushort-c-reference"></a><span data-ttu-id="9645a-102">ushort (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9645a-102">ushort (C# Reference)</span></span>
 
-Ключевое слово `ushort` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
+<span data-ttu-id="9645a-103">Ключевое слово `ushort` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="9645a-103">The `ushort` keyword indicates an integral data type that stores values according to the size and range shown in the following table.</span></span>  
   
-|Тип|Диапазон|Размер|Тип платформы .NET Framework|  
+|<span data-ttu-id="9645a-104">Тип</span><span class="sxs-lookup"><span data-stu-id="9645a-104">Type</span></span>|<span data-ttu-id="9645a-105">Диапазон</span><span class="sxs-lookup"><span data-stu-id="9645a-105">Range</span></span>|<span data-ttu-id="9645a-106">Размер</span><span class="sxs-lookup"><span data-stu-id="9645a-106">Size</span></span>|<span data-ttu-id="9645a-107">Тип платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9645a-107">.NET Framework type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`ushort`|От 0 до 65 535|16-разрядное целое число без знака|<xref:System.UInt16?displayProperty=fullName>|  
+|`ushort`|<span data-ttu-id="9645a-108">От 0 до 65 535</span><span class="sxs-lookup"><span data-stu-id="9645a-108">0 to 65,535</span></span>|<span data-ttu-id="9645a-109">16-разрядное целое число без знака</span><span class="sxs-lookup"><span data-stu-id="9645a-109">Unsigned 16-bit integer</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|  
   
-## <a name="literals"></a>Литералы  
+## <a name="literals"></a><span data-ttu-id="9645a-110">Литералы</span><span class="sxs-lookup"><span data-stu-id="9645a-110">Literals</span></span>  
 
-Переменную `ushort` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `ushort` (то есть если он меньше <xref:System.UInt16.MinValue?displayProperty=fullName> или больше <xref:System.UInt16.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+<span data-ttu-id="9645a-111">Переменную `ushort` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал.</span><span class="sxs-lookup"><span data-stu-id="9645a-111">You can declare and initialize a `ushort` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7) a binary literal to it.</span></span> <span data-ttu-id="9645a-112">Если целочисленный литерал выходит за пределы диапазона `ushort` (то есть если он меньше <xref:System.UInt16.MinValue?displayProperty=nameWithType> или больше <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.</span><span class="sxs-lookup"><span data-stu-id="9645a-112">If the integer literal is outside the range of `ushort` (that is, if it is less than <xref:System.UInt16.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
 
-В следующем примере целые числа, равные 65 034 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `ushort`.    
+<span data-ttu-id="9645a-113">В следующем примере целые числа, равные 65 034 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `ushort`.</span><span class="sxs-lookup"><span data-stu-id="9645a-113">In the following example, integers equal to 65,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `ushort` values.</span></span>    
   
-[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+[!code-csharp[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
 
 > [!NOTE] 
-> Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет.
+> <span data-ttu-id="9645a-114">Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`.</span><span class="sxs-lookup"><span data-stu-id="9645a-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="9645a-115">У десятичных литералов префиксов нет.</span><span class="sxs-lookup"><span data-stu-id="9645a-115">Decimal literals have no prefix.</span></span>
 
-Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+<span data-ttu-id="9645a-116">Начиная с C# 7, ваши возможности были добавлены для повышения удобства чтения.</span><span class="sxs-lookup"><span data-stu-id="9645a-116">Starting with C# 7, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="9645a-117">C# 7.0 допускает использование символа подчеркивания, `_`, в качестве разделителя цифр.</span><span class="sxs-lookup"><span data-stu-id="9645a-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="9645a-118">7.2 C# позволяет `_` должен использоваться как разделитель для двоичных или шестнадцатеричное литерала, после префикса.</span><span class="sxs-lookup"><span data-stu-id="9645a-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="9645a-119">Десятичный литерал не может иметь с символа подчеркивания.</span><span class="sxs-lookup"><span data-stu-id="9645a-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+<span data-ttu-id="9645a-120">Ниже приведены некоторые примеры.</span><span class="sxs-lookup"><span data-stu-id="9645a-120">Some examples are shown below.</span></span>
+
+[!code-csharp[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
  
-## <a name="compiler-overload-resolution"></a>Разрешение перегрузки компилятора
+## <a name="compiler-overload-resolution"></a><span data-ttu-id="9645a-121">Разрешение перегрузки компилятора</span><span class="sxs-lookup"><span data-stu-id="9645a-121">Compiler overload resolution</span></span>
   
- При вызове перегруженных методов необходимо использовать приведение типов. Рассмотрим, например, следующие перегруженные методы, в которых используются параметры типов `ushort` и [int](../../../csharp/language-reference/keywords/int.md):  
+ <span data-ttu-id="9645a-122">При вызове перегруженных методов необходимо использовать приведение типов.</span><span class="sxs-lookup"><span data-stu-id="9645a-122">A cast must be used when you call overloaded methods.</span></span> <span data-ttu-id="9645a-123">Рассмотрим, например, следующие перегруженные методы, в которых используются параметры типов `ushort` и [int](../../../csharp/language-reference/keywords/int.md):</span><span class="sxs-lookup"><span data-stu-id="9645a-123">Consider, for example, the following overloaded methods that use `ushort` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
  
- Использование приведения типа `ushort` гарантирует вызов метода правильного типа, например:  
+ <span data-ttu-id="9645a-124">Использование приведения типа `ushort` гарантирует вызов метода правильного типа, например:</span><span class="sxs-lookup"><span data-stu-id="9645a-124">Using the `ushort` cast guarantees that the correct type is called, for example:</span></span>  
   
 ```csharp  
 // Calls the method with the int parameter:  
@@ -78,35 +63,35 @@ SampleMethod(5);
 SampleMethod((ushort)5);    
 ```  
   
-## <a name="conversions"></a>Преобразования  
- Существует предопределенное преобразование типа `ushort` в типы [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md).  
+## <a name="conversions"></a><span data-ttu-id="9645a-125">Преобразования</span><span class="sxs-lookup"><span data-stu-id="9645a-125">Conversions</span></span>  
+ <span data-ttu-id="9645a-126">Существует предопределенное преобразование типа `ushort` в типы [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="9645a-126">There is a predefined implicit conversion from `ushort` to [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- Существует предопределенное неявное преобразование типа [byte](../../../csharp/language-reference/keywords/byte.md) или [char](../../../csharp/language-reference/keywords/char.md) в тип `ushort`. В противном случае для выполнения явного преобразования следует использовать приведение. Рассмотрим, например, следующие две переменные `x` и `y` типа `ushort`:  
+ <span data-ttu-id="9645a-127">Существует предопределенное неявное преобразование типа [byte](../../../csharp/language-reference/keywords/byte.md) или [char](../../../csharp/language-reference/keywords/char.md) в тип `ushort`.</span><span class="sxs-lookup"><span data-stu-id="9645a-127">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md) or [char](../../../csharp/language-reference/keywords/char.md) to `ushort`.</span></span> <span data-ttu-id="9645a-128">В противном случае для выполнения явного преобразования следует использовать приведение.</span><span class="sxs-lookup"><span data-stu-id="9645a-128">Otherwise a cast must be used to perform an explicit conversion.</span></span> <span data-ttu-id="9645a-129">Рассмотрим, например, следующие две переменные `x` и `y` типа `ushort`:</span><span class="sxs-lookup"><span data-stu-id="9645a-129">Consider, for example, the following two `ushort` variables `x` and `y`:</span></span>  
   
 ```csharp 
 ushort x = 5, y = 12;  
 ```  
   
- Следующая инструкция назначения приведет к ошибке компиляции, потому что арифметическое выражение, расположенное справа от оператора назначения, по умолчанию оценивается как имеющее тип `int`.  
+ <span data-ttu-id="9645a-130">Следующая инструкция назначения приведет к ошибке компиляции, потому что арифметическое выражение, расположенное справа от оператора назначения, по умолчанию оценивается как имеющее тип `int`.</span><span class="sxs-lookup"><span data-stu-id="9645a-130">The following assignment statement will produce a compilation error, because the arithmetic expression on the right side of the assignment operator evaluates to `int` by default.</span></span>  
   
 ```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
- Для устранения этой проблемы используйте приведение:  
+ <span data-ttu-id="9645a-131">Для устранения этой проблемы используйте приведение:</span><span class="sxs-lookup"><span data-stu-id="9645a-131">To fix this problem, use a cast:</span></span>  
   
 ```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
- Тем не менее можно использовать следующие инструкции, в которых переменная назначения имеет такой же или больший размер при хранении:  
+ <span data-ttu-id="9645a-132">Тем не менее можно использовать следующие инструкции, в которых переменная назначения имеет такой же или больший размер при хранении:</span><span class="sxs-lookup"><span data-stu-id="9645a-132">It is possible though to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
   
 ```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
- Обратите внимание, что неявного преобразования типов с плавающей запятой в тип `ushort` не существует. Например, следующая инструкция приводит к ошибке компилятора, если не выполнить явное приведение типов:  
+ <span data-ttu-id="9645a-133">Обратите внимание, что неявного преобразования типов с плавающей запятой в тип `ushort` не существует.</span><span class="sxs-lookup"><span data-stu-id="9645a-133">Notice also that there is no implicit conversion from floating-point types to `ushort`.</span></span> <span data-ttu-id="9645a-134">Например, следующая инструкция приводит к ошибке компилятора, если не выполнить явное приведение типов:</span><span class="sxs-lookup"><span data-stu-id="9645a-134">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -115,20 +100,19 @@ ushort x = 3.0;
 ushort y = (ushort)3.0;  
 ```  
   
- Сведения об арифметических выражениях, в которых одновременно используются переменные типов с плавающей запятой и целочисленных типов, см. в разделах [float](../../../csharp/language-reference/keywords/float.md) и [double](../../../csharp/language-reference/keywords/double.md).  
+ <span data-ttu-id="9645a-135">Сведения об арифметических выражениях, в которых одновременно используются переменные типов с плавающей запятой и целочисленных типов, см. в разделах [float](../../../csharp/language-reference/keywords/float.md) и [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="9645a-135">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- Дополнительные сведения о правилах выполнения неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ <span data-ttu-id="9645a-136">Дополнительные сведения о правилах выполнения неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="9645a-136">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="9645a-137">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="9645a-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.UInt16>   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-
+## <a name="see-also"></a><span data-ttu-id="9645a-138">См. также</span><span class="sxs-lookup"><span data-stu-id="9645a-138">See Also</span></span>  
+ <xref:System.UInt16>  
+ [<span data-ttu-id="9645a-139">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="9645a-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="9645a-140">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="9645a-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9645a-141">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="9645a-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="9645a-142">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="9645a-142">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="9645a-143">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="9645a-143">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="9645a-144">Таблица неявных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="9645a-144">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="9645a-145">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="9645a-145">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

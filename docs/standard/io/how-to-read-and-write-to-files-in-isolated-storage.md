@@ -1,46 +1,52 @@
 ---
-title: "Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "хранение данных с помощью изолированного хранилища, чтение и запись в файлы"
-  - "хранилища данных, чтение и запись в файлы"
-  - "файлы, изолированное хранилище"
-  - "изолированное хранилище, чтение и запись в файлы"
-  - "чтение данных"
-  - "чтение файлов в хранилище"
-  - "хранилища, чтение и запись в файлы"
-  - "сохранение данных с помощью изолированного хранилища, чтение и запись в файлы"
-  - "запись в файлы в хранилище"
+title: "Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- files, isolated storage
+- reading data
+- storing data using isolated storage, reading and writing to files
+- writing to files within store
+- data storage using isolated storage, reading and writing to files
+- reading files within store
+- isolated storage, reading and writing to files
+- data stores, reading and writing to files
+- stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-caps.latest.revision: 15
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 8d733efc3d70070dd12f55c651033e97d1792c38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище
-Для чтения или записи в файл в изолированном хранилище, используйте объект <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> с модулем чтения потока \(объектом <xref:System.IO.StreamReader> \) или средство записи потока \(объекта <xref:System.IO.StreamWriter>\).  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="94366-102">Практическое руководство. Считывание из файлов и запись в файлы в изолированном хранилище</span><span class="sxs-lookup"><span data-stu-id="94366-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="94366-103">Для чтения из файла или записи в файл в изолированном хранилище используется объект <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> с модулем чтения потока (объект <xref:System.IO.StreamReader> ) или модулем записи в поток (объект <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="94366-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## Пример  
- В следующем примере кода показано получение изолированного хранилища и проверка, существует ли файл с именем TestStore.txt в хранилище.  Если он не существует, создается файл и записывается "Hello Isolated Storage" в файл.  Если параметр TestStore.txt уже существует, то пример кода считывает данные из файла.  
+## <a name="example"></a><span data-ttu-id="94366-104">Пример</span><span class="sxs-lookup"><span data-stu-id="94366-104">Example</span></span>  
+ <span data-ttu-id="94366-105">В следующем примере получается изолированное хранилище и проверяет, существует ли файл с именем TestStore.txt в хранилище.</span><span class="sxs-lookup"><span data-stu-id="94366-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="94366-106">Если он не существует, он создает файл и записывает в файл «Hello изолированного хранилища».</span><span class="sxs-lookup"><span data-stu-id="94366-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="94366-107">Если TestStore.txt уже существует, пример кода считывает из файла.</span><span class="sxs-lookup"><span data-stu-id="94366-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## См. также  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>   
- <xref:System.IO.FileMode?displayProperty=fullName>   
- <xref:System.IO.FileAccess?displayProperty=fullName>   
- <xref:System.IO.StreamReader?displayProperty=fullName>   
- <xref:System.IO.StreamWriter?displayProperty=fullName>   
- [Файловый и потоковый ввод\-вывод](../../../docs/standard/io/index.md)   
- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a><span data-ttu-id="94366-108">См. также</span><span class="sxs-lookup"><span data-stu-id="94366-108">See Also</span></span>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+ <xref:System.IO.FileMode?displayProperty=nameWithType>  
+ <xref:System.IO.FileAccess?displayProperty=nameWithType>  
+ <xref:System.IO.StreamReader?displayProperty=nameWithType>  
+ <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
+ [<span data-ttu-id="94366-109">Файловый и потоковый ввод-вывод</span><span class="sxs-lookup"><span data-stu-id="94366-109">File and Stream I-O</span></span>](../../../docs/standard/io/index.md)  
+ [<span data-ttu-id="94366-110">Изолированное хранилище</span><span class="sxs-lookup"><span data-stu-id="94366-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

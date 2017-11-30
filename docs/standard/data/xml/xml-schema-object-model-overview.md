@@ -1,57 +1,55 @@
 ---
-title: "Общие сведения об модели объектов XML-схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Общие сведения об модели объектов XML-схемы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6a06de3f8fb6351d340e1c8f1bfe8f4105967e25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об модели объектов XML-схемы
-Модель SOM в Microsoft .NET Framework является богатым по возможностям API, позволяющим создавать, изменять и проверять схемы программным путем.  Модель SOM работает в документах схемы XML так же, как модель DOM работает в XML\-документах.  Документы схемы XML \- это допустимые XML\-файлы, которые после загрузки в память делают осмысленными утверждения о структуре и правильности других XML\-документов, соответствующих этой схеме.  
+# <a name="xml-schema-object-model-overview"></a><span data-ttu-id="10dd4-102">Общие сведения об модели объектов XML-схемы</span><span class="sxs-lookup"><span data-stu-id="10dd4-102">XML Schema Object Model Overview</span></span>
+<span data-ttu-id="10dd4-103">Модель SOM в Microsoft .NET Framework является богатым по возможностям API, позволяющим создавать, изменять и проверять схемы программным путем.</span><span class="sxs-lookup"><span data-stu-id="10dd4-103">The Schema Object Model (SOM) in the Microsoft .NET Framework is a rich API that allows you to create, edit, and validate schemas programmatically.</span></span> <span data-ttu-id="10dd4-104">Модель SOM работает в документах схемы XML так же, как модель DOM работает в XML-документах.</span><span class="sxs-lookup"><span data-stu-id="10dd4-104">The SOM operates on XML schema documents similarly to the way the Document Object Model (DOM) operates on XML documents.</span></span> <span data-ttu-id="10dd4-105">Документы схемы XML - это допустимые XML-файлы, которые после загрузки в память делают осмысленными утверждения о структуре и правильности других XML-документов, соответствующих этой схеме.</span><span class="sxs-lookup"><span data-stu-id="10dd4-105">XML schema documents are valid XML files that, once loaded into the SOM, convey meaning about the structure and validity of other XML documents which conform to the schema.</span></span>  
   
- Схема представляет собой XML\-документ, который определяет класс XML\-документов, указывая структуру или модель XML\-документа для конкретной схемы.  В схеме определяются ограничения на содержимое XML\-документов и описывается словарь \(правила или грамматика\), которому должны следовать совместимые с ней XML\-документы, чтобы считаться допустимыми для этой конкретной схемы.  Проверка XML\-документа \- это процесс, обеспечивающий соответствие документа заданной схемой грамматике.  
+ <span data-ttu-id="10dd4-106">Схема представляет собой XML-документ, который определяет класс XML-документов, указывая структуру или модель XML-документа для конкретной схемы.</span><span class="sxs-lookup"><span data-stu-id="10dd4-106">A schema is an XML document that defines a class of XML documents by specifying the structure or model of XML documents for a particular schema.</span></span> <span data-ttu-id="10dd4-107">В схеме определяются ограничения на содержимое XML-документов и описывается словарь (правила или грамматика), которому должны следовать совместимые с ней XML-документы, чтобы считаться допустимыми для этой конкретной схемы.</span><span class="sxs-lookup"><span data-stu-id="10dd4-107">A schema identifies the constraints on the content of the XML documents, and describes the vocabulary (rules or grammar) that compliant XML documents must follow in order to be considered schema-valid with that particular schema.</span></span> <span data-ttu-id="10dd4-108">Проверка XML-документа - это процесс, обеспечивающий соответствие документа заданной схемой грамматике.</span><span class="sxs-lookup"><span data-stu-id="10dd4-108">Validation of an XML document is the process that ensures that the document conforms to the grammar specified by the schema.</span></span>  
   
- Ниже представлены способы, с помощью которых API модели SOM в платформе .NET Framework позволяет создавать, изменять и проверять схемы.  
+ <span data-ttu-id="10dd4-109">Ниже представлены способы, с помощью которых API модели SOM в платформе .NET Framework позволяет создавать, изменять и проверять схемы.</span><span class="sxs-lookup"><span data-stu-id="10dd4-109">The following are ways the SOM API in the .NET Framework enables you to create, edit, and validate schemas.</span></span>  
   
--   Загрузка допустимых схем из файлов и сохранение их в файл.  
+-   <span data-ttu-id="10dd4-110">Загрузка допустимых схем из файлов и сохранение их в файл.</span><span class="sxs-lookup"><span data-stu-id="10dd4-110">Load and save valid schemas to and from files.</span></span>  
   
--   Создание в памяти схем, использующих классы со строгой типизацией.  
+-   <span data-ttu-id="10dd4-111">Создание в памяти схем, использующих классы со строгой типизацией.</span><span class="sxs-lookup"><span data-stu-id="10dd4-111">Create in-memory schemas using strongly typed classes.</span></span>  
   
--   Взаимодействие с классом <xref:System.Xml.Schema.XmlSchemaSet> для кэширования, компиляции и получения схем.  
+-   <span data-ttu-id="10dd4-112">Взаимодействие с классом <xref:System.Xml.Schema.XmlSchemaSet> для кэширования, компиляции и получения схем.</span><span class="sxs-lookup"><span data-stu-id="10dd4-112">Interact with the <xref:System.Xml.Schema.XmlSchemaSet> class to cache, compile, and retrieve schemas.</span></span>  
   
--   Взаимодействие с методом <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> для проверки соответствия экземпляров XML\-документов схемам.  
+-   <span data-ttu-id="10dd4-113">Взаимодействие с методом <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> для проверки соответствия экземпляров XML-документов схемам.</span><span class="sxs-lookup"><span data-stu-id="10dd4-113">Interact with the <xref:System.Xml.XmlReader.Create%2A> method of the <xref:System.Xml.XmlReader> class to validate XML instance documents against schemas.</span></span>  
   
--   Построение редакторов для создания и обслуживания схем.  
+-   <span data-ttu-id="10dd4-114">Построение редакторов для создания и обслуживания схем.</span><span class="sxs-lookup"><span data-stu-id="10dd4-114">Build editors for creating and maintaining schemas.</span></span>  
   
--   Динамическое изменение схемы, которую можно скомпилировать и сохранить для использования в проверке экземпляров XML\-документов.  
+-   <span data-ttu-id="10dd4-115">Динамическое изменение схемы, которую можно скомпилировать и сохранить для использования в проверке экземпляров XML-документов.</span><span class="sxs-lookup"><span data-stu-id="10dd4-115">Dynamically edit a schema that can be complied and saved for use in the validation of XML instance documents.</span></span>  
   
-## Модель SOM  
- Модель SOM состоит из широкого набора классов в пространстве имен <xref:System.Xml.Schema?displayProperty=fullName>, соответствующих элементам схемы XML.  Например, элемент `<xsd:schema>...</xsd:schema>` сопоставляется с классом <xref:System.Xml.Schema.XmlSchema?displayProperty=fullName>, а все данные, содержащиеся в элементе `<xsd:schema/>`, можно представить с помощью класса <xref:System.Xml.Schema.XmlSchema>.  Точно так же элементы `<xsd:element>...</xsd:element>` и `<xsd:attribute>...</xsd:attribute>` сопоставляются с классами <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=fullName> и <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=fullName> соответственно.  Это сопоставление выполняется для всех элементов схемы XML, создающих модели XML SOM в пространстве имен <xref:System.Xml.Schema>, как показано на следующей схеме.  
+## <a name="the-schema-object-model"></a><span data-ttu-id="10dd4-116">Модель SOM</span><span class="sxs-lookup"><span data-stu-id="10dd4-116">The Schema Object Model</span></span>  
+ <span data-ttu-id="10dd4-117">Модель SOM состоит из широкого набора классов в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>, соответствующих элементам схемы XML.</span><span class="sxs-lookup"><span data-stu-id="10dd4-117">The SOM consists of an extensive set of classes in the <xref:System.Xml.Schema?displayProperty=nameWithType> namespace corresponding to the elements in an XML schema.</span></span> <span data-ttu-id="10dd4-118">Например, элемент `<xsd:schema>...</xsd:schema>` сопоставляется с классом <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>, а все данные, содержащиеся в элементе `<xsd:schema/>`, можно представить с помощью класса <xref:System.Xml.Schema.XmlSchema>.</span><span class="sxs-lookup"><span data-stu-id="10dd4-118">For example, the `<xsd:schema>...</xsd:schema>` element maps to the <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> class, and all the information that can be contained within an `<xsd:schema/>` element can be represented using the <xref:System.Xml.Schema.XmlSchema> class.</span></span> <span data-ttu-id="10dd4-119">Точно так же элементы `<xsd:element>...</xsd:element>` и `<xsd:attribute>...</xsd:attribute>` сопоставляются с классами <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> и <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> соответственно.</span><span class="sxs-lookup"><span data-stu-id="10dd4-119">Similarly, the `<xsd:element>...</xsd:element>` and `<xsd:attribute>...</xsd:attribute>` elements map to the <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> and <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> classes respectively.</span></span> <span data-ttu-id="10dd4-120">Это сопоставление выполняется для всех элементов схемы XML, создающих модели XML SOM в пространстве имен <xref:System.Xml.Schema>, как показано на следующей схеме.</span><span class="sxs-lookup"><span data-stu-id="10dd4-120">This mapping continues for all the elements of an XML schema creating an XML schema object model in the <xref:System.Xml.Schema> namespace illustrated in the diagram that follows.</span></span>  
   
- ![Объектная модель System.Xml.Schema](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.png "XMLSchemaObjModelOverview")  
+ <span data-ttu-id="10dd4-121">![Объектная модель System.Xml.Schema](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")</span><span class="sxs-lookup"><span data-stu-id="10dd4-121">![System.Xml.Schema Object Model](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")</span></span>  
   
- Дополнительные сведения о каждом классе в пространстве имен <xref:System.Xml.Schema> см. в справочной документации для пространства имен <xref:System.Xml.Schema> в библиотеке классов платформы .NET Framework.  
+ <span data-ttu-id="10dd4-122">Дополнительные сведения о каждом классе в пространстве имен <xref:System.Xml.Schema> см. в справочной документации для пространства имен <xref:System.Xml.Schema> в библиотеке классов платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="10dd4-122">For more information about each class in the <xref:System.Xml.Schema> namespace, see the <xref:System.Xml.Schema> namespace reference documentation in the .NET Framework class library.</span></span>  
   
-## См. также  
- [Чтение и запись XML\-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [Обход XML\-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)   
- [Изменение XML\-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [Включение или импорт XML\-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)   
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)   
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a><span data-ttu-id="10dd4-123">См. также</span><span class="sxs-lookup"><span data-stu-id="10dd4-123">See Also</span></span>  
+ [<span data-ttu-id="10dd4-124">Чтение и запись XML-схем</span><span class="sxs-lookup"><span data-stu-id="10dd4-124">Reading and Writing XML Schemas</span></span>](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [<span data-ttu-id="10dd4-125">Построение XML-схем</span><span class="sxs-lookup"><span data-stu-id="10dd4-125">Building XML Schemas</span></span>](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [<span data-ttu-id="10dd4-126">Обход XML-схем</span><span class="sxs-lookup"><span data-stu-id="10dd4-126">Traversing XML Schemas</span></span>](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [<span data-ttu-id="10dd4-127">Изменение XML-схем</span><span class="sxs-lookup"><span data-stu-id="10dd4-127">Editing XML Schemas</span></span>](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [<span data-ttu-id="10dd4-128">Включение или импорт XML-схем</span><span class="sxs-lookup"><span data-stu-id="10dd4-128">Including or Importing XML Schemas</span></span>](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [<span data-ttu-id="10dd4-129">XmlSchemaSet для компиляции схемы</span><span class="sxs-lookup"><span data-stu-id="10dd4-129">XmlSchemaSet for Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [<span data-ttu-id="10dd4-130">Информационный набор после компиляции схемы</span><span class="sxs-lookup"><span data-stu-id="10dd4-130">Post-Schema Compilation Infoset</span></span>](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

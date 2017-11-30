@@ -1,1 +1,1 @@
-**Этот раздел применим к: ✓**.NET Core 2.x
+<span data-ttu-id="569ca-101">**Этот раздел относится к: ✓** пакета SDK для .NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="569ca-101">**This topic applies to: ✓** .NET Core SDK 2.x</span></span>

@@ -5,65 +5,62 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-# <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework и внештатные выпуски
-.NET Framework эволюционирует, чтобы обеспечивать поддержку различных платформ, например приложений Windows Phone и Магазина Windows, традиционных приложений для настольных компьютеров (классических приложений) и веб-приложений, а также чтобы сделать возможным максимальное повторное использование кода. В дополнение к обычным выпускам .NET Framework, мы выпускаем новые функции в виде внештатных выпусков (OOB) для совершенствования кроссплатформенной разработки или добавления новых функциональных возможностей. В этом разделе обсуждаются направления развития платформы .NET Framework и ее внештатных выпусков.  
+# <a name="the-net-framework-and-out-of-band-releases"></a><span data-ttu-id="1ba5d-102">.NET Framework и внештатные выпуски</span><span class="sxs-lookup"><span data-stu-id="1ba5d-102">The .NET Framework and Out-of-Band Releases</span></span>
+<span data-ttu-id="1ba5d-103">.NET Framework эволюционирует, чтобы обеспечивать поддержку различных платформ, например приложений Windows Phone и Магазина Windows, традиционных приложений для настольных компьютеров (классических приложений) и веб-приложений, а также чтобы сделать возможным максимальное повторное использование кода.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-103">The .NET Framework is evolving to accommodate different platforms such as Windows Phone and Windows Store apps as well as traditional desktop and web apps, and to maximize code reuse.</span></span> <span data-ttu-id="1ba5d-104">В дополнение к обычным выпускам .NET Framework, мы выпускаем новые функции в виде внештатных выпусков (OOB) для совершенствования кроссплатформенной разработки или добавления новых функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-104">In addition to our regular .NET Framework releases, we release new features out of band (OOB) to improve cross-platform development or to introduce new functionality.</span></span> <span data-ttu-id="1ba5d-105">В этом разделе обсуждаются направления развития платформы .NET Framework и ее внештатных выпусков.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-105">This topic discusses the future direction of the .NET Framework and its OOB releases.</span></span>  
   
-## <a name="advantages-of-oob-releases"></a>Преимущества внештатных выпусков  
- Поставка новых компонентов или обновлений к компонентам в виде внештатных выпусков позволяет Microsoft чаще предоставлять обновления платформы .NET Framework. Кроме того, мы можем собрать данные и отреагировать на отзыв клиента быстрее.  
+## <a name="advantages-of-oob-releases"></a><span data-ttu-id="1ba5d-106">Преимущества внештатных выпусков</span><span class="sxs-lookup"><span data-stu-id="1ba5d-106">Advantages of OOB releases</span></span>  
+ <span data-ttu-id="1ba5d-107">Поставка новых компонентов или обновлений к компонентам в виде внештатных выпусков позволяет Microsoft чаще предоставлять обновления платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-107">Shipping new components or updates to components out of band enables Microsoft to provide more frequent updates to the .NET Framework.</span></span> <span data-ttu-id="1ba5d-108">Кроме того, мы можем собрать данные и отреагировать на отзыв клиента быстрее.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-108">In addition, we can gather and respond to customer feedback more quickly.</span></span>  
   
- При использовании в приложении функций внештатных выпусков, пользователям не требуется устанавливать последнюю версию платформы .NET Framework для выполнения приложения, поскольку внештатные сборки развертываются вместе с пакетом приложения.  
+ <span data-ttu-id="1ba5d-109">При использовании в приложении функций внештатных выпусков, пользователям не требуется устанавливать последнюю версию платформы .NET Framework для выполнения приложения, поскольку внештатные сборки развертываются вместе с пакетом приложения.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-109">When you use an OOB feature in your app, your users do not have to install the latest version of the .NET Framework to run your app, because the OOB assemblies deploy with your app package.</span></span>  
   
-## <a name="how-oob-packages-are-distributed"></a>Распространение внештатных пакетов  
- Внештатные выпуски для среды CLR доставляются через [Диспетчер пакетов NuGet](http://nuget.codeplex.com/), который представляет собой расширение Visual Studio с открытым кодом. NuGet позволяет легко просматривать и добавлять библиотеки в проекты .NET Framework из обозревателя решений в Visual Studio. NuGet входит в состав всех выпусков Visual Studio, начиная с Visual Studio 2012. Чтобы определить, установлен ли NuGet, найдите в Visual Studio элемент **Диспетчер библиотеки пакетов** в меню **Сервис**. Если он не установлен:  
+## <a name="how-oob-packages-are-distributed"></a><span data-ttu-id="1ba5d-110">Распространение внештатных пакетов</span><span class="sxs-lookup"><span data-stu-id="1ba5d-110">How OOB packages are distributed</span></span>  
+<span data-ttu-id="1ba5d-111">Внештатные выпуски для основных общих компонентов языка среды CLR доставляются через [NuGet](https://www.nuget.org/), который является диспетчер пакетов для .NET.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-111">OOB releases for core common language runtime (CLR) components are delivered through the [NuGet](https://www.nuget.org/), which is a package manager for .NET.</span></span> <span data-ttu-id="1ba5d-112">NuGet позволяет легко просматривать и добавлять библиотеки в проекты .NET Framework из обозревателя решений в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-112">NuGet enables you to browse and add libraries to your .NET Framework projects easily from the Solution Explorer in Visual Studio.</span></span> <span data-ttu-id="1ba5d-113">NuGet входит в состав всех выпусков Visual Studio, начиная с Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-113">NuGet is included with all editions of Visual Studio starting with Visual Studio 2012.</span></span> <span data-ttu-id="1ba5d-114">Чтобы определить, установлен ли NuGet, найдите в Visual Studio элемент **Диспетчер библиотеки пакетов** в меню **Сервис**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-114">To see if NuGet is installed, look for **Library Package Manager** on the Visual Studio **Tools** menu.</span></span> <span data-ttu-id="1ba5d-115">Если он не установлен:</span><span class="sxs-lookup"><span data-stu-id="1ba5d-115">If it’s not installed:</span></span>  
   
-1.  В строке меню Visual Studio выберите **Сервис**, **Расширения и обновления** (в Visual Studio 2010 выберите **Диспетчер расширений**).  
+1.  <span data-ttu-id="1ba5d-116">В строке меню Visual Studio выберите **Сервис**, **Расширения и обновления** (в Visual Studio 2010 выберите **Диспетчер расширений**).</span><span class="sxs-lookup"><span data-stu-id="1ba5d-116">On the Visual Studio menu bar, choose **Tools**, **Extensions and Updates** (in Visual Studio 2010, choose **Extension Manager**).</span></span>  
   
-     Появится диалоговое окно **Расширения и обновления**.  
+     <span data-ttu-id="1ba5d-117">Появится диалоговое окно **Расширения и обновления**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-117">The **Extensions and Updates** dialog box opens.</span></span>  
   
-2.  Выберите **В сети**, **Диспетчер пакетов NuGet**, а затем выберите **Загрузить**.  
+2.  <span data-ttu-id="1ba5d-118">Выберите **В сети**, **Диспетчер пакетов NuGet**, а затем выберите **Загрузить**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-118">Choose **Online**, **NuGet Package Manager**, and then choose **Download**.</span></span>  
   
-3.  После завершения загрузки, перезапустите Visual Studio.  
+3.  <span data-ttu-id="1ba5d-119">После завершения загрузки, перезапустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-119">After the download completes, restart Visual Studio.</span></span>  
   
- Подробные инструкции по установке см. в статье об [установке NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) на веб-сайте документации NuGet. Дополнительные сведения о NuGet см. в [документации по NuGet](http://docs.nuget.org/).  
+ <span data-ttu-id="1ba5d-120">Подробные инструкции по установке см. в статье об [установке NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) на веб-сайте документации NuGet.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-120">For detailed installation instructions, see [Installing NuGet](http://docs.nuget.org/docs/start-here/installing-nuget) on the NuGet Docs website.</span></span> <span data-ttu-id="1ba5d-121">Дополнительные сведения о NuGet см. в [документации по NuGet](http://docs.nuget.org/).</span><span class="sxs-lookup"><span data-stu-id="1ba5d-121">For more information about NuGet, see the [NuGet documentation](http://docs.nuget.org/).</span></span>  
   
-## <a name="using-a-nuget-oob-package"></a>Использование внештатного пакета NuGet  
- После установки NuGet можно просмотреть и добавить ссылки на пакеты NuGet с помощью обозревателя решений в Visual Studio:  
+## <a name="using-a-nuget-oob-package"></a><span data-ttu-id="1ba5d-122">Использование внештатного пакета NuGet</span><span class="sxs-lookup"><span data-stu-id="1ba5d-122">Using a NuGet OOB package</span></span>  
+ <span data-ttu-id="1ba5d-123">После установки NuGet можно просмотреть и добавить ссылки на пакеты NuGet с помощью обозревателя решений в Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="1ba5d-123">After you install NuGet, you can browse and add references to NuGet packages by using Solution Explorer in Visual Studio:</span></span>  
   
-1.  В Visual Studio откройте контекстное меню для проекта, а затем выберите **Управлять пакетами NuGet**. (Этот параметр также доступен из меню **Проект**).  
+1.  <span data-ttu-id="1ba5d-124">В Visual Studio откройте контекстное меню для проекта, а затем выберите **Управлять пакетами NuGet**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-124">Open the shortcut menu for your project in Visual Studio, and then choose **Manage NuGet Packages**.</span></span> <span data-ttu-id="1ba5d-125">(Этот параметр также доступен из меню **Проект**).</span><span class="sxs-lookup"><span data-stu-id="1ba5d-125">(This option is also available from the **Project** menu.)</span></span>  
   
-2.  В области слева выберите пункт **В сети**.  
+2.  <span data-ttu-id="1ba5d-126">В области слева выберите пункт **В сети**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-126">In the left pane, choose **Online**.</span></span>  
   
-3.  Если требуется использовать пакеты предварительного выпуска, в раскрывающемся списке в области посередине выберите команду **Включить предварительные выпуски** вместо **Только стабильные**.  
+3.  <span data-ttu-id="1ba5d-127">Если требуется использовать пакеты предварительного выпуска, в раскрывающемся списке в области посередине выберите команду **Включить предварительные выпуски** вместо **Только стабильные**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-127">If you want to use prerelease packages, in the drop-down list box in the middle pane, choose **Include Prerelease** instead of **Stable Only**.</span></span>  
   
-4.  В области справа используйте окно **Поиск**, чтобы найти нужный пакет. Некоторые пакеты Microsoft обозначены логотипом Microsoft .NET Framework; для всех из них корпорация Microsoft указана в качестве издателя.  
+4.  <span data-ttu-id="1ba5d-128">В области справа используйте окно **Поиск**, чтобы найти нужный пакет.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-128">In the right pane, use the **Search** box to locate the package you would like to use.</span></span> <span data-ttu-id="1ba5d-129">Некоторые пакеты Microsoft обозначены логотипом Microsoft .NET Framework; для всех из них корпорация Microsoft указана в качестве издателя.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-129">Some Microsoft packages are identified by the Microsoft .NET Framework logo, and all identify Microsoft as the publisher.</span></span>  
   
- ![Диспетчер пакетов NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")  
+ <span data-ttu-id="1ba5d-130">![Диспетчер пакетов NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")</span><span class="sxs-lookup"><span data-stu-id="1ba5d-130">![NuGet Package Manager](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")</span></span>  
   
- Как упоминалось ранее, при развертывании приложения, использующего внештатный пакет, вместе с пакетом приложения поставляются внештатные сборки.  
+ <span data-ttu-id="1ba5d-131">Как упоминалось ранее, при развертывании приложения, использующего внештатный пакет, вместе с пакетом приложения поставляются внештатные сборки.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-131">As mentioned previously, when you deploy an app that uses an OOB package, the OOB assemblies will ship with your app package.</span></span>  
   
-## <a name="types-of-oob-releases"></a>Типы внештатных выпусков  
- Обычно внештатный пакет имеет одну или несколько предварительных версий и стабильную версию. Лицензия, сопровождающая предварительный выпуск, обычно не разрешает распространение, но позволяет опробовать пакет и предоставить свой отзыв. Отзыв включается во все обновления пакета. Окончательный выпуск распространяется с NuGet в качестве стабильного пакета и включает лицензию, которая позволяет распространять пакет NuGet вместе с приложением. Стабильные пакеты поддерживаются корпорацией Майкрософт. Корпорация Майкрософт предоставляет поддержку IntelliSense, а также других типов документации, таких как публикации в блогах и ответы на форумах, для всех пакетов. Кроме того, исходный код может быть доступен с некоторыми, но не всеми, пакетами. Чтобы регулярно узнавать о новых и обновленных пакетах можно просматривать, подпишитесь на [блог по .NET Framework](http://blogs.msdn.com/b/dotnet/).  
+## <a name="types-of-oob-releases"></a><span data-ttu-id="1ba5d-132">Типы внештатных выпусков</span><span class="sxs-lookup"><span data-stu-id="1ba5d-132">Types of OOB releases</span></span>  
+ <span data-ttu-id="1ba5d-133">Обычно внештатный пакет имеет одну или несколько предварительных версий и стабильную версию.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-133">Typically, an OOB package has one or more prerelease versions and a stable version.</span></span> <span data-ttu-id="1ba5d-134">Лицензия, сопровождающая предварительный выпуск, обычно не разрешает распространение, но позволяет опробовать пакет и предоставить свой отзыв.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-134">The license that accompanies a prerelease doesn't typically allow redistribution, but enables you to try out a package and provide feedback.</span></span> <span data-ttu-id="1ba5d-135">Отзыв включается во все обновления пакета.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-135">Feedback is incorporated in any updates made to the package.</span></span> <span data-ttu-id="1ba5d-136">Окончательный выпуск распространяется с NuGet в качестве стабильного пакета и включает лицензию, которая позволяет распространять пакет NuGet вместе с приложением.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-136">A final release is distributed as a stable package with NuGet and includes a license that lets you redistribute the NuGet package with your app.</span></span> <span data-ttu-id="1ba5d-137">Стабильные пакеты поддерживаются корпорацией Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-137">Stable packages are supported by Microsoft.</span></span> <span data-ttu-id="1ba5d-138">Корпорация Майкрософт предоставляет поддержку IntelliSense, а также других типов документации, таких как публикации в блогах и ответы на форумах, для всех пакетов.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-138">Microsoft provides IntelliSense support as well as other types of documentation such as blog posts and forum answers for all packages.</span></span> <span data-ttu-id="1ba5d-139">Кроме того, исходный код может быть доступен с некоторыми, но не всеми, пакетами.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-139">In addition, source code may be available with some, but not all, packages.</span></span> <span data-ttu-id="1ba5d-140">Чтобы регулярно узнавать о новых и обновленных пакетах можно просматривать, подпишитесь на [блог по .NET Framework](http://blogs.msdn.com/b/dotnet/).</span><span class="sxs-lookup"><span data-stu-id="1ba5d-140">For announcements regarding new and updated packages, you can subscribe to [the .NET Framework Blog](http://blogs.msdn.com/b/dotnet/).</span></span>  
   
- Чтобы найти и стабильные пакеты, и пакеты с предварительным выпуском, в диспетчере пакетов NuGet выберите вариант **Включить предварительные выпуски**.  
+ <span data-ttu-id="1ba5d-141">Чтобы найти и стабильные пакеты, и пакеты с предварительным выпуском, в диспетчере пакетов NuGet выберите вариант **Включить предварительные выпуски**.</span><span class="sxs-lookup"><span data-stu-id="1ba5d-141">To find both prerelease and stable packages, choose **Include Prerelease** in the NuGet Package Manager.</span></span>  
   
- Чтобы получать уведомления о выпуске стабильных пакетов, подпишитесь на [веб-канал .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
+ <span data-ttu-id="1ba5d-142">Чтобы получать уведомления о выпуске стабильных пакетов, подпишитесь на [веб-канал .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).</span><span class="sxs-lookup"><span data-stu-id="1ba5d-142">If you want to be notified of stable package releases, subscribe to the [the .NET Framework feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Начало работы](../../../docs/framework/get-started/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="1ba5d-143">См. также</span><span class="sxs-lookup"><span data-stu-id="1ba5d-143">See Also</span></span>  
+ [<span data-ttu-id="1ba5d-144">Начало работы</span><span class="sxs-lookup"><span data-stu-id="1ba5d-144">Getting Started</span></span>](../../../docs/framework/get-started/index.md)

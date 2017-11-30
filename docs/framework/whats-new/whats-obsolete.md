@@ -1,59 +1,53 @@
 ---
 title: "Устаревшие классы библиотеки классов .NET Framework"
-ms.custom: 
-ms.date: 03/30/2017
+ms.custom: updateeachrelease
+ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Устаревшие классы библиотеки классов .NET Framework
-Со временем в платформу .NET Framework вносятся изменения. В каждой новой версии добавляются новые типы и члены типов, предоставляющие новые функциональные возможности. Существующие типы и их члены постепенно изменяются. Например, некоторые типы становятся менее важными из-за того, что поддерживаемая ими технология заменяется на другую технологию, а некоторые методы вытесняются новыми методами, которые более удобны в использовании или обладают большей функциональностью.  
+# <a name="what39s-obsolete-in-the-net-framework-class-library"></a><span data-ttu-id="7c977-102">Устаревшие классы библиотеки классов .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7c977-102">What&#39;s Obsolete in the .NET Framework Class Library</span></span>
+<span data-ttu-id="7c977-103">Со временем в платформу .NET Framework вносятся изменения.</span><span class="sxs-lookup"><span data-stu-id="7c977-103">The .NET Framework changes over time.</span></span> <span data-ttu-id="7c977-104">В каждой новой версии добавляются новые типы и члены типов, предоставляющие новые функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="7c977-104">Each new version adds new types and type members that provide new functionality.</span></span> <span data-ttu-id="7c977-105">Существующие типы и их члены постепенно изменяются.</span><span class="sxs-lookup"><span data-stu-id="7c977-105">Existing types and their members also change over time.</span></span> <span data-ttu-id="7c977-106">Например, некоторые типы становятся менее важными из-за того, что поддерживаемая ими технология заменяется на другую технологию, а некоторые методы вытесняются новыми методами, которые более удобны в использовании или обладают большей функциональностью.</span><span class="sxs-lookup"><span data-stu-id="7c977-106">For example, some types become less important as the technology they support is replaced by a new technology, and some methods are superseded by newer methods that are either more convenient or more full-featured.</span></span>  
   
- Платформа .NET Framework и среда CLR ориентированы на поддержку обратной совместимости (которая позволяет запускать приложения, разработанные в одной версии платформы .NET Framework, в более новой версии .NET Framework). Это затрудняет простое удаление типа или его члена. Вместо этого платформа .NET Framework указывает, что отдельный тип или член типа больше не следует использовать, помечая его как устаревший или нерекомендуемый. Для перевода типа или члена типа в разряд нерекомендуемых он помечается, чтобы разработчики знали об отказе от него и у них было время к этому подготовиться. Однако существующий код, в котором используется этот тип или член, продолжает выполняться в новой версии .NET Framework.  
+ <span data-ttu-id="7c977-107">Платформа .NET Framework и среда CLR ориентированы на поддержку обратной совместимости (которая позволяет запускать приложения, разработанные в одной версии платформы .NET Framework, в более новой версии .NET Framework).</span><span class="sxs-lookup"><span data-stu-id="7c977-107">The .NET Framework and the common language runtime strive to support backward compatibility (allowing applications that were developed with one version of the .NET Framework to run on the next version of the .NET Framework).</span></span> <span data-ttu-id="7c977-108">Это затрудняет простое удаление типа или его члена.</span><span class="sxs-lookup"><span data-stu-id="7c977-108">This makes it difficult to simply remove a type or a type member.</span></span> <span data-ttu-id="7c977-109">Вместо этого платформа .NET Framework указывает, что отдельный тип или член типа больше не следует использовать, помечая его как устаревший или нерекомендуемый.</span><span class="sxs-lookup"><span data-stu-id="7c977-109">Instead, the .NET Framework indicates that a type or a type member should no longer be used by marking it as obsolete or deprecated.</span></span> <span data-ttu-id="7c977-110">Для перевода типа или члена типа в разряд нерекомендуемых он помечается, чтобы разработчики знали об отказе от него и у них было время к этому подготовиться.</span><span class="sxs-lookup"><span data-stu-id="7c977-110">Deprecating a type or a member involves marking it so that developers are aware it will go away and have time to respond to its removal.</span></span> <span data-ttu-id="7c977-111">Однако существующий код, в котором используется этот тип или член, продолжает выполняться в новой версии .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7c977-111">However, existing code that uses the type or member continues to run in the new version of the .NET Framework.</span></span>  
   
 > [!NOTE]
->  Применительно к типам и членам платформы .NET Framework термины *устаревший* и *нерекомендуемый* имеют одинаковое значение.  
+>  <span data-ttu-id="7c977-112">Применительно к типам и членам платформы .NET Framework термины *устаревший* и *нерекомендуемый* имеют одинаковое значение.</span><span class="sxs-lookup"><span data-stu-id="7c977-112">The terms *obsolete* and *deprecated* have the same meaning when applied to the types and members of the .NET Framework.</span></span>  
   
-## <a name="the-obsoleteattribute-attribute"></a>Атрибут ObsoleteAttribute  
- Платформа .NET Framework указывает, что тип или член типа является устаревшим, помечая его с помощью атрибута <xref:System.ObsoleteAttribute>. Применение этого атрибута к типу или члену указывает на то, что этот тип или член будет удален в одной из последующих версий платформы .NET Framework без нарушения кода, в котором он используется.  
+## <a name="the-obsoleteattribute-attribute"></a><span data-ttu-id="7c977-113">Атрибут ObsoleteAttribute</span><span class="sxs-lookup"><span data-stu-id="7c977-113">The ObsoleteAttribute Attribute</span></span>  
+ <span data-ttu-id="7c977-114">Платформа .NET Framework указывает, что тип или член типа является устаревшим, помечая его с помощью атрибута <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7c977-114">The .NET Framework indicates that a type or type member is obsolete by marking it with the <xref:System.ObsoleteAttribute> attribute.</span></span> <span data-ttu-id="7c977-115">Применение этого атрибута к типу или члену указывает на то, что этот тип или член будет удален в одной из последующих версий платформы .NET Framework без нарушения кода, в котором он используется.</span><span class="sxs-lookup"><span data-stu-id="7c977-115">Applying the attribute to a type or member indicates that that type or member will be removed in some future version of the .NET Framework without breaking compiled code that uses that member.</span></span>  
   
- Кроме обозначения устаревшего типа или члена типа, атрибут <xref:System.ObsoleteAttribute> определяет, как компилятор обрабатывает исходный код, содержащий такой тип или член. Компилятор может компилировать код, выдавая предупреждение, или считать использование такого типа или члена ошибкой. В первом случае код успешно компилируется, но выдается предупреждение о том, что тип или член является устаревшим. Во втором случае происходит сбой компиляции.  
+ <span data-ttu-id="7c977-116">Кроме обозначения устаревшего типа или члена типа, атрибут <xref:System.ObsoleteAttribute> определяет, как компилятор обрабатывает исходный код, содержащий такой тип или член.</span><span class="sxs-lookup"><span data-stu-id="7c977-116">In addition to indicating that a type or a type member is obsolete, <xref:System.ObsoleteAttribute> defines how the compiler handles source code that includes that type or member.</span></span> <span data-ttu-id="7c977-117">Компилятор может компилировать код, выдавая предупреждение, или считать использование такого типа или члена ошибкой.</span><span class="sxs-lookup"><span data-stu-id="7c977-117">The compiler can compile the code but emit a warning message, or it can treat the use of the type or member as an error.</span></span> <span data-ttu-id="7c977-118">В первом случае код успешно компилируется, но выдается предупреждение о том, что тип или член является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="7c977-118">In the first case, the code can successfully compile, but a warning message indicates that the type or member is obsolete.</span></span> <span data-ttu-id="7c977-119">Во втором случае происходит сбой компиляции.</span><span class="sxs-lookup"><span data-stu-id="7c977-119">In the second case, compilation fails.</span></span>  
   
- Даже если во время компиляции вместо предупреждения происходит ошибка, атрибут <xref:System.ObsoleteAttribute> не влияет на поведение во время выполнения. Таким образом, приложения, использующие тип или член, который был успешно скомпилирован, всегда выполняются успешно. Сбой вызывает только повторная компиляция такого приложения.  
+ <span data-ttu-id="7c977-120">Даже если во время компиляции вместо предупреждения происходит ошибка, атрибут <xref:System.ObsoleteAttribute> не влияет на поведение во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="7c977-120">Even if compilation produces an error instead of a warning message, <xref:System.ObsoleteAttribute> does not affect run-time behavior.</span></span> <span data-ttu-id="7c977-121">Таким образом, приложения, использующие тип или член, который был успешно скомпилирован, всегда выполняются успешно.</span><span class="sxs-lookup"><span data-stu-id="7c977-121">That is, applications that use the type or member and that have compiled successfully will always run successfully.</span></span> <span data-ttu-id="7c977-122">Сбой вызывает только повторная компиляция такого приложения.</span><span class="sxs-lookup"><span data-stu-id="7c977-122">Only the attempt to recompile an application that uses the type or member fails.</span></span>  
   
-## <a name="how-to-handle-obsolete-types-and-members"></a>Обработка устаревших типов и членов  
- При обновлении и повторной компиляции существующего кода использование типа или члена, вызывающего предупреждение компилятора, полностью приемлемо. Однако следует просматривать предупреждение компилятора для того, чтобы определить, следует ли изменить код приложения. Если в предупреждении не указан допустимый альтернативный вариант, следует выполнить одно из следующих действий:  
+## <a name="how-to-handle-obsolete-types-and-members"></a><span data-ttu-id="7c977-123">Обработка устаревших типов и членов</span><span class="sxs-lookup"><span data-stu-id="7c977-123">How to Handle Obsolete Types and Members</span></span>  
+ <span data-ttu-id="7c977-124">При обновлении и повторной компиляции существующего кода использование типа или члена, вызывающего предупреждение компилятора, полностью приемлемо.</span><span class="sxs-lookup"><span data-stu-id="7c977-124">When you upgrade and recompile existing code, using an obsolete type or member that produces a compiler warning in your application is perfectly acceptable.</span></span> <span data-ttu-id="7c977-125">Однако следует просматривать предупреждение компилятора для того, чтобы определить, следует ли изменить код приложения.</span><span class="sxs-lookup"><span data-stu-id="7c977-125">However, you should review the compiler warning message to determine whether you should change your application code.</span></span> <span data-ttu-id="7c977-126">Если в предупреждении не указан допустимый альтернативный вариант, следует выполнить одно из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="7c977-126">If the message does not point to a suitable alternative, you should do either of the following:</span></span>  
   
--   Измените код, удалив такой тип или член, если это возможно.  
+-   <span data-ttu-id="7c977-127">Измените код, удалив такой тип или член, если это возможно.</span><span class="sxs-lookup"><span data-stu-id="7c977-127">Change your code by removing the use of the type or member, if possible.</span></span>  
   
-     -или-  
+     <span data-ttu-id="7c977-128">-или-</span><span class="sxs-lookup"><span data-stu-id="7c977-128">-or-</span></span>  
   
--   Просмотрите документацию по данной технологии, чтобы определить, что делать с таким нерекомендуемым типом или членом.  
+-   <span data-ttu-id="7c977-129">Просмотрите документацию по данной технологии, чтобы определить, что делать с таким нерекомендуемым типом или членом.</span><span class="sxs-lookup"><span data-stu-id="7c977-129">Review the documentation for this technology area to determine how to respond to the deprecation.</span></span>  
   
- Можно не выполнять повторную компиляцию существующего кода в более новой версии .NET Framework. Вместо этого можно указать версию .NET Framework, в которой запускается имеющийся скомпилированный код. Предположим, что имеется приложение app1.exe, скомпилированное в платформе [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], но требуется его запуск в платформе [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Для этого необходимо выполнить следующие действия:  
+ <span data-ttu-id="7c977-130">Можно не выполнять повторную компиляцию существующего кода в более новой версии .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7c977-130">You may choose not to recompile existing code against a later version of the .NET Framework.</span></span> <span data-ttu-id="7c977-131">Вместо этого можно указать версию .NET Framework, в которой запускается имеющийся скомпилированный код.</span><span class="sxs-lookup"><span data-stu-id="7c977-131">Instead, you can specify the version of the .NET Framework against which your existing compiled code runs.</span></span> <span data-ttu-id="7c977-132">Предположим, что имеется приложение app1.exe, скомпилированное в платформе [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], но требуется его запуск в платформе [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7c977-132">For example, suppose that you have an application named app1.exe that was compiled against the [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], but you want the application to run against the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span> <span data-ttu-id="7c977-133">Для этого необходимо выполнить следующие действия:</span><span class="sxs-lookup"><span data-stu-id="7c977-133">This requires the following steps:</span></span>  
   
-1.  Создайте файл конфигурации для основного исполняемого файла и назовите его *appName*.exe.config, где *appName* — это имя исполняемого файла приложения. Для используемого в данном примере приложения app1.exe необходимо создать файл конфигурации app1.exe.config.  
+1.  <span data-ttu-id="7c977-134">Создайте файл конфигурации для основного исполняемого файла и назовите его *appName*.exe.config, где *appName* — это имя исполняемого файла приложения.</span><span class="sxs-lookup"><span data-stu-id="7c977-134">Create a configuration file for your main executable and name it *appName*.exe.config, where *appName* is the name of the application executable.</span></span> <span data-ttu-id="7c977-135">Для используемого в данном примере приложения app1.exe необходимо создать файл конфигурации app1.exe.config.</span><span class="sxs-lookup"><span data-stu-id="7c977-135">For the application named app1.exe in our example, you would create a configuration file named app1.exe.config.</span></span>  
   
-2.  Добавьте в этот файл конфигурации следующее.  
+2.  <span data-ttu-id="7c977-136">Добавьте в этот файл конфигурации следующее.</span><span class="sxs-lookup"><span data-stu-id="7c977-136">Add the following to the configuration file.</span></span>  
   
     ```xml  
     <configuration>  
@@ -63,33 +57,32 @@ ms.lasthandoff: 07/28/2017
     </configuration>  
     ```  
   
- В следующей таблице приведены строковые значения, которые можно назначить атрибуту `version` для ориентации на определенную версию платформы .NET Framework.  
+ <span data-ttu-id="7c977-137">В следующей таблице приведены строковые значения, которые можно назначить атрибуту `version` для ориентации на определенную версию платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7c977-137">The following table lists the string values that you can assign to the `version` attribute to target a specific version of the .NET Framework.</span></span>  
   
-|Версия платформы .NET Framework|`version` строковое значение|
+|<span data-ttu-id="7c977-138">Версия платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="7c977-138">.NET Framework version</span></span>|<span data-ttu-id="7c977-139">`version` строковое значение</span><span class="sxs-lookup"><span data-stu-id="7c977-139">`version` string</span></span>|
 |-|-|  
-|4.7|v4.0|  
-|4.6 (включая 4.6.1 и 4.6.2)|v4.0|  
-|4.5 (включая 4.5.1 и 4.5.2)|v4.0|  
-|4|v4.0|  
-|3.5|v2.0.50727|  
-|2.0|v2.0.50727|  
-|1.1|v1.1.4322|  
-|1.0|v1.0.3705|  
+|<span data-ttu-id="7c977-140">4.7 (включая 4.7.1)</span><span class="sxs-lookup"><span data-stu-id="7c977-140">4.7 (including 4.7.1)</span></span>|<span data-ttu-id="7c977-141">v4.0</span><span class="sxs-lookup"><span data-stu-id="7c977-141">v4.0</span></span>|  
+|<span data-ttu-id="7c977-142">4.6 (включая 4.6.1 и 4.6.2)</span><span class="sxs-lookup"><span data-stu-id="7c977-142">4.6 (including 4.6.1 and 4.6.2)</span></span>|<span data-ttu-id="7c977-143">v4.0</span><span class="sxs-lookup"><span data-stu-id="7c977-143">v4.0</span></span>|  
+|<span data-ttu-id="7c977-144">4.5 (включая 4.5.1 и 4.5.2)</span><span class="sxs-lookup"><span data-stu-id="7c977-144">4.5 (including 4.5.1 and 4.5.2)</span></span>|<span data-ttu-id="7c977-145">v4.0</span><span class="sxs-lookup"><span data-stu-id="7c977-145">v4.0</span></span>|  
+|<span data-ttu-id="7c977-146">4</span><span class="sxs-lookup"><span data-stu-id="7c977-146">4</span></span>|<span data-ttu-id="7c977-147">v4.0</span><span class="sxs-lookup"><span data-stu-id="7c977-147">v4.0</span></span>|  
+|<span data-ttu-id="7c977-148">3.5</span><span class="sxs-lookup"><span data-stu-id="7c977-148">3.5</span></span>|<span data-ttu-id="7c977-149">v2.0.50727</span><span class="sxs-lookup"><span data-stu-id="7c977-149">v2.0.50727</span></span>|  
+|<span data-ttu-id="7c977-150">2.0</span><span class="sxs-lookup"><span data-stu-id="7c977-150">2.0</span></span>|<span data-ttu-id="7c977-151">v2.0.50727</span><span class="sxs-lookup"><span data-stu-id="7c977-151">v2.0.50727</span></span>|  
+|<span data-ttu-id="7c977-152">1.1</span><span class="sxs-lookup"><span data-stu-id="7c977-152">1.1</span></span>|<span data-ttu-id="7c977-153">v1.1.4322</span><span class="sxs-lookup"><span data-stu-id="7c977-153">v1.1.4322</span></span>|  
+|<span data-ttu-id="7c977-154">1.0</span><span class="sxs-lookup"><span data-stu-id="7c977-154">1.0</span></span>|<span data-ttu-id="7c977-155">v1.0.3705</span><span class="sxs-lookup"><span data-stu-id="7c977-155">v1.0.3705</span></span>|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Списки устаревших типов и членов для платформ .NET Framework 4.5 и 4.6  
- [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)  
+## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a><span data-ttu-id="7c977-156">Списки устаревших типов и членов для платформ .NET Framework 4.5 и 4.6</span><span class="sxs-lookup"><span data-stu-id="7c977-156">Obsolete Lists for the .NET Framework 4.5 and 4.6</span></span>  
+ [<span data-ttu-id="7c977-157">Устаревшие типы</span><span class="sxs-lookup"><span data-stu-id="7c977-157">Obsolete Types</span></span>](../../../docs/framework/whats-new/obsolete-types.md)  
   
- [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)  
+ [<span data-ttu-id="7c977-158">Устаревшие члены</span><span class="sxs-lookup"><span data-stu-id="7c977-158">Obsolete Members</span></span>](../../../docs/framework/whats-new/obsolete-members.md)  
   
-## <a name="obsolete-lists-for-previous-versions"></a>Списки устаревших типов и членов для предыдущих версий  
- [Устаревшие типы в платформе .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+## <a name="obsolete-lists-for-previous-versions"></a><span data-ttu-id="7c977-159">Списки устаревших типов и членов для предыдущих версий</span><span class="sxs-lookup"><span data-stu-id="7c977-159">Obsolete Lists for Previous Versions</span></span>  
+ [<span data-ttu-id="7c977-160">Устаревшие типы в платформе .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="7c977-160">Obsolete Types in the .NET Framework 4</span></span>](http://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Устаревшие члены в платформе .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [<span data-ttu-id="7c977-161">Устаревшие члены в платформе .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="7c977-161">Obsolete Members in the .NET Framework 4</span></span>](http://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Список устаревших элементов в платформе .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [<span data-ttu-id="7c977-162">Список устаревших элементов в платформе .NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="7c977-162">.NET Framework 3.5 Obsolete List</span></span>](http://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Список устаревших элементов в платформе .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [<span data-ttu-id="7c977-163">Список устаревших элементов в платформе .NET Framework 2.0</span><span class="sxs-lookup"><span data-stu-id="7c977-163">.NET Framework 2.0 Obsolete List</span></span>](http://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>См. также  
- [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-
+## <a name="see-also"></a><span data-ttu-id="7c977-164">См. также</span><span class="sxs-lookup"><span data-stu-id="7c977-164">See Also</span></span>  
+ [<span data-ttu-id="7c977-165">\<Поддерживаемый элемент среды выполнения</span><span class="sxs-lookup"><span data-stu-id="7c977-165">\<supportedRuntime> Element</span></span>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

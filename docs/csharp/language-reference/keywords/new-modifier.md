@@ -1,85 +1,65 @@
 ---
 title: "Модификатор new (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- new modifier keyword [C#]
+helpviewer_keywords: new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f763b9a1d2f146b8ebb475a01bd12f1a4238050a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="new-modifier-c-reference"></a>Модификатор new (Справочник по C#)
-При использовании в качестве модификатора объявления ключевое слово `new` явным образом скрывает члены, унаследованные от базового класса. При скрытии унаследованного члена его производная версия заменяет версию базового класса. Хотя члены можно скрывать без использования модификатора `new`, в этом случае появляется предупреждение компилятора. При использовании `new` для явного скрытия члена, предупреждение не появляется.  
+# <a name="new-modifier-c-reference"></a><span data-ttu-id="dd7b2-102">Модификатор new (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="dd7b2-102">new Modifier (C# Reference)</span></span>
+<span data-ttu-id="dd7b2-103">При использовании в качестве модификатора объявления ключевое слово `new` явным образом скрывает члены, унаследованные от базового класса.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-103">When used as a declaration modifier, the `new` keyword explicitly hides a member that is inherited from a base class.</span></span> <span data-ttu-id="dd7b2-104">При скрытии унаследованного члена его производная версия заменяет версию базового класса.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-104">When you hide an inherited member, the derived version of the member replaces the base class version.</span></span> <span data-ttu-id="dd7b2-105">Хотя члены можно скрывать без использования модификатора `new`, в этом случае появляется предупреждение компилятора.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-105">Although you can hide members without using the `new` modifier, you get a compiler warning.</span></span> <span data-ttu-id="dd7b2-106">При использовании `new` для явного скрытия члена, предупреждение не появляется.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-106">If you use `new` to explicitly hide a member, it suppresses this warning.</span></span>  
   
- Чтобы скрыть унаследованный член, объявите его в производном классе с использованием такого же имени члена и измените с помощью ключевого слова `new`. Пример:  
+ <span data-ttu-id="dd7b2-107">Чтобы скрыть унаследованный член, объявите его в производном классе с использованием такого же имени члена и измените с помощью ключевого слова `new`.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-107">To hide an inherited member, declare it in the derived class by using the same member name, and modify it with the `new` keyword.</span></span> <span data-ttu-id="dd7b2-108">Пример:</span><span class="sxs-lookup"><span data-stu-id="dd7b2-108">For example:</span></span>  
   
- [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
- В этом примере `BaseC.Invoke` скрывается с помощью `DerivedC.Invoke`. Поле `x` не затрагивается, поскольку оно не скрыто таким же именем.  
+ <span data-ttu-id="dd7b2-109">В этом примере `BaseC.Invoke` скрывается с помощью `DerivedC.Invoke`.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-109">In this example, `BaseC.Invoke` is hidden by `DerivedC.Invoke`.</span></span> <span data-ttu-id="dd7b2-110">Поле `x` не затрагивается, поскольку оно не скрыто таким же именем.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-110">The field `x` is not affected because it is not hidden by a similar name.</span></span>  
   
- Скрытие имен через наследование принимает одну из следующих форм.  
+ <span data-ttu-id="dd7b2-111">Скрытие имен через наследование принимает одну из следующих форм.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-111">Name hiding through inheritance takes one of the following forms:</span></span>  
   
--   Как правило, константы, поля, свойства и типы, которые вводятся в классе или структуре, скрывают все члены базового класса с таким же именем.  Однако существуют особые случаи.  Например, если объявить новое поле с именем `N`, чтобы сделать тип невызываемым, в то время как в базовом типе был объявлен метод `N`, новое поле не скрывает базовое объявление в синтаксисе вызова.  Подробные сведения см. в разделе [Спецификация языка C#](http://go.microsoft.com/fwlink/?LinkId=199552) (подраздел "Поиск члена" в разделе "Выражения").  
+-   <span data-ttu-id="dd7b2-112">Как правило, константы, поля, свойства и типы, которые вводятся в классе или структуре, скрывают все члены базового класса с таким же именем.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-112">Generally, a constant, field, property, or type that is introduced in a class or struct hides all base class members that share its name.</span></span>  <span data-ttu-id="dd7b2-113">Однако существуют особые случаи.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-113">There are special cases.</span></span>  <span data-ttu-id="dd7b2-114">Например, если объявить новое поле с именем `N`, чтобы сделать тип невызываемым, в то время как в базовом типе был объявлен метод `N`, новое поле не скрывает базовое объявление в синтаксисе вызова.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-114">For example, if you declare a new field with name `N` to have a type that is not invocable, and a base type declares `N` to be a method, the new field does not hide the base declaration in invocation syntax.</span></span>  <span data-ttu-id="dd7b2-115">В разделе [спецификация языка C# 5.0](http://go.microsoft.com/fwlink/?LinkId=199552) подробности (см. раздел «Поиск члена» в разделе «Выражения»).</span><span class="sxs-lookup"><span data-stu-id="dd7b2-115">See the [C# 5.0 language specification](http://go.microsoft.com/fwlink/?LinkId=199552) for details (see section "Member Lookup" in section "Expressions").</span></span>  
   
--   Метод, введенный в классе или структуре, скрывает свойства, поля и типы с тем же именем в базовом классе. Кроме того, он также скрывает все методы базового класса, имеющие такую же сигнатуру.  
+-   <span data-ttu-id="dd7b2-116">Метод, введенный в классе или структуре, скрывает свойства, поля и типы с тем же именем в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-116">A method introduced in a class or struct hides properties, fields, and types that share that name in the base class.</span></span> <span data-ttu-id="dd7b2-117">Кроме того, он также скрывает все методы базового класса, имеющие такую же сигнатуру.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-117">It also hides all base class methods that have the same signature.</span></span>  
   
--   Индексатор, представленный в классе или структуре, скрывает все индексаторы базового класса, имеющие одинаковую сигнатуру.  
+-   <span data-ttu-id="dd7b2-118">Индексатор, представленный в классе или структуре, скрывает все индексаторы базового класса, имеющие одинаковую сигнатуру.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-118">An indexer introduced in a class or struct hides all base class indexers that have the same signature.</span></span>  
   
- Совместное использование модификаторов `new` и [override](../../../csharp/language-reference/keywords/override.md) в одном члене является недопустимым, так как эти два модификатора имеют взаимоисключающие значения. Модификатор `new` создает новый член с таким же именем и приводит к скрытию исходного члена. Модификатор `override` расширяет реализацию для наследуемого члена.  
+ <span data-ttu-id="dd7b2-119">Совместное использование модификаторов `new` и [override](../../../csharp/language-reference/keywords/override.md) в одном члене является недопустимым, так как эти два модификатора имеют взаимоисключающие значения.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-119">It is an error to use both `new` and [override](../../../csharp/language-reference/keywords/override.md) on the same member, because the two modifiers have mutually exclusive meanings.</span></span> <span data-ttu-id="dd7b2-120">Модификатор `new` создает новый член с таким же именем и приводит к скрытию исходного члена.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-120">The `new` modifier creates a new member with the same name and causes the original member to become hidden.</span></span> <span data-ttu-id="dd7b2-121">Модификатор `override` расширяет реализацию для наследуемого члена.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-121">The `override` modifier extends the implementation for an inherited member.</span></span>  
   
- При использовании модификатора `new` в объявлении, которое не скрывает наследуемый член, возникает предупреждение.  
+ <span data-ttu-id="dd7b2-122">При использовании модификатора `new` в объявлении, которое не скрывает наследуемый член, возникает предупреждение.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-122">Using the `new` modifier in a declaration that does not hide an inherited member generates a warning.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере базовый класс `BaseC` и производный класс `DerivedC` используют одно и то же имя поля `x`, которое скрывает значение унаследованного поля. В примере показано использование модификатора `new`. Здесь также показано обращение к скрытым членам базового класса с помощью их полных имен.  
+## <a name="example"></a><span data-ttu-id="dd7b2-123">Пример</span><span class="sxs-lookup"><span data-stu-id="dd7b2-123">Example</span></span>  
+ <span data-ttu-id="dd7b2-124">В этом примере базовый класс `BaseC` и производный класс `DerivedC` используют одно и то же имя поля `x`, которое скрывает значение унаследованного поля.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-124">In this example, a base class, `BaseC`, and a derived class, `DerivedC`, use the same field name `x`, which hides the value of the inherited field.</span></span> <span data-ttu-id="dd7b2-125">В примере показано использование модификатора `new`.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-125">The example demonstrates the use of the `new` modifier.</span></span> <span data-ttu-id="dd7b2-126">Здесь также показано обращение к скрытым членам базового класса с помощью их полных имен.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-126">It also demonstrates how to access the hidden members of the base class by using their fully qualified names.</span></span>  
   
- [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
+ [!code-csharp[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
-## <a name="example"></a>Пример  
- В этом примере вложенный класс скрывает класс, имеющий такое же имя в базовом классе. Здесь показано использование модификатора `new` для исключения предупреждений, а также обращение к членам скрытого класса с помощью их полных имен.  
+## <a name="example"></a><span data-ttu-id="dd7b2-127">Пример</span><span class="sxs-lookup"><span data-stu-id="dd7b2-127">Example</span></span>  
+ <span data-ttu-id="dd7b2-128">В этом примере вложенный класс скрывает класс, имеющий такое же имя в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-128">In this example, a nested class hides a class that has the same name in the base class.</span></span> <span data-ttu-id="dd7b2-129">Здесь показано использование модификатора `new` для исключения предупреждений, а также обращение к членам скрытого класса с помощью их полных имен.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-129">The example demonstrates how to use the `new` modifier to eliminate the warning message and how to access the hidden class members by using their fully qualified names.</span></span>  
   
- [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
+ [!code-csharp[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
   
- В случае удаления модификатора `new` программа продолжит компиляцию и выполнение, однако появится следующее предупреждение.  
+ <span data-ttu-id="dd7b2-130">В случае удаления модификатора `new` программа продолжит компиляцию и выполнение, однако появится следующее предупреждение.</span><span class="sxs-lookup"><span data-stu-id="dd7b2-130">If you remove the `new` modifier, the program will still compile and run, but you will get the following warning:</span></span>  
   
 ```  
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.  
 ```  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="dd7b2-131">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="dd7b2-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
- [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)
-
+## <a name="see-also"></a><span data-ttu-id="dd7b2-132">См. также</span><span class="sxs-lookup"><span data-stu-id="dd7b2-132">See Also</span></span>  
+ [<span data-ttu-id="dd7b2-133">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="dd7b2-133">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="dd7b2-134">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="dd7b2-134">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="dd7b2-135">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="dd7b2-135">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="dd7b2-136">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="dd7b2-136">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [<span data-ttu-id="dd7b2-137">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="dd7b2-137">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="dd7b2-138">Управление версиями с помощью ключевых слов Override и New</span><span class="sxs-lookup"><span data-stu-id="dd7b2-138">Versioning with the Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+ [<span data-ttu-id="dd7b2-139">Использование ключевых слов Override и New</span><span class="sxs-lookup"><span data-stu-id="dd7b2-139">Knowing When to Use Override and New Keywords</span></span>](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

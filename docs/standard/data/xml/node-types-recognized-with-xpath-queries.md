@@ -1,67 +1,65 @@
 ---
-title: "Типы узлов, распознаваемые запросами XPath | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Типы узлов, распознаваемые запросами XPath"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 1c1e48bbfd6388686fdb83f08668f7f0234275a5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Типы узлов, распознаваемые запросами XPath
-Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML\-документа.  
+# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="3b221-102">Типы узлов, распознаваемые запросами XPath</span><span class="sxs-lookup"><span data-stu-id="3b221-102">Node Types Recognized with XPath Queries</span></span>
+<span data-ttu-id="3b221-103">Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML-документа.</span><span class="sxs-lookup"><span data-stu-id="3b221-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
   
-## Типы узлов W3C XPath  
- Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML\-документа.  Ниже приведены типы узлов XPath, представленные перечислением <xref:System.Xml.XPath.XPathNodeType>.  
+## <a name="w3c-xpath-node-types"></a><span data-ttu-id="3b221-104">Типы узлов W3C XPath</span><span class="sxs-lookup"><span data-stu-id="3b221-104">W3C XPath Node Types</span></span>  
+ <span data-ttu-id="3b221-105">Типы узлов, распознаваемые в запросе XPath, отличаются от типов узлов в модели DOM XML-документа.</span><span class="sxs-lookup"><span data-stu-id="3b221-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="3b221-106">Ниже приведены типы узлов XPath, представленные перечислением <xref:System.Xml.XPath.XPathNodeType>.</span><span class="sxs-lookup"><span data-stu-id="3b221-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType>  
+-   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- Эти типы узлов основаны на модели данных XPath, где узлы являются производными от набора данных XML.  Типы узлов <xref:System.Xml.XPath.XPathNodeType> и <xref:System.Xml.XPath.XPathNodeType> \- расширения платформы Microsoft .NET Framework для базовых типов узлов, описанных в модели данных XPath.  
+ <span data-ttu-id="3b221-107">Эти типы узлов основаны на модели данных XPath, где узлы являются производными от набора данных XML.</span><span class="sxs-lookup"><span data-stu-id="3b221-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="3b221-108">Типы узлов <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> и <xref:System.Xml.XPath.XPathNodeType.Whitespace> - расширения платформы Microsoft .NET Framework для базовых типов узлов, описанных в модели данных XPath.</span><span class="sxs-lookup"><span data-stu-id="3b221-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
   
- Тип узла атрибута используется в модели данных XPath иначе, нежели в DOM.  В модели данных XPath узел элемента имеет набор связанных с ним узлов атрибута, и узел элемента является родителем каждого узла атрибута.  Однако в DOM узел элемента является владельцем, но не родителем.  В обеих моделях узлы атрибута и пространства имен не считаются дочерними узлами узла элемента.  
+ <span data-ttu-id="3b221-109">Тип узла атрибута используется в модели данных XPath иначе, нежели в DOM.</span><span class="sxs-lookup"><span data-stu-id="3b221-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="3b221-110">В модели данных XPath узел элемента имеет набор связанных с ним узлов атрибута, и узел элемента является родителем каждого узла атрибута.</span><span class="sxs-lookup"><span data-stu-id="3b221-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="3b221-111">Однако в DOM узел элемента является владельцем, но не родителем.</span><span class="sxs-lookup"><span data-stu-id="3b221-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="3b221-112">В обеих моделях узлы атрибута и пространства имен не считаются дочерними узлами узла элемента.</span><span class="sxs-lookup"><span data-stu-id="3b221-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
   
- Тип узла пространства имен \- дополнение к модели данных XPath и не является распознаваемым типом узла DOM.  
+ <span data-ttu-id="3b221-113">Тип узла пространства имен - дополнение к модели данных XPath и не является распознаваемым типом узла DOM.</span><span class="sxs-lookup"><span data-stu-id="3b221-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
   
- Дополнительные сведения о навигации по узлам элементов, атрибутов и пространств имен см. в разделах [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) и [Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
+ <span data-ttu-id="3b221-114">Дополнительные сведения о навигации элемента, атрибута и узлы пространства имен см. в разделе [узла задать навигации с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) и [атрибутов и пространство имен узла навигации с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) разделы.</span><span class="sxs-lookup"><span data-stu-id="3b221-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
   
-## См. также  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Обработка XML\-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Выборка XML\-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)   
- [Вычисление выражения XPath с помощью класса XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)   
- [Соответствие узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)   
- [Запросы XPath и пространства имен](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)   
- [Скомпилированные выражения XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="3b221-115">См. также</span><span class="sxs-lookup"><span data-stu-id="3b221-115">See Also</span></span>  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [<span data-ttu-id="3b221-116">Обработка XML-данных с использованием модели данных XPath</span><span class="sxs-lookup"><span data-stu-id="3b221-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [<span data-ttu-id="3b221-117">Выберите XML-данных с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="3b221-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [<span data-ttu-id="3b221-118">Вычисление выражения XPath с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="3b221-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [<span data-ttu-id="3b221-119">Соответствие узлов с помощью XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="3b221-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [<span data-ttu-id="3b221-120">Запросы XPath и пространства имен</span><span class="sxs-lookup"><span data-stu-id="3b221-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+ [<span data-ttu-id="3b221-121">Скомпилированные выражения XPath</span><span class="sxs-lookup"><span data-stu-id="3b221-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

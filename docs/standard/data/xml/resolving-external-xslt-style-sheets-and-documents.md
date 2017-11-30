@@ -1,67 +1,65 @@
 ---
-title: "Разрешение внешних таблиц стилей XSLT и документов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Разрешение внешних таблиц стилей XSLT и документов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a5e84935f9fff1f993a677d408287cd775269f03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разрешение внешних таблиц стилей XSLT и документов
-В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
+# <a name="resolving-external-xslt-style-sheets-and-documents"></a><span data-ttu-id="dc94d-102">Разрешение внешних таблиц стилей XSLT и документов</span><span class="sxs-lookup"><span data-stu-id="dc94d-102">Resolving External XSLT Style Sheets and Documents</span></span>
+<span data-ttu-id="dc94d-103">В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dc94d-103">There are several times during a transformation when you may need to resolve external resources.</span></span>  
   
 > [!NOTE]
->  Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел.  Можно выполнять XSLT\-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>.  
+>  <span data-ttu-id="dc94d-104">Класс <xref:System.Xml.Xsl.XslTransform> в версии [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] устарел.</span><span class="sxs-lookup"><span data-stu-id="dc94d-104">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="dc94d-105">Можно выполнять XSLT-преобразование, используя класс <xref:System.Xml.Xsl.XslCompiledTransform>.</span><span class="sxs-lookup"><span data-stu-id="dc94d-105">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  
   
- В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
+ <span data-ttu-id="dc94d-106">В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dc94d-106">There are several times during a transformation when you may need to resolve external resources:</span></span>  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить внешнюю таблицу стилей.  
+-   <span data-ttu-id="dc94d-107">При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить внешнюю таблицу стилей.</span><span class="sxs-lookup"><span data-stu-id="dc94d-107">During the <xref:System.Xml.Xsl.XslTransform.Load%2A> to locate an external style sheet.</span></span>  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить любые элементы `<xsl:include>` или `<xsl:import>`, обнаруженные в таблице стилей.  
+-   <span data-ttu-id="dc94d-108">При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить любые элементы `<xsl:include>` или `<xsl:import>`, обнаруженные в таблице стилей.</span><span class="sxs-lookup"><span data-stu-id="dc94d-108">During <xref:System.Xml.Xsl.XslTransform.Load%2A> to resolve any `<xsl:include>` or `<xsl:import>` elements found in the style sheet.</span></span>  
   
--   При использовании метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>, чтобы разрешить любые функции `document()`.  
+-   <span data-ttu-id="dc94d-109">При использовании метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>, чтобы разрешить любые функции `document()`.</span><span class="sxs-lookup"><span data-stu-id="dc94d-109">During <xref:System.Xml.Xsl.XslTransform.Transform%2A> to resolve any `document()` functions.</span></span>  
   
-## Использование класса XmlResolver  
- Если для проверки подлинности требуется доступ к сетевому ресурсу, используйте методы <xref:System.Xml.Xsl.XslTransform.Load%2A> с параметром <xref:System.Xml.XmlResolver>, чтобы передать объект <xref:System.Xml.XmlResolver> с набором необходимых свойств учетных данных.  
+## <a name="using-the-xmlresolver-class"></a><span data-ttu-id="dc94d-110">Использование класса XmlResolver</span><span class="sxs-lookup"><span data-stu-id="dc94d-110">Using the XmlResolver Class</span></span>  
+ <span data-ttu-id="dc94d-111">Если для проверки подлинности требуется доступ к сетевому ресурсу, используйте методы <xref:System.Xml.Xsl.XslTransform.Load%2A> с параметром <xref:System.Xml.XmlResolver>, чтобы передать объект <xref:System.Xml.XmlResolver> с набором необходимых свойств учетных данных.</span><span class="sxs-lookup"><span data-stu-id="dc94d-111">If authentication is required to access a network resource, use the <xref:System.Xml.Xsl.XslTransform.Load%2A> methods that have an <xref:System.Xml.XmlResolver> parameter to pass the <xref:System.Xml.XmlResolver> object, which has the necessary credential properties set.</span></span>  
   
- Если нужно использовать специальный класс <xref:System.Xml.XmlResolver> или указать другие учетные данные, то в следующей таблице приведен список необходимых задач, в зависимости от того, когда необходимо разрешить внешний ресурс.  
+ <span data-ttu-id="dc94d-112">Если нужно использовать специальный класс <xref:System.Xml.XmlResolver> или указать другие учетные данные, то в следующей таблице приведен список необходимых задач, в зависимости от того, когда необходимо разрешить внешний ресурс.</span><span class="sxs-lookup"><span data-stu-id="dc94d-112">If you have a custom <xref:System.Xml.XmlResolver> that you want to use, or if you need to specify different credentials, the following table lists the task required, depending on when the external resource needs resolution.</span></span>  
   
-|Процесс, требующий разрешения|Необходимая задача|  
-|-----------------------------------|------------------------|  
-|При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить таблицу стилей.|Указать перегруженный метод <xref:System.Xml.Xsl.XslTransform.Load%2A>, который принимает в качестве параметра объект <xref:System.Xml.XmlResolver>, если таблица стилей находится в ресурсе, требующем учетных данных.|  
-|При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить элементы `<xsl:include>` или `<xsl:import>`.|Указать перегруженный метод <xref:System.Xml.Xsl.XslTransform.Load%2A>, который принимает в качестве параметра объект <xref:System.Xml.XmlResolver>.  Объект <xref:System.Xml.XmlResolver> используется для загрузки таблиц стилей, на которые ссылаются инструкции `import` или `include`.  Если передается значение `null`, то внешние ресурсы не разрешаются.|  
-|При использовании преобразования для разрешения любых функций `document()`.|Указать объект <xref:System.Xml.XmlResolver> при преобразовании с помощью метода <xref:System.Xml.Xsl.XslTransform.Transform%2A>, который принимает аргумент <xref:System.Xml.XmlResolver>.|  
+|<span data-ttu-id="dc94d-113">Процесс, требующий разрешения</span><span class="sxs-lookup"><span data-stu-id="dc94d-113">What process requires resolution</span></span>|<span data-ttu-id="dc94d-114">Необходимая задача</span><span class="sxs-lookup"><span data-stu-id="dc94d-114">Task required</span></span>|  
+|--------------------------------------|-------------------|  
+|<span data-ttu-id="dc94d-115">При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы обнаружить таблицу стилей.</span><span class="sxs-lookup"><span data-stu-id="dc94d-115">During <xref:System.Xml.Xsl.XslTransform.Load%2A> to locate the style sheet.</span></span>|<span data-ttu-id="dc94d-116">Указать перегруженный метод <xref:System.Xml.Xsl.XslTransform.Load%2A>, который принимает в качестве параметра объект <xref:System.Xml.XmlResolver>, если таблица стилей находится в ресурсе, требующем учетных данных.</span><span class="sxs-lookup"><span data-stu-id="dc94d-116">Specify the overloaded <xref:System.Xml.Xsl.XslTransform.Load%2A> method that takes, as a parameter, an <xref:System.Xml.XmlResolver> if the style sheet is on a resource that requires credentials.</span></span>|  
+|<span data-ttu-id="dc94d-117">При использовании метода <xref:System.Xml.Xsl.XslTransform.Load%2A>, чтобы разрешить элементы `<xsl:include>` или `<xsl:import>`.</span><span class="sxs-lookup"><span data-stu-id="dc94d-117">During <xref:System.Xml.Xsl.XslTransform.Load%2A> to resolve `<xsl:include>` or `<xsl:import>`.</span></span>|<span data-ttu-id="dc94d-118">Указать перегруженный метод <xref:System.Xml.Xsl.XslTransform.Load%2A>, который принимает в качестве параметра объект <xref:System.Xml.XmlResolver>.</span><span class="sxs-lookup"><span data-stu-id="dc94d-118">Specify the overloaded <xref:System.Xml.Xsl.XslTransform.Load%2A> method that takes, as a parameter, an <xref:System.Xml.XmlResolver>.</span></span> <span data-ttu-id="dc94d-119">Объект <xref:System.Xml.XmlResolver> используется для загрузки таблиц стилей, на которые ссылаются инструкции `import` или `include`.</span><span class="sxs-lookup"><span data-stu-id="dc94d-119">The <xref:System.Xml.XmlResolver> is used to load the style sheets referenced by the `import` or `include` statements.</span></span> <span data-ttu-id="dc94d-120">Если передается значение `null`, то внешние ресурсы не разрешаются.</span><span class="sxs-lookup"><span data-stu-id="dc94d-120">If you pass in `null`, the external resources are not resolved.</span></span>|  
+|<span data-ttu-id="dc94d-121">При использовании преобразования для разрешения любых функций `document()`.</span><span class="sxs-lookup"><span data-stu-id="dc94d-121">During a transformation to resolve any `document()` functions.</span></span>|<span data-ttu-id="dc94d-122">Укажите <xref:System.Xml.XmlResolver> при преобразовании с помощью <xref:System.Xml.Xsl.XslTransform.Transform%2A> метода, принимающего <xref:System.Xml.XmlResolver> аргумент.</span><span class="sxs-lookup"><span data-stu-id="dc94d-122">Specify the <xref:System.Xml.XmlResolver> during the transformation by using the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method that takes an <xref:System.Xml.XmlResolver> argument.</span></span>|  
   
- Функция  `document()` получает другие XML\-ресурсы из таблицы стилей, в дополнение к начальным XML\-данным, предоставленным входным потоком.  Поскольку эта функция обеспечивает включение XML\-данных, расположенных в других местах, объект <xref:System.Xml.XmlResolver> со значением `null`, предоставленный методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>, предотвращает выполнение функции `document()`.  Если необходимо использовать функцию `document()`, используйте метод <xref:System.Xml.Xsl.XslTransform.Transform%2A>, который получает объект <xref:System.Xml.XmlResolver> в качестве параметра, в дополнение к соответствующему набору разрешений.  
+ <span data-ttu-id="dc94d-123">`document()` Функция получает другие XML-ресурсы из таблицы стилей, в дополнение к начальным XML-данным, предоставляемые входного потока.</span><span class="sxs-lookup"><span data-stu-id="dc94d-123">The `document()` function retrieves other XML resources from a style sheet, in addition to the initial XML data provided by the input stream.</span></span> <span data-ttu-id="dc94d-124">Поскольку эта функция обеспечивает включение XML-данных, расположенных в других местах, объект <xref:System.Xml.XmlResolver> со значением `null`, предоставленный методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>, предотвращает выполнение функции `document()`.</span><span class="sxs-lookup"><span data-stu-id="dc94d-124">Since this function allows the inclusion of XML data that can be located elsewhere, an <xref:System.Xml.XmlResolver> with a `null` value supplied to the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method prevents the `document()` function from executing.</span></span> <span data-ttu-id="dc94d-125">Если необходимо использовать функцию `document()`, используйте метод <xref:System.Xml.Xsl.XslTransform.Transform%2A>, который получает объект <xref:System.Xml.XmlResolver> в качестве параметра, в дополнение к соответствующему набору разрешений.</span><span class="sxs-lookup"><span data-stu-id="dc94d-125">If you want to use the `document()` function, use the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method that takes an <xref:System.Xml.XmlResolver> as a parameter, in addition to having the appropriate permission set.</span></span>  
   
- Дополнительные сведения о методе <xref:System.Xml.Xsl.XslTransform.Load%2A> и использовании им класса <xref:System.Xml.XmlResolver> см. в разделе <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=fullName>.  
+ <span data-ttu-id="dc94d-126">Дополнительные сведения о методе <xref:System.Xml.Xsl.XslTransform.Load%2A> и использовании им класса <xref:System.Xml.XmlResolver> см. в разделе <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dc94d-126">For more information on the <xref:System.Xml.Xsl.XslTransform.Load%2A> method and its use of the <xref:System.Xml.XmlResolver>, see <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.</span></span>  
   
- При вызове метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> разрешения вычисляются с учетом свидетельств, предоставленных во время загрузки, и этот набор разрешений назначается всему процессу преобразования.  Если функция `document()` пытается инициировать действие, для которого требуются разрешения, отсутствующие в наборе, вызывается исключение.  
+ <span data-ttu-id="dc94d-127">При вызове метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> разрешения вычисляются с учетом свидетельств, предоставленных во время загрузки, и этот набор разрешений назначается всему процессу преобразования.</span><span class="sxs-lookup"><span data-stu-id="dc94d-127">When the <xref:System.Xml.Xsl.XslTransform.Transform%2A> method is called, permissions are calculated against the evidence provided at load time, and that permission set is assigned to the entire transformation process.</span></span> <span data-ttu-id="dc94d-128">Если функция `document()` пытается инициировать действие, для которого требуются разрешения, отсутствующие в наборе, вызывается исключение.</span><span class="sxs-lookup"><span data-stu-id="dc94d-128">If the `document()` function attempts to initiate an action that requires permissions not found in the set, an exception is thrown.</span></span>  
   
-## См. также  
- [XSLT\-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)   
- [Реализация классом XslTransform XSLT\-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)   
- [Результаты вывода XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)   
- [XSLT\-преобразования над различными хранилищами](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)   
- [XsltArgumentList для параметров таблицы стилей и объектов расширения](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)   
- [Создание скриптов таблиц стилей XSLT с помощью \<msxsl:script\>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)   
- [Поддержка функции msxsl:node\-set\(\)](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)   
- [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)   
- [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)   
- [Ввод XPathDocument в XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)   
- [Ввод XmlDataDocument в XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)   
- [Ввод XmlDocument в XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a><span data-ttu-id="dc94d-129">См. также</span><span class="sxs-lookup"><span data-stu-id="dc94d-129">See Also</span></span>  
+ [<span data-ttu-id="dc94d-130">XSLT-преобразования с помощью класса XslTransform</span><span class="sxs-lookup"><span data-stu-id="dc94d-130">XSLT Transformations with the XslTransform Class</span></span>](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+ [<span data-ttu-id="dc94d-131">Реализуемых классом XslTransform XSLT-процессора</span><span class="sxs-lookup"><span data-stu-id="dc94d-131">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [<span data-ttu-id="dc94d-132">Выходные данные XslTransform</span><span class="sxs-lookup"><span data-stu-id="dc94d-132">Outputs from an XslTransform</span></span>](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+ [<span data-ttu-id="dc94d-133">XSLT-преобразования над различными хранилищами</span><span class="sxs-lookup"><span data-stu-id="dc94d-133">XSLT Transformations Over Different Stores</span></span>](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
+ [<span data-ttu-id="dc94d-134">XsltArgumentList для параметров таблицы стилей и объекты расширения</span><span class="sxs-lookup"><span data-stu-id="dc94d-134">XsltArgumentList for Style Sheet Parameters and Extension Objects</span></span>](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
+ [<span data-ttu-id="dc94d-135">Сценарии с помощью XSLT таблицы стилей \<msxsl: script ></span><span class="sxs-lookup"><span data-stu-id="dc94d-135">XSLT Stylesheet Scripting Using \<msxsl:script></span></span>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
+ [<span data-ttu-id="dc94d-136">Поддержка функции msxsl: node-set()</span><span class="sxs-lookup"><span data-stu-id="dc94d-136">Support for the msxsl:node-set() Function</span></span>](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
+ [<span data-ttu-id="dc94d-137">XPathNavigator в преобразованиях</span><span class="sxs-lookup"><span data-stu-id="dc94d-137">XPathNavigator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [<span data-ttu-id="dc94d-138">XPathNodeIterator в преобразованиях</span><span class="sxs-lookup"><span data-stu-id="dc94d-138">XPathNodeIterator in Transformations</span></span>](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [<span data-ttu-id="dc94d-139">Ввод XPathDocument в XslTransform</span><span class="sxs-lookup"><span data-stu-id="dc94d-139">XPathDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="dc94d-140">Ввод XmlDataDocument в XslTransform</span><span class="sxs-lookup"><span data-stu-id="dc94d-140">XmlDataDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [<span data-ttu-id="dc94d-141">Ввод XmlDocument в XslTransform</span><span class="sxs-lookup"><span data-stu-id="dc94d-141">XmlDocument Input to XslTransform</span></span>](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

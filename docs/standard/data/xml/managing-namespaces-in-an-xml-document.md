@@ -1,51 +1,49 @@
 ---
-title: "Управление пространствами имен в XML-документе | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Управление пространствами имен в XML-документе"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Управление пространствами имен в XML-документе
-Пространства имен XML связывают имена элементов и атрибутов в XML\-документе с пользовательскими и стандартными URI.  Для создания этих связей определяются префиксы для URI пространства имен, с помощью которых затем квалифицируются имена элементов и атрибутов в XML\-данных.  Пространства имен предотвращают конфликты имен элементов и атрибутов, а также позволяют обрабатывать и проверять элементы и атрибуты с одним и тем же именем.  
+# <a name="managing-namespaces-in-an-xml-document"></a><span data-ttu-id="2fbcb-102">Управление пространствами имен в XML-документе</span><span class="sxs-lookup"><span data-stu-id="2fbcb-102">Managing Namespaces in an XML Document</span></span>
+<span data-ttu-id="2fbcb-103">Пространства имен XML связывают имена элементов и атрибутов в XML-документе с пользовательскими и стандартными URI.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-103">XML namespaces associate element and attribute names in an XML document with custom and predefined URIs.</span></span> <span data-ttu-id="2fbcb-104">Для создания этих связей определяются префиксы для URI пространства имен, с помощью которых затем квалифицируются имена элементов и атрибутов в XML-данных.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-104">To create these associations, you define prefixes for namespace URIs, and use those prefixes to qualify element and attribute names in XML data.</span></span> <span data-ttu-id="2fbcb-105">Пространства имен предотвращают конфликты имен элементов и атрибутов, а также позволяют обрабатывать и проверять элементы и атрибуты с одним и тем же именем.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-105">Namespaces prevent element and attribute name collisions, and enable elements and attributes of the same name to be handled and validated differently.</span></span>  
   
 <a name="declare"></a>   
-## Объявление пространств имен  
- Пространство имен для элемента объявляется с помощью атрибута `xmlns:`:  
+## <a name="declaring-namespaces"></a><span data-ttu-id="2fbcb-106">Объявление пространств имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-106">Declaring namespaces</span></span>  
+ <span data-ttu-id="2fbcb-107">Пространство имен для элемента объявляется с помощью атрибута `xmlns:`:</span><span class="sxs-lookup"><span data-stu-id="2fbcb-107">To declare a namespace on an element, you use the `xmlns:` attribute:</span></span>  
   
  `xmlns:<name>=<"uri">`  
   
- где `<name>` — это префикс пространства имен, а `<"uri">` — это URI, который определяет это пространство имен.  После объявления префикса его можно использовать для уточнения имен элементов и атрибутов в XML\-документе и связывания их с URI\-кодом пространства имен.  Так как этот префикс пространства имен используется во всем документе, он должен быть коротким.  
+ <span data-ttu-id="2fbcb-108">где `<name>` — это префикс пространства имен, а `<"uri">` — это URI, который определяет это пространство имен.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-108">where `<name>` is the namespace prefix and `<"uri">` is the URI that identifies the namespace.</span></span> <span data-ttu-id="2fbcb-109">После объявления префикса его можно использовать для уточнения имен элементов и атрибутов в XML-документе и связывания их с URI-кодом пространства имен.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-109">After you declare the prefix, you can use it to qualify elements and attributes in an XML document and associate them with the namespace URI.</span></span> <span data-ttu-id="2fbcb-110">Так как этот префикс пространства имен используется во всем документе, он должен быть коротким.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-110">Because the namespace prefix is used throughout a document, it should be short in length.</span></span>  
   
- В данном примере определяются два элемента `BOOK`.  Первый элемент квалифицируется префиксом `mybook`, а второй — префиксом `bb`.  Каждый префикс связан с разными URI\-кодами пространств имен:  
+ <span data-ttu-id="2fbcb-111">В данном примере определяются два элемента `BOOK`.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-111">This example defines two `BOOK` elements.</span></span> <span data-ttu-id="2fbcb-112">Первый элемент квалифицируется префиксом `mybook`, а второй — префиксом `bb`.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-112">The first element element is qualified by the prefix, `mybook`, and the second element is qualified by the prefix, `bb`.</span></span> <span data-ttu-id="2fbcb-113">Каждый префикс связан с разными URI-кодами пространств имен:</span><span class="sxs-lookup"><span data-stu-id="2fbcb-113">Each prefix is associated with a different namespace URI:</span></span>  
   
-```  
+```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
 <bb:BOOK xmlns:bb="urn:blueyonderairlines">  
 ```  
   
- Чтобы указать, что элемент принадлежит к определенному пространству имен, добавьте к нему префикс пространства имен.  Например, если элемент `Author` принадлежит пространству имен `mybook`, то он объявляется как `<mybook:Author>`.  
+ <span data-ttu-id="2fbcb-114">Чтобы указать, что элемент принадлежит к определенному пространству имен, добавьте к нему префикс пространства имен.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-114">To signify that an element is a part of a particular namespace, add the namespace prefix to it.</span></span> <span data-ttu-id="2fbcb-115">Например, если элемент `Author` принадлежит пространству имен `mybook`, то он объявляется как `<mybook:Author>`.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-115">For example, if a `Author` element belongs to the `mybook` namespace, it is declared as `<mybook:Author>`.</span></span>  
   
 <a name="scope"></a>   
-## Область видимости объявления  
- Пространство имен действует от точки объявления до конца элемента, где оно было объявлено.  В этом примере пространство имен, определенное в элементе `BOOK`, не применяется к элементам, которые находятся за пределами элемента `BOOK`, например к элементу `Publisher`:  
+## <a name="declaration-scope"></a><span data-ttu-id="2fbcb-116">Область видимости объявления</span><span class="sxs-lookup"><span data-stu-id="2fbcb-116">Declaration scope</span></span>  
+ <span data-ttu-id="2fbcb-117">Пространство имен действует от точки объявления до конца элемента, где оно было объявлено.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-117">A namespace is effective from its point of declaration until the end of the element it was declared in.</span></span> <span data-ttu-id="2fbcb-118">В этом примере пространство имен, определенное в элементе `BOOK`, не применяется к элементам, которые находятся за пределами элемента `BOOK`, например к элементу `Publisher`:</span><span class="sxs-lookup"><span data-stu-id="2fbcb-118">In this example, the namespace defined in the `BOOK` element doesn't apply to elements outside the `BOOK` element, such as the `Publisher` element:</span></span>  
   
-```  
+```xml  
 <Author>Joe Smith</Author>  
 <BOOK xmlns:book="http://www.contoso.com">  
     <title>My Wonderful Day</title>  
@@ -56,38 +54,38 @@ caps.handback.revision: 5
 </Publisher>  
 ```  
   
- Пространство имен можно использовать только после его объявления, однако это не значит, что объявление пространства имен должно располагаться в самом начале XML\-документа.  
+ <span data-ttu-id="2fbcb-119">Пространство имен можно использовать только после его объявления, однако это не значит, что объявление пространства имен должно располагаться в самом начале XML-документа.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-119">A namespace must be declared before it can be used, but it doesn't have to appear at the top of the XML document.</span></span>  
   
- Если в XML\-документе используются несколько пространств имен, можно определить одно из них как пространство по умолчанию, чтобы упростить чтение документа.  Пространство имен по умолчанию объявляется в корневом элементе и применяется ко всем элементам в документе, которые не квалифицированы.  Пространства имен по умолчанию применяются только к элементам и не применяются к атрибутам.  
+ <span data-ttu-id="2fbcb-120">Если в XML-документе используются несколько пространств имен, можно определить одно из них как пространство по умолчанию, чтобы упростить чтение документа.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-120">When you use multiple namespaces in an XML document, you can define one namespace as the default namespace to create a cleaner looking document.</span></span> <span data-ttu-id="2fbcb-121">Пространство имен по умолчанию объявляется в корневом элементе и применяется ко всем элементам в документе, которые не квалифицированы.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-121">The default namespace is declared in the root element and applies to all unqualified elements in the document.</span></span> <span data-ttu-id="2fbcb-122">Пространства имен по умолчанию применяются только к элементам и не применяются к атрибутам.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-122">Default namespaces apply to elements only, not to attributes.</span></span>  
   
- Для использования пространства имен по умолчанию не указывайте префикс и двоеточие в объявлении элемента:  
+ <span data-ttu-id="2fbcb-123">Для использования пространства имен по умолчанию не указывайте префикс и двоеточие в объявлении элемента:</span><span class="sxs-lookup"><span data-stu-id="2fbcb-123">To use the default namespace, omit the prefix and the colon from the declaration on the element:</span></span>  
   
-```  
+```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
 ```  
   
-## Управление пространствами имен  
- В классе <xref:System.Xml.XmlNamespaceManager> хранится коллекция URI пространств имен и их префиксов. С его помощью можно искать, добавлять и удалять пространства имен из этой коллекции.  В некоторых контекстах этот класс необходим для повышения производительности обработки XML.  Например, класс <xref:System.Xml.XmlNamespaceManager> используется классом <xref:System.Xml.Xsl.XsltContext> для обеспечения поддержки XPath.  
+## <a name="managing-namespaces"></a><span data-ttu-id="2fbcb-124">Управление пространствами имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-124">Managing namespaces</span></span>  
+ <span data-ttu-id="2fbcb-125">В классе <xref:System.Xml.XmlNamespaceManager> хранится коллекция URI пространств имен и их префиксов. С его помощью можно искать, добавлять и удалять пространства имен из этой коллекции.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-125">The <xref:System.Xml.XmlNamespaceManager> class stores a collection of namespace URIs and their prefixes, and lets you look up, add, and remove namespaces from this collection.</span></span> <span data-ttu-id="2fbcb-126">В некоторых контекстах этот класс необходим для повышения производительности обработки XML.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-126">In certain contexts, this class is required for better XML processing performance.</span></span> <span data-ttu-id="2fbcb-127">Например, класс <xref:System.Xml.Xsl.XsltContext> используется классом <xref:System.Xml.XmlNamespaceManager> для обеспечения поддержки XPath.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-127">For example, the <xref:System.Xml.Xsl.XsltContext> class uses <xref:System.Xml.XmlNamespaceManager> for XPath support.</span></span>  
   
- Диспетчер пространств имен не выполняет проверку пространств имен, так как предполагается, что префиксы и пространства имен уже проверены и соответствуют спецификации [W3C для пространств имен](http://www.w3.org/TR/REC-xml-names/).  
+ <span data-ttu-id="2fbcb-128">Диспетчер пространств имен не выполняет проверку пространств имен, но предполагается, что префиксы и пространства имен уже проверены и соответствуют [W3C для пространств имен](http://www.w3.org/TR/REC-xml-names/) спецификации.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-128">The namespace manager doesn't perform any validation on the namespaces, but assumes that prefixes and namespaces have already been verified and conform to the [W3C Namespaces](http://www.w3.org/TR/REC-xml-names/) specification.</span></span>  
   
 > [!NOTE]
->  [LINQ to XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-xml.md) не использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен.  Сведения об управлении пространствами имен в случае использования LINQ to XML см. в разделе [Работа с пространствами имен XML](../../../../ocs/visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) документации по LINQ.  
+>  <span data-ttu-id="2fbcb-129">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) не использует <xref:System.Xml.XmlNamespaceManager> для управления пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-129">[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) doesn't use <xref:System.Xml.XmlNamespaceManager> to manage namespaces.</span></span> <span data-ttu-id="2fbcb-130">В разделе [работа с пространствами имен XML](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) в документации LINQ сведения об управлении пространств имен при использовании LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-130">See [Working with XML Namespaces](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) in the LINQ documentation for information about managing namespaces when using LINQ to XML.</span></span>  
   
- Вот некоторые из задач по управлению и подстановке, которые можно выполнить с помощью класса <xref:System.Xml.XmlNamespaceManager>.  Дополнительные сведения и примеры см. в разделах справочника, посвященных каждому методу или свойству.  
+ <span data-ttu-id="2fbcb-131">Вот некоторые из задач по управлению и подстановке, которые можно выполнить с помощью класса <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-131">Here are some of the management and lookup tasks you can perform with the <xref:System.Xml.XmlNamespaceManager> class.</span></span> <span data-ttu-id="2fbcb-132">Дополнительные сведения и примеры см. в разделах справочника, посвященных каждому методу или свойству.</span><span class="sxs-lookup"><span data-stu-id="2fbcb-132">For more information and examples, follow the links to the reference page for each method or property.</span></span>  
   
-|Целевой тип|Применение|  
-|-----------------|----------------|  
-|Добавление пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
-|Удаление пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
-|Поиск URI для пространства имен по умолчанию|Свойство <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>|  
-|Поиск URI для префикса пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>|  
-|Поиск префикса для URI\-кодов пространства имен|Метод <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>|  
-|Получение списка пространств имен, которые есть на текущем узле|Метод <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>|  
-|Задание области видимости пространства имен|Методы <xref:System.Xml.XmlNamespaceManager.PushScope%2A> и <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Проверка того, определен ли префикс в текущей области|Метод <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
-|Получение таблицы имен используется для поиска префиксов и URI|Свойство <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
+|<span data-ttu-id="2fbcb-133">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="2fbcb-133">To</span></span>|<span data-ttu-id="2fbcb-134">Применение</span><span class="sxs-lookup"><span data-stu-id="2fbcb-134">Use</span></span>|  
+|--------|---------|  
+|<span data-ttu-id="2fbcb-135">Добавление пространства имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-135">Add a namespace</span></span>|<span data-ttu-id="2fbcb-136">Метод <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-136"><xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-137">Удаление пространства имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-137">Remove a namespace</span></span>|<span data-ttu-id="2fbcb-138">Метод <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-138"><xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-139">Поиск URI для пространства имен по умолчанию</span><span class="sxs-lookup"><span data-stu-id="2fbcb-139">Find the URI for the default namespace</span></span>|<span data-ttu-id="2fbcb-140">Свойство <xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-140"><xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> property</span></span>|  
+|<span data-ttu-id="2fbcb-141">Поиск URI для префикса пространства имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-141">Find the URI for a namespace prefix</span></span>|<span data-ttu-id="2fbcb-142">Метод <xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-142"><xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-143">Поиск префикса для URI-кодов пространства имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-143">Find the prefix for a namespace URI</span></span>|<span data-ttu-id="2fbcb-144">Метод <xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-144"><xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-145">Получение списка пространств имен, которые есть на текущем узле</span><span class="sxs-lookup"><span data-stu-id="2fbcb-145">Get a list of namespaces in the current node</span></span>|<span data-ttu-id="2fbcb-146">Метод <xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-146"><xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-147">Задание области видимости пространства имен</span><span class="sxs-lookup"><span data-stu-id="2fbcb-147">Scope a namespace</span></span>|<span data-ttu-id="2fbcb-148">Методы <xref:System.Xml.XmlNamespaceManager.PushScope%2A> и <xref:System.Xml.XmlNamespaceManager.PopScope%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-148"><xref:System.Xml.XmlNamespaceManager.PushScope%2A> and <xref:System.Xml.XmlNamespaceManager.PopScope%2A> methods</span></span>|  
+|<span data-ttu-id="2fbcb-149">Проверка того, определен ли префикс в текущей области</span><span class="sxs-lookup"><span data-stu-id="2fbcb-149">Check whether a prefix is defined in the current scope</span></span>|<span data-ttu-id="2fbcb-150">Метод <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-150"><xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> method</span></span>|  
+|<span data-ttu-id="2fbcb-151">Получение таблицы имен используется для поиска префиксов и URI</span><span class="sxs-lookup"><span data-stu-id="2fbcb-151">Get the name table used to look up prefixes and URIs</span></span>|<span data-ttu-id="2fbcb-152">Свойство <xref:System.Xml.XmlNamespaceManager.NameTable%2A></span><span class="sxs-lookup"><span data-stu-id="2fbcb-152"><xref:System.Xml.XmlNamespaceManager.NameTable%2A> property</span></span>|  
   
-## См. также  
- <xref:System.Xml.XmlNamespaceManager>   
- [XML\-документы и данные](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="2fbcb-153">См. также</span><span class="sxs-lookup"><span data-stu-id="2fbcb-153">See Also</span></span>  
+ <xref:System.Xml.XmlNamespaceManager>  
+ [<span data-ttu-id="2fbcb-154">XML-документы и данные</span><span class="sxs-lookup"><span data-stu-id="2fbcb-154">XML Documents and Data</span></span>](../../../../docs/standard/data/xml/index.md)

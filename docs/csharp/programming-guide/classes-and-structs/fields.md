@@ -1,79 +1,59 @@
 ---
 title: "Поля (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- fields [C#]
+helpviewer_keywords: fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: acf4ade68235a196fd6d2f3c6c71279748f3dd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="fields-c-programming-guide"></a>Поля (Руководство по программированию в C#)
-*Поле* является переменной любого типа, которая объявлена непосредственно в [классе](../../../csharp/language-reference/keywords/class.md) или [структуре](../../../csharp/language-reference/keywords/struct.md). Поля являются *членами* содержащих их типов.  
+# <a name="fields-c-programming-guide"></a><span data-ttu-id="6c69b-102">Поля (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="6c69b-102">Fields (C# Programming Guide)</span></span>
+<span data-ttu-id="6c69b-103">*Поле* является переменной любого типа, которая объявлена непосредственно в [классе](../../../csharp/language-reference/keywords/class.md) или [структуре](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="6c69b-104">Поля являются *членами* содержащих их типов.</span><span class="sxs-lookup"><span data-stu-id="6c69b-104">Fields are *members* of their containing type.</span></span>  
   
- Класс или структура может иметь поля экземпляра или статические поля. Поля экземпляра относятся только к экземпляру типа. Если имеется класс T с полем экземпляра F, можно создать два объекта типа T и изменить значение F в каждом объекте, не влияя на значение в другом объекте. Напротив, статическое поле принадлежит к самому классу и является общим для всех экземпляров этого класса. Изменения, выполненные из экземпляра A, будут немедленно доступны экземплярам B и C, если они получат доступ к полю.  
+ <span data-ttu-id="6c69b-105">Класс или структура может иметь поля экземпляра или статические поля.</span><span class="sxs-lookup"><span data-stu-id="6c69b-105">A class or struct may have instance fields or static fields or both.</span></span> <span data-ttu-id="6c69b-106">Поля экземпляра относятся только к экземпляру типа.</span><span class="sxs-lookup"><span data-stu-id="6c69b-106">Instance fields are specific to an instance of a type.</span></span> <span data-ttu-id="6c69b-107">Если имеется класс T с полем экземпляра F, можно создать два объекта типа T и изменить значение F в каждом объекте, не влияя на значение в другом объекте.</span><span class="sxs-lookup"><span data-stu-id="6c69b-107">If you have a class T, with an instance field F, you can create two objects of type T, and modify the value of F in each object without affecting the value in the other object.</span></span> <span data-ttu-id="6c69b-108">Напротив, статическое поле принадлежит к самому классу и является общим для всех экземпляров этого класса.</span><span class="sxs-lookup"><span data-stu-id="6c69b-108">By contrast, a static field belongs to the class itself, and is shared among all instances of that class.</span></span> <span data-ttu-id="6c69b-109">Изменения, выполненные из экземпляра A, будут немедленно доступны экземплярам B и C, если они получат доступ к полю.</span><span class="sxs-lookup"><span data-stu-id="6c69b-109">Changes made from instance A will be visibly immediately to instances B and C if they access the field.</span></span>  
   
- Как правило, следует использовать поля только для переменных, являющихся закрытыми или защищенными. Данные, которые класс представляет клиентскому коду, должны предоставляться через [методы](../../../csharp/programming-guide/classes-and-structs/methods.md), [свойства](../../../csharp/programming-guide/classes-and-structs/properties.md) и [индексаторы](../../../csharp/programming-guide/indexers/index.md). Используя эти конструкции для косвенного доступа к внутренним полям, можно предотвратить использование недопустимых входных значений. Закрытое поле, которое хранит данные, представленные открытым свойством, называется *резервным хранилищем* или *резервным полем*.  
+ <span data-ttu-id="6c69b-110">Как правило, следует использовать поля только для переменных, являющихся закрытыми или защищенными.</span><span class="sxs-lookup"><span data-stu-id="6c69b-110">Generally, you should use fields only for variables that have private or protected accessibility.</span></span> <span data-ttu-id="6c69b-111">Данные, которые класс представляет клиентскому коду, должны предоставляться через [методы](../../../csharp/programming-guide/classes-and-structs/methods.md), [свойства](../../../csharp/programming-guide/classes-and-structs/properties.md) и [индексаторы](../../../csharp/programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-111">Data that your class exposes to client code should be provided through [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md) and [indexers](../../../csharp/programming-guide/indexers/index.md).</span></span> <span data-ttu-id="6c69b-112">Используя эти конструкции для косвенного доступа к внутренним полям, можно предотвратить использование недопустимых входных значений.</span><span class="sxs-lookup"><span data-stu-id="6c69b-112">By using these constructs for indirect access to internal fields, you can guard against invalid input values.</span></span> <span data-ttu-id="6c69b-113">Закрытое поле, которое хранит данные, представленные открытым свойством, называется *резервным хранилищем* или *резервным полем*.</span><span class="sxs-lookup"><span data-stu-id="6c69b-113">A private field that stores the data exposed by a public property is called a *backing store* or *backing field*.</span></span>  
   
- Как правило, поля хранят данные, которые должны быть доступны нескольким методам класса и храниться дольше, чем время существования любого отдельного метода. Например, класс, представляющий календарную дату, может иметь три целочисленных поля: одно для месяца, одно для числа и одно для года. Переменные, не используемые вне области одного метода, должны быть объявлены как *локальные переменные* в самом теле метода.  
+ <span data-ttu-id="6c69b-114">Как правило, поля хранят данные, которые должны быть доступны нескольким методам класса и храниться дольше, чем время существования любого отдельного метода.</span><span class="sxs-lookup"><span data-stu-id="6c69b-114">Fields typically store the data that must be accessible to more than one class method and must be stored for longer than the lifetime of any single method.</span></span> <span data-ttu-id="6c69b-115">Например, класс, представляющий календарную дату, может иметь три целочисленных поля: одно для месяца, одно для числа и одно для года.</span><span class="sxs-lookup"><span data-stu-id="6c69b-115">For example, a class that represents a calendar date might have three integer fields: one for the month, one for the day, and one for the year.</span></span> <span data-ttu-id="6c69b-116">Переменные, не используемые вне области одного метода, должны быть объявлены как *локальные переменные* в самом теле метода.</span><span class="sxs-lookup"><span data-stu-id="6c69b-116">Variables that are not used outside the scope of a single method should be declared as *local variables* within the method body itself.</span></span>  
   
- Поля объявляются в блоке класса путем указания уровня доступа поля, за которым следует тип поля, а затем имя поля. Например:  
+ <span data-ttu-id="6c69b-117">Поля объявляются в блоке класса путем указания уровня доступа поля, за которым следует тип поля, а затем имя поля.</span><span class="sxs-lookup"><span data-stu-id="6c69b-117">Fields are declared in the class block by specifying the access level of the field, followed by the type of the field, followed by the name of the field.</span></span> <span data-ttu-id="6c69b-118">Пример:</span><span class="sxs-lookup"><span data-stu-id="6c69b-118">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
- Для доступа к полю в объекте добавьте точку после имени объекта, за которой следует имя поля, как в `objectname.fieldname`. Например:  
+ <span data-ttu-id="6c69b-119">Для доступа к полю в объекте добавьте точку после имени объекта, за которой следует имя поля, как в `objectname.fieldname`.</span><span class="sxs-lookup"><span data-stu-id="6c69b-119">To access a field in an object, add a period after the object name, followed by the name of the field, as in `objectname.fieldname`.</span></span> <span data-ttu-id="6c69b-120">Пример:</span><span class="sxs-lookup"><span data-stu-id="6c69b-120">For example:</span></span>  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
- Полю можно присвоить начальное значение с помощью оператора присваивания при объявлении поля. Чтобы автоматически назначить поле `day`, например полю `"Monday"`, нужно объявить `day`, как в следующем примере:  
+ <span data-ttu-id="6c69b-121">Полю можно присвоить начальное значение с помощью оператора присваивания при объявлении поля.</span><span class="sxs-lookup"><span data-stu-id="6c69b-121">A field can be given an initial value by using the assignment operator when the field is declared.</span></span> <span data-ttu-id="6c69b-122">Чтобы автоматически назначить поле `day`, например полю `"Monday"`, нужно объявить `day`, как в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="6c69b-122">To automatically assign the `day` field to `"Monday"`, for example, you would declare `day` as in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
- Поля инициализируются непосредственно перед вызовом конструктора для экземпляра объекта. Если конструктор присваивает значение поля, он заменит значения, присвоенные при объявлении поля. Дополнительные сведения см. в разделе [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
+ <span data-ttu-id="6c69b-123">Поля инициализируются непосредственно перед вызовом конструктора для экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="6c69b-123">Fields are initialized immediately before the constructor for the object instance is called.</span></span> <span data-ttu-id="6c69b-124">Если конструктор присваивает значение поля, он заменит значения, присвоенные при объявлении поля.</span><span class="sxs-lookup"><span data-stu-id="6c69b-124">If the constructor assigns the value of a field, it will overwrite any value given during field declaration.</span></span> <span data-ttu-id="6c69b-125">Дополнительные сведения см. в разделе [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-125">For more information, see [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).</span></span>  
   
 > [!NOTE]
->  Инициализатор поля не может ссылаться на другие поля экземпляров.  
+>  <span data-ttu-id="6c69b-126">Инициализатор поля не может ссылаться на другие поля экземпляров.</span><span class="sxs-lookup"><span data-stu-id="6c69b-126">A field initializer cannot refer to other instance fields.</span></span>  
   
- Поля могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md) и [internal](../../../csharp/language-reference/keywords/internal.md) или `protected internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к полю. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ <span data-ttu-id="6c69b-127">Поля могут быть помечены как [открытый](../../../csharp/language-reference/keywords/public.md), [закрытый](../../../csharp/language-reference/keywords/private.md), [защищенных](../../../csharp/language-reference/keywords/protected.md), [внутренней](../../../csharp/language-reference/keywords/internal.md), [защищенные внутренние](../../../csharp/language-reference/keywords/protected-internal.md) или [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-127">Fields can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="6c69b-128">Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к полю.</span><span class="sxs-lookup"><span data-stu-id="6c69b-128">These access modifiers define how users of the class can access the fields.</span></span> <span data-ttu-id="6c69b-129">Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-129">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
- При необходимости можно объявить поле статическим ([static](../../../csharp/language-reference/keywords/static.md)). Это делает поле доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует. Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ <span data-ttu-id="6c69b-130">При необходимости можно объявить поле статическим ([static](../../../csharp/language-reference/keywords/static.md)).</span><span class="sxs-lookup"><span data-stu-id="6c69b-130">A field can optionally be declared [static](../../../csharp/language-reference/keywords/static.md).</span></span> <span data-ttu-id="6c69b-131">Это делает поле доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует.</span><span class="sxs-lookup"><span data-stu-id="6c69b-131">This makes the field available to callers at any time, even if no instance of the class exists.</span></span> <span data-ttu-id="6c69b-132">Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-132">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- Поле может быть объявлено доступным только для чтения ([readonly](../../../csharp/language-reference/keywords/readonly.md)). Полю только для чтения можно присвоить значение только во время инициализации или в конструкторе. Поле `static``readonly` очень похоже на константу, за исключением того, что компилятор C# не имеет доступа к значению статического поля только для чтения во время компиляции, но только во время выполнения. Дополнительные сведения см. в разделе [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md).  
+ <span data-ttu-id="6c69b-133">Поле может быть объявлено доступным только для чтения ([readonly](../../../csharp/language-reference/keywords/readonly.md)).</span><span class="sxs-lookup"><span data-stu-id="6c69b-133">A field can be declared [readonly](../../../csharp/language-reference/keywords/readonly.md).</span></span> <span data-ttu-id="6c69b-134">Полю только для чтения можно присвоить значение только во время инициализации или в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="6c69b-134">A read-only field can only be assigned a value during initialization or in a constructor.</span></span> <span data-ttu-id="6c69b-135">Поле `static``readonly` очень похоже на константу, за исключением того, что компилятор C# не имеет доступа к значению статического поля только для чтения во время компиляции, но только во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="6c69b-135">A `static``readonly` field is very similar to a constant, except that the C# compiler does not have access to the value of a static read-only field at compile time, only at run time.</span></span> <span data-ttu-id="6c69b-136">Дополнительные сведения см. в разделе [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md).</span><span class="sxs-lookup"><span data-stu-id="6c69b-136">For more information, see [Constants](../../../csharp/programming-guide/classes-and-structs/constants.md).</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="6c69b-137">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="6c69b-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="6c69b-138">См. также</span><span class="sxs-lookup"><span data-stu-id="6c69b-138">See Also</span></span>  
+ [<span data-ttu-id="6c69b-139">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6c69b-139">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6c69b-140">Классы и структуры</span><span class="sxs-lookup"><span data-stu-id="6c69b-140">Classes and Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [<span data-ttu-id="6c69b-141">Использование конструкторов</span><span class="sxs-lookup"><span data-stu-id="6c69b-141">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+ [<span data-ttu-id="6c69b-142">Наследование</span><span class="sxs-lookup"><span data-stu-id="6c69b-142">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [<span data-ttu-id="6c69b-143">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="6c69b-143">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="6c69b-144">Абстрактные и запечатанные классы и члены классов</span><span class="sxs-lookup"><span data-stu-id="6c69b-144">Abstract and Sealed Classes and Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)

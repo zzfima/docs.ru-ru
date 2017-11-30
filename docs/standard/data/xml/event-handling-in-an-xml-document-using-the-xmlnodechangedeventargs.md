@@ -1,42 +1,43 @@
 ---
-title: "Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
-Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий.  События и описания условий их срабатывания приведены в следующей таблице.  
+# <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a><span data-ttu-id="d988b-102">Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs</span><span class="sxs-lookup"><span data-stu-id="d988b-102">Event Handling in an XML Document Using the XmlNodeChangedEventArgs</span></span>
+<span data-ttu-id="d988b-103">**XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, зарегистрированных на **XmlDocument** для обработки событий.</span><span class="sxs-lookup"><span data-stu-id="d988b-103">The **XmlNodeChangedEventArgs** encapsulates the arguments passed to the event handlers registered on the **XmlDocument** object for handling events.</span></span> <span data-ttu-id="d988b-104">События и описания условий их срабатывания приведены в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="d988b-104">The events and a description of when they are fired is given in the following table.</span></span>  
   
-|Событие|Срабатывание|  
-|-------------|------------------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|Перед вставкой узла, принадлежащего текущему документу, в другой узел.|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|После вставки узла, принадлежащего текущему документу, в другой узел.|  
-|<xref:System.Xml.XmlDocument.NodeRemoving>|Перед удалением узла, принадлежащего этому документу, из документа.|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|После удаления узла, принадлежащего этому документу, из родителя.|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|Перед изменением значения узла.|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|После изменения значения узла.|  
+|<span data-ttu-id="d988b-105">Событие</span><span class="sxs-lookup"><span data-stu-id="d988b-105">Event</span></span>|<span data-ttu-id="d988b-106">Срабатывание</span><span class="sxs-lookup"><span data-stu-id="d988b-106">Fired</span></span>|  
+|-----------|-----------|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|<span data-ttu-id="d988b-107">Перед вставкой узла, принадлежащего текущему документу, в другой узел.</span><span class="sxs-lookup"><span data-stu-id="d988b-107">When a node belonging to the current document is about to be inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|<span data-ttu-id="d988b-108">После вставки узла, принадлежащего текущему документу, в другой узел.</span><span class="sxs-lookup"><span data-stu-id="d988b-108">When a node belonging to the current document has been inserted into another node.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoving>|<span data-ttu-id="d988b-109">Перед удалением узла, принадлежащего этому документу, из документа.</span><span class="sxs-lookup"><span data-stu-id="d988b-109">When a node belonging to this document is about to be removed from the document.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|<span data-ttu-id="d988b-110">После удаления узла, принадлежащего этому документу, из родителя.</span><span class="sxs-lookup"><span data-stu-id="d988b-110">When a node belonging to this document has been removed from its parent.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|<span data-ttu-id="d988b-111">Перед изменением значения узла.</span><span class="sxs-lookup"><span data-stu-id="d988b-111">When the value of a node is about to be changed.</span></span>|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|<span data-ttu-id="d988b-112">После изменения значения узла.</span><span class="sxs-lookup"><span data-stu-id="d988b-112">When the value of a node has been changed.</span></span>|  
   
 > [!NOTE]
->  Если использование памяти **XmlDataDocument** полностью оптимизировано для работы хранилища **DataSet**, то **XmlDataDocument** может не инициировать ни одно из приведенных выше событий при внесении изменений в базовом хранилище **DataSet**.  Если эти события нужны, то необходимо просмотреть один раз весь **XmlDocument**, чтобы полностью оптимизировать использование памяти.  
+>  <span data-ttu-id="d988b-113">Если **XmlDataDocument** использование памяти полностью оптимизирован для использования **DataSet** хранилища, **XmlDataDocument** не могут вызывать события, перечисленные выше, если изменения в базовом **набора данных**.</span><span class="sxs-lookup"><span data-stu-id="d988b-113">If the **XmlDataDocument** memory usage is fully optimized to use **DataSet** storage, the **XmlDataDocument** might not raise any of the events listed above when changes are made to the underlying **DataSet**.</span></span> <span data-ttu-id="d988b-114">Если эти события нужны, то необходимо просмотреть весь **XmlDocument** один раз, чтобы полностью оптимизировать использование памяти.</span><span class="sxs-lookup"><span data-stu-id="d988b-114">If you need these events, you must traverse the whole **XmlDocument** once to make the memory usage non-fully optimized.</span></span>  
   
- В следующем примере кода показано, как определить обработчик событий, и как добавить его к событию.  
+ <span data-ttu-id="d988b-115">В следующем примере кода показано, как определить обработчик событий, и как добавить его к событию.</span><span class="sxs-lookup"><span data-stu-id="d988b-115">The following code example shows how to define an event handler and how to add the event handler to an event.</span></span>  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -79,9 +80,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий.  Например, **AppendChild** может также удалить узел, добавляемый из его предыдущего родителя.  В этом случае сначала сработает событие **NodeRemoved**, а затем событие **NodeInserted**.  Такие операции, как установка **InnerXml**, могут вызывать срабатывание нескольких событий.  
+ <span data-ttu-id="d988b-116">Некоторые операции модели DOM представляют собой составные операции, которые могут вызвать срабатывание нескольких событий.</span><span class="sxs-lookup"><span data-stu-id="d988b-116">Some XML Document Object Model (DOM) operations are compound operations that can result in multiple events being fired.</span></span> <span data-ttu-id="d988b-117">Например **AppendChild** также может потребоваться удалить узел, добавляемый из его предыдущего родителя.</span><span class="sxs-lookup"><span data-stu-id="d988b-117">For example, **AppendChild** may also have to remove the node being appended from its previous parent.</span></span> <span data-ttu-id="d988b-118">В этом случае вы видите **NodeRemoved** во-первых, сработавшего события, за которым следует **NodeInserted** событий.</span><span class="sxs-lookup"><span data-stu-id="d988b-118">In this case, you see a **NodeRemoved** event fired first, followed by a **NodeInserted** event.</span></span> <span data-ttu-id="d988b-119">Операции, такие как параметр **InnerXml** может привести к несколько событий.</span><span class="sxs-lookup"><span data-stu-id="d988b-119">Operations like setting **InnerXml** could result in multiple events.</span></span>  
   
- В следующем примере кода показано создание обработчика события и обработка события **NodeInserted**.  
+ <span data-ttu-id="d988b-120">В следующем примере кода показано создание обработчика события и обработка **NodeInserted** событий.</span><span class="sxs-lookup"><span data-stu-id="d988b-120">The following code example shows the creation of the event handler and the handling of the **NodeInserted** event.</span></span>  
   
 ```vb  
 Imports System  
@@ -212,7 +213,7 @@ public class Sample
 } // End class   
 ```  
   
- Дополнительные сведения см. в разделах [XmlNodeChangeEventArgs Members](frlrfSystemXmlXmlNodeChangedEventArgsMembersTopic) и [XmlNodeChangedEventHandler Delegate](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ <span data-ttu-id="d988b-121">Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="d988b-121">For more information, see <xref:System.Xml.XmlNodeChangedEventArgs> and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="d988b-122">См. также</span><span class="sxs-lookup"><span data-stu-id="d988b-122">See Also</span></span>  
+ [<span data-ttu-id="d988b-123">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="d988b-123">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

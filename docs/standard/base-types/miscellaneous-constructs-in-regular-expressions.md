@@ -1,107 +1,113 @@
 ---
-title: "Другие конструкции в регулярных выражениях | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "регулярные выражения .NET Framework, прочие конструкции"
-  - "конструкции, прочее"
-  - "регулярные выражения, прочие конструкции"
+title: "Другие конструкции в регулярных выражениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- constructs, miscellaneous
+- .NET Framework regular expressions, miscellaneous constructs
+- regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Другие конструкции в регулярных выражениях
-Регулярные выражения в платформе .NET Framework включают три различные языковые конструкции.  Позволяет включить или отключить определенные параметры соответствия в середине шаблона регулярного выражения.  Оставшиеся два позволяют включить примечания в регулярное выражение.  
+# <a name="miscellaneous-constructs-in-regular-expressions"></a><span data-ttu-id="4aeec-102">Другие конструкции в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="4aeec-102">Miscellaneous Constructs in Regular Expressions</span></span>
+<span data-ttu-id="4aeec-103">Регулярные выражения в .NET поддерживают три различные языковые конструкции.</span><span class="sxs-lookup"><span data-stu-id="4aeec-103">Regular expressions in .NET include three miscellaneous language constructs.</span></span> <span data-ttu-id="4aeec-104">Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-104">One lets you enable or disable particular matching options in the middle of a regular expression pattern.</span></span> <span data-ttu-id="4aeec-105">Оставшиеся две позволяют включать комментарии в регулярное выражение.</span><span class="sxs-lookup"><span data-stu-id="4aeec-105">The remaining two let you include comments in a regular expression.</span></span>  
   
-## Встроенные параметры  
- Задать или отключить конкретные параметры сопоставления шаблонов для части регулярного выражения можно с помощью синтаксиса  
+## <a name="inline-options"></a><span data-ttu-id="4aeec-106">Встроенные параметры</span><span class="sxs-lookup"><span data-stu-id="4aeec-106">Inline Options</span></span>  
+ <span data-ttu-id="4aeec-107">С помощью синтаксиса можно задать или отключить конкретные параметры сопоставления шаблонов для части регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-107">You can set or disable specific pattern matching options for part of a regular expression by using the syntax</span></span>  
   
 ```  
 (?imnsx-imnsx)  
 ```  
   
- Список параметров, которые нужно включить, приводится после вопросительного знака, а параметры, которые требуется отключить, перечисляются после знака "минус".  В таблице ниже представлено описание каждого из этих параметров.  Дополнительные сведения о каждом параметре см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).  
+ <span data-ttu-id="4aeec-108">Параметры, которые нужно включить, указываются после вопросительного знака, а параметры, которые требуется отключить, перечисляются после знака минус.</span><span class="sxs-lookup"><span data-stu-id="4aeec-108">You list the options you want to enable after the question mark, and the options you want to disable after the minus sign.</span></span> <span data-ttu-id="4aeec-109">В таблице ниже представлено описание каждого из этих параметров.</span><span class="sxs-lookup"><span data-stu-id="4aeec-109">The following table describes each option.</span></span> <span data-ttu-id="4aeec-110">Дополнительные сведения о каждом параметре см. в разделе [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md).</span><span class="sxs-lookup"><span data-stu-id="4aeec-110">For more information about each option, see [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).</span></span>  
   
-|Команда|Описание|  
-|-------------|--------------|  
-|`i`|Соответствие без учета регистра.|  
-|`m`|Многострочный режим.|  
-|`n`|Только явные захваты. \(Скобки не действуют как захватываемые группы.\)|  
-|`s`|Однострочный режим.|  
-|`x`|Игнорировать не преобразованные в escape\-последовательность пробелы и разрешить комментарии в режиме x.|  
+|<span data-ttu-id="4aeec-111">Параметр</span><span class="sxs-lookup"><span data-stu-id="4aeec-111">Option</span></span>|<span data-ttu-id="4aeec-112">Описание</span><span class="sxs-lookup"><span data-stu-id="4aeec-112">Description</span></span>|  
+|------------|-----------------|  
+|`i`|<span data-ttu-id="4aeec-113">Сопоставление без учета регистра.</span><span class="sxs-lookup"><span data-stu-id="4aeec-113">Case-insensitive matching.</span></span>|  
+|`m`|<span data-ttu-id="4aeec-114">Многострочный режим.</span><span class="sxs-lookup"><span data-stu-id="4aeec-114">Multiline mode.</span></span>|  
+|`n`|<span data-ttu-id="4aeec-115">Только явные захваты.</span><span class="sxs-lookup"><span data-stu-id="4aeec-115">Explicit captures only.</span></span> <span data-ttu-id="4aeec-116">(Скобки не действуют как захватываемые группы.)</span><span class="sxs-lookup"><span data-stu-id="4aeec-116">(Parentheses do not act as capturing groups.)</span></span>|  
+|`s`|<span data-ttu-id="4aeec-117">Однострочный режим.</span><span class="sxs-lookup"><span data-stu-id="4aeec-117">Single-line mode.</span></span>|  
+|`x`|<span data-ttu-id="4aeec-118">Игнорировать не преобразованные в escape-последовательность пробелы и разрешить комментарии в режиме x.</span><span class="sxs-lookup"><span data-stu-id="4aeec-118">Ignore unescaped white space, and allow x-mode comments.</span></span>|  
   
- Любое изменение параметров регулярных выражений, заданное конструкцией `(?imnsx-imnsx)`, остается в силе до конца содержащей группы.  
+ <span data-ttu-id="4aeec-119">Любое изменение параметров регулярных выражений определяются `(?imnsx-imnsx)` создания остается в силе до завершения внешней группы.</span><span class="sxs-lookup"><span data-stu-id="4aeec-119">Any change in regular expression options defined by the `(?imnsx-imnsx)` construct remains in effect until the end of the enclosing group.</span></span>  
   
 > [!NOTE]
->  Конструкция группировки `(?imnsx-imnsx:`*subexpression*`)` предоставляет части выражения одинаковые функциональные возможности.  Для получения дополнительной информации см. [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  <span data-ttu-id="4aeec-120">`(?imnsx-imnsx:` *Часть выражения* `)` конструкция группирования обеспечивает одинаковую функциональность для части выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-120">The `(?imnsx-imnsx:`*subexpression*`)` grouping construct provides identical functionality for a subexpression.</span></span> <span data-ttu-id="4aeec-121">Дополнительные сведения см. в разделе [Конструкции группировки](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="4aeec-121">For more information, see [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).</span></span>  
   
- В следующем примере параметры `i`, `n` и `x` используются для отключения чувствительности к регистру символов и включения явных захватов, чтобы игнорировать пробелы в шаблоне регулярного выражения в его середине.  
+ <span data-ttu-id="4aeec-122">В следующем примере используется `i`, `n`, и `x` параметры включить учет регистра и явные захваты и игнорировать пробелы в шаблоне регулярного выражения во время регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-122">The following example uses the `i`, `n`, and `x` options to enable case insensitivity and explicit captures, and to ignore white space in the regular expression pattern in the middle of a regular expression.</span></span>  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
- В примере определяются два регулярных выражения.  Первый, `\b(D\w+)\s(d\w+)\b`, выделяет два последовательных слова, начинающиеся со строчной буквы d и прописной буквы D.  Второе регулярное выражение `\b(D\w+)(?ixn) \s (d\w+) \b` использует встроенные параметры для изменения этого шаблона, как описано в следующей таблице.  Сравнение результатов подтверждает влияние конструкции `(?ixn)`.  
+ <span data-ttu-id="4aeec-123">В примере определяются два регулярных выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-123">The example defines two regular expressions.</span></span> <span data-ttu-id="4aeec-124">Первое `\b(D\w+)\s(d\w+)\b` выделяет два последовательных слова, начинающихся с прописной буквы "D" и строчной буквы "d".</span><span class="sxs-lookup"><span data-stu-id="4aeec-124">The first, `\b(D\w+)\s(d\w+)\b`, matches two consecutive words that begin with an uppercase "D" and a lowercase "d".</span></span> <span data-ttu-id="4aeec-125">Во втором регулярном выражении `\b(D\w+)(?ixn) \s (d\w+) \b` используются встроенные параметры для изменения этого шаблона, как описано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="4aeec-125">The second regular expression, `\b(D\w+)(?ixn) \s (d\w+) \b`, uses inline options to modify this pattern, as described in the following table.</span></span> <span data-ttu-id="4aeec-126">Сравнение результатов подтверждает влияние конструкции `(?ixn)`.</span><span class="sxs-lookup"><span data-stu-id="4aeec-126">A comparison of the results confirms the effect of the `(?ixn)` construct.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(D\w+)`|Выделяет прописную букву "D" c одной или несколькими последующими буквами.  Это первая группа записи.|  
-|`(?ixn)`|С этого момента делайте сравнения без учета регистра, делайте только явные захваты и игнорируйте пробелы в шаблоне регулярного выражения.|  
-|`\s`|Соответствует пробелу.|  
-|`(d\w+)`|Выделяет прописную или строчную букву "d", за которой следует один или несколько букв.  Эта группа не записывается, поскольку включен параметр `n` \(явная запись\).|  
-|`\b`|Соответствует границе слова.|  
+|<span data-ttu-id="4aeec-127">Шаблон</span><span class="sxs-lookup"><span data-stu-id="4aeec-127">Pattern</span></span>|<span data-ttu-id="4aeec-128">Описание</span><span class="sxs-lookup"><span data-stu-id="4aeec-128">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="4aeec-129">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="4aeec-129">Start at a word boundary.</span></span>|  
+|`(D\w+)`|<span data-ttu-id="4aeec-130">Совпадение с прописной буквой "D", за которой следует один или более словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="4aeec-130">Match a capital "D" followed by one or more word characters.</span></span> <span data-ttu-id="4aeec-131">Это первая захватываемая группа.</span><span class="sxs-lookup"><span data-stu-id="4aeec-131">This is the first capture group.</span></span>|  
+|`(?ixn)`|<span data-ttu-id="4aeec-132">С этого момента рекомендуется делать сравнения без учета регистра, делать только явные захваты и игнорировать пробелы в шаблоне регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-132">From this point on, make comparisons case-insensitive, make only explicit captures, and ignore white space in the regular expression pattern.</span></span>|  
+|`\s`|<span data-ttu-id="4aeec-133">Соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="4aeec-133">Match a white-space character.</span></span>|  
+|`(d\w+)`|<span data-ttu-id="4aeec-134">Совпадение с прописной или строчной буквой "d", за которой следует один или более словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="4aeec-134">Match an uppercase or lowercase "d" followed by one or more word characters.</span></span> <span data-ttu-id="4aeec-135">Эта группа не записывается, поскольку `n` был включен (явный захват)...</span><span class="sxs-lookup"><span data-stu-id="4aeec-135">This group is not captured because the `n` (explicit capture) option was enabled..</span></span>|  
+|`\b`|<span data-ttu-id="4aeec-136">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="4aeec-136">Match a word boundary.</span></span>|  
   
-## Встроенное примечание  
- Конструкция `(?#` *comment*`)` позволяет включить встроенные комментарии в регулярное выражение.  Обработчик регулярных выражений не использует какую\-либо часть комментария при выделении шаблонов, хотя комментарий включается в строку, которая возвращается методом <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=fullName>.  Примечание заканчивается первой закрывающей скобкой.  
+## <a name="inline-comment"></a><span data-ttu-id="4aeec-137">Встроенный комментарий</span><span class="sxs-lookup"><span data-stu-id="4aeec-137">Inline Comment</span></span>  
+ <span data-ttu-id="4aeec-138">`(?#` *Комментарий* `)` конструкция позволяет включить встроенные комментарии в регулярном выражении.</span><span class="sxs-lookup"><span data-stu-id="4aeec-138">The `(?#` *comment*`)` construct lets you include an inline comment in a regular expression.</span></span> <span data-ttu-id="4aeec-139">Обработчик регулярных выражений не использует любой части комментария в сопоставлении шаблонов, хотя комментарий включается в строку, которая возвращается методом <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> метод.</span><span class="sxs-lookup"><span data-stu-id="4aeec-139">The regular expression engine does not use any part of the comment in pattern matching, although the comment is included in the string that is returned by the <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4aeec-140">Примечание заканчивается первой закрывающей скобкой.</span><span class="sxs-lookup"><span data-stu-id="4aeec-140">The comment ends at the first closing parenthesis.</span></span>  
   
- В следующем примере повторяется первый шаблон регулярного выражения из примера, указанного в предыдущем разделе.  В регулярное выражение добавляются два встроенных комментария, чтобы указать, учитывается ли в сравнении регистр.  Шаблон регулярного выражения `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` определяется следующим образом.  
+ <span data-ttu-id="4aeec-141">В следующем примере повторяется первый шаблон регулярного выражения из примера, указанного в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="4aeec-141">The following example repeats the first regular expression pattern from the example in the previous section.</span></span> <span data-ttu-id="4aeec-142">В регулярное выражение добавляются два встроенных комментария, чтобы указать, учитывается ли в сравнении регистр.</span><span class="sxs-lookup"><span data-stu-id="4aeec-142">It adds two inline comments to the regular expression to indicate whether the comparison is case-sensitive.</span></span> <span data-ttu-id="4aeec-143">Шаблон регулярного выражения `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` определяется, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="4aeec-143">The regular expression pattern, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, is defined as follows.</span></span>  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\b`|Начало на границе слова.|  
-|`(?# case-sensitive comparison)`|Комментарий.  Не влияет на алгоритм выделения шаблона.|  
-|`(D\w+)`|Выделяет прописную букву "D" c одной или несколькими последующими буквами.  Это первая группа записи.|  
-|`\s`|Соответствует пробелу.|  
-|`(?ixn)`|С этого момента делайте сравнения без учета регистра, делайте только явные захваты и игнорируйте пробелы в шаблоне регулярного выражения.|  
-|`(?#case-insensitive comparison)`|Комментарий.  Не влияет на алгоритм выделения шаблона.|  
-|`(d\w+)`|Выделяет прописную или строчную букву "d", за которой следует один или несколько букв.  Это вторая группа записи.|  
-|`\b`|Соответствует границе слова.|  
+|<span data-ttu-id="4aeec-144">Шаблон</span><span class="sxs-lookup"><span data-stu-id="4aeec-144">Pattern</span></span>|<span data-ttu-id="4aeec-145">Описание</span><span class="sxs-lookup"><span data-stu-id="4aeec-145">Description</span></span>|  
+|-------------|-----------------|  
+|`\b`|<span data-ttu-id="4aeec-146">Начало на границе слова.</span><span class="sxs-lookup"><span data-stu-id="4aeec-146">Start at a word boundary.</span></span>|  
+|`(?# case-sensitive comparison)`|<span data-ttu-id="4aeec-147">Комментарий.</span><span class="sxs-lookup"><span data-stu-id="4aeec-147">A comment.</span></span> <span data-ttu-id="4aeec-148">Не влияет на алгоритм соответствия шаблону.</span><span class="sxs-lookup"><span data-stu-id="4aeec-148">It does not affect pattern-matching behavior.</span></span>|  
+|`(D\w+)`|<span data-ttu-id="4aeec-149">Совпадение с прописной буквой "D", за которой следует один или более словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="4aeec-149">Match a capital "D" followed by one or more word characters.</span></span> <span data-ttu-id="4aeec-150">Это первая группа записи.</span><span class="sxs-lookup"><span data-stu-id="4aeec-150">This is the first capturing group.</span></span>|  
+|`\s`|<span data-ttu-id="4aeec-151">Соответствует пробелу.</span><span class="sxs-lookup"><span data-stu-id="4aeec-151">Match a white-space character.</span></span>|  
+|`(?ixn)`|<span data-ttu-id="4aeec-152">С этого момента рекомендуется делать сравнения без учета регистра, делать только явные захваты и игнорировать пробелы в шаблоне регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-152">From this point on, make comparisons case-insensitive, make only explicit captures, and ignore white space in the regular expression pattern.</span></span>|  
+|`(?#case-insensitive comparison)`|<span data-ttu-id="4aeec-153">Комментарий.</span><span class="sxs-lookup"><span data-stu-id="4aeec-153">A comment.</span></span> <span data-ttu-id="4aeec-154">Не влияет на алгоритм соответствия шаблону.</span><span class="sxs-lookup"><span data-stu-id="4aeec-154">It does not affect pattern-matching behavior.</span></span>|  
+|`(d\w+)`|<span data-ttu-id="4aeec-155">Совпадение с прописной или строчной буквой "d", за которой следует один или более словообразующих символов.</span><span class="sxs-lookup"><span data-stu-id="4aeec-155">Match an uppercase or lowercase "d" followed by one or more word characters.</span></span> <span data-ttu-id="4aeec-156">Это вторая захватываемая группа.</span><span class="sxs-lookup"><span data-stu-id="4aeec-156">This is the second capture group.</span></span>|  
+|`\b`|<span data-ttu-id="4aeec-157">Соответствует границе слова.</span><span class="sxs-lookup"><span data-stu-id="4aeec-157">Match a word boundary.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous2.cs#2)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
-## Комментарий в конце строки.  
- Знак номера \(`#`\) помечает комментарий режима x, который начинается символом \#, не преобразованным в escape\-последовательность, в конце шаблона регулярного выражения и продолжается до конца строки.  Для использования этой конструкции следует включить параметр `x` \(во встроенных параметрах\) или передать значение <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName> в параметр `option` при создании экземпляра <xref:System.Text.RegularExpressions.Regex> или вызове статического метода <xref:System.Text.RegularExpressions.Regex>.  
+## <a name="end-of-line-comment"></a><span data-ttu-id="4aeec-158">Комментарий в конце строки</span><span class="sxs-lookup"><span data-stu-id="4aeec-158">End-of-Line Comment</span></span>  
+ <span data-ttu-id="4aeec-159">Знак решетки (`#`) помечает комментарий режима x, который начинается с символа # без escape-последовательности в конце шаблона регулярного выражения и продолжается до конца строки.</span><span class="sxs-lookup"><span data-stu-id="4aeec-159">A number sign (`#`)marks an x-mode comment, which starts at the unescaped # character at the end of the regular expression pattern and continues until the end of the line.</span></span> <span data-ttu-id="4aeec-160">Чтобы использовать этот конструктор, необходимо включить `x` параметр (через встроенные параметры) или указать <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> значение `option` параметр при создании экземпляра <xref:System.Text.RegularExpressions.Regex> объекта или вызов статического <xref:System.Text.RegularExpressions.Regex> метод.</span><span class="sxs-lookup"><span data-stu-id="4aeec-160">To use this construct, you must either enable the `x` option (through inline options) or supply the <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> value to the `option` parameter when instantiating the <xref:System.Text.RegularExpressions.Regex> object or calling a static <xref:System.Text.RegularExpressions.Regex> method.</span></span>  
   
- В следующем примере показана конструкция комментария в конце строки.  Определяет, является ли строка составного форматирования строкой, которая включает по крайней мере один элемент формата.  В следующей таблице описаны конструкции шаблона регулярного выражения.  
+ <span data-ttu-id="4aeec-161">В следующем примере показана конструкция комментария в конце строки.</span><span class="sxs-lookup"><span data-stu-id="4aeec-161">The following example illustrates the end-of-line comment construct.</span></span> <span data-ttu-id="4aeec-162">Она определяет, является ли строка составного форматирования строкой, которая содержит по крайней мере один элемент формата.</span><span class="sxs-lookup"><span data-stu-id="4aeec-162">It determines whether a string is a composite format string that includes at least one format item.</span></span> <span data-ttu-id="4aeec-163">В следующей таблице описаны конструкции в шаблоне регулярного выражения.</span><span class="sxs-lookup"><span data-stu-id="4aeec-163">The following table describes the constructs in the regular expression pattern:</span></span>  
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Шаблон|Описание|  
-|------------|--------------|  
-|`\{`|Совпадает с открывающей фигурной скобкой.|  
-|`\d+`|Совпадение с одной или несколькими десятичными цифрами.|  
-|`(,-*\d+)*`|Выделить ноль или одно вхождение запятой, за которой следует минус \(необязательно\), за которым идет одна или несколько десятичных цифр.|  
-|`(\:\w{1,4}?)*`|Выделить ноль или одно вхождение двоеточие, за которым следуют как можно меньшее число символов пробела \(от одного до четырех\).|  
-|`(?#case insensitive comparison)`|Встроенное примечание.  Не влияет на алгоритм выделения шаблона.|  
-|`\}`|Выделяет закрывающую фигурную скобку.|  
-|`(?x)`|Включите игнорирование параметра пробела шаблона, чтобы распознавался комментарий в конце строки.|  
-|`# Looks for a composite format item.`|Конец строки комментария.|  
+|<span data-ttu-id="4aeec-164">Шаблон</span><span class="sxs-lookup"><span data-stu-id="4aeec-164">Pattern</span></span>|<span data-ttu-id="4aeec-165">Описание</span><span class="sxs-lookup"><span data-stu-id="4aeec-165">Description</span></span>|  
+|-------------|-----------------|  
+|`\{`|<span data-ttu-id="4aeec-166">Совпадение с открывающей скобкой.</span><span class="sxs-lookup"><span data-stu-id="4aeec-166">Match an opening brace.</span></span>|  
+|`\d+`|<span data-ttu-id="4aeec-167">Совпадение с одной или несколькими десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="4aeec-167">Match one or more decimal digits.</span></span>|  
+|`(,-*\d+)*`|<span data-ttu-id="4aeec-168">Совпадение с нулем или одним вхождением точки, за которой следует необязательный знак минус, за которым идет одна или несколько десятичных цифр.</span><span class="sxs-lookup"><span data-stu-id="4aeec-168">Match zero or one occurrence of a comma, followed by an optional minus sign, followed by one or more decimal digits.</span></span>|  
+|`(\:\w{1,4}?)*`|<span data-ttu-id="4aeec-169">Совпадение с нулем или одним вхождением двоеточия, за которым следует от одного до четырех символов пробела (но как можно меньшее количество).</span><span class="sxs-lookup"><span data-stu-id="4aeec-169">Match zero or one occurrence of a colon, followed by one to four, but as few as possible, white-space characters.</span></span>|  
+|`(?#case insensitive comparison)`|<span data-ttu-id="4aeec-170">Встроенный комментарий.</span><span class="sxs-lookup"><span data-stu-id="4aeec-170">An inline comment.</span></span> <span data-ttu-id="4aeec-171">Не влияет на алгоритм соответствия шаблону.</span><span class="sxs-lookup"><span data-stu-id="4aeec-171">It has no effect on pattern-matching behavior.</span></span>|  
+|`\}`|<span data-ttu-id="4aeec-172">Совпадение с закрывающей фигурной скобкой.</span><span class="sxs-lookup"><span data-stu-id="4aeec-172">Match a closing brace.</span></span>|  
+|`(?x)`|<span data-ttu-id="4aeec-173">Включить параметр для пропуска пробелов, чтобы распознавался комментарий в конце строки.</span><span class="sxs-lookup"><span data-stu-id="4aeec-173">Enable the ignore pattern white-space option so that the end-of-line comment will be recognized.</span></span>|  
+|`# Looks for a composite format item.`|<span data-ttu-id="4aeec-174">Комментарий в конце строки.</span><span class="sxs-lookup"><span data-stu-id="4aeec-174">An end-of-line comment.</span></span>|  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Обратите внимание, что вместо предоставления конструкции `(?x)` в регулярном выражении комментарий также можно распознать путем вызова метода <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=fullName> и передачи ему значения перечисления <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  
+ <span data-ttu-id="4aeec-175">Обратите внимание, что вместо предоставления `(?x)` создать в регулярном выражении комментарий может также распознанных путем вызова <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> метод и передает его <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> значение перечисления.</span><span class="sxs-lookup"><span data-stu-id="4aeec-175">Note that, instead of providing the `(?x)` construct in the regular expression, the comment could also have been recognized by calling the <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> method and passing it the <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> enumeration value.</span></span>  
   
-## См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a><span data-ttu-id="4aeec-176">См. также</span><span class="sxs-lookup"><span data-stu-id="4aeec-176">See Also</span></span>  
+ [<span data-ttu-id="4aeec-177">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="4aeec-177">Regular Expression Language - Quick Reference</span></span>](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

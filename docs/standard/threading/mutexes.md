@@ -1,64 +1,67 @@
 ---
-title: "Mutexes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "wait handles"
-  - "threading [.NET Framework], Mutex class"
-  - "Mutex class, about Mutex class"
-  - "threading [.NET Framework], cross-process synchronization"
+title: Mutexes
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wait handles
+- threading [.NET Framework], Mutex class
+- Mutex class, about Mutex class
+- threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a1d69c1b943d15b9ad8c80b4d7dbafebc54990ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Mutexes
-Можно использовать объект <xref:System.Threading.Mutex> для предоставления монопольного доступа к ресурсу.  Класс <xref:System.Threading.Mutex> использует больше системных ресурсов, чем класс <xref:System.Threading.Monitor>, однако он может маршалироваться через границы домена приложения, использоваться с несколькими ожиданиями, а также использоваться для синхронизации потоков в различных процессах.  Сравнение управляемых механизмов синхронизации см. в разделе [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+# <a name="mutexes"></a><span data-ttu-id="a1e55-102">Mutexes</span><span class="sxs-lookup"><span data-stu-id="a1e55-102">Mutexes</span></span>
+<span data-ttu-id="a1e55-103">Можно использовать <xref:System.Threading.Mutex> для получения монопольного доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="a1e55-103">You can use a <xref:System.Threading.Mutex> object to provide exclusive access to a resource.</span></span> <span data-ttu-id="a1e55-104"><xref:System.Threading.Mutex> Класс использует больше системных ресурсов, чем <xref:System.Threading.Monitor> класса, но может быть маршалирован через границы домена приложения, он может использоваться с несколькими ожиданиями, а также он может использоваться для синхронизации потоков в различных процессах.</span><span class="sxs-lookup"><span data-stu-id="a1e55-104">The <xref:System.Threading.Mutex> class uses more system resources than the <xref:System.Threading.Monitor> class, but it can be marshaled across application domain boundaries, it can be used with multiple waits, and it can be used to synchronize threads in different processes.</span></span> <span data-ttu-id="a1e55-105">Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span><span class="sxs-lookup"><span data-stu-id="a1e55-105">For a comparison of managed synchronization mechanisms, see [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).</span></span>  
   
- Примеры кода см. в справочной документации для конструкторов <xref:System.Threading.Mutex.%23ctor%2A>.  
+ <span data-ttu-id="a1e55-106">Примеры кода см. в справочной документации по <xref:System.Threading.Mutex.%23ctor%2A> конструкторы.</span><span class="sxs-lookup"><span data-stu-id="a1e55-106">For code examples, see the reference documentation for the <xref:System.Threading.Mutex.%23ctor%2A> constructors.</span></span>  
   
-## Использование мьютексов  
- Поток вызывает метод <xref:System.Threading.WaitHandle.WaitOne%2A> мьютекса для запроса изменения владельца.  Вызов блокирует поток до того момента, как мьютекс станет доступным, или пока не истечет дополнительное время ожидания.  Если мьютекс не используется ни одним из потоков, он находится в свободном состоянии.  
+## <a name="using-mutexes"></a><span data-ttu-id="a1e55-107">Использование мьютексов</span><span class="sxs-lookup"><span data-stu-id="a1e55-107">Using Mutexes</span></span>  
+ <span data-ttu-id="a1e55-108">Поток вызывает метод <xref:System.Threading.WaitHandle.WaitOne%2A> метод мьютекса, который запросит владение.</span><span class="sxs-lookup"><span data-stu-id="a1e55-108">A thread calls the <xref:System.Threading.WaitHandle.WaitOne%2A> method of a mutex to request ownership.</span></span> <span data-ttu-id="a1e55-109">Вызов блокируется до тех пор, пока мьютекс на будет доступен или пока не истечет дополнительное время ожидания.</span><span class="sxs-lookup"><span data-stu-id="a1e55-109">The call blocks until the mutex is available, or until the optional timeout interval elapses.</span></span> <span data-ttu-id="a1e55-110">Если мьютексом не владеет ни один поток, сообщается состояние мьютекса.</span><span class="sxs-lookup"><span data-stu-id="a1e55-110">The state of a mutex is signaled if no thread owns it.</span></span>  
   
- Поток освобождает мьютекс путем вызова метода <xref:System.Threading.Mutex.ReleaseMutex%2A>.  Мьютексы поддерживают сходство потоков; то есть мьютекс может быть освобожден только потоком, который владеет этим мьютексом.  Если поток освобождает мьютекс, которым не владеет, в потоке создается исключение <xref:System.ApplicationException>.  
+ <span data-ttu-id="a1e55-111">Поток освобождает мьютекс путем вызова его <xref:System.Threading.Mutex.ReleaseMutex%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="a1e55-111">A thread releases a mutex by calling its <xref:System.Threading.Mutex.ReleaseMutex%2A> method.</span></span> <span data-ttu-id="a1e55-112">Мьютексы поддерживают сходство потоков, т. е. мьютекс может быть освобожден только тем потоком, который им владеет.</span><span class="sxs-lookup"><span data-stu-id="a1e55-112">Mutexes have thread affinity; that is, the mutex can be released only by the thread that owns it.</span></span> <span data-ttu-id="a1e55-113">Если поток освобождает мьютекс не владеет, <xref:System.ApplicationException> исключение в потоке.</span><span class="sxs-lookup"><span data-stu-id="a1e55-113">If a thread releases a mutex it does not own, an <xref:System.ApplicationException> is thrown in the thread.</span></span>  
   
- Так как класс <xref:System.Threading.Mutex> является производным из <xref:System.Threading.WaitHandle>, можно вызвать статические методы <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> класса <xref:System.Threading.WaitHandle> для запроса изменения владельца объекта <xref:System.Threading.Mutex> в комбинации с другими дескрипторами ожидания.  
+ <span data-ttu-id="a1e55-114">Поскольку <xref:System.Threading.Mutex> класс является производным от <xref:System.Threading.WaitHandle>, вы также можете вызвать статический <xref:System.Threading.WaitHandle.WaitAll%2A> или <xref:System.Threading.WaitHandle.WaitAny%2A> методы <xref:System.Threading.WaitHandle> который запросит владение <xref:System.Threading.Mutex> в сочетании с другими дескрипторы ожидания.</span><span class="sxs-lookup"><span data-stu-id="a1e55-114">Because the <xref:System.Threading.Mutex> class derives from <xref:System.Threading.WaitHandle>, you can also call the static <xref:System.Threading.WaitHandle.WaitAll%2A> or <xref:System.Threading.WaitHandle.WaitAny%2A> methods of <xref:System.Threading.WaitHandle> to request ownership of a <xref:System.Threading.Mutex> in combination with other wait handles.</span></span>  
   
- Если <xref:System.Threading.Mutex> используется потоком, этот поток может указывать тот же объект <xref:System.Threading.Mutex> при повторном вызове запроса\-ожидания, не прерывая выполнения. Для отказа от использования объекта <xref:System.Threading.Mutex> его нужно освободить соответствующее количество раз.  
+ <span data-ttu-id="a1e55-115">Если поток владеет <xref:System.Threading.Mutex>, что поток может указывать тот же <xref:System.Threading.Mutex> при вызове повторного запроса ожидания, не прерывая выполнения; тем не менее, его нужно освободить <xref:System.Threading.Mutex> количество раз для освобождения владения.</span><span class="sxs-lookup"><span data-stu-id="a1e55-115">If a thread owns a <xref:System.Threading.Mutex>, that thread can specify the same <xref:System.Threading.Mutex> in repeated wait-request calls without blocking its execution; however, it must release the <xref:System.Threading.Mutex> as many times to release ownership.</span></span>  
   
-## Брошенные мьютексы  
- Если поток прерывается без освобождения <xref:System.Threading.Mutex>, мьютекс называется брошенным.  Это часто указывает на серьезную ошибку при программировании, так как ресурс, защищаемый мьютексом, может остаться в несогласованном состоянии.  В .NET Framework версии 2.0 исключение <xref:System.Threading.AbandonedMutexException> в следующем потоке, который получает мьютекс.  
+## <a name="abandoned-mutexes"></a><span data-ttu-id="a1e55-116">Брошенные мьютексы</span><span class="sxs-lookup"><span data-stu-id="a1e55-116">Abandoned Mutexes</span></span>  
+ <span data-ttu-id="a1e55-117">Если поток завершается без освобождения <xref:System.Threading.Mutex>, мьютекс называется к прерыванию.</span><span class="sxs-lookup"><span data-stu-id="a1e55-117">If a thread terminates without releasing a <xref:System.Threading.Mutex>, the mutex is said to be abandoned.</span></span> <span data-ttu-id="a1e55-118">Это часто указывает на серьезную ошибку программирования, поскольку ресурс, защищаемый мьютексом, может остаться в несогласованном состоянии.</span><span class="sxs-lookup"><span data-stu-id="a1e55-118">This often indicates a serious programming error because the resource the mutex is protecting might be left in an inconsistent state.</span></span> <span data-ttu-id="a1e55-119">В .NET Framework версии 2.0 <xref:System.Threading.AbandonedMutexException> вызывается в следующий поток, который получает объект взаимного исключения.</span><span class="sxs-lookup"><span data-stu-id="a1e55-119">In the .NET Framework version 2.0, an <xref:System.Threading.AbandonedMutexException> is thrown in the next thread that acquires the mutex.</span></span>  
   
 > [!NOTE]
->  В .NET Framework версии 1.0 и 1.1 состояние брошенного <xref:System.Threading.Mutex> задается как сигнальное и владельцем становится следующий ожидающий поток.  Если нет ни одного ожидающего потока, <xref:System.Threading.Mutex> остается в сигнальном состоянии.  Исключение не создается.  
+>  <span data-ttu-id="a1e55-120">В .NET Framework версий 1.0 и 1.1, прерванное <xref:System.Threading.Mutex> сигнальное состояние и следующий ожидающий поток-владелец получает.</span><span class="sxs-lookup"><span data-stu-id="a1e55-120">In the .NET Framework versions 1.0 and 1.1, an abandoned <xref:System.Threading.Mutex> is set to the signaled state and the next waiting thread gets ownership.</span></span> <span data-ttu-id="a1e55-121">Если ни один поток не находится в состоянии ожидания, <xref:System.Threading.Mutex> остается в состоянии получения сигнала.</span><span class="sxs-lookup"><span data-stu-id="a1e55-121">If no thread is waiting, the <xref:System.Threading.Mutex> remains in a signaled state.</span></span> <span data-ttu-id="a1e55-122">Исключение не возникает.</span><span class="sxs-lookup"><span data-stu-id="a1e55-122">No exception is thrown.</span></span>  
   
- Брошенный системный мьютекс может свидетельствовать о внезапном прекращении выполнения приложения \(например, с помощью диспетчера задач Windows\).  
+ <span data-ttu-id="a1e55-123">В случае системного мьютекса брошенный мьютекс может указывать на то, что работа приложения была внезапно прекращена (например, с помощью диспетчера задач Windows).</span><span class="sxs-lookup"><span data-stu-id="a1e55-123">In the case of a system-wide mutex, an abandoned mutex might indicate that an application has been terminated abruptly (for example, by using Windows Task Manager).</span></span>  
   
-## Локальные и системные мьютексы  
- Мьютексы бывают двух типов: локальные мьютексы и именованные системные мьютексы.  При создании объекта <xref:System.Threading.Mutex> с помощью конструктора, позволяющего передавать параметр с именем объекта, объект связывается с имеющим данное имя объектом операционной системы.  Именованные системные мьютексы доступны в пределах всей операционной системы и могут быть использованы для синхронизации действий процессов.  Можно создать несколько объектов <xref:System.Threading.Mutex>, представляющих один и тот же именованный системный мьютекс, и использовать метод <xref:System.Threading.Mutex.OpenExisting%2A> для открытия существующего именованного системного мьютекса.  
+## <a name="local-and-system-mutexes"></a><span data-ttu-id="a1e55-124">Локальные и системные мьютексы</span><span class="sxs-lookup"><span data-stu-id="a1e55-124">Local and System Mutexes</span></span>  
+ <span data-ttu-id="a1e55-125">Мьютексы бывают двух типов: локальные и именованные системные.</span><span class="sxs-lookup"><span data-stu-id="a1e55-125">Mutexes are of two types: local mutexes and named system mutexes.</span></span> <span data-ttu-id="a1e55-126">Если вы создаете <xref:System.Threading.Mutex> объекта, используя конструктор, который принимает имя, она связана с объектом операционной системы с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="a1e55-126">If you create a <xref:System.Threading.Mutex> object using a constructor that accepts a name, it is associated with an operating-system object of that name.</span></span> <span data-ttu-id="a1e55-127">Именованные системные мьютексы доступны во всей операционной системе и могут использоваться для синхронизации действий процессов.</span><span class="sxs-lookup"><span data-stu-id="a1e55-127">Named system mutexes are visible throughout the operating system and can be used to synchronize the activities of processes.</span></span> <span data-ttu-id="a1e55-128">Можно создать несколько <xref:System.Threading.Mutex> объекты, представляющие же именованный системный мьютекс, и можно использовать <xref:System.Threading.Mutex.OpenExisting%2A> метод, чтобы открыть существующий именованный системный мьютекс.</span><span class="sxs-lookup"><span data-stu-id="a1e55-128">You can create multiple <xref:System.Threading.Mutex> objects that represent the same named system mutex, and you can use the <xref:System.Threading.Mutex.OpenExisting%2A> method to open an existing named system mutex.</span></span>  
   
- Локальный мьютекс существует только внутри одного процесса.  Он может использоваться любым потоком в процессе, имеющим ссылку на локальный объект <xref:System.Threading.Mutex>.  Каждый объект <xref:System.Threading.Mutex> является отдельным локальным мьютекс.  
+ <span data-ttu-id="a1e55-129">Локальный мьютекс существует только в вашем процессе.</span><span class="sxs-lookup"><span data-stu-id="a1e55-129">A local mutex exists only within your process.</span></span> <span data-ttu-id="a1e55-130">Он может использоваться любым потоком в процессе, имеющим ссылку на локальный <xref:System.Threading.Mutex> объекта.</span><span class="sxs-lookup"><span data-stu-id="a1e55-130">It can be used by any thread in your process that has a reference to the local <xref:System.Threading.Mutex> object.</span></span> <span data-ttu-id="a1e55-131">Каждый <xref:System.Threading.Mutex> объект является отдельным локальным мьютекс.</span><span class="sxs-lookup"><span data-stu-id="a1e55-131">Each <xref:System.Threading.Mutex> object is a separate local mutex.</span></span>  
   
-### Безопасность управления доступом для системных мьютексов  
- В .NET Framework версии 2.0 предоставляется возможность запроса и установки безопасности управления доступом Windows для именованных системных объектов.  Рекомендуется защищать системные мьютексы с момента создания, потому что системные объекты являются глобальными и поэтому могут быть заблокированы посторонним кодом.  
+### <a name="access-control-security-for-system-mutexes"></a><span data-ttu-id="a1e55-132">Безопасность управления доступом для системных мьютексов</span><span class="sxs-lookup"><span data-stu-id="a1e55-132">Access Control Security for System Mutexes</span></span>  
+ <span data-ttu-id="a1e55-133">Платформа .NET Framework версии 2.0 позволяет запрашивать и настраивать безопасность управления доступом Windows для именованных системных объектов.</span><span class="sxs-lookup"><span data-stu-id="a1e55-133">The .NET Framework version 2.0 provides the ability to query and set Windows access control security for named system objects.</span></span> <span data-ttu-id="a1e55-134">Системные мьютексы рекомендуется защищать с момента создания, поскольку системные объекты глобальны, а значит, могут быть заблокированы не вашим кодом.</span><span class="sxs-lookup"><span data-stu-id="a1e55-134">Protecting system mutexes from the moment of creation is recommended because system objects are global and therefore can be locked by code other than your own.</span></span>  
   
- Сведения о безопасности управления доступом для мьютексов см. в классах <xref:System.Security.AccessControl.MutexSecurity> и <xref:System.Security.AccessControl.MutexAccessRule>, перечислении <xref:System.Security.AccessControl.MutexRights>, методах <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> и <xref:System.Threading.Mutex.OpenExisting%2A> класса <xref:System.Threading.Mutex> и в конструкторе <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
+ <span data-ttu-id="a1e55-135">Сведения о безопасности управления доступом для мьютексов см. в разделе <xref:System.Security.AccessControl.MutexSecurity> и <xref:System.Security.AccessControl.MutexAccessRule> классы, <xref:System.Security.AccessControl.MutexRights> перечисления, <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A>, и <xref:System.Threading.Mutex.OpenExisting%2A> методы <xref:System.Threading.Mutex> класс и <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> конструктор.</span><span class="sxs-lookup"><span data-stu-id="a1e55-135">For information on access control security for mutexes, see the <xref:System.Security.AccessControl.MutexSecurity> and <xref:System.Security.AccessControl.MutexAccessRule> classes, the <xref:System.Security.AccessControl.MutexRights> enumeration, the <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A>, and <xref:System.Threading.Mutex.OpenExisting%2A> methods of the <xref:System.Threading.Mutex> class, and the <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> constructor.</span></span>  
   
-## См. также  
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.Mutex.%23ctor%2A>   
- <xref:System.Security.AccessControl.MutexSecurity>   
- <xref:System.Security.AccessControl.MutexAccessRule>   
- [Threading](../../../docs/standard/threading/index.md)   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)   
- [Мониторы](../Topic/Monitors.md)   
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a><span data-ttu-id="a1e55-136">См. также</span><span class="sxs-lookup"><span data-stu-id="a1e55-136">See Also</span></span>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.Mutex.%23ctor%2A>  
+ <xref:System.Security.AccessControl.MutexSecurity>  
+ <xref:System.Security.AccessControl.MutexAccessRule>  
+ [<span data-ttu-id="a1e55-137">Работа с потоками</span><span class="sxs-lookup"><span data-stu-id="a1e55-137">Threading</span></span>](../../../docs/standard/threading/index.md)  
+ [<span data-ttu-id="a1e55-138">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="a1e55-138">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [<span data-ttu-id="a1e55-139">Мониторы</span><span class="sxs-lookup"><span data-stu-id="a1e55-139">Monitors</span></span>](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [<span data-ttu-id="a1e55-140">Потоки и работа с потоками</span><span class="sxs-lookup"><span data-stu-id="a1e55-140">Threads and Threading</span></span>](../../../docs/standard/threading/threads-and-threading.md)

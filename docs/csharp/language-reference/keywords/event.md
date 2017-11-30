@@ -1,79 +1,59 @@
 ---
 title: "event (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - event
 - remove
 - event_CSharpKeyword
 - add
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- event keyword [C#]
+helpviewer_keywords: event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 674e36625a68243afff75f6c5028309dc7aff02a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="event-c-reference"></a>event (Справочник по C#)
-Ключевое слово `event` используется для объявления события в классе Publisher.  
+# <a name="event-c-reference"></a><span data-ttu-id="9c474-102">event (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9c474-102">event (C# Reference)</span></span>
+<span data-ttu-id="9c474-103">Ключевое слово `event` используется для объявления события в классе Publisher.</span><span class="sxs-lookup"><span data-stu-id="9c474-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует объявление и вызов события, которое использует <xref:System.EventHandler> как базовый тип делегата. Полный пример кода, демонстрирующий использование универсального типа делегата <xref:System.EventHandler%601>, создание подписки на событие и создание метода обработчика событий, см. в разделе [Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+## <a name="example"></a><span data-ttu-id="9c474-104">Пример</span><span class="sxs-lookup"><span data-stu-id="9c474-104">Example</span></span>  
+ <span data-ttu-id="9c474-105">Следующий пример демонстрирует объявление и вызов события, которое использует <xref:System.EventHandler> как базовый тип делегата.</span><span class="sxs-lookup"><span data-stu-id="9c474-105">The following example shows how to declare and raise an event that uses <xref:System.EventHandler> as the underlying delegate type.</span></span> <span data-ttu-id="9c474-106">Полный пример кода, демонстрирующий использование универсального типа делегата <xref:System.EventHandler%601>, создание подписки на событие и создание метода обработчика событий, см. в разделе [Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-106">For the complete code example that also shows how to use the generic <xref:System.EventHandler%601> delegate type and how to subscribe to an event and create an event handler method, see [How to: Publish Events that Conform to .NET Framework Guidelines](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
- События представляют собой специальный вид многоадресного делегата, который можно вызвать только из класса или структуры, в которых он объявлен (класс Publisher). Если другие классы или структуры подписываются на событие, их методы обработчиков событий будут вызываться, когда класс Publisher будет вызывать событие. Дополнительные сведения и примеры кода см. в разделах [События](../../../csharp/programming-guide/events/index.md) и [Делегаты](../../../csharp/programming-guide/delegates/index.md).  
+ <span data-ttu-id="9c474-107">События представляют собой специальный вид многоадресного делегата, который можно вызвать только из класса или структуры, в которых он объявлен (класс Publisher).</span><span class="sxs-lookup"><span data-stu-id="9c474-107">Events are a special kind of multicast delegate that can only be invoked from within the class or struct where they are declared (the publisher class).</span></span> <span data-ttu-id="9c474-108">Если другие классы или структуры подписываются на событие, их методы обработчиков событий будут вызываться, когда класс Publisher будет вызывать событие.</span><span class="sxs-lookup"><span data-stu-id="9c474-108">If other classes or structs subscribe to the event, their event handler methods will be called when the publisher class raises the event.</span></span> <span data-ttu-id="9c474-109">Дополнительные сведения и примеры кода см. в разделах [События](../../../csharp/programming-guide/events/index.md) и [Делегаты](../../../csharp/programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-109">For more information and code examples, see [Events](../../../csharp/programming-guide/events/index.md) and [Delegates](../../../csharp/programming-guide/delegates/index.md).</span></span>  
   
- События могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md) и [internal](../../../csharp/language-reference/keywords/internal.md) или `protected internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к событию. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ <span data-ttu-id="9c474-110">События могут быть помечены как [открытый](../../../csharp/language-reference/keywords/public.md), [закрытый](../../../csharp/language-reference/keywords/private.md), [защищенных](../../../csharp/language-reference/keywords/protected.md), [внутренней](../../../csharp/language-reference/keywords/internal.md), [защищенные внутренние](../../../csharp/language-reference/keywords/protected-internal.md) или [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-110">Events can be marked as [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) or [private protected](../../../csharp/language-reference/keywords/private-protected.md).</span></span> <span data-ttu-id="9c474-111">Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к событию.</span><span class="sxs-lookup"><span data-stu-id="9c474-111">These access modifiers define how users of the class can access the event.</span></span> <span data-ttu-id="9c474-112">Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-112">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>  
   
-## <a name="keywords-and-events"></a>Ключевые слова и события  
- Следующие ключевые слова применяются к событиям.  
+## <a name="keywords-and-events"></a><span data-ttu-id="9c474-113">Ключевые слова и события</span><span class="sxs-lookup"><span data-stu-id="9c474-113">Keywords and Events</span></span>  
+ <span data-ttu-id="9c474-114">Следующие ключевые слова применяются к событиям.</span><span class="sxs-lookup"><span data-stu-id="9c474-114">The following keywords apply to events.</span></span>  
   
-|Ключевое слово|Описание|Дополнительные сведения|  
+|<span data-ttu-id="9c474-115">Ключевое слово</span><span class="sxs-lookup"><span data-stu-id="9c474-115">Keyword</span></span>|<span data-ttu-id="9c474-116">Описание</span><span class="sxs-lookup"><span data-stu-id="9c474-116">Description</span></span>|<span data-ttu-id="9c474-117">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="9c474-117">For more information</span></span>|  
 |-------------|-----------------|--------------------------|  
-|[static](../../../csharp/language-reference/keywords/static.md)|Делает событие доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует.|[Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
-|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Позволяет производным классам переопределять поведение события с помощью ключевого слова [override](../../../csharp/language-reference/keywords/override.md).|[Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
-|[sealed](../../../csharp/language-reference/keywords/sealed.md)|Указывает, что для производных классов оно больше не является виртуальным.||  
-|[abstract](../../../csharp/language-reference/keywords/abstract.md)|Компилятор не будет создавать блоки доступа к событиям `add` и `remove`, и поэтому производные классы должны предоставлять собственную реализацию.||  
+|[<span data-ttu-id="9c474-118">static</span><span class="sxs-lookup"><span data-stu-id="9c474-118">static</span></span>](../../../csharp/language-reference/keywords/static.md)|<span data-ttu-id="9c474-119">Делает событие доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует.</span><span class="sxs-lookup"><span data-stu-id="9c474-119">Makes the event available to callers at any time, even if no instance of the class exists.</span></span>|[<span data-ttu-id="9c474-120">Статические классы и члены статических классов</span><span class="sxs-lookup"><span data-stu-id="9c474-120">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
+|[<span data-ttu-id="9c474-121">virtual</span><span class="sxs-lookup"><span data-stu-id="9c474-121">virtual</span></span>](../../../csharp/language-reference/keywords/virtual.md)|<span data-ttu-id="9c474-122">Позволяет производным классам переопределять поведение события с помощью ключевого слова [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-122">Allows derived classes to override the event behavior by using the [override](../../../csharp/language-reference/keywords/override.md) keyword.</span></span>|[<span data-ttu-id="9c474-123">Наследование</span><span class="sxs-lookup"><span data-stu-id="9c474-123">Inheritance</span></span>](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
+|[<span data-ttu-id="9c474-124">sealed</span><span class="sxs-lookup"><span data-stu-id="9c474-124">sealed</span></span>](../../../csharp/language-reference/keywords/sealed.md)|<span data-ttu-id="9c474-125">Указывает, что для производных классов оно больше не является виртуальным.</span><span class="sxs-lookup"><span data-stu-id="9c474-125">Specifies that for derived classes it is no longer virtual.</span></span>||  
+|[<span data-ttu-id="9c474-126">abstract</span><span class="sxs-lookup"><span data-stu-id="9c474-126">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)|<span data-ttu-id="9c474-127">Компилятор не будет создавать блоки доступа к событиям `add` и `remove`, и поэтому производные классы должны предоставлять собственную реализацию.</span><span class="sxs-lookup"><span data-stu-id="9c474-127">The compiler will not generate the `add` and `remove` event accessor blocks and therefore derived classes must provide their own implementation.</span></span>||  
   
- Событие может быть объявлено как статическое событие с помощью ключевого слова [static](../../../csharp/language-reference/keywords/static.md). Это делает событие доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует. Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ <span data-ttu-id="9c474-128">Событие может быть объявлено как статическое событие с помощью ключевого слова [static](../../../csharp/language-reference/keywords/static.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-128">An event may be declared as a static event by using the [static](../../../csharp/language-reference/keywords/static.md) keyword.</span></span> <span data-ttu-id="9c474-129">Это делает событие доступным для вызывающих объектов в любое время, даже если экземпляр класса не существует.</span><span class="sxs-lookup"><span data-stu-id="9c474-129">This makes the event available to callers at any time, even if no instance of the class exists.</span></span> <span data-ttu-id="9c474-130">Дополнительные сведения см. в разделе [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-130">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- Событие может быть помечено как виртуальное событие с помощью ключевого слова [virtual](../../../csharp/language-reference/keywords/virtual.md). Это позволяет производным классам переопределять поведение события с помощью ключевого слова [override](../../../csharp/language-reference/keywords/override.md). Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md). Событие, переопределяющее виртуальное событие, также может быть запечатанным ([sealed](../../../csharp/language-reference/keywords/sealed.md)), что указывает, что для производных классов оно больше не является виртуальным. И наконец, можно объявить событие абстрактным ([abstract](../../../csharp/language-reference/keywords/abstract.md)), что означает, что компилятор не будет создавать блоки доступа к событиям `add` и `remove`. Поэтому производные классы должны предоставлять собственную реализацию.  
+ <span data-ttu-id="9c474-131">Событие может быть помечено как виртуальное событие с помощью ключевого слова [virtual](../../../csharp/language-reference/keywords/virtual.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-131">An event can be marked as a virtual event by using the [virtual](../../../csharp/language-reference/keywords/virtual.md) keyword.</span></span> <span data-ttu-id="9c474-132">Это позволяет производным классам переопределять поведение события с помощью ключевого слова [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-132">This enables derived classes to override the event behavior by using the [override](../../../csharp/language-reference/keywords/override.md) keyword.</span></span> <span data-ttu-id="9c474-133">Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="9c474-133">For more information, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span> <span data-ttu-id="9c474-134">Событие, переопределяющее виртуальное событие, также может быть запечатанным ([sealed](../../../csharp/language-reference/keywords/sealed.md)), что указывает, что для производных классов оно больше не является виртуальным.</span><span class="sxs-lookup"><span data-stu-id="9c474-134">An event overriding a virtual event can also be [sealed](../../../csharp/language-reference/keywords/sealed.md), which specifies that for derived classes it is no longer virtual.</span></span> <span data-ttu-id="9c474-135">И наконец, можно объявить событие абстрактным ([abstract](../../../csharp/language-reference/keywords/abstract.md)), что означает, что компилятор не будет создавать блоки доступа к событиям `add` и `remove`.</span><span class="sxs-lookup"><span data-stu-id="9c474-135">Lastly, an event can be declared [abstract](../../../csharp/language-reference/keywords/abstract.md), which means that the compiler will not generate the `add` and `remove` event accessor blocks.</span></span> <span data-ttu-id="9c474-136">Поэтому производные классы должны предоставлять собственную реализацию.</span><span class="sxs-lookup"><span data-stu-id="9c474-136">Therefore derived classes must provide their own implementation.</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="9c474-137">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="9c474-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [add](../../../csharp/language-reference/keywords/add.md)   
- [remove](../../../csharp/language-reference/keywords/remove.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
-
+## <a name="see-also"></a><span data-ttu-id="9c474-138">См. также</span><span class="sxs-lookup"><span data-stu-id="9c474-138">See Also</span></span>  
+ [<span data-ttu-id="9c474-139">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="9c474-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="9c474-140">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="9c474-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="9c474-141">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="9c474-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="9c474-142">add</span><span class="sxs-lookup"><span data-stu-id="9c474-142">add</span></span>](../../../csharp/language-reference/keywords/add.md)  
+ [<span data-ttu-id="9c474-143">remove</span><span class="sxs-lookup"><span data-stu-id="9c474-143">remove</span></span>](../../../csharp/language-reference/keywords/remove.md)  
+ [<span data-ttu-id="9c474-144">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="9c474-144">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="9c474-145">Практическое руководство. Объединение делегатов (многоадресные делегаты)</span><span class="sxs-lookup"><span data-stu-id="9c474-145">How to: Combine Delegates (Multicast Delegates)</span></span>](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

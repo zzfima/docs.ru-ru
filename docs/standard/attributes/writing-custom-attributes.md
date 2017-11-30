@@ -1,162 +1,169 @@
 ---
-title: "Написание настраиваемых атрибутов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "AllowMultiple - свойство"
-  - "классы атрибутов, объявление"
-  - "атрибуты [платформа .NET Framework], пользовательский"
-  - "AttributeTargets - перечисление"
-  - "AttributeUsageAttribute - класс, настраиваемые атрибуты"
-  - "настраиваемые атрибуты"
-  - "Inherited - свойство"
-  - "несколько экземпляров атрибута"
+title: "Написание настраиваемых атрибутов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- multiple attribute instances
+- AttributeTargets enumeration
+- attributes [.NET Framework], custom
+- AllowMultiple property
+- custom attributes
+- AttributeUsageAttribute class, custom attributes
+- Inherited property
+- attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Написание настраиваемых атрибутов
-Чтобы создавать собственные атрибуты, совсем не обязательно в совершенстве овладевать множеством новых понятий. Если вы знакомы с объектно\-ориентированным программированием и знаете, как создавать классы, вы уже обладаете почти всеми нужными знаниями. Настраиваемые атрибуты, в сущности, представляют собой традиционные классы, прямо или косвенно наследующие от <xref:System.Attribute?displayProperty=fullName>. Подобно традиционным классам настраиваемые атрибуты содержат методы, хранящие и извлекающие данные.  
+# <a name="writing-custom-attributes"></a><span data-ttu-id="4af52-102">Написание настраиваемых атрибутов</span><span class="sxs-lookup"><span data-stu-id="4af52-102">Writing Custom Attributes</span></span>
+<span data-ttu-id="4af52-103">Чтобы создавать собственные атрибуты, совсем не обязательно в совершенстве овладевать множеством новых понятий.</span><span class="sxs-lookup"><span data-stu-id="4af52-103">To design your own custom attributes, you do not need to master many new concepts.</span></span> <span data-ttu-id="4af52-104">Если вы знакомы с объектно-ориентированным программированием и знаете, как создавать классы, вы уже обладаете почти всеми нужными знаниями.</span><span class="sxs-lookup"><span data-stu-id="4af52-104">If you are familiar with object-oriented programming and know how to design classes, you already have most of the knowledge needed.</span></span> <span data-ttu-id="4af52-105">Пользовательские атрибуты — традиционные классы, прямо или косвенно наследующие <xref:System.Attribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4af52-105">Custom attributes are essentially traditional classes that derive directly or indirectly from <xref:System.Attribute?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4af52-106">Подобно традиционным классам настраиваемые атрибуты содержат методы, хранящие и извлекающие данные.</span><span class="sxs-lookup"><span data-stu-id="4af52-106">Just like traditional classes, custom attributes contain methods that store and retrieve data.</span></span>  
   
- Ниже приведены основные этапы правильно выстроенного процесса разработки классов настраиваемых атрибутов.  
+ <span data-ttu-id="4af52-107">Ниже приведены основные этапы правильно выстроенного процесса разработки классов настраиваемых атрибутов.</span><span class="sxs-lookup"><span data-stu-id="4af52-107">The primary steps to properly design custom attribute classes are as follows:</span></span>  
   
--   [Применение атрибута AttributeUsageAttribute](#cpconapplyingattributeusageattribute)  
+-   [<span data-ttu-id="4af52-108">Применение атрибута AttributeUsageAttribute</span><span class="sxs-lookup"><span data-stu-id="4af52-108">Applying the AttributeUsageAttribute</span></span>](#cpconapplyingattributeusageattribute)  
   
--   [Объявление класса атрибута](#cpcondeclaringattributeclass)  
+-   [<span data-ttu-id="4af52-109">Объявление класса атрибута</span><span class="sxs-lookup"><span data-stu-id="4af52-109">Declaring the attribute class</span></span>](#cpcondeclaringattributeclass)  
   
--   [Объявление конструкторов](#cpcondeclaringconstructors)  
+-   [<span data-ttu-id="4af52-110">Объявление конструкторов</span><span class="sxs-lookup"><span data-stu-id="4af52-110">Declaring constructors</span></span>](#cpcondeclaringconstructors)  
   
--   [Объявление свойств](#cpcondeclaringproperties)  
+-   [<span data-ttu-id="4af52-111">Объявление свойств</span><span class="sxs-lookup"><span data-stu-id="4af52-111">Declaring properties</span></span>](#cpcondeclaringproperties)  
   
- В этом разделе описано каждое из этих действий. В конце приведен [пример настраиваемого атрибута](#cpconcustomattributeexample).  
+ <span data-ttu-id="4af52-112">В этом разделе описано каждое из этих действий. В конце приведен [пример настраиваемого атрибута](#cpconcustomattributeexample).</span><span class="sxs-lookup"><span data-stu-id="4af52-112">This section describes each of these steps and concludes with a [custom attribute example](#cpconcustomattributeexample).</span></span>  
   
 <a name="cpconapplyingattributeusageattribute"></a>   
-## Применение атрибута AttributeUsageAttribute  
- Объявление настраиваемого атрибута начинается с **AttributeUsageAttribute**, определяющего некоторые ключевые характеристики класса атрибута. Например, можно указать, может ли атрибут быть унаследован другими классами, или указать элементы языка, к которым может применяться этот атрибут. В приведенном ниже фрагменте кода демонстрируется использование атрибута **AttributeUsageAttribute**.  
+## <a name="applying-the-attributeusageattribute"></a><span data-ttu-id="4af52-113">Применение атрибута AttributeUsageAttribute</span><span class="sxs-lookup"><span data-stu-id="4af52-113">Applying the AttributeUsageAttribute</span></span>  
+ <span data-ttu-id="4af52-114">Объявление настраиваемого атрибута начинается с **AttributeUsageAttribute**, определяющего некоторые ключевые характеристики класса атрибута.</span><span class="sxs-lookup"><span data-stu-id="4af52-114">A custom attribute declaration begins with the **AttributeUsageAttribute**, which defines some of the key characteristics of your attribute class.</span></span> <span data-ttu-id="4af52-115">Например, можно указать, может ли атрибут быть унаследован другими классами, или указать элементы языка, к которым может применяться этот атрибут.</span><span class="sxs-lookup"><span data-stu-id="4af52-115">For example, you can specify whether your attribute can be inherited by other classes or specify which elements the attribute can be applied to.</span></span> <span data-ttu-id="4af52-116">В приведенном ниже фрагменте кода демонстрируется использование атрибута **AttributeUsageAttribute**.</span><span class="sxs-lookup"><span data-stu-id="4af52-116">The following code fragment demonstrates how to use the **AttributeUsageAttribute**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- В <xref:System.AttributeUsageAttribute?displayProperty=fullName> имеется три члена, которые важны для создания настраиваемых атрибутов: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2) и [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ <span data-ttu-id="4af52-117"><xref:System.AttributeUsageAttribute?displayProperty=nameWithType> Имеет три члена, которые важны для создания настраиваемых атрибутов: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), и [AllowMultiple](#cpconwritingcustomattributesanchor3).</span><span class="sxs-lookup"><span data-stu-id="4af52-117">The <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> has three members that are important for the creation of custom attributes: [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), and [AllowMultiple](#cpconwritingcustomattributesanchor3).</span></span>  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
-### Член AttributeTargets  
- В предыдущем примере использовалось значение **AttributeTargets.All**, указывающее, что этот атрибут может применяться к любым элементам программы. Можно также задать значение **AttributeTargets.Class**, указывающее, что атрибут может применяться только к классам, или **AttributeTargets.Method**, указывающее, что этот атрибут может применяться только к методам. Подобным образом с помощью настраиваемых атрибутов можно выделить любые элементы программы с целью их последующего описания.  
+### <a name="attributetargets-member"></a><span data-ttu-id="4af52-118">Член AttributeTargets</span><span class="sxs-lookup"><span data-stu-id="4af52-118">AttributeTargets Member</span></span>  
+ <span data-ttu-id="4af52-119">В предыдущем примере использовалось значение **AttributeTargets.All** , указывающее, что этот атрибут может применяться к любым элементам программы.</span><span class="sxs-lookup"><span data-stu-id="4af52-119">In the previous example, **AttributeTargets.All** is specified, indicating that this attribute can be applied to all program elements.</span></span> <span data-ttu-id="4af52-120">Можно также задать значение **AttributeTargets.Class**, указывающее, что атрибут может применяться только к классам, или **AttributeTargets.Method**, указывающее, что этот атрибут может применяться только к методам.</span><span class="sxs-lookup"><span data-stu-id="4af52-120">Alternatively, you can specify **AttributeTargets.Class**, indicating that your attribute can be applied only to a class, or **AttributeTargets.Method**, indicating that your attribute can be applied only to a method.</span></span> <span data-ttu-id="4af52-121">Подобным образом с помощью настраиваемых атрибутов можно выделить любые элементы программы с целью их последующего описания.</span><span class="sxs-lookup"><span data-stu-id="4af52-121">All program elements can be marked for description by a custom attribute in this manner.</span></span>  
   
- Также можно передать несколько экземпляров <xref:System.AttributeTargets>. В следующем фрагменте кода задается применение настраиваемого атрибута к любому классу или методу.  
+ <span data-ttu-id="4af52-122">Также можно передать несколько экземпляров <xref:System.AttributeTargets>.</span><span class="sxs-lookup"><span data-stu-id="4af52-122">You can also pass multiple instances of <xref:System.AttributeTargets>.</span></span> <span data-ttu-id="4af52-123">В следующем фрагменте кода задается применение настраиваемого атрибута к любому классу или методу.</span><span class="sxs-lookup"><span data-stu-id="4af52-123">The following code fragment specifies that a custom attribute can be applied to any class or method.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#6)]
  [!code-csharp[Conceptual.Attributes.Usage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#6)]
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
-### Свойство Inherited  
- Свойство <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=fullName> указывает, может ли атрибут быть унаследован классами, производными от класса, к которому этот атрибут применен. Это свойство принимает значение **true** \(по умолчанию\) или **false**. Например, в следующем примере свойству `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> задано значение по умолчанию **true**, в то время как свойство `YourAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> имеет значение **false**.  
+### <a name="inherited-property"></a><span data-ttu-id="4af52-124">Свойство Inherited</span><span class="sxs-lookup"><span data-stu-id="4af52-124">Inherited Property</span></span>  
+ <span data-ttu-id="4af52-125"><xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Указывает ли атрибут быть унаследован классами, производными от классов, к которым применяется этот атрибут.</span><span class="sxs-lookup"><span data-stu-id="4af52-125">The <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> property indicates whether your attribute can be inherited by classes that are derived from the classes to which your attribute is applied.</span></span> <span data-ttu-id="4af52-126">Это свойство принимает значение **true** (по умолчанию) или **false** .</span><span class="sxs-lookup"><span data-stu-id="4af52-126">This property takes either a **true** (the default) or **false** flag.</span></span> <span data-ttu-id="4af52-127">Например, в следующем примере свойству `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> задано значение по умолчанию **true**, в то время как свойство `YourAttribute` атрибута <xref:System.AttributeUsageAttribute.Inherited%2A> имеет значение **false**.</span><span class="sxs-lookup"><span data-stu-id="4af52-127">For example, in the following example, `MyAttribute` has a default <xref:System.AttributeUsageAttribute.Inherited%2A> value of **true**, while `YourAttribute` has an <xref:System.AttributeUsageAttribute.Inherited%2A> value of **false**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
  [!code-vb[Conceptual.Attributes.Usage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#7)]  
   
- Затем эти два атрибута применяются к методу в базовом классе `MyClass`.  
+ <span data-ttu-id="4af52-128">Затем эти два атрибута применяются к методу в базовом классе `MyClass`.</span><span class="sxs-lookup"><span data-stu-id="4af52-128">The two attributes are then applied to a method in the base class `MyClass`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#9)]
  [!code-csharp[Conceptual.Attributes.Usage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#9)]
  [!code-vb[Conceptual.Attributes.Usage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#9)]  
   
- Наконец, класс `YourClass` наследуется от базового класса `MyClass`. Метод `MyMethod` использует атрибут `MyAttribute`, но не `YourAttribute`.  
+ <span data-ttu-id="4af52-129">Наконец, класс `YourClass` наследуется от базового класса `MyClass`.</span><span class="sxs-lookup"><span data-stu-id="4af52-129">Finally, the class `YourClass` is inherited from the base class `MyClass`.</span></span> <span data-ttu-id="4af52-130">Метод `MyMethod` использует атрибут `MyAttribute`, но не `YourAttribute`.</span><span class="sxs-lookup"><span data-stu-id="4af52-130">The method `MyMethod` shows `MyAttribute`, but not `YourAttribute`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#10](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#10)]
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
-### Свойство AllowMultiple  
- Свойство <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=fullName> указывает, можно ли применять к элементу несколько экземпляров атрибута. Если его значение равно **true**, допускается существование нескольких экземпляров. Если значение равно **false** \(по умолчанию\), можно использовать только один экземпляр.  
+### <a name="allowmultiple-property"></a><span data-ttu-id="4af52-131">Свойство AllowMultiple</span><span class="sxs-lookup"><span data-stu-id="4af52-131">AllowMultiple Property</span></span>  
+ <span data-ttu-id="4af52-132"><xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> Свойство указывает, является ли на элемент может существовать несколько экземпляров атрибута.</span><span class="sxs-lookup"><span data-stu-id="4af52-132">The <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> property indicates whether multiple instances of your attribute can exist on an element.</span></span> <span data-ttu-id="4af52-133">Если его значение равно **true**, допускается существование нескольких экземпляров. Если значение равно **false** (по умолчанию), можно использовать только один экземпляр.</span><span class="sxs-lookup"><span data-stu-id="4af52-133">If set to **true**, multiple instances are allowed; if set to **false** (the default), only one instance is allowed.</span></span>  
   
- В следующем примере свойство `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.AllowMultiple%2A> имеет значение по умолчанию **false**, в то время как для атрибута `YourAttribute` это свойство имеет значение **true**.  
+ <span data-ttu-id="4af52-134">В следующем примере свойство `MyAttribute` атрибута <xref:System.AttributeUsageAttribute.AllowMultiple%2A> имеет значение по умолчанию **false**, в то время как для атрибута `YourAttribute` это свойство имеет значение **true**.</span><span class="sxs-lookup"><span data-stu-id="4af52-134">In the following example, `MyAttribute` has a default <xref:System.AttributeUsageAttribute.AllowMultiple%2A> value of **false**, while `YourAttribute` has a value of **true**.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#11)]
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
  [!code-vb[Conceptual.Attributes.Usage#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#11)]  
   
- При применении нескольких экземпляров этих атрибутов атрибут `MyAttribute` вызывает ошибку компилятора. В следующем примере кода показано правильное использование атрибута `YourAttribute` и неправильное использование атрибута `MyAttribute`.  
+ <span data-ttu-id="4af52-135">При применении нескольких экземпляров этих атрибутов атрибут `MyAttribute` вызывает ошибку компилятора.</span><span class="sxs-lookup"><span data-stu-id="4af52-135">When multiple instances of these attributes are applied, `MyAttribute` produces a compiler error.</span></span> <span data-ttu-id="4af52-136">В следующем примере кода показано правильное использование атрибута `YourAttribute` и неправильное использование атрибута `MyAttribute`.</span><span class="sxs-lookup"><span data-stu-id="4af52-136">The following code example shows the valid use of `YourAttribute` and the invalid use of `MyAttribute`.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#13](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#13)]
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
  [!code-vb[Conceptual.Attributes.Usage#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#13)]  
   
- Если и свойство <xref:System.AttributeUsageAttribute.AllowMultiple%2A>, и свойство <xref:System.AttributeUsageAttribute.Inherited%2A> имеют значение **true**, то класс, наследуемый от другого класса, может наследовать атрибуты и иметь дополнительные экземпляры атрибута, применяемого в этом же дочернем классе. Если <xref:System.AttributeUsageAttribute.AllowMultiple%2A> имеет значение **false**, значения любых атрибутов в родительском классе будут перезаписаны новыми экземплярами того же самого атрибута в дочернем классе.  
+ <span data-ttu-id="4af52-137">Если и свойство <xref:System.AttributeUsageAttribute.AllowMultiple%2A> , и свойство <xref:System.AttributeUsageAttribute.Inherited%2A> имеют значение **true**, то класс, наследуемый от другого класса, может наследовать атрибуты и иметь дополнительные экземпляры атрибута, применяемого в этом же дочернем классе.</span><span class="sxs-lookup"><span data-stu-id="4af52-137">If both the <xref:System.AttributeUsageAttribute.AllowMultiple%2A> property and the <xref:System.AttributeUsageAttribute.Inherited%2A> property are set to **true**, a class that is inherited from another class can inherit an attribute and have another instance of the same attribute applied in the same child class.</span></span> <span data-ttu-id="4af52-138">Если <xref:System.AttributeUsageAttribute.AllowMultiple%2A> имеет значение **false**, значения любых атрибутов в родительском классе будут перезаписаны новыми экземплярами того же самого атрибута в дочернем классе.</span><span class="sxs-lookup"><span data-stu-id="4af52-138">If <xref:System.AttributeUsageAttribute.AllowMultiple%2A> is set to **false**, the values of any attributes in the parent class will be overwritten by new instances of the same attribute in the child class.</span></span>  
   
 <a name="cpcondeclaringattributeclass"></a>   
-## Объявление класса атрибута  
- После применения <xref:System.AttributeUsageAttribute> можно начать определение характеристик атрибута. Объявление класса атрибута выглядит аналогично объявлению традиционного класса, как показано в следующем примере кода.  
+## <a name="declaring-the-attribute-class"></a><span data-ttu-id="4af52-139">Объявление класса атрибута</span><span class="sxs-lookup"><span data-stu-id="4af52-139">Declaring the Attribute Class</span></span>  
+ <span data-ttu-id="4af52-140">После применения <xref:System.AttributeUsageAttribute>можно начать определение характеристик атрибута.</span><span class="sxs-lookup"><span data-stu-id="4af52-140">After you apply the <xref:System.AttributeUsageAttribute>, you can begin to define the specifics of your attribute.</span></span> <span data-ttu-id="4af52-141">Объявление класса атрибута выглядит аналогично объявлению традиционного класса, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="4af52-141">The declaration of an attribute class looks similar to the declaration of a traditional class, as demonstrated by the following code.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
  [!code-csharp[Conceptual.Attributes.Usage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#14)]
  [!code-vb[Conceptual.Attributes.Usage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#14)]  
   
- В этом определении атрибута демонстрируются следующие моменты.  
+ <span data-ttu-id="4af52-142">В этом определении атрибута демонстрируются следующие моменты.</span><span class="sxs-lookup"><span data-stu-id="4af52-142">This attribute definition demonstrates the following points:</span></span>  
   
--   Классы атрибутов должны объявляться как открытые классы.  
+-   <span data-ttu-id="4af52-143">Классы атрибутов должны объявляться как открытые классы.</span><span class="sxs-lookup"><span data-stu-id="4af52-143">Attribute classes must be declared as public classes.</span></span>  
   
--   В соответствии с соглашением имя класса атрибута должно завершаться словом **Attribute**. Это условие не обязательно, но рекомендуется для повышения удобства чтения. При применении атрибута использование слова Attribute является необязательным.  
+-   <span data-ttu-id="4af52-144">В соответствии с соглашением имя класса атрибута должно завершаться словом **Attribute**.</span><span class="sxs-lookup"><span data-stu-id="4af52-144">By convention, the name of the attribute class ends with the word **Attribute**.</span></span> <span data-ttu-id="4af52-145">Это условие не обязательно, но рекомендуется для повышения удобства чтения.</span><span class="sxs-lookup"><span data-stu-id="4af52-145">While not required, this convention is recommended for readability.</span></span> <span data-ttu-id="4af52-146">При применении атрибута использование слова Attribute является необязательным.</span><span class="sxs-lookup"><span data-stu-id="4af52-146">When the attribute is applied, the inclusion of the word Attribute is optional.</span></span>  
   
--   Все классы атрибутов должны непосредственно или косвенно наследовать от класса **System.Attribute**.  
+-   <span data-ttu-id="4af52-147">Все классы атрибутов должны непосредственно или косвенно наследовать от класса **System.Attribute**.</span><span class="sxs-lookup"><span data-stu-id="4af52-147">All attribute classes must inherit directly or indirectly from **System.Attribute**.</span></span>  
   
--   В Microsoft Visual Basic все классы настраиваемых атрибутов должны иметь атрибут **AttributeUsageAttribute**.  
+-   <span data-ttu-id="4af52-148">В Microsoft Visual Basic все классы настраиваемых атрибутов должны иметь атрибут **AttributeUsageAttribute** .</span><span class="sxs-lookup"><span data-stu-id="4af52-148">In Microsoft Visual Basic, all custom attribute classes must have the **AttributeUsageAttribute** attribute.</span></span>  
   
 <a name="cpcondeclaringconstructors"></a>   
-## Объявление конструкторов  
- Атрибуты инициализируются с помощью конструкторов точно так же, как и традиционные классы. В следующем фрагменте кода показан типичный конструктор атрибута. Этот открытый конструктор получает параметр и устанавливает его значение равным переменной\-члену.  
+## <a name="declaring-constructors"></a><span data-ttu-id="4af52-149">Объявление конструкторов</span><span class="sxs-lookup"><span data-stu-id="4af52-149">Declaring Constructors</span></span>  
+ <span data-ttu-id="4af52-150">Атрибуты инициализируются с помощью конструкторов точно так же, как и традиционные классы.</span><span class="sxs-lookup"><span data-stu-id="4af52-150">Attributes are initialized with constructors in the same way as traditional classes.</span></span> <span data-ttu-id="4af52-151">В следующем фрагменте кода показан типичный конструктор атрибута.</span><span class="sxs-lookup"><span data-stu-id="4af52-151">The following code fragment illustrates a typical attribute constructor.</span></span> <span data-ttu-id="4af52-152">Этот открытый конструктор получает параметр и устанавливает его значение равным переменной-члену.</span><span class="sxs-lookup"><span data-stu-id="4af52-152">This public constructor takes a parameter and sets its value equal to a member variable.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Чтобы использовать различные сочетания значений, можно выполнить перегрузку конструктора. Если для класса настраиваемого атрибута также определяется и [свойство](../Topic/Properties%20Overview.md), при инициализации атрибута можно использовать сочетание именованных и позиционных параметров. Как правило, все обязательные параметры определяются как позиционные, а все необязательные — как именованные. В этом случае атрибут нельзя инициализировать без обязательного параметра. Все остальные параметры являются необязательными. Обратите внимание, что в Visual Basic конструкторы для классов атрибутов не могут использовать аргумент ParamArray.  
+ <span data-ttu-id="4af52-153">Чтобы использовать различные сочетания значений, можно выполнить перегрузку конструктора.</span><span class="sxs-lookup"><span data-stu-id="4af52-153">You can overload the constructor to accommodate different combinations of values.</span></span> <span data-ttu-id="4af52-154">Если для класса настраиваемого атрибута также определяется и [свойство](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) , при инициализации атрибута можно использовать сочетание именованных и позиционных параметров.</span><span class="sxs-lookup"><span data-stu-id="4af52-154">If you also define a [property](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) for your custom attribute class, you can use a combination of named and positional parameters when initializing the attribute.</span></span> <span data-ttu-id="4af52-155">Как правило, все обязательные параметры определяются как позиционные, а все необязательные — как именованные.</span><span class="sxs-lookup"><span data-stu-id="4af52-155">Typically, you define all required parameters as positional and all optional parameters as named.</span></span> <span data-ttu-id="4af52-156">В этом случае атрибут нельзя инициализировать без обязательного параметра.</span><span class="sxs-lookup"><span data-stu-id="4af52-156">In this case, the attribute cannot be initialized without the required parameter.</span></span> <span data-ttu-id="4af52-157">Все остальные параметры являются необязательными.</span><span class="sxs-lookup"><span data-stu-id="4af52-157">All other parameters are optional.</span></span> <span data-ttu-id="4af52-158">Обратите внимание, что в Visual Basic конструкторы для классов атрибутов не могут использовать аргумент ParamArray.</span><span class="sxs-lookup"><span data-stu-id="4af52-158">Note that in Visual Basic, constructors for an attribute class should not use a ParamArray argument.</span></span>  
   
- В следующем примере кода показано, как атрибут, использующий приведенный выше конструктор, можно использовать с обязательными и необязательными параметрами. Предполагается, что этот атрибут имеет один обязательный логический параметр и одно необязательное строковое свойство.  
+ <span data-ttu-id="4af52-159">В следующем примере кода показано, как атрибут, использующий приведенный выше конструктор, можно использовать с обязательными и необязательными параметрами.</span><span class="sxs-lookup"><span data-stu-id="4af52-159">The following code example shows how an attribute that uses the previous constructor can be applied using optional and required parameters.</span></span> <span data-ttu-id="4af52-160">Предполагается, что этот атрибут имеет один обязательный логический параметр и одно необязательное строковое свойство.</span><span class="sxs-lookup"><span data-stu-id="4af52-160">It assumes that the attribute has one required Boolean value and one optional string property.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#17)]
  [!code-csharp[Conceptual.Attributes.Usage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#17)]
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 <a name="cpcondeclaringproperties"></a>   
-## Объявление свойств  
- Если необходимо определить именованный параметр или предоставить простой способ получения значений, хранящихся в атрибуте, можно объявить [свойство](../Topic/Properties%20Overview.md). Свойства атрибута следует объявлять как открытые сущности с описанием типа данных, который будет возвращен. Определите переменную, которая будет хранить значение свойства, и свяжите ее с методами **get** и **set**. В следующем примере кода показана реализация простого свойства в атрибуте.  
+## <a name="declaring-properties"></a><span data-ttu-id="4af52-161">Объявление свойств</span><span class="sxs-lookup"><span data-stu-id="4af52-161">Declaring Properties</span></span>  
+ <span data-ttu-id="4af52-162">Если необходимо определить именованный параметр или предоставить простой способ получения значений, хранящихся в атрибуте, можно объявить [свойство](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span><span class="sxs-lookup"><span data-stu-id="4af52-162">If you want to define a named parameter or provide an easy way to return the values stored by your attribute, declare a [property](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).</span></span> <span data-ttu-id="4af52-163">Свойства атрибута следует объявлять как открытые сущности с описанием типа данных, который будет возвращен.</span><span class="sxs-lookup"><span data-stu-id="4af52-163">Attribute properties should be declared as public entities with a description of the data type that will be returned.</span></span> <span data-ttu-id="4af52-164">Определите переменную, которая будет хранить значение свойства, и свяжите ее с методами **get** и **set** .</span><span class="sxs-lookup"><span data-stu-id="4af52-164">Define the variable that will hold the value of your property and associate it with the **get** and **set** methods.</span></span> <span data-ttu-id="4af52-165">В следующем примере кода показана реализация простого свойства в атрибуте.</span><span class="sxs-lookup"><span data-stu-id="4af52-165">The following code example demonstrates how to implement a simple property in your attribute.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 <a name="cpconcustomattributeexample"></a>   
-## Пример настраиваемого атрибута  
- В этом разделе используются приведенные выше сведения и демонстрируется пример создания простого атрибута, содержащего данные об авторе раздела кода. Атрибут в этом примере хранит имя и уровень программиста, а также данные об изменениях, внесенных в код. Для хранения текущих сохраняемых значений в нем используются три закрытые переменные. Каждая переменная представлена открытым свойством, которое возвращает и задает значения. Наконец, в примере определяется конструктор с двумя обязательными параметрами.  
+## <a name="custom-attribute-example"></a><span data-ttu-id="4af52-166">пример настраиваемого атрибута</span><span class="sxs-lookup"><span data-stu-id="4af52-166">Custom Attribute Example</span></span>  
+ <span data-ttu-id="4af52-167">В этом разделе используются приведенные выше сведения и демонстрируется пример создания простого атрибута, содержащего данные об авторе раздела кода.</span><span class="sxs-lookup"><span data-stu-id="4af52-167">This section incorporates the previous information and shows how to design a simple attribute that documents information about the author of a section of code.</span></span> <span data-ttu-id="4af52-168">Атрибут в этом примере хранит имя и уровень программиста, а также данные об изменениях, внесенных в код.</span><span class="sxs-lookup"><span data-stu-id="4af52-168">The attribute in this example stores the name and level of the programmer, and whether the code has been reviewed.</span></span> <span data-ttu-id="4af52-169">Для хранения текущих сохраняемых значений в нем используются три закрытые переменные.</span><span class="sxs-lookup"><span data-stu-id="4af52-169">It uses three private variables to store the actual values to save.</span></span> <span data-ttu-id="4af52-170">Каждая переменная представлена открытым свойством, которое возвращает и задает значения.</span><span class="sxs-lookup"><span data-stu-id="4af52-170">Each variable is represented by a public property that gets and sets the values.</span></span> <span data-ttu-id="4af52-171">Наконец, в примере определяется конструктор с двумя обязательными параметрами.</span><span class="sxs-lookup"><span data-stu-id="4af52-171">Finally, the constructor is defined with two required parameters.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]
  [!code-csharp[Conceptual.Attributes.Usage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#4)]
  [!code-vb[Conceptual.Attributes.Usage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#4)]  
   
- Этот атрибут можно применять с помощью полного имени `DeveloperAttribute` или сокращенного имени `Developer` одним из следующих способов.  
+ <span data-ttu-id="4af52-172">Этот атрибут можно применять с помощью полного имени `DeveloperAttribute`или сокращенного имени `Developer`одним из следующих способов.</span><span class="sxs-lookup"><span data-stu-id="4af52-172">You can apply this attribute using the full name, `DeveloperAttribute`, or using the abbreviated name, `Developer`, in one of the following ways.</span></span>  
   
  [!code-cpp[Conceptual.Attributes.Usage#12](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#12)]
  [!code-csharp[Conceptual.Attributes.Usage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#12)]
  [!code-vb[Conceptual.Attributes.Usage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#12)]  
   
- В первом примере этот атрибут применяется только с обязательными именованными параметрами, а во втором примере атрибут применяется и с обязательными, и с необязательными параметрами.  
+ <span data-ttu-id="4af52-173">В первом примере этот атрибут применяется только с обязательными именованными параметрами, а во втором примере атрибут применяется и с обязательными, и с необязательными параметрами.</span><span class="sxs-lookup"><span data-stu-id="4af52-173">The first example shows the attribute applied with only the required named parameters, while the second example shows the attribute applied with both the required and optional parameters.</span></span>  
   
-## См. также  
- <xref:System.Attribute?displayProperty=fullName>   
- <xref:System.AttributeUsageAttribute>   
- [Атрибуты](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="4af52-174">См. также</span><span class="sxs-lookup"><span data-stu-id="4af52-174">See Also</span></span>  
+ <xref:System.Attribute?displayProperty=nameWithType>  
+ <xref:System.AttributeUsageAttribute>  
+ [<span data-ttu-id="4af52-175">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="4af52-175">Attributes</span></span>](../../../docs/standard/attributes/index.md)
