@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a65ca3d3d4a787132246312e28213e71defc94ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Узел ReadLine экземпляра WorkflowApplication
 Этот образец представляет собой универсальный узел ReadLine. С помощью имеющегося действия `ReadLine` (или других действий, подобных тем, которые возвращают данные из закладок, возобновленных со строками) можно загружать и запускать любой рабочий процесс. Выходные данные из действия `WriteLine` или любого другого, выполняющего запись в расширение <xref:System.Activities.Statements.WriteLine.TextWriter%2A>, направляются в окно узла. Если экземпляр бездействует, в поле со списком отображаются имеющиеся в нем закладки. Если выбрать закладку, ввести некоторый текст и нажать кнопку возобновления закладки, то выполнение рабочего процесса будет продолжено. Можно также отменить, прервать или завершить выбранный рабочий процесс. По умолчанию сохраняемость включена - можно остановить узел и снова его запустить, список экземпляров при этом будет заполнен экземплярами, сохраненными в базе данных. Отслеживание используется для передачи событий уровня <xref:System.Activities.WorkflowApplication> узлу с возможностью добавления подробного отслеживания на уровне действия.  
@@ -67,6 +67,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`  
-  
-## <a name="see-also"></a>См. также
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

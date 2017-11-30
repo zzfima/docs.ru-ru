@@ -1,41 +1,22 @@
 ---
 title: "byte (справочник по C#)"
-ms.date: 2017-03-14
+ms.date: 03/14/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - byte
 - byte_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- byte keyword [C#]
+helpviewer_keywords: byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 231a491914071b1d43b5a8938e677be531726e75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ef7494e2a8a1463d37cff77d1dacebec8182b66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="byte-c-reference"></a>byte (справочник по C#)
 
@@ -43,22 +24,26 @@ ms.lasthandoff: 07/28/2017
   
 |Тип|Диапазон|Размер|Тип платформы .NET Framework|  
 |----------|-----------|----------|-------------------------|  
-|`byte`|От 0 до 255|8-разрядное целое число без знака|<xref:System.Byte?displayProperty=fullName>|  
+|`byte`|От 0 до 255|8-разрядное целое число без знака|<xref:System.Byte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Литералы  
 
- Переменную `byte` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `byte` (то есть если он меньше <xref:System.Byte.MinValue?displayProperty=fullName> или больше <xref:System.Byte.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+ Переменную `byte` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `byte` (то есть если он меньше <xref:System.Byte.MinValue?displayProperty=nameWithType> или больше <xref:System.Byte.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
 
 В следующем примере целые числа, равные 201 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `byte`.    
   
-[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
+[!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
 
 > [!NOTE] 
 > Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет.
 
-Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+Начиная с C# 7, ваши возможности были добавлены для повышения удобства чтения. 
+ - C# 7.0 допускает использование символа подчеркивания, `_`, в качестве разделителя цифр.
+ - 7.2 C# позволяет `_` должен использоваться как разделитель для двоичных или шестнадцатеричное литерала, после префикса. Десятичный литерал не может иметь с символа подчеркивания.
 
-[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
+Ниже приведены некоторые примеры.
+
+[!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
  
 ## <a name="conversions"></a>Преобразования  
  Существует предопределенное неявное преобразование типа `byte` в типы [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md).  
@@ -124,12 +109,11 @@ SampleMethod((byte)5);
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Byte>   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ <xref:System.Byte>  
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

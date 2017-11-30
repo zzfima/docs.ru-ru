@@ -1,113 +1,181 @@
 ---
-title: "Лучшие методики обработки исключений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "исключения, рекомендации"
+title: "Лучшие методики обработки исключений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords: exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: 28
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/28/2017
 ---
-# Лучшие методики обработки исключений
-Хорошо спроектированное приложение обрабатывает исключения и ошибки, чтобы предотвратить сбои приложения.  В этом разделе описываются рекомендации по обработке и созданию исключений.  
+# <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
+
+Хорошо спроектированное приложение обрабатывает исключения и ошибки, чтобы предотвратить сбои приложения. В этом разделе описываются рекомендации по обработке и созданию исключений.
+
+## <a name="use-trycatchfinally-blocks"></a>Использование блоков try/catch/finally
+
+Используйте блоки `try`/`catch`/`finally` для выделения кода, который может стать источником исключения. 
+
+В блоках `catch` следует всегда упорядочивать исключения от более конкретных к более общим.
+
+Используйте блок `finally` для очистки ресурсов с учетом возможности восстановления.
+
+## <a name="handle-common-conditions-without-throwing-exceptions"></a>Обработка общих условий без выдачи исключений
+
+Для условий, которые могут возникнуть, но способны вызвать исключение, рекомендуется реализовать обработку таким способом, который позволит избежать исключения. Например, при попытке закрыть уже закрытое подключение возникает `InvalidOperationException`. Этого можно избежать, используя оператор `if` для проверки состояния подключения перед попыткой закрыть его.
+
+[!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
+[!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
+[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]  
+
+Если состояние подключения перед закрытием не проверяется, исключение `InvalidOperationException` можно перехватить.
+
+[!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
+[!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
+[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]  
+
+Выбор конкретного способа зависит от того, насколько часто ожидается возникновение данного события.
+
+- Используйте обработку исключений, если событие не происходит очень часто, то есть если событие носит действительно исключительный характер и указывает на ошибку (например, в случае неожиданного конца файла). При использовании обработки исключений в обычных условиях выполняется меньше кода.
+
+- Если событие происходит регулярно в рамках нормальной работы программы, выполняйте проверку на наличие ошибок прямо в коде. Проверка на наличие распространенных условий ошибки позволяет выполнять меньший объем кода благодаря устранению исключений.
+
+## <a name="design-classes-so-that-exceptions-can-be-avoided"></a>Устранение исключений при разработке классов
+
+Класс может предоставлять методы и свойства, позволяющие избежать вызова, способного выдать исключение. Например, класс <xref:System.IO.FileStream> содержит методы, позволяющие определить, достигнут ли конец файла. Это позволяет избежать появления исключения, создаваемого в случае выполнения чтения после окончания файла. В следующем примере показан способ чтения до конца файла без выдачи исключения.
+
+[!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
+[!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
+[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
+
+Другой способ устранения исключений заключается в том, что для наиболее общих и часто встречающихся ошибок следует возвращать значение NULL. Такие ошибки могут относиться к обычному потоку управления. Возвращая значение null в таких случаях, можно сократить влияние на производительность приложения.
+
+## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Выдача исключений вместо возврата кода ошибки
+
+Исключения гарантируют, что сбои не останутся незамеченными из-за того, что вызывающий код не проверил код возврата. 
+
+## <a name="use-the-predefined-net-exception-types"></a>Использование предопределенных типов исключений .NET
+
+Создавайте новый класс исключений, только если предопределенное исключение не подходит. Например:
+
+- Вызывайте исключение <xref:System.InvalidOperationException>, если значение свойства или вызов метода не соответствуют текущему состоянию объекта.
+
+- Порождайте исключение <xref:System.ArgumentException> или одного из предварительно определенных классов, которые являются производными от <xref:System.ArgumentException>, если передаются недопустимые параметры.
+
+## <a name="end-exception-class-names-with-the-word-exception"></a>Завершайте имена классов исключений словом `Exception`
+
+Если требуется пользовательское исключение, присвойте ему соответствующее имя и сделайте его производным от класса <xref:System.Exception>. Пример:
+
+[!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
+[!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
+[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]  
+
+## <a name="include-three-constructors-in-custom-exception-classes"></a>Включение трех конструкторов в пользовательские классы исключений
+
+При создании собственных классов исключений можно использовать по меньшей мере три общих конструктора: конструктор по умолчанию, конструктор, принимающий строковое сообщение, и конструктор, принимающий строковое сообщение и внутреннее исключение.
+
+* <xref:System.Exception.%23ctor>, которая использует значения по умолчанию.
   
-## Обработка исключений  
- В следующем списке приведены некоторые общие рекомендации по обработке исключений в приложении.  
+* <xref:System.Exception.%23ctor%28System.String%29>, принимающий строковое сообщение.  
   
--   Используйте код обработки исключений \(блоки `try`\/`catch`\) надлежащим образом.  Можно также программным путем проверять условие, которое с большой вероятностью может возникать без обработки исключений.  
+* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.  
   
-     **Программные проверки**.  В следующем примере показано использование оператора `if` для проверки закрытия подключения.  Если подключение не закрыто, пример закрывает подключение вместо выдачи исключения.  
+Пример см. в разделе [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
+
+## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Обеспечение доступности данных об исключении при удаленном выполнении кода
+
+При создании пользовательских исключений следует обеспечить доступность метаданных исключений для удаленно исполняемого кода. 
+
+Например в реализациях .NET, поддерживающие доменов приложений, исключения могут возникать между доменами приложений. Предположим, что домен приложения А создает домен приложения В, который выполняет код, вызывающий исключение. Чтобы домен приложения A правильно перехватил и обработал исключение, он должен найти сборку, которая содержит исключение, порожденное доменом приложения B. Если домен приложения B порождает исключение, содержащееся в сборке в его базовой папке приложения, но не в базовой папке приложения домена A, то домен приложения A не сможет найти исключение и среда CLR породит исключение <xref:System.IO.FileNotFoundException>. Чтобы избежать такой ситуации, можно развернуть сборку, содержащую сведения об исключении, двумя способами:
+
+- Поместите эту сборку в общую базу приложения, совместно используемую обоими доменами приложений.
+
+    \- или -
+
+- Если у этих доменов нет общей базы приложения, то подпишите сборку, содержащую сведения об исключении, строгим именем и разверните ее в глобальном кэше сборок.
+
+## <a name="include-a-localized-description-string-in-every-exception"></a>Включение локализованной строки описания в каждое исключение
+
+Сообщение об ошибке, показываемое пользователю, извлекается из строки описания созданного исключения, а не из имени класса исключения.
+
+## <a name="use-grammatically-correct-error-messages"></a>Использование грамматически правильных сообщений об ошибке
+
+Составляйте понятные предложения, указывая в конце знаки препинания. Каждое предложение в строке описания должно заканчиваться точкой. Например «переполнение таблицы журнала.» будет подходящей строкой описания.
+
+## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Предоставление дополнительных свойств в пользовательских исключениях по мере необходимости
+
+Дополнительные сведения (кроме строки описания) включайте в исключение только в тех случаях, когда в соответствии со сценарием программирования такие дополнительные сведения могут оказаться полезными. Например, исключение <xref:System.IO.FileNotFoundException> предоставляет свойство <xref:System.IO.FileNotFoundException.FileName>.
+
+## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Размещение операторов throw для удобной трассировки стека
+
+Трассировка стека начинается в операторе, породившем исключение, и завершается оператором `catch`, перехватывающим это исключение.
+
+## <a name="use-exception-builder-methods"></a>Использование методов построителя исключений
+
+Обычно класс генерирует одно и то же исключение из различных мест своей реализации. Чтобы избежать повторения кода, используйте вспомогательные методы, создающие исключение и затем возвращающие его. Пример:
+
+[!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
+[!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
+[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-     [!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
-     [!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-     [!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]  
-  
-     **Обработка исключений**.  В следующем примере используется блок `try`\/`catch`, который проверяет подключение и вызывает исключение, если подключение не закрыто.  
-  
-     [!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
-     [!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-     [!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]  
-  
-     Выбираемый метод зависит от того, насколько часто ожидается возникновение данного события.  
-  
-    -   Используйте обработку исключений, если событие не происходит очень часто, то есть если событие носит действительно исключительный характер и указывает на ошибку \(например, в случае неожиданного конца файла\).  При использовании обработки исключений в обычных условиях выполняется меньше кода.  
-  
-    -   Если событие происходит регулярно в рамках нормальной работы программы, используйте программный метод проверки на наличие ошибок.  В случае программной проверки на наличие ошибок при возникновении исключения выполняется больше кода.  
-  
--   Используйте блоки `try`\/`catch` выделив с их помощью тот код, который потенциально может вызвать исключение, и используйте блок `finally` для очистки ресурсов, если это необходимо.  При таком способе оператор `try` создает исключение, оператор `catch` обрабатывает исключение, а оператор `finally` закрывает или освобождает ресурсы.  
-  
--   В блоках `catch` следует всегда упорядочивать исключения от более конкретных к более общим.  При таком методе определенное исключение обрабатывается до его передачи в блок `catch` более общего исключения.  
-  
-## Создание и вызов исключений  
- В следующем списке описываются рекомендации по созданию собственных исключений и ситуации, при которых они должны вызываться.  Дополнительные сведения см. в разделе [Правила разработки исключений](../../../docs/standard/design-guidelines/exceptions.md).  
-  
--   Разрабатывайте классы таким образом, чтобы исключение никогда не создавалось при нормальном использовании.  Например, класс <xref:System.IO.FileStream> содержит методы, позволяющие определить, достигнут ли конец файла.  Это позволяет избежать создания исключения, создаваемого в случае выполнения чтения после окончания файла.  В следующем примере показан способ чтения до конца файла.  
-  
-     [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
-     [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-     [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
-  
--   Вместо возврата кода ошибки или HRESULT следует создавать исключения.  
-  
--   Для наиболее общих и часто встречающихся ошибок следует возвращать значение null.  Такие ошибки могут относиться к обычному потоку управления.  Возвращая значение null в таких случаях, можно сократить влияние на производительность приложения.  
-  
--   В большинстве случаев следует использовать предопределенные типы исключений .NET Framework.  Создавайте новый класс исключений, только если предопределенное исключение не подходит.  
-  
--   Вызывайте исключение <xref:System.InvalidOperationException>, если значение свойства или вызов метода не соответствуют текущему состоянию объекта.  
-  
--   Вызывайте исключение <xref:System.ArgumentException> или класс, производный от <xref:System.ArgumentException>, если передаются недопустимые параметры.  
-  
--   Для большинства приложений следует наследовать особые исключения от класса <xref:System.Exception>.  Наследование от класса <xref:System.ApplicationException> не имеет особого значения.  
-  
--   Имена классов исключений завершайте словом "Exception".  Например:  
-  
-     [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
-     [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-     [!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]  
-  
--   В C\# и C\+\+ при создании собственных классов исключений можно использовать по меньшей мере три общих конструктора: конструктор по умолчанию, конструктор, принимающий строковое сообщение, и конструктор, принимающий строковое сообщение и внутреннее исключение.  Пример см. в разделе [Практическое руководство. Создание пользовательских исключений](../../../docs/standard/exceptions/how-to-create-user-defined-exceptions.md).  
-  
-    1.  <xref:System.Exception.%23ctor>, использующий значения по умолчанию.  
-  
-    2.  <xref:System.Exception.%23ctor%28System.String%29>, принимающий строковое сообщение.  
-  
-    3.  <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.  
-  
--   При создании пользовательских исключений необходимо обеспечить доступность метаданных исключений для удаленно исполняемого кода, включая и те исключения, которые возникают между доменами приложений.  Например, предположим, что домен приложения А создает домен приложения В, который выполняет код, порождающий исключение.  Чтобы домен приложения A правильно перехватил и обработал это исключение, он должен иметь возможность найти сборку, содержащую исключение, вызванное доменом приложения B.  Если домен приложения B вызывает исключение, содержащееся в его базе приложения, но не в базе домена приложения A, то домен приложения A не сможет найти исключение и среда CLR вызовет исключение <xref:System.IO.FileNotFoundException>.  Чтобы избежать такой ситуации, можно развернуть сборку, содержащую сведения об исключении, двумя способами:  
-  
-    -   Поместите эту сборку в общую базу приложения, совместно используемую обоими доменами приложений.  
-  
-         \-или\-  
-  
-    -   Если у этих доменов нет общей базы приложения, то подпишите сборку, содержащую сведения об исключении, строгим именем и разверните ее в глобальном кэше сборок.  
-  
--   В каждое исключение включайте локализованную строку описания.  Сообщение об ошибке, показываемое пользователю, извлекается из строки описания созданного исключения, а не из класса исключения.  
-  
--   Используйте грамматически правильные сообщения об ошибке с соответствующей пунктуацией.  Каждое предложение в строке описания должно заканчиваться точкой.  Например, можно использовать строку описания "Переполнение таблицы журнала".  
-  
--   Обеспечьте программный доступ к свойствам <xref:System.Exception>.  Дополнительные сведения \(кроме строки описания\) включайте в исключение только в тех случаях, когда в соответствии со сценарием программирования такие дополнительные сведения могут оказаться полезными.  Например, исключение <xref:System.IO.FileNotFoundException> предоставляет свойство <xref:System.IO.FileNotFoundException.FileName%2A>.  
-  
--   Трассировка стека начинается в операторе, породившем исключение, и завершается оператором `catch`, перехватывающим это исключение.  Не забывайте об этом, принимая решение о месте расположения оператора `throw`.  
-  
--   Используйте методы построителя исключений.  Обычно класс генерирует одно и то же исключение из различных мест своей реализации.  Чтобы избежать повторения кода, используйте вспомогательные методы, создающие исключение и затем возвращающие его.  Например:  
-  
-     [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
-     [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-     [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
-  
-     Другой вариант — воспользуйтесь конструктором для построения исключения.  Это больше подходит для глобальных классов исключений, таких как <xref:System.ArgumentException>.  
-  
--   Устраняйте промежуточные результаты при порождении исключения.  Вызывающие объекты должны предполагать, что при создании исключения из метода не возникают побочные эффекты.  
-  
-## См. также  
- [Исключения](../../../docs/standard/exceptions/index.md)
+В некоторых случаях для создания исключения лучше воспользоваться конструктором исключений. Примером является класс глобальных исключений, таких как <xref:System.ArgumentException>.
+
+## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Очистка промежуточных результатов при выдаче исключения
+
+Вызывающие объекты должны предполагать, что при создании исключения из метода не возникают побочные эффекты. Например, если у вас есть код, который передает деньги, списывая их с одного счета и внося на другой, и при начислении средств возникает исключение, списание средств применяться не должно.
+
+```csharp
+public void TransferFunds(Account from, Account to, decimal amount)
+{
+    from.Withdrawal(amount);
+    // If the deposit fails, the withdrawal shouldn't remain in effect. 
+    to.Deposit(amount);
+}
+```
+
+Один из способов обработки в этой ситуации заключается в перехвате всех исключений, выданных транзакцией начисления средств, и откате транзакции списания средств.
+
+```csharp
+private static void TransferFunds(Account from, Account to, decimal amount)
+{
+    string withdrawalTrxID = from.Withdrawal(amount);
+    try
+    {
+        to.Deposit(amount);
+    }
+    catch
+    {
+        from.RollbackTransaction(withdrawalTrxID);
+        throw;
+    }
+}
+```
+
+В этом примере показано использование `throw` для повторного порождения исходного исключения. Это позволяет вызывающим объектам проще установить фактическую причину проблемы, не обращаясь к свойству <xref:System.Exception.InnerException>. Альтернативным способом является выдача нового исключения с включением исходного исключения в качестве внутреннего:
+
+```csharp
+catch (Exception ex)
+{
+    from.RollbackTransaction(withdrawalTrxID);
+    throw new Exception("Withdrawal failed", ex);
+}
+```
+
+## <a name="see-also"></a>См. также  
+[Исключения](index.md)

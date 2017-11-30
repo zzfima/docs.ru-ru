@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6691af16d41b4ae8c0bdca17f0a6b078cd72af16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 87858af7c3d040a5eef9a12512e79217aa49cffb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="visual-workflow-tracking"></a>Визуальное отслеживание рабочего процесса
 В этом образце показано, как подготовить приложение для визуального отслеживания рабочих процессов с использованием функции отладки, доступной через [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
@@ -47,6 +47,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`  
-  
-## <a name="see-also"></a>См. также
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

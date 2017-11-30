@@ -1,35 +1,36 @@
 ---
-title: "Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ebe8a55cd5dd80be10553948c7765f81429c0957
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
-Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML\-документа по схемам на языке XSD.  Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке.  Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
+Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD. Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке. Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.  
   
 > [!IMPORTANT]
->  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>.  Дополнительные сведений о классе <xref:System.Xml.Schema.XmlSchemaSet> см. в разделе [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+>  Класс <xref:System.Xml.Schema.XmlSchemaCollection> устарел и заменен классом <xref:System.Xml.Schema.XmlSchemaSet>. Дополнительные сведения о <xref:System.Xml.Schema.XmlSchemaSet> см. класс, [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  В следующем примере показан корневой элемент файла данных.  
   
-```  
+```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
     xmlns="urn:bookstore-schema"  
     elementFormDefault="qualified"  
@@ -58,7 +59,7 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- В основном атрибут `targetNamespace` используется при добавлении свойства `namespaceURI` в методе <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> коллекции <xref:System.Xml.Schema.XmlSchemaCollection>.  Перед добавлением схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> можно указать ссылку со значением NULL.  Для схем без пространства имен следует использовать пустую строку \(""\).  В коллекции <xref:System.Xml.Schema.XmlSchemaCollection> может быть только одна схема без пространства имен.  
+ В основном атрибут `targetNamespace` используется при добавлении свойства `namespaceURI` в методе <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> коллекции <xref:System.Xml.Schema.XmlSchemaCollection>. Перед добавлением схемы в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> можно указать ссылку со значением NULL. Для схем без пространства имен следует использовать пустую строку (""). В коллекции <xref:System.Xml.Schema.XmlSchemaCollection> может быть только одна схема без пространства имен.  
   
  Следующий пример кода добавляет схему XML HeadCount.xsd в коллекцию <xref:System.Xml.Schema.XmlSchemaCollection> и проверяет файл HeadCount.xml.  
   
@@ -133,7 +134,7 @@ namespace ValidationSample
   
  Ниже описано содержимое проверяемого входного файла HeadCount.xml.  
   
-```  
+```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
 <hc:HeadCount xmlns:hc='xsdHeadCount'>  
    <Name>Waldo Pepper</Name>  
@@ -141,9 +142,9 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- Ниже описано содержимое проверяемого файла XML\-схемы HeadCount.xsd.  
+ Ниже описано содержимое проверяемого файла XML-схемы HeadCount.xsd.  
   
-```  
+```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
    <xs:element name='HeadCount' type="HEADCOUNT"/>  
    <xs:complexType name="HEADCOUNT">  
@@ -155,7 +156,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Следующий пример кода создает <xref:System.Xml.XmlValidatingReader>, принимающий <xref:System.Xml.XmlTextReader>.  Входной файл sample4.xml проверяется по схеме XML sample4.xsd.  
+ Следующий пример кода создает <xref:System.Xml.XmlValidatingReader>, принимающий <xref:System.Xml.XmlTextReader>. Входной файл sample4.xml проверяется по схеме XML sample4.xsd.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -181,7 +182,7 @@ while(vr.Read()) {
   
  Далее приведено содержимое проверяемого входного файла sample4.xml.  
   
-```  
+```xml  
 <datatypes xmlns="datatypesTest">  
     <number>  
         <number_1>123</number_1>  
@@ -191,7 +192,7 @@ while(vr.Read()) {
   
  Далее приведено содержимое файла схемы XML sample4.xsd, по которому будет выполнена проверка.  
   
-```  
+```xml  
 <xs:schema   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     xmlns:tns="datatypesTest"   
@@ -214,8 +215,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## См. также  
- <xref:System.Xml.XmlParserContext>   
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=fullName>   
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Xml.XmlParserContext>  
+ <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+ <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
  [Компиляция схемы XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
+ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 
 В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core для macOS. Вы узнаете, как создавать проекты и модульные тесты, использовать средства отладки и включать библиотеки сторонних разработчиков с помощью [NuGet](https://www.nuget.org/).
@@ -82,7 +80,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-Выполните команду [`dotnet restore`](../tools/dotnet-restore.md), которая восстанавливает зависимости и создает подкаталог *obj* в каталоге *library*. Этот подкаталог содержит три файла, в том числе файл *project.assets.json*:
+Выполнение [ `dotnet restore` ](../tools/dotnet-restore.md), ([см. Примечание](#dotnet-restore-note)) который восстанавливает зависимости и создает *obj* папки *библиотеки* с тремя в нем файлов, включая *project.assets.json* файла:
 
 ```console
 dotnet restore
@@ -162,7 +160,7 @@ namespace TestApp
 Из папки *golden* выполните следующие команды:
 
 ```console
-dotnet restore
+dotnet restore 
 dotnet test test-library/test-library.csproj
 ```
 
@@ -196,7 +194,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-Выполните команду `dotnet restore`, чтобы восстановить зависимости для трех проектов в решении. Откройте файл *Program.cs* и замените содержимое метода `Main` следующей строкой:
+Запустите `dotnet restore` ([см. Примечание](#dotnet-restore-note)) для восстановления зависимостей из трех проектов в решении. Откройте файл *Program.cs* и замените содержимое метода `Main` следующей строкой:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
@@ -225,3 +223,5 @@ dotnet run -p app/app.csproj
 
 Нажмите кнопку "Воспроизвести", чтобы запустить приложение в режиме отладки. Приложение выполняется до точки останова, в которой оно останавливается. Выполните метод `Get` по шагам и убедитесь в том, что переданы правильные аргументы. Убедитесь, что ответ равен 42.
 
+<a name="dotnet-restore-note"></a>
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

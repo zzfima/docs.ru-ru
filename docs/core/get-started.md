@@ -4,17 +4,16 @@ description: "Ресурсы, посвященные созданию прило
 keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
-ms.date: 08/14/2017
+ms.date: 09/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
+ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1f016b73a375c5ab63bba28accf57c5572d581c8
-ms.openlocfilehash: 694800954134888a511a90f069f55004bb2a2dce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
@@ -38,21 +37,14 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="linux"></a>Linux
 
-Установите .NET Core в своем дистрибутиве или версии.
-
-* [Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
-* [Ubuntu 14.04, 16.04, 16.10, 17.04 и Linux Mint 17, 18](https://www.microsoft.com/net/core#linuxubuntu)
-* [Debian 8.2+, 8.7+, 9](https://www.microsoft.com/net/core#linuxdebian)
-* [Fedora 24, 25, 26](https://www.microsoft.com/net/core#linuxfedora)
-* [CentOS 7.1 и Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
-* [SUSE Enterprise Linux (SLES) 12 с пакетом обновления 2 (SP2), openSUSE 42.1, 42.2](https://www.microsoft.com/net/core#linuxopensuse)
+Установите .NET Core на [Linux](https://www.microsoft.com/net/core#linuxredhat).
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
 * [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://code.visualstudio.com/), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения .NET Core в Ubuntu 14.04.
 
-Платформа .NET Core поддерживается дистрибутивами и версиями Linux, которые указаны в приведенном выше списке ссылок для установки.
+В разделе [предварительные требования для разработки Linux](linux-prerequisites.md) список поддерживаемых версий и дистрибутивы Linux.
 
 ## <a name="os-x--macos"></a>OS X и Mac OS
 
@@ -67,4 +59,3 @@ ms.lasthandoff: 08/29/2017
 * [Создание полноценного решения .NET Core на macOS с помощью Visual Studio для Mac](tutorials/using-on-mac-vs-full-solution.md) — это учебник описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
 
 Список поддерживаемых версий OS X и macOS см. в разделе [Предварительные требования для разработки в macOS](macos-prerequisites.md).
-

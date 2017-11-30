@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
 - code generation tool
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Erikre
 ms.author: erikre
 manager: erikre
+ms.openlocfilehash: fa4cf7baa3ca3ba19a733438920357034e8de193
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Программа командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -150,7 +143,6 @@ sqlmetal [options] [<input file>]
 >  При использовании параметра **/pluralize** вместе с учебной базой данных Northwind необходимо иметь в виду следующее. Когда SqlMetal создает имена типов строк для таблиц, имена таблиц представляются в единственном числе. При создании свойств <xref:System.Data.Linq.DataContext> для таблиц имена таблиц представляются во множественном числе. Однако таблицы в учебной базе данных Northwind уже имеют имена в форме множественного числа. Поэтому данная часть процедуры не будет иметь видимого эффекта. Если таблицам базы данных принято присваивать имена в единственном числе, то коллекциям .NET принято присваивать имена во множественном числе.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Создание модели объектов в Visual Basic или C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
- [Создание кода в LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
+ [Как: Создание модели объектов в Visual Basic или C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [Создание кода в LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [Внешнее сопоставление](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-

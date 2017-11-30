@@ -6,12 +6,11 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 84f1eaf5fbfcdf8d1dd1b90545f9236e2daedd15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -39,9 +38,9 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="net-core-dependencies"></a>Зависимости .NET Core
 
-Для запуска платформы .NET Core в версиях до Windows 10 и Windows Server 2016 необходим распространяемый компонент Visual C++. Эта зависимость устанавливается автоматически установщиком .NET Core.
+.NET core 1.1 и более ранних версий требуется распространяемый пакет Visual C++ при работе в версиях Windows, более ранних, чем Windows 10 и Windows Server 2016. Эта зависимость устанавливается автоматически установщиком .NET Core.
 
-[Распространяемый компонент Microsoft Visual C++ 2015 с обновлением 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685) необходимо установить вручную в следующих случаях:
+[Распространяемый компонент Microsoft Visual C++ 2015 с обновлением 3](https://www.microsoft.com/download/details.aspx?id=52685) необходимо установить вручную в следующих случаях:
 
    * при установке .NET Core с помощью [скрипта установщика](./tools/dotnet-install-script.md);
    * при развертывании автономного приложения .NET Core.
@@ -95,4 +94,3 @@ ms.lasthandoff: 08/14/2017
      > * В диалоговом окне **О программе Microsoft Visual Studio** проверьте номер версии.
 >     * Для приложений .NET Core 2.x требуется среда Visual Studio 2017 версии 15.3 (26730.01) или более поздней.
 >     * Для приложений .NET Core 1.x требуется среда Visual Studio 2017 версии 15.0 (26228.04) или более поздней.
-

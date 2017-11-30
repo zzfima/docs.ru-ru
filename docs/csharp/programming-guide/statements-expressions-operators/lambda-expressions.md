@@ -1,12 +1,9 @@
 ---
 title: "Лямбда-выражения (Руководство по программированию в C#)"
-ms.date: 2017-03-03
+ms.date: 03/03/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -14,30 +11,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
 Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  
@@ -74,7 +55,7 @@ namespace ConsoleApplication1
   
  Лямбда-операторы используются в запросах [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на основе методов в качестве аргументов стандартных методов операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A>.  
   
- При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на объекты и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=fullName>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=fullName> (как это делается в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
+ При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на объекты и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (как это делается в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
   
  Обратите внимание: в приведенном выше примере сигнатура делегата имеет один неявный входной параметр типа `int`и возвращает значение типа `int`. Лямбда-выражение можно преобразовать в делегат соответствующего типа, поскольку он также имеет один входной параметр (`x`) и возвращает значение, которое компилятор может неявно преобразовать в тип `int`. (Вывод типов более подробно рассматривается в следующих разделах.) Делегат, вызываемый посредством входного параметра 5, возвращает результат 25.  
   
@@ -296,11 +277,10 @@ class Test
  [Делегаты, события и лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=195395) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Примеры Visual Studio 2008 C# (см. Примеры запросов LINQ и программа XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
  [Рекурсивные лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=112395)
-

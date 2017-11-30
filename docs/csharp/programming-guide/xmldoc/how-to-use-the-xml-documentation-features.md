@@ -1,45 +1,27 @@
 ---
 title: "Практическое руководство. Использование XML-документации (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Практическое руководство. Использование XML-документации (Руководство по программированию в C#)
 В данном примере представлены основные общие сведения о задокументированном типе.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **// Этот XML-файл был создан в предыдущем образце кода.**  
 **\<?xml version="1.0"?>**  
@@ -52,7 +34,7 @@ ms.lasthandoff: 07/28/2017
  **\<summary>**  
  **Здесь сводная документация об уровне класса.\</summary>**  
  **\<remarks>**  
- **Расширенные комментарии можно связать с типом или членом**   
+ **Комментариев больше времени может быть связан с типом или членом**  
  **при помощи тега remarks\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -60,14 +42,14 @@ ms.lasthandoff: 07/28/2017
  **Хранилище для свойства name\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<summary>Конструктор класса.\</summary>**   
+ **\<Сводка > конструктора класса.  \< /summary >**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **Описание метода SomeMethod.\</summary>**  
  **\<param name="s"> Здесь описание параметра s\</param>**  
  **\<seealso cref="T:System.String">**  
- **Атрибут cref можно использовать в любом теге для ссылки на тип или член,**   
+ **Атрибут cref можно использовать на любом теге для ссылки на тип или член**  
  **и тогда компилятор проверит существование ссылки. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -116,7 +98,6 @@ ms.lasthandoff: 07/28/2017
         >  XML-файл не предоставляет полную информацию о типе и членах (например, он не содержит никаких сведений о типе). Чтобы получить полную информацию о типе или члене, необходимо использовать файл документации вместе с отражением на текущий тип или член.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [/ doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-

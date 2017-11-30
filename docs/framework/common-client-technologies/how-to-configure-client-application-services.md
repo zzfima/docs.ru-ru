@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client application services, configuring
+helpviewer_keywords: client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1d15e380b6b7e8b226f26b261f4d4540eeef88d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Практическое руководство. Настройка служб клиентских приложений
 В этом разделе описывается использование [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **конструктора проектов** для включения и настройки служб клиентских приложений. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -54,7 +51,7 @@ ms.lasthandoff: 07/28/2017
   
 6.  При необходимости, если выбран параметр **Использовать проверку подлинности с помощью форм**, можно указать значение в поле **Поставщик учетных данных**. Поставщик учетных данных должен реализовать интерфейс <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>. Используя поставщик учетных данных, можно отделить интерфейс входа от остального кода приложения. Это позволяет создать окно единого входа для использования в нескольких приложениях. Дополнительные сведения см. в разделе [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md).  
   
-     Если указывать поставщика учетных данных, требуется ввести имя типа сборки. Дополнительные сведения см. в разделах <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> и [Имена сборок](../../../docs/framework/app-domains/assembly-names.md). В простейшем виде имя типа сборки выглядит примерно так:  
+     Если указывать поставщика учетных данных, требуется ввести имя типа сборки. Дополнительные сведения см. в разделах <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> и [Имена сборок](../../../docs/framework/app-domains/assembly-names.md). В простейшем виде имя типа сборки выглядит примерно так:  
   
     ```  
     MyNamespace.MyLoginClass, MyAssembly  
@@ -99,7 +96,7 @@ ms.lasthandoff: 07/28/2017
   
      В текстовом поле отобразится значение по умолчанию `Data Source = |SQL/CE|`.  
   
-3.  Для создания и использования базы данных SQL Server Compact оставьте значение по умолчанию строки подключения. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создаст файл базы данных и поместит его в каталог, указанный свойством <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName>.  
+3.  Для создания и использования базы данных SQL Server Compact оставьте значение по умолчанию строки подключения. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] создаст файл базы данных и поместит его в каталог, указанный свойством <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Для создания и использования зашифрованной базы данных [!INCLUDE[ssEW](../../../includes/ssew-md.md)] добавьте значения `password` и `encrypt database` в строку подключения, как показано в следующем примере.  
   
@@ -124,7 +121,7 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ## <a name="using-custom-providers"></a>Использование настраиваемых поставщиков  
- По умолчанию компонент служб клиентских приложений использует поставщиков в пространстве имен <xref:System.Web.ClientServices.Providers?displayProperty=fullName>. При настройке приложения с помощью страницы **Службы** в **конструкторе проектов** ссылки на этих поставщиков добавляются в файл App.config. Эти поставщики по умолчанию получают доступ к соответствующим поставщикам на сервере. Веб-службы часто настраивается для доступа к данным пользователя через поставщиков, таких как <xref:System.Web.Security.SqlMembershipProvider> и <xref:System.Web.Security.SqlRoleProvider>.  
+ По умолчанию компонент служб клиентских приложений использует поставщиков в пространстве имен <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. При настройке приложения с помощью страницы **Службы** в **конструкторе проектов** ссылки на этих поставщиков добавляются в файл App.config. Эти поставщики по умолчанию получают доступ к соответствующим поставщикам на сервере. Веб-службы часто настраивается для доступа к данным пользователя через поставщиков, таких как <xref:System.Web.Security.SqlMembershipProvider> и <xref:System.Web.Security.SqlRoleProvider>.  
   
  Если нужно использовать других поставщиков, обычно следует изменить поставщиков на стороне сервера, чтобы изменения действовали для всех клиентских приложений, получающих доступ к серверу. Впрочем, есть возможность использовать других поставщиков и на стороне клиента. В файле App.config можно указать настраиваемых поставщиков проверки подлинности и поставщиков ролей. Сведения о создании пользовательской проверки подлинности и поставщиков служб см. в разделах [Реализация поставщика членства](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) и [Реализация поставщика ролей](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Также можно использовать настраиваемый поставщик параметров, изменив в проекте класс `Settings` (доступен как `Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Дополнительные сведения см. в разделе [Архитектура параметров приложения](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
@@ -140,7 +137,7 @@ ms.lasthandoff: 07/28/2017
   
 4.  Найдите элемент `<providers>` в элементе `<membership>` или `<roleManager>`. Это дочерние элементы элемента `<system.web>`. Элемент `<membership>` используется для указания поставщиков проверки подлинности, а элемент `<roleManager>` — для указания поставщиков ролей.  
   
-5.  Добавьте элемент `<add>` в качестве дочернего для элемента `<providers>`. Необходимо указать атрибуты `name` и `type`, как показано в следующем примере. Значение атрибута `type` должно представлять собой имя типа сборки. Дополнительные сведения см. в разделах <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName> и [Имена сборок](../../../docs/framework/app-domains/assembly-names.md).  
+5.  Добавьте элемент `<add>` в качестве дочернего для элемента `<providers>`. Необходимо указать атрибуты `name` и `type`, как показано в следующем примере. Значение атрибута `type` должно представлять собой имя типа сборки. Дополнительные сведения см. в разделах <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> и [Имена сборок](../../../docs/framework/app-domains/assembly-names.md).  
   
     ```xml  
     <add name="MyCustomRoleProvider" type="MyNamespace.MyRoleProvider, MyAssembly" />  
@@ -153,14 +150,13 @@ ms.lasthandoff: 07/28/2017
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Службы клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services.md)   
- [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
- [Страница "Службы" в конструкторе проектов](https://msdn.microsoft.com/library/bb398109)   
- [Диалоговое окно "Дополнительные параметры служб"](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)   
- [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)   
- [Пошаговое руководство. Использование служб клиентских приложений](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
- [Реализация поставщика членства](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)   
- [Реализация поставщика ролей](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)   
- [Архитектура параметров приложения](../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
+ [Службы клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Страница "Службы" в конструкторе проектов](https://msdn.microsoft.com/library/bb398109)  
+ [Диалоговое окно "Дополнительные параметры служб"](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Пошаговое руководство. Использование служб клиентских приложений](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Реализация поставщика членства](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [Реализация поставщика ролей](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [Архитектура параметров приложения](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
  [Создание и настройка базы данных служб приложений для SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
-

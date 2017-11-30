@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
+ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cb5725a70d94173c8596f818dcaa6eb2de13bcc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="documenting-your-code-with-xml-comments"></a>Документирование кода с помощью XML-комментариев
 
 Комментарии к XML-документации — это особый тип комментария, добавляемого перед определением определяемого пользователем типа или члена. Их особенность в том, что компилятор может обрабатывать их для создания XML-файла документации во время компиляции.
@@ -27,10 +25,10 @@ ms.lasthandoff: 07/28/2017
 
 Можно создать XML-файл во время компиляции, выполнив одно из следующих действий.
 
-- Если вы разрабатываете приложение с использованием .NET Core из командной строки, добавьте [элемент DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) в раздел `<PropertyGroup>` CSPROJ-файла проекта. В следующем примере создается XML-файл в каталоге проекта с тем же именем корневого файла проекта:
+- Если вы разрабатываете приложение с использованием .NET Core из командной строки, добавьте [элемент DocumentationFile](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) в раздел `<PropertyGroup>` CSPROJ-файла проекта. Следующий пример приводит к возникновению ошибки в XML-файл в каталоге проекта с тем же именем корневого файла сборки:
 
    ```xml
-   <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+   <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
    Также можно указать точный абсолютный или относительный путь и имя XML-файла. В следующем примере создается XML-файла в одном каталоге с отладочной версией приложения:
@@ -45,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 
 Для вставки комментария к XML-документации используются три символа косой черты (`///`) и текст комментария в формате XML. Пример:
 
-[!code-csharp[Комментарии XML-документации](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
+[!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>Пошаговое руководство
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 07/28/2017
 
 Ниже приведен код для простой математической библиотеки.
 
-[!code-csharp[Пример библиотеки](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
+[!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
 Пример библиотеки поддерживает четыре основные арифметические операции `add`, `subtract`, `multiply` и `divide` с типами данных `int` и `double`.
 
@@ -65,7 +63,7 @@ ms.lasthandoff: 07/28/2017
 Тег `<summary>` добавляет краткие сведения о типе или члене.
 Я продемонстрирую использование тега путем его добавления в определение класса `Math` и первый метод `Add`. Кроме того, его можно применить к остальной части кода.
 
-[!code-csharp[Тег Summary](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
+[!code-csharp[Summary Tag](../../samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
 Тег `<summary>` имеет очень важное значение, и его рекомендуется включать, так как его содержимое является основным источником информации о типе или члене в IntelliSense или справочном документе по API.
 
@@ -73,28 +71,28 @@ ms.lasthandoff: 07/28/2017
 
 Тег `<remarks>` дополняет сведения о типах или членах, предоставляемые тегом `<summary>`. В этом примере вы просто добавите его в класс.
 
-[!code-csharp[Тег Remarks](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
+[!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
 ### <a name="ltreturnsgt"></a>&lt;returns&gt;
 
 Тег `<returns>` описывает возвращаемое значение объявления метода.
 Как и ранее, в следующем примере демонстрируется тег `<returns>` в первом методе `Add`. То же самое можно сделать и с другими методами.
 
-[!code-csharp[Тег Returns](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
+[!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
 ### <a name="ltvaluegt"></a>&lt;value&gt;
 
 Тег `<value>` аналогичен тегу `<returns>`, за исключением того, что он используется для свойств.
 Если бы в библиотеке `Math` было статическое свойство `PI`, вы использовали бы этот тег следующим образом:
 
-[!code-csharp[Тег Value](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
+[!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
 ### <a name="ltexamplegt"></a>&lt;example&gt;
 
 Тег `<example>` применяется для включения примера в XML-документацию.
 В этом случае нужно использовать дочерний тег `<code>`.
 
-[!code-csharp[Тег Example](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
+[!code-csharp[Example Tag](../../samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
 Тег `code` сохраняет разрывы строк и отступы для более длинных примеров.
 
@@ -103,7 +101,7 @@ ms.lasthandoff: 07/28/2017
 Тег `<para>` используется для форматирования содержимого в его родительском теге. `<para>` обычно используется внутри тега, такого как `<remarks>` или `<returns>`, чтобы разделить текст на абзацы.
 Содержимое тега `<remarks>` для определения класса можно отформатировать.
 
-[!code-csharp[Тег Para](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
+[!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
 ### <a name="ltcgt"></a>&lt;c&gt;
 
@@ -111,14 +109,14 @@ ms.lasthandoff: 07/28/2017
 Он подобен тегу `<code>`, но является встроенным. Он полезен, если требуется показать пример кода как часть содержимого тега.
 Давайте обновим в документацию для класса `Math`.
 
-[!code-csharp[Тег C](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
+[!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
 ### <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 С помощью тега `<exception>` можно сообщить разработчикам, что метод может генерировать определенные исключения.
 Если взглянуть на библиотеку `Math`, можно увидеть, что оба метода `Add` создают исключение при выполнении определенного условия. Метод `Divide` с типом integer также создает исключение (хотя и не столь очевидно), если параметр `b` равен нулю. Теперь добавьте в этот метод документацию по исключению.
 
-[!code-csharp[Тег Exception](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
+[!code-csharp[Exception Tag](../../samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
 Атрибут `cref` представляет ссылку на исключение, которое доступно из текущей среды компиляции.
 Это может быть любой тип, определенный в проекте или ссылочной сборке. Компилятор выдаст предупреждение, если его значение не может быть разрешено.
@@ -127,7 +125,7 @@ ms.lasthandoff: 07/28/2017
 
 Тег `<see>` позволяет создать активную ссылку на страницу документации по другому элементу кода. В следующем примере будет создана активная ссылка между двумя методами `Add`.
 
-[!code-csharp[Тег See](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
+[!code-csharp[See Tag](../../samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
 Атрибут `cref` является **обязательным** и представляет ссылку на тип или его член, который доступен из текущей среды компиляции. Это может быть любой тип, определенный в проекте или ссылочной сборке.
 
@@ -135,43 +133,43 @@ ms.lasthandoff: 07/28/2017
 
 Тег `<seealso>` используется так же, как тег `<see>`. Единственное различие заключается в том, что его содержимое обычно помещается в раздел "См. также". Мы добавим тег `seealso` в метод `Add` с типом integer для ссылки на другие методы в классе, принимающие параметры с типом integer:
 
-[!code-csharp[Тег Seealso](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
+[!code-csharp[Seealso Tag](../../samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
 Атрибут `cref` представляет ссылку на тип или его член, который доступен из текущей среды компиляции.
 Это может быть любой тип, определенный в проекте или ссылочной сборке.
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-Тег `<param>` используется для описания параметров метода. Ниже приведен пример для метода `Add` с типом double: параметр, описываемый тегом, указан в **обязательном** атрибуте `name`.
+Тег `<param>` используется для описания параметров метода. Ниже приведен пример на метода `Add` с типом double: параметр, описываемый тегом, указан в **обязательном** атрибуте `name`.
 
-[!code-csharp[Тег Param](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
+[!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
 ### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
 
 Тег `<typeparam>` используется так же, как тег `<param>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.
 Добавьте в класс `Math` быстрый универсальный метод, чтобы проверить, что одно количество больше другого.
 
-[!code-csharp[Тег Typeparam](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
+[!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
 ### <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
 Иногда в процессе описания выполнения метода в теге `<summary>` может потребоваться создание ссылки на параметр. Для этого отлично подойдет тег `<paramref>`. Обновим сводку по методу `Add` с типом double. Как и для тега `<param>`, имя параметра указано в **обязательном** атрибуте `name`.
 
-[!code-csharp[Тег Paramref](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
+[!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
 ### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
 
 Тег `<typeparamref>` используется так же, как тег `<paramref>`, но для объявлений универсального типа или метода он служит для описания универсального параметра.
 Можно использовать созданные ранее универсальный метод.
 
-[!code-csharp[Тег Typeparamref](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
+[!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
 ### <a name="ltlistgt"></a>&lt;list&gt;
 
 Тег `<list>` используется для форматирования сведений о документации в виде упорядоченного списка, неупорядоченного списка или таблицы.
 Создайте неупорядоченный список для каждой математической операции, поддерживаемой библиотекой `Math`.
 
-[!code-csharp[Тег List](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
+[!code-csharp[List Tag](../../samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Упорядоченный список или таблицу можно сформировать, изменив атрибут `type` на `number` или `table` соответственно.
 
@@ -179,7 +177,7 @@ ms.lasthandoff: 07/28/2017
 
 Вы выполнили инструкции в этом учебнике и включили теги в код там, где необходимо. Теперь ваш код должен иметь следующий вид:
 
-[!code-csharp[Библиотека с тегами](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
+[!code-csharp[Tagged Library](../../samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
 В коде можно создать подробную документацию к веб-сайту, содержащую интерактивные перекрестные ссылки. При этом вы можете столкнуться с другой проблемой — такой код очень трудно читать.
 Для любого разработчика, который хочет вносить дополнения в этот код, необходимость обработки большого количества данных становится настоящим кошмаром. К счастью, есть XML-тег, который поможет справиться с этой задачей:
@@ -190,11 +188,11 @@ ms.lasthandoff: 07/28/2017
 
 Переместим все XML-теги в отдельный файл XML с именем `docs.xml`. Файлу можно задать любое имя.
 
-[!code-xml[Образец XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
+[!code-xml[Sample XML](../../samples/snippets/csharp/concepts/codedoc/include.xml)]
 
 В приведенном выше XML комментарии к документации по каждому члену отображаются непосредственно внутри тега с именем, соответствующим его назначению. Можно выбрать собственную стратегию. Теперь, когда комментарии XML находятся в отдельном файле, давайте посмотрим, как можно улучшить удобочитаемость кода с помощью тега `<include>`.
 
-[!code-csharp[Тег Include](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
+[!code-csharp[Include Tag](../../samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
 Сейчас чтение кода снова не вызывает сложностей, и никакие сведения не были потеряны. 
 
@@ -228,4 +226,3 @@ ms.lasthandoff: 07/28/2017
 [Комментарии к XML-документации (руководство по программированию на C#)](programming-guide/xmldoc/xml-documentation-comments.md)
 
 [Рекомендуемые теги для комментариев документации (руководство по программированию на C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

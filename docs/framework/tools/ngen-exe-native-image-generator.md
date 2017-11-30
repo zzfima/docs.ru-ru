@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - Native Image Generator
 - images [.NET Framework], native
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (генератор образов в машинном коде)
 Генератор образов в машинном коде (Ngen.exe) — это средство повышения быстродействия управляемых приложений. Программа Ngen.exe создает образы в машинном коде, представляющие собой файлы, содержащие компилированный, специфический для процессора машинный код, и устанавливает их в кэш образов в машинном коде на локальном компьютере. Среда выполнения может использовать образы в машинном коде, находящиеся в кэше, вместо использования JIT-компилятора для компиляции исходной сборки.  
@@ -89,7 +86,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Удаляет образы в машинном коде для сборки и ее зависимостей из кэша образов в машинном коде.<br /><br /> Для удаления одного образа и его зависимостей используются те же аргументы командной строки, что и для установки образа. **Примечание**. Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], действие `uninstall` * не поддерживается.|  
 |`update` [`/queue`]|Обновляет образы в машинном коде, ставшие недействительными.<br /><br /> Если указан ключ `/queue`, обновления помещаются в очередь службы образов в машинном коде. Обновления всегда планируются с приоритетом 3, поэтому они выполняются во время простоя компьютера.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Отображает состояние образов в машинном коде для сборки и ее зависимостей.<br /><br /> Если аргумент не указан, отображается все содержимое кэша образов в машинном коде.|  
-|`executeQueuedItems` [`1``&#124;``2``&#124;``3`]<br /><br /> -или-<br /><br /> `eqi` [1&#124;2&#124;3]|Выполняет поставленные в очередь задания компиляции.<br /><br /> Если указан приоритет, выполняются задания компиляции с большим или равным приоритетом. Если приоритет не задан, выполняются все поставленные в очередь задания компиляции.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -или-<br /><br /> `eqi` [1&#124;2&#124;3]|Выполняет поставленные в очередь задания компиляции.<br /><br /> Если указан приоритет, выполняются задания компиляции с большим или равным приоритетом. Если приоритет не задан, выполняются все поставленные в очередь задания компиляции.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Приостанавливает работу службы образов в машинном коде, разрешает продолжение выполнения приостановленной службы или запрашивает состояние службы.|  
   
 <a name="ArgumentTable"></a>   
@@ -144,20 +141,20 @@ ngen /? | /help
   
  Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], образы в машинном коде, созданные с помощью NGen.exe, нельзя загружать в приложения, выполняющиеся в режиме частичного доверия. Вместо этого вызывается JIT-компилятор.  
   
- Программа Ngen.exe создает образы в машинном коде для сборки, указанной аргументом `assemblyname`, для действия `install` и всех его зависимостей. Зависимости определяются по ссылкам в манифесте сборки. Единственный сценарий, в котором необходимо задавать зависимость отдельно, — это когда приложение загружает зависимость с помощью отражения, например путем вызова метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ Программа Ngen.exe создает образы в машинном коде для сборки, указанной аргументом `assemblyname`, для действия `install` и всех его зависимостей. Зависимости определяются по ссылкам в манифесте сборки. Единственный сценарий, в котором необходимо задавать зависимость отдельно, — это когда приложение загружает зависимость с помощью отражения, например путем вызова метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  Не используйте метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> с образами в машинном коде. Образ, загруженный этим методом, не может использоваться другими сборками в контексте выполнения.  
+>  Не используйте метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> с образами в машинном коде. Образ, загруженный этим методом, не может использоваться другими сборками в контексте выполнения.  
   
  Программа Ngen.exe ведет подсчет зависимостей. Например, пусть и `MyAssembly.exe` и `YourAssembly.exe` установлены в кэше образов в машинном коде и содержат ссылки на `OurDependency.dll`. При удалении `MyAssembly.exe` библиотека `OurDependency.dll` не удаляется. Она удаляется только после удаления `YourAssembly.exe`.  
   
- При создании образа в машинном коде для сборки из глобального кэша сборок необходимо указать ее отображаемое имя. См. раздел <xref:System.Reflection.Assembly.FullName%2A?displayProperty=fullName>.  
+ При создании образа в машинном коде для сборки из глобального кэша сборок необходимо указать ее отображаемое имя. См. раздел <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.  
   
  Образы в машинном коде, созданные программой Ngen.exe, могут совместно использоваться в доменах приложений. Это означает, что программу Ngen.exe можно использовать в сценариях приложений, требующих совместного использования сборок в доменах приложений. Чтобы определить независимость от домена, выполните следующие действия.  
   
 -   Примените к своему приложению атрибут <xref:System.LoaderOptimizationAttribute>.  
   
--   При создании сведений о настройке для нового домена приложений задайте свойство <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=fullName>.  
+-   При создании сведений о настройке для нового домена приложений задайте свойство <xref:System.AppDomainSetup.LoaderOptimization%2A?displayProperty=nameWithType>.  
   
  При загрузке одной и той же сборки в несколько доменов приложений всегда используйте программный код, независимый от домена. Если образ в машинном коде, загруженный в общий домен приложения, загружается в неиспользуемый совместно домен, его использование невозможно.  
   
@@ -289,7 +286,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Задание для зависимости подсказки, касающейся привязки  
- Примените атрибут <xref:System.Runtime.CompilerServices.DependencyAttribute> к сборке, чтобы указать вероятность того, что указанная зависимость будет загружаться. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName> указывает, что жесткая привязка подходит, <xref:System.Runtime.CompilerServices.LoadHint.Default> указывает, что для зависимости должно использоваться значение по умолчанию, и <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> указывает, что жесткая привязка не подходит.  
+ Примените атрибут <xref:System.Runtime.CompilerServices.DependencyAttribute> к сборке, чтобы указать вероятность того, что указанная зависимость будет загружаться. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> указывает, что жесткая привязка подходит, <xref:System.Runtime.CompilerServices.LoadHint.Default> указывает, что для зависимости должно использоваться значение по умолчанию, и <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> указывает, что жесткая привязка не подходит.  
   
  В следующем коде показаны атрибуты для сборки с двумя зависимостями. Первая зависимость (Assembly1) является подходящим кандидатом для жесткой привязки, а вторая (Assembly2) — нет.  
   
@@ -315,10 +312,10 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="AssemblyHint"></a>   
 ### <a name="specifying-a-default-binding-hint-for-an-assembly"></a>Задание для сборки подсказки для привязки по умолчанию  
- Подсказки для привязки по умолчанию необходимы только для сборок, которые будут использоваться немедленно и часто любым приложением, связанным с этими сборками зависимостями. Чтобы определить необходимость использования жесткой привязки, к таким сборкам можно применить атрибут <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> с <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName>.  
+ Подсказки для привязки по умолчанию необходимы только для сборок, которые будут использоваться немедленно и часто любым приложением, связанным с этими сборками зависимостями. Чтобы определить необходимость использования жесткой привязки, к таким сборкам можно применить атрибут <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> с <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Не стоит применять атрибут <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> к DLL-сборкам, не подпадающим под эту категорию, поскольку применение атрибута с любым значением, отличным от <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=fullName>, аналогично полному отсутствию атрибута.  
+>  Не стоит применять атрибут <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> к DLL-сборкам, не подпадающим под эту категорию, поскольку применение атрибута с любым значением, отличным от <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>, аналогично полному отсутствию атрибута.  
   
  Корпорация Майкрософт использует атрибут <xref:System.Runtime.CompilerServices.DefaultDependencyAttribute> для указания того, что жесткая привязка является значением по умолчанию для очень небольшого числа сборок в .NET Framework, например "mscorlib.dll".  
   
@@ -388,11 +385,13 @@ using namespace System::Runtime::CompilerServices;
   
  Тем не менее обратите внимание, что `BypassNGenAttribute` не определен как тип в библиотеке классов .NET Framework. Для использования атрибута в коде, его необходимо сначала определить следующим образом.  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)] [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
   
  Затем можно применить атрибут индивидуально для каждого метода. Следующий пример указывает генератору образов в машинном коде, что ему не следует формировать образ в машинном коде для метода `ExampleClass.ToJITCompile`.  
   
- [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)] [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
+ [!code-csharp[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#2)]
+ [!code-vb[System.Runtime.BypassNGenAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#2)]  
   
 ## <a name="examples"></a>Примеры  
  Следующая команда создает образ в машинном коде для приложения `ClientApp.exe`, расположенного в текущем каталоге, и устанавливает образ в кэш образов в машинном коде. Если для сборки существует файл конфигурации, программа Ngen.exe использует его. Кроме того, образы в машинном коде создаются для всех DLL-файлов, на которые ссылается программа `ClientApp.exe`.  
@@ -414,7 +413,7 @@ ngen install c:\myfiles\MyAssembly.exe
 > [!NOTE]
 >  Поведение программы Ngen.exe было изменено по сравнению с .NET Framework версий 1.0 и 1.1, где в качестве базового каталога приложения использовался текущий каталог.  
   
- Сборка может использовать зависимость без ссылки, например, если она загружает DLL-файл с помощью метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>. С помощью параметра `/ExeConfig` для такого DLL-файла можно создать образ в машинном коде, используя сведения о конфигурации для сборки приложения. Следующая команда создает образ в машинном коде для `MyLib.dll,`, используя сведения о конфигурации из `MyApp.exe`.  
+ Сборка может использовать зависимость без ссылки, например, если она загружает DLL-файл с помощью метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. С помощью параметра `/ExeConfig` для такого DLL-файла можно создать образ в машинном коде, используя сведения о конфигурации для сборки приложения. Следующая команда создает образ в машинном коде для `MyLib.dll,`, используя сведения о конфигурации из `MyApp.exe`.  
   
 ```  
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
@@ -594,10 +593,9 @@ ngen executeQueuedItems
  В версии .NET Framework 2.0 взаимодействие со службой образов в машинном коде может осуществляться только через программу командной строки Ngen.exe. Используйте эту программу в скриптах установки для управления очередями действий, выполняемых службой образов в машинном коде, и для взаимодействия с этой службой.  
   
 ## <a name="see-also"></a>См. также  
- [Служба образов в машинном коде](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)   
- [Задача образов в машинном коде](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Служба образов в машинном коде](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
+ [Задача образов в машинном коде](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
+ [Инструменты](../../../docs/framework/tools/index.md)  
+ [Процесс управляемого выполнения](../../../docs/standard/managed-execution-process.md)  
+ [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

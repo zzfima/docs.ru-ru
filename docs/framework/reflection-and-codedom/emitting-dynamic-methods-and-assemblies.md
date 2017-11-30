@@ -1,12 +1,11 @@
 ---
 title: "Предоставление динамических методов и сборок"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 08/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,14 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
-caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 91b0cc4614834f2ad8f7b54d9364d484ca9a6990
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Предоставление динамических методов и сборок
 В этом разделе описывается набор управляемых типов в пространстве имен <xref:System.Reflection.Emit>, позволяющий компилятору или средству порождать метаданные и код MSIL во время выполнения, а также при необходимости создавать переносимый исполняемый (PE) файл на диске. Основными пользователями этого пространства имен являются обработчики скриптов и компиляторы. В этом разделе функциональные возможности, предоставляемые пространством имен <xref:System.Reflection.Emit>, называются порождением отражения.  
@@ -48,9 +44,22 @@ ms.lasthandoff: 07/28/2017
   
  Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. Документацию можно найти на сайтах [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) и [ECMA](http://go.microsoft.com/fwlink/?LinkId=116487).  
   
-## <a name="in-this-section"></a>Содержание  
- [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- Описываются проблемы безопасности, связанные с созданием динамических сборок с помощью порождения отражения.  
+## <a name="in-this-section"></a>Содержание
+  
+[Вопросы безопасности в порождаемом отражении](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+Описываются проблемы безопасности, связанные с созданием динамических сборок с помощью порождения отражения.  
+
+[Как: определение и выполнение динамических методов](how-to-define-and-execute-dynamic-methods.md)   
+В этом разделе показано выполнение простого динамического метода и динамического метода, привязанного к экземпляру класса.
+
+[Как: определение универсального типа с отражением выпуска](how-to-define-a-generic-type-with-reflection-emit.md)   
+Показывает способы создания простого универсального типа с двумя параметрами типов, как применить класс, интерфейс и особые ограничения параметров типа и создание memers, использующих параметры типа класса в качестве типов параметров и возвращаемых типов.
+
+[Как: определение универсального метода с отражением выпуска](how-to-define-a-generic-method-with-reflection-emit.md)   
+Показано, как создать, создания и вызова простой универсальный метод.
+
+[Собираемые сборки для создания динамического типа](collectible-assemblies.md)   
+Представляет сборку, подлежащую сборок, которые являются динамических сборок, которые могут быть выгружены без выгрузки домена приложения, в котором они были созданы.
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Reflection.Emit.OpCodes>  
@@ -70,5 +79,4 @@ ms.lasthandoff: 07/28/2017
  Описываются способы просмотра метаданных и управляемого кода.  
   
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Обзор сборок в .NET Framework.
-
+ Общие сведения о сборках в реализациях .NET.

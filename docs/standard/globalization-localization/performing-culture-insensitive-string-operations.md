@@ -1,47 +1,50 @@
 ---
-title: "Выполнение строковых операций, не зависящих от языка и региональных параметров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сопоставление регистра"
-  - "настраиваемое сопоставление регистра"
-  - "язык и региональные параметры, настраиваемые правила сортировки"
-  - "настраиваемые правила сортировки"
-  - "операции, не зависящие от языка и региональных параметров, для выполнения"
-  - "язык и региональные параметры, настраиваемое сопоставление регистра"
-  - "операции со строками без учета языка и региональных параметров, перегрузки методов"
+title: "Выполнение строковых операций, не зависящих от языка и региональных параметров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- case mappings
+- custom case mappings
+- culture, custom sorting rules
+- custom sorting rules
+- culture-insensitive string operations, options for performing
+- culture, custom case mappings
+- culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e703e9adc531b7d1695d3e9bbed61a2c0f62ad31
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Выполнение строковых операций, не зависящих от языка и региональных параметров
-Большинство методов .NET Framework, по умолчанию выполняющих строковые операции с учетом языка и региональных параметров, предоставляет методы перегрузки, позволяющие явно указать используемый язык путем передачи параметра <xref:System.Globalization.CultureInfo>.   Эти перегрузки позволяют устранить языковые и региональные различия, влияющие на правила сортировки и сопоставления регистра, и гарантируют результаты, не зависящие от языковых параметров.  
+# <a name="performing-culture-insensitive-string-operations"></a>Выполнение строковых операций, не зависящих от языка и региональных параметров
+Большинство методов .NET Framework, выполняющих строковые операции с учетом языка и региональных параметров по умолчанию предоставляют перегрузки метода, которые позволяют явным образом указать язык и региональные параметры путем передачи <xref:System.Globalization.CultureInfo> параметра. Эти перегрузки позволяют устранить различия в сопоставлении регистров и правилах сортировки, вызванные различием языка и региональных параметров, и получить результаты, которые не зависят от языка и региональных параметров.  
   
- В этом разделе рассматриваются следующие вопросы о выполнении строковых операции, не зависящих от языковых параметров и региональных параметров, с использованием методов .NET Framework, являющихся по умолчанию зависимыми от языка.  
+ В этом разделе содержатся следующие подразделы, которые показывают, как выполнять операции со строками без учета языка и региональных параметров с помощью методов платформы .NET Framework, которые по умолчанию учитывают язык и региональные параметры.  
   
-## В этом подразделе  
- [Выполнение сравнения строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)  
- Описание использования методов <xref:System.String.Compare%2A?displayProperty=fullName> и <xref:System.String.CompareTo%2A?displayProperty=fullName> для сравнения строк без учета языка и региональных параметров.  
+## <a name="in-this-section"></a>Содержание  
+ [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)  
+ Описывает использование <xref:System.String.Compare%2A?displayProperty=nameWithType> и <xref:System.String.CompareTo%2A?displayProperty=nameWithType> методы для выполнения сравнения строк без учета языка и региональных параметров.  
   
- [Выполнение смены регистра независимо от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)  
- Описание использование методов <xref:System.String.ToUpper%2A?displayProperty=fullName>, <xref:System.String.ToLower%2A?displayProperty=fullName>, <xref:System.Char.ToUpper%2A?displayProperty=fullName> и <xref:System.Char.ToLower%2A?displayProperty=fullName> для смены регистра независимо от языка и региональных параметров.  
+ [Изменение регистра без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)  
+ Описывает использование <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> методы для выполнения смены регистра независимо от языка и региональных параметров.  
   
- [Выполнение в коллекциях строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)  
- Описание использования [класса CaseInsensitiveComparer](frlrfSystemCollectionsCaseInsensitiveComparerClassTopic), класса <xref:System.Collections.CaseInsensitiveHashCodeProvider>, [класса SortedList](frlrfSystemCollectionsSortedListClassTopic), [метода ArrayList.Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx) и [метода CollectionsUtil.CreateCaseInsensitiveHashtable](frlrfSystemCollectionsSpecializedCollectionsUtilClassCreateCaseInsensitiveHashtableTopic)для выполнения в коллекциях операций, не зависящих от языка и региональных параметров.  
+ [Выполнение строковых операций без учета языка и региональных параметров в коллекциях](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)  
+ Описывает использование <xref:System.Collections.CaseInsensitiveComparer>, <xref:System.Collections.CaseInsensitiveHashCodeProvider> класса <xref:System.Collections.SortedList>, <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> и <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> для выполнения операций без учета языка и региональных параметров в коллекции.  
   
- [Выполнение в массивах строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)  
- Описание использование методов <xref:System.Array.Sort%2A?displayProperty=fullName> и <xref:System.Array.BinarySearch%2A?displayProperty=fullName> для выполнения в массивах операций без учета языка и региональных параметров.  
+ [Выполнение строковых операций без учета языка и региональных параметров в массивах](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)  
+ Описывает использование <xref:System.Array.Sort%2A?displayProperty=nameWithType> и <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> методы для выполнения операций без учета языка и региональных параметров в массивах.  
   
-## Связанные подразделы  
- [Строковые операции, не зависящие от языка и региональных параметров](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Описание причин, по которым необходимо учитывать языковые и региональные параметры при выполнении строковых операции, и указания о том, когда выполнять зависящие от языка операции, а когда — не зависящие.
+## <a name="related-sections"></a>Связанные разделы  
+ [Операции со строками без учета языка и региональных параметров](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ Описывает, почему следует иметь в виду язык и региональные параметры при выполнении операций над строками, и содержит указания о том, когда следует выполнять операции с учетом и без учета языка и региональных параметров.

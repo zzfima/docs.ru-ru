@@ -1,36 +1,37 @@
 ---
-title: "Извлечение XML-данных с помощью XPathNavigator | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Извлечение XML-данных с помощью XPathNavigator"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c42539db3750ebc2a4220ef776b89bbabe6aaca3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Извлечение XML-данных с помощью XPathNavigator
-В платформе Microsoft .NET Framework есть несколько способов представления XML\-документа.  К ним относится использование класса <xref:System.String>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> или <xref:System.Xml.XPath.XPathDocument>.  Чтобы ускорить перемещение между различными представлениями XML\-документа, в классе <xref:System.Xml.XPath.XPathNavigator> предусмотрено несколько методов и свойств для извлечения XML как объекта <xref:System.String>, <xref:System.Xml.XmlReader> или <xref:System.Xml.XmlWriter>.  
+# <a name="extract-xml-data-using-xpathnavigator"></a>Извлечение XML-данных с помощью XPathNavigator
+В платформе Microsoft .NET Framework есть несколько способов представления XML-документа. К ним относится использование класса <xref:System.String>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> или <xref:System.Xml.XPath.XPathDocument>. Чтобы ускорить перемещение между различными представлениями XML-документа, в классе <xref:System.Xml.XPath.XPathNavigator> предусмотрено несколько методов и свойств для извлечения XML как объекта <xref:System.String>, <xref:System.Xml.XmlReader> или <xref:System.Xml.XmlWriter>.  
   
-## Преобразование XPathNavigator в строку  
- Свойство <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> класса <xref:System.Xml.XPath.XPathNavigator> используется для получения разметки всего XML\-документа или просто разметки одного узла и его дочерних узлов.  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Преобразование XPathNavigator в строку  
+ Свойство <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> класса <xref:System.Xml.XPath.XPathNavigator> используется для получения разметки всего XML-документа или просто разметки одного узла и его дочерних узлов.  
   
 > [!NOTE]
 >  Свойство <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> получает разметку или просто дочерние узлы данного узла.  
   
- В следующем примере кода показано, как сохранить целый XML\-документ, содержащийся в объекте <xref:System.Xml.XPath.XPathNavigator> как <xref:System.String>, а также один узел и его дочерние узлы.  
+ В следующем примере кода показано, как сохранить целый XML-документ, содержащийся в объекте <xref:System.Xml.XPath.XPathNavigator> как <xref:System.String>, а также один узел и его дочерние узлы.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -56,14 +57,14 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## Преобразование XPathNavigator в XmlReader  
- Метод <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> используется для потоковой записи всего содержимого XML\-документа или отдельного его узла с дочерними узлами в объект <xref:System.Xml.XmlReader>.  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Преобразование XPathNavigator в XmlReader  
+ Метод <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> используется для потоковой записи всего содержимого XML-документа или отдельного его узла с дочерними узлами в объект <xref:System.Xml.XmlReader>.  
   
- Когда объект <xref:System.Xml.XmlReader> создан с текущим узлом и дочерними узлами, свойство <xref:System.Xml.XmlReader.ReadState%2A> объекта <xref:System.Xml.XmlReader> имеет значение <xref:System.Xml.ReadState>.  Когда метод <xref:System.Xml.XmlReader.Read%2A> объекта <xref:System.Xml.XmlReader> вызывается в первый раз, <xref:System.Xml.XmlReader> перемещается в текущий узел <xref:System.Xml.XPath.XPathNavigator>.  Новый объект <xref:System.Xml.XmlReader> продолжает считывание до тех пор, пока не будет достигнут конец XML\-дерева.  На этом этапе метод <xref:System.Xml.XmlReader.Read%2A> возвращает `false`, а свойство <xref:System.Xml.XmlReader.ReadState%2A> объекта <xref:System.Xml.XmlReader> имеет значение <xref:System.Xml.ReadState>.  
+ Когда объект <xref:System.Xml.XmlReader> создан с текущим узлом и дочерними узлами, свойство <xref:System.Xml.XmlReader> объекта <xref:System.Xml.XmlReader.ReadState%2A> имеет значение <xref:System.Xml.ReadState.Initial>. Когда метод <xref:System.Xml.XmlReader> объекта <xref:System.Xml.XmlReader.Read%2A> вызывается в первый раз, <xref:System.Xml.XmlReader> перемещается в текущий узел <xref:System.Xml.XPath.XPathNavigator>. Новый объект <xref:System.Xml.XmlReader> продолжает считывание до тех пор, пока не будет достигнут конец XML-дерева. На этом этапе метод <xref:System.Xml.XmlReader.Read%2A> возвращает `false`, а свойство <xref:System.Xml.XmlReader> объекта <xref:System.Xml.XmlReader.ReadState%2A> имеет значение <xref:System.Xml.ReadState.EndOfFile>.  
   
- Позиция объекта <xref:System.Xml.XPath.XPathNavigator> не изменяется при создании или перемещении объекта <xref:System.Xml.XmlReader>.  Метод <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> допустим только при размещении на элементе или в корневом узле.  
+ Позиция объекта <xref:System.Xml.XPath.XPathNavigator> не изменяется при создании или перемещении объекта <xref:System.Xml.XmlReader>. Метод <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> допустим только при размещении на элементе или в корневом узле.  
   
- Следующий пример показывает, как получить объект <xref:System.Xml.XmlReader>, содержащий весь XML\-документ в объекте <xref:System.Xml.XPath.XPathDocument>, так же как и для отдельного узла с дочерними узлами.  
+ Следующий пример показывает, как получить объект <xref:System.Xml.XmlReader>, содержащий весь XML-документ в объекте <xref:System.Xml.XPath.XPathDocument>, так же как и для отдельного узла с дочерними узлами.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -123,12 +124,12 @@ book.Close();
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## Преобразование XPathNavigator в XmlWriter  
- Метод <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> используется для потоковой записи всего содержимого XML\-документа или отдельного его узла с дочерними узлами в объект <xref:System.Xml.XmlWriter>.  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Преобразование XPathNavigator в XmlWriter  
+ Метод <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> используется для потоковой записи всего содержимого XML-документа или отдельного его узла с дочерними узлами в объект <xref:System.Xml.XmlWriter>.  
   
  Позиция объекта <xref:System.Xml.XPath.XPathNavigator> не изменяется при создании объекта <xref:System.Xml.XmlWriter>.  
   
- Следующий пример показывает, как получить объект <xref:System.Xml.XmlWriter>, содержащий весь XML\-документ в объекте <xref:System.Xml.XPath.XPathDocument>, так же как и для отдельного узла с дочерними узлами.  
+ Следующий пример показывает, как получить объект <xref:System.Xml.XmlWriter>, содержащий весь XML-документ в объекте <xref:System.Xml.XPath.XPathDocument>, так же как и для отдельного узла с дочерними узлами.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -168,11 +169,11 @@ book.Close();
   
  В данном примере в качестве входного файла используется указанный выше файл `books.xml`.  
   
-## См. также  
- <xref:System.Xml.XmlDocument>   
- <xref:System.Xml.XPath.XPathDocument>   
- <xref:System.Xml.XPath.XPathNavigator>   
- [Обработка XML\-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)   
- [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)   
- [Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)   
- [Доступ к XML\-данным со строгой типизацией с помощью XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Xml.XmlDocument>  
+ <xref:System.Xml.XPath.XPathDocument>  
+ <xref:System.Xml.XPath.XPathNavigator>  
+ [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Атрибут и навигации узла пространства имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [Доступ к строго типизированным XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

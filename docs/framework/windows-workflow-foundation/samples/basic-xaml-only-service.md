@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 3fbf8a719647199439e2333ba5e26cbe51be3add
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 004a37682b855135998ef4620e673421f769326d
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="basic-xaml-only-service"></a>Базовая служба с использованием только XAML
 В этом образце демонстрируется создание службы, работающей только с языком XAML. В данном сценарии рассматривается диагностическая служба для автомобильных проблем. Служба реализована в виде рабочего процесса, задающего клиенту ряд вопросов для диагностики проблемы. Эта служба может выполнять диагностику двух типов проблем (машина не заводится, или система кондиционирования не работает). Для представления трех простых операций служб в рабочем процессе использует шаблон «Запрос-ответ» из конструктора. Служба размещается в службах IIS путем создания виртуального каталога в IIS и копирования service1.xamlx и файлов Web.config в виртуальный каталог, скомпилированный код не требуется. По умолчанию в этом примере автоматически скопирует необходимые файлы в виртуальный каталог, созданный при выполнении процедуры настройки для образцов WCF и WF: [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) при построении в Visual Studio 2010.  
@@ -38,6 +38,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`  
-  
-## <a name="see-also"></a>См. также
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLService`

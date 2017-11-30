@@ -1,48 +1,31 @@
 ---
 title: "decimal (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- decimal keyword [C#]
+helpviewer_keywords: decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
+ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/25/2017
 ---
 # <a name="decimal-c-reference"></a>decimal (Справочник по C#)
 Ключевое слово `decimal` обозначает 128-разрядный тип данных. По сравнению с другими типами данных с плавающей запятой, диапазон значений `decimal` меньше, а точность выше, благодаря чему этот тип подходит для финансовых расчетов. В следующей таблице представлен приблизительный диапазон значений и точность для типа `decimal`.  
   
 |Тип|Приблизительный диапазон значений|Точность|Тип платформы .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(От -7,9 x 10<sup>28</sup> до 7,9 x 10<sup>28</sup>) / (от 10<sup>0</sup> до 10<sup>28</sup>)|28–29 значащих цифр|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(От -7,9 x 10<sup>28</sup> до 7,9 x 10<sup>28</sup>) / (от 10<sup>0</sup> до 10<sup>28</sup>)|28–29 значащих цифр|<xref:System.Decimal?displayProperty=nameWithType>|  
+
+Значение по умолчанию `decimal` 0 м.
   
 ## <a name="literals"></a>Литералы  
  Если требуется, чтобы числовой действительный литерал рассматривался как `decimal`, следует использовать суффикс m или M, например:  
@@ -75,7 +58,7 @@ myMoney = (decimal)x;
  Дополнительные сведения о явных числовых преобразованиях см. в разделе [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
 ## <a name="formatting-decimal-output"></a>Форматирование десятичных выходных данных  
- Для форматирования результатов можно воспользоваться методом `String.Format` или методом <xref:System.Console.Write%2A?displayProperty=fullName>, вызывающим метод `String.Format()`. Формат денежных единиц задается с помощью стандартной строки формата денежных единиц "C" или "c", как показано во втором примере далее в данной статье. Дополнительные сведения о методе `String.Format` см. в разделе <xref:System.String.Format%2A?displayProperty=fullName>.  
+ Для форматирования результатов можно воспользоваться методом `String.Format` или методом <xref:System.Console.Write%2A?displayProperty=nameWithType>, вызывающим метод `String.Format()`. Формат денежных единиц задается с помощью стандартной строки формата денежных единиц "C" или "c", как показано во втором примере далее в данной статье. Дополнительные сведения о методе `String.Format` см. в разделе <xref:System.String.Format%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере возникает ошибка компилятора при попытке сложить переменные типов [double](../../../csharp/language-reference/keywords/double.md) и `decimal`.  
@@ -97,24 +80,23 @@ Console.WriteLine((double)dec + dub);
   
  В приведенном ниже примере в одном выражении используются переменные типов `decimal` и [int](../../../csharp/language-reference/keywords/int.md). В результате возвращается тип `decimal`.  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере для форматирования выходных данных используется строка формата денежных единиц. Обратите внимание на округление переменной `x`, поскольку десятичные разряды превышают 0,99 долл. США. Переменная `y`, представляющая максимально точные цифры, отображается в правильном формате.  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Decimal>   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
+ <xref:System.Decimal>  
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
  [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
-

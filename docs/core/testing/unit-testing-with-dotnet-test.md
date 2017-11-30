@@ -6,12 +6,11 @@ ms.author: wiwagn
 ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
+ms.openlocfilehash: 6e986e89d47ba4de9b8563f1a95cb1ae89accc89
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit
 
@@ -157,5 +156,6 @@ if (candidate < 2)
 
 Продолжайте итерации, добавляя тесты, алгоритмы и код в главной библиотеке. В результате вы получите [готовую версию тестов](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) и [полную реализацию библиотеки](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
 
-Вы создали небольшую библиотеку и набор модульных тестов для нее. Вы структурировали решение, чтобы сделать добавление новых пакетов и тестов частью текущего рабочего процесса и получить возможность сосредоточиться на задачах приложения.
+### <a name="additional-resources"></a>Дополнительные ресурсы
 
+[Тестирование логики контроллер в ASP.NET Core](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)

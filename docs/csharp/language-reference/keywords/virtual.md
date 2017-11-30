@@ -1,41 +1,22 @@
 ---
 title: "virtual (Справочник по C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- virtual keyword [C#]
+helpviewer_keywords: virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24ca77a0a645a17c0223437e73539bc04ba80f23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="virtual-c-reference"></a>virtual (Справочник по C#)
 Ключевое слово `virtual` используется для изменения объявлений методов, свойств, индексаторов и событий и разрешения их переопределения в производном классе. Например, этот метод может быть переопределен любым наследующим его классом:  
@@ -54,9 +35,9 @@ public virtual double Area()
   
  По умолчанию методы не являются виртуальными. Такой метод переопределить невозможно.  
   
- Модификатор `virtual` нельзя использовать с модификаторами `static`, `abstract, private` или `override`. В следующем примере показано виртуальное свойство.  
+ Нельзя использовать `virtual` модификатор `static`, `abstract`, `private`, или `override` модификаторы. В следующем примере показано виртуальное свойство.  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
  Действие виртуальных свойств аналогично абстрактным методам, за исключением отличий в синтаксисе объявлений и вызовов.  
   
@@ -75,18 +56,17 @@ public Cylinder(double r, double h): base(r, h) {}
   
  Следующая программа вычисляет и отображает соответствующую область для каждой фигуры путем вызова нужной реализации метода `Area()` в соответствии с объектом, связанным с методом.  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [abstract](../../../csharp/language-reference/keywords/abstract.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+ [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+ [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [abstract](../../../csharp/language-reference/keywords/abstract.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [new](../../../csharp/language-reference/keywords/new.md)
-

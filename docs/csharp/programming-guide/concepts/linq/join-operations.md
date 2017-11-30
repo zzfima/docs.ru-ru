@@ -1,30 +1,21 @@
 ---
 title: "Операции соединения (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 158d035985dae0d1c1daf0f276a9df7b913f2263
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df2f88f2988a4c91730bcfc4e39f10e3471e4ddf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-operations-c"></a>Операции соединения (C#)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -45,17 +36,16 @@ ms.lasthandoff: 07/28/2017
 |GroupJoin|Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq>   
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [Формулировка запросов-объединений и запросов векторного произведения](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md)   
- [Практическое руководство. Соединение с помощью составных ключей](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [Практическое руководство. Упорядочение результатов предложения соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [Практическое руководство. Выполнение пользовательских операций соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)   
- [Практическое руководство. Выполнение групповых соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [Практическое руководство. Выполнение внутренних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [Практическое руководство. Выполнение левых внешних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
+ <xref:System.Linq>  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [Сформулировать соединения и запросы перекрестного произведения](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [предложение join](../../../../csharp/language-reference/keywords/join-clause.md)  
+ [Практическое руководство. Соединение с помощью составных ключей](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [Практическое руководство. Упорядочение результатов предложения соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [Практическое руководство. Выполнение пользовательских операций соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+ [Практическое руководство. Выполнение групповых соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [Практическое руководство. Выполнение внутренних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [Практическое руководство. Выполнение левых внешних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
  [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-

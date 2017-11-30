@@ -1,40 +1,22 @@
 ---
 title: "Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
@@ -49,7 +31,7 @@ ms.lasthandoff: 09/19/2017
   
      [!INCLUDE[csprcs](~/includes/csprcs-md.md)] создаст пустой метод обработчика событий и добавит его в код. Код можно также добавить вручную в представлении **Код**. Например, приведенные ниже строки кода объявляют метод обработчика событий, который будет выполнен при вызове классом `Form` события `Load`.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
+     [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      Строка кода, требуемая для подписки на событие, также создается автоматически в методе `InitializeComponent` в файле Form1.Designer.cs проекта. Она имеет следующий вид:  
   
@@ -122,9 +104,8 @@ ms.lasthandoff: 09/19/2017
      Если подписка на событие отменена для всех подписчиков, экземпляр события в классе издателя получает значение `null`.  
   
 ## <a name="see-also"></a>См. также  
- [События](../../../csharp/programming-guide/events/index.md)   
- [event](../../../csharp/language-reference/keywords/event.md)   
- [Практическое руководство. Публикация событий, соответствующих рекомендациям для .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)   
- [Оператор -= (справочник по C#)](../../language-reference/operators/subtraction-assignment-operator.md)   
+ [События](../../../csharp/programming-guide/events/index.md)  
+ [event](../../../csharp/language-reference/keywords/event.md)  
+ [Практическое руководство. Публикация событий, соответствующих рекомендациям для .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+ [-= Оператор (Справочник по C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
  [Оператор +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
-

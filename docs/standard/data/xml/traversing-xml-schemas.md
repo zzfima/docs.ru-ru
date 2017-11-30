@@ -1,58 +1,60 @@
 ---
-title: "Обход XML-схем | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Обход XML-схем"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обход XML-схем
-Обзор схемы XML с помощью API\-интерфейса объектной модели схемы XML \(SOM\) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM.  Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
+# <a name="traversing-xml-schemas"></a>Обход XML-схем
+Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
   
-## Обзор схемы XML  
+## <a name="traversing-an-xml-schema"></a>Обзор схемы XML  
  Следующие свойства класса <xref:System.Xml.Schema.XmlSchema> предоставляют доступ к коллекции глобальных объектов, добавляемых к схеме XML.  
   
 |Свойство|Тип объекта, хранимого в коллекции или массиве|  
-|--------------|----------------------------------------------------|  
+|--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
 |<xref:System.Xml.Schema.XmlSchema.AttributeGroups%2A>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Groups%2A>|<xref:System.Xml.Schema.XmlSchemaGroup>|  
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> или <xref:System.Xml.Schema.XmlSchemaRedefine>|  
-|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> \(предоставляет доступ ко всем элементам, атрибутам и типам глобального уровня\).|  
+|<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (предоставляет доступ ко всем элементам, атрибутам и типам глобального уровня).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
 |<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
-|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> \(предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы\).|  
+|<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (предоставляет доступ к атрибутам, не принадлежащим к пространству имен схемы).|  
   
 > [!NOTE]
->  Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post\-Schema\-Compilation\-Infoset \(PSCI\), доступными только после компиляции схемы.  Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.  
+>  Все свойства, перечисленные выше в таблице, кроме свойства <xref:System.Xml.Schema.XmlSchema.Items%2A>, являются свойствами Post-Schema-Compilation-Infoset (PSCI), доступными только после компиляции схемы. Свойство <xref:System.Xml.Schema.XmlSchema.Items%2A> доступно до компиляции схемы и может использоваться, когда схема еще не скомпилирована, для доступа ко всем элементам, атрибутам и типам глобального уровня и для их изменения.  
 >   
->  Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы.  Эти атрибуты не обрабатываются обработчиком схемы.  
+>  Свойство <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> предоставляет доступ ко всем атрибутам, не принадлежащим к пространству имен схемы. Эти атрибуты не обрабатываются обработчиком схемы.  
   
- Ниже приведен пример кода, демонстрирующий обзор схемы Customer, созданной в разделе [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md).  Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.  
+ В примере кода ниже просматривается пользовательской схемы, созданные в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) раздела. Приводится пример кода, в котором схема просматривается с помощью коллекций, описанных выше, и все элементы и атрибуты схемы выводятся в консоль.  
   
  В данном примере схема Customer просматривается с помощью следующих шагов.  
   
-1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция.  Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
+1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>.  Так как схема компилируется, свойства Post\-Schema\-Compilation\-Infoset \(PSCI\) доступны.  
+2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
   
-3.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=fullName> и выводится имя каждого элемента в консоль.  
+3.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
   
 4.  Возвращается сложный тип элемента `Customer` с помощью класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
@@ -60,7 +62,7 @@ caps.handback.revision: 2
   
 6.  Возвращается примитив sequence сложного типа с помощью класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-7.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=fullName> и выводится имя каждого элемента в консоль.  
+7.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
   
  Ниже приведен полный пример кода.  
   
@@ -68,15 +70,15 @@ caps.handback.revision: 2
  [!code-csharp[XmlSchemaTraverseExample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaTraverseExample/CS/XmlSchemaTraverseExample.cs#1)]
  [!code-vb[XmlSchemaTraverseExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaTraverseExample/VB/XmlSchemaTraverseExample.vb#1)]  
   
- Свойство <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=fullName> может иметь тип <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType> если это определенный пользователем простой тип или сложный тип.  Оно может также иметь тип <xref:System.Xml.Schema.XmlSchemaDatatype>, если это один из встроенных типов данных, описанных в рекомендациях схемы XML W3C.  В схеме «Заказчик» тип <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> элемента `Customer` представляет собой <xref:System.Xml.Schema.XmlSchemaComplexType>, а тип элементов `FirstName` и `LastName` \- <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
+ Свойство <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> может иметь тип <xref:System.Xml.Schema.XmlSchemaSimpleType> или <xref:System.Xml.Schema.XmlSchemaComplexType> если это определенный пользователем простой тип или сложный тип. Оно может также иметь тип <xref:System.Xml.Schema.XmlSchemaDatatype>, если это один из встроенных типов данных, описанных в рекомендациях схемы XML W3C. В схеме «Заказчик» тип <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> элемента `Customer` представляет собой <xref:System.Xml.Schema.XmlSchemaComplexType>, а тип элементов `FirstName` и `LastName` - <xref:System.Xml.Schema.XmlSchemaSimpleType>.  
   
- Пример кода в разделе [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) использовал коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=fullName> для добавления атрибута `CustomerId` к элементу `Customer`.  Это свойство доступно до компиляции схемы.  Соответствующее свойство PSCI \(доступное только после компиляции схемы\) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=fullName>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
+ В примере кода в [построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md) разделе используется <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> коллекции для добавления атрибута `CustomerId` для `Customer` элемента. Это свойство доступно до компиляции схемы. Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
   
-## См. также  
- [Общие сведения об модели объектов XML\-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)   
- [Чтение и запись XML\-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)   
- [Построение XML\-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)   
- [Изменение XML\-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)   
- [Включение или импорт XML\-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)   
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)   
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о модели объектов схемы XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+ [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Информационный набор после компиляции схемы](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

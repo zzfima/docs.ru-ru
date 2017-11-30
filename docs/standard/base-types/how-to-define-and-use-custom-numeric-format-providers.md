@@ -1,96 +1,102 @@
 ---
-title: "Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "строки пользовательского формата"
-  - "строки настраиваемых числовых форматов"
-  - "отображение данных даты и времени"
-  - "поставщики формата [платформа .NET Framework]"
-  - "форматирование [платформа .NET Framework], числа"
-  - "форматирование чисел [платформа .NET Framework]"
-  - "числа [платформа .NET Framework], строки настраиваемых числовых форматов"
-  - "строки числовых форматов [платформа .NET Framework]"
+title: "Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- numeric format strings [.NET Framework]
+- formatting [.NET Framework], numbers
+- number formatting [.NET Framework]
+- custom numeric format strings
+- numbers [.NET Framework], custom numeric format strings
+- displaying date and time data
+- format providers [.NET Framework]
+- custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0e44a909eb92f0d9dfa21980a918a2d370dcf427
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет расширенный контроль над строковым представлением числовых значений.  Он поддерживает следующие возможности для настройки форматов числовых значений:  
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Предоставляет расширенный контроль над строковым представлением числовых значений. Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.  
   
--   Строки стандартных числовых форматов, которые предоставляют стандартный набор форматов для преобразования чисел в их строковое представление.  Их можно использовать с любым методом числового форматирования, например <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName> с параметром `format`.  Дополнительные сведения см. в разделе [Строки стандартных числовых форматов](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+-   Строки стандартных числовых форматов, которые предоставляют стандартный набор форматов для преобразования чисел в их строковое представление. Их можно использовать с любым методом числового форматирования, такие как <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, который имеет `format` параметра. Дополнительные сведения см. в разделе [строки стандартного числового формата](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Строки пользовательских числовых форматов, предоставляющих набор символов, которые могут быть объединены для определения спецификаторов пользовательского числового формата.  Они также могут быть использованы с любым методом числового форматирования, например <xref:System.Decimal.ToString%28System.String%29?displayProperty=fullName> с параметром `format`.  Дополнительные сведения см. в разделе [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+-   Строки настраиваемых числовых форматов, предоставляющих набор символов, которые могут быть объединены для определения описателей настраиваемого числового формата. Они также могут использоваться с любым методом числового форматирования, такие как <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, который имеет `format` параметра. Дополнительные сведения см. в разделе [строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Настраиваемые объекты <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo>, которые определяют символы и шаблоны форматирования, используемые при отображении строковых представлений числовых значений.  Их можно использовать с любым методом числового форматирования, например <xref:System.Int32.ToString%2A> с параметром `provider`.  Как правило, параметр `provider` используется для указания форматирования, зависящего от региональных параметров.  
+-   Настраиваемый <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo> объектов, которые определяют символы и шаблоны, используемые при отображении строковые представления числовых значений форматирования. Их можно использовать с любым методом числового форматирования, такие как <xref:System.Int32.ToString%2A>, который имеет `provider` параметра. Как правило `provider` параметр используется для указания форматирования, зависящего от языка и региональных параметров.  
   
- В некоторых случаях \(например, когда приложению необходимо отобразить отформатированный номер учетной записи, идентификационный номер или почтовый индекс\) эти три метода неприменимы.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] также позволяет определить объект форматирования, который не является ни <xref:System.Globalization.CultureInfo>, ни объектом <xref:System.Globalization.NumberFormatInfo>, для определения порядка форматирования числовых значений.  Этот раздел содержит подробные инструкции по реализации таких объектов и пример форматирования телефонных номеров.  
+ В некоторых случаях (например, когда приложению необходимо отобразить отформатированный номер учетной записи, идентификационный номер или почтовый индекс) эти три метода неприменимы. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Также позволяет определить объект форматирования, который не является ни <xref:System.Globalization.CultureInfo> , ни <xref:System.Globalization.NumberFormatInfo> объектом, чтобы определить способ форматирования числового значения. Этот раздел содержит пошаговые инструкции по реализации таких объектов и пример форматирования телефонных номеров.  
   
-### Определение поставщика пользовательского формата  
+### <a name="to-define-a-custom-format-provider"></a>Определение поставщика пользовательского формата  
   
-1.  Определите класс, который реализует интерфейсы <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>.  
+1.  Определите класс, который реализует <xref:System.IFormatProvider> и <xref:System.ICustomFormatter> интерфейсов.  
   
-2.  Реализуйте метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName>.  <xref:System.IFormatProvider.GetFormat%2A> представляет собой метод обратного вызова, который вызывается методом форматирования \(таким как метод [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>\) для получения объекта, фактически отвечающего за выполнение пользовательского форматирования.  Обычно реализация метода <xref:System.IFormatProvider.GetFormat%2A> выполняет следующие действия.  
+2.  Выполните метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A>метод обратного вызова, метод форматирования (например, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метод) вызывается для получения объекта, который фактически отвечает за выполнение пользовательского форматирования. Типичная реализация <xref:System.IFormatProvider.GetFormat%2A> делает следующее:  
   
-    1.  Определяет, представляет ли объект <xref:System.Type>, передаваемый в качестве параметра метода, интерфейс <xref:System.ICustomFormatter>.  
+    1.  Определяет, является ли <xref:System.Type> объект, переданный в качестве метода представляет параметр <xref:System.ICustomFormatter> интерфейса.  
   
-    2.  Если параметр представляет собой интерфейс <xref:System.ICustomFormatter>, то метод <xref:System.IFormatProvider.GetFormat%2A> возвращает объект, реализующий интерфейс <xref:System.ICustomFormatter>, который отвечает за предоставление пользовательского форматирования.  Как правило, объект пользовательского форматирования возвращает сам себя.  
+    2.  Если параметр представляет <xref:System.ICustomFormatter> интерфейс, <xref:System.IFormatProvider.GetFormat%2A> возвращает объект, реализующий интерфейс <xref:System.ICustomFormatter> интерфейс, который отвечает за предоставление пользовательского форматирования. Как правило, объект пользовательского форматирования возвращает сам себя.  
   
-    3.  Если параметр не представляет собой интерфейс <xref:System.ICustomFormatter>, то метод <xref:System.IFormatProvider.GetFormat%2A> возвращает `null`.  
+    3.  Если параметр не представляет <xref:System.ICustomFormatter> интерфейс, <xref:System.IFormatProvider.GetFormat%2A> возвращает `null`.  
   
-3.  Реализуйте метод <xref:System.ICustomFormatter.Format%2A>.  Этот метод вызывается методом [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName> и возвращает строковое представление числа.  Реализация этого метода обычно включает в себя следующее:  
+3.  Выполните метод <xref:System.ICustomFormatter.Format%2A>. Этот метод вызывается методом <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метод и возвращает строковое представление числа. Реализация этого метода обычно включает в себя выполнение следующих действий.  
   
-    1.  При необходимости убедитесь, что метод предназначен для предоставления служб форматирования, проверив параметр `provider`.  Для объектов форматирования, реализующих <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>, это включает в себя проверку параметра `provider` на равенство с текущим объектом форматирования.  
+    1.  При необходимости убедитесь, что метод предназначен для предоставления служб форматирования, проверив `provider` параметра. Для форматирования объектов, реализующих <xref:System.IFormatProvider> и <xref:System.ICustomFormatter>, это включает в себя проверку `provider` параметра на равенство с текущим объектом форматирования.  
   
-    2.  Определите, должен ли объект форматирования поддерживать спецификаторы пользовательского формата. \(Например, спецификатор формата "N" может указать, что телефонный номер США следует выводить в формате NANP, а "I" может означать вывод по рекомендации ITU\-T формата E.123.\). Если используются спецификаторы формата, то метод должен обрабатывать этот спецификатор определенного формата.  Он передается методу в качестве параметра `format`.  Если спецификатор отсутствует, то значением параметра `format` является <xref:System.String.Empty?displayProperty=fullName>.  
+    2.  Определите, должен ли объект форматирования поддерживать описатели настраиваемого формата. (Например, описатель формата "N" может указывать, что телефонный номер США следует выводить в формате NANP, а "I" может означать вывод в формате E.123 в соответствии с рекомендацией ITU-T.) Если используются описатели формата, то метод должен обрабатывать этот описатель определенного формата. Он передается методу в `format` параметра. Если спецификатор отсутствует, значение `format` параметр <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Получите числовое значение, передаваемое в метод в качестве параметра `arg`.  Выполните операции, необходимые для его преобразования в строковое представление.  
+    3.  Числовое значение, передаваемое в качестве метода получения `arg` параметра. Выполните операции, необходимые для его преобразования в строковое представление.  
   
-    4.  Верните строковое представление параметра `arg`.  
+    4.  Возвращает строковое представление `arg` параметра.  
   
-### Использование объекта пользовательского числового форматирования  
+### <a name="to-use-a-custom-numeric-formatting-object"></a>Использование объекта настраиваемого числового форматирования  
   
-1.  Создайте новый экземпляр класса пользовательского форматирования.  
+1.  Создайте новый экземпляр класса настраиваемого форматирования.  
   
-2.  Вызовите метод форматирования [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>, передавая ему объект пользовательского форматирования, спецификатор форматирования \(или <xref:System.String.Empty?displayProperty=fullName>, если он не используется\) и числовое значение, подлежащее форматированию.  
+2.  Вызовите <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метода форматирования, передавая ему объект пользовательского форматирования, спецификатор форматирования (или <xref:System.String.Empty?displayProperty=nameWithType>, если он не используется), а числовое значение для форматирования.  
   
-## Пример  
- В следующем примере определяется поставщик пользовательского числового формата с именем `TelephoneFormatter`, который преобразует число, представляющее номер телефона в США, в формат NANP или E.123.  Метод обрабатывает два спецификатора формата, "N" \(вывод в формате NANP\) и "I" \(вывод в международном формате E.123\).  
+## <a name="example"></a>Пример  
+ В следующем примере определяется поставщик настраиваемого числового формата с именем `TelephoneFormatter`, который преобразует число, представляющее номер телефона в США, в формат NANP или E.123. Метод обрабатывает два описателя формата "N" (вывод в формате NANP) и "I" (вывод в международном формате E.123).  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
  [!code-vb[Formatting.HowTo.NumericValue#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#1)]  
   
- Поставщик пользовательского числового формата может использоваться только с методом [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>.  Другие перегрузки методов числового форматирования \(например `ToString`\) с параметром типа <xref:System.IFormatProvider> передают реализацию метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=fullName> для объекта <xref:System.Type>, представляющего тип <xref:System.Globalization.NumberFormatInfo>.  В свою очередь, они ожидают, что метод возвратит объект <xref:System.Globalization.NumberFormatInfo>.  Если это не так, то поставщик пользовательского числового формата игнорируется, и вместо него используется объект <xref:System.Globalization.NumberFormatInfo>, соответствующий текущим региональным параметрам.  В этом примере метод `TelephoneFormatter.GetFormat` обрабатывает вероятность некорректной передачи методу числового форматирования, проверяя параметр метода и возвращая `null`, если он представляет тип, отличный от <xref:System.ICustomFormatter>.  
+ Поставщик настраиваемого числового формата можно использовать только с <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метод. Другие перегрузки методов числового форматирования (например `ToString`) с параметром типа <xref:System.IFormatProvider> передают <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> реализацию <xref:System.Type> , представляющий <xref:System.Globalization.NumberFormatInfo> типа. Взамен они ожидают, что метод для возврата <xref:System.Globalization.NumberFormatInfo> объекта. Если этого не произошло, поставщика настраиваемого числового формата игнорируется и <xref:System.Globalization.NumberFormatInfo> объект для текущего языка и региональных параметров используется вместо него. В примере `TelephoneFormatter.GetFormat` метод обрабатывает возможность того, что может быть неверно передан методу числового форматирования, проверяя параметр метода и возвращая `null` , если он представляет тип, отличный от <xref:System.ICustomFormatter>.  
   
- Если поставщик пользовательского числового формата поддерживает набор спецификаторов формата, убедитесь, что также предоставлено поведение по умолчанию, если спецификатор формата не предоставляется в элементе форматирования, используемом при вызове метода [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>.  В приведенном примере "N" — это спецификатор формата по умолчанию.  Это позволяет преобразовать число в формат телефонного номера, явно предоставляя спецификатор формата.  В следующем примере показан такой вызов метода.  
+ Если поставщик настраиваемого числового формата поддерживает набор описателей формата, убедитесь, что предоставить поведение по умолчанию, если спецификатор формата предоставляется в элементе форматирования, используемых в <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> вызова метода. В приведенном примере "N" является описателем формата по умолчанию. Это позволяет преобразовать число в формат телефонного номера, явно предоставляя описатель формата. В следующем примере показан такой вызов метода.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- Но это также позволяет произвести преобразование в случае, если спецификатор формата отсутствует.  В следующем примере показан такой вызов метода.  
+ Но это также позволяет выполнить преобразование в случае, если описатель формата отсутствует. В следующем примере показан такой вызов метода.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
   
- Если не определен спецификатор формата по умолчанию, то реализация метода <xref:System.ICustomFormatter.Format%2A?displayProperty=fullName> должна содержать код, аналогичный приведенному ниже, чтобы в .NET Framework могло быть представлено форматирование, которое не поддерживается кодом.  
+ Если определен спецификатор формата по умолчанию реализация <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> метод должен включать следующий код, что платформа .NET можно обеспечить форматирование кода не поддерживает.  
   
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- В таком случае в этом примере метод, реализующий <xref:System.ICustomFormatter.Format%2A?displayProperty=fullName>, служит методом обратного вызова для метода [String.Format\(IFormatProvider, String, Object\<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=fullName>.  Таким образом, он проверяет параметр `formatProvider` на наличие ссылки на текущий объект `TelephoneFormatter`.  Тем не менее, метод можно также вызвать непосредственно из кода.  В этом случае можно использовать параметр `formatProvider` для предоставления <xref:System.Globalization.CultureInfo> или объекта <xref:System.Globalization.NumberFormatInfo>, предоставляющего сведения о форматировании для соответствующих региональных параметров.  
+ В случае в этом примере метод, реализующий <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> предназначен для использования в качестве метода обратного вызова для <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> метод. Таким образом, он проверяет `formatProvider` параметра, чтобы определить, содержит ли ссылка на текущую `TelephoneFormatter` объекта. Тем не менее, метод можно также вызвать непосредственно из кода. В этом случае можно использовать `formatProvider` для предоставления <xref:System.Globalization.CultureInfo> или <xref:System.Globalization.NumberFormatInfo> объект, предоставляющий сведения о форматировании для определенного языка и региональных параметров.  
   
-## Компиляция кода  
- Откомпилируйте код из командной строки, используя csc.exe или vb.exe.  Чтобы откомпилировать код в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], поместите его в шаблон проекта консольного приложения.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скомпилируйте код из командной строки с помощью csc.exe или vb.exe. Для компиляции кода в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], поместите его в шаблон проекта консольного приложения.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)

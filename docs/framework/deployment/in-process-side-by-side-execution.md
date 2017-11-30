@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>Внутрипроцессное параллельное выполнение
 Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Управляемые COM-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
@@ -47,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   **Разработчики приложений**. Параллельное размещение не затрагивает разработчиков приложений. Приложения по умолчанию всегда выполняются в версиях платформы .NET Framework, в которых они были созданы. Это поведение не изменено. Разработчики могут переопределить это поведение и настроить приложение на выполнение в более новой версии платформы .NET Framework (см. [сценарий 2](#scenarios)).  
   
--   **Разработчики и пользователи библиотек**. Параллельное размещение не устраняет проблемы совместимости, с которыми сталкиваются разработчики библиотек. Библиотека, загруженная приложением напрямую (через прямую ссылку или с помощью вызова <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>) продолжает использовать среду выполнения класса <xref:System.AppDomain>, в который она загружена. Следует проверить корректность работы библиотек со всеми версиями платформы .NET Framework, поддержка которых необходима. Если приложение компилируется с помощью среды выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], но содержит библиотеку, построенную с помощью более старой среды выполнения, эта библиотека также будет использовать среду выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Но, если приложение было создано с помощью более старой среды выполнения и библиотеки, которая построена в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], приложение также необходимо явным образом настроить на использование [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (см. [сценарий 3](#scenarios)).  
+-   **Разработчики и пользователи библиотек**. Параллельное размещение не устраняет проблемы совместимости, с которыми сталкиваются разработчики библиотек. Библиотека, загруженная приложением напрямую (через прямую ссылку или с помощью вызова <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>) продолжает использовать среду выполнения класса <xref:System.AppDomain>, в который она загружена. Следует проверить корректность работы библиотек со всеми версиями платформы .NET Framework, поддержка которых необходима. Если приложение компилируется с помощью среды выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], но содержит библиотеку, построенную с помощью более старой среды выполнения, эта библиотека также будет использовать среду выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Но, если приложение было создано с помощью более старой среды выполнения и библиотеки, которая построена в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], приложение также необходимо явным образом настроить на использование [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (см. [сценарий 3](#scenarios)).  
   
 -   **Разработчики управляемых COM-компонентов**. Управляемые COM-компоненты ранее автоматически выполнялись в последней версии среды выполнения, установленной на компьютере. Теперь COM-компоненты можно запускать в той версии среды выполнения, в которой они были созданы.  
   
@@ -189,6 +182,5 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Элемент \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<При запуске > элемент](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
-

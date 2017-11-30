@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
+ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate и ключевое слово `delegate`
 
 [Назад](delegates-overview.md)
@@ -26,7 +24,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="defining-delegate-types"></a>Определение типов делегатов
 
-Начнем с ключевого слова "delegate", потому что это основной элемент, используемый при работе с делегатами. Код, который компилятор создает при использовании ключевого слова `delegate`, будет сопоставляться с вызовами методов, вызывающих члены классов @System.Delegate и @System.MulticastDelegate. 
+Начнем с ключевого слова "delegate", потому что это основной элемент, используемый при работе с делегатами. Код, который компилятор создает при использовании ключевого слова `delegate`, будет сопоставляться с вызовами методов, вызывающих члены классов <xref:System.Delegate> и <xref:System.MulticastDelegate>. 
 
 Тип делегата определяется с помощью синтаксиса, подобному синтаксису определения сигнатуры метода. К определению нужно просто добавить ключевое слово `delegate`.
 
@@ -122,7 +120,7 @@ phrases.Sort(comparer);
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Классы Delegate и MulticastDelegate
 
-Описанная выше поддержка языка предоставляет функции и поддержку, которые обычно необходимы для работы с делегатами. Эти возможности основаны на двух классах в платформе .NET Core: @System.Delegate и @"System.MulticastDelegate".
+Описанная выше поддержка языка предоставляет функции и поддержку, которые обычно необходимы для работы с делегатами. Эти возможности построены на двух классов в платформе .NET Core: <xref:System.Delegate> и <xref:System.MulticastDelegate>.
 
 Класс `System.Delegate` и его прямой вложенный класс `System.MulticastDelegate` обеспечивают поддержку платформы для создания делегатов, регистрации методов в качестве целевых объектов делегатов и вызова всех методов, которые зарегистрированы как целевые объекты делегатов. 
 
@@ -143,4 +141,3 @@ phrases.Sort(comparer);
 После знакомства с синтаксисом языка и классами, поддерживающими делегаты, давайте рассмотрим вопросы использования, создания и вызова строго типизированных делегатов.
 
 [Далее](delegates-strongly-typed.md)
-

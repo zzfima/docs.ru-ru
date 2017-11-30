@@ -1,46 +1,49 @@
 ---
-title: "Как использовать поставщик членства ASP.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF и ASP.NET"
-  - "WCF, авторизация"
-  - "WCF, безопасность"
+title: "Практическое руководство. Использование поставщика членства ASP.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF and ASP.NET
+- WCF, authorization
+- WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 74056ae23b08850b9c9a564248d6e276fc518a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать поставщик членства ASP.NET
-Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] — это функция, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб\-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля.Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам.В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows.Вместо этого любой пользователь, который предоставляет свои учетные данные \(сочетание имени пользователя и пароля\), может использовать узел и его службы.  
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Практическое руководство. Использование поставщика членства ASP.NET
+Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] - это функция, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля. Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам. В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows. Вместо этого любой пользователь, который предоставляет свои учетные данные (сочетание имени пользователя и пароля), может использовать узел и его службы.  
   
- Пример приложения см. в разделе [Поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).Сведения об использовании функции поставщика ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] см. в разделе [Как использовать поставщик ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
+ Пример приложения см. в разделе [поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Дополнительные сведения об использовании [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] возможность поставщика ролей, в разделе [как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
- Функция членства требует использования базы данных SQL Server для хранения сведений о пользователе.Эта функция также включает методы напоминания пользователю его пароля с помощью специального вопроса.  
+ Возможность членства требует использования базы данных SQL Server для хранения сведений о пользователе. Эта функция также включает методы напоминания пользователю его пароля с помощью специального вопроса.  
   
- Разработчики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут воспользоваться преимуществами этих функций в целях безопасности.Когда эти функции интегрированы в приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], пользователи должны предоставлять сочетание имя\/пароль пользователя клиентскому приложению [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Для передачи данных службе [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используйте привязку, которая поддерживает учетные данные \(имя и пароль пользователя\), например <xref:System.ServiceModel.WSHttpBinding> \(в конфигурации, [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)\), и установите тип учетных данных клиента на `UserName`.В службе система безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет подлинность пользователя по имени и паролю пользователя и назначает роль, заданную ролью [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Разработчики [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] могут воспользоваться преимуществами этих функций в целях безопасности. Когда эти функции интегрированы в приложение [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], пользователи должны предоставлять сочетание имя/пароль пользователя клиентскому приложению [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Для передачи данных в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службы, привязку, которая поддерживает учетные данные имени и пароля пользователя, такие как <xref:System.ServiceModel.WSHttpBinding> (в конфигурации [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) и задайте учетные данные клиента Тип `UserName`. В службе система безопасности [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] проверяет подлинность пользователя по имени и паролю пользователя и назначает роль, заданную ролью [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
->  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не предусмотрены какие\-либо методы для заполнения базы данных сочетаниями имени\/пароля пользователя или другими сведениями о пользователе.  
+>  В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] не предусмотрены какие-либо методы для заполнения базы данных сочетаниями имени/пароля пользователя или другими сведениями о пользователе.  
   
-### Настройка поставщика участия  
+### <a name="to-configure-the-membership-provider"></a>Настройка поставщика членства  
   
-1.  В элементе \<`system.web`\> файла Web.config создайте элемент \<`membership`\>.  
+1.  В файле Web.config в разделе <`system.web`> элемент, создать <`membership`> элемент.  
   
-2.  В элементе `<membership>``<providers> создайте элемент` .  
+2.  В элементе `<membership>`создайте элемент `<providers>`.  
   
-3.  Добавьте элемент \<`providers`\> в качестве дочернего к элементу `<clear />`, чтобы записать коллекцию поставщиков.  
+3.  Как дочерние для <`providers`> элемента, добавьте `<clear />` элемент, чтобы очистить коллекцию поставщиков.  
   
-4.  В элементе `<clear />`\< `создайте элемент add`\>`name со следующими атрибутами, для которых заданы соответствующие значения:` `type,` `connectionStringName,` `applicationName,` `enablePasswordRetrieval,` `enablePasswordReset,` `requiresQuestionAndAnswer,` `requiresUniqueEmail,` `passwordFormat и` .Атрибут `name` используется далее в качестве значения в файле конфигурации.В следующем примере ему задается значение `SqlMembershipProvider`.  
+4.  В разделе `<clear />` элемент, создать <`add`> присвойте соответствующие значения элемента со следующими атрибутами: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, и `passwordFormat`. Атрибут `name` используется далее в качестве значения в файле конфигурации. В следующем примере задается значение `SqlMembershipProvider`.  
   
      В следующем примере демонстрируется раздел конфигурации.  
   
@@ -63,15 +66,15 @@ caps.handback.revision: 15
     </membership>  
     ```  
   
-### Настройка системы безопасности службы на прием сочетания имя\/пароль пользователя.  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Настройка системы безопасности службы на прием сочетания имя/пароль пользователя  
   
-1.  Добавьте элемент [\<привязки\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) в элемент  [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) файла конфигурации.  
+1.  В файле конфигурации в разделе [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) элемента, добавьте [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента.  
   
-2.  Добавьте элемент [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) в раздел привязок.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] создании элемента привязки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] см. в разделе [Как задать привязку службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2.  Добавить [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) для раздела привязок. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] элемент привязки в разделе [как: задание привязки службы в конфигурации](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-3.  Задайте для атрибута `mode` элемента `<security>``Message значение` .  
+3.  Задайте атрибуту `mode` элемента `<security>` значение `Message`.  
   
-4.  Задайте для атрибута `clientCredentialType` элемента \<`message`\> значение `UserName`.В этом случае пара «имя пользователя и пароль» будет использоваться в качестве учетной записи клиента.  
+4.  Задать `clientCredentialType` атрибут <`message`> элемент `UserName`. В этом случае пара "имя пользователя и пароль" будет использоваться в качестве учетной записи клиента.  
   
      В следующем примере показан код конфигурации для привязки.  
   
@@ -90,24 +93,24 @@ caps.handback.revision: 15
     </system.serviceModel>  
     ```  
   
-### Настройка службы на использование поставщика участия  
+### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Настройка службы на использование поставщика членства  
   
-1.  Добавьте элемент [\<поведения\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) в качестве дочернего для элемента `<system.serviceModel>`.  
+1.  Как дочерние для `<system.serviceModel>` элемента, добавьте [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент  
   
-2.  Добавьте элемент [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) в элемент \<`behaviors`\>.  
+2.  Добавить [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) для <`behaviors`> элемент.  
   
-3.  Добавьте элемент [\<поведение\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) и задайте соответствующее значение для атрибута `name`.  
+3.  Добавить [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) и задайте `name` соответствующее значение атрибута.  
   
-4.  Добавьте элемент [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)\<`behavior в элемент` \>.  
+4.  Добавить [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) для <`behavior`> элемент.  
   
-5.  Добавьте элемент [\<userNameAuthentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) в элемент `<serviceCredentials>`.  
+5.  Добавить [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) для `<serviceCredentials>` элемента.  
   
 6.  Задайте для атрибута `userNamePasswordValidationMode` значение `MembershipProvider`.  
   
     > [!IMPORTANT]
-    >  Если значение `userNamePasswordValidationMode` не задано, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует проверку подлинности Windows вместо поставщика участия [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+    >  Если значение `userNamePasswordValidationMode` не задано, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует проверку подлинности Windows вместо поставщика членства [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
-7.  Задайте для атрибута `membershipProviderName` значение «имя поставщика» \(указывается при добавлении поставщика в первой процедуре данного раздела\).В следующем примере показан фрагмент `<serviceCredentials>`, иллюстрирующий вышеуказанные действия.  
+7.  Задайте для атрибута `membershipProviderName` значение "имя поставщика" (указывается при добавлении поставщика в первой процедуре данного раздела). В следующем примере показан фрагмент `<serviceCredentials>`, иллюстрирующий вышеуказанные действия.  
   
     ```xml  
     <behaviors>  
@@ -121,13 +124,12 @@ caps.handback.revision: 15
           </behavior>  
        </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Пример  
- В следующем коде показана конфигурация службы, использующей функцию членства в ASP.  
+## <a name="example"></a>Пример  
+ В следующем коде показана конфигурация службы, использующей возможность членства в ASP.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -160,9 +162,8 @@ caps.handback.revision: 15
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## См. также  
- [Как использовать поставщик ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)   
+## <a name="see-also"></a>См. также  
+ [Как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  [Поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
+ms.openlocfilehash: b0d4082d020da782b334a5b3999905f7de744e64
+ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/28/2017
 ---
-
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Управление версиями зависимостей пакетов для .NET Core 1.0
 
 В этой статье приводятся необходимые сведения о версиях пакетов для библиотек и приложений .NET Core.
@@ -51,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 
 ### <a name="why-does-this-matter"></a>Почему это важно
 
-Мы гарантируем, что, если вы исправите зависимости до версий, поставляемых вместе с .NET Core 1.0, эти пакеты будут работать вместе.  При использовании пакетов, которые не исправлены подобным образом, такой гарантии нет.
+Мы гарантируем, что если исправления зависимостей для какой поставляется вместе с .NET Core 1.0, эти пакеты будут все работать вместе. При использовании пакетов, которые не исправлены подобным образом, такой гарантии нет.
 
 ### <a name="scenarios"></a>Сценарии
 
@@ -59,11 +57,11 @@ ms.lasthandoff: 07/28/2017
 
 **Используете ли вы только** `NETStandard.Library`**?**
 
-Если да, пакет `NETStandard.Library` следует исправить до версии `1.6`.  Так как это проверенный метапакет, его оболочка также исправляется до версии 1.0.
+Если Да, необходимо исправить вашей `NETStandard.Library` пакет до версии `1.6`.  Так как это проверенный метапакет, его оболочка также исправляется до версии 1.0.
 
 **Используете ли вы только** `Microsoft.NETCore.App`**?**
 
-Если да, пакет `Microsoft.NETCore.App` следует исправить до версии `1.0.0`.  Так как это проверенный метапакет, его оболочка также исправляется до версии 1.0.
+Если Да, необходимо исправить вашей `Microsoft.NETCore.App` пакет до версии `1.0.0`.  Так как это проверенный метапакет, его оболочка также исправляется до версии 1.0.
 
 **[Усекаете](../deploying/reducing-dependencies.md) ли вы зависимости метапакета** `NETStandard.Library` **или** `Microsoft.NETCore.App`**?**
 
@@ -86,4 +84,3 @@ ms.lasthandoff: 07/28/2017
 [Список всех пакетов среды выполнения и их версий для 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [Список всех пакетов приложений .NET Core и их версий для 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-

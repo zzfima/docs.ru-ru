@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 30aa268fbfa8a6f59491de30dbde6508ccdd7a68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: affc9d1638148971dd9c57969c75166facfd545c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="auto-confirm-pattern"></a>Шаблон автоподтверждения
 Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`. В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`. Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>. В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.  
@@ -46,6 +46,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`  
-  
-## <a name="see-also"></a>См. также
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

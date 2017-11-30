@@ -1,30 +1,28 @@
 ---
-title: "Загрузка данных из модуля чтения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Загрузка данных из модуля чтения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Загрузка данных из модуля чтения
-Если XML\-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов.  Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
+# <a name="load-data-from-a-reader"></a>Загрузка данных из модуля чтения
+Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов. Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
   
- Если модуль чтения уже позиционирован на одном из узлов документа и передается методу <xref:System.Xml.XmlDocument.Load%2A>, то метод <xref:System.Xml.XmlDocument.Load%2A> пытается считать текущий узел и все его одноуровневые элементы вплоть до закрывающего тега, закрывающего текущую глубину в памяти.  Успех попытки метода <xref:System.Xml.XmlDocument.Load%2A> зависит от узла, на котором находится модуль чтения при попытке загрузки, когда метод <xref:System.Xml.XmlDocument.Load%2A> проверяет, что XML\-документ из модуля чтения правильного формата.  Если XML\-документ неправильного формата, метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  Например, следующий набор узлов содержит два корневых элемента, XML\-документ неправильного формата, и метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  
+ Если модуль чтения уже позиционирован на одном из узлов документа и передается методу <xref:System.Xml.XmlDocument.Load%2A>, то метод <xref:System.Xml.XmlDocument.Load%2A> пытается считать текущий узел и все его одноуровневые элементы вплоть до закрывающего тега, закрывающего текущую глубину в памяти. Успех попытки метода <xref:System.Xml.XmlDocument.Load%2A> зависит от узла, на котором находится модуль чтения при попытке загрузки, когда метод <xref:System.Xml.XmlDocument.Load%2A> проверяет, что XML-документ из модуля чтения правильного формата. Если XML-документ неправильного формата, метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение. Например, следующий набор узлов содержит два корневых элемента, XML-документ неправильного формата, и метод <xref:System.Xml.XmlDocument.Load%2A> вызывает исключение.  
   
 -   Узел Comment, за которым следует узел Element, еще один узел Element и узел EndElement.  
   
@@ -32,11 +30,11 @@ caps.handback.revision: 4
   
 -   Узел Comment, за которым следует узел ProcessingInstruction, еще один узел Comment и узел EndElement.  
   
- В этом случае исключения не возникает, и данные загружаются.  В верхнюю часть этих узлов можно добавить корневой элемент и создать XML\-документ правильного формата, который можно сохранить без ошибки.  
+ В этом случае исключения не возникает, и данные загружаются. В верхнюю часть этих узлов можно добавить корневой элемент и создать XML-документ правильного формата, который можно сохранить без ошибки.  
   
- Если модуль чтения расположен на конечном узле, недопустимом для корневого уровня документа \(например, пробел или узел атрибута\), он продолжает читать, пока не окажется на узле, который можно использовать в качестве корневого.  Документ начинает загружаться в этой точке.  
+ Если модуль чтения расположен на конечном узле, недопустимом для корневого уровня документа (например, пробел или узел атрибута), он продолжает читать, пока не окажется на узле, который можно использовать в качестве корневого. Документ начинает загружаться в этой точке.  
   
- По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа \(DTD\) или проверки схемы.  Он только проверяет правильность формата XML\-документа.  Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>.  Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD\-схемы.  Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку.  Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.  
+ По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа (DTD) или проверки схемы. Он только проверяет правильность формата XML-документа. Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>. Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD-схемы. Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку. Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,39 +1,40 @@
 ---
-title: "Расширение модели DOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Расширение модели DOM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Расширение модели DOM
-Платформа Microsoft .NET Framework имеет базовый набор классов, обеспечивающих реализацию модели DOM.  Объект <xref:System.Xml.XmlNode> и его производные классы предоставляют методы и свойства, позволяющие переходить по содержимому и структуре XML\-документа, запрашивать и изменять это содержимое и структуру.  
+# <a name="extending-the-dom"></a>Расширение модели DOM
+Microsoft .NET Framework включает в себя базовый набор классов, обеспечивающих реализацию модели объектов XML документа (DOM). Объект <xref:System.Xml.XmlNode> и его производные классы предоставляют методы и свойства, позволяющие переходить по содержимому и структуре XML-документа, запрашивать и изменять это содержимое и структуру.  
   
- Если содержимое XML загружается в память с помощью модели DOM, созданные узлы содержат такие сведения, как имя узла, тип узла и так далее.  Могут быть случаи, когда необходимы конкретные данные об узле, которые не предоставляют базовые классы.  Например, может потребоваться узнать номер строки и позицию узла.  В этом случае можно произвести новые классы из существующих классов DOM, создав для них дополнительные возможности.  
+ Если содержимое XML загружается в память с помощью модели DOM, созданные узлы содержат такие сведения, как имя узла, тип узла и так далее. Могут быть случаи, когда необходимы конкретные данные об узле, которые не предоставляют базовые классы. Например, может потребоваться узнать номер строки и позицию узла. В этом случае можно произвести новые классы из существующих классов DOM, создав для них дополнительные возможности.  
   
  Есть две общие рекомендации для создания новых классов из существующих.  
   
--   Рекомендуется никогда не создавать производных классов от класса <xref:System.Xml.XmlNode>.  Вместо этого рекомендуется наследовать классы от класса, соответствующего типу интересующего вас узла.  Например, если необходимо возвращать дополнительную информацию об узлах атрибутов, можно унаследовать класс <xref:System.Xml.XmlAttribute>.  
+-   Рекомендуется никогда не создавать производных классов от класса <xref:System.Xml.XmlNode>. Вместо этого рекомендуется наследовать классы от класса, соответствующего типу интересующего вас узла. Например, если необходимо возвращать дополнительную информацию об узлах атрибутов, можно унаследовать класс <xref:System.Xml.XmlAttribute>.  
   
 -   За исключением методов создания узлов, при переопределении функции рекомендуется всегда вызывать базовую версию функции, а затем добавлять дополнительную обработку.  
   
-## Создание собственных экземпляров узлов  
- Класс <xref:System.Xml.XmlDocument> содержит методы создания узлов.  Эти методы вызываются для создания узлов при загрузке XML\-файла.  Эти методы можно переопределять, чтобы собственные экземпляры узлов создавались при загрузке документа.  Например, при расширении класса <xref:System.Xml.XmlElement> был бы унаследован класс <xref:System.Xml.XmlDocument> и переопределен метод <xref:System.Xml.XmlDocument.CreateElement%2A>.  
+## <a name="creating-your-own-node-instances"></a>Создание собственных экземпляров узлов  
+ Класс <xref:System.Xml.XmlDocument> содержит методы создания узлов. Эти методы вызываются для создания узлов при загрузке XML-файла. Эти методы можно переопределять, чтобы собственные экземпляры узлов создавались при загрузке документа. Например, при расширении класса <xref:System.Xml.XmlElement> был бы унаследован класс <xref:System.Xml.XmlDocument> и переопределен метод <xref:System.Xml.XmlDocument.CreateElement%2A>.  
   
  В следующем примере показано, как переопределить метод <xref:System.Xml.XmlDocument.CreateElement%2A>, чтобы возвратить собственную реализацию класса <xref:System.Xml.XmlElement>.  
   
@@ -55,10 +56,10 @@ class LineInfoDocument : XmlDocument {
   }  
 ```  
   
-## Расширение класса  
- Чтобы расширить класс, необходимо создать собственный класс на основе одного из существующих классов модели DOM.  После этого можно будет переопределить любые виртуальные методы или свойства в базовом классе или добавить собственные.  
+## <a name="extending-a-class"></a>Расширение класса  
+ Чтобы расширить класс, необходимо создать собственный класс на основе одного из существующих классов модели DOM. После этого можно будет переопределить любые виртуальные методы или свойства в базовом классе или добавить собственные.  
   
- В следующем примере создается новый класс, который реализует класс <xref:System.Xml.XmlElement> и интерфейс <xref:System.Xml.IXmlLineInfo>.  Определяются дополнительные методы и свойства, позволяющие пользователям получать сведения о строке.  
+ В следующем примере создается новый класс, который реализует класс <xref:System.Xml.XmlElement> и интерфейс <xref:System.Xml.IXmlLineInfo>. Определяются дополнительные методы и свойства, позволяющие пользователям получать сведения о строке.  
   
 ```vb  
 Class LineInfoElement  
@@ -122,8 +123,8 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.  
 ```  
   
-### Пример  
- Следующий пример считает количество элементов в XML\-документе.  
+### <a name="example"></a>Пример  
+ Следующий пример считает количество элементов в XML-документе.  
   
 ```vb  
 Imports System  
@@ -164,7 +165,7 @@ Class LineInfoElement
       CType(doc, LineInfoDocument).IncrementElementCount()  
    End Sub 'New  
 End Class 'LineInfoElement  
- _ 'End LineInfoElement class.   
+ _ 'End LineInfoElement class.  
   
 Public Class Test  
   
@@ -225,10 +226,10 @@ public class Test {
 }   
 ```  
   
-##### Ввод  
+##### <a name="input"></a>Ввод  
  book.xml  
   
-```  
+```xml  
 <!--sample XML fragment-->  
 <book genre='novel' ISBN='1-861001-57-5' misc='sale-item'>  
   <title>The Handmaid's Tale</title>  
@@ -236,23 +237,23 @@ public class Test {
 </book>  
 ```  
   
-##### Вывод  
+##### <a name="output"></a>Вывод  
   
 ```  
 Number of elements in book.xml: 3  
 ```  
   
- Пример, показывающий, как расширять классы модели XML DOM \(System.Xml\), см. в www.gotdotnet.com\/userfiles\/XMLDom\/extendDOM.zip.  
+ Пример, показывающий, как расширять классы модели XML DOM (System.Xml), см. в www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.  
   
-## Обработчик события узла  
- Реализация модели DOM в платформе .NET Framework также имеет систему событий, которая позволяет принимать и обрабатывать события при изменении узлов в XML\-документе.  При помощи классов <xref:System.Xml.XmlNodeChangedEventHandler> и <xref:System.Xml.XmlNodeChangedEventArgs> можно отслеживать события `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved` и `NodeRemoving`.  
+## <a name="node-event-handler"></a>Обработчик события узла  
+ Реализация модели DOM в платформе .NET Framework также имеет систему событий, которая позволяет принимать и обрабатывать события при изменении узлов в XML-документе. При помощи классов <xref:System.Xml.XmlNodeChangedEventHandler> и <xref:System.Xml.XmlNodeChangedEventArgs> можно отслеживать события `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved` и `NodeRemoving`.  
   
  В производных классах процесс обработки событий протекает точно так же, как в исходных классах модели DOM.  
   
- Дополнительные сведения об обработке событий узлов см. в разделах [События](../../../../docs/standard/events/index.md) и [Делегат XmlNodeChangedEventHandler](frlrfSystemXmlXmlNodeChangedEventHandlerClassTopic).  
+ Дополнительные сведения о узла обработки событий в разделе [событий](../../../../docs/standard/events/index.md) и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## Атрибуты по умолчанию и метод CreateElement  
- При переопределении метода <xref:System.Xml.XmlDocument.CreateElement%2A> в производном классе, если во время изменения документа создаются новые элементы, атрибуты по умолчанию не добавляются.  Это верно только при выполнении изменений.  Так как метод <xref:System.Xml.XmlDocument.CreateElement%2A> отвечает за добавление атрибутов по умолчанию в класс <xref:System.Xml.XmlDocument>, необходимо запрограммировать эту функциональность в методе <xref:System.Xml.XmlDocument.CreateElement%2A>.  При загрузке объекта <xref:System.Xml.XmlDocument>, который содержит атрибуты по умолчанию, они будут обработаны правильно.  Дополнительные сведения об атрибутах по умолчанию см. в разделе [Создание новых атрибутов для элементов в модели DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+## <a name="default-attributes-and-the-createelement-method"></a>Атрибуты по умолчанию и метод CreateElement  
+ При переопределении метода <xref:System.Xml.XmlDocument.CreateElement%2A> в производном классе, если во время изменения документа создаются новые элементы, атрибуты по умолчанию не добавляются. Это верно только при выполнении изменений. Так как метод <xref:System.Xml.XmlDocument.CreateElement%2A> отвечает за добавление атрибутов по умолчанию в класс <xref:System.Xml.XmlDocument>, необходимо запрограммировать эту функциональность в методе <xref:System.Xml.XmlDocument.CreateElement%2A>. При загрузке объекта <xref:System.Xml.XmlDocument>, который содержит атрибуты по умолчанию, они будут обработаны правильно. Дополнительные сведения об атрибутах по умолчанию см. в разделе [создание новых атрибутов для элементов в модели DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

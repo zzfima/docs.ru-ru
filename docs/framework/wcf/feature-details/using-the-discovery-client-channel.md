@@ -13,11 +13,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9d0aede489c6b5db029a9df37f84d0a067bbf836
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 655885aa392420cc0f35955e6146fd6a1f8e50d7
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>Использование клиентского канала обнаружения
 При написании клиентского приложения WCF необходимо знать адрес конечной точки вызываемой службы. Во многих случаях адрес конечной точки службы неизвестен заранее или может измениться со временем. Клиентский канал обнаружения позволяет создать клиентское приложение WCF, описать службу, которую необходимо вызвать, после чего клиентский канал автоматически отправит зондирующий запрос. После ответа службы клиентский канал обнаружения извлекает адрес конечной точки службы из ответа запроса и пользуется им для вызова службы.  
@@ -32,13 +32,13 @@ ms.lasthandoff: 10/18/2017
   
 1.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, которое используется для описания вызываемой службы.  
   
-2.  <!--zz <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpoint%2A>  --> `DiscoveryEndpoint`, which specifies the discovery endpoint to send discovery messages to.  
+2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>который указывает конечную точку обнаружения для отправки сообщений обнаружения.  
   
- Свойство <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A> позволяет указать искомый контракт службы, все необходимые URI области и максимальное количество попыток открытия канала. Тип контракта указывается путем вызова конструктора <<!--zz <xref:System.ServiceModel.Discovery.FindCriteria%2A>  --> `FindCriteria`>. URI области могут быть добавлены в свойство <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. Свойство <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> позволяет задать максимальное количество результатов, с которыми клиент пытается установить соединение. При получении ответа на зондирующий запрос клиент выполняет попытку открытия канала по адресу конечной точки, полученному из ответа запроса. Если возникло исключение, то клиент переходит к следующему ответу зондирующего запроса и при необходимости ожидает получения дополнительных ответов. Это продолжается до тех пор, пока не будет успешно открыт канал или достигнуто максимальное количество результатов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти параметры в разделе <<!--zz <xref:System.ServiceModel.Discovery.FindCriteria%2A>  --> `FindCriteria`>.  
+ Свойство <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> позволяет указать искомый контракт службы, все необходимые URI области и максимальное количество попыток открытия канала. Тип контракта указывается путем вызова конструктора <xref:System.ServiceModel.Discovery.FindCriteria>. URI области могут быть добавлены в свойство <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. Свойство <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> позволяет задать максимальное количество результатов, с которыми клиент пытается установить соединение. При получении ответа на зондирующий запрос клиент выполняет попытку открытия канала по адресу конечной точки, полученному из ответа запроса. Если возникло исключение, то клиент переходит к следующему ответу зондирующего запроса и при необходимости ожидает получения дополнительных ответов. Это продолжается до тех пор, пока не будет успешно открыт канал или достигнуто максимальное количество результатов. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти параметры в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
- <!--zz <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpoint%2A>  --> `DiscoveryEndpoint%2A>` Свойство позволяет указать конечную точку обнаружения для использования. Обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, но может быть также использована любая действительная конечная точка.  
+ Свойство <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> позволяет указать конечную точку обнаружения для использования. Обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, но может быть также использована любая действительная конечная точка.  
   
- При создании привязки для взаимодействия со службой должна быть указана та же привязку, что и в службе. Единственное различие заключается в том, что привязка клиента содержит <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> в вершине стека. Если служба использует одну из привязок, предоставленных системой, создайте новую <xref:System.ServiceModel.Channels.CustomBinding> и передайте привязку, предоставленную системой, конструктору <!--zz <xref:System.ServiceModel.CustomBinding.CustomBinding%2A> `CustomBinding` -->. Затем можно добавить <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> путем вызова `Insert` на <!--zz <xref:System.ServiceModel.Channels.Binding.Elements%2A> --> `Elements` свойство.  
+ При создании привязки для взаимодействия со службой должна быть указана та же привязку, что и в службе. Единственное различие заключается в том, что привязка клиента содержит <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> в вершине стека. Если служба использует одну из привязок, предоставленных системой, создайте новую <xref:System.ServiceModel.Channels.CustomBinding> и передайте привязку, предоставленную системой, конструктору <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A>. После этого можно добавить <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, вызвав `Insert` для свойства <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A>.  
   
  После добавления к привязке и настройки <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> можно создать экземпляр класса клиента WCF, открыть его и обращаться к его методам. В следующем примере показан клиентский канал обнаружения для обнаружения службы WCF, которая реализует класс `ICalculator` (используется в учебнике «Приступая к работе с WCF») и вызывает его метод `Add`.  
   

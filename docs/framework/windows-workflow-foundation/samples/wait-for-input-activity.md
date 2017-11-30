@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d4e9df410f5f8e6c95baa5ce5fdc9b2d339a190f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 145a71ff7d1ca07112ab91aa46ec4efb10429713
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="wait-for-input-activity"></a>Ожидание входного действия
 Этот образец демонстрирует способ создания именованных закладок в рабочем процессе. [!INCLUDE[wf](../../../../includes/wf-md.md)] не предусматривает действия для декларативного создания закладок. В связи с этим, когда необходимо создать закладку в рабочем процессе, необходимо написать пользовательское действие, которое ее создаст. Действие `WaitForInput`, определенное в этом образце, предоставляет эти функциональные возможности. С его помощью пользователи могут создавать в рабочем процессе закладки декларативным образом.  
@@ -68,6 +68,4 @@ ms.lasthandoff: 10/18/2017
 >   
 >  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`  
-  
-## <a name="see-also"></a>См. также
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

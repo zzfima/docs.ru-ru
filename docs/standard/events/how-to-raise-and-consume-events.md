@@ -1,48 +1,55 @@
 ---
-title: "Практическое руководство. Вызов и прием событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "события [платформа .NET Framework], возникновение"
-  - "события [платформа .NET Framework], примеры"
-  - "создание событий"
+title: "Практическое руководство. Вызов и прием событий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- events [.NET Framework], raising
+- raising events
+- events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d052c865a554977ce5c8b0a347337d9d9b92fc57
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Вызов и прием событий
-В примерах этого раздела показано, как работать с событиями.  Сюда входят примеры делегата <xref:System.EventHandler>, делегата <xref:System.EventHandler%601> и пользовательского делегата, чтобы проиллюстрировать события как c данными, так и без.  
+# <a name="how-to-raise-and-consume-events"></a>Практическое руководство. Вызов и прием событий
+В примерах в этом разделе показано, как работать с событиями. Даны примеры делегата <xref:System.EventHandler>, делегата <xref:System.EventHandler%601> и пользовательского делегата, иллюстрирующие события как с данными, так и без.  
   
- В примерах используются понятия, описанные в статье [События](../../../docs/standard/events/index.md).  
+ В примерах используются понятия, описанные в [события](../../../docs/standard/events/index.md) статьи.  
   
-## Пример  
- В первом примере показано, как вызывать и получать событие, которое не содержит данные.  Он содержит класс `Counter` с именем события `ThresholdReached`.  Это событие возникает, когда значение счетчика больше либо равно порогового значения.  Делегат <xref:System.EventHandler> связан с событием, потому что данные события не предоставляются.  
+## <a name="example"></a>Пример  
+ В первом примере показано, как вызывать и использовать событие, не содержащее данные. Он содержит класс `Counter` с событием `ThresholdReached`. Это событие возникает, когда значение счетчика больше порогового значения или равно ему. Делегат <xref:System.EventHandler> связан с событием, потому что данные события не предоставляются.  
   
  [!code-csharp[EventsOverview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programnodata.cs#5)]
  [!code-vb[EventsOverview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1nodata.vb#5)]  
   
-## Пример  
- В следующем примере показано, вызывать и получать событие, которое предоставляет данные.  Делегат <xref:System.EventHandler%601> связан с событием и предоставляется экземпляр объекта данных пользовательского события.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как вызывать и использовать событие, предоставляющее данные. Делегат <xref:System.EventHandler%601> связан с событием; предоставляется экземпляр объекта данных пользовательского события.  
   
  [!code-cpp[EventsOverview#6](../../../samples/snippets/cpp/VS_Snippets_CLR/eventsoverview/cpp/programwithdata.cpp#6)]
  [!code-csharp[EventsOverview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdata.cs#6)]
  [!code-vb[EventsOverview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdata.vb#6)]  
   
-## Пример  
- В следующем примере показано объявление делегата для события.  Делегат назван `ThresholdReachedEventHandler`.  \(Это всего лишь пример.  Как правило, нет необходимости объявлять делегат для события, поскольку можно использовать или <xref:System.EventHandler> или делегат <xref:System.EventHandler%601>.  Объявлять делегат необходимо только в редких случаях, например, делая класс доступным коду прежних версий, который не может использовать универсальные шаблоны.  
+## <a name="example"></a>Пример  
+ В следующем примере показано объявление делегата для события. Имя делегата — `ThresholdReachedEventHandler`. Это всего лишь пример. Как правило, не требуется объявлять делегат для события, поскольку можно использовать делегат <xref:System.EventHandler> или <xref:System.EventHandler%601>. Объявлять делегат необходимо только в редких случаях, например чтобы сделать класс доступным для устаревшего кода, который не может использовать универсальные классы.  
   
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [События](../../../docs/standard/events/index.md)

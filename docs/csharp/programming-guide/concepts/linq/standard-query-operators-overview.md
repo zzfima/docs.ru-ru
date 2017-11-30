@@ -1,30 +1,21 @@
 ---
 title: "Общие сведения о стандартных операторах запроса (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bcf64b87eb7fa1cba863f809dc11ab0ccb68ea9b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ffb68dd9c1a488e1367117bae639805ba9167551
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="standard-query-operators-overview-c"></a>Общие сведения о стандартных операторах запроса (C#)
 *Стандартные операторы запросов* — это методы, формирующие шаблон LINQ. Большинство этих методов работают с последовательностями. В данном контексте последовательность — это объект, тип которого реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Функциональные возможности стандартных операторов запросов включают фильтрацию, проекцию, статистическую обработку, сортировку и многие другие.  
@@ -121,10 +112,9 @@ foreach (var obj in query)
  [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable>   
- [Введение в запросы LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)   
- [Синтаксис выражений запроса для стандартных операторов запроса (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [Классификация стандартных операторов запросов по способу выполнения (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [Введение в запросы LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [Синтаксис выражения запроса для стандартных операторов запроса (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [Классификация стандартных операторов запросов по способу выполнения (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
  [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-

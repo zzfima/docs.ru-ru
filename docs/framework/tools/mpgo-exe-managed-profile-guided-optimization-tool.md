@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81c68f718b0395b70f604ed9157daeaa84e9eefc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (управляемое средство профильной оптимизации)
 Управляемое средство профильной оптимизации (Mpgo.exe) — это программа командной строки, которая использует общие пользовательские сценарии для оптимизации сборок машинных образов, созданных [Генератором машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Это средство позволяет выполнять обучающие сценарии, которые создают данные профиля. [Генератор машинных образов (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) использует эти данные для оптимизации создаваемых сборок приложений с машинными образами. Обучающий сценарий — это пробный сеанс предполагаемого использования приложения. Средство Mpgo.exe доступно в Visual Studio Ultimate 2012 и более поздних версий. Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] с помощью средства Mpgo.exe можно также оптимизировать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
@@ -141,8 +134,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)   
- [Повышение производительности при запуске классических приложений](http://go.microsoft.com/fwlink/p/?LinkId=248943)   
+ [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [Повышение производительности запуска для классических приложений](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [Обзор средств повышения производительности в .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)
-

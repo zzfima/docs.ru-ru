@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 208ea77318d67900eb059606b8ecd8e0e3b203a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework и внештатные выпуски
 .NET Framework эволюционирует, чтобы обеспечивать поддержку различных платформ, например приложений Windows Phone и Магазина Windows, традиционных приложений для настольных компьютеров (классических приложений) и веб-приложений, а также чтобы сделать возможным максимальное повторное использование кода. В дополнение к обычным выпускам .NET Framework, мы выпускаем новые функции в виде внештатных выпусков (OOB) для совершенствования кроссплатформенной разработки или добавления новых функциональных возможностей. В этом разделе обсуждаются направления развития платформы .NET Framework и ее внештатных выпусков.  
@@ -30,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  При использовании в приложении функций внештатных выпусков, пользователям не требуется устанавливать последнюю версию платформы .NET Framework для выполнения приложения, поскольку внештатные сборки развертываются вместе с пакетом приложения.  
   
 ## <a name="how-oob-packages-are-distributed"></a>Распространение внештатных пакетов  
- Внештатные выпуски для среды CLR доставляются через [Диспетчер пакетов NuGet](http://nuget.codeplex.com/), который представляет собой расширение Visual Studio с открытым кодом. NuGet позволяет легко просматривать и добавлять библиотеки в проекты .NET Framework из обозревателя решений в Visual Studio. NuGet входит в состав всех выпусков Visual Studio, начиная с Visual Studio 2012. Чтобы определить, установлен ли NuGet, найдите в Visual Studio элемент **Диспетчер библиотеки пакетов** в меню **Сервис**. Если он не установлен:  
+Внештатные выпуски для основных общих компонентов языка среды CLR доставляются через [NuGet](https://www.nuget.org/), который является диспетчер пакетов для .NET. NuGet позволяет легко просматривать и добавлять библиотеки в проекты .NET Framework из обозревателя решений в Visual Studio. NuGet входит в состав всех выпусков Visual Studio, начиная с Visual Studio 2012. Чтобы определить, установлен ли NuGet, найдите в Visual Studio элемент **Диспетчер библиотеки пакетов** в меню **Сервис**. Если он не установлен:  
   
 1.  В строке меню Visual Studio выберите **Сервис**, **Расширения и обновления** (в Visual Studio 2010 выберите **Диспетчер расширений**).  
   
@@ -66,4 +64,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [Начало работы](../../../docs/framework/get-started/index.md)
-

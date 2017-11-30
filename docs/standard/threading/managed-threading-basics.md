@@ -1,75 +1,78 @@
 ---
-title: "Managed Threading Basics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple threads"
-  - "threading [.NET Framework], multiple threads"
-  - "threading [.NET Framework], about threading"
-  - "managed threading"
+title: "Основы управляемых потоков"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple threads
+- threading [.NET Framework], multiple threads
+- threading [.NET Framework], about threading
+- managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 62c207f6074e33813887c6903f5285ee72d14e85
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Managed Threading Basics
-Первые пять тем этого раздела посвящены использованию управляемых потоков и содержат описания некоторых основных средств.  Сведения о классах, предоставляющих дополнительные функциональные возможности, см. в разделах [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md) и [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+# <a name="managed-threading-basics"></a>Основы управляемых потоков
+Первые пять тем этого раздела поможет вам определить, когда для использования управляемых потоков и содержат описания некоторых основных средств. В классах, которые предоставляют дополнительные возможности Подробнее [возможности](../../../docs/standard/threading/threading-objects-and-features.md) и [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
  Остальные темы данного раздела посвящены описанию дополнительных возможностей, включая взаимодействие управляемых потоков с операционной системой Windows.  
   
 > [!NOTE]
->  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] библиотека параллельных задач и PLINQ предоставляют интерфейсы API для параллельного выполнения задач и обработки данных в многопотоковых программах.  Для получения дополнительной информации см. [Parallel Programming](../../../docs/standard/parallel-programming/index.md).  
+>  В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], библиотека параллельных задач и PLINQ предоставляют интерфейсы API для задачи и данных параллелизма в многопоточных программах. Дополнительные сведения см. в разделе [Параллельное программирование](../../../docs/standard/parallel-programming/index.md).  
   
-## В этом подразделе  
- [Threads and Threading](../../../docs/standard/threading/threads-and-threading.md)  
- Преимущества и недостатки использования нескольких потоков; сценарии, в которых можно создавать потоки, используя группу потоков.  
+## <a name="in-this-section"></a>Содержание  
+ [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
+ Преимущества и недостатки использования нескольких потоков и описаны сценарии, в которых может создавать потоки или использовать потоки из пула потоков.  
   
- [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
- Описание поведения неуправляемых исключений в потоках для различных версий платформы .NET Framework, в частности ситуации, в которых эти исключения приводят к закрытию приложения.  
+ [Исключения в управляемых потоках](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
+ Описание поведения необработанного исключения в потоках для различных версий платформы .NET Framework, в частности случаев, в котором они приведут к завершению работы приложения.  
   
- [Synchronizing Data for Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- Описание принципов работы, используемых для синхронизации данных, при работе с несколькими потоками.  
+ [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ Описывает стратегии для синхронизации данных в классах, которые будут использоваться с несколькими потоками.  
   
  [Состояния управляемых потоков](../../../docs/standard/threading/managed-thread-states.md)  
- Описание основных состояний потоков и способов определения, работает ли поток.  
+ Описание состояния основных потоков и объясняется, как определить, выполняется ли поток.  
   
- [Foreground and Background Threads](../../../docs/standard/threading/foreground-and-background-threads.md)  
- Описание различий между основными и фоновыми потоками.  
+ [Основные и фоновые потоки](../../../docs/standard/threading/foreground-and-background-threads.md)  
+ Описание различий между потоками переднего плана и фона.  
   
- [Managed and Unmanaged Threading in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
- Обсуждение взаимоотношений между управляемыми и неуправляемыми потоками; управляемые эквиваленты потоков для API потоков Windows; обсуждение взаимодействия управляемых потоков и апартаментов COM.  
+ [Управляемые и неуправляемые потоки в Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
+ Рассматривается связь между управляемыми и неуправляемыми потоками, перечислены управляемые эквиваленты для работы с потоками API-интерфейсы Windows и описывает взаимодействие подразделения COM и управляемыми потоками.  
   
- [Thread.Suspend, Garbage Collection, and Safe Points](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Описание приостановки работы потока и сборки мусора.  
+ [Метод Thread.Suspend, сборка мусора и безопасные точки](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
+ Представляет коллекцию поток приостановки и сборке мусора.  
   
- [Thread Local Storage: Thread\-Relative Static Fields and Data Slots](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
- Описание механизмов хранения потока.  
+ [Локальное хранилище потока: статические поля потока и области данных](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ Описывает механизмы хранения потока.  
   
- [Cancellation in Managed Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- Описывает, как асинхронные или долго выполняемые синхронные операции могут быть отменены с помощью токена отмены.  
+ [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+ Описывает, как асинхронных или долго выполняющихся синхронных операций может быть отменено с помощью токена отмены.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Threading.Thread>  
- Справочная документация по классу **Thread**, который представляет управляемый поток, созданный неуправляемым кодом или в управляемом приложении.  
+ Справочная документация по классу **Thread**, который представляет управляемый поток вне зависимости от того, был ли он получен из неуправляемого кода или создан в управляемом приложении.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- Описание безопасного способа реализации многопоточности вместе с объектами пользовательского интерфейса.  
+ Предоставляет безопасный способ реализации многопоточности вместе с объектами пользовательского интерфейса.  
   
-## Связанные подразделы  
- [Overview of Synchronization Primitives](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- Описание управляемых классов, используемых для синхронизации действий нескольких потоков.  
+## <a name="related-sections"></a>Связанные разделы  
+ [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ Описывает управляемые классы, используемые для синхронизации действий нескольких потоков.  
   
- [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Описание частых проблем, связанных с многопоточностью, и стратегии по их предотвращению.  
+ [Рекомендации по работе с потоками](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ Описание распространенных проблем с многопоточность и стратегии для предотвращения проблем.  
   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)  
- Описание библиотеки параллельных задач и PLINQ, которые существенно облегчают работу по созданию асинхронных и многопотоковых приложений, основывающихся на платформе .NET Framework.
+ [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+ Описание библиотеки параллельных задач и PLINQ, которые существенно упрощают работу по созданию асинхронных и многопотоковых приложений .NET Framework.

@@ -1,28 +1,29 @@
 ---
-title: "Неупорядоченное извлечение узлов по имени или индексу | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Неупорядоченное извлечение узлов по имени или индексу"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 4
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "4"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Неупорядоченное извлечение узлов по имени или индексу
-Класс **XmlNamedNodeMap** описан в спецификации консорциума W3C как NamedNodeMap и нужен для обработки неупорядоченного набора узлов с возможностью ссылаться на узлы по их имени и индексу.  Единственный способ доступа к классу **XmlNamedNodeMap** \- возвращение **XmlNamedNodeMap** через метод или свойство.  Есть три метода или свойства, возвращающие класс **XmlNamedNodeMap**:  
+# <a name="unordered-node-retrieval-by-name-or-index"></a>Неупорядоченное извлечение узлов по имени или индексу
+**XmlNamedNodeMap** описан в спецификации консорциума World Wide Web (W3C) как NamedNodeMap и нужен для обработки неупорядоченного набора узлов с возможностью ссылки на узел по его имени или индексу. Единственным способом у вас есть доступ к **XmlNamedNodeMap** при **XmlNamedNodeMap** возвращается с помощью метода или свойства. Существует три метода или свойства, которые возвращают **XmlNamedNodeMap**:  
   
 -   XmlElement.Attributes;  
   
@@ -30,9 +31,9 @@ caps.handback.revision: 3
   
 -   XmlDocumentType.Notations.  
   
- Например, свойство **XmlDocumentType.Entities** получает коллекцию узлов **XmlEntity**, указанных в декларации типа документа.  Эта коллекция возвращается как **XmlNamedNodeMap**. Можно пройти по коллекции с помощью свойства **Count** и отобразить данные о сущности.  Пример использования прохода по **XmlNamedNodeMap** см. в разделе [XmlDocumentType.Entities Property](frlrfSystemXmlXmlDocumentTypeClassEntitiesTopic).  
+ Например **XmlDocumentType.Entities** свойство возвращает коллекцию **XmlEntity** узлы, объявленных в объявлении типа документа. Эта коллекция возвращается как **XmlNamedNodeMap**, и может выполнять проход по коллекции с помощью **число** и отобразить сведения о сущности. Пример использования прохода по **XmlNamedNodeMap**, в разделе <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   
- Коллекция **XmlAttributeCollection** является производной от **XmlNamedNodeMap**, и только атрибуты можно изменять, а нотации и сущности доступны только для чтения.  С помощью коллекции **XmlNamedNodeMap** для атрибутов можно получить узлы на основе их XML\-имен.  Это дает простой метод управления коллекцией атрибутов на узле элемента.  Данный метод можно противопоставить напрямую с коллекцией **XmlNodeList**, в которой также реализован интерфейс **IEnumerable**, но с методом доступа по индексу, а не по строке.  Методы **RemoveNamedItem** и **SetNamedItem** используются только с коллекцией **XmlAttributeCollection**.  Добавление или удаление из коллекции атрибутов, как с помощью реализации **AttributeCollection**, так и с помощью **XmlNamedNodeMap**, изменяет коллекцию атрибутов на элементе.  В следующем примере кода показан способ перемещения атрибута и создания атрибута.  
+ **XmlAttributeCollection** является производным от **XmlNamedNodeMap** и только атрибуты можно изменять, а нотации и сущности доступны только для чтения. С помощью **XmlNamedNodeMap** для атрибутов, можно получить узлы для этих атрибутов, основываясь на их именах XML. Это дает простой метод управления коллекцией атрибутов на узле элемента. Данный метод можно противопоставить напрямую с **XmlNodeList**, также реализует **IEnumerable** интерфейс, но с методом доступа по индексу, а не строку. **RemoveNamedItem** и **SetNamedItem** методов используются только с **XmlAttributeCollection**. Добавление или удаление из коллекции атрибутов, как с помощью **AttributeCollection** или **XmlNamedNodeMap** реализацию, изменяет коллекцию атрибутов элемента. В следующем примере кода показан способ перемещения атрибута и создания атрибута.  
   
 ```vb  
 Imports System  
@@ -123,7 +124,7 @@ class test {
 }  
 ```  
   
- Дополнительный пример кода, в котором показано перемещение атрибута из коллекции **AttributeCollection**, см. в разделе [XmlNamedNodeMap.RemoveNamedItem Method](frlrfSystemXmlXmlNamedNodeMapClassRemoveNamedItemTopic).  Дополнительные сведения о доступных методах и свойствах см. в разделе [XmlNamedNodeMap Members](frlrfSystemXmlXmlNamedNodeMapMembersTopic).  
+ Чтобы увидеть дополнительный пример кода, показывающий атрибут, который удаляется из **AttributeCollection**, в разделе [XmlNamedNodeMap.RemoveNamedItem Method](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Дополнительные сведения о методов и свойств см. в разделе [XmlNamedNodeMap Members](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -3,16 +3,15 @@ title: "Команда dotnet run — CLI .NET Core"
 description: "Команда dotnet run — это удобное средство для запуска приложения из исходного кода."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 09/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7670934199d7d4b8a7c5e598142366ef1eb3ef1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -74,6 +73,10 @@ dotnet myapp.dll
 
 Выполняет сборку и запуск приложения с использованием указанной [платформы](../../standard/frameworks.md). Эта платформа должна быть указана в файле проекта.
 
+`--force`
+
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Это эквивалентно удалению *project.assets.json*.
+
 `-h|--help`
 
 Выводит краткую справку по команде.
@@ -85,6 +88,10 @@ dotnet myapp.dll
 `--no-build`
 
 Не выполняет сборку проекта перед запуском.
+
+`--no-dependencies`
+
+При восстановлении проекта с перекрестными ссылками между проектами восстанавливает только корневой проект, но не ссылки.
 
 `--no-launch-profile`
 
@@ -142,4 +149,3 @@ dotnet myapp.dll
 Выполнение проекта в текущем каталоге (аргумент `--help` в этом примере передается приложению, так как используется аргумент `--`):
 
 `dotnet run --configuration Release -- --help`
-

@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b05608ca0704483f4318342a733ce363c0a66fc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 75f4a75a38b79e7b7ab18ac2ce3eff2a13aab15f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hello-world-custom-activity"></a>Пользовательское действие Hello World
 В этом образце показано несколько ключевых возможностей [!INCLUDE[wf](../../../../includes/wf-md.md)], включая создание простого настраиваемого действия. Некоторые возможности, демонстрируемые в этом образце, создают пользовательское действие в C# и используют аргументы `in` и `out` (<xref:System.Activities.InArgument> и <xref:System.Activities.OutArgument>).  
@@ -59,6 +59,4 @@ ms.lasthandoff: 10/18/2017
   
 2.  Для построения решения нажмите CTRL+SHIFT+B.  
   
-3.  Чтобы запустить решение, нажмите клавишу F5.  
-  
-## <a name="see-also"></a>См. также
+3.  Чтобы запустить решение, нажмите клавишу F5.

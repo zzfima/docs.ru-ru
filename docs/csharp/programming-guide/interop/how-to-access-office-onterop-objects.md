@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
   
-2.  Чтобы создать список `Main`, содержащий два счета, добавьте в метод `bankAccounts` следующий код.  
+2.  Чтобы создать список `bankAccounts`, содержащий два счета, добавьте в метод `Main` следующий код.  
   
      [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   

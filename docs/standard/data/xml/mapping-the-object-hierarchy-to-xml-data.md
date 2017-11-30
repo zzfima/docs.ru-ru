@@ -1,36 +1,37 @@
 ---
-title: "Сопоставление объектной иерархии с XML-данными | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Сопоставление объектной иерархии с XML-данными"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "5"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сопоставление объектной иерархии с XML-данными
-Когда XML\-документ находится в памяти, его концептуальным представлением является дерево.  В распоряжении программиста имеется объектная иерархия для доступа к узлам этого дерева.  Следующий пример показывает, как XML\-содержимое становится узлами.  
+# <a name="mapping-the-object-hierarchy-to-xml-data"></a>Сопоставление объектной иерархии с XML-данными
+Когда XML-документ находится в памяти, его концептуальным представлением является дерево. В распоряжении программиста имеется объектная иерархия для доступа к узлам этого дерева. Следующий пример показывает, как XML-содержимое становится узлами.  
   
- При считывании XML в модель DOM, его фрагменты преобразуются в узлы, и эти узлы сохраняют дополнительные метаданные о себе, в частности, тип узла и значения.  Тип узла \- это его объект и характеристики, определяющие выполняемые действия и свойства, которые можно установить и получить.  
+ При считывании XML в модель DOM, его фрагменты преобразуются в узлы, и эти узлы сохраняют дополнительные метаданные о себе, в частности, тип узла и значения. Тип узла - это его объект и характеристики, определяющие выполняемые действия и свойства, которые можно установить и получить.  
   
  Если имеется следующий простой XML:  
   
  **Ввод**  
   
-```  
+```xml  
 <book>  
     <title>The Handmaid's Tale</title>  
 </book>  
@@ -38,16 +39,16 @@ caps.handback.revision: 4
   
  Входные данные представлены в памяти следующим деревом узлов с назначенным свойством типа узлов:  
   
- ![пример узла дерева](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple\_XML")  
+ ![Пример узла дерева](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Представление дерева узлов book и title  
   
- Элемент `book` становится объектом **XmlElement**, следующий элемент, `title`, также становится **XmlElement**, а элемент content становится объектом **XmlText**.  Методы и свойства объекта **XmlElement** отличаются от методов и свойств, доступных для объекта **XmlText**.  Поэтому очень важно знать, какой тип узла получает XML, так как тип узла определяет действия, которые можно выполнить.  
+ `book` Элемент становится **XmlElement** объект, следующий элемент `title`, также становится **XmlElement**, а элемент content становится **XmlText** объекта. Изучить **XmlElement** методы и свойства, методы и свойства отличаются от методов и свойств, доступных для **XmlText** объекта. Поэтому очень важно знать, какой тип узла получает XML, так как тип узла определяет действия, которые можно выполнить.  
   
- В следующих примерах выполняется считывание XML\-данных и запись другого текста, в зависимости от типа узла.  Использование в качестве входных данных следующего XML\-файла, **items.xml**.  
+ В следующих примерах выполняется считывание XML-данных и запись другого текста, в зависимости от типа узла. Используя следующий XML-файл данных в качестве входных данных, **items.xml**:  
   
  **Ввод**  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <!-- This is a sample XML document -->  
 <!DOCTYPE Items [<!ENTITY number "123">]>  
@@ -61,7 +62,7 @@ caps.handback.revision: 4
 </Items>  
 ```  
   
- Следующий пример кода считывает файл **items.xml** и отображает сведения для каждого типа узла.  
+ Следующий пример кода считывает **items.xml** и отображает сведения для каждого типа узла.  
   
 ```vb  
 Imports System  
@@ -186,46 +187,45 @@ public class Sample
   
  **Вывод**  
   
-```  
-  
+```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
 ```  
   
- Рассматривая входные данные построчно и используя выход, сформированный кодом, можно использовать следующую таблицу для анализа того, какой узел сформировал конкретные строки результата, и понять, какие XML\-данные стали соответствующими типами узлов.  
+ Рассматривая входные данные построчно и используя выход, сформированный кодом, можно использовать следующую таблицу для анализа того, какой узел сформировал конкретные строки результата, и понять, какие XML-данные стали соответствующими типами узлов.  
   
 |Ввод|Вывод|Проверка типа узла|  
-|----------|-----------|------------------------|  
-|\<?xml version\="1.0"?\>|\<?xml version\='1.0'?\>|XmlNodeType.XmlDeclaration|  
-|\<\!\-\- Это пример XML\-документа \-\-\>|\<\!\-\- Это пример XML\-документа \-\-\>|XmlNodeType.Comment|  
-|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]\>|\<\!DOCTYPE Items \[\<\!ENTITY number "123"\>\]|XmlNodeType.DocumentType|  
-|\<Items\>|\<Items\>|XmlNodeType.Element|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Проверка с помощью сущности: &number;|Test with an entity: 123|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmNodeType.Element|  
+|-----------|------------|--------------------|  
+|\<? версия xml = «1.0»? >|\<? версия xml = "1.0"? >|XmlNodeType.XmlDeclaration|  
+|\<!--Это образец XML-документа-->|\<!--Это образец XML-документа-->|XmlNodeType.Comment|  
+|\<! Элементы DOCTYPE [\<! СУЩНОСТИ номер «123» >] >|\<! Элементы DOCTYPE [\<! СУЩНОСТИ номер «123» >]|XmlNodeType.DocumentType|  
+|\<Элементы >|\<Элементы >|XmlNodeType.Element|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Тестирование с помощью сущности:&number;|Test with an entity: 123|XmlNodeType.Text|  
+|\</ Элемент >|\</ Элемент >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmNodeType.Element|  
 |test with a child element|test with a child element|XmlNodeType.Text|  
-|\<more\>|\<more\>|XmlNodeType.Element|  
+|\<Дополнительные >|\<Дополнительные >|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Элемент >|\</ Элемент >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |test with a CDATA section|test with a CDATA section|XmlTest.Text|  
-|\<\!\[CDATA\[\<456\>\]\]\>|\<\!\[CDATA\[\<456\>\]\]\>|XmlTest.CDATA|  
+|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
-|Проверка с помощью сущности char: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\!\-\- В этом элементе 14 типов данных char.\-\-\>|\<\-\- В этом элементе 14 типов данных char.\-\-\>|XmlNodeType.Comment|  
-|\<Item\>|\<Item\>|XmlNodeType.Element|  
+|\</ Элемент >|\</ Элемент >|XmlNodeType.EndElement|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
+|Тест с помощью сущности char: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|\</ Элемент >|\</ Элемент >|XmlNodeType.EndElement|  
+|\<!--В этом элементе 14 типов данных char.-->|\<— В этом элементе 14 типов данных char.-->|XmlNodeType.Comment|  
+|\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\<\/Item\>|\<\/Item\>|XmlNodeType.EndElement|  
-|\<\/Items\>|\<\/Items\>|XmlNodeType.EndElement|  
+|\</ Элемент >|\</ Элемент >|XmlNodeType.EndElement|  
+|\</ Items >|\</ Items >|XmlNodeType.EndElement|  
   
  Необходимо знать, какой тип узла назначен, так как от типа узла зависят допустимые типы действий и типы свойств, которые можно установить и получить.  
   
- Управление созданием узлов для пробелов при загрузке данных в модель DOM осуществляется флагом **PreserveWhitespace**.  Дополнительные сведения см. в разделе [Обработка незначимых и значимых пробелов при загрузке модели DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ Управляет созданием узлов для пробелов при загрузке данных в модель DOM осуществляется **PreserveWhitespace** флаг. Дополнительные сведения см. в разделе [пробелы обработка и значимых пробелов при загрузке модели DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Чтобы добавить новые узлы в модель DOM, см. раздел [Вставка узлов в XML\-документ](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md).  Чтобы удалить узлы из модели DOM, см. раздел [Удаление узлов, содержимого и значений из XML\-документа](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  Чтобы изменить узлы в модели DOM, см. раздел [Изменение узлов, содержимого и значений в XML\-документе](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Чтобы добавить новые узлы в модель DOM, в разделе [Вставка узлов в XML-документ](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Удаление узлов из DOM, в разделе [удаление узлов, содержимого и значений из XML-документа](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Чтобы изменить содержимое узлов в модели DOM, в разделе [изменение узлов, содержимого и значений в XML-документ](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,49 +1,50 @@
 ---
-title: "Сохранение и запись документа | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Сохранение и запись документа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: 3
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Сохранение и запись документа
+# <a name="saving-and-writing-a-document"></a>Сохранение и запись документа
 При загрузке и сохранении <xref:System.Xml.XmlDocument> между сохраненным и исходным документами возможны следующие различия:  
   
 -   Если свойство <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> имеет значение `true` перед вызовом метода <xref:System.Xml.XmlDocument.Save%2A>, то пробелы в документе при выводе сохраняются. Если свойство имеет значение `false`, то <xref:System.Xml.XmlDocument> автоматически вставляет отступы в выходные данные.  
   
 -   Все пробелы между атрибутами сокращаются до одного символа пробела.  
   
--   Пробелы между элементами изменяются.  Значащие пробелы сохраняются, а незначащие \- нет.  Однако при сохранении документа по умолчанию используется режим <xref:System.Xml.XmlTextWriter> **Отступ**, обеспечивающий аккуратный внешний вид при печати и удобство чтения.  
+-   Пробелы между элементами изменяются. Значащие пробелы сохраняются, а незначащие - нет. Но когда документ сохраняется, он будет использовать <xref:System.Xml.XmlTextWriter> **отступы** режим по умолчанию, чтобы аккуратно печати и сделать код более удобочитаемым.  
   
--   Символ кавычки вокруг значений атрибута по умолчанию заменяется символом двойной кавычки.  Выбрать в качестве символа кавычки двойную кавычку или одинарную кавычку можно с помощью свойства <xref:System.Xml.XmlTextReader.QuoteChar%2A> класса <xref:System.Xml.XmlTextWriter>.  
+-   Символ кавычки вокруг значений атрибута по умолчанию заменяется символом двойной кавычки. Выбрать в качестве символа кавычки двойную кавычку или одинарную кавычку можно с помощью свойства <xref:System.Xml.XmlTextReader.QuoteChar%2A> класса <xref:System.Xml.XmlTextWriter>.  
   
 -   По умолчанию символы числовых сущностей, например `{`, расширяются.  
   
--   Значение отметки порядка байт во входном документе не сохраняется.  UCS\-2 сохраняется как UTF\-8, если явно не создана XML\-декларация, указывающая другую кодировку.  
+-   Значение отметки порядка байт во входном документе не сохраняется. UCS-2 сохраняется как UTF-8, если явно не создана XML-декларация, указывающая другую кодировку.  
   
--   Если требуется записать <xref:System.Xml.XmlDocument> в файл или поток, то записываемые выходные данные не будут отличаться от содержимого документа.  То есть, <xref:System.Xml.XmlDeclaration> записывается только если объявление содержится в документе, а кодировка, используемая при записи документа, совпадает с указанной в узле декларации.  
+-   Если требуется записать <xref:System.Xml.XmlDocument> в файл или поток, то записываемые выходные данные не будут отличаться от содержимого документа. То есть, <xref:System.Xml.XmlDeclaration> записывается только если объявление содержится в документе, а кодировка, используемая при записи документа, совпадает с указанной в узле декларации.  
   
-## Запись XmlDeclaration  
- XML\-декларацию создают члены <xref:System.Xml.XmlDocument> и элементы <xref:System.Xml.XmlDeclaration> классов <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A>, метод <xref:System.Xml.XmlNode.WriteTo%2A>, а также методы <xref:System.Xml.XmlDocument.Save%2A> и <xref:System.Xml.XmlDocument.WriteContentTo%2A> класса <xref:System.Xml.XmlDocument>.  
+## <a name="writing-an-xmldeclaration"></a>Запись XmlDeclaration  
+ XML-декларацию создают члены <xref:System.Xml.XmlDocument> и элементы <xref:System.Xml.XmlDeclaration> классов <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A>, метод <xref:System.Xml.XmlNode.WriteTo%2A>, а также методы <xref:System.Xml.XmlDocument> и <xref:System.Xml.XmlDocument.Save%2A> класса <xref:System.Xml.XmlDocument.WriteContentTo%2A>.  
   
- Для свойств <xref:System.Xml.XmlDocument> методов <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, а также методов <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> и <xref:System.Xml.XmlDocument.WriteContentTo%2A> кодировка, записываемая в XML\-декларацию, берется из узла <xref:System.Xml.XmlDeclaration>.  Если узел <xref:System.Xml.XmlDeclaration> отсутствует, то <xref:System.Xml.XmlDeclaration> не записывается.  Если в узле <xref:System.Xml.XmlDeclaration> нет кодировки, то кодировка не записывается в XML\-декларацию.  
+ Для свойств <xref:System.Xml.XmlDocument> методов <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, а также методов <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> и <xref:System.Xml.XmlDocument.WriteContentTo%2A> кодировка, записываемая в XML-декларацию, берется из узла <xref:System.Xml.XmlDeclaration>. Если узел <xref:System.Xml.XmlDeclaration> отсутствует, то <xref:System.Xml.XmlDeclaration> не записывается. Если в узле <xref:System.Xml.XmlDeclaration> нет кодировки, то кодировка не записывается в XML-декларацию.  
   
- Методы <xref:System.Xml.XmlDocument.Save%2A?displayProperty=fullName> и <xref:System.Xml.XmlDocument.Save%2A?displayProperty=fullName> всегда записывают <xref:System.Xml.XmlDeclaration>.  Они получают кодировку из модуля, в который производится запись.  То есть, кодовое значение модуля записи переопределяет кодировку в документе и в <xref:System.Xml.XmlDeclaration>.  Например, приведенный ниже код не записывает кодировку в XML\-декларацию, находящуюся в выходном файле `out.xml`.  
+ Методы <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> и <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> всегда записывают <xref:System.Xml.XmlDeclaration>. Они получают кодировку из модуля, в который производится запись. То есть, кодовое значение модуля записи переопределяет кодировку в документе и в <xref:System.Xml.XmlDeclaration>. Например, приведенный ниже код не записывает кодировку в XML-декларацию, находящуюся в выходном файле `out.xml`.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -59,12 +60,12 @@ doc.Load("text.xml");
 doc.Save(tw);  
 ```  
   
- Для метода <xref:System.Xml.XmlDocument.Save%2A> XML\-декларация записывается с помощью метода <xref:System.Xml.XmlWriter.WriteStartDocument%2A> класса <xref:System.Xml.XmlWriter>.  Поэтому при перезаписи метода <xref:System.Xml.XmlWriter.WriteStartDocument%2A> изменяется способ записи начала документа.  
+ Для метода <xref:System.Xml.XmlDocument.Save%2A> XML-декларация записывается с помощью метода <xref:System.Xml.XmlWriter.WriteStartDocument%2A> класса <xref:System.Xml.XmlWriter>. Поэтому при перезаписи метода <xref:System.Xml.XmlWriter.WriteStartDocument%2A> изменяется способ записи начала документа.  
   
- Если для элементов <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> и <xref:System.Xml.XmlNode.InnerXml%2A> класса <xref:System.Xml.XmlDeclaration> не установлено свойство <xref:System.Xml.XmlDeclaration.Encoding%2A>, то кодировка не записывается.  В противном случае кодировка, записанная в XML\-декларацию, не отличается от кодировки в свойстве <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
+ Если для элементов <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlNode.OuterXml%2A> и <xref:System.Xml.XmlDeclaration.WriteTo%2A> класса <xref:System.Xml.XmlNode.InnerXml%2A> не установлено свойство <xref:System.Xml.XmlDeclaration.Encoding%2A>, то кодировка не записывается. В противном случае кодировка, записанная в XML-декларацию, не отличается от кодировки в свойстве <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
   
-## Запись содержимого документа с помощью свойства OuterXml  
- Свойство <xref:System.Xml.XmlNode.OuterXml%2A> является расширением Майкрософт для стандартов объектной модели DOM XML\-документа консорциума W3C.  Свойство <xref:System.Xml.XmlNode.OuterXml%2A> позволяет получить разметку как полного XML\-документа, так и единичного узла вместе с его дочерними узлами.  Свойство <xref:System.Xml.XmlNode.OuterXml%2A> возвращает разметку, предоставляющую заданный узел и все его дочерние узлы.  
+## <a name="writing-document-content-using-the-outerxml-property"></a>Запись содержимого документа с помощью свойства OuterXml  
+ Свойство <xref:System.Xml.XmlNode.OuterXml%2A> является расширением Майкрософт для стандартов объектной модели DOM XML-документа консорциума W3C. Свойство <xref:System.Xml.XmlNode.OuterXml%2A> позволяет получить разметку как полного XML-документа, так и единичного узла вместе с его дочерними узлами. Свойство <xref:System.Xml.XmlNode.OuterXml%2A> возвращает разметку, предоставляющую заданный узел и все его дочерние узлы.  
   
  В приведенном ниже образце кода показано сохранение документа целиком в виде строки.  
   
@@ -96,5 +97,5 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  Однако если требуется содержимое дочерних узлов, можно использовать свойство <xref:System.Xml.XmlNode.InnerText%2A>.  
   
-## См. также  
- [Модель DOM для XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также  
+ [Модель объектов XML-документов (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
