@@ -1,24 +1,28 @@
 ---
-title: "Вызов проверки действия | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вызов проверки действия"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 752137d5e917e22d5c24e78b45714db1fa06b2a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вызов проверки действия
-Проверка действия предоставляет метод выявления ошибок и сообщения о них в конфигурации любого действия до его выполнения.Когда рабочий процесс модифицируется в конструкторе, выполняется проверка и любые ошибки или предупреждения, выявленные в ее ходе, отображаются в конструкторе.Также проверка происходит во время выполнения, когда вызывается рабочий процесс, и при появлении каких\-либо ошибок проверки логикой проверки по умолчанию выдается исключение <xref:System.Activities.InvalidWorkflowException>.[!INCLUDE[wf](../../../includes/wf-md.md)] предоставляет класс <xref:System.Activities.Validation.ActivityValidationServices>, который может использоваться разработчиками приложений и средств работы с рабочими процессами для явной проверки действия.В этом разделе описывается, как использовать <xref:System.Activities.Validation.ActivityValidationServices> для выполнения проверки действия.  
+# <a name="invoking-activity-validation"></a>Вызов проверки действия
+Проверка действия предоставляет метод выявления ошибок и сообщения о них в конфигурации любого действия до его выполнения. Когда рабочий процесс модифицируется в конструкторе, выполняется проверка и любые ошибки или предупреждения, выявленные в ее ходе, отображаются в конструкторе. Также проверка происходит во время выполнения, когда вызывается рабочий процесс, и при появлении каких-либо ошибок проверки логикой проверки по умолчанию выдается исключение <xref:System.Activities.InvalidWorkflowException>. [!INCLUDE[wf](../../../includes/wf-md.md)] предоставляет класс <xref:System.Activities.Validation.ActivityValidationServices>, который может использоваться разработчиками приложений и средств работы с рабочими процессами для явной проверки действия. В этом разделе описывается, как использовать <xref:System.Activities.Validation.ActivityValidationServices> для выполнения проверки действия.  
   
-## Использование служб ActivityValidationServices  
- В <xref:System.Activities.Validation.ActivityValidationServices> есть две перегруженные формы <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, используемые для вызова логики проверки действия.Первая перегруженная форма получает проверяемое корневое действие и возвращает коллекцию ошибок и предупреждений.В следующем примере использовано пользовательское действие `Add` с двумя обязательными аргументами.  
+## <a name="using-activityvalidationservices"></a>Использование служб ActivityValidationServices  
+ В <xref:System.Activities.Validation.ActivityValidationServices> есть две перегруженные формы <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>, используемые для вызова логики проверки действия. Первая перегруженная форма получает проверяемое корневое действие и возвращает коллекцию ошибок и предупреждений. В следующем примере использовано пользовательское действие `Add` с двумя обязательными аргументами.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -57,7 +61,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Этот рабочий процесс может быть проверен путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>.<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> возвращает коллекцию всех ошибок и предупреждений проверки, содержащихся в действии \(и в любых его дочерних действиях\), как показано в следующем примере.  
+ Этот рабочий процесс может быть проверен путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> возвращает коллекцию всех ошибок и предупреждений проверки, содержащихся в действии (и в любых его дочерних действиях), как показано в следующем примере.  
   
 ```csharp  
 ValidationResults results = ActivityValidationServices.Validate(wf);  
@@ -81,8 +85,8 @@ else
   
  Когда <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> вызывается для данного образца рабочего процесса, возвращаются две выявленные при проверке ошибки.  
   
- **Ошибка: Не указано значение необходимого аргумента действия Operand2.**   
-**Ошибка: Не указано значение необходимого аргумента действия Operand1.**  Если этот рабочий процесс был вызван, будет сформировано исключение <xref:System.Activities.InvalidWorkflowException>, как показано в следующем примере.  
+ **Ошибка: Не указано значение необходимого аргумента действия «Операнд_2».**  
+**Ошибка: Не указано значение необходимого аргумента действия «Операнд_1».**  Если этот рабочий процесс был вызван, будет сформировано исключение <xref:System.Activities.InvalidWorkflowException>, как показано в следующем примере.  
   
 ```csharp  
 try  
@@ -95,10 +99,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.Activities.InvalidWorkflowException:**   
-**Во время обработки дерева рабочего процесса обнаружены следующие ошибки:**   
-**«Добавить»: не указано значение необходимого аргумента действия Operand2.**   
-**'Добавить':Не указано значение необходимого аргумента действия Operand1.**  Чтобы данный образец рабочего процесса был действительным, два обязательных аргумента действия `Add` должны быть связаны.В следующем примере два обязательных аргумента связаны с переменными рабочего процесса и со значением результата.В данном примере аргумент <xref:System.Activities.Activity%601.Result%2A> связан вместе с двумя обязательными аргументами.Аргумент <xref:System.Activities.Activity%601.Result%2A> связывать необязательно. Если он не связан, то при проверке это не вызовет ошибку.В обязанности автора рабочего процесса входит связать <xref:System.Activities.Activity%601.Result%2A>, если его значение используется в другом месте рабочего процесса.  
+ **System.Activities.InvalidWorkflowException:**  
+**При обработке дерева рабочих процессов произошли следующие ошибки:**   
+**'Добавить': значение необходимого аргумента действия «Операнд_2» не указано.**   
+**'Добавить': значение необходимого аргумента действия «Операнд_1» не указано.**  Чтобы данный образец рабочего процесса был действительным, два обязательных аргумента действия `Add` должны быть связаны. В следующем примере два обязательных аргумента связаны с переменными рабочего процесса и со значением результата. В данном примере аргумент <xref:System.Activities.Activity%601.Result%2A> связан вместе с двумя обязательными аргументами. Аргумент <xref:System.Activities.Activity%601.Result%2A> связывать необязательно. Если он не связан, то при проверке это не вызовет ошибку. В обязанности автора рабочего процесса входит связать <xref:System.Activities.Activity%601.Result%2A>, если его значение используется в другом месте рабочего процесса.  
   
 ```csharp  
 new Add  
@@ -109,8 +113,8 @@ new Add
 }  
 ```  
   
-### Проверка требуемых аргументов для корневого действия  
- Если у корневого действия рабочего процесса есть аргументы, то они не связываются, пока рабочий процесс не будет вызван и ему не будут переданы параметры.Следующий рабочий процесс проходит проверку, но при вызове рабочего процесса без передачи обязательных аргументов создается исключение, как показано в следующем примере.  
+### <a name="validating-required-arguments-on-the-root-activity"></a>Проверка требуемых аргументов для корневого действия  
+ Если у корневого действия рабочего процесса есть аргументы, то они не связываются, пока рабочий процесс не будет вызван и ему не будут переданы параметры. Следующий рабочий процесс проходит проверку, но при вызове рабочего процесса без передачи обязательных аргументов создается исключение, как показано в следующем примере.  
   
 ```csharp  
 Activity wf = new Add();  
@@ -128,10 +132,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: параметры аргументов корневого действия заданы неверно.**   
-**Исправьте либо определение рабочего процесса, либо передачу входных значений, чтобы устранить эти ошибки.**   
-**«Добавить»: не указано значение необходимого аргумента действия Operand2.**   
-**'Добавить':Не указано значение необходимого аргумента действия Operand1.**  После передачи требуемых аргументов рабочий процесс будет успешно выполнен, как показано в следующем примере.  
+ **System.ArgumentException: Параметры аргументов корневого действия заданы неверно.**  
+**Либо исправьте определение рабочего процесса, либо введите допустимые значения для устранения этих ошибок:**   
+**'Добавить': значение необходимого аргумента действия «Операнд_2» не указано.**   
+**'Добавить': значение необходимого аргумента действия «Операнд_1» не указано.**  После передачи требуемых аргументов рабочий процесс будет успешно выполнен, как показано в следующем примере.  
   
 ```csharp  
 Add wf = new Add();  
@@ -157,12 +161,12 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  В данном примере корневое действие было объявлено как `Add` \(вместо `Activity`\), как в предыдущем примереЭто позволяет методу `WorkflowInvoker.Invoke` возвратить отдельное целочисленное значение, представляющее результаты действия `Add` вместо словаря аргументов `out`.Переменную `wf` также можно было объявить как `Activity<int>`.  
+>  В данном примере корневое действие было объявлено как `Add` (вместо `Activity`), как в предыдущем примере Это позволяет методу `WorkflowInvoker.Invoke` возвратить отдельное целочисленное значение, представляющее результаты действия `Add` вместо словаря аргументов `out`. Переменную `wf` также можно было объявить как `Activity<int>`.  
   
- Во время проверки корневых аргументов ведущее приложение должно проследить, чтобы при вызове рабочего процесса были переданы все обязательные аргументы.  
+ Во время проверки корневых аргументов базовое приложение должно проследить, чтобы при вызове рабочего процесса были переданы все обязательные аргументы.  
   
-### Вызов императивной проверки на уровне кода  
- Проверка на основе императивного кода доступна для действий, производных от <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> и <xref:System.Activities.NativeActivity>, и служит простым способом автономной проверки действия.Код проверки, который определяет все ошибки и предупреждения проверки, добавляется к действию.При вызове проверки допустимости для действий эти предупреждения или ошибки содержатся в коллекции, возвращаемой вызовом метода <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>.В следующем примере из образца [Базовая проверка](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md) определяется действие `CreateProduct`.Если значение `Cost` больше `Price`, к метаданным в переопределении <xref:System.Activities.CodeActivity.CacheMetadata%2A> добавляется ошибка проверки.  
+### <a name="invoking-imperative-code-based-validation"></a>Вызов императивной проверки на уровне кода  
+ Проверка в императивном коде доступна для действий, производных от <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> и <xref:System.Activities.NativeActivity>, и служит простым способом автономной проверки действия. Код проверки, определяющий все ошибки и предупреждения проверки, добавляется к действию. При вызове проверки допустимости для действий эти предупреждения или ошибки содержатся в коллекции, возвращаемой вызовом метода <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. В следующем примере берется из [базовую проверку](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md) образце `CreateProduct` определяется действие. Если значение `Cost` больше `Price`, к метаданным в переопределении <xref:System.Activities.CodeActivity.CacheMetadata%2A> добавляется ошибка проверки.  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -191,10 +195,9 @@ public sealed class CreateProduct : CodeActivity
         // Not needed for the sample.  
     }  
 }  
-  
 ```  
   
- В этом примере рабочий процесс создается с помощью действия `CreateProduct`.В этом рабочем процессе `Cost` больше, чем `Price`, а обязательный аргумент `Description` не задан.При вызове проверки допустимости возвращаются следующие ошибки.  
+ В этом примере рабочий процесс создается с помощью действия `CreateProduct`. В этом рабочем процессе `Cost` больше, чем `Price`, а обязательный аргумент `Description` не задан. При вызове проверки допустимости возвращаются следующие ошибки.  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -231,18 +234,17 @@ else
         Console.WriteLine("Warning: {0}", warning.Message);  
     }  
 }  
-  
 ```  
   
- **Ошибка: стоимость должна быть меньше цены или равна ей.**   
-**Ошибка: не указано значение обязательного аргумента действия Description.**    
+ **Ошибка: Стоимость должна быть меньше или равно цену.**  
+**Ошибка: Не указано значение необходимого аргумента действия «Описание».**    
 > [!NOTE]
->  Авторы настраиваемых действий могут размещать логику проверки в переопределенном методе <xref:System.Activities.CodeActivity.CacheMetadata%2A> действия.Исключения, вызванные в методе <xref:System.Activities.CodeActivity.CacheMetadata%2A>, не считаются ошибками проверки.Эти исключения перейдут из метода <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> к вызывающему объекту, который должен их обработать.  
+>  Авторы настраиваемых действий могут размещать логику проверки в переопределенном методе <xref:System.Activities.CodeActivity.CacheMetadata%2A> действия. Исключения, вызванные в методе <xref:System.Activities.CodeActivity.CacheMetadata%2A>, не считаются ошибками проверки. Эти исключения перейдут из метода <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> к вызывающему объекту, который должен их обработать.  
   
-## Использование ValidationSettings  
- По умолчанию все действия из дерева действий вычисляются при вызове проверки службой <xref:System.Activities.Validation.ActivityValidationServices>.<xref:System.Activities.Validation.ValidationSettings> позволяет настраивать проверку несколькими способами посредством трех ее свойств.<xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> указывает, должен проверяющий элемент управления пройти по всему дереву действий или применить логику проверки только к предоставленному действию.По умолчанию задано значение `false`.<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> задает дополнительное сопоставление ограничений от типа к списку ограничений.В <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> имеется уточняющий запрос для базового типа каждого действия из проверяемого дерева действий.Если найден подходящий список ограничений, то все ограничения в нем вычисляются для действия.<xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> указывает, должен проверяющий элемент управления вычислять все ограничения или только указанные в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>.По умолчанию задано значение `false`.<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> и <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> помогают авторам узлов рабочих процессов добавлять дополнительные проверки рабочих процессов, например ограничения политики для таких инструментов, как FxCop.[!INCLUDE[crabout](../../../includes/crabout-md.md)] ограничениях см. в разделе [Декларативные ограничения](../../../docs/framework/windows-workflow-foundation//declarative-constraints.md).  
+## <a name="using-validationsettings"></a>Использование ValidationSettings  
+ По умолчанию все действия из дерева действий вычисляются при вызове проверки службой <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> позволяет настраивать проверку несколькими способами посредством трех ее свойств. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> указывает, должен проверяющий элемент управления пройти по всему дереву действий или применить логику проверки только к предоставленному действию. Значение по умолчанию для этого свойства - `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> задает дополнительное сопоставление ограничений от типа к списку ограничений. В <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> имеется уточняющий запрос для базового типа каждого действия из проверяемого дерева действий. Если найден подходящий список ограничений, то все ограничения в нем вычисляются для действия. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> указывает, должен проверяющий элемент управления вычислять все ограничения или только указанные в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Значение по умолчанию — `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> и <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> помогают авторам узлов рабочих процессов добавлять дополнительные проверки рабочих процессов, например ограничения политики для таких инструментов, как FxCop. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ограничения, в разделе [декларативных ограничений](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
   
- Чтобы использовать <xref:System.Activities.Validation.ValidationSettings>, настройте требуемые свойства и передайте этот объект в вызове <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>.В данном примере проверяется рабочий процесс, состоящий из <xref:System.Activities.Statements.Sequence> с пользовательским действием `Add`.У действия `Add` есть два обязательных аргумента.  
+ Чтобы использовать <xref:System.Activities.Validation.ValidationSettings>, настройте требуемые свойства и передайте этот объект в вызове <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. В данном примере проверяется рабочий процесс, состоящий из <xref:System.Activities.Statements.Sequence> с пользовательским действием `Add`. У действия `Add` есть два обязательных аргумента.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -308,6 +310,6 @@ else
 }  
 ```  
   
- Этот код отображает следующие выходные данные:  
+ Этот код отображает следующие данные.  
   
- **Предупреждения или ошибки отсутствуют** Несмотря на то что у действия `Add` есть обязательные аргументы, которые не связаны, проверка проходит успешно, поскольку вычисляется только корневое действие.Такой тип проверки полезен, когда нужно проверить только определенные элементы дерева действий, например изменение свойства отдельного действия в конструкторе.Обратите внимание, что если бы этот рабочий процесс вызывался, то выполнялась бы полная проверка, настроенная в рабочем процессе, и возникло бы исключение <xref:System.Activities.InvalidWorkflowException>.<xref:System.Activities.Validation.ActivityValidationServices> и <xref:System.Activities.Validation.ValidationSettings> настраивают только проверку, явно вызываемую узлом, но не ту, которая выполняется при вызове рабочего процесса.
+ **Без предупреждения или ошибки** несмотря на то что `Add` действия есть обязательные аргументы, которые не связаны, проверка проходит успешно, поскольку вычисляется только корневое действие. Такой тип проверки полезен, когда нужно проверить только определенные элементы дерева действий, например изменение свойства отдельного действия в конструкторе. Обратите внимание, что если этот рабочий процесс вызван, то выполняется полная проверка, настроенная в рабочем процессе, и создается исключение <xref:System.Activities.InvalidWorkflowException>. <xref:System.Activities.Validation.ActivityValidationServices> и <xref:System.Activities.Validation.ValidationSettings> настраивают только проверку, явно вызываемую узлом, но невыполняемую при вызове рабочего процесса.

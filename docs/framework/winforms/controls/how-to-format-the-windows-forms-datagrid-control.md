@@ -1,77 +1,82 @@
 ---
-title: "Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "цвета, применение к элементам управления DataGrid"
-  - "столбцы [Windows Forms], DataGrid - элемент управления"
-  - "столбцы [Windows Forms], форматирование данных в элементе управления DataGrid"
-  - "DataGrid - элемент управления [Windows Forms], основные стили"
-  - "DataGrid - элемент управления [Windows Forms], форматирование"
-  - "форматирование [Windows Forms]"
-  - "таблицы [Windows Forms], форматирование данных в элементе управления DataGrid"
+title: "Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid control
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- columns [Windows Forms], formatting in DataGrid control
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8518fdcaca7ebed65d0923b9bc1fe1a6797b97c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a>Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Выделение разными цветами различных частей элемента управления <xref:System.Windows.Forms.DataGrid> поможет облегчить чтение и понимание сведений.  Цветами можно выделять строки и столбцы.  Строки и столбцы можно также скрывать или отображать по необходимости.  
+ Выделение разными цветами различных частей <xref:System.Windows.Forms.DataGrid> управления позволяет облегчить чтение и понимание сведений. Цвет могут применяться к строкам и столбцам. Строки и столбцы можно также скрывать или отображать по необходимости.  
   
- Форматирование элемента управления <xref:System.Windows.Forms.DataGrid> состоит из трех основных этапов.  Можно настроить свойства для создания стиля отображения данных по умолчанию.  На этой основе можно затем изменить способ представления определенных таблиц во время выполнения.  Наконец, можно указать столбцы, отображаемые в сетке данных, а также цвета и другие параметры форматирования для них.  
+ Состоит из трех основных этапов форматирования <xref:System.Windows.Forms.DataGrid> элемента управления. Можно установить свойства, чтобы создать стиль по умолчанию, в котором отображаются данные. На этой основе можно настроить способ отображения некоторых таблицах во время выполнения. Наконец можно изменить столбцы, которые отображаются в сетке данных, а также цвета и другие элементы, которые отображается.  
   
- На первом этапе форматирования сетки данных можно задать свойства элемента управления <xref:System.Windows.Forms.DataGrid>.  Выбранные параметры цветов и форматирования составляют основу, в которую впоследствии можно вносить изменения, исходя из требований к отображению таблиц и столбцов.  
+ На первом этапе форматирования сетки данных можно задать свойства <xref:System.Windows.Forms.DataGrid> сам. Эти параметры цветов и форматирования составляют основу, из которой затем можно внести изменения в зависимости от данных таблиц и столбцов, отображаемых.  
   
-### Чтобы создать стиль по умолчанию для элемента управления DataGrid  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Чтобы создать стиль по умолчанию для элемента управления DataGrid  
   
-1.  Задайте нужным образом следующие свойства:  
+1.  При необходимости задайте следующие свойства:  
   
-    |Свойство.|Описание|  
-    |---------------|--------------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Свойство <xref:System.Windows.Forms.DataGrid.BackColor%2A> определяет цвет четных строк сетки.  Если в свойстве <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> задан другой цвет, все остальные строки выделяются этим цветом \(строки 1, 3, 5 и так далее\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Фоновый цвет четных строк сетки \(строки 0, 2, 4, 6 и так далее\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Если свойства <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> определяют цвета строк сетки, то свойство <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> определяет цвет области, незанятой строками, которая видна, только когда сетка прокручена вниз или содержит небольшое количество строк.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Стиль границы сетки — одно из перечисляемых значений свойства <xref:System.Windows.Forms.BorderStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Фоновый цвет заголовка окна сетки, расположенного непосредственно над сеткой.|  
+    |Свойство|Описание|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> Свойство определяет цвет строк сетки с четными номерами. При задании <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> другой цвет, все остальные строки является свойство цветом (строки 1, 3, 5 и т. д.).|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона строк сетки с четными номерами (строки 0, 2, 4, 6 и т. д.).|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|В то время как <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> свойства определяет цвет строк в сетке <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> свойство определяет цвет области, незанятой строками, который отображается, только когда выполняется прокрутка нижней сетке, или только несколько строк, содержащихся в Сетка.|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Стиль границ сетки, один из <xref:System.Windows.Forms.BorderStyle> значений перечисления.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Цвет фона названия окна сетки, расположенного непосредственно над сеткой.|  
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Шрифт заголовка в верхней части сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Фоновый цвет заголовка окна сетки.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|Шрифт текста в сетке.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Цвет шрифта, которым представлены данные в строках сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Цвет линий сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Стиль линий, разделяющих ячейки сетки — одно из перечисляемых значений свойства <xref:System.Windows.Forms.DataGridLineStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Фоновый цвет заголовков строк и столбцов.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Шрифт заголовков столбцов.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Цвет заголовков столбцов сетки, включая текст самих заголовков, а также знаки плюс и минус, служащие для развертывания и свертывания строк при просмотре нескольких связанных таблиц.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Цвет текста всех ссылок в сетке данных, включая ссылки на дочерние таблицы, имя отношения и так далее.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Фоновый цвет родительских строк в дочерней таблице.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Цвет текста родительских строк в дочерней таблице.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Определяет, отображаются ли названия таблицы и столбцов в родительской строке с помощью перечисления <xref:System.Windows.Forms.DataGridParentRowsLabelStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Стандартная ширина \(в пикселях\) столбцов сетки.  Установите это свойство, прежде чем сбрасывать свойства <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(либо отдельно, либо с помощью метода <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\), иначе свойство не подействует.<br /><br /> Данное свойство не может иметь отрицательное значение.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Стандартная высота \(в пикселях\) строк сетки.  Установите это свойство, прежде чем сбрасывать свойства <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(либо отдельно, либо с помощью метода <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\), иначе свойство не подействует.<br /><br /> Данное свойство не может иметь отрицательное значение.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Цвет фона названия окна сетки.|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|Шрифт, используемый для отображения текста в сетке.|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Цвет шрифта, которым данные в строках сетки данных.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Цвет линий сетки сетки данных.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Задает стиль линий, разделяющих ячейки сетки — одно из <xref:System.Windows.Forms.DataGridLineStyle> значений перечисления.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Цвет фона заголовков строк и столбцов.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Шрифт, используемый для заголовков столбцов.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Основной цвет заголовков столбцов сетки, включая текст заголовка столбца и глифы плюс/минус (для расширения строк при отображении нескольких связанных таблиц).|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Цвет текста всех ссылок в сетке данных, включая ссылки на дочерние таблицы, имя отношения и т. д.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|В дочерней таблице это цвет фона родительских строк.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|В дочерней таблице это основной цвет родительских строк.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Определяет, отображаются ли имена таблиц и столбцов в родительской строке с помощью параметра <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> перечисления.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Стандартная ширина (в пикселях) столбцов сетки. Присвойте этому свойству перед сбросом <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойств (либо отдельно, либо с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод), или свойство не будет действовать.<br /><br /> Свойство не может быть присвоено значение меньше 0.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Высота строки (в пикселях) строки в сетке. Присвойте этому свойству перед сбросом <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойств (либо отдельно, либо с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод), или свойство не будет действовать.<br /><br /> Свойство не может быть присвоено значение меньше 0.|  
     |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Ширина заголовков строк сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Фоновый цвет выделенной строки или ячейки.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Цвет текста выделенной строки или ячейки.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|При выборе строки или ячейки, это цвет фона.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|При выборе строки или ячейки, это цвет переднего плана.|  
   
     > [!NOTE]
-    >  При настройке цветов элементов управления следует учесть, что выбор неудачных цветов \(например, красный и зеленый\) может затруднить работу с элементом управления.  Чтобы избежать этого, используйте цвета из палитры **Системные цвета**.  
+    >  Следует помнить, при настройке цветов элементов управления, что можно сделать элемент управления недоступен из-за выбор неудачных цветов (например, красный и зеленый). Используйте цвета на **системных цветов** палитру цветов, чтобы избежать этой проблемы.  
   
-     Следующие процедуры позволяют создать элемент управления <xref:System.Windows.Forms.DataGrid>, связанный с таблицей данных.  Дополнительные сведения см. в разделе [Привязка элемента управления Windows Forms DataGrid к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     Следующие процедуры позволяют создать <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных. Дополнительные сведения см. в разделе [привязки элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
-### Чтобы задать стили таблицы и столбца таблицы данных программным образом  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Задание стиля таблицы и столбца таблицы данных программным способом  
   
 1.  Создайте новый стиль таблицы и задайте его свойства.  
   
@@ -81,13 +86,13 @@ caps.handback.revision: 14
   
 4.  Добавьте стиль таблицы в коллекцию стилей таблиц сетки данных.  
   
-5.  В следующем примере создайте экземпляр нового <xref:System.Windows.Forms.DataGridTableStyle> и задайте его свойство <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>.  
+5.  В следующем примере создайте экземпляр нового <xref:System.Windows.Forms.DataGridTableStyle> и задайте его <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство.  
   
-6.  Создайте новый экземпляр стиля **GridColumnStyle** и задайте его свойство **MappingName**, а также некоторые другие свойства отображения и расположения.  
+6.  Создать новый экземпляр **GridColumnStyle** и задайте его **MappingName** (и некоторые другие свойства отображения и).  
   
-7.  Повторите шаги со 2 по 6 для каждого создаваемого стиля столбца.  
+7.  Повторите шаги 2 – 6 для каждого стиля столбца, который требуется создать.  
   
-     В следующем примере проиллюстрировано создание <xref:System.Windows.Forms.DataGridTextBoxColumn>, поскольку в столбце должно отображаться имя.  Кроме того, в класс <xref:System.Windows.Forms.GridColumnStylesCollection> стиля таблицы добавляется стиль столбца, а в класс <xref:System.Windows.Forms.GridTableStylesCollection> сетки данных — стиль таблицы.  
+     В следующем примере показан способ <xref:System.Windows.Forms.DataGridTextBoxColumn> создается, поскольку имя будет отображаться в столбце. Кроме того, добавить стиль столбца <xref:System.Windows.Forms.GridColumnStylesCollection> стиля таблицы и добавьте стиль таблицы для <xref:System.Windows.Forms.GridTableStylesCollection> сетки данных.  
   
     ```vb  
     Private Sub CreateAuthorFirstNameColumn()  
@@ -109,7 +114,6 @@ caps.handback.revision: 14
        ' the GridTableStylesCollection.   
        myDataGrid.TableStyles.Add(TSAuthors)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -133,7 +137,6 @@ caps.handback.revision: 14
        // the GridTableStylesCollection.   
        dataGrid1.TableStyles.Add(TSAuthors);  
     }  
-  
     ```  
   
     ```cpp  
@@ -160,9 +163,9 @@ caps.handback.revision: 14
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [Практическое руководство. Удаление или сокрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

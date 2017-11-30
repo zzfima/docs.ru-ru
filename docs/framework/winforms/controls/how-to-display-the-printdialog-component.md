@@ -1,40 +1,41 @@
 ---
-title: "Практическое руководство. Отображение компонента PrintDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Печать - диалоговое окно, отображение"
-  - "PrintDialog - компонент [Windows Forms], отображение"
-  - "печать [Windows Forms], отображение диалоговое окно Печать"
+title: "Практическое руководство. Отображение компонента PrintDialog"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Print dialog box [Windows Forms], displaying
+- PrintDialog component [Windows Forms], displaying
+- printing [Windows Forms], displaying print dialog box
 ms.assetid: 745a8db7-0526-4b21-b09d-18e13ed32014
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7e1162a4e926d5be35f8f7bb7cdeb92264f293aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение компонента PrintDialog
-Компонент <xref:System.Windows.Forms.PrintDialog> является стандартным диалоговым окном печати в Windows, хорошо знакомым пользователям.  Поскольку пользователям будет удобно работать с этим окном, использование компонента <xref:System.Windows.Forms.PrintDialog> очень полезно.  
+# <a name="how-to-display-the-printdialog-component"></a>Практическое руководство. Отображение компонента PrintDialog
+<xref:System.Windows.Forms.PrintDialog> Компонент является стандартной Windows диалоговое окно печати, многие ваши пользователи будут знакомы с. Поскольку пользователям будет удобно работать с ней, он может оказаться эффективным для использования <xref:System.Windows.Forms.PrintDialog> компонента.  
   
-### Чтобы отобразить компонент PrintDialog  
+### <a name="to-display-the-printdialog-component"></a>Отображение компонента PrintDialog  
   
--   Вызовите метод <xref:System.Windows.Forms.Form.ShowDialog%2A> в коде приложения.  
+-   Вызовите <xref:System.Windows.Forms.Form.ShowDialog%2A> метода в код приложения.  
   
-     После отображения этого компонента пользователи смогут с его помощью определять свойства задания печати.  Они сохраняются в классе [PrinterSettings](frlrfSystemDrawingPrintingPrinterSettingsMembersTopic) \(и классе [PageSettings](frlrfSystemDrawingPrintingPageSettingsMembersTopic), если пользователь получает доступ к [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) через компонент <xref:System.Windows.Forms.PrintDialog>\), связанном с этим заданием печати.  Затем можно вызывать эти свойства, которые задаются для определения специфики заданий печати.  
+     После отображения этого компонента пользователи смогут взаимодействовать с ним, задавая свойства задания печати. Они сохраняются в <!--zz <xref:System.Drawing.Printing.PrinterSetting>--> `PrinterSetting` класса (и <xref:System.Drawing.Printing.PageSettings> класса, если пользователь обращается к [компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) через <xref:System.Windows.Forms.PrintDialog> компонента) связанный с этим заданием печати. Затем можно вызывать заданные пользователями свойства для определения специфики задания печати.  
   
-## См. также  
- [How to: Create Standard Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)   
- [How to: Capture User Input from a PrintDialog at Run Time](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)   
- [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)   
- [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Создание стандартных заданий печати в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ [Практическое руководство. Захват данных, введенных пользователем в PrintDialog во время выполнения](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)

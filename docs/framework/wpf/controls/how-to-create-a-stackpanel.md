@@ -1,35 +1,36 @@
 ---
-title: "Практическое руководство. Создание StackPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "StackPanel-элемент управления, создание"
+title: "Практическое руководство. Создание StackPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5ba089c671fe54afe1c97da0a7bd786949cb5c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание StackPanel
+# <a name="how-to-create-a-stackpanel"></a>Практическое руководство. Создание StackPanel
 В этом примере показано, как создать <xref:System.Windows.Controls.StackPanel>.  
   
 ## <a name="example"></a>Пример  
- Объект <xref:System.Windows.Controls.StackPanel> позволяет располагать элементы в указанном направлении. С помощью свойства, определенные на <xref:System.Windows.Controls.StackPanel>, содержимое может располагаться и по вертикали, который является значением по умолчанию, или по горизонтали.  
+ Объект <xref:System.Windows.Controls.StackPanel> позволяет располагать элементы в указанном направлении. С помощью свойств, которые определены в <xref:System.Windows.Controls.StackPanel>, содержимое может располагаться и по вертикали, который является значением по умолчанию, или по горизонтали.  
   
- В следующем примере по вертикали располагаются пять <xref:System.Windows.Controls.TextBlock> элементов управления, с разными <xref:System.Windows.Controls.Border> и <xref:System.Windows.Controls.Border.Background%2A>, с помощью <xref:System.Windows.Controls.StackPanel>. Дочерние элементы, у которых нет указанного <xref:System.Windows.FrameworkElement.Width%2A> растягиваются для заполнения родительского окна; Однако дочерние элементы, имеющие указанный <xref:System.Windows.FrameworkElement.Width%2A>, выравнивается по центру окна.  
+ Следующий пример по вертикали располагаются пять <xref:System.Windows.Controls.TextBlock> элементов управления, каждый с различным <xref:System.Windows.Controls.Border> и <xref:System.Windows.Controls.Border.Background%2A>, с помощью <xref:System.Windows.Controls.StackPanel>. Дочерние элементы, которые имеют не указан <xref:System.Windows.FrameworkElement.Width%2A> растягиваются для заполнения родительское окно; Однако дочерние элементы, имеющие указанного <xref:System.Windows.FrameworkElement.Width%2A>, по центру в окне.  
   
  По умолчанию направление стека в <xref:System.Windows.Controls.StackPanel> вертикально. Чтобы контролировать поток содержимого в <xref:System.Windows.Controls.StackPanel>, используйте <xref:System.Windows.Controls.StackPanel.Orientation%2A> свойство. Горизонтальное выравнивание можно контролировать с помощью <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойство.  
   
 ```xaml  
-  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
   <StackPanel>  
     <Border Background="SkyBlue" BorderBrush="Black" BorderThickness="1">  
@@ -49,10 +50,9 @@ caps.handback.revision: 12
     </Border>  
   </StackPanel>  
 </Page>  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.StackPanel>   
- [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)   
+ <xref:System.Windows.Controls.StackPanel>  
+ [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Разделы практического руководства](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

@@ -1,45 +1,46 @@
 ---
-title: "Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели инструментов [Windows Forms], добавление элементов"
-  - "панели инструментов [Windows Forms], создание"
-  - "ToolStrip - элемент управления [Windows Forms], добавление стандартных элементов"
-  - "ToolStrip - элемент управления [Windows Forms], создание"
+title: "Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], creating
+- toolbars [Windows Forms], creating
+- toolbars [Windows Forms], adding items
+- ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb3ed52ffc0a5f386a603c63a0d5bc0a72e040de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора
-В следующей процедуре демонстрируется создание <xref:System.Windows.Forms.ToolStrip> и добавление семи элементов управления <xref:System.Windows.Forms.ToolStripButton>, которые представляют собой типичные задачи.  
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора
+Следующая процедура демонстрирует создание <xref:System.Windows.Forms.ToolStrip> и добавление семи <xref:System.Windows.Forms.ToolStripButton> элементов управления, которые представляют типичные задачи.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параментры, выберите **Импорт и экспорт параметров** в меню **Сервис**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы добавить стандартные элементы в конструкторе  
+### <a name="to-add-standard-items-in-the-designer"></a>Чтобы добавить стандартные элементы в конструкторе  
   
-1.  Создайте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
+1.  Создание <xref:System.Windows.Forms.ToolStrip> элемента управления.  
   
-2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip> щелкните стрелку быстрых действий, чтобы отобразить область задач **ToolStrip**.  
+2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку запуска задачи для отображения **задач ToolStrip** области.  
   
-3.  В области задач **ToolStrip** выберите **Вставить стандартные элементы**.  
+3.  В **задач ToolStrip** области, выберите **вставить стандартные элементы**.  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStrip>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)   
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ToolStrip>  
+ [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

@@ -1,49 +1,53 @@
 ---
-title: "How to: Print a Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, printing"
-  - "printing [Windows Forms]"
-  - "printing a form"
-  - "printing [Windows Forms, printing a form"
+title: "Практическое руководство. Печать формы Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, printing
+- printing [Windows Forms]
+- printing a form
+- printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9149b90317036c7c62c5fca3056bb697df56e543
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Print a Windows Form
-Обычно в процессе разработки приходится печатать копии форм Windows Forms.  В следующем примере показан способ печати копии текущей формы с помощью метода <xref:System.Drawing.Graphics.CopyFromScreen%2A>.  
+# <a name="how-to-print-a-windows-form"></a>Практическое руководство. Печать формы Windows Forms
+В рамках процесса разработки обычно требуется распечатать копию формы Windows Forms. В следующем примере кода показано, как напечатать копию текущей формы с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
-## Компиляция кода  
- Это полный пример кода, содержащего метод `Main`.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Это полный пример кода, содержащий `Main` метод.  
   
-## Отказоустойчивость  
- При следующих условиях возможно возникновение исключения.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ При следующих условиях возможно возникновение исключения:  
   
--   Нет разрешения на доступ к принтеру.  
+-   У вас разрешения на доступ к принтеру.  
   
--   Принтер не установлен.  
+-   Нет не установлен принтер.  
   
-## Безопасность платформы .NET Framework  
- Чтобы запустить этот пример, необходимо иметь разрешение на доступ к принтеру, используемому на компьютере.  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ Чтобы запустить этот пример кода, необходимо иметь разрешение на доступ к принтеру, используемому на компьютере.  
   
-## См. также  
- <xref:System.Drawing.Printing.PrintDocument>   
- [Практическое руководство. Вывод изображений с использованием GDI\+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)   
- [How to: Print Graphics in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Printing.PrintDocument>  
+ [Практическое руководство. Прорисовка изображений с использованием GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [Практическое руководство. Печать графических изображений в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

@@ -1,86 +1,88 @@
 ---
-title: "Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox - элемент управления [Windows Forms], создание таблицы подстановок"
-  - "поля со списком, таблицы подстановок"
-  - "ComboBox - элемент управления [Windows Forms], таблица подстановок"
-  - "списки, таблицы подстановок"
-  - "ListBox - элемент управления [Windows Forms], создание таблицы подстановок"
-  - "ListBox - элемент управления [Windows Forms], таблицы подстановок"
-  - "таблицы подстановок"
-  - "таблицы подстановок, создание для элементов управления"
+title: "Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], creating lookup tables
+- lookup tables
+- list boxes [Windows Forms], lookup tables
+- ListBox control [Windows Forms], lookup tables
+- ComboBox control [Windows Forms], lookup table
+- lookup tables [Windows Forms], creating for controls
+- combo boxes [Windows Forms], lookup tables
+- ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb7ffb8a7f20c1e53b24a1db8bda326d73743a93
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms
-Иногда полезно отображать данные в удобном для пользователя формате в форме Windows Forms и при этом сохранять их в формате, требуемом в используемой программе.  Например, в бланке заказа продуктов питания могут отображаться элементы меню с названиями продуктов в списке.  Однако таблица данных регистрации заказа будет содержать уникальные идентификаторы, представляющие продукты питания.  В таблице ниже представлен пример хранения и отображения данных бланка заказа продуктов питания.  
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms
+Иногда полезно отображать данные в удобном для пользователя формате в форме Windows Forms и при этом сохранять их в формате, требуемом в используемой программе. Например, в бланке заказа продуктов питания могут отображаться элементы меню с названиями продуктов в списке. Однако таблица данных регистрации заказа будет содержать уникальные идентификаторы, представляющие продукты питания. В таблице ниже представлен пример хранения и отображения данных бланка заказа продуктов питания.  
   
-### OrderDetailsTable  
+### <a name="orderdetailstable"></a>OrderDetailsTable  
   
 |OrderID|Код элемента|Количество|  
-|-------------|------------------|----------------|  
+|-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  
   
-### ItemTable  
+### <a name="itemtable"></a>ItemTable  
   
 |Идентификатор|Имя|  
-|-------------------|---------|  
+|--------|----------|  
 |12|Картофель|  
 |13|Цыпленок|  
   
- В этом сценарии одна таблица \(OrderDetailsTable\) содержит фактические сведения, важные с точки зрения отображения и сохранения.  Однако с целью экономии места они представлены в неудобном для восприятия виде.  Другая таблица \(ItemTable\) содержит только данные, связанные с представлением, а именно сведения о том, какой код соответствует тому или иному продукту. Информации о фактических заказах продуктов в ней нет.  
+ В этом сценарии одна таблица **OrderDetailsTable**, содержит фактические сведения, которые вас интересуют отображения и сохранения. Однако с целью экономии места они представлены в неудобном для восприятия виде. Другая таблица, **ItemTable**, содержит только связанные информацию о какой идентификатор номер эквивалентные какие название продукта и ничего о заказах на фактическое пищевых продуктов.  
   
- Таблица ItemTable связана с элементом управления <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> или <xref:System.Windows.Forms.CheckedListBox> с помощью трех свойств.  Свойство  `DataSource`  содержит имя таблицы.  Свойство  `DisplayMember` содержит столбец данных таблицы, который должен отображаться в элементе управления \(название продукта\).  Свойство  `ValueMember`  содержит столбец данных таблицы с сохраняемыми данными \(идентификатор\).  
+ **ItemTable** подключен к <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, или <xref:System.Windows.Forms.CheckedListBox> управление с помощью трех свойств. `DataSource` Свойство содержит имя этой таблицы. `DisplayMember` Свойство содержит столбец данных таблицы, который будет отображаться в элементе управления (название продукта). `ValueMember` Свойство содержит столбец данных таблицы с сохраняемыми данными (идентификатор).  
   
- Таблица OrderDetailsTable связана с элементом управления с помощью коллекции привязок, доступных через свойство <xref:System.Windows.Forms.Control.DataBindings%2A>.  При добавлении объекта привязки в коллекцию свойство элемента управления связывается с определенным элементом данных \(столбцом кодов\) в источнике данных \(таблице OrderDetailsTable\).  Когда в элементе управления делается выбор, в этой таблице сохраняются вводимые данные.  
+ **OrderDetailsTable** подключен к элементу управления с помощью коллекции привязок, доступных через <xref:System.Windows.Forms.Control.DataBindings%2A> свойство. При добавлении объекта привязки в коллекцию свойство элемента управления подключиться к члену данных (столбцом кодов) в источнике данных ( **OrderDetailsTable**). Когда в элементе управления делается выбор, в этой таблице сохраняются вводимые данные.  
   
-### Создание таблицы подстановок  
+### <a name="to-create-a-lookup-table"></a>Создание таблицы подстановок  
   
 1.  Добавьте на форму элемент управления <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> или <xref:System.Windows.Forms.CheckedListBox>.  
   
 2.  Произведите подключение к источнику данных.  
   
-3.  Установите связь между данными в двух таблицах.  См. раздел [Знакомство с объектами DataRelation](../Topic/Introduction%20to%20DataRelation%20Objects.md).  
+3.  Установите связь между данными в двух таблицах. В разделе [Знакомство с объектами DataRelation](http://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
   
-4.  Задайте перечисленные ниже свойства.  Их можно задать в коде или в конструкторе.  
+4.  Задайте перечисленные ниже свойства. Их можно задать в коде или в конструкторе.  
   
     |Свойство|Параметр|  
-    |--------------|--------------|  
-    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Таблица, в которой содержатся сведения о том, какому коду соответствует тот или иной элемент.  В приведенном выше сценарии это  `ItemTable`.|  
-    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Столбец таблицы источника данных, который необходимо отобразить в элементе управления.  В приведенном выше сценарии это  `"Name"`  \(для задания в коде используйте кавычки\).|  
-    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Столбец таблицы источника данных, который содержит сохраняемую информацию.  В приведенном выше сценарии это  `"ID"`  \(для задания в коде используйте кавычки\).|  
+    |--------------|-------------|  
+    |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Таблица, в которой содержатся сведения о том, какому коду соответствует тот или иной элемент. В приведенном выше сценарии это `ItemTable`.|  
+    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Столбец таблицы источника данных, который необходимо отобразить в элементе управления. В приведенном выше сценарии это `"Name"` (для задания в коде используйте кавычки).|  
+    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Столбец таблицы источника данных, который содержит сохраняемую информацию. В приведенном выше сценарии это `"ID"` (для задания в коде используйте кавычки).|  
   
-5.  В процедуре вызовите метод <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> класса <xref:System.Windows.Forms.ControlBindingsCollection> для привязки свойства <xref:System.Windows.Forms.ListControl.SelectedValue%2A> элемента управления к таблице, в которой регистрируются данные, вводимые в форме.  Кроме того, вместо кода это можно сделать в конструкторе с помощью свойства <xref:System.Windows.Forms.Control.DataBindings%2A> элемента управления в окне **Свойства**.  В приведенном выше сценарии это  `OrderDetailsTable`, а столбец —  `"ItemID"`.  
+5.  В процедуре вызовите метод <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> класса <xref:System.Windows.Forms.ControlBindingsCollection> для привязки свойства <xref:System.Windows.Forms.ListControl.SelectedValue%2A> элемента управления к таблице, в которой регистрируются данные, вводимые в форме. Также это можно сделать в конструкторе, а не в коде, обратившись к элемента управления <xref:System.Windows.Forms.Control.DataBindings%2A> свойство в **свойства** окна. В приведенном выше сценарии это `OrderDetailsTable`, а столбец — `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
-  
     ```  
   
     ```csharp  
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
-  
     ```  
   
-## См. также  
- [Связывание данных и Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)   
- [Общие сведения об элементе управления ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)   
- [Общие сведения об элементе управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)   
- [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Привязка данных и Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Общие сведения об элементе управления ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [Общие сведения об элементе управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
  [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

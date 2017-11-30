@@ -1,28 +1,34 @@
 ---
-title: "Практическое руководство. Управление элементами потокового содержимого через свойство Blocks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blocks - свойство, управления элементами растягиваемого содержимого"
-  - "документы, управление элементами растягиваемого содержимого с помощью свойства Blocks"
-  - "элементы растягиваемого содержимого, управление с помощью свойства Blocks"
-  - "свойства, Blocks, управления элементами растягиваемого содержимого"
+title: "Практическое руководство. Управление элементами потокового содержимого через свойство Blocks"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], manipulating flow content elements through Blocks property
+- flow content elements [WPF], manipulating through Blocks property
+- properties [WPF], Blocks [WPF], manipulating flow content elements
+- Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Управление элементами потокового содержимого через свойство Blocks
-В этих примерах показаны некоторые наиболее распространенные операции, которые могут быть выполнены в элементах потока содержимого с помощью свойства **Blocks**.  Это свойство используется для добавления и удаления элементов в <xref:System.Windows.Documents.BlockCollection>.  К элементам потока содержимого, которые имеют свойство **Block**, относятся:  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Практическое руководство. Управление элементами потокового содержимого через свойство Blocks
+Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут быть выполнены в элементах потока содержимого с помощью **блоки** свойство. Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.BlockCollection>. Элементы содержимого на поток, эта функция **блоки** свойства включают:  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -34,43 +40,43 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- В этих примерах показано, как использовать <xref:System.Windows.Documents.Section> в качестве элемента потокового содержимого, но эти методы применяются ко всем элементам, в которых размещена коллекция элементов потокового содержимого.  
+ Для использования этих примерах <xref:System.Windows.Documents.Section> поток содержимого элемента, но эти методы применяются ко всем элементам, на которых размещена коллекция элемент содержимого потока.  
   
-## Пример  
- В следующем примере создается новый <xref:System.Windows.Documents.Section> и затем используется метод **Add** для добавления нового абзаца в содержимое **Section**.  
+## <a name="example"></a>Пример  
+ В следующем примере создается новый <xref:System.Windows.Documents.Section> , а затем использует **добавить** метод, чтобы добавить новый абзац в **раздел** содержимое.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
-## Пример  
- В следующем примере создается новый элемент <xref:System.Windows.Documents.Paragraph>, который вставляется в начало объекта <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a>Пример  
+ В следующем примере создается новый <xref:System.Windows.Documents.Paragraph> элемент и вставляет его в начале <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksinsert)]  
   
-## Пример  
- В следующем примере извлекается число элементов <xref:System.Windows.Documents.Block> верхнего уровня, содержащихся в <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a>Пример  
+ В следующем примере возвращается количество верхнего уровня <xref:System.Windows.Documents.Block> элементов, содержащихся в <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblockscount)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
-## Пример  
- В следующем примере удаляется последний элемент <xref:System.Windows.Documents.Block> в объекте <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a>Пример  
+ В следующем примере удаляется последний <xref:System.Windows.Documents.Block> элемент в <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
-## Пример  
- В следующем примере удаляется все содержимое \(элементы <xref:System.Windows.Documents.Block>\) из объекта <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a>Пример  
+ В следующем примере удаляются все содержимое (<xref:System.Windows.Documents.Block> элементы) из <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## См. также  
- <xref:System.Windows.Documents.BlockCollection>   
- <xref:System.Windows.Documents.InlineCollection>   
- <xref:System.Windows.Documents.ListItemCollection>   
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)   
- [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Documents.BlockCollection>  
+ <xref:System.Windows.Documents.InlineCollection>  
+ <xref:System.Windows.Documents.ListItemCollection>  
+ [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
  [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

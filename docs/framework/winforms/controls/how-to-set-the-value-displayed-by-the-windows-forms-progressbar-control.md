@@ -1,54 +1,54 @@
 ---
-title: "Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Increment - метод"
-  - "PerformStep - метод"
-  - "элементы управления хода выполнения, установка отображаемого значения"
-  - "ProgressBar - элемент управления [Windows Forms], установка отображаемого значения"
-  - "Step - свойство"
-  - "Value - свойство"
+title: "Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ProgressBar control [Windows Forms], setting value displayed
+- progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3fd66e10515e5135545f6fcfa64546141346519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms
 > [!IMPORTANT]
 >  Элемент управления <xref:System.Windows.Forms.ToolStripProgressBar> заменяет элемент управления <xref:System.Windows.Forms.ProgressBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ProgressBar> можно сохранить для обратной совместимости и использования в будущем.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] позволяет отображать заданное заданное значение в элементе управления <xref:System.Windows.Forms.ProgressBar> несколькими способами.  Выбор способа зависит от поставленной задачи или проблемы, которую требуется решить.  В следующей таблице показаны доступные для выбора подходы.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Предоставляет несколько способов отображения заданное значение в пределах <xref:System.Windows.Forms.ProgressBar> элемента управления. Выбор способа зависит от поставленной задачи или проблемы, которую требуется решить. В следующей таблице показаны подходы, доступные для выбора.  
   
 |Подход|Описание|  
-|------------|--------------|  
-|Задайте значение элемента управления <xref:System.Windows.Forms.ProgressBar> напрямую.|Этот подход используется в задачах, когда известно точное количество используемых элементов, например при чтении записей из источника данных.  Помимо этого, данный подход можно использовать и в том случае, если нужно задать значение один или два раза.  Наконец, данный подход можно использовать, если требуется уменьшить значение, отображаемое индикатором выполнения.|  
-|Увеличьте отображаемое значение элемента управления <xref:System.Windows.Forms.ProgressBar> на фиксированную величину.|Этот способ можно использовать при отображении простого счета между минимумом и максимумом, например при отображении затраченного времени или количества файлов из известного общего количества, которые были обработаны.|  
-|Увеличьте отображаемое значение элемента управления <xref:System.Windows.Forms.ProgressBar> на переменную величину.|Этот способ можно использовать, когда требуется изменить отображаемое значение несколько раз на различные величины.  В качестве примера выбрано количество места на жестком диске, которое расходуется при записи набора файлов на диск.|  
+|--------------|-----------------|  
+|Установите для параметра <xref:System.Windows.Forms.ProgressBar> управления напрямую.|Этот подход полезен для выполнения задач, когда вы знаете, общее количество элементов, который будет принимать участие, таких как чтение записей из источника данных. Кроме того Если требуется задать значение один или два раза, это простой способ сделать это. Наконец можно используйте этот процесс, если необходимо уменьшить значения, отображаемого в строке состояния.|  
+|Увеличьте <xref:System.Windows.Forms.ProgressBar> отображения фиксированным значением.|Этот подход полезен при отображении простого счета между минимум и максимум, такие как затраченное время и число файлов, которые были обработаны из известного общего.|  
+|Увеличьте <xref:System.Windows.Forms.ProgressBar> отображения, значение которого изменяется.|Этот подход полезен, если нужно будет изменить отображаемое значение несколько раз на различные величины. Пример выбрано объем места на диске, которое расходуется при записи набора файлов на диск.|  
   
- Самый прямой способ задать значение, отображаемое индикатором выполнения, — задать значение свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>.  Это можно сделать в режиме разработки, а также во время выполнения.  
+ — Самый простой способ задать значение, отображаемое индикатором, задав <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство. Это можно сделать во время разработки или во время выполнения.  
   
-### Чтобы задать значение элемента управления ProgressBar напрямую  
+### <a name="to-set-the-progressbar-value-directly"></a>Чтобы задать значение элемента управления ProgressBar напрямую  
   
-1.  Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1.  Задать <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  В коде задайте для свойства <xref:System.Windows.Forms.ProgressBar.Value%2A> элемента управления целочисленное значение, которое находится между указанными минимумом и максимумом.  
+2.  В коде, задайте в качестве <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство в целочисленное значение между минимальным и максимальным значениями, было установлено.  
   
     > [!NOTE]
-    >  Если задать значение свойства <xref:System.Windows.Forms.ProgressBar.Value%2A>, которое выходит за рамки диапазона, установленного свойствами <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A>, элемент управления создает исключение <xref:System.ArgumentException>.  
+    >  Если задать <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство за пределами диапазона, установленного <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> свойства, элемент управления создает <xref:System.ArgumentException> исключение.  
   
-     В следующем примере кода показано, как задать значение элемента управления <xref:System.Windows.Forms.ProgressBar> напрямую.  С помощью кода считываются записи из источника данных. Каждый раз при считывании записи обновляются индикатор выполнения и его метка.  Для данного примера требуется присутствие на форме элемента управления <xref:System.Windows.Forms.Label>, элемента управления <xref:System.Windows.Forms.ProgressBar> и таблицы данных со строкой`CustomerRow` c полями`FirstName` и`Last Name` .  
+     В следующем примере кода показано задание <xref:System.Windows.Forms.ProgressBar> значение напрямую. Код считывает записи из источника данных и обновляет индикатор хода выполнения и метки, каждый раз при чтении записи данных. В этом примере требуется наличие формы <xref:System.Windows.Forms.Label> управления <xref:System.Windows.Forms.ProgressBar> управления и таблицы данных со строкой `CustomerRow` с `FirstName` и `LastName` поля.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -69,7 +69,6 @@ caps.handback.revision: 14
        ' Updates the label to show that a record was read.  
        Label1.Text = "Records Read = " & ProgressBar1.Value.ToString()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -94,19 +93,19 @@ caps.handback.revision: 14
     }  
     ```  
   
-     При отображении хода выполнения, который увеличивается на постоянный числовой интервал, можно задать значение и затем вызвать метод, который увеличивает значение элемента управления <xref:System.Windows.Forms.ProgressBar> на этот числовой интервал.  Это используется в таймерах и других сценариях, когда ход выполнения не измеряется в процентах от общей величины.  
+     При отображении хода выполнения, который увеличивается с фиксированным интервалом, можно задать значение и затем вызвать метод, который увеличивает <xref:System.Windows.Forms.ProgressBar> элемента управления значение этого интервала. Это полезно для таймеров и других сценариев, где не измеряется хода выполнения в процентах от целого.  
   
-### Чтобы увеличить отображаемое значение индикатора выполнения на фиксированную величину  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Чтобы увеличить индикатора хода выполнения на фиксированную величину  
   
-1.  Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1.  Задать <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  В качестве значения свойства <xref:System.Windows.Forms.ProgressBar.Step%2A> задайте целое число, представляющее величину, на которую следует увеличить отображаемое значение индикатора выполнения.  
+2.  Задайте в качестве <xref:System.Windows.Forms.ProgressBar.Step%2A> свойства целое число, представляющее сумму для увеличения индикатора хода выполнения отображаемое значение.  
   
-3.  Вызовите метод <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> для изменения отображаемого значения на величину, заданную в свойстве <xref:System.Windows.Forms.ProgressBar.Step%2A>.  
+3.  Вызовите <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> метод, чтобы изменить значения, отображаемого в число, заданное параметром <xref:System.Windows.Forms.ProgressBar.Step%2A> свойство.  
   
-     В следующем примере кода показано, как с помощью индикатора выполнения обеспечить подсчет файлов в ходе операции копирования.  
+     В следующем примере кода показано, как индикатор обеспечить число файлов в ходе операции копирования.  
   
-     В следующем примере индикатор выполнения и надпись обновляются по мере считывания каждого файла в память, чтобы отображать общее количество считанных файлов.  В этом примере требуется, чтобы форма содержала элемент управления <xref:System.Windows.Forms.Label> и элемент управления <xref:System.Windows.Forms.ProgressBar>.  
+     В следующем примере индикатор и надпись обновляются по мере считывания каждого файла в память, для отражения считывания на общее количество файлов. В этом примере требуется наличие формы <xref:System.Windows.Forms.Label> управления и <xref:System.Windows.Forms.ProgressBar> элемента управления.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -132,7 +131,6 @@ caps.handback.revision: 14
           Label1.Text = "# of Files Read = " & ProgressBar1.Value.ToString  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -161,17 +159,17 @@ caps.handback.revision: 14
     }  
     ```  
   
-     Наконец, можно увеличить значение, отображаемое индикатором выполнения, таким образом, чтобы каждое приращение являлось уникальным числом.  Это используется при отслеживании серий уникальных операций, например при записи файлов различных размеров на жесткий диск или при измерении хода выполнения в процентах от общего значения.  
+     Наконец можно увеличить значение, отображаемое индикатором так, чтобы каждое увеличение уникальным числом. Это полезно в том случае, если вы позволяет отслеживать их ряд уникальных операций, таких как записи файлов различных размеров на жесткий диск или при измерении хода выполнения в процентах от целого.  
   
-### Чтобы увеличить отображаемое значение индикатора выполнения на переменную величину  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Чтобы увеличить индикатора хода выполнения на динамическое значение  
   
-1.  Задайте значения <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> элемента управления <xref:System.Windows.Forms.ProgressBar>.  
+1.  Задать <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  Вызовите метод <xref:System.Windows.Forms.ProgressBar.Increment%2A> для изменения отображаемого значения на указанную величину.  
+2.  Вызовите <xref:System.Windows.Forms.ProgressBar.Increment%2A> метод, чтобы изменить значения, отображаемого в указании целого числа.  
   
-     В следующем примере кода показано, как с помощью индикатора выполнения можно рассчитать объем пространства на жестком диске, использованного в ходе операции копирования.  
+     В следующем примере кода показано, как индикатор хода выполнения можно вычислить объем дискового пространства, использованного в ходе операции копирования.  
   
-     В следующем примере индикатор выполнения и надпись обновляются по мере записи каждого файла на жесткий диск, чтобы отражать количество свободного места на жестком диске.  В этом примере требуется, чтобы форма содержала элемент управления <xref:System.Windows.Forms.Label> и элемент управления <xref:System.Windows.Forms.ProgressBar>.  
+     В следующем примере индикатор выполнения и надпись обновляются по как каждый файл записывается на жесткий диск с учетом объема места на жестком диске. В этом примере требуется наличие формы <xref:System.Windows.Forms.Label> управления и <xref:System.Windows.Forms.ProgressBar> элемента управления.  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -203,7 +201,6 @@ caps.handback.revision: 14
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -237,8 +234,8 @@ caps.handback.revision: 14
     }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ProgressBar>   
- <xref:System.Windows.Forms.ToolStripProgressBar>   
- [Общие сведения об элементе управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ProgressBar>  
+ <xref:System.Windows.Forms.ToolStripProgressBar>  
+ [Общие сведения об элементе управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  [Элемент управления ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

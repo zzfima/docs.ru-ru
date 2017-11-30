@@ -1,50 +1,54 @@
 ---
-title: "Практическое руководство. Рисование текста с использованием GDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "рисование, текст"
-  - "GDI, рисование текста [Windows Forms]"
-  - "текст, рисование с использованием TextRenderer"
-  - "Windows Forms, рисование текста с помощью GDI"
+title: "Практическое руководство. Рисование текста с использованием GDI"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- GDI [Windows Forms], drawing text [Windows Forms]
+- text [Windows Forms], drawing with TextRenderer
+- drawing [Windows Forms], text
+- Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 48644ce8449c8d8eea7306eff1e43539659370c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование текста с использованием GDI
-Метод <xref:System.Windows.Forms.TextRenderer.DrawText%2A> класса <xref:System.Windows.Forms.TextRenderer> позволяет использовать функциональность [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], связанную с возможностями размещения текста на форме или элементе управления.  Функции отрисовки текста [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в большинстве случаев обладают большей производительностью и более точно управляют параметрами текста, чем функции [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+# <a name="how-to-draw-text-with-gdi"></a>Практическое руководство. Рисование текста с использованием GDI
+С <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод в <xref:System.Windows.Forms.TextRenderer> класс, доступны [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] функциональные возможности для рисования текста в форме или элементе управления. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]визуализация текста обычно обладают большей производительностью и более точно управляют параметрами чем текста [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 > [!NOTE]
->  Методы <xref:System.Windows.Forms.TextRenderer.DrawText%2A> класса <xref:System.Windows.Forms.TextRenderer> не поддерживаются для печати.  Для печати всегда следует использовать методы <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics>.  
+>  <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Методы <xref:System.Windows.Forms.TextRenderer> класса не поддерживаются для печати. При печати, всегда используйте <xref:System.Drawing.Graphics.DrawString%2A> методы <xref:System.Drawing.Graphics> класса.  
   
-## Пример  
- В следующем примере демонстрируется рисование текста на нескольких строках внутри прямоугольника с помощью метода <xref:System.Windows.Forms.TextRenderer.DrawText%2A>.  
+## <a name="example"></a>Пример  
+ В следующем примере кода показано, как отображается текст на нескольких строках внутри прямоугольника с помощью <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод.  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
  [!code-vb[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- Чтобы отобразить с помощью класса <xref:System.Windows.Forms.TextRenderer> какой\-либо текст, потребуется интерфейс <xref:System.Drawing.IDeviceContext>, например <xref:System.Drawing.Graphics> и <xref:System.Drawing.Font>, а также место для вывода текста и цвет этого текста.  Формат текста можно также указать с помощью перечисления <xref:System.Windows.Forms.TextFormatFlags>.  
+ Чтобы отобразить с <xref:System.Windows.Forms.TextRenderer> класса, необходимо <xref:System.Drawing.IDeviceContext>, такие как <xref:System.Drawing.Graphics> и <xref:System.Drawing.Font>, расположение для рисования текста и цвет, в котором оно должно отображаться. При необходимости можно указать текст, форматирование с использованием <xref:System.Windows.Forms.TextFormatFlags> перечисления.  
   
- Дополнительные сведения о получении объекта <xref:System.Drawing.Graphics> см. в разделе [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  Дополнительные сведения о создании объекта <xref:System.Drawing.Font> см. в разделе [Практическое руководство. Разработка шрифтов и их семейств](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).  
+ Дополнительные сведения о получении <xref:System.Drawing.Graphics>, в разделе [как: Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md). Дополнительные сведения о построении <xref:System.Drawing.Font>, в разделе [как: шрифтов и их семейств создания](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md).  
   
-## Компиляция кода  
- Предыдущий пример кода предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример кода предназначен для работы с Windows Forms, и для него необходим <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- <xref:System.Windows.Forms.TextRenderer>   
- <xref:System.Drawing.Font>   
- <xref:System.Drawing.Color>   
- <xref:System.Drawing.Color>   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TextRenderer>  
+ <xref:System.Drawing.Font>  
+ <xref:System.Drawing.Color>  
+ <xref:System.Drawing.Color>  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

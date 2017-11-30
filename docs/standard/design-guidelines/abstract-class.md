@@ -1,52 +1,50 @@
 ---
-title: "Разработка абстрактных классов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "рекомендации по разработке типов, абстрактные классы"
-  - "абстрактные классы, рекомендации по проектированию"
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework] классы"
-  - "абстрактные классы [платформа .NET Framework]"
-  - "классы [платформа .NET Framework] рекомендации по проектированию"
-  - "правила разработки типов, классы"
+title: "Разработка абстрактных классов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines, abstract classes
+- abstract classes, design guidelines
+- class library design guidelines [.NET Framework], classes
+- classes [.NET Framework], abstract
+- classes [.NET Framework], design guidelines
+- type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d7b680c3377cbfa40734a57f9408d9487dbf3769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разработка абстрактных классов
+# <a name="abstract-class-design"></a>Разработка абстрактных классов
 **X не** определение открытого или защищенного внутреннего конструкторов в абстрактных типов.  
   
- Конструкторы должны быть открытыми, только в том случае, если пользователи должны будут создавать экземпляры типа. Поскольку невозможно создавать экземпляры абстрактного типа, абстрактный тип с открытым конструктором неправильно спроектированных и для пользователей в заблуждение.  
+ Конструкторы должны быть открытыми, только в том случае, если пользователи должны будут создавать экземпляры типа. Так как невозможно создавать экземпляры абстрактного типа, абстрактный тип с открытым конструктором неправильно предназначена и ввести в заблуждение пользователей.  
   
- **✓ сделать** Определите защищенный или внутренний конструктор в абстрактных классов.  
+ **✓ СДЕЛАТЬ** Определите защищенный или внутренний конструктор в абстрактных классах.  
   
- Защищенный конструктор чаще и просто позволяет базового класса, чтобы сделать собственный инициализации при создании подтипы.  
+ Защищенный конструктор, чаще всего и просто позволяет базового класса, чтобы сделать свои собственные инициализации при создании подтипы.  
   
- Внутренний конструктор можно использовать для ограничения конкретные реализации абстрактного класса сборки, определяющей класс.  
+ Внутренний конструктор используется для ограничения конкретные реализации абстрактного класса для сборки, определяющей класс.  
   
- **✓ сделать** предоставляют по крайней мере один конкретный тип, наследующий от каждого абстрактного класса, который вы отправляете.  
+ **✓ СДЕЛАТЬ** укажите по крайней мере один конкретный тип, наследующий от каждого абстрактный класс, который можно отправить.  
   
- Это помогает проверить архитектуру абстрактного класса. Например  <xref:System.IO.FileStream?displayProperty=fullName> — это реализация <xref:System.IO.Stream?displayProperty=fullName> абстрактного класса.  
+ Это помогает проверить конструктора абстрактного класса. Например <xref:System.IO.FileStream?displayProperty=nameWithType> — это реализация <xref:System.IO.Stream?displayProperty=nameWithType> абстрактного класса.  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
   
-## См. также  
- [Правила разработки типов](../../../docs/standard/design-guidelines/type.md)   
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>См. также  
+ [Рекомендации по проектированию типа](../../../docs/standard/design-guidelines/type.md)  
+ [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

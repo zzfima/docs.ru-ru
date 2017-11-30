@@ -1,42 +1,48 @@
 ---
-title: "Практическое руководство. Прокручивание содержимого с помощью интерфейса IScrollInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IScrollInfo - интерфейс"
-  - "прокрутка содержимого"
-  - "ScrollViewer - элемент управления, прокрутка содержимого"
+title: "Практическое руководство. Прокручивание содержимого с помощью интерфейса IScrollInfo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ScrollViewer control [WPF], scrolling content
+- scrolling content [WPF]
+- IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1895507c30ad5267d4c2b1afff3acf004e872d40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Прокручивание содержимого с помощью интерфейса IScrollInfo
-В этом примере демонстрируется прокрутка содержимого с помощью интерфейса <xref:System.Windows.Controls.Primitives.IScrollInfo>.  
+# <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Практическое руководство. Прокручивание содержимого с помощью интерфейса IScrollInfo
+В этом примере показано, как выполнять прокрутку содержимого с помощью <xref:System.Windows.Controls.Primitives.IScrollInfo> интерфейса.  
   
-## Пример  
- В следующем примере показаны свойства интерфейса <xref:System.Windows.Controls.Primitives.IScrollInfo>.  В примере создается элемент <xref:System.Windows.Controls.StackPanel> в коде [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], вложенный в родительский элемент управления <xref:System.Windows.Controls.ScrollViewer>.  Дочерние элементы панели <xref:System.Windows.Controls.StackPanel> поддерживают логическую прокрутку с помощью методов, определенных интерфейсом <xref:System.Windows.Controls.Primitives.IScrollInfo>, и приведение к экземпляру <xref:System.Windows.Controls.StackPanel> \(`sp1`\) в коде.  
+## <a name="example"></a>Пример  
+ Следующий пример демонстрирует функции <xref:System.Windows.Controls.Primitives.IScrollInfo> интерфейса. В примере создается <xref:System.Windows.Controls.StackPanel> элемент в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , вложенный в родительский элемент <xref:System.Windows.Controls.ScrollViewer>. Дочерние элементы <xref:System.Windows.Controls.StackPanel> можно прокручивать логически с помощью методов, определенных <xref:System.Windows.Controls.Primitives.IScrollInfo> интерфейс и приведение к экземпляру <xref:System.Windows.Controls.StackPanel> (`sp1`) в коде.  
   
- [!code-xml[IScrollInfoMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
+ [!code-xaml[IScrollInfoMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
   
- Каждый элемент управления <xref:System.Windows.Controls.Button> в файле [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] вызывает связанный настраиваемый метод, который управляет режимом прокрутки в панели <xref:System.Windows.Controls.StackPanel>.  В следующем примере показано использование методов <xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> и <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>; также в целом показано использование всех методов позиционирования, определенных в классе <xref:System.Windows.Controls.Primitives.IScrollInfo>.  
+ Каждый <xref:System.Windows.Controls.Button> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файла вызывает связанный настраиваемый метод, который управляет поведением прокрутки в <xref:System.Windows.Controls.StackPanel>. В следующем примере показано, как использовать <xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> и <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A> методов; также в целом показано, как использовать все методы позиционирования, <xref:System.Windows.Controls.Primitives.IScrollInfo> класс определяет.  
   
  [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
-## См. также  
- <xref:System.Windows.Controls.ScrollViewer>   
- <xref:System.Windows.Controls.Primitives.IScrollInfo>   
- <xref:System.Windows.Controls.StackPanel>   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Controls.ScrollViewer>  
+ <xref:System.Windows.Controls.Primitives.IScrollInfo>  
+ <xref:System.Windows.Controls.StackPanel>  
+ [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
  [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 В .NET Framework версии 3.5 с пакетом обновления 1 (SP1) и более поздних внесены касающиеся безопасности изменения, влияющие на обработку встроенной проверки подлинности Windows классами <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> и связанными классами в пространстве имен System.Net. Эти изменения могут влиять на приложения, которые используют данные классы для выполнения веб-запросов и получения ответов с применением встроенной проверки подлинности Windows на основе NTLM. Они также могут повлиять на веб-серверы и клиентские приложения, в которых используется встроенная проверка подлинности Windows.  
@@ -39,9 +33,9 @@ ms.lasthandoff: 08/21/2017
   
  При настройке больших развертываний также часто бывает так, что одно имя виртуального сервера присваивается всему развертыванию, а имена входящих в него компьютеров никогда не используются клиентскими приложениями и пользователями. Например, сервер может называться www.contoso.com, но во внутренней сети используется имя contoso. Это имя называется заголовком узла в веб-запросе клиента. Согласно спецификации протокола HTTP в поле заголовка узла в запросе указываются узел в Интернете и номер порта запрашиваемого ресурса. Эти сведения берутся из исходного универсального кода ресурса (URI), предоставленного пользователем или ссылающимся ресурсом (как правило, это URL-адрес HTTP). В .NET Framework версии 4 эти сведения также могут быть заданы клиентом с помощью нового свойства <xref:System.Net.HttpWebRequest.Host%2A>.  
   
- Класс <xref:System.Net.AuthenticationManager> контролирует управляемые компоненты (модули) проверки подлинности, которые используются производными классами <xref:System.Net.WebRequest> и классом <xref:System.Net.WebClient>. Класс <xref:System.Net.AuthenticationManager> предоставляет свойство, обеспечивающее доступ к объекту <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>, который индексируется по строке URI. С его помощью приложения указывают пользовательскую строку с именем субъекта-службы, которая должна использоваться во время проверки подлинности.  
+ Класс <xref:System.Net.AuthenticationManager> контролирует управляемые компоненты (модули) проверки подлинности, которые используются производными классами <xref:System.Net.WebRequest> и классом <xref:System.Net.WebClient>. Класс <xref:System.Net.AuthenticationManager> предоставляет свойство, обеспечивающее доступ к объекту <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>, который индексируется по строке URI. С его помощью приложения указывают пользовательскую строку с именем субъекта-службы, которая должна использоваться во время проверки подлинности.  
   
- Если свойство <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> не задано, то при обмене данными для проверки подлинности NTLM в версии 3.5 с пакетом обновления  1 (SP1) в качестве имени субъекта-службы по умолчанию указывается имя узла, используемое в URL-адресе запроса. Имя узла, используемое в URL-адресе запроса, может отличаться от заголовка узла, указанного в <xref:System.Net.HttpRequestHeader?displayProperty=fullName> в запросе клиента. Кроме того, оно может отличаться от фактического имени узла сервера, имени компьютера сервера, IP-адреса компьютера или петлевого адреса. В таких случаях Windows отклонит запрос проверки подлинности. Для решения этой проблемы необходимо уведомить Windows о том, что имя узла, используемое в URL-адресе запроса клиента (например, contoso), на самом деле является альтернативным именем локального компьютера.  
+ Если свойство <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> не задано, то при обмене данными для проверки подлинности NTLM в версии 3.5 с пакетом обновления  1 (SP1) в качестве имени субъекта-службы по умолчанию указывается имя узла, используемое в URL-адресе запроса. Имя узла, используемое в URL-адресе запроса, может отличаться от заголовка узла, указанного в <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> в запросе клиента. Кроме того, оно может отличаться от фактического имени узла сервера, имени компьютера сервера, IP-адреса компьютера или петлевого адреса. В таких случаях Windows отклонит запрос проверки подлинности. Для решения этой проблемы необходимо уведомить Windows о том, что имя узла, используемое в URL-адресе запроса клиента (например, contoso), на самом деле является альтернативным именем локального компьютера.  
   
  Адаптировать серверное приложение к этому изменению можно несколькими способами. Рекомендуемый подход заключается в сопоставлении имени узла, используемого в URL-адресе запроса, с разделом реестра `BackConnectionHostNames` на сервере. Раздел реестра `BackConnectionHostNames`, как правило, служит для сопоставления имени узла с петлевым адресом. Необходимые действия описаны ниже.  
   
@@ -66,7 +60,6 @@ ms.lasthandoff: 08/21/2017
  Менее безопасный способ — отключить проверку замыкания на себя, как описано в статье по адресу [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). При этом отключается защита от атак отражением. Поэтому лучше ограничить набор альтернативных имен только теми, которые действительно будут использоваться компьютером.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
- <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
-
+ <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
+ <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
+ <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

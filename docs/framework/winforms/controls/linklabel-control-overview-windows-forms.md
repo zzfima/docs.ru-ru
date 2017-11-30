@@ -1,39 +1,39 @@
 ---
-title: "Общие сведения об элементе управления LinkLabel (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Label - элемент управления [Windows Forms], об элементе управления Label"
-  - "LinkLabel - элемент управления [Windows Forms], сведения об элементе управления LinkLabel"
-  - "связи, LinkLabel - элемент управления"
+title: "Общие сведения об элементе управления LinkLabel (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LinkLabel
+helpviewer_keywords:
+- links [Windows Forms], LinkLabel control
+- Label control [Windows Forms], about Label control
+- LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0cb01c0fc5503a5bf16e1f191d87ae90907ec816
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления LinkLabel (Windows Forms)
-Элемент управления форм <xref:System.Windows.Forms.LinkLabel> позволяет добавлять ссылки в стиле веб в приложения форм Windows.  Элемент управления <xref:System.Windows.Forms.Label> может использоваться для тех же целей, что и элемент управления <xref:System.Windows.Forms.LinkLabel>; кроме того, имеется возможность задать часть текста в качестве ссылки на файл, папку или веб\-страницу.  
+# <a name="linklabel-control-overview-windows-forms"></a>Общие сведения об элементе управления LinkLabel (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.LinkLabel> позволяет добавить веб-ссылок в приложениях Windows Forms. Можно использовать <xref:System.Windows.Forms.LinkLabel> управления для всех элементов, можно использовать <xref:System.Windows.Forms.Label> элемента управления; в тексте можно задать как ссылка на файл, папку или веб-страницы.  
   
-## Возможные действия с элементом управления LinkLabel  
- В дополнение ко всем свойствам, методам и событиям элемента управления <xref:System.Windows.Forms.LinkLabel>, у элемента управления <xref:System.Windows.Forms.Label> имеются еще свойства для гиперссылок и цвета ссылок.  Свойство <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> определяет область текста, которая активирует ссылку.  Свойства <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> и <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> определяют цвета ссылки.  Событие <xref:System.Windows.Forms.LinkLabel.LinkClicked> определяет, что происходит при выборе текста ссылки.  
+## <a name="what-you-can-do-with-the-linklabel-control"></a>Что можно сделать с помощью элемента управления LinkLabel  
+ Помимо свойств, методов и событий <xref:System.Windows.Forms.Label> управления <xref:System.Windows.Forms.LinkLabel> элемент управления имеет свойства для гиперссылок и цвета ссылок. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Свойство задает область текста, которая активирует ссылку. <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, И <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> свойства задать цвета ссылки. <xref:System.Windows.Forms.LinkLabel.LinkClicked> Событий определяет, что происходит при выборе текста ссылки.  
   
- Простейшее применение элемента управления <xref:System.Windows.Forms.LinkLabel> — отображение одиночной ссылки с использованием свойства <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, однако также возможно отображение нескольких гиперссылок с помощью свойства <xref:System.Windows.Forms.LinkLabel.Links%2A>.  Свойство <xref:System.Windows.Forms.LinkLabel.Links%2A> позволяет получить доступ к коллекции ссылок.  Кроме того, в свойстве <xref:System.Windows.Forms.LinkLabel.Link> можно определить данные для каждого отдельного объекта <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>.  Значение свойства <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> служит для хранения размещения отображаемого файла или адреса веб\-узла.  
+ Простейшего использования <xref:System.Windows.Forms.LinkLabel> управления является отображение одну связь с помощью <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> свойство, но также может отображаться несколько гиперссылки с помощью <xref:System.Windows.Forms.LinkLabel.Links%2A> свойство. <xref:System.Windows.Forms.LinkLabel.Links%2A> Свойство позволяет получить доступ к коллекции ссылок. Можно также указать данные в <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> свойства каждого отдельного <xref:System.Windows.Forms.LinkLabel.Link> объекта. Значение <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> свойство может использоваться для хранения расположение файла для отображения или адрес веб-сайта.  
   
-## См. также  
- <xref:System.Windows.Forms.LinkLabel>   
- [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
- [Практическое руководство. Создание связи с объектом или веб\-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.LinkLabel>  
+ [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
  [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

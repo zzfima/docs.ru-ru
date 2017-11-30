@@ -1,38 +1,42 @@
 ---
-title: "Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательского размещения в диалоговое окно"
-  - "добавление пользовательского размещения в диалоговое окно"
-  - "CustomPlaces - коллекция"
+title: "Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Custom Place to dialog box
+- adding Custom Place to dialog box
+- CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ce5efccfd2efda2f333b51868e375849f7c7752
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла
-Значение по умолчанию открывать и сохранять диалоговые окна на [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] имеют область слева от под названием **Избранные ссылки**. Эта область пользовательских размещений. <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog> классы позволяют добавлять папки для <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции.  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Практическое руководство. Добавление пользовательских размещений в диалоговое окно сохранения или открытия файла
+Диалоговые окна сохранения или открытия файла по умолчанию в [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] содержат область в левой части окна под названием **Избранные ссылки**. Это область пользовательских размещений. <xref:System.Windows.Forms.OpenFileDialog> И <xref:System.Windows.Forms.SaveFileDialog> классы позволяют добавлять папки для <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции.  
   
 > [!NOTE]
->  Чтобы пользовательского размещения в <xref:System.Windows.Forms.OpenFileDialog> или <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> свойство должно быть присвоено `true` (по умолчанию).  
+>  Чтобы пользовательского размещения в <xref:System.Windows.Forms.OpenFileDialog> или <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> свойству необходимо присвоить значение `true` (по умолчанию).  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Добавление пользовательского размещения в диалоговое окно файла  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла  
   
--   Добавьте путь к папке известный GUID или <xref:System.Windows.Forms.FileDialogCustomPlace> объект <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию диалоговое окно.  
+-   Добавьте путь к папке Известные GUID или <xref:System.Windows.Forms.FileDialogCustomPlace> объект <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекцию диалоговое окно.  
   
-     В следующем примере кода демонстрируется добавление пути:  
+     В следующем примере кода демонстрируется добавление пути.  
   
     ```vb  
     OpenFileDialog1.CustomPlaces.Add("C:\MyCustomPlace")  
@@ -43,6 +47,6 @@ caps.handback.revision: 13
     ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.FileDialog>   
- <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=fullName>   
- [Известные GUID папок для пользовательских размещений диалогового окна файла](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+ <xref:System.Windows.Forms.FileDialog>  
+ <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>  
+ [GUID известных папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)

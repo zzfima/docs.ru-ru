@@ -1,26 +1,29 @@
 ---
-title: "Интеграция с System.Web.Routing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Интеграция с System.Web.Routing"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d1c1493e344bfe60a12ad16e3c0d257392b3545a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Интеграция с System.Web.Routing
-При размещении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в службах IIS SVC\-файл размещается в виртуальном каталоге.Этот SVC\-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу.При составлении запросов к службе SVC\-файл указывается в URI, например: http:\/\/contoso.com\/EmployeeServce.svc.Для разработчиков служб REST такой тип URI не является оптимальным.URI для служб REST указывают определенный ресурс и обычно не имеют модулей.Функция интеграции <xref:System.Web.Routing> позволяют размещать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST, соответствующую URI \-адресам без расширения.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о маршрутизации см. в разделе [Маршрутизация ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) и образце [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md).  
+# <a name="systemwebrouting-integration"></a>Интеграция с System.Web.Routing
+При размещении службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] в службах IIS SVC-файл размещается в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе SVC-файл указывается в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. Функция интеграции <xref:System.Web.Routing> позволяет размещать службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST, соответствующую URI-адресам без расширения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]маршрутизации см. в разделе [маршрутизации ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) и [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) образца.  
   
-## Использование интеграции System.Web.Routing  
- Для использования функции интеграции <xref:System.Web.Routing> с помощью класса <xref:System.ServiceModel.Activation.ServiceRoute> создайте один или несколько маршрутов и добавьте их в <xref:System.Web.Routing.RouteTable> в файле Global.asax.Это маршруты указывают относительные URI, по которым отвечает служба.Следующий пример показывает, как это сделать.  
+## <a name="using-systemwebrouting-integration"></a>Использование интеграции System.Web.Routing  
+ Для использования функции интеграции <xref:System.Web.Routing> с помощью класса <xref:System.ServiceModel.Activation.ServiceRoute> создайте один или несколько маршрутов и добавьте их в <xref:System.Web.Routing.RouteTable> в файле Global.asax. Это маршруты указывают относительные URI, по которым отвечает служба. Следующий пример показывает, как это сделать.  
   
 ```  
 <%@ Application Language="C#" %>  
@@ -39,7 +42,6 @@ caps.handback.revision: 7
         routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));   
    }  
 </script>  
-  
 ```  
   
  Все запросы направляются по относительному URI, который начинается с Customers службы `Service`.  
@@ -57,9 +59,9 @@ caps.handback.revision: 7
     </system.webServer>  
 ```  
   
- Это позволит загрузить модуль и обработчик, которые необходимы для маршрутизации.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Маршрутизация](../../../../docs/framework/wcf/feature-details/routing.md).Необходимо также установить атрибут `aspNetCompatibilityEnabled` в значение `true` в элементе `<serviceHostingEnvironment>`, как показано в следующем примере.  
+ Это позволит загрузить модуль и обработчик, которые необходимы для маршрутизации. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Маршрутизации](../../../../docs/framework/wcf/feature-details/routing.md). Необходимо также установить атрибут `aspNetCompatibilityEnabled` в значение `true` в элементе `<serviceHostingEnvironment>`, как показано в следующем примере.  
   
-```  
+```xml  
 <system.serviceModel>  
     <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
         <!-- ... -->  
@@ -77,6 +79,6 @@ caps.handback.revision: 7
     }  
 ```  
   
-## См. также  
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
+## <a name="see-also"></a>См. также  
+ [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Маршрутизация ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660)

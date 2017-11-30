@@ -1,46 +1,29 @@
 ---
-title: "Оператор GetXmlNamespace (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Оператор GetXmlNamespace (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.GetXmlNamespace
 - GetXmlNamespace
-dev_langs:
-- VB
 helpviewer_keywords:
-- GetXmlNamespace operator
-- GetXmlNamespace keyword
+- GetXmlNamespace operator [Visual Basic]
+- GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 929ba4edae9e155245228670424a3898896da807
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 47ba67bc58debf8f144f6468bf510932414c0698
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>Оператор GetXmlNamespace (Visual Basic)
-Возвращает <xref:System.Xml.Linq.XNamespace>объекта, который соответствует указанным префиксом пространства имен XML.</xref:System.Xml.Linq.XNamespace>  
+Возвращает <xref:System.Xml.Linq.XNamespace> объекта, который соответствует указанным префиксом пространства имен XML.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,25 +33,25 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>Части  
  `xmlNamespacePrefix`  
- Необязательный. Строка, определяющая префикс пространства имен XML. Если указано, эта строка должна быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [имена объявленных элементов XML и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Если префикс не указан, возвращается пространство имен по умолчанию. Если пространство имен по умолчанию не задано, возвращается пустое пространство имен.  
+ Необязательно. Строка, определяющая префикс пространства имен XML. Если указано, эта строка должна быть допустимым идентификатором XML. Дополнительные сведения см. в разделе [имена из объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Если префикс не указан, возвращается пространство имен по умолчанию. Если пространство имен по умолчанию не задано, возвращается пустое пространство имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- <xref:System.Xml.Linq.XNamespace>, Соответствующий префикс пространства имен XML.</xref:System.Xml.Linq.XNamespace>  
+ <xref:System.Xml.Linq.XNamespace> Объект, соответствующий префикс пространства имен XML.  
   
 ## <a name="remarks"></a>Примечания  
- `GetXmlNamespace` Оператор возвращает <xref:System.Xml.Linq.XNamespace>, соответствующий префикс пространства имен XML `xmlNamespacePrefix`.</xref:System.Xml.Linq.XNamespace>  
+ `GetXmlNamespace` Оператор возвращает <xref:System.Xml.Linq.XNamespace> объект, соответствующий префикс пространства имен XML `xmlNamespacePrefix`.  
   
- Можно использовать префиксы пространства имен XML непосредственно в XML-литералы и свойства оси XML. Тем не менее, необходимо использовать `GetXmlNamespace` оператор преобразования префикс пространства имен для <xref:System.Xml.Linq.XNamespace>объекта перед использованием в коде.</xref:System.Xml.Linq.XNamespace> После добавления имени неполное элемента для <xref:System.Xml.Linq.XNamespace>полное имя объекта <xref:System.Xml.Linq.XName>объекта, который многие [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] методы требуют.</xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XNamespace>  
+ Можно использовать префиксы пространства имен XML непосредственно в XML-литералы и свойства оси XML. Тем не менее, необходимо использовать `GetXmlNamespace` оператор преобразования префикс пространства имен для <xref:System.Xml.Linq.XNamespace> объекта перед его можно использовать в коде. После добавления имени неизвестного элемента для <xref:System.Xml.Linq.XNamespace> объекта для получения полного имени <xref:System.Xml.Linq.XName> объекта, который многие [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] методы требуют.  
   
 ## <a name="example"></a>Пример  
- В следующем примере выполняется импорт `ns` как префикс пространства имен XML. Затем используется префикс пространства имен для создания литерала XML и доступа к первым дочерним узлом, который имеет полное имя `ns:phone`. Он затем передает этот дочерний узел для `ShowName` подпрограмму, которая создает полное имя с помощью `GetXmlNamespace` оператор. `ShowName` Подпрограммы передает проверенное имя <xref:System.Xml.Linq.XNode.Ancestors%2A>метод, чтобы получить родительский `ns:contact` узла.</xref:System.Xml.Linq.XNode.Ancestors%2A>  
+ В следующем примере выполняется импорт `ns` как префикс пространства имен XML. Затем используется префикс пространства имен для создания литерала XML и доступа к первым дочерним узлом, который имеет полное имя `ns:phone`. Он затем передает этот дочерний узел для `ShowName` подпрограмму, которая создает полное имя с помощью `GetXmlNamespace` оператор. `ShowName` Подпрограммы полного имени, которое передает <xref:System.Xml.Linq.XNode.Ancestors%2A> метод нужно получить родительский `ns:contact` узла.  
   
- [!code-vb[VbXMLSamples&#38;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
   
- При вызове метода `TestGetXmlNamespace.RunSample()`, отображается окно сообщения, содержащее следующий текст:  
+ При вызове `TestGetXmlNamespace.RunSample()`, он отображает окно сообщения, содержащее следующий текст:  
   
  `Name: Patrick Hines`  
   
 ## <a name="see-also"></a>См. также  
- [Оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)   
- [Доступ к XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+ [Оператор Imports (пространство имен XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
+ [Доступ к XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

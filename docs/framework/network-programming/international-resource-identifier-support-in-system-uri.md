@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bb81ee9db5c4c8dc7dfa9a7a193adf47ee37b604
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e11e6a6746c555db9b51d76da3554ce75c1f6ee8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Поддержка международного кода ресурса в System.Uri
-Класс <xref:System.Uri?displayProperty=fullName> был расширен за счет поддержки международного идентификатора ресурса (IRI) и международных доменных имен (IDN). Эти улучшения доступны в .NET Framework 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1).  
+Класс <xref:System.Uri?displayProperty=nameWithType> был расширен за счет поддержки международного идентификатора ресурса (IRI) и международных доменных имен (IDN). Эти улучшения доступны в .NET Framework 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1).  
   
 ## <a name="iri-and-idn-support"></a>Поддержка IRI и IDN  
  Веб-адреса обычно выражаются с помощью унифицированных идентификаторов ресурса (URI), которые состоят из очень ограниченного набора символов:  
@@ -40,27 +34,26 @@ ms.lasthandoff: 08/21/2017
   
  По мере расширения Интернета потребность в идентификации ресурсов на языках, отличных от английского, становится все более насущной. Идентификаторы, которые способствуют удовлетворению этой потребности и позволяют использовать символы, не принадлежащие к кодировке ASCII (символы из кодировок Unicode/ISO 10646), называются международными кодами ресурсов (IRI). Спецификации IRI документально зафиксированы в стандарте RFC 3987, опубликованном IETF. Использование IRI позволяет применять в URL символы Юникода.  
   
- Существующий класс <xref:System.Uri?displayProperty=fullName> был расширен, чтобы обеспечивать поддержку IRI на основе стандарта RFC 3987. Пользователи не увидят никаких функциональных изменений, внесенных после платформы .NET Framework 2.0, пока специально не включат поддержку IRI. Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
+ Существующий класс <xref:System.Uri?displayProperty=nameWithType> был расширен, чтобы обеспечивать поддержку IRI на основе стандарта RFC 3987. Пользователи не увидят никаких функциональных изменений, внесенных после платформы .NET Framework 2.0, пока специально не включат поддержку IRI. Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
   
  Приложение может указать, должен ли применяться синтаксический анализ международных доменных имен (IDN) к доменным именам и должны ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
  При включенном IDN метки в Юникоде в доменном имени будут преобразованы в аналоги в кодировке Punicode. Имена Punicode содержат только символы ASCII и всегда начинаются с префикса "xn--". Это сделано для того, чтобы поддерживать существующие DNS-серверы в интрасети, так как большинство DNS-серверов поддерживает только символы ASCII (см. RFC 3940).  
   
- Включение IRI и IDN влияет на значение свойства <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName>. Включение IRI и IDN может также привести к изменению принципа действия методов <xref:System.Uri.Equals%2A?displayProperty=fullName>, <xref:System.Uri.OriginalString%2A?displayProperty=fullName>, <xref:System.Uri.GetComponents%2A?displayProperty=fullName> и <xref:System.Uri.IsWellFormedOriginalString%2A>.  
+ Включение IRI и IDN влияет на значение свойства <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>. Включение IRI и IDN может также привести к изменению принципа действия методов <xref:System.Uri.Equals%2A?displayProperty=nameWithType>, <xref:System.Uri.OriginalString%2A?displayProperty=nameWithType>, <xref:System.Uri.GetComponents%2A?displayProperty=nameWithType> и <xref:System.Uri.IsWellFormedOriginalString%2A>.  
   
- Расширен был также и класс <xref:System.GenericUriParser?displayProperty=fullName>, который теперь позволяет создавать настраиваемые средства синтаксического анализа, поддерживающие IRI и IDN. Поведение объекта <xref:System.GenericUriParser?displayProperty=fullName> задается путем передачи побитового сочетания значений, доступных в перечислении <xref:System.GenericUriParserOptions?displayProperty=fullName>, конструктору <xref:System.GenericUriParser?displayProperty=fullName>. Тип <xref:System.GenericUriParserOptions.IriParsing?displayProperty=fullName> указывает на то, что средство синтаксического анализа поддерживает правила анализа, определенные стандартом RFC 3987 для международных кодов ресурсов (IRI). Фактически использование IRI зависит от того, включен ли IRI.  
+ Расширен был также и класс <xref:System.GenericUriParser?displayProperty=nameWithType>, который теперь позволяет создавать настраиваемые средства синтаксического анализа, поддерживающие IRI и IDN. Поведение объекта <xref:System.GenericUriParser?displayProperty=nameWithType> задается путем передачи побитового сочетания значений, доступных в перечислении <xref:System.GenericUriParserOptions?displayProperty=nameWithType>, конструктору <xref:System.GenericUriParser?displayProperty=nameWithType>. Тип <xref:System.GenericUriParserOptions.IriParsing?displayProperty=nameWithType> указывает на то, что средство синтаксического анализа поддерживает правила анализа, определенные стандартом RFC 3987 для международных кодов ресурсов (IRI). Фактически использование IRI зависит от того, включен ли IRI.  
   
- Тип <xref:System.GenericUriParserOptions.Idn?displayProperty=fullName> указывает на то, что средство синтаксического анализа поддерживает анализ международных доменных имен (IDN) узлов. Фактически использование IDN зависит от того, включен ли IDN.  
+ Тип <xref:System.GenericUriParserOptions.Idn?displayProperty=nameWithType> указывает на то, что средство синтаксического анализа поддерживает анализ международных доменных имен (IDN) узлов. Фактически использование IDN зависит от того, включен ли IDN.  
   
  Синтаксический анализ IRI будет выполнять проверку нормализации и символов в соответствии с последними правилами IRI стандарта RFC 3987. Значение по умолчанию для синтаксического анализа отключается, поэтому нормализация и проверка символов выполняются в соответствии с RFC 2396 и RFC 3986.  
   
- Обработку IRI и IDN в классе <xref:System.Uri?displayProperty=fullName> также можно контролировать с помощью классов параметров конфигурации <xref:System.Configuration.IriParsingElement?displayProperty=fullName> и <xref:System.Configuration.IdnElement?displayProperty=fullName>. Параметр <xref:System.Configuration.IriParsingElement?displayProperty=fullName> включает или отключает обработку IRI в классе <xref:System.Uri?displayProperty=fullName>. Параметр <xref:System.Configuration.IdnElement?displayProperty=fullName> включает или отключает обработку IDN в классе <xref:System.Uri>. Параметр <xref:System.Configuration.IriParsingElement?displayProperty=fullName> также косвенно управляет IDN. Обработка IRI должна быть включена для обработки IDN. Если IRI-система не включена, то обработка IDN данных будет происходить по умолчанию, когда режим платформы .NET Framework 2.0 является совместимым и имена IDN не используются.  
+ Обработку IRI и IDN в классе <xref:System.Uri?displayProperty=nameWithType> также можно контролировать с помощью классов параметров конфигурации <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> и <xref:System.Configuration.IdnElement?displayProperty=nameWithType>. Параметр <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> включает или отключает обработку IRI в классе <xref:System.Uri?displayProperty=nameWithType>. Параметр <xref:System.Configuration.IdnElement?displayProperty=nameWithType> включает или отключает обработку IDN в классе <xref:System.Uri>. Параметр <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> также косвенно управляет IDN. Обработка IRI должна быть включена для обработки IDN. Если IRI-система не включена, то обработка IDN данных будет происходить по умолчанию, когда режим платформы .NET Framework 2.0 является совместимым и имена IDN не используются.  
   
- Параметр конфигурации для классов конфигурации <xref:System.Configuration.IriParsingElement?displayProperty=fullName> и <xref:System.Configuration.IdnElement?displayProperty=fullName> будет считан, когда будет создан первый класс <xref:System.Uri?displayProperty=fullName>. Изменения, внесенные в параметры конфигурации после этого, игнорируются.  
+ Параметр конфигурации для классов конфигурации <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> и <xref:System.Configuration.IdnElement?displayProperty=nameWithType> будет считан, когда будет создан первый класс <xref:System.Uri?displayProperty=nameWithType>. Изменения, внесенные в параметры конфигурации после этого, игнорируются.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Configuration.IdnElement?displayProperty=fullName>   
- <xref:System.Configuration.IriParsingElement?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
- <xref:System.Uri.DnsSafeHost%2A?displayProperty=fullName>
-
+ <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
+ <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>

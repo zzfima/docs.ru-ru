@@ -1,63 +1,64 @@
 ---
-title: "Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], закрепление с помощью конструктора"
-  - "Dock - свойство, выравнивание элементов управления (c помощью конструктора)"
+title: "Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], docking using designer
+- Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 86134902a6645d2c9bf7bcef2cf93bf543d8c9bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
-Можно выровнять элемент управления по границе формы с помощью свойства <xref:System.Windows.Forms.Control.Dock%2A>.  Это свойство определяет, в каком месте формы будет размещаться элемент управления.  Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать следующие значения.  
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
+Можно сделать элемент управления Выровнять по границе формы, задав <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
   
 |Параметр|Влияние на элемент управления|  
-|--------------|-----------------------------------|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у нижнего края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Заполняет все свободное пространство формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у левого края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Не фиксирует элемент нигде, он отображается в месте, указанном в свойстве <xref:System.Windows.Forms.Control.Location%2A>.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у правого края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у верхнего края формы.|  
+|-------------|----------------------------|  
+|<xref:System.Windows.Forms.DockStyle.Bottom>|Фиксирует элемент управления у нижнего края формы.|  
+|<xref:System.Windows.Forms.DockStyle.Fill>|Заполняет все свободное пространство формы.|  
+|<xref:System.Windows.Forms.DockStyle.Left>|Фиксирует элемент управления у левого края формы.|  
+|<xref:System.Windows.Forms.DockStyle.None>|Не фиксирует элемент нигде, он отображается в месте, указанном в его <xref:System.Windows.Forms.Control.Location%2A>.|  
+|<xref:System.Windows.Forms.DockStyle.Right>|Фиксирует элемент управления у правого края формы.|  
+|<xref:System.Windows.Forms.DockStyle.Top>|Фиксирует элемент управления у верхнего края формы.|  
   
- Эти значения также могут быть заданы в коде.  Дополнительные сведения см. в разделе [Практическое руководство. Выравнивание элементов управления по границам формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
+ Эти значения можно также задать в коде. Дополнительные сведения см. в разделе [как: выравнивание элементов управления на границы формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы задать свойство "Dock" для элемента управления в режиме разработки  
+### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Чтобы задать свойства Dock для элемента управления во время разработки  
   
-1.  В конструкторе Windows Forms выберите ваш элемент управления.  
+1.  В конструкторе Windows Forms выберите элемент управления.  
   
-2.  В окне **Свойства** нажмите кнопку раскрывающегося списка рядом со свойством <xref:System.Windows.Forms.Control.Dock%2A>.  
+2.  В **свойства** окно, щелкните раскрывающийся список полю <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
   
-     Отобразится графический интерфейс с шестью возможными значениями свойства <xref:System.Windows.Forms.Control.Dock%2A>.  
+     Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.  
   
-3.  Выберите соответствующее значение.  
+3.  Выберите соответствующий параметр.  
   
-4.  Положение элемента управления будет зафиксировано в соответствии с выбранным значением.  
+4.  Элемент управления будет зафиксировано в соответствии с параметр.  
   
-## См. также  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>   
- [Практическое руководство. Выравнивание элементов управления по границам формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Практическое руководство. Привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
+ [Практическое руководство. Выравнивание элементов управления по границам формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
+ [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Практическое руководство. Привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

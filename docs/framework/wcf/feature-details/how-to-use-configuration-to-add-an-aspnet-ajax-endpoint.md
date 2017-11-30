@@ -1,31 +1,34 @@
 ---
-title: "Как использовать конфигурацию для добавления конечной точки ASP.NET AJAX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b08bfd30eae1b33b2bf91eb1b0bd0127c09f9632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать конфигурацию для добавления конечной точки ASP.NET AJAX
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создать службу, предоставляющую доступ к конечной точке с поддержкой ASP.NET AJAX, которую можно вызвать из кода JavaScript на клиентском веб\-сайте.Для создания этой конечной точки можно воспользоваться либо файлом конфигурации \(как и для всех остальных конечных точек [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]\), либо методом, не требующим каких\-либо элементов конфигурации.В этом разделе показано выполнение этой задачи с помощью файла конфигурации.  
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет создать службу, предоставляющую доступ к конечной точке с поддержкой ASP.NET AJAX, которую можно вызвать из кода JavaScript на клиентском веб-сайте. Для создания этой конечной точки можно воспользоваться либо файлом конфигурации (как и для всех остальных конечных точек [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]), либо методом, не требующим каких-либо элементов конфигурации. В этом разделе показано выполнение этой задачи с помощью файла конфигурации.  
   
- Часть процедуры, обеспечивающей поддержку ASP.NET AJAX конечной точкой, заключается в том, чтобы указать в конфигурации этой конечной точки использование <xref:System.ServiceModel.WebHttpBinding> и добавить ей поведение [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md).После того как конечная точка сконфигурирована, действия по реализации и размещению службы аналогичны выполняемым для любой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Рабочий пример см. в разделе [Служба AJAX с использованием HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+ Часть процедуры, которая позволяет конечной точке службы становятся поддержкой ASP.NET AJAX состоит в настройке конечной точки, чтобы использовать <xref:System.ServiceModel.WebHttpBinding> и добавление [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) поведения конечной точки. После того как конечная точка сконфигурирована, действия по реализации и размещению службы аналогичны выполняемым для любой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Рабочий пример см. в разделе [AJAX службы с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] настройке конечной точки с поддержкой ASP.NET AJAX без применения файла конфигурации см. в разделе [Как добавить конечную точку ASP.NET AJAX без использования конфигурации](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]как настроить конечную точку ASP.NET AJAX без использования конфигурации см. в разделе [как: Добавление ASP.NET AJAX конфигурации конечной точки без с помощью](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
-### Создание базовой службы WCF  
+### <a name="to-create-a-basic-wcf-service"></a>Создание базовой службы WCF  
   
-1.  Определите контракт базовой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса, отмеченного атрибутом <xref:System.ServiceModel.ServiceContractAttribute>.Пометьте каждую операцию атрибутом <xref:System.ServiceModel.OperationContractAttribute>.Не забудьте задать свойство <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
+1.  Определите контракт базовой службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с помощью интерфейса, помеченного атрибутом <xref:System.ServiceModel.ServiceContractAttribute>. Пометьте каждую операцию атрибутом <xref:System.ServiceModel.OperationContractAttribute>. Не забудьте задать свойство <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
   
     ```  
     [ServiceContract(Namespace = "MyService")]  
@@ -53,7 +56,7 @@ caps.handback.revision: 14
     //Other operations omitted…  
     ```  
   
-3.  Определите пространство имен для реализации классов `ICalculator` и `CalculatorService`, заключив их в блок пространства имен.  
+3.  Определите пространство имен для реализаций `ICalculator` и `CalculatorService`, заключив их в блок пространства имен.  
   
     ```  
     Namespace Microsoft.Ajax.Samples  
@@ -62,11 +65,11 @@ caps.handback.revision: 14
     }  
     ```  
   
-### Создание конечной точки ASP.NET AJAX для службы  
+### <a name="to-create-an-aspnet-ajax-endpoint-for-the-service"></a>Создание конечной точки ASP.NET AJAX для службы  
   
-1.  Создайте конфигурацию поведения и укажите поведение [\<enableWebScript\>](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) для конечных точек службы, поддерживающих ASP.NET AJAX.  
+1.  Создать конфигурацию поведения и указать [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) поведение для конечные точки службы с поддержкой ASP.NET AJAX.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <behaviors>  
             <endpointBehaviors>  
@@ -80,7 +83,7 @@ caps.handback.revision: 14
   
 2.  Создайте конечную точку для службы, использующую <xref:System.ServiceModel.WebHttpBinding> и поведение ASP.NET AJAX, определенное на предыдущем шаге.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <services>  
             <service name="Microsoft.Ajax.Samples.CalculatorService">  
@@ -93,9 +96,9 @@ caps.handback.revision: 14
     </system.serviceModel>   
     ```  
   
-### Размещение службы в IIS  
+### <a name="to-host-the-service-in-iis"></a>Размещение службы в IIS  
   
-1.  Чтобы разместить службу в IIS, создайте в приложении файл с именем, соответствующем имени службы, и с расширением SVC.Измените этот файл, добавив надлежащую информацию директивы [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) об этой службе.Например, файл службы для нашего примера `CalculatorService` содержит следующую информацию.  
+1.  Чтобы разместить службу в IIS, создайте в приложении файл с именем, соответствующем имени службы, и с расширением SVC. Измените этот файл, добавив соответствующие [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директив сведения о службе. Например, файл службы для нашего примера `CalculatorService` содержит следующую информацию.  
   
     ```  
     <%@ServiceHost   
@@ -105,12 +108,12 @@ caps.handback.revision: 14
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] размещении служб в IIS см. в разделе [Как разместить службу WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Размещение в службах IIS, в разделе [как: размещение службы WCF в IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
-### Вызов службы  
+### <a name="to-call-the-service"></a>Вызов службы  
   
-1.  Конечная точка настраивается по пустому адресу, заданному относительно SVC\-файла, поэтому служба становится доступной и может быть вызвана отправкой запросов на service.svc\/\<operation\> \(например, service.svc\/Add для операции `Add`\).Для этого укажите URL\-адрес конечной точки в коллекции «Скрипты» в диспетчере скриптов ASP.NET AJAX.Пример см. в разделе [Служба AJAX с использованием HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
+1.  Конечная точка настраивается с пустым адресом относительно SVC-файла, поэтому служба становится доступной и может быть вызвана отправкой запросов на service.svc/\<операции > — Например, service.svc/Add для `Add` операции. Для этого укажите URL-адрес конечной точки в коллекции "Скрипты" в диспетчере скриптов ASP.NET AJAX. Пример см. в разделе [AJAX службы с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
-## См. также  
- [Создание служб WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [Практическое руководство. Миграция веб\-служб ASP.NET с поддержкой AJAX на платформу WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a>См. также  
+ [Создание службы WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [Как: миграция с поддержкой AJAX веб-служб ASP.NET в WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

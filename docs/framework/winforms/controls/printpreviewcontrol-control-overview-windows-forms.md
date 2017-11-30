@@ -1,36 +1,36 @@
 ---
-title: "Общие сведения об элементе управления PrintPreviewControl (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintPreviewControl"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "предварительный просмотр"
-  - "PrintPreviewControl - элемент управления"
+title: "Общие сведения об элементе управления PrintPreviewControl (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintPreviewControl
+helpviewer_keywords:
+- print preview
+- PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47bef441b01d8bdcf9a365c341005cff28c64f27
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления PrintPreviewControl (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> используется для отображения объекта [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) в том виде, как он будет напечатан.  В элементе управления <xref:System.Windows.Forms.PrintPreviewControl> отсутствуют кнопки и другие элементы пользовательского интерфейса, поэтому он обычно используется только при необходимости разработки собственного интерфейса пользователя для предварительного просмотра.  При необходимости создать стандартный интерфейс пользователя воспользуйтесь элементом управления <xref:System.Windows.Forms.PrintPreviewDialog>; общие сведения о нем см. в разделе [Общие сведения об элементе управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md).  
+# <a name="printpreviewcontrol-control-overview-windows-forms"></a>Общие сведения об элементе управления PrintPreviewControl (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> используется для отображения [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) как будет выглядеть при печати. У элемента управления <xref:System.Windows.Forms.PrintPreviewControl> нет кнопок и других элементов пользовательского интерфейса, поэтому обычно он используется только в том случае, если нужно реализовать собственный интерфейс предварительного просмотра. Стандартный пользовательский интерфейс, используйте <xref:System.Windows.Forms.PrintPreviewDialog> управления; см. раздел [Обзор элемента управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md) Общие сведения.  
   
-## Ключевые свойства  
- Ключевым свойством этого элемента управления является свойство <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, задающее документ, который требуется просмотреть.  Этот документ должен являться объектом <xref:System.Drawing.Printing.PrintDocument>.  Общие сведения о создании документов для печати см. в разделах [Общие сведения о компоненте PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-overview-windows-forms.md) и [Windows Forms Print Support](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md).  Свойства <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> и <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> определяют число страниц, отображающихся в элементе управления по вертикали или по горизонтали.  Сглаживание служит для отображения текста без неровностей, однако оно может привести к замедлению отображения; чтобы применить сглаживание, следует задать для свойства <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> значение `true`.  
+## <a name="key-properties"></a>Ключевые свойства  
+ Ключевое свойство элемента управления <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, который задает документ для предварительного просмотра. Документ должен быть <xref:System.Drawing.Printing.PrintDocument> объекта. Общие сведения о создании документов для печати см. в разделе [Общие сведения о компоненте PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-overview-windows-forms.md) и [поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md). <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> И <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> свойства определяют число страниц, отображаемых по горизонтали и вертикали в элементе управления. Сглаживание можно увеличить гладкую текст, но оно может привести к замедлению отображения; Чтобы использовать его, установите <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> свойства `true`.  
   
-## См. также  
- <xref:System.Windows.Forms.PrintPreviewControl>   
- [Общие сведения об элементе управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)   
- [Элемент управления PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.PrintPreviewControl>  
+ [Общие сведения об элементе управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [Элемент управления PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
  [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)

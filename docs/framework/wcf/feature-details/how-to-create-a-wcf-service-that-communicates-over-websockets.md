@@ -1,25 +1,28 @@
 ---
-title: "Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
-Службы и клиенты WCF могут использовать привязку <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  WebSockets будет использоваться в тех случаях, когда <xref:System.ServiceModel.NetHttpBinding> распознает, что в контракте службы определен контракт обратного вызова.  В этом разделе описано, как реализовать службу WCF и клиент, использующий <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
+Службы и клиенты WCF могут использовать привязку <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  WebSockets будет использоваться в тех случаях, когда <xref:System.ServiceModel.NetHttpBinding> распознает, что в контракте службы определен контракт обратного вызова. В этом разделе описано, как реализовать службу WCF и клиент, использующий <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  
   
-### Определение службы  
+### <a name="define-the-service"></a>Определение службы  
   
 1.  Определите контракт обратного вызова  
   
@@ -66,7 +69,7 @@ caps.handback.revision: 2
         }  
     ```  
   
-     Операция службы `StartSendingQuotes` реализуется как асинхронный вызов.  Получим канал обратного вызова через `OperationContext` и, если канал открыт, выполним через него асинхронный вызов.  
+     Операция службы `StartSendingQuotes` реализуется как асинхронный вызов. Получим канал обратного вызова через `OperationContext` и, если канал открыт, выполним через него асинхронный вызов.  
   
 4.  Настройка службы  
   
@@ -97,9 +100,9 @@ caps.handback.revision: 2
     </configuration>  
     ```  
   
-     Файл конфигурации службы построен на конечных точках WCF по умолчанию.  Раздел `<protocolMapping>` служит для указания того, что привязка `NetHttpBinding` должна быть использована для созданных конечных точек по умолчанию.  
+     Файл конфигурации службы построен на конечных точках WCF по умолчанию. Раздел `<protocolMapping>` служит для указания того, что привязка `NetHttpBinding` должна быть использована для созданных конечных точек по умолчанию.  
   
-### Определение клиента  
+### <a name="define-the-client"></a>Определение клиента  
   
 1.  Реализация контракта обратного вызова.  
   
@@ -138,7 +141,7 @@ caps.handback.revision: 2
         }  
         ```  
   
-         CallbackHandler здесь повторен только для ясности.  Клиентское приложение создает новый InstanceContext и реализацию интерфейса обратного вызова.  Затем оно создает экземпляр прокси\-класса, отправляя ссылку вновь созданному InstanceContext.  Когда клиент вызывает службу, служба вызывает клиента через заданный контракт обратного вызова.  
+         CallbackHandler здесь повторен только для ясности. Клиентское приложение создает новый InstanceContext и реализацию интерфейса обратного вызова. Затем оно создает экземпляр прокси-класса, отправляя ссылку вновь созданному InstanceContext. Когда клиент вызывает службу, служба вызывает клиента через заданный контракт обратного вызова.  
   
     2.  Настройка клиента  
   
@@ -167,7 +170,7 @@ caps.handback.revision: 2
   
          Никаких особых изменений в клиентскую конфигурацию вносить не нужно, просто укажите конечную точку на стороне клиента с помощью `NetHttpBinding`.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приведен полный код, используемый в данном разделе.  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## См. также  
- [Синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>См. также  
+ [Синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [Использование NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

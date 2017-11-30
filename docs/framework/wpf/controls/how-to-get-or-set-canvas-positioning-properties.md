@@ -1,40 +1,45 @@
 ---
-title: "Практическое руководство. Получение или задание свойств размещения Canvas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Canvas - элемент управления, установка свойств позиционирования"
+title: "Практическое руководство. Получение или задание свойств размещения Canvas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Получение или задание свойств размещения Canvas
-В этом примере показано, как использовать методы размещения элемента <xref:System.Windows.Controls.Canvas> для размещения дочернего элемента.  В этом примере содержимое в <xref:System.Windows.Controls.ListBoxItem> используется для представления значений размещения и преобразования их в экземпляры <xref:System.Double>, что необходимо для размещения.  Значения затем преобразуются обратно в строки и отображаются в виде текста в элементе <xref:System.Windows.Controls.TextBlock> с помощью метода <xref:System.Windows.Controls.Canvas.GetLeft%2A>.  
+# <a name="how-to-get-or-set-canvas-positioning-properties"></a>Практическое руководство. Получение или задание свойств размещения Canvas
+В этом примере показано, как использовать методы размещения элемента <xref:System.Windows.Controls.Canvas> для размещения содержимого дочернего элемента. В этом примере используется содержимое в <xref:System.Windows.Controls.ListBoxItem> для представления значений размещения и преобразования их в экземпляры <xref:System.Double>, который является обязательным аргументом для позиционирования. Затем значения преобразуются обратно в строки и отображаются в виде текста <xref:System.Windows.Controls.TextBlock> элемента с помощью <xref:System.Windows.Controls.Canvas.GetLeft%2A> метод.  
   
-## Пример  
- В следующем примере создается элемент <xref:System.Windows.Controls.ListBox>, который содержит одиннадцать выбираемых элементов <xref:System.Windows.Controls.ListBoxItem>.  Событие <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> вызывает пользовательский метод `ChangeLeft`, который определяется в последующем блоке кода.  
+## <a name="example"></a>Пример  
+ В следующем примере создается <xref:System.Windows.Controls.ListBox> элемент, который имеет одиннадцать выбираемых <xref:System.Windows.Controls.ListBoxItem> элементов. <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Триггеров событий `ChangeLeft` пользовательский метод, который определяет последующего блока кода.  
   
- Каждый <xref:System.Windows.Controls.ListBoxItem> представляет значение <xref:System.Double>, которое является одним из аргументов, принимаемых методом <xref:System.Windows.Controls.Canvas.SetLeft%2A> для <xref:System.Windows.Controls.Canvas>.  Чтобы использовать <xref:System.Windows.Controls.ListBoxItem> для представления экземпляра <xref:System.Double>, необходимо сначала преобразовать <xref:System.Windows.Controls.ListBoxItem> к правильному типу данных.  
+ Каждый <xref:System.Windows.Controls.ListBoxItem> представляет <xref:System.Double> значение, которое является одним из аргументов, <xref:System.Windows.Controls.Canvas.SetLeft%2A> метод <xref:System.Windows.Controls.Canvas> принимает. Чтобы использовать <xref:System.Windows.Controls.ListBoxItem> для представления экземпляра <xref:System.Double>, необходимо сначала преобразовать <xref:System.Windows.Controls.ListBoxItem> правильный тип данных.  
   
- [!code-xml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
+ [!code-xaml[CanvasPositioningProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml#1)]  
   
- При изменении выделения <xref:System.Windows.Controls.ListBox> пользователем, вызывается пользовательский метод `ChangeLeft`.  Этот метод передает <xref:System.Windows.Controls.ListBoxItem> в объект <xref:System.Windows.LengthConverter>, который преобразует <xref:System.Windows.Controls.ContentControl.Content%2A> для <xref:System.Windows.Controls.ListBoxItem> в экземпляр <xref:System.Double> \(обратите внимание, что это значение уже было преобразовано к <xref:System.String> с помощью метода <xref:System.Windows.Controls.Control.ToString%2A>\).  Это значение затем передается обратно методам <xref:System.Windows.Controls.Canvas.SetLeft%2A> и <xref:System.Windows.Controls.Canvas.GetLeft%2A> для <xref:System.Windows.Controls.Canvas>, чтобы изменить положение объекта `text1`.  
+ Когда пользователь изменяет <xref:System.Windows.Controls.ListBox> выбора, он вызывает `ChangeLeft` пользовательский метод. Этот метод передает <xref:System.Windows.Controls.ListBoxItem> для <xref:System.Windows.LengthConverter> объекта, который преобразует <xref:System.Windows.Controls.ContentControl.Content%2A> из <xref:System.Windows.Controls.ListBoxItem> к экземпляру <xref:System.Double> (Обратите внимание, что это значение уже был преобразован в <xref:System.String> с помощью <xref:System.Windows.Controls.Control.ToString%2A> метод). Это значение затем передается обратно <xref:System.Windows.Controls.Canvas.SetLeft%2A> и <xref:System.Windows.Controls.Canvas.GetLeft%2A> методы <xref:System.Windows.Controls.Canvas> Чтобы изменить положение `text1` объекта.  
   
  [!code-csharp[CanvasPositioningProperties#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml.cs#2)]
  [!code-vb[CanvasPositioningProperties#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
-## См. также  
- <xref:System.Windows.Controls.Canvas>   
- <xref:System.Windows.Controls.ListBoxItem>   
- <xref:System.Windows.LengthConverter>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Controls.Canvas>  
+ <xref:System.Windows.Controls.ListBoxItem>  
+ <xref:System.Windows.LengthConverter>  
  [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md)

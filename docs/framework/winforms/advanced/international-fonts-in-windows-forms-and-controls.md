@@ -1,38 +1,39 @@
 ---
-title: "International Fonts in Windows Forms and Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "fonts, international"
-  - "international applications [Windows Forms], character display"
-  - "fonts, globalization considerations"
-  - "localization [Windows Forms], fonts"
-  - "Windows Forms controls, labels"
-  - "font fallback in Windows Forms"
-  - "globalization [Windows Forms], character sets"
+title: "Международные шрифты в Windows Forms и элементах управления Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- fonts [Windows Forms], international
+- international applications [Windows Forms], character display
+- fonts [Windows Forms], globalization considerations
+- localization [Windows Forms], fonts
+- Windows Forms controls, labels
+- font fallback in Windows Forms
+- globalization [Windows Forms], character sets
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# International Fonts in Windows Forms and Controls
-Рекомендуемым способом выбора шрифтов в международных приложениях является как возможно более широкое использование режима подмены шрифта.  Это означает, что система сама определяет, к какому языку относится тот или иной знак.  
+# <a name="international-fonts-in-windows-forms-and-controls"></a>Международные шрифты в Windows Forms и элементах управления Windows
+В приложениях на разных языках выбора шрифтов рекомендуется использовать откат шрифта везде, где это возможно. Это означает система определяет, что скрипт символ принадлежит.  
   
-## Применение подмены шрифта  
- Для того чтобы воспользоваться этой возможностью, не задавайте значение свойства <xref:System.Drawing.Font> для форм или каких\-либо других элементов.  Приложение автоматически задействует системный шрифт по умолчанию, который зависит от языка локализованной операционной системы.  При выполнении приложения система автоматически выбирает правильный шрифт для языка и региональных параметров, установленных в операционной системе.  
+## <a name="using-font-fallback"></a>Применение подмены шрифта  
+ Чтобы воспользоваться этой функцией, не устанавливайте <xref:System.Drawing.Font> свойство формы или любого другого элемента. Приложение будет автоматически использовать системный шрифт по умолчанию, отличающийся от языка локализованной операционной системы в другую. При запуске приложения, система автоматически выбирает правильный шрифт для языка и региональных параметров, выбранных в операционной системе.  
   
- Данное правило, в силу которого шрифт не задается, имеет одно исключение, связанное с изменением начертания шрифта.  Это может оказаться важным для приложения, в котором пользователь нажимает кнопку, чтобы текст в текстовом поле был выделен полужирным шрифтом.  Для этого потребуется написать функцию, которая изменяла бы начертание шрифта в текстовом поле на полужирное в зависимости от шрифта формы.  Важно вызвать эту функцию в двух местах: в обработчике события <xref:System.Windows.Forms.Control.Click> кнопки и в обработчике события <xref:System.Windows.Forms.Control.FontChanged>.  Если функция вызывается только в обработчике события <xref:System.Windows.Forms.Control.Click>, то при изменении семейства шрифтов для всей формы каким\-либо другим фрагментом кода шрифт текстового поля не будет изменен вместе с остальной частью формы.  
+ Существует исключение из правила не задавать шрифт, начертание шрифта изменением. Это может оказаться важным для приложения, в котором пользователь нажимает кнопку для отображения текста в текстовом поле был выделен полужирным шрифтом. Чтобы сделать это, вы пишете функции для изменения стиля шрифта текстовое поле, будут выводиться полужирным шрифтом, зависимости от того, независимо от шрифта формы. Очень важно, чтобы эта функция вызывается в двух местах: в кнопке <xref:System.Windows.Forms.Control.Click> обработчик событий и в <xref:System.Windows.Forms.Control.FontChanged> обработчика событий. Если функция вызывается только в <xref:System.Windows.Forms.Control.Click> обработчик событий и другие части кода изменяет семейства шрифтов для всей формы, текстовое поле не изменится с остальной частью формы.  
   
 ```  
 ' Visual Basic  
@@ -78,7 +79,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }  
 ```  
   
- Однако при локализации приложения на некоторых языках полужирный шрифт может выглядеть некрасиво.  Если это так, то локализаторам необходима возможность переключать начертание шрифта с обычного на полужирное и обратно.  Поскольку локализаторы, как правило, не являются разработчиками и не имеют доступа к исходному коду, работая только с файлами ресурсов, эту возможность требуется реализовать в файлах ресурсов.  Для этого необходимо установить для свойства <xref:System.Drawing.Font.Bold%2A> значение `true`.  Таким образом, в файлах ресурсов записывается начертание шрифта, и локализаторы могут видоизменять его.  Затем следует написать код, который сбрасывает шрифт на основании того, каким был шрифт формы, но использует начертание шрифта, указанное в файле ресурсов. Этот код следует вставить после метода `InitializeComponent` .  
+ Тем не менее при локализации приложения полужирный шрифт могут отображаться неправильно для определенных языков. Если это критично, то локализаторам иметь возможность переключения шрифта с жирного шрифта на обычный текст. Поскольку локализаторам обычно не являются разработчиками и не имеют доступа к исходному коду, только с файлами ресурсов, этот параметр необходимо задать в файлах ресурсов. Чтобы сделать это, необходимо установить <xref:System.Drawing.Font.Bold%2A> свойства `true`. Это приводит к записывается в файлы ресурсов, где локализаторам можно изменить начертание шрифта. Затем написать код после `InitializeComponent` метод, который сбрасывает шрифт на основании шрифт независимо от формы, но использует начертание шрифта, указанное в файле ресурсов.  
   
 ```  
 ' Visual Basic  
@@ -88,6 +89,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## См. также  
- [Globalizing Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>См. также  
+ [Глобализация Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

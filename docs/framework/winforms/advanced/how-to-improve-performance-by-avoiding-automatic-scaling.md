@@ -1,51 +1,55 @@
 ---
-title: "Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "автоматическое масштабирование"
-  - "изображения [Windows Forms], повышение производительности"
-  - "изображения [Windows Forms], использование без автоматического масштабирования"
-  - "производительность, улучшение изображения"
+title: "Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
-Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает автоматическое масштабирование выводимого на экран изображения, но этот процесс снижает производительность.  Для управления масштабом изображения можно также передавать методу <xref:System.Drawing.Graphics.DrawImage%2A> значения ширины и высоты прямоугольника назначения.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Автоматическое масштабирование образа при рисовании, снижает производительность. Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
   
- Например, в показанном ниже вызове метода <xref:System.Drawing.Graphics.DrawImage%2A> указывается верхний левый угол с координатами \(50, 30\), а прямоугольник назначения не определяется.  
+ Например, в следующем вызове <xref:System.Drawing.Graphics.DrawImage%2A> метод задает верхний левый угол (50, 30), но не указывает прямоугольника назначения.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- Хотя это простейший вариант метода <xref:System.Drawing.Graphics.DrawImage%2A>, если судить по количеству требуемых параметров, однако он необязательно является самым эффективным.  Если разрешение \(обычно 96 точек на дюйм\), используемое интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], отличается от разрешения, указанного в объекте <xref:System.Drawing.Image>, то метод <xref:System.Drawing.Graphics.DrawImage%2A> осуществляет масштабирование изображения.  Например, предположим, что объект <xref:System.Drawing.Image> имеет в ширину 216 пикселей, а хранящееся в этом объекте разрешение по горизонтали составляет 72 точки на дюйм.  Поскольку 216\/72 равно 3, метод <xref:System.Drawing.Graphics.DrawImage%2A> осуществляет масштабирование изображения таким образом, чтобы конечное изображение имело в ширину 3 дюйма при разрешении 96 точек на дюйм.  Таким образом, метод <xref:System.Drawing.Graphics.DrawImage%2A> выводит изображение шириной 96 x 3 \= 288 пикселей.  
+ Хотя это простейший вариант <xref:System.Drawing.Graphics.DrawImage%2A> метод с точки зрения число обязательных аргументов, не обязательно будет наиболее эффективным. Если используется разрешение [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (обычно 96 точек на дюйм) отличается от разрешения, указанного в <xref:System.Drawing.Image> объекта, а затем <xref:System.Drawing.Graphics.DrawImage%2A> метод будет масштабирования изображения. Например, предположим, что <xref:System.Drawing.Image> объект имеет ширину 216 точек, а хранимые разрешение по горизонтали составляет 72 точек на дюйм. Поскольку 216/72 равно 3, <xref:System.Drawing.Graphics.DrawImage%2A> будет масштабирования изображения, чтобы его ширину 3 дюйма с разрешением 96 точек на дюйм. То есть <xref:System.Drawing.Graphics.DrawImage%2A> выводит изображение шириной 96 x 3 = 288 пикселей.  
   
- Даже если экранное разрешение отличается от 96 точек на дюйм, вполне вероятно, что интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] все равно осуществит масштабирование изображения, как если бы разрешение составляло 96 точек на дюйм.  Это происходит потому, что объект <xref:System.Drawing.Graphics> интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] связан с программной средой устройства и, когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] запрашивает экранное разрешение у программной среды устройства, результатом обычно является 96, независимо от фактического экранного разрешения.  Чтобы предотвратить автоматическое масштабирование, можно указать в параметрах метода <xref:System.Drawing.Graphics.DrawImage%2A> прямоугольник назначения.  
+ Даже если разрешение экрана 96 точек на дюйм, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] будут, скорее всего, масштабирования изображения так, будто разрешение экрана 96 точек на дюйм. Причина этого заключается в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> объект связан с контекста устройства и когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] контекст устройства для разрешения экрана, результат обычно является 96, независимо от фактического экранного разрешения запросов. Можно избежать автоматического масштабирования, указав в прямоугольник назначения в <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
   
-## Пример  
- В следующем примере одно и то же изображение рисуется два раза.  В первом случае ширина и высота прямоугольника назначения не указываются и осуществляется автоматическое масштабирование изображения.  Во втором случае ширина и высота прямоугольника назначения задаются явным образом \(в пикселях\) равными соответственно ширине и высоте исходного изображения.  На приведенном ниже рисунке показано дважды выведенное на экран изображение.  
+## <a name="example"></a>Пример  
+ В следующем примере рисуется дважды для одного изображения. В первом случае ширину и высоту прямоугольника назначения не указан, а изображение масштабируется автоматически. Во втором случае ширину и высоту прямоугольника назначения (измеряется в пикселях) для указания совпадать с ширину и высоту исходного изображения. На следующем рисунке изображение, рисуемое дважды.  
   
- ![Масштабированная текстура](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ ![Масштабировать текстуры](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  Не забудьте заменить путь и имя файла Replace Texture.jpg именем файла изображения в вашей системе.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Замените Texture.jpg в вашей системе путь и имя образа.  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,38 +1,42 @@
 ---
-title: "Общие сведения об использовании элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms]"
-  - "пользовательские элементы управления [Windows Forms]"
-  - "Windows Forms, элементы управления"
+title: "Общие сведения об использовании элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об использовании элементов управления в формах Windows Forms
-В этом раздел описываются существенные элементы приложения Windows Forms и приводится простой пример, в котором используются элементы управления и обработка событий в приложении Windows Forms.  
+# <a name="overview-of-using-controls-in-windows-forms"></a>Общие сведения об использовании элементов управления в формах Windows Forms
+В этом разделе описываются основные элементы приложения Windows Forms и предоставляет простой пример, использующий элементы управления и обработка событий в приложении Windows Forms.  
   
-## Простые приложения Windows Forms  
- Приложение Windows Forms состоит, как минимум, из следующих элементов.  
+## <a name="simple-windows-forms-applications"></a>Приложения простой Windows Forms  
+ Как минимум приложение Windows Forms состоит из следующих элементов:  
   
--   Один или несколько классов, производных от класса <xref:System.Windows.Forms.Form?displayProperty=fullName>.  
+-   Один или несколько классов, которые являются производными от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Метод `Main`, вызывающий метод `static` \(в Visual Basic — `shared`\) <xref:System.Windows.Forms.Application.Run%2A> и передающий ему экземпляр <xref:System.Windows.Forms.Form>.  Метод <xref:System.Windows.Forms.Application.Run%2A> обрабатывает сообщения, поступающие в приложение из операционной системы.  
+-   Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> метод и передает <xref:System.Windows.Forms.Form> экземпляра к нему. <xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы в приложение.  
   
- В следующем примере кода демонстрируются основные элементы приложения Windows Forms.  
+ В следующем примере кода показаны основные элементы приложения Windows Forms.  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## Использование элементов управления в приложениях Windows Forms  
- В следующем примере кода создается простейшее приложение, иллюстрирующее, как приложения Windows Forms используют элементы управления и обрабатывают события.  Пример состоит из трех кнопок на форме, каждая из которых изменяет цвет фона при щелчке мышью.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Использование элементов управления в приложении Windows Forms  
+ В следующем примере кода показано простое приложение, которое показано, как приложения Windows Forms с помощью элементов управления и обработки событий. Пример состоит из трех кнопок в форме. Каждая кнопка изменяет цвет фона при щелчке.  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## См. также  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
+## <a name="see-also"></a>См. также  
+ [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

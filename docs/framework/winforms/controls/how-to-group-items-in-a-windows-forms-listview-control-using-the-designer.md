@@ -1,64 +1,65 @@
 ---
-title: "Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "группирование"
-  - "группы, в элементах управления Windows Forms"
-  - "ListView - элемент управления [Windows Forms], группирование элементов"
+title: "Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ListView control [Windows Forms], grouping items
+- grouping
+- groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 97c9dc3a12227d3c9bfd64c97be61e69b50d2bbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора
-Функция группирования элемента управления <xref:System.Windows.Forms.ListView> позволяет отображать соответствующие наборы элементов в виде групп.  Эти группы разделяются на экране горизонтальными заголовками группы, которые содержат названия групп.  Можно использовать группы <xref:System.Windows.Forms.ListView> для упрощения просмотра больших списков за счет группирования их элементов по алфавиту, по дате или по другим критериям.  На приведенном ниже рисунке показаны некоторые сгруппированные элементы.  
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора
+Функция группирования элемента <xref:System.Windows.Forms.ListView> управления позволяет отображать соответствующие наборы элементов в группах. Эти группы разделяются на экране горизонтальными заголовками группы, содержащие заголовки групп. Можно использовать <xref:System.Windows.Forms.ListView> группы для упрощения просмотра больших списков, сгруппировав элементы по алфавиту, по датам или по другим критериям. На рисунке показаны некоторые сгруппированные элементы.  
   
  ![Группы ListView](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
   
- Для следующей процедуры требуется проект **Приложение Windows** с формой, содержащей элемент управления <xref:System.Windows.Forms.ListView>.  Сведения о создании такого проекта см. в разделах [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa) и [Практическое руководство. Добавление элементов управления в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ В следующей процедуре требуется **приложение Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ListView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
- Для разрешения группирования необходимо сначала создать один или несколько объектов <xref:System.Windows.Forms.ListViewGroup> в конструкторе или программным путем.  После определения группы можно назначить ее элементы.  
+ Чтобы включить группирование, необходимо сначала создать один или несколько <xref:System.Windows.Forms.ListViewGroup> объектов в конструкторе или программным путем. После определения группы можно назначить элементы.  
   
 > [!NOTE]
->  Группы <xref:System.Windows.Forms.ListView> можно использовать только в [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] при вызове приложением метода <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName>.  В предыдущих версиях операционных систем код, связанный с созданием групп, не действует, и группы отображаться не будут.  Дополнительные сведения см. в разделе <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=fullName>.  
+>  <xref:System.Windows.Forms.ListView>группы доступны только на [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] при вызове приложением <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> метод. В предыдущих версиях операционных систем любой код, относящийся к группам, не действует, и группы не будут. Для получения дополнительной информации см. <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.  
 >   
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы добавить или удалить группы в режиме конструктора, выполните следующие действия:  
+### <a name="to-add-or-remove-groups-in-the-designer"></a>Чтобы добавить или удалить группы в конструкторе  
   
-1.  В окне **Свойства** нажмите кнопку с **многоточием** \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) рядом со свойством <xref:System.Windows.Forms.ListView.Groups%2A>.  
+1.  В **свойства** окно, нажмите кнопку **многоточие** (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) рядом с <xref:System.Windows.Forms.ListView.Groups%2A> свойство.  
   
-     Появится окно **Редактор коллекции ListViewGroup**.  
+     **Редактор коллекции ListViewGroup** отображается.  
   
-2.  Чтобы добавить группу, нажмите кнопку **Добавить**.  Затем можно задать свойства новой группы, например <xref:System.Windows.Forms.ListViewGroup.Header%2A> и <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>.  Чтобы удалить группу, выделите ее и нажмите кнопку **Удалить**.  
+2.  Чтобы добавить группу, нажмите кнопку **добавить** кнопки. Затем можно задать свойства новой группы, такие как <xref:System.Windows.Forms.ListViewGroup.Header%2A> и <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> свойства. Чтобы удалить группу, выберите его и нажмите кнопку **удалить** кнопки.  
   
-### Чтобы назначить элементы группам в режиме конструктора, выполните следующие действия:  
+### <a name="to-assign-items-to-groups-in-the-designer"></a>Чтобы назначить элементы группам в конструкторе  
   
-1.  В окне **Свойства** нажмите кнопку с **многоточием** \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) рядом со свойством <xref:System.Windows.Forms.ListView.Items%2A>.  
+1.  В **свойства** окно, нажмите кнопку **многоточие** (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) рядом с <xref:System.Windows.Forms.ListView.Items%2A> свойство.  
   
-     Появится окно **Редактор коллекции ListViewItem**.  
+     **Редактор коллекции ListViewItem** отображается.  
   
-2.  Чтобы добавить новый элемент, нажмите кнопку **Добавить**.  Затем можно задать свойства нового элемента, например <xref:System.Windows.Forms.ListViewItem.Text%2A> и <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>.  
+2.  Чтобы добавить новый элемент, щелкните **добавить** кнопки. Затем можно задать свойства нового элемента, например <xref:System.Windows.Forms.ListViewItem.Text%2A> и <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> свойства.  
   
-3.  Выберите свойство <xref:System.Windows.Forms.ListViewItem.Group%2A>, затем выберите группу из раскрывающегося списка.  
+3.  Выберите <xref:System.Windows.Forms.ListViewItem.Group%2A> свойство и выберите группу из раскрывающегося списка.  
   
-## См. также  
- <xref:System.Windows.Forms.ListView>   
- <xref:System.Windows.Forms.ListView.Groups%2A>   
- <xref:System.Windows.Forms.ListViewGroup>   
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
- [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/ru-ru/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListView.Groups%2A>  
+ <xref:System.Windows.Forms.ListViewGroup>  
+ [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

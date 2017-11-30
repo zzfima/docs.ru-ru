@@ -1,26 +1,29 @@
 ---
-title: "Обработка ошибок веб-протокола HTTP WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обработка ошибок веб-протокола HTTP WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3366ab851c6e6b66a5df94bdb24baad4ae0c8d14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обработка ошибок веб-протокола HTTP WCF
-Обработка ошибок протокола HTTP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет возвращать из веб\-служб HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ошибки, указывающие код состояния HTTP, причем в том формате, который используется в операции, например XML или JSON.  
+# <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF
+Обработка ошибок протокола HTTP в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] позволяет возвращать из веб-служб HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ошибки, указывающие код состояния HTTP, причем в том формате, который используется в операции, например XML или JSON.  
   
-## Обработка ошибок веб\-протокола HTTP WCF  
- Класс <xref:System.ServiceModel.Web.WebFaultException> содержит конструктор, позволяющий указать код состояния HTTP.Затем этот код состояния возвращается клиенту.Общая версия класса <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> позволяет возвращать определенный пользователем тип, содержащий сведения о возникшей ошибке.Этот пользовательский объект сериализуется с помощью формата, указанного операцией и возвращенного клиенту.Следующий пример показывает, как вернуть код состояния HTTP.  
+## <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF  
+ Класс <xref:System.ServiceModel.Web.WebFaultException> содержит конструктор, позволяющий указать код состояния HTTP. Затем этот код состояния возвращается клиенту. Общая версия класса <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> позволяет возвращать определенный пользователем тип, содержащий сведения о возникшей ошибке. Этот пользовательский объект сериализуется с помощью формата, указанного операцией и возвращенного клиенту. Следующий пример показывает, как вернуть код состояния HTTP.  
   
 ```  
 Public string Operation1()  
@@ -30,21 +33,21 @@ Public string Operation1()
 }  
 ```  
   
- В следующем примере показано, как вернуть код состояния HTTP и дополнительные сведения в типе, определяемом пользователем.`MyErrorDetail` — это пользовательский тип, который содержит дополнительные сведения о возникшей ошибке.  
+ В следующем примере показано, как вернуть код состояния HTTP и дополнительные сведения в типе, определяемом пользователем. `MyErrorDetail` - определяемый пользователем тип, который содержит дополнительные сведения о возникшей ошибке.  
   
 ```  
 Public string Operation2()  
    // Operation logic  
    // ...   MyErrorDetail detail = new MyErrorDetail  
    {  
-      Message = “Error Message”,  
+      Message = "Error Message",  
       ErrorCode = 123,  
    }  
    throw new WebFaultException<MyErrorDetail>(detail, HttpStatusCode.Forbidden);  
 }  
 ```  
   
- В приведенном выше коде возвращается ответ HTTP с кодом состояния «доступ запрещен» и экземпляром объекта `MyErrorDetails` в теле ответа.Формат объекта `MyErrorDetails` определяется следующими элементами.  
+ В приведенном выше коде возвращается ответ HTTP с кодом состояния «доступ запрещен» и экземпляром объекта `MyErrorDetails` в теле ответа. Формат объекта `MyErrorDetails` определяется следующими элементами.  
   
 -   Значение параметра `ResponseFormat` атрибута <xref:System.ServiceModel.Web.WebGetAttribute> или <xref:System.ServiceModel.Web.WebInvokeAttribute>, указанного в операции службы.  
   
@@ -52,13 +55,13 @@ Public string Operation2()
   
 -   Значение свойства <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> при обращении к <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] о влиянии этих значений на форматирование операции см. в разделе [Форматирование веб\-объектов HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Эти значения влияют на форматирование операции, разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
  Исключение <xref:System.ServiceModel.Web.WebFaultException> является <xref:System.ServiceModel.FaultException> и, следовательно, может быть использовано в качестве модели программирования ошибок для служб, предоставляющих конечные точки SOAP, а также сетевые конечные точки HTTP.  
   
-## См. также  
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Форматирование веб\-объектов HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)   
- [Определение и задание сбоев](../../../../docs/framework/wcf/defining-and-specifying-faults.md)   
- [Обработка исключений и сбоев](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)   
+## <a name="see-also"></a>См. также  
+ [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Форматирование WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ [Определение и указание сбоев](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
+ [Обработка исключений и сбоев](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
  [Сбои при отправке и получении](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

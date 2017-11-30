@@ -1,44 +1,47 @@
 ---
-title: "Практическое руководство. Настройка уведомлений обновлений привязок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка, обновления, уведомления о"
-  - "привязка данных, уведомление об обновлениях привязки"
-  - "уведомления, обновления привязки"
+title: "Практическое руководство. Настройка уведомлений обновлений привязок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- notifications [WPF], binding updates
+- data binding [WPF], notification of binding updates
+- binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e75ec53a769099e199b60f5466eeb4037b86862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Настройка уведомлений обновлений привязок
-В этом примере демонстрируется настройка уведомления, когда свойство [целевого объекта привязки](GTMT) \(цели\) или [исходного объекта привязки](GTMT) \(источника\) было обновлено.  
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Практическое руководство. Настройка уведомлений обновлений привязок
+В этом примере показано, как настроить уведомления об обновлении свойства цели привязки (целевой) или источника привязки (источник) для привязки.  
   
-## Пример  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] вызывает событие обновления данных каждый раз при обновлении источника или цели привязки.  Внутри это событие используется для информирования [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], что он должен быть обновлен, поскольку связанные данные были изменены.  Обратите внимание, что для работы этих событий, а также для правильной работы односторонней или двусторонней привязки необходимо реализовать класс данных с помощью интерфейса <xref:System.ComponentModel.INotifyPropertyChanged>.  Дополнительные сведения см. в разделе [Реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+## <a name="example"></a>Пример  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]вызывает событие обновления данных каждый раз при обновлении источника или цели привязки. Внутри системы это событие используется для информирования [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], что он должен быть обновлен, поскольку связанные данные были изменены. Обратите внимание, что для работы этих событий, а также для односторонняя или двусторонняя привязка для правильной работы необходимо реализовать класс данных с помощью <xref:System.ComponentModel.INotifyPropertyChanged> интерфейса. Дополнительные сведения см. в разделе [Реализация уведомления об изменении свойств](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
   
- Установите свойство <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> или <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> \(или оба\) в значение `true` в привязке.  Обработчик, который предоставляется для прослушивания данного события, должен быть присоединен непосредственно к элементу, об изменениях которого необходимо информировать, или к контексту общих данных, если необходимо информировать обо всех изменениях в контексте.  
+ Задать <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> или <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> (или оба) для `true` в привязке. Обработчик, который предоставляется для ожидания данного события, должен быть подключен непосредственно к элементу, где вы хотите получать сведения об изменениях, или к контексту общих данных, чтобы получить информацию о любом изменении в контексте.  
   
- Здесь приведен пример, который показывает, как установить уведомление при обновлении нужного свойства.  
+ Ниже приведен пример, в котором показано, как настроить уведомления при обновлении свойства цели привязки.  
   
- [!code-xml[DirectionalBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[DirectionalBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#2)]  
   
- Затем для обработки события можно назначить обработчик, основанный на делегате EventHandler\<T\>, в данном примере на *OnTargetUpdated*:  
+ Затем можно назначить обработчик, основанный на делегате EventHandler\<T>, в этом примере *OnTargetUpdated*, для обработки события:  
   
  [!code-csharp[DirectionalBinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#3)]  
 [!code-csharp[DirectionalBinding#EndEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#endevent)]  
   
- Параметры события можно использовать для задания сведений о свойстве, которое было изменено \(например тип или конкретный элемент, если один и тот же обработчик подключен к нескольким элементам\), что может быть полезно, если имеются несколько связанных свойств для одного элемента.  
+ Параметры события можно использовать для задания сведений об измененном свойстве (например, типа или конкретного элемента, если один обработчик подключен к нескольким элементам), что может оказаться полезным в том случае, если существует несколько связанных свойств для одного элемента.  
   
-## См. также  
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

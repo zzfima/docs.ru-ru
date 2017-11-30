@@ -1,73 +1,74 @@
 ---
-title: "Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox - элемент управления [Windows Forms], добавление и удаление элементов"
-  - "поля со списком, добавление элементов"
-  - "поля со списком, удаление элементов"
-  - "ComboBox - элемент управления [Windows Forms], добавление и удаление элементов"
-  - "списки, добавление элементов"
-  - "списки, удаление элементов"
-  - "ListBox - элемент управления [Windows Forms], добавление и удаление элементов"
+title: "Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- combo boxes [Windows Forms], adding items
+- list boxes [Windows Forms], removing items
+- ComboBox control [Windows Forms], adding and removing items
+- ListBox control [Windows Forms], adding and removing items
+- list boxes [Windows Forms], adding items
+- combo boxes [Windows Forms], removing items
+- CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
-В поля со списком, списки или списки с помеченными элементами Windows Forms можно добавлять элементы множеством способов, так как эти элементы управления можно привязать к самым разнообразным источникам данных.  В этом разделе показан простейший способ, для которого привязка к данным не требуется.  Отображаемые элементы обычно представляют собой строки, однако можно использовать любой объект.  Текст, отображаемый в элементе управления, является значением, возвращаемым методом`ToString` этого объекта.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
+Элементы могут добавляться в Windows Forms со списком, списке или списки с помеченными различными способами, так как эти элементы управления могут быть привязаны к различным источникам данных. Однако в этом разделе демонстрирует простейший метод и привязка к данным не требуется. Элементы отображаются обычно представляют собой строки; Тем не менее можно использовать любой объект. Текст, отображаемый в элементе управления является значения, возвращенного объекта `ToString` метод.  
   
-### Добавление элементов  
+### <a name="to-add-items"></a>Добавление элементов  
   
-1.  Добавьте строку или объект в список с помощью метода `Add` класса `ObjectCollection`.  Коллекция указывается с помощью свойства`Items` :  
+1.  Добавьте строку или объект в список с помощью `Add` метод `ObjectCollection` класса. Коллекция указывается с помощью `Items` свойство:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
-  
     ```  
   
     ```csharp  
     comboBox1.Items.Add("Tokyo");  
-  
     ```  
   
     ```cpp  
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     \-либо\-  
+     - или  
   
-2.  Вставьте строку или объект в нужную точку списка с помощью метода`Insert` :  
+2.  Вставьте строку или объект в нужную точку в списке с `Insert` метод:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
-  
     ```  
   
     ```csharp  
     checkedListBox1.Items.Insert(0, "Copenhagen");  
-  
     ```  
   
     ```cpp  
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     \-либо\-  
+     - или  
   
-3.  Присвойте коллекции`Items` полный массив:  
+3.  Присвойте полный массив `Items` коллекции:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -76,7 +77,6 @@ caps.handback.revision: 19
        ItemObject(i) = "Item" & i  
     Next i  
     ListBox1.Items.AddRange(ItemObject)  
-  
     ```  
   
     ```csharp  
@@ -86,7 +86,6 @@ caps.handback.revision: 19
        ItemObject[i] = "Item" + i;  
     }  
     listBox1.Items.AddRange(ItemObject);  
-  
     ```  
   
     ```cpp  
@@ -98,11 +97,11 @@ caps.handback.revision: 19
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### Удаление элемента  
+### <a name="to-remove-an-item"></a>Удаление элемента  
   
-1.  Вызовите метод`Remove` или`RemoveAt` , чтобы удалить элементы.  
+1.  Вызовите `Remove` или `RemoveAt` метод для удаления элементов.  
   
-     Метод `Remove` имеет один атрибут, определяющий, какой элемент следует удалить. Метод`RemoveAt` удаляет элемент с указанным номером.  
+     `Remove`имеет один аргумент, который задает удаляемый элемент.`RemoveAt` Удаляет элемент с заданным индексом.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -111,7 +110,6 @@ caps.handback.revision: 19
     ComboBox1.Items.Remove(ComboBox1.SelectedItem)  
     ' To remove "Tokyo" item:  
     ComboBox1.Items.Remove("Tokyo")  
-  
     ```  
   
     ```csharp  
@@ -121,7 +119,6 @@ caps.handback.revision: 19
     comboBox1.Items.Remove(comboBox1.SelectedItem);  
     // To remove "Tokyo" item:  
     comboBox1.Items.Remove("Tokyo");  
-  
     ```  
   
     ```cpp  
@@ -133,28 +130,26 @@ caps.handback.revision: 19
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### Чтобы удалить все элементы  
+### <a name="to-remove-all-items"></a>Чтобы удалить все элементы  
   
-1.  Вызовите метод `Clear`, чтобы удалить из коллекции все элементы:  
+1.  Вызовите `Clear` метод, чтобы удалить все элементы из коллекции:  
   
     ```vb  
     ListBox1.Items.Clear()  
-  
     ```  
   
     ```csharp  
     listBox1.Items.Clear();  
-  
     ```  
   
     ```cpp  
     listBox1->Items->Clear();  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

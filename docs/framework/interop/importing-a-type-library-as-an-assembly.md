@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a907e75785bb0eb9ced43466ef5e51e598d4f629
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Импорт библиотеки типов в виде сборки
 Определения COM-типов обычно хранятся в библиотеке типов. С другой стороны, CLS-совместимые компиляторы создают в сборке метаданные типов. Эти два источника сведений о типах заметно отличаются. В этом разделе описываются способы создания метаданных из библиотеки типов. Результирующая сборка и называется сборкой взаимодействия, а содержащиеся в ней сведения о типах позволяют приложениям .NET Framework использовать COM-типы.  
@@ -65,7 +58,7 @@ ms.lasthandoff: 08/21/2017
   
      Программа экспорта библиотек типов предоставляет параметры командной строки для настройки метаданных в результирующем файле взаимодействия, импортирует типы из существующей библиотеки типов и создает сборку взаимодействия и пространство имен. Инструкции см. в разделе [Практическое руководство. Создание сборок взаимодействия из библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   Класс <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=fullName>  
+-   Класс <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>  
   
      Этот класс предоставляет методы преобразования компонентных классов и интерфейсов в библиотеке типов в метаданные сборки. Он создает такие же выходные метаданные, что и программа Tlbimp.exe. Однако, в отличие от программы Tlbimp.exe, класс <xref:System.Runtime.InteropServices.TypeLibConverter> может преобразовать в метаданные библиотеку типов, находящуюся в памяти.  
   
@@ -86,15 +79,14 @@ ms.lasthandoff: 08/21/2017
  Дополнительные сведения процессе импорта COM-взаимодействия см. в разделе [Обзор преобразования библиотек типов в сборки](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.TypeLibConverter>   
- [Предоставление клиентам .NET Framework доступа к COM-компонентам](../../../docs/framework/interop/exposing-com-components.md)   
- [Обзор преобразования библиотеки типов в сборку](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe (программа импорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Настройка стандартных оболочек](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
- [Использование COM-типов в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md)   
- [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)   
- [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)   
- [Практическое руководство. Создание сборок взаимодействия из библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)   
+ <xref:System.Runtime.InteropServices.TypeLibConverter>  
+ [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
+ [Общие сведения о преобразовании библиотеки типов в сборку](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Настройка стандартных оболочек](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [Использование типов COM в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md)  
+ [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)  
+ [Практическое руководство. Добавление ссылок на библиотеки типов](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
+ [Практическое руководство. Создание сборок взаимодействия их библиотек типов](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
  [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
-

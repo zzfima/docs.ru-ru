@@ -1,31 +1,34 @@
 ---
-title: "Практическое руководство. Воспроизведение звука в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "воспроизведение звуков в Windows Forms"
-  - "воспроизведение звуков"
-  - "SoundPlayer - класс"
-  - "звуки"
-  - "Объект My.Computer.Audio, воспроизведение звуков"
-  - "примеры [Windows Forms] звуков"
+title: "Практическое руководство. Воспроизведение звука в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- playing sounds [Windows Forms], Windows Forms
+- sounds [Windows Forms], playing
+- sounds
+- My.Computer.Audio object [Windows Forms], playing sounds
+- examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ed5335108e010ed61d8a96e3169353133e9ddd0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Воспроизведение звука в Windows Forms
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Практическое руководство. Воспроизведение звука в Windows Forms
 В этом примере воспроизводится звук по заданному пути во время выполнения.  
   
 ## <a name="example"></a>Пример  
@@ -49,22 +52,22 @@ private void playSimpleSound()
   
 -   замена имени файла `"c:\Windows\Media\chimes.wav"` на допустимое имя файла.  
   
--   (C#) Ссылку на <xref:System.Media?displayProperty=fullName> пространства имен.  
+-   (C#) Ссылку на <xref:System.Media?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
- Файл операции должны быть включены в соответствующие структурированные блоки обработки исключений.  
+ Операции с файлами должны быть включены в соответствующие структурированные блоки обработки исключений.  
   
  При следующих условиях возможно возникновение исключения:  
   
--   Недопустимое имя пути Например, оно содержит недопустимые символы или только пробелы (<xref:System.ArgumentException> класса).  
+-   Недопустимое имя пути Например, оно содержит недопустимые символы или состоит из одних пробелов (класс <xref:System.ArgumentException>).  
   
--   Путь доступен только для чтения (<xref:System.IO.IOException> класса).  
+-   Путь доступен только для чтения (класс <xref:System.IO.IOException>).  
   
--   Недопустимое имя пути `null` (<xref:System.ArgumentNullException> класса).  
+-   Имя пути — `null` (класс <xref:System.ArgumentNullException>).  
   
--   Указано слишком длинное имя пути (<xref:System.IO.PathTooLongException> класса).  
+-   Указано слишком длинное имя пути (класс <xref:System.IO.PathTooLongException>).  
   
--   Недопустимый путь (<xref:System.IO.DirectoryNotFoundException> класса).  
+-   Недопустимый путь (класс <xref:System.IO.DirectoryNotFoundException>).  
   
 -   Путь содержит только двоеточие «:» (<xref:System.NotSupportedException> класса).  
   
@@ -72,6 +75,6 @@ private void playSimpleSound()
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем `Form1.vb` может вовсе не быть исходным файлом Visual Basic. Следует проверять все входные данные перед использованием их в приложении.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Media.SoundPlayer>   
- [Практическое руководство: Загрузка звука асинхронно в форме Windows Forms](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)   
+ <xref:System.Media.SoundPlayer>  
+ [Практическое руководство. Асинхронная загрузка звука в Windows Forms](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
  

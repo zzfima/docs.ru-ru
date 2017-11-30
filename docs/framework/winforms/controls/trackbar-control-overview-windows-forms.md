@@ -1,37 +1,37 @@
 ---
-title: "Общие сведения об элементе управления TrackBar (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TrackBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления "Ползунок", сведения об элементах управления "Ползунок""
-  - "ползунки, сведения о ползунках"
-  - "TrackBar - элемент управления [Windows Forms], сведения об элементе управления TrackBar"
+title: "Общие сведения об элементе управления TrackBar (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TrackBar
+helpviewer_keywords:
+- sliders [Windows Forms], about sliders
+- TrackBar control [Windows Forms], about TrackBar control
+- slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления TrackBar (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.TrackBar> \(известный также как элемент управления "Ползунок"\) используется для просмотра сведений большого объема или для визуальной настройки числовых параметров.  Элемент управления <xref:System.Windows.Forms.TrackBar> состоит из двух частей: ползунка и делений.  Ползунок служит средством настройки компонента.  Его положение соответствует свойству <xref:System.Windows.Forms.TrackBar.Value%2A>.  Деления представляют собой визуальные отметки, расположенные через равные интервалы.  Ползунок перемещается по шагам, задаваемым разработчиком; его можно расположить по вертикали или по горизонтали.  Ползунок можно использовать, например, для управления частотой мерцания курсора или скоростью мыши в системе.  
+# <a name="trackbar-control-overview-windows-forms"></a>Общие сведения об элементе управления TrackBar (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.TrackBar> управления (иногда называют также элемент управления «ползунок») используется для просмотра данные большого объема или для визуальной настройки числовых параметров. <xref:System.Windows.Forms.TrackBar> Управления состоит из двух частей: ползунка и делений. Бегунка входит в состав, которое может быть настроено. Его положение соответствует <xref:System.Windows.Forms.TrackBar.Value%2A> свойство. Деления — это визуальные индикаторы, расположенные через равные промежутки времени. Ползунок перемещается с шагом, которые могут быть выровнены по горизонтали или вертикали. Например можно использовать для управления мерцания курсора скорость или мыши скорости для системы полосы прокрутки.  
   
-## Ключевые свойства  
- Ключевыми свойствами элемента управления <xref:System.Windows.Forms.TrackBar> являются <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A> и <xref:System.Windows.Forms.TrackBar.Maximum%2A>.  <xref:System.Windows.Forms.TrackBar.TickFrequency%2A> определяет интервалы между делениями.  <xref:System.Windows.Forms.TrackBar.Minimum%2A> и <xref:System.Windows.Forms.TrackBar.Maximum%2A> являются наименьшим и наибольшим значениями, которые можно представить в области ползунка.  
+## <a name="key-properties"></a>Основные свойства  
+ Ключевые свойства <xref:System.Windows.Forms.TrackBar> управления <xref:System.Windows.Forms.TrackBar.Value%2A>, <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>, <xref:System.Windows.Forms.TrackBar.Minimum%2A>, и <xref:System.Windows.Forms.TrackBar.Maximum%2A>. <xref:System.Windows.Forms.TrackBar.TickFrequency%2A>является меткой импульсов. <xref:System.Windows.Forms.TrackBar.Minimum%2A>и <xref:System.Windows.Forms.TrackBar.Maximum%2A> являются наименьшим и наибольшим значениями, которые могут быть представлены на полосе ползунка.  
   
- Два других важных свойства это <xref:System.Windows.Forms.TrackBar.SmallChange%2A> и <xref:System.Windows.Forms.TrackBar.LargeChange%2A>.  Значением свойства <xref:System.Windows.Forms.TrackBar.SmallChange%2A> является число делений, на которое перемещается ползунок при нажатии клавиши со стрелкой ВЛЕВО или ВПРАВО.  Значением свойства <xref:System.Windows.Forms.TrackBar.LargeChange%2A> является число делений, на которое перемещается бегунок при нажатии клавиши PAGE UP или PAGE DOWN или при щелчке кнопкой мыши по шкале ползунка справа или слева от него.  
+ Два важных свойства: <xref:System.Windows.Forms.TrackBar.SmallChange%2A> и <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Значение <xref:System.Windows.Forms.TrackBar.SmallChange%2A> свойство — количество позиций, перемещается в ответ на нажатии клавиши влево или вправо. Значение <xref:System.Windows.Forms.TrackBar.LargeChange%2A> свойство — количество позиций бегунка переходит в ответ на нажатии клавиши PAGE UP или PAGE DOWN или в ответ на мыши, нажимает на полосе слева от бегунка.  
   
-## См. также  
- <xref:System.Windows.Forms.TrackBar>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.TrackBar>  
  [Элемент управления TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)

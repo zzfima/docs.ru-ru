@@ -1,29 +1,31 @@
 ---
-title: "Службы и транзакции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "контракты служб [WCF], разработка служб и транзакций"
+title: "Службы и транзакции"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a206ff3d82378e825cd612a6564366ef1e07977
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Службы и транзакции
-Приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] могут инициировать транзакцию из клиента и координировать ее в пределах операции службы.Клиенты могут инициировать транзакцию, вызвать несколько операций службы и обеспечить, чтобы операции службы либо фиксировались, либо откатывались как единый блок.  
+# <a name="services-and-transactions"></a>Службы и транзакции
+Приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] могут инициировать транзакцию из клиента и координировать ее в пределах операции службы. Клиенты могут инициировать транзакцию, вызвать несколько операций службы и обеспечить, чтобы операции службы либо фиксировались, либо откатывались как единый блок.  
   
- Чтобы включить поведение транзакции в контракте службы, укажите атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> и задайте его свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> и <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> для операций службы, для которых требуются клиентские транзакции.Параметр <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> указывает, следует ли автоматически завершать транзакцию, в которой выполняется метод, при отсутствии необработанных исключений.[!INCLUDE[crabout](../../../includes/crabout-md.md)] о данных атрибутах см. в разделе [Атрибуты транзакции ServiceModel](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Чтобы включить поведение транзакции в контракте службы, укажите атрибут <xref:System.ServiceModel.ServiceBehaviorAttribute> и задайте его свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> и <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> для операций службы, для которых требуются клиентские транзакции. Параметр <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> указывает, следует ли автоматически завершать транзакцию, в которой выполняется метод, при отсутствии необработанных исключений. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Эти атрибуты в разделе [атрибуты транзакции ServiceModel](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
- Работа, выполняемая операциями службы и управляемая диспетчером ресурсов \(например, ведение журнала обновления базы данных\), является частью транзакции клиента.  
+ Работа, выполняемая операциями службы и управляемая диспетчером ресурсов (например, ведение журнала обновления базы данных), является частью транзакции клиента.  
   
  В следующем примере показано использование атрибутов <xref:System.ServiceModel.ServiceBehaviorAttribute> и <xref:System.ServiceModel.OperationBehaviorAttribute> для управления поведением транзакций на стороне сервера.  
   
@@ -66,9 +68,9 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- Можно включить транзакции и поток транзакций, настроив привязки клиента и службы так, чтобы они использовали протокол WS\-AtomicTransaction, и присвоив элементу [\<transactionFlow\>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) значение `true`, как показано в следующем примере конфигурации.  
+ Можно включить транзакции и транзакция потока путем настройки клиента и службы привязки для использования протокола WS-AtomicTransaction и параметр [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) элемента `true`, как показано в следующем образце конфигурации.  
   
-```  
+```xml  
 <client>  
     <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
           binding="netTcpBinding"   
@@ -95,7 +97,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## См. также  
- [Поддержка транзакций в System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)   
- [Модели транзакций](../../../docs/framework/wcf/feature-details/transaction-models.md)   
+## <a name="see-also"></a>См. также  
+ [Поддержка транзакций в System.ServiceModel](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [Модели транзакций](../../../docs/framework/wcf/feature-details/transaction-models.md)  
  [Поток транзакций WS](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

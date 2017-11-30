@@ -1,97 +1,99 @@
 ---
-title: "Introduction to Windows Service Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceController"
-helpviewer_keywords: 
-  - "Windows Service applications, deploying"
-  - "OnStop method"
-  - "OnPause method"
-  - "services, about services"
-  - "Service class, Windows Service applications"
-  - "framework services, creating services"
-  - "ServiceController components, about Windows services"
-  - "Win32OwnProcess service type"
-  - "services, lifetime"
-  - "OnContinue method"
-  - "Windows Service applications, about Windows Service applications"
-  - "services, states"
-  - "service states"
-  - "WaitForStatus method"
-  - "Win32ShareProcess service type"
-  - "Windows Service applications, lifetime"
+title: "Знакомство с приложениями служб Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ServiceController
+helpviewer_keywords:
+- Windows Service applications, deploying
+- OnStop method
+- OnPause method
+- services, about services
+- Service class, Windows Service applications
+- framework services, creating services
+- ServiceController components, about Windows services
+- Win32OwnProcess service type
+- services, lifetime
+- OnContinue method
+- Windows Service applications, about Windows Service applications
+- services, states
+- service states
+- WaitForStatus method
+- Win32ShareProcess service type
+- Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Introduction to Windows Service Applications
-Службы Microsoft Windows, ранее называвшиеся службами NT, позволяют создавать исполняемые приложения, работающие продолжительное время и выполняющиеся в отдельной сессии Windows.  Эти службы не содержат элементов пользовательского интерфейса, могут быть остановлены и запущены повторно и способны автоматически запускаться при загрузке компьютера.  Эти особенности делают службы идеальным средством для использования на сервере, а также в ситуациях, когда необходима долговременно работающая функциональность, не мешающая работе пользователей на том же компьютере.  Кроме того, службы могут запускаться в контексте безопасности конкретной учетной записи Windows, отличающейся от текущего пользователя или учетной записи компьютера по умолчанию.  Дополнительные сведения о службах и сеансах Windows см. в документации Windows SDK в библиотеке MSDN.  
+# <a name="introduction-to-windows-service-applications"></a>Знакомство с приложениями служб Windows
+Службы Microsoft Windows, ранее известные как службы NT, позволяют создавать долго выполняющихся исполняемыми приложениями, которые выполняются в собственных сеансах Windows. Эти службы могут запускаться автоматически при запуске компьютера, можно приостановить и перезапустить и не содержат элементов пользовательского интерфейса. Эти особенности делают службы идеальным для использования на сервере, или каждый раз, когда требуется длительное время, не влияют на работу других пользователей, работающих на том же компьютере. Службы могут выполняться в контексте безопасности определенной учетной записи пользователя, отличное от вошедшего в систему пользователя или учетной записи компьютера по умолчанию. Дополнительные сведения о службах и сеансах Windows см. в документации пакета SDK для Windows.  
   
- Службы можно легко создавать путем создания приложений, которые устанавливаются в качестве служб.  Предположим, что нужно отслеживать данные счетчика производительности и реагировать на пороговые значения.  Можно написать приложение службы Windows, которое будет считывать эти показания, развернуть приложение и приступить к сбору и анализу данных.  
+ Можно легко создавать службы путем создания приложения, которое устанавливается как служба. Например предположим, что нужно отслеживать данные счетчика производительности и реагировать на пороговые значения. Можно написать приложение службы Windows, прослушивающая данных счетчиков производительности, развертывания приложения и начать сбор и анализ данных.  
   
- Служба создается как проект Microsoft Visual Studio; в проект помещается код, определяющий, какие команды могут быть посланы службе, и действия, которые должны быть выполнены в ответ на эти команды.  Службе могут быть посланы команды запуска, остановки, приостановки и возобновления выполнения; также возможно выполнение настраиваемых команд.  
+ Создании службы как проект Microsoft Visual Studio, определение код внутри него, который определяет, какие команды могут отправляться в службе и какие действия должны быть выполнены, при получении этих команд. Команды, которые могут быть отправлены в службу включают запуск, приостановка, возобновление и остановке службы; Можно также выполнять пользовательские команды.  
   
- После создания и сборки приложения для его установки необходимо запустить программу командной строки InstallUtil.exe и указать путь к исполняемому файлу службы.  В дальнейшем для настройки, запуска, остановки или приостановки этой службы можно использовать **Диспетчер управления службами**.  Часть этих действий может быть также выполнена через узел **Службы** в **обозревателе серверов** или с помощью класса <xref:System.ServiceProcess.ServiceController>.  
+ После создания и построения приложения, его можно установить, запустив программу командной строки InstallUtil.exe и передача пути к исполняемому файлу службы. Затем можно использовать **диспетчера управления службами** Чтобы запустить, остановить, приостановить, возобновить и настроить службу. Можно также выполнять многие из этих задач в **службы** узел в **обозревателя серверов** или с помощью <xref:System.ServiceProcess.ServiceController> класса.  
   
-## Приложения\-службы и другие приложения Visual Studio  
- Работа приложений служб имеет ряд отличий от других типов проектов.  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>Приложения-службы или. Другие приложения Visual Studio  
+ Функция службы приложений отличается от других типов проектов несколькими способами:  
   
--   Чтобы проект начал работать, исполняемый файл, созданный после компиляции проекта приложения службы, должен быть предварительно размещен на сервере.  Приложения служб нельзя отлаживать или запускать нажатием клавиш F5 или F11; также нельзя производить непосредственный запуск службы или пошаговую отладку ее кода.  Вместо этого необходимо установить и запустить службу, а затем использовать для отладки процесса данной службы отладчик.  Для получения дополнительной информации см. [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+-   Скомпилированный исполняемый файл, который создает проект приложения службы должны устанавливаться на сервере, чтобы проект можно работать более удобным образом. Не удается выполнить отладку или запустите приложение службы, нажав клавишу F5 или F11; Невозможно запустить сразу же службы или этапа в его код. Вместо этого необходимо установить и запустить службу и затем присоединить отладчик к процессу службы. Дополнительные сведения см. в разделе [как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   В отличие от проектов других типов, для приложений служб обязательно нужно создавать компоненты установки.  Компоненты установки устанавливают и регистрируют службу на сервере, а также используют **Диспетчер управления службами** Windows для создания соответствующей записи об этой службе.  Для получения дополнительной информации см. [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   В отличие от некоторых типах проектов необходимо создать компонента установки для приложений служб. Компоненты установки установить и зарегистрировать службу на сервере и создать запись для службы с помощью Windows **диспетчера управления службами**. Дополнительные сведения см. в разделе [как: добавление установщиков к приложению службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   Метод `Main` приложения службы должен послать команду запуска службам, входящим в состав проекта.  Метод `Run` загружает службы в **Диспетчер управления службами** соответствующего сервера.  При использовании шаблона проекта **Служба Windows** данный метод создается автоматически.  Необходимо помнить, что загрузка службы — не то же самое, что ее запуск.  Дополнительные сведения см. далее в разделе "Жизненный цикл службы".  
+-   `Main` Метод для приложения службы должен выдать команду запуска службы проекта содержит. `Run` Метод загружает службы в **диспетчера управления службами** на соответствующем сервере. Если вы используете **служб Windows** шаблона проекта, этот метод создается автоматически. Обратите внимание, что загрузка службы — не то же самое, что ее запуск. В разделе «Время существования службы» ниже для получения дополнительной информации.  
   
--   Приложения служб Windows выполняются в отдельной оконной станции, отличной от станции вошедшего пользователя.  Оконная станция — это безопасный объект, содержащий буфер обмена, набор глобальных атомов и группу объектов рабочего стола.  Поскольку оконная станция службы Windows не является интерактивной, диалоговые окна, создаваемые службой Windows, не будут отображаться и могут привести к зависанию программы.  Аналогичным образом, сообщения об ошибках должны записываться в журнал событий Windows, а не выводиться на экран.  
+-   Приложения служб Windows выполняются в отдельной рабочей станции, отличной от станции вошедшего пользователя. Рабочая станция является безопасной объект, содержащий буфер обмена, набор глобальных атомами и группу объектов рабочего стола. Поскольку станция службы Windows не интерактивной, диалоговые окна, создаваемые приложения службы не будут видны и могут привести к зависанию программы Windows. Аналогичным образом сообщения об ошибках должны записываться в журнал событий Windows, а не появляется в пользовательском интерфейсе.  
   
-     Классы служб Windows, поддерживаемые .NET Framework, не поддерживают взаимодействие с интерактивными станциями, то есть станциями текущего пользователя.  В NET Framework также отсутствуют классы, представляющие станции и рабочие столы.  При необходимости организовать взаимодействие службы Windows с другими станциями следует использовать неуправляемый интерфейс API Windows.  Дополнительные сведения см. в документации по Windows SDK.  
+     Классы служб Windows, поддерживаемые .NET Framework не поддерживают взаимодействие с интерактивной станции, то есть, вошедшего в систему пользователя. .NET Framework также включает классы, представляющие станции и рабочие столы. Если служба Windows должна взаимодействовать с другими станциями, необходимо будет получить доступ к неуправляемый интерфейс API Windows. Дополнительные сведения см. в документации пакета SDK для Windows.  
   
-     Взаимодействие службы Windows с пользователем или другими станциями должно быть тщательно спроектировано с учетом таких ситуаций, как отсутствие текущего пользователя или непредвиденный набор объектов рабочего стола пользователя.  В некоторых случаях более целесообразным будет создание приложения Windows, выполняющегося под управлением пользователя.  
+     Взаимодействие службы с пользователем или другими станциями должно быть тщательно спроектировано с учетом таких ситуаций существует как нет пользователя или пользователя, имеющего непредвиденный набор объектов рабочего стола Windows. В некоторых случаях может быть более удобным использовать для написания приложения Windows, работающего под управлением пользователя.  
   
--   Приложения служб Windows выполняются в собственном контексте безопасности и запускаются до того, как пользователь войдет в систему на компьютере, на котором они установлены.  Необходимо с осторожностью подходить к вопросу выбора учетной записи, от имени которой будет запускаться служба; службы, запущенные от имени системной учетной записи, имеют больше прав и привилегий, чем службы, запущенные от имени учетной записи пользователя.  
+-   Приложения служб Windows выполняются в контексте безопасности и запускаются до входа пользователя в компьютер Windows, на котором они установлены. Следует тщательно Планируйте какую учетную запись пользователя для запуска службы Служба выполняется под учетной записью системы имеет дополнительные разрешения и права доступа, чем учетная запись пользователя.  
   
-## Жизненный цикл службы  
- Жизненный цикл службы включает несколько состояний.  Сначала служба устанавливается на компьютер, на котором она будет работать.  При этом для проекта службы запускаются установщики, а сама служба устанавливается в **Диспетчер управлениями службами** этого компьютера.  **Диспетчер управлениями службами** является основным средством управления службами Windows.  
+## <a name="service-lifetime"></a>Время существования службы  
+ Служба проходит через несколько состояний за время его существования. Во-первых служба устанавливается на компьютер, на котором будут выполняться. Этот процесс для проекта службы установщики и загружает службу в **диспетчера управления службами** для этого компьютера. **Диспетчера управления службами** является основным средством управления службами Windows.  
   
- После загрузки службы ее необходимо запустить.  После запуска служба может выполнять свои задачи.  Служба может быть запущена с помощью **Диспетчера управлениями службами**, с помощью **обозревателя серверов** или же путем вызова метода <xref:System.ServiceProcess.ServiceController.Start%2A>.  Метод <xref:System.ServiceProcess.ServiceController.Start%2A> передает управление методу <xref:System.ServiceProcess.ServiceBase.OnStart%2A> вызываемого приложения и выполняет содержащийся в нем код.  
+ После загрузки службы ее необходимо запустить. После запуска служба может выполнять свои задачи. Можно запустить службу из **диспетчера управления службами**, из **обозревателя серверов**, или программным путем вызова <xref:System.ServiceProcess.ServiceController.Start%2A> метод. <xref:System.ServiceProcess.ServiceController.Start%2A> Метод передает обработку в приложение <xref:System.ServiceProcess.ServiceBase.OnStart%2A> метод и обрабатывает любой код, содержащийся.  
   
- Служба может находиться в запущенном состоянии неограниченное время, пока она не будет остановлена или приостановлена, или же пока компьютер не будет выключен.  Существуют три основных состояния службы: <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus> или <xref:System.ServiceProcess.ServiceControllerStatus>.  Кроме того, служба может сообщать о состоянии ожидания выполнения команды: <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus>, <xref:System.ServiceProcess.ServiceControllerStatus>, или <xref:System.ServiceProcess.ServiceControllerStatus>.  Это говорит о том, что выполняется отправленная службе команда \(например, команда приостановки или запуска службы\).  Определить, в каком состоянии находится служба, можно с помощью свойства <xref:System.ServiceProcess.ServiceController.Status%2A>; метод <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> используется для выполнения какого\-либо действия при возникновении какого\-либо из этих состояний.  
+ Служба может находиться в этом состоянии бесконечно, пока он не будет остановлена или приостановлена или до завершения работы компьютера. Существуют три основных состояния службы: <xref:System.ServiceProcess.ServiceControllerStatus.Running>, <xref:System.ServiceProcess.ServiceControllerStatus.Paused>, или <xref:System.ServiceProcess.ServiceControllerStatus.Stopped>. Служба также может сообщать о состоянии ожидания выполнения команды: <xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>, <xref:System.ServiceProcess.ServiceControllerStatus.PausePending>, <xref:System.ServiceProcess.ServiceControllerStatus.StartPending>, или <xref:System.ServiceProcess.ServiceControllerStatus.StopPending>. Эти состояния указывают, что команда была выполнена, например, команда приостановки или запуска службы, но не была выполнена еще. Вы можете запрашивать <xref:System.ServiceProcess.ServiceController.Status%2A> чтобы определить, в каком состоянии находится служба, или используйте <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> выполнить действие, если любой из этих состояний происходит.  
   
- Служба может быть приостановлена, остановлена или продолжена с помощью **Диспетчера управления службами**, **обозревателя серверов** или же путем вызова соответствующих программных методов.  При каждом из этих действий может вызываться соответствующая процедура службы \(<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> или <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>\), где можно задать дополнительные действия при изменении состояния службы.  
+ Можно приостановить, остановить или возобновить работу службы из **диспетчера управления службами**, из **обозревателя серверов**, или путем вызова методов в коде. Каждое из этих действий вызывает соответствующую процедуру, в службе (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, или <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>), в котором можно определить дополнительной обработки, выполняемой при изменении состояния службы.  
   
-## Типы служб  
- С помощью .NET Framework в Visual Studio можно создавать службы двух типов.  Если служба в процессе одна, то она относится к типу <xref:System.ServiceProcess.ServiceType>.  Службы, находящиеся в процессе совместно с другими службами, относятся к типу <xref:System.ServiceProcess.ServiceType>.  Получить тип службы можно с помощью свойства <xref:System.ServiceProcess.ServiceController.ServiceType%2A>.  
+## <a name="types-of-services"></a>Типы служб  
+ Существует два типа службы, которые можно создать в Visual Studio с помощью .NET Framework. Службы, которые являются только службы в процессе назначается тип <xref:System.ServiceProcess.ServiceType.Win32OwnProcess>. Службы, находящиеся в процессе совместно с другими службами, назначается тип <xref:System.ServiceProcess.ServiceType.Win32ShareProcess>. Тип службы можно получить, запросив <xref:System.ServiceProcess.ServiceController.ServiceType%2A> свойство.  
   
- При попытке считать значение этого свойства у служб, которые были созданы вне Visual Studio, могут быть получены и другие значения.  Дополнительные сведения см. в разделе <xref:System.ServiceProcess.ServiceType>.  
+ Считать служб других типов при выполнении запроса служб, которые не были созданы в Visual Studio. Дополнительные сведения об этом см. в разделе <xref:System.ServiceProcess.ServiceType>.  
   
-## Службы и компонент ServiceController  
- Компонент <xref:System.ServiceProcess.ServiceController> используется для подключения к установленной службе и изменения ее состояния. С помощью компонента <xref:System.ServiceProcess.ServiceController> можно запустить или остановить службу, приостановить ее или продолжить выполнение, а также отправить службе настраиваемую команду.  Однако при создании приложения службы нет необходимости в использовании компонента <xref:System.ServiceProcess.ServiceController>.  Фактически в большинстве случаев компонент <xref:System.ServiceProcess.ServiceController> должен находиться не в самом приложении службы Windows, а в отдельном приложении.  
+## <a name="services-and-the-servicecontroller-component"></a>Службы и с помощью компонента ServiceController  
+ <xref:System.ServiceProcess.ServiceController> Компонент будет использоваться для подключения к установленной службе и изменения ее состояния; с помощью <xref:System.ServiceProcess.ServiceController> компонента, можно запустить и остановить службу, приостановить и продолжить выполнение и отправить службе пользовательские команды. Тем не менее, необходимо использовать <xref:System.ServiceProcess.ServiceController> компонента при создании приложения службы. Фактически в большинстве случаев вашей <xref:System.ServiceProcess.ServiceController> компонента должна находиться в отдельном приложении из приложения службы Windows, который определяет службу.  
   
  Для получения дополнительной информации см. <xref:System.ServiceProcess.ServiceController>.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
--   Службы должны создаваться с использованием проекта приложения **Служба Windows** или другого типа проекта .NET Framework, который наследует от класса <xref:System.ServiceProcess.ServiceBase> и при построении которого будет создан EXE\-файл.  
+-   Службы должны создаваться в **службы Windows** проект приложения или другой проект, поддерживающие .NET Framework, который создает файл .exe при построении и наследует от <xref:System.ServiceProcess.ServiceBase> класса.  
   
--   В состав проектов, содержащих службы Windows, должны входить компоненты установки самого проекта и его служб.  Для этого можно использовать настройки, задаваемые в окне **Свойства**.  Для получения дополнительной информации см. [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+-   Проектов, содержащих службы Windows должны быть компоненты установки для проекта и его службы. Это легко сделать с **свойства** окна. Дополнительные сведения см. в разделе [как: добавление установщиков к приложению службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-## См. также  
- [Windows Service Applications](../../../docs/framework/windows-services/index.md)   
- [Service Application Programming Architecture](../../../docs/framework/windows-services/service-application-programming-architecture.md)   
- [How to: Create Windows Services](../../../docs/framework/windows-services/how-to-create-windows-services.md)   
- [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md)   
- [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)   
- [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>См. также  
+ [Приложения служб Windows](../../../docs/framework/windows-services/index.md)  
+ [Программная архитектура приложений служб](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
+ [Как: создание служб Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Как: Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Как: запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Как: отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Пошаговое руководство: Создание приложения службы Windows в конструкторе компонентов](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Как: добавление установщиков в приложение службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

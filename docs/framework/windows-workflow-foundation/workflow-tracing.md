@@ -1,55 +1,58 @@
 ---
-title: "Отслеживание рабочих процессов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Отслеживание рабочих процессов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4332b93175f4cb751ba88c7d2b05e4b462de7748
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Отслеживание рабочих процессов
-Трассировка рабочего процесса позволяет получать сведения диагностики при помощи прослушивателей трассировки .NET Framework.Трассировку можно включить при обнаружении проблемы в работе приложения, а затем снова отключить после разрешения проблемы.Существует два способа включения трассировки отладки для рабочих процессов.Можно настроить отслеживание в средстве просмотра трассировки событий либо использовать <xref:System.Diagnostics> для отправки событий трассировки в файл.  
+# <a name="workflow-tracing"></a>Отслеживание рабочих процессов
+Трассировка рабочего процесса позволяет получать сведения диагностики при помощи прослушивателей трассировки .NET Framework. Трассировку можно включить при обнаружении проблемы в работе приложения, а затем снова отключить после разрешения проблемы. Существует два способа включения трассировки отладки для рабочих процессов. Можно настроить отслеживание в средстве просмотра трассировки событий либо использовать <xref:System.Diagnostics> для отправки событий трассировки в файл.  
   
-## Включение трассировки отладки в ETW  
+## <a name="enabling-debug-tracing-in-etw"></a>Включение трассировки отладки в ETW  
  Для включения трассировки при помощи ETW включите канал отладки в средстве просмотра событий.  
   
 1.  Перейдите в узел аналитики и журналов отладки в средстве просмотра событий.  
   
-2.  В представлении дерева в средстве просмотра событий перейдите на вкладку **Средств просмотра событий\-\>Журналы приложений и служб\-\>Microsoft\-\>Windows\-\>Сервер приложений\-приложения**.Правой кнопкой мыши щелкните **Сервер приложений\-приложения** и выберите пункт **Просмотр\-\>Показать аналитику и журналы отладки**.Щелкните правой кнопкой мыши пункт **Отладка** и выберите **Включить журнал**.  
+2.  В представлении дерева в средстве просмотра событий перейдите к **Просмотр событий -> приложений и журналы служб -> Майкрософт -> Windows -> сервер приложений-приложения**. Щелкните правой кнопкой мыши **сервер приложений-приложения** и выберите **Просмотр -> Отобразить аналитический и отладочный журналы**. Щелкните правой кнопкой мыши **отладки** и выберите **включить журнал**.  
   
-3.  Когда рабочий процесс запускает отладку и трассы событий выдаются в канал отладки ETW, их можно просмотреть в средстве просмотра событий.Перейдите на вкладку **Средство просмотра событий\-\>Журналы приложений и служб\-\>Microsoft\-\>Windows\-\>Сервер приложений\-приложения**.Щелкните правой кнопкой мыши пункт **Отладка** и выберите **Обновить**.  
+3.  Когда рабочий процесс запускает отладку и трассы событий выдаются в канал отладки ETW, их можно просмотреть в средстве просмотра событий. Перейдите к **Просмотр событий -> приложений и журналы служб -> Майкрософт -> Windows -> сервер приложений-приложения**. Щелкните правой кнопкой мыши **отладки** и выберите **обновление**.  
   
-4.  Размер буфера аналитической трассировки по умолчанию составляет всего 4 килобайта \(КБ\). Рекомендуется увеличить этот размер до 32 КБ.Для этого выполните следующие действия.  
+4.  Размер буфера аналитической трассировки по умолчанию составляет всего 4 килобайта (КБ). Рекомендуется увеличить этот размер до 32 КБ. Для этого выполните следующие действия.  
   
-    1.  Выполните следующую команду в текущем каталоге платформы \(например, C:\\Windows\\Microsoft.NET\\Framework\\v4.0.21203\):`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Выполните следующую команду в текущем каталоге платформы (например, C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2.  Измените значение \<bufferSize\> в файле Windows.ApplicationServer.Applications.man на значение 32.  
+    2.  Изменение \<bufferSize > значение в файле Windows.ApplicationServer.Applications.man 32.  
   
-        ```  
+        ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
                     <publishing>  
                       <bufferSize>32</bufferSize>  
                     </publishing>  
                   </channel>  
-  
         ```  
   
-    3.  Выполните следующую команду в текущем каталоге платформы \(например, C:\\Windows\\Microsoft.NET\\Framework\\v4.0.21203\):`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Выполните следующую команду в текущем каталоге платформы (например, C:\Windows\Microsoft.NET\Framework\v4.0.21203):`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  Если пользователь использует клиентский профиль .NET Framework 4, следует сначала зарегистрировать манифест трассировки событий Windows, выполнив в папке .NET Framework 4 следующую команду: `ServiceModelReg.exe –i –c:etw`  
+>  Если вы используете клиентский профиль .NET Framework 4, необходимо сначала зарегистрировать ETW-манифест, выполнив следующую команду из каталога .NET Framework 4:`ServiceModelReg.exe –i –c:etw`  
   
-## Включение трассировки отладки при помощи System.Diagnostics  
- Эти прослушиватели можно настроить в файле App.config приложения рабочего процесса либо в файле Web.config для службы рабочего процесса.В этом примере будет настроен параметр [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) для сохранения информации трассировки в файле MyTraceLog.txt в текущем каталоге.  
+## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Включение трассировки отладки при помощи System.Diagnostics  
+ Эти прослушиватели можно настроить в файле App.config приложения рабочего процесса либо в файле Web.config для службы рабочего процесса. В этом примере [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) настроен для сохранения данных трассировки в файле MyTraceLog.txt в текущем каталоге.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -75,6 +78,6 @@ caps.handback.revision: 12
 </configuration>  
 ```  
   
-## См. также  
- [Наблюдение за фабрикой приложений сервера Windows](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Наблюдение за приложениями с помощью фабрики приложения](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>См. также  
+ [Наблюдение за Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Мониторинг приложений с](http://go.microsoft.com/fwlink/?LinkId=201275)

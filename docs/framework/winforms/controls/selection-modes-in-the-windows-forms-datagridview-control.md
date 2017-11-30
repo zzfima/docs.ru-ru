@@ -1,62 +1,63 @@
 ---
-title: "Режимы выделения содержимого элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView - элемент управления [Windows Forms], режим выделения"
-  - "выделенный фрагмент, режимы элемента управления DataGridView"
+title: "Режимы выделения содержимого элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- selection [Windows Forms], modes in DataGridView control
+- DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Режимы выделения содержимого элемента управления DataGridView в Windows Forms
-Иногда необходимо, чтобы приложение выполняло действия в зависимости от выбранного пользователем объекта внутри элемента управления <xref:System.Windows.Forms.DataGridView>.  В зависимости от действий может потребоваться запрет выбора некоторых типов объектов.  Например, предположим, что приложение выполняет печать отчета по выделенной в данный момент записи.  В этом случае, элемент управления <xref:System.Windows.Forms.DataGridView> может потребоваться настроить таким образом, чтобы при щелчке в любой области строки выделялась строка целиком и только одна строка одновременно.  
+# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Режимы выделения содержимого элемента управления DataGridView в Windows Forms
+Иногда требуется, чтобы приложение для выполнения действий, основываясь на выборе пользователя в пределах <xref:System.Windows.Forms.DataGridView> элемента управления. В зависимости от действий может потребоваться ограничить типы выбора, в которых возможны. Например предположим, что приложение можно распечатать отчет для выбранных записей. В этом случае может потребоваться настроить <xref:System.Windows.Forms.DataGridView> элемента управления, щелкнув в любом месте внутри строки выделяет всю строку, и таким образом можно выбрать только одну строку за раз.  
   
- Объекты, выбор которых разрешается, можно указать при помощи свойства <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName>, присвоив ему одно из следующих значений перечисления <xref:System.Windows.Forms.DataGridViewSelectionMode>.  
+ Можно указать, задав допускается выбор <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> в одно из следующих <xref:System.Windows.Forms.DataGridViewSelectionMode> значений перечисления.  
   
 |Значение DataGridViewSelectionMode|Описание|  
-|----------------------------------------|--------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Выделение ячейки по щелчку кнопкой мыши.  Строки и столбцы выделить нельзя.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Выделение ячейки по щелчку кнопкой мыши.  Выделение столбца целиком по щелчку на заголовке столбца.  Заголовки столбцов нельзя использовать для сортировки.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Выделение столбца целиком по щелчку на ячейке или заголовке столбца.  Заголовки столбцов нельзя использовать для сортировки.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Выделение строки целиком по щелчку на ячейке или заголовке строки.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|Режим выделения по умолчанию.  Выделение ячейки по щелчку кнопкой мыши.  Выделение строки целиком по щелчку на заголовке строки.|  
+|-------------------------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|При щелчке ячейки выделяется. Заголовки строк и столбцов не может использоваться для выбора.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|При щелчке ячейки выделяется. Щелкнув заголовок столбца выбирает весь столбец. Заголовки столбцов не может использоваться для сортировки.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Выделение всего столбца по щелчку ячейки или заголовок столбца. Заголовки столбцов не может использоваться для сортировки.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Щелкнув ячейку или строку заголовка выделяет всю строку.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Режим выбора по умолчанию. При щелчке ячейки выделяется. При щелчке заголовка строки выделяет всю строку.|  
   
 > [!NOTE]
->  Изменение режима выделения во время выполнения автоматически снимает текущее выделение.  
+>  Изменение режима выделения во время выполнения автоматически отменяет текущее выделение.  
   
- По умолчанию пользователи могут выделять несколько строк, столбцов или ячеек путем перетаскивания курсора мыши, расширения или изменения области выделения при нажатой клавише CTRL или SHIFT, или по щелчку заголовка верхней левой ячейки для выделения всех строк в элементе управления.  Чтобы запретить такое выделение, свойству <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> следует присвоить значение `false`.  
+ По умолчанию пользователи могут выбрать несколько строк, столбцов или ячеек с помощью перетаскивания мышью при нажатой клавишу CTRL или SHIFT во время расширения или изменения области выделения, или щелкнув ячейку левого верхнего заголовка, чтобы выделить все ячейки в элементе управления. Чтобы предотвратить такое поведение, присвойте <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> свойства `false`.  
   
- Режимы <xref:System.Windows.Forms.DataGridViewSelectionMode> и <xref:System.Windows.Forms.DataGridViewSelectionMode> позволяют удалять строки путем их выделения и нажатия клавиши DELETE.  Пользователи могут удалить строки только в том случае, если текущая ячейка не в режиме редактирования, свойство <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> имеет значение `true`, а основной источник данных поддерживает удаление строк пользователем.  Обратите внимание, что эти параметры не препятствуют удалению строк программным образом.  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> И <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> режимы позволяют удалять строки, выбрав их и нажав клавишу DELETE. Пользователи могут удалить строки только в том случае, если текущая ячейка не находится в режиме редактирования <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> свойству `true`, и в источнике данных поддерживает удаление строк пользователем. Обратите внимание, что эти параметры не препятствуют удалению строк программным.  
   
-## Программное выделение  
- Текущий режим выделения ограничивает возможности программного выделения, равно как и выделения пользователем.  Текущее выделение можно изменить программно, установив свойство `Selected` любых ячеек, строк или столбцов в элементе управления <xref:System.Windows.Forms.DataGridView>.  Кроме того, в зависимости от режима выделения можно также выделить все ячейки в элементе управления при помощи метода <xref:System.Windows.Forms.DataGridView.SelectAll%2A>.  Чтобы снять выделение, используйте метод <xref:System.Windows.Forms.DataGridView.ClearSelection%2A>.  
+## <a name="programmatic-selection"></a>Программный выбор  
+ Текущий режим выделения ограничивает возможности программного выделения, а также выбора пользователя. Текущее выделение можно изменить программно, установив `Selected` свойства любого ячеек, строк или столбцов в <xref:System.Windows.Forms.DataGridView> элемента управления. Можно также выделить все ячейки в элементе управления через <xref:System.Windows.Forms.DataGridView.SelectAll%2A> метод в зависимости от режима выделения. Чтобы снять выделение, используйте <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> метод.  
   
- Если свойство <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> имеет значение `true`, элементы <xref:System.Windows.Forms.DataGridView> можно добавить в область выделения или исключить их из нее, изменив свойство `Selected` элемента.  В противном случае, присвоение свойству `Selected` значения `true` для одного элемента приведет к автоматическому исключению элементов из выделения.  
+ Если <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> свойству `true`, можно добавить <xref:System.Windows.Forms.DataGridView> элементов, или удалите их из списка выбранных, изменив `Selected` свойство элемента. В противном случае установка `Selected` свойства `true` для одного элемента автоматически удаляет другие элементы из выделения.  
   
- Обратите внимание, что изменение значения свойства <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> не приводит к изменению текущего выделения.  
+ Обратите внимание, что изменение значения <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойства не изменяет текущее выделение.  
   
- Набор выделенных ячеек, строк или столбцов можно извлечь при помощи свойств <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> и <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> элемента управления <xref:System.Windows.Forms.DataGridView>.  Если в элементе управления выделены все ячейки, обращение к этим свойствам будет неэффективным.  Чтобы избежать снижения производительности в этом случае, сначала используйте метод <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>.  Кроме того, обращение к этим коллекциям для определения числа выделенных ячеек, строк или столбцов может также оказаться неэффективным.  Вместо этого следует использовать метод <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A> или <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A>, подставляющий значение <xref:System.Windows.Forms.DataGridViewElementStates>.  
+ Можно получить коллекцию выделенных ячеек, строк или столбцов с помощью <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, и <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> свойства <xref:System.Windows.Forms.DataGridView> элемента управления. Доступ к этим свойствам неэффективно при каждой ячейки в элементе управления. Чтобы избежать снижения производительности в этом случае, используйте <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> метод первой. Кроме того доступ к этим коллекциям для определения числа выделенных ячеек, строк или столбцов может быть неэффективным. Вместо этого следует использовать <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, или <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> метод, передавая <xref:System.Windows.Forms.DataGridViewElementStates.Selected> значение.  
   
 > [!TIP]
->  Пример кода, демонстрирующий программное использование выделенных ячеек, см. в обзоре класса <xref:System.Windows.Forms.DataGridView>.  
+>  Пример кода, демонстрирующий программное использование выделенных ячеек можно найти в <xref:System.Windows.Forms.DataGridView> Общие сведения о классе.  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>   
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>   
- <xref:System.Windows.Forms.DataGridViewSelectionMode>   
- [Выделение данных и операции с буфером обмена в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
+ <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode>  
+ [Выделение данных и операции с буфером обмена в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  [Практическое руководство. Определение режима выделения для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

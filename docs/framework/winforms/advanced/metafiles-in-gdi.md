@@ -1,47 +1,51 @@
 ---
-title: "Метафайлы в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, метафайлы"
-  - "изображения [Windows Forms], метафайлы"
-  - "метафайлы"
+title: "Метафайлы в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], metafiles
+- GDI+, metafiles
+- metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b75ceb08df0454172a000d5d1ad15445f685ddf
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Метафайлы в GDI+
-В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеется класс <xref:System.Drawing.Imaging.Metafile>, позволяющий записывать и отображать метафайлы.  Метафайл, также называемый векторным рисунком, — это изображение, сохраненное в виде последовательности команд и параметров рисования.  Команды и параметры, сохраненные в объекте <xref:System.Drawing.Imaging.Metafile>, могут быть сохранены в памяти или записаны в файл или в поток.  
+# <a name="metafiles-in-gdi"></a>Метафайлы в GDI+
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]предоставляет <xref:System.Drawing.Imaging.Metafile> класса, можно записывать и отображать метафайлы. Метафайл, также называемый векторным рисунком, — это изображение, сохраненное в виде последовательности команд и параметров рисования. Команды и параметры, сохраненные в <xref:System.Drawing.Imaging.Metafile> объекта можно хранить в памяти или сохранить файл или поток.  
   
-## Форматы метафайлов  
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет отображать метафайлы, сохраненные в одном из перечисленных ниже форматов.  
+## <a name="metafile-formats"></a>Форматы метафайлов  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]позволяет отображать метафайлы, сохраненные в следующих форматах:  
   
--   WMF \(Windows Metafile — метафайл Windows\)  
+-   Метафайл Windows (WMF)  
   
--   EMF \(Enhanced Metafile —расширенный метафайл\)  
+-   EMF (Enhanced Metafile —расширенный метафайл)  
   
--   EMF\+  
+-   EMF +  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет сохранять метафайлы в форматах EMF и EMF\+, но не в формате WMF.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]позволяет сохранять метафайлы в форматах EMF и EMF +, но не в формате WMF.  
   
- Формат EMF\+ является расширением формата EMF, позволяющим сохранять записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  Существует два варианта формата EMF\+: EMF\+ Only и EMF\+ Dual.  Метафайлы EMF\+ Only содержат только записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  Такие метафайлы могут отображаться интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], но не интерфейсом [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Метафайлы EMF\+ Dual содержат записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и записи [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Каждая запись [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] хранится в метафайле EMF\+ Dual вместе с альтернативной записью [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Такие метафайлы могут отображаться как интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], так и интерфейсом [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ EMF + является расширением формата EMF, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записи для сохранения. Существуют две разновидности на формат EMF +: EMF + только и EMF + Dual. Метафайлы EMF + Only содержат только [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записей. Такие метафайлы могут отображаться с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , но не по [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. Метафайлы EMF + Dual содержат [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] записей. Каждый [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записей в двух EMF + метафайла, вместе с альтернативной [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] записи. Такие метафайлы могут отображаться с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] или [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- Приведенный ниже пример демонстрирует отображение метафайла, ранее сохраненного в файле.  Метафайл отображается с привязкой его левого верхнего края к точке с координатами \(100, 100\).  
+ В следующем примере отображается метафайла, который был ранее сохранен в файл. Метафайл отображается с его верхнего левого угла в (100, 100).  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a>См. также  
+ [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

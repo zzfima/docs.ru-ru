@@ -1,45 +1,49 @@
 ---
-title: "How to: Create Event Handlers at Run Time for Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, event handling"
-  - "event handlers, creating"
-  - "run time, creating event handlers at"
-  - "examples [Windows Forms], event handling"
-  - "Button control [Windows Forms], event handlers"
+title: "Практическое руководство. Создание обработчиков событий для Windows Forms во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms, event handling
+- event handlers [Windows Forms], creating
+- run time [Windows Forms], creating event handlers at
+- examples [Windows Forms], event handling
+- Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53664bcf8c776338399297687a16ec430bca128b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create Event Handlers at Run Time for Windows Forms
-Помимо создания событий с помощью конструктора Windows Forms, можно также создать обработчик событий во время выполнения.  Это позволяет подключать обработчики событий не при запуске программы, а в зависимости от условий, возникающих в коде во время выполнения.  
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Практическое руководство. Создание обработчиков событий для Windows Forms во время выполнения
+Помимо создания событий с помощью конструктора Windows Forms можно также создать обработчик событий во время выполнения. Это позволит подключать обработчики событий в зависимости от условий в коде во время выполнения, а не при начальном запуске программы.  
   
-### Чтобы создать обработчик событий во время выполнения, выполните следующие действия.  
+### <a name="to-create-an-event-handler-at-run-time"></a>Создание обработчика событий во время выполнения  
   
-1.  Откройте форму, к которой требуется добавить обработчик событий, в редакторе кода.  
+1.  Откройте форму в редакторе кода, в которую необходимо добавить обработчик событий.  
   
-2.  Добавьте в форму метод с сигнатурой для события, которое необходимо обработать.  
+2.  Добавьте метод в форму с сигнатурой метода для события, которое будет необходимо обрабатывать.  
   
-     Например, для обработки события <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button> создайте метод, как показано ниже.  
+     Например, для обработки <xref:System.Windows.Forms.Control.Click> событие <xref:System.Windows.Forms.Button> элемента управления, необходимо создать метод, подобный следующему:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)  
        ' Add event handler code here.  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -47,7 +51,6 @@ caps.handback.revision: 15
     {  
     // Add event handler code here.  
     }  
-  
     ```  
   
     ```cpp  
@@ -59,29 +62,27 @@ caps.handback.revision: 15
        }  
     ```  
   
-3.  Добавьте в обработчик событий код, соответствующий приложению.  
+3.  Добавьте код в обработчик событий в зависимости от приложения.  
   
-4.  Определите, для какой формы или элемента управления требуется создать обработчик событий.  
+4.  Определите форму или элемент управления, для которого необходимо создать обработчик событий.  
   
-5.  Для метода в классе формы добавьте код, который определяет обработчик событий для обработки события.  Например, в следующем фрагменте кода определен обработчик событий `button1_Click`, который служит для обработки события <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button>.  
+5.  В методе внутри класса формы добавьте код, в соответствии с которым обработчик событий будет обрабатывать событие. Например, следующий код определяет обработчик событий `button1_Click` дескрипторы <xref:System.Windows.Forms.Control.Click> событие <xref:System.Windows.Forms.Button> управления:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  
-  
     ```  
   
     ```csharp  
     button1.Click += new EventHandler(button1_Click);  
-  
     ```  
   
     ```cpp  
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     Метод <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>, представленный в примере кода Visual Basic, создает обработчик событий нажатия кнопки.  
+     <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> Метод демонстрируется в приведенном выше коде Visual Basic устанавливает обработчик событий click для кнопки.  
   
-## См. также  
- [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)   
- [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md)
+## <a name="see-also"></a>См. также  
+ [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Общие сведения об обработчиках событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
+ [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

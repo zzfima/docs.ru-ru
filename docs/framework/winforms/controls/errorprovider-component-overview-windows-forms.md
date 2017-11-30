@@ -1,41 +1,41 @@
 ---
-title: "Общие сведения о компоненте ErrorProvider (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ErrorProvider"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "сообщения об ошибках, отображение"
-  - "ErrorProvider - компонент [Windows Forms], сведения о компоненте ErrorProvider"
-  - "ошибки [Windows Forms], отображение для пользователей"
+title: "Общие сведения о компоненте ErrorProvider (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ErrorProvider
+helpviewer_keywords:
+- errors [Windows Forms], displaying to users
+- error messages [Windows Forms], displaying
+- ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о компоненте ErrorProvider (Windows Forms)
-Компонент форм Windows [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) предназначен для проверки данных, введенных пользователем в форму или элемент управления.  Обычно он используется вместе с проверкой сведений, вводимых в форму пользователем, или отображением ошибок в наборе данных.  Использование поставщика ошибок — лучший вариант выбора по сравнению с отображением сообщения об ошибке в соответствующем окне, поскольку после закрытия этого окна сообщение об ошибке более не отображается.  Компонент <xref:System.Windows.Forms.ErrorProvider> отображает значок ошибки \(![Значок ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.png "vbErrorProviderIcon")\) рядом с соответствующим элементом управления, например текстовым полем; при установке курсора мыши на значке ошибки появляется ToolTip, отображающий строку сообщения об ошибке.  
+# <a name="errorprovider-component-overview-windows-forms"></a>Общие сведения о компоненте ErrorProvider (Windows Forms)
+Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) компонент используется для проверки пользовательского ввода в форме или элементе управления. Обычно используется в сочетании с проверка пользовательского ввода в форме или отображение ошибок в наборе данных. Использование поставщика ошибок — лучшую альтернативу по сравнению с сообщением об ошибке в окне сообщения, так как после закрытия этого окна сообщения сообщение об ошибке больше не отображается. <xref:System.Windows.Forms.ErrorProvider> Компонент отображает значок ошибки (![значок ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) рядом с соответствующим элементом управления, например текстовое поле; при наведении указателя мыши на значок ошибки появляется подсказка, показывающая строка сообщения об ошибке.  
   
-## Ключевые свойства  
- Основные свойства компонента <xref:System.Windows.Forms.ErrorProvider>: <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> и <xref:System.Windows.Forms.ErrorProvider.Icon%2A>.  Если используется компонент <xref:System.Windows.Forms.ErrorProvider> с элементами управления с привязкой к данным, то для отображения компонентом значка ошибки в форме должен быть задан соответствующий контейнер \(обычно форма Windows\) для свойства <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>.  Если этот компонент добавляется в конструкторе, для свойства <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> устанавливается включающая его форма; если этот элемент управления добавляется в коде, необходимо установить его самостоятельно.  
+## <a name="key-properties"></a>Ключевые свойства  
+ <xref:System.Windows.Forms.ErrorProvider> Ключевые свойства компонента — <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>, и <xref:System.Windows.Forms.ErrorProvider.Icon%2A>. При использовании <xref:System.Windows.Forms.ErrorProvider> компонент с привязкой к данным элементы управления, <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойство должно быть присвоено подходящего контейнера (как правило, форма Windows) в порядке для компонента, чтобы отобразить значок ошибки в форме. При добавлении компонента в конструкторе <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> свойству форме; при добавлении элемента управления в коде необходимо задать самостоятельно.  
   
- Для свойства <xref:System.Windows.Forms.ErrorProvider.Icon%2A> вместо устанавливаемого по умолчанию значка ошибки имеется возможность задать пользовательский значок.  Если задано свойство <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>, компонент <xref:System.Windows.Forms.ErrorProvider> может отображать сообщения об ошибках для набора данных.  Основной метод компонента <xref:System.Windows.Forms.ErrorProvider.SetError%2A> — метод <xref:System.Windows.Forms.ErrorProvider>, указывающий строку сообщения об ошибке и место нахождения значка ошибки.  
+ <xref:System.Windows.Forms.ErrorProvider.Icon%2A> Может быть установлено на значок пользовательской ошибки вместо значения по умолчанию. Когда <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> свойство задано, <xref:System.Windows.Forms.ErrorProvider> компонент может отображать сообщения об ошибках для набора данных. Основной метод <xref:System.Windows.Forms.ErrorProvider> компонент является <xref:System.Windows.Forms.ErrorProvider.SetError%2A> метод, который указывает строка сообщения об ошибке и где должен отображаться значок ошибки.  
   
 > [!NOTE]
->  Компонент <xref:System.Windows.Forms.ErrorProvider> не имеет встроенной поддержки клиентских приложений со специальными возможностями.  Чтобы приложение было доступно при использовании этого компонента, необходимо реализовать дополнительный механизм обратной связи со специальными возможностями.  
+>  <xref:System.Windows.Forms.ErrorProvider> Компонент не предоставляет встроенную поддержку для клиентами специальных возможностей. Чтобы сделать приложение доступным при использовании этого компонента, необходимо предоставить отзыв дополнительные, доступный механизм.  
   
-## См. также  
- <xref:System.Windows.Forms.ErrorProvider>   
- [Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ErrorProvider>  
+ [Практическое руководство. Индикация ошибок данных, содержащихся в объекте DataSet, с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  [Практическое руководство. Отображение значков ошибок при проверке введенных в форму данных с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

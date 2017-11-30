@@ -1,37 +1,38 @@
 ---
-title: "Структура интерфейса Graphics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, использование управляемых интерфейсов"
-  - "графика, структура класса"
+title: "Структура интерфейса Graphics"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, using managed interface
+- graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Структура интерфейса Graphics
-Интерфейс управляемых классов [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур.  Класс <xref:System.Drawing.Graphics> является основой интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], этот класс непосредственно выполняет рисование прямых и кривых линий, геометрических фигур, вывод рисунков и текста.  
+# <a name="structure-of-the-graphics-interface"></a>Структура интерфейса Graphics
+Интерфейс управляемых классов [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур. <xref:System.Drawing.Graphics> Класс является основой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] функциональные возможности; это класс, который фактически рисует линии, кривые, фигур, изображений и текста.  
   
-## Важные классы  
- Многие классы работают совместно с классом <xref:System.Drawing.Graphics>.  Например, метод <xref:System.Drawing.Graphics.DrawLine%2A> получает объект <xref:System.Drawing.Pen>, содержащий атрибуты рисуемой линии, такие как цвет, ширина, наличие или отсутствие пунктира и т. п.  Метод <xref:System.Drawing.Graphics.FillRectangle%2A> может получать указатель на объект <xref:System.Drawing.Drawing2D.LinearGradientBrush>, работающий совместно с объектом <xref:System.Drawing.Graphics> и реализующий заполнение прямоугольника постепенно меняющимся цветом.  Объекты <xref:System.Drawing.Font> и <xref:System.Drawing.StringFormat> определяют то, как объект <xref:System.Drawing.Graphics> выводит на экран текст.  Объект <xref:System.Drawing.Drawing2D.Matrix> обеспечивает выполнение различных действий по объемным преобразованиям объекта <xref:System.Drawing.Graphics>, которые используются для вращения, масштабирования и отражения рисунков.  
+## <a name="important-classes"></a>Важные классы  
+ Многие классы работают совместно с <xref:System.Drawing.Graphics> класса. Например <xref:System.Drawing.Graphics.DrawLine%2A> метод получает <xref:System.Drawing.Pen> объекта, который хранит атрибуты рисуемой линии (цвет, ширину, стиль штриха и like). <xref:System.Drawing.Graphics.FillRectangle%2A> Метод может получить указатель на <xref:System.Drawing.Drawing2D.LinearGradientBrush> объекта, который работает с <xref:System.Drawing.Graphics> объекта для заполнения прямоугольника постепенно изменения цвета. <xref:System.Drawing.Font>и <xref:System.Drawing.StringFormat> объектов влияют на способ <xref:System.Drawing.Graphics> объект рисуется текст. Объект <xref:System.Drawing.Drawing2D.Matrix> объект хранит и управляет мировое преобразование объекта <xref:System.Drawing.Graphics> объекта, который используется для вращения, масштабирования и зеркальное отражение изображения.  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько структур, таких как <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point> и <xref:System.Drawing.Size>, которые используются для хранения графических данных.  Некоторые классы также используются, в основном, как структурированные типы данных.  Например, класс <xref:System.Drawing.Imaging.BitmapData> является вспомогательным хранилищем данных для класса <xref:System.Drawing.Bitmap>, а класс <xref:System.Drawing.Drawing2D.PathData> является вспомогательным хранилищем данных для класса <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]предоставляет несколько структур (например, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point>, и <xref:System.Drawing.Size>) для хранения графических данных. Кроме того некоторые классы служат в основном как структурированные типы данных. Например <xref:System.Drawing.Imaging.BitmapData> класс представляет вспомогательный класс для <xref:System.Drawing.Bitmap> класса и <xref:System.Drawing.Drawing2D.PathData> класс представляет вспомогательный класс для <xref:System.Drawing.Drawing2D.GraphicsPath> класса.  
   
- В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определены несколько перечислений, которые являются коллекциями связанных констант.  Например, перечисление <xref:System.Drawing.Drawing2D.LineJoin> содержит элементы <xref:System.Drawing.Drawing2D.LineJoin>, <xref:System.Drawing.Drawing2D.LineJoin> и <xref:System.Drawing.Drawing2D.LineJoin>, определяющие стили соединения линий.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]определяет несколько перечислений, которые представляют собой наборы связанных констант. Например <xref:System.Drawing.Drawing2D.LineJoin> перечисление содержит элементы <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, и <xref:System.Drawing.Drawing2D.LineJoin.Round>, указывающие, стили, которые можно использовать для соединения двух строк.  
   
-## См. также  
- [Общие сведения о графике](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [Управляемый код GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения о графике](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [Управляемый код GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
  [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

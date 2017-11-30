@@ -1,99 +1,103 @@
 ---
-title: "Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "отображение дополнительных кнопок, MenuStrip - элемент управления [Windows Forms]"
-  - "MenuStrip - элемент управления [Windows Forms], отображение дополнительных кнопок"
-  - "дополнительные кнопки [Windows Forms], отображение в MenuStrip"
+title: "Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MenuStrip [Windows Forms], displaying option buttons
+- displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
+- option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms)
-Переключатели подобны флажкам за тем исключением, что одновременно может выбрать только один из них.  По умолчанию в классе <xref:System.Windows.Forms.ToolStripMenuItem> не реализована функциональность переключателей, однако в нем предусмотрена функциональность для создания флажков, на основе которой можно реализовать функциональность переключателей для пунктов меню в составе элемента управления <xref:System.Windows.Forms.MenuStrip>.  
+# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms)
+Переключатели, также известные как переключатели, похожи на флажки, за исключением того, пользователи могут выбрать только один раз. Несмотря на то что по умолчанию <xref:System.Windows.Forms.ToolStripMenuItem> класс не предоставляет функциональность переключателей, класс предоставляет поведение флажков, которые можно настроить для реализации поведения переключателей для пунктов меню в <xref:System.Windows.Forms.MenuStrip> элемента управления.  
   
- Если свойство <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> пункта меню имеет значение `true`, пользователь может устанавливать или снимать флажок рядом с пунктом меню щелчком мыши.  Свойство <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> показывает текущее состояние пункта меню.  Для реализации базовой функциональности переключателей необходимо при выборе нового пункта меню присваивать свойству <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> ранее выбранного пункта значение `false`.  
+ Когда <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> свойство пункта меню `true`, пользователям можно щелкнуть элемент, чтобы показать или скрыть метку. <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Свойство указывает текущее состояние элемента. Для реализации поведения основные переключатель, вы должны убедиться, что при выборе элемента <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> свойство ранее выбранного элемента в `false`.  
   
- Следующие процедуры описывают реализацию этой и дополнительной функциональности в классе, наследуемом от класса <xref:System.Windows.Forms.ToolStripMenuItem>.  Для обеспечения надлежащего поведения и внешнего вида переключателей в классе `ToolStripRadioButtonMenuItem` переопределяются такие члены, как <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> и <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>.  Кроме того, в данном классе переопределяется свойство <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> с тем, чтобы пункты подменю были отключены, если не выбран родительский элемент  
+ Следующие процедуры описывают, как это реализовать и дополнительные функциональные возможности в наследуемом классе <xref:System.Windows.Forms.ToolStripMenuItem> класса. `ToolStripRadioButtonMenuItem` Класс переопределяет элементы, такие как <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> и <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> для предоставления выбора поведение и внешний вид кнопки. Кроме того, этот класс переопределяет <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойство, параметры, в подменю отключены, если не выбран родительский элемент.  
   
-### Реализация поведения переключателей  
+### <a name="to-implement-option-button-selection-behavior"></a>Для реализации поведения выбора переключателей  
   
-1.  Присвойте свойству <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> значение `true`, чтобы сделать возможным выделение пунктов меню.  
+1.  Инициализация <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> свойства `true` Включение выбора элемента.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Переопределите метод <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> для снятия выделения с ранее выбранного пункта при выборе нового.  
+2.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> метод, чтобы удалить выбор ранее выбранного элемента, если элемент выбран.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Переопределите метод <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> так, чтобы при щелчке по уже выбранному пункту выделение не снималось.  
+3.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> метод, чтобы при щелчке элемента, который уже был выбран не будет снять выделение.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
-### Изменение внешнего вида переключателей  
+### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Чтобы изменить внешний вид элементов переключателей  
   
-1.  Переопределите метод <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>, чтобы заменить стандартный флажок переключателем с помощью класса <xref:System.Windows.Forms.RadioButtonRenderer>.  
+1.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> метод, чтобы заменить флажок по умолчанию с помощью переключателя <xref:System.Windows.Forms.RadioButtonRenderer> класса.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Переопределите методы <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A> и <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A>, чтобы отслеживать состояние мыши, и обеспечьте правильное отображение состояния переключателя методом <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A>.  
+2.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, и <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> методы для отслеживания состояния мыши и убедитесь, что <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> метод закрашивает состояния правильный переключателя.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
-### Отключение пунктов подменю, если не выбран родительский элемент  
+### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>Отключение пунктов подменю, если не выбран родительский элемент  
   
-1.  Переопределите свойство <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> так, чтобы пункт был отключен, если свойство <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> родительского элемента имеет значение `true`, а свойство <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> имеет значение `false`.  
+1.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойства, чтобы элемент остается недоступной, если он имеет родительский элемент с обоими <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> значение `true` и <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> значение `false`.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Переопределите метод <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A>, чтобы подписаться на событие <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> родительского элемента.  
+2.  Переопределить <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> метод подписаться на <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> событие родительского элемента.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  В обработчике события <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> родительского элемента необходимо объявить элемент недействительным, чтобы он отображался как включенный.  
+3.  В обработчике родительского элемента <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> события, сделайте элемент для обновления экрана с новым состоянием включено.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  
   
-## Пример  
- В следующем примере кода приводится полное описание класса `ToolStripRadioButtonMenuItem`, а также классов <xref:System.Windows.Forms.Form> и `Program` для демонстрации поведения переключателей.  
+## <a name="example"></a>Пример  
+ В следующем примере кода предоставляет полное `ToolStripRadioButtonMenuItem` класса и <xref:System.Windows.Forms.Form> класса и `Program` для демонстрации поведения переключателей.  
   
  [!code-csharp[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
  [!code-vb[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+-   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RadioButtonRenderer>   
- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RadioButtonRenderer>  
+ [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
  [Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)

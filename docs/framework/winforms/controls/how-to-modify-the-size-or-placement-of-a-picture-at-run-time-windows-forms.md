@@ -1,46 +1,51 @@
 ---
-title: "Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], PictureBox - элемент управления"
-  - "изображения [Windows Forms], управление размещением в элементе управления PictureBox [Windows Forms]"
-  - "PictureBox - элемент управления [Windows Forms], размер и выравнивание рисунка"
-  - "рисунки, управление размещением в элементе управления PictureBox [Windows Forms]"
+title: "Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- images [Windows Forms], controlling placement in PictureBox control [Windows Forms]
+- examples [Windows Forms], PictureBox control
+- PictureBox control [Windows Forms], picture size and alignment
+- pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df67871b0b133297a6f53ff9e4a42c7630a5f56d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
-Если элемент управления Windows Forms <xref:System.Windows.Forms.PictureBox> используется в форме, имеется возможность с помощью свойства <xref:System.Windows.Forms.PictureBox.SizeMode%2A>:  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
+Если вы используете Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления в форме, можно задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойства:  
   
--   Выровнять левый верхний угол рисунка по левому верхнему углу элемента управления  
+-   Выравнивание верхнего левого угла изображения с верхнего левого угла элемента управления  
   
--   Поместить рисунок в центре элемента управления  
+-   Центрировать изображение в элементе управления  
   
--   Изменять размеры элемента управления в соответствии с размерами отображаемого рисунка  
+-   Изменить размер элемента управления по размеру изображения, которые в нем отображаются  
   
 -   Изменять размеры рисунка в соответствии с размерами элемента управления  
   
- Растяжение границ рисунка \(особенно в растровом формате\) может привести к ухудшению качества изображения.  Метафайлы, в которых перечислены инструкции для создания изображений во время выполнения, лучше подходят для растяжения границ, чем растровые изображения.  
+ Растяжение рисунка (особенно в формат растрового изображения) может привести к ухудшению качества изображения. Метафайлы, в которых перечислены инструкции для создания изображений во время выполнения, лучше подходят для растяжения границ, чем растровые изображения.  
   
-### Чтобы задать значение свойству SizeMode во время выполнения  
+### <a name="to-set-the-sizemode-property-at-run-time"></a>Чтобы задать свойства SizeMode во время выполнения  
   
-1.  Задайте для свойства <xref:System.Windows.Forms.PictureBox.SizeMode%2A> значение <xref:System.Windows.Forms.PictureBoxSizeMode> \(по умолчанию\), <xref:System.Windows.Forms.PictureBoxSizeMode>, <xref:System.Windows.Forms.PictureBoxSizeMode> или <xref:System.Windows.Forms.PictureBoxSizeMode>.  <xref:System.Windows.Forms.PictureBoxSizeMode> означает, что изображение размещается в левом верхнему углу элемента управления; если изображение больше элемента управления, его правый и нижний края обрезаются.  <xref:System.Windows.Forms.PictureBoxSizeMode> означает, что изображение выравнивается по центру элемента управления; если изображение больше элемента управления, его края обрезаются.  <xref:System.Windows.Forms.PictureBoxSizeMode> означает, что размер элемента управления определяется размером изображения.  <xref:System.Windows.Forms.PictureBoxSizeMode> наоборот означает, что размер элемента изображения определяется размером элемента управления.  
+1.  Задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> для <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>означает, что изображение размещается в левом верхнем углу элемента управления; Если изображение больше, чем элемент управления, его нижняя и правая границы обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>означает, что изображение по центру элемента управления; Если изображение больше, чем элемент управления, его внешние границы обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>означает, что размер элемента управления размер изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>является обратным и означает, что размер изображения размер элемента управления.  
   
-     В приведенном ниже примере в пути для расположения отображаемых рисунков указана папка "Мои документы".  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  В примере, представленном ниже, подразумевается, что элемент управления <xref:System.Windows.Forms.PictureBox> уже добавлен в форму.  
+     В следующем примере в расположение образа выбрана папка «Мои документы». Эта операция необходима, поскольку можно предположить, что большинство компьютеров под управлением операционной системы Windows включает этот каталог. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается наличие формы с <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
   
     ```vb  
     Private Sub StretchPic()  
@@ -54,7 +59,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +74,6 @@ caps.handback.revision: 12
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Image.gif")  
     }  
-  
     ```  
   
     ```cpp  
@@ -89,9 +92,9 @@ caps.handback.revision: 12
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.PictureBox>   
- [Практическое руководство. Загрузка изображения с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Общие сведения об элементе управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Практическое руководство. Установка изображений во время выполнения](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.PictureBox>  
+ [Практическое руководство. Загрузка изображения с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Общие сведения об элементе управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Практическое руководство. Установка изображений во время выполнения](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
  [Элемент управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

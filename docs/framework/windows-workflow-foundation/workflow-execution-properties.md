@@ -1,31 +1,35 @@
 ---
-title: "Свойства выполнения рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Свойства выполнения рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d119d721964df7ea1c007eadd17a8db54f4f8cd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Свойства выполнения рабочего процесса
-Через локальную память потока \(TLS\) CLR поддерживает контекст выполнения для каждого потока.Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  
+# <a name="workflow-execution-properties"></a>Свойства выполнения рабочего процесса
+Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока. Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  
   
- В отличие от программ, предназначенных для непосредственной работы в среде CLR, программы рабочих процессов представляют иерархические деревья действий, которые выполняются в среде, не поддерживающей разделение на потоки.Это предполагает, что с помощью стандартных механизмов TLS нельзя непосредственно определить, какой контекст находится в области для данного рабочего элемента.Например, две параллельные ветви выполнения могут использовать различные транзакции, но планировщик может чередовать их выполнение в одном потоке CLR.  
+ В отличие от программ, предназначенных для непосредственной работы в среде CLR, программы рабочих процессов представляют иерархические деревья действий, которые выполняются в среде, не поддерживающей разделение на потоки. Это предполагает, что с помощью стандартных механизмов TLS нельзя непосредственно определить, какой контекст находится в области для данного рабочего элемента. Например, две параллельные ветви выполнения могут использовать различные транзакции, но планировщик может чередовать их выполнение в одном потоке CLR.  
   
- Свойства выполнения рабочего процесса предоставляют механизм добавления определенных свойств контекста к среде действия.Это позволяет действию объявлять, какие свойства находятся в области для его поддерева, а также предоставляет обработчики для установки или удаления TLS в целях правильного взаимодействия с объектами CLR.  
+ Свойства выполнения рабочего процесса предоставляют механизм добавления определенных свойств контекста к среде действия. Это позволяет действию объявлять, какие свойства находятся в области для его поддерева, а также предоставлять обработчики для установки или удаления TLS в целях правильного взаимодействия с объектами CLR.  
   
-## Создание и использование свойств выполнения рабочего процесса  
- Свойства выполнения рабочего процесса обычно реализуют интерфейс <xref:System.Activities.IExecutionProperty>, хотя свойства, сфокусированные на обмене сообщениями, могут вместо этого реализовать <xref:> System.ServiceModel.Activities.ISendMessageCallback?qualifyHint=False&autoUpgrade=True и <xref:> System.ServiceModel.Activities.IReceiveMessageCallback?qualifyHint=False&autoUpgrade=True.Чтобы создать свойство выполнения рабочего процесса, создайте класс, который реализует интерфейс <xref:System.Activities.IExecutionProperty>, а также реализует элементы <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> и <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>.Эти элементы обеспечивают для свойства выполнения возможность правильной настройки локального хранилища потока на всех этапах выполнения действия, которое содержит свойство, включая все дочерние свойства.В этом примере создается `ConsoleColorProperty`, который задает `Console.ForegroundColor`.  
+## <a name="creating-and-using-workflow-execution-properties"></a>Создание и использование свойств выполнения рабочего процесса  
+ Свойства выполнения рабочего процесса обычно реализуют интерфейс <xref:System.Activities.IExecutionProperty>, хотя свойства, сфокусированные на обмене сообщениями, могут вместо этого реализовать <xref:System.ServiceModel.Activities.ISendMessageCallback> и <xref:System.ServiceModel.Activities.IReceiveMessageCallback>. Чтобы создать свойство выполнения рабочего процесса, создайте класс, который реализует интерфейс <xref:System.Activities.IExecutionProperty>, а также реализует элементы <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> и <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Эти элементы обеспечивают для свойства выполнения возможность правильной настройки локального хранилища потока на всех этапах выполнения действия, которое содержит свойство, включая все дочерние свойства. В этом примере создается `ConsoleColorProperty`, который задает `Console.ForegroundColor`.  
   
 > [!NOTE]
->  Следующий пример кода в этом разделе основан на образце [Свойства выполнения](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md).  
+>  В следующем примере кода в этом разделе основан на [свойства выполнения](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md) образца.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  
@@ -53,7 +57,7 @@ class ConsoleColorProperty : IExecutionProperty
 }  
 ```  
   
- Создатели действия могут использовать это свойство путем его регистрации в операции переопределения выполнения действия.В этом примере определяется действие `ConsoleColorScope`, которое регистрирует свойство `ConsoleColorProperty` путем его добавления к коллекции <xref:System.Activities.NativeActivityContext.Properties%2A> текущего контекста <xref:System.Activities.NativeActivityContext>.  
+ Создатели действия могут использовать это свойство путем его регистрации в операции переопределения выполнения действия. В этом примере определяется действие `ConsoleColorScope`, которое регистрирует свойство `ConsoleColorProperty` путем его добавления к коллекции <xref:System.Activities.NativeActivityContext.Properties%2A> текущего контекста <xref:System.Activities.NativeActivityContext>.  
   
 ```csharp  
 public sealed class ConsoleColorScope : NativeActivity  
@@ -78,7 +82,7 @@ public sealed class ConsoleColorScope : NativeActivity
 }  
 ```  
   
- С началом в тексте действия рабочего импульса вызывается метод <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> этого свойства, а после завершения рабочего импульса вызывается <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>.В этом примере создается рабочий процесс, который использует действие <xref:System.Activities.Statements.Parallel> с тремя ветвями.В первых двух ветвях используется действие `ConsoleColorScope`, а в третьей — нет.Все три ветви содержат два действия <xref:System.Activities.Statements.WriteLine> и действие <xref:System.Activities.Statements.Delay>.При выполнении действия <xref:System.Activities.Statements.Parallel> те действия, которые содержатся в ветвях, выполняются с чередованием, но при выполнении каждого дочернего действия свойство `ConsoleColorProperty` применяет правильный цвет консоли.  
+ С началом в тексте действия рабочего импульса вызывается метод <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> этого свойства, а после завершения рабочего импульса вызывается <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. В этом примере создается рабочий процесс, который использует действие <xref:System.Activities.Statements.Parallel> с тремя ветвями. В первых двух ветвях используется действие `ConsoleColorScope`, а в третьей - нет. Все три ветви содержат два действия <xref:System.Activities.Statements.WriteLine> и действие <xref:System.Activities.Statements.Delay>. При выполнении действия <xref:System.Activities.Statements.Parallel> те действия, которые содержатся в ветвях, выполняются с чередованием, но при выполнении каждого дочернего действия свойство `ConsoleColorProperty` применяет правильный цвет консоли.  
   
 ```csharp  
 Activity wf = new Parallel  
@@ -165,11 +169,11 @@ End default text.
 ```  
   
 > [!NOTE]
->  Хотя это не показано в предыдущих выходных данных, все строки текста в окне консоли отображаются с использованием указанного цвета.  
+>  Хотя это не показано в предшествующих выходных данных, все строки текста в окне консоли отображаются с использованием указанного цвета.  
   
  Создатели настраиваемого действия могут использовать свойства выполнения рабочего процесса, а также предоставлять механизм управления обработкой для таких действий, как <xref:System.ServiceModel.Activities.CorrelationScope> и <xref:System.Activities.Statements.TransactionScope>.  
   
-## См. также  
- <xref:System.Activities.IExecutionProperty>   
- <xref:System.Activities.IPropertyRegistrationCallback>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Activities.IExecutionProperty>  
+ <xref:System.Activities.IPropertyRegistrationCallback>  
  <xref:System.Activities.RegistrationContext>

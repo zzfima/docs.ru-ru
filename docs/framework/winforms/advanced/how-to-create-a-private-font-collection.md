@@ -1,62 +1,66 @@
 ---
-title: "Практическое руководство. Создание частной коллекции шрифтов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "шрифты, создание частных коллекций"
-  - "частные коллекции шрифтов, создание"
+title: "Практическое руководство. Создание частной коллекции шрифтов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- private font collections [Windows Forms], creating
+- fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3016fb9a1b1d8466137bcaddb0b885c02c399baf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание частной коллекции шрифтов
-Класс <xref:System.Drawing.Text.PrivateFontCollection> наследуется от абстрактного базового класса <xref:System.Drawing.Text.FontCollection>.  Объект <xref:System.Drawing.Text.PrivateFontCollection> можно использовать для хранения некоторого набора шрифтов, предназначенных для конкретного приложения.  Частная коллекция шрифтов может включать как установленные системные шрифты, так и шрифты, которые не установлены на компьютере.  Чтобы добавить файл со шрифтом в частную коллекцию шрифтов, следует вызвать метод <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> объекта <xref:System.Drawing.Text.PrivateFontCollection>.  
+# <a name="how-to-create-a-private-font-collection"></a>Практическое руководство. Создание частной коллекции шрифтов
+<xref:System.Drawing.Text.PrivateFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса. Можно использовать <xref:System.Drawing.Text.PrivateFontCollection> объекта для сохранения набора шрифтов, предназначенных для конкретного приложения. Частной коллекции может включать шрифты установленной системы, а также шрифты, которые не были установлены на компьютере. Чтобы добавить файл шрифта частной коллекции, вызовите <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> метод <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
   
- Свойство <xref:System.Drawing.Text.FontCollection.Families%2A> объекта <xref:System.Drawing.Text.PrivateFontCollection> содержит массив объектов <xref:System.Drawing.FontFamily>.  
+ <xref:System.Drawing.Text.FontCollection.Families%2A> Свойство <xref:System.Drawing.Text.PrivateFontCollection> объект содержит массив <xref:System.Drawing.FontFamily> объектов.  
   
- Количество семейств шрифтов в частной коллекции не обязательно совпадает с количеством файлов со шрифтами, которые были добавлены в эту коллекцию.  Например, предположим, что в коллекцию добавляются файлы ArialBd.tff, Times.tff и TimesBd.tff.  В коллекции в этом случае будут содержаться три файла, но только два семейства шрифтов, потому что Times.tff и TimesBd.tff относятся к одному семейству.  
+ Количество семейств шрифтов в частной коллекции не обязательно совпадает с количеством файлов шрифтов, которые были добавлены в коллекцию. Например предположим, что файлы ArialBd.tff, Times.tff и TimesBd.tff добавить в коллекцию. Будет существовать три файла, но только два семейства в коллекции, так как Times.tff и TimesBd.tff относятся к одному семейству.  
   
-## Пример  
- В следующем примере в объект <xref:System.Drawing.Text.PrivateFontCollection> добавляются следующие три файла со шрифтами:  
+## <a name="example"></a>Пример  
+ В следующем примере добавляется по следующим файлам три шрифта <xref:System.Drawing.Text.PrivateFontCollection> объекта:  
   
--   C:\\*systemroot*\\Fonts\\Arial.tff \(Arial, обычный\)  
+-   C:\\*systemroot*\Fonts\Arial.tff (Arial, обычный)  
   
--   C:\\*systemroot*\\Fonts\\CourBI.tff \(Courier New, полужирный курсив\)  
+-   C:\\*systemroot*\Fonts\CourBI.tff (Courier New, полужирный курсив)  
   
--   C:\\*systemroot*\\Fonts\\TimesBd.tff \(Times New Roman, полужирный\)  
+-   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, полужирный)  
   
- Этот код извлекает массив объектов <xref:System.Drawing.FontFamily> из свойства <xref:System.Drawing.Text.FontCollection.Families%2A> объекта <xref:System.Drawing.Text.PrivateFontCollection>.  
+ Этот код извлекает массив <xref:System.Drawing.FontFamily> объектов из <xref:System.Drawing.Text.FontCollection.Families%2A> свойство <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
   
- Для каждого объекта <xref:System.Drawing.FontFamily> из этой коллекции код вызывает метод <xref:System.Drawing.FontFamily.IsStyleAvailable%2A>, чтобы определить, доступны ли различные начертания \(обычный, полужирный, курсив, полужирный курсив, подчеркивание и зачеркивание\).  Параметры, передаваемые методу <xref:System.Drawing.FontFamily.IsStyleAvailable%2A>, являются членами перечисления <xref:System.Drawing.FontStyle>.  
+ Для каждого <xref:System.Drawing.FontFamily> объекта в коллекции, этот код вызывает <xref:System.Drawing.FontFamily.IsStyleAvailable%2A> метод, чтобы определить, будут ли доступны различные стили (обычный, полужирный, курсив, полужирный курсив, подчеркнутый и зачеркнутый). Аргументы, передаваемые <xref:System.Drawing.FontFamily.IsStyleAvailable%2A> метод являются членами <xref:System.Drawing.FontStyle> перечисления.  
   
- Если рассматриваемое сочетание "семейство — начертание" доступно, то на основе этого сочетания семейства и начертания создается объект <xref:System.Drawing.Font>.  Первым параметром, передаваемым конструктору <xref:System.Drawing.Font.%23ctor%2A>, является название семейства шрифтов \(а не объект <xref:System.Drawing.FontFamily>, как в других вариантах конструктора <xref:System.Drawing.Font.%23ctor%2A>\).  После создания объект <xref:System.Drawing.Font> передается методу <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics> для отображения названия семейства вместе с названием начертания.  
+ Если сочетание заданного семейства и стиля, <xref:System.Drawing.Font> объект создается с помощью этого семейства и стиля. Первый аргумент, переданный <xref:System.Drawing.Font.%23ctor%2A> конструктор является имя семейства шрифтов (не <xref:System.Drawing.FontFamily> объекта, как в случае других вариантах <xref:System.Drawing.Font.%23ctor%2A> конструктора). После <xref:System.Drawing.Font> объект создан, он передается <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> класса для отображения имени семейства вместе с именем стиля.  
   
- Результат работы приведенного ниже кода выглядит примерно следующим образом.  
+ Выходные данные приведенного ниже кода аналогична выходные данные, показанные на следующем рисунке.  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- Arial.tff \(который добавлялся в частную коллекцию шрифтов в следующем примере\) является файлом шрифта Arial обычного начертания.  Обратите, однако, внимание, что в списке, выводимом программой, присутствуют несколько доступных начертаний для семейства шрифтов Arial, а не только обычное начертание.  Это связано с тем, что интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] может имитировать такие начертания, как полужирный, курсив и полужирный курсив, на основе обычного начертания.  Кроме того, с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно создавать зачеркивание и подчеркивание обычного начертания.  
+ Arial.tff (который добавлялся в частную коллекцию шрифтов в следующем примере кода) — это файл шрифта Arial обычного стиля. Обратите внимание, что выходные данные программы отображает доступные стили отличный от обычной для семейства шрифтов Arial. Причина этого заключается в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] может имитировать полужирный, курсив и полужирный курсив из обычного стиля. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]также можно создавать зачеркивание и подчеркивание обычного стиля.  
   
- Похожим образом интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] может имитировать начертание полужирный курсив на основе либо полужирного начертания, либо курсива.  Список, выводимый программой, показывает, что начертание полужирный курсив доступно для семейства Times, хотя TimesBd.tff \(Times New Roman, полужирный\) является единственным файлом семейства шрифтов Times в коллекции.  
+ Аналогичным образом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно имитировать начертание полужирный курсив полужирный стиль или курсивное начертание. Выходные данные программы показывает, что начертание полужирный курсив доступно для семейства Times, хотя TimesBd.tff (Times New Roman, полужирный) является единственным файлом раз в коллекции.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.PaintEventHandler>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- <xref:System.Drawing.Text.PrivateFontCollection>   
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Text.PrivateFontCollection>  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

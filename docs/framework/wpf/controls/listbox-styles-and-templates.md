@@ -1,82 +1,83 @@
 ---
-title: "Стили и шаблоны элемента ListBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ListBox"
-  - "ListBox [WPF], стили и шаблоны"
-  - "части [WPF], ListBox"
-  - "состояния [WPF], ListBox"
-  - "стили [WPF], ListBox"
-  - "шаблоны [WPF], ListBox"
+title: "Стили и шаблоны элемента ListBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], ListBox
+- templates [WPF], ListBox
+- states [WPF], ListBox
+- ControlTemplate [WPF], ListBox
+- parts [WPF], ListBox
+- ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df974b2f6f89c3b62c5039be9cde144d9ef62d14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента ListBox
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ListBox>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="listbox-styles-and-templates"></a>Стили и шаблоны элемента ListBox
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ListBox> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Части ListBox  
- Элемент управления <xref:System.Windows.Controls.ListBox> не имеет именованных частей.  
+## <a name="listbox-parts"></a>Части ListBox  
+ <xref:System.Windows.Controls.ListBox> Управления не имеет именованных частей.  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ListBox> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.ListBox>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ListBox>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.ListBox>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).  Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
   
-## Состояния ListBox  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.ListBox>.  
+## <a name="listbox-states"></a>Состояния ListBox  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ListBox> элемента управления.  
   
-||||  
-|-|-|-|  
 |Имя VisualState|Имя VisualStateGroup|Описание|  
+|-|-|-|  
 |Valid|ValidationStates|Элемент управления является допустимым.|  
 |InvalidFocused|ValidationStates|Элемент управления не является допустимым и имеет фокус.|  
 |InvalidUnfocused|ValidationStates|Элемент управления не является допустимым и не имеет фокуса.|  
   
-## Части ListBoxItem  
- Элемент управления <xref:System.Windows.Controls.ListBoxItem> не имеет именованных частей.  
+## <a name="listboxitem-parts"></a>Части ListBoxItem  
+ <xref:System.Windows.Controls.ListBoxItem> Управления не имеет именованных частей.  
   
-## Состояния ListBoxItem  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.ListBox>.  
+## <a name="listboxitem-states"></a>Состояния ListBoxItem  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ListBox> элемента управления.  
   
-||||  
-|-|-|-|  
 |Имя VisualState|Имя VisualStateGroup|Описание|  
-|Обычные|CommonStates|Состояние по умолчанию.|  
-|MouseOver|CommonStates|Указатель мыши расположен в элементе управления.|  
-|Disabled|CommonStates|Элемент отключен.|  
-|Focused|FocusStates|На элементе установлен фокус.|  
-|Unfocused|FocusStates|Элемент не имеет фокус.|  
-|Не выбран|SelectionStates|Элемент выбран.|  
-|Выбран|SelectionStates|Элемент не выбран.|  
-|SelectedUnfocused|SelectionStates|Элемент выбран, но не имеет фокус.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|-|-|-|  
+|Норм.|CommonStates|Состояние по умолчанию.|  
+|MouseOver|CommonStates|Указатель мыши расположен над элементом управления.|  
+|Отключено|CommonStates|Элемент отключен.|  
+|Focused|FocusStates|Элемент имеет фокус.|  
+|Без фокуса ввода|FocusStates|Элемент не имеет фокуса.|  
+|Unselected|SelectionStates|Элемент не выбран.|  
+|Selected|SelectionStates|Этот элемент сейчас выбран.|  
+|SelectedUnfocused|SelectionStates|Элемент выбран, но не имеет фокуса.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
   
-## Пример ControlTemplate ListBox  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элементов управления <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListBoxItem>.  
+## <a name="listbox-controltemplate-example"></a>Пример шаблона элемента управления ControlTemplate для ListBox  
+ В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListBoxItem> элементов управления.  
   
- [!code-xml[ControlTemplateExamples#ListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
+ [!code-xaml[ControlTemplateExamples#ListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ В предыдущем примере используется один или несколько из следующих ресурсов.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

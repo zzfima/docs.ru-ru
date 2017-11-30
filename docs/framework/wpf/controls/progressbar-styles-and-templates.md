@@ -1,67 +1,69 @@
 ---
-title: "Стили и шаблоны элемента ProgressBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ProgressBar"
-  - "части [WPF], ProgressBar"
-  - "ProgressBar [WPF], стили и шаблоны"
-  - "состояния [WPF], ProgressBar"
-  - "стили [WPF], ProgressBar"
-  - "шаблоны [WPF], ProgressBar"
+title: "Стили и шаблоны элемента ProgressBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], ProgressBar
+- ProgressBar [WPF], styles and templates
+- styles [WPF], ProgressBar
+- ControlTemplate [WPF], ProgressBar
+- templates [WPF], ProgressBar
+- states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 475607381f16d7b42f26f12809a11d5eaf4e74bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента ProgressBar
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ProgressBar>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="progressbar-styles-and-templates"></a>Стили и шаблоны элемента ProgressBar
+В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ProgressBar> элемента управления. Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Части ProgressBar  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.ProgressBar>.  
+## <a name="progressbar-parts"></a>Части элемента управления ProgressBar  
+ В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ProgressBar> элемента управления.  
   
-||||  
+|Отделение|Тип|Описание|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_Indicator|<xref:System.Windows.FrameworkElement>|Объект, указывающий ход выполнения.|  
-|PART\_Track|<xref:System.Windows.FrameworkElement>|Объект, определяющий путь к индикатору хода выполнения.|  
-|PART\_GlowRect|<xref:System.Windows.FrameworkElement>|Объект, оформляющий индикатор выполнения.|  
+|PART_Indicator|<xref:System.Windows.FrameworkElement>|Объект, указывающий ход выполнения.|  
+|PART_Track|<xref:System.Windows.FrameworkElement>|Объект, определяющий путь индикатор хода выполнения.|  
+|PART_GlowRect|<xref:System.Windows.FrameworkElement>|Объект, оформляющий индикатор выполнения.|  
   
-## Состояния ProgressBar  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.ProgressBar>.  
+## <a name="progressbar-states"></a>Состояния элемента управления ProgressBar  
+ В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ProgressBar> элемента управления.  
   
 |Имя VisualState|Имя VisualStateGroup|Описание|  
-|---------------------|--------------------------|--------------|  
-|Determinate|CommonStates|Элемент управления <xref:System.Windows.Controls.ProgressBar> показывает ход выполнения на основе свойства <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.|  
-|Indeterminate|CommonStates|Элемент управления <xref:System.Windows.Controls.ProgressBar> показывает общий ход выполнения с помощью повторяющегося рисунка.|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|----------------------|---------------------------|-----------------|  
+|Определенный|CommonStates|<xref:System.Windows.Controls.ProgressBar>сообщает о ходе выполнения на основе <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> свойство.|  
+|Неопределенный|CommonStates|<xref:System.Windows.Controls.ProgressBar>показывает общий ход выполнения с помощью повторяющегося рисунка.|  
+|Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.|  
   
-## Пример шаблона ControlTemplate для элемента управления ProgressBar  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ProgressBar>.  
+## <a name="progressbar-controltemplate-example"></a>Пример шаблона элемента управления ProgressBar  
+ В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ProgressBar> элемента управления.  
   
- [!code-xml[ControlTemplateExamples#ProgressBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
+ [!code-xaml[ControlTemplateExamples#ProgressBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/progressbar.xaml#progressbar)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ В предыдущем примере используется один или несколько из следующих ресурсов.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. по адресу          [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Стили и шаблоны элемента управления](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

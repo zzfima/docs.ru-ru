@@ -1,37 +1,35 @@
 ---
-title: "Вложенная функция не имеет сигнатуры, совместимой с делегатом &quot;&lt;имя_делегата&gt;&quot; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc36532"
-  - "bc36532"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36532"
+title: "Вложенная функция не имеет сигнатуры, совместимой с делегатом &#39; &lt;имя_делегата&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc36532
+- bc36532
+helpviewer_keywords: BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 60cf15343023110561da3e3fcf202bd00394127a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вложенная функция не имеет сигнатуры, совместимой с делегатом &quot;&lt;имя_делегата&gt;&quot;
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Лямбда\-выражение, присвоенное делегату, имеет несовместимую сигнатуру.  Например, в следующем коде делегат `Del` имеет два параметра целого типа.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>Вложенная функция не имеет сигнатуры, совместимой с делегатом &#39; &lt;имя_делегата&gt;&#39;
+Лямбда-выражение для делегата, имеющего несовместимая сигнатура назначено. Например, в следующем коде делегат `Del` имеет два параметра целого типа.  
   
-```vb#  
+```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- Ошибка возникает, если лямбда\-выражения с одним аргументом объявляется как тип `Del`:  
+ Эта ошибка возникает, если лямбда-выражение с одним аргументом объявляется как тип `Del`:  
   
-```vb#  
+```vb  
 ' Neither of these is valid.   
 ' Dim lambda1 As Del = Function(n As Integer) n + 1  
 ' Dim lambda2 As Del = Function(n) n + 1  
@@ -39,10 +37,10 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
  **Идентификатор ошибки:** BC36532  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Измените определение делегата или назначенное лямбда\-выражение таким образом, чтобы сигнатуры были совместимы.  
+-   Измените определение делегата или назначенного лямбда-выражения, чтобы сигнатуры были совместимы.  
   
-## См. также  
- [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>См. также  
+ [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
+ [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

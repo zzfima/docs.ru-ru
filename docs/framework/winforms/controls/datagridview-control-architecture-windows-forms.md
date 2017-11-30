@@ -1,73 +1,73 @@
 ---
-title: "Архитектура элементов управления DataGridView (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView - элемент управления [Windows Forms], архитектура"
+title: "Архитектура элементов управления DataGridView (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb44a32e63fd7a0ff0e480c205d5459da2ce2bd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Архитектура элементов управления DataGridView (Windows Forms)
-Элемент управления <xref:System.Windows.Forms.DataGridView> и и все связанные с ним классы должны стать гибкой, расширяемой системой для отображения и правки табличных данных.  Все эти классы содержатся в пространстве имен <xref:System.Windows.Forms?displayProperty=fullName> и имеют префикс "DataGridView" в имени.  
+# <a name="datagridview-control-architecture-windows-forms"></a>Архитектура элементов управления DataGridView (Windows Forms)
+<xref:System.Windows.Forms.DataGridView> Управления и его связанные классы предназначены для гибкую расширяемую систему для отображения и изменения табличных данных. Эти классы содержатся в <xref:System.Windows.Forms?displayProperty=nameWithType> пространства имен и они именуются с префиксом «DataGridView».  
   
-## Элементы архитектуры  
- Основные сопутсвующие классы <xref:System.Windows.Forms.DataGridView> являются производными <xref:System.Windows.Forms.DataGridViewElement>.  В следующей объектной модели показана иерархия наследования <xref:System.Windows.Forms.DataGridViewElement>.  
+## <a name="architecture-elements"></a>Элементы архитектуры  
+ Основной <xref:System.Windows.Forms.DataGridView> сопутствующих классов являются производными от <xref:System.Windows.Forms.DataGridViewElement>. Следующей объектной модели показано <xref:System.Windows.Forms.DataGridViewElement> иерархии наследования.  
   
- ![Объектная модель DataGridViewElement](../../../../docs/framework/winforms/controls/media/datagridviewelement.png "DataGridViewElement")  
+ ![Объектная модель DataGridViewElement](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")  
 Объектная модель DataGridViewElement  
   
- Класс <xref:System.Windows.Forms.DataGridViewElement> предоставляет ссылку на родительский элемент управления <xref:System.Windows.Forms.DataGridView> и имеет свойство <xref:System.Windows.Forms.DataGridViewElement.State%2A> со значением, представляющим набор значений из перечисления <xref:System.Windows.Forms.DataGridViewElementStates>.  
+ <xref:System.Windows.Forms.DataGridViewElement> Класс предоставляет ссылку на родительский объект <xref:System.Windows.Forms.DataGridView> управления и имеет <xref:System.Windows.Forms.DataGridViewElement.State%2A> свойство, которое содержит значение, которое представляет сочетание значений из <xref:System.Windows.Forms.DataGridViewElementStates> перечисления.  
   
- В следующих разделах сопутствующие классы <xref:System.Windows.Forms.DataGridView> описаны более подробно.  
+ В следующих разделах описаны <xref:System.Windows.Forms.DataGridView> сопутствующих классов более подробно.  
   
-### DataGridViewElementStates  
- Перечисление <xref:System.Windows.Forms.DataGridViewElementStates> содержит следующие значения:  
+### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
+ <xref:System.Windows.Forms.DataGridViewElementStates> Перечисление содержит следующие значения:  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates>  
+-   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
- Значения этого перечисления можно объединить с поразрядными логическими операторами так, чтобы свойство <xref:System.Windows.Forms.DataGridViewElement.State%2A> могло выражать более одного состояния одновременно.  Например, <xref:System.Windows.Forms.DataGridViewElement> может быть одновременно <xref:System.Windows.Forms.DataGridViewElementStates>, <xref:System.Windows.Forms.DataGridViewElementStates> и <xref:System.Windows.Forms.DataGridViewElementStates>.  
+ Значения этого перечисления могут объединяться с побитовые логические операторы, поэтому <xref:System.Windows.Forms.DataGridViewElement.State%2A> свойства можно выразить несколько состояний одновременно. Например <xref:System.Windows.Forms.DataGridViewElement> может быть одновременно <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, и <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
   
-### Ячейки и зоны  
- Элемент управления <xref:System.Windows.Forms.DataGridView> состоит из двух основных типов объектов – ячеек и зон.  Все ячейки являются производными от базового класса <xref:System.Windows.Forms.DataGridViewCell>.  Два типа зон – <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.DataGridViewRow> – являются производными от базового класса <xref:System.Windows.Forms.DataGridViewBand>.  
+### <a name="cells-and-bands"></a>Ячейки и зоны  
+ <xref:System.Windows.Forms.DataGridView> Управления состоит из двух основных типов объектов: ячеек и зон. Все ячейки являются производными от <xref:System.Windows.Forms.DataGridViewCell> базового класса. Два вида делений, <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.DataGridViewRow>, оба являются производными от <xref:System.Windows.Forms.DataGridViewBand> базового класса.  
   
- Элемент управления <xref:System.Windows.Forms.DataGridView> взаимодействует с несколькими классами, но чаще всего встречаются <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn> и <xref:System.Windows.Forms.DataGridViewRow>.  
+ <xref:System.Windows.Forms.DataGridView> Управления взаимодействует с несколькими классами, но чаще всего встречаются <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>, и <xref:System.Windows.Forms.DataGridViewRow>.  
   
-### DataGridViewCell  
- Основной единицей взаимодействия для <xref:System.Windows.Forms.DataGridView> является ячейка.  Ячейки располагаются в центре и, как правило, используются для ввода данных.  Для обращения к ячейкам можно использовать коллекцию <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> класса <xref:System.Windows.Forms.DataGridViewRow>, а для обращения к выбранным ячейкам – коллекцию <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> класса <xref:System.Windows.Forms.DataGridView>.  В следующей объектной модели показан пример использования и иерархия наследования <xref:System.Windows.Forms.DataGridViewCell>.  
+### <a name="datagridviewcell"></a>DataGridViewCell  
+ Ячейка является базовой единицей взаимодействия для <xref:System.Windows.Forms.DataGridView>. Отображение выравнивается по центру ячейки и ввода данных часто осуществляется с помощью ячеек. Доступ к ячейкам с помощью <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> коллекцию <xref:System.Windows.Forms.DataGridViewRow> класса и имеют доступ к выбранным ячейкам с помощью <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> коллекцию <xref:System.Windows.Forms.DataGridView> элемента управления. В следующей объектной модели показан пример использования и показывает <xref:System.Windows.Forms.DataGridViewCell> иерархии наследования.  
   
- ![Объектная модель DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.png "DataGridViewCell")  
+ ![Объектная модель DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 Объектная модель DataGridViewCell  
   
- Тип <xref:System.Windows.Forms.DataGridViewCell> является абстрактным базовым классом, от которого наследуют все типы ячеек.  <xref:System.Windows.Forms.DataGridViewCell> и его производные типы не являются элементами управления Windows Forms, но в некоторых из них размещаются элементы управления Windows Forms.  Любая возможность изменения, поддерживаемая ячейкой, как правило обрабатывается элементом управления ведущего приложения.  
+ <xref:System.Windows.Forms.DataGridViewCell> Тип является абстрактным базовым классом, от которого наследуют все типы ячеек. <xref:System.Windows.Forms.DataGridViewCell>и его производные типы не являются элементы управления Windows Forms, но некоторые элементы управления ведущего приложения Windows Forms. Любые изменения функциональных возможностей, поддерживаемых ячейки обычно обрабатываются размещенного элемента управления.  
   
- Объекты <xref:System.Windows.Forms.DataGridViewCell> не управляют собственным внешним видом и оформлением так, как это делают элементы управления Windows Forms.  Вместо этого, <xref:System.Windows.Forms.DataGridView> отвечает за внешний вид собственных объектов <xref:System.Windows.Forms.DataGridViewCell>.  Внешний вид и поведение ячеек можно в значительной степени изменять путем взаимодействия со свойствами и событиями элемента управления <xref:System.Windows.Forms.DataGridView>.  В случае особых требований к настройкам, выходящим за пределы возможностей элемента управления <xref:System.Windows.Forms.DataGridView>, можно реализовать собственный производный от <xref:System.Windows.Forms.DataGridViewCell> класс или один из его дочерних классов.  
+ <xref:System.Windows.Forms.DataGridViewCell>объекты контролирует собственные внешним видом и оформлением так же как элементы управления Windows Forms. Вместо этого <xref:System.Windows.Forms.DataGridView> отвечает за внешний вид его <xref:System.Windows.Forms.DataGridViewCell> объектов. Вы может существенно повлиять на внешний вид и поведение ячеек, взаимодействуя с <xref:System.Windows.Forms.DataGridView> свойства и события для элемента управления. При наличии особых требований к настройкам, выходящих за рамки возможностей <xref:System.Windows.Forms.DataGridView> управления, можно реализовать собственный класс, производный от <xref:System.Windows.Forms.DataGridViewCell> или один из его дочерних классов.  
   
- В следующем списке перечислены производные от <xref:System.Windows.Forms.DataGridViewCell> классы.  
+ В следующем списке приведены классы, производные от <xref:System.Windows.Forms.DataGridViewCell>:  
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
@@ -91,15 +91,15 @@ caps.handback.revision: 21
   
 -   Пользовательские типы ячеек  
   
-### DataGridViewColumn  
- Схема вложененного хранилища данных элемента управления <xref:System.Windows.Forms.DataGridView> выражена в столбцах элемента управления <xref:System.Windows.Forms.DataGridView>.  Доступ к столбцам элемента управления <xref:System.Windows.Forms.DataGridView> можно получить при помощи коллекции <xref:System.Windows.Forms.DataGridView.Columns%2A>.  Доступ к выбранным столбцам можно получить при помощи коллекции <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>.  В следующей объектной модели показан пример использования и иерархия наследования <xref:System.Windows.Forms.DataGridViewColumn>.  
+### <a name="datagridviewcolumn"></a>DataGridViewColumn  
+ Схема <xref:System.Windows.Forms.DataGridView> элемента управления хранилища данных представляется в формате <xref:System.Windows.Forms.DataGridView> столбцов элемента управления. Вы можете получить доступ к <xref:System.Windows.Forms.DataGridView> столбцов элемента управления с помощью <xref:System.Windows.Forms.DataGridView.Columns%2A> коллекции. Выбранные столбцы доступны с помощью <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> коллекции. В следующей объектной модели показан пример использования и показывает <xref:System.Windows.Forms.DataGridViewColumn> иерархии наследования.  
   
- ![Объектная модель DataGridViewColumn](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.png "DataGridViewColumn")  
+ ![Объектная модель DataGridViewColumn](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")  
 Объектная модель DataGridViewColumn  
   
- Некоторым ключевым типам ячеек соответствуют типы столбцов.  Они являются производными базового класса <xref:System.Windows.Forms.DataGridViewColumn>.  
+ Некоторые типы ключей ячейки имеют соответствующие типы столбцов. Они являются производными <xref:System.Windows.Forms.DataGridViewColumn> базового класса.  
   
- В следующем списке перечислены унаследованные от <xref:System.Windows.Forms.DataGridViewColumn> классы.  
+ В следующем списке приведены классы, производные от <xref:System.Windows.Forms.DataGridViewColumn>:  
   
 -   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
@@ -115,42 +115,42 @@ caps.handback.revision: 21
   
 -   Пользовательские типы столбцов  
   
-### Элементы управления для редактирования DataGridView  
- Ячейки, поддерживающие расширенные функции редактирования, как правило, используют элемент управления ведущего приложения, являющийся производным от элемента управления Windows Forms.  Эти элементы управления реализуют интерфейс <xref:System.Windows.Forms.IDataGridViewEditingControl>.  В следующей объектной модели показано использование этих элементов управления.  
+### <a name="datagridview-editing-controls"></a>Элементы управления редактирования DataGridView  
+ Ячейки, поддерживающие расширенные функции редактирования, обычно используют размещенного элемента управления, который является производным от элемента управления Windows Forms. Эти элементы управления также реализовать <xref:System.Windows.Forms.IDataGridViewEditingControl> интерфейса. В следующей объектной модели показано использование этих элементов управления.  
   
- ![Объектная модель элемента управления для редактирования DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewediting.png "DataGridViewEditing")  
-Объектная модель элемента управления для редактирования DataGridView  
+ ![Объектная модель элемента управления редактирования DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")  
+Объектная модель редактирования элемента управления DataGridView  
   
- Следующие элементы управления для редактирования предоставляются с элементом управления <xref:System.Windows.Forms.DataGridView>:  
+ Следующие элементы управления для редактирования, предоставляемых с <xref:System.Windows.Forms.DataGridView> управления:  
   
 -   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Дополнительные сведения о создании собственных элементов управления для редактирования см. в разделе [Практическое руководство. Размещение элементов управления в ячейках элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Сведения о создании собственных редактирования элементов управления см. в разделе [как: элементы управления ведущего приложения в ячеек элемента управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
- В следующей таблице показана связь между типами ячеек, типами столбцов и элементами управления для редактирования.  
+ В следующей таблице показаны отношения между типов ячеек, типы столбцов и элементами управления.  
   
-|Тип ячейки|Элемент управления ведущего приложения|Тип столбца|  
-|----------------|--------------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|нет|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|нет|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|Тип ячейки|Размещаемый элемент управления|Тип столбца|  
+|---------------|--------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|Н/Д|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|Н/Д|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|нет|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|нет|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|Н/Д|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|Н/Д|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
-### DataGridViewRow  
- Класс <xref:System.Windows.Forms.DataGridViewRow> отображает поля данных записи из хранилища данных, в который вложен элемент управления <xref:System.Windows.Forms.DataGridView>.  Доступ к строкам элемента управления <xref:System.Windows.Forms.DataGridView> можно получить при помощи коллекции <xref:System.Windows.Forms.DataGridView.Rows%2A>.  Доступ к выбранным строкам можно получить при помощи коллекции <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>.  В следующей объектной модели показан пример использования и иерархия наследования <xref:System.Windows.Forms.DataGridViewRow>.  
+### <a name="datagridviewrow"></a>DataGridViewRow  
+ <xref:System.Windows.Forms.DataGridViewRow> Хранения класс отображает поля данных записи из данных, к которому <xref:System.Windows.Forms.DataGridView> присоединенного элемента управления. Вы можете получить доступ к <xref:System.Windows.Forms.DataGridView> строк элемента управления с помощью <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции. Выбранные строки доступны с помощью <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> коллекции. В следующей объектной модели показан пример использования и показывает <xref:System.Windows.Forms.DataGridViewRow> иерархии наследования.  
   
- ![Объектная модель DataGridViewRow](../../../../docs/framework/winforms/controls/media/datagridviewrow.png "DataGridViewRow")  
+ ![Объектная модель DataGridViewRow](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")  
 Объектная модель DataGridViewRow  
   
- Собственные типы можно получить из класса <xref:System.Windows.Forms.DataGridViewRow>, однако в большинстве случаев это не потребуется.  Элемент управления <xref:System.Windows.Forms.DataGridView> имеет несколько связанных со строками событий и свойств для настройки поведения его объектов <xref:System.Windows.Forms.DataGridViewRow>.  
+ Можно создавать производные типы из <xref:System.Windows.Forms.DataGridViewRow> класса, хотя это обычно не требуется. <xref:System.Windows.Forms.DataGridView> Управления имеет несколько связанных со строками событий и свойств для настройки поведения его <xref:System.Windows.Forms.DataGridViewRow> объектов.  
   
- После включения свойства <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> элемента управления <xref:System.Windows.Forms.DataGridView>, в качестве последней появляется специальная строка для добавления новых строк.  Эта строка является частью коллекции <xref:System.Windows.Forms.DataGridView.Rows%2A>, но обладает особыми функциональными возможностями, требующими внимания.  Дополнительные сведения см. в разделе [Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ При включении <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> , специальную строку для добавления новых строк отображается в виде последней строки. Эта строка является частью <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции, но он имеет специальные функции, которые могут потребовать вашего внимания. Дополнительные сведения см. в разделе [с помощью строки для новых записей в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
-## См. также  
- [Общие сведения об элементе управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)   
- [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения об элементе управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  [Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

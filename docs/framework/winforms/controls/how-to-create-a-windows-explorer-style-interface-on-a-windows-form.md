@@ -1,66 +1,67 @@
 ---
-title: "Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "формы, тип проводника Windows"
-  - "SplitContainer - элемент управления [Windows Forms], стиль интерфейса проводника"
-  - "Проводник Windows, создание с помощью Windows Forms"
+title: "Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Explorer [Windows Forms], creating with Windows Forms
+- SplitContainer control [Windows Forms], Explorer-style interface
+- forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
-Пользовательский интерфейс проводника часто используется в приложениях, поскольку он хорошо знаком всем пользователям.  
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Практическое руководство. Создание интерфейса в стиле проводника в форме Windows Forms
+Проводник Windows является распространенным вариантом пользовательского интерфейса для приложений из-за его хорошо знаком всем пользователям.  
   
- Проводник — это, по существу, элементы управления <xref:System.Windows.Forms.TreeView> и <xref:System.Windows.Forms.ListView>, расположенные на отдельных панелях.  Размеры панелей можно изменить с помощью разделителя.  Это сочетание элементов управления является весьма эффективным для отображения и просмотра информации.  
+ Проводник — это, по существу, <xref:System.Windows.Forms.TreeView> управления и <xref:System.Windows.Forms.ListView> на отдельных панелях. С помощью разделителя панели выполняются с раскрывающимися списками. Это упорядочение элементов управления является весьма эффективным для отображения и просмотра информации.  
   
- В приведенных ниже действиях описано размещение элементов управления в формах, аналогичных проводнику.  В них не описано добавление функций просмотра файлов приложения проводника Windows.  
+ Следующие шаги показывают, как размещение элементов управления в форме проводника Windows. Они не показано, как добавить функциональные возможности просмотра файла приложение проводника.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы создать в Windows Forms форму, аналогичную проводнику, выполните следующие действия:  
+### <a name="to-create-a-windows-explorer-style-windows-form"></a>Чтобы создать форму Windows Forms стиле проводника Windows  
   
-1.  Создайте новый проект "Приложение Windows".  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Создайте новый проект приложения Windows. Дополнительные сведения см. в разделе [Практическое руководство. Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  В **панели элементов**:  
+2.  Из **элементов**:  
   
-    1.  Перетащите элемент управления <xref:System.Windows.Forms.SplitContainer> на форму.  
+    1.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления на форму.  
   
-    2.  Перетащите элемент управления <xref:System.Windows.Forms.TreeView> в **SplitterPanel1** \(панель элемента управления <xref:System.Windows.Forms.SplitContainer> с пометкой **Panel1**\).  
+    2.  Перетащите <xref:System.Windows.Forms.TreeView> управления в **SplitterPanel1** (панели <xref:System.Windows.Forms.SplitContainer> управления, помеченных как **Panel1**).  
   
-    3.  Перетащите элемент управления <xref:System.Windows.Forms.ListView> в **SplitterPanel2** \(панель элемента управления <xref:System.Windows.Forms.SplitContainer> с пометкой **Panel2**\).  
+    3.  Перетащите <xref:System.Windows.Forms.ListView> управления в **SplitterPanel2** (панели <xref:System.Windows.Forms.SplitContainer> управления, помеченных как **Panel2**).  
   
-3.  Выберите все три элемента управления, нажав клавишу CTRL и щелкнув последовательно каждый из них.  При выборе элемента управления <xref:System.Windows.Forms.SplitContainer> щелкните разделитель, а не панели.  
+3.  Выберите все три элемента управления, нажав клавишу CTRL и щелкая их в свою очередь. При выборе <xref:System.Windows.Forms.SplitContainer> управлять, щелкните вешку разбивки, а не панели.  
   
     > [!NOTE]
-    >  Не используйте команду **Выделить все** в меню **Правка**.  Если это сделать, то свойство, необходимое в следующем действии, не появится в окне **Свойства**.  
+    >  Не используйте **выделить все** на **изменить** меню. Если это сделать, свойство, необходимое на следующем шаге будет отсутствовать в **свойства** окна.  
   
-4.  В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle>.  
+4.  В **свойства** задайте <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 5.  Нажмите клавишу F5 для запуска приложения.  
   
-     Отображается форма с состоящим из двух частей пользовательским интерфейсом, аналогичным интерфейсу проводника Windows.  
+     В форме отображаются двух частей пользовательского интерфейса, аналогично проводника Windows.  
   
     > [!NOTE]
-    >  При перетаскивании разделителя размер панелей меняется соответствующим образом.  
+    >  При перетаскивании разделителя, изменение панелями размеров строк.  
   
-## См. также  
- <xref:System.Windows.Forms.SplitContainer>   
- [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)   
- [Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)   
- [Практическое руководство. Разделение окна по горизонтали](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Практическое руководство. Разделение окна по горизонтали](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

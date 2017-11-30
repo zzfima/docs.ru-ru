@@ -1,38 +1,37 @@
 ---
-title: "Практическое руководство. Использование клиента Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "клиенты WCF [WCF], использование"
+title: "Практическое руководство. Использование клиента Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование клиента Windows Communication Foundation
-Это последний из шести шагов, необходимых для создания базового приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a>Практическое руководство. Использование клиента Windows Communication Foundation
+Это последний из шести шагов, необходимых для создания базового приложения [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Общие сведения обо всех шести задач см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md) раздела.  
   
- После создания и настройки прокси [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] можно создать экземпляр клиента, скомпилировать клиентское приложение и использовать его для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  В этом разделе описаны процедуры создания и использования клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Эта процедура выполняет три операции.  
+ После создания и настройки прокси [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] можно создать экземпляр клиента, скомпилировать клиентское приложение и использовать его для взаимодействия со службой [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. В этом разделе описаны процедуры создания и использования клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Эта процедура выполняет три операции.  
   
 1.  Создается клиент [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
-2.  Вызывает операции службы из созданной учетной записи\-посредника.  
+2.  Вызывает операции службы из созданной учетной записи-посредника.  
   
 3.  Закрывает клиент после завершения вызова операции.  
   
-### Использование клиента Windows Communication Foundation  
+### <a name="to-use-a-windows-communication-foundation-client"></a>Использование клиента Windows Communication Foundation  
   
 1.  Откройте файл Program.cs или Program.vb из проекта GettingStartedClient и замените существующий код в файлах следующим:  
   
@@ -82,7 +81,6 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
     ```  
@@ -133,44 +131,28 @@ caps.handback.revision: 38
         End Sub  
   
     End Module  
-  
     ```  
   
-     Обратите внимание на инструкции using и imports для импорта GettingStartedClient.ServiceReference1.  Эта инструкция импортирует код, созданный функцией «Добавить ссылки на службу» средства Visual Studio.  Код создает WCF\-прокси и затем вызывает каждую операцию службы, предоставленную службой калькулятора, закрывает прокси и завершает работу.  
+     Обратите внимание на инструкции using и imports для импорта GettingStartedClient.ServiceReference1. Эта инструкция импортирует код, созданный функцией «Добавить ссылки на службу» средства Visual Studio. Код создает WCF-прокси и затем вызывает каждую операцию службы, предоставленную службой калькулятора, закрывает прокси и завершает работу.  
   
- Вы завершили работу с учебником.  Был определен и реализован контракт службы, создан WCF\-прокси, настроено клиентское приложение WCF, и использованы прокси для вызова операций службы.  Чтобы проверить приложение, сначала запустите GettingStartedHost для запуска службы, а затем сам клиент GettingStartedClient.  Вывод из GettingStartedHost должен выглядеть следующим образом:  
+ Вы завершили работу с учебником. Был определен и реализован контракт службы, создан WCF-прокси, настроено клиентское приложение WCF, и использованы прокси для вызова операций службы. Чтобы проверить приложение, сначала запустите GettingStartedHost для запуска службы, а затем сам клиент GettingStartedClient. Вывод из GettingStartedHost должен выглядеть следующим образом:  
   
 ```Output  
-  
-            Служба готова.  Нажмите клавишу <ВВОД>, чтобы завершить работу службы.  Received Add(100,15.99)  
-Return: 115.99  
-Received Subtract(145,76.54)  
-Return: 68.46  
-Received Multiply(9,81.25)  
-Return: 731.25  
-Received Divide(22,7)  
-Return: 3.14285714285714    
+The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
  Вывод GettingStartedClient должен выглядеть следующим образом:  
   
 ```Output  
-  
-            Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-  
-Нажмите клавишу ВВОД, чтобы завершить работу клиента.  
-  
+Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
 ```  
   
-## См. также  
- [Построение клиентов](../../../docs/framework/wcf/building-clients.md)   
- [Как создать клиент](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [Базовое программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Как создавать дуплексный контракт](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)   
+## <a name="see-also"></a>См. также  
+ [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
+ [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Руководство по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Как: создание дуплексного контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Как: доступ к службам с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)

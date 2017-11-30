@@ -1,62 +1,66 @@
 ---
-title: "Эллипсы и дуги в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "дуги"
-  - "рисование, дуги"
-  - "рисование, эллипсы"
-  - "эллипсы"
-  - "GDI+, дуги"
-  - "GDI+, эллипсы"
+title: "Эллипсы и дуги в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- arcs
+- GDI+, arcs
+- drawing [Windows Forms], ellipses
+- GDI+, ellipses
+- ellipses
+- drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ebeae1d076a0ebcf36d52dee1af0c0ad5f04fdf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Эллипсы и дуги в GDI+
-Для рисования эллипсов и дуг служат методы <xref:System.Drawing.Graphics.DrawEllipse%2A> и <xref:System.Drawing.Graphics.DrawArc%2A> класса <xref:System.Drawing.Graphics>.  
+# <a name="ellipses-and-arcs-in-gdi"></a>Эллипсы и дуги в GDI+
+Можно легко создать эллипсы и дуги с помощью <xref:System.Drawing.Graphics.DrawEllipse%2A> и <xref:System.Drawing.Graphics.DrawArc%2A> методы <xref:System.Drawing.Graphics> класса.  
   
-## Рисование эллипса  
- Чтобы нарисовать эллипс, нужно создать два объекта: объект <xref:System.Drawing.Graphics> и объект <xref:System.Drawing.Pen>.  У объекта <xref:System.Drawing.Graphics> имеется метод <xref:System.Drawing.Graphics.DrawEllipse%2A>, а объект <xref:System.Drawing.Pen> предназначен для хранения таких атрибутов, как ширина и цвет линии, с помощью которой рисуется эллипс.  Объект <xref:System.Drawing.Pen> передается методу <xref:System.Drawing.Graphics.DrawEllipse%2A> в качестве одного из аргументов.  Остальные аргументы, передаваемые методу <xref:System.Drawing.Graphics.DrawEllipse%2A>, задают прямоугольник, ограничивающий этот эллипс.  На приведенном ниже рисунке изображен эллипс с ограничивающим его прямоугольником.  
+## <a name="drawing-an-ellipse"></a>Рисование эллипса  
+ Чтобы нарисовать эллипс, нужно <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Объект предоставляет <xref:System.Drawing.Graphics.DrawEllipse%2A> метода и <xref:System.Drawing.Pen> объект хранит атрибуты, такие как ширина и цвет линии, используемой для подготовки к просмотру эллипса. <xref:System.Drawing.Pen> Объекта передается в качестве одного из аргументов <xref:System.Drawing.Graphics.DrawEllipse%2A> метод. Остальные аргументы, передаваемые <xref:System.Drawing.Graphics.DrawEllipse%2A> указать метод прямоугольник, ограничивающий эллипс. На следующем рисунке эллипса вместе с его ограничивающего прямоугольника.  
   
- ![Эллипсы и дуги](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.png "Aboutgdip02\_art05")  
+ ![Эллипсы и дуги](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.gif "Aboutgdip02_art05")  
   
- В приведенном ниже примере демонстрируется рисование эллипса, вокруг которого описывается прямоугольник шириной 80 и высотой 40, верхний левый угол которого расположен в точке с координатами \(100, 50\).  
+ В следующем примере рисуется эллипс; ограничивающий прямоугольник имеет ширину 80 высоту 40 и левом верхнем углу (100, 50):  
   
  [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
  [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- Метод <xref:System.Drawing.Graphics.DrawEllipse%2A> класса <xref:System.Drawing.Graphics> перегружен, поэтому для него поддерживается несколько способов передачи аргументов.  Например, можно создать объект <xref:System.Drawing.Rectangle> и передать этот объект <xref:System.Drawing.Rectangle> в качестве аргумента методу <xref:System.Drawing.Graphics.DrawEllipse%2A>:  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A>— перегруженный метод <xref:System.Drawing.Graphics> класса, поэтому существует несколько способов передачи аргументов. Например, можно построить <xref:System.Drawing.Rectangle> и передать <xref:System.Drawing.Rectangle> для <xref:System.Drawing.Graphics.DrawEllipse%2A> метод в качестве аргумента:  
   
  [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
  [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
   
-## Рисование дуги  
- Дуга — это часть эллипса.  Чтобы нарисовать дугу, вызовите метод <xref:System.Drawing.Graphics.DrawArc%2A> класса <xref:System.Drawing.Graphics>.  Параметры метода <xref:System.Drawing.Graphics.DrawArc%2A> совпадают с параметрами метода <xref:System.Drawing.Graphics.DrawEllipse%2A> за тем исключением, что методу <xref:System.Drawing.Graphics.DrawArc%2A> требуются значения начального угла и углового размера дуги.  В приведенном ниже примере демонстрируется рисование дуги с начальным углом 30 градусов и с угловым размером 180 градусов.  
+## <a name="drawing-an-arc"></a>Рисование дуги  
+ Дуга является частью эллипса. Чтобы нарисовать дугу, вызовите <xref:System.Drawing.Graphics.DrawArc%2A> метод <xref:System.Drawing.Graphics> класса. Параметры <xref:System.Drawing.Graphics.DrawArc%2A> метода отличаются от параметров <xref:System.Drawing.Graphics.DrawEllipse%2A> метода, за исключением того, что <xref:System.Drawing.Graphics.DrawArc%2A> требует начального угла и угла поворота. В следующем примере рисуется дуга с начальным углом 30 градусов и угол поворота 180 градусов:  
   
  [!code-csharp[LinesCurvesAndShapes#53](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#53)]
  [!code-vb[LinesCurvesAndShapes#53](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#53)]  
   
- На приведенном ниже рисунке изображена дуга, эллипс и ограничивающий их прямоугольник.  
+ На следующем рисунке дуги, эллипс и ограничивающий прямоугольник.  
   
- ![Эллипсы и дуги](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.png "Aboutgdip02\_art06")  
+ ![Эллипсы и дуги](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
-## См. также  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- [Прямые и кривые линии и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Практическое руководство. Создание пера](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [Практическое руководство. Рисование линии или контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Практическое руководство. Создание графических объектов для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Практическое руководство. Создание пера](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Практическое руководство. Рисование контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

@@ -1,42 +1,42 @@
 ---
-title: "Общие сведения об элементе управления ListBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "списки, сведения о списках"
-  - "ListBox - элемент управления [Windows Forms], об элементе управления ListBox"
+title: "Общие сведения об элементе управления ListBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ListBox
+helpviewer_keywords:
+- list boxes [Windows Forms], about list boxes
+- ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления ListBox (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.ListBox> отображает список элементов, в котором пользователь может выбрать один или несколько элементов.  Если не все элементы могут одновременно отобразиться в поле списка, к элементу управления <xref:System.Windows.Forms.ListBox> автоматически добавляется полоса прокрутки.  Если для свойства <xref:System.Windows.Forms.ListBox.MultiColumn%2A> задано значение `true`, элементы списка отображаются в нескольких столбцах и появляется горизонтальная полоса прокрутки.  Если для свойства <xref:System.Windows.Forms.ListBox.MultiColumn%2A> задано значение `false`, элементы списка отображаются в одном столбце и появляется вертикальная полоса прокрутки.  Если для <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> задано значение `true`, полоса прокрутки появляется независимо от числа элементов.  Свойство <xref:System.Windows.Forms.ListBox.SelectionMode%2A> определяет, сколько элементов списка можно выбрать одновременно.  
+# <a name="listbox-control-overview-windows-forms"></a>Общие сведения об элементе управления ListBox (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.ListBox> элемент управления отображает список, из которого пользователь может выбрать один или несколько элементов. Если общее количество элементов превышает число, которое может быть отображено, полоса прокрутки автоматически добавляется <xref:System.Windows.Forms.ListBox> элемента управления. Когда <xref:System.Windows.Forms.ListBox.MultiColumn%2A> свойству `true`, элементы списка отображаются в нескольких столбцах и появляется горизонтальная полоса прокрутки. Когда <xref:System.Windows.Forms.ListBox.MultiColumn%2A> свойству `false`, элементы списка отображаются в одном столбце и появляется вертикальная полоса прокрутки. Когда <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> равно `true`, появляется полоса прокрутки независимо от количества элементов. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Свойство определяет, сколько элементов списка можно выбрать одновременно.  
   
-## Способы изменения элемента управления ListBox  
- Свойство <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> возвращает целочисленное значение, соответствующее первому выбранному элементу списка.  Выбранный элемент можно изменить программными средствами, изменив в коде значение <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>; соответствующий элемент списка будет выделен в форме Windows.  Если выбранных элементов нет, значение <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> равно \-1.  Если в списке выбран первый элемент, значение <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> равно 0.  Если выбрано несколько элементов, значение свойства <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> отражает выбранный элемент, появляющийся первым в списке.  Свойство <xref:System.Windows.Forms.ListBox.SelectedItem%2A> аналогично свойству <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, но возвращает сам элемент, обычно в виде строкового значения.  Свойство <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> отражает число элементов в списке, а значение свойства <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> всегда на единицу больше максимально возможного значения свойства <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, поскольку для свойства <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> индексация ведется от нуля.  
+## <a name="ways-to-change-the-listbox-control"></a>Способы изменения элемента управления ListBox  
+ <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> Свойство возвращает целочисленное значение, соответствующее первому элементу выбранного в поле со списком. Можно программно изменить выбранный элемент, изменив <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> значения в коде; соответствующий элемент в списке будет выделен в форме Windows Forms. Если элемент не выбран, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> значение-1. Если выбран первый элемент в списке, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> значение равно 0. Если выбрано несколько элементов, <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> значение отражает выбранный элемент, который отображается первым в списке. <xref:System.Windows.Forms.ListBox.SelectedItem%2A> Свойства аналогичен <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, но возвращает сам элемент обычно строковое значение. <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> Свойство отражает количество элементов в списке, а значение <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> свойство всегда имеет один больше, чем наибольшее возможное <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> поскольку <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> начинается с нуля.  
   
- Чтобы добавить или удалить элементы в элементе управления <xref:System.Windows.Forms.ListBox>, используйте метод <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> или <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>.  Кроме того, можно добавить элементы в список с помощью свойства <xref:System.Windows.Forms.ListBox.Items%2A> во время разработки.  
+ Чтобы добавить или удалить элементы в <xref:System.Windows.Forms.ListBox> управления, используйте <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> или <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> метод. Кроме того, можно добавить элементы в список с помощью <xref:System.Windows.Forms.ListBox.Items%2A> во время разработки.  
   
-## См. также  
- <xref:System.Windows.Forms.ListBox>   
- [Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)   
- [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)   
- [Общие сведения об элементе управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)   
- [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)   
- [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.ListBox>  
+ [Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ [Общие сведения об элементе управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
  [Практическое руководство. Создание таблицы подстановки для элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)

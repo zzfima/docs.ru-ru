@@ -1,40 +1,40 @@
 ---
-title: "Общие сведения об элементе управления StatusBar (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StatusBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "строки состояния"
-  - "StatusBar - элемент управления [Windows Forms], сведения об элементе управления StatusBar"
+title: "Общие сведения об элементе управления StatusBar (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StatusBar
+helpviewer_keywords:
+- StatusBar control [Windows Forms], about StatusBar control
+- status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c26463fae5beca23026a71dd83b19bf3eb52875
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления StatusBar (Windows Forms)
+# <a name="statusbar-control-overview-windows-forms"></a>Общие сведения об элементе управления StatusBar (Windows Forms)
 > [!IMPORTANT]
->  Элементы управления <xref:System.Windows.Forms.StatusStrip> и <xref:System.Windows.Forms.ToolStripStatusLabel> заменяют элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> и расширяют их функциональные возможности; однако при необходимости элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> можно сохранить для обратной совместимости и использования в будущем.  
+>  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> заменить элементы управления и добавить функциональные возможности в <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления можно сохранить для обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
   
- Элемент управления [Элемент управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) Windows Forms используется в формах в виде области внизу окна, в которой приложение отображает различную информацию о состоянии.  Элементы управления <xref:System.Windows.Forms.StatusBar> могут включать панели строки состояния, на которые выводятся текст или значки, показывающие состояние, или анимированный набор значков, показывающий выполнение процесса \(например, такие как при сохранении документа в приложении [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]\).  
+ Windows Forms [управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. <xref:System.Windows.Forms.StatusBar>элементы управления могут включать панели строки состояния на них, отображающие текст или значки, показывающие состояние, или набор значков в анимации, указывающие, что процесс работает; например [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] означает, что при сохранении документа.  
   
-## Использование элемента управления StatusBar  
- В приложении Internet Explorer строка состояния используется для указания адреса URL страницы при наведении указателя мыши на гиперссылку; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] представляет сведения о расположении страницы и раздела, а также о режимах редактирования, например о режимах замены и правки; в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] строка состояния используется для предоставления контекстных сведений, таких как описание действий с закрепленными или плавающими закрепляемыми окнами.  
+## <a name="using-the-statusbar-control"></a>С помощью элемента управления StatusBar  
+ Строка состояния Internet Explorer используется для указания URL-адрес страницы, при наведении указателя мыши на гиперссылку; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] представлены сведения о расположении страницы, расположение раздела и изменение режимы, такие как замены и правки; и [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] строка состояния используется для предоставления контекстных сведений, например о том, как управлять фиксируемого Windows как закрепленного или с плавающей запятой.  
   
- Отдельное сообщение выводится в строке состояния путем задания для свойства <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> значения `false` \(по умолчанию\), а для свойства <xref:System.Windows.Forms.StatusBar.Text%2A> строки состояния — текста, который требуется вывести в строке состояния.  Можно разделить строку состояния в панели с целью отображения различных типов информации. Для этого необходимо присвоить свойству <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> значение `true` и использовать метод <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> элемента <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ Можно отобразить одно сообщение в строке состояния, задав <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойства `false` (по умолчанию) и параметр <xref:System.Windows.Forms.StatusBar.Text%2A> свойство строки состояния, применяемый к тексту, который будет отображаться в строке состояния. В строке состояния можно разделить на панелей для отображения более чем один тип данных, задав <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойства `true` и с помощью <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> метод <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## См. также  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
  [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)

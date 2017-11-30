@@ -1,39 +1,39 @@
 ---
-title: "Компонент MainMenu (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MainMenu - элемент управления [Windows Forms]"
+title: "Компонент MainMenu (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Компонент MainMenu (Windows Forms)
+# <a name="mainmenu-component-windows-forms"></a>Компонент MainMenu (Windows Forms)
 > [!NOTE]
->  Хотя элементы управления `MenuStrip` и `ContextMenuStrip` заменяют элементы управления `MainMenu` и <xref:System.Windows.Forms.ContextMenu> предыдущих версий и расширяют их функциональные возможности, при необходимости элементы управления `MainMenu` и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем.  
+>  Несмотря на то что `MenuStrip` и `ContextMenuStrip` заменить и добавить функциональные возможности в `MainMenu` и <xref:System.Windows.Forms.ContextMenu> элементы управления предыдущих версий, `MainMenu` и <xref:System.Windows.Forms.ContextMenu> можно сохранить для обратной совместимости и использования в будущем, если выбрать.  
   
- Компонент форм Windows Forms `MainMenu` отображает меню во время выполнения.  
+ Windows Forms `MainMenu` компонент отображает меню во время выполнения.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о компоненте MainMenu](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
- Описание данного элемента управления, его основных возможностей и свойств.  
+ Описание компонента и его основные возможности и свойства.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MainMenu>  
  Описание класса и ссылки на все его члены.  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

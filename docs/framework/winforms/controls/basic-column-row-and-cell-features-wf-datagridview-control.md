@@ -1,67 +1,68 @@
 ---
-title: "Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "столбцы [Windows Forms], DataGridView - элемент управления"
-  - "таблицы данных, примеры"
-  - "DataGridView - элемент управления [Windows Forms], основные функции"
-  - "DataGridView - элемент управления [Windows Forms], примеры"
+title: "Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], basic features
+- columns [Windows Forms], DataGridView control
+- data grids [Windows Forms], examples
+- DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms
-Во многих случаях базовое поведение ячеек, строк и столбцов `DataGridView` можно изменить путем задания одного свойства.  В этом разделе описывается несколько наиболее часто используемых возможностей, предназначенных для этого.  
+# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms
+Во многих случаях basic поведение `DataGridView` ячеек, строк и столбцов можно изменить путем задания одного свойства. В этом разделе описываются некоторые из наиболее часто используемые из этих функций.  
   
-## В этом подразделе  
- [Практическое руководство. Сокрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
- Описание способов запрещения появления определенных столбцов в элементе управления.  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ Описывает, как для отключения определенных столбцов в элементе управления.  
   
- [Практическое руководство. Сокрытие заголовков столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
- Описание способов запрещения появления заголовков столбцов в элементе управления.  
+ [Практическое руководство. Скрытие заголовков столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ Описывает, как предотвратить заголовки столбцов в элементе управления.  
   
  [Практическое руководство. Разрешение переупорядочивания столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
- Описание способов предоставления возможности изменять порядок столбцов в элементе управления.  
+ Описывает, как разрешить пользователям изменять порядок столбцов в элементе управления.  
   
  [Практическое руководство. Замораживание столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
- Описание способов запрещения прокрутки одного или нескольких соседних столбцов.  
+ Описывает способ предотвратить один или несколько смежных столбцов, в результате прокрутки.  
   
  [Практическое руководство. Определение столбцов элемента управления DataGridView как доступных только для чтения в Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
- Описание способов запрещения редактирования определенных столбцов в элементе управления.  
+ Описывает, как запретить пользователям редактировать определенные столбцы в элементе управления.  
   
  [Практическое руководство. Запрет добавления и удаления строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
- Описание способов удаления строки для добавления новых записей в нижней части элемента управления для запрещения добавления строк,  а также способов запрещения удаления строк.  
+ Описывает, как удалить строку для новых записей в нижней части элемента управления, чтобы запретить пользователям добавлять строки. Также описывает, как запретить пользователям удалять строки.  
   
  [Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
- Описание доступа к ячейке в элементе управления, на которой в данный момент находится фокус.  
+ Описание способов доступа к ячейке, которая фокус в данный момент в элементе управления.  
   
  [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
- Описание способов создания столбца с изображением, отображающего значок в каждой ячейке.  
+ Описание способов создания столбца с изображением, отображается значок в каждой ячейке.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.DataGridView>  
- Справочная документация по элементу управления.  
+ Содержит справочную документацию для элемента управления.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- Содержит список разделов, в которых описаны способы изменения основного внешнего вида элемента управления и отображения форматирования данных ячейки.  
+ Разделы, описывающие способы изменения базового внешнего вида элемента управления и форматирования отображаемых данных ячейки.  
   
- [Программирование с использование ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Разделы, описывающие программирование объектов ячеек, строк и столбцов.  
   
-## См. также  
- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Типы столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Указание направления привязки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "направление привязки"
-  - "привязка данных, направление привязки"
-  - "направление привязки"
+title: "Практическое руководство. Указание направления привязки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- direction of binding [WPF]
+- binding direction [WPF]
+- data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdcda02a61f0114bfbbe5d5c411cb397cddcf683
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Указание направления привязки
-Этот пример показывает, как указать, что привязка обновляет только свойство [цели привязки](GTMT) \(цель\), свойство [источника привязки](GTMT) \(источник\), или обновляет свойство цели и свойство источника.  
+# <a name="how-to-specify-the-direction-of-the-binding"></a>Практическое руководство. Указание направления привязки
+В этом примере показано, как указать, что привязка обновляет только свойство цели привязки (цель), свойство источника привязки (источник) или обновляет свойство цели и свойство источника.  
   
-## Пример  
- Вы используете свойство <xref:System.Windows.Data.Binding.Mode%2A> для указания направления привязки.  В следующем списке перечислены доступные параметры для обновлений привязки:  
+## <a name="example"></a>Пример  
+ Вы используете <xref:System.Windows.Data.Binding.Mode%2A> свойство, чтобы указать направление привязки. В следующем списке перечислены доступные параметры для обновлений привязки.  
   
--   <xref:System.Windows.Data.BindingMode> обновляет свойство цели или свойство источника при изменении свойства цели или свойства источника.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay>обновляет целевое свойство или свойства при каждом изменении целевого свойства или свойства source.  
   
--   <xref:System.Windows.Data.BindingMode> обновляет только свойство цели при изменении свойства источника.  
+-   <xref:System.Windows.Data.BindingMode.OneWay>обновляет свойство целевого только при изменении свойства источника.  
   
--   <xref:System.Windows.Data.BindingMode> обновляет только свойство цели при запуске приложения, или когда <xref:System.Windows.FrameworkElement.DataContext%2A> подвергается изменению.  
+-   <xref:System.Windows.Data.BindingMode.OneTime>обновляет свойство целевого только в том случае, если приложение запускается или если <xref:System.Windows.FrameworkElement.DataContext%2A> меняется.  
   
--   <xref:System.Windows.Data.BindingMode> обновляет только свойство источника при изменении свойства цели.  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource>обновляет исходное свойство при изменении целевого свойства.  
   
--   <xref:System.Windows.Data.BindingMode> вызывает значение <xref:System.Windows.Data.Binding.Mode%2A> по умолчанию используемого свойства цели.  
+-   <xref:System.Windows.Data.BindingMode.Default>по умолчанию <xref:System.Windows.Data.Binding.Mode%2A> значение целевого свойства для использования.  
   
- Дополнительные сведения см. в разделе <xref:System.Windows.Data.BindingMode>.  
+ Дополнительные сведения см. в описании перечисления <xref:System.Windows.Data.BindingMode>.  
   
  В следующем примере показано, как задать свойство <xref:System.Windows.Data.Binding.Mode%2A>.  
   
- [!code-xml[DirectionalBinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
+ [!code-xaml[DirectionalBinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   
- Для обнаружения изменений в источнике \(применимо для типов связывания <xref:System.Windows.Data.BindingMode> и <xref:System.Windows.Data.BindingMode>\), источник должен реализовывать подходящий механизм уведомления об изменении свойства, такой как <xref:System.ComponentModel.INotifyPropertyChanged>.  Пример реализации класса <xref:System.ComponentModel.INotifyPropertyChanged> см. в разделе [Реализация уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+ Для обнаружения изменений в источнике (применимо к <xref:System.Windows.Data.BindingMode.OneWay> и <xref:System.Windows.Data.BindingMode.TwoWay> привязок), источник должен применять механизм уведомлений об изменениях подходящего свойства <xref:System.ComponentModel.INotifyPropertyChanged>. В разделе [реализуют уведомления об изменении свойства](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) пример <xref:System.ComponentModel.INotifyPropertyChanged> реализации.  
   
- Для привязок <xref:System.Windows.Data.BindingMode> или <xref:System.Windows.Data.BindingMode>, вы можете управлять временем обновлений источника путем задания свойства <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
+ Для <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки, задав может управлять временем обновлений источника <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
-## См. также  
- <xref:System.Windows.Data.Binding>   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Data.Binding>  
+ [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

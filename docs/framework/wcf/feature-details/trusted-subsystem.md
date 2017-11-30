@@ -1,61 +1,67 @@
 ---
-title: "Доверенная подсистема | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Доверенная подсистема"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 229efd7fed9b8aeb1effff7bd4358930ab8c44ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Доверенная подсистема
-Клиент обращается к одной или нескольким веб\-службам, распределенным по сети.Веб\-службы устроены так, что доступ к дополнительным ресурсам \(таким как базы данных или другие веб\-службы\) инкапсулируется в бизнес\-логике веб\-службы.Эти ресурсы должны быть защищены от несанкционированного доступа.На следующем рисунке показан процесс доверенной подсистемы.  
+# <a name="trusted-subsystem"></a>Доверенная подсистема
+Клиент обращается к одной или нескольким веб-службам, распределенным по сети. Веб-службы устроены так, что доступ к дополнительным ресурсам (таким как базы данных или другие веб-службы) инкапсулируется в бизнес-логике веб-службы. Эти ресурсы должны быть защищены от несанкционированного доступа. На следующем рисунке показан процесс доверенной подсистемы.  
   
- ![Доверенная подсистема](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc\_TrustedSubsystemc")  
+ ![Доверенные подсистемы](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  Показанный на рисунке процесс доверенной подсистемы пошагово описан ниже.  
   
-1.  Клиент отправляет запрос \(вместе с учетными данными\) доверенной подсистеме.  
+1.  Клиент отправляет запрос (вместе с учетными данными) доверенной подсистеме.  
   
 2.  Доверенная подсистема проверяет подлинность пользователя и авторизует его.  
   
-3.  Доверенная подсистема отправляет сообщение запроса удаленному ресурсу.Этот запрос сопровождается учетными данными доверенной подсистемы \(или учетной записи службы, от имени которой выполняется процесс доверенной подсистемы\).  
+3.  Доверенная подсистема отправляет сообщение запроса удаленному ресурсу. Этот запрос сопровождается учетными данными доверенной подсистемы (или учетной записи службы, от имени которой выполняется процесс доверенной подсистемы).  
   
-4.  Внутренний ресурс проверяет подлинность доверенной подсистемы и авторизует ее.Затем он обрабатывает запрос и отправляет ответ доверенной подсистеме.  
+4.  Внутренний ресурс проверяет подлинность доверенной подсистемы и авторизует ее. Затем он обрабатывает запрос и отправляет ответ доверенной подсистеме.  
   
 5.  Доверенная подсистема обрабатывает ответ и отправляет свой ответ клиенту.  
   
 |Характеристика|Описание|  
-|--------------------|--------------|  
+|--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Только [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
-|Проверка подлинности \(служба\)|Служба маркеров безопасности проверяет подлинность клиентов и авторизует их.|  
-|Проверка подлинности \(клиент\)|Доверенная подсистема проверяет подлинность клиента, а ресурс проверяет подлинность службы доверенной подсистемы.|  
+|Проверка подлинности (служба)|Служба маркеров безопасности проверяет подлинность клиентов и авторизует их.|  
+|Проверка подлинности (клиент)|Доверенная подсистема проверяет подлинность клиента, а ресурс проверяет подлинность службы доверенной подсистемы.|  
 |Целостность|Да|  
 |Конфиденциальность|Да|  
-|Транспорт|HTTP между клиентом и службой доверенной подсистемы.<br /><br /> NET.TCP между службой доверенной подсистемы и ресурсом \(внутренней службой\).|  
-|Привязка|<xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Transport|HTTP между клиентом и службой доверенной подсистемы.<br /><br /> NET.TCP между службой доверенной подсистемы и ресурсом (внутренней службой).|  
+|Привязка|<xref:System.ServiceModel.WSHttpBinding>и <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
-## Ресурс \(внутренняя служба\)  
+## <a name="resource-back-end-service"></a>Ресурс (внутренняя служба)  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано, как создать конечную точку службы для ресурса, работающую в режиме безопасности транспорта по транспортному протоколу TCP.  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  В следующей конфигурации настраивается та же конечная точка с использованием конфигурации.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -91,9 +97,9 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## Доверенная подсистема  
+## <a name="trusted-subsystem"></a>Доверенная подсистема  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано, как создать конечную точку службы для доверенной подсистемы, работающую в режиме безопасности сообщения по транспортному протоколу HTTP и использующую для проверки подлинности имя пользователя и пароль.  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
@@ -104,10 +110,10 @@ caps.handback.revision: 10
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### Конфигурация  
- В следующей конфигурации настраивается та же конечная точка с использованием конфигурации.Обратите внимание на две привязки: одна защищает службу, размещенную в доверенной подсистеме, а вторая обеспечивает обмен данными между доверенной подсистемой и внутренней службой.  
+### <a name="configuration"></a>Конфигурация  
+ В следующей конфигурации настраивается та же конечная точка с использованием конфигурации. Обратите внимание на две привязки: одна защищает службу, размещенную в доверенной подсистеме, а вторая обеспечивает обмен данными между доверенной подсистемой и внутренней службой.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -167,18 +173,18 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## Клиент  
+## <a name="client"></a>Клиент  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано, как создать клиент, обменивающийся данными с доверенной подсистемой в режиме безопасности сообщения по протоколу HTTP и использующий для проверки подлинности имя пользователя и пароль.  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### Конфигурация  
- Следующий код служит для настройки клиента для использования режима безопасности сообщений по протоколу HTTP, а также имени пользователя и пароля для проверки подлинности.Указать имя пользователя и пароль можно только с помощью кода \(они не подлежат настройке\).  
+### <a name="configuration"></a>Конфигурация  
+ Следующий код служит для настройки клиента для использования режима безопасности сообщений по протоколу HTTP, а также имени пользователя и пароля для проверки подлинности. Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -214,6 +220,6 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,36 +1,39 @@
 ---
-title: "Практическое руководство. Определение и создание ссылки на ресурс | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "определение ресурсов"
-  - "создание ссылок на ресурсы"
-  - "ресурсы, определение"
-  - "ресурсы, создание ссылок"
+title: "Практическое руководство. Определение и создание ссылки на ресурс"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resources [WPF], defining
+- defining resources [WPF]
+- resources [WPF], referencing
+- referencing resources [WPF]
 ms.assetid: b86b876b-0a10-489b-9a5d-581ea9b32406
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 322ac3e5ebfe2d820a4711d877396b9a1a2759a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение и создание ссылки на ресурс
-В этом примере описывается порядок определения ресурса и создания ссылки на него с помощью атрибута в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+# <a name="how-to-define-and-reference-a-resource"></a>Практическое руководство. Определение и создание ссылки на ресурс
+В этом примере показано, как определить ресурс и ссылки на него с помощью атрибута в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
-## Пример  
- В следующем примере определяются ресурсы двух типов: ресурс <xref:System.Windows.Media.SolidColorBrush>, а также несколько ресурсов <xref:System.Windows.Style>.  Ресурс <xref:System.Windows.Media.SolidColorBrush>`MyBrush` используется для предоставления значений нескольких свойств, каждое из которых принимает значение типа <xref:System.Windows.Media.Brush>.  Каждый из ресурсов класса <xref:System.Windows.Style> \(`PageBackground`, `TitleText` и `Label`\) предназначен для определенного типа элемента управления.  Стили используются для установки нескольких свойств для целевых элементов управления. Для этого создается ссылка ключа ресурса на ресурс стиля, который используется для установки свойства <xref:System.Windows.FrameworkElement.Style%2A> для нескольких конкретных элементов управления, определенных в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+## <a name="example"></a>Пример  
+ В следующем примере определяются два типа ресурсов: <xref:System.Windows.Media.SolidColorBrush> ресурсов, а также несколько <xref:System.Windows.Style> ресурсов. <xref:System.Windows.Media.SolidColorBrush> Ресурсов `MyBrush` используется для предоставления значений нескольких свойств, каждый из которых принимает <xref:System.Windows.Media.Brush> введите значение. <xref:System.Windows.Style> Ресурсов `PageBackground`, `TitleText` и `Label` каждый целевой определенного типа элемента управления. Стили устанавливается ряд различных свойств для целевых элементов, если ресурс стиля ссылается ключ ресурса и используется для задания <xref:System.Windows.FrameworkElement.Style%2A> свойства нескольких элементов конкретного элемента управления, определенных в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- Обратите внимание, что одно из свойств метода установки стиля `Label` также ссылается на ресурс `MyBrush`, определенный ранее.  Это стандартный способ. Однако следует учитывать, что анализ ресурсов и их добавление в словарь ресурсов осуществляется в том порядке, в котором они заданы.  Если для ссылки на ресурсы из другого ресурса используется [Расширение разметки StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md), их запрос также осуществляется в том порядке, в котором они найдены в словаре.  Убедитесь, что любые ресурсы, на которые можно ссылаться, определены в коллекции ресурсов до их запроса.  При необходимости можно обойти строгий порядок создания ссылок ресурсов. Для этого следует использовать [Расширение разметки DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) для ссылки на ресурс во время выполнения. Однако следует учитывать, что использование этого способа DynamicResource может привести к снижению производительности.  Дополнительные сведения см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Примечание, что одно из свойств метода установки `Label` также ссылается на стиль `MyBrush` ресурсов, определенные ранее. Это распространенный способ, но важно запомнить синтаксический анализ и введенные в словаре ресурсов, в том порядке, приведенном ресурсов. Запрос ресурсов также осуществляется в порядке найдены в словаре, если вы используете [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) чтобы ссылаться на них из другого ресурса. Убедитесь, что любой ресурс, на которую ссылается, определены в коллекции ресурсов, до которой затем запрошена этого ресурса. При необходимости можно обойти строгий порядок создания ресурсов с помощью [DynamicResource Markup Extension](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) вместо этого ссылок во время выполнения, но следует иметь в виду, это DynamicResource метод окажет влияние на производительность. Дополнительные сведения см. в разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!code-xml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
+ [!code-xaml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
   
-## См. также  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
+## <a name="see-also"></a>См. также  
+ [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)

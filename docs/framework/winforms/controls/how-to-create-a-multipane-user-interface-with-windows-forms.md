@@ -1,42 +1,46 @@
 ---
-title: "Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView - элемент управления [Windows Forms], примеры"
-  - "Panel - элемент управления [Windows Forms], примеры"
-  - "RichTextBox - элемент управления [Windows Forms], примеры"
-  - "SplitContainer - элемент управления [Windows Forms], примеры"
-  - "Splitter - элемент управления [Windows Forms], примеры"
-  - "TreeView - элемент управления [Windows Forms], примеры"
+title: "Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], examples
+- ListView control [Windows Forms], examples
+- RichTextBox control [Windows Forms], examples
+- Panel control [Windows Forms], examples
+- TreeView control [Windows Forms], examples
+- Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms
-В следующей процедуре создается пользовательский интерфейс с несколькими областями, похожий на интерфейс, используемый в Microsoft Outlook, где имеется список **Папка**, область **Сообщения** и область **Предварительный просмотр**.  Такое расположение элементов достигается главным образом за счет закрепления элементов управления внутри форм.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms
+В следующей процедуре вы создадите с несколькими областями пользовательского интерфейса, которая аналогична той, которая используется в Microsoft Outlook с **папки** списка, **сообщений** области и **предварительногопросмотра** области. Такое расположение элементов достигается главным образом за счет закрепления элементов управления формы.  
   
- При закреплении элемента управления необходимо решить, к какому краю родительского контейнера его следует прикрепить.  Таким образом, если для свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> задать значение <xref:System.Windows.Forms.DockStyle>, правый край элемента управления закрепляется на правом крае родительского элемента управления.  При этом размер прикрепленного края элемента управления изменяется с учетом размера элемента управления контейнерного типа.  Дополнительные сведения об использовании свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> см. в разделе [Практическое руководство. Закрепление элементов управления в формах Windows Forms.](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ При закреплении элемента управления, вы можете определить, какие края родительский контейнер элемента управления он прикреплен к. Таким образом Если задать <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Right>, правый край элемента управления будет прикреплен к правым краем родительского элемента управления. Кроме того закрепленной края элемента управления изменяется в соответствии с элементом управления контейнера. Дополнительные сведения о том, как <xref:System.Windows.Forms.SplitContainer.Dock%2A> работает, в разделе [как: закрепление элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
   
- Эта процедура предназначена для расположения элемента управления <xref:System.Windows.Forms.SplitContainer> и других элементов в форме, а не для добавления дополнительных функциональных возможностей и имитации Microsoft Outlook.  
+ Эта процедура предназначена для расположения <xref:System.Windows.Forms.SplitContainer> и других элементов управления в форме, а не на добавление функциональности для имитации Microsoft Outlook.  
   
- Для создания пользовательского интерфейса следует расположить все элементы управления внутри элемента управления <xref:System.Windows.Forms.SplitContainer>, в левой панели которого находится элемент управления <xref:System.Windows.Forms.TreeView>.  В правой панели элемента управления <xref:System.Windows.Forms.SplitContainer> содержится второй элемент управления <xref:System.Windows.Forms.SplitContainer>, причем элемент управления <xref:System.Windows.Forms.ListView> находится выше элемента управления <xref:System.Windows.Forms.RichTextBox>.  Эти элементы управления <xref:System.Windows.Forms.SplitContainer> позволяют независимо изменять размер других элементов управления в форме.  Используемые в данном примере методы можно изменять для создания пользовательских интерфейсов, отвечающих конкретным требованиям.  
+ Для создания пользовательского интерфейса, поместите все элементы управления внутри <xref:System.Windows.Forms.SplitContainer> управления, который содержит <xref:System.Windows.Forms.TreeView> управления на левой панели. На правой панели <xref:System.Windows.Forms.SplitContainer> содержит второй элемент управления <xref:System.Windows.Forms.SplitContainer> управления <xref:System.Windows.Forms.ListView> управления выше <xref:System.Windows.Forms.RichTextBox> элемента управления. Эти <xref:System.Windows.Forms.SplitContainer> элементы управления позволяют независимо изменять размер других элементов управления в форме. Вы можете адаптировать в этой процедуре для создания пользовательских интерфейсов собственные методы.  
   
-### Создание пользовательского интерфейса типа Outlook программным способом  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Чтобы создать пользовательский интерфейс типа Outlook программными средствами  
   
-1.  Объявите в форме все элементы управления, составляющие ее пользовательский интерфейс.  В данном примере для создания интерфейса в стиле Microsoft Outlook используются элементы управления <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer> и <xref:System.Windows.Forms.RichTextBox>.  
+1.  В форме объявите каждого элемента управления, составляющие ее пользовательский интерфейс. В этом примере используется <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, и <xref:System.Windows.Forms.RichTextBox> элементов управления, чтобы имитировать пользовательского интерфейса Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -46,7 +50,6 @@ caps.handback.revision: 20
         System.Windows.Forms.SplitContainer  
     Private WithEvents splitContainer2 As _  
         System.Windows.Forms.SplitContainer  
-  
     ```  
   
     ```csharp  
@@ -55,10 +58,9 @@ caps.handback.revision: 20
     private System.Windows.Forms.RichTextBox richTextBox1;  
     private System.Windows.Forms. SplitContainer splitContainer2;  
     private System.Windows.Forms. SplitContainer splitContainer1;  
-  
     ```  
   
-2.  Создайте процедуру, определяющую пользовательский интерфейс.  Нижеследующий код устанавливает свойства таким образом, что форма приобретает вид, схожий с Microsoft Outlook.  Однако таким же образом можно легко создавать другие, не менее гибкие пользовательские интерфейсы, используя для этого другие элементы управления или иначе их закрепляя.  
+2.  Создайте процедуру, которая определяет пользовательский интерфейс. Следующий код задает свойства, чтобы форма будет напоминать пользовательского интерфейса в Microsoft Outlook. Однако с помощью других элементов управления или закрепления их по-разному, так же просто создавать другие интерфейсы, не менее гибкие.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -120,7 +122,6 @@ caps.handback.revision: 20
         Me.Controls.Add(Me.splitContainer2)  
         Me.Text = "Intricate UI Example"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -171,24 +172,21 @@ caps.handback.revision: 20
         this.Controls.Add(this.splitContainer2);  
         this.Text = "Intricate UI Example";  
     }  
-  
     ```  
   
-3.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] добавьте вызов процедуры, которая была только что создана в процедуре `New()`.  В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] добавьте в конструктор класса формы следующую строку кода.  
+3.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], добавьте вызов процедуры, вы только что создали `New()` процедуры. В [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], добавьте следующую строку кода в конструктор класса формы.  
   
     ```vb  
     ' Add this to the New procedure.  
     CreateOutlookUI()  
-  
     ```  
   
     ```csharp  
     // Add this to the form class's constructor.  
     createOutlookUI();  
-  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.SplitContainer>   
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

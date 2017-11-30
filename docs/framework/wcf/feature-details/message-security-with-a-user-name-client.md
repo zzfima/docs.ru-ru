@@ -1,56 +1,62 @@
 ---
-title: "Безопасность сообщений при использовании клиентом учетных данных пользователя | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений при использовании клиентом учетных данных пользователя"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений при использовании клиентом учетных данных пользователя
-На следующем рисунке показано, как защищаются служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью безопасности на уровне сообщений.Служба проходит проверку подлинности с использованием сертификата X.509.Подлинность клиента проверяется с помощью имени и пароля пользователя.  
+# <a name="message-security-with-a-user-name-client"></a>Безопасность сообщений при использовании клиентом учетных данных пользователя
+На следующем рисунке показано, как защищаются служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью безопасности на уровне сообщений. Служба проходит проверку подлинности с использованием сертификата X.509. Подлинность клиента проверяется с помощью имени и пароля пользователя.  
   
- Пример приложения см. в разделе [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Пример приложения см. в разделе [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
- ![Безопасность сообщений с использованием аутентификации имени пользователя](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61\-7e1d\-42f5\-b1af\-195bfee5b3c6")  
+ ![Безопасность сообщений с использованием проверки подлинности имя пользователя](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Характеристика|Описание|  
-|--------------------|--------------|  
+|--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
 |Взаимодействие|Только [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
-|Проверка подлинности \(сервера\)|Первоначальное согласование возможно только после проверки подлинности сервера|  
-|Проверка подлинности \(клиента\)|Имя пользователя\/пароль|  
+|Проверка подлинности (сервера)|Первоначальное согласование возможно только после проверки подлинности сервера|  
+|Проверка подлинности (клиента)|Имя пользователя/пароль|  
 |Целостность|Да, используется общий контекст безопасности|  
 |Конфиденциальность|Да, используется общий контекст безопасности|  
-|Транспорт|HTTP|  
+|Transport|HTTP|  
 |Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a>Служба  
+ Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономную службу, используя код без конфигурации.  
   
 -   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
   
-### Код  
+### <a name="code"></a>Код  
  В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### Конфигурация  
+### <a name="configuration"></a>Конфигурация  
  Вместо кода можно использовать следующую конфигурацию:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -90,18 +96,18 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## Клиент  
+## <a name="client"></a>Клиент  
   
-### Код  
- Следующий код служит для создания клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.Указать имя пользователя и пароль можно только с помощью кода \(они не подлежат настройке\).Здесь не показан код, который возвращает имя пользователя и пароль, потому что это происходит на уровне приложения.Например, диалоговое окно Window Forms используется для запроса данных у пользователя.  
+### <a name="code"></a>Код  
+ Следующий код служит для создания клиента. Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`. Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке). Здесь не показан код, который возвращает имя пользователя и пароль, потому что это происходит на уровне приложения. Например, диалоговое окно Windows Forms используется для того, чтобы запросить пользователя о данных.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### Конфигурация  
- Следующий код служит для настройки клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.Указать имя пользователя и пароль можно только с помощью кода \(они не подлежат настройке\).  
+### <a name="configuration"></a>Конфигурация  
+ Следующий код служит для настройки клиента. Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`. Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -129,9 +135,9 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md)   
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<удостоверение\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Имя пользователя для безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [Службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [\<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

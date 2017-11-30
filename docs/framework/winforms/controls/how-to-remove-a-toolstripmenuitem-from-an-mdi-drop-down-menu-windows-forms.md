@@ -1,62 +1,66 @@
 ---
-title: "Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI - интерфейс, объединение пунктов меню"
-  - "пункты меню, удаление из раскрывающихся меню MDI"
-  - "MenuStrip - элемент управления [Windows Forms], слияние"
-  - "MenuStrip - элемент управления [Windows Forms], удаление"
+title: "Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], removing from MDI drop-down menus
+- MenuStrip control [Windows Forms], merging
+- MenuStrip control [Windows Forms], removing
+- MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения (Windows Forms)
-В некоторых приложениях вид дочернего окна интерфейса MDI может отличаться от родительского окна MDI.  Например, если родительский интерфейс MDI — таблица, то дочерний интерфейс MDI может быть диаграммой.  В этом случае может потребоваться обновление содержимого меню родительского интерфейса MDI содержимым меню дочернего интерфейса MDI при активировании различных видов дочерних окон интерфейса MDI.  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения (Windows Forms)
+В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
   
- В следующей процедуре свойства <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> используются для удаления пункта меню из раскрывающейся части родительского меню MDI.  При закрытии дочернего окна MDI происходит восстановление удаленных пунктов меню в родительском меню MDI.  
+ В следующей процедуре используется <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойств, чтобы удалить элемент меню из раскрывающегося списка части родительского меню MDI. Восстановление удаленных пунктов меню родительского меню MDI закрытии дочернего окна MDI.  
   
-### Чтобы удалить объект MenuStrip из раскрывающегося меню MDI, выполните следующие действия:  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Чтобы удалить объект MenuStrip из раскрывающегося меню MDI  
   
 1.  Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
   
-2.  Добавьте <xref:System.Windows.Forms.MenuStrip> в `Form1` и присвойте свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> компонента <xref:System.Windows.Forms.MenuStrip> значение `true`.  
+2.  Добавьте <xref:System.Windows.Forms.MenuStrip> на `Form1` и присвойте свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> для элемента <xref:System.Windows.Forms.MenuStrip> значение `true`.  
   
-3.  Добавьте пункт меню верхнего уровня в `Form1`<xref:System.Windows.Forms.MenuStrip> установите его и  <xref:System.Windows.Forms.Control.Text%2A> свойство  `&File`.  
+3.  Добавьте пункт меню верхнего уровня в `Form1`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.Control.Text%2A> значение `&File`.  
   
-4.  Добавьте три пункта подменю в пункт меню `&File` и присвойте их свойствам <xref:System.Windows.Forms.ToolStripItem.Text%2A> значения `&Open`, `&Import from` и `E&xit`.  
+4.  Добавьте три подменю `&File` меню и присвойте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Open`, `&Import from`, и `E&xit`.  
   
-5.  Добавьте два пункта подменю в пункт подменю `&Import from` и присвойте их свойствам <xref:System.Windows.Forms.ToolStripItem.Text%2A> значения `&Word` и `&Excel`.  
+5.  Добавьте два подменю к `&Import from` подменю и задайте их <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства `&Word` и `&Excel`.  
   
-6.  Добавьте форму, добавьте к проекту a <xref:System.Windows.Forms.MenuStrip> в форму и установите  <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> свойство   `Form2`<xref:System.Windows.Forms.MenuStrip> В  `true`.  
+6.  Добавьте в проект форму, добавьте <xref:System.Windows.Forms.MenuStrip> на форму и присвойте его свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> элемента `Form2`<xref:System.Windows.Forms.MenuStrip> значение `true`.  
   
-7.  Добавьте пункт меню верхнего уровня в `Form2`<xref:System.Windows.Forms.MenuStrip> установите его и  <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство  `&File`.  
+7.  Добавьте пункт меню верхнего уровня в `Form2`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение `&File`.  
   
-8.  Добавьте пункт подменю `&Import from` в меню `&File` формы `Form2` и добавьте пункт подменю `&Word` в меню `&File`.  
+8.  Добавить `&Import from` пункт подменю `&File` меню `Form2`и добавьте `&Word` пункт подменю `&File` меню.  
   
-9. Задайте свойства <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> пунктов меню `Form2` в соответствии со следующей таблицей.  
+9. Задать <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойства `Form2` элементы меню, как показано в следующей таблице.  
   
     |Пункт меню Form2|Значение MergeAction|Значение MergeIndex|  
-    |----------------------|--------------------------|-------------------------|  
-    |Файл|MatchOnly|\-1|  
-    |Import from|MatchOnly|\-1|  
-    |Word|Удалить|\-1|  
+    |---------------------|-----------------------|----------------------|  
+    |Файл|MatchOnly|-1|  
+    |Импорт из|MatchOnly|-1|  
+    |Слово|Удалить|-1|  
   
-10. IN `Form1`создайте обработчик событий для события  <xref:System.Windows.Forms.Control.Click> событие   `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. В `Form1`, создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> событие `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-11. В обработчик событий вставьте код, аналогичный следующему примеру кода, для создания и отображения новых экземпляров формы `Form2` как дочерних форм MDI формы `Form1`.  
+11. В обработчик событий вставьте код, аналогичный приведенному в следующем примере кода для создания и отображения новых экземпляров `Form2` как дочерних окон MDI `Form1`:  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -66,12 +70,9 @@ caps.handback.revision: 12
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void openToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -80,33 +81,30 @@ caps.handback.revision: 12
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-12. Поместите код, аналогичный следующему примеру кода `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> зарегистрировать обработчик событий.  
+12. Поместите код, аналогичный приведенному в следующем примере, в `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>, для регистрации обработчика событий.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles openToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.openToolStripMenuItem.Click += new _  
     System.EventHandler(this.openToolStripMenuItem_Click);  
-  
     ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`.  
+-   два элемента управления <xref:System.Windows.Forms.Form> с именами `Form1` и `Form2`;  
   
--   Элемент управления <xref:System.Windows.Forms.MenuStrip> в форме `Form1` с именем `menuStrip1`, и элемент управления <xref:System.Windows.Forms.MenuStrip> в форме `Form2` с именем `menuStrip2`.  
+-   элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form1` с именем `menuStrip1` и элемент управления <xref:System.Windows.Forms.MenuStrip> на `Form2` с именем `menuStrip2`;  
   
--   Ссылки на сборки <xref:System?displayProperty=fullName> и <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## См. также  
- [Практическое руководство. Создание родительских MDI\-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Практическое руководство. Создание дочерних MDI\-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Практическое руководство. Создание дочерних MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
