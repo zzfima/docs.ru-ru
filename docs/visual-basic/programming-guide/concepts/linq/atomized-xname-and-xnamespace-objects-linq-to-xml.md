@@ -1,40 +1,35 @@
 ---
-title: "Атомизация объекты XName и XNamespace (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Атомизация объекты XName и XNamespace (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b08f3116f5acb404cf2c33072ec31fbaada4e7cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 3d3c0b1278411c41d002c546f4b1a3be9975a801
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>Атомизация объекты XName и XNamespace (LINQ to XML) (Visual Basic)
-<xref:System.Xml.Linq.XName>и <xref:System.Xml.Linq.XNamespace>объекты *атомизация*; то есть, если они имеют идентичное полное имя, они ссылаются на один объект.</xref:System.Xml.Linq.XNamespace></xref:System.Xml.Linq.XName> Это способствует повышению производительности при выполнении запросов: при сравнении двух атомарных имен для проверки их равенства соответствующий промежуточный язык должен определить, ссылаются ли они на один и тот же объект. Эта операция используется в промежуточном коде вместо более длительной операции сравнения строк.  
+Объекты <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> являются *атомарными*; иными словами, если они имеют идентичное полное имя, они ссылаются на один и тот же объект. Это способствует повышению производительности при выполнении запросов: при сравнении двух атомарных имен для проверки их равенства соответствующий промежуточный язык должен определить, ссылаются ли они на один и тот же объект. Эта операция используется в промежуточном коде вместо более длительной операции сравнения строк.  
   
 ## <a name="atomization-semantics"></a>Семантика атомизации  
- Атомизация означает, что если два <xref:System.Xml.Linq.XName>объекты имеют одинаковое локальное имя и они находятся в том же пространстве имен, они совместно используют тот же экземпляр.</xref:System.Xml.Linq.XName> Таким же образом, если два <xref:System.Xml.Linq.XNamespace>объекты имеют то же пространство имен URI, совместно используют тот же экземпляр.</xref:System.Xml.Linq.XNamespace>  
+ Атомизация означает, что два объекта <xref:System.Xml.Linq.XName> имеющие идентичное локальное имя и находящиеся в одном пространстве имен, совместно используют один и тот же экземпляр. Аналогично, если два объекта <xref:System.Xml.Linq.XNamespace> имеют идентичный идентификатор URI пространства имен, то они совместно используют один и тот же экземпляр.  
   
- Чтобы разрешить создание атомарных объектов класса, необходимо, чтобы конструктор класса был закрытым, а не открытым. Это требование основано на том, что если бы конструктор был открытым, можно было бы создавать неатомарные объекты. <xref:System.Xml.Linq.XName>И <xref:System.Xml.Linq.XNamespace>классы реализуют неявный оператор преобразования для преобразования строки в <xref:System.Xml.Linq.XName>или <xref:System.Xml.Linq.XNamespace>.</xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName> </xref:System.Xml.Linq.XNamespace> </xref:System.Xml.Linq.XName> Экземпляры этих объектов могут быть получены только таким способом. Создание экземпляров с помощью конструктора невозможно, так как конструктор недоступен.  
+ Чтобы разрешить создание атомарных объектов класса, необходимо, чтобы конструктор класса был закрытым, а не открытым. Это требование основано на том, что если бы конструктор был открытым, можно было бы создавать неатомарные объекты. Классы <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> реализуют неявный оператор преобразования строки в объект <xref:System.Xml.Linq.XName> или <xref:System.Xml.Linq.XNamespace>. Экземпляры этих объектов могут быть получены только таким способом. Создание экземпляров с помощью конструктора невозможно, так как конструктор недоступен.  
   
- <xref:System.Xml.Linq.XName>и <xref:System.Xml.Linq.XNamespace>также реализуют операторы равенства и неравенства, определяющие ли два сравниваемых являются ссылками на том же экземпляре.</xref:System.Xml.Linq.XNamespace></xref:System.Xml.Linq.XName>  
+ Классы <xref:System.Xml.Linq.XName> и<xref:System.Xml.Linq.XNamespace> также реализуют операторы для проверки равенства и неравенства, определяющие, ссылаются ли два сравниваемых объекта на один и тот же экземпляр.  
   
 ## <a name="example"></a>Пример  
- Следующий код создает <xref:System.Xml.Linq.XElement>объектов и демонстрирует, что идентичные имена совместно используют тот же экземпляр.</xref:System.Xml.Linq.XElement>  
+ Следующий код создает объекты <xref:System.Xml.Linq.XElement> и демонстрирует, что идентичные имена совместно используют один и тот же экземпляр.  
   
 ```vb  
 Dim r1 As New XElement("Root", "data1")  
@@ -62,9 +57,9 @@ r1 and r2 have names that refer to the same instance.
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- Как упоминалось выше, преимущество атомарных объектов заключается в, при использовании одного из методов оси, принимающих <xref:System.Xml.Linq.XName>как параметр метода оси должен определить, что два имени ссылки один и тот же экземпляр для выбора необходимых элементов.</xref:System.Xml.Linq.XName>  
+ Как отмечалось выше, преимущество атомарных объектов заключается в том, что при использовании одного из методов оси, принимающих в качестве параметра <xref:System.Xml.Linq.XName>, этому методу оси для выбора необходимых элементов достаточно определить, что два имени совместно используют один и тот же экземпляр.  
   
- В следующем примере передается <xref:System.Xml.Linq.XName>для <xref:System.Xml.Linq.XContainer.Descendants%2A>вызова метода, для которого производительность за счет атомизации.</xref:System.Xml.Linq.XContainer.Descendants%2A> </xref:System.Xml.Linq.XName>  
+ В следующем примере объект <xref:System.Xml.Linq.XName> передается при вызове метода <xref:System.Xml.Linq.XContainer.Descendants%2A>, производительность которого выше за счет использования атомизации.  
   
 ```vb  
 Dim root As New XElement("Root", New XElement("C1", 1), New XElement("Z1", New XElement("C1", 2), New XElement("C1", 1)))  
@@ -85,4 +80,3 @@ Next
   
 ## <a name="see-also"></a>См. также  
  [Производительность (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

@@ -1,35 +1,41 @@
 ---
-title: "Указание XML-значений в качестве параметров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Указание значений XML как параметров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Указание XML-значений в качестве параметров
-Если запрос требует параметров, значения которых представляет XML\-строка, разработчики могут передать это значение с помощью экземпляра типа данных **SqlXml**.  Это не составляет никакой сложности, поскольку XML\-столбцы в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] принимают значения параметров точно так же, как другие типы данных.  
+# <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
+Если запрос требует параметр, значение которого является XML-строка, разработчики могут передать это значение с помощью экземпляра **SqlXml** тип данных. Это не составляет никакой сложности, поскольку XML-столбцы в [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] принимают значения параметров точно так же, как другие типы данных.  
   
-## Пример  
- Следующее приложение командной строки создает новую таблицу в базе данных **AdventureWorks**.  Новая таблица содержит столбец с именем **SalesID** и XML\-столбец с именем **SalesInfo**.  
+## <a name="example"></a>Пример  
+ Следующее консольное приложение создает новую таблицу в **AdventureWorks** базы данных. Новая таблица содержит столбец с именем **SalesID** и XML-столбец с именем **SalesInfo**.  
   
 > [!NOTE]
->  Образец базы данных **AdventureWorks** не устанавливается по умолчанию при установке [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Чтобы установить его, запустите программу установки SQL Server.  
+>  **AdventureWorks** образца базы данных не устанавливается по умолчанию при установке [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Чтобы установить его, запустите программу установки SQL Server.  
   
- Пример подготавливает объект <xref:System.Data.SqlClient.SqlCommand>, чтобы вставить строку в новую таблицу.  Сохраненный файл предоставляет XML\-данные, необходимые для столбца **SalesInfo**.  
+ Пример подготавливает объект <xref:System.Data.SqlClient.SqlCommand>, чтобы вставить строку в новую таблицу. Сохраненный файл предоставляет XML-данные, необходимые для **SalesInfo** столбца.  
   
- Чтобы создать файл, требующийся для выполнения примера, создайте новый текстовый файл в папке проекта.  Присвойте файлу имя MyTestStoreData.xml.  Откройте файл в приложении «Блокнот» и скопируйте следующий текст.  
+ Чтобы создать файл, требующийся для выполнения примера, создайте новый текстовый файл в папке проекта. Присвойте файлу имя MyTestStoreData.xml. Откройте файл в приложении «Блокнот» и скопируйте следующий текст.  
   
-```  
+```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
@@ -44,9 +50,7 @@ caps.handback.revision: 5
 </StoreSurvey>  
 ```  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
 Imports System.Data.SqlTypes  
@@ -104,9 +108,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -167,7 +169,7 @@ class Class1
 }  
 ```  
   
-## См. также  
- <xref:System.Data.SqlTypes.SqlXml>   
- [XML\-данные в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.SqlTypes.SqlXml>  
+ [XML-данных в SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

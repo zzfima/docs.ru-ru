@@ -1,37 +1,37 @@
 ---
-title: "Общие сведения о компоненте FontDialog (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FontDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "диалоговое окно шрифтов"
-  - "диалоговое окно шрифтов, Windows Forms"
-  - "FontDialog - компонент [Windows Forms], сведения о компоненте FontDialog"
+title: "Общие сведения о компоненте FontDialog (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FontDialog
+helpviewer_keywords:
+- Font dialog box [Windows Forms], Windows Forms
+- Font dialog box
+- FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1e00fc074148ddd53885bafbb490a3e3868fc0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о компоненте FontDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.FontDialog> является стандартным диалоговым окном, аналогичным окну Windows **Шрифт**; он используется для предоставления шрифтов, установленных в операционной системе.  Этот компонент используется в приложении Windows в качестве простого решения для выбора шрифтов вместо диалогового окна, настраиваемого самостоятельно.  
+# <a name="fontdialog-component-overview-windows-forms"></a>Общие сведения о компоненте FontDialog (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.FontDialog> компонент является стандартным диалоговым окном, то есть стандартные Windows **шрифта** диалоговым окном, используемым для предоставления шрифты, установленные в системе. Он используется в приложении Windows в качестве простого решения для выбора шрифтов вместо настройки собственного диалогового.  
   
- По умолчанию в диалоговом окне отображаются списки "Шрифт", "Стиль" и "Размер"; поля флажков для таких эффектов, как зачеркивание и подчеркивание; раскрывающийся список "Набор символов"; поле, в котором показан образец шрифта.  \(Набор символов определяет, какие символы доступны для данного шрифта: например, иврит или японский.\) Чтобы вывести диалоговое окно шрифтов, следует вызвать метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+ По умолчанию в диалоговом окне отображаются списки шрифт, начертание и размер. Установите флажки для эффектов, как зачеркивание и подчеркивание; раскрывающегося списка для скрипта; и пример того, как будет выглядеть шрифт. (Сценарий относится к другой символ скриптов, которые доступны для данного шрифта, например, иврит или японский.) Чтобы отобразить диалоговое окно шрифтов, вызовите <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.  
   
-## Ключевые свойства  
- Этот компонент обладает рядом свойств, определяющих его внешний вид.  Свойствами, задающими параметры диалогового окна, являются <xref:System.Windows.Forms.FontDialog.Font%2A> и <xref:System.Windows.Forms.FontDialog.Color%2A>.  Свойство <xref:System.Windows.Forms.FontDialog.Font%2A> задает шрифт, стиль, размер, набор символов и эффекты, например:  `Arial, 10pt, style=Italic, Strikeout`.  
+## <a name="key-properties"></a>Основные свойства  
+ Компонент содержит несколько свойств, определяющих его внешний вид. Свойства, задайте параметры диалогового окна, <xref:System.Windows.Forms.FontDialog.Font%2A> и <xref:System.Windows.Forms.FontDialog.Color%2A>. <xref:System.Windows.Forms.FontDialog.Font%2A> Свойство задает шрифт, стиль, размер, сценариев и эффектов; например, `Arial, 10pt, style=Italic, Strikeout`.  
   
-## См. также  
- <xref:System.Windows.Forms.FontDialog>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.FontDialog>  
  [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

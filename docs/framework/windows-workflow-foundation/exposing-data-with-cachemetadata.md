@@ -1,30 +1,34 @@
 ---
-title: "Предоставление данных с помощью CacheMetadata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Предоставление данных с помощью CacheMetadata"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: aea620d740b7b95747395821d622f267943352da
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Предоставление данных с помощью CacheMetadata
-Перед выполнением действия среда выполнения рабочих процессов получает все сведения, которые необходимы для его поддержки.Среда выполнения получает эти данные во время выполнения метода <xref:System.Activities.Activity.CacheMetadata%2A>.Реализация этого метода по умолчанию предоставляет среде выполнения все открытые аргументы, переменные и дочерние действия этого действия, доступные во время выполнения. Если действие требует передачи среде выполнения дополнительных сведений \(например, закрытых элементов или действий, планируемых этим действием\), то этот метод может быть переопределен.  
+# <a name="exposing-data-with-cachemetadata"></a>Предоставление данных с помощью CacheMetadata
+Перед выполнением действия среда выполнения рабочих процессов получает все сведения, которые необходимы для его поддержки. Среда выполнения получает эти данные во время выполнения метода <xref:System.Activities.Activity.CacheMetadata%2A>. Реализация этого метода по умолчанию предоставляет среде выполнения все открытые аргументы, переменные и дочерние действия этого действия, доступные во время выполнения. Если действие требует передачи среде выполнения дополнительных сведений (например, закрытых элементов или действий, планируемых этим действием), то этот метод может быть переопределен.  
   
-## Поведение CacheMetadata по умолчанию  
+## <a name="default-cachemetadata-behavior"></a>Поведение CacheMetadata по умолчанию  
  Реализация <xref:System.Activities.NativeActivity.CacheMetadata%2A> по умолчанию для действий, производных от <xref:System.Activities.NativeActivity>, обрабатывает следующие типы методов следующими способами:  
   
--   <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> или <xref:System.Activities.InOutArgument%601> \(универсальные аргументы\). Эти аргументы доступны в среде выполнения с именем и типом, совпадающими с именем и типом переданного свойства, с соответствующим направлением аргумента и некоторыми проверочными данными.  
+-   <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> или <xref:System.Activities.InOutArgument%601> (универсальные аргументы). Эти аргументы доступны в среде выполнения с именем и типом, совпадающими с именем и типом переданного свойства, с соответствующим направлением аргумента и некоторыми проверочными данными.  
   
 -   <xref:System.Activities.Variable> или любой его подкласс. Эти элементы предоставляются среде выполнения в виде открытых переменных.  
   
--   <xref:System.Activities.Activity> или любой его подкласс. Эти элементы предоставляются среде выполнения в виде открытых дочерних действий.Поведение по умолчанию может быть реализовано явным образом, вызовом <xref:System.Activities.ActivityMetadata.AddImportedChild%2A> с передачей дочернего действия.  
+-   <xref:System.Activities.Activity> или любой его подкласс. Эти элементы предоставляются среде выполнения в виде открытых дочерних действий. Поведение по умолчанию может быть реализовано явным образом, вызовом <xref:System.Activities.ActivityMetadata.AddImportedChild%2A> с передачей дочернего действия.  
   
 -   <xref:System.Activities.ActivityDelegate> или любой его подкласс. Эти элементы доступны в среде выполнения в виде открытых делегатов.  
   
@@ -40,12 +44,12 @@ caps.handback.revision: 4
   
 -   Классы, производные от <xref:System.Activities.CodeActivity> и <xref:System.Activities.AsyncCodeActivity>, не поддерживают переменные, дочерние элементы и делегаты, поэтому передаваться могут только аргументы.  
   
-## Переопределение метода CacheMetadata для передачи данных среде выполнения  
- В следующем фрагменте кода показано, как добавить сведения об элементах в метаданные любого действия во время выполнения метода <xref:System.Activities.Activity.CacheMetadata%2A>.Следует иметь в виду, что основа метода вызывается для кэширования всех открытых данных о действии.  
+## <a name="overriding-cachemetadata-to-provide-information-to-the-runtime"></a>Переопределение метода CacheMetadata для передачи данных среде выполнения  
+ В следующем фрагменте кода показано, как добавить сведения об элементах в метаданные любого действия во время выполнения метода <xref:System.Activities.Activity.CacheMetadata%2A>. Следует иметь в виду, что основа метода вызывается для кэширования всех открытых данных о действии.  
   
 ```  
 protected override void CacheMetadata(NativeActivityMetadata metadata)  
-{      
+{      
     base.CacheMetadata(metadata);  
     metadata.AddImplementationChild(this._writeLine);  
     metadata.AddVariable(this._myVariable);  
@@ -55,40 +59,38 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
     metadata.Bind(argument, this.SomeName);  
     metadata.AddArgument(argument);  
 }  
-  
 ```  
   
-## Доступ к дочерним элементам реализации через метод CacheMetadata  
- Чтобы передать данные дочерним действиям, которые должны быть запланированы действием с помощью переменных, необходимо добавить переменные в виде переменных реализации. Значения открытых переменных нельзя задать таким образом.Причина этого заключается в том, что действия должны выполняться скорее как реализации функций \(имеющих параметры\), а не как инкапсулированные классы \(имеющие свойства\).Однако в некоторых ситуациях аргументы должны задаваться явным образом, например через <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, поскольку запланированное действие, в отличие от дочернего, не имеет доступа к аргументам родительского действия.  
+## <a name="using-cachemetadata-to-expose-implementation-children"></a>Доступ к дочерним элементам реализации через метод CacheMetadata  
+ Чтобы передать данные дочерним действиям, которые должны быть запланированы действием с помощью переменных, необходимо добавить переменные в виде переменных реализации. Значения открытых переменных нельзя задать таким образом. Причина этого заключается в том, что действия должны выполняться скорее как реализации функций (имеющих параметры), а не как инкапсулированные классы (имеющие свойства). Однако в некоторых ситуациях аргументы должны задаваться явным образом, например через <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, поскольку запланированное действие, в отличие от дочернего, не имеет доступа к аргументам родительского действия.  
   
  В следующем фрагменте кода показан способ передачи аргумента от исходного действия запланированному действию с помощью <xref:System.Activities.Activity.CacheMetadata%2A>.  
   
 ```  
 public sealed class ChildActivity : NativeActivity  
 {  
-    public WriteLine _writeLine;  
-    public InArgument<string> Message { get; set; }  
-    private Variable<string> MessageVariable { get; set; }  
-    public ChildActivity()  
-    {  
-        MessageVariable = new Variable<string>();  
-        _writeLine = new WriteLine  
-        {  
-            Text = new InArgument<string>(MessageVariable),  
-        };  
-    }  
-    protected override void CacheMetadata(NativeActivityMetadata metadata)  
-    {  
-        base.CacheMetadata(metadata);  
-        metadata.AddImplementationVariable(this.MessageVariable);  
-        metadata.AddImplementationChild(this._writeLine);  
-    }  
-    protected override void Execute(NativeActivityContext context)  
-    {  
-        string configuredMessage = context.GetValue(Message);  
-        context.SetValue(MessageVariable, configuredMessage);  
-        context.ScheduleActivity(this._writeLine);  
-    }  
+    public WriteLine _writeLine;  
+    public InArgument<string> Message { get; set; }  
+    private Variable<string> MessageVariable { get; set; }  
+    public ChildActivity()  
+    {  
+        MessageVariable = new Variable<string>();  
+        _writeLine = new WriteLine  
+        {  
+            Text = new InArgument<string>(MessageVariable),  
+        };  
+    }  
+    protected override void CacheMetadata(NativeActivityMetadata metadata)  
+    {  
+        base.CacheMetadata(metadata);  
+        metadata.AddImplementationVariable(this.MessageVariable);  
+        metadata.AddImplementationChild(this._writeLine);  
+    }  
+    protected override void Execute(NativeActivityContext context)  
+    {  
+        string configuredMessage = context.GetValue(Message);  
+        context.SetValue(MessageVariable, configuredMessage);  
+        context.ScheduleActivity(this._writeLine);  
+    }  
 }  
-  
 ```

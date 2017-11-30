@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>Адресация IPv6
 Длина IPv6-адресов составляет 128 бит. Одна из причин такого большого адресного пространства заключается в том, чтобы разделить доступные адреса на иерархию доменов маршрутизации, отражающих топологию Интернета. Другая причина состоит в том, чтобы сопоставить адреса сетевых адаптеров (или интерфейсов), которые подключают устройства к сети. IPv6 обладает встроенной возможностью разрешать адреса на их самом низком уровне, который находится на уровне сетевого интерфейса, а также позволяет выполнять автоматическую настройку.  
@@ -88,6 +82,5 @@ ms.lasthandoff: 08/21/2017
  Как правило, узел всегда имеет адрес локального канала. У него может быть адрес локального узла и один или несколько глобальных адресов.  
   
 ## <a name="see-also"></a>См. также  
- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Сокеты](../../../docs/framework/network-programming/sockets.md)
-

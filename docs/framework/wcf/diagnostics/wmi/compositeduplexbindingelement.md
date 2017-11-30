@@ -1,25 +1,28 @@
 ---
-title: "CompositeDuplexBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CompositeDuplexBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05e985aa-6462-431d-a831-0d601f3a3835
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 78543561f0773b97acde8375cffa39b4e6af5049
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# CompositeDuplexBindingElement
+# <a name="compositeduplexbindingelement"></a>CompositeDuplexBindingElement
 CompositeDuplexBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CompositeDuplexBindingElement : BindingElement  
@@ -28,24 +31,24 @@ class CompositeDuplexBindingElement : BindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс CompositeDuplexBindingElement не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс CompositeDuplexBindingElement имеет следующее свойство.  
   
-### ClientBaseAddress  
+### <a name="clientbaseaddress"></a>ClientBaseAddress  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Базовый адрес клиента.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>

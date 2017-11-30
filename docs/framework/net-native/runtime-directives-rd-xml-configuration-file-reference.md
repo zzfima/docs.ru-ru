@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68f1e217cdc6433270ecb8afe4149d2e37e4b014
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Ссылка на файл конфигурации директив среды выполнения (rd.xml)
 Файл директив среды выполнения (. rd.xml) — это файл конфигурации XML, который определяет, доступны ли элементы в указанной программе для отражения. Ниже приведен пример файла директив среды выполнения:  
@@ -53,41 +51,41 @@ ms.lasthandoff: 08/21/2017
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассы содержащего типа) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассы содержащего типа) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
@@ -97,36 +95,36 @@ ms.lasthandoff: 08/21/2017
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассы содержащего типа) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (подклассы содержащего типа) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (содержащий тип является атрибутом) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (сконструированного универсального типа) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
@@ -167,11 +165,11 @@ ms.lasthandoff: 08/21/2017
   
 -   `Serialize`. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек сторонних поставщиков, как сериализатор Newtonsoft JSON.  
   
--   `DataContractSerializer`. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractSerializer`. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `DataContractJsonSerializer`. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractJsonSerializer`. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `XmlSerializer`. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.  
+-   `XmlSerializer`. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.  
   
 -   `MarshalObject`. Определяет политику для маршалинга ссылочных типов в WinRT и COM.  
   
@@ -396,7 +394,7 @@ ms.lasthandoff: 08/21/2017
   
 -   Если метод универсален, типы, по которым создается экземпляр метода, помечаются политикой `Browse`.  
   
--   Этот метод может вызываться `MethodInfo.Invoke`, а создание делегата становится возможным с помощью <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=fullName>.  
+-   Этот метод может вызываться `MethodInfo.Invoke`, а создание делегата становится возможным с помощью <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.  
   
  Применение политики `Dynamic` для поля включает в себя следующие изменения политики:  
   
@@ -417,7 +415,7 @@ ms.lasthandoff: 08/21/2017
   
  Применение политики `Activation` для метода включает в себя следующие изменения политики:  
   
--   Конструктор может вызываться методами <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=fullName> и <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>. Для методов политика `Activation` оказывает действие только на конструкторы.  
+-   Конструктор может вызываться методами <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> и <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. Для методов политика `Activation` оказывает действие только на конструкторы.  
   
  Применение политики `Activation` к полю не оказывает влияния.  
   
@@ -470,6 +468,5 @@ ms.lasthandoff: 08/21/2017
  Подробнее см. в подразделе "Различия в сериализаторах" раздела [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 ## <a name="see-also"></a>См. также  
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-

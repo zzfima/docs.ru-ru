@@ -1,41 +1,42 @@
 ---
-title: "Элемент управления Splitter (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "несколько представлений"
-  - "Splitter - элемент управления [Windows Forms]"
-  - "представления, несколько в одном окне"
+title: "Элемент управления Splitter (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiple views
+- Splitter control [Windows Forms]
+- views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b6a1438a48cd6cd21532a977dcf9cee69fd2cea
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Элемент управления Splitter (Windows Forms)
-Элементы управления Windows Forms `Splitter` \(разделители\) используются для изменения размеров закрепленных элементов управления во время выполнения.  Элемент управления `Splitter` часто используется в формах с элементами управления, в которых представлены данные переменной длины, например в проводнике Windows, где области данных в разное время содержат сведения разных размеров.  
+# <a name="splitter-control-windows-forms"></a>Элемент управления Splitter (Windows Forms)
+Windows Forms `Splitter` элементы управления используются для изменения размера закрепленных элементов управления во время выполнения. `Splitter` Управления часто используется в формах с элементами управления, в которых представлены, например в проводнике Windows, где области данных содержат сведения о разных размеров в разное время данные переменной длины.  
   
 > [!NOTE]
->  Хотя элемент управления <xref:System.Windows.Forms.SplitContainer> заменяет элемент управления `Splitter` предыдущих версий и расширяет его функциональные возможности, однако при необходимости элемент управления `Splitter` можно сохранить для обратной совместимости и использования в будущем.  
+>  Несмотря на то что <xref:System.Windows.Forms.SplitContainer> заменяет и расширяет его функциональные возможности `Splitter` управления предыдущих версий, `Splitter` можно сохранить для обратной совместимости и использования в будущем, если выбрать.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления Splitter](../../../../docs/framework/winforms/controls/splitter-control-overview-windows-forms.md)  
- Описание данного элемента управления и его основных характеристик и свойств.  
+ Описывается элемент управления, его основные возможности и свойства.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.Splitter>  
  Описание класса и ссылки на все его члены.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы, в которых описывается их использование.
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

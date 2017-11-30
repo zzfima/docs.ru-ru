@@ -1,25 +1,28 @@
 ---
-title: "ReliableSessionBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ReliableSessionBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f4aff60c96db5071d41a3f011019b05746f0c96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ReliableSessionBindingElement
+# <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class ReliableSessionBindingElement : BindingElement  
@@ -35,73 +38,73 @@ class ReliableSessionBindingElement : BindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс ReliableSessionBindingElement не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс ReliableSessionBindingElement имеет следующие свойства.  
   
-### AcknowledgementInterval  
+### <a name="acknowledgementinterval"></a>AcknowledgementInterval  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Промежуток времени, в течение которого пункт назначения ожидает перед отправкой подтверждения источнику сообщения по надежным каналам, созданным фабрикой.  
   
-### FlowControlEnabled  
+### <a name="flowcontrolenabled"></a>FlowControlEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, указывающее, включено ли управление потоком.  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Максимальное время, в течение которого канал позволяет другому участнику соединения не отправлять никаких сообщений, прежде чем канал будет закрыт с ошибкой.  
   
-### MaxPendingChannels  
+### <a name="maxpendingchannels"></a>MaxPendingChannels  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное число каналов, ожидающих принятия на прослушивателе.  
   
-### MaxRetryCount  
+### <a name="maxretrycount"></a>MaxRetryCount  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное количество попыток повторной передачи надежным каналом сообщения, для которого не было получено подтверждение приема. Повторная передача осуществляется посредством вызова метода `Send` в базовом канале.  
   
-### MaxTransferWindowSize  
+### <a name="maxtransferwindowsize"></a>MaxTransferWindowSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальный размер окна передачи для надежного сеанса.  
   
-### Ordered  
+### <a name="ordered"></a>Ordered  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, определяющее, прибывают ли сообщения точно в том порядке, в котором они были отправлены.  
   
-### ReliableMessagingVersion  
+### <a name="reliablemessagingversion"></a>ReliableMessagingVersion  
  Тип данных: integer  
   
  Тип доступа: только для чтения  
   
- Целочисленное значение, задающее версию используемого в надежном канале протокола WS\-ReliableMessaging.  
+ Целочисленное значение, задающее версию используемого в надежном канале протокола WS-ReliableMessaging.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

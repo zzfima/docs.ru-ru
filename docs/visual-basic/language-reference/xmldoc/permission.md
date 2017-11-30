@@ -1,51 +1,50 @@
 ---
-title: "&lt;разрешение&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<permission> - XML-тег"
-  - "permission - XML-тег"
+title: "&lt;разрешение&gt; (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <permission> XML tag
+- permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 67e11998e43a43f92c26eb5f7daa488d288823c8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;разрешение&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Задает требуемое разрешение для члена.  
+# <a name="ltpermissiongt-visual-basic"></a>&lt;разрешение&gt; (Visual Basic)
+Указывает разрешение, необходимые для элемента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на член или поле, которое может вызываться из текущей среды компиляции.  Компилятор проверяет, существует ли элемент кода и приводит `member` к каноническому имени элемента в выходных XML\-данных.  Заключите `member` в кавычки \(" "\).  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных. Заключите `member` в кавычки (» «).  
   
  `description`  
- Описание доступа к члену.  
+ Описание уровня доступа для члена.  
   
-## Заметки  
- Используйте тег `<permission>`, чтобы документ получил доступ к члену.  Используйте класс <xref:System.Security.PermissionSet>, чтобы указать доступ к члену.  
+## <a name="remarks"></a>Примечания  
+ Используйте `<permission>` тег для документирования доступ к члену. Используйте <xref:System.Security.PermissionSet> классу, чтобы задать доступ к члену.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В данном примере используется тег `<permission>`, указывающий, что требуется <xref:System.Security.Permissions.FileIOPermission> для метода `ReadFile`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<permission>` тегов для описания, <xref:System.Security.Permissions.FileIOPermission> затребована `ReadFile` метод.  
   
  [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

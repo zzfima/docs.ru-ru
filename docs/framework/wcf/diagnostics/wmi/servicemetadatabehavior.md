@@ -1,25 +1,28 @@
 ---
-title: "ServiceMetadataBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceMetadataBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d10fdd9e33b078fa392e0ef359372913f9ba133
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceMetadataBehavior
+# <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 ServiceMetadataBehavior  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class ServiceMetadataBehavior : Behavior  
@@ -32,52 +35,52 @@ class ServiceMetadataBehavior : Behavior
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс ServiceMetadataBehavior не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс ServiceMetadataBehavior имеет следующие свойства.  
   
-### ExternalMetadataLocation  
+### <a name="externalmetadatalocation"></a>ExternalMetadataLocation  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Задает расположение, в которое служба перенаправляет запросы метаданных.  
   
-### HttpGetEnabled  
+### <a name="httpgetenabled"></a>HttpGetEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Определяет, публикует ли служба свой код WSDL по адресу, определяемому атрибутом `HttpGetUrl`.  
   
-### HttpGetUrl  
+### <a name="httpgeturl"></a>HttpGetUrl  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Задает расположение, в котором публикуется код WSDL службы для извлечения по протоколу HTTP.  
+ Задает расположение для публикации языка WSDL службы и его получения с помощью HTTP.  
   
-### HttpsGetEnabled  
+### <a name="httpsgetenabled"></a>HttpsGetEnabled  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Определяет, публикует ли служба свой код WSDL через HTTPS по адресу, определяемому атрибутом `HttpsGetUrl`.  
+ Определяет, публикует ли служба свой язык WSDL через HTTPS по адресу, указанному в атрибуте `HttpsGetUrl`.  
   
-### HttpsGetUrl  
+### <a name="httpsgeturl"></a>HttpsGetUrl  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Задает расположение, в котором публикуется код WSDL службы для извлечения по протоколу HTTPS.  
+ Задает расположение для публикации языка WSDL службы и его получения с помощью HTTPS.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>

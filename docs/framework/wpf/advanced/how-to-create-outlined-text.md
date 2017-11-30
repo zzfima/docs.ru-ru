@@ -1,65 +1,71 @@
 ---
-title: "Практическое руководство. Вывод текста по контуру | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "градиентная кисть"
-  - "кисть с линейным градиентом"
-  - "контурный текст"
-  - "оформление, кисть с линейным градиентом"
-  - "оформление, контурные эффекты"
+title: "Практическое руководство. Вывод текста по контуру"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- typography [WPF], linear gradient brush
+- outlined text [WPF]
+- gradient brush [WPF]
+- linear gradient brush [WPF]
+- typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 76d0dcf63f9d8a66106f4bcdc52a2bf98c75cdc4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Вывод текста по контуру
-В большинстве случаев при добавлении декоративных элементов в текстовые строки в приложении [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] используется текст в виде коллекции дискретных символов или глифов.  Например, можно создать кисть линейного градиента и применить ее к свойству <xref:System.Windows.Controls.Control.Foreground%2A> объекта <xref:System.Windows.Controls.TextBox>.  Когда происходит отображение или редактирование текстового поля, кисть линейного градиента автоматически применяется к текущему набору символов в строке текста.  
+# <a name="how-to-create-outlined-text"></a>Практическое руководство. Вывод текста по контуру
+В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложение, вы используете текст в виде коллекции дискретных символов или глифов. Например, можно создать кисти линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта. При отображении или измените текстовое поле кисти линейного градиента автоматически применяется текущий набор символов в текстовой строке.  
   
- ![Текст, отображенный при помощи кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext01.png "OutlinedText01")  
-Пример кисти линейного градиента, применяемой к текстовому полю  
+ ![Текст, отображаемый кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext01.jpg "OutlinedText01")  
+Пример кисти линейного градиента, применяются к текстовому полю  
   
- В то же время текст можно также преобразовать в объекты <xref:System.Windows.Media.Geometry>, что позволяет создавать другие типы визуально насыщенного текста.  Например, можно создать объект <xref:System.Windows.Media.Geometry>, основанный на контуре строки текста.  
+ Тем не менее, можно преобразовать текст в <xref:System.Windows.Media.Geometry> объекты, что позволяет создавать другие типы визуально форматированного текста. Например, можно создать <xref:System.Windows.Media.Geometry> объекта, основанного на структуре текстовой строки.  
   
- ![Оконтуривание текста с использованием кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext02.png "OutlinedText02")  
-Пример кисти линейного градиента, применяемой к геометрической форме контура текста  
+ ![Оконтуривание текста с использованием кисти линейного градиента](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+Пример кисти линейного градиента, применяемой к геометрии структуры текста  
   
- Текст, преобразованный в объект <xref:System.Windows.Media.Geometry>, не является набором символов, для которого изменение символов в текстовой строке невозможно.  Тем не менее, внешний вид преобразованного текста можно изменять с помощью свойств штриха и заливки.  Штрих — это контур преобразованного текста, а заливка — область внутри контура преобразованного текста.  
+ Если текст преобразуется в <xref:System.Windows.Media.Geometry> объекта, он больше не является набором символов — изменение символов в текстовой строке невозможно. Тем не менее можно повлиять на внешний вид преобразованного текст, изменив его свойства штриха и заливки. Штрих — это контур преобразованного текста; заливка — это область внутри контура преобразованного текста.  
   
- Следующие примеры демонстрируют несколько способов создания визуальных эффектов, изменяя штрих и заливку преобразованного текста.  
+ Следующие примеры иллюстрируют несколько способов создания визуальных эффектов путем изменения обводки и заливку преобразованного текста.  
   
- ![Текст с различными цветами для заполнения штриха](../../../../docs/framework/wpf/advanced/media/outlinedtext03.png "OutlinedText03")  
+ ![Текст с различными цветами для заполнения штриха](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
 Пример установки разного цвета для штриха и заливки  
   
- ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext04.png "OutlinedText04")  
+ ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
 Пример применения кисти к штриху  
   
- Также возможно изменить прямоугольник ограничивающего поля или выделить преобразованный текст.  Следующий пример демонстрирует способ создания визуальных эффектов путем изменения штриха и выделения преобразованного текста.  
+ Можно также изменить ограничивающего прямоугольника поля или выделить преобразованный текст. Следующий пример демонстрирует способ создания визуальных эффектов путем изменения обводки и выделения преобразованного текста.  
   
- ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext05.png "OutlinedText05")  
+ ![Текст с кистью изображения, примененной к штриху](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
 Пример применения кисти к штриху и выделению  
   
-## Пример  
- Чтобы преобразовать текст в объект <xref:System.Windows.Media.Geometry>, необходимо использовать объект <xref:System.Windows.Media.FormattedText>.  После создания этого объекта можно использовать методы <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> и <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> для преобразования текста в объекты <xref:System.Windows.Media.Geometry>.  Первый метод возвращает геометрическую форму форматированного текста, а второй — геометрическую форму ограничивающего поля форматированного текста.  В следующем примере показано создание объекта <xref:System.Windows.Media.FormattedText> и извлечение геометрических форм форматированного текста и его ограничивающего поля.  
+## <a name="example"></a>Пример  
+ Ключ, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> необходимо использовать <xref:System.Windows.Media.FormattedText> объекта. После создания этот объект можно использовать <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> и <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> методов, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> объектов. Первый метод возвращает геометрии форматированного текста. Второй метод возвращает геометрию форматированный текст ограничивающего прямоугольника. В следующем примере кода показано, как создать <xref:System.Windows.Media.FormattedText> объекта и извлечение геометрических форм форматированного текста и его ограничивающего прямоугольника.  
   
  [!code-csharp[OutlineTextControlViewer#CreateText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Чтобы отобразить извлеченные объекты <xref:System.Windows.Media.Geometry>, необходимо иметь доступ к <xref:System.Windows.Media.DrawingContext> объекта, который отображает преобразованный текст.  В приведенных примерах кода это делается путем создания объекта пользовательского элемента управления, который является производным от класса, поддерживающего определенную пользователем отрисовку.  
+ Чтобы отобразить извлеченные <xref:System.Windows.Media.Geometry> объектов, необходимо получить доступ к <xref:System.Windows.Media.DrawingContext> объекта, который отображает преобразованный текст. В этих примерах кода этого путем создания объекта пользовательского элемента управления, производный от класса, поддерживающего определенную пользователем отрисовку.  
   
- Чтобы отобразить объекты <xref:System.Windows.Media.Geometry> в пользовательском элементе управления, выполните переопределение для метода <xref:System.Windows.UIElement.OnRender%2A>.  Переопределенный метод должен использовать метод <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> для рисования объектов <xref:System.Windows.Media.Geometry>.  
+ Для отображения <xref:System.Windows.Media.Geometry> объектов в пользовательский элемент управления, выполните переопределение для <xref:System.Windows.UIElement.OnRender%2A> метод. Переопределенный метод должен использовать <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> метод для отображения <xref:System.Windows.Media.Geometry> объектов.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)

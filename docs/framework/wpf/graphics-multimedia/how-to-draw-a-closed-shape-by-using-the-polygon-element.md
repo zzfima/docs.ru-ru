@@ -1,34 +1,37 @@
 ---
-title: "Практическое руководство. Рисование замкнутой фигуры с помощью элемента &quot;Многоугольник&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "замкнутые фигуры, рисование с помощью элементов Polygon"
-  - "рисование, закрытых фигур с помощью элементов Polygon"
-  - "графика, элементы Polygon"
-  - "элементы Polygon"
+title: "Практическое руководство. Рисование замкнутой фигуры с помощью элемента \"Многоугольник\""
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], Polygon elements
+- closed shapes [WPF], drawing with Polygon elements
+- Polygon elements [WPF]
+- drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b38efefa503ec3786b6e40f7b93bac59596b419f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Рисование замкнутой фигуры с помощью элемента &quot;Многоугольник&quot;
-В этом примере демонстрируется рисование замкнутой фигуры с помощью элемента <xref:System.Windows.Shapes.Polygon>.  Чтобы нарисовать замкнутую фигуру, создайте элемент <xref:System.Windows.Shapes.Polygon> и используйте его свойство <xref:System.Windows.Shapes.Polygon.Points%2A> для указания вершин фигуры.  Автоматически рисуется линия, соединяющая первую и последнюю точки.  Затем укажите <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A> или оба свойства.  
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Практическое руководство. Рисование замкнутой фигуры с помощью элемента "Многоугольник"
+В этом примере показано, как Рисование замкнутой фигуры с помощью <xref:System.Windows.Shapes.Polygon> элемента. Чтобы нарисовать замкнутую фигуру, создайте <xref:System.Windows.Shapes.Polygon> элемента и использовать его <xref:System.Windows.Shapes.Polygon.Points%2A> свойство, чтобы указать вершинах фигуры. Автоматически отображается линия, соединяющая точки первым и последним. Наконец, укажите <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, или оба.  
   
-## Пример  
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] допустимым синтаксисом для точек является список, содержащий пары разделенных пробелом координат x и y.  
+## <a name="example"></a>Пример  
+ В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], допустимым синтаксисом для точек — перечень запятыми координат x и y пары.  
   
- [!code-xml[drawingwithshapeelements#PolygonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolygonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
   
- Хотя в примере для хранения многоугольников используется <xref:System.Windows.Controls.Canvas>, элементы многоугольника \(и все остальные элементы фигур\) можно использовать с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control>, поддерживающим нетекстовое содержимое.  
+ Несмотря на то, что в этом примере <xref:System.Windows.Controls.Canvas> для хранения многоугольников, можно использовать элементы многоугольника (и все остальные элементы фигур) с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control> , поддерживающую нетекстовых содержимое.  
   
- Этот пример является фрагментом большего примера; полный пример см. на веб\-странице [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).
+ Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов фигуры](http://go.microsoft.com/fwlink/?LinkID=160037).

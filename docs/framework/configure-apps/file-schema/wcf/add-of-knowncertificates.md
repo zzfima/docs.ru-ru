@@ -1,28 +1,39 @@
 ---
-title: "&lt;add&gt; для &lt;knownCertificates&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;add&gt; для &lt;knownCertificates&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e19bb495f360352b7304595323265d28773660a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; для &lt;knownCertificates&gt;
+# <a name="ltaddgt-of-ltknowncertificatesgt"></a>&lt;add&gt; для &lt;knownCertificates&gt;
 Добавляет сертификат X.509 в коллекцию известных сертификатов.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<поведения >  
+\<serviceBehaviors >  
+\<поведение >  
+\<serviceCredentials >  
+\<issuedTokenAuthentication >  
+\<knownCertificates >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <knownCertificates>   
    <add findValue="String"  
       storeLocation="CurrentUser/LocalMachine"  
@@ -31,57 +42,57 @@ caps.handback.revision: 14
 </knownCertificates>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|findValue|Строка.  Значение, которое нужно найти.|  
-|storeLocation|Перечисление.  Одно из двух местоположений хранилища, где следует проводить поиск.|  
-|storeName|Перечисление.  Одно из системных хранилищ, где следует проводить поиск.|  
-|x509FindType|Перечисление.  Одно из полей сертификата, где следует проводить поиск.|  
+|---------------|-----------------|  
+|findValue|Строка. Значение, которое нужно найти.|  
+|storeLocation|Перечисление. Одно из двух местоположений хранилища, где следует проводить поиск.|  
+|storeName|Перечисление. Одно из системных хранилищ, где следует проводить поиск.|  
+|x509FindType|Перечисление. Одно из полей сертификата, где следует проводить поиск.|  
   
-## Атрибут findValue  
-  
-|Значение|Описание|  
-|--------------|--------------|  
-|Строковое|Значение зависит от поля \(заданного атрибутом x509FindType\), поиск которого выполняется.  Например, при поиске отпечатка значение должно быть строкой шестнадцатеричных чисел.|  
-  
-## Атрибут x509FindType  
+## <a name="findvalue-attribute"></a>Атрибут findValue  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
+|Строковое|Значение зависит от поля (заданного атрибутом x509FindType), поиск которого выполняется. Например, при поиске отпечатка значение должно быть строкой шестнадцатеричных чисел.|  
+  
+## <a name="x509findtype-attribute"></a>Атрибут x509FindType  
+  
+|Значение|Описание|  
+|-----------|-----------------|  
 |Перечисление|К числу значений относятся следующие: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
-## Атрибут storeLocation  
+## <a name="storelocation-attribute"></a>Атрибут storeLocation  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
 |Перечисление|CurrentUser или LocalMachine.|  
   
-## Атрибут storeName  
+## <a name="storename-attribute"></a>Атрибут storeName  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
 |Перечисление|К числу значений относятся следующие: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople и TrustedPublisher.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<knownCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Представляет коллекцию сертификатов X.509, предоставленную службой STS для проверки маркеров безопасности.|  
+|-------------|-----------------|  
+|[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Представляет коллекцию сертификатов X.509, предоставленную службой STS для проверки маркеров безопасности.|  
   
-## Заметки  
- В сценарии с выданным маркером имеется три этапа.  На первом этапе клиент, который пытается получить доступ к службе, направляется к *службе маркеров безопасности*.  Затем служба маркеров безопасности проводит проверку подлинности клиента и выдает клиенту маркер, обычно на языке Security Assertions Markup Language \(SAML\).  После этого клиент возвращается к службе с этим маркером.  Служба проверяет наличие в маркере данных, позволяющих проверить подлинность маркера и, соответственно, самого клиента.  Для проверки подлинности маркера сертификат, используемый службой маркеров безопасности, должен быть известен службе.  
+## <a name="remarks"></a>Примечания  
+ В сценарии с выданным маркером имеется три этапа. На первом этапе клиент, который пытается получить доступ к службе называется *службы маркеров безопасности*. Затем служба маркеров безопасности проводит проверку подлинности клиента и выдает клиенту маркер, обычно на языке Security Assertions Markup Language (SAML). После этого клиент возвращается к службе с этим маркером. Служба проверяет наличие в маркере данных, позволяющих проверить подлинность маркера и, соответственно, самого клиента. Для проверки подлинности маркера сертификат, используемый службой маркеров безопасности, должен быть известен службе.  
   
- Элемент [\<issuedTokenAuthentication\>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) является хранилищем подобных сертификатов службы маркеров безопасности.  Используйте элемент [\<knownCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md), чтобы добавить сертификаты.  Вставьте элемент [\<add\> element \<knownCertificates\> Element](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) для каждого сертификата, как показано в следующем примере.  
+ [ \<IssuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) элемент является хранилищем для всех таких сертификатов службы маркеров безопасности. Чтобы добавить сертификаты, используйте [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). Вставить [ \<Добавить > элемент \<knownCertificates > элемент](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) для каждого сертификата, как показано в следующем примере.  
   
-```  
+```xml  
 <issuedTokenAuthentication>  
    <knownCertificates>  
       <add findValue="www.contoso.com"   
@@ -91,14 +102,14 @@ caps.handback.revision: 14
 </issuedTokenAuthentication>  
 ```  
   
- По умолчанию сертификаты должны быть получены от службы маркеров безопасности.  Эти "известные" сертификаты гарантируют, что доступ к службе могут получить только допустимые клиенты.  
+ По умолчанию сертификаты должны быть получены от службы маркеров безопасности. Эти "известные" сертификаты гарантируют, что доступ к службе могут получить только допустимые клиенты.  
   
- Условия, соблюдение которых необходимо для подтверждения подлинности клиента федеративной службой, а также подробные сведения об использовании данного элемента конфигурации см. в разделе [Как настраивать учетные данные службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  Дополнительные сведения о федеративных сценариях см. в разделе [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Просмотреть условия, необходимые клиенту проходить проверку подлинности в федеративной службе, а также дополнительные сведения об использовании данного элемента конфигурации в разделе [как: Настройка учетных данных службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Дополнительные сведения о федеративных сценариев см. в разделе [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере демонстрируется добавление сертификата в хранилище сертификатов службы STS.  
   
-```  
+```xml  
 <serviceBehaviors>  
  <behavior name="myServiceBehavior">  
   <serviceCredentials>  
@@ -114,16 +125,16 @@ caps.handback.revision: 14
  </serviceBehaviors>  
 ```  
   
-## См. также  
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>   
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>   
- <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>   
- <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>   
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>   
- <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>   
- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>   
- [\<knownCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)   
- [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)   
- [Как настраивать учетные данные службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
+ <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
+ <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement.KnownCertificates%2A>  
+ <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>  
+ <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>  
+ <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>  
+ [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)  
+ [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Федерация и выданные маркеры](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [Как: настройте учетные данные для службы федерации](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

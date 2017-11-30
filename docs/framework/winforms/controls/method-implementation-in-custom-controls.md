@@ -1,30 +1,34 @@
 ---
-title: "Реализация методов в специализированных элементах управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms] реализация метода"
-  - "пользовательские элементы управления [Windows Forms] перегрузка методов"
-  - "пользовательские элементы управления [Windows Forms] реализация метода"
-  - "методы [Windows Forms]"
-  - "методы [Windows Forms], пользовательские элементы управления"
+title: "Реализация методов в специализированных элементах управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user controls [Windows Forms], method implementation
+- custom controls [Windows Forms], overloading methods
+- custom controls [Windows Forms], method implementation
+- methods [Windows Forms]
+- methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c992197b653fb3999870247a3a4cdb4015612ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Реализация методов в специализированных элементах управления
+# <a name="method-implementation-in-custom-controls"></a>Реализация методов в специализированных элементах управления
 Метод применяется в элементе управления точно так же, как и в любом другом компоненте.  
   
  В Visual Basic, если метод требуется для возврата значения, он выполняется как `Public Function`. Если значение не возвращается, метод выполняется как `Public Sub`. Методы объявляются согласно следующему синтаксису:  
@@ -82,5 +86,5 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [События](../../../../docs/standard/events/index.md)   
+ [События](../../../../docs/standard/events/index.md)  
  [Свойства элементов управления Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

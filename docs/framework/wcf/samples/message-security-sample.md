@@ -1,30 +1,33 @@
 ---
-title: "Образец безопасности сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример безопасности сообщений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-caps.latest.revision: 33
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: eda5acd6865e463f01b59566c7c75f8efad0c329
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец безопасности сообщений
-Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений.Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), реализующем службу калькулятора.  
+# <a name="message-security-sample"></a>Пример безопасности сообщений
+Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Режим безопасности `basicHttpBinding` может быть установлен в следующие значения: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` и `None`.В следующем образце файла службы App.config, в определении конечной точки задаются привязка `basicHttpBinding` и ссылки на конфигурацию привязки с именем `Binding1`, как показано в следующем образце конфигурации.  
+ Режим безопасности `basicHttpBinding` может быть установлен в следующие значения: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` и `None`. В следующем образце файла службы App.config, в определении конечной точки задаются привязка `basicHttpBinding` и ссылки на конфигурацию привязки с именем `Binding1`, как показано в следующем образце конфигурации.  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -40,9 +43,9 @@ caps.handback.revision: 33
 </system.serviceModel>  
 ```  
   
- Конфигурация привязки задает атрибуту `mode` элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) значение `Message` и задает атрибуту `clientCredentialType` элемента [\<сообщение\>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) значение `Certificate`, как показано в следующем образце конфигурации.  
+ Наборы конфигурации привязки `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message` и задает `clientCredentialType` атрибут [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)для `Certificate` как показано в следующем образце конфигурации:  
   
-```  
+```xml  
 <bindings>  
   <basicHttpBinding>  
     <!--   
@@ -58,9 +61,9 @@ caps.handback.revision: 33
 </bindings>  
 ```  
   
- Сертификат, используемый службой для проверки своей подлинности при подключении к клиенту, установлен в разделе поведений элемента `serviceCredentials` файла конфигурации.Режим проверки, применяемый к сертификату, который клиент использует для проверки своей подлинности при подключении к службе, также задается в разделе поведений элемента `clientCertificate`.  
+ Сертификат, используемый службой для проверки своей подлинности при подключении к клиенту, установлен в разделе поведений элемента `serviceCredentials` файла конфигурации. Режим проверки, применяемый к сертификату, который клиент использует для проверки своей подлинности при подключении к службе, также задается в разделе поведений элемента `clientCertificate`.  
   
-```  
+```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
 <behaviors>  
   <serviceBehaviors>  
@@ -106,7 +109,7 @@ caps.handback.revision: 33
 Console.WriteLine("Called by {0}", ServiceSecurityContext.Current.PrimaryIdentity.Name);  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -116,73 +119,73 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка и построение образца  
+### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы выполнить построение версии решения для языка C\# или Visual Basic .NET, следуйте инструкциям раздела [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-### Выполнение образца на одном компьютере  
+### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере  
   
-1.  Запустите файл Setup.bat из папки установки образца.При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
+1.  Запустите файл Setup.bat из папки установки примера. При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
   
     > [!NOTE]
-    >  Пакетный файл Setup.bat предназначен для запуска из командной строки Windows SDK.Требуется, чтобы переменная среды MSSDK указывала на каталог, в котором установлен пакет SDK.Эта переменная среды автоматически устанавливается в командной строке Windows SDK.  
+    >  Пакетный файл Setup.bat предназначен для запуска из командной строки Windows SDK. Требуется, чтобы переменная среды MSSDK указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически устанавливается в командной строке Windows SDK.  
   
-2.  Запустите приложение службы из \\service\\bin.  
+2.  Запустите приложение службы из \service\bin.  
   
-3.  Запустите клиентское приложение из \\service\\bin.Действия клиента отображаются в консольном приложении клиента.  
+3.  Запустите клиентское приложение из \service\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-5.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты.В других образцах обеспечения безопасности используются те же сертификаты.  
+5.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
   
-### Выполнение образца на нескольких компьютерах  
+### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   
 1.  Создайте на компьютере службы каталог для двоичных файлов службы.  
   
-2.  Скопируйте файлы программ службы из каталога службы на сервер.Также скопируйте на сервер файлы Setup.bat, Cleanup.bat и ImportClientCert.bat.  
+2.  Скопируйте файлы программ службы из каталога службы на сервер. Также скопируйте на сервер файлы Setup.bat, Cleanup.bat и ImportClientCert.bat.  
   
 3.  Создайте на клиентском компьютере каталог для двоичных файлов клиента.  
   
-4.  Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента.Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
+4.  Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента. Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
   
-5.  На сервере выполните команду `setup.bat service`.При выполнении команды `setup.bat` с аргументом `service` создается сертификат службы с полным доменным именем компьютера, который экспортируется в файл с именем Service.cer.  
+5.  На сервере выполните команду `setup.bat service`. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
   
-6.  Внесите в файл Service.exe.config изменения в соответствии с новым именем сертификата \(в атрибуте `findValue` элемента [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), которое совпадает с полным доменным именем компьютера.Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
+6.  Изменить Service.exe.config в соответствии с новым именем сертификата (в `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемент) которого совпадает со значением полное доменное имя компьютера. Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
   
 7.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
-8.  На клиенте выполните команду `setup.bat client`.При выполнении команды `setup.bat` с аргументом `client` создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.  
+8.  На клиенте выполните команду `setup.bat client`. При выполнении команды `setup.bat`с аргументом `client` создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.  
   
-9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.Для этого замените имя localhost полным доменным именем сервера.Также измените атрибут`findValue` элемента [\<defaultCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) на имя нового сертификата, которое является полным доменным именем сервера.  
+9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Кроме того, изменить `findValue` атрибут [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) на новое имя сертификата службы, которым полное доменное имя сервера.  
   
 10. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
   
-11. Запустите на клиенте файл ImportServiceCert.bat.Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser \- TrustedPeople.  
+11. Запустите на клиенте файл ImportServiceCert.bat. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
   
-12. На сервере запустите файл ImportClientCert.bat. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine \- TrustedPeople.  
+12. На сервере запустите файл ImportClientCert.bat. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine - TrustedPeople.  
   
 13. Запустите программу Service.exe из командной строки на компьютере службы.  
   
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-    1.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### Очистка после образца  
+### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
--   После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
+-   После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
   
     > [!NOTE]
-    >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении образца на нескольких компьютерах.Если образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, выполнялись на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser \- TrustedPeople».Для этого воспользуйтесь командой `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например, `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], в которых использовались сертификаты, выполнялись на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - TrustedPeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
   
-## См. также
+## <a name="see-also"></a>См. также

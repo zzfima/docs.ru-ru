@@ -1,51 +1,50 @@
 ---
-title: "&lt;exception&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<exception> - XML-тег"
-  - "exception - XML-тег"
+title: "&lt;исключение&gt; (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <exception> XML tag
+- exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8d718a7c2213a61f7f60ed80a04f9bd03f6c770a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;exception&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Задает, какие исключения могут возникнуть.  
+# <a name="ltexceptiongt-visual-basic"></a>&lt;исключение&gt; (Visual Basic)
+Указывает, какие исключения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на исключение, которое доступно из текущей среды компиляции.  Компилятор проверяет, существует ли исключение и приводит `member` к каноническому имени элемента в выходных XML\-данных.  `member` необходимо заключать в двойные кавычки \(" "\).  
+ Ссылка на исключение, которое доступно из текущей среды компиляции. Компилятор проверяет, существует ли исключение, и приводит `member` к каноническому имени элемента в выходных XML-данных. `member` необходимо заключать в двойные кавычки (" ").  
   
  `description`  
- Описание  
+ Описание.  
   
-## Заметки  
- Тег `<exception>` служит для указания возможных исключений.  Этот тег применяется к определению метода.  
+## <a name="remarks"></a>Примечания  
+ Используйте `<exception>` тег, чтобы указать, какие исключения. Этот тег применяется к определению метода.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В этом примере используется тег `<exception>` для описания исключения, которое может создавать функция `IntDivide`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<exception>` тегов для описания исключения, `IntDivide` функция может создавать.  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

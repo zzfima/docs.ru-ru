@@ -1,83 +1,85 @@
 ---
-title: "Элемент &lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<forcePerformanceCounterUniqueSharedMemoryReads> - элемент"
-  - "forcePerformanceCounterUniqueSharedMemoryReads - элемент"
+title: "&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- forcePerformanceCounterUniqueSharedMemoryReads element
+- <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 4c90799ed2db061e8f42cde79804789eb8d2da0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;
-Указывает, использует ли PerfCounter.dll параметр реестра CategoryOptions в приложениях .NET Framework 1.1 для определения необходимости загрузки данных счетчиков производительности из общей памяти конкретной категории или глобальной памяти.  
+# <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; элемент
+Указывает, использует ли файл PerfCounter.dll параметр реестра CategoryOptions в приложении .NET Framework версии 1.1, чтобы определить, следует ли загружать данные счетчиков производительности из общей памяти конкретной категории или глобальной памяти.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+\<forcePerformanceCounterUniqueSharedMemoryReads >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <forcePerformanceCounterUniqueSharedMemoryReads   
 enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
+|---------------|-----------------|  
 |`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли PerfCounter.dll параметр реестра CategoryOptions для определения необходимости загрузки данных счетчиков производительности из общей памяти конкретной категории или глобальной памяти.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|PerfCounter.dll не использует параметр реестра CategoryOptions. Это значение по умолчанию.|  
-|`true`|PerfCounter.dll использует параметр реестра CategoryOptions.|  
+|-----------|-----------------|  
+|`false`|PerfCounter.dll не использует параметр реестра, установка этого параметра значение по умолчанию.|  
+|`true`|PerfCounter.dll параметр CategoryOptions реестра.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- В версиях .NET Framework до [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] загружаемая версия PerfCounter.dll соответствовала среде выполнения, которая была загружена в процессе.  Если на компьютере установлены версии .NET Framework 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)], приложения .NET Framework 1.1 будут загружать версию .NET Framework 1.1 файла PerfCounter.dll.  Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] загружается последняя установленная версия PerfCounter.dll.  Это означает, что приложение .NET Framework 1.1 загрузит версию .NET Framework из [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], если на компьютере установлена [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+## <a name="remarks"></a>Примечания  
+ В версиях .NET Framework до [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], значение соответствовало версии PerfCounter.dll, который был загружен в среду выполнения, который был загружен в процессе. Ли компьютер у обоих .NET Framework версии 1.1 и [!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)] установки приложения .NET Framework 1.1 загружает версию .NET Framework 1.1 PerfCounter.dll. Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], загружается PerfCounter.dll последней установленной версии. Это означает, что приложения .NET Framework 1.1 будет загружать [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] версии PerfCounter.dll Если [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] установлен на компьютере.  
   
- Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] при использовании счетчиков производительности PerfCounter.dll проверяет параметр реестра CategoryOptions для каждого поставщика, чтобы определить, должен ли он выполнять чтение из общей памяти конкретной категории или из глобальной общей памяти.  PerfCounter.dll .NET Framework 1.1 не может читать эту запись реестра, так как ему не известно об общей памяти конкретной категории; он всегда считывает из глобальной общей памяти.  
+ Начиная с [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], при использовании счетчиков производительности, PerfCounter.dll проверяет параметр реестра для каждого поставщика определить, следует ли считать из общей памяти конкретной категории или глобальную общую память. .NET Framework 1.1 PerfCounter.dll не поддерживает эту запись реестра, так как он не учитывает общей памяти категориям; он считывает из глобальную общую память.  
   
- Для обеспечения обратной совместимости [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll не выполняет проверку реестра CategoryOptions при работе в приложениях .NET Framework 1.1.  Он просто использует глобальную общую память, точно так же, как.NET Framework 1.1 PerfCounter.dll.  Тем не менее можно указать [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll, что необходимо проверять параметр реестра, включив элемент `<forcePerformanceCounterUniqueSharedMemoryReads>`.  
+ Для обеспечения обратной совместимости [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll не проверяет параметр CategoryOptions при запуске в приложении .NET Framework 1.1. Он просто использует глобальную общую память, так же, как .NET Framework 1.1 PerfCounter.dll. Тем не менее, можно указать [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] PerfCounter.dll Проверка параметра реестра, включив `<forcePerformanceCounterUniqueSharedMemoryReads>` элемента.  
   
 > [!NOTE]
->  Включение элемента `<forcePerformanceCounterUniqueSharedMemoryReads>` не гарантирует, что будет использоваться общая память конкретной категории.  Установка значения `true` для включения приводит только к тому, что PerfCounter.dll ссылается на параметр реестра CategoryOptions.  Значение по умолчанию для CategoryOptions — для использования общей памяти конкретной категории; тем не менее можно изменить CategoryOptions для указания, что следует использовать глобальную общую память.  
+>  Включение `<forcePerformanceCounterUniqueSharedMemoryReads>` элемент не гарантирует использования общей памяти конкретной категории. Политика включена для `true` только вызывает PerfCounter.dll параметр реестра CategoryOptions ссылок. Параметр по умолчанию является использование общей памяти категориям; Тем не менее можно изменить параметр, чтобы указать, что следует использовать глобальную общую память.  
   
- Раздел реестра, содержащий параметр CategoryOptions имеет вид HKEY\_LOCAL\_MACHINE\\System\\CurrentControlSet\\Services\\\<categoryName\>\\Performance.  По умолчанию CategoryOptions равно 3, что указывает PerfCounter.dll на необходимость использования общей памяти, относящейся к определенной категории.  Если CategoryOptions равняется 0, PerfCounter.dll использует глобальную общую память.  Данные экземпляра будут повторно использоваться, только если имя создаваемого экземпляра идентично используемому экземпляру.  Все версии смогут записывать в категорию.  Если CategoryOptions равняется 1, используется глобальная общая память, но данные экземпляра могут быть повторно использованы, если имя категории имеет одинаковую длину с повторно используемой категорией.  
+ Раздел реестра, содержащий параметр CategoryOptions — HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance. По умолчанию параметр имеет значение 3, отдает PerfCounter.dll для использования общей памяти конкретной категории. Если параметр имеет значение 0, PerfCounter.dll использует глобальную общую память. Данные экземпляра будут повторно только в том случае, если имя экземпляра не идентичен используемому экземпляру. Все версии смогут записывать в категорию. Если параметр имеет значение 1, используется глобальную общую память, но данные экземпляра можно использовать повторно, если имя категории имеет одинаковую длину поля, повторно используемые категории.  
   
- Параметры 0 и 1 могут привести к утечке памяти и заполнению памяти счетчиков производительности.  
+ Параметры 0 и 1 может привести к утечке памяти и заполнению памяти счетчиков производительности.  
   
-## Пример  
- В следующем примере показано, как указать, что PerfCounter.dll должен ссылаться на запись реестра CategoryOptions, чтобы определить, нужно ли использовать общую память конкретной категории.  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как указать, что PerfCounter.dll должны ссылаться на параметр реестра CategoryOptions для определения, следует ли использовать категориям общей памяти.  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <forcePerformanceCounterUniqueSharedMemoryReads enabled="true"/>  
@@ -85,6 +87,6 @@ enabled="true|false"/>
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

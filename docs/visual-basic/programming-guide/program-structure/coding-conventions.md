@@ -1,75 +1,58 @@
 ---
-title: "Соглашения о написании кода Visual Basic | Документы Microsoft"
+title: "Соглашения о написании кода в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- coding conventions, Visual Basic
+- coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5712f14d53b86552a0b82af38ecf579577ef3fa1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="visual-basic-coding-conventions"></a>Соглашения о написании кода в Visual Basic
-Корпорация Майкрософт разрабатывает примеры и документация, следуйте рекомендациям в этом разделе. Если следовать тем же правилам написания кода, могут получить следующие преимущества:  
+Корпорация Майкрософт разрабатывает примеров и документации, следуйте указаниям, изложенным в этом разделе. При таком же соглашения о написании кода, может получить следующие преимущества:  
   
--   Код будет иметь согласованный вид, чтобы читателям лучше сосредоточиться на содержимом, а не на макете.  
+-   Код будет иметь согласованный внешний вид, чтобы читатели может лучше сосредоточиться на содержимом, а не на макете.  
   
--   Читателям понимание кода более быстро, так как они могут делать предположения, основанные на опыте.  
+-   Читатели понимание кода более быстро, так как они могут делать предположения, основанные на опыте.  
   
--   Можно скопировать, изменение и обслуживание кода проще.  
+-   Копирование, изменение и обслуживать код проще.  
   
--   Позволяет убедиться, что код демонстрирует «рекомендации» для Visual Basic.  
+-   Позволяет убедиться, что коде показано, как «рекомендации» для Visual Basic.  
   
 ## <a name="naming-conventions"></a>Соглашения об именах  
   
--   Сведения о правилах именования см. в разделе [правила именования](http://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3) раздела.  
+-   Сведения о рекомендациях по именованию см. в разделе [правила именования](../../../standard/design-guidelines/naming-guidelines.md) раздела.  
   
--   Не использовать «Мои» или «my» как часть имени переменной. Такой подход создает путаницу с `My` объектов.  
+-   Не используйте «My» или «my» как часть имени переменной. Такой подход создает путаницы с `My` объектов.  
   
--   Необходимо изменить имена объектов в автоматически сгенерированный код, чтобы сделать их соответствующими рекомендациям.  
+-   Необходимо изменить имена объектов в автоматически создаваемый код, чтобы сделать их соответствующими рекомендациям.  
   
 ## <a name="layout-conventions"></a>Соглашения о расположении  
   
--   Вставка табуляции в качестве пробелов и использовать интеллектуальных отступов с помощью отступов четыре пробела.  
+-   Вставка табуляции в качестве пробелов и используйте интеллектуальных отступов с помощью отступов четыре пробела.  
   
--   Используйте **красивое оформление код (форматирование) из** переформатировать кода в редакторе кода. Дополнительные сведения см. в разделе [параметры, текстовый редактор, Basic (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+-   Используйте **довольно листинг кода (изменения форматирования)** переформатирование кода в редакторе кода. Дополнительные сведения см. в разделе [параметры, текстовый редактор, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
--   Использование только одного оператора в строке. Не используйте знак разделителя строки Visual Basic (:).  
+-   Используйте только одну инструкцию в строке. Не используйте знак разделителя строки Visual Basic (:).  
   
--   Избегайте использования символа продолжения строки явную «_» пользу неявное продолжение строки там, где язык допускает его.  
+-   Избегайте использования символа продолжения явные строки «_» пользу неявное продолжение строки там, где язык позволяет его.  
   
--   Используйте только одного объявления в строке.  
+-   Используйте только одно объявление в строке.  
   
--   Если **красивое оформление код (форматирование) из** не продолжения строки формата автоматически, вручную отступ продолжения строки должен быть одним символом табуляции. Тем не менее всегда влево элементов в списке.  
+-   Если **довольно листинг кода (изменения форматирования)** не продолжения строки формата автоматически, вручную отступ продолжения строки должен быть одним символом табуляции. Однако всегда влево элементов в списке.  
   
     ```  
     a As Integer,  
@@ -82,11 +65,11 @@ ms.lasthandoff: 03/13/2017
   
 -   Поместите комментарии на отдельной строке, а не в конце строки кода.  
   
--   Текст комментария с прописной буквы и end текст, содержащий точку начала.  
+-   Текст комментария с заглавной буквы и end текст, содержащий точку начала.  
   
--   Вставьте один пробел между разделителем комментария (') и текстом комментария.  
+-   Вставьте один пробел между разделителем комментария (') и текст комментария.  
   
-     [!code-vb[VbVbalrGuidelines&#2;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
+     [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
   
 -   Не заключайте комментарии с звездочек.  
   
@@ -94,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
 -   При использовании `Main` метода, используйте конструктор по умолчанию для новых консольных приложений и использовать `My` для аргументов командной строки.  
   
-     [!code-vb[VbVbalrGuidelines&#3;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
+     [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
   
 ## <a name="language-guidelines"></a>Рекомендации по работе с языком  
   
@@ -102,133 +85,133 @@ ms.lasthandoff: 03/13/2017
   
 -   Для объединения строк, используйте амперсанд (&).  
   
-     [!code-vb[VbVbalrGuidelines&#4;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_3.vb)]  
+     [!code-vb[VbVbalrGuidelines#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_3.vb)]  
   
--   Для добавления строк в циклы, используйте <xref:System.Text.StringBuilder>объекта.</xref:System.Text.StringBuilder>  
+-   Для добавления строк в циклы, используйте <xref:System.Text.StringBuilder> объекта.  
   
-     [!code-vb[VbVbalrGuidelines&#5;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
+     [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>Ослабленные делегаты в обработчиках событий  
- Не присваивайте аргументы (Object и EventArgs) явно обработчикам событий. Если вы не используете аргументы события, переданные в событие (например, отправитель как объект e EventArgs), используйте ослабленные делегаты и пропускайте аргументы событий в коде:  
+ Не определены аргументы (Object и EventArgs) явно обработчикам событий. Если вы не используете аргументы события, которые передаются на событие (например, отправитель как объект e EventArgs), используйте ослабленные делегаты и пропускайте аргументы событий в коде:  
   
- [!code-vb[VbVbalrGuidelines&#7;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
+ [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
   
 ### <a name="unsigned-data-type"></a>Беззнаковый тип данных  
   
--   Использование `Integer` вместо беззнаковых типов, за исключением того, где они необходимы.  
+-   Используйте `Integer` вместо беззнаковых типов, за исключением того, где они необходимы.  
   
 ### <a name="arrays"></a>Массивы  
   
 -   Используйте короткий синтаксис при инициализации массивов в строке объявления. Например используйте следующий синтаксис.  
   
-     [!code-vb[VbVbalrGuidelines №&8;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
+     [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
   
      Не используйте следующий синтаксис.  
   
-     [!code-vb[VbVbalrGuidelines №&9;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_7.vb)]  
+     [!code-vb[VbVbalrGuidelines#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_7.vb)]  
   
 -   Установите обозначение массива, тип, отличный от переменной. Например используйте следующий синтаксис:  
   
-     [!code-vb[VbVbalrGuidelines&11;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_8.vb)]  
+     [!code-vb[VbVbalrGuidelines#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_8.vb)]  
   
      Не используйте следующий синтаксис:  
   
-     [!code-vb[VbVbalrGuidelines&#10;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_9.vb)]  
+     [!code-vb[VbVbalrGuidelines#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_9.vb)]  
   
 -   Используйте синтаксис {} при объявлении и инициализации массивов основных типов данных. Например используйте следующий синтаксис:  
   
-     [!code-vb[VbVbalrGuidelines&#12;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
+     [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
   
      Не используйте следующий синтаксис:  
   
-     [!code-vb[VbVbalrGuidelines&#13;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
+     [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
   
 ### <a name="use-the-with-keyword"></a>Используется с ключевым словом  
- При внесении ряда вызовов одного объекта, рассмотрите возможность использования `With` ключевое слово:  
+ Если вы внесли ряд вызовов одного объекта, рассмотрите возможность использования `With` ключевое слово:  
   
- [!code-vb[VbVbalrGuidelines&#15;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
+ [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Использование операторов Try... С помощью инструкций, при использовании обработки исключений и catch  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Использование Try... С помощью инструкций, при использовании обработки исключений и catch  
  Не используйте `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Используйте ключевое слово IsNot  
- Используйте `IsNot` ключевое слово `Not...Is Nothing`.  
+ Используйте `IsNot` ключевое слово, а не `Not...Is Nothing`.  
   
-### <a name="new-keyword"></a>New-ключевое слово  
+### <a name="new-keyword"></a>Новое ключевое слово  
   
--   Используйте короткий способ создания экземпляра. Например используйте следующий синтаксис:  
+-   Используйте короткие при создании экземпляра. Например используйте следующий синтаксис:  
   
-     [!code-vb[VbVbalrGuidelines&#21;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_13.vb)]  
+     [!code-vb[VbVbalrGuidelines#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_13.vb)]  
   
      Предыдущая строка эквивалентна следующей:  
   
-     [!code-vb[VbVbalrGuidelines&#22;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
+     [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
   
--   Используйте инициализаторы объектов для новых объектов вместо конструкторов:  
+-   Для новых объектов, а не конструктор без параметров, используйте инициализаторы объектов:  
   
-     [!code-vb[VbVbalrGuidelines&#23;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
+     [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
   
 ### <a name="event-handling"></a>Обработка событий  
   
 -   Используйте `Handles` вместо `AddHandler`:  
   
-     [!code-vb[VbVbalrGuidelines&#24;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_16.vb)]  
+     [!code-vb[VbVbalrGuidelines#24](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_16.vb)]  
   
 -   Используйте `AddressOf`и не создавайте экземпляр делегата явным образом:  
   
-     [!code-vb[VbVbalrGuidelines&#25;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
+     [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
   
 -   При определении события, используйте короткий синтаксис и позвольте компилятору определить делегат:  
   
-     [!code-vb[VbVbalrGuidelines&#26;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
+     [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Проверяет, является ли событие `Nothing` (null), перед вызовом метода `RaiseEvent` метод. `RaiseEvent`проверяет наличие `Nothing` перед его событие.  
+-   Не проверять, является ли событие `Nothing` (null), перед вызовом метода `RaiseEvent` метод. `RaiseEvent`проверяет наличие `Nothing` перед его вызывает событие.  
   
 ### <a name="using-shared-members"></a>Использование общих членов  
- Вызов `Shared` члены с помощью имени класса, а не переменной экземпляра.  
+ Вызовите `Shared` члены с помощью имени класса, а не переменной экземпляра.  
   
 ### <a name="use-xml-literals"></a>Использование XML-литералов  
- Литералы XML упрощают наиболее распространенных задач, возникающих при работе с XML (например, загрузки, запроса и преобразования). При разработке с использованием XML, придерживайтесь следующих рекомендаций:  
+ Литералы XML упрощают наиболее распространенные задачи, которые возникают при работе с XML (например, загрузки, запроса и преобразования). При разработке с использованием XML, придерживайтесь следующих правил:  
   
--   Используйте литералы XML для создания XML-документов и фрагментов вместо непосредственного вызова интерфейсов API.  
+-   Используйте литералы XML для создания XML-документы и фрагменты вместо непосредственного вызова интерфейсов API.  
   
--   Импорт пространства имен XML на уровне проект или файл, чтобы воспользоваться преимуществами оптимизации производительности для XML-литералов.  
+-   Импорт пространства имен XML на уровне файла или проекта, чтобы воспользоваться преимуществами оптимизации производительности для XML-литералов.  
   
--   Используйте свойства оси XML для доступа к элементам и атрибутам в XML-документ.  
+-   Используйте свойства оси XML для доступа к элементам и атрибутам в XML-документа.  
   
--   Использовать внедренные выражения для включения значений и создания XML из существующих значений вместо использования вызовов API, таких как `Add` метод:  
+-   Использование внедренных выражений для включения значений и создания XML на основе существующих значений вместо использования вызовов API, таких как `Add` метод:  
   
-     [!code-vb[VbVbalrGuidelines&#27;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_19.vb)]  
+     [!code-vb[VbVbalrGuidelines#27](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_19.vb)]  
   
 ### <a name="linq-queries"></a>Запросы LINQ  
   
 -   Используйте значимые имена для переменных запроса:  
   
-     [!code-vb[VbVbalrGuidelines&#28;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
+     [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
   
--   Укажите имена для элементов в запросе, чтобы убедиться в том, что имена свойств анонимных типов верно используются прописные буквы с помощью языка Pascal регистр:  
+-   Укажите имена элементов в запросе, чтобы убедиться в том, что имена свойств анонимных типов верно используются прописные буквы с помощью языка Pascal регистр:  
   
-     [!code-vb[VbVbalrGuidelines&#29;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
+     [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
   
--   Переименуйте свойства, если имена свойств в результате могут быть неоднозначными. Например, если запрос возвращает клиента, имя и идентификатор заказа, переименуйте их не оставляйте как `Name` и `ID` в результате:  
+-   Переименуйте свойства, если имена свойств в результате могут быть неоднозначными. Например, если запрос возвращает клиента, имя и идентификатор заказа, переименуйте их не оставляйте их в виде `Name` и `ID` в результате:  
   
-     [!code-vb[VbVbalrGuidelines&#30;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
+     [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
   
--   Используйте вывод типа в объявлении переменных запроса и переменных диапазона:  
+-   Используйте определение типа в объявлении переменных запроса и переменных диапазона:  
   
-     [!code-vb[VbVbalrGuidelines&#31;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
+     [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
   
 -   Выравнивайте предложения запроса под `From` инструкции:  
   
-     [!code-vb[VbVbalrGuidelines&#32;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_24.vb)]  
+     [!code-vb[VbVbalrGuidelines#32](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_24.vb)]  
   
--   Используйте `Where` предложения перед другие предложения запроса, чтобы более поздние предложения запроса работают отфильтрованный набор данных:  
+-   Используйте `Where` перед другие предложения запроса, чтобы более поздние предложения запроса работают отфильтрованный набор данных:  
   
-     [!code-vb[VbVbalrGuidelines&#33;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_25.vb)]  
+     [!code-vb[VbVbalrGuidelines#33](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_25.vb)]  
   
--   Используйте `Join` предложение для явного определения операции соединения вместо `Where` предложение для неявного определения операции соединения:  
+-   Используйте `Join` предложений, чтобы явно определить операцию join, вместо использования `Where` предложение для неявного определения операции соединения:  
   
-     [!code-vb[VbVbalrGuidelines&#34;](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
+     [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [Правила написания безопасного кода](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ [Правила написания безопасного кода](../../../standard/security/secure-coding-guidelines.md)

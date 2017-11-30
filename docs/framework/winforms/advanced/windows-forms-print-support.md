@@ -1,73 +1,74 @@
 ---
-title: "Windows Forms Print Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, printing"
-  - "printing [Windows Forms]"
-  - "forms, printing (using designer)"
-  - "printing, Windows Forms, support"
-  - "printing [Windows Forms], print support"
+title: "Поддержка печати в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, printing
+- printing [Windows Forms]
+- forms [Windows Forms], printing (using designer)
+- printing [Windows Forms], Windows Forms, support
+- printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 029d5ed424061807cf04446cbb10424ae20afba2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Forms Print Support
-Печать в формах Windows Forms состоит в основном из использования компонента [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) для поддержки печати пользователем и элемента управления [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) с компонентами [Компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) и [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) для предоставления знакомого графического интерфейса пользователям, привыкшим к операционной системе Windows.  
+# <a name="windows-forms-print-support"></a>Поддержка печати в Windows Forms
+Печать в Windows Forms состоит в основном из использования [компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) компонента, чтобы пользователь мог напечатать и [управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) управления [PrintDialog Компонент](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) и [компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) компоненты для обеспечения знакомый графический интерфейс для пользователей, привыкших к операционной системе Windows.  
   
- Обычно создается новый экземпляр компонента <xref:System.Drawing.Printing.PrintDocument>, задаются свойства, которые описывают объект печати с помощью классов <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings>, а также вызывается метод <xref:System.Drawing.Printing.PrintDocument.Print%2A> для печати документа.  
+ Обычно создается новый экземпляр <xref:System.Drawing.Printing.PrintDocument> набор компонентов, свойств, описывающих печатаемое содержимое с помощью <xref:System.Drawing.Printing.PrinterSettings> и <xref:System.Drawing.Printing.PageSettings> классы и вызовите метод <xref:System.Drawing.Printing.PrintDocument.Print%2A> способ печати документа.  
   
- В течение сеанса печати из приложения Windows компонент <xref:System.Drawing.Printing.PrintDocument> отображает диалоговое окно прерывания печати, которое оповещает пользователей о начале печати и предоставляет возможность отменить задание.  
+ В ходе работы при печати из приложения Windows <xref:System.Drawing.Printing.PrintDocument> компонент отображает диалоговое окно прерывания печати, которое оповестить пользователей о начале печати и чтобы разрешить задание печати отменяется.  
   
-## В этом подразделе  
- [How to: Create Standard Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
- Объясняется использование компонента <xref:System.Drawing.Printing.PrintDocument> для печати из форм Windows Forms  
+## <a name="in-this-section"></a>Содержание  
+ [Практическое руководство. Создание стандартных заданий печати в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ Описание способов использования <xref:System.Drawing.Printing.PrintDocument> компонента для печати в Windows Forms.  
   
- [How to: Capture User Input from a PrintDialog at Run Time](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
- Объясняется, как изменить выбранные параметры печати программными средствами с помощью компонента <xref:System.Windows.Forms.PrintDialog>.  
+ [Практическое руководство. Захват данных, введенных пользователем в PrintDialog во время выполнения](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ Объясняется, как изменить выбранные параметры печати программными средствами с помощью <xref:System.Windows.Forms.PrintDialog> компонента.  
   
  [Практическое руководство. Выбор принтера, подключенного к компьютеру пользователя, в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
- Описывается смена принтера с помощью компонента <xref:System.Windows.Forms.PrintDialog> во время выполнения.  
+ Описывает изменение принтер для печати с помощью <xref:System.Windows.Forms.PrintDialog> компонента во время выполнения.  
   
- [How to: Print Graphics in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
- Описывается вывод графики на принтер.  
+ [Практическое руководство. Печать графических изображений в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
+ Справка по выводу графики на принтер.  
   
- [How to: Print a Multi\-Page Text File in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- Описывается вывод текста на принтер.  
+ [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ Справка по выводу текста на принтер.  
   
- [How to: Complete Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
- Объясняются способы оповещения пользователей о завершении задания печати.  
+ [Практическое руководство. Выполнение заданий печати в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
+ Справка по оповещению пользователей о завершении задания печати.  
   
- [How to: Print a Windows Form](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
- Показывается, как напечатать копию текущей формы.  
+ [Практическое руководство. Печать формы Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
+ Показано, как напечатать копию текущей формы.  
   
  [Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)  
- Показывается, как использовать элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> для печати документа.  
+ Показано, как использовать <xref:System.Windows.Forms.PrintPreviewDialog> для печати документа.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Компонент PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- Объясняется использование компонента <xref:System.Drawing.Printing.PrintDocument>.  
+ Объясняется использование <xref:System.Drawing.Printing.PrintDocument> компонента.  
   
  [Компонент PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- Объясняется использование компонента <xref:System.Windows.Forms.PrintDialog>.  
+ Объясняется использование <xref:System.Windows.Forms.PrintDialog> компонента.  
   
  [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- Объясняется использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog>.  
+ Объясняется использование <xref:System.Windows.Forms.PrintPreviewDialog> элемента управления.  
   
  [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- Объясняется использование компонента <xref:System.Windows.Forms.PageSetupDialog>.  
+ Объясняется использование <xref:System.Windows.Forms.PageSetupDialog> компонента.  
   
  <xref:System.Drawing.Printing>  
- Описываются классы в пространстве имен <xref:System.Drawing.Printing>.
+ Описываются классы в <xref:System.Drawing.Printing> пространства имен.

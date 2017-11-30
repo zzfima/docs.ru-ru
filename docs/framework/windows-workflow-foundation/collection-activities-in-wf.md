@@ -1,26 +1,30 @@
 ---
-title: "Действия коллекции в WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Действия коллекции в WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Действия коллекции в WF
-Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса.  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции.  `ExistsInCollection` и `RemoveFromCollectio` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
+# <a name="collection-activities-in-wf"></a>Действия коллекции в WF
+Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection`и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
   
 > [!IMPORTANT]
 >  Если действие коллекции выполняется до задания базового объекта коллекции, то формируется исключение <xref:System.InvalidOperationException> и действие завершается ошибкой.  
   
-## Действия коллекции  
+## <a name="collection-activities"></a>Действия коллекции  
   
 |||  
 |-|-|  
@@ -29,8 +33,8 @@ caps.handback.revision: 10
 |<xref:System.Activities.Statements.ExistsInCollection%601>|Если элемент присутствует в коллекции, возвращает `true`.|  
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Удаляет элемент из указанной коллекции и возвращает значение `true`, если элемент успешно удален.|  
   
-## Использование действий коллекции  
- В следующем примере кода показано, как работать с коллекцией, объявленной в виде переменной рабочего процесса.  Используемая коллекция является <xref:System.Collections.Generic.List%E2%80%991> объектов <xref:System.String> по имени `fruitList`.  
+## <a name="using-collection-activities"></a>Использование действий коллекции  
+ В следующем примере кода показано, как работать с коллекцией, объявленной в виде переменной рабочего процесса. Используемая коллекция является <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` из <xref:System.String> объектов с именем `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -85,7 +89,6 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
 ```xaml  
@@ -229,7 +232,6 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
  Перечисленные выше образцы кода можно также создать с помощью <xref:Microsoft.CSharp.Activities.CSharpValue%601> вместо <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
@@ -287,10 +289,9 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-```  
+```xml  
 <Sequence  
    xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -431,8 +432,7 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
-## См. также  
- [Разработка рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>См. также  
+ [Разработка рабочих процессов, действий и выражений с использованием императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,66 +1,74 @@
 ---
-title: "&lt;knownType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;knownType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ccb7152197a021821936e178e0de77b9dfabce45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;knownType&gt;
-Задает тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации.  Элемент задает «известный тип», возвращаемый полем или свойством «объявленного типа». Для получения дополнительной информации см. [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+# <a name="ltknowntypegt"></a>&lt;knownType&gt;
+Задает тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации. Элемент задает «известный тип», возвращаемый полем или свойством «объявленного типа». Дополнительные сведения см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## Синтаксис  
+ \<System.Runtime.Serialization >  
+\<dataContractSerializer >  
+\<declaredTypes > элемент  
+\<Добавить > из \<declaredTypes >  
+\<knownType > элемент  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <knownType type="String">  
      <parameter index="Integer"  
                 type="String" />  
 </knownType>  
 ```  
   
-## Тип  
+## <a name="type"></a>Тип  
  `string`  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|тип|Задает тип \(в том числе пространство имен\), имя сборки, версию, язык и региональные параметры и маркер открытого ключа.|  
+|---------------|-----------------|  
+|тип|Задает тип (в том числе пространство имен), имя сборки, версию, язык и региональные параметры и маркер открытого ключа.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<параметр\>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Задает индекс параметра в том случае, если объявленный тип является универсальным типом.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Добавляет объявленный тип в коллекцию объявленных типов.|  
+|-------------|-----------------|  
+|[\<параметр >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Задает индекс параметра в том случае, если объявленный тип является универсальным типом.|  
   
-## Заметки  
- Дополнительные сведения об известных типах см. в разделах [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
+### <a name="parent-elements"></a>Родительские элементы  
   
- Пример использования этого элемента см. в разделе [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md).  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Добавляет объявленный тип в коллекцию объявленных типов.|  
   
-## Пример  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
-```  
+ В разделе [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) пример использования этого элемента.  
+  
+## <a name="example"></a>Пример  
+  
+```xml  
 <add type="MyCompany.Library.Shape,   
            MyAssembly, Version=2.0.0.0, Culture=neutral,  
            PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
@@ -71,8 +79,8 @@ caps.handback.revision: 10
 </add>  
 ```  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)   
- [\<добавление;\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>Наследование от WebResponse
 <xref:System.Net.WebRequest> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика запросов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс **WebRequest**, могут запрашивать данные с использованием любого поддерживаемого протокола, не указывая конкретный протокол.  
   
- Чтобы использовать класс определенного протокола в качестве подключаемого протокола, должны соблюдаться два условия: класс должен реализовывать интерфейс <xref:System.Net.IWebRequestCreate> и выполнять регистрацию с использованием метода <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>. Для предоставления подключаемого интерфейса класс должен переопределять все абстрактные методы и свойства класса **WebRequest**.  
+ Чтобы использовать класс определенного протокола в качестве подключаемого протокола, должны соблюдаться два условия: класс должен реализовывать интерфейс <xref:System.Net.IWebRequestCreate> и выполнять регистрацию с использованием метода <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. Для предоставления подключаемого интерфейса класс должен переопределять все абстрактные методы и свойства класса **WebRequest**.  
   
  Экземпляры **WebRequest** предназначены для однократного использования. Чтобы выполнить другой запрос, необходимо создать новый экземпляр **WebRequest**. Класс **WebRequest** поддерживает интерфейс <xref:System.Runtime.Serialization.ISerializable>, с помощью которого разработчик может выполнить сериализацию шаблона **WebRequest**, а затем воссоздать шаблон для дополнительных запросов.  
   
 ## <a name="iwebrequest-create-method"></a>Метод IWebRequest Create  
- Метод <xref:System.Net.IWebRequestCreate.Create%2A> используется для инициализации нового экземпляра класса определенного протокола. При создании нового экземпляра **WebRequest** метод <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> сопоставляет запрашиваемый URI с префиксами URI, зарегистрированными с помощью метода **RegisterPrefix**. Метод **Create** соответствующего потомка класса определенного протокола должен возвращать инициализированный экземпляр потомка, который может выполнить стандартную операцию запроса-ответа для протокола, не изменяя при этом соответствующие протоколу поля.  
+ Метод <xref:System.Net.IWebRequestCreate.Create%2A> используется для инициализации нового экземпляра класса определенного протокола. При создании нового экземпляра **WebRequest** метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> сопоставляет запрашиваемый URI с префиксами URI, зарегистрированными с помощью метода **RegisterPrefix**. Метод **Create** соответствующего потомка класса определенного протокола должен возвращать инициализированный экземпляр потомка, который может выполнить стандартную операцию запроса-ответа для протокола, не изменяя при этом соответствующие протоколу поля.  
   
 ## <a name="connectiongroupname-property"></a>Свойство ConnectionGroupName  
  Свойство <xref:System.Net.WebRequest.ConnectionGroupName%2A> используется для присваивания имени группе подключений к ресурсу, чтобы выполнять несколько запросов с применением одного подключения. Чтобы реализовать совместное использование подключения, необходимо применить метод определенного протокола для опроса и присваивания подключений. Например, предоставленный класс <xref:System.Net.ServicePointManager> реализует совместное использование подключения для класса <xref:System.Net.HttpWebRequest>. Класс **ServicePointManager** создает <xref:System.Net.ServicePoint>, который предоставляет подключение к конкретному серверу для каждой группы подключений.  
@@ -59,7 +53,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="headers-property"></a>Свойство Headers  
  Свойство <xref:System.Net.WebRequest.Headers%2A> содержит произвольную коллекцию пар "имя-значение" для метаданных, связанных с запросом. В свойство **Headers** можно включать любые метаданные для протокола, которые могут быть выражены в виде пар "имя-значение". Как правило, эти сведения необходимо передавать до вызова методов <xref:System.Net.WebRequest.GetRequestStream%2A> или <xref:System.Net.WebRequest.GetResponse%2A>. После выполнения запроса метаданные будут доступны только для чтения.  
   
- Чтобы использовать метаданные заголовка, применять свойство **Headers** необязательно. Относящиеся к протоколу метаданные могут предоставляться в виде свойств. Например, свойство <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> предоставляет заголовок HTTP **User-Agent**. Если метаданные заголовка предоставляются в виде свойства, необходимо запретить установку этого свойства с использованием свойства **Headers**.  
+ Чтобы использовать метаданные заголовка, применять свойство **Headers** необязательно. Относящиеся к протоколу метаданные могут предоставляться в виде свойств. Например, свойство <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> предоставляет заголовок HTTP **User-Agent**. Если метаданные заголовка предоставляются в виде свойства, необходимо запретить установку этого свойства с использованием свойства **Headers**.  
   
 ## <a name="method-property"></a>Свойство Method  
  Свойство <xref:System.Net.WebRequest.Method%2A> содержит команду или операцию, которую должен выполнить сервер при получении запроса. Значение свойства **Method** по умолчанию должно обеспечивать выполнение стандартной операции запроса-ответа без установки относящихся к протоколу свойств. Например, в качестве метода <xref:System.Net.HttpWebResponse.Method%2A> по умолчанию устанавливается GET, который запрашивает ресурс с веб-сервера и возвращает ответ.  
@@ -104,9 +98,8 @@ ms.lasthandoff: 08/21/2017
  Метод **GetResponse** используется для создания соответствующего потомка класса **WebResponse**, который содержит полученный ответ.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

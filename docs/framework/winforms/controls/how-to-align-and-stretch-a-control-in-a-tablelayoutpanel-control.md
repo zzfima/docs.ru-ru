@@ -1,52 +1,52 @@
 ---
-title: "Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], выравнивание"
-  - "элементы управления [Windows Forms], растяжение"
-  - "TableLayoutPanel - элемент управления [Windows Forms], растяжение элементов управления"
+title: "Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
+helpviewer_keywords:
+- TableLayoutPanel control [Windows Forms], stretching controls
+- controls [Windows Forms], stretching
+- controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 043adb68b88ab031cea3de1206d1f2c4252b75d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel
-Можно выравнивать и растягивать элементы управления в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>, используя свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A>.  
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Практическое руководство. Выравнивание и растягивание элемента управления в элементе управления TableLayoutPanel
+Можно выравнивать и растягивать элементы управления в <xref:System.Windows.Forms.TableLayoutPanel> с <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> свойства.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы выровнять и растянуть элемент управления, выполните следующие действия:  
+### <a name="to-align-and-stretch-a-control"></a>Выравнивание и Растягивание элемента управления  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.TableLayoutPanel> из **панели элементов** в форму.  
+1.  Перетащите <xref:System.Windows.Forms.TableLayoutPanel> управления из **элементов** на форму.  
   
-2.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в верхнюю левую ячейку элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  Элемент управления <xref:System.Windows.Forms.Button> выравнивается по центру ячейки.  
+2.  Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в левый верхний угол элемента <xref:System.Windows.Forms.TableLayoutPanel> элемента управления. <xref:System.Windows.Forms.Button> Управления выравнивается по центру ячейки.  
   
-3.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> значение `Left,Right`.  Элемент управления <xref:System.Windows.Forms.Button> растягивается в соответствии с шириной ячейки.  
+3.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства `Left,Right`. <xref:System.Windows.Forms.Button> Управления растягивается по ширине ячейки.  
   
-4.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> значение `Top,Bottom`.  Элемент управления <xref:System.Windows.Forms.Button> растягивается в соответствии с высотой ячейки.  
+4.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства `Top,Bottom`. <xref:System.Windows.Forms.Button> Управления растягивается в соответствии с высотой ячейки.  
   
-5.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> значение <xref:System.Windows.Forms.DockStyle>.  Элемент управления <xref:System.Windows.Forms.Button> разворачивается, чтобы заполнить ячейку.  
+5.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Button> Элемент управления расширяется для заполнения ячейки.  
   
-6.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> значение <xref:System.Windows.Forms.DockStyle>.  Элемент управления <xref:System.Windows.Forms.Button> возвращается к исходному размеру и перемещается в верхний левый угол ячейки.  Конструктор **Windows Forms** установил для свойства <xref:System.Windows.Forms.Control.Anchor%2A> значение `Top, Left`.  
+6.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.None>. <xref:System.Windows.Forms.Button> Управления возвращает исходный размер и перемещается в левый верхний угол ячейки. **Конструктор Windows Forms** задал <xref:System.Windows.Forms.Control.Anchor%2A> свойства `Top, Left`.  
   
-7.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> значение `Bottom,Right`.  Элемент управления <xref:System.Windows.Forms.Button> перемещается в правый нижний угол ячейки.  
+7.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства `Bottom,Right`. <xref:System.Windows.Forms.Button> Элемент управления перемещается в правом нижнем углу ячейки.  
   
-8.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> значение <xref:System.Windows.Forms.AnchorStyles>.  Элемент управления <xref:System.Windows.Forms.Button> перемещается в центр ячейки.  
+8.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства <xref:System.Windows.Forms.AnchorStyles.None>. <xref:System.Windows.Forms.Button> Управления перемещается по центру ячейки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

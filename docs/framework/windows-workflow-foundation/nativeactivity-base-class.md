@@ -1,24 +1,28 @@
 ---
-title: "Базовый класс NativeActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Базовый класс NativeActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22c9557c53c15fef3ca8dee4a0f665d333c5ffe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Базовый класс NativeActivity
-<xref:System.Activities.NativeActivity> является абстрактным классом с защищенным конструктором.Подобно <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> используется для записи принудительного поведения посредством реализации метода <xref:System.Activities.NativeActivity.Execute%2A>.В отличие от <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> имеет доступ ко всем предоставляемым функциональным возможностям среды выполнения рабочего процесса с помощью объекта <xref:System.Activities.NativeActivityContext>, передаваемого методу <xref:System.Activities.NativeActivity.Execute%2A>.  
+# <a name="nativeactivity-base-class"></a>Базовый класс NativeActivity
+<xref:System.Activities.NativeActivity> является абстрактным классом с защищенным конструктором. Подобно <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> используется для записи принудительного поведения посредством реализации метода <xref:System.Activities.NativeActivity.Execute%2A>. В отличие от <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> имеет доступ ко всем предоставляемым функциональным возможностям среды выполнения рабочего процесса с помощью объекта <xref:System.Activities.NativeActivityContext>, передаваемого методу <xref:System.Activities.NativeActivity.Execute%2A>.  
   
-## Использование NativeActivityContext  
- Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.NativeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.NativeActivityContext>.Функции, доступные посредством <xref:System.Activities.NativeActivityContext>:  
+## <a name="using-nativeactivitycontext"></a>Использование NativeActivityContext  
+ Доступ к функциям среды выполнения рабочего процесса можно получить из метода <xref:System.Activities.NativeActivity.Execute%2A> при помощи элементов параметра `context` типа <xref:System.Activities.NativeActivityContext>. Функции, доступные посредством <xref:System.Activities.NativeActivityContext>:  
   
 -   Возвращение и задание аргументов и переменных.  
   
@@ -36,15 +40,15 @@ caps.handback.revision: 8
   
 -   Планирование задач и функций действий с помощью <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> и <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>.  
   
-#### Создание пользовательского действия, которое наследуется от NativeActivity  
+#### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Создание пользовательского действия, которое наследуется от NativeActivity  
   
-1.  Откройте среду [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Откройте [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Выберите **Файл**, **Создать**, а затем **Проект**.Выберите **Workflow 4.0** в списке **Visual C\#** в разделе **Типы проектов**, затем выберите узел **v2010**.В окне **Шаблоны** выберите **Библиотека действий**.Задайте имя для нового проекта HelloActivity.  
+2.  Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.  
   
-3.  Щелкните правой кнопкой мыши файл Activity1.xaml в проекте HelloActivity и выберите команду **Удалить**.  
+3.  Щелкните правой кнопкой мыши файл Activity1.xaml в проекте HelloActivity и выберите **удалить**.  
   
-4.  Щелкните правой кнопкой мыши проект HelloActivity и выберите команду **Добавить**, а затем **Класс**.Задайте имя для нового класса HelloActivity.cs.  
+4.  Щелкните правой кнопкой мыши в проекте HelloActivity и выберите **добавить**, а затем **класса**. Задайте имя для нового класса HelloActivity.cs.  
   
 5.  В файле HelloActivity.cs добавьте следующие директивы `using`.  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-8.  Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A> и вызовите соответствующий метод Add, чтобы сообщить среде выполнения рабочего процесса о переменных, аргументах, дочерних элементах и делегатах пользовательского действия.Дополнительные сведения см. в описании класса <xref:System.Activities.NativeActivityMetadata>.  
+8.  Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A> и вызовите соответствующий метод Add, чтобы сообщить среде выполнения рабочего процесса о переменных, аргументах, дочерних элементах и делегатах пользовательского действия. Дополнительные сведения см. в описании класса <xref:System.Activities.NativeActivityMetadata>.  
   
-9. Для планирования закладок используйте объект <xref:System.Activities.NativeActivityContext>.Подробные сведения о том, как создавать, планировать и возобновлять закладки, см. в разделе <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.  
+9. Для планирования закладок используйте объект <xref:System.Activities.NativeActivityContext>. Подробные сведения о том, как создавать, планировать и возобновлять закладки, см. в разделе <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -79,5 +83,4 @@ caps.handback.revision: 8
             context.CreateBookmark(BookmarkName.Get(context),   
                 new BookmarkCallback(OnResumeBookmark));  
         }  
-  
     ```

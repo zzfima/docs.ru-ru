@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Cache If Available policy
 - reload policy
@@ -26,16 +21,15 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5b4bf67db3fcbb70d2a93f35976d8d9b4b3a028
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="location-based-cache-policies"></a>политики кэша на основе расположения
 Политики кэша на основе расположения определяют актуальность действительных записей в кэше на основе расположения, в котором может быть получен запрашиваемый ресурс. Кэшируемый ресурс является действительным, если он не нарушает требований сервера по повторной проверке. Политика кэша на основе расположения создается программным способом с помощью конструктора класса <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>. Тип политики на основе расположения передается в конструктор с помощью значения перечисления <xref:System.Net.Cache.RequestCacheLevel> или <xref:System.Net.Cache.HttpRequestCacheLevel>. Примеры кода с созданием политик на основе расположения см. в разделе [Практическое руководство. Установка политики кэша на основе расположения для приложения](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). В следующих разделах приводится описание каждого типа политики кэша на основе расположения для ресурсов HTTP и HTTPS.  
@@ -62,9 +56,8 @@ ms.lasthandoff: 08/21/2017
  Сравнивает копию ресурса в кэше с копией на сервере. Если копия на сервере более свежая, эта копия возвращается в ответ на запрос и записывается в кэш. Если копия в кэше аналогична копии на сервере, возвращается копия из кэша. В протоколе кэширования HTTP для этого используется условный запрос.  
   
 ## <a name="see-also"></a>См. также  
- [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)  
+ [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

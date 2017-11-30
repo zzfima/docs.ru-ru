@@ -1,44 +1,49 @@
 ---
-title: "Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "диалоговое окно шрифтов, отображение"
-  - "Font - свойство, установка с помощью компонента FontDialog"
-  - "FontDialog - компонент [Windows Forms]"
-  - "шрифты, атрибуты"
-  - "шрифты, выбор"
-  - "шрифты, отображение списка"
+title: "Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- fonts [Windows Forms], showing list
+- FontDialog component [Windows Forms]
+- fonts [Windows Forms], attributes
+- Font property [Windows Forms], setting with FontDialog component
+- Font dialog box [Windows Forms], displaying
+- fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
-Компонент [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) позволяет пользователям выбирать шрифт и менять параметры его отображения, такие как вес и размер.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
+[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, такие как вес и размер.  
   
- Шрифт, выбранный в диалоговом окне, возвращается в свойстве <xref:System.Windows.Forms.FontDialog.Font%2A>.  Таким образом, при выборе шрифта пользователем весь процесс сводится к чтению свойства.  
+ Шрифт, выбранный в диалоговом окне, возвращается в <xref:System.Windows.Forms.FontDialog.Font%2A> свойство. Таким образом используя преимущества шрифта, выбранного пользователем так же легко, как и чтение свойство.  
   
-### Чтобы выбрать свойства шрифта с помощью компонента FontDialog  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Чтобы выбрать свойства шрифта с помощью компонента FontDialog  
   
-1.  Отобразите диалоговое окно с помощью метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+1.  Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.  
   
-2.  С помощью свойства <xref:System.Windows.Forms.DialogResult> определите, как было закрыто диалоговое окно.  
+2.  Используйте <xref:System.Windows.Forms.DialogResult> свойство, чтобы определить, как окно было закрыто.  
   
-3.  Для задания требуемого шрифта воспользуйтесь свойством <xref:System.Windows.Forms.FontDialog.Font%2A>.  
+3.  Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.  
   
-     В приведенном ниже примере обработчик события <xref:System.Windows.Forms.Control.Click> элемента управления <xref:System.Windows.Forms.Button> открывает компонент <xref:System.Windows.Forms.FontDialog>.  Когда шрифт выбран и пользователь нажимает кнопку **ОК**, свойство <xref:System.Windows.Forms.FontDialog.Font%2A> элемента управления <xref:System.Windows.Forms.TextBox> приобретает значение выбранного шрифта.  Пример предполагает, что в форме есть элемент управления <xref:System.Windows.Forms.Button>, элемент управления <xref:System.Windows.Forms.TextBox> и компонент <xref:System.Windows.Forms.FontDialog>.  
+     В следующем примере <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает <xref:System.Windows.Forms.FontDialog> компонента. Если шрифт является выбран и пользователь нажимает **ОК**, <xref:System.Windows.Forms.FontDialog.Font%2A> свойство <xref:System.Windows.Forms.TextBox> элемент управления на форме имеет значение выбранного шрифта. В этом примере предполагается, имеет форму <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.TextBox> управления и <xref:System.Windows.Forms.FontDialog> компонента.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -47,7 +52,6 @@ caps.handback.revision: 15
           TextBox1.Font = FontDialog1.Font  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +62,6 @@ caps.handback.revision: 15
           textBox1.Font = fontDialog1.Font;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,17 +76,16 @@ caps.handback.revision: 15
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Поместите в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] и [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.FontDialog>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.FontDialog>  
  [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

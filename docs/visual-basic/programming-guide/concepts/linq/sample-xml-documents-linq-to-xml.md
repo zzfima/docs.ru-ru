@@ -1,33 +1,25 @@
 ---
-title: "Пример XML-документов (LINQ to XML) | Документы Microsoft"
+title: "Примеры XML-документов (LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d2ba4eec12b3a51c912ed4d531f4de9f80ffa332
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: db9837d5dbe09b3045d88dc68e429877b39559f2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Примеры XML-документов (LINQ to XML)
-Следующие примеры файлов используются в образцы кода и фрагменты кода на протяжении [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] документации.  
+Следующие примеры файлов используются в образцах и фрагментах кода во всей документации по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
 >  Использованные в примерах компании, организации, продукты, доменные имена, адреса электронной почты, эмблемы, имена людей, географические названия и события являются вымышленными. Любые совпадения с реальными предприятиями, организациями, товарами, именами доменов, адресами электронной почты, эмблемами, лицами, местами и событиями являются случайными и непреднамеренными.  
@@ -43,7 +35,7 @@ ms.lasthandoff: 03/13/2017
 |[Пример XML-файла. Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|XML-документ, который содержит некоторые псевдотестовые данные конфигурации.|  
 |[Пример XML-файла. Конфигурация тестирования в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|XML-документ в пространстве имен, который содержит некоторые псевдотестовые данные конфигурации.|  
 |[Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|XML-документ, который содержит список клиентов и заказов.|  
-|[Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Схемы определения Xml (XSD), проверяет [пример XML-файла: Customers и Orders (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Определение схемы XML (XSD), которое проверяет [пример XML-файла: клиенты и заказы (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[Пример XML-файла. Клиенты и заказы в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|XML-документ в пространстве имен, который содержит список клиентов и заказов.|  
 |[Пример XML-файла. Числовые данные (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|XML-документ, который содержит данные, подходящие для суммирования и группирования.|  
 |[Пример XML-файла. Числовые данные в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|XML-документ в пространстве имен, который содержит данные, подходящие для суммирования и группирования.|  

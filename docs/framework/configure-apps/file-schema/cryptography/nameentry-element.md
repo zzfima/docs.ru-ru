@@ -1,68 +1,72 @@
 ---
-title: "Элемент &lt;nameEntry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<nameEntry> - элемент"
-  - "nameEntry - элемент"
+title: "&lt;nameEntry&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry
+helpviewer_keywords:
+- <nameEntry> element
+- nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;nameEntry&gt;
-Сопоставление имени класса с понятным именем алгоритма, позволяющим одному классу иметь несколько понятных имен.  
+# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; элемент
+Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
   
-## Синтаксис  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
+\<nameEntry >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|**name**|Обязательный атрибут.<br /><br /> Задание понятного имени алгоритма, реализуемого в криптографическом классе.|  
-|**класс**|Обязательный атрибут.<br /><br /> Задание значение для атрибута **name** в элементе [\<cryptoClass\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md).|  
+|---------------|-----------------|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя для алгоритма, который реализует криптографический класс.|  
+|**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибута в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемента.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.web`|Определяет корневой элемент для раздела конфигурации ASP.NET.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`system.web`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
-## Заметки  
- Атрибут **name** может представлять собой имя одного из абстрактных классов пространства имен <xref:System.Security.Cryptography>.  При вызове метода **Create** для абстрактного криптографического класса имя абстрактного класса передается в метод [Security.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic).  **CreateFromName** возвращает экземпляр типа, указанный с помощью атрибута **class**.  Если в атрибуте **name** содержится краткое имя \(например, RSA\), это имя можно использовать при вызове метода **CreateFromName**.  
+## <a name="remarks"></a>Примечания  
+ **Имя** атрибут может быть имя абстрактные классы, находящиеся в <xref:System.Security.Cryptography> пространства имен. При вызове **создать** метода криптографии абстрактного класса, абстрактный класс имя передается <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> метод. **CreateFromName** возвращает экземпляр типа, указанного **класса** атрибута. Если **имя** атрибут — это краткое имя, например RSA, можно использовать это имя при вызове **CreateFromName** метод.  
   
-## Пример  
- В следующем примере показано, как использовать элемент **\<nameEntry\>** для создания ссылки на криптографический класс и конфигурирования среды выполнения.  В этом случае можно передать строку "RSA" в метод <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> и использовать метод <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> для получения объекта `MyCryptoRSAClass`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать  **\<nameEntry >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -81,8 +85,8 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>См. также  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)  
  [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -1,37 +1,28 @@
 ---
-title: "Практическое руководство: сериализация с использованием DataContractSerializer (Visual Basic) | Документы Microsoft"
+title: "Как: сериализация с использованием DataContractSerializer (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6701834f1a99536abda37f3fbc2450bd795dcb5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e86409b3b1ff499a3be789e1a22947dff6011517
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Практическое руководство: сериализация с использованием DataContractSerializer (Visual Basic)
-В этом разделе приводится пример, где выполняется сериализация и десериализация с использованием <xref:System.Runtime.Serialization.DataContractSerializer>.</xref:System.Runtime.Serialization.DataContractSerializer>  
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Как: сериализация с использованием DataContractSerializer (Visual Basic)
+Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается некоторое количество объектов, содержащих <xref:System.Xml.Linq.XElement>объектов.</xref:System.Xml.Linq.XElement> Затем они сериализуются в текстовые файлы и десериализуются из текстовых файлов.  
+ В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>. Затем они сериализуются в текстовые файлы и десериализуются из текстовых файлов.  
   
 ```vb  
 Imports System  
@@ -103,4 +94,3 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>См. также  
  [Сериализация графов объектов, содержащих объекты XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
-

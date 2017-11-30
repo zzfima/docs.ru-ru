@@ -1,65 +1,74 @@
 ---
-title: "&lt;сообщение&gt; для &lt;netHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;сообщение&gt; для &lt;netHttpBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9ee45fe84a7134eea442b19a6f3e123a464cbb5a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;сообщение&gt; для &lt;netHttpBinding&gt;
-Определяет параметры безопасности уровня сообщений для [\<basicHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+# <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;сообщение&gt; для &lt;netHttpBinding&gt;
+Определяет параметры безопасности уровня сообщений [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<привязки >  
+\<Привязка netHttpBinding >  
+\<Привязка >  
+\<Безопасность >  
+\<сообщение >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <message   
    algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
       clientCredentialType="UserName/Certificate"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|algorithmSuite|Задает алгоритмы шифрования сообщений и ключей.  Этот атрибут имеет тип <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, который задает алгоритмы и размеры ключей.  Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности \(WS\-SecurityPolicy\).<br /><br /> Значение по умолчанию — `Basic256`.|  
-|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности на уровне сообщений.  Значение по умолчанию — `UserName`.|  
+|---------------|-----------------|  
+|algorithmSuite|Задает алгоритмы шифрования сообщений и ключей. Этот атрибут имеет тип <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, который задает алгоритмы и размеры ключей. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Значение по умолчанию — `Basic256`.|  
+|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности на уровне сообщений. Значение по умолчанию — `UserName`.|  
   
-## Атрибут clientCredentialType  
+## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|UserName|-   Требует, чтобы при подключении к серверу проводилась проверка подлинности клиента с использованием имени пользователя.  Эти учетные данные должны быть указаны с помощью элемента \<`clientCredentials`\>.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений.  Таким образом, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании имени пользователя.  Для `basicHttpBinding` это требует настройки канала SSL.|  
-|Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата.  В этом случае учетные данные клиента должны быть определены с помощью элементов \<`clientCredentials`\> и \<`clientCertificate`\>.  Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы.  Учетные данные службы в данном случае должны быть указаны с помощью класса <xref:System.ServiceModel.Description.ClientCredentials> или элемента поведения `ClientCredentials` с указанием сертификата службы в элементе \<serviceCertificate\> элемента serviceCredentials.|  
+|-----------|-----------------|  
+|UserName|-Требует подлинности клиента на сервер с использованием имени пользователя. Эти учетные данные должны быть указаны с помощью элемента <`clientCredentials`>.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]не поддерживает передачу дайджеста пароля или получение ключей с использованием паролей и использование таких ключей для обеспечения безопасности сообщений. Таким образом, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] принудительно обеспечивает безопасность транспорта при использовании имени пользователя. Для `basicHttpBinding` это требует настройки канала SSL.|  
+|Сертификат|Требует, чтобы при подключении к серверу проверка подлинности клиента проводилась с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью элементов <`clientCredentials`> и <`clientCertificate`>. Кроме того, при использовании режима безопасности сообщений клиенту должен быть предоставлен сертификат службы. В этом случае необходимо указать с помощью учетных данных службы <xref:System.ServiceModel.Description.ClientCredentials> класса или `ClientCredentials` элемент поведения и указав службу сертификатов с помощью \<serviceCertificate > элемента serviceCredentials.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|\<Элемент `security`\> \<`netHttpBinding`\>|Определяет возможности безопасности для элемента \<`netHttpBinding`\>.|  
+|-------------|-----------------|  
+|<`security`> элемента <`netHttpBinding`>|Определяет возможности безопасности для элемента <`netHttpBinding`>.|  
   
-## Пример  
- В образце демонстрируется реализация приложения, которое использует basicHttpBinding и безопасность сообщений.  В следующем примере конфигурации для службы в определении конечной точки задаются привязка basicHttpBinding и ссылки на конфигурацию привязки с именем `Binding1`.  Сертификат, используемый службой для своей проверки подлинности при подключении к клиенту, установлен в разделе `behaviors` файла конфигурации в элементе `serviceCredentials`.  Режим проверки, применяемый к сертификату, который клиент использует для своей проверки подлинности при подключении к службе, также установлен в разделе `behaviors` в элементе `clientCertificate`.  
+## <a name="example"></a>Пример  
+ В образце демонстрируется реализация приложения, которое использует basicHttpBinding и безопасность сообщений. В следующем примере конфигурации для службы в определении конечной точки задаются привязка basicHttpBinding и ссылки на конфигурацию привязки с именем `Binding1`. Сертификат, используемый службой для своей проверки подлинности при подключении к клиенту, установлен в разделе `behaviors` файла конфигурации в элементе `serviceCredentials`. Режим проверки, применяемый к сертификату, который клиент использует для своей проверки подлинности при подключении к службе, также установлен в разделе `behaviors` в элементе `clientCertificate`.  
   
  Та же привязка и данные безопасности задаются в файле конфигурации клиента.  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -126,13 +135,9 @@ caps.handback.revision: 3
 </system.serviceModel>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.NetHttpMessageSecurity>   
- <xref:System.ServiceModel.Configuration.NetHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.NetHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.NetHttpMessageSecurityElement>   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>См. также  
+ [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Привязки](../../../../../docs/framework/wcf/bindings.md)  
+ [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<Привязка >](../../../../../docs/framework/misc/binding.md)

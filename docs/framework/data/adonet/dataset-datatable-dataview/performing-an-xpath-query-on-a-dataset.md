@@ -1,25 +1,31 @@
 ---
-title: "Выполнение запроса XPath над DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выполнение запроса XPath к набору данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Выполнение запроса XPath над DataSet
-Связь между синхронизированным объектом <xref:System.Data.DataSet> и объектом <xref:System.Xml.XmlDataDocument> позволяет использовать службы XML, например запрос XPath, предоставляющий доступ к объекту **XmlDataDocument**, и выполнять некоторые функции более простым способом, чем напрямую обращаться к объекту **DataSet**.  Например, вместо использования метода **Select** объекта <xref:System.Data.DataTable> для перехода по связям к другим таблицам в объекте **DataSet** можно выполнить запрос XPath к объекту **XmlDataDocument**, синхронизированному с объектом **DataSet**, чтобы получить список XML\-элементов в виде объекта <xref:System.Xml.XmlNodeList>.  Узлы в объекте **XmlNodeList**, приведенные к узлам <xref:System.Xml.XmlElement>, затем можно передать методу **GetRowFromElement** **XmlDataDocument**, чтобы вернуть совпадающие ссылки <xref:System.Data.DataRow> к строкам таблицы в синхронизированном объекте **DataSet**.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Выполнение запроса XPath к набору данных
+Связь между синхронизированным <xref:System.Data.DataSet> и <xref:System.Xml.XmlDataDocument> позволяет использовать XML-служб, таких как запрос языка XML Path (XPath), которые обращаются к **XmlDataDocument** и выполнять некоторые функции более удобным, чем доступ к **DataSet** напрямую. Например, вместо использования **выберите** метод <xref:System.Data.DataTable> для перехода по связям к другим таблицам в **DataSet**, можно выполнить запрос XPath к **XmlDataDocument**  , синхронизируется с **DataSet**, чтобы получить список XML-элементов в виде <xref:System.Xml.XmlNodeList>. Узлы в **XmlNodeList**, приведенное <xref:System.Xml.XmlElement> узлов, может быть передан **GetRowFromElement** метод **XmlDataDocument**, чтобы вернуть совпадающие <xref:System.Data.DataRow> ссылки на строки таблицы в синхронизированном **набора данных**.  
   
- Например, следующий образец кода выполняет запрос XPath «по внукам».  Объект **DataSet** заполняется тремя таблицами: **Customers**, **Orders** и **OrderDetails**.  В образце первая связь типа «родители\-потомки» создается между таблицами **Customers** и **Orders** и между таблицами **Orders** и **OrderDetails**.  Затем выполняется запрос XPath, возвращающий объект **XmlNodeList**, содержащий узлы **Customers**, где внучатый узел **OrderDetails** имеет узел **ProductID** со значением 43.  По сути дела, запрос XPath определяет, какой из заказчиков, заказавших продукт, имеет значение узла **ProductID**, равное 43.  
+ Например, следующий образец кода выполняет запрос XPath «по внукам». **DataSet** заполняется тремя таблицами: **клиентов**, **заказов**, и **OrderDetails**. В этом образце родители потомки сначала создается связь между **клиентов** и **заказов** таблиц и между **заказов** и **OrderDetails** таблиц. Затем выполняется запрос XPath для возврата **XmlNodeList** из **клиентов** узлы где внучатый узел **OrderDetails** узел имеет **ProductID**со значением 43. По сути, в образце используется запрос XPath для определения того, какой из заказчиков, заказавших продукт, имеющий **ProductID** 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## См. также  
- [Синхронизация DataSet и XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Набор данных и XmlDataDocument синхронизации](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,72 +1,78 @@
 ---
-title: "Обновление источников данных с помощью объектов DataAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обновление источников данных с объектами DataAdapter"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5c0e032c7f4483648826ed8c03a8bdaa0ce5e4a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обновление источников данных с помощью объектов DataAdapter
-Метод `Update` объекта <xref:System.Data.Common.DataAdapter> вызывается для решения задачи по передаче изменений из <xref:System.Data.DataSet> обратно в источник данных.  Метод `Update`, как и метод `Fill`, принимает в качестве аргументов экземпляр `DataSet`, а также \(необязательно\) объект <xref:System.Data.DataTable> или имя `DataTable`.  Экземпляр `DataSet` представляет собой объект `DataSet`, который содержит выполненные изменения, а `DataTable` указывает на таблицу, из которой должны быть получены эти изменения.  Если ни один объект `DataTable` не задан, используется первый объект `DataTable` в `DataSet`.  
+# <a name="updating-data-sources-with-dataadapters"></a>Обновление источников данных с объектами DataAdapter
+Метод `Update` объекта <xref:System.Data.Common.DataAdapter> вызывается для решения задачи по передаче изменений из <xref:System.Data.DataSet> обратно в источник данных. Метод `Update`, как и метод `Fill`, принимает в качестве аргументов экземпляр `DataSet`, а также (необязательно) объект <xref:System.Data.DataTable> или имя `DataTable`. Экземпляр `DataSet` представляет собой объект `DataSet`, который содержит выполненные изменения, а `DataTable` указывает на таблицу, из которой должны быть получены эти изменения. Если ни один объект `DataTable` не задан, используется первый объект `DataTable` в `DataSet`.  
   
- При вызове метода `Update` в `DataAdapter` анализируются внесенные изменения и выполняется соответствующая команда \(INSERT, UPDATE или DELETE\).  Если в `DataAdapter` обнаруживается изменение в <xref:System.Data.DataRow>, то в этом объекте используется команда <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> или <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> для обработки этого изменения.  Это позволяет максимально повысить производительность приложения ADO.NET путем задания синтаксиса команды во время разработки, а также, по возможности, за счет применения хранимых процедур.  Необходимо явно задавать команды перед вызовом `Update`.  Если вызывается `Update`, и не существует подходящая команда для конкретного обновления \(например, отсутствует `DeleteCommand` для удаленных строк\), то активизируется исключение.  
-  
-> [!NOTE]
->  При использовании хранимых процедур SQL Server для изменения или удаления данных с помощью `DataAdapter` убедитесь, что в определении хранимой процедуры не указана инструкция SET NOCOUNT ON.  В таком случае возвращается число затронутых строк, равное нулю, что `DataAdapter` интерпретирует как конфликт параллелизма.  Это событие вызовет исключение <xref:System.Data.DBConcurrencyException>.  
-  
- Параметры команды могут использоваться в целях указания входных и выходных значений для инструкции SQL или хранимой процедуры применительно к каждой модифицированной строке в `DataSet`.  Для получения дополнительной информации см. [Параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ При вызове метода `Update` в `DataAdapter` анализируются внесенные изменения и выполняется соответствующая команда (INSERT, UPDATE или DELETE). Если в `DataAdapter` обнаруживается изменение в <xref:System.Data.DataRow>, то в этом объекте используется команда <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> или <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> для обработки этого изменения. Это позволяет максимально повысить производительность приложения ADO.NET путем задания синтаксиса команды во время разработки, а также, по возможности, за счет применения хранимых процедур. Необходимо явно задавать команды перед вызовом `Update`. Если вызывается `Update`, и не существует подходящая команда для конкретного обновления (например, отсутствует `DeleteCommand` для удаленных строк), то активизируется исключение.  
   
 > [!NOTE]
->  Важно учитывать различие между обозначением строки как удаленной в <xref:System.Data.DataTable> и удалением этой строки.  Если вызывается метод `Remove` или `RemoveAt`, строка немедленно удаляется.  Любые соответствующие строки в серверном источнике данных остаются не затронутыми, если после этого будет передано значение `DataTable` или `DataSet` в `DataAdapter` и вызван метод `Update`.  Если же используется метод `Delete`, то строка остается в `DataTable` и отмечается как предназначенная для удаления.  Если после этого будет передано значение `DataTable` или `DataSet` в `DataAdapter` и вызван метод `Update`, то соответствующая строка в серверном источнике данных становится удаленной.  
+>  При использовании хранимых процедур SQL Server для изменения или удаления данных с помощью `DataAdapter` убедитесь, что в определении хранимой процедуры не указана инструкция SET NOCOUNT ON. В таком случае возвращается число затронутых строк, равное нулю, что `DataAdapter` интерпретирует как конфликт параллелизма. Это событие вызовет исключение <xref:System.Data.DBConcurrencyException>.  
   
- Если значение `DataTable` сопоставляется или создается на основе одной таблицы базы данных, то можно воспользоваться тем, что объект <xref:System.Data.Common.DbCommandBuilder> автоматически создает объекты `DeleteCommand`, `InsertCommand` и `UpdateCommand` для `DataAdapter`.  Для получения дополнительной информации см. [Создание команд с помощью объекта CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Параметры команды могут использоваться в целях указания входных и выходных значений для инструкции SQL или хранимой процедуры применительно к каждой модифицированной строке в `DataSet`. Дополнительные сведения см. в разделе [параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
-## Использование объекта UpdatedRowSource для сопоставления значений с набором данных  
- Можно управлять тем, как значения, возвращенные из источника данных, сопоставляются в обратном направлении с `DataTable` вслед за вызовом метода Update объекта `DataAdapter` с использованием свойства <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> объекта <xref:System.Data.Common.DbCommand>.  Задавая значение свойства `UpdatedRowSource` равным одному из значений перечисления <xref:System.Data.UpdateRowSource>, можно управлять тем, должны ли пропускаться выходные параметры, возвращаемые командами `DataAdapter`, или применяться к изменившейся строке в `DataSet`.  Можно также указать, применяется ли первая возвращенная строка \(если она существует\) к изменившейся строке в `DataTable`.  
+> [!NOTE]
+>  Важно учитывать различие между обозначением строки как удаленной в <xref:System.Data.DataTable> и удалением этой строки. Если вызывается метод `Remove` или `RemoveAt`, строка немедленно удаляется. Любые соответствующие строки в серверном источнике данных остаются не затронутыми, если после этого будет передано значение `DataTable` или `DataSet` в `DataAdapter` и вызван метод `Update`. Если же используется метод `Delete`, то строка остается в `DataTable` и отмечается как предназначенная для удаления. Если после этого будет передано значение `DataTable` или `DataSet` в `DataAdapter` и вызван метод `Update`, то соответствующая строка в серверном источнике данных становится удаленной.  
+  
+ Если значение `DataTable` сопоставляется или создается на основе одной таблицы базы данных, то можно воспользоваться тем, что объект <xref:System.Data.Common.DbCommandBuilder> автоматически создает объекты `DeleteCommand`, `InsertCommand` и `UpdateCommand` для `DataAdapter`. Дополнительные сведения см. в разделе [создание команд с помощью построителей команд](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+  
+## <a name="using-updatedrowsource-to-map-values-to-a-dataset"></a>Использование объекта UpdatedRowSource для сопоставления значений с набором данных  
+ Можно управлять тем, как значения, возвращенные из источника данных, сопоставляются в обратном направлении с `DataTable` вслед за вызовом метода Update объекта `DataAdapter` с использованием свойства <xref:System.Data.Common.DbCommand.UpdatedRowSource%2A> объекта <xref:System.Data.Common.DbCommand>. Задавая значение свойства `UpdatedRowSource` равным одному из значений перечисления <xref:System.Data.UpdateRowSource>, можно управлять тем, должны ли пропускаться выходные параметры, возвращаемые командами `DataAdapter`, или применяться к изменившейся строке в `DataSet`. Можно также указать, применяется ли первая возвращенная строка (если она существует) к изменившейся строке в `DataTable`.  
   
  В следующей таблице приведено описание различных значений перечисления `UpdateRowSource` и показано, как они влияют на поведение команды, используемой в сочетании с `DataAdapter`.  
   
 |Перечисление UpdatedRowSource|Описание|  
-|-----------------------------------|--------------|  
-|<xref:System.Data.UpdateRowSource>|И выходные параметры, и первая строка возвращенного результирующего набора могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
-|<xref:System.Data.UpdateRowSource>|Только данные из первой строки возвращенного результирующего набора могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
-|<xref:System.Data.UpdateRowSource>|Любые выходные параметры или строки возвращенного результирующего набора пропускаются.|  
-|<xref:System.Data.UpdateRowSource>|Только выходные параметры могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
+|----------------------------------|-----------------|  
+|<xref:System.Data.UpdateRowSource.Both>|И выходные параметры, и первая строка возвращенного результирующего набора могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Только данные из первой строки возвращенного результирующего набора могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
+|<xref:System.Data.UpdateRowSource.None>|Любые выходные параметры или строки возвращенного результирующего набора пропускаются.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|Только выходные параметры могут быть сопоставлены с модифицированной строкой в `DataSet`.|  
   
- Метод `Update` позволяет решить задачу по передаче внесенных изменений обратно в источник данных; но может оказаться так, что другие клиенты уже внесли изменения в данные источника данных с того момента, как последний раз было осуществлено заполнение `DataSet`.  Чтобы обновить применяемый объект `DataSet` с использованием текущих данных, воспользуйтесь `DataAdapter` и методом `Fill`.  Произойдет добавление новых строк к таблице, а обновленная информация будет включена в существующие строки.  Метод `Fill` определяет, должна ли быть добавлена новая строка или обновлена существующая строка, путем проверки значений первичного ключа в строках объекта `DataSet` и в строках, возвращенных `SelectCommand`.  Если в методе `Fill` обнаруживается значение первичного ключа какой\-то строки в `DataSet`, которое совпадает со значением первичного ключа строки в результатах, возвращенных `SelectCommand`, то метод обновляет существующую строку на основании данных из строки, возвращенной `SelectCommand`, и задает значение <xref:System.Data.DataRow.RowState%2A> существующей строки, равное `Unchanged`.  Если строка, возвращенная `SelectCommand`, имеет значение первичного ключа, не совпадающее ни с одним из значений первичного ключа в строках в `DataSet`, то метод `Fill` добавляет новую строку со значением `RowState`, равным `Unchanged`.  
+ Метод `Update` позволяет решить задачу по передаче внесенных изменений обратно в источник данных; но может оказаться так, что другие клиенты уже внесли изменения в данные источника данных с того момента, как последний раз было осуществлено заполнение `DataSet`. Чтобы обновить применяемый объект `DataSet` с использованием текущих данных, воспользуйтесь `DataAdapter` и методом `Fill`. Произойдет добавление новых строк к таблице, а обновленная информация будет включена в существующие строки. Метод `Fill` определяет, должна ли быть добавлена новая строка или обновлена существующая строка, путем проверки значений первичного ключа в строках объекта `DataSet` и в строках, возвращенных `SelectCommand`. Если в методе `Fill` обнаруживается значение первичного ключа какой-то строки в `DataSet`, которое совпадает со значением первичного ключа строки в результатах, возвращенных `SelectCommand`, то метод обновляет существующую строку на основании данных из строки, возвращенной `SelectCommand`, и задает значение <xref:System.Data.DataRow.RowState%2A> существующей строки, равное `Unchanged`. Если строка, возвращенная `SelectCommand`, имеет значение первичного ключа, не совпадающее ни с одним из значений первичного ключа в строках в `DataSet`, то метод `Fill` добавляет новую строку со значением `RowState`, равным `Unchanged`.  
   
 > [!NOTE]
->  Если метод `SelectCommand` возвращает результаты инструкции OUTER JOIN, то `DataAdapter` не задает значение `PrimaryKey` для результирующего набора `DataTable`.  Необходимо непосредственно определить значение `PrimaryKey` для обеспечения того, чтобы решение по обработке повторяющихся строк было принято правильно.  Для получения дополнительной информации см. [Определение первичных ключей](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+>  Если метод `SelectCommand` возвращает результаты инструкции OUTER JOIN, то `DataAdapter` не задает значение `PrimaryKey` для результирующего набора `DataTable`. Необходимо непосредственно определить значение `PrimaryKey` для обеспечения того, чтобы решение по обработке повторяющихся строк было принято правильно. Дополнительные сведения см. в разделе [Определение первичных ключей](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- Чтобы обеспечить обработку исключений, которые могут возникнуть при вызове метода `Update`, можно воспользоваться событием `RowUpdated` для осуществления ответных действий на ошибки обновления строк по мере их возникновения \(см. раздел [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)\) или задать значение `DataAdapter.ContinueUpdateOnError` равным `true` перед вызовом `Update` и осуществлять ответные действия на основании сведений об ошибке, хранящихся в свойстве `RowError` конкретной строки, после завершения обновления \(см. раздел [Сведения об ошибке строки](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)\).  
+ Для обработки исключений, которые могут возникать при вызове `Update` метод, можно использовать `RowUpdated` события, происходящие реагировать на ошибки обновления строк (в разделе [обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), или можно задать `DataAdapter.ContinueUpdateOnError` для `true` перед вызовом `Update`и реагировать на ошибки сведениями, хранящимися в `RowError` свойство конкретной строки после завершения обновления (в разделе [сведения об ошибках строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Примечание** Вызов `AcceptChanges` применительно к `DataSet`, `DataTable` или `DataRow` приводит к тому, что все значения `Original`, относящиеся к `DataRow`, перезаписываются значениями `Current`, относящимися к `DataRow`.  Если были изменены значения полей, уникальным образом идентифицирующих строку, то после вызова метода `AcceptChanges` значения `Original` больше не будут соответствовать этим значениям в источнике данных.  Метод `AcceptChanges` вызывается автоматически для каждой строки во время вызова метода Update объекта `DataAdapter`.  Можно сохранить первоначальные значения во время вызова метода Update, для чего вначале следует задать значение свойства `AcceptChangesDuringUpdate` объекта `DataAdapter` равным false, или создать обработчик событий для события `RowUpdated` и задать значение <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>, равное <xref:System.Data.UpdateStatus>.  Дополнительные сведения см. в разделах [Объединение содержимого DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) и [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Примечание** вызов `AcceptChanges` на `DataSet`, `DataTable`, или `DataRow` все `Original` значения для `DataRow` перезапись `Current` значения для `DataRow`. Если были изменены значения полей, уникальным образом идентифицирующих строку, то после вызова метода `AcceptChanges` значения `Original` больше не будут соответствовать этим значениям в источнике данных. Метод `AcceptChanges` вызывается автоматически для каждой строки во время вызова метода Update объекта `DataAdapter`. Можно сохранить первоначальные значения во время вызова метода Update, для чего вначале следует задать значение свойства `AcceptChangesDuringUpdate` объекта `DataAdapter` равным false, или создать обработчик событий для события `RowUpdated` и задать значение <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>, равное <xref:System.Data.UpdateStatus.SkipCurrentRow>. Дополнительные сведения см. в разделе [слияние содержимого набора данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) и [обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
-## Пример  
- В следующих примерах показано, как выполнить обновления применительно к модифицированным строкам путем явного задания значения `UpdateCommand` объекта `DataAdapter` и вызова его метода `Update` .  Обратите внимание на то, что задан параметр, указанный в предложении WHERE инструкции UPDATE, чтобы использовалось значение `Original` объекта `SourceColumn`.  Это важно, поскольку значение `Current` могло быть изменено, поэтому может не соответствовать этому значению в источнике данных.  Значение `Original` представляет собой значение, которое использовалось для заполнения `DataTable` из источника данных.  
+## <a name="example"></a>Пример  
+ Следующие примеры демонстрируют, как для выполнения обновлений к модифицированным строкам путем явного задания `UpdateCommand` из `DataAdapter` и вызов его `Update` метод. Обратите внимание на то, что задан параметр, указанный в предложении WHERE инструкции UPDATE, чтобы использовалось значение `Original` объекта `SourceColumn`. Это важно, поскольку значение `Current` могло быть изменено, поэтому может не соответствовать этому значению в источнике данных. Значение `Original` представляет собой значение, которое использовалось для заполнения `DataTable` из источника данных.  
   
  [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]  
   
-## Столбцы AutoIncrement  
- Если в таблицах из применяемого источника данных имеются столбцы с автоматическим увеличением значений, то можно обеспечить заполнение столбцов в применяемом `DataSet` путем возврата автоматически увеличивающегося значения как выходного параметра хранимой процедуры и сопоставления его со столбцом таблицы; возврата автоматически увеличивающегося значения в первой строке результирующего набора, возвращенного хранимой процедурой или инструкцией SQL; а также использование события `RowUpdated` объекта `DataAdapter` для выполнения дополнительной инструкции SELECT.  Дополнительные сведения и пример см. в разделе [Получение значений идентификаторов или автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+## <a name="autoincrement-columns"></a>Столбцы AutoIncrement  
+ Если в таблицах из применяемого источника данных имеются столбцы с автоматическим увеличением значений, то можно обеспечить заполнение столбцов в применяемом `DataSet` путем возврата автоматически увеличивающегося значения как выходного параметра хранимой процедуры и сопоставления его со столбцом таблицы; возврата автоматически увеличивающегося значения в первой строке результирующего набора, возвращенного хранимой процедурой или инструкцией SQL; а также использование события `RowUpdated` объекта `DataAdapter` для выполнения дополнительной инструкции SELECT. Дополнительные сведения и пример см. в разделе [извлечение идентификации или значений автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
-## Упорядочение вставок, обновлений и удалений  
- Во многих обстоятельствах имеет значение последовательность передачи изменений, внесенных с помощью `DataSet`, в источник данных.  Например, если происходит обновление значения первичного ключа для существующей строки и добавляется новая строка с новым значением первичного ключа в качестве внешнего ключа, то важно вначале осуществить обновление, а затем вставку.  
+## <a name="ordering-of-inserts-updates-and-deletes"></a>Упорядочение вставок, обновлений и удалений  
+ Во многих обстоятельствах имеет значение последовательность передачи изменений, внесенных с помощью `DataSet`, в источник данных. Например, если происходит обновление значения первичного ключа для существующей строки и добавляется новая строка с новым значением первичного ключа в качестве внешнего ключа, то важно вначале осуществить обновление, а затем вставку.  
   
- Можно использовать метод `Select` объекта `DataTable` для возврата массива `DataRow`, который ссылается только на строки с конкретным значением `RowState`.  После этого можно передать возвращенный массив `DataRow` в метод `Update` объекта `DataAdapter` для обработки измененных строк.  Задавая подмножество строк, подлежащих обновлению, можно управлять тем, в какой последовательности обрабатываются вставки, обновления и удаления.  
+ Можно использовать метод `Select` объекта `DataTable` для возврата массива `DataRow`, который ссылается только на строки с конкретным значением `RowState`. После этого можно передать возвращенный массив `DataRow` в метод `Update` объекта `DataAdapter` для обработки измененных строк. Задавая подмножество строк, подлежащих обновлению, можно управлять тем, в какой последовательности обрабатываются вставки, обновления и удаления.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Например, в следующем коде обеспечивается то, что удаленные строки таблицы обрабатываются в первую очередь, затем происходит обработка обновленных строк, после чего обрабатываются вставленные строки.  
   
 ```vb  
@@ -99,14 +105,14 @@ adapter.Update(table.Select(null, null,
 adapter.Update(table.Select(null, null, DataViewRowState.Added));  
 ```  
   
-## Используйте DataAdapter для извлечения и обновления данных  
+## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Используйте DataAdapter для извлечения и обновления данных  
  DataAdapter можно использовать для извлечения и обновления данных.  
   
--   В этом примере DataAdapter.AcceptChangesDuringFill используется для клонирования данных в базе данных.  Если свойство имеет значение false, AcceptChanges при заполнении таблицы не вызывается и позднее добавленные строки рассматриваются как вставленные строки.  Таким образом, в примере эти строки используются для вставки новых строк в базу данных.  
+-   В этом примере DataAdapter.AcceptChangesDuringFill используется для клонирования данных в базе данных. Если свойство имеет значение false, AcceptChanges при заполнении таблицы не вызывается и позднее добавленные строки рассматриваются как вставленные строки. Таким образом, в примере эти строки используются для вставки новых строк в базу данных.  
   
 -   В этом примере DataAdapter.TableMappings используется для определения сопоставления между исходной таблицей и DataTable.  
   
--   В этом примере DataAdapter.FillLoadOption используется для определения того, как адаптер заполняет DataTable из DbDataReader.  При создании объекта DataTable можно выполнять запись данных из базы данных только в текущую или исходную версию путем установки свойства в LoadOption.Upsert или LoadOption.PreserveChanges.  
+-   В этом примере DataAdapter.FillLoadOption используется для определения того, как адаптер заполняет DataTable из DbDataReader. При создании объекта DataTable можно выполнять запись данных из базы данных только в текущую или исходную версию путем установки свойства в LoadOption.Upsert или LoadOption.PreserveChanges.  
   
 -   В примере также обновляется таблица путем использования DbDataAdapter.UpdateBatchSize для выполнения пакетных операций.  
   
@@ -132,7 +138,7 @@ CREATE TABLE [dbo].[Course]([CourseID] [nvarchar](10) NOT NULL,
 [Title] [nvarchar](100) NOT NULL,  
 [Credits] [int] NOT NULL,  
 [DepartmentID] [int] NOT NULL,  
- CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_Course] PRIMARY KEY CLUSTERED  
 (  
 [CourseID] ASC,  
 [Year] ASC  
@@ -149,7 +155,7 @@ CREATE TABLE [dbo].[Department]([DepartmentID] [int] IDENTITY(1,1) NOT NULL,
 [Budget] [money] NOT NULL,  
 [StartDate] [datetime] NOT NULL,  
 [Administrator] [int] NULL,  
- CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED  
 (  
 [DepartmentID] ASC  
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]) ON [PRIMARY]  
@@ -176,7 +182,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO  
 ```  
   
- Проекты C\# и Visual Basic с этим образцом кода можно найти в разделе [Образцы кода разработчика](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
+ Проекты C# и Visual Basic с этим образцом кода можно найти на [примеры кода от разработчиков](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D).  
   
 ```  
 using System;  
@@ -372,10 +378,10 @@ class Program {
 }  
 ```  
   
-## См. также  
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Состояния и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [AcceptChanges и RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)   
- [Объединение содержимого DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)   
- [Получение значений идентификаторов или автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Состояния строк и версии строк](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [AcceptChanges и RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [Слияние содержимого набора данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
+ [Извлечение идентификации или значений автонумерации](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

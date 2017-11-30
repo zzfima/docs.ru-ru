@@ -1,45 +1,46 @@
 ---
-title: "Адресация | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Адресация"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3ac0cb2b9df130820a4b12efd4b845b50ad7c79a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Адресация
-В образце адресации показаны различные аспекты и функции адресов конечных точек.  Пример основан на примере [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md).  В этом образце служба является резидентной.  Как служба, так и клиент являются консольными приложениями.  Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
+# <a name="addressing"></a>Адресация
+В образце адресации показаны различные аспекты и возможности адресов конечных точек. Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба является резидентной. Как служба, так и клиент являются консольными приложениями. Служба определяет несколько конечных точек, используя сочетание их относительных и абсолютных адресов.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Представленный ниже файл конфигурации службы задает базовый адрес и четыре конечные точки.  Базовый адрес задается с помощью элемента add в каталоге service\/host\/baseAddresses, как показано в следующем образце конфигурации.  
+ Представленный ниже файл конфигурации службы задает базовый адрес и четыре конечные точки. Базовый адрес задается с помощью элемента add в каталоге service/host/baseAddresses, как показано в следующем образце конфигурации.  
   
-```  
-<service   
-    name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">  
+```xml  
+<service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+         behaviorConfiguration="CalculatorServiceBehavior">  
   <host>  
     <baseAddresses>  
-      <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
+      <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />  
     </baseAddresses>  
   </host>  
-  ...  
 </service>  
 ```  
   
  В первом определении конечной точки, показанном в следующем образце конфигурации, задается относительный адрес. Это означает, что адрес конечной точки представляет собой сочетание базового и относительного адресов, соответствующее правилам формирования универсального кода ресурса.  
   
-```  
+```xml
 <!-- Empty relative address specified:   
      use the base address provided by the host. -->  
 <!-- The endpoint address is  
@@ -49,11 +50,11 @@ caps.handback.revision: 21
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- В этом случае относительный адрес пустой \(""\), поэтому адрес конечной точки совпадает с базовым адресом.  Фактический адрес конечной точки \- http:\/\/localhost:8000\/servicemodelsamples\/service.  
+ В этом случае относительный адрес пустой (""), поэтому адрес конечной точки совпадает с базовым адресом. Фактический адрес конечной точки - http://localhost:8000/servicemodelsamples/service.  
   
  Во втором определении конечной точки также задается относительный адрес, как показано в следующем образце конфигурации.  
   
-```  
+```xml  
 <!-- The relative address specified: use the base address -->  
 <!-- provided by the host + path. The endpoint address is -->  
 <!-- http://localhost:8000/servicemodelsamples/service/test. -->  
@@ -62,21 +63,21 @@ caps.handback.revision: 21
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Относительный адрес, "test", присоединяется к базовому адресу.  Фактический адрес конечной точки \- http:\/\/localhost:8000\/servicemodelsamples\/service\/test.  
+ Относительный адрес, "test", присоединяется к базовому адресу. Фактический адрес конечной точки - http://localhost:8000/servicemodelsamples/service/test.  
   
  В третьем определении конечной точки задается абсолютный адрес, как показано в следующем образце конфигурации.  
   
-```  
+```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
           binding="wsHttpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Базовый адрес не играет никакой роли в этом адресе.  Фактический адрес конечной точки \- http:\/\/localhost:8001\/hello\/servicemodelsamples.  
+ Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки - http://localhost:8001/hello/servicemodelsamples.  
   
- В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт \- TCP.  Базовый адрес не играет никакой роли в этом адресе.  Фактический адрес конечной точки — net.tcp:\/\/localhost:9000\/servicemodelsamples\/service.  
+ В четвертом определении конечной точки задаются абсолютный адрес и другой транспорт - TCP. Базовый адрес не играет никакой роли в этом адресе. Фактический адрес конечной точки — net.tcp://localhost:9000/servicemodelsamples/service.  
   
-```  
+```xml  
 <!-- The absolute address specified, different transport: -->  
 <!-- use the specified address, and ignore the base address. -->  
 <!-- The endpoint address is -->  
@@ -88,9 +89,9 @@ caps.handback.revision: 21
 </service>  
 ```  
   
- Клиент связывается только с одной конечной точкой службы из четырех, однако в файле конфигурации заданы все четыре.  Клиент выбирает конечную точку при создании объекта `CalculatorProxy`.  Изменяя имя файла конфигурации с `CalculatorEndpoint1` по `CalculatorEndpoint4`, можно использовать любую конечную точку.  
+ Клиент связывается только с одной конечной точкой службы из четырех, однако в файле конфигурации заданы все четыре. Клиент выбирает конечную точку при создании объекта `CalculatorProxy`. Изменяя имя файла конфигурации с `CalculatorEndpoint1` по `CalculatorEndpoint4`, можно использовать любую конечную точку.  
   
- При запуске образца служба перечисляет адрес, имя привязки и имя контракта для каждой конечной точки.  Конечная точка обмена метаданными \(MEX\) представляет собой лишь другую конечную точку из перспективы ServiceHost, поэтому она показывается в списке.  
+ При запуске образца служба перечисляет адрес, имя привязки и имя контракта для каждой конечной точки. Конечная точка обмена метаданными (MEX) представляет собой лишь другую конечную точку из перспективы ServiceHost, поэтому она показывается в списке.  
   
 ```  
 Service endpoints:  
@@ -112,10 +113,9 @@ Endpoint - address:  http://localhost:8000/ServiceModelSamples/service/mex
   
 The service is ready.  
 Press <ENTER> to terminate service.  
-  
 ```  
   
- При запуске клиента запросы и ответы операций отображаются в окнах консоли как службы, так и клиента.  Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
+ При запуске клиента запросы и ответы операций отображаются в окнах консоли как службы, так и клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -126,24 +126,24 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Если для восстановления конфигурации этого образца используется программа Svcutil.exe, измените имя конечной точки в конфигурации клиента, чтобы оно соответствовало клиентскому коду.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## См. также
+## <a name="see-also"></a>См. также

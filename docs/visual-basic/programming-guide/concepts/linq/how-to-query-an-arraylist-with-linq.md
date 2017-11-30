@@ -1,46 +1,37 @@
 ---
-title: "Практическое руководство: запроса к ArrayList с помощью LINQ (Visual Basic) | Документы Microsoft"
+title: "Как: запроса к ArrayList с помощью LINQ (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6740d8a7c6d4a31ccd3730249695c24c6417785d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Практическое руководство: запроса к ArrayList с помощью LINQ (Visual Basic)
-При использовании LINQ для запросов к неуниверсальным <xref:System.Collections.IEnumerable>коллекций, такие как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> Например, если у вас есть <xref:System.Collections.ArrayList>из `Student` объектов, к [предложение From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:</xref:System.Collections.ArrayList>  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Как: запроса к ArrayList с помощью LINQ (Visual Basic)
+При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, к [предложения From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:  
   
 ```  
 Dim query = From student As Student In arrList   
 ...  
 ```  
   
- Путем указания типа переменной диапазона, выполняется приведение каждого элемента в <xref:System.Collections.ArrayList>для `Student`.</xref:System.Collections.ArrayList>  
+ Указав тип переменной диапазона, вы приводите каждый элемент в <xref:System.Collections.ArrayList> к `Student`.  
   
- Использование явным образом типизированная переменная диапазона в выражении запроса эквивалентно вызову метода <xref:System.Linq.Enumerable.Cast%2A>метод.</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>создает исключение, если не удается выполнить указанное приведение.</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>и <xref:System.Linq.Enumerable.OfType%2A>два метода стандартного оператора запроса, которые оперируют неуниверсальный <xref:System.Collections.IEnumerable>типов.</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable.OfType%2A></xref:System.Linq.Enumerable.Cast%2A> В Visual Basic, необходимо явно вызвать <xref:System.Linq.Enumerable.Cast%2A>метод в источнике данных, чтобы обеспечить конкретный тип переменной диапазона.</xref:System.Linq.Enumerable.Cast%2A> Дополнительные сведения см. в разделе[связи типов в операциях запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ Использование явным образом типизированной переменной диапазона в выражении запроса эквивалентно вызову метода <xref:System.Linq.Enumerable.Cast%2A>. Если выполнить приведение не удается, <xref:System.Linq.Enumerable.Cast%2A> создает исключение. Методы <xref:System.Linq.Enumerable.Cast%2A> и <xref:System.Linq.Enumerable.OfType%2A> стандартного оператора запроса используются для работы с неуниверсальными типами <xref:System.Collections.IEnumerable>. В Visual Basic, необходимо явным образом вызвать <xref:System.Linq.Enumerable.Cast%2A> метод в источнике данных, чтобы обеспечить конкретный тип переменной диапазона. Дополнительные сведения см. в разделе[связи между типами в операциях запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует простой запрос на <xref:System.Collections.ArrayList>.</xref:System.Collections.ArrayList> Обратите внимание, что в этом примере используются инициализаторы, когда код вызывает <xref:System.Collections.ArrayList.Add%2A>метода, однако это не является требованием.</xref:System.Collections.ArrayList.Add%2A>  
+ В следующем примере показан простой запрос к объекту <xref:System.Collections.ArrayList>. Обратите внимание на то, что в этом примере инициализаторы объектов используются, когда код вызывает метод <xref:System.Collections.ArrayList.Add%2A>, но это не обязательно.  
   
 ```vb  
 Imports System.Collections  
@@ -95,5 +86,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

@@ -1,24 +1,27 @@
 ---
-title: "Общие справочные сведения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "общие справочные сведения [WCF]"
-  - "WCF, общие справочные сведения"
-  - "Windows Communication Foundation, общие справочные сведения"
+title: "Общие справочные сведения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- general reference [WCF]
+- Windows Communication Foundation, general reference
+- WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9109898adb20a3630ca393176e7f0a59eda0d617
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Общие справочные сведения
-В разделе [\<system.serviceModel\>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) описаны элементы, используемые для настройки клиентов и служб [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].
+# <a name="general-reference"></a>Общие справочные сведения
+Раздел [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) описаны элементы, которые используются для настройки [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] клиенты и службы.

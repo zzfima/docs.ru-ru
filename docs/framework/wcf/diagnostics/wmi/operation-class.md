@@ -1,25 +1,28 @@
 ---
-title: "Класс Operation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Класс Operation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 739f8309e7a01eeecf921b50fcde24417fbbc515
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Класс Operation
+# <a name="operation-class"></a>Класс Operation
 Операция  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class Operation  
@@ -39,101 +42,101 @@ class Operation
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс Operation не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс Operation имеет следующие свойства.  
   
-### Действие  
+### <a name="action"></a>Действие  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
- Действие WS\-Addressing сообщения запроса.  
+ Действие WS-Addressing сообщения запроса.  
   
-### AsyncPattern  
+### <a name="asyncpattern"></a>AsyncPattern  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
- Показывает, что операция реализуется асинхронно с использованием пары методов `Begin` \[открыть\/закрыть угловые скобки\] и `End` \[открыть\/закрыть угловые скобки\] в контракте службы.  
+ Указывает, что операция реализуется асинхронно с помощью `Begin`[открыть/закрыть угловые скобки] и `End`пары методов [открыть/закрыть угловые скобки] в контракте службы.  
   
-### Поведения  
+### <a name="behaviors"></a>поведения  
  Тип данных: массив Behavior  
   
  Тип доступа: только для чтения  
   
  Поведения, связанные с этой операцией.  
   
-### IsCallback  
+### <a name="iscallback"></a>IsCallback  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Истинно, если операция является операцией обратного вызова.  
   
-### IsInitiating  
+### <a name="isinitiating"></a>IsInitiating  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Показывает, реализует ли метод операцию, которая может инициировать сеанс на сервере.  
   
-### IsOneWay  
+### <a name="isoneway"></a>IsOneWay  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Показывает, возвращает ли операция ответное сообщение.  
   
-### IsTerminating  
+### <a name="isterminating"></a>IsTerminating  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Показывает, возвращает ли операция ответное сообщение.  
   
-### MethodSignature  
+### <a name="methodsignature"></a>MethodSignature  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Подпись метода операции.  
   
-### Name  
+### <a name="name"></a>Имя  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя операции.  
   
-### ParameterTypes  
+### <a name="parametertypes"></a>ParameterTypes  
  Тип данных: массив строк  
   
  Тип доступа: только для чтения  
   
  Типы параметров операции.  
   
-### ReplyAction  
+### <a name="replyaction"></a>ReplyAction  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Значение действия SOAP для ответного сообщения операции.  
   
-### ReturnType  
+### <a name="returntype"></a>ReturnType  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Возвращаемый тип операции.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Description.OperationDescription>

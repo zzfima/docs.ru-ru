@@ -1,23 +1,29 @@
 ---
-title: "Сопоставление объектной модели синдикации WCF моделям Atom и RSS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Сопоставление объектной модели синдикации WCF моделям Atom и RSS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e6af3dc911cdf67e7290d339122821c00fe6bc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сопоставление объектной модели синдикации WCF моделям Atom и RSS
-При разработке службы синдикации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создаются веб\-каналы и элементы с использованием следующих классов.  
+# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Сопоставление объектной модели синдикации WCF моделям Atom и RSS
+При разработке службы синдикации [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создаются веб-каналы и элементы с использованием следующих классов.  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -35,13 +41,13 @@ caps.handback.revision: 18
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- Объект <xref:System.ServiceModel.Syndication.SyndicationFeed> может быть сериализован в любой формат синдикации, для которого определен модуль форматирования.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с двумя форматами: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> и <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Объект <xref:System.ServiceModel.Syndication.SyndicationFeed> может быть сериализован в любой формат синдикации, для которого определен модуль форматирования. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] поставляется с двумя модулями форматирования: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> и <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Объектная модель, связанная с классами <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, больше соответствует спецификации Atom 1.0, чем спецификации RSS 2.0.Это связано с тем, что Atom 1.0 — более значимая спецификация, определяющая элементы, которые являются неоднозначными или не включены в спецификацию RSS 2.0.Из\-за этого многие элементы объектной модели синдикации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] непосредственно не представлены в спецификации RSS 2.0.При сериализации объектов <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> в спецификацию RSS 2.0 система [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет сериализовать элементы данных, характерные для спецификации Atom, как определяемые пространством имен элементы расширения, соответствующие спецификации Atom.Этим процессом можно управлять с помощью параметра, передаваемого в конструктор <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Объектная модель, связанная с классами <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>, больше соответствует спецификации Atom 1.0, чем спецификации RSS 2.0. Это связано с тем, что Atom 1.0 - более значимая спецификация, определяющая элементы, которые являются неоднозначными или не включены в спецификацию RSS 2.0. Из-за этого многие элементы объектной модели синдикации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] непосредственно не представлены в спецификации RSS 2.0. При сериализации объектов <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem> в спецификацию RSS 2.0 система [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] позволяет сериализовать элементы данных, характерные для спецификации Atom, как определяемые пространством имен элементы расширения, соответствующие спецификации Atom. Этим процессом можно управлять с помощью параметра, передаваемого в конструктор <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
  В примерах кода в данном разделе для выполнения фактической сериализации используется один из двух определенных здесь методов.  
   
- `SerializeFeed` сериализует веб\-канал синдикации.  
+ `SerializeFeed` сериализует веб-канал синдикации.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
@@ -51,17 +57,17 @@ caps.handback.revision: 18
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
-## SyndicationFeed  
+## <a name="syndicationfeed"></a>SyndicationFeed  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.SyndicationFeed> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
  [!code-vb[SyndicationMapping#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#0)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationFeed> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как свойство <xref:System.ServiceModel.Syndication.SyndicationFeed> сериализуется в Atom 1.0.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<feed xml:lang="RU-RU" xmlns="http://www.w3.org/2005/Atom">  
+<feed xml:lang="EN-US" xmlns="http://www.w3.org/2005/Atom">  
   <title type="text">My Feed Title</title>  
   <subtitle type="text">My Feed Description</subtitle>  
   <id>FeedID</id>  
@@ -106,16 +112,16 @@ caps.handback.revision: 18
 </feed>  
 ```  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationFeed> сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationFeed> сериализуется в RSS 2.0.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">  
   <channel>  
     <title>My Feed Title</title>  
     <link>http://myfeeduri/</link>  
     <description>My Feed Description</description>  
-    <language>RU-RU</language>  
+    <language>EN-US</language>  
     <copyright>Copyright 2007</copyright>  
     <lastBuildDate>Wed, 29 Aug 2007 13:57:17 -0700</lastBuildDate>  
     <category domain="categoryScheme">categoryName</category>  
@@ -148,15 +154,15 @@ caps.handback.revision: 18
 </rss>  
 ```  
   
-## SyndicationItem  
+## <a name="syndicationitem"></a>SyndicationItem  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.SyndicationItem> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
  [!code-vb[SyndicationMapping#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#1)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationItem> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как свойство <xref:System.ServiceModel.Syndication.SyndicationItem> сериализуется в Atom 1.0.  
   
-```  
+```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
   <id>ItemID</id>  
   <title type="text">Item Title</title>  
@@ -196,9 +202,9 @@ caps.handback.revision: 18
 </entry>  
 ```  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationItem> сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationItem> сериализуется в RSS 2.0.  
   
-```  
+```xml  
 <item>  
   <guid isPermaLink="false">ItemID</guid>  
   <link>http://myitemuri/</link>  
@@ -234,15 +240,15 @@ caps.handback.revision: 18
 </item>  
 ```  
   
-## SyndicationPerson  
+## <a name="syndicationperson"></a>SyndicationPerson  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.SyndicationPerson> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
  [!code-vb[SyndicationMapping#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#2)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как свойство <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в Atom 1.0.  
   
-```  
+```xml  
   <author>  
     <name>Jesper Aaberg</name>  
     <uri>http://Contoso/Aaberg</uri>  
@@ -255,9 +261,9 @@ caps.handback.revision: 18
   </contributor>  
 ```  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в RSS 2.0, если в коллекции `Authors` или `Contributors` существует только один класс <xref:System.ServiceModel.Syndication.SyndicationPerson>.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в RSS 2.0, если в коллекции <xref:System.ServiceModel.Syndication.SyndicationPerson> или `Authors` существует только один класс `Contributors`.  
   
-```  
+```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
 <a10:contributor>  
     <a10:name>Lene Aaling</a10:name>  
@@ -266,9 +272,9 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в RSS 2.0, если в коллекции `Authors` или `Contributors` существует несколько классов <xref:System.ServiceModel.Syndication.SyndicationPerson>.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationPerson> сериализуется в RSS 2.0, если в коллекции <xref:System.ServiceModel.Syndication.SyndicationPerson> или `Authors` существует несколько классов `Contributors`.  
   
-```  
+```xml  
 <a10:author>  
     <a10:name>Jesper Aaberg</a10:name>  
     <a10:uri>http://Contoso/Aaberg</a10:uri>  
@@ -291,45 +297,45 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
-## SyndicationLink  
+## <a name="syndicationlink"></a>SyndicationLink  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.SyndicationLink> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
  [!code-vb[SyndicationMapping#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#3)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationLink> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как свойство <xref:System.ServiceModel.Syndication.SyndicationLink> сериализуется в Atom 1.0.  
   
  `<link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationLink> сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationLink> сериализуется в RSS 2.0.  
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
-## SyndicationCategory  
+## <a name="syndicationcategory"></a>SyndicationCategory  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.SyndicationCategory> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
  [!code-vb[SyndicationMapping#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#4)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationCategory> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как свойство <xref:System.ServiceModel.Syndication.SyndicationCategory> сериализуется в Atom 1.0.  
   
  `<category term="categoryName" label="categoryLabel" scheme="categoryScheme" />`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationCategory> сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.SyndicationCategory> сериализуется в RSS 2.0.  
   
  `<category domain="categoryScheme">categoryName</category>`  
   
-## TextSyndicationContent  
+## <a name="textsyndicationcontent"></a>TextSyndicationContent  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> в Atom 1.0 и RSS 2.0, когда класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> создан с содержимым HTML.  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
  [!code-vb[SyndicationMapping#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#5)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым HTML сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым HTML сериализуется в Atom 1.0.  
   
  `<content type="html"><html> some html </html></content>`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым HTML сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым HTML сериализуется в RSS 2.0.  
   
  `<description><html> some html </html></description>`  
   
@@ -338,11 +344,11 @@ caps.handback.revision: 18
  [!code-csharp[SyndicationMapping#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#6)]
  [!code-vb[SyndicationMapping#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#6)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым в виде обычного текста сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым в виде обычного текста сериализуется в Atom 1.0.  
   
  `<content type="text">Some Plain Text</content>`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым в виде обычного текста сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым в виде обычного текста сериализуется в RSS 2.0.  
   
  `<description>Some Plain Text</description>`  
   
@@ -351,7 +357,7 @@ caps.handback.revision: 18
  [!code-csharp[SyndicationMapping#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#7)]
  [!code-vb[SyndicationMapping#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#7)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым XHTML сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым XHTML сериализуется в Atom 1.0.  
   
  `<content type="xhtml">`  
   
@@ -359,33 +365,33 @@ caps.handback.revision: 18
   
  `</content>`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.TextSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
   
  `<description><html> some xhtml </html></description>`  
   
-## UrlSyndicationContent  
+## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.UrlSyndicationContent> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
  [!code-vb[SyndicationMapping#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#8)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.UrlSyndicationContent> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.UrlSyndicationContent> сериализуется в Atom 1.0.  
   
  `<content type="audio" src="http://someurl/" />`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.UrlSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.UrlSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
   
  `<description />`  
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
-## XmlSyndicationContent  
+## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
  В следующем примере кода показано, как сериализовать класс <xref:System.ServiceModel.Syndication.XmlSyndicationContent> в Atom 1.0 и RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
  [!code-vb[SyndicationMapping#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#9)]  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.XmlSyndicationContent> сериализуется в Atom 1.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.XmlSyndicationContent> сериализуется в Atom 1.0.  
   
  `<content type="mytype">`  
   
@@ -393,7 +399,7 @@ caps.handback.revision: 18
   
  `</content>`  
   
- В следующем XML\-коде показано, как класс <xref:System.ServiceModel.Syndication.XmlSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
+ В следующем XML-коде показано, как класс <xref:System.ServiceModel.Syndication.XmlSyndicationContent> с содержимым XHTML сериализуется в RSS 2.0.  
   
  `<content type="mytype" xmlns="http://www.w3.org/2005/Atom">`  
   
@@ -401,9 +407,9 @@ caps.handback.revision: 18
   
  `</content>`  
   
-## См. также  
- [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)   
- [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)   
- [Как создавать базовый RSS\-канал](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)   
- [Как создать базовый канал Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)   
- [Как предоставить доступ к каналу в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Архитектура синдикации](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Как: создание базового RSS-канала](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Как: создание базового канала Atom](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Как: предоставить доступ к каналу в форматах Atom и RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

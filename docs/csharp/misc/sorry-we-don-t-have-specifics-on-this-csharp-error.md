@@ -1,9 +1,8 @@
 ---
-title: "К сожалению, у нас нет подробные сведения об этой ошибке C# | Документы Microsoft"
-ms.date: 2015-07-20
+title: "К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -178,7 +177,6 @@ f1_keywords:
 - CS1912
 - CS0743
 - CS2016
-- CS4009
 - CS0315
 - CS1609
 - CS1102
@@ -875,54 +873,46 @@ f1_keywords:
 - CS0057
 - CS0589
 - CS0656
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- errors [C#], additional information
+- CS8038
+- CS8132
+- CS8136
+- CS8137
+- CS8139
+- CS8156
+- CS8168
+- CS8172
+- CS8179
+helpviewer_keywords: errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению у нас нет подробные сведения об этой ошибке C#
-Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке C#
+Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Или вы можете запросить другим разработчикам на следующих форумах:  
   
  [Язык Visual C#](http://go.microsoft.com/fwlink/?LinkId=146921)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [Интегрированная среда разработки Visual C#](http://go.microsoft.com/fwlink/?LinkId=146922)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Visual C# Общие](http://go.microsoft.com/fwlink/?LinkId=146920)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ [Общие сведения о Visual C#](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ Форум предназначен для вопросов по работе [!INCLUDE[csprcs](~/includes/csprcs-md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам.  
+ Форум предназначен для вопросов по работе [!INCLUDE[csprcs](~/includes/csprcs-md.md)] и соответствующим проблемам.  
   
  См. также:  
  [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)   
- [Справочник по C#](../../csharp/language-reference/index.md)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
+ [Справочник по C#](../../csharp/language-reference/index.md)  
+ [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
+ [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
