@@ -1,107 +1,89 @@
 ---
-title: "Объект My.Resources | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Объект My.Resources"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
 - My.Resources.MyResources.Culture
-dev_langs:
-- VB
-helpviewer_keywords:
-- My.Resources object
+helpviewer_keywords: My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ad5bd4e33438256719b59cb0936cf6bc8525ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b2a2de7229f59e7deea29fe4186a5e466459d9fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="myresources-object"></a>Объект My.Resources
-Предоставляет свойства и классы для доступа к ресурсам приложения.  
+# <a name="myresources-object"></a><span data-ttu-id="79cff-102">Объект My.Resources</span><span class="sxs-lookup"><span data-stu-id="79cff-102">My.Resources Object</span></span>
+<span data-ttu-id="79cff-103">Предоставляет свойства и классы для доступа к ресурсам приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-103">Provides properties and classes for accessing the application's resources.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- `My.Resources` Объект предоставляет доступ к ресурсам приложения и позволяет динамически извлекать ресурсы для приложения. Дополнительные сведения см. в разделе [управление ресурсами приложения (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-resources-dotnet).  
+## <a name="remarks"></a><span data-ttu-id="79cff-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="79cff-104">Remarks</span></span>  
+ <span data-ttu-id="79cff-105">`My.Resources` Объект предоставляет доступ к ресурсам приложения и позволяет динамически извлекать ресурсы для приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-105">The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application.</span></span> <span data-ttu-id="79cff-106">Дополнительные сведения см. в разделе [управление ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).</span><span class="sxs-lookup"><span data-stu-id="79cff-106">For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).</span></span>  
   
- `My.Resources` Объект предоставляет только глобальные ресурсы. Он не обеспечивает доступа к файлам ресурсов, связанных с формами. Необходимо получить доступ к ресурсам формы из формы. Дополнительные сведения см. в разделе [Пошаговое руководство. Локализация Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ <span data-ttu-id="79cff-107">`My.Resources` Объект предоставляет только глобальные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="79cff-107">The `My.Resources` object exposes only global resources.</span></span> <span data-ttu-id="79cff-108">Он не предоставляет доступ к файлам ресурсов, связанных с формами.</span><span class="sxs-lookup"><span data-stu-id="79cff-108">It does not provide access to resource files associated with forms.</span></span> <span data-ttu-id="79cff-109">Для доступа к ресурсам формы из формы.</span><span class="sxs-lookup"><span data-stu-id="79cff-109">You must access the form resources from the form.</span></span> <span data-ttu-id="79cff-110">Дополнительные сведения см. в разделе [Пошаговое руководство. Локализация Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span><span class="sxs-lookup"><span data-stu-id="79cff-110">For more information, see [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span></span>  
   
- Получить доступ к файлам ресурсов для конкретных языка и региональных параметров приложения из `My.Resources` объекта. По умолчанию `My.Resources` объекта ищет ресурсы из файла ресурсов, который совпадает с языком и региональными параметрами в <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>свойство.</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> Однако можно переопределить это поведение и указать определенного языка и региональных параметров для использования ресурсов. Дополнительные сведения см. в разделе [ресурсов в приложениях рабочего стола](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890).  
+ <span data-ttu-id="79cff-111">Можно получить доступ к файлы ресурсов для определенных языка и региональных параметров приложения из `My.Resources` объекта.</span><span class="sxs-lookup"><span data-stu-id="79cff-111">You can access the application's culture-specific resource files from the `My.Resources` object.</span></span> <span data-ttu-id="79cff-112">По умолчанию `My.Resources` объект ищет ресурсы из файла ресурсов, который совпадает с языком и региональными параметрами, в <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="79cff-112">By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property.</span></span> <span data-ttu-id="79cff-113">Однако можно переопределить это поведение и указать определенного языка и региональных параметров для использования для ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-113">However, you can override this behavior and specify a particular culture to use for the resources.</span></span> <span data-ttu-id="79cff-114">Дополнительные сведения см. в разделе [Ресурсы в приложениях для настольных систем](../../../framework/resources/index.md).</span><span class="sxs-lookup"><span data-stu-id="79cff-114">For more information, see [Resources in Desktop Apps](../../../framework/resources/index.md).</span></span>  
   
-## <a name="properties"></a>Свойства  
- Свойства `My.Resources` объект предоставлять доступ только для чтения к ресурсам приложения. Чтобы добавить или удалить ресурсы, используйте **конструктора проектов**. Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). Доступны ресурсы, добавленные с помощью **конструктора проектов** с помощью `My.Resources.``resourceName`.  
+## <a name="properties"></a><span data-ttu-id="79cff-115">Свойства</span><span class="sxs-lookup"><span data-stu-id="79cff-115">Properties</span></span>  
+ <span data-ttu-id="79cff-116">Свойства `My.Resources` объект предоставлять доступ только для чтения к ресурсам приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-116">The properties of the `My.Resources` object provide read-only access to your application's resources.</span></span> <span data-ttu-id="79cff-117">Чтобы добавить или удалить ресурсы, используйте **конструктора проектов**.</span><span class="sxs-lookup"><span data-stu-id="79cff-117">To add or remove resources, use the **Project Designer**.</span></span> <span data-ttu-id="79cff-118">Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="79cff-118">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span> <span data-ttu-id="79cff-119">Получить доступ к ресурсам, добавляемые с помощью **конструктора проектов** с помощью `My.Resources.``resourceName`.</span><span class="sxs-lookup"><span data-stu-id="79cff-119">You can access resources added through the **Project Designer** by using `My.Resources.``resourceName`.</span></span>  
   
- Можно также добавить или удалить файлы ресурсов, выбрав проект в **обозревателе решений** и щелкнув **Добавление нового элемента** или **добавить существующий элемент** из **проекта** меню. Получить доступ к ресурсам, добавленным таким образом с помощью `My.Resources.``resourceFileName`.`resourceName`.  
+ <span data-ttu-id="79cff-120">Можно также добавить или удалить файлы ресурсов, выбрав проект в **обозревателе решений** и щелкнув **Добавление нового элемента** или **Добавление существующего элемента** из  **Проект** меню.</span><span class="sxs-lookup"><span data-stu-id="79cff-120">You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu.</span></span> <span data-ttu-id="79cff-121">Можно получить доступ к ресурсам, добавленным таким образом с помощью `My.Resources.``resourceFileName`.`resourceName`.</span><span class="sxs-lookup"><span data-stu-id="79cff-121">You can access resources added in this manner by using `My.Resources.``resourceFileName`.`resourceName`.</span></span>  
   
- Каждый ресурс имеет имя, категорию и значение, и эти параметры ресурсов определяют, как отображается свойство для доступа к ресурсу в `My.Resources` объекта. Для ресурсов, добавленных в **конструктора проектов**:  
+ <span data-ttu-id="79cff-122">Каждый ресурс имеет имя, категорию и значение, и эти параметры ресурсов определяют отображение свойства доступа к ресурсам в `My.Resources` объекта.</span><span class="sxs-lookup"><span data-stu-id="79cff-122">Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object.</span></span> <span data-ttu-id="79cff-123">Для ресурсов, добавленных в **конструктора проектов**:</span><span class="sxs-lookup"><span data-stu-id="79cff-123">For resources added in the **Project Designer**:</span></span>  
   
--   Имя определяет имя свойства  
+-   <span data-ttu-id="79cff-124">Имя определяет имя свойства</span><span class="sxs-lookup"><span data-stu-id="79cff-124">The name determines the name of the property,</span></span>  
   
--   Данные ресурсов являются значение свойства  
+-   <span data-ttu-id="79cff-125">Данные ресурсов являются значение свойства</span><span class="sxs-lookup"><span data-stu-id="79cff-125">The resource data is the value of the property,</span></span>  
   
--   Категория определяет тип свойства:  
+-   <span data-ttu-id="79cff-126">Категория определяет тип свойства:</span><span class="sxs-lookup"><span data-stu-id="79cff-126">The category determines the type of the property:</span></span>  
   
-|Категория|Тип данных свойства|  
+|<span data-ttu-id="79cff-127">Категория</span><span class="sxs-lookup"><span data-stu-id="79cff-127">Category</span></span>|<span data-ttu-id="79cff-128">Тип данных свойства</span><span class="sxs-lookup"><span data-stu-id="79cff-128">Property data type</span></span>|  
 |---|---|  
-|**Строки**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
-|**Изображения**|<xref:System.Drawing.Bitmap></xref:System.Drawing.Bitmap>|  
-|**Значки**|<xref:System.Drawing.Icon></xref:System.Drawing.Icon>|  
-|**Аудио**|<xref:System.IO.UnmanagedMemoryStream></xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream>Класс является производным от <xref:System.IO.Stream>класса, чтобы можно было использовать с методами, принимающими потоки, такие как <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>метод.</xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> </xref:System.IO.Stream> </xref:System.IO.UnmanagedMemoryStream>|  
-|**Файлы**|-   [Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) для текстовых файлов.<br />- <xref:System.Drawing.Bitmap>файлов изображений.</xref:System.Drawing.Bitmap><br />- <xref:System.Drawing.Icon>файлов значков.</xref:System.Drawing.Icon><br />- <xref:System.IO.UnmanagedMemoryStream>звук.</xref:System.IO.UnmanagedMemoryStream>|  
-|**Другое**|Определяются данными в конструкторе **тип** столбца.|  
+|<span data-ttu-id="79cff-129">**Строки**</span><span class="sxs-lookup"><span data-stu-id="79cff-129">**Strings**</span></span>|[<span data-ttu-id="79cff-130">String</span><span class="sxs-lookup"><span data-stu-id="79cff-130">String</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
+|<span data-ttu-id="79cff-131">**Изображения**</span><span class="sxs-lookup"><span data-stu-id="79cff-131">**Images**</span></span>|<xref:System.Drawing.Bitmap>|  
+|<span data-ttu-id="79cff-132">**Значки**</span><span class="sxs-lookup"><span data-stu-id="79cff-132">**Icons**</span></span>|<xref:System.Drawing.Icon>|  
+|<span data-ttu-id="79cff-133">**Аудио**</span><span class="sxs-lookup"><span data-stu-id="79cff-133">**Audio**</span></span>|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <span data-ttu-id="79cff-134"><xref:System.IO.UnmanagedMemoryStream> Класс является производным от <xref:System.IO.Stream> класса, чтобы можно было использовать с методами, которые принимают потоки, такие как <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="79cff-134">The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.</span></span>|  
+|<span data-ttu-id="79cff-135">**Файлы**</span><span class="sxs-lookup"><span data-stu-id="79cff-135">**Files**</span></span>|<span data-ttu-id="79cff-136">-   [Строка](../../../visual-basic/language-reference/data-types/string-data-type.md) для текстовых файлов.</span><span class="sxs-lookup"><span data-stu-id="79cff-136">-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.</span></span><br /><span data-ttu-id="79cff-137">-   <xref:System.Drawing.Bitmap>для файлов изображений.</span><span class="sxs-lookup"><span data-stu-id="79cff-137">-   <xref:System.Drawing.Bitmap> for image files.</span></span><br /><span data-ttu-id="79cff-138">-   <xref:System.Drawing.Icon>значок файлов.</span><span class="sxs-lookup"><span data-stu-id="79cff-138">-   <xref:System.Drawing.Icon> for icon files.</span></span><br /><span data-ttu-id="79cff-139">-   <xref:System.IO.UnmanagedMemoryStream>для звуковых файлов.</span><span class="sxs-lookup"><span data-stu-id="79cff-139">-   <xref:System.IO.UnmanagedMemoryStream> for sound files.</span></span>|  
+|<span data-ttu-id="79cff-140">**Другое**</span><span class="sxs-lookup"><span data-stu-id="79cff-140">**Other**</span></span>|<span data-ttu-id="79cff-141">Определяются данными в конструкторе **тип** столбца.</span><span class="sxs-lookup"><span data-stu-id="79cff-141">Determined by the information in the designer's **Type** column.</span></span>|  
   
-## <a name="classes"></a>Классы  
- `My.Resources` Объект представляет каждый файл ресурсов как класс с общими свойствами. Имя класса совпадает с именем файла ресурсов. Как описано в предыдущем разделе, ресурсы в файле ресурсов представляются как свойства в классе.  
+## <a name="classes"></a><span data-ttu-id="79cff-142">Классы</span><span class="sxs-lookup"><span data-stu-id="79cff-142">Classes</span></span>  
+ <span data-ttu-id="79cff-143">`My.Resources` Объект представляет каждый файл ресурсов как класс с общими свойствами.</span><span class="sxs-lookup"><span data-stu-id="79cff-143">The `My.Resources` object exposes each resource file as a class with shared properties.</span></span> <span data-ttu-id="79cff-144">Имя класса совпадает с именем файла ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-144">The class name is the same as the name of the resource file.</span></span> <span data-ttu-id="79cff-145">Как описано в предыдущем разделе, ресурсы в файле ресурсов представляются как свойства в классе.</span><span class="sxs-lookup"><span data-stu-id="79cff-145">As described in the previous section, the resources in a resource file are exposed as properties in the class.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере заголовок формы устанавливается строковый ресурс с именем `Form1Title` в файле ресурсов приложения. Для работы этого примера приложение должно иметь строку с именем `Form1Title` в файле ресурсов. Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).  
+## <a name="example"></a><span data-ttu-id="79cff-146">Пример</span><span class="sxs-lookup"><span data-stu-id="79cff-146">Example</span></span>  
+ <span data-ttu-id="79cff-147">В этом примере заголовок формы устанавливается строковый ресурс с именем `Form1Title` в файл ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-147">This example sets the title of a form to the string resource named `Form1Title` in the application resource file.</span></span> <span data-ttu-id="79cff-148">Для работы этого примера приложение должно иметь строку с именем `Form1Title` в файле ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-148">For the example to work, the application must have a string named `Form1Title` in its resource file.</span></span> <span data-ttu-id="79cff-149">Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="79cff-149">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span>  
   
- [!code-vb[VbVbalrMyResources&#1;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
-## <a name="example"></a>Пример  
- В этом примере задает значок формы на значок с именем `Form1Icon` , хранятся в файле ресурсов приложения. Для работы этого примера приложение должно иметь значок с именем `Form1Icon` в файле ресурсов.  
+## <a name="example"></a><span data-ttu-id="79cff-150">Пример</span><span class="sxs-lookup"><span data-stu-id="79cff-150">Example</span></span>  
+ <span data-ttu-id="79cff-151">В этом примере задает значок формы на значок с именем `Form1Icon` , хранится в файле ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-151">This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file.</span></span> <span data-ttu-id="79cff-152">Для работы этого примера приложение должно иметь значок с именем `Form1Icon` в файле ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-152">For the example to work, the application must have an icon named `Form1Icon` in its resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources&#2;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
-## <a name="example"></a>Пример  
- В этом примере задает фоновое изображение формы ресурса изображения с именем `Form1Background`, который находится в файле ресурсов приложения. Для работы этого примера приложение должно иметь ресурс изображения с именем `Form1Background` в файле ресурсов.  
+## <a name="example"></a><span data-ttu-id="79cff-153">Пример</span><span class="sxs-lookup"><span data-stu-id="79cff-153">Example</span></span>  
+ <span data-ttu-id="79cff-154">В этом примере задает фоновое изображение формы изображение ресурса с именем `Form1Background`, который находится в файле ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-154">This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file.</span></span> <span data-ttu-id="79cff-155">Для работы этого примера приложение должно иметь ресурс изображения `Form1Background` в файле ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-155">For this example to work, the application must have an image resource named `Form1Background` in its resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources&#3;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
-## <a name="example"></a>Пример  
- В этом примере воспроизводится звук, который хранится в виде звукового ресурса с именем `Form1Greeting` в файле ресурсов приложения. Для работы этого примера приложение должно иметь звукового ресурса с именем `Form1Greeting` в файле ресурсов. `My.Computer.Audio.Play` Метод доступен только для приложений Windows Forms.  
+## <a name="example"></a><span data-ttu-id="79cff-156">Пример</span><span class="sxs-lookup"><span data-stu-id="79cff-156">Example</span></span>  
+ <span data-ttu-id="79cff-157">В этом примере воспроизводится звук, который хранится в виде звукового ресурса с именем `Form1Greeting` в файле ресурсов приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-157">This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file.</span></span> <span data-ttu-id="79cff-158">Для работы этого примера приложение должно иметь звуковой ресурс с именем `Form1Greeting` в файле ресурсов.</span><span class="sxs-lookup"><span data-stu-id="79cff-158">For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file.</span></span> <span data-ttu-id="79cff-159">`My.Computer.Audio.Play` Метод доступен только для приложений Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="79cff-159">The `My.Computer.Audio.Play` method is available only for Windows Forms applications.</span></span>  
   
- [!code-vb[VbVbalrMyResources&#4;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
-## <a name="example"></a>Пример  
- В этом примере извлекается французскую версию строковый ресурс приложения. Ресурс с именем `Message`. Для изменения культуры, `My.Resources` использует объект, используемый в примере <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>  
+## <a name="example"></a><span data-ttu-id="79cff-160">Пример</span><span class="sxs-lookup"><span data-stu-id="79cff-160">Example</span></span>  
+ <span data-ttu-id="79cff-161">Этот пример возвращает версию французского языка строковый ресурс приложения.</span><span class="sxs-lookup"><span data-stu-id="79cff-161">This example retrieves the French-culture version of a  string resource of the application.</span></span> <span data-ttu-id="79cff-162">Ресурс с именем `Message`.</span><span class="sxs-lookup"><span data-stu-id="79cff-162">The resource is named `Message`.</span></span> <span data-ttu-id="79cff-163">Чтобы изменить язык и региональные параметры, `My.Resources` использует объект, в примере используется <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</span><span class="sxs-lookup"><span data-stu-id="79cff-163">To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</span></span>  
   
- Для работы этого примера приложение должно иметь строку с именем `Message` в его ресурсе файл и приложение должны иметь версию файла ресурсов, Resources.fr-FR.resx французского языка. Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). Если приложение не имеет французскую версию файла ресурсов, `My.Resource` объект извлекает ресурс из файла ресурсов культуры по умолчанию.  
+ <span data-ttu-id="79cff-164">Для работы этого примера приложение должно иметь строку с именем `Message` в его ресурсов файлов и приложений должны иметь версию файла ресурсов, Resources.fr-FR.resx французского языка.</span><span class="sxs-lookup"><span data-stu-id="79cff-164">For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx.</span></span> <span data-ttu-id="79cff-165">Дополнительные сведения см. в разделе [как: добавлять или удалять ресурсы](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="79cff-165">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span> <span data-ttu-id="79cff-166">Если приложение не имеет версию французского языка файла ресурсов, `My.Resource` объект извлекает ресурс из файла ресурсов культуры по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="79cff-166">If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources&#10;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство: Добавление и удаление ресурсов](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)   
- [Управление ресурсами приложения (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-resources-dotnet)   
- [Ресурсы в приложениях для настольных систем](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)   
- [Пошаговое руководство: Локализация форм Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+## <a name="see-also"></a><span data-ttu-id="79cff-167">См. также</span><span class="sxs-lookup"><span data-stu-id="79cff-167">See Also</span></span>  
+ [<span data-ttu-id="79cff-168">Практическое руководство. Добавление или удаление ресурсов</span><span class="sxs-lookup"><span data-stu-id="79cff-168">How to: Add or Remove Resources</span></span>](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)  
+ [<span data-ttu-id="79cff-169">Управление ресурсами приложения (.NET)</span><span class="sxs-lookup"><span data-stu-id="79cff-169">Managing Application Resources (.NET)</span></span>](/visualstudio/ide/managing-application-resources-dotnet)  
+ [<span data-ttu-id="79cff-170">Ресурсы в приложениях для настольных систем</span><span class="sxs-lookup"><span data-stu-id="79cff-170">Resources in Desktop Apps</span></span>](../../../framework/resources/index.md)  
+ [<span data-ttu-id="79cff-171">Пошаговое руководство: Локализация форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="79cff-171">Walkthrough: Localizing Windows Forms</span></span>](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)

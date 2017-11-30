@@ -1,61 +1,59 @@
 ---
-title: "Предложение Where (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryWhere"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "запросы [Visual Basic], Where"
-  - "Where - предложение"
-  - "Where - оператор"
+title: "Предложение Where (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryWhere
+helpviewer_keywords:
+- Where statement [Visual Basic]
+- queries [Visual Basic], Where
+- Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение Where (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Устанавливает условия фильтрации для запроса.  
+# <a name="where-clause-visual-basic"></a><span data-ttu-id="6f695-102">Предложение Where (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f695-102">Where Clause (Visual Basic)</span></span>
+<span data-ttu-id="6f695-103">Указывает условие фильтрации для запроса.</span><span class="sxs-lookup"><span data-stu-id="6f695-103">Specifies the filtering condition for a query.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="6f695-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6f695-104">Syntax</span></span>  
   
 ```  
 Where condition  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="6f695-105">Части</span><span class="sxs-lookup"><span data-stu-id="6f695-105">Parts</span></span>  
  `condition`  
- Обязательный.  Выражение, определяющее, должны ли значения текущего элемента коллекции входить в выходную коллекцию.  Выражение должно возвращать значение `Boolean`, либо эквивалент значения `Boolean`.  Если условие имеет значение `True`, элемент будет включен в результат запроса; в противном случае элемент исключается из результата запроса.  
+ <span data-ttu-id="6f695-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="6f695-106">Required.</span></span> <span data-ttu-id="6f695-107">Это выражение, определяющее, включаются ли в коллекции выходных значений для текущего элемента в коллекции.</span><span class="sxs-lookup"><span data-stu-id="6f695-107">An expression that determines whether the values for the current item in the collection are included in the output collection.</span></span> <span data-ttu-id="6f695-108">Выражение должно возвращать `Boolean` значение или его эквивалент `Boolean` значение.</span><span class="sxs-lookup"><span data-stu-id="6f695-108">The expression must evaluate to a `Boolean` value or the equivalent of a `Boolean` value.</span></span> <span data-ttu-id="6f695-109">Если условие принимает значение `True`, элемент включается в результат запроса; в противном случае, элемент исключается из результата запроса.</span><span class="sxs-lookup"><span data-stu-id="6f695-109">If the condition evaluates to `True`, the element is included in the query result; otherwise, the element is excluded from the query result.</span></span>  
   
-## Заметки  
- Предложение `Where` позволяет отфильтровать данные запроса, выбрав только элементы, удовлетворяющие определенным условиям.  Элементы, значения которых делают предложение `Where` эквивалентным `True`, включаются в результат запроса; другие элементы исключаются.  Выражение, которое используется в предложении `Where`, должно иметь значение `Boolean` или эквивалент `Boolean`, например Integer, значение которого равно `False` при значении переменной, равной нулю.  Можно комбинировать несколько выражений в предложении `Where` с помощью логических операторов `And`, `Or`, `AndAlso`, `OrElse`, `Is` и `IsNot`.  
+## <a name="remarks"></a><span data-ttu-id="6f695-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="6f695-110">Remarks</span></span>  
+ <span data-ttu-id="6f695-111">`Where` Предложение позволяет фильтровать данные запроса, выбрав только элементы, которые соответствуют определенным критериям.</span><span class="sxs-lookup"><span data-stu-id="6f695-111">The `Where` clause enables you to filter query data by selecting only elements that meet certain criteria.</span></span> <span data-ttu-id="6f695-112">Элементы, значения которых делают `Where` предложение, чтобы он принимал значение `True` включены в результат запроса; другие элементы исключаются.</span><span class="sxs-lookup"><span data-stu-id="6f695-112">Elements whose values cause the `Where` clause to evaluate to `True` are included in the query result; other elements are excluded.</span></span> <span data-ttu-id="6f695-113">Выражение, которое используется в `Where` должны иметь предложение `Boolean` или его эквивалент `Boolean`, такие как целое число, результатом которого является `False` при его значение равно нулю.</span><span class="sxs-lookup"><span data-stu-id="6f695-113">The expression that is used in a `Where` clause must evaluate to a `Boolean` or the equivalent of a `Boolean`, such as an Integer that evaluates to `False` when its value is zero.</span></span> <span data-ttu-id="6f695-114">Можно использовать несколько выражений в `Where` предложение с помощью логических операторов, таких как `And`, `Or`, `AndAlso`, `OrElse`, `Is`, и `IsNot`.</span><span class="sxs-lookup"><span data-stu-id="6f695-114">You can combine multiple expressions in a `Where` clause by using logical operators such as `And`, `Or`, `AndAlso`, `OrElse`, `Is`, and `IsNot`.</span></span>  
   
- По умолчанию, выражения запроса не вычисляются до тех пор, пока не становятся доступными, например когда они с привязываются к данным или итерируются в цикле `For`.  В результате предложение `Where` не получает значение до тех пор, пока не осуществляется доступ к запросу.  Если имеются значения, внешние по отношению к запросу, используемые в предложении `Where`, убедитесь, что в предложении `Where` соответствующее значение используется во время выполнения запроса.  Дополнительные сведения о выполнении запроса см. в разделе [Написание первого запроса LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ <span data-ttu-id="6f695-115">По умолчанию, выражения запроса не вычисляются, пока к ним осуществляется доступ, например, когда они являются с привязкой к данным или итерации через в `For` цикла.</span><span class="sxs-lookup"><span data-stu-id="6f695-115">By default, query expressions are not evaluated until they are accessed—for example, when they are data-bound or iterated through in a `For` loop.</span></span> <span data-ttu-id="6f695-116">В результате `Where` предложение вычисляется только в том случае, пока не осуществляется доступ к запросу.</span><span class="sxs-lookup"><span data-stu-id="6f695-116">As a result, the `Where` clause is not evaluated until the query is accessed.</span></span> <span data-ttu-id="6f695-117">Если имеются значения, внешние для запроса, которые используются в `Where` предложения, убедитесь, что соответствующее значение используется в `Where` предложение во время выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="6f695-117">If you have values external to the query that are used in the `Where` clause, ensure that the appropriate value is used in the `Where` clause at the time the query is executed.</span></span> <span data-ttu-id="6f695-118">Дополнительные сведения о выполнении запроса см. в разделе [написание вашего первого запроса LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span><span class="sxs-lookup"><span data-stu-id="6f695-118">For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span></span>  
   
- В предложении `Where` можно вызывать функции для выполнения вычислений или операций со значениями текущего элемента коллекции.  Вызов функции в предложении `Where` может вызвать немедленное выполнение запроса при определении, а не при доступе.  Дополнительные сведения о выполнении запроса см. в разделе [Написание первого запроса LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+ <span data-ttu-id="6f695-119">Можно вызывать функции в `Where` предложение для выполнения вычислений или операций со значениями из текущего элемента в коллекции.</span><span class="sxs-lookup"><span data-stu-id="6f695-119">You can call functions within a `Where` clause to perform a calculation or operation on a value from the current element in the collection.</span></span> <span data-ttu-id="6f695-120">Вызов функции в `Where` предложение может вызвать запроса для выполнения сразу же при определении, а не при доступе.</span><span class="sxs-lookup"><span data-stu-id="6f695-120">Calling a function in a `Where` clause can cause the query to be executed immediately when it is defined instead of when it is accessed.</span></span> <span data-ttu-id="6f695-121">Дополнительные сведения о выполнении запроса см. в разделе [написание вашего первого запроса LINQ](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span><span class="sxs-lookup"><span data-stu-id="6f695-121">For more information about query execution, see [Writing Your First LINQ Query](../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span></span>  
   
-## Пример  
- Следующее выражение запроса использует предложение `From` для объявления диапазона переменной `cust` для каждого объекта `Customer` в коллекции `customers`.  Предложение `Where` использует переменную диапазона для ограничения вывода для заказчиков из указанной области.  В результате запроса цикл `For Each` отображает имя компании для каждого заказчика.  
+## <a name="example"></a><span data-ttu-id="6f695-122">Пример</span><span class="sxs-lookup"><span data-stu-id="6f695-122">Example</span></span>  
+ <span data-ttu-id="6f695-123">В следующем запросе используется выражение `From` предложение для объявления переменной диапазона `cust` для каждого `Customer` объекта в `customers` коллекции.</span><span class="sxs-lookup"><span data-stu-id="6f695-123">The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection.</span></span> <span data-ttu-id="6f695-124">`Where` Предложение использует переменную диапазона для ограничения выходных данных для клиентов из заданной области.</span><span class="sxs-lookup"><span data-stu-id="6f695-124">The `Where` clause uses the range variable to restrict the output to customers from the specified region.</span></span> <span data-ttu-id="6f695-125">`For Each` Цикл имя компании для каждого клиента в результатах запроса.</span><span class="sxs-lookup"><span data-stu-id="6f695-125">The `For Each` loop displays the company name for each customer in the query result.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
-## Пример  
- Следующий пример использует `And` и  `Or` логические операторы  `Where` предложение.  
+## <a name="example"></a><span data-ttu-id="6f695-126">Пример</span><span class="sxs-lookup"><span data-stu-id="6f695-126">Example</span></span>  
+ <span data-ttu-id="6f695-127">В следующем примере используется `And` и `Or` логические операторы в `Where` предложения.</span><span class="sxs-lookup"><span data-stu-id="6f695-127">The following example uses `And` and `Or` logical operators in the `Where` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
-## См. также  
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="6f695-128">См. также</span><span class="sxs-lookup"><span data-stu-id="6f695-128">See Also</span></span>  
+ <span data-ttu-id="6f695-129">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6f695-129">[Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="6f695-130">Запросы</span><span class="sxs-lookup"><span data-stu-id="6f695-130">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="6f695-131">Предложение From</span><span class="sxs-lookup"><span data-stu-id="6f695-131">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="6f695-132">Предложение Select</span><span class="sxs-lookup"><span data-stu-id="6f695-132">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="6f695-133">Оператор For Each...Next</span><span class="sxs-lookup"><span data-stu-id="6f695-133">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

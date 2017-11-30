@@ -1,53 +1,56 @@
 ---
-title: "Защита приложений одноранговых каналов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Защита приложений одноранговых каналов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 02bad6b5c7460655f4d3a5851e4e74d7de12111f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Защита приложений одноранговых каналов
-Как и другие привязки в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], привязка `NetPeerTcpBinding` имеет включенную по умолчанию безопасность и предлагает безопасность как на основе транспорта, так и на основе сообщения \(или оба типа безопасности\).  В данном разделе обсуждаются два этих типа безопасности.  Тип безопасности задается тегом режима безопасности в спецификации привязки \(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A> `Mode`\).  
+# <a name="securing-peer-channel-applications"></a><span data-ttu-id="eb392-102">Защита приложений одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-102">Securing Peer Channel Applications</span></span>
+<span data-ttu-id="eb392-103">Как и другие привязки в [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], привязка `NetPeerTcpBinding` имеет включенную по умолчанию безопасность и предлагает безопасность как на основе транспорта, так и на основе сообщения (или оба типа безопасности).</span><span class="sxs-lookup"><span data-stu-id="eb392-103">Like other bindings under the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` has security enabled by default and offers both transport- and message-based security (or both).</span></span> <span data-ttu-id="eb392-104">В данном разделе обсуждаются два этих типа безопасности.</span><span class="sxs-lookup"><span data-stu-id="eb392-104">This topic discusses these two types of security.</span></span> <span data-ttu-id="eb392-105">Тип безопасности задается тегом режима безопасности в спецификации привязки (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).</span><span class="sxs-lookup"><span data-stu-id="eb392-105">The type of security is specified by the security mode tag in the binding specification (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).</span></span>  
   
-## Безопасность на базе транспорта  
- Одноранговый канал поддерживает два типа учетных данных для проверки подлинности, обеспечивающие безопасность транспорта; оба типа требуют настройки свойства `ClientCredentialSettings.Peer` в связанной фабрике каналов `ChannelFactory`.  
+## <a name="transport-based-security"></a><span data-ttu-id="eb392-106">Безопасность на базе транспорта</span><span class="sxs-lookup"><span data-stu-id="eb392-106">Transport-Based Security</span></span>  
+ <span data-ttu-id="eb392-107">Одноранговый канал поддерживает два типа учетных данных для проверки подлинности, обеспечивающие безопасность транспорта; оба типа требуют настройки свойства `ClientCredentialSettings.Peer` в связанной фабрике каналов `ChannelFactory`.</span><span class="sxs-lookup"><span data-stu-id="eb392-107">Peer Channel supports two types of authentication credentials for securing transport, both of which require setting out the `ClientCredentialSettings.Peer` property on the associated `ChannelFactory`:</span></span>  
   
--   Пароль.  Клиенты используют знание секретного пароля для проверки подлинности подключений.  При использовании этого типа учетных данных `ClientCredentialSettings.Peer.MeshPassword` должен содержать действительный пароль и дополнительно экземпляр `X509Certificate2`.  
+-   <span data-ttu-id="eb392-108">Пароль.</span><span class="sxs-lookup"><span data-stu-id="eb392-108">Password.</span></span> <span data-ttu-id="eb392-109">Клиенты используют знание секретного пароля для проверки подлинности подключений.</span><span class="sxs-lookup"><span data-stu-id="eb392-109">Clients use knowledge of a secret password to authenticate connections.</span></span> <span data-ttu-id="eb392-110">При использовании этого типа учетных данных `ClientCredentialSettings.Peer.MeshPassword` должен содержать действительный пароль и дополнительно экземпляр `X509Certificate2`.</span><span class="sxs-lookup"><span data-stu-id="eb392-110">When this credential type is used, `ClientCredentialSettings.Peer.MeshPassword` must carry a valid password and optionally an `X509Certificate2` instance.</span></span>  
   
--   Сертификат.  Используется специальная проверка подлинности приложения.  При использовании этого типа учетных данных необходимо использовать конкретную реализацию <xref:System.IdentityModel.Selectors.X509CertificateValidator> в проверке подлинности `ClientCredentialSettings.Peer.PeerAuthentication`.  
+-   <span data-ttu-id="eb392-111">Сертификат.</span><span class="sxs-lookup"><span data-stu-id="eb392-111">Certificate.</span></span> <span data-ttu-id="eb392-112">Используется специальная проверка подлинности приложения.</span><span class="sxs-lookup"><span data-stu-id="eb392-112">Specific application authentication is used.</span></span> <span data-ttu-id="eb392-113">При использовании этого типа учетных данных необходимо использовать конкретную реализацию <xref:System.IdentityModel.Selectors.X509CertificateValidator> в проверке подлинности `ClientCredentialSettings.Peer.PeerAuthentication`.</span><span class="sxs-lookup"><span data-stu-id="eb392-113">When this credential type is used, you must use a concrete implementation of <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.</span></span>  
   
-## Безопасность на основе сообщения  
- Приложение может подписывать исходящие сообщения с помощью безопасности сообщений, чтобы все получатели могли проверить, что сообщение отправлено надежной стороной и защищено от подделки.  В настоящее время одноранговый канал поддерживает только подпись сообщений с учетными данными X.509.  
+## <a name="message-based-security"></a><span data-ttu-id="eb392-114">Безопасность на основе сообщения</span><span class="sxs-lookup"><span data-stu-id="eb392-114">Message-Based Security</span></span>  
+ <span data-ttu-id="eb392-115">Приложение может подписывать исходящие сообщения с помощью безопасности сообщений, чтобы все получатели могли проверить, что сообщение отправлено надежной стороной и защищено от подделки.</span><span class="sxs-lookup"><span data-stu-id="eb392-115">Using message security, an application can sign outgoing messages so that all receiving parties can verify the message is sent by a trusted party and that the message was not tampered with.</span></span> <span data-ttu-id="eb392-116">В настоящее время одноранговый канал поддерживает только подпись сообщений с учетными данными X.509.</span><span class="sxs-lookup"><span data-stu-id="eb392-116">Currently, Peer Channel supports only X.509 credential message signing.</span></span>  
   
-## Рекомендации  
+## <a name="best-practices"></a><span data-ttu-id="eb392-117">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="eb392-117">Best Practices</span></span>  
   
--   В этом разделе приводятся рекомендации по защите приложений одноранговых каналов.  
+-   <span data-ttu-id="eb392-118">В этом разделе приводятся рекомендации по защите приложений одноранговых каналов.</span><span class="sxs-lookup"><span data-stu-id="eb392-118">This section discusses the best practices for securing Peer Channel applications.</span></span>  
   
-### Включение безопасности приложений одноранговых каналов  
- Распределенность протоколов однорангового канала затрудняет принудительное использование членства в сетке, секретности и конфиденциальности в незащищенной сетке.  Важно также не забыть обеспечить безопасность связи между клиентами и службой распознавателя.  В протоколе PNRP используйте безопасные имена во избежание спуфинга и других распространенных атак.  Защитите пользовательскую службу распознавателя, включив безопасность на подключении, используемом клиентами для связи со службой распознавателя, включая как безопасность на основе сообщений, так и на основе транспорта.  
+### <a name="enable-security-with-peer-channel-applications"></a><span data-ttu-id="eb392-119">Включение безопасности приложений одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-119">Enable Security with Peer Channel Applications</span></span>  
+ <span data-ttu-id="eb392-120">Распределенность протоколов однорангового канала затрудняет принудительное использование членства в сетке, секретности и конфиденциальности в незащищенной сетке.</span><span class="sxs-lookup"><span data-stu-id="eb392-120">Due to the distributed nature of the Peer Channel protocols, it is hard to enforce mesh membership, confidentiality, and privacy in an unsecured mesh.</span></span> <span data-ttu-id="eb392-121">Важно также не забыть обеспечить безопасность связи между клиентами и службой распознавателя.</span><span class="sxs-lookup"><span data-stu-id="eb392-121">It is also important to remember to secure communication between clients and the resolver service.</span></span> <span data-ttu-id="eb392-122">В протоколе PNRP используйте безопасные имена во избежание спуфинга и других распространенных атак.</span><span class="sxs-lookup"><span data-stu-id="eb392-122">Under Peer Name Resolution Protocol (PNRP), use secure names to avoid spoofing and other common attacks.</span></span> <span data-ttu-id="eb392-123">Защитите пользовательскую службу распознавателя, включив безопасность на подключении, используемом клиентами для связи со службой распознавателя, включая как безопасность на основе сообщений, так и на основе транспорта.</span><span class="sxs-lookup"><span data-stu-id="eb392-123">Secure a custom resolver service by enabling security on the connection clients use to contact the resolver service, including both message- and transport-based security.</span></span>  
   
-### Используйте самую сильную модель безопасности  
- Например, если требуется отдельно идентифицировать каждого члена сетки, используйте модель проверки подлинности на основе сертификатов.  Если это невозможно, используйте проверку подлинности на основе паролей, следуя текущим рекомендациям по их защите.  Для защиты паролей необходимо обмениваться паролями только с доверенными сторонами, передавать пароли только в безопасной среде передачи, часто изменять пароли и обеспечивать надежность паролей \(они должны состоять как минимум из восьми символов, включать хотя бы по одному символу из обоих регистров, цифру и специальный знак\).  
+### <a name="use-the-strongest-possible-security-model"></a><span data-ttu-id="eb392-124">Используйте самую сильную модель безопасности</span><span class="sxs-lookup"><span data-stu-id="eb392-124">Use the Strongest Possible Security Model</span></span>  
+ <span data-ttu-id="eb392-125">Например, если требуется отдельно идентифицировать каждого члена сетки, используйте модель проверки подлинности на основе сертификатов.</span><span class="sxs-lookup"><span data-stu-id="eb392-125">For example, if each member of the mesh needs to be individually identified, use certificate-based authentication model.</span></span> <span data-ttu-id="eb392-126">Если это невозможно, используйте проверку подлинности на основе паролей, следуя текущим рекомендациям по их защите.</span><span class="sxs-lookup"><span data-stu-id="eb392-126">If that is not possible, use password-based authentication following current recommendations to keep them secure.</span></span> <span data-ttu-id="eb392-127">Для защиты паролей необходимо обмениваться паролями только с доверенными сторонами, передавать пароли только в безопасной среде передачи, часто изменять пароли и обеспечивать надежность паролей (они должны состоять как минимум из восьми символов, включать хотя бы по одному символу из обоих регистров, цифру и специальный знак).</span><span class="sxs-lookup"><span data-stu-id="eb392-127">This includes sharing passwords only with trusted parties, transmitting passwords using a secure medium, changing passwords frequently, and ensuring that passwords are strong (at least eight characters long, include at least one letter from both cases, a digit, and a special character).</span></span>  
   
-### Никогда не принимайте самозаверяющие сертификаты  
- Никогда не принимайте учетные данные сертификата на основе имен субъекта.  Обратите внимание, что любой может создать сертификат и выбрать имя, проверку которого вы осуществляете.  Чтобы защититься от спуфинга, необходимо проверять сертификаты на основе учетных данных центра выдачи сертификата \(доверенного издателя или корневого центра сертификации\).  
+### <a name="never-accept-self-signed-certificates"></a><span data-ttu-id="eb392-128">Никогда не принимайте самозаверяющие сертификаты</span><span class="sxs-lookup"><span data-stu-id="eb392-128">Never Accept Self-Signed Certificates</span></span>  
+ <span data-ttu-id="eb392-129">Никогда не принимайте учетные данные сертификата на основе имен субъекта.</span><span class="sxs-lookup"><span data-stu-id="eb392-129">Never accept a certificate credential based on subject names.</span></span> <span data-ttu-id="eb392-130">Обратите внимание, что любой может создать сертификат и выбрать имя, проверку которого вы осуществляете.</span><span class="sxs-lookup"><span data-stu-id="eb392-130">Note that anyone can create a certificate, and anyone can choose a name that you are validating.</span></span> <span data-ttu-id="eb392-131">Чтобы защититься от спуфинга, необходимо проверять сертификаты на основе учетных данных центра выдачи сертификата (доверенного издателя или корневого центра сертификации).</span><span class="sxs-lookup"><span data-stu-id="eb392-131">To avoid the possibility of spoofing, validate certificates based on issuing authority credentials (either a trusted issuer or a root certification authority).</span></span>  
   
-### Используйте проверку подлинности сообщения  
- Используйте проверку подлинности сообщения, чтобы проверить, что сообщение было получено из надежного источника и не было подделано во время передачи.  Без проверки подлинности сообщения злонамеренному клиенту легко подделать или заменить сообщения в сетке.  
+### <a name="use-message-authentication"></a><span data-ttu-id="eb392-132">Используйте проверку подлинности сообщения</span><span class="sxs-lookup"><span data-stu-id="eb392-132">Use Message Authentication</span></span>  
+ <span data-ttu-id="eb392-133">Используйте проверку подлинности сообщения, чтобы проверить, что сообщение было получено из надежного источника и не было подделано во время передачи.</span><span class="sxs-lookup"><span data-stu-id="eb392-133">Use message authentication to verify that a message originated from a trusted source and that no one has tampered with the message during transmission.</span></span> <span data-ttu-id="eb392-134">Без проверки подлинности сообщения злонамеренному клиенту легко подделать или заменить сообщения в сетке.</span><span class="sxs-lookup"><span data-stu-id="eb392-134">Without message authentication, it is easy for a malicious client to spoof or tamper with messages in the mesh.</span></span>  
   
-## Примеры кода одноранговых каналов  
- [Сценарии одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
+## <a name="peer-channel-code-examples"></a><span data-ttu-id="eb392-135">Примеры кода одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-135">Peer Channel Code Examples</span></span>  
+ [<span data-ttu-id="eb392-136">Сценарии одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-136">Peer Channel Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## См. также  
- [Безопасность одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)   
- [Создание приложения одноранговых каналов](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a><span data-ttu-id="eb392-137">См. также</span><span class="sxs-lookup"><span data-stu-id="eb392-137">See Also</span></span>  
+ [<span data-ttu-id="eb392-138">Безопасность одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-138">Peer Channel Security</span></span>](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [<span data-ttu-id="eb392-139">Создание приложения одноранговых каналов</span><span class="sxs-lookup"><span data-stu-id="eb392-139">Building a Peer Channel Application</span></span>](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

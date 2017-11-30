@@ -1,52 +1,55 @@
 ---
-title: "Очереди и надежные сеансы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Очереди и надежные сеансы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cfd81e1b2290f1ed2c4e2400516ce0d23c7588f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Очереди и надежные сеансы
-Очереди и надежные сеансы — функции [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], реализующие надежный обмен сообщениями.В подразделах данного раздела рассматриваются функции надежного обмена сообщениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="queues-and-reliable-sessions"></a><span data-ttu-id="1ee52-102">Очереди и надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="1ee52-102">Queues and Reliable Sessions</span></span>
+<span data-ttu-id="1ee52-103">Очереди и надежные сеансы - функции [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], реализующие надежный обмен сообщениями.</span><span class="sxs-lookup"><span data-stu-id="1ee52-103">Queues and reliable sessions are the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] features that implement reliable messaging.</span></span> <span data-ttu-id="1ee52-104">В подразделах данного раздела рассматриваются функции надежного обмена сообщениями [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1ee52-104">The topics contained in this section discuss the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reliable messaging features.</span></span>  
   
- Надежный обмен сообщениями — это надежная передача сообщений от надежного источника сообщений \(называемого источником\) в надежное назначение сообщений \(называемое назначением\).  
+ <span data-ttu-id="1ee52-105">Надежный обмен сообщениями - это надежная передача сообщений от надежного источника сообщений (называемого источником) в надежное назначение сообщений (называемое назначением).</span><span class="sxs-lookup"><span data-stu-id="1ee52-105">Reliable messaging is how a reliable messaging source (called the source) transfers messages reliably to a reliable messaging destination (called the destination).</span></span>  
   
- Надежный обмен сообщениями имеет следующие ключевые аспекты:  
+ <span data-ttu-id="1ee52-106">Надежный обмен сообщениями имеет следующие ключевые аспекты:</span><span class="sxs-lookup"><span data-stu-id="1ee52-106">Reliable messaging has the following key aspects:</span></span>  
   
--   Гарантии передачи сообщений, отправленных из источника в назначение, вне зависимости от сбоев передачи сообщений или транспортных сбоев.  
+-   <span data-ttu-id="1ee52-107">Гарантии передачи сообщений, отправленных из источника в назначение, вне зависимости от сбоев передачи сообщений или транспортных сбоев.</span><span class="sxs-lookup"><span data-stu-id="1ee52-107">Transfer assurances for messages sent from a source to a destination regardless of message transfer failure or transport failures.</span></span>  
   
--   Отделение источника от назначения, благодаря чему любые сбои и восстановления источника и назначения происходят независимо, и обеспечивается надежность доставки сообщения даже при недоступности источника или назначения.  
+-   <span data-ttu-id="1ee52-108">Отделение источника от назначения, благодаря чему любые сбои и восстановления источника и назначения происходят независимо, и обеспечивается надежность доставки сообщения даже при недоступности источника или назначения.</span><span class="sxs-lookup"><span data-stu-id="1ee52-108">Separation of the source and the destination from each other, which provides independent failure and recovery of the source and the destination as well as reliable transfer and delivery of messages even though the source or destination is unavailable.</span></span>  
   
- Надежность обмена сообщениями часто обеспечивается ценой высокой задержки.Задержкой называется время, затрачиваемое на доставку сообщения от источника в назначение.В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены следующие типы надежного обмена сообщениями:  
+ <span data-ttu-id="1ee52-109">Надежность обмена сообщениями часто обеспечивается ценой высокой задержки.</span><span class="sxs-lookup"><span data-stu-id="1ee52-109">Reliable messaging frequently comes at the cost of high latency.</span></span> <span data-ttu-id="1ee52-110">Задержкой называется время, затрачиваемое на доставку сообщения от источника в назначение.</span><span class="sxs-lookup"><span data-stu-id="1ee52-110">Latency is the time it takes for the message to reach the destination from the source.</span></span> <span data-ttu-id="1ee52-111">В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предусмотрены следующие типы надежного обмена сообщениями:</span><span class="sxs-lookup"><span data-stu-id="1ee52-111">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], therefore, provides the following types of reliable messaging:</span></span>  
   
--   [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), обеспечивающие надежную передачу без сильного повышения задержки  
+-   <span data-ttu-id="1ee52-112">[Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), которое обеспечивает надежной передачи без ценой высокой задержки</span><span class="sxs-lookup"><span data-stu-id="1ee52-112">[Reliable Sessions](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), which offer reliable transfer without the cost of high latency</span></span>  
   
--   [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), обеспечивающие надежную передачу и разделение между источником и назначением.  
+-   <span data-ttu-id="1ee52-113">[Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), которые обеспечивают надежную передачу и разделение между источником и назначением.</span><span class="sxs-lookup"><span data-stu-id="1ee52-113">[Queues in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), which offer both reliable transfers and separation between the source and the destination.</span></span>  
   
-## Надежные сеансы  
- Надежные сеансы обеспечивают надежную сквозную доставку сообщений между источником и назначением с помощью протокола WS\-ReliableMessaging, вне зависимости от количества и типа посредников между конечными точками обмена сообщениями \(источником и назначением\).В том числе от любых посредников транспорта, не использующих протокол SOAP \(например, HTTP\-прокси\), и посредников, использующих этот протокол \(например, мостов и маршрутизаторов на базе SOAP\), необходимых для доставки сообщений между конечными точками.Надежные сеансы используют окно передачи в памяти для маскировки сбоев на уровне сообщений SOAP и повторной установки соединений при транспортных сбоях.  
+## <a name="reliable-sessions"></a><span data-ttu-id="1ee52-114">Надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="1ee52-114">Reliable Sessions</span></span>  
+ <span data-ttu-id="1ee52-115">Надежные сеансы обеспечивают надежную сквозную доставку сообщений между источником и назначением с помощью протокола WS-ReliableMessaging, вне зависимости от количества и типа посредников между конечными точками обмена сообщениями (источником и назначением).</span><span class="sxs-lookup"><span data-stu-id="1ee52-115">Reliable sessions provide end-to-end reliable transfer of messages between a source and a destination using the WS-ReliableMessaging protocol regardless of the number or type of intermediaries that separate the messaging (source and destination) endpoints.</span></span> <span data-ttu-id="1ee52-116">В него входят любые транспортные посредники, не использующие протокол SOAP (например, прокси-серверы HTTP), и посредники, использующие этот протокол (например, мосты и маршрутизаторы на базе SOAP), необходимые для продвижения сообщений между конечными точками.</span><span class="sxs-lookup"><span data-stu-id="1ee52-116">This includes any transport intermediaries that do not use SOAP (for example, HTTP proxies) or intermediaries that use SOAP (for example, SOAP-based routers or bridges) that are required for messages to flow between the endpoints.</span></span> <span data-ttu-id="1ee52-117">Надежные сеансы используют окно передачи в памяти для маскировки сбоев на уровне сообщений SOAP и повторной установки соединений при транспортных сбоях.</span><span class="sxs-lookup"><span data-stu-id="1ee52-117">Reliable sessions use an in-memory transfer window to mask SOAP message-level failures and re-establish connections in the case of transport failures.</span></span>  
   
- Надежные сеансы обеспечивают надежную передачу сообщений с низкой задержкой.Они обеспечивают доставку сообщений протокола SOAP через любые прокси или маршрутизаторы, подобно тому, как протокол TCP обеспечивает доставку пакетов через IP\-мосты.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о надежных сеансах см. в разделе [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ <span data-ttu-id="1ee52-118">Надежные сеансы обеспечивают надежную передачу сообщений с низкой задержкой.</span><span class="sxs-lookup"><span data-stu-id="1ee52-118">Reliable sessions provide low-latency reliable message transfers.</span></span> <span data-ttu-id="1ee52-119">Они обеспечивают доставку сообщений протокола SOAP через любые прокси или маршрутизаторы подобно тому, как протокол TCP обеспечивает доставку пакетов через IP-мосты.</span><span class="sxs-lookup"><span data-stu-id="1ee52-119">They provide for SOAP messages over any proxies or intermediaries, equivalent to what TCP provides for packets over IP bridges.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1ee52-120">надежные сеансы, в разделе [надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).</span><span class="sxs-lookup"><span data-stu-id="1ee52-120"> reliable sessions, see [Reliable Sessions](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).</span></span>  
   
-### Очереди  
- Очереди в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивают надежную передачу сообщений и отделение источника от назначения \(ценой высокой задержки\).Взаимодействие на основе очередей [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] построено на основе MSMQ.  
+### <a name="queues"></a><span data-ttu-id="1ee52-121">Очереди</span><span class="sxs-lookup"><span data-stu-id="1ee52-121">Queues</span></span>  
+ <span data-ttu-id="1ee52-122">Очереди в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обеспечивают надежную передачу сообщений и отделение источника от назначения (ценой высокой задержки).</span><span class="sxs-lookup"><span data-stu-id="1ee52-122">Queues in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provide both reliable transfers of messages and separation between sources and destinations at the cost of high latency.</span></span> <span data-ttu-id="1ee52-123">Взаимодействие через очереди в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] построено на основе MSMQ.</span><span class="sxs-lookup"><span data-stu-id="1ee52-123">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] queued communication is built on top of Message Queuing (also known as MSMQ).</span></span>  
   
- MSMQ поставляется как дополнительный компонент Windows и выполняется как служба NT.MSMQ помещает передаваемые сообщения в очередь передачи от имени источника и доставляет их в целевую очередь.Целевая очередь принимает сообщения от имени назначения для дальнейшей доставки в назначения, запрашиваемые для этих сообщений.Диспетчеры очередей MSMQ реализуют надежный протокол передачи сообщений, благодаря которому сообщения не могут быть потеряны при передаче.Протокол может быть собственным или основанным на SOAP, как, например, протокол SRMP.  
+ <span data-ttu-id="1ee52-124">MSMQ поставляется как дополнительный компонент Windows и выполняется как служба NT.</span><span class="sxs-lookup"><span data-stu-id="1ee52-124">MSMQ is shipped as an option with Windows that runs as an NT service.</span></span> <span data-ttu-id="1ee52-125">MSMQ помещает передаваемые сообщения в очередь передачи от имени источника и доставляет их в целевую очередь.</span><span class="sxs-lookup"><span data-stu-id="1ee52-125">It captures messages for transmission in a transmission queue on behalf of the source and delivers it to a target queue.</span></span> <span data-ttu-id="1ee52-126">Целевая очередь принимает сообщения от имени назначения для дальнейшей доставки в назначения, запрашиваемые для этих сообщений.</span><span class="sxs-lookup"><span data-stu-id="1ee52-126">The target queue accepts messages on behalf of the destination for later delivery whenever the destination requests for messages.</span></span> <span data-ttu-id="1ee52-127">Диспетчеры очередей MSMQ реализуют надежный протокол передачи сообщений, благодаря которому сообщения не могут быть потеряны при передаче.</span><span class="sxs-lookup"><span data-stu-id="1ee52-127">The MSMQ queue managers implement a reliable message-transfer protocol so that messages are not lost in transmission.</span></span> <span data-ttu-id="1ee52-128">Протокол может быть собственным или основанным на SOAP, как, например, протокол SRMP.</span><span class="sxs-lookup"><span data-stu-id="1ee52-128">The protocol can be native or SOAP-based, such as Soap Reliable Messaging Protocol (SRMP).</span></span>  
   
- Разделение в сочетании с надежностью передачи сообщений между очередями обеспечивает надежную передачу данных между слабо связанными приложениями.В отличие от технологии надежных сеансов, не требуется, чтобы источник и назначение выполнялись одновременно.Таким образом, однозначно возможны сценарии, в которых запросы фактически используются как механизм контроля нагрузки при несоответствии интенсивности создания сообщений источником и их потребления назначением.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] об очередях см. в разделе [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ <span data-ttu-id="1ee52-129">Разделение в сочетании с надежностью передачи сообщений между очередями обеспечивает надежную передачу данных между слабо связанными приложениями.</span><span class="sxs-lookup"><span data-stu-id="1ee52-129">The separation, coupled with reliable message transfers between queues, enables applications that are loosely coupled to communicate reliably.</span></span> <span data-ttu-id="1ee52-130">В отличие от технологии надежных сеансов, не требуется, чтобы источник и назначение выполнялись одновременно.</span><span class="sxs-lookup"><span data-stu-id="1ee52-130">Unlike reliable sessions, the source and destination do not have to be running at the same time.</span></span> <span data-ttu-id="1ee52-131">Таким образом, однозначно возможны сценарии, в которых запросы фактически используются как механизм контроля нагрузки при несоответствии интенсивности создания сообщений источником и их потребления назначением.</span><span class="sxs-lookup"><span data-stu-id="1ee52-131">This implicitly enables scenarios where queues are, in effect, used as a load-leveling mechanism when there is a mismatch between the rate of message production by the source and the rate of the message consumption by the destination.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1ee52-132">очереди, разделе [очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="1ee52-132"> queues, see [Queues in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).</span></span>  
   
-## См. также  
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)   
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)   
- [Общие сведения о надежных сеансах](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1ee52-133">См. также</span><span class="sxs-lookup"><span data-stu-id="1ee52-133">See Also</span></span>  
+ [<span data-ttu-id="1ee52-134">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="1ee52-134">Queues in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="1ee52-135">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="1ee52-135">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [<span data-ttu-id="1ee52-136">Надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="1ee52-136">Reliable Sessions</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
+ [<span data-ttu-id="1ee52-137">Общие сведения о надежных сеансов</span><span class="sxs-lookup"><span data-stu-id="1ee52-137">Reliable Sessions Overview</span></span>](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

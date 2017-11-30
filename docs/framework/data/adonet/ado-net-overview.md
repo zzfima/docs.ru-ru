@@ -1,70 +1,73 @@
 ---
-title: "Общие сведения об ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Общие сведения о ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об ADO.NET
-ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC.  Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
+# <a name="adonet-overview"></a><span data-ttu-id="0591e-102">Общие сведения о ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-102">ADO.NET Overview</span></span>
+<span data-ttu-id="0591e-103">ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC.</span><span class="sxs-lookup"><span data-stu-id="0591e-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="0591e-104">Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.</span><span class="sxs-lookup"><span data-stu-id="0591e-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  
   
- ADO.NET разделят доступ к данным и обработку данных на дискретные компоненты, которые могут использоваться отдельно или совместно.  ADO.NET включает поставщиков данных .NET Framework для соединения с базой данных, выполнения команд и получения результатов.  Эти результаты, помещенные в объект ADO.NET <xref:System.Data.DataSet>, обрабатываются непосредственно, чтобы они могли быть предоставлены пользователю нерегламентированным образом, объединенные с данными из многих источников или передаваемые между уровнями.  Объект `DataSet` также может независимо использоваться поставщиком данных .NET Framework для управления локальными для приложения данными или данными, источником которых является XML.  
+ <span data-ttu-id="0591e-105">ADO.NET разделят доступ к данным и обработку данных на дискретные компоненты, которые могут использоваться отдельно или совместно.</span><span class="sxs-lookup"><span data-stu-id="0591e-105">ADO.NET separates data access from data manipulation into discrete components that can be used separately or in tandem.</span></span> <span data-ttu-id="0591e-106">ADO.NET включает поставщиков данных .NET Framework для соединения с базой данных, выполнения команд и получения результатов.</span><span class="sxs-lookup"><span data-stu-id="0591e-106">ADO.NET includes .NET Framework data providers for connecting to a database, executing commands, and retrieving results.</span></span> <span data-ttu-id="0591e-107">Эти результаты, помещенные в объект ADO.NET <xref:System.Data.DataSet>, обрабатываются непосредственно, чтобы они могли быть предоставлены пользователю нерегламентированным образом, объединенные с данными из многих источников или передаваемые между уровнями.</span><span class="sxs-lookup"><span data-stu-id="0591e-107">Those results are either processed directly, placed in an ADO.NET <xref:System.Data.DataSet> object in order to be exposed to the user in an ad hoc manner, combined with data from multiple sources, or passed between tiers.</span></span> <span data-ttu-id="0591e-108">Объект `DataSet` также может независимо использоваться поставщиком данных .NET Framework для управления локальными для приложения данными или данными, источником которых является XML.</span><span class="sxs-lookup"><span data-stu-id="0591e-108">The `DataSet` object can also be used independently of a .NET Framework data provider to manage data local to the application or sourced from XML.</span></span>  
   
- Классы ADO.NET имеются в System.Data.dll и интегрируются с классами XML, имеющимися в System.Xml.dll.  Сведения об образце кода, который соединяется с базой данных, получает из нее данные, а затем отображает эти данные в консоли, см. в разделе [Примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ <span data-ttu-id="0591e-109">Классы ADO.NET имеются в System.Data.dll и интегрируются с классами XML, имеющимися в System.Xml.dll.</span><span class="sxs-lookup"><span data-stu-id="0591e-109">The ADO.NET classes are found in System.Data.dll, and are integrated with the XML classes found in System.Xml.dll.</span></span> <span data-ttu-id="0591e-110">Пример кода, который подключается к базе данных получает данные из него, а затем отображаются в окне консоли, см. в разделе [примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).</span><span class="sxs-lookup"><span data-stu-id="0591e-110">For sample code that connects to a database, retrieves data from it, and then displays that data in a console window, see [ADO.NET Code Examples](../../../../docs/framework/data/adonet/ado-net-code-examples.md).</span></span>  
   
- Для разработчиков, которые пишут управляемый код, ADO.NET предоставляет функциональный набор, сходный с функциональным набором, который предоставляют объекты данных ActiveX \(ADO\) разработчикам моделей объектов собственных компонентов \(COM\).  Для доступа к данным в приложении .NET мы рекомендуем использовать ADO.NET, а не ADO.  
+ <span data-ttu-id="0591e-111">Для разработчиков, которые пишут управляемый код, ADO.NET предоставляет функциональный набор, сходный с функциональным набором, который предоставляют объекты данных ActiveX (ADO) разработчикам моделей объектов собственных компонентов (COM).</span><span class="sxs-lookup"><span data-stu-id="0591e-111">ADO.NET provides functionality to developers who write managed code similar to the functionality provided to native component object model (COM) developers by ActiveX Data Objects (ADO).</span></span> <span data-ttu-id="0591e-112">Для доступа к данным в приложении .NET мы рекомендуем использовать ADO.NET, а не ADO.</span><span class="sxs-lookup"><span data-stu-id="0591e-112">We recommend that you use ADO.NET, not ADO, for accessing data in your .NET applications.</span></span>  
   
- ADO.NET предоставляет самый прямой способ доступа к данным в .NET Framework.  Сведения о более высоком уровне абстракции, который позволяет приложениям работать с концептуальной моделью, а не с базовой моделью хранения, см. в разделе [Платформа ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ <span data-ttu-id="0591e-113">ADO.NET предоставляет самый прямой способ доступа к данным в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0591e-113">ADO.NET provides the most direct method of data access within the .NET Framework.</span></span> <span data-ttu-id="0591e-114">Для более высокого уровня абстракции, который позволяет приложениям работать к концептуальной модели, а не базовой модели хранения, в разделе [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span><span class="sxs-lookup"><span data-stu-id="0591e-114">For a higher-level abstraction that allows applications to work against a conceptual model instead of the underlying storage model, see the [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span></span>  
   
- **Заявление о конфиденциальности.** Сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не отличают личные данные пользователя от всех остальных данных.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные.  Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
+ <span data-ttu-id="0591e-115">**Заявление о конфиденциальности**: сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не различать личных данных и неконфиденциальные данные пользователя.</span><span class="sxs-lookup"><span data-stu-id="0591e-115">**Privacy Statement**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll, and System.Data.DataSetExtensions.dll assemblies do not distinguish between a user's private data and non-private data.</span></span>  <span data-ttu-id="0591e-116">Эти сборки не собирают, не хранят и не переносят пользовательские личные данные.</span><span class="sxs-lookup"><span data-stu-id="0591e-116">These assemblies do not collect, store, or transport any user's private data.</span></span> <span data-ttu-id="0591e-117">Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.</span><span class="sxs-lookup"><span data-stu-id="0591e-117">However, third-party applications might collect, store, or transport a user's private data using these assemblies.</span></span>  
   
-## В этом подразделе  
- [Архитектура ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
- Предоставляет общие сведения об архитектуре и компонентах ADO.NET.  
+## <a name="in-this-section"></a><span data-ttu-id="0591e-118">Содержание</span><span class="sxs-lookup"><span data-stu-id="0591e-118">In This Section</span></span>  
+ [<span data-ttu-id="0591e-119">Архитектура ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-119">ADO.NET Architecture</span></span>](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
+ <span data-ttu-id="0591e-120">Предоставляет общие сведения об архитектуре и компонентах ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="0591e-120">Provides an overview of the architecture and components of ADO.NET.</span></span>  
   
- [Рекомендации и параметры технологии ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
- Описываются продукты и технологии, входящие в состав платформы Entity Data Platform.  
+ [<span data-ttu-id="0591e-121">Правила и возможности технологии ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-121">ADO.NET Technology Options and Guidelines</span></span>](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ <span data-ttu-id="0591e-122">Описываются продукты и технологии, входящие в состав платформы Entity Data Platform.</span><span class="sxs-lookup"><span data-stu-id="0591e-122">Describes the products and technologies included with the Entity Data Platform.</span></span>  
   
- [LINQ и ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Описывается реализация технологии LINQ \(Language\-Integrated Query\) в ADO.NET и приводятся ссылки на соответствующие разделы.  
+ [<span data-ttu-id="0591e-123">LINQ и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-123">LINQ and ADO.NET</span></span>](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
+ <span data-ttu-id="0591e-124">Описывается реализация технологии LINQ (Language-Integrated Query) в ADO.NET и приводятся ссылки на соответствующие разделы.</span><span class="sxs-lookup"><span data-stu-id="0591e-124">Describes how Language-Integrated Query (LINQ) is implemented in ADO.NET and provides links to relevant topics.</span></span>  
   
- [Поставщики данных .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
- Предоставляет общие сведения о конструкции поставщика данных .NET Framework и поставщиков данных .NET Framework, включенных при помощи ADO.NET.  
+ [<span data-ttu-id="0591e-125">Поставщики данных .NET framework</span><span class="sxs-lookup"><span data-stu-id="0591e-125">.NET Framework Data Providers</span></span>](../../../../docs/framework/data/adonet/data-providers.md)  
+ <span data-ttu-id="0591e-126">Предоставляет общие сведения о конструкции поставщика данных .NET Framework и поставщиков данных .NET Framework, включенных при помощи ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="0591e-126">Provides an overview of the design of the .NET Framework data provider and of the .NET Framework data providers that are included with ADO.NET.</span></span>  
   
- [Объекты DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- Предоставляет общие сведения о конструкции и компонентах `DataSet`.  
+ [<span data-ttu-id="0591e-127">Наборы данных ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-127">ADO.NET DataSets</span></span>](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ <span data-ttu-id="0591e-128">Предоставляет общие сведения о конструкции и компонентах `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="0591e-128">Provides an overview of the `DataSet` design and components.</span></span>  
   
- [Параллельное выполнение в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
- Рассматривает различия версий ADO.NET и их влияние на параллельное выполнение и совместимость приложений.  
+ [<span data-ttu-id="0591e-129">С одновременным выполнением в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-129">Side-by-Side Execution in ADO.NET</span></span>](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ <span data-ttu-id="0591e-130">Рассматривает различия версий ADO.NET и их влияние на параллельное выполнение и совместимость приложений.</span><span class="sxs-lookup"><span data-stu-id="0591e-130">Discusses differences in ADO.NET versions and their effect on side-by-side execution and application compatibility.</span></span>  
   
- [Примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
- Предоставляет образцы кода, который получает данные при помощи поставщиков данных ADO.NET.  
+ [<span data-ttu-id="0591e-131">Примеры кода ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-131">ADO.NET Code Examples</span></span>](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
+ <span data-ttu-id="0591e-132">Предоставляет образцы кода, который получает данные при помощи поставщиков данных ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="0591e-132">Provides code samples that retrieve data using the ADO.NET data providers.</span></span>  
   
-## Связанные подразделы  
- [Новые возможности ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Представляет новые для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] функции.  
+## <a name="related-sections"></a><span data-ttu-id="0591e-133">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="0591e-133">Related Sections</span></span>  
+ [<span data-ttu-id="0591e-134">Новые возможности в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-134">What's New in ADO.NET</span></span>](../../../../docs/framework/data/adonet/whats-new.md)  
+ <span data-ttu-id="0591e-135">Представляет новые для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] функции.</span><span class="sxs-lookup"><span data-stu-id="0591e-135">Introduces features that are new in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].</span></span>  
   
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Описывает приемы безопасного программирования при использовании ADO.NET.  
+ [<span data-ttu-id="0591e-136">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-136">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ <span data-ttu-id="0591e-137">Описывает приемы безопасного программирования при использовании ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="0591e-137">Describes secure coding practices when using ADO.NET.</span></span>  
   
- [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- Описывается сопоставление между типами данных .NET Framework и поставщиками данных .NET Framework.  
+ [<span data-ttu-id="0591e-138">Сопоставления типов данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-138">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ <span data-ttu-id="0591e-139">Описывается сопоставление между типами данных .NET Framework и поставщиками данных .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0591e-139">Describes data type mappings between .NET Framework data types and the .NET Framework data providers.</span></span>  
   
- [Получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Описывает, как выполнять соединение с источником данных, получать и изменять данные.  К этому относятся `DataReaders` и `DataAdapters`.  
+ [<span data-ttu-id="0591e-140">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-140">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ <span data-ttu-id="0591e-141">Описывает, как выполнять соединение с источником данных, получать и изменять данные.</span><span class="sxs-lookup"><span data-stu-id="0591e-141">Describes how to connect to a data source, retrieve data, and modify data.</span></span> <span data-ttu-id="0591e-142">К этому относятся `DataReaders` и `DataAdapters`.</span><span class="sxs-lookup"><span data-stu-id="0591e-142">This includes `DataReaders` and `DataAdapters`.</span></span>  
   
-## См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [Доступ к данным в Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="0591e-143">См. также</span><span class="sxs-lookup"><span data-stu-id="0591e-143">See Also</span></span>  
+ [<span data-ttu-id="0591e-144">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-144">ADO.NET</span></span>](../../../../docs/framework/data/adonet/index.md)  
+ [<span data-ttu-id="0591e-145">Доступ к данным в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0591e-145">Accessing data in Visual Studio</span></span>](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [<span data-ttu-id="0591e-146">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="0591e-146">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

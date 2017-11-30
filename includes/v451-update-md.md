@@ -1,1 +1,1 @@
-4.6, 4.5.2, обновление 4.5.1 в ноябре 2013 г.
+<span data-ttu-id="37876-101">4.6, 4.5.2, обновление 4.5.1 в ноябре 2013 г.</span><span class="sxs-lookup"><span data-stu-id="37876-101">4.6, 4.5.2, November 2013 update to 4.5.1</span></span>

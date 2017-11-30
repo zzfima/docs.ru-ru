@@ -1,61 +1,60 @@
 ---
-title: "Условные обозначения и соглашения о коде (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "рекомендации, соглашения о написании кода"
-  - "соглашения о написании кода, Visual Basic"
-  - "соглашения, документация"
-  - "соглашения, кодирование в Visual Basic"
-  - "соглашения о документации"
-  - "соглашения о печати"
-  - "код Visual Basic, соглашения"
+title: "Условные обозначения и соглашения о коде (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- coding conventions [Visual Basic], Visual Basic
+- best practices [Visual Basic], coding conventions
+- conventions [Visual Basic], Visual Basic coding
+- typographic conventions [Visual Basic]
+- document conventions [Visual Basic]
+- conventions [Visual Basic], documentation
+- Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Условные обозначения и соглашения о коде (Visual Basic)
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
-
-В документации по Visual Basic используются следующие условные обозначения и соглашения о коде.  
+# <a name="typographic-and-code-conventions-visual-basic"></a><span data-ttu-id="55089-102">Условные обозначения и соглашения о коде (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55089-102">Typographic and Code Conventions (Visual Basic)</span></span>
+<span data-ttu-id="55089-103">Документации Visual Basic используются следующие условные обозначения и соглашения о написании кода.</span><span class="sxs-lookup"><span data-stu-id="55089-103">Visual Basic documentation uses the following typographic and code conventions.</span></span>  
   
-## Условные обозначения  
+## <a name="typographic-conventions"></a><span data-ttu-id="55089-104">Обозначения</span><span class="sxs-lookup"><span data-stu-id="55089-104">Typographic Conventions</span></span>  
   
-|Пример|Описание|  
-|------------|--------------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Ключевые слова конкретного языка и члены среды выполнения имеют начальные прописные буквы и форматируются как показано в этом примере.|  
-|SmallProject, ButtonCollection|Слова и фразы, которые следует ввести, форматируются как показано в этом примере.|  
-|[Оператор Module](../../visual-basic/language-reference/statements/module-statement.md)|Ссылки, которые можно щелкнуть для перехода на другую страницу справки, форматируются как показано в этом примере.|  
-|*object*, *имя\_переменной*, `argumentList`|Пустые местозаполнители для сведений, предоставляемых пользователем, форматируются как показано в этом примере.|  
-|\[ Shadows \], \[ *список\_выражений* \]|В синтаксисе необязательные элементы заключены в кавычки.|  
-|{ `Public` &#124; `Friend` &#124; `Private` }|Если необходимо сделать выбор между несколькими элементами, такие элементы в синтаксисе заключаются в фигурные скобки и разделяются вертикальной чертой.<br /><br /> Необходимо выбрать только один из этих элементов.|  
-|\[ `Protected` &#124; `Friend` \]|Если предоставляется возможность выбора из нескольких элементов, такие элементы в синтаксисе заключаются в квадратные скобки и разделяются вертикальной чертой.<br /><br /> Можно выбрать любое сочетание элементов, или не указывать элементы вообще.|  
-|\[{ `ByVal` &#124; `ByRef` }\]|В синтаксисе, когда можно выбрать не более одного элемента, но можно также опустить элементы полностью, каждый элемент заключен в квадратные скобки, а элементы разделяются вертикальной чертой. Весь список элементов также полностью заключается в квадратные скобки.|  
-|*имя\_члена* 1, *имя\_члена*2, *имя\_члена*3|Несколько экземпляров, располагающихся в одной позиции, различаются по нижним индексам, как показано в примере.|  
-|*имя\_члена1*<br /><br /> ...<br /><br /> *имя\_членаN*|В синтаксисе многоточие \(...\) используется для указания неопределенного числа элементов сразу перед многоточием.<br /><br /> В коде многоточия обозначают часть кода, опущенного для простоты.|  
-|ESC, ВВОД|Названия клавиш и последовательность клавиш на клавиатуре всегда отображаются в верхнем регистре.|  
-|ALT \+ F1|Знак "плюс" \(\+\) между названиями клавиш, означает, что необходимо удерживать нажатой одну клавишу при нажатии второй.  Например, ALT\+F1 означает, что следует нажать клавишу F1, удерживая нажатой клавишу ALT.|  
+|<span data-ttu-id="55089-105">Пример</span><span class="sxs-lookup"><span data-stu-id="55089-105">Example</span></span>|<span data-ttu-id="55089-106">Описание</span><span class="sxs-lookup"><span data-stu-id="55089-106">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="55089-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span><span class="sxs-lookup"><span data-stu-id="55089-107">`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`</span></span>|<span data-ttu-id="55089-108">Зарезервированные слова языка и члены среды выполнения имеют начальные прописные буквы и форматируются как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-108">Language-specific keywords and runtime members have initial uppercase letters and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="55089-109">**SmallProject**, **ButtonCollection**</span><span class="sxs-lookup"><span data-stu-id="55089-109">**SmallProject**, **ButtonCollection**</span></span>|<span data-ttu-id="55089-110">Слова и фразы, будет предложено ввести форматируются как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-110">Words and phrases you are instructed to type are formatted as shown in this example.</span></span>|  
+|[<span data-ttu-id="55089-111">Оператор Module</span><span class="sxs-lookup"><span data-stu-id="55089-111">Module Statement</span></span>](../../visual-basic/language-reference/statements/module-statement.md)|<span data-ttu-id="55089-112">Ссылки, которые можно щелкнуть для перехода на другую страницу справки, форматируются как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-112">Links you can click to go to another Help page are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="55089-113">*Объект*, *variableName*,`argumentList`</span><span class="sxs-lookup"><span data-stu-id="55089-113">*object*, *variableName*, `argumentList`</span></span>|<span data-ttu-id="55089-114">Заполнители для сведений, предоставляемых пользователем, форматируются как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-114">Placeholders for information that you supply are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="55089-115">[Теней] [ *expressionList* ]</span><span class="sxs-lookup"><span data-stu-id="55089-115">[ Shadows ], [ *expressionList* ]</span></span>|<span data-ttu-id="55089-116">В синтаксисе необязательные элементы заключены в квадратные скобки.</span><span class="sxs-lookup"><span data-stu-id="55089-116">In syntax, optional items are enclosed in brackets.</span></span>|  
+|<span data-ttu-id="55089-117">{ `Public` &#124; `Friend` &#124; `Private` }</span><span class="sxs-lookup"><span data-stu-id="55089-117">{ `Public` &#124; `Friend` &#124; `Private` }</span></span>|<span data-ttu-id="55089-118">Если необходимо сделать выбор между двумя или несколькими элементами, элементы в синтаксисе заключены в фигурные скобки и разделяются вертикальной чертой.</span><span class="sxs-lookup"><span data-stu-id="55089-118">In syntax, when you must make a choice between two or more items, the items are enclosed in braces and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="55089-119">Необходимо выбрать один и только один из элементов.</span><span class="sxs-lookup"><span data-stu-id="55089-119">You must select one, and only one, of the items.</span></span>|  
+|<span data-ttu-id="55089-120">[ `Protected` &#124; `Friend` ]</span><span class="sxs-lookup"><span data-stu-id="55089-120">[ `Protected` &#124; `Friend` ]</span></span>|<span data-ttu-id="55089-121">Если у вас есть возможность выбрать между двумя или более элементов, элементы в синтаксисе заключаются в квадратные скобки и разделяются вертикальной чертой.</span><span class="sxs-lookup"><span data-stu-id="55089-121">In syntax, when you have the option of selecting between two or more items, the items are enclosed in square brackets and separated by vertical bars.</span></span><br /><br /> <span data-ttu-id="55089-122">Можно выбрать любое сочетание элементов или ни один элемент.</span><span class="sxs-lookup"><span data-stu-id="55089-122">You can select any combination of the items, or no item.</span></span>|  
+|<span data-ttu-id="55089-123">[{ `ByVal` &#124; `ByRef` }]</span><span class="sxs-lookup"><span data-stu-id="55089-123">[{ `ByVal` &#124; `ByRef` }]</span></span>|<span data-ttu-id="55089-124">В синтаксисе когда можно выбрать не более одного элемента, но можно также опустить элементы полностью, элементы заключаются в квадратные скобки заключены в фигурные скобки и разделяются вертикальной чертой.</span><span class="sxs-lookup"><span data-stu-id="55089-124">In syntax, when you can select no more than one item, but you can also omit the items completely, the items are enclosed in square brackets surrounded by braces and separated by vertical bars.</span></span>|  
+|<span data-ttu-id="55089-125">*имя пользователя*1, *memberName*2, *memberName*3</span><span class="sxs-lookup"><span data-stu-id="55089-125">*memberName*1, *memberName*2, *memberName*3</span></span>|<span data-ttu-id="55089-126">Несколько экземпляров одной позиции отличаются тем, индексов, как показано в примере.</span><span class="sxs-lookup"><span data-stu-id="55089-126">Multiple instances of the same placeholder are differentiated by subscripts, as shown in the example.</span></span>|  
+|<span data-ttu-id="55089-127">*Имя_члена1*</span><span class="sxs-lookup"><span data-stu-id="55089-127">*memberName1*</span></span><br /><br /> <span data-ttu-id="55089-128">...</span><span class="sxs-lookup"><span data-stu-id="55089-128">...</span></span><br /><br /> <span data-ttu-id="55089-129">*memberNameN*</span><span class="sxs-lookup"><span data-stu-id="55089-129">*memberNameN*</span></span>|<span data-ttu-id="55089-130">В синтаксисе многоточие (...) используется для указания неограниченное число элементов данного типа сразу перед многоточием.</span><span class="sxs-lookup"><span data-stu-id="55089-130">In syntax, an ellipsis (...) is used to indicate an indefinite number of items of the kind immediately in front of the ellipsis.</span></span><br /><br /> <span data-ttu-id="55089-131">В коде многоточия обозначают код опущен для ясности.</span><span class="sxs-lookup"><span data-stu-id="55089-131">In code, ellipses signify code omitted for the sake of clarity.</span></span>|  
+|<span data-ttu-id="55089-132">ESC, ВВЕДИТЕ</span><span class="sxs-lookup"><span data-stu-id="55089-132">ESC, ENTER</span></span>|<span data-ttu-id="55089-133">Имена ключей и сочетания клавиш на клавиатуре отображаются только прописными буквами.</span><span class="sxs-lookup"><span data-stu-id="55089-133">Key names and key sequences on the keyboard appear in all uppercase letters.</span></span>|  
+|<span data-ttu-id="55089-134">ALT + F1</span><span class="sxs-lookup"><span data-stu-id="55089-134">ALT+F1</span></span>|<span data-ttu-id="55089-135">Если между именами ключей отображаются плюс (+), необходимо удерживать нажатой клавишу один при нажатии второй.</span><span class="sxs-lookup"><span data-stu-id="55089-135">When plus signs (+) appear between key names, you must hold down one key while pressing the other.</span></span> <span data-ttu-id="55089-136">Например ALT + F1 означает удерживать нажатой клавишу ALT при нажатии клавиши F1.</span><span class="sxs-lookup"><span data-stu-id="55089-136">For example, ALT+F1 means hold down the ALT key while pressing the F1 key.</span></span>|  
   
-## Соглашения о коде  
+## <a name="code-conventions"></a><span data-ttu-id="55089-137">Соглашения о написании кода</span><span class="sxs-lookup"><span data-stu-id="55089-137">Code Conventions</span></span>  
   
-|Пример|Описание|  
-|------------|--------------|  
-|`sampleString = "Hello, world!"`|Код отображается моноширинным шрифтом, и форматируется как показано в этом примере.|  
-|Предыдущий оператор устанавливает значение `sampleString` в "Hello, world\!".|Пояснительный текст к элементам кода оформляется моноширинным шрифтом, как показано в примере.|  
-|`' This is a comment.`<br /><br /> `REM This is also a comment.`|Перед комментариями к коду ставится знак апострофа \('\) или ключевое слово REM.|  
-|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|Знаки пробела и подчеркивания \( \_\) в конце строки указывают на то, что инструкция продолжается в следующей строке.|  
+|<span data-ttu-id="55089-138">Пример</span><span class="sxs-lookup"><span data-stu-id="55089-138">Example</span></span>|<span data-ttu-id="55089-139">Описание</span><span class="sxs-lookup"><span data-stu-id="55089-139">Description</span></span>|  
+|-------------|-----------------|  
+|`sampleString = "Hello, world!"`|<span data-ttu-id="55089-140">Примеры кода, отображаются в моноширинный шрифт и форматируются как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-140">Code samples appear in a fixed-pitch font and are formatted as shown in this example.</span></span>|  
+|<span data-ttu-id="55089-141">Предыдущая инструкция устанавливает значение `sampleString` для «Hello, world!»</span><span class="sxs-lookup"><span data-stu-id="55089-141">The previous statement sets the value of `sampleString` to "Hello, world!"</span></span>|<span data-ttu-id="55089-142">Элементы кода в пояснительного текста отображаются в моноширинный шрифт, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="55089-142">Code elements in explanatory text appear in a fixed-pitch font, as shown in this example.</span></span>|  
+|`' This is a comment.`<br /><br /> `REM This is also a comment.`|<span data-ttu-id="55089-143">Комментарии к коду введенный символ апострофа (') или ключевое слово REM.</span><span class="sxs-lookup"><span data-stu-id="55089-143">Code comments are introduced by an apostrophe (') or the REM keyword.</span></span>|  
+|`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|<span data-ttu-id="55089-144">Пробел перед знаком подчеркивания (_) в конце строки указывает, что инструкция продолжается на следующей строке.</span><span class="sxs-lookup"><span data-stu-id="55089-144">A space followed by an underscore ( _) at the end of a line indicates that the statement continues on the following line.</span></span>|  
   
-## См. также  
- [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)   
- [Ключевые слова](../../visual-basic/language-reference/keywords/index.md)   
- [Члены библиотеки времени выполнения Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)   
- [Соглашения об именах Visual Basic](../../visual-basic/programming-guide/program-structure/naming-conventions.md)   
- [Практическое руководство. Разбиение и объединение инструкций в коде](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)   
- [Комментарии в коде](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="55089-145">См. также</span><span class="sxs-lookup"><span data-stu-id="55089-145">See Also</span></span>  
+ [<span data-ttu-id="55089-146">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="55089-146">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ [<span data-ttu-id="55089-147">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="55089-147">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="55089-148">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="55089-148">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="55089-149">Соглашения об именах Visual Basic</span><span class="sxs-lookup"><span data-stu-id="55089-149">Visual Basic Naming Conventions</span></span>](../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+ [<span data-ttu-id="55089-150">Практическое руководство. Разбиение и объединение инструкций в коде</span><span class="sxs-lookup"><span data-stu-id="55089-150">How to: Break and Combine Statements in Code</span></span>](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [<span data-ttu-id="55089-151">Комментарии в коде</span><span class="sxs-lookup"><span data-stu-id="55089-151">Comments in Code</span></span>](../../visual-basic/programming-guide/program-structure/comments-in-code.md)

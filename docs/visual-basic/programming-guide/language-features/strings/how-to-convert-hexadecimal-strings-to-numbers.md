@@ -1,40 +1,39 @@
 ---
-title: "Практическое руководство. Преобразование шестнадцатеричных строк в числа (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "десятичные знаки, шестнадцатеричные"
-  - "примеры [Visual Basic], преобразование строк"
-  - "шестнадцатеричные, десятичные знаки"
-  - "числа, шестнадцатеричные"
-  - "преобразование строк, шестнадцатеричные знаки в числа"
+title: "Практическое руководство. Преобразование шестнадцатеричных строк в числа (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- numbers [Visual Basic], hexadecimals
+- hexadecimals [Visual Basic], decimals
+- examples [Visual Basic], string conversion
+- decimals [Visual Basic], hexadecimals
+- string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e6b1beae273fa737ca7c95a253d95c947e760f9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Преобразование шестнадцатеричных строк в числа (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Этот пример преобразует шестнадцатеричную строку в целое число, используя метод <xref:System.Convert.ToInt32%2A>.  
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a><span data-ttu-id="79460-102">Практическое руководство. Преобразование шестнадцатеричных строк в числа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79460-102">How to: Convert Hexadecimal Strings to Numbers (Visual Basic)</span></span>
+<span data-ttu-id="79460-103">Этот пример преобразует шестнадцатеричную строку в целое число, используя <xref:System.Convert.ToInt32%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="79460-103">This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A> method.</span></span>  
   
-### Преобразование шестнадцатеричной строки в число  
+### <a name="to-convert-a-hexadecimal-string-to-a-number"></a><span data-ttu-id="79460-104">Чтобы преобразовать число в шестнадцатеричную строку</span><span class="sxs-lookup"><span data-stu-id="79460-104">To convert a hexadecimal string to a number</span></span>  
   
--   Используйте метод <xref:System.Convert.ToInt32%2A> для преобразования числа, выраженного в шестнадцатеричном исчислении, в целое.  
+-   <span data-ttu-id="79460-105">Использование <xref:System.Convert.ToInt32%2A> метода для преобразования в base-16 в целое число.</span><span class="sxs-lookup"><span data-stu-id="79460-105">Use the <xref:System.Convert.ToInt32%2A> method to convert the number expressed in base-16 to an integer.</span></span>  
   
-     Первый аргумент метода <xref:System.Convert.ToInt32%2A> — это преобразуемая строка.  Второй аргумент описывает, в каком исчислении представлено число.  
+     <span data-ttu-id="79460-106">Первый аргумент <xref:System.Convert.ToInt32%2A> метод является строка для преобразования.</span><span class="sxs-lookup"><span data-stu-id="79460-106">The first argument of the <xref:System.Convert.ToInt32%2A> method is the string to convert.</span></span> <span data-ttu-id="79460-107">Второй аргумент описывает, какая база, число, представленное в; шестнадцатеричное является основанием 16.</span><span class="sxs-lookup"><span data-stu-id="79460-107">The second argument describes what base the number is expressed in; hexadecimal is base 16.</span></span>  
   
      [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
+## <a name="see-also"></a><span data-ttu-id="79460-108">См. также</span><span class="sxs-lookup"><span data-stu-id="79460-108">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
  <xref:System.Convert.ToInt32%2A>

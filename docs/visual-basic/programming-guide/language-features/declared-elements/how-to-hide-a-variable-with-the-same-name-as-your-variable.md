@@ -1,60 +1,59 @@
 ---
-title: "Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "операторы объявления, объявленные элементы"
-  - "объявления, элементы"
-  - "объявленные элементы, сведения об объявленных элементах"
-  - "объявленные элементы, создание ссылок"
-  - "объявление элементов"
-  - "имена элементов, квалификация"
-  - "квалификация, имен элементов"
-  - "ссылки, объявленные элементы"
-  - "создание ссылок на объявленные элементы"
+title: "Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- declarations [Visual Basic], elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declaration statements [Visual Basic], declared elements
+- declaring elements [Visual Basic]
+- referencing declared elements [Visual Basic]
+- declared elements [Visual Basic], referencing
+- declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Cкрыть переменную можно *затенением*, то есть переопределением переменной с тем же именем.  Затенить переменную, которую требуется скрыть, можно двумя способами:  
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a><span data-ttu-id="f720c-102">Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f720c-102">How to: Hide a Variable with the Same Name as Your Variable (Visual Basic)</span></span>
+<span data-ttu-id="f720c-103">Можно скрыть переменной с *затенение* его, то есть переопределением с переменной с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="f720c-103">You can hide a variable by *shadowing* it, that is, by redefining it with a variable of the same name.</span></span> <span data-ttu-id="f720c-104">Можно скрыть переменную, которую вы хотите скрыть двумя способами:</span><span class="sxs-lookup"><span data-stu-id="f720c-104">You can shadow the variable you want to hide in two ways:</span></span>  
   
--   **Затенение через область действия.** Можно затенить переменную в области действия путем переопределения ее внутри вложенного блока, внешний блок которого содержит переменную, которую требуется скрыть.  
+-   <span data-ttu-id="f720c-105">**Затемнения посредством области.**</span><span class="sxs-lookup"><span data-stu-id="f720c-105">**Shadowing Through Scope.**</span></span> <span data-ttu-id="f720c-106">Его можно скрыть посредством области путем ее переопределения внутри подобласти содержит переменную, которую требуется скрыть.</span><span class="sxs-lookup"><span data-stu-id="f720c-106">You can shadow it through scope by redeclaring it inside a subregion of the region containing the variable you want to hide.</span></span>  
   
--   **Затенение через наследование.** Если переменная, которую требуется скрыть, определена на уровне класса, то ее можно затенить через наследование путем ее переопределения с помощью ключевого слова [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) в производном классе.  
+-   <span data-ttu-id="f720c-107">**Затемнения посредством наследования.**</span><span class="sxs-lookup"><span data-stu-id="f720c-107">**Shadowing Through Inheritance.**</span></span> <span data-ttu-id="f720c-108">Если вы хотите скрыть переменная определяется на уровне класса, можно скрыть его через наследование путем ее переопределения с [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) ключевое слово в производном классе.</span><span class="sxs-lookup"><span data-stu-id="f720c-108">If the variable you want to hide is defined at class level, you can shadow it through inheritance by redeclaring it with the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in a derived class.</span></span>  
   
-## Два способа сокрытия переменной  
+## <a name="two-ways-to-hide-a-variable"></a><span data-ttu-id="f720c-109">Два способа сокрытия переменной</span><span class="sxs-lookup"><span data-stu-id="f720c-109">Two Ways to Hide a Variable</span></span>  
   
-#### Чтобы скрыть переменную с помощью затенения в области действия, выполните следующие действия:  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a><span data-ttu-id="f720c-110">Чтобы скрыть переменную с помощью области</span><span class="sxs-lookup"><span data-stu-id="f720c-110">To hide a variable by shadowing it through scope</span></span>  
   
-1.  Определите область действия переменной, которую требуется скрыть, и подобласть, в которой будет производиться переопределение переменной.  
+1.  <span data-ttu-id="f720c-111">Определите переменную, которую вы хотите скрыть область и подобласть, в которой будет производиться переопределение переменной.</span><span class="sxs-lookup"><span data-stu-id="f720c-111">Determine the region defining the variable you want to hide, and determine a subregion in which to redefine it with your variable.</span></span>  
   
-    |Область действия переменной|Допустимые подобласти для ее переопределения|  
-    |---------------------------------|--------------------------------------------------|  
-    |Модуль|Класс в модуле|  
-    |Класс|Подкласс внутри класса<br /><br /> Процедура внутри класса|  
+    |<span data-ttu-id="f720c-112">Область переменной</span><span class="sxs-lookup"><span data-stu-id="f720c-112">Variable's region</span></span>|<span data-ttu-id="f720c-113">Допустимые подобласти для ее переопределения</span><span class="sxs-lookup"><span data-stu-id="f720c-113">Allowable subregion for redefining it</span></span>|  
+    |-----------------------|-------------------------------------------|  
+    |<span data-ttu-id="f720c-114">Модуль</span><span class="sxs-lookup"><span data-stu-id="f720c-114">Module</span></span>|<span data-ttu-id="f720c-115">Класс в модуле</span><span class="sxs-lookup"><span data-stu-id="f720c-115">A class within the module</span></span>|  
+    |<span data-ttu-id="f720c-116">Класс</span><span class="sxs-lookup"><span data-stu-id="f720c-116">Class</span></span>|<span data-ttu-id="f720c-117">Подкласс внутри класса</span><span class="sxs-lookup"><span data-stu-id="f720c-117">A subclass within the class</span></span><br /><br /> <span data-ttu-id="f720c-118">Процедура внутри класса</span><span class="sxs-lookup"><span data-stu-id="f720c-118">A procedure within the class</span></span>|  
   
-     Нельзя переопределить переменную процедуры в блоке, находящемся внутри этой процедуры, например, в конструкции `If`...`End If` или в цикле `For`.  
+     <span data-ttu-id="f720c-119">Нельзя переопределить переменную процедуры в блоке, в рамках этой процедуры, например в `If`... `End If` построения или `For` цикла.</span><span class="sxs-lookup"><span data-stu-id="f720c-119">You cannot redefine a procedure variable in a block within that procedure, for example in an `If`...`End If` construction or a `For` loop.</span></span>  
   
-2.  Создайте подобласть, если она еще не существует.  
+2.  <span data-ttu-id="f720c-120">Создайте подобласть, если он еще не существует.</span><span class="sxs-lookup"><span data-stu-id="f720c-120">Create the subregion if it does not already exist.</span></span>  
   
-3.  В пределах подобласти напишите оператор [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md), объявляющий затеняемую переменную.  
+3.  <span data-ttu-id="f720c-121">В пределах подобласти, запись [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) объявление переменной затенения.</span><span class="sxs-lookup"><span data-stu-id="f720c-121">Within the subregion, write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declaring the shadowing variable.</span></span>  
   
-     Когда код внутри подобласти ссылается на имя переменной, компилятор разрешает ссылку с помощью затеняющей переменной.  
+     <span data-ttu-id="f720c-122">Когда код внутри подобласти ссылается на имя переменной, компилятор разрешает ссылку переменной затенения.</span><span class="sxs-lookup"><span data-stu-id="f720c-122">When code inside the subregion refers to the variable name, the compiler resolves the reference to the shadowing variable.</span></span>  
   
-     В следующем примере показано затенение через область действия, а также обращение, обходящее затенение.  
+     <span data-ttu-id="f720c-123">В следующем примере показано затемнения посредством области, а также ссылки, который обходит затенение.</span><span class="sxs-lookup"><span data-stu-id="f720c-123">The following example illustrates shadowing through scope, as well as a reference that bypasses the shadowing.</span></span>  
   
     ```  
     Module shadowByScope  
@@ -76,21 +75,21 @@ Cкрыть переменную можно *затенением*, то ест�
     End Module  
     ```  
   
-     В предыдущем примере переменная `num` объявляется как на уровне модуля, так и на уровне процедуры \(в процедуре `show`\).  Локальная переменная `num` скрывает переменную уровня модуля `num` в `show`, поэтому локальная переменная принимает значение 2.  Однако локальной переменной для скрытия `num` в процедуре `useModuleLevelNum` нет.  Поэтому `useModuleLevelNum` присваивает значение 1 переменной на уровне модуля.  
+     <span data-ttu-id="f720c-124">В предыдущем примере объявляются переменная `num` как на уровне модуля, так и на уровне процедуры (в процедуре `show`).</span><span class="sxs-lookup"><span data-stu-id="f720c-124">The preceding example declares the variable `num` both at module level and at procedure level (in the procedure `show`).</span></span> <span data-ttu-id="f720c-125">Локальная переменная `num` скрывает переменную уровня модуля `num` в `show`, поэтому локальная переменная имеет значение 2.</span><span class="sxs-lookup"><span data-stu-id="f720c-125">The local variable `num` shadows the module-level variable `num` within `show`, so the local variable is set to 2.</span></span> <span data-ttu-id="f720c-126">Однако есть нет локальной переменной для скрытия `num` в `useModuleLevelNum` процедуры.</span><span class="sxs-lookup"><span data-stu-id="f720c-126">However, there is no local variable to shadow `num` in the `useModuleLevelNum` procedure.</span></span> <span data-ttu-id="f720c-127">Таким образом `useModuleLevelNum` присваивает значение переменной уровня модуля 1.</span><span class="sxs-lookup"><span data-stu-id="f720c-127">Therefore, `useModuleLevelNum` sets the value of the module-level variable to 1.</span></span>  
   
-     Вызов `MsgBox` внутри `show` обходит затеняющий механизм путем уточнения `num` с помощью имени модуля.  Поэтому в нем отображается переменная уровня модуля, а не локальная переменная.  
+     <span data-ttu-id="f720c-128">`MsgBox` Вызывать внутри `show` обходит механизм скрывающий путем уточнения `num` с именем модуля.</span><span class="sxs-lookup"><span data-stu-id="f720c-128">The `MsgBox` call inside `show` bypasses the shadowing mechanism by qualifying `num` with the module name.</span></span> <span data-ttu-id="f720c-129">Поэтому он отображает переменную уровня модуля, вместо локальной переменной.</span><span class="sxs-lookup"><span data-stu-id="f720c-129">Therefore, it displays the module-level variable instead of the local variable.</span></span>  
   
-#### Чтобы скрыть переменную с помощью наследования, выполните следующие действия:  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a><span data-ttu-id="f720c-130">Чтобы скрыть переменную с помощью наследования</span><span class="sxs-lookup"><span data-stu-id="f720c-130">To hide a variable by shadowing it through inheritance</span></span>  
   
-1.  Убедитесь, что переменная, которую требуется скрыть, объявлена в классе и на уровне класса \(вне всех процедур\).  В противном случае скрыть ее через наследование нельзя.  
+1.  <span data-ttu-id="f720c-131">Убедитесь, что переменная, которую вы хотите скрыть объявлена в классе и на уровне класса (вне любых процедур).</span><span class="sxs-lookup"><span data-stu-id="f720c-131">Be sure the variable you want to hide is declared in a class, and at class level (outside any procedure).</span></span> <span data-ttu-id="f720c-132">В противном случае он не может переобъявлять через наследование.</span><span class="sxs-lookup"><span data-stu-id="f720c-132">Otherwise you cannot shadow it through inheritance.</span></span>  
   
-2.  Определите класс, производный от класса переменной, если такой еще не существует.  
+2.  <span data-ttu-id="f720c-133">Определите класс, производный от класса переменной, если еще не существует.</span><span class="sxs-lookup"><span data-stu-id="f720c-133">Define a class derived from the variable's class if one does not already exist.</span></span>  
   
-3.  Внутри производного класса напишите оператор `Dim`, объявляющий переменную.  Включите в объявление ключевое слово [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md).  
+3.  <span data-ttu-id="f720c-134">Внутри производного класса, напишите `Dim` инструкции объявления переменной.</span><span class="sxs-lookup"><span data-stu-id="f720c-134">Inside the derived class, write a `Dim` statement declaring your variable.</span></span> <span data-ttu-id="f720c-135">Включить [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) ключевое слово в объявлении.</span><span class="sxs-lookup"><span data-stu-id="f720c-135">Include the [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) keyword in the declaration.</span></span>  
   
-     Если код в производном классе ссылается на имя переменной, компилятор разрешает ссылку с помощью созданной таким образом переменной.  
+     <span data-ttu-id="f720c-136">Когда код в производном классе ссылается на имя переменной, компилятор разрешает ссылку на переменную.</span><span class="sxs-lookup"><span data-stu-id="f720c-136">When code in the derived class refers to the variable name, the compiler resolves the reference to your variable.</span></span>  
   
-     В следующем примере показано затенение через наследование.  Производятся два обращения: одно — к затеняющей переменной, другое же обходит затенение.  
+     <span data-ttu-id="f720c-137">В следующем примере показано затемнения посредством наследования.</span><span class="sxs-lookup"><span data-stu-id="f720c-137">The following example illustrates shadowing through inheritance.</span></span> <span data-ttu-id="f720c-138">Он делает две ссылки, который обращается к переменной затенения, а другой обходит затенение.</span><span class="sxs-lookup"><span data-stu-id="f720c-138">It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.</span></span>  
   
     ```  
     Public Class shadowBaseClass  
@@ -107,17 +106,17 @@ Cкрыть переменную можно *затенением*, то ест�
     End Class  
     ```  
   
-     В этом примере переменная `shadowString`, объявленная в базовом классе, скрывается в производном классе.  Процедура `showStrings` в производном классе отображает версию затеняющую версию строки, если имя `shadowString` не квалифицировано полностью.  Затем затененная версия отображается, если `shadowString` определяется с помощью ключевого слова `MyBase`.  
+     <span data-ttu-id="f720c-139">В предыдущем примере объявляются переменная `shadowString` в базовом классе, скрывается в производном классе.</span><span class="sxs-lookup"><span data-stu-id="f720c-139">The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class.</span></span> <span data-ttu-id="f720c-140">Процедура `showStrings` в производном классе отображает версию затенения строки, если имя `shadowString` не обработаны квалификатором.</span><span class="sxs-lookup"><span data-stu-id="f720c-140">The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified.</span></span> <span data-ttu-id="f720c-141">Затем отображается затененная версия при `shadowString` квалифицируется `MyBase` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="f720c-141">It then displays the shadowed version when `shadowString` is qualified with the `MyBase` keyword.</span></span>  
   
-## Отказоустойчивость  
- Затенение представляет несколько версий переменной с тем же именем.  Если оператор кода ссылается на имя переменной, то версия переменной, на которую компилятор разрешает ссылку, зависит от таких факторов, как расположение оператора кода и наличие строки с именем квалификации.  Это может повысить риск обращения к непредусмотренной версии затеняемой переменной.  Снизить этот риск можно путем полной квалификации всех обращений к затеняемой переменной.  
+## <a name="robust-programming"></a><span data-ttu-id="f720c-142">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="f720c-142">Robust Programming</span></span>  
+ <span data-ttu-id="f720c-143">Затенение представляет несколько версий переменной с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="f720c-143">Shadowing introduces more than one version of a variable with the same name.</span></span> <span data-ttu-id="f720c-144">Когда оператор кода ссылается на имя переменной, версии, для которого компилятор разрешает ссылку зависит от факторов, таких как расположение оператора кода и наличие уточняющей строки.</span><span class="sxs-lookup"><span data-stu-id="f720c-144">When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string.</span></span> <span data-ttu-id="f720c-145">Это может увеличить риск ссылки на неправильную версию затененной переменной.</span><span class="sxs-lookup"><span data-stu-id="f720c-145">This can increase the risk of referring to an unintended version of a shadowed variable.</span></span> <span data-ttu-id="f720c-146">Можно снизить этот риск, полное все ссылки на затененную переменную.</span><span class="sxs-lookup"><span data-stu-id="f720c-146">You can lower that risk by fully qualifying all references to a shadowed variable.</span></span>  
   
-## См. также  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Различия между сокрытием и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Практическое руководство. Доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Основы наследования](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a><span data-ttu-id="f720c-147">См. также</span><span class="sxs-lookup"><span data-stu-id="f720c-147">See Also</span></span>  
+ [<span data-ttu-id="f720c-148">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="f720c-148">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="f720c-149">Сокрытие в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f720c-149">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="f720c-150">Различия между затемнением и переопределением</span><span class="sxs-lookup"><span data-stu-id="f720c-150">Differences Between Shadowing and Overriding</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [<span data-ttu-id="f720c-151">Практическое руководство. Сокрытие наследуемой переменной</span><span class="sxs-lookup"><span data-stu-id="f720c-151">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="f720c-152">Практическое руководство. Доступ к переменной, скрытой производным классом</span><span class="sxs-lookup"><span data-stu-id="f720c-152">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="f720c-153">Переопределения</span><span class="sxs-lookup"><span data-stu-id="f720c-153">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="f720c-154">Me, My, MyBase и MyClass</span><span class="sxs-lookup"><span data-stu-id="f720c-154">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [<span data-ttu-id="f720c-155">Основы наследования</span><span class="sxs-lookup"><span data-stu-id="f720c-155">Inheritance Basics</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

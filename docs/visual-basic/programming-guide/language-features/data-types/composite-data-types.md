@@ -1,69 +1,56 @@
 ---
-title: "Составные типы данных (Visual Basic) | Документы Microsoft"
+title: "Составные типы данных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 04/25/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
-- composite types
-- composite data types
+- composite types [Visual Basic]
+- composite data types [Visual Basic]
 - data types [Visual Basic], composite
 - arrays [Visual Basic], composite data types
-- structures, composite data types
+- structures [Visual Basic], composite data types
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d81b2c08155cb16754e780fdfb341b596322302d
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="composite-data-types-visual-basic"></a>Составные типы данных (Visual Basic)
-Помимо простых типов данных [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] блоки, можно создавать из элементов различных типов для создания *составные типы данных* как структуры, массивы и классы. Можно создавать составные типы данных из простых типов или из других составных типов. Например можно определить массив элементов структуры или структуру с членами массива.  
+# <a name="composite-data-types-visual-basic"></a><span data-ttu-id="f87f4-102">Составные типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f87f4-102">Composite Data Types (Visual Basic)</span></span>
+<span data-ttu-id="f87f4-103">Помимо простых типов данных [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] предоставляет, можно создавать из элементов различных типов, чтобы создать *составные типы данных* как структуры, массивы и классы.</span><span class="sxs-lookup"><span data-stu-id="f87f4-103">In addition to the elementary data types [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes.</span></span> <span data-ttu-id="f87f4-104">Можно создавать составные типы данных из простых типов или из других составных типов.</span><span class="sxs-lookup"><span data-stu-id="f87f4-104">You can build composite data types from elementary types and from other composite types.</span></span> <span data-ttu-id="f87f4-105">Например можно определить массив элементов структуры или структуру с членами массива.</span><span class="sxs-lookup"><span data-stu-id="f87f4-105">For example, you can define an array of structure elements, or a structure with array members.</span></span>  
   
-## <a name="data-types"></a>Типы данных  
- Составной тип отличается от типа данных любого из его компонентов. Например, массив `Integer` элементы не `Integer` тип данных.  
+## <a name="data-types"></a><span data-ttu-id="f87f4-106">Типы данных</span><span class="sxs-lookup"><span data-stu-id="f87f4-106">Data Types</span></span>  
+ <span data-ttu-id="f87f4-107">Составной тип отличается от типа данных любого из его компонентов.</span><span class="sxs-lookup"><span data-stu-id="f87f4-107">A composite type is different from the data type of any of its components.</span></span> <span data-ttu-id="f87f4-108">Например, массив `Integer` элементов не относится к `Integer` тип данных.</span><span class="sxs-lookup"><span data-stu-id="f87f4-108">For example, an array of `Integer` elements is not of the `Integer` data type.</span></span>  
   
- Тип данных массива обычно представляется с помощью типа элемента, скобок и запятых при необходимости. Например, одномерный массив `String` элементов представляется в виде `String()`, а двумерный массив `Boolean` элементов представляется в виде `Boolean(,)`.  
+ <span data-ttu-id="f87f4-109">Тип данных массива обычно представляется с помощью типа элемента, скобки и запятые, при необходимости.</span><span class="sxs-lookup"><span data-stu-id="f87f4-109">An array data type is normally represented using the element type, parentheses, and commas as necessary.</span></span> <span data-ttu-id="f87f4-110">Например, одномерный массив `String` элементов представляется в виде `String()`и двухмерный массив `Boolean` элементов представляется в виде `Boolean(,)`.</span><span class="sxs-lookup"><span data-stu-id="f87f4-110">For example, a one-dimensional array of `String` elements is represented as `String()`, and a two-dimensional array of `Boolean` elements is represented as `Boolean(,)`.</span></span>  
   
-## <a name="structure-types"></a>Типы структур  
- Отсутствует тип данных single включающего в себя все структуры. Вместо этого каждое определение структуры представляет собой уникальный тип данных, даже если две структуры определяют идентичные элементы в том же порядке. Однако, если создать два или более экземпляров одной и той же структуры, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] рассматривает их как элементы одного типа данных.  
+## <a name="structure-types"></a><span data-ttu-id="f87f4-111">Типы структур</span><span class="sxs-lookup"><span data-stu-id="f87f4-111">Structure Types</span></span>  
+ <span data-ttu-id="f87f4-112">Нет единого типа данных, включающего в себя все структуры.</span><span class="sxs-lookup"><span data-stu-id="f87f4-112">There is no single data type comprising all structures.</span></span> <span data-ttu-id="f87f4-113">Вместо этого каждое определение структуры представляет собой уникальный тип данных, даже если две структуры определяют идентичные элементы в том же порядке.</span><span class="sxs-lookup"><span data-stu-id="f87f4-113">Instead, each definition of a structure represents a unique data type, even if two structures define identical elements in the same order.</span></span> <span data-ttu-id="f87f4-114">Тем не менее, если создать несколько экземпляров одной и той же структуры, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] рассматривает их как того же типа данных.</span><span class="sxs-lookup"><span data-stu-id="f87f4-114">However, if you create two or more instances of the same structure, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] considers them to be of the same data type.</span></span>  
   
-## <a name="array-types"></a>Типы массивов  
- Отсутствует тип данных single включающего в себя все массивы. Тип данных отдельного экземпляра массива определяется следующим образом:  
+## <a name="tuples"></a><span data-ttu-id="f87f4-115">Кортежи</span><span class="sxs-lookup"><span data-stu-id="f87f4-115">Tuples</span></span>
+
+<span data-ttu-id="f87f4-116">Кортеж — упрощенный структуру, содержащую два или более полей, типы которых являются предопределенными.</span><span class="sxs-lookup"><span data-stu-id="f87f4-116">A tuple is a lightweight structure that contains two or more fields whose types are predefined.</span></span> <span data-ttu-id="f87f4-117">Кортежи поддерживаются начиная с Visual Basic 2017 г.</span><span class="sxs-lookup"><span data-stu-id="f87f4-117">Tuples are supported starting with Visual Basic 2017.</span></span> <span data-ttu-id="f87f4-118">Кортежи чаще всего используются для возврата нескольких значений из одного вызова метода без необходимости передачи аргументов по ссылке или упаковки возвращаемых полей в более доступная класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="f87f4-118">Tuples are most commonly used to return multiple values from a single method call without having to pass arguments by reference or packaging the returned fields in a more heavy-weight class or structure.</span></span> <span data-ttu-id="f87f4-119">В разделе [кортежей](tuples.md) приведены дополнительные сведения об кортежей.</span><span class="sxs-lookup"><span data-stu-id="f87f4-119">See the [Tuples](tuples.md) topic for more information on tuples.</span></span>
+
+## <a name="array-types"></a><span data-ttu-id="f87f4-120">Типы массивов</span><span class="sxs-lookup"><span data-stu-id="f87f4-120">Array Types</span></span>  
+ <span data-ttu-id="f87f4-121">Нет единого типа данных, включающего в себя все массивы.</span><span class="sxs-lookup"><span data-stu-id="f87f4-121">There is no single data type comprising all arrays.</span></span> <span data-ttu-id="f87f4-122">Тип данных отдельного экземпляра массива определяется следующее:</span><span class="sxs-lookup"><span data-stu-id="f87f4-122">The data type of a particular instance of an array is determined by the following:</span></span>  
   
--   Факт существования массива  
+-   <span data-ttu-id="f87f4-123">Факт существования массива</span><span class="sxs-lookup"><span data-stu-id="f87f4-123">The fact of being an array</span></span>  
   
--   Ранг (размерность) массива  
+-   <span data-ttu-id="f87f4-124">Ранг (число измерений) массива</span><span class="sxs-lookup"><span data-stu-id="f87f4-124">The rank (number of dimensions) of the array</span></span>  
   
--   Тип элемента массива  
+-   <span data-ttu-id="f87f4-125">Тип элемента массива</span><span class="sxs-lookup"><span data-stu-id="f87f4-125">The element type of the array</span></span>  
   
- В частности длина данного измерения не является частью типа данных экземпляра. Это показано в следующем примере.  
+ <span data-ttu-id="f87f4-126">В частности длина данного измерения не является частью типа данных экземпляра.</span><span class="sxs-lookup"><span data-stu-id="f87f4-126">In particular, the length of a given dimension is not part of the instance's data type.</span></span> <span data-ttu-id="f87f4-127">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="f87f4-127">The following example illustrates this.</span></span>  
   
 ```  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -73,21 +60,21 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- В предыдущем примере массив переменных `arrayA` и `arrayB` считаются тот же тип данных — `Byte()` — даже если они инициализируются для различной длины. Переменные `arrayB` и `arrayC` не являются того же типа, так как типы их элементов различны. Переменные `arrayC` и `arrayD` не являются того же типа, так как их ранги различны. Переменные `arrayD` и `arrayE` имеют одинаковый тип — `Short(,)` , так как их ранги и типы элементов одинаковы, даже если `arrayD` еще не инициализирован.  
+ <span data-ttu-id="f87f4-128">В предыдущем примере массив переменных `arrayA` и `arrayB` считаются того же типа данных — `Byte()` , даже если они инициализируются для различной длины.</span><span class="sxs-lookup"><span data-stu-id="f87f4-128">In the preceding example, array variables `arrayA` and `arrayB` are considered to be of the same data type — `Byte()` — even though they are initialized to different lengths.</span></span> <span data-ttu-id="f87f4-129">Переменные `arrayB` и `arrayC` не являются того же типа, так как типы их элементов различны.</span><span class="sxs-lookup"><span data-stu-id="f87f4-129">Variables `arrayB` and `arrayC` are not of the same type because their element types are different.</span></span> <span data-ttu-id="f87f4-130">Переменные `arrayC` и `arrayD` не являются того же типа, так как их ранги различны.</span><span class="sxs-lookup"><span data-stu-id="f87f4-130">Variables `arrayC` and `arrayD` are not of the same type because their ranks are different.</span></span> <span data-ttu-id="f87f4-131">Переменные `arrayD` и `arrayE` имеют одинаковый тип — `Short(,)` , так как их ранги и типы элементов одинаковы, даже если `arrayD` еще не инициализирован.</span><span class="sxs-lookup"><span data-stu-id="f87f4-131">Variables `arrayD` and `arrayE` have the same type — `Short(,)` — because their ranks and element types are the same, even though `arrayD` is not yet initialized.</span></span>  
   
- Дополнительные сведения о массивах см. в разделе [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ <span data-ttu-id="f87f4-132">Дополнительные сведения о массивах см. в разделе [массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="f87f4-132">For more information on arrays, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-## <a name="class-types"></a>Типы классов  
- Нет нет типа данных, включающего в себя все классы. Несмотря на то, что один класс может наследовать от другого класса, каждый является отдельным типом данных. Несколько экземпляров одного класса имеют одинаковый тип данных. Если назначить одну переменную экземпляра класса в другой, не только они имеют тот же тип данных, они указывают на один экземпляр класса в памяти.  
+## <a name="class-types"></a><span data-ttu-id="f87f4-133">Типы классов</span><span class="sxs-lookup"><span data-stu-id="f87f4-133">Class Types</span></span>  
+ <span data-ttu-id="f87f4-134">Нет единого типа данных, включающего в себя все классы.</span><span class="sxs-lookup"><span data-stu-id="f87f4-134">There is no single data type comprising all classes.</span></span> <span data-ttu-id="f87f4-135">Несмотря на то, что один класс может наследовать от другого класса, каждый является отдельным типом данных.</span><span class="sxs-lookup"><span data-stu-id="f87f4-135">Although one class can inherit from another class, each is a separate data type.</span></span> <span data-ttu-id="f87f4-136">Несколько экземпляров одного класса имеют одинаковый тип данных.</span><span class="sxs-lookup"><span data-stu-id="f87f4-136">Multiple instances of the same class are of the same data type.</span></span> <span data-ttu-id="f87f4-137">Если назначить одну переменную экземпляра класса в другой, не только они имеют одинаковый тип данных, они указывают на один экземпляр класса в памяти.</span><span class="sxs-lookup"><span data-stu-id="f87f4-137">If you assign one class instance variable to another, not only do they have the same data type, they point to the same class instance in memory.</span></span>  
   
- Дополнительные сведения о классах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+ <span data-ttu-id="f87f4-138">Дополнительные сведения о классах см. в разделе [объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span><span class="sxs-lookup"><span data-stu-id="f87f4-138">For more information on classes, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Устранение неполадок типы данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Практическое руководство. Хранение нескольких значений в переменной](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+## <a name="see-also"></a><span data-ttu-id="f87f4-139">См. также</span><span class="sxs-lookup"><span data-stu-id="f87f4-139">See Also</span></span>  
+ [<span data-ttu-id="f87f4-140">Типы данных</span><span class="sxs-lookup"><span data-stu-id="f87f4-140">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="f87f4-141">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="f87f4-141">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="f87f4-142">Универсальные типы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f87f4-142">Generic Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="f87f4-143">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="f87f4-143">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="f87f4-144">Преобразования типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f87f4-144">Type Conversions in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [<span data-ttu-id="f87f4-145">Структуры</span><span class="sxs-lookup"><span data-stu-id="f87f4-145">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="f87f4-146">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="f87f4-146">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="f87f4-147">Практическое руководство. Хранение нескольких значений в переменной</span><span class="sxs-lookup"><span data-stu-id="f87f4-147">How to: Hold More Than One Value in a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

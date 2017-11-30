@@ -1,117 +1,116 @@
 ---
-title: "Оператор ReDim (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ReDim"
-  - "vb.Preserve"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "массивы [Visual Basic], и скаляры"
-  - "массивы [Visual Basic], объявление"
-  - "массивы [Visual Basic], измерения"
-  - "массивы [Visual Basic], повторное выделение"
-  - "массивы [Visual Basic], повторная инициализация"
-  - "As - ключевое слово, в операторе ReDim"
-  - "типы данных [Visual Basic], назначение"
-  - "операторы объявления"
-  - "декларации, динамические массивы"
-  - "динамические массивы, ReDim - оператор"
-  - "строки фиксированной длины, объявление"
-  - "Preserve - ключевое слово, ReDim - оператор"
-  - "ReDim - оператор"
-  - "ReDim - оператор, синтаксис"
-  - "скалярные переменные"
-  - "скаляры"
-  - "скаляры, и массивы"
-  - "storage, выделение"
-  - "To - ключевое слово, ReDim - оператор"
-  - "переменные [Visual Basic], скалярный"
+title: "Оператор ReDim (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ReDim
+- vb.Preserve
+helpviewer_keywords:
+- fixed-length strings [Visual Basic], declaring
+- ReDim statement [Visual Basic], syntax
+- dynamic arrays [Visual Basic], ReDim statement
+- arrays [Visual Basic], reallocating
+- arrays [Visual Basic], reinitializing
+- arrays [Visual Basic], dimensions
+- scalars, and arrays
+- scalars
+- declarations [Visual Basic], dynamic arrays
+- variables [Visual Basic], scalar
+- ReDim statement [Visual Basic]
+- data types [Visual Basic], assigning
+- As keyword [Visual Basic], in ReDim statement
+- To keyword [Visual Basic], ReDim statement
+- arrays [Visual Basic], declaring
+- Preserve keyword [Visual Basic], ReDim statement
+- storage [Visual Basic], allocating
+- arrays [Visual Basic], and scalars
+- declaration statements [Visual Basic]
+- scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор ReDim (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Перераспределяет область хранения для переменной массива.  
+# <a name="redim-statement-visual-basic"></a><span data-ttu-id="3f11d-102">Оператор ReDim (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3f11d-102">ReDim Statement (Visual Basic)</span></span>
+<span data-ttu-id="3f11d-103">Перераспределяет область хранения для переменной массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-103">Reallocates storage space for an array variable.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="3f11d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3f11d-104">Syntax</span></span>  
   
 ```  
-ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
+ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="3f11d-105">Части</span><span class="sxs-lookup"><span data-stu-id="3f11d-105">Parts</span></span>  
   
-|Термин|Определение|  
-|------------|-----------------|  
-|`Preserve`|Необязательно.  Модификатор, используемый для сохранения данных в существующем массиве при изменении размера только последнего измерения.|  
-|`name`|Обязательный.  Имя переменной массива.  См. раздел [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Обязательный.  Список границ для всех измерений переопределенного массива.|  
+|<span data-ttu-id="3f11d-106">Термин</span><span class="sxs-lookup"><span data-stu-id="3f11d-106">Term</span></span>|<span data-ttu-id="3f11d-107">Определение</span><span class="sxs-lookup"><span data-stu-id="3f11d-107">Definition</span></span>|  
+|----------|----------------|  
+|`Preserve`|<span data-ttu-id="3f11d-108">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="3f11d-108">Optional.</span></span> <span data-ttu-id="3f11d-109">Модификатор, используемый для сохранения данных в существующем массиве при изменении размера только последнего измерения.</span><span class="sxs-lookup"><span data-stu-id="3f11d-109">Modifier used to preserve the data in the existing array when you change the size of only the last dimension.</span></span>|  
+|`name`|<span data-ttu-id="3f11d-110">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="3f11d-110">Required.</span></span> <span data-ttu-id="3f11d-111">Имя переменной массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-111">Name of the array variable.</span></span> <span data-ttu-id="3f11d-112">В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="3f11d-112">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`boundlist`|<span data-ttu-id="3f11d-113">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="3f11d-113">Required.</span></span> <span data-ttu-id="3f11d-114">Список границ для всех измерений переопределенного массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-114">List of bounds of each dimension of the redefined array.</span></span>|  
   
-## Заметки  
- Для изменения размера одного или нескольких из уже объявленных измерений массива можно использовать оператор `ReDim`.  Если у вас есть большой массив и некоторые из входящих в него элементов больше не требуются, `ReDim` позволяет освободить память, уменьшив размер массива.  Если же массив требует дополнительных элементов, `ReDim` может их добавить.  
+## <a name="remarks"></a><span data-ttu-id="3f11d-115">Примечания</span><span class="sxs-lookup"><span data-stu-id="3f11d-115">Remarks</span></span>  
+ <span data-ttu-id="3f11d-116">Для изменения размера одного или нескольких из уже объявленных измерений массива можно использовать оператор `ReDim`.</span><span class="sxs-lookup"><span data-stu-id="3f11d-116">You can use the `ReDim` statement to change the size of one or more dimensions of an array that has already been declared.</span></span> <span data-ttu-id="3f11d-117">Если у вас есть большой массив и некоторые из входящих в него элементов больше не требуются, `ReDim` позволяет освободить память, уменьшив размер массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-117">If you have a large array and you no longer need some of its elements, `ReDim` can free up memory by reducing the array size.</span></span> <span data-ttu-id="3f11d-118">Если же массив требует дополнительных элементов, `ReDim` может их добавить.</span><span class="sxs-lookup"><span data-stu-id="3f11d-118">On the other hand, if your array needs more elements, `ReDim` can add them.</span></span>  
   
- Оператор `ReDim` предназначен только для массивов.  Он не подходит для скалярных величин \(переменных, содержащих единственное значение\), коллекций или структур.  Обратите внимание, что при объявлении переменной типа `Array` у оператора `ReDim` не будет достаточной информации о типе для создания нового массива.  
+ <span data-ttu-id="3f11d-119">Оператор `ReDim` предназначен только для массивов.</span><span class="sxs-lookup"><span data-stu-id="3f11d-119">The `ReDim` statement is intended only for arrays.</span></span> <span data-ttu-id="3f11d-120">Он не подходит для скалярных величин (переменных, содержащих единственное значение), коллекций или структур.</span><span class="sxs-lookup"><span data-stu-id="3f11d-120">It's not valid on scalars (variables that contain only a single value), collections, or structures.</span></span> <span data-ttu-id="3f11d-121">Обратите внимание, что при объявлении переменной типа `Array` у оператора `ReDim` не будет достаточной информации о типе для создания нового массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-121">Note that if you declare a variable to be of type `Array`, the `ReDim` statement doesn't have sufficient type information to create the new array.</span></span>  
   
- Оператор `ReDim` можно использовать только на уровне процедуры.  В связи с этим контекст объявления для переменной должен быть процедурой; он не может быть исходным файлом, пространством имен, интерфейсом, классом, структурой, модулем или блоком.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ <span data-ttu-id="3f11d-122">Оператор `ReDim` можно использовать только на уровне процедуры.</span><span class="sxs-lookup"><span data-stu-id="3f11d-122">You can use `ReDim` only at procedure level.</span></span> <span data-ttu-id="3f11d-123">В связи с этим контекст объявления для переменной должен быть процедурой; он не может быть исходным файлом, пространством имен, интерфейсом, классом, структурой, модулем или блоком.</span><span class="sxs-lookup"><span data-stu-id="3f11d-123">Therefore, the declaration context for the variable must be a procedure; it can't be a source file, a namespace, an interface, a class, a structure, a module, or a block.</span></span> <span data-ttu-id="3f11d-124">Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="3f11d-124">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
-## Правила  
+## <a name="rules"></a><span data-ttu-id="3f11d-125">Правила</span><span class="sxs-lookup"><span data-stu-id="3f11d-125">Rules</span></span>  
   
--   **Множество переменных.** В одном операторе объявления можно изменить сразу несколько переменных массива и указать для каждой части `name` и `boundlist`.  Переменные разделяются запятыми.  
+-   <span data-ttu-id="3f11d-126">**Несколько переменных.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-126">**Multiple Variables.**</span></span> <span data-ttu-id="3f11d-127">В одном операторе объявления можно изменить сразу несколько переменных массива и указать для каждой части `name` и `boundlist`.</span><span class="sxs-lookup"><span data-stu-id="3f11d-127">You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable.</span></span> <span data-ttu-id="3f11d-128">Переменные разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="3f11d-128">Multiple variables are separated by commas.</span></span>  
   
--   **Границы массива.** Каждая запись в `boundlist` может задавать нижнюю и верхнюю границу измерения.  Нижняя граница всегда 0 \(ноль\).  Верхняя граница представляет собой наибольшее возможное значение индекса для этого измерения, но не длину измерения \(она равна верхней границе плюс один\).  Индекс для каждого измерения может варьироваться от 0 до значения верхней границы.  
+-   <span data-ttu-id="3f11d-129">**Границы массива.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-129">**Array Bounds.**</span></span> <span data-ttu-id="3f11d-130">Каждая запись в `boundlist` может задавать нижнюю и верхнюю границу измерения.</span><span class="sxs-lookup"><span data-stu-id="3f11d-130">Each entry in `boundlist` can specify the lower and upper bounds of that dimension.</span></span> <span data-ttu-id="3f11d-131">Нижняя граница всегда 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="3f11d-131">The lower bound is always 0 (zero).</span></span> <span data-ttu-id="3f11d-132">Верхняя граница представляет собой наибольшее возможное значение индекса для этого измерения, но не длину измерения (она равна верхней границе плюс один).</span><span class="sxs-lookup"><span data-stu-id="3f11d-132">The upper bound is the highest possible index value for that dimension, not the length of the dimension (which is the upper bound plus one).</span></span> <span data-ttu-id="3f11d-133">Индекс для каждого измерения может варьироваться от 0 до значения верхней границы.</span><span class="sxs-lookup"><span data-stu-id="3f11d-133">The index for each dimension can vary from 0 through its upper bound value.</span></span>  
   
-     Число измерений в `boundlist` должно совпадать с исходным числом измерений \(рангом\) массива.  
+     <span data-ttu-id="3f11d-134">Число измерений в `boundlist` должно совпадать с исходным числом измерений (рангом) массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-134">The number of dimensions in `boundlist` must match the original number of dimensions (rank) of the array.</span></span>  
   
--   **Типы данных.** Оператор `ReDim` не может изменить тип данных переменной массива или ее элементов.  
+-   <span data-ttu-id="3f11d-135">**Типы данных.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-135">**Data Types.**</span></span> <span data-ttu-id="3f11d-136">Оператор `ReDim` не может изменить тип данных переменной массива или ее элементов.</span><span class="sxs-lookup"><span data-stu-id="3f11d-136">The `ReDim` statement cannot change the data type of an array variable or its elements.</span></span>  
   
--   **Инициализация.** Оператор `ReDim` не может предоставить новые значения инициализации для элементов массива.  
+-   <span data-ttu-id="3f11d-137">**Инициализация.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-137">**Initialization.**</span></span> <span data-ttu-id="3f11d-138">Оператор `ReDim` не может предоставить новые значения инициализации для элементов массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-138">The `ReDim` statement cannot provide new initialization values for the array elements.</span></span>  
   
--   **Ранг.** Оператор `ReDim` не может изменить ранг \(число измерений\) массива.  
+-   <span data-ttu-id="3f11d-139">**Ранг.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-139">**Rank.**</span></span> <span data-ttu-id="3f11d-140">Оператор `ReDim` не может изменить ранг (число измерений) массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-140">The `ReDim` statement cannot change the rank (the number of dimensions) of the array.</span></span>  
   
--   **Изменение размера с помощью оператора Preserve.** Используя оператор `Preserve`, можно изменить только последнее измерение массива.  Для всех остальных измерений необходимо указывать привязку существующего массива.  
+-   <span data-ttu-id="3f11d-141">**Изменение размеров с помощью оператора Preserve.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-141">**Resizing with Preserve.**</span></span> <span data-ttu-id="3f11d-142">Используя оператор `Preserve`, можно изменить только последнее измерение массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-142">If you use `Preserve`, you can resize only the last dimension of the array.</span></span> <span data-ttu-id="3f11d-143">Для всех остальных измерений необходимо указывать привязку существующего массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-143">For every other dimension, you must specify the bound of the existing array.</span></span>  
   
-     Например, в одномерных массивах можно изменить это измерение и в то же время сохранить все содержимое массива, поскольку изменяется только одно, последнее, измерение.  Если же массив имеет два или больше измерений, то с помощью оператора Preserve можно изменить только последнее измерение массива.`Preserve`  
+     <span data-ttu-id="3f11d-144">Например, в одномерных массивах можно изменить это измерение и в то же время сохранить все содержимое массива, поскольку изменяется только одно, последнее, измерение.</span><span class="sxs-lookup"><span data-stu-id="3f11d-144">For example, if your array has only one dimension, you can resize that dimension and still preserve all the contents of the array, because you are changing the last and only dimension.</span></span> <span data-ttu-id="3f11d-145">Если же массив имеет два или больше измерений, то с помощью оператора Preserve можно изменить только последнее измерение массива.`Preserve`</span><span class="sxs-lookup"><span data-stu-id="3f11d-145">However, if your array has two or more dimensions, you can change the size of only the last dimension if you use `Preserve`.</span></span>  
   
--   **Свойства.** Оператор `ReDim` можно использовать для свойства, которое содержит массив значений.  
+-   <span data-ttu-id="3f11d-146">**Свойства.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-146">**Properties.**</span></span> <span data-ttu-id="3f11d-147">Оператор `ReDim` можно использовать для свойства, которое содержит массив значений.</span><span class="sxs-lookup"><span data-stu-id="3f11d-147">You can use `ReDim` on a property that holds an array of values.</span></span>  
   
-## Поведение  
+## <a name="behavior"></a><span data-ttu-id="3f11d-148">Поведение</span><span class="sxs-lookup"><span data-stu-id="3f11d-148">Behavior</span></span>  
   
--   **Замена массива.** Оператор `ReDim` освобождает существующий массив и создает новый массив с тем же рангом.  Новый массив заменяет освобожденный массив в переменной массива.  
+-   <span data-ttu-id="3f11d-149">**Замена массива.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-149">**Array Replacement.**</span></span> <span data-ttu-id="3f11d-150">`ReDim`освобождает существующий массив и создает новый массив с тем же рангом.</span><span class="sxs-lookup"><span data-stu-id="3f11d-150">`ReDim` releases the existing array and creates a new array with the same rank.</span></span> <span data-ttu-id="3f11d-151">Новый массив заменяет освобожденный массив в переменной массива.</span><span class="sxs-lookup"><span data-stu-id="3f11d-151">The new array replaces the released array in the array variable.</span></span>  
   
--   **Инициализация без использования оператора Preserve.** Если оператор `Preserve` не указан, `ReDim` инициализирует элементы нового массива, используя значение по умолчанию для соответствующего типа данных.  
+-   <span data-ttu-id="3f11d-152">**Инициализация без использования оператора Preserve.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-152">**Initialization without Preserve.**</span></span> <span data-ttu-id="3f11d-153">Если оператор `Preserve` не указан, `ReDim` инициализирует элементы нового массива, используя значение по умолчанию для соответствующего типа данных.</span><span class="sxs-lookup"><span data-stu-id="3f11d-153">If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.</span></span>  
   
--   **Инициализация с использованием оператора Preserve.** Если оператор `Preserve` указан, Visual Basic копирует элементы из существующего массива в новый массив.  
+-   <span data-ttu-id="3f11d-154">**Инициализация с помощью оператора Preserve.**</span><span class="sxs-lookup"><span data-stu-id="3f11d-154">**Initialization with Preserve.**</span></span> <span data-ttu-id="3f11d-155">Если оператор `Preserve` указан, Visual Basic копирует элементы из существующего массива в новый массив.</span><span class="sxs-lookup"><span data-stu-id="3f11d-155">If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.</span></span>  
   
-## Пример  
- В приведенном ниже примере производится увеличение размера последнего измерения динамического массива без потери существующих данных, а затем уменьшение размера массива с частичной потерей данных.  Кроме того, размер массива уменьшается до исходного значения и все элементы массива инициализируются повторно.  
+## <a name="example"></a><span data-ttu-id="3f11d-156">Пример</span><span class="sxs-lookup"><span data-stu-id="3f11d-156">Example</span></span>  
+ <span data-ttu-id="3f11d-157">В приведенном ниже примере производится увеличение размера последнего измерения динамического массива без потери существующих данных, а затем уменьшение размера массива с частичной потерей данных.</span><span class="sxs-lookup"><span data-stu-id="3f11d-157">The following example increases the size of the last dimension of a dynamic array without losing any existing data in the array, and then decreases the size with partial data loss.</span></span> <span data-ttu-id="3f11d-158">Кроме того, размер массива уменьшается до исходного значения и все элементы массива инициализируются повторно.</span><span class="sxs-lookup"><span data-stu-id="3f11d-158">Finally, it decreases the size back to its original value and reinitializes all the array elements.</span></span>  
   
  [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
- Оператор `Dim` создает новый массив с тремя измерениями.  Каждое измерение объявляется с границей 10, поэтому индекс массива для каждого измерения может варьироваться в диапазоне от 0 до 10.  В приведенном ниже описании эти три измерения называются слоем, строкой и столбцом.  
+ <span data-ttu-id="3f11d-159">Оператор `Dim` создает новый массив с тремя измерениями.</span><span class="sxs-lookup"><span data-stu-id="3f11d-159">The `Dim` statement creates a new array with three dimensions.</span></span> <span data-ttu-id="3f11d-160">Каждое измерение объявляется с границей 10, поэтому индекс массива для каждого измерения может варьироваться в диапазоне от 0 до 10.</span><span class="sxs-lookup"><span data-stu-id="3f11d-160">Each dimension is declared with a bound of 10, so the array index for each dimension can range from 0 through 10.</span></span> <span data-ttu-id="3f11d-161">В приведенном ниже описании эти три измерения называются слоем, строкой и столбцом.</span><span class="sxs-lookup"><span data-stu-id="3f11d-161">In the following discussion, the three dimensions are referred to as layer, row, and column.</span></span>  
   
- Первый оператор `ReDim` создает новый массив, который заменяет существующий массив в переменной `intArray`.  Оператор `ReDim` копирует все элементы из существующего массива в новый массив.  Кроме того, он добавляет по десять столбцов в конец каждой строки каждого слоя и инициализирует элементы в этих новых столбцах со значением 0 \(значение параметра `Integer`, который является типом элемента массива, по умолчанию\).  
+ <span data-ttu-id="3f11d-162">Первый оператор `ReDim` создает новый массив, который заменяет существующий массив в переменной `intArray`.</span><span class="sxs-lookup"><span data-stu-id="3f11d-162">The first `ReDim` creates a new array which replaces the existing array in variable `intArray`.</span></span> <span data-ttu-id="3f11d-163">Оператор `ReDim` копирует все элементы из существующего массива в новый массив.</span><span class="sxs-lookup"><span data-stu-id="3f11d-163">`ReDim` copies all the elements from the existing array into the new array.</span></span> <span data-ttu-id="3f11d-164">Кроме того, он добавляет по десять столбцов в конец каждой строки каждого слоя и инициализирует элементы в этих новых столбцах со значением 0 (значение параметра `Integer`, который является типом элемента массива, по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="3f11d-164">It also adds 10 more columns to the end of every row in every layer and initializes the elements in these new columns to 0 (the default value of `Integer`, which is the element type of the array).</span></span>  
   
- Второй оператор `ReDim` создает еще один массив и копирует в него все подходящие элементы.  При этом в каждой строке каждого слоя теряются пять последних столбцов.  Это не проблема, если данные столбцы вам больше не нужны.  Уменьшение размера большого массива позволяет освободить память, которая больше не требуется.  
+ <span data-ttu-id="3f11d-165">Второй оператор `ReDim` создает еще один массив и копирует в него все подходящие элементы.</span><span class="sxs-lookup"><span data-stu-id="3f11d-165">The second `ReDim` creates another new array and copies all the elements that fit.</span></span> <span data-ttu-id="3f11d-166">При этом в каждой строке каждого слоя теряются пять последних столбцов.</span><span class="sxs-lookup"><span data-stu-id="3f11d-166">However, five columns are lost from the end of every row in every layer.</span></span> <span data-ttu-id="3f11d-167">Это не проблема, если данные столбцы вам больше не нужны.</span><span class="sxs-lookup"><span data-stu-id="3f11d-167">This is not a problem if you have finished using these columns.</span></span> <span data-ttu-id="3f11d-168">Уменьшение размера большого массива позволяет освободить память, которая больше не требуется.</span><span class="sxs-lookup"><span data-stu-id="3f11d-168">Reducing the size of a large array can free up memory that you no longer need.</span></span>  
   
- Третий оператор `ReDim` создает еще один массив и удаляет еще пять столбцов в конце каждой строки каждого слоя.  В данном случае он не копирует существующие элементы.  Этот оператор возвращает массиву первоначальный размер.  Поскольку оператор не включает модификатор `Preserve`, он приводит все элементы массива к исходным значениям по умолчанию.  
+ <span data-ttu-id="3f11d-169">Третий оператор `ReDim` создает еще один массив и удаляет еще пять столбцов в конце каждой строки каждого слоя.</span><span class="sxs-lookup"><span data-stu-id="3f11d-169">The third `ReDim` creates another new array and removes another five columns from the end of every row in every layer.</span></span> <span data-ttu-id="3f11d-170">В данном случае он не копирует существующие элементы.</span><span class="sxs-lookup"><span data-stu-id="3f11d-170">This time it does not copy any existing elements.</span></span> <span data-ttu-id="3f11d-171">Этот оператор возвращает массиву первоначальный размер.</span><span class="sxs-lookup"><span data-stu-id="3f11d-171">This statement reverts the array to its original size.</span></span> <span data-ttu-id="3f11d-172">Поскольку оператор не включает модификатор `Preserve`, он приводит все элементы массива к исходным значениям по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3f11d-172">Because the statement doesn't include the `Preserve` modifier, it sets all array elements to their original default values.</span></span>  
   
- Дополнительные примеры см. в разделе [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ <span data-ttu-id="3f11d-173">Дополнительные примеры см. в разделе [массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="3f11d-173">For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-## См. также  
- <xref:System.IndexOutOfRangeException>   
- [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Оператор Erase](../../../visual-basic/language-reference/statements/erase-statement.md)   
- [Nothing](../../../visual-basic/language-reference/nothing.md)   
- [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="3f11d-174">См. также</span><span class="sxs-lookup"><span data-stu-id="3f11d-174">See Also</span></span>  
+ <xref:System.IndexOutOfRangeException>  
+ [<span data-ttu-id="3f11d-175">Оператор Const</span><span class="sxs-lookup"><span data-stu-id="3f11d-175">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="3f11d-176">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="3f11d-176">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="3f11d-177">Оператор Erase</span><span class="sxs-lookup"><span data-stu-id="3f11d-177">Erase Statement</span></span>](../../../visual-basic/language-reference/statements/erase-statement.md)  
+ [<span data-ttu-id="3f11d-178">Nothing</span><span class="sxs-lookup"><span data-stu-id="3f11d-178">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)  
+ [<span data-ttu-id="3f11d-179">Массивы</span><span class="sxs-lookup"><span data-stu-id="3f11d-179">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

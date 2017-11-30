@@ -1,176 +1,221 @@
 ---
-title: "Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic) | Документы Microsoft"
+title: "Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adc58e081cd9b874a841d84b11d92cbffb6ba6b8
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)
-При внедрении информации о типе из управляемой сборки со строгими именами могут слабую типами в приложении для достижения независимости версий. То есть программы могут записываться в использовать типы из нескольких версий управляемой библиотеки без повторной компиляции для каждой версии.  
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a><span data-ttu-id="e0561-102">Пошаговое руководство: Внедрение типов из управляемых сборок в Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0561-102">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)</span></span>
+<span data-ttu-id="e0561-103">Внедряя сведения о типе из управляемой сборки со строгим именем, можно свободно объединять типы в приложении, делая версию независимой.</span><span class="sxs-lookup"><span data-stu-id="e0561-103">If you embed type information from a strong-named managed assembly, you can loosely couple types in an application to achieve version independence.</span></span> <span data-ttu-id="e0561-104">Это означает, что в программе можно использовать типы из нескольких версий управляемой библиотеки, т. е. необходимость компилировать каждую версию отдельно отпадает.</span><span class="sxs-lookup"><span data-stu-id="e0561-104">That is, your program can be written to use types from multiple versions of a managed library without having to be recompiled for each version.</span></span>  
   
- Внедрение типа часто используется с COM-взаимодействием, например приложение, которое использует объекты автоматизации Microsoft Office. Внедрение данных о типе позволяет одному построению программы работать с различными версиями Microsoft Office на разных компьютерах. Тем не менее можно также использовать тип внедрение с полностью управляемое решение.  
+ <span data-ttu-id="e0561-105">Внедрение типов часто используется с COM-взаимодействием, например в приложениях, использующих объекты автоматизации из Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="e0561-105">Type embedding is frequently used with COM interop, such as an application that uses automation objects from Microsoft Office.</span></span> <span data-ttu-id="e0561-106">Сведения о типе внедрения позволяют одной и той же сборке программы работать с различными версиями Microsoft Office на разных компьютерах.</span><span class="sxs-lookup"><span data-stu-id="e0561-106">Embedding type information enables the same build of a program to work with different versions of Microsoft Office on different computers.</span></span> <span data-ttu-id="e0561-107">Тем не менее внедрение типа можно также использовать с полностью управляемым решением.</span><span class="sxs-lookup"><span data-stu-id="e0561-107">However, you can also use type embedding with a fully managed solution.</span></span>  
   
- Сведения о типе может быть внедрен из сборки, которая имеет следующие характеристики:  
+ <span data-ttu-id="e0561-108">Сведения о типе можно внедрить из сборки, имеющей следующие характеристики:</span><span class="sxs-lookup"><span data-stu-id="e0561-108">Type information can be embedded from an assembly that has the following characteristics:</span></span>  
   
--   Сборка предоставляет по крайней мере один открытый интерфейс.  
+-   <span data-ttu-id="e0561-109">Сборка предоставляет по крайней мере один открытый интерфейс.</span><span class="sxs-lookup"><span data-stu-id="e0561-109">The assembly exposes at least one public interface.</span></span>  
   
--   Внедренные интерфейсы отмечены `ComImport` атрибут и `Guid` атрибута (и уникальный идентификатор GUID).  
+-   <span data-ttu-id="e0561-110">Внедренные интерфейсы снабжаются аннотацией с указанием атрибута `ComImport` и атрибута `Guid` (уникальный GUID).</span><span class="sxs-lookup"><span data-stu-id="e0561-110">The embedded interfaces are annotated with a `ComImport` attribute and a `Guid` attribute (and a unique GUID).</span></span>  
   
--   Сборка отмечена `ImportedFromTypeLib` атрибут или `PrimaryInteropAssembly` атрибут и уровня сборки `Guid` атрибута. (По умолчанию шаблоны проектов Visual Basic включают уровня сборки `Guid` атрибута.)  
+-   <span data-ttu-id="e0561-111">Сборка снабжается аннотацией с указанием атрибута `ImportedFromTypeLib` или атрибута `PrimaryInteropAssembly`, а также атрибута сборки `Guid`.</span><span class="sxs-lookup"><span data-stu-id="e0561-111">The assembly is annotated with the `ImportedFromTypeLib` attribute or the `PrimaryInteropAssembly` attribute, and an assembly-level `Guid` attribute.</span></span> <span data-ttu-id="e0561-112">(По умолчанию шаблоны проектов Visual Basic содержат уровня сборки `Guid` атрибута.)</span><span class="sxs-lookup"><span data-stu-id="e0561-112">(By default, Visual Basic project templates include an assembly-level `Guid` attribute.)</span></span>  
   
- После указания открытых интерфейсов, которые могут быть внедрены, можно создать классы среды выполнения, которые реализуют эти интерфейсы. Клиентская программа встраивает сведения о типе для этих интерфейсов во время разработки, ссылаясь на сборку, содержащую открытые интерфейсы и параметр `Embed Interop Types` ссылку на свойство `True`. Это эквивалентно с помощью компилятора командной строки и ссылки на сборки с помощью `/link` параметр компилятора. Клиентская программа может затем загрузить экземпляры объектов среды выполнения, типизированного как эти интерфейсы. При создании новой версии сборки со строгими именами среды выполнения, клиентская программа не нужно повторно компилировать с обновленной сборкой среды выполнения. Вместо этого клиентская программа будет использовать любой сборки среды выполнения доступна версия, используя внедренные данные о типе для открытых интерфейсов.  
+ <span data-ttu-id="e0561-113">После того как открытые интерфейсы, доступные для внедрения, будут указаны, можно создать реализующие их классы среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="e0561-113">After you have specified the public interfaces that can be embedded, you can create runtime classes that implement those interfaces.</span></span> <span data-ttu-id="e0561-114">Во время разработки клиентская программа встраивает сведения о типе для этих интерфейсов, ссылаясь на сборку, содержащую открытые интерфейсы и присваивая свойству `Embed Interop Types` ссылки значение `True`.</span><span class="sxs-lookup"><span data-stu-id="e0561-114">A client program can then embed the type information for those interfaces at design time by referencing the assembly that contains the public interfaces and setting the `Embed Interop Types` property of the reference to `True`.</span></span> <span data-ttu-id="e0561-115">Это эквивалентно использованию компилятора командной строки и ссылки на сборку с помощью параметра компилятора `/link`.</span><span class="sxs-lookup"><span data-stu-id="e0561-115">This is equivalent to using the command line compiler and referencing the assembly by using the `/link` compiler option.</span></span> <span data-ttu-id="e0561-116">После этого клиентская программа может загружать экземпляры объектов среды выполнения, типизированные как указанные интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="e0561-116">The client program can then load instances of your runtime objects typed as those interfaces.</span></span> <span data-ttu-id="e0561-117">При создании новой версии сборки среды выполнения со строгим именем повторная компиляция клиентской программы с обновленной сборкой среды выполнения не требуется.</span><span class="sxs-lookup"><span data-stu-id="e0561-117">If you create a new version of your strong-named runtime assembly, the client program does not have to be recompiled with the updated runtime assembly.</span></span> <span data-ttu-id="e0561-118">Клиентская программа продолжает работать с той версией сборки среды выполнения, которая ей доступна, используя сведения о внедренном типе для открытых интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="e0561-118">Instead, the client program continues to use whichever version of the runtime assembly is available to it, using the embedded type information for the public interfaces.</span></span>  
   
- Поскольку основная функция внедрения типа — поддержка внедрения информации о типе из сборок взаимодействия COM, при внедрении информации о типе в полностью управляемое решение, применяются следующие ограничения:  
+ <span data-ttu-id="e0561-119">Поскольку основной функцией внедрения типа является поддержка внедрения сведений о типе из сборок COM-взаимодействия, при внедрении сведений о типе в полностью управляемое решение применяются следующие ограничения:</span><span class="sxs-lookup"><span data-stu-id="e0561-119">Because the primary function of type embedding is to support embedding of type information from COM interop assemblies, the following limitations apply when you embed type information in a fully managed solution:</span></span>  
   
--   Внедряются только атрибуты, специфичные для COM-взаимодействия; другие атрибуты игнорируются.  
+-   <span data-ttu-id="e0561-120">Внедряются только атрибуты, характерные для COM-взаимодействия; другие атрибуты игнорируются.</span><span class="sxs-lookup"><span data-stu-id="e0561-120">Only attributes specific to COM interop are embedded; other attributes are ignored.</span></span>  
   
--   Если тип использует универсальные параметры и тип универсального параметра является внедренным типом, этот тип не может использоваться через границы сборок. Примеры использования через границы сборок включают вызов метода из другой сборки или тип является производным от типа, определенного в другой сборке.  
+-   <span data-ttu-id="e0561-121">Если тип включает универсальные параметры внедренного типа, использовать этот тип как границу сборки нельзя.</span><span class="sxs-lookup"><span data-stu-id="e0561-121">If a type uses generic parameters and the type of the generic parameter is an embedded type, that type cannot be used across an assembly boundary.</span></span> <span data-ttu-id="e0561-122">Граница сборки пересекается, например, при вызове метода из другой сборки или выведении типа из типа, определенного в другой сборке.</span><span class="sxs-lookup"><span data-stu-id="e0561-122">Examples of crossing an assembly boundary include calling a method from another assembly or a deriving a type from a type defined in another assembly.</span></span>  
   
--   Константы не внедряются.  
+-   <span data-ttu-id="e0561-123">Константы не внедряются.</span><span class="sxs-lookup"><span data-stu-id="e0561-123">Constants are not embedded.</span></span>  
   
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>Класс не поддерживает внедренный тип в качестве ключа.</xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> Можно реализовать собственный тип словаря для поддержки внедренного типа в качестве ключа.  
+-   <span data-ttu-id="e0561-124">Класс <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> не поддерживает использование внедренного типа в качестве ключа.</span><span class="sxs-lookup"><span data-stu-id="e0561-124">The <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> class does not support an embedded type as a key.</span></span> <span data-ttu-id="e0561-125">Для поддержки внедренного типа в качестве ключа можно реализовать свой собственный тип словаря.</span><span class="sxs-lookup"><span data-stu-id="e0561-125">You can implement your own dictionary type to support an embedded type as a key.</span></span>  
   
- В этом пошаговом руководстве необходимо следующее:  
+ <span data-ttu-id="e0561-126">В этом пошаговом руководстве выполняются следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="e0561-126">In this walkthrough, you will do the following:</span></span>  
   
--   Создайте сборку строгим именем, которая имеет открытый интерфейс, содержащий сведения о типе, который может быть внедрен.  
+-   <span data-ttu-id="e0561-127">Создайте сборку со строгим именем и открытым интерфейсом, содержащим сведения о типе, который может быть внедрен.</span><span class="sxs-lookup"><span data-stu-id="e0561-127">Create a strong-named assembly that has a public interface that contains type information that can be embedded.</span></span>  
   
--   Создание сборки со строгим именем, которая реализует открытый интерфейс.  
+-   <span data-ttu-id="e0561-128">Создайте сборку среды выполнения со строгим именем, реализующую открытый интерфейс.</span><span class="sxs-lookup"><span data-stu-id="e0561-128">Create a strong-named runtime assembly that implements that public interface.</span></span>  
   
--   Создание клиентской программы, которая включает сведения о типе из открытого интерфейса и создает экземпляр класса из сборки среды выполнения.  
+-   <span data-ttu-id="e0561-129">Создайте клиентскую программу, внедряющую сведения о типе из открытого интерфейса и создающую экземпляр класса из сборки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="e0561-129">Create a client program that embeds the type information from the public interface and creates an instance of the class from the runtime assembly.</span></span>  
   
--   Изменение и повторное построение сборки среды выполнения.  
+-   <span data-ttu-id="e0561-130">Внесите изменения и создайте сборку среды выполнения заново.</span><span class="sxs-lookup"><span data-stu-id="e0561-130">Modify and rebuild the runtime assembly.</span></span>  
   
--   Запустите программу клиента, чтобы увидеть, что новая версия сборки среды выполнения используется без повторной компиляции клиентской программы.  
+-   <span data-ttu-id="e0561-131">Запустите клиентскую программу, чтобы увидеть, что новая версия сборки среды выполнения позволяет обойтись без повторной компиляции клиентской программы.</span><span class="sxs-lookup"><span data-stu-id="e0561-131">Run the client program to see that the new version of the runtime assembly is being used without having to recompile the client program.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-an-interface"></a>Создание интерфейса  
+## <a name="creating-an-interface"></a><span data-ttu-id="e0561-132">Создание интерфейса</span><span class="sxs-lookup"><span data-stu-id="e0561-132">Creating an Interface</span></span>  
   
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Создание проекта интерфейса эквивалентности типа  
+#### <a name="to-create-the-type-equivalence-interface-project"></a><span data-ttu-id="e0561-133">Создание проекта интерфейса для эквивалентности типа</span><span class="sxs-lookup"><span data-stu-id="e0561-133">To create the type equivalence interface project</span></span>  
   
-1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**.  
+1.  <span data-ttu-id="e0561-134">В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.</span><span class="sxs-lookup"><span data-stu-id="e0561-134">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-2.  В **новый проект** в диалоговом **типы проектов** область, убедитесь, что **Windows** выбран. Выберите **библиотеки классов** в **шаблоны** области. В **имя** введите `TypeEquivalenceInterface`, а затем нажмите кнопку **ОК**. Создан новый проект.  
+2.  <span data-ttu-id="e0561-135">Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**.</span><span class="sxs-lookup"><span data-stu-id="e0561-135">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="e0561-136">Выберите **Библиотеки классов** в области **Шаблоны**.</span><span class="sxs-lookup"><span data-stu-id="e0561-136">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="e0561-137">В поле **Имя** введите `TypeEquivalenceInterface` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-137">In the **Name** box, type `TypeEquivalenceInterface`, and then click **OK**.</span></span> <span data-ttu-id="e0561-138">Проект создан.</span><span class="sxs-lookup"><span data-stu-id="e0561-138">The new project is created.</span></span>  
   
-3.  В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и выберите **переименование**. Переименуйте файл `ISampleInterface.vb` и нажмите клавишу ВВОД. Переименование файла также Переименуйте класс в `ISampleInterface`. Этот класс будет представлять открытый интерфейс для класса.  
+3.  <span data-ttu-id="e0561-139">В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и нажмите кнопку **переименование**.</span><span class="sxs-lookup"><span data-stu-id="e0561-139">In **Solution Explorer**, right-click the Class1.vb file and click **Rename**.</span></span> <span data-ttu-id="e0561-140">Измените имя файла на `ISampleInterface.vb` и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="e0561-140">Rename the file to `ISampleInterface.vb` and press ENTER.</span></span> <span data-ttu-id="e0561-141">При переименовании файла класс также будет переименован в `ISampleInterface`.</span><span class="sxs-lookup"><span data-stu-id="e0561-141">Renaming the file will also rename the class to `ISampleInterface`.</span></span> <span data-ttu-id="e0561-142">Этот класс будет представлять открытый интерфейс для класса.</span><span class="sxs-lookup"><span data-stu-id="e0561-142">This class will represent the public interface for the class.</span></span>  
   
-4.  Щелкните правой кнопкой мыши проект TypeEquivalenceInterface и нажмите кнопку **свойства**. Откройте вкладку **Компиляция**. Задать выходной путь к местоположению на компьютере разработчика, такие как `C:\TypeEquivalenceSample`. Это расположение также будет использоваться позже в этом пошаговом руководстве.  
+4.  <span data-ttu-id="e0561-143">Щелкните проект TypeEquivalenceInterface правой кнопкой мыши и выберите **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="e0561-143">Right-click the TypeEquivalenceInterface project and click **Properties**.</span></span> <span data-ttu-id="e0561-144">Откройте вкладку **Компиляция**. Укажите выходной путь к местоположению, существующему на компьютере разработчика, например `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="e0561-144">Click the **Compile** tab. Set the output path to a valid location on your development computer, such as `C:\TypeEquivalenceSample`.</span></span> <span data-ttu-id="e0561-145">Это расположение также пригодится при последующей работе с данным пошаговым руководством.</span><span class="sxs-lookup"><span data-stu-id="e0561-145">This location will also be used in a later step in this walkthrough.</span></span>  
   
-5.  Не выходя свойства проекта, откройте **подписи** вкладки. Выберите **подписать сборку** параметр. В **выберите файл ключей строгого имени** выберите ** <New...> **.</New...> В **имя файла ключа** введите `key.snk`. Очистить **защитить мой файл ключей паролем** флажок. Нажмите кнопку **ОК**.  
+5.  <span data-ttu-id="e0561-146">Не закрывая окно редактирования свойств проекта, откройте вкладку **Подписывание**. Выберите параметр **Подписать сборку**.</span><span class="sxs-lookup"><span data-stu-id="e0561-146">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="e0561-147">В списке **Выберите файл ключа строгого имени** выберите **<Создать...>**.</span><span class="sxs-lookup"><span data-stu-id="e0561-147">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="e0561-148">В поле **Имя файла ключа** введите `key.snk`.</span><span class="sxs-lookup"><span data-stu-id="e0561-148">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="e0561-149">Снимите флажок **Защитить файл ключа паролем**.</span><span class="sxs-lookup"><span data-stu-id="e0561-149">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="e0561-150">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-150">Click **OK**.</span></span>  
   
-6.  Откройте файл ISampleInterface.vb. Добавьте следующий код в файле класса ISampleInterface для создания интерфейса ISampleInterface.  
+6.  <span data-ttu-id="e0561-151">Откройте файл ISampleInterface.vb.</span><span class="sxs-lookup"><span data-stu-id="e0561-151">Open the ISampleInterface.vb file.</span></span> <span data-ttu-id="e0561-152">Добавьте следующий код в файл класса ISampleInterface, чтобы создать интерфейс ISampleInterface.</span><span class="sxs-lookup"><span data-stu-id="e0561-152">Add the following code to the ISampleInterface class file to create the ISampleInterface interface.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-7.  На **средства** меню, щелкните **создать Guid**. В **создать GUID** диалоговом нажмите кнопку **формат реестра** и нажмите кнопку **копирования**. Нажмите кнопку **Выход**.  
+    ```vb  
+    Imports System.Runtime.InteropServices  
   
-8.  В `Guid` атрибут, удалите образец GUID и вставьте идентификатор GUID, скопированный из **создать GUID** диалоговое окно. Удалите фигурные скобки ({}) из скопированного GUID.  
+    <ComImport()>  
+    <Guid("8DA56996-A151-4136-B474-32784559F6DF")>  
+    Public Interface ISampleInterface  
+        Sub GetUserInput()  
+        ReadOnly Property UserInput As String  
+    End Interface  
+    ```  
   
-9. На **проекта** меню, щелкните **Показать все файлы**.  
+7.  <span data-ttu-id="e0561-153">В меню **Сервис** выберите пункт **Создать GUID**.</span><span class="sxs-lookup"><span data-stu-id="e0561-153">On the **Tools** menu, click **Create Guid**.</span></span> <span data-ttu-id="e0561-154">В диалоговом окне **Создание GUID** нажмите кнопку **Формат реестра**, а затем **Копировать**.</span><span class="sxs-lookup"><span data-stu-id="e0561-154">In the **Create GUID** dialog box, click **Registry Format** and then click **Copy**.</span></span> <span data-ttu-id="e0561-155">Нажмите кнопку **Выход**.</span><span class="sxs-lookup"><span data-stu-id="e0561-155">Click **Exit**.</span></span>  
   
-10. В **обозревателе решений**, разверните **Мой проект** папки. Дважды щелкните файл AssemblyInfo.vb. Добавьте следующий атрибут к файлу.  
+8.  <span data-ttu-id="e0561-156">В атрибуте `Guid` удалите пример GUID и вставьте GUID, скопированный из диалогового окна **Создание GUID**.</span><span class="sxs-lookup"><span data-stu-id="e0561-156">In the `Guid` attribute, delete the sample GUID and paste in the GUID that you copied from the **Create GUID** dialog box.</span></span> <span data-ttu-id="e0561-157">Удалите фигурные скобки ({}) из скопированного GUID.</span><span class="sxs-lookup"><span data-stu-id="e0561-157">Remove the braces ({}) from the copied GUID.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-     Сохраните файл.  
+9. <span data-ttu-id="e0561-158">В меню **Проект** выберите пункт **Показать все файлы**.</span><span class="sxs-lookup"><span data-stu-id="e0561-158">On the **Project** menu, click **Show All Files**.</span></span>  
   
-11. Сохраните проект.  
+10. <span data-ttu-id="e0561-159">В **обозревателе решений**, разверните **Мой проект** папки.</span><span class="sxs-lookup"><span data-stu-id="e0561-159">In **Solution Explorer**, expand the **My Project** folder.</span></span> <span data-ttu-id="e0561-160">Дважды щелкните AssemblyInfo.vb.</span><span class="sxs-lookup"><span data-stu-id="e0561-160">Double-click the AssemblyInfo.vb.</span></span> <span data-ttu-id="e0561-161">Добавьте в файл следующий атрибут.</span><span class="sxs-lookup"><span data-stu-id="e0561-161">Add the following attribute to the file.</span></span>  
   
-12. Щелкните правой кнопкой мыши проект TypeEquivalenceInterface и нажмите кнопку **сборки**. DLL-файла библиотеки классов компилируется и сохранен на выходной путь построения (например, C:\TypeEquivalenceSample).  
+    ```vb  
+    <Assembly: ImportedFromTypeLib("")>  
+    ```  
   
-## <a name="creating-a-runtime-class"></a>Создание класса среды выполнения  
+     <span data-ttu-id="e0561-162">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="e0561-162">Save the file.</span></span>  
   
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Создание проекта среды выполнения эквивалентности типа  
+11. <span data-ttu-id="e0561-163">Сохраните проект.</span><span class="sxs-lookup"><span data-stu-id="e0561-163">Save the project.</span></span>  
   
-1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**.  
+12. <span data-ttu-id="e0561-164">Щелкните проект TypeEquivalenceInterface правой кнопкой мыши и выберите пункт **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="e0561-164">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="e0561-165">DLL-файл библиотеки классов компилируется и сохраняется по указанному выходному пути для сборки (например, C:\TypeEquivalenceSample).</span><span class="sxs-lookup"><span data-stu-id="e0561-165">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-2.  В **новый проект** в диалоговом **типы проектов** область, убедитесь, что **Windows** выбран. Выберите **библиотеки классов** в **шаблоны** области. В **имя** введите `TypeEquivalenceRuntime`, а затем нажмите кнопку **ОК**. Создан новый проект.  
+## <a name="creating-a-runtime-class"></a><span data-ttu-id="e0561-166">Создание класса среды выполнения</span><span class="sxs-lookup"><span data-stu-id="e0561-166">Creating a Runtime Class</span></span>  
   
-3.  В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и выберите **переименование**. Переименуйте файл `SampleClass.vb` и нажмите клавишу ВВОД. Переименование файла также класс будет переименован в `SampleClass`. Этот класс будет реализовывать `ISampleInterface` интерфейса.  
+#### <a name="to-create-the-type-equivalence-runtime-project"></a><span data-ttu-id="e0561-167">Создание проекта среды выполнения для эквивалентности типа</span><span class="sxs-lookup"><span data-stu-id="e0561-167">To create the type equivalence runtime project</span></span>  
   
-4.  Щелкните правой кнопкой мыши проект TypeEquivalenceRuntime и нажмите кнопку **свойства**. Откройте вкладку **Компиляция**. В то же расположение, которое используется в проекте TypeEquivalenceInterface, например, задайте для выходной путь `C:\TypeEquivalenceSample`.  
+1.  <span data-ttu-id="e0561-168">В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.</span><span class="sxs-lookup"><span data-stu-id="e0561-168">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-5.  Не выходя свойства проекта, откройте **подписи** вкладки. Выберите **подписать сборку** параметр. В **выберите файл ключей строгого имени** выберите ** <New...> **.</New...> В **имя файла ключа** введите `key.snk`. Очистить **защитить мой файл ключей паролем** флажок. Нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="e0561-169">Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**.</span><span class="sxs-lookup"><span data-stu-id="e0561-169">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="e0561-170">Выберите **Библиотеки классов** в области **Шаблоны**.</span><span class="sxs-lookup"><span data-stu-id="e0561-170">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="e0561-171">В поле **Имя** введите `TypeEquivalenceRuntime` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-171">In the **Name** box, type `TypeEquivalenceRuntime`, and then click **OK**.</span></span> <span data-ttu-id="e0561-172">Проект создан.</span><span class="sxs-lookup"><span data-stu-id="e0561-172">The new project is created.</span></span>  
   
-6.  Щелкните правой кнопкой мыши проект TypeEquivalenceRuntime и нажмите кнопку **добавить ссылку**. Щелкните **Обзор** вкладку и перейдите в папку выходных данных. Выберите файл TypeEquivalenceInterface.dll и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="e0561-173">В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и нажмите кнопку **переименование**.</span><span class="sxs-lookup"><span data-stu-id="e0561-173">In **Solution Explorer**, right-click the Class1.vb file and click **Rename**.</span></span> <span data-ttu-id="e0561-174">Измените имя файла на `SampleClass.vb` и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="e0561-174">Rename the file to `SampleClass.vb` and press ENTER.</span></span> <span data-ttu-id="e0561-175">При переименовании файла класс также будет переименован в `SampleClass`.</span><span class="sxs-lookup"><span data-stu-id="e0561-175">Renaming the file also renames the class to `SampleClass`.</span></span> <span data-ttu-id="e0561-176">Этот класс реализует интерфейс `ISampleInterface`.</span><span class="sxs-lookup"><span data-stu-id="e0561-176">This class will implement the `ISampleInterface` interface.</span></span>  
   
-7.  На **проекта** меню, щелкните **Показать все файлы**.  
+4.  <span data-ttu-id="e0561-177">Щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="e0561-177">Right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="e0561-178">Откройте вкладку **Компиляция**. Укажите выходной путь, ведущий в то же расположение, которое вы использовали в проекте TypeEquivalenceInterface, например `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="e0561-178">Click the **Compile** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-8.  В **обозревателе решений**, разверните **ссылки** папки. Выберите ссылку TypeEquivalenceInterface. В окне свойств для ссылки на TypeEquivalenceInterface **версии** свойства **False**.  
+5.  <span data-ttu-id="e0561-179">Не закрывая окно редактирования свойств проекта, откройте вкладку **Подписывание**. Выберите параметр **Подписать сборку**.</span><span class="sxs-lookup"><span data-stu-id="e0561-179">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="e0561-180">В списке **Выберите файл ключа строгого имени** выберите **<Создать...>**.</span><span class="sxs-lookup"><span data-stu-id="e0561-180">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="e0561-181">В поле **Имя файла ключа** введите `key.snk`.</span><span class="sxs-lookup"><span data-stu-id="e0561-181">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="e0561-182">Снимите флажок **Защитить файл ключа паролем**.</span><span class="sxs-lookup"><span data-stu-id="e0561-182">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="e0561-183">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-183">Click **OK**.</span></span>  
   
-9. Добавьте следующий код в файл класса SampleClass создание класса SampleClass.  
+6.  <span data-ttu-id="e0561-184">Щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите пункт **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="e0561-184">Right-click the TypeEquivalenceRuntime project and click **Add Reference**.</span></span> <span data-ttu-id="e0561-185">Откройте вкладку **Обзор** и перейдите в папку выходного пути.</span><span class="sxs-lookup"><span data-stu-id="e0561-185">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="e0561-186">Выберите файл TypeEquivalenceInterface.dll и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-186">Select the TypeEquivalenceInterface.dll file and click **OK**.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-10. Сохраните проект.  
+7.  <span data-ttu-id="e0561-187">В меню **Проект** выберите пункт **Показать все файлы**.</span><span class="sxs-lookup"><span data-stu-id="e0561-187">On the **Project** menu, click **Show All Files**.</span></span>  
   
-11. Щелкните правой кнопкой мыши проект TypeEquivalenceRuntime и нажмите кнопку **сборки**. DLL-файла библиотеки классов компилируется и сохранен на выходной путь построения (например, C:\TypeEquivalenceSample).  
+8.  <span data-ttu-id="e0561-188">В **обозревателе решений** разверните папку **Ссылки**.</span><span class="sxs-lookup"><span data-stu-id="e0561-188">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="e0561-189">Выберите ссылку TypeEquivalenceInterface.</span><span class="sxs-lookup"><span data-stu-id="e0561-189">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="e0561-190">В окне свойств для ссылки TypeEquivalenceInterface присвойте свойству **Указанная версия** значение **False**.</span><span class="sxs-lookup"><span data-stu-id="e0561-190">In the Properties window for the TypeEquivalenceInterface reference, set the **Specific Version** property to **False**.</span></span>  
   
-## <a name="creating-a-client-project"></a>Создание клиентского проекта  
+9. <span data-ttu-id="e0561-191">Добавьте следующий код в файл класса SampleClass, чтобы создать класс SampleClass.</span><span class="sxs-lookup"><span data-stu-id="e0561-191">Add the following code to the SampleClass class file to create the SampleClass class.</span></span>  
   
-#### <a name="to-create-the-type-equivalence-client-project"></a>Создание проекта клиента эквивалентности типа  
+    ```vb  
+    Imports TypeEquivalenceInterface  
   
-1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**.  
+    Public Class SampleClass  
+        Implements ISampleInterface  
   
-2.  В **новый проект** в диалоговом **типы проектов** область, убедитесь, что **Windows** выбран. Выберите **консольное приложение** в **шаблоны** области. В **имя** введите `TypeEquivalenceClient`, а затем нажмите кнопку **ОК**. Создан новый проект.  
+        Private p_UserInput As String  
+        Public ReadOnly Property UserInput() As String Implements ISampleInterface.UserInput  
+            Get  
+                Return p_UserInput  
+            End Get  
+        End Property  
   
-3.  Щелкните правой кнопкой мыши проект TypeEquivalenceClient и нажмите кнопку **свойства**. Откройте вкладку **Компиляция**. В то же расположение, которое используется в проекте TypeEquivalenceInterface, например, задайте для выходной путь `C:\TypeEquivalenceSample`.  
+        Public Sub GetUserInput() Implements ISampleInterface.GetUserInput  
+            Console.WriteLine("Please enter a value:")  
+            p_UserInput = Console.ReadLine()  
+        End Sub  
+    End Class  
+    ```  
   
-4.  Щелкните правой кнопкой мыши проект TypeEquivalenceClient и нажмите кнопку **добавить ссылку**. Щелкните **Обзор** вкладку и перейдите в папку выходных данных. Выберите файл TypeEquivalenceInterface.dll (не TypeEquivalenceRuntime.dll) и нажмите кнопку **ОК**.  
+10. <span data-ttu-id="e0561-192">Сохраните проект.</span><span class="sxs-lookup"><span data-stu-id="e0561-192">Save the project.</span></span>  
   
-5.  На **проекта** меню, щелкните **Показать все файлы**.  
+11. <span data-ttu-id="e0561-193">Щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите пункт **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="e0561-193">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="e0561-194">DLL-файл библиотеки классов компилируется и сохраняется по указанному выходному пути для сборки (например, C:\TypeEquivalenceSample).</span><span class="sxs-lookup"><span data-stu-id="e0561-194">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-6.  В **обозревателе решений**, разверните **ссылки** папки. Выберите ссылку TypeEquivalenceInterface. В окне свойств для ссылки на TypeEquivalenceInterface **Embed Interop Types** свойства **True**.  
+## <a name="creating-a-client-project"></a><span data-ttu-id="e0561-195">Создание проекта клиента</span><span class="sxs-lookup"><span data-stu-id="e0561-195">Creating a Client Project</span></span>  
   
-7.  Добавьте следующий код в файл Module1.vb для создания клиентской программы.  
+#### <a name="to-create-the-type-equivalence-client-project"></a><span data-ttu-id="e0561-196">Создание проекта клиента для эквивалентности типа</span><span class="sxs-lookup"><span data-stu-id="e0561-196">To create the type equivalence client project</span></span>  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-8.  Нажмите CTRL + F5, чтобы построить и запустить программу.  
+1.  <span data-ttu-id="e0561-197">В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.</span><span class="sxs-lookup"><span data-stu-id="e0561-197">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-## <a name="modifying-the-interface"></a>Изменение интерфейса  
+2.  <span data-ttu-id="e0561-198">Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**.</span><span class="sxs-lookup"><span data-stu-id="e0561-198">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="e0561-199">В области **Шаблоны** выберите пункт **Консольное приложение**.</span><span class="sxs-lookup"><span data-stu-id="e0561-199">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="e0561-200">В поле **Имя** введите `TypeEquivalenceClient` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-200">In the **Name** box, type `TypeEquivalenceClient`, and then click **OK**.</span></span> <span data-ttu-id="e0561-201">Проект создан.</span><span class="sxs-lookup"><span data-stu-id="e0561-201">The new project is created.</span></span>  
   
-#### <a name="to-modify-the-interface"></a>Изменение интерфейса  
+3.  <span data-ttu-id="e0561-202">Щелкните проект TypeEquivalenceClient правой кнопкой мыши и выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="e0561-202">Right-click the TypeEquivalenceClient project and click **Properties**.</span></span> <span data-ttu-id="e0561-203">Откройте вкладку **Компиляция**. Укажите выходной путь, ведущий в то же расположение, которое вы использовали в проекте TypeEquivalenceInterface, например `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="e0561-203">Click the **Compile** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-1.  В Visual Studio на **файл** наведите указатель мыши на **откройте**, а затем нажмите кнопку **решение или проект**.  
+4.  <span data-ttu-id="e0561-204">Щелкните проект TypeEquivalenceClient правой кнопкой мыши и выберите пункт **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="e0561-204">Right-click the TypeEquivalenceClient project and click **Add Reference**.</span></span> <span data-ttu-id="e0561-205">Откройте вкладку **Обзор** и перейдите в папку выходного пути.</span><span class="sxs-lookup"><span data-stu-id="e0561-205">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="e0561-206">Выберите файл TypeEquivalenceInterface.dll (не TypeEquivalenceRuntime.dll) и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="e0561-206">Select the TypeEquivalenceInterface.dll file (not the TypeEquivalenceRuntime.dll) and click **OK**.</span></span>  
   
-2.  В **открыть проект** диалоговое окно, щелкните правой кнопкой мыши проект TypeEquivalenceInterface и нажмите кнопку **свойства**. Перейдите на вкладку **Приложение** . Щелкните **сведения о сборке** кнопки. Изменение **версию сборки** и **версия файла** значения `2.0.0.0`.  
+5.  <span data-ttu-id="e0561-207">В меню **Проект** выберите пункт **Показать все файлы**.</span><span class="sxs-lookup"><span data-stu-id="e0561-207">On the **Project** menu, click **Show All Files**.</span></span>  
   
-3.  Откройте файл ISampleInterface.vb. Добавьте следующую строку кода в интерфейс ISampleInterface.  
+6.  <span data-ttu-id="e0561-208">В **обозревателе решений** разверните папку **Ссылки**.</span><span class="sxs-lookup"><span data-stu-id="e0561-208">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="e0561-209">Выберите ссылку TypeEquivalenceInterface.</span><span class="sxs-lookup"><span data-stu-id="e0561-209">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="e0561-210">В окне свойств для ссылки TypeEquivalenceInterface присвойте свойству **Внедрить типы взаимодействия** значение **True**.</span><span class="sxs-lookup"><span data-stu-id="e0561-210">In the Properties window for the TypeEquivalenceInterface reference, set the **Embed Interop Types** property to **True**.</span></span>  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-     Сохраните файл.  
+7.  <span data-ttu-id="e0561-211">Добавьте следующий код в файл Module1.vb, чтобы создать клиентскую программу.</span><span class="sxs-lookup"><span data-stu-id="e0561-211">Add the following code to the Module1.vb file to create the client program.</span></span>  
   
-4.  Сохраните проект.  
+    ```vb  
+    Imports TypeEquivalenceInterface  
+    Imports System.Reflection  
   
-5.  Щелкните правой кнопкой мыши проект TypeEquivalenceInterface и нажмите кнопку **сборки**. Новая версия DLL-файла библиотеки классов компилируется и сохраняется в папке выходных данных построения (например, C:\TypeEquivalenceSample).  
+    Module Module1  
   
-## <a name="modifying-the-runtime-class"></a>Изменение класса среды выполнения  
+        Sub Main()  
+            Dim sampleAssembly = Assembly.Load("TypeEquivalenceRuntime")  
+            Dim sampleClass As ISampleInterface = CType( _  
+                sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass"), ISampleInterface)  
+            sampleClass.GetUserInput()  
+            Console.WriteLine(sampleClass.UserInput)  
+            Console.WriteLine(sampleAssembly.GetName().Version)  
+            Console.ReadLine()  
+        End Sub  
   
-#### <a name="to-modify-the-runtime-class"></a>Изменение класса среды выполнения  
+    End Module  
+    ```  
   
-1.  В Visual Studio на **файл** наведите указатель мыши на **откройте**, а затем нажмите кнопку **решение или проект**.  
+8.  <span data-ttu-id="e0561-212">Нажмите сочетание клавиш CTRL+F5, чтобы собрать и запустить программу.</span><span class="sxs-lookup"><span data-stu-id="e0561-212">Press CTRL+F5 to build and run the program.</span></span>  
   
-2.  В **открыть проект** диалоговое окно, щелкните правой кнопкой мыши проект TypeEquivalenceRuntime и нажмите кнопку **свойства**. Перейдите на вкладку **Приложение** . Щелкните **сведения о сборке** кнопки. Изменение **версию сборки** и **версия файла** значения `2.0.0.0`.  
+## <a name="modifying-the-interface"></a><span data-ttu-id="e0561-213">Изменение интерфейса</span><span class="sxs-lookup"><span data-stu-id="e0561-213">Modifying the Interface</span></span>  
   
-3.  Откройте SampleClass.vbfile. Добавьте следующий код в класс SampleClass.  
+#### <a name="to-modify-the-interface"></a><span data-ttu-id="e0561-214">Изменение интерфейса</span><span class="sxs-lookup"><span data-stu-id="e0561-214">To modify the interface</span></span>  
+  
+1.  <span data-ttu-id="e0561-215">В Visual Studio откройте меню **Файл**, наведите указатель мыши на пункт **Создать** и щелкните **Проект/решение**.</span><span class="sxs-lookup"><span data-stu-id="e0561-215">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
+  
+2.  <span data-ttu-id="e0561-216">В диалоговом окне **Открыть проект** щелкните проект TypeEquivalenceInterface правой кнопкой мыши и выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="e0561-216">In the **Open Project** dialog box, right-click the TypeEquivalenceInterface project, and then click **Properties**.</span></span> <span data-ttu-id="e0561-217">Перейдите на вкладку **Приложение** . Нажмите кнопку **Сведения о сборке**.</span><span class="sxs-lookup"><span data-stu-id="e0561-217">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="e0561-218">Измените значения параметров **Версия сборки** и **Версия файла** на `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="e0561-218">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
+  
+3.  <span data-ttu-id="e0561-219">Откройте файл ISampleInterface.vb.</span><span class="sxs-lookup"><span data-stu-id="e0561-219">Open the ISampleInterface.vb file.</span></span> <span data-ttu-id="e0561-220">Добавьте в интерфейс ISampleInterface следующую строку кода.</span><span class="sxs-lookup"><span data-stu-id="e0561-220">Add the following line of code to the ISampleInterface interface.</span></span>  
+  
+    ```vb  
+    Function GetDate() As Date  
+    ```  
+  
+     <span data-ttu-id="e0561-221">Сохраните файл.</span><span class="sxs-lookup"><span data-stu-id="e0561-221">Save the file.</span></span>  
+  
+4.  <span data-ttu-id="e0561-222">Сохраните проект.</span><span class="sxs-lookup"><span data-stu-id="e0561-222">Save the project.</span></span>  
+  
+5.  <span data-ttu-id="e0561-223">Щелкните проект TypeEquivalenceInterface правой кнопкой мыши и выберите пункт **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="e0561-223">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="e0561-224">Новая версия DLL-файла библиотеки классов компилируется и сохраняется по указанному выходному пути (например, C:\TypeEquivalenceSample).</span><span class="sxs-lookup"><span data-stu-id="e0561-224">A new version of the class library .dll file is compiled and saved in the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
+  
+## <a name="modifying-the-runtime-class"></a><span data-ttu-id="e0561-225">Изменение класса среды выполнения</span><span class="sxs-lookup"><span data-stu-id="e0561-225">Modifying the Runtime Class</span></span>  
+  
+#### <a name="to-modify-the-runtime-class"></a><span data-ttu-id="e0561-226">Изменение класса среды выполнения</span><span class="sxs-lookup"><span data-stu-id="e0561-226">To modify the runtime class</span></span>  
+  
+1.  <span data-ttu-id="e0561-227">В Visual Studio откройте меню **Файл**, наведите указатель мыши на пункт **Создать** и щелкните **Проект/решение**.</span><span class="sxs-lookup"><span data-stu-id="e0561-227">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
+  
+2.  <span data-ttu-id="e0561-228">В диалоговом окне **Открыть проект** щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="e0561-228">In the **Open Project** dialog box, right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="e0561-229">Перейдите на вкладку **Приложение** . Нажмите кнопку **Сведения о сборке**.</span><span class="sxs-lookup"><span data-stu-id="e0561-229">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="e0561-230">Измените значения параметров **Версия сборки** и **Версия файла** на `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="e0561-230">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
+  
+3.  <span data-ttu-id="e0561-231">Откройте SampleClass.vbfile.</span><span class="sxs-lookup"><span data-stu-id="e0561-231">Open the SampleClass.vbfile.</span></span> <span data-ttu-id="e0561-232">Добавьте в класс SampleClass следующие строки кода.</span><span class="sxs-lookup"><span data-stu-id="e0561-232">Add the following lines of code to the SampleClass class.</span></span>  
   
 ```vb  
 Public Function GetDate() As DateTime Implements ISampleInterface.GetDate  
@@ -180,15 +225,14 @@ End Function
   
      Save the file.  
   
-4.  Сохраните проект.  
+4.  <span data-ttu-id="e0561-233">Сохраните проект.</span><span class="sxs-lookup"><span data-stu-id="e0561-233">Save the project.</span></span>  
   
-5.  Щелкните правой кнопкой мыши проект TypeEquivalenceRuntime и нажмите кнопку **сборки**. Обновленная версия DLL-файла библиотеки классов компилируется и сохраняется в папке выходных данных ранее указанной сборки (например, C:\TypeEquivalenceSample).  
+5.  <span data-ttu-id="e0561-234">Щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите пункт **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="e0561-234">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="e0561-235">Обновленная версия DLL-файла библиотеки классов компилируется и сохраняется по указанному ранее выходному пути для сборки (например, C:\TypeEquivalenceSample).</span><span class="sxs-lookup"><span data-stu-id="e0561-235">An updated version of the class library .dll file is compiled and saved in the previously specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-6.  В проводнике откройте папку выходной файл (например, C:\TypeEquivalenceSample). Дважды щелкните TypeEquivalenceClient.exe для запуска программы. В программе отображается новая версия сборки TypeEquivalenceRuntime не выполнена.  
+6.  <span data-ttu-id="e0561-236">В проводнике откройте папку выходного пути (например, C:\TypeEquivalenceSample).</span><span class="sxs-lookup"><span data-stu-id="e0561-236">In File Explorer, open the output path folder (for example, C:\TypeEquivalenceSample).</span></span> <span data-ttu-id="e0561-237">Дважды щелкните файл TypeEquivalenceClient.exe, чтобы выполнить программу.</span><span class="sxs-lookup"><span data-stu-id="e0561-237">Double-click the TypeEquivalenceClient.exe to run the program.</span></span> <span data-ttu-id="e0561-238">Новая версия сборки TypeEquivalenceRuntime отображается в программе без повторной компиляции.</span><span class="sxs-lookup"><span data-stu-id="e0561-238">The program will reflect the new version of the TypeEquivalenceRuntime assembly without having been recompiled.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [/ LINK (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)   
- [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Программирование с использованием сборок](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
- [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="e0561-239">См. также</span><span class="sxs-lookup"><span data-stu-id="e0561-239">See Also</span></span>  
+ [<span data-ttu-id="e0561-240">/link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0561-240">/link (Visual Basic)</span></span>](../../../../visual-basic/reference/command-line-compiler/link.md)  
+ [<span data-ttu-id="e0561-241">Основные понятия программирования</span><span class="sxs-lookup"><span data-stu-id="e0561-241">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="e0561-242">Программирование с использованием сборок</span><span class="sxs-lookup"><span data-stu-id="e0561-242">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="e0561-243">Сборки и глобальный кэш сборок (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0561-243">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)

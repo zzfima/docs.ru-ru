@@ -1,58 +1,64 @@
 ---
-title: "Безопасность сообщений с использованием взаимных сертификатов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений с использованием взаимных сертификатов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3d5e598fea118eb340b965d605f5fdeb9c479a4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений с использованием взаимных сертификатов
-В следующем сценарии показано, как служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] защищаются с помощью режима безопасности сообщений.Проверка подлинности клиента и службы выполняется с помощью сертификатов.  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="b2dde-102">Безопасность сообщений с использованием взаимных сертификатов</span><span class="sxs-lookup"><span data-stu-id="b2dde-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="b2dde-103">В следующем сценарии показано, как служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] защищаются с помощью режима безопасности сообщений.</span><span class="sxs-lookup"><span data-stu-id="b2dde-103">The following scenario shows a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message security mode.</span></span> <span data-ttu-id="b2dde-104">Проверка подлинности клиента и службы выполняется с помощью сертификатов.</span><span class="sxs-lookup"><span data-stu-id="b2dde-104">The client and the service are authenticated with certificates.</span></span>  
   
- Данный сценарий поддерживает возможность взаимодействия, поскольку в нем используется WS\-Security с профилем маркера сертификата X.509.  
+ <span data-ttu-id="b2dde-105">Данный сценарий поддерживает возможность взаимодействия, поскольку в нем используется WS-Security с профилем маркера сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="b2dde-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  Данный сценарий не выполняет согласование сертификата службы.Сертификат службы должен быть предоставлен клиенту перед началом любой связи.Сертификат сервера может быть распределен приложением или предоставлен во внеполосной связи.  
+>  <span data-ttu-id="b2dde-106">Данный сценарий не выполняет согласование сертификата службы.</span><span class="sxs-lookup"><span data-stu-id="b2dde-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="b2dde-107">Сертификат службы должен быть предоставлен клиенту перед началом любой связи.</span><span class="sxs-lookup"><span data-stu-id="b2dde-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="b2dde-108">Сертификат сервера может быть распределен приложением или предоставлен во внеполосной связи.</span><span class="sxs-lookup"><span data-stu-id="b2dde-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- ![Безопасность сообщений с взаимными сертификатами](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312\-b17c\-416c\-a5ee\-fa7b54db211b")  
+ <span data-ttu-id="b2dde-109">![Безопасность с использованием взаимных сертификатов сообщений](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="b2dde-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|Характеристика|Описание|  
-|--------------------|--------------|  
-|Режим безопасности|Сообщение|  
-|Взаимодействие|Да, с клиентами и службами, совместимыми с профилем маркера WS\-Security и сертификата X.509.|  
-|Проверка подлинности|Взаимная проверка подлинности сервера и клиента.|  
-|Целостность|Да|  
-|Конфиденциальность|Да|  
-|Транспорт|HTTP|  
-|Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="b2dde-110">Характеристика</span><span class="sxs-lookup"><span data-stu-id="b2dde-110">Characteristic</span></span>|<span data-ttu-id="b2dde-111">Описание</span><span class="sxs-lookup"><span data-stu-id="b2dde-111">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="b2dde-112">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="b2dde-112">Security Mode</span></span>|<span data-ttu-id="b2dde-113">Сообщение</span><span class="sxs-lookup"><span data-stu-id="b2dde-113">Message</span></span>|  
+|<span data-ttu-id="b2dde-114">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="b2dde-114">Interoperability</span></span>|<span data-ttu-id="b2dde-115">Да, с клиентами и службами, совместимыми с профилем маркера WS-Security и сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="b2dde-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="b2dde-116">Аутентификация</span><span class="sxs-lookup"><span data-stu-id="b2dde-116">Authentication</span></span>|<span data-ttu-id="b2dde-117">Взаимная проверка подлинности сервера и клиента.</span><span class="sxs-lookup"><span data-stu-id="b2dde-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="b2dde-118">Целостность</span><span class="sxs-lookup"><span data-stu-id="b2dde-118">Integrity</span></span>|<span data-ttu-id="b2dde-119">Да</span><span class="sxs-lookup"><span data-stu-id="b2dde-119">Yes</span></span>|  
+|<span data-ttu-id="b2dde-120">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="b2dde-120">Confidentiality</span></span>|<span data-ttu-id="b2dde-121">Да</span><span class="sxs-lookup"><span data-stu-id="b2dde-121">Yes</span></span>|  
+|<span data-ttu-id="b2dde-122">Transport</span><span class="sxs-lookup"><span data-stu-id="b2dde-122">Transport</span></span>|<span data-ttu-id="b2dde-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="b2dde-123">HTTP</span></span>|  
+|<span data-ttu-id="b2dde-124">Привязка</span><span class="sxs-lookup"><span data-stu-id="b2dde-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a><span data-ttu-id="b2dde-125">Служба</span><span class="sxs-lookup"><span data-stu-id="b2dde-125">Service</span></span>  
+ <span data-ttu-id="b2dde-126">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="b2dde-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2dde-127">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="b2dde-127">Do one of the following:</span></span>  
   
--   Создайте автономную службу, используя код без конфигурации.  
+-   <span data-ttu-id="b2dde-128">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b2dde-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
+-   <span data-ttu-id="b2dde-129">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="b2dde-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Код  
- В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.Служба требует прохождения проверки подлинности сертификата.  
+### <a name="code"></a><span data-ttu-id="b2dde-130">Код</span><span class="sxs-lookup"><span data-stu-id="b2dde-130">Code</span></span>  
+ <span data-ttu-id="b2dde-131">В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="b2dde-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="b2dde-132">Служба требует прохождения проверки подлинности сертификата.</span><span class="sxs-lookup"><span data-stu-id="b2dde-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### Конфигурация  
- Вместо кода для создания той же службы можно использовать следующую конфигурацию.  
+### <a name="configuration"></a><span data-ttu-id="b2dde-133">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="b2dde-133">Configuration</span></span>  
+ <span data-ttu-id="b2dde-134">Вместо кода для создания той же службы можно использовать следующую конфигурацию.</span><span class="sxs-lookup"><span data-stu-id="b2dde-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -94,26 +100,26 @@ caps.handback.revision: 18
 </configuration>  
 ```  
   
-## Клиент  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="client"></a><span data-ttu-id="b2dde-135">Клиент</span><span class="sxs-lookup"><span data-stu-id="b2dde-135">Client</span></span>  
+ <span data-ttu-id="b2dde-136">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="b2dde-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2dde-137">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="b2dde-137">Do one of the following:</span></span>  
   
--   Создайте автономный клиент, используя код \(и код клиента\).  
+-   <span data-ttu-id="b2dde-138">Создайте автономный клиент, используя код (и код клиента).</span><span class="sxs-lookup"><span data-stu-id="b2dde-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек.Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.Пример:  
+-   <span data-ttu-id="b2dde-139">Создайте клиент, который не определяет никаких адресов конечных точек.</span><span class="sxs-lookup"><span data-stu-id="b2dde-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="b2dde-140">Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.</span><span class="sxs-lookup"><span data-stu-id="b2dde-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="b2dde-141">Например:</span><span class="sxs-lookup"><span data-stu-id="b2dde-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Код  
- Следующий код служит для создания клиента.Режим безопасности установлен в Message, и типу учетных данных клиента присвоено значение Certificate.  
+### <a name="code"></a><span data-ttu-id="b2dde-142">Код</span><span class="sxs-lookup"><span data-stu-id="b2dde-142">Code</span></span>  
+ <span data-ttu-id="b2dde-143">Следующий код служит для создания клиента.</span><span class="sxs-lookup"><span data-stu-id="b2dde-143">The following code creates the client.</span></span> <span data-ttu-id="b2dde-144">Режим безопасности установлен в Message, и типу учетных данных клиента присвоено значение Certificate.</span><span class="sxs-lookup"><span data-stu-id="b2dde-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### Конфигурация  
- Следующий код служит для настройки клиента.Сертификат клиента должен быть указан с помощью [\<clientCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).Кроме того, сертификат службы указывается при помощи [\<defaultCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+### <a name="configuration"></a><span data-ttu-id="b2dde-145">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="b2dde-145">Configuration</span></span>  
+ <span data-ttu-id="b2dde-146">Следующий код служит для настройки клиента.</span><span class="sxs-lookup"><span data-stu-id="b2dde-146">The following configures the client.</span></span> <span data-ttu-id="b2dde-147">Сертификат клиента должен быть указан с помощью [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span><span class="sxs-lookup"><span data-stu-id="b2dde-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="b2dde-148">Кроме того, сертификат службы задается с помощью [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span><span class="sxs-lookup"><span data-stu-id="b2dde-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -162,7 +168,7 @@ caps.handback.revision: 18
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Модель безопасности для фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)   
- [Практическое руководство. Создание и настройка в WCF временных сертификатов для обеспечения безопасности транспорта \(во время разработки\)](http://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a><span data-ttu-id="b2dde-149">См. также</span><span class="sxs-lookup"><span data-stu-id="b2dde-149">See Also</span></span>  
+ [<span data-ttu-id="b2dde-150">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="b2dde-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="b2dde-151">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="b2dde-151">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [<span data-ttu-id="b2dde-152">Как: Создание и Установка временных сертификатов в WCF для обеспечения безопасности транспорта во время разработки</span><span class="sxs-lookup"><span data-stu-id="b2dde-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](http://go.microsoft.com/fwlink/?LinkId=244264)

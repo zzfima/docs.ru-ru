@@ -1,55 +1,53 @@
 ---
-title: "Именование ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "ресурсы, локализованные имена [платформа .NET Framework]"
-  - "локализация, правила именования"
-  - "имена ресурсов"
-  - "глобальные приложения, правила именования"
-  - "приложения на разных языках, правила именования"
+title: "Именование ресурсов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], localized resources
+- localization, naming guidelines
+- resource names
+- global applications, naming guidelines
+- international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 89782b00799bfaac97780b0ffdee62c89fdfbe49
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Именование ресурсов
-Поскольку локализуемые ресурсы можно ссылаться через определенные объекты, как если бы они были свойства, правилам именования для ресурсов похожи на правила свойств.  
+# <a name="naming-resources"></a><span data-ttu-id="86582-102">Именование ресурсов</span><span class="sxs-lookup"><span data-stu-id="86582-102">Naming Resources</span></span>
+<span data-ttu-id="86582-103">Поскольку локализуемые ресурсы можно ссылаться через определенные объекты, как если бы они были свойства, правилам именования для ресурсов похожи на правила свойств.</span><span class="sxs-lookup"><span data-stu-id="86582-103">Because localizable resources can be referenced via certain objects as if they were properties, the naming guidelines for resources are similar to property guidelines.</span></span>  
   
- **✓ сделать** использовать PascalCasing в ключах ресурсов.  
+ <span data-ttu-id="86582-104">**✓ СДЕЛАТЬ** использовать PascalCasing в ключи ресурсов.</span><span class="sxs-lookup"><span data-stu-id="86582-104">**✓ DO** use PascalCasing in resource keys.</span></span>  
   
- **✓ сделать** предоставить описательные, а не короткие идентификаторы.  
+ <span data-ttu-id="86582-105">**✓ СДЕЛАТЬ** предоставляют описательные, а не короткие идентификаторы.</span><span class="sxs-lookup"><span data-stu-id="86582-105">**✓ DO** provide descriptive rather than short identifiers.</span></span>  
   
- **X не** использовать зарезервированные слова языка основных языков среды CLR.  
+ <span data-ttu-id="86582-106">**X не** использовать зарезервированные слова языка основных языков среды CLR.</span><span class="sxs-lookup"><span data-stu-id="86582-106">**X DO NOT** use language-specific keywords of the main CLR languages.</span></span>  
   
- **✓ сделать** использовать только буквы, цифры и символы подчеркивания в именовании ресурсов.  
+ <span data-ttu-id="86582-107">**✓ СДЕЛАТЬ** использовать только буквы, цифры и знаки подчеркивания, при именовании ресурсов.</span><span class="sxs-lookup"><span data-stu-id="86582-107">**✓ DO** use only alphanumeric characters and underscores in naming resources.</span></span>  
   
- **✓ сделать** использовать следующее соглашение об именовании для ресурсов сообщение исключения.  
+ <span data-ttu-id="86582-108">**✓ СДЕЛАТЬ** используется следующее соглашение об именовании ресурсов сообщение исключения.</span><span class="sxs-lookup"><span data-stu-id="86582-108">**✓ DO** use the following naming convention for exception message resources.</span></span>  
   
- Идентификатор ресурса должен быть именем типа исключения, а также с коротким идентификатором исключения:  
+ <span data-ttu-id="86582-109">Идентификатор ресурса должен быть именем типа исключения, а также с коротким идентификатором исключения:</span><span class="sxs-lookup"><span data-stu-id="86582-109">The resource identifier should be the exception type name plus a short identifier of the exception:</span></span>  
   
- `ArgumentExceptionIllegalCharacters`   
- `ArgumentExceptionInvalidName`   
+ `ArgumentExceptionIllegalCharacters`  
+ `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="86582-110">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="86582-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="86582-111">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="86582-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)   
- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="86582-112">См. также</span><span class="sxs-lookup"><span data-stu-id="86582-112">See Also</span></span>  
+ [<span data-ttu-id="86582-113">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="86582-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="86582-114">Правила именования</span><span class="sxs-lookup"><span data-stu-id="86582-114">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -1,51 +1,50 @@
 ---
-title: "Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "перегрузка процедур, необязательные параметры"
-  - "параметры процедуры"
-  - "процедуры, определение"
-  - "процедуры, несколько версий"
-  - "процедуры, перегрузка"
-  - "процедуры, параметры"
-  - "код Visual Basic, процедуры"
+title: "Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], parameters
+- procedure overloading [Visual Basic], optional parameters
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- procedure parameters
+- procedures [Visual Basic], overloading
+- procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b4a863944d4f9ab265aab52578fbb704ca376de5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Если процедура имеет один или несколько параметров [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), нельзя определить перегруженную версию, соответствующую любой из ее неявных перегрузок.  Дополнительные сведения содержатся в разделе "Неявные перегрузки для опциональных параметров" в [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
+# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a><span data-ttu-id="2233b-102">Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2233b-102">How to: Overload a Procedure that Takes Optional Parameters (Visual Basic)</span></span>
+<span data-ttu-id="2233b-103">Если процедура имеет один или несколько [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметров, нельзя определить перегруженную версию, соответствующую любой из ее неявных перегрузок.</span><span class="sxs-lookup"><span data-stu-id="2233b-103">If a procedure has one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters, you cannot define an overloaded version matching any of its implicit overloads.</span></span> <span data-ttu-id="2233b-104">Дополнительные сведения см. в разделе «Неявные перегрузки для необязательные параметры» в [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="2233b-104">For more information, see "Implicit Overloads for Optional Parameters" in [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  
   
-## Один необязательный параметр  
+## <a name="one-optional-parameter"></a><span data-ttu-id="2233b-105">Один необязательный параметр</span><span class="sxs-lookup"><span data-stu-id="2233b-105">One Optional Parameter</span></span>  
   
-#### Чтобы перегрузить процедуру, которая принимает один опциональный параметр  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a><span data-ttu-id="2233b-106">Перегрузка процедуры, которая принимает один необязательный параметр</span><span class="sxs-lookup"><span data-stu-id="2233b-106">To overload a procedure that takes one optional parameter</span></span>  
   
-1.  Напишите объявление инструкции `Sub` или `Function`, которая содержит опциональный параметр в списке параметров.  Не используйте ключевое слово `Optional` в данной перегруженной версии.  
+1.  <span data-ttu-id="2233b-107">Запись `Sub` или `Function` оператора объявления, который содержит дополнительный параметр в списке параметров.</span><span class="sxs-lookup"><span data-stu-id="2233b-107">Write a `Sub` or `Function` declaration statement that includes the optional parameter in the parameter list.</span></span> <span data-ttu-id="2233b-108">Не используйте `Optional` ключевое слово в данной перегруженной версии.</span><span class="sxs-lookup"><span data-stu-id="2233b-108">Do not use the `Optional` keyword in this overloaded version.</span></span>  
   
-2.  Переместите ключевое слово `Sub` или `Function` так, чтобы оно предшествовало ключевому слову [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md).  
+2.  <span data-ttu-id="2233b-109">Перед `Sub` или `Function` ключевого слова with [перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="2233b-109">Precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.</span></span>  
   
-3.  Напишите код процедуры, который должен выполняться, когда код вызова предоставляет опциональный аргумент.  
+3.  <span data-ttu-id="2233b-110">Напишите код процедуры, который должен выполняться, когда вызывающий код не предоставляет необязательный аргумент.</span><span class="sxs-lookup"><span data-stu-id="2233b-110">Write the procedure code that should execute when the calling code supplies the optional argument.</span></span>  
   
-4.  Завершите процедуру подходящим оператором `End Sub` либо `End Function`.  
+4.  <span data-ttu-id="2233b-111">Завершите процедуру `End Sub` или `End Function` инструкцию соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="2233b-111">Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.</span></span>  
   
-5.  Запишите вторую инструкцию объявления, идентичную первому объявлению, за исключением того, что она не включает опциональный параметр в списке параметров.  
+5.  <span data-ttu-id="2233b-112">Напишите второй оператор объявления, идентичный первому объявлению, за исключением того, что он не включает необязательный параметр в списке параметров.</span><span class="sxs-lookup"><span data-stu-id="2233b-112">Write a second declaration statement that is identical to the first declaration except that it does not include the optional parameter in the parameter list.</span></span>  
   
-6.  Напишите код процедуры, который должен выполняться, когда код вызова не предоставляет необязательный аргумент.  Завершите процедуру подходящим оператором `End Sub` либо `End Function`.  
+6.  <span data-ttu-id="2233b-113">Напишите код процедуры, который должен выполняться, когда вызывающий код не предоставляет необязательный аргумент.</span><span class="sxs-lookup"><span data-stu-id="2233b-113">Write the procedure code that should execute when the calling code does not supply the optional argument.</span></span> <span data-ttu-id="2233b-114">Завершите процедуру `End Sub` или `End Function` инструкцию соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="2233b-114">Terminate the procedure with the `End Sub` or `End Function` statement as appropriate.</span></span>  
   
-     В следующем примере процедура определена с необязательным параметром, эквивалент набору из двух перегруженных процедур и в конце примеры допустимых и недопустимых перегруженных версий процедуры.  
+     <span data-ttu-id="2233b-115">В следующем примере показано процедура, определенная с необязательным параметром, аналогичный набор из двух перегруженных процедур и, наконец, примеры и недопустимых перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="2233b-115">The following example shows a procedure defined with an optional parameter,  an equivalent set of two overloaded procedures, and finally examples of both invalid and valid overloaded versions.</span></span>  
   
      [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
@@ -53,31 +52,31 @@ caps.handback.revision: 17
   
      [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
-## Несколько опциональных параметров  
- Обычно необходимо более двух перегруженных версий процедуры, если она имеет более одного опционального параметра.  Например, если существуют два опциональных параметра и код вызова может использовать или опустить каждый из них независимо друг от друга, необходимо четыре перегруженных версии, по одной для каждой возможной комбинации предоставленных аргументов.  
+## <a name="multiple-optional-parameters"></a><span data-ttu-id="2233b-116">Несколько необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="2233b-116">Multiple Optional Parameters</span></span>  
+ <span data-ttu-id="2233b-117">Для процедуры с более чем один необязательный параметр обычно необходимо более двух перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="2233b-117">For a procedure with more than one optional parameter, you normally need more than two overloaded versions.</span></span> <span data-ttu-id="2233b-118">Например если имеются два необязательных параметра, а вызывающий код может использовать или опустить каждый из них независимо от другого, необходимо четыре перегруженных версий, один для каждой возможной комбинации предоставленных аргументов.</span><span class="sxs-lookup"><span data-stu-id="2233b-118">For example, if there are two optional parameters, and the calling code can supply or omit each one independently of the other, you need four overloaded versions, one for each possible combination of supplied arguments.</span></span>  
   
- Такой подход становится более сложным с увеличением числа необязательных параметров.  Кроме неприемлемых комбинаций переданных аргументов, для N необязательных параметров необходимо 2 ^ N перегруженных версий.  Из характера процедуры ясно, что требуются лишние усилия для определения всех перегруженных версий.  
+ <span data-ttu-id="2233b-119">С увеличением числа необязательных параметров увеличивает сложность перегрузки.</span><span class="sxs-lookup"><span data-stu-id="2233b-119">As the number of optional parameters increases, the complexity of the overloading increases.</span></span> <span data-ttu-id="2233b-120">Если некоторые сочетания предоставленных аргументов неприемлемы, для необязательных параметров N требуется 2 ^ N перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="2233b-120">Unless some combinations of supplied arguments are not acceptable, for N optional parameters you need 2 ^ N overloaded versions.</span></span> <span data-ttu-id="2233b-121">В зависимости от процедуры может оказаться, что ясности логики, японской и корейской лишние усилия для определения всех перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="2233b-121">Depending on the nature of the procedure, you might find that the clarity of logic justifies the extra effort of defining all the overloaded versions.</span></span>  
   
-#### Чтобы перегрузить процедуру, которая принимает больше одного необязательного параметра  
+#### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a><span data-ttu-id="2233b-122">Перегрузка процедуры, которая принимает более чем один необязательный параметр</span><span class="sxs-lookup"><span data-stu-id="2233b-122">To overload a procedure that takes more than one optional parameter</span></span>  
   
-1.  Определите какие комбинации предоставленных опциональных аргументов допустимы для логики процедуры.  Недопустимое сочетание может возникнуть, если один дополнительный параметр зависит от другого.  Например, если один параметр принимает имя супруга, а другой принимает возраст супруга, учитывать аргументы возраста, но опустить имя является недопустимым.  
+1.  <span data-ttu-id="2233b-123">Определите, какие комбинации предоставленных необязательные аргументы, приемлемы для логику процедуры.</span><span class="sxs-lookup"><span data-stu-id="2233b-123">Determine which combinations of supplied optional arguments are acceptable to the logic of the procedure.</span></span> <span data-ttu-id="2233b-124">Недопустимое сочетание может возникнуть, если один необязательный параметр зависит от другого.</span><span class="sxs-lookup"><span data-stu-id="2233b-124">An unacceptable combination might arise if one optional parameter depends on another.</span></span> <span data-ttu-id="2233b-125">Например если один параметр принимает имя супруга, а другой принимает возраст супруга, учитывать аргументы возраста, но опустить имя недопустима.</span><span class="sxs-lookup"><span data-stu-id="2233b-125">For example, if one parameter accepts a spouse's name and another accepts the spouse's age, a combination of arguments supplying the age but omitting the name is unacceptable.</span></span>  
   
-2.  Для каждой допустимой комбинации предоставленных опциональных аргументов напишите инструкции объявления `Sub` или `Function`, определяющие соответствующий список параметров.  Не используйте ключевое слово `Optional`.  
+2.  <span data-ttu-id="2233b-126">Для каждой допустимой комбинации предоставленных необязательных аргументов напишите `Sub` или `Function` инструкцию объявления, определяющую соответствующий список параметров.</span><span class="sxs-lookup"><span data-stu-id="2233b-126">For each acceptable combination of supplied optional arguments, write a `Sub` or `Function` declaration statement that defines the corresponding parameter list.</span></span> <span data-ttu-id="2233b-127">Не используйте `Optional` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="2233b-127">Do not use the `Optional` keyword.</span></span>  
   
-3.  В каждом объявлении ключевому слову `Sub` или `Function` должно предшествовать ключевое слово [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md).  
+3.  <span data-ttu-id="2233b-128">В каждое объявление перед `Sub` или `Function` ключевого слова with [перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="2233b-128">In each declaration, precede the `Sub` or `Function` keyword with the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword.</span></span>  
   
-4.  После каждого объявления напишите код процедуры, который должен выполняться, когда вызывающий код предоставит список аргументов, соответствующий элементам списка параметров в объявлении.  
+4.  <span data-ttu-id="2233b-129">После каждого объявления напишите код процедуры, который должен выполняться, когда вызывающий код передает список аргументов, соответствующий списку параметров в объявлении.</span><span class="sxs-lookup"><span data-stu-id="2233b-129">Following each declaration, write the procedure code that should execute when the calling code supplies an argument list corresponding to that declaration's parameter list.</span></span>  
   
-5.  Завершите выполнение каждой процедуры оператором `End Sub` или `End Function` .  
+5.  <span data-ttu-id="2233b-130">Завершите выполнение каждой процедуры с `End Sub` или `End Function` инструкцию соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="2233b-130">Terminate each procedure with the `End Sub` or `End Function` statement as appropriate.</span></span>  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Необязательные параметры](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Массивы параметров](../../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Устранение неполадок в процедурах](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [Практическое руководство. Определение различных версий процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [Практическое руководство. Вызов перегруженной процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
- [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Разрешение перегрузки](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+## <a name="see-also"></a><span data-ttu-id="2233b-131">См. также</span><span class="sxs-lookup"><span data-stu-id="2233b-131">See Also</span></span>  
+ [<span data-ttu-id="2233b-132">Процедуры</span><span class="sxs-lookup"><span data-stu-id="2233b-132">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="2233b-133">Параметры и аргументы процедуры</span><span class="sxs-lookup"><span data-stu-id="2233b-133">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="2233b-134">Необязательные параметры</span><span class="sxs-lookup"><span data-stu-id="2233b-134">Optional Parameters</span></span>](./optional-parameters.md)  
+ [<span data-ttu-id="2233b-135">Массивы параметров</span><span class="sxs-lookup"><span data-stu-id="2233b-135">Parameter Arrays</span></span>](./parameter-arrays.md)  
+ [<span data-ttu-id="2233b-136">Перегрузка процедур</span><span class="sxs-lookup"><span data-stu-id="2233b-136">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="2233b-137">Рекомендации по устранению неполадок</span><span class="sxs-lookup"><span data-stu-id="2233b-137">Troubleshooting Procedures</span></span>](./troubleshooting-procedures.md)  
+ [<span data-ttu-id="2233b-138">Практическое руководство. Определение различных версий процедуры</span><span class="sxs-lookup"><span data-stu-id="2233b-138">How to: Define Multiple Versions of a Procedure</span></span>](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [<span data-ttu-id="2233b-139">Практическое руководство. Вызов перегруженной процедуры</span><span class="sxs-lookup"><span data-stu-id="2233b-139">How to: Call an Overloaded Procedure</span></span>](./how-to-call-an-overloaded-procedure.md)  
+ [<span data-ttu-id="2233b-140">Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров</span><span class="sxs-lookup"><span data-stu-id="2233b-140">How to: Overload a Procedure that Takes an Indefinite Number of Parameters</span></span>](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [<span data-ttu-id="2233b-141">Разрешение перегрузки</span><span class="sxs-lookup"><span data-stu-id="2233b-141">Overload Resolution</span></span>](./overload-resolution.md)

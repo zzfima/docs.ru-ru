@@ -1,60 +1,66 @@
 ---
-title: "Как динамически создать базу данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Динамическое создание базы данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5374c5a7954a8a31736e62c7f954e3fc5a1b937b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как динамически создать базу данных
-В LINQ to SQL модель объектов сопоставляется с реляционной базой данных.  Сопоставление обеспечивается применением для описания структуры реляционной базы данных сопоставления на основе атрибутов или внешнего файла сопоставления.  В обоих случаях имеется достаточно сведений о реляционной базе данных, позволяющих создать новый экземпляр базы данных с помощью метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=fullName>.  
+# <a name="how-to-dynamically-create-a-database"></a><span data-ttu-id="d4b4b-102">Практическое руководство. Динамическое создание базы данных</span><span class="sxs-lookup"><span data-stu-id="d4b4b-102">How to: Dynamically Create a Database</span></span>
+<span data-ttu-id="d4b4b-103">В LINQ to SQL модель объектов сопоставляется с реляционной базой данных.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-103">In LINQ to SQL, an object model is mapped to a relational database.</span></span> <span data-ttu-id="d4b4b-104">Сопоставление обеспечивается применением для описания структуры реляционной базы данных сопоставления на основе атрибутов или внешнего файла сопоставления.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-104">Mapping is enabled by using attribute-based mapping or an external mapping file to describe the structure of the relational database.</span></span> <span data-ttu-id="d4b4b-105">В обоих случаях имеется достаточно сведений о реляционной базе данных, позволяющих создать новый экземпляр базы данных с помощью метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-105">In both scenarios, there is enough information about the relational database that you can create a new instance of the database using the <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> method.</span></span>  
   
- Метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=fullName> создает реплику базы данных с той степенью подробности, которую позволяет обеспечить информация, закодированная в модели объектов.  Файлы сопоставления и атрибуты из модели объектов могут включать не все сведения относительно структуры существующей базы.  Сведения сопоставления не представляют содержимого определяемых пользователем функций, хранимых процедур, триггеров и проверочных ограничений.  Для большинства баз данных такого поведения достаточно.  
+ <span data-ttu-id="d4b4b-106">Метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> создает реплику базы данных с той степенью подробности, которую позволяет обеспечить информация, закодированная в модели объектов.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-106">The <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> method creates a replica of the database only to the extent of the information encoded in the object model.</span></span> <span data-ttu-id="d4b4b-107">Файлы сопоставления и атрибуты из модели объектов могут включать не все сведения относительно структуры существующей базы.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-107">Mapping files and attributes from your object model might not encode everything about the structure of an existing database.</span></span> <span data-ttu-id="d4b4b-108">Сведения сопоставления не представляют содержимого определяемых пользователем функций, хранимых процедур, триггеров и проверочных ограничений.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-108">Mapping information does not represent the contents of user-defined functions, stored procedures, triggers, or check constraints.</span></span> <span data-ttu-id="d4b4b-109">Для большинства баз данных такого поведения достаточно.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-109">This behavior is sufficient for a variety of databases.</span></span>  
   
- Методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=fullName> можно воспользоваться в произвольном числе случаев, особенно если доступен известный поставщик данных наподобие Microsoft SQL Server 2008.  К числу типовых сценариев относятся.  
+ <span data-ttu-id="d4b4b-110">Методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> можно воспользоваться в произвольном числе случаев, особенно если доступен известный поставщик данных наподобие Microsoft SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-110">You can use the <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> method in any number of scenarios, especially if a known data provider like Microsoft SQL Server 2008 is available.</span></span> <span data-ttu-id="d4b4b-111">К числу типовых сценариев относятся.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-111">Typical scenarios include the following:</span></span>  
   
--   Построение приложения, которое автоматически устанавливает себя на клиентской системе.  
+-   <span data-ttu-id="d4b4b-112">Построение приложения, которое автоматически устанавливает себя на клиентской системе.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-112">You are building an application that automatically installs itself on a customer system.</span></span>  
   
--   Построение клиентского приложения, которому требуется локальная база данных для сохранения своего автономного состояния.  
+-   <span data-ttu-id="d4b4b-113">Построение клиентского приложения, которому требуется локальная база данных для сохранения своего автономного состояния.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-113">You are building a client application that needs a local database to save its offline state.</span></span>  
   
- Можно также вызвать с SQL Server метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=fullName>, указав имя MDF\-файла или каталога, в зависимости от строки соединения.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения исходя из создаваемой базы данных и сервера, на котором она должна быть создана.  
+ <span data-ttu-id="d4b4b-114">Можно также вызвать с SQL Server метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>, указав имя MDF-файла или каталога, в зависимости от строки соединения.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-114">You can also use the <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> method with SQL Server by using an .mdf file or a catalog name, depending on your connection string.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="d4b4b-115"> использует строку соединения исходя из создаваемой базы данных и сервера, на котором она должна быть создана.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-115"> uses the connection string to define the database to be created and on which server the database is to be created.</span></span>  
   
 > [!NOTE]
->  При любой возможности применяйте встроенную безопасность Windows для соединения с базой данных, чтобы не требовались пароли в строке соединения.  
+>  <span data-ttu-id="d4b4b-116">При любой возможности применяйте встроенную безопасность Windows для соединения с базой данных, чтобы не требовались пароли в строке соединения.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-116">Whenever possible, use Windows Integrated Security to connect to the database so that passwords are not required in the connection string.</span></span>  
   
-## Пример  
- В приведенном ниже коде дан пример того, как создать новую базу данных с именем MyDVDs.mdf.  
+## <a name="example"></a><span data-ttu-id="d4b4b-117">Пример</span><span class="sxs-lookup"><span data-stu-id="d4b4b-117">Example</span></span>  
+ <span data-ttu-id="d4b4b-118">В приведенном ниже коде дан пример того, как создать новую базу данных с именем MyDVDs.mdf.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-118">The following code provides an example of how to create a new database named MyDVDs.mdf.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#5)]
  [!code-vb[DLinqSubmittingChanges#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#5)]  
   
-## Пример  
- Для создания базы данных можно использовать модель объектов, выполняя следующее:  
+## <a name="example"></a><span data-ttu-id="d4b4b-119">Пример</span><span class="sxs-lookup"><span data-stu-id="d4b4b-119">Example</span></span>  
+ <span data-ttu-id="d4b4b-120">Для создания базы данных можно использовать модель объектов, выполняя следующее:</span><span class="sxs-lookup"><span data-stu-id="d4b4b-120">You can use the object model to create a database by doing the following:</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#6)]
  [!code-vb[DLinqSubmittingChanges#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#6)]  
   
-## Пример  
- При построении приложения, которое автоматически устанавливает себя на клиентской системе, проверьте, существует ли уже база данных, и удалите ее перед созданием новой базы.  Класс <xref:System.Data.Linq.DataContext> предоставляет методы <xref:System.Data.Linq.DataContext.DatabaseExists%2A> и <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> для помощи в этом процессе.  
+## <a name="example"></a><span data-ttu-id="d4b4b-121">Пример</span><span class="sxs-lookup"><span data-stu-id="d4b4b-121">Example</span></span>  
+ <span data-ttu-id="d4b4b-122">При построении приложения, которое автоматически устанавливает себя на клиентской системе, проверьте, существует ли уже база данных, и удалите ее перед созданием новой базы.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-122">When building an application that automatically installs itself on a  customer system, see if the database already exists and drop it before creating a new one.</span></span> <span data-ttu-id="d4b4b-123">Класс <xref:System.Data.Linq.DataContext> предоставляет методы <xref:System.Data.Linq.DataContext.DatabaseExists%2A> и <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> для помощи в этом процессе.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-123">The <xref:System.Data.Linq.DataContext> class provides the <xref:System.Data.Linq.DataContext.DatabaseExists%2A> and <xref:System.Data.Linq.DataContext.DeleteDatabase%2A> methods to help you with this process.</span></span>  
   
- Следующий пример показывает один из способов применения этих методов для реализации такого подхода.  
+ <span data-ttu-id="d4b4b-124">Следующий пример показывает один из способов применения этих методов для реализации такого подхода.</span><span class="sxs-lookup"><span data-stu-id="d4b4b-124">The following example shows one way these methods can be used to implement this approach:</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
-## См. также  
- [Сопоставление на основе атрибутов](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)   
- [Внешние сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)   
- [Сопоставление типов SQL и CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
- [Дополнительные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)   
- [Внесение и отправка изменений данных ](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a><span data-ttu-id="d4b4b-125">См. также</span><span class="sxs-lookup"><span data-stu-id="d4b4b-125">See Also</span></span>  
+ [<span data-ttu-id="d4b4b-126">Сопоставление на основе атрибутов</span><span class="sxs-lookup"><span data-stu-id="d4b4b-126">Attribute-Based Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [<span data-ttu-id="d4b4b-127">Внешнее сопоставление</span><span class="sxs-lookup"><span data-stu-id="d4b4b-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [<span data-ttu-id="d4b4b-128">Сопоставление типов SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="d4b4b-128">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="d4b4b-129">Общие сведения</span><span class="sxs-lookup"><span data-stu-id="d4b4b-129">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="d4b4b-130">Внесение и отправка изменений данных</span><span class="sxs-lookup"><span data-stu-id="d4b4b-130">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

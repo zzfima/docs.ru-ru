@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Listener object types
 - listeners
@@ -24,37 +21,36 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7dc94602a4bd66d74e7135b03a5d851a0a22754f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56cbde16eff89d25960e510e7eec2424f15e51b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="trace-listeners"></a>Прослушиватели трассировки
-При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений. Сообщения трассировки получаются *прослушивателями*. В задачу прослушивателя входит сбор, хранение и маршрутизация сообщений трассировки. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту, например, в журнал событий, окно или текстовый файл.  
+# <a name="trace-listeners"></a><span data-ttu-id="14e44-102">Прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="14e44-102">Trace Listeners</span></span>
+<span data-ttu-id="14e44-103">При использовании классов **Trace**, **Debug** и <xref:System.Diagnostics.TraceSource> необходимо обеспечить механизм сбора и записи отправляемых сообщений.</span><span class="sxs-lookup"><span data-stu-id="14e44-103">When using **Trace**, **Debug** and <xref:System.Diagnostics.TraceSource>, you must have a mechanism for collecting and recording the messages that are sent.</span></span> <span data-ttu-id="14e44-104">Сообщения трассировки получаются *прослушивателями*.</span><span class="sxs-lookup"><span data-stu-id="14e44-104">Trace messages are received by *listeners*.</span></span> <span data-ttu-id="14e44-105">В задачу прослушивателя входит сбор, хранение и маршрутизация сообщений трассировки.</span><span class="sxs-lookup"><span data-stu-id="14e44-105">The purpose of a listener is to collect, store, and route tracing messages.</span></span> <span data-ttu-id="14e44-106">Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту, например, в журнал событий, окно или текстовый файл.</span><span class="sxs-lookup"><span data-stu-id="14e44-106">Listeners direct the tracing output to an appropriate target, such as a log, window, or text file.</span></span>  
   
- Прослушиватели доступны для классов **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, каждый из которых может отправлять свои выходные данные разным объектам прослушивателей. Ниже перечислены часто используемые предварительно определенные прослушиватели.  
+ <span data-ttu-id="14e44-107">Прослушиватели доступны для классов **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, каждый из которых может отправлять свои выходные данные разным объектам прослушивателей.</span><span class="sxs-lookup"><span data-stu-id="14e44-107">Listeners are available to the **Debug**, **Trace**, and <xref:System.Diagnostics.TraceSource> classes, each of which can send its output to a variety of listener objects.</span></span> <span data-ttu-id="14e44-108">Ниже перечислены часто используемые предварительно определенные прослушиватели.</span><span class="sxs-lookup"><span data-stu-id="14e44-108">The following are the commonly used predefined listeners:</span></span>  
   
--   Прослушиватель <xref:System.Diagnostics.TextWriterTraceListener> перенаправляет выходные данные в экземпляр класса <xref:System.IO.TextWriter> или любой объект, являющийся классом <xref:System.IO.Stream>. Он также может осуществлять запись в консоль или файл, потому что это классы <xref:System.IO.Stream>.  
+-   <span data-ttu-id="14e44-109">Прослушиватель <xref:System.Diagnostics.TextWriterTraceListener> перенаправляет выходные данные в экземпляр класса <xref:System.IO.TextWriter> или любой объект, являющийся классом <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="14e44-109">A <xref:System.Diagnostics.TextWriterTraceListener> redirects output to an instance of the <xref:System.IO.TextWriter> class or to anything that is a <xref:System.IO.Stream> class.</span></span> <span data-ttu-id="14e44-110">Он также может осуществлять запись в консоль или файл, потому что это классы <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="14e44-110">It can also write to the console or to a file, because these are <xref:System.IO.Stream> classes.</span></span>  
   
--   Класс <xref:System.Diagnostics.EventLogTraceListener> перенаправляет выходные данные в журнал событий.  
+-   <span data-ttu-id="14e44-111">Класс <xref:System.Diagnostics.EventLogTraceListener> перенаправляет выходные данные в журнал событий.</span><span class="sxs-lookup"><span data-stu-id="14e44-111">An <xref:System.Diagnostics.EventLogTraceListener> redirects output to an event log.</span></span>  
   
--   Класс <xref:System.Diagnostics.DefaultTraceListener> выводит сообщения методов **Write** и **WriteLine** в строку **OutputDebugString** и метод **Debugger.Log**. В Visual Studio в этом случае сообщения отладки отображаются в окне «Вывод». Сообщения метода **Fail** и завершившегося сбоем метода **Assert** также выводятся в API Windows **OutputDebugString** и методе **Debugger.Log**. Также в этом случае отображается поле сообщений. Данное поведение — это поведение по умолчанию для сообщений **Debug** и **Trace**, так как прослушиватель **DefaultTraceListener** автоматически включается в каждую коллекцию `Listeners` и является единственным автоматически включаемым прослушивателем.  
+-   <span data-ttu-id="14e44-112">Класс <xref:System.Diagnostics.DefaultTraceListener> выводит сообщения методов **Write** и **WriteLine** в строку **OutputDebugString** и метод **Debugger.Log**.</span><span class="sxs-lookup"><span data-stu-id="14e44-112">A <xref:System.Diagnostics.DefaultTraceListener> emits **Write** and **WriteLine** messages to the **OutputDebugString** and to the **Debugger.Log** method.</span></span> <span data-ttu-id="14e44-113">В Visual Studio в этом случае сообщения отладки отображаются в окне «Вывод».</span><span class="sxs-lookup"><span data-stu-id="14e44-113">In Visual Studio, this causes the debugging messages to appear in the Output window.</span></span> <span data-ttu-id="14e44-114">Сообщения метода **Fail** и завершившегося сбоем метода **Assert** также выводятся в API Windows **OutputDebugString** и методе **Debugger.Log**. Также в этом случае отображается поле сообщений.</span><span class="sxs-lookup"><span data-stu-id="14e44-114">**Fail** and failed **Assert** messages also emit to the **OutputDebugString** Windows API and the **Debugger.Log** method, and also cause a message box to be displayed.</span></span> <span data-ttu-id="14e44-115">Данное поведение — это поведение по умолчанию для сообщений **Debug** и **Trace**, так как прослушиватель **DefaultTraceListener** автоматически включается в каждую коллекцию `Listeners` и является единственным автоматически включаемым прослушивателем.</span><span class="sxs-lookup"><span data-stu-id="14e44-115">This behavior is the default behavior for **Debug** and **Trace** messages, because **DefaultTraceListener** is automatically included in every `Listeners` collection and is the only listener automatically included.</span></span>  
   
--   Объект <xref:System.Diagnostics.ConsoleTraceListener> направляет выходные данные трассировки или отладки в стандартный вывод или стандартный поток ошибок.  
+-   <span data-ttu-id="14e44-116">Объект <xref:System.Diagnostics.ConsoleTraceListener> направляет выходные данные трассировки или отладки в стандартный вывод или стандартный поток ошибок.</span><span class="sxs-lookup"><span data-stu-id="14e44-116">A <xref:System.Diagnostics.ConsoleTraceListener> directs tracing or debugging output to either the standard output or the standard error stream.</span></span>  
   
--   Прослушиватель <xref:System.Diagnostics.DelimitedListTraceListener> направляет выходные данные трассировки или отладки в модуль записи текста, например модуль записи в поток, или в поток, например файловый поток. Вывод трассировки находится в текстовом формате с разделителями и использует разделитель, заданный свойством <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.  
+-   <span data-ttu-id="14e44-117">Прослушиватель <xref:System.Diagnostics.DelimitedListTraceListener> направляет выходные данные трассировки или отладки в модуль записи текста, например модуль записи в поток, или в поток, например файловый поток.</span><span class="sxs-lookup"><span data-stu-id="14e44-117">A <xref:System.Diagnostics.DelimitedListTraceListener> directs tracing or debugging output to a text writer, such as a stream writer, or to a stream, such as a file stream.</span></span> <span data-ttu-id="14e44-118">Вывод трассировки находится в текстовом формате с разделителями и использует разделитель, заданный свойством <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>.</span><span class="sxs-lookup"><span data-stu-id="14e44-118">The trace output is in a delimited text format that uses the delimiter specified by the <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> property.</span></span>  
   
--   Прослушиватель <xref:System.Diagnostics.XmlWriterTraceListener> направляет вывод отладки или трассировки в качестве кодированных в XML данных в метод <xref:System.IO.TextWriter> или поток <xref:System.IO.Stream>, например <xref:System.IO.FileStream>.  
+-   <span data-ttu-id="14e44-119">Прослушиватель <xref:System.Diagnostics.XmlWriterTraceListener> направляет вывод отладки или трассировки в качестве кодированных в XML данных в метод <xref:System.IO.TextWriter> или поток <xref:System.IO.Stream>, например <xref:System.IO.FileStream>.</span><span class="sxs-lookup"><span data-stu-id="14e44-119">An <xref:System.Diagnostics.XmlWriterTraceListener> directs tracing or debugging output as XML-encoded data to a <xref:System.IO.TextWriter> or to a <xref:System.IO.Stream>, such as a <xref:System.IO.FileStream>.</span></span>  
   
- Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`. Дополнительные сведения см. в разделе [Практическое руководство. Создание и инициализация прослушивателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) и [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md). Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки. Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**. Каждый прослушиватель получает одно и то же сообщение. Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.  
+ <span data-ttu-id="14e44-120">Если нужно, чтобы какой-либо еще прослушиватель, помимо <xref:System.Diagnostics.DefaultTraceListener>, получал выходные данные **Debug**, **Trace** и <xref:System.Diagnostics.TraceSource>, необходимо добавить его в коллекцию `Listeners`.</span><span class="sxs-lookup"><span data-stu-id="14e44-120">If you want any listener besides the <xref:System.Diagnostics.DefaultTraceListener> to receive **Debug**, **Trace** and <xref:System.Diagnostics.TraceSource> output, you must add it to the `Listeners` collection.</span></span> <span data-ttu-id="14e44-121">Дополнительные сведения см. в разделе [Практическое руководство. Создание и инициализация прослушивателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) и [Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).</span><span class="sxs-lookup"><span data-stu-id="14e44-121">For more information, see [How to: Create and Initialize Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) and [How to: Use TraceSource and Filters with Trace Listeners](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).</span></span> <span data-ttu-id="14e44-122">Любой прослушиватель из коллекции **Listeners** получает те же сообщения от методов вывода трассировки.</span><span class="sxs-lookup"><span data-stu-id="14e44-122">Any listener in the **Listeners** collection gets the same messages from the trace output methods.</span></span> <span data-ttu-id="14e44-123">Предположим, например, что настроены два прослушивателя: **TextWriterTraceListener** и **EventLogTraceListener**.</span><span class="sxs-lookup"><span data-stu-id="14e44-123">For example, suppose you set up two listeners: a **TextWriterTraceListener** and an **EventLogTraceListener**.</span></span> <span data-ttu-id="14e44-124">Каждый прослушиватель получает одно и то же сообщение.</span><span class="sxs-lookup"><span data-stu-id="14e44-124">Each listener receives the same message.</span></span> <span data-ttu-id="14e44-125">Прослушиватель **TextWriterTraceListener** направляет выходные данные в поток, а **EventLogTraceListener** направляет выходные данные в журнал событий.</span><span class="sxs-lookup"><span data-stu-id="14e44-125">The **TextWriterTraceListener** would direct its output to a stream, and the **EventLogTraceListener** would direct its output to an event log.</span></span>  
   
- В приведенном ниже примере показана отправка выходных данных в коллекцию **прослушивателей**.  
+ <span data-ttu-id="14e44-126">В приведенном ниже примере показана отправка выходных данных в коллекцию **прослушивателей**.</span><span class="sxs-lookup"><span data-stu-id="14e44-126">The following example shows how to send output to the **Listeners** collection.</span></span>  
   
 ```vb  
 ' Use this example when debugging.  
@@ -70,9 +66,9 @@ System.Diagnostics.Debug.WriteLine("Error in Widget 42");
 System.Diagnostics.Trace.WriteLine("Error in Widget 42");  
 ```  
   
- При отладке и трассировке используется одна и та же коллекция **прослушивателей**, поэтому если добавить объект прослушивателя в коллекцию **Debug.Listeners** в приложении, он также будет добавлен и в коллекцию **Trace.Listeners**.  
+ <span data-ttu-id="14e44-127">При отладке и трассировке используется одна и та же коллекция **прослушивателей**, поэтому если добавить объект прослушивателя в коллекцию **Debug.Listeners** в приложении, он также будет добавлен и в коллекцию **Trace.Listeners**.</span><span class="sxs-lookup"><span data-stu-id="14e44-127">Debug and trace share the same **Listeners** collection, so if you add a listener object to a **Debug.Listeners** collection in your application, it gets added to the **Trace.Listeners** collection as well.</span></span>  
   
- В следующем примере показано использование прослушивателя для отправки сведений трассировки на консоль.  
+ <span data-ttu-id="14e44-128">В следующем примере показано использование прослушивателя для отправки сведений трассировки на консоль.</span><span class="sxs-lookup"><span data-stu-id="14e44-128">The following example shows how to use a listener to send tracing information to a console:</span></span>  
   
 ```vb  
 Trace.Listeners.Clear()  
@@ -85,14 +81,13 @@ System.Diagnostics.Trace.Listeners.Add(
    new System.Diagnostics.TextWriterTraceListener(Console.Out));  
 ```  
   
-## <a name="developer-defined-listeners"></a>Прослушиватели, определяемые разработчиками  
- Можно определить собственные прослушиватели путем наследования от базового класса **TraceListener** и переопределения его методов своими пользовательскими методами. Дополнительные сведения о создании прослушивателей, определяемых разработчиками, см. в описании <xref:System.Diagnostics.TraceListener> в справочнике по .NET Framework.  
+## <a name="developer-defined-listeners"></a><span data-ttu-id="14e44-129">Прослушиватели, определяемые разработчиками</span><span class="sxs-lookup"><span data-stu-id="14e44-129">Developer-Defined Listeners</span></span>  
+ <span data-ttu-id="14e44-130">Можно определить собственные прослушиватели путем наследования от базового класса **TraceListener** и переопределения его методов своими пользовательскими методами.</span><span class="sxs-lookup"><span data-stu-id="14e44-130">You can define your own listeners by inheriting from the **TraceListener** base class and overriding its methods with your customized methods.</span></span> <span data-ttu-id="14e44-131">Дополнительные сведения о создании прослушивателей, определяемых разработчиками, см. в описании <xref:System.Diagnostics.TraceListener> в справочнике по .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="14e44-131">For more information on creating developer-defined listeners, see <xref:System.Diagnostics.TraceListener> in the .NET Framework reference.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TraceListener>   
- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
-
+## <a name="see-also"></a><span data-ttu-id="14e44-132">См. также</span><span class="sxs-lookup"><span data-stu-id="14e44-132">See Also</span></span>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="14e44-133">Трассировка и инструментирование приложений</span><span class="sxs-lookup"><span data-stu-id="14e44-133">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [<span data-ttu-id="14e44-134">Переключатели трассировки</span><span class="sxs-lookup"><span data-stu-id="14e44-134">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)

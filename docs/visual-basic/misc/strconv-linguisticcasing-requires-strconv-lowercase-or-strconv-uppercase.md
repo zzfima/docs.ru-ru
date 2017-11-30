@@ -1,25 +1,27 @@
 ---
-title: "Для &quot;StrConv.LinguisticCasing&quot; требуется &quot;StrConv.LowerCase&quot; или &quot;StrConv.UpperCase&quot; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrLinguisticRequirements"
+title: "&#39; Для StrConv.LinguisticCasing &#39; требуется &#39; StrConv.LowerCase &#39; или &#39; StrConv.UpperCase &#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 742457b7de5797d965e134e7d1da594856c2a4df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Для &quot;StrConv.LinguisticCasing&quot; требуется &quot;StrConv.LowerCase&quot; или &quot;StrConv.UpperCase&quot;
-Вы попытались использовать функцию `StrConv.LinguisticCasing`, что допустимо только в сочетании с функцией `StrConv.LowerCase` или `StrConv.UpperCase`.  
+# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="85275-102">&#39; Для StrConv.LinguisticCasing &#39; требуется &#39; StrConv.LowerCase &#39; или &#39; StrConv.UpperCase &#39;</span><span class="sxs-lookup"><span data-stu-id="85275-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
+<span data-ttu-id="85275-103">Вы попытались использовать функцию `StrConv.LinguisticCasing`, что допустимо только в сочетании с функцией `StrConv.LowerCase` или `StrConv.UpperCase`.</span><span class="sxs-lookup"><span data-stu-id="85275-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="85275-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="85275-104">To correct this error</span></span>  
   
-1.  Используйте функцию `StrConv.LowerCase` или `StrConv.UpperCase` вместе с функцией `StrConv.LinguisticCasing`.  
+1.  <span data-ttu-id="85275-105">Используйте функцию `StrConv.LowerCase` или `StrConv.UpperCase` вместе с функцией `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="85275-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
   
-## См. также  
- [НЕ В СБОРКЕ. Функция StrConv](http://msdn.microsoft.com/ru-ru/31ceb44b-005b-455f-b344-9dd06efbf660)   
- [StrConv Constant Changes in Visual Basic .NET](http://msdn.microsoft.com/ru-ru/7a8c2781-2716-40dd-90c1-96c1548516e2)
+## <a name="see-also"></a><span data-ttu-id="85275-106">См. также</span><span class="sxs-lookup"><span data-stu-id="85275-106">See Also</span></span>  
+ [<span data-ttu-id="85275-107">НЕ в СБОРКЕ. Функция StrConv</span><span class="sxs-lookup"><span data-stu-id="85275-107">NOT IN BUILD: StrConv Function</span></span>](http://msdn.microsoft.com/en-us/31ceb44b-005b-455f-b344-9dd06efbf660)  
+ [<span data-ttu-id="85275-108">Константа StrConv изменения в Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="85275-108">StrConv Constant Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/7a8c2781-2716-40dd-90c1-96c1548516e2)

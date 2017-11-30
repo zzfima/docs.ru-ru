@@ -1,37 +1,40 @@
 ---
-title: "Пространства имен MEF для приложений .NET для Магазина Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "MEF для .NET для магазина Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-caps.latest.revision: 3
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7f427656f9b385214db5b3bd26c4addb1122b35a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пространства имен MEF для приложений .NET для Магазина Windows
-<xref:System.Composition?displayProperty=fullName> и его дочерние пространства имен содержат типы для разработки расширяемых приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью Managed Extensibility Framework \(MEF\).  Эти пространства имен являются частью подмножества [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] для операционной системы [!INCLUDE[win8](../../../includes/win8-md.md)].  
+# <a name="mef-for-net-for-windows-store-apps"></a><span data-ttu-id="4613b-102">MEF для .NET для магазина Windows</span><span class="sxs-lookup"><span data-stu-id="4613b-102">MEF for .NET for Windows Store Apps</span></span>
+<span data-ttu-id="4613b-103"><xref:System.Composition?displayProperty=nameWithType>и его дочерние пространства имен содержат типы для разработки расширяемого [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложения Managed Extensibility Framework (MEF).</span><span class="sxs-lookup"><span data-stu-id="4613b-103"><xref:System.Composition?displayProperty=nameWithType> and its child namespaces contain types for developing extensible [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps with Managed Extensibility Framework (MEF).</span></span> <span data-ttu-id="4613b-104">Эти пространства имен являются частью [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] подмножества для [!INCLUDE[win8](../../../includes/win8-md.md)] операционной системы.</span><span class="sxs-lookup"><span data-stu-id="4613b-104">These namespaces are part of the [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subset for the [!INCLUDE[win8](../../../includes/win8-md.md)] operating system.</span></span>  
   
- Эти пространства имен не являются частью основной библиотеки классов, распространяемой с платформой .NET Framework.  Чтобы установить эти пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **Управление пакетами NuGet** из меню **Project** и найдите в сети пакет Microsoft.Composition.  
+ <span data-ttu-id="4613b-105">Эти пространства имен не входят в основную библиотеку классов, распространяемой с .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4613b-105">These namespaces are not part of the core class library distributed with the .NET Framework.</span></span> <span data-ttu-id="4613b-106">Чтобы установить следующие пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите **управление пакетами NuGet** из **проекта** меню и найдите пакет Microsoft.Composition в Интернете.</span><span class="sxs-lookup"><span data-stu-id="4613b-106">To install these namespaces, open your project in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], choose **Manage NuGet Packages** from the **Project** menu, and search online for the Microsoft.Composition package.</span></span>  
   
--   <xref:System.Composition?displayProperty=fullName> предоставляет классы, которые составляют MEF ядро для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+-   <span data-ttu-id="4613b-107"><xref:System.Composition?displayProperty=nameWithType>предоставляет классы, которые составляют ядро MEF для [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="4613b-107"><xref:System.Composition?displayProperty=nameWithType> provides classes that constitute the core MEF for [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
--   <xref:System.Composition.Convention?displayProperty=fullName> предоставляет типы, которые поддерживают использование MEF с моделью конфигурации на основе соглашений.  
+-   <span data-ttu-id="4613b-108"><xref:System.Composition.Convention?displayProperty=nameWithType>Предоставляет типы, поддерживающие благодаря применению MEF модель конфигурации на основе соглашений.</span><span class="sxs-lookup"><span data-stu-id="4613b-108"><xref:System.Composition.Convention?displayProperty=nameWithType> provides types that support using MEF with a convention-based configuration model.</span></span>  
   
--   <xref:System.Composition.Hosting?displayProperty=fullName> предоставляет типы MEF, которые полезны для разработчиков ведущих приложений.  
+-   <span data-ttu-id="4613b-109"><xref:System.Composition.Hosting?displayProperty=nameWithType>Предоставляет типы MEF, которые полезны для разработчиков, ведущих приложений.</span><span class="sxs-lookup"><span data-stu-id="4613b-109"><xref:System.Composition.Hosting?displayProperty=nameWithType> provides MEF types that are useful to developers of host applications.</span></span>  
   
--   <xref:System.Composition.Hosting.Core?displayProperty=fullName> предоставляет типы MEF, используемые внутри механизмом композиции.  
+-   <span data-ttu-id="4613b-110"><xref:System.Composition.Hosting.Core?displayProperty=nameWithType>Предоставляет типы MEF внутреннего использования подсистемой композиции.</span><span class="sxs-lookup"><span data-stu-id="4613b-110"><xref:System.Composition.Hosting.Core?displayProperty=nameWithType> provides MEF types used internally by the composition engine.</span></span>  
   
- Дополнительные сведения о [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и список пространств имен и типов, которые он содержит, см. в разделе [обзор приложений .NET для Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) в центре разработки Windows.  
+ <span data-ttu-id="4613b-111">Дополнительные сведения о [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и просмотреть список пространств имен и типов, содержащихся в нем [Обзор приложений .NET для магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) в центре разработчиков Windows.</span><span class="sxs-lookup"><span data-stu-id="4613b-111">For more information about [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] and a list of namespaces and types that it contains, see [.NET for Windows Store apps overview](http://go.microsoft.com/fwlink/p/?LinkID=238312) in the Windows Dev Center.</span></span>  
   
-## См. также  
- [Общие сведения о .NET для приложений Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312)   
- [.NET для приложений Магазина Windows. Поддерживаемые API](http://go.microsoft.com/fwlink/p/?LinkID=247912)   
- [Managed Extensibility Framework \(MEF\)](../../../docs/framework/mef/index.md)
+## <a name="see-also"></a><span data-ttu-id="4613b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="4613b-112">See Also</span></span>  
+ [<span data-ttu-id="4613b-113">Обзор приложений .NET для магазина Windows</span><span class="sxs-lookup"><span data-stu-id="4613b-113">.NET for Windows Store apps overview</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [<span data-ttu-id="4613b-114">Поддерживаемые API .NET для приложений Магазина Windows</span><span class="sxs-lookup"><span data-stu-id="4613b-114">.NET for Windows Store apps – supported APIs</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [<span data-ttu-id="4613b-115">Managed Extensibility Framework (MEF)</span><span class="sxs-lookup"><span data-stu-id="4613b-115">Managed Extensibility Framework (MEF)</span></span>](../../../docs/framework/mef/index.md)

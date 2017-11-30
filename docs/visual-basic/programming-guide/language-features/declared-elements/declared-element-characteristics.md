@@ -1,73 +1,72 @@
 ---
-title: "Характеристики объявленных элементов (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "уровни доступа, объявленные элементы"
-  - "типы данных [Visual Basic], объявленные элементы"
-  - "объявленные элементы, уровень доступа"
-  - "объявленные элементы, время существования"
-  - "объявленные элементы, область действия"
-  - "объявленные элементы, видимость"
-  - "элементы, программирование"
-  - "время существования, объявленные элементы"
-  - "область действия, объявленные элементы"
-  - "видимость, объявленные элементы"
+title: "Характеристики объявленных элементов (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- declared elements [Visual Basic], lifetime
+- access levels, declared elements
+- declared elements [Visual Basic], scope
+- visibility [Visual Basic], declared elements
+- elements [Visual Basic], programming
+- scope [Visual Basic], declared elements
+- lifetime [Visual Basic], declared elements
+- declared elements [Visual Basic], access level
+- data types [Visual Basic], declared elements
+- declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Характеристики объявленных элементов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-*Характеристикой* объявленного элемента называется свойство этого элемента, определяющее способы его взаимодействия с кодом.  У каждого объявленного элемента есть одна или несколько следующих связанных с ним характеристик:  
+# <a name="declared-element-characteristics-visual-basic"></a><span data-ttu-id="6b392-102">Характеристики объявленных элементов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b392-102">Declared Element Characteristics (Visual Basic)</span></span>
+<span data-ttu-id="6b392-103">Объект *характеристика* объявленного элемента называется свойство этого элемента, определяющее, как код может взаимодействовать с ним.</span><span class="sxs-lookup"><span data-stu-id="6b392-103">A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it.</span></span> <span data-ttu-id="6b392-104">У каждого объявленного элемента имеется один или несколько из следующих характеристик, связанные с ним:</span><span class="sxs-lookup"><span data-stu-id="6b392-104">Every declared element has one or more of the following characteristics associated with it:</span></span>  
   
--   *Тип данных* — значения, которые может принимать элемент, и способ их хранения.  Дополнительные сведения см. в разделе [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+-   <span data-ttu-id="6b392-105">*Тип данных* — значения, которые может принимать элемент, и способ их хранения.</span><span class="sxs-lookup"><span data-stu-id="6b392-105">*Data type* — the values the element can hold, and how it stores those values.</span></span> <span data-ttu-id="6b392-106">Дополнительные сведения см. в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span><span class="sxs-lookup"><span data-stu-id="6b392-106">For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md).</span></span>  
   
--   *Время существования* — период времени выполнения, в течение которого элемент доступен для использования.  Дополнительные сведения см. в разделе [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+-   <span data-ttu-id="6b392-107">*Время существования* — период времени выполнения, в течение которого элемент доступен для использования.</span><span class="sxs-lookup"><span data-stu-id="6b392-107">*Lifetime* — the period of execution time during which the element is available for use.</span></span> <span data-ttu-id="6b392-108">Дополнительные сведения см. в разделе [время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span><span class="sxs-lookup"><span data-stu-id="6b392-108">For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).</span></span>  
   
--   *Область действия* — область кода, из которой возможно обращение к элементу без указания его полного имени.  Дополнительные сведения см. в разделе [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   <span data-ttu-id="6b392-109">*Область* — набор весь код, который может ссылаться на элемент неполного имени.</span><span class="sxs-lookup"><span data-stu-id="6b392-109">*Scope* — the set of all code that can refer to the element without qualifying its name.</span></span> <span data-ttu-id="6b392-110">Дополнительные сведения см. в разделе [как: управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).</span><span class="sxs-lookup"><span data-stu-id="6b392-110">For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).</span></span>  
   
--   *Уровень доступа* — разрешение коду на использование этого элемента.  Дополнительные сведения см. в разделе [Практическое руководство. Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   <span data-ttu-id="6b392-111">*Уровень доступа* — разрешение коду на использование этого элемента.</span><span class="sxs-lookup"><span data-stu-id="6b392-111">*Access level* — the permission for code to make use of the element.</span></span> <span data-ttu-id="6b392-112">Дополнительные сведения см. в разделе [как: Управление доступностью переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).</span><span class="sxs-lookup"><span data-stu-id="6b392-112">For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).</span></span>  
   
-## Характеристики элементов  
- В следующей таблице приведены объявленные элементы и характеристики каждого из них.  
+## <a name="characteristics-of-the-elements"></a><span data-ttu-id="6b392-113">Характеристики элементов</span><span class="sxs-lookup"><span data-stu-id="6b392-113">Characteristics of the Elements</span></span>  
+ <span data-ttu-id="6b392-114">В следующей таблице показаны объявленные элементы и характеристики, которые применяются для каждого из них.</span><span class="sxs-lookup"><span data-stu-id="6b392-114">The following table shows the declared elements and the characteristics that apply to each one.</span></span>  
   
-|Элемент|Тип данных|Время существования|Область <sup>1</sup>|Уровень доступа|  
-|-------------|----------------|-------------------------|--------------------------|---------------------|  
-|Переменная|Да|Да|Да|Да|  
-|Константа|Да|Нет|Да|Да|  
-|Перечисление|Да|Нет|Да|Да|  
-|Структура|Нет|Нет|Да|Да|  
-|Свойство.|Да|Да|Да|Да|  
-|Метод|Нет|Да|Да|Да|  
-|Процедура \(`Sub` или `Function`\)|Нет|Да|Да|Да|  
-|Параметр процедуры|Да|Да|Да|Нет|  
-|Значение, возвращаемое функцией|Да|Да|Да|Нет|  
-|Оператор|Да|Нет|Да|Да|  
-|Интерфейс|Нет|Нет|Да|Да|  
-|Класс|Нет|Нет|Да|Да|  
-|Событие|Нет|Нет|Да|Да|  
-|Делегат|Нет|Нет|Да|Да|  
+|<span data-ttu-id="6b392-115">Элемент</span><span class="sxs-lookup"><span data-stu-id="6b392-115">Element</span></span>|<span data-ttu-id="6b392-116">Тип данных</span><span class="sxs-lookup"><span data-stu-id="6b392-116">Data Type</span></span>|<span data-ttu-id="6b392-117">Время существования</span><span class="sxs-lookup"><span data-stu-id="6b392-117">Lifetime</span></span>|<span data-ttu-id="6b392-118">Область <sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="6b392-118">Scope <sup>1</sup></span></span>|<span data-ttu-id="6b392-119">Уровень доступа</span><span class="sxs-lookup"><span data-stu-id="6b392-119">Access Level</span></span>|  
+|-------------|---------------|--------------|------------------------|------------------|  
+|<span data-ttu-id="6b392-120">Переменная</span><span class="sxs-lookup"><span data-stu-id="6b392-120">Variable</span></span>|<span data-ttu-id="6b392-121">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-121">Yes</span></span>|<span data-ttu-id="6b392-122">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-122">Yes</span></span>|<span data-ttu-id="6b392-123">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-123">Yes</span></span>|<span data-ttu-id="6b392-124">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-124">Yes</span></span>|  
+|<span data-ttu-id="6b392-125">Константа</span><span class="sxs-lookup"><span data-stu-id="6b392-125">Constant</span></span>|<span data-ttu-id="6b392-126">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-126">Yes</span></span>|<span data-ttu-id="6b392-127">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-127">No</span></span>|<span data-ttu-id="6b392-128">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-128">Yes</span></span>|<span data-ttu-id="6b392-129">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-129">Yes</span></span>|  
+|<span data-ttu-id="6b392-130">Перечисление</span><span class="sxs-lookup"><span data-stu-id="6b392-130">Enumeration</span></span>|<span data-ttu-id="6b392-131">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-131">Yes</span></span>|<span data-ttu-id="6b392-132">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-132">No</span></span>|<span data-ttu-id="6b392-133">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-133">Yes</span></span>|<span data-ttu-id="6b392-134">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-134">Yes</span></span>|  
+|<span data-ttu-id="6b392-135">Структура</span><span class="sxs-lookup"><span data-stu-id="6b392-135">Structure</span></span>|<span data-ttu-id="6b392-136">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-136">No</span></span>|<span data-ttu-id="6b392-137">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-137">No</span></span>|<span data-ttu-id="6b392-138">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-138">Yes</span></span>|<span data-ttu-id="6b392-139">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-139">Yes</span></span>|  
+|<span data-ttu-id="6b392-140">Свойство</span><span class="sxs-lookup"><span data-stu-id="6b392-140">Property</span></span>|<span data-ttu-id="6b392-141">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-141">Yes</span></span>|<span data-ttu-id="6b392-142">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-142">Yes</span></span>|<span data-ttu-id="6b392-143">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-143">Yes</span></span>|<span data-ttu-id="6b392-144">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-144">Yes</span></span>|  
+|<span data-ttu-id="6b392-145">Метод</span><span class="sxs-lookup"><span data-stu-id="6b392-145">Method</span></span>|<span data-ttu-id="6b392-146">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-146">No</span></span>|<span data-ttu-id="6b392-147">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-147">Yes</span></span>|<span data-ttu-id="6b392-148">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-148">Yes</span></span>|<span data-ttu-id="6b392-149">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-149">Yes</span></span>|  
+|<span data-ttu-id="6b392-150">Процедура (`Sub` или `Function`)</span><span class="sxs-lookup"><span data-stu-id="6b392-150">Procedure (`Sub` or `Function`)</span></span>|<span data-ttu-id="6b392-151">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-151">No</span></span>|<span data-ttu-id="6b392-152">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-152">Yes</span></span>|<span data-ttu-id="6b392-153">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-153">Yes</span></span>|<span data-ttu-id="6b392-154">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-154">Yes</span></span>|  
+|<span data-ttu-id="6b392-155">Параметр процедуры</span><span class="sxs-lookup"><span data-stu-id="6b392-155">Procedure parameter</span></span>|<span data-ttu-id="6b392-156">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-156">Yes</span></span>|<span data-ttu-id="6b392-157">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-157">Yes</span></span>|<span data-ttu-id="6b392-158">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-158">Yes</span></span>|<span data-ttu-id="6b392-159">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-159">No</span></span>|  
+|<span data-ttu-id="6b392-160">Функция возврата</span><span class="sxs-lookup"><span data-stu-id="6b392-160">Function return</span></span>|<span data-ttu-id="6b392-161">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-161">Yes</span></span>|<span data-ttu-id="6b392-162">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-162">Yes</span></span>|<span data-ttu-id="6b392-163">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-163">Yes</span></span>|<span data-ttu-id="6b392-164">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-164">No</span></span>|  
+|<span data-ttu-id="6b392-165">Оператор</span><span class="sxs-lookup"><span data-stu-id="6b392-165">Operator</span></span>|<span data-ttu-id="6b392-166">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-166">Yes</span></span>|<span data-ttu-id="6b392-167">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-167">No</span></span>|<span data-ttu-id="6b392-168">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-168">Yes</span></span>|<span data-ttu-id="6b392-169">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-169">Yes</span></span>|  
+|<span data-ttu-id="6b392-170">Интерфейс</span><span class="sxs-lookup"><span data-stu-id="6b392-170">Interface</span></span>|<span data-ttu-id="6b392-171">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-171">No</span></span>|<span data-ttu-id="6b392-172">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-172">No</span></span>|<span data-ttu-id="6b392-173">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-173">Yes</span></span>|<span data-ttu-id="6b392-174">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-174">Yes</span></span>|  
+|<span data-ttu-id="6b392-175">Класс</span><span class="sxs-lookup"><span data-stu-id="6b392-175">Class</span></span>|<span data-ttu-id="6b392-176">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-176">No</span></span>|<span data-ttu-id="6b392-177">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-177">No</span></span>|<span data-ttu-id="6b392-178">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-178">Yes</span></span>|<span data-ttu-id="6b392-179">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-179">Yes</span></span>|  
+|<span data-ttu-id="6b392-180">Событие</span><span class="sxs-lookup"><span data-stu-id="6b392-180">Event</span></span>|<span data-ttu-id="6b392-181">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-181">No</span></span>|<span data-ttu-id="6b392-182">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-182">No</span></span>|<span data-ttu-id="6b392-183">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-183">Yes</span></span>|<span data-ttu-id="6b392-184">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-184">Yes</span></span>|  
+|<span data-ttu-id="6b392-185">Делегат</span><span class="sxs-lookup"><span data-stu-id="6b392-185">Delegate</span></span>|<span data-ttu-id="6b392-186">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-186">No</span></span>|<span data-ttu-id="6b392-187">Нет</span><span class="sxs-lookup"><span data-stu-id="6b392-187">No</span></span>|<span data-ttu-id="6b392-188">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-188">Yes</span></span>|<span data-ttu-id="6b392-189">Да</span><span class="sxs-lookup"><span data-stu-id="6b392-189">Yes</span></span>|  
   
- Область <sup>1</sup> иногда называют *видимой*.  
+ <span data-ttu-id="6b392-190"><sup>1</sup> область, иногда называют *видимость*.</span><span class="sxs-lookup"><span data-stu-id="6b392-190"><sup>1</sup> Scope is sometimes referred to as *visibility*.</span></span>  
   
-## См. также  
- [Объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)   
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Объявление переменной](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="6b392-191">См. также</span><span class="sxs-lookup"><span data-stu-id="6b392-191">See Also</span></span>  
+ [<span data-ttu-id="6b392-192">Объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="6b392-192">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [<span data-ttu-id="6b392-193">Имена объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="6b392-193">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="6b392-194">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="6b392-194">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="6b392-195">Время существования в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6b392-195">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="6b392-196">Область в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6b392-196">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="6b392-197">Уровни доступа в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6b392-197">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="6b392-198">Типы данных</span><span class="sxs-lookup"><span data-stu-id="6b392-198">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="6b392-199">Объявление переменных</span><span class="sxs-lookup"><span data-stu-id="6b392-199">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

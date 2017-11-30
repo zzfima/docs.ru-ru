@@ -1,160 +1,143 @@
 ---
-title: "Устранение неполадок в процедурах (Visual Basic) | Документы Microsoft"
+title: "Устранение неполадок в процедурах (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
-- procedures, troubleshooting
+- procedures [Visual Basic], troubleshooting
 - Visual Basic code, procedures
 - troubleshooting procedures
-- procedures, about procedures
+- procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5445d6da982e4eea5b1047505e4bee3380ed472
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-procedures-visual-basic"></a>Устранение неполадок в процедурах (Visual Basic)
-На этой странице перечислены некоторые общие проблемы, которые могут возникнуть при работе с процедурами.  
+# <a name="troubleshooting-procedures-visual-basic"></a><span data-ttu-id="cbcbe-102">Устранение неполадок в процедурах (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbcbe-102">Troubleshooting Procedures (Visual Basic)</span></span>
+<span data-ttu-id="cbcbe-103">Этой странице перечислены некоторые общие проблемы, которые могут возникнуть при работе с процедурами.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-103">This page lists some common problems that can occur when working with procedures.</span></span>  
   
-## <a name="returning-an-array-type-from-a-function-procedure"></a>Возврат типа массива из процедуры Function  
- Если `Function` процедура возвращает массив, нельзя использовать `Function` имя для хранения значений элементов массива. Попытка сделать это, компилятор интерпретирует как вызов `Function`. В следующем примере возникает ошибки компилятора.  
+## <a name="returning-an-array-type-from-a-function-procedure"></a><span data-ttu-id="cbcbe-104">Возврат типа массива из процедуры Function</span><span class="sxs-lookup"><span data-stu-id="cbcbe-104">Returning an Array Type from a Function Procedure</span></span>  
+ <span data-ttu-id="cbcbe-105">Если `Function` процедура возвращает тип данных массива, нельзя использовать `Function` имя для хранения значений в элементах массива.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-105">If a `Function` procedure returns an array data type, you cannot use the `Function` name to store values in the elements of the array.</span></span> <span data-ttu-id="cbcbe-106">Если вы попытаетесь это сделать, компилятор интерпретирует его как вызов `Function`.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-106">If you attempt to do this, the compiler interprets it as a call to the `Function`.</span></span> <span data-ttu-id="cbcbe-107">Следующий пример приводит к возникновению ошибки компилятора.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-107">The following example generates compiler errors.</span></span>  
   
  `Function allOnes(ByVal n As Integer) As Integer()`  
   
  `For i As Integer = 1 To n - 1`  
   
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
+ <span data-ttu-id="cbcbe-108">`' The following statement generates a`   `COMPILER ERROR`  `.`</span><span class="sxs-lookup"><span data-stu-id="cbcbe-108">`' The following statement generates a`   `COMPILER ERROR`  `.`</span></span>  
   
  `allOnes(i) = 1`  
   
  `Next i`  
   
- `' The following statement generates a`   `COMPILER ERROR`  `.`  
+ <span data-ttu-id="cbcbe-109">`' The following statement generates a`   `COMPILER ERROR`  `.`</span><span class="sxs-lookup"><span data-stu-id="cbcbe-109">`' The following statement generates a`   `COMPILER ERROR`  `.`</span></span>  
   
  `Return allOnes()`  
   
  `End Function`  
   
- Инструкция `allOnes(i) = 1` создает ошибку компилятора, поскольку для вызова `allOnes` с аргументом неверного типа данных (одноэлементный `Integer` вместо `Integer` массива). Инструкция `Return allOnes()` создает ошибку компилятора, поскольку для вызова `allOnes` без аргументов.  
+ <span data-ttu-id="cbcbe-110">Инструкция `allOnes(i) = 1` создает ошибку компилятора, поскольку для вызова `allOnes` с аргументом неверного типа данных (одноэлементный `Integer` вместо `Integer` массива).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-110">The statement `allOnes(i) = 1` generates a compiler error because it appears to call `allOnes` with an argument of the wrong data type (a singleton `Integer` instead of an `Integer` array).</span></span> <span data-ttu-id="cbcbe-111">Инструкция `Return allOnes()` создает ошибку компилятора, поскольку для вызова `allOnes` без аргумента.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-111">The statement `Return allOnes()` generates a compiler error because it appears to call `allOnes` with no argument.</span></span>  
   
- **Правильный подход:** может изменять элементы массива, который должен быть возвращен, определить внутреннего массива как локальная переменная. В следующем примере компилируется без ошибок.  
+ <span data-ttu-id="cbcbe-112">**Правильный подход:** возможность изменения элементов массива, должно быть возвращено, определение внутреннего массива как локальная переменная.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-112">**Correct Approach:** To be able to modify the elements of an array that is to be returned, define an internal array as a local variable.</span></span> <span data-ttu-id="cbcbe-113">В следующем примере компилируется без ошибок.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-113">The following example compiles without error.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#66;](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
-## <a name="argument-not-being-modified-by-procedure-call"></a>Аргумент не изменен вызовом процедуры  
- Если предполагается позволить процедуре изменять программный элемент, лежащий в основе аргумента в вызывающем коде, необходимо передать его по ссылке. Но процедура может доступа к элементам аргумента ссылочного типа, даже если при передаче по значению.  
+## <a name="argument-not-being-modified-by-procedure-call"></a><span data-ttu-id="cbcbe-114">Аргумент не изменен вызовом процедуры</span><span class="sxs-lookup"><span data-stu-id="cbcbe-114">Argument Not Being Modified by Procedure Call</span></span>  
+ <span data-ttu-id="cbcbe-115">Если вы собираетесь разрешить процедуре изменять программный элемент базового аргумента в вызывающем коде, необходимо передать его по ссылке.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-115">If you intend to allow a procedure to change a programming element underlying an argument in the calling code, you must pass it by reference.</span></span> <span data-ttu-id="cbcbe-116">Но процедура может доступа к элементам аргумента ссылочного типа, даже если он передается по значению.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-116">But a procedure can access the elements of a reference type argument even if you pass it by value.</span></span>  
   
--   **Базовый переменной**. Чтобы разрешить процедуре заменить значение элемента базовой переменной, процедура должна объявить параметр [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Также, вызывающий код не должен заключать аргумент в круглые скобки, поскольку это переопределяет `ByRef` механизм передачи.  
+-   <span data-ttu-id="cbcbe-117">**Базовый переменной**.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-117">**Underlying Variable**.</span></span> <span data-ttu-id="cbcbe-118">Чтобы разрешить процедуре заменить значение элемента базовой переменной, процедура должна объявить параметр [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-118">To allow the procedure to replace the value of the underlying variable element itself, the procedure must declare the parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).</span></span> <span data-ttu-id="cbcbe-119">Также, вызывающий код не должен заключать аргумент в круглые скобки, поскольку это переопределяет `ByRef` механизм передачи.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-119">Also, the calling code must not enclose the argument in parentheses, because that would override the `ByRef` passing mechanism.</span></span>  
   
--   **Ссылаться на элементы типа**. Если параметр объявлен [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), процедура не может изменить элемент базовой переменной. Однако если аргумент имеет ссылочный тип, процедура может изменить члены объекта, на который он указывает, несмотря на то, что она не может заменить значение переменной. Например если аргумент является переменной массива, ему нельзя присвоить новый массив, к ней, но его можно изменить один или несколько его элементов. Изменение элементов, отражаются в базовой переменной массива в вызывающем коде.  
+-   <span data-ttu-id="cbcbe-120">**Ссылаться на элементы типа**.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-120">**Reference Type Elements**.</span></span> <span data-ttu-id="cbcbe-121">Если параметр объявлен [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), процедура не может изменить элемент базовой переменной.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-121">If you declare a parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), the procedure cannot modify the underlying variable element itself.</span></span> <span data-ttu-id="cbcbe-122">Однако если аргумент имеет ссылочный тип, процедура может изменить члены объекта, на который он указывает, несмотря на то, что она не может заменить значение переменной.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-122">However, if the argument is a reference type, the procedure can modify the members of the object to which it points, even though it cannot replace the variable's value.</span></span> <span data-ttu-id="cbcbe-123">Например если аргумент является массивом, процедура нельзя присвоить новый массив, но его можно изменить один или несколько его элементов.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-123">For example, if the argument is an array variable, the procedure cannot assign a new array to it, but it can change one or more of its elements.</span></span> <span data-ttu-id="cbcbe-124">Изменение элементов, отражаются в базовую переменную массива в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-124">The changed elements are reflected in the underlying array variable in the calling code.</span></span>  
   
- В следующем примере определяется две процедуры, которые принимают переменную массива по значению и работать над его элементами. Процедура `increase` просто добавляет единицу к каждому элементу. Процедура `replace` присваивает новый массив параметру `a()` и затем добавляет единицу к каждому элементу. Однако переназначение не влияет на базовую переменную массива в вызывающем коде, так как `a()` объявляется `ByVal`.  
+ <span data-ttu-id="cbcbe-125">В следующем примере определяется две процедуры, которые принимают переменную массива по значению и работать над его элементами.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-125">The following example defines two procedures that take an array variable by value and operate on its elements.</span></span> <span data-ttu-id="cbcbe-126">Процедура `increase` просто добавляет единицу к каждому элементу.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-126">Procedure `increase` simply adds one to each element.</span></span> <span data-ttu-id="cbcbe-127">Процедура `replace` присваивает новый массив параметру `a()` и добавляет единицу к каждому элементу.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-127">Procedure `replace` assigns a new array to the parameter `a()` and then adds one to each element.</span></span> <span data-ttu-id="cbcbe-128">Однако, переопределение не влияет на базовую переменную массива в вызывающем коде, так как `a()` объявлен `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-128">However, the reassignment does not affect the underlying array variable in the calling code because `a()` is declared `ByVal`.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#35;](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures&#38;](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
- Следующий пример вызывает `increase` и `replace`.  
+ <span data-ttu-id="cbcbe-129">Следующий пример выполняет вызовы `increase` и `replace`.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-129">The following example makes calls to `increase` and `replace`.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#37;](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
- Первый `MsgBox` вызове отображается «после увеличения (n): 11, 21, 31, 41». Поскольку `n` является ссылочным типом, `increase` может изменить его элементы, несмотря на то, что он передается `ByVal`.  
+ <span data-ttu-id="cbcbe-130">Первый `MsgBox` вызове отображается «после увеличения (n): 11, 21, 31, 41».</span><span class="sxs-lookup"><span data-stu-id="cbcbe-130">The first `MsgBox` call displays "After increase(n): 11, 21, 31, 41".</span></span> <span data-ttu-id="cbcbe-131">Поскольку `n` является ссылочным типом, `increase` может изменить его элементы, даже если он передается `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-131">Because `n` is a reference type, `increase` can change its members, even though it is passed `ByVal`.</span></span>  
   
- Второй `MsgBox` вызове отображается «после замены(n): 11, 21, 31, 41». Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n` , назначив ему новый массив. Когда `replace` создает новый экземпляр массива `k` и назначает его локальной переменной `a`, он теряет ссылку на `n` передается в вызывающий код. Когда он увеличивает члены `a`, только локальный массив `k` изменяется.  
+ <span data-ttu-id="cbcbe-132">Второй `MsgBox` вызове отображается «после замены(n): 11, 21, 31, 41».</span><span class="sxs-lookup"><span data-stu-id="cbcbe-132">The second `MsgBox` call displays "After replace(n): 11, 21, 31, 41".</span></span> <span data-ttu-id="cbcbe-133">Поскольку `n` передается `ByVal`, `replace` не может изменить переменную `n` путем присвоения нового массива.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-133">Because `n` is passed `ByVal`, `replace` cannot modify the variable `n` by assigning a new array to it.</span></span> <span data-ttu-id="cbcbe-134">Когда `replace` создает новый экземпляр массива `k` и присваивает его локальной переменной `a`, он теряет ссылку на `n` передается в вызывающий код.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-134">When `replace` creates the new array instance `k` and assigns it to the local variable `a`, it loses the reference to `n` passed in by the calling code.</span></span> <span data-ttu-id="cbcbe-135">Когда он увеличивает члены `a`, только локальный массив `k` зависит.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-135">When it increments the members of `a`, only the local array `k` is affected.</span></span>  
   
- **Правильный подход:** возможность изменить элемент базовой переменной, передать его по ссылке. В следующем примере показано изменение в объявлении `replace` , позволяющее заменить один массив на другой в вызывающем коде.  
+ <span data-ttu-id="cbcbe-136">**Правильный подход:** чтобы иметь возможность изменить элемент базовой переменной, передайте его по ссылке.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-136">**Correct Approach:** To be able to modify an underlying variable element itself, pass it by reference.</span></span> <span data-ttu-id="cbcbe-137">В следующем примере показано изменение в объявлении `replace` , позволяющее заменить один массив на другой в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-137">The following example shows the change in the declaration of `replace` that allows it to replace one array with another in the calling code.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#64;](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
-## <a name="unable-to-define-an-overload"></a>Не удалось определить перегрузку  
- Если вы хотите определить перегруженную версию процедуры, необходимо использовать то же имя, но другую подпись. Если компилятор не может отличить объявление от перегруженного варианта с той же сигнатурой, он выдает ошибку.  
+## <a name="unable-to-define-an-overload"></a><span data-ttu-id="cbcbe-138">Не удалось определить перегрузку</span><span class="sxs-lookup"><span data-stu-id="cbcbe-138">Unable to Define an Overload</span></span>  
+ <span data-ttu-id="cbcbe-139">Если вы хотите определить перегруженные версии процедуры, необходимо использовать одинаковое имя, но другой сигнатурой.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-139">If you want to define an overloaded version of a procedure, you must use the same name but a different signature.</span></span> <span data-ttu-id="cbcbe-140">Если компилятор не может отличить объявление от перегруженного варианта с такой же сигнатурой, он создает ошибку.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-140">If the compiler cannot differentiate your declaration from an overload with the same signature, it generates an error.</span></span>  
   
- *Подписи* процедуры определяется именем процедуры и списком параметров. Каждая перегрузка должен иметь имя, совпадающее с именем все другие перегрузки, но должна отличаться от всех, по крайней мере одним из компонентов подписи. Дополнительные сведения см. в разделе [перегрузка процедур](./procedure-overloading.md).  
+ <span data-ttu-id="cbcbe-141">*Подписи* процедуры определяется имя процедуры и список параметров.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-141">The *signature* of a procedure is determined by the procedure name and the parameter list.</span></span> <span data-ttu-id="cbcbe-142">Каждая перегрузка должен иметь имя, совпадающее с именем все другие перегрузки, но должна отличаться от всех, по крайней мере одним из компонентов подписи.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-142">Each overload must have the same name as all the other overloads but must differ from all of them in at least one of the other components of the signature.</span></span> <span data-ttu-id="cbcbe-143">Дополнительные сведения см. в разделе [перегрузка процедур](./procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-143">For more information, see [Procedure Overloading](./procedure-overloading.md).</span></span>  
   
- Следующие элементы, даже если они относятся к списку параметров, не являются компонентами сигнатуры процедуры:  
+ <span data-ttu-id="cbcbe-144">Следующие элементы, даже если они относятся к списку параметров, не являются компонентами подписи процедуры:</span><span class="sxs-lookup"><span data-stu-id="cbcbe-144">The following items, even though they pertain to the parameter list, are not components of a procedure's signature:</span></span>  
   
--   Ключевые слова модификаторов процедур, таких как `Public`, `Shared`, и`Static`  
+-   <span data-ttu-id="cbcbe-145">Ключевые слова модификаторов процедур, таких как `Public`, `Shared`, и`Static`</span><span class="sxs-lookup"><span data-stu-id="cbcbe-145">Procedure modifier keywords, such as `Public`, `Shared`, and `Static`</span></span>  
   
--   Имена параметров  
+-   <span data-ttu-id="cbcbe-146">Имена параметров</span><span class="sxs-lookup"><span data-stu-id="cbcbe-146">Parameter names</span></span>  
   
--   Зарезервированные слова модификаторов параметров, таких как `ByRef` и`Optional`  
+-   <span data-ttu-id="cbcbe-147">Ключевые слова модификаторов параметров, таких как `ByRef` и`Optional`</span><span class="sxs-lookup"><span data-stu-id="cbcbe-147">Parameter modifier keywords, such as `ByRef` and `Optional`</span></span>  
   
--   Тип данных возвращаемого значения (за исключением оператора преобразования)  
+-   <span data-ttu-id="cbcbe-148">Тип данных возвращаемого значения (за исключением оператора преобразования)</span><span class="sxs-lookup"><span data-stu-id="cbcbe-148">The data type of the return value (except for a conversion operator)</span></span>  
   
- Нельзя перегрузить процедуру, варьируя только один или несколько из вышеперечисленных элементов.  
+ <span data-ttu-id="cbcbe-149">Нельзя перегрузить процедуру путем изменения только один или несколько из вышеперечисленных элементов.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-149">You cannot overload a procedure by varying only one or more of the preceding items.</span></span>  
   
- **Правильный подход:** для определения перегрузки процедуры должны различаться подпись. Так как необходимо использовать то же имя, должны меняться число, порядок и типы данных параметров. В универсальной процедуре можно варьировать число параметров типа. В операторе преобразовании ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)), можно варьировать возвращаемый тип.  
+ <span data-ttu-id="cbcbe-150">**Правильный подход:** возможность определить перегрузка процедуры, необходимо изменить подпись.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-150">**Correct Approach:** To be able to define a procedure overload, you must vary the signature.</span></span> <span data-ttu-id="cbcbe-151">Так как необходимо использовать то же имя, необходимо изменить номер, порядок или типы данных параметров.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-151">Because you must use the same name, you must vary the number, order, or data types of the parameters.</span></span> <span data-ttu-id="cbcbe-152">Универсальная процедура можно задавать разное число параметров типа.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-152">In a generic procedure, you can vary the number of type parameters.</span></span> <span data-ttu-id="cbcbe-153">В оператор преобразования ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)), можно изменить тип возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-153">In a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)), you can vary the return type.</span></span>  
   
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Перегрузка разрешение с дополнительными и аргументы ParamArray  
- Если происходит перегрузка процедуры с одним или несколькими [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметры или [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметр, необходимо избегать дублирования *неявные перегрузки*. Сведения см. в разделе [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a><span data-ttu-id="cbcbe-154">Перегрузки разрешение с необязательными и ParamArray-аргументы</span><span class="sxs-lookup"><span data-stu-id="cbcbe-154">Overload Resolution with Optional and ParamArray Arguments</span></span>  
+ <span data-ttu-id="cbcbe-155">Если происходит перегрузка процедуры с одним или несколькими [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) параметры или [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметр, необходимо избегать дублирования *неявные перегрузки*.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-155">If you are overloading a procedure with one or more [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) parameters or a [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parameter, you must avoid duplicating any of the *implicit overloads*.</span></span> <span data-ttu-id="cbcbe-156">Сведения см. в разделе [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-156">For information, see [Considerations in Overloading Procedures](./considerations-in-overloading-procedures.md).</span></span>  
   
-## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Вызов неверной версии перегруженной процедуры  
- Если процедура имеет несколько перегруженных версий, следует ознакомиться со всеми их списками параметров и понять, как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] разрешает вызовы между перегрузками. В противном случае можно вызвать перегрузку, отличную от предполагаемой.  
+## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a><span data-ttu-id="cbcbe-157">Вызов неверной версии перегруженной процедуры</span><span class="sxs-lookup"><span data-stu-id="cbcbe-157">Calling a Wrong Version of an Overloaded Procedure</span></span>  
+ <span data-ttu-id="cbcbe-158">Если процедура имеет несколько перегруженных версий, необходимо ознакомиться со всеми их списками параметров и понять, каким образом [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] разрешает вызовы между перегрузками.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-158">If a procedure has several overloaded versions, you should be familiar with all their parameter lists and understand how [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] resolves calls among the overloads.</span></span> <span data-ttu-id="cbcbe-159">В противном случае можно вызвать перегрузку, отличную от предполагаемой.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-159">Otherwise you could call an overload other than the intended one.</span></span>  
   
- После определения перегрузки, которую необходимо вызвать, следует соблюдать следующие правила:  
+ <span data-ttu-id="cbcbe-160">После определения перегрузки, которую требуется вызвать стараться придерживайтесь следующих правил:</span><span class="sxs-lookup"><span data-stu-id="cbcbe-160">When you have determined which overload you want to call, be careful to observe the following rules:</span></span>  
   
--   Укажите правильное количество аргументов и в правильном порядке.  
+-   <span data-ttu-id="cbcbe-161">Укажите правильное количество аргументов и в правильном порядке.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-161">Supply the correct number of arguments, and in the correct order.</span></span>  
   
--   В идеальном случае аргументы должны иметь те же типы данных, что и соответствующие параметры. В любом случае тип данных каждого аргумента должен расширяться до соответствующего параметра. Это верно даже при [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) значение `Off`. Если перегрузка требует сужающего преобразования списка аргументов, перегрузка не может быть вызвана.  
+-   <span data-ttu-id="cbcbe-162">В идеальном случае аргументы должны иметь те же типы данных, что и соответствующие параметры.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-162">Ideally, your arguments should have the exact same data types as the corresponding parameters.</span></span> <span data-ttu-id="cbcbe-163">В любом случае тип данных каждого аргумента должен расширяться, соответствующего параметра.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-163">In any case, the data type of each argument must widen to that of its corresponding parameter.</span></span> <span data-ttu-id="cbcbe-164">Это верно даже при использовании [оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) значение `Off`.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-164">This is true even with the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) set to `Off`.</span></span> <span data-ttu-id="cbcbe-165">Если перегрузка требует сужающего преобразования списка аргументов, перегрузки не может быть вызвана.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-165">If an overload requires any narrowing conversion from your argument list, that overload is not eligible to be called.</span></span>  
   
--   При указании аргументов, которые требуют расширения, задайте их типы данных как можно ближе к типам данных параметров. Если две или более перегрузки принимают типы данных аргументов, компилятор разрешает вызов перегрузки, которое вызывает наименьший объем расширения.  
+-   <span data-ttu-id="cbcbe-166">При указании аргументов, которые требуют расширения, задайте их типы данных как можно ближе к типам данных параметров.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-166">If you supply arguments that require widening, make their data types as close as possible to the corresponding parameter data types.</span></span> <span data-ttu-id="cbcbe-167">Если два или несколько перегрузок принимают типы данных аргументов, компилятор разрешает вызов перегрузку, которая вызывает наименьший объем расширения.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-167">If two or more overloads accept your argument data types, the compiler resolves your call to the overload that calls for the least amount of widening.</span></span>  
   
- Можно уменьшить вероятность несоответствия типов данных с помощью [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) ключевого слова преобразования при подготовке аргументов.  
+ <span data-ttu-id="cbcbe-168">Можно уменьшить вероятность несоответствия типов данных с помощью [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) ключевое слово преобразования при подготовке аргументов.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-168">You can reduce the chance of data type mismatches by using the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) conversion keyword when preparing your arguments.</span></span>  
   
-### <a name="overload-resolution-failure"></a>Сбой разрешения перегрузки  
- При вызове перегруженной процедуры компилятор пытается выбрать единственную перегрузку. В случае успеха он разрешает вызов этой перегрузки. Если исключаются все перегрузки или он не может снизить быть выбран единственный вариант, он выдает ошибку.  
+### <a name="overload-resolution-failure"></a><span data-ttu-id="cbcbe-169">Сбой разрешения перегрузки</span><span class="sxs-lookup"><span data-stu-id="cbcbe-169">Overload Resolution Failure</span></span>  
+ <span data-ttu-id="cbcbe-170">При вызове перегруженной процедуры, компилятор пытается выбрать единственную перегрузку.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-170">When you call an overloaded procedure, the compiler attempts to eliminate all but one of the overloads.</span></span> <span data-ttu-id="cbcbe-171">Если он выполняется успешно, он разрешает вызов этой перегрузки.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-171">If it succeeds, it resolves the call to that overload.</span></span> <span data-ttu-id="cbcbe-172">Если исключаются все перегрузки или его нельзя уменьшить быть выбран единственный вариант, он выдает ошибку.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-172">If it eliminates all the overloads, or if it cannot reduce the eligible overloads to a single candidate, it generates an error.</span></span>  
   
- В следующем примере показано перегруженного процесса разрешения.  
+ <span data-ttu-id="cbcbe-173">В следующем примере показано перегруженного процесса разрешения.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-173">The following example illustrates the overload resolution process.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#62;](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures&#63;](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
- В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента (`Short`) сужается к типу соответствующего параметра (`Byte`). Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке (`Short` и `Single`) может быть расширен до соответствующего типа в третьей перегрузке (`Integer` и `Single`). Вторая перегрузка требует меньшего расширения, поэтому компилятор использует ее для вызова.  
+ <span data-ttu-id="cbcbe-174">В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента (`Short`) сужается к типу соответствующего параметра (`Byte`).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-174">In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`).</span></span> <span data-ttu-id="cbcbe-175">Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке (`Short` и `Single`) может быть расширен до соответствующего типа в третьей перегрузке (`Integer` и `Single`).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-175">It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`).</span></span> <span data-ttu-id="cbcbe-176">Вторая перегрузка требует меньшего расширения, поэтому компилятор использует его для вызова.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-176">The second overload requires less widening, so the compiler uses it for the call.</span></span>  
   
- Во втором вызове компилятор не может устранить любую из перегрузок зависимости от сужения. Он исключаются третья перегрузка по тем же причинам, как в первом вызове, поскольку можно вызвать вторую перегрузку с меньшим расширением типов аргументов. Однако компилятор не может разрешить между первой и второй перегрузок. Каждая имеет один определенный тип параметра, может быть расширен до соответствующего типа в другой (`Byte` для `Short`, но `Single` для `Double`). Поэтому компилятор создает ошибку разрешения перегрузки.  
+ <span data-ttu-id="cbcbe-177">Во втором вызове компилятор не может устранить зависимости от сужения перегрузок.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-177">In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing.</span></span> <span data-ttu-id="cbcbe-178">Она также аннулирует третьей перегрузке по той же причине, что и первый вызов, так как он может вызвать вторую перегрузку с меньшим расширением типов аргументов.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-178">It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types.</span></span> <span data-ttu-id="cbcbe-179">Однако компилятор не может разрешить между первой и второй перегрузок.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-179">However, the compiler cannot resolve between the first and second overloads.</span></span> <span data-ttu-id="cbcbe-180">Каждая имеет один определенный тип параметра, может быть расширен до соответствующего типа в другой (`Byte` для `Short`, но `Single` для `Double`).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-180">Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`).</span></span> <span data-ttu-id="cbcbe-181">Поэтому компилятор создает ошибку разрешения перегрузки.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-181">The compiler therefore generates an overload resolution error.</span></span>  
   
- **Правильный подход:** возможность вызов перегруженной процедуры без неоднозначности, используйте [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) соответствуют типы данных аргументов в типы параметров. В следующем примере показано вызов `z` , требующий разрешения второй перегрузки.  
+ <span data-ttu-id="cbcbe-182">**Правильный подход:** могли осуществлять вызов перегруженной процедуры без неоднозначности, используйте [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для сопоставления типов данных аргументов в типы параметров.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-182">**Correct Approach:** To be able to call an overloaded procedure without ambiguity, use [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to match the argument data types to the parameter types.</span></span> <span data-ttu-id="cbcbe-183">В следующем примере показано вызов `z` , требующий разрешения второй перегрузки.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-183">The following example shows a call to `z` that forces resolution to the second overload.</span></span>  
   
- [!code-vb[VbVbcnProcedures&#65;](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
-### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Перегрузка разрешение с дополнительными и аргументы ParamArray  
- Если две перегрузки процедуры имеют идентичные подписи, за исключением того, что последний параметр объявляется [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) в одном и [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов процедуры, выбирая наиболее близкий вариант. Дополнительные сведения см. в разделе [разрешения перегруженных](./overload-resolution.md).  
+### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a><span data-ttu-id="cbcbe-184">Перегрузки разрешение с необязательными и ParamArray-аргументы</span><span class="sxs-lookup"><span data-stu-id="cbcbe-184">Overload Resolution with Optional and ParamArray Arguments</span></span>  
+ <span data-ttu-id="cbcbe-185">Если две перегрузки процедуры имеют одинаковые сигнатуры, за исключением того, что последний параметр объявляется [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) в одном и [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов процедуры в соответствии с наиболее точное соответствие.</span><span class="sxs-lookup"><span data-stu-id="cbcbe-185">If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure according to the closest match.</span></span> <span data-ttu-id="cbcbe-186">Дополнительные сведения см. в разделе [разрешение перегрузки](./overload-resolution.md).</span><span class="sxs-lookup"><span data-stu-id="cbcbe-186">For more information, see [Overload Resolution](./overload-resolution.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Процедуры](./index.md)   
- [Sub-процедуры](./sub-procedures.md)   
- [Процедуры функций](./function-procedures.md)   
- [Процедуры свойств](./property-procedures.md)   
- [Процедуры операторов](./operator-procedures.md)   
- [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
- [Перегрузка процедур](./procedure-overloading.md)   
- [Вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md)   
- [Разрешение перегрузки](./overload-resolution.md)
+## <a name="see-also"></a><span data-ttu-id="cbcbe-187">См. также</span><span class="sxs-lookup"><span data-stu-id="cbcbe-187">See Also</span></span>  
+ [<span data-ttu-id="cbcbe-188">Процедуры</span><span class="sxs-lookup"><span data-stu-id="cbcbe-188">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="cbcbe-189">Подпрограммы</span><span class="sxs-lookup"><span data-stu-id="cbcbe-189">Sub Procedures</span></span>](./sub-procedures.md)  
+ [<span data-ttu-id="cbcbe-190">Процедуры функций</span><span class="sxs-lookup"><span data-stu-id="cbcbe-190">Function Procedures</span></span>](./function-procedures.md)  
+ [<span data-ttu-id="cbcbe-191">Процедуры свойств</span><span class="sxs-lookup"><span data-stu-id="cbcbe-191">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="cbcbe-192">Процедуры операторов</span><span class="sxs-lookup"><span data-stu-id="cbcbe-192">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="cbcbe-193">Параметры и аргументы процедуры</span><span class="sxs-lookup"><span data-stu-id="cbcbe-193">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="cbcbe-194">Перегрузка процедур</span><span class="sxs-lookup"><span data-stu-id="cbcbe-194">Procedure Overloading</span></span>](./procedure-overloading.md)  
+ [<span data-ttu-id="cbcbe-195">Вопросы, связанные с перегрузкой процедур</span><span class="sxs-lookup"><span data-stu-id="cbcbe-195">Considerations in Overloading Procedures</span></span>](./considerations-in-overloading-procedures.md)  
+ [<span data-ttu-id="cbcbe-196">Разрешение перегрузки</span><span class="sxs-lookup"><span data-stu-id="cbcbe-196">Overload Resolution</span></span>](./overload-resolution.md)

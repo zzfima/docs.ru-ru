@@ -1,1 +1,1 @@
-графический пользовательский интерфейс (GUI)
+<span data-ttu-id="fe3e2-101">графический пользовательский интерфейс (GUI)</span><span class="sxs-lookup"><span data-stu-id="fe3e2-101">graphical user interface (GUI)</span></span>

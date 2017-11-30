@@ -1,111 +1,114 @@
 ---
-title: "Пользовательские обновления потоков | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские обновления потоков"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7cf7a45051c6cd550225ebc29e587bc937b0953
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пользовательские обновления потоков
-Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером.  Поток реализуется объектом <xref:System.IO.Stream>.  при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала.  Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.  
+# <a name="custom-stream-upgrades"></a><span data-ttu-id="673eb-102">Пользовательские обновления потоков</span><span class="sxs-lookup"><span data-stu-id="673eb-102">Custom Stream Upgrades</span></span>
+<span data-ttu-id="673eb-103">Ориентированные на потоки виды транспорта, например TCP и именованные каналы, работают с непрерывным потоком данных, установленным между клиентом и сервером.</span><span class="sxs-lookup"><span data-stu-id="673eb-103">Stream-oriented transports such as TCP and Named Pipes operate on a continuous stream of bytes between the client and server.</span></span> <span data-ttu-id="673eb-104">Поток реализуется объектом <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="673eb-104">This stream is realized by a  <xref:System.IO.Stream> object.</span></span> <span data-ttu-id="673eb-105">при обновлении потока клиенту требуется добавить дополнительный уровень протокола в стек каналов и он отправляет соответствующий запрос другому участнику коммуникационного канала.</span><span class="sxs-lookup"><span data-stu-id="673eb-105">In a stream upgrade, the client wants to add an optional protocol layer to the channel stack, and asks the other end of the communication channel to do so.</span></span> <span data-ttu-id="673eb-106">Обновление канала предполагает замену исходного объекта <xref:System.IO.Stream> на обновленный.</span><span class="sxs-lookup"><span data-stu-id="673eb-106">The stream upgrade consists in replacing the original <xref:System.IO.Stream> object with an upgraded one.</span></span>  
   
- Например, можно создать поток сжатия непосредственно поверх транспортного потока.  В этом случае исходный транспортный поток <xref:System.IO.Stream> заменяется потоком, который выступает в роли оболочки потока <xref:System.IO.Stream> сжатия вокруг исходного потока.  
+ <span data-ttu-id="673eb-107">Например, можно создать поток сжатия непосредственно поверх транспортного потока.</span><span class="sxs-lookup"><span data-stu-id="673eb-107">For example, you can build a compression stream directly on top of the transport stream.</span></span> <span data-ttu-id="673eb-108">В этом случае исходный транспортный поток <xref:System.IO.Stream> заменяется потоком, который выступает в роли оболочки потока <xref:System.IO.Stream> сжатия вокруг исходного потока.</span><span class="sxs-lookup"><span data-stu-id="673eb-108">In this case the original transport <xref:System.IO.Stream> is replaced with one that wraps the compression <xref:System.IO.Stream> around the original one.</span></span>  
   
- Можно применить несколько обновлений потоков, каждое из которых будет служить оболочкой для предыдущего.  
+ <span data-ttu-id="673eb-109">Можно применить несколько обновлений потоков, каждое из которых будет служить оболочкой для предыдущего.</span><span class="sxs-lookup"><span data-stu-id="673eb-109">You can apply multiple stream upgrades, each wrapping the preceding one.</span></span>  
   
-## Принципы работы обновления потока  
- Имеется четыре компонента процесса обновления потока.  
+## <a name="how-stream-upgrades-work"></a><span data-ttu-id="673eb-110">Принципы работы обновления потока</span><span class="sxs-lookup"><span data-stu-id="673eb-110">How Stream Upgrades Work</span></span>  
+ <span data-ttu-id="673eb-111">Имеется четыре компонента процесса обновления потока.</span><span class="sxs-lookup"><span data-stu-id="673eb-111">There are four components to the stream upgrade process.</span></span>  
   
-1.  *Инициатор* обновления потока начинает процесс: во время выполнения он может создать для другой стороны подключения запрос на обновление транспортного уровня канала.  
+1.  <span data-ttu-id="673eb-112">Обновления потока *инициатора* начинает процесс: во время выполнения он может создать запрос на обновление транспортного уровня канала к другой стороне связи.</span><span class="sxs-lookup"><span data-stu-id="673eb-112">An upgrade stream *Initiator* begins the process: at run-time it can initiate a request to the other end of its connection to upgrade the channel transport layer.</span></span>  
   
-2.  *Акцептор* выполняет обновление: во время выполнения он получает запрос на обновление от другого компьютера и, если это возможно, принимает обновление.  
+2.  <span data-ttu-id="673eb-113">Обновления потока *Акцептор* выполняет обновление: во время выполнения он получает запрос на обновление от другого компьютера и по возможности принимает обновление.</span><span class="sxs-lookup"><span data-stu-id="673eb-113">An upgrade stream *Acceptor* carries out the upgrade: at run-time it receives the upgrade request from the other machine, and if possible, accepts the upgrade.</span></span>  
   
-3.  *Поставщик* обновления создает *инициатор* на клиенте и *акцептор* на сервере.  
+3.  <span data-ttu-id="673eb-114">Обновление *поставщика* создает *инициатора* на стороне клиента и *Акцептор* на сервере.</span><span class="sxs-lookup"><span data-stu-id="673eb-114">An upgrade *Provider* creates the *Initiator* on the client and the *Acceptor* on the server.</span></span>  
   
-4.  *Элемент привязки* обновления потока добавляется в привязки службы и клиента и создает во время выполнения поставщик.  
+4.  <span data-ttu-id="673eb-115">Обновления потока *элемент привязки* добавляется в привязки службы и клиента и создает во время выполнения поставщик.</span><span class="sxs-lookup"><span data-stu-id="673eb-115">A stream upgrade *Binding Element* is added to the bindings on the service and the client, and creates the provider at runtime.</span></span>  
   
- Обратите внимание, что в случае нескольких обновлений инициатор и акцептор инкапсулируют конечные автоматы для определения переходов обновления, которые являются допустимыми для каждой инициации.  
+ <span data-ttu-id="673eb-116">Обратите внимание, что в случае нескольких обновлений инициатор и акцептор инкапсулируют конечные автоматы для определения переходов обновления, которые являются допустимыми для каждой инициации.</span><span class="sxs-lookup"><span data-stu-id="673eb-116">Note that in the case of multiple upgrades, the Initiator and Acceptor encapsulate state machines to enforce which upgrade transitions are valid for each Initiation.</span></span>  
   
-## Реализация обновления потока  
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] имеется четыре класса `abstract`, которые можно реализовать:  
+## <a name="how-to-implement-a-stream-upgrade"></a><span data-ttu-id="673eb-117">Реализация обновления потока</span><span class="sxs-lookup"><span data-stu-id="673eb-117">How to Implement a Stream Upgrade</span></span>  
+ <span data-ttu-id="673eb-118">В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] имеется четыре класса `abstract`, которые можно реализовать:</span><span class="sxs-lookup"><span data-stu-id="673eb-118">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides four `abstract` classes that you can implement:</span></span>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=fullName>  
+-   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
- Чтобы реализовать пользовательское обновление потока, выполните следующие действия.  Ниже приведена процедура минимального обновления потока на клиентском и сервером компьютерах.  
+ <span data-ttu-id="673eb-119">Чтобы реализовать пользовательское обновление потока, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="673eb-119">To implement a custom stream upgrade, do the following.</span></span> <span data-ttu-id="673eb-120">Ниже приведена процедура минимального обновления потока на клиентском и сервером компьютерах.</span><span class="sxs-lookup"><span data-stu-id="673eb-120">This procedure implements a minimal stream upgrade process on both the client and server machines.</span></span>  
   
-1.  Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1.  <span data-ttu-id="673eb-121">Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.</span><span class="sxs-lookup"><span data-stu-id="673eb-121">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.</span></span>  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток.  Этот метод работает синхронно; имеются аналогичные методы для асинхронной инициации обновления.  
+    1.  <span data-ttu-id="673eb-122">Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток.</span><span class="sxs-lookup"><span data-stu-id="673eb-122">Override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> method to take in the stream to be upgraded, and return the upgraded stream.</span></span> <span data-ttu-id="673eb-123">Этот метод работает синхронно; имеются аналогичные методы для асинхронной инициации обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-123">This method works synchronously; there are analogous methods to initiate the upgrade asynchronously.</span></span>  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он проверял на необходимость дополнительных обновлений.  
+    2.  <span data-ttu-id="673eb-124">Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он проверял на необходимость дополнительных обновлений.</span><span class="sxs-lookup"><span data-stu-id="673eb-124">Override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> method to check for additional upgrades.</span></span>  
   
-2.  Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2.  <span data-ttu-id="673eb-125">Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.</span><span class="sxs-lookup"><span data-stu-id="673eb-125">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.</span></span>  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток.  Этот метод работает синхронно; имеются аналогичные методы для асинхронного принятия обновления.  
+    1.  <span data-ttu-id="673eb-126">Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A>, чтобы он принимал обновляемый поток и возвращал обновленный поток.</span><span class="sxs-lookup"><span data-stu-id="673eb-126">Override the <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> method to take in the stream to be upgraded, and return the upgraded stream.</span></span> <span data-ttu-id="673eb-127">Этот метод работает синхронно; имеются аналогичные методы для асинхронного принятия обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-127">This method works synchronously; there are analogous methods to accept the upgrade asynchronously.</span></span>  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>, чтобы он проверял, поддерживается ли запрошенное обновление текущим акцептором обновления в данной точке процесса обновления.  
+    2.  <span data-ttu-id="673eb-128">Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>, чтобы он проверял, поддерживается ли запрошенное обновление текущим акцептором обновления в данной точке процесса обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-128">Override the <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> method to determine if the upgrade requested is supported by this upgrade acceptor at this point in the upgrade process.</span></span>  
   
-3.  Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.  Переопределите методы <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>, чтобы они возвращали экземпляры акцептора и инициатора, определенные на шагах 2 и 1.  
+3.  <span data-ttu-id="673eb-129">Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.</span><span class="sxs-lookup"><span data-stu-id="673eb-129">Create a class the implements <xref:System.ServiceModel.Channels.StreamUpgradeProvider>.</span></span> <span data-ttu-id="673eb-130">Переопределите методы <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A>, чтобы они возвращали экземпляры акцептора и инициатора, определенные на шагах 2 и 1.</span><span class="sxs-lookup"><span data-stu-id="673eb-130">Override the <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> and the <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> methods to return instances of the acceptor and initiator defined in steps 2 and 1.</span></span>  
   
-4.  Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4.  <span data-ttu-id="673eb-131">Создайте класс, реализующий <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="673eb-131">Create a class that implements <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.</span></span>  
   
-    1.  Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> клиента и метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> службы.  
+    1.  <span data-ttu-id="673eb-132">Переопределите метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> клиента и метод <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> службы.</span><span class="sxs-lookup"><span data-stu-id="673eb-132">Override the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> method on the client and the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> method on the service.</span></span>  
   
-    2.  Переопределите метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> клиента и метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> службы, чтобы добавлять в свойство <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> элемент привязки обновления.  
+    2.  <span data-ttu-id="673eb-133">Переопределите метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> клиента и метод <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> службы, чтобы добавлять в свойство <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A> элемент привязки обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-133">Override the <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> method on the client and the <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> method on the service to add the upgrade Binding Element to <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.</span></span>  
   
-5.  Добавьте новый элемент привязки обновления потока в привязки на клиентском и серверном компьютерах.  
+5.  <span data-ttu-id="673eb-134">Добавьте новый элемент привязки обновления потока в привязки на клиентском и серверном компьютерах.</span><span class="sxs-lookup"><span data-stu-id="673eb-134">Add the new stream upgrade binding element to bindings on the server and client machines.</span></span>  
   
-## Обновления системы безопасности  
- Добавление обновления системы безопасности представляет собой специальную версию общего процесса обновления потока.  
+## <a name="security-upgrades"></a><span data-ttu-id="673eb-135">Обновления системы безопасности</span><span class="sxs-lookup"><span data-stu-id="673eb-135">Security Upgrades</span></span>  
+ <span data-ttu-id="673eb-136">Добавление обновления системы безопасности представляет собой специальную версию общего процесса обновления потока.</span><span class="sxs-lookup"><span data-stu-id="673eb-136">Adding a security upgrade is a specialized version of the general stream upgrade process.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] уже содержит два элемента привязки для обновления безопасности потока.  Конфигурация безопасности транспортного уровня инкапсулируется в элементах <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> и <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, которые можно настроить и добавить в пользовательскую привязку.  Эти элементы привязки расширяют класс <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>, создающий поставщики обновления потока клиента и сервера.  У этих элементов привязки имеются методы, создающие специальные классы поставщиков обновления системы безопасности потоков, которые не являются `public`, поэтому в этих двух случаях достаточно просто добавить элемент привязки в привязку.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="673eb-137"> уже содержит два элемента привязки для обновления безопасности потока.</span><span class="sxs-lookup"><span data-stu-id="673eb-137"> already provides two binding elements for upgrading stream security.</span></span> <span data-ttu-id="673eb-138">Конфигурация безопасности транспортного уровня инкапсулируется в элементах <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> и <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>, которые можно настроить и добавить в пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="673eb-138">The configuration of transport-level security is encapsulated by the <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> and the <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> which can be configured and added to a custom binding.</span></span> <span data-ttu-id="673eb-139">Эти элементы привязки расширяют класс <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>, создающий поставщики обновления потока клиента и сервера.</span><span class="sxs-lookup"><span data-stu-id="673eb-139">These binding elements extend the <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> class that builds the client and server stream upgrade providers.</span></span> <span data-ttu-id="673eb-140">У этих элементов привязки имеются методы, создающие специальные классы поставщиков обновления системы безопасности потоков, которые не являются `public`, поэтому в этих двух случаях достаточно просто добавить элемент привязки в привязку.</span><span class="sxs-lookup"><span data-stu-id="673eb-140">These binding elements have methods that create the specialized security stream upgrade provider classes, which are not `public`, so for these two cases all you need to do is to add the binding element to the binding.</span></span>  
   
- Для сценариев обеспечения безопасности, не реализуемых с помощью описанных выше двух элементов привязки, от вышеупомянутых базовых классов инициатора, акцептора и поставщика наследуются три класса `abstract`, связанных с обеспечением безопасности:  
+ <span data-ttu-id="673eb-141">Для сценариев обеспечения безопасности, не реализуемых с помощью описанных выше двух элементов привязки, от вышеупомянутых базовых классов инициатора, акцептора и поставщика наследуются три класса `abstract`, связанных с обеспечением безопасности:</span><span class="sxs-lookup"><span data-stu-id="673eb-141">For security scenarios not met by the above two binding elements, three security-related `abstract` classes are derived from the above initiator, acceptor and provider base classes:</span></span>  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=fullName>  
+1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=fullName>  
+2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=fullName>  
+3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
- Процесс реализации обновления безопасности потока такой же, как и раньше, лишь с тем отличием, что наследование выполняется от этих трех классов.  Переопределите дополнительные свойства в этих классах, чтобы предоставить среде выполнения сведения о безопасности.  
+ <span data-ttu-id="673eb-142">Процесс реализации обновления безопасности потока такой же, как и раньше, лишь с тем отличием, что наследование выполняется от этих трех классов.</span><span class="sxs-lookup"><span data-stu-id="673eb-142">The process of implementing a security stream upgrade is the same as before, with the difference that you would derive from these three classes.</span></span> <span data-ttu-id="673eb-143">Переопределите дополнительные свойства в этих классах, чтобы предоставить среде выполнения сведения о безопасности.</span><span class="sxs-lookup"><span data-stu-id="673eb-143">Override the additional properties in these classes to supply security information to the runtime.</span></span>  
   
-## Несколько обновлений  
- Чтобы создать дополнительные запросы на обновление, повторите описанный выше процесс: создайте дополнительные расширения поставщика <xref:System.ServiceModel.Channels.StreamUpgradeProvider> и элементы привязки.  Добавьте в привязку элементы привязки.  Дополнительные элементы привязки обрабатываться последовательно, начиная с первого элемента привязки, добавленного в привязку.  В методах <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> и <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> каждый поставщик обновления может определять, как расположить себя относительно существующих параметров привязки обновления.  В этом случае он должен заменить существующий параметр привязки обновления на новый составной параметр привязки обновления.  
+## <a name="multiple-upgrades"></a><span data-ttu-id="673eb-144">Несколько обновлений</span><span class="sxs-lookup"><span data-stu-id="673eb-144">Multiple Upgrades</span></span>  
+ <span data-ttu-id="673eb-145">Чтобы создать дополнительные запросы на обновление, повторите описанный выше процесс: создайте дополнительные расширения поставщика <xref:System.ServiceModel.Channels.StreamUpgradeProvider> и элементы привязки.</span><span class="sxs-lookup"><span data-stu-id="673eb-145">To create additional upgrade requests repeat the above process: create additional extensions of <xref:System.ServiceModel.Channels.StreamUpgradeProvider> and binding elements.</span></span> <span data-ttu-id="673eb-146">Добавьте в привязку элементы привязки.</span><span class="sxs-lookup"><span data-stu-id="673eb-146">Add the binding elements to the binding.</span></span> <span data-ttu-id="673eb-147">Дополнительные элементы привязки обрабатываться последовательно, начиная с первого элемента привязки, добавленного в привязку.</span><span class="sxs-lookup"><span data-stu-id="673eb-147">The additional binding elements are processed sequentially, starting with the first binding element added to the binding.</span></span> <span data-ttu-id="673eb-148">В методах <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> и <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> каждый поставщик обновления может определять, как расположить себя относительно существующих параметров привязки обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-148">In <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> and <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> each upgrade provider can determine how to layer itself on any pre-existing upgrade binding parameters.</span></span> <span data-ttu-id="673eb-149">В этом случае он должен заменить существующий параметр привязки обновления на новый составной параметр привязки обновления.</span><span class="sxs-lookup"><span data-stu-id="673eb-149">It should then replace the existing upgrade binding parameter with a new composite upgrade binding parameter.</span></span>  
   
- Кроме того, один поставщик обновления может поддерживать несколько обновлений.  Например, может потребоваться реализовать пользовательский поставщик обновления потока, который поддерживает как безопасность, так и сжатие.  Выполните следующие действия.  
+ <span data-ttu-id="673eb-150">Кроме того, один поставщик обновления может поддерживать несколько обновлений.</span><span class="sxs-lookup"><span data-stu-id="673eb-150">Alternatively, one upgrade provider can support multiple upgrades.</span></span> <span data-ttu-id="673eb-151">Например, может потребоваться реализовать пользовательский поставщик обновления потока, который поддерживает как безопасность, так и сжатие.</span><span class="sxs-lookup"><span data-stu-id="673eb-151">For example, you might want to implement a custom stream upgrade provider that supports both security and compression.</span></span> <span data-ttu-id="673eb-152">Выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="673eb-152">Do the following steps:</span></span>  
   
-1.  На основе класса <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> создайте класс поставщика, который создает инициатор и акцептор.  
+1.  <span data-ttu-id="673eb-153">На основе класса <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> создайте класс поставщика, который создает инициатор и акцептор.</span><span class="sxs-lookup"><span data-stu-id="673eb-153">Subclass <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> to write the provider class that creates the Initiator and Acceptor.</span></span>  
   
-2.  Создайте подкласс <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>, переопределив метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он возвращал типы содержимого для потока сжатия и потока защиты в нужном порядке.  
+2.  <span data-ttu-id="673eb-154">Создайте подкласс <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>, переопределив метод <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A>, чтобы он возвращал типы содержимого для потока сжатия и потока защиты в нужном порядке.</span><span class="sxs-lookup"><span data-stu-id="673eb-154">Subclass the <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> making sure to override the <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> method to return the content types for the compression stream and the secure stream in order.</span></span>  
   
-3.  Создайте подкласс <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>, метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> которого может распознавать пользовательские типы содержимого.  
+3.  <span data-ttu-id="673eb-155">Создайте подкласс <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>, метод <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> которого может распознавать пользовательские типы содержимого.</span><span class="sxs-lookup"><span data-stu-id="673eb-155">Subclass the <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> that understands the custom content types in its <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> method.</span></span>  
   
-4.  Поток будет обновляться после каждого вызова методов <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4.  <span data-ttu-id="673eb-156">Поток будет обновляться после каждого вызова методов <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> и <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.</span><span class="sxs-lookup"><span data-stu-id="673eb-156">The stream will be upgraded after each call to <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> and <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>   
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>   
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>   
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>   
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>   
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>   
+## <a name="see-also"></a><span data-ttu-id="673eb-157">См. также</span><span class="sxs-lookup"><span data-stu-id="673eb-157">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
+ <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
+ <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
+ <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

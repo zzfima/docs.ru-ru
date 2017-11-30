@@ -1,1 +1,1 @@
-Реляционный конструктор объектов
+<span data-ttu-id="47337-101">Реляционный конструктор объектов</span><span class="sxs-lookup"><span data-stu-id="47337-101">O/R Designer</span></span>

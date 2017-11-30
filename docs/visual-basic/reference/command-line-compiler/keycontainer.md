@@ -1,80 +1,63 @@
 ---
-title: "/ keycontainer | Документы Microsoft"
-ms.date: 2015-07-20
+title: /keycontainer
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - -keycontainer compiler option [Visual Basic]
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 68fa09edce5c0c9af143197f9379d5a46afab52e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 887e84843201c64f7dd7b056b5e31d5ccd91bf23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="keycontainer"></a>/keycontainer
-Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.  
+# <a name="keycontainer"></a><span data-ttu-id="9cb59-102">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="9cb59-102">/keycontainer</span></span>
+<span data-ttu-id="9cb59-103">Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.</span><span class="sxs-lookup"><span data-stu-id="9cb59-103">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="9cb59-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9cb59-104">Syntax</span></span>  
   
 ```  
 /keycontainer:container  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="9cb59-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="9cb59-105">Arguments</span></span>  
   
-|Термин|Определение|  
+|<span data-ttu-id="9cb59-106">Термин</span><span class="sxs-lookup"><span data-stu-id="9cb59-106">Term</span></span>|<span data-ttu-id="9cb59-107">Определение</span><span class="sxs-lookup"><span data-stu-id="9cb59-107">Definition</span></span>|  
 |---|---|  
-|`container`|Обязательный. Файл контейнера, содержащий ключ. Заключите имя файла в кавычки ("»), если имя содержит пробелы.|  
+|`container`|<span data-ttu-id="9cb59-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="9cb59-108">Required.</span></span> <span data-ttu-id="9cb59-109">Файл контейнера, содержащий ключ.</span><span class="sxs-lookup"><span data-stu-id="9cb59-109">Container file that contains the key.</span></span> <span data-ttu-id="9cb59-110">Заключите имя файла в кавычки ("»), если имя содержит пробелы.</span><span class="sxs-lookup"><span data-stu-id="9cb59-110">Enclose the file name in quotation marks ("") if the name contains a space.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Компилятор создает совместно используемый компонент, вставляя в манифест сборки открытый ключ и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите `sn -k``file` в командной строке. `-i` Параметр устанавливает пару ключей в контейнер. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
+## <a name="remarks"></a><span data-ttu-id="9cb59-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="9cb59-111">Remarks</span></span>  
+ <span data-ttu-id="9cb59-112">Компилятор создает совместно используемый компонент путем вставки открытого ключа в манифест сборки и подписывая окончательную сборку закрытым ключом.</span><span class="sxs-lookup"><span data-stu-id="9cb59-112">The compiler creates the sharable component by inserting a public key into the assembly manifest and by signing the final assembly with the private key.</span></span> <span data-ttu-id="9cb59-113">Чтобы создать файл ключа, введите `sn -k``file` из командной строки.</span><span class="sxs-lookup"><span data-stu-id="9cb59-113">To generate a key file, type `sn -k``file` at the command line.</span></span> <span data-ttu-id="9cb59-114">`-i` Параметр устанавливает пару ключей в контейнер.</span><span class="sxs-lookup"><span data-stu-id="9cb59-114">The `-i` option installs the key pair into a container.</span></span> <span data-ttu-id="9cb59-115">Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).</span><span class="sxs-lookup"><span data-stu-id="9cb59-115">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
- Если компиляция выполняется с `/target:module`, имя файла ключа сохраняется в модуле и включается в сборку, созданный при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ <span data-ttu-id="9cb59-116">Если компиляция выполняется с `/target:module`, имя файла ключа сохраняется в модуле и включается в сборку, которая создается при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span><span class="sxs-lookup"><span data-stu-id="9cb59-116">If you compile with `/target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
   
- Можно также указать этот параметр в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyNameAttribute>) в исходном коде любого модуля промежуточного языка (MSIL) Microsoft.</xref:System.Reflection.AssemblyKeyNameAttribute>  
+ <span data-ttu-id="9cb59-117">Этот параметр можно также указать в исходном коде любого модуля MSIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyNameAttribute>).</span><span class="sxs-lookup"><span data-stu-id="9cb59-117">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyNameAttribute>) in the source code for any Microsoft intermediate language (MSIL) module.</span></span>  
   
- Сведения о шифровании можно также передать компилятору с [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Используйте [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) Если частично подписанной сборки.  
+ <span data-ttu-id="9cb59-118">Также можно передать сведения о шифровании компилятору с помощью параметра [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span><span class="sxs-lookup"><span data-stu-id="9cb59-118">You can also pass your encryption information to the compiler with [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span></span> <span data-ttu-id="9cb59-119">Если необходимо использовать частично подписанную сборку, применяйте параметр [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md).</span><span class="sxs-lookup"><span data-stu-id="9cb59-119">Use [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
   
- В разделе [Создание и использование сборок](https://msdn.microsoft.com/library/xwb8f617) Дополнительные сведения о подписи сборки.  
+ <span data-ttu-id="9cb59-120">В разделе [Создание и использование сборок](https://msdn.microsoft.com/library/xwb8f617) Дополнительные сведения о подписи сборки.</span><span class="sxs-lookup"><span data-stu-id="9cb59-120">See [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) for more information on signing an assembly.</span></span>  
   
 > [!NOTE]
->  `/keycontainer` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+>  <span data-ttu-id="9cb59-121">`/keycontainer` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="9cb59-121">The `/keycontainer` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий код компилирует исходный файл `Input.vb` и указывает контейнер ключей.  
+## <a name="example"></a><span data-ttu-id="9cb59-122">Пример</span><span class="sxs-lookup"><span data-stu-id="9cb59-122">Example</span></span>  
+ <span data-ttu-id="9cb59-123">Следующий код компилирует исходный файл `Input.vb` и указывает контейнер ключей.</span><span class="sxs-lookup"><span data-stu-id="9cb59-123">The following code compiles source file `Input.vb` and specifies a key container.</span></span>  
   
 ```  
 vbc /keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="9cb59-124">См. также</span><span class="sxs-lookup"><span data-stu-id="9cb59-124">See Also</span></span>  
+ [<span data-ttu-id="9cb59-125">Сборки и глобальный кэш сборок</span><span class="sxs-lookup"><span data-stu-id="9cb59-125">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="9cb59-126">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="9cb59-126">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="9cb59-127">/keyfile</span><span class="sxs-lookup"><span data-stu-id="9cb59-127">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="9cb59-128">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="9cb59-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
