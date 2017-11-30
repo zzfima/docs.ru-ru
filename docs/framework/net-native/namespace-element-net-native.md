@@ -5,26 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f92797e9c06762602c30d7c3ed8e6b0d6e579bbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 014dc690d034c27f0f004172fb8108249bb5c89b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltnamespacegt-element-net-native"></a>Элемент &lt;Namespace&gt; (машинный код .NET)
-Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.  
+# <a name="ltnamespacegt-element-net-native"></a><span data-ttu-id="b0be0-102">Элемент &lt;Namespace&gt; (машинный код .NET)</span><span class="sxs-lookup"><span data-stu-id="b0be0-102">&lt;Namespace&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="b0be0-103">Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-103">Applies runtime reflection policy to all the types in a specified namespace.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="b0be0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b0be0-104">Syntax</span></span>  
   
 ```xml  
 <Namespace Name="namespace_name"   
@@ -40,61 +38,60 @@ ms.lasthandoff: 08/21/2017
            MarshalStructure="policy_setting" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b0be0-105">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b0be0-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="b0be0-106">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b0be0-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="b0be0-107">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b0be0-107">Attributes</span></span>  
   
-|Атрибут|Тип атрибута|Описание|  
+|<span data-ttu-id="b0be0-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b0be0-108">Attribute</span></span>|<span data-ttu-id="b0be0-109">Тип атрибута</span><span class="sxs-lookup"><span data-stu-id="b0be0-109">Attribute type</span></span>|<span data-ttu-id="b0be0-110">Описание</span><span class="sxs-lookup"><span data-stu-id="b0be0-110">Description</span></span>|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие правила|Обязательный атрибут. Указывает имя пространства имен.|  
-|`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
-|`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
-|`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
-|`Serialize`|Сериализация|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON.|  
-|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
-|`MarshalObject`|Interop|Необязательный атрибут. Определяет политику для маршалинга ссылочных типов в среды выполнения Windows и COM.|  
-|`MarshalDelegate`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.|  
-|`MarshalStructure`|Interop|Необязательный атрибут. Определяет политику для маршалинга структуры в машинный код.|  
+|`Name`|<span data-ttu-id="b0be0-111">Общие правила</span><span class="sxs-lookup"><span data-stu-id="b0be0-111">General</span></span>|<span data-ttu-id="b0be0-112">Обязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-112">Required attribute.</span></span> <span data-ttu-id="b0be0-113">Указывает имя пространства имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-113">Specifies the name of the namespace.</span></span>|  
+|`Activate`|<span data-ttu-id="b0be0-114">Отражение</span><span class="sxs-lookup"><span data-stu-id="b0be0-114">Reflection</span></span>|<span data-ttu-id="b0be0-115">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-115">Optional attribute.</span></span> <span data-ttu-id="b0be0-116">Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.</span><span class="sxs-lookup"><span data-stu-id="b0be0-116">Controls runtime access to constructors to enable activation of instances.</span></span>|  
+|`Browse`|<span data-ttu-id="b0be0-117">Отражение</span><span class="sxs-lookup"><span data-stu-id="b0be0-117">Reflection</span></span>|<span data-ttu-id="b0be0-118">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-118">Optional attribute.</span></span> <span data-ttu-id="b0be0-119">Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="b0be0-119">Controls querying for information about program elements, but does not enable any runtime access.</span></span>|  
+|`Dynamic`|<span data-ttu-id="b0be0-120">Отражение</span><span class="sxs-lookup"><span data-stu-id="b0be0-120">Reflection</span></span>|<span data-ttu-id="b0be0-121">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-121">Optional attribute.</span></span> <span data-ttu-id="b0be0-122">Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.</span><span class="sxs-lookup"><span data-stu-id="b0be0-122">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>|  
+|`Serialize`|<span data-ttu-id="b0be0-123">Сериализация</span><span class="sxs-lookup"><span data-stu-id="b0be0-123">Serialization</span></span>|<span data-ttu-id="b0be0-124">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-124">Optional attribute.</span></span> <span data-ttu-id="b0be0-125">Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON.</span><span class="sxs-lookup"><span data-stu-id="b0be0-125">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span>|  
+|`DataContractSerializer`|<span data-ttu-id="b0be0-126">Сериализация</span><span class="sxs-lookup"><span data-stu-id="b0be0-126">Serialization</span></span>|<span data-ttu-id="b0be0-127">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-127">Optional attribute.</span></span> <span data-ttu-id="b0be0-128">Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b0be0-128">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`DataContractJsonSerializer`|<span data-ttu-id="b0be0-129">Сериализация</span><span class="sxs-lookup"><span data-stu-id="b0be0-129">Serialization</span></span>|<span data-ttu-id="b0be0-130">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-130">Optional attribute.</span></span> <span data-ttu-id="b0be0-131">Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b0be0-131">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`XmlSerializer`|<span data-ttu-id="b0be0-132">Сериализация</span><span class="sxs-lookup"><span data-stu-id="b0be0-132">Serialization</span></span>|<span data-ttu-id="b0be0-133">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-133">Optional attribute.</span></span> <span data-ttu-id="b0be0-134">Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b0be0-134">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>|  
+|`MarshalObject`|<span data-ttu-id="b0be0-135">Interop</span><span class="sxs-lookup"><span data-stu-id="b0be0-135">Interop</span></span>|<span data-ttu-id="b0be0-136">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-136">Optional attribute.</span></span> <span data-ttu-id="b0be0-137">Определяет политику для маршалинга ссылочных типов в среды выполнения Windows и COM.</span><span class="sxs-lookup"><span data-stu-id="b0be0-137">Controls policy for marshaling reference types to Windows Runtime and COM.</span></span>|  
+|`MarshalDelegate`|<span data-ttu-id="b0be0-138">Interop</span><span class="sxs-lookup"><span data-stu-id="b0be0-138">Interop</span></span>|<span data-ttu-id="b0be0-139">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-139">Optional attribute.</span></span> <span data-ttu-id="b0be0-140">Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.</span><span class="sxs-lookup"><span data-stu-id="b0be0-140">Controls policy for marshaling delegate types as function pointers to native code.</span></span>|  
+|`MarshalStructure`|<span data-ttu-id="b0be0-141">Interop</span><span class="sxs-lookup"><span data-stu-id="b0be0-141">Interop</span></span>|<span data-ttu-id="b0be0-142">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="b0be0-142">Optional attribute.</span></span> <span data-ttu-id="b0be0-143">Определяет политику для маршалинга структуры в машинный код.</span><span class="sxs-lookup"><span data-stu-id="b0be0-143">Controls policy for marshaling structures to native code.</span></span>|  
   
-## <a name="name-attribute"></a>Name - атрибут  
+## <a name="name-attribute"></a><span data-ttu-id="b0be0-144">Name - атрибут</span><span class="sxs-lookup"><span data-stu-id="b0be0-144">Name attribute</span></span>  
   
-|Значение|Описание|  
+|<span data-ttu-id="b0be0-145">Значение</span><span class="sxs-lookup"><span data-stu-id="b0be0-145">Value</span></span>|<span data-ttu-id="b0be0-146">Описание</span><span class="sxs-lookup"><span data-stu-id="b0be0-146">Description</span></span>|  
 |-----------|-----------------|  
-|*namespace_name*|Имя пространства имен. Если элемент \<Namespace> является дочерним элементом для элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) или [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* должно быть полным именем пространства имен. Если элемент \<Namespace> является дочерним элементом другого элемента \<Namespace>, то *namespace_name* должно быть относительным именем пространства имен.|  
+|<span data-ttu-id="b0be0-147">*namespace_name*</span><span class="sxs-lookup"><span data-stu-id="b0be0-147">*namespace_name*</span></span>|<span data-ttu-id="b0be0-148">Имя пространства имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-148">The namespace name.</span></span> <span data-ttu-id="b0be0-149">Если элемент \<Namespace> является дочерним элементом для элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) или [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* должно быть полным именем пространства имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-149">If the \<Namespace> element is a child of an [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md), or [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element, *namespace_name* must be a fully qualified namespace name.</span></span> <span data-ttu-id="b0be0-150">Если элемент \<Namespace> является дочерним элементом другого элемента \<Namespace>, то *namespace_name* должно быть относительным именем пространства имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-150">If the \<Namespace> element is a child of another \<Namespace> element, *namespace_name* must be a relative namespace name.</span></span>|  
   
-## <a name="all-other-attributes"></a>Все остальные атрибуты  
+## <a name="all-other-attributes"></a><span data-ttu-id="b0be0-151">Все остальные атрибуты</span><span class="sxs-lookup"><span data-stu-id="b0be0-151">All other attributes</span></span>  
   
-|Значение|Описание|  
+|<span data-ttu-id="b0be0-152">Значение</span><span class="sxs-lookup"><span data-stu-id="b0be0-152">Value</span></span>|<span data-ttu-id="b0be0-153">Описание</span><span class="sxs-lookup"><span data-stu-id="b0be0-153">Description</span></span>|  
 |-----------|-----------------|  
-|*policy_setting*|Значение для этого типа политики для всех типов в пространстве имен. Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|<span data-ttu-id="b0be0-154">*policy_setting*</span><span class="sxs-lookup"><span data-stu-id="b0be0-154">*policy_setting*</span></span>|<span data-ttu-id="b0be0-155">Значение для этого типа политики для всех типов в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-155">The setting to apply to this policy type for all types in the namespace.</span></span> <span data-ttu-id="b0be0-156">Допустимые значения `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`.</span><span class="sxs-lookup"><span data-stu-id="b0be0-156">Possible values are `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`, and `Required All`.</span></span> <span data-ttu-id="b0be0-157">Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span><span class="sxs-lookup"><span data-stu-id="b0be0-157">For more information, see [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md).</span></span>|  
   
-### <a name="child-elements"></a>Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="b0be0-158">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b0be0-158">Child Elements</span></span>  
   
-|Элемент|Описание|  
+|<span data-ttu-id="b0be0-159">Элемент</span><span class="sxs-lookup"><span data-stu-id="b0be0-159">Element</span></span>|<span data-ttu-id="b0be0-160">Описание</span><span class="sxs-lookup"><span data-stu-id="b0be0-160">Description</span></span>|  
 |-------------|-----------------|  
-|`<Namespace>`|Применяет политику отражения среды выполнения для всех типов в родительском пространстве имен.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу.|  
+|`<Namespace>`|<span data-ttu-id="b0be0-161">Применяет политику отражения среды выполнения для всех типов в родительском пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-161">Applies runtime reflection policy to all types in a parent namespace.</span></span>|  
+|[<span data-ttu-id="b0be0-162">\<Type></span><span class="sxs-lookup"><span data-stu-id="b0be0-162">\<Type></span></span>](../../../docs/framework/net-native/type-element-net-native.md)|<span data-ttu-id="b0be0-163">Применяет политику отражения к типу.</span><span class="sxs-lookup"><span data-stu-id="b0be0-163">Applies reflection policy to a type.</span></span>|  
+|[<span data-ttu-id="b0be0-164">\<TypeInstantiation></span><span class="sxs-lookup"><span data-stu-id="b0be0-164">\<TypeInstantiation></span></span>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|<span data-ttu-id="b0be0-165">Применяет политику отражения к сконструированному универсальному типу.</span><span class="sxs-lookup"><span data-stu-id="b0be0-165">Applies reflection policy to a constructed generic type.</span></span>|  
   
-### <a name="parent-elements"></a>Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="b0be0-166">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b0be0-166">Parent Elements</span></span>  
   
-|Элемент|Описание|  
+|<span data-ttu-id="b0be0-167">Элемент</span><span class="sxs-lookup"><span data-stu-id="b0be0-167">Element</span></span>|<span data-ttu-id="b0be0-168">Описание</span><span class="sxs-lookup"><span data-stu-id="b0be0-168">Description</span></span>|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения. Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения среды выполнения ко всем типам в указанной сборке.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения. Элемент [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) может иметь ноль или один элемент [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|`<Namespace>`|Применяет политику отражения для всех типов в родительском пространстве имен.|  
+|[<span data-ttu-id="b0be0-169">\<Application></span><span class="sxs-lookup"><span data-stu-id="b0be0-169">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="b0be0-170">Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b0be0-170">Serves as a container for application-wide types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="b0be0-171">Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="b0be0-171">The [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element can have zero, one, or more [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) elements.</span></span>|  
+|[<span data-ttu-id="b0be0-172">\<Assembly></span><span class="sxs-lookup"><span data-stu-id="b0be0-172">\<Assembly></span></span>](../../../docs/framework/net-native/assembly-element-net-native.md)|<span data-ttu-id="b0be0-173">Применяет политику отражения среды выполнения ко всем типам в указанной сборке.</span><span class="sxs-lookup"><span data-stu-id="b0be0-173">Applies runtime reflection policy to all the types in a specified assembly.</span></span>|  
+|[<span data-ttu-id="b0be0-174">\<Library></span><span class="sxs-lookup"><span data-stu-id="b0be0-174">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="b0be0-175">Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="b0be0-175">Defines the assembly that contains types and type members whose metadata is available for reflection at run time.</span></span> <span data-ttu-id="b0be0-176">Элемент [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) может иметь ноль или один элемент [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="b0be0-176">The [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) element can have zero or one [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element.</span></span>|  
+|`<Namespace>`|<span data-ttu-id="b0be0-177">Применяет политику отражения для всех типов в родительском пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-177">Applies reflection policy to all types in a parent namespace.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Атрибуты `Activate`, `Browse`, `Dynamic` и `Serialize` необязательны. Если таковые отсутствуют, элемент `<Namespace>` используется только как контейнер для дочерних элементов. Если они присутствуют, элемент `<Namespace>` применяет политика отражения среды выполнения ко всем типам в указанном пространстве имен.  
+## <a name="remarks"></a><span data-ttu-id="b0be0-178">Примечания</span><span class="sxs-lookup"><span data-stu-id="b0be0-178">Remarks</span></span>  
+ <span data-ttu-id="b0be0-179">Атрибуты `Activate`, `Browse`, `Dynamic` и `Serialize` необязательны.</span><span class="sxs-lookup"><span data-stu-id="b0be0-179">The `Activate`, `Browse`, `Dynamic`, and `Serialize` attributes are all optional.</span></span> <span data-ttu-id="b0be0-180">Если таковые отсутствуют, элемент `<Namespace>` используется только как контейнер для дочерних элементов.</span><span class="sxs-lookup"><span data-stu-id="b0be0-180">If none are present, the `<Namespace>` element serves only as a container for child elements.</span></span> <span data-ttu-id="b0be0-181">Если они присутствуют, элемент `<Namespace>` применяет политика отражения среды выполнения ко всем типам в указанном пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="b0be0-181">If they are present, the `<Namespace>` element applies runtime reflection policy to all the types in the specified namespace.</span></span>  
   
- Если это дочерний элемент элемента [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), то элемент `<Namespace>` переопределяет политику отражения среды выполнения, определенную элементом [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
+ <span data-ttu-id="b0be0-182">Если это дочерний элемент элемента [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), то элемент `<Namespace>` переопределяет политику отражения среды выполнения, определенную элементом [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="b0be0-182">When it is a child of the [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element, the `<Namespace>` element overrides the runtime reflection policy defined by the  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) element.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-
+## <a name="see-also"></a><span data-ttu-id="b0be0-183">См. также</span><span class="sxs-lookup"><span data-stu-id="b0be0-183">See Also</span></span>  
+ [<span data-ttu-id="b0be0-184">Параметры политики директив среды выполнения</span><span class="sxs-lookup"><span data-stu-id="b0be0-184">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
+ [<span data-ttu-id="b0be0-185">Справочник по конфигурационному файлу директив среды выполнения (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="b0be0-185">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="b0be0-186">Элементы директив среды выполнения</span><span class="sxs-lookup"><span data-stu-id="b0be0-186">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)

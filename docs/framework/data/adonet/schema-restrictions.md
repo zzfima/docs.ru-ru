@@ -1,50 +1,54 @@
 ---
-title: "Ограничения схемы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ограничения схемы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Ограничения схемы
-Вторым необязательным параметром метода **GetSchema** являются ограничения, используемые для ограничения объема возвращаемых сведений о схеме, передаваемых методу **GetSchema** в виде массива строк.  Позиция в массиве определяет значения, которые можно передать, и она эквивалентна номеру ограничения.  
+# <a name="schema-restrictions"></a><span data-ttu-id="b074b-102">Ограничения схемы</span><span class="sxs-lookup"><span data-stu-id="b074b-102">Schema Restrictions</span></span>
+<span data-ttu-id="b074b-103">Вторым необязательным параметром метода **GetSchema** в противном случае возвращается ограничений, которые используются для ограничения объема сведений о схеме, и оно передается **GetSchema** метод как массив строк .</span><span class="sxs-lookup"><span data-stu-id="b074b-103">The second optional parameter of the **GetSchema** method is the restrictions that are used to limit the amount of schema information returned, and it is passed to the **GetSchema** method as an array of strings.</span></span> <span data-ttu-id="b074b-104">Позиция в массиве определяет значения, которые можно передать, и она эквивалентна номеру ограничения.</span><span class="sxs-lookup"><span data-stu-id="b074b-104">The position in the array determines the values that you can pass, and this is equivalent to the restriction number.</span></span>  
   
- Например, в приведенной ниже таблице описываются ограничения, поддерживаемые коллекцией схемы Tables, использующей поставщик данных .NET Framework для SQL Server.  Дополнительные ограничения для коллекций схем SQL Server перечислены в конце данного раздела.  
+ <span data-ttu-id="b074b-105">Например, в приведенной ниже таблице описываются ограничения, поддерживаемые коллекцией схемы Tables, использующей поставщик данных .NET Framework для SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b074b-105">For example, the following table describes the restrictions supported by the "Tables" schema collection using the .NET Framework Data Provider for SQL Server.</span></span> <span data-ttu-id="b074b-106">Дополнительные ограничения для коллекций схем SQL Server перечислены в конце данного раздела.</span><span class="sxs-lookup"><span data-stu-id="b074b-106">Additional restrictions for SQL Server schema collections are listed at the end of this topic.</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|<span data-ttu-id="b074b-107">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-107">Restriction Name</span></span>|<span data-ttu-id="b074b-108">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-108">Parameter Name</span></span>|<span data-ttu-id="b074b-109">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-109">Restriction Default</span></span>|<span data-ttu-id="b074b-110">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-110">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-111">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-111">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-112">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-112">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-113">1</span><span class="sxs-lookup"><span data-stu-id="b074b-113">1</span></span>|  
+|<span data-ttu-id="b074b-114">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-114">Owner</span></span>|@Owner|<span data-ttu-id="b074b-115">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-115">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-116">2</span><span class="sxs-lookup"><span data-stu-id="b074b-116">2</span></span>|  
+|<span data-ttu-id="b074b-117">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-117">Table</span></span>|@Name|<span data-ttu-id="b074b-118">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-118">TABLE_NAME</span></span>|<span data-ttu-id="b074b-119">3</span><span class="sxs-lookup"><span data-stu-id="b074b-119">3</span></span>|  
+|<span data-ttu-id="b074b-120">TableType</span><span class="sxs-lookup"><span data-stu-id="b074b-120">TableType</span></span>|@TableType|<span data-ttu-id="b074b-121">TABLE_TYPE</span><span class="sxs-lookup"><span data-stu-id="b074b-121">TABLE_TYPE</span></span>|<span data-ttu-id="b074b-122">4</span><span class="sxs-lookup"><span data-stu-id="b074b-122">4</span></span>|  
   
-## Указание значений ограничения  
- Чтобы использовать одно из ограничений коллекции схем Tables, необходимо создать массив строк с четырьмя элементами, затем поместить значение в элемент, совпадающий с номером ограничения.  Например, чтобы ограничить таблицы, возвращаемые методом **GetSchema** только таблицами из схемы «Sales», присвойте перед передачей массива методу **GetSchema** второму элементу массива значение «Sales».  
-  
-> [!NOTE]
->  Коллекции ограничений для `SqlClient` и `OracleClient` имеют дополнительный столбец `ParameterName`.  Столбец ограничения по умолчанию оставлен для обратной совместимости, но не учитывается.  Чтобы свести к минимуму вероятности проведения атак путем внедрения кода SQL, при указании значений ограничений следует использовать параметризированные запросы, а не замену строк.  
+## <a name="specifying-restriction-values"></a><span data-ttu-id="b074b-123">Указание значений ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-123">Specifying Restriction Values</span></span>  
+ <span data-ttu-id="b074b-124">Чтобы использовать одно из ограничений коллекции схем Tables, необходимо создать массив строк с четырьмя элементами, затем поместить значение в элемент, совпадающий с номером ограничения.</span><span class="sxs-lookup"><span data-stu-id="b074b-124">To use one of the restrictions of the "Tables" schema collection, simply create an array of strings with four elements, then place a value in the element that matches the restriction number.</span></span> <span data-ttu-id="b074b-125">Например, чтобы ограничить таблицы, возвращаемые **GetSchema** только таблицами из схемы «Sales», присвойте второй элемент массива значение «Sales» перед передачей **GetSchema** метод.</span><span class="sxs-lookup"><span data-stu-id="b074b-125">For example, to restrict the tables returned by the **GetSchema** method to only those tables in the "Sales" schema, set the second element of the array to "Sales" before passing it to the **GetSchema** method.</span></span>  
   
 > [!NOTE]
->  Количество элементов в массиве должно быть меньше или равно количеству ограничений, поддерживаемых специальной коллекцией схем, в противном случае возникнет исключение <xref:System.ArgumentException>.  Их может быть меньше максимального количества ограничений.  Предполагается, что отсутствующие ограничения имеют значение NULL \(без ограничений\).  
+>  <span data-ttu-id="b074b-126">Коллекции ограничений для `SqlClient` и `OracleClient` имеют дополнительный столбец `ParameterName`.</span><span class="sxs-lookup"><span data-stu-id="b074b-126">The restrictions collections for `SqlClient` and `OracleClient` have an additional `ParameterName` column.</span></span> <span data-ttu-id="b074b-127">Столбец ограничения по умолчанию оставлен для обратной совместимости, но не учитывается.</span><span class="sxs-lookup"><span data-stu-id="b074b-127">The restriction default column is still there for backwards compatibility, but is currently ignored.</span></span> <span data-ttu-id="b074b-128">Чтобы свести к минимуму вероятности проведения атак путем внедрения кода SQL, при указании значений ограничений следует использовать параметризированные запросы, а не замену строк.</span><span class="sxs-lookup"><span data-stu-id="b074b-128">Parameterized queries rather than string replacement should be used to minimize the risk of an SQL injection attack when specifying restriction values.</span></span>  
   
- Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых ограничений, вызвав метод **GetSchema** с именем коллекции схем ограничений Restrictions.  Будет возвращен объект <xref:System.Data.DataTable> со списком имен коллекций и ограничений, значениями ограничений по умолчанию и номерами ограничений.  
+> [!NOTE]
+>  <span data-ttu-id="b074b-129">Количество элементов в массиве должно быть меньше или равно количеству ограничений, поддерживаемых специальной коллекцией схем, в противном случае возникнет исключение <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="b074b-129">The number of elements in the array must be less than or equal to the number of restrictions supported for the specified schema collection else an <xref:System.ArgumentException> will be thrown.</span></span> <span data-ttu-id="b074b-130">Их может быть меньше максимального количества ограничений.</span><span class="sxs-lookup"><span data-stu-id="b074b-130">There can be fewer than the maximum number of restrictions.</span></span> <span data-ttu-id="b074b-131">Предполагается, что отсутствующие ограничения имеют значение NULL (без ограничений).</span><span class="sxs-lookup"><span data-stu-id="b074b-131">The missing restrictions are assumed to be null (unrestricted).</span></span>  
   
-### Пример  
- В приведенных ниже примерах демонстрируется использование метода <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> класса поставщика данных .NET Framework для SQL Server <xref:System.Data.SqlClient.SqlConnection> для извлечения данных схемы о всех таблицах, содержащихся в учебной базе данных **AdventureWorks**, а также для ограничения возвращаемых данных только таблицами из схемы «Sales».  
+ <span data-ttu-id="b074b-132">Можно запросить управляемый поставщик .NET Framework для определения списка поддерживаемых ограничений, вызвав **GetSchema** метод с именем коллекции схем ограничений — «Ограничения».</span><span class="sxs-lookup"><span data-stu-id="b074b-132">You can query a .NET Framework managed provider to determine the list of supported restrictions by calling the **GetSchema** method with the name of the restrictions schema collection, which is "Restrictions".</span></span> <span data-ttu-id="b074b-133">Будет возвращен объект <xref:System.Data.DataTable> со списком имен коллекций и ограничений, значениями ограничений по умолчанию и номерами ограничений.</span><span class="sxs-lookup"><span data-stu-id="b074b-133">This will return a <xref:System.Data.DataTable> with a list of the collection names, the restriction names, the default restriction values, and the restriction numbers.</span></span>  
   
- \[Visual Basic\]  
+### <a name="example"></a><span data-ttu-id="b074b-134">Пример</span><span class="sxs-lookup"><span data-stu-id="b074b-134">Example</span></span>  
+ <span data-ttu-id="b074b-135">Следующие примеры демонстрируют, как использовать <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> метод поставщика данных .NET Framework для SQL Server <xref:System.Data.SqlClient.SqlConnection> класса для извлечения сведений о всех таблиц, содержащихся в схеме **AdventureWorks**образца базы данных, а также для ограничения сведений возвращаются только таблицами из схемы «Sales»:</span><span class="sxs-lookup"><span data-stu-id="b074b-135">The following examples demonstrate how to use the <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> method of the .NET Framework Data Provider for the SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database, and to restrict the information returned to only those tables in the "Sales" schema:</span></span>  
   
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -76,9 +80,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -138,136 +140,136 @@ class Program
 }  
 ```  
   
-## Ограничения схемы SQL Server  
- В приведенных ниже таблицах перечислены ограничения коллекций схем SQL Server.  
+## <a name="sql-server-schema-restrictions"></a><span data-ttu-id="b074b-136">Ограничения схемы SQL Server</span><span class="sxs-lookup"><span data-stu-id="b074b-136">SQL Server Schema Restrictions</span></span>  
+ <span data-ttu-id="b074b-137">В приведенных ниже таблицах перечислены ограничения коллекций схем SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b074b-137">The following tables list the restrictions for SQL Server schema collections.</span></span>  
   
-### Users  
+### <a name="users"></a><span data-ttu-id="b074b-138">Users</span><span class="sxs-lookup"><span data-stu-id="b074b-138">Users</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|User\_Name|@Name|имя|1|  
+|<span data-ttu-id="b074b-139">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-139">Restriction Name</span></span>|<span data-ttu-id="b074b-140">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-140">Parameter Name</span></span>|<span data-ttu-id="b074b-141">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-141">Restriction Default</span></span>|<span data-ttu-id="b074b-142">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-142">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-143">User_Name</span><span class="sxs-lookup"><span data-stu-id="b074b-143">User_Name</span></span>|@Name|<span data-ttu-id="b074b-144">имя</span><span class="sxs-lookup"><span data-stu-id="b074b-144">name</span></span>|<span data-ttu-id="b074b-145">1</span><span class="sxs-lookup"><span data-stu-id="b074b-145">1</span></span>|  
   
-### Databases  
+### <a name="databases"></a><span data-ttu-id="b074b-146">Databases</span><span class="sxs-lookup"><span data-stu-id="b074b-146">Databases</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Имя|@Name|Имя|1|  
+|<span data-ttu-id="b074b-147">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-147">Restriction Name</span></span>|<span data-ttu-id="b074b-148">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-148">Parameter Name</span></span>|<span data-ttu-id="b074b-149">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-149">Restriction Default</span></span>|<span data-ttu-id="b074b-150">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-150">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-151">Имя</span><span class="sxs-lookup"><span data-stu-id="b074b-151">Name</span></span>|@Name|<span data-ttu-id="b074b-152">Имя</span><span class="sxs-lookup"><span data-stu-id="b074b-152">Name</span></span>|<span data-ttu-id="b074b-153">1</span><span class="sxs-lookup"><span data-stu-id="b074b-153">1</span></span>|  
   
-### Таблицы  
+### <a name="tables"></a><span data-ttu-id="b074b-154">Таблицы</span><span class="sxs-lookup"><span data-stu-id="b074b-154">Tables</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Name|TABLE\_NAME|3|  
-|TableType|@TableType|TABLE\_TYPE|4|  
+|<span data-ttu-id="b074b-155">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-155">Restriction Name</span></span>|<span data-ttu-id="b074b-156">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-156">Parameter Name</span></span>|<span data-ttu-id="b074b-157">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-157">Restriction Default</span></span>|<span data-ttu-id="b074b-158">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-158">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-159">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-159">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-160">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-160">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-161">1</span><span class="sxs-lookup"><span data-stu-id="b074b-161">1</span></span>|  
+|<span data-ttu-id="b074b-162">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-162">Owner</span></span>|@Owner|<span data-ttu-id="b074b-163">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-163">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-164">2</span><span class="sxs-lookup"><span data-stu-id="b074b-164">2</span></span>|  
+|<span data-ttu-id="b074b-165">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-165">Table</span></span>|@Name|<span data-ttu-id="b074b-166">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-166">TABLE_NAME</span></span>|<span data-ttu-id="b074b-167">3</span><span class="sxs-lookup"><span data-stu-id="b074b-167">3</span></span>|  
+|<span data-ttu-id="b074b-168">TableType</span><span class="sxs-lookup"><span data-stu-id="b074b-168">TableType</span></span>|@TableType|<span data-ttu-id="b074b-169">TABLE_TYPE</span><span class="sxs-lookup"><span data-stu-id="b074b-169">TABLE_TYPE</span></span>|<span data-ttu-id="b074b-170">4</span><span class="sxs-lookup"><span data-stu-id="b074b-170">4</span></span>|  
   
-### Столбцы  
+### <a name="columns"></a><span data-ttu-id="b074b-171">Столбцы</span><span class="sxs-lookup"><span data-stu-id="b074b-171">Columns</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
-|Столбец|@Column|COLUMN\_NAME|4|  
+|<span data-ttu-id="b074b-172">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-172">Restriction Name</span></span>|<span data-ttu-id="b074b-173">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-173">Parameter Name</span></span>|<span data-ttu-id="b074b-174">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-174">Restriction Default</span></span>|<span data-ttu-id="b074b-175">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-175">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-176">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-176">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-177">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-177">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-178">1</span><span class="sxs-lookup"><span data-stu-id="b074b-178">1</span></span>|  
+|<span data-ttu-id="b074b-179">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-179">Owner</span></span>|@Owner|<span data-ttu-id="b074b-180">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-180">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-181">2</span><span class="sxs-lookup"><span data-stu-id="b074b-181">2</span></span>|  
+|<span data-ttu-id="b074b-182">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-182">Table</span></span>|@Table|<span data-ttu-id="b074b-183">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-183">TABLE_NAME</span></span>|<span data-ttu-id="b074b-184">3</span><span class="sxs-lookup"><span data-stu-id="b074b-184">3</span></span>|  
+|<span data-ttu-id="b074b-185">Столбец</span><span class="sxs-lookup"><span data-stu-id="b074b-185">Column</span></span>|@Column|<span data-ttu-id="b074b-186">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-186">COLUMN_NAME</span></span>|<span data-ttu-id="b074b-187">4</span><span class="sxs-lookup"><span data-stu-id="b074b-187">4</span></span>|  
   
-### StructuredTypeMembers  
+### <a name="structuredtypemembers"></a><span data-ttu-id="b074b-188">StructuredTypeMembers</span><span class="sxs-lookup"><span data-stu-id="b074b-188">StructuredTypeMembers</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
-|Столбец|@Column|COLUMN\_NAME|4|  
+|<span data-ttu-id="b074b-189">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-189">Restriction Name</span></span>|<span data-ttu-id="b074b-190">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-190">Parameter Name</span></span>|<span data-ttu-id="b074b-191">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-191">Restriction Default</span></span>|<span data-ttu-id="b074b-192">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-192">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-193">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-193">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-194">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-194">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-195">1</span><span class="sxs-lookup"><span data-stu-id="b074b-195">1</span></span>|  
+|<span data-ttu-id="b074b-196">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-196">Owner</span></span>|@Owner|<span data-ttu-id="b074b-197">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-197">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-198">2</span><span class="sxs-lookup"><span data-stu-id="b074b-198">2</span></span>|  
+|<span data-ttu-id="b074b-199">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-199">Table</span></span>|@Table|<span data-ttu-id="b074b-200">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-200">TABLE_NAME</span></span>|<span data-ttu-id="b074b-201">3</span><span class="sxs-lookup"><span data-stu-id="b074b-201">3</span></span>|  
+|<span data-ttu-id="b074b-202">Столбец</span><span class="sxs-lookup"><span data-stu-id="b074b-202">Column</span></span>|@Column|<span data-ttu-id="b074b-203">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-203">COLUMN_NAME</span></span>|<span data-ttu-id="b074b-204">4</span><span class="sxs-lookup"><span data-stu-id="b074b-204">4</span></span>|  
   
-### Представления  
+### <a name="views"></a><span data-ttu-id="b074b-205">Представления</span><span class="sxs-lookup"><span data-stu-id="b074b-205">Views</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
+|<span data-ttu-id="b074b-206">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-206">Restriction Name</span></span>|<span data-ttu-id="b074b-207">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-207">Parameter Name</span></span>|<span data-ttu-id="b074b-208">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-208">Restriction Default</span></span>|<span data-ttu-id="b074b-209">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-209">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-210">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-210">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-211">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-211">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-212">1</span><span class="sxs-lookup"><span data-stu-id="b074b-212">1</span></span>|  
+|<span data-ttu-id="b074b-213">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-213">Owner</span></span>|@Owner|<span data-ttu-id="b074b-214">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-214">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-215">2</span><span class="sxs-lookup"><span data-stu-id="b074b-215">2</span></span>|  
+|<span data-ttu-id="b074b-216">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-216">Table</span></span>|@Table|<span data-ttu-id="b074b-217">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-217">TABLE_NAME</span></span>|<span data-ttu-id="b074b-218">3</span><span class="sxs-lookup"><span data-stu-id="b074b-218">3</span></span>|  
   
-### ViewColumns  
+### <a name="viewcolumns"></a><span data-ttu-id="b074b-219">ViewColumns</span><span class="sxs-lookup"><span data-stu-id="b074b-219">ViewColumns</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|VIEW\_CATALOG|1|  
-|рисунка|@Owner|VIEW\_SCHEMA|2|  
-|Таблица|@Table|VIEW\_NAME|3|  
-|Столбец|@Column|COLUMN\_NAME|4|  
+|<span data-ttu-id="b074b-220">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-220">Restriction Name</span></span>|<span data-ttu-id="b074b-221">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-221">Parameter Name</span></span>|<span data-ttu-id="b074b-222">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-222">Restriction Default</span></span>|<span data-ttu-id="b074b-223">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-223">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-224">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-224">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-225">VIEW_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-225">VIEW_CATALOG</span></span>|<span data-ttu-id="b074b-226">1</span><span class="sxs-lookup"><span data-stu-id="b074b-226">1</span></span>|  
+|<span data-ttu-id="b074b-227">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-227">Owner</span></span>|@Owner|<span data-ttu-id="b074b-228">VIEW_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-228">VIEW_SCHEMA</span></span>|<span data-ttu-id="b074b-229">2</span><span class="sxs-lookup"><span data-stu-id="b074b-229">2</span></span>|  
+|<span data-ttu-id="b074b-230">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-230">Table</span></span>|@Table|<span data-ttu-id="b074b-231">VIEW_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-231">VIEW_NAME</span></span>|<span data-ttu-id="b074b-232">3</span><span class="sxs-lookup"><span data-stu-id="b074b-232">3</span></span>|  
+|<span data-ttu-id="b074b-233">Столбец</span><span class="sxs-lookup"><span data-stu-id="b074b-233">Column</span></span>|@Column|<span data-ttu-id="b074b-234">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-234">COLUMN_NAME</span></span>|<span data-ttu-id="b074b-235">4</span><span class="sxs-lookup"><span data-stu-id="b074b-235">4</span></span>|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a><span data-ttu-id="b074b-236">ProcedureParameters</span><span class="sxs-lookup"><span data-stu-id="b074b-236">ProcedureParameters</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|рисунка|@Owner|SPECIFIC\_SCHEMA|2|  
-|Имя|@Name|SPECIFIC\_NAME|3|  
-|Параметр|@Parameter|PARAMETER\_NAME|4|  
+|<span data-ttu-id="b074b-237">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-237">Restriction Name</span></span>|<span data-ttu-id="b074b-238">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-238">Parameter Name</span></span>|<span data-ttu-id="b074b-239">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-239">Restriction Default</span></span>|<span data-ttu-id="b074b-240">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-240">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-241">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-241">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-242">SPECIFIC_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-242">SPECIFIC_CATALOG</span></span>|<span data-ttu-id="b074b-243">1</span><span class="sxs-lookup"><span data-stu-id="b074b-243">1</span></span>|  
+|<span data-ttu-id="b074b-244">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-244">Owner</span></span>|@Owner|<span data-ttu-id="b074b-245">SPECIFIC_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-245">SPECIFIC_SCHEMA</span></span>|<span data-ttu-id="b074b-246">2</span><span class="sxs-lookup"><span data-stu-id="b074b-246">2</span></span>|  
+|<span data-ttu-id="b074b-247">Имя</span><span class="sxs-lookup"><span data-stu-id="b074b-247">Name</span></span>|@Name|<span data-ttu-id="b074b-248">SPECIFIC_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-248">SPECIFIC_NAME</span></span>|<span data-ttu-id="b074b-249">3</span><span class="sxs-lookup"><span data-stu-id="b074b-249">3</span></span>|  
+|<span data-ttu-id="b074b-250">Параметр</span><span class="sxs-lookup"><span data-stu-id="b074b-250">Parameter</span></span>|@Parameter|<span data-ttu-id="b074b-251">PARAMETER_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-251">PARAMETER_NAME</span></span>|<span data-ttu-id="b074b-252">4</span><span class="sxs-lookup"><span data-stu-id="b074b-252">4</span></span>|  
   
-### Процедуры  
+### <a name="procedures"></a><span data-ttu-id="b074b-253">Процедуры</span><span class="sxs-lookup"><span data-stu-id="b074b-253">Procedures</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|SPECIFIC\_CATALOG|1|  
-|рисунка|@Owner|SPECIFIC\_SCHEMA|2|  
-|Имя|@Name|SPECIFIC\_NAME|3|  
-|Тип|@Type|ROUTINE\_TYPE|4|  
+|<span data-ttu-id="b074b-254">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-254">Restriction Name</span></span>|<span data-ttu-id="b074b-255">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-255">Parameter Name</span></span>|<span data-ttu-id="b074b-256">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-256">Restriction Default</span></span>|<span data-ttu-id="b074b-257">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-257">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-258">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-258">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-259">SPECIFIC_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-259">SPECIFIC_CATALOG</span></span>|<span data-ttu-id="b074b-260">1</span><span class="sxs-lookup"><span data-stu-id="b074b-260">1</span></span>|  
+|<span data-ttu-id="b074b-261">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-261">Owner</span></span>|@Owner|<span data-ttu-id="b074b-262">SPECIFIC_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-262">SPECIFIC_SCHEMA</span></span>|<span data-ttu-id="b074b-263">2</span><span class="sxs-lookup"><span data-stu-id="b074b-263">2</span></span>|  
+|<span data-ttu-id="b074b-264">Имя</span><span class="sxs-lookup"><span data-stu-id="b074b-264">Name</span></span>|@Name|<span data-ttu-id="b074b-265">SPECIFIC_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-265">SPECIFIC_NAME</span></span>|<span data-ttu-id="b074b-266">3</span><span class="sxs-lookup"><span data-stu-id="b074b-266">3</span></span>|  
+|<span data-ttu-id="b074b-267">Тип</span><span class="sxs-lookup"><span data-stu-id="b074b-267">Type</span></span>|@Type|<span data-ttu-id="b074b-268">ROUTINE_TYPE</span><span class="sxs-lookup"><span data-stu-id="b074b-268">ROUTINE_TYPE</span></span>|<span data-ttu-id="b074b-269">4</span><span class="sxs-lookup"><span data-stu-id="b074b-269">4</span></span>|  
   
-### IndexColumns  
+### <a name="indexcolumns"></a><span data-ttu-id="b074b-270">IndexColumns</span><span class="sxs-lookup"><span data-stu-id="b074b-270">IndexColumns</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|рисунка|@Owner|user\_name\(\)|2|  
-|Таблица|@Table|o.  имя|3|  
-|ConstraintName|@ConstraintName|x.  имя|4|  
-|Столбец|@Column|В.  имя|5|  
+|<span data-ttu-id="b074b-271">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-271">Restriction Name</span></span>|<span data-ttu-id="b074b-272">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-272">Parameter Name</span></span>|<span data-ttu-id="b074b-273">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-273">Restriction Default</span></span>|<span data-ttu-id="b074b-274">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-274">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-275">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-275">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-276">db_name()</span><span class="sxs-lookup"><span data-stu-id="b074b-276">db_name()</span></span>|<span data-ttu-id="b074b-277">1</span><span class="sxs-lookup"><span data-stu-id="b074b-277">1</span></span>|  
+|<span data-ttu-id="b074b-278">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-278">Owner</span></span>|@Owner|<span data-ttu-id="b074b-279">user_name()</span><span class="sxs-lookup"><span data-stu-id="b074b-279">user_name()</span></span>|<span data-ttu-id="b074b-280">2</span><span class="sxs-lookup"><span data-stu-id="b074b-280">2</span></span>|  
+|<span data-ttu-id="b074b-281">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-281">Table</span></span>|@Table|<span data-ttu-id="b074b-282">o.name</span><span class="sxs-lookup"><span data-stu-id="b074b-282">o.name</span></span>|<span data-ttu-id="b074b-283">3</span><span class="sxs-lookup"><span data-stu-id="b074b-283">3</span></span>|  
+|<span data-ttu-id="b074b-284">ConstraintName</span><span class="sxs-lookup"><span data-stu-id="b074b-284">ConstraintName</span></span>|@ConstraintName|<span data-ttu-id="b074b-285">x.name</span><span class="sxs-lookup"><span data-stu-id="b074b-285">x.name</span></span>|<span data-ttu-id="b074b-286">4</span><span class="sxs-lookup"><span data-stu-id="b074b-286">4</span></span>|  
+|<span data-ttu-id="b074b-287">Столбец</span><span class="sxs-lookup"><span data-stu-id="b074b-287">Column</span></span>|@Column|<span data-ttu-id="b074b-288">c.name</span><span class="sxs-lookup"><span data-stu-id="b074b-288">c.name</span></span>|<span data-ttu-id="b074b-289">5</span><span class="sxs-lookup"><span data-stu-id="b074b-289">5</span></span>|  
   
-### Indexes  
+### <a name="indexes"></a><span data-ttu-id="b074b-290">Indexes</span><span class="sxs-lookup"><span data-stu-id="b074b-290">Indexes</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|db\_name\(\)|1|  
-|рисунка|@Owner|user\_name\(\)|2|  
-|Таблица|@Table|o.  имя|3|  
+|<span data-ttu-id="b074b-291">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-291">Restriction Name</span></span>|<span data-ttu-id="b074b-292">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-292">Parameter Name</span></span>|<span data-ttu-id="b074b-293">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-293">Restriction Default</span></span>|<span data-ttu-id="b074b-294">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-294">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-295">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-295">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-296">db_name()</span><span class="sxs-lookup"><span data-stu-id="b074b-296">db_name()</span></span>|<span data-ttu-id="b074b-297">1</span><span class="sxs-lookup"><span data-stu-id="b074b-297">1</span></span>|  
+|<span data-ttu-id="b074b-298">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-298">Owner</span></span>|@Owner|<span data-ttu-id="b074b-299">user_name()</span><span class="sxs-lookup"><span data-stu-id="b074b-299">user_name()</span></span>|<span data-ttu-id="b074b-300">2</span><span class="sxs-lookup"><span data-stu-id="b074b-300">2</span></span>|  
+|<span data-ttu-id="b074b-301">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-301">Table</span></span>|@Table|<span data-ttu-id="b074b-302">o.name</span><span class="sxs-lookup"><span data-stu-id="b074b-302">o.name</span></span>|<span data-ttu-id="b074b-303">3</span><span class="sxs-lookup"><span data-stu-id="b074b-303">3</span></span>|  
   
-### UserDefinedTypes  
+### <a name="userdefinedtypes"></a><span data-ttu-id="b074b-304">UserDefinedTypes</span><span class="sxs-lookup"><span data-stu-id="b074b-304">UserDefinedTypes</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|assembly\_name|@AssemblyName|сборки.  имя|1|  
-|udt\_name|@UDTName|types.assembly\_class|2|  
+|<span data-ttu-id="b074b-305">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-305">Restriction Name</span></span>|<span data-ttu-id="b074b-306">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-306">Parameter Name</span></span>|<span data-ttu-id="b074b-307">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-307">Restriction Default</span></span>|<span data-ttu-id="b074b-308">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-308">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-309">assembly_name</span><span class="sxs-lookup"><span data-stu-id="b074b-309">assembly_name</span></span>|@AssemblyName|<span data-ttu-id="b074b-310">assemblies.name</span><span class="sxs-lookup"><span data-stu-id="b074b-310">assemblies.name</span></span>|<span data-ttu-id="b074b-311">1</span><span class="sxs-lookup"><span data-stu-id="b074b-311">1</span></span>|  
+|<span data-ttu-id="b074b-312">udt_name</span><span class="sxs-lookup"><span data-stu-id="b074b-312">udt_name</span></span>|@UDTName|<span data-ttu-id="b074b-313">types.assembly_class</span><span class="sxs-lookup"><span data-stu-id="b074b-313">types.assembly_class</span></span>|<span data-ttu-id="b074b-314">2</span><span class="sxs-lookup"><span data-stu-id="b074b-314">2</span></span>|  
   
-### ForeignKeys  
+### <a name="foreignkeys"></a><span data-ttu-id="b074b-315">ForeignKeys</span><span class="sxs-lookup"><span data-stu-id="b074b-315">ForeignKeys</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|CONSTRAINT\_CATALOG|1|  
-|рисунка|@Owner|CONSTRAINT\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
-|Имя|@Name|CONSTRAINT\_NAME|4|  
+|<span data-ttu-id="b074b-316">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-316">Restriction Name</span></span>|<span data-ttu-id="b074b-317">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-317">Parameter Name</span></span>|<span data-ttu-id="b074b-318">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-318">Restriction Default</span></span>|<span data-ttu-id="b074b-319">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-319">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-320">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-320">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-321">CONSTRAINT_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-321">CONSTRAINT_CATALOG</span></span>|<span data-ttu-id="b074b-322">1</span><span class="sxs-lookup"><span data-stu-id="b074b-322">1</span></span>|  
+|<span data-ttu-id="b074b-323">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-323">Owner</span></span>|@Owner|<span data-ttu-id="b074b-324">CONSTRAINT_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-324">CONSTRAINT_SCHEMA</span></span>|<span data-ttu-id="b074b-325">2</span><span class="sxs-lookup"><span data-stu-id="b074b-325">2</span></span>|  
+|<span data-ttu-id="b074b-326">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-326">Table</span></span>|@Table|<span data-ttu-id="b074b-327">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-327">TABLE_NAME</span></span>|<span data-ttu-id="b074b-328">3</span><span class="sxs-lookup"><span data-stu-id="b074b-328">3</span></span>|  
+|<span data-ttu-id="b074b-329">Имя</span><span class="sxs-lookup"><span data-stu-id="b074b-329">Name</span></span>|@Name|<span data-ttu-id="b074b-330">CONSTRAINT_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-330">CONSTRAINT_NAME</span></span>|<span data-ttu-id="b074b-331">4</span><span class="sxs-lookup"><span data-stu-id="b074b-331">4</span></span>|  
   
-## Ограничения схемы SQL Server 2008  
- В приведенных ниже таблицах перечислены ограничения коллекций схем SQL Server 2008.  Эти ограничения действуют, начиная с версии .NET Framework 3.5 с пакетом обновления 1 \(SP1\) и SQL Server 2008.  Они не поддерживаются в предыдущих версиях .NET Framework и SQL Server.  
+## <a name="sql-server-2008-schema-restrictions"></a><span data-ttu-id="b074b-332">Ограничения схемы SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="b074b-332">SQL Server 2008 Schema Restrictions</span></span>  
+ <span data-ttu-id="b074b-333">В приведенных ниже таблицах перечислены ограничения коллекций схем SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="b074b-333">The following tables list the restrictions for SQL Server 2008 schema collections.</span></span> <span data-ttu-id="b074b-334">Эти ограничения действуют, начиная с версии .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="b074b-334">These restrictions are valid beginning with version 3.5 SP1 of the .NET Framework and SQL Server 2008.</span></span> <span data-ttu-id="b074b-335">Они не поддерживаются в предыдущих версиях .NET Framework и SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b074b-335">They are not supported in earlier versions of the .NET Framework and SQL Server.</span></span>  
   
-### ColumnSetColumns  
+### <a name="columnsetcolumns"></a><span data-ttu-id="b074b-336">ColumnSetColumns</span><span class="sxs-lookup"><span data-stu-id="b074b-336">ColumnSetColumns</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
+|<span data-ttu-id="b074b-337">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-337">Restriction Name</span></span>|<span data-ttu-id="b074b-338">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-338">Parameter Name</span></span>|<span data-ttu-id="b074b-339">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-339">Restriction Default</span></span>|<span data-ttu-id="b074b-340">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-340">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-341">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-341">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-342">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-342">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-343">1</span><span class="sxs-lookup"><span data-stu-id="b074b-343">1</span></span>|  
+|<span data-ttu-id="b074b-344">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-344">Owner</span></span>|@Owner|<span data-ttu-id="b074b-345">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-345">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-346">2</span><span class="sxs-lookup"><span data-stu-id="b074b-346">2</span></span>|  
+|<span data-ttu-id="b074b-347">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-347">Table</span></span>|@Table|<span data-ttu-id="b074b-348">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-348">TABLE_NAME</span></span>|<span data-ttu-id="b074b-349">3</span><span class="sxs-lookup"><span data-stu-id="b074b-349">3</span></span>|  
   
-### AllColumns  
+### <a name="allcolumns"></a><span data-ttu-id="b074b-350">AllColumns</span><span class="sxs-lookup"><span data-stu-id="b074b-350">AllColumns</span></span>  
   
-|Имя ограничения|Имя параметра|Значение ограничения по умолчанию|Номер ограничения|  
-|---------------------|-------------------|---------------------------------------|-----------------------|  
-|Catalog|@Catalog|TABLE\_CATALOG|1|  
-|рисунка|@Owner|TABLE\_SCHEMA|2|  
-|Таблица|@Table|TABLE\_NAME|3|  
-|Столбец|@Column|COLUMN\_NAME|4|  
+|<span data-ttu-id="b074b-351">Имя ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-351">Restriction Name</span></span>|<span data-ttu-id="b074b-352">Имя параметра</span><span class="sxs-lookup"><span data-stu-id="b074b-352">Parameter Name</span></span>|<span data-ttu-id="b074b-353">Значение ограничения по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b074b-353">Restriction Default</span></span>|<span data-ttu-id="b074b-354">Номер ограничения</span><span class="sxs-lookup"><span data-stu-id="b074b-354">Restriction Number</span></span>|  
+|----------------------|--------------------|-------------------------|------------------------|  
+|<span data-ttu-id="b074b-355">Catalog</span><span class="sxs-lookup"><span data-stu-id="b074b-355">Catalog</span></span>|@Catalog|<span data-ttu-id="b074b-356">TABLE_CATALOG</span><span class="sxs-lookup"><span data-stu-id="b074b-356">TABLE_CATALOG</span></span>|<span data-ttu-id="b074b-357">1</span><span class="sxs-lookup"><span data-stu-id="b074b-357">1</span></span>|  
+|<span data-ttu-id="b074b-358">Владелец</span><span class="sxs-lookup"><span data-stu-id="b074b-358">Owner</span></span>|@Owner|<span data-ttu-id="b074b-359">TABLE_SCHEMA</span><span class="sxs-lookup"><span data-stu-id="b074b-359">TABLE_SCHEMA</span></span>|<span data-ttu-id="b074b-360">2</span><span class="sxs-lookup"><span data-stu-id="b074b-360">2</span></span>|  
+|<span data-ttu-id="b074b-361">Таблица</span><span class="sxs-lookup"><span data-stu-id="b074b-361">Table</span></span>|@Table|<span data-ttu-id="b074b-362">TABLE_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-362">TABLE_NAME</span></span>|<span data-ttu-id="b074b-363">3</span><span class="sxs-lookup"><span data-stu-id="b074b-363">3</span></span>|  
+|<span data-ttu-id="b074b-364">Столбец</span><span class="sxs-lookup"><span data-stu-id="b074b-364">Column</span></span>|@Column|<span data-ttu-id="b074b-365">COLUMN_NAME</span><span class="sxs-lookup"><span data-stu-id="b074b-365">COLUMN_NAME</span></span>|<span data-ttu-id="b074b-366">4</span><span class="sxs-lookup"><span data-stu-id="b074b-366">4</span></span>|  
   
-## См. также  
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b074b-367">См. также</span><span class="sxs-lookup"><span data-stu-id="b074b-367">See Also</span></span>  
+ [<span data-ttu-id="b074b-368">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b074b-368">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

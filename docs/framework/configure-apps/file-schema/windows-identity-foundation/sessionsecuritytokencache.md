@@ -1,58 +1,67 @@
 ---
-title: "&lt;sessionSecurityTokenCache&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;sessionSecurityTokenCache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a1d1af398073e15ce7f73b3359366df9e5629ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;sessionSecurityTokenCache&gt;
-Регистрирует кэша маркеров сеанса службы или коллекции обработчик маркеров безопасности.  
+# <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="775e9-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="775e9-102">&lt;sessionSecurityTokenCache&gt;</span></span>
+<span data-ttu-id="775e9-103">Регистрирует кэша для маркеров сеанса службы или коллекции обработчик маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="775e9-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="775e9-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="775e9-104">\<system.identityModel></span></span>  
+<span data-ttu-id="775e9-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="775e9-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="775e9-106">\<кэширует ></span><span class="sxs-lookup"><span data-stu-id="775e9-106">\<caches></span></span>  
+<span data-ttu-id="775e9-107">\<sessionSecurityTokenCache ></span><span class="sxs-lookup"><span data-stu-id="775e9-107">\<sessionSecurityTokenCache></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="775e9-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="775e9-108">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <caches>  
-      <sessionSecurityTokenCache type=xs:string>  
-      </sessionSecurityTokenCache>  
-    </caches>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <caches>  
+      <sessionSecurityTokenCache type=xs:string>  
+      </sessionSecurityTokenCache>  
+    </caches>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="775e9-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="775e9-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="775e9-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="775e9-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="775e9-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="775e9-111">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|type|Тип, производный от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> класса.  Дополнительные сведения об указании пользовательского `type`, см. [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|<span data-ttu-id="775e9-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="775e9-112">Attribute</span></span>|<span data-ttu-id="775e9-113">Описание</span><span class="sxs-lookup"><span data-stu-id="775e9-113">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="775e9-114">type</span><span class="sxs-lookup"><span data-stu-id="775e9-114">type</span></span>|<span data-ttu-id="775e9-115">Тип, который является производным от <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> класса.</span><span class="sxs-lookup"><span data-stu-id="775e9-115">A type that derives from the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> class.</span></span>|  
   
-### Дочерние элементы  
- None  
+### <a name="child-elements"></a><span data-ttu-id="775e9-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="775e9-116">Child Elements</span></span>  
+ <span data-ttu-id="775e9-117">Нет</span><span class="sxs-lookup"><span data-stu-id="775e9-117">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="775e9-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="775e9-118">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэшей, службы или коллекции обработчик маркеров безопасности.|  
+|<span data-ttu-id="775e9-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="775e9-119">Element</span></span>|<span data-ttu-id="775e9-120">Описание</span><span class="sxs-lookup"><span data-stu-id="775e9-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="775e9-121">\<кэширует ></span><span class="sxs-lookup"><span data-stu-id="775e9-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="775e9-122">Регистрирует кэши, используемая службой или коллекцию обработчика токенов безопасности.</span><span class="sxs-lookup"><span data-stu-id="775e9-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
   
-## Пример  
- Следующий XML показывает конфигурацию пользовательского кэша для хранения сеанса маркеров безопасности \(<xref:System.IdentityModel.Tokens.SessionSecurityToken>\).  Конфигурация берется из `ClaimsAwareWebFarm` образца.  Дополнительные сведения об этом примере см. [Индекс образцов кода WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
+## <a name="example"></a><span data-ttu-id="775e9-123">Пример</span><span class="sxs-lookup"><span data-stu-id="775e9-123">Example</span></span>  
+ <span data-ttu-id="775e9-124">Следующий код XML показана конфигурация пользовательского кэша для хранения токенов безопасности сеанса (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span><span class="sxs-lookup"><span data-stu-id="775e9-124">The following XML shows the configuration of a custom cache for holding session security tokens (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span></span> <span data-ttu-id="775e9-125">Конфигурации берется из `ClaimsAwareWebFarm` образца.</span><span class="sxs-lookup"><span data-stu-id="775e9-125">The configuration is taken from the `ClaimsAwareWebFarm` sample.</span></span> <span data-ttu-id="775e9-126">Дополнительные сведения об этом образце см. в разделе [индекс образцов кода WIF](../../../../../docs/framework/security/wif-code-sample-index.md).</span><span class="sxs-lookup"><span data-stu-id="775e9-126">For more information about this sample, see [WIF Code Sample Index](../../../../../docs/framework/security/wif-code-sample-index.md).</span></span>  
   
-```  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  
@@ -61,5 +70,5 @@ caps.handback.revision: 7
 </caches>  
 ```  
   
-## См. также  
+## <a name="see-also"></a><span data-ttu-id="775e9-127">См. также</span><span class="sxs-lookup"><span data-stu-id="775e9-127">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

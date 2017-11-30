@@ -1,1 +1,1 @@
-Жизненный цикл разработки защищенных приложений (Майкрософт) (SDL)
+<span data-ttu-id="da146-101">Жизненный цикл разработки защищенных приложений (Майкрософт) (SDL)</span><span class="sxs-lookup"><span data-stu-id="da146-101">Microsoft Security Development Lifecycle (SDL)</span></span>

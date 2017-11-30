@@ -1,1 +1,1 @@
-графические пользовательские интерфейсы (GUI)
+<span data-ttu-id="eb56b-101">графические пользовательские интерфейсы (GUI)</span><span class="sxs-lookup"><span data-stu-id="eb56b-101">graphical user interfaces (GUIs)</span></span>

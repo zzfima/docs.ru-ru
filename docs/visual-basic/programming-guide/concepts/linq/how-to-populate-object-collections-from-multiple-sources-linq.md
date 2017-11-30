@@ -1,43 +1,35 @@
 ---
-title: "Практическое руководство: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Практическое руководство: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)
-В этом примере показано, как объединить данные из различных источников в последовательность новых типов.  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="963de-102">Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="963de-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="963de-103">В этом примере показано, как объединить данные из разных источников в последовательность новых типов.</span><span class="sxs-lookup"><span data-stu-id="963de-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  Не пытайтесь объединить данные в памяти или данных в файловой системе с данными, остается в базе данных. Такие междоменные соединения могут выдавать неопределенный результат из-за различными способами, в котором операции соединения могут быть определены для запросов к базам данных и другим типам источников. Кроме того существует риск, что такая операция может вызвать исключение нехватки памяти, если достаточно большой объем данных в базе данных. Чтобы соединить данные из базы данных с данными в памяти, сначала вызовите `ToList` или `ToArray` на базе запросов, а затем выполните соединение с возвращенной коллекцией.  
+>  <span data-ttu-id="963de-104">Не пытайтесь объединить данные в памяти или данные в файловой системе с данными, которые остаются в базе данных.</span><span class="sxs-lookup"><span data-stu-id="963de-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="963de-105">Такие междоменные соединения могут повлечь за собой непредвиденные результаты из-за разных способов, с помощью которых операции соединения могут определяться для запросов к базам данных и другим типам источников.</span><span class="sxs-lookup"><span data-stu-id="963de-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="963de-106">Кроме того, существует риск, что такая операция может вызвать исключение нехватки памяти, если объем данных в базе данных достаточно большой.</span><span class="sxs-lookup"><span data-stu-id="963de-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="963de-107">Чтобы объединить данные из базы данных с данными в памяти, сначала вызовите `ToList` или `ToArray` для запроса к базе данных, а затем выполните присоединение для возвращенной коллекции.</span><span class="sxs-lookup"><span data-stu-id="963de-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>Создание файла данных  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="963de-108">Создание файла данных</span><span class="sxs-lookup"><span data-stu-id="963de-108">To create the data file</span></span>  
   
--   Скопируйте файлы names.csv и scores.csv в папке проекта, как описано в [Практическое руководство: присоединение содержимого из разных форматов файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
+-   <span data-ttu-id="963de-109">Скопируйте файлы names.csv и scores.csv в папке проекта, как описано в [как: присоединение содержимого из различных файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span><span class="sxs-lookup"><span data-stu-id="963de-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует использование именованного типа `Student` для хранения объединенных данных из двух коллекций в памяти, строк, которые имитируют данные электронной таблицы в формате CSV. Первый набор строк представляет имена и идентификаторы студентов, а вторая коллекция представляет идентификатор студента (в первом столбце) и четыре результата экзаменов. Идентификатор используется в качестве внешнего ключа.  
+## <a name="example"></a><span data-ttu-id="963de-110">Пример</span><span class="sxs-lookup"><span data-stu-id="963de-110">Example</span></span>  
+ <span data-ttu-id="963de-111">Следующий пример демонстрирует использование именованного типа `Student` для хранения объединенных данных из двух коллекций строк в памяти, которые имитируют данные электронной таблицы в формате CSV.</span><span class="sxs-lookup"><span data-stu-id="963de-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="963de-112">Первая коллекция строк представляет имена и идентификаторы учащихся, а вторая коллекция — идентификатор учащегося (в первом столбце) и результаты четырех экзаменов.</span><span class="sxs-lookup"><span data-stu-id="963de-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="963de-113">Идентификатор используется в качестве внешнего ключа.</span><span class="sxs-lookup"><span data-stu-id="963de-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- В [предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md) предложение, инициализатор объектов используется для создания каждого нового `Student` объекта, используя данные из двух источников.  
+ <span data-ttu-id="963de-114">В [предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md) предложение, инициализатор объектов используется для создания каждого нового `Student` объекта, используя данные из двух источников.</span><span class="sxs-lookup"><span data-stu-id="963de-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- Если не требуется хранить результаты запроса, анонимные типы могут быть более удобным, чем именованные типы. Именованные типы необходимы, если передать результаты запроса за пределами метода, в котором выполняется запрос. Следующий пример выполняет одну и ту же задачу в предыдущем примере, но использует анонимные типы вместо именованных типов:  
+ <span data-ttu-id="963de-115">Если не требуется хранить результаты запроса, анонимные типы могут быть более удобным, чем именованные типы.</span><span class="sxs-lookup"><span data-stu-id="963de-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="963de-116">Именованные типы необходимы, если результаты запроса передаются за пределы метода, в котором выполняется запрос.</span><span class="sxs-lookup"><span data-stu-id="963de-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="963de-117">Следующий пример кода выполняет ту же задачу, что и в предыдущем примере, но использует анонимные типы вместо именованных типов:</span><span class="sxs-lookup"><span data-stu-id="963de-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -140,8 +132,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="963de-118">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="963de-118">Compiling the Code</span></span>  
+ <span data-ttu-id="963de-119">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="963de-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="963de-120">См. также</span><span class="sxs-lookup"><span data-stu-id="963de-120">See Also</span></span>  
+ [<span data-ttu-id="963de-121">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="963de-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

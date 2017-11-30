@@ -7,24 +7,22 @@ helpviewer_keywords:
 - binary serialization, basic serialization
 - serialization, basic serialization
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
-dev_langs:
-- CSharp
-caps.latest.revision: 7
+dev_langs: CSharp
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 334fe65c41e283f9ea6335183da1b2dab53e30af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1e059fa92f88501853236c3e6632525646bc7a19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="basic-serialization"></a>Базовая сериализация
+# <a name="basic-serialization"></a><span data-ttu-id="3fab4-102">Базовая сериализация</span><span class="sxs-lookup"><span data-stu-id="3fab4-102">Basic serialization</span></span>
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-Самый простой способ создать сериализуемый класс — отметить его атрибутом <xref:System.SerializableAttribute> следующим образом.  
+<span data-ttu-id="3fab4-103">Самый простой способ создать сериализуемый класс — отметить его атрибутом <xref:System.SerializableAttribute> следующим образом.</span><span class="sxs-lookup"><span data-stu-id="3fab4-103">The easiest way to make a class serializable is to mark it with the <xref:System.SerializableAttribute> as follows.</span></span>  
   
 ```csharp  
 [Serializable]  
@@ -35,7 +33,7 @@ public class MyObject {
 }  
 ```  
   
-В следующем примере кода показано, как экземпляр этого класса можно сериализовать в файл.  
+<span data-ttu-id="3fab4-104">В следующем примере кода показано, как экземпляр этого класса можно сериализовать в файл.</span><span class="sxs-lookup"><span data-stu-id="3fab4-104">The following code example shows how an instance of this class can be serialized to a file.</span></span>  
   
 ```csharp  
 MyObject obj = new MyObject();  
@@ -48,9 +46,9 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-В этом примере для сериализации используется двоичный модуль форматирования. Все, что нужно сделать, — создать экземпляр потока и модуль форматирования, который будет использоваться, а затем вызвать для модуля форматирования метод **Serialize**. Сериализуемый поток и объект для этого вызова предоставляются как параметры. Хотя в этом примере это явно не показано, будут сериализованы все переменные членов класса - даже переменные, отмеченные как закрытые. Таким образом, двоичная сериализация отличается от класса <xref:System.Xml.Serialization.XmlSerializer>, при котором выполняется сериализация только открытых полей. Сведения об исключении переменных членов из двоичной сериализации см. в разделе [Выборочная сериализация](selective-serialization.md).  
+<span data-ttu-id="3fab4-105">В этом примере для сериализации используется двоичный модуль форматирования.</span><span class="sxs-lookup"><span data-stu-id="3fab4-105">This example uses a binary formatter to do the serialization.</span></span> <span data-ttu-id="3fab4-106">Все, что нужно сделать, — создать экземпляр потока и модуль форматирования, который будет использоваться, а затем вызвать для модуля форматирования метод **Serialize**.</span><span class="sxs-lookup"><span data-stu-id="3fab4-106">All you need to do is create an instance of the stream and the formatter you intend to use, and then call the **Serialize** method on the formatter.</span></span> <span data-ttu-id="3fab4-107">Сериализуемый поток и объект для этого вызова предоставляются как параметры.</span><span class="sxs-lookup"><span data-stu-id="3fab4-107">The stream and the object to serialize are provided as parameters to this call.</span></span> <span data-ttu-id="3fab4-108">Хотя в этом примере это явно не показано, будут сериализованы все переменные членов класса - даже переменные, отмеченные как закрытые.</span><span class="sxs-lookup"><span data-stu-id="3fab4-108">Although it is not explicitly demonstrated in this example, all member variables of a class will be serialized—even variables marked as private.</span></span> <span data-ttu-id="3fab4-109">Таким образом, двоичная сериализация отличается от класса <xref:System.Xml.Serialization.XmlSerializer>, при котором выполняется сериализация только открытых полей.</span><span class="sxs-lookup"><span data-stu-id="3fab4-109">In this aspect, binary serialization differs from the <xref:System.Xml.Serialization.XmlSerializer> class, which only serializes public fields.</span></span> <span data-ttu-id="3fab4-110">Сведения об исключении переменных членов из двоичной сериализации см. в разделе [Выборочная сериализация](selective-serialization.md).</span><span class="sxs-lookup"><span data-stu-id="3fab4-110">For information on excluding member variables from binary serialization, see [Selective Serialization](selective-serialization.md).</span></span>  
   
-Не менее просто и восстановление объекта в предыдущее состояние. Сначала создайте поток для чтения и <xref:System.Runtime.Serialization.Formatter>, а затем дайте модулю форматирования команду десериализовать объект. Эта процедура показана в следующем примере кода.  
+<span data-ttu-id="3fab4-111">Не менее просто и восстановление объекта в предыдущее состояние.</span><span class="sxs-lookup"><span data-stu-id="3fab4-111">Restoring the object back to its former state is just as easy.</span></span> <span data-ttu-id="3fab4-112">Сначала создайте поток для чтения и <xref:System.Runtime.Serialization.Formatter>, а затем дайте модулю форматирования команду десериализовать объект.</span><span class="sxs-lookup"><span data-stu-id="3fab4-112">First, create a stream for reading and a <xref:System.Runtime.Serialization.Formatter>, and then instruct the formatter to deserialize the object.</span></span> <span data-ttu-id="3fab4-113">Эта процедура показана в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="3fab4-113">The code example below shows how this is done.</span></span>  
   
 ```csharp  
 IFormatter formatter = new BinaryFormatter();  
@@ -64,9 +62,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Используемый выше <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> очень эффективен и генерирует компактный поток байтов. Все сериализуемые с использованием этого модуля форматирования объекты можно также десериализовать с его помощью, что делает его идеальным инструментом для сериализации объектов, которые будут десериализованы в платформе .NET Framework. Важно отметить, что во время десериализации объекта конструкторы не вызываются. Это ограничение накладывается на десериализацию по причинам обеспечения производительности. Однако при этом способе нарушаются некоторые обычные контракты, которые осуществляет среда выполнения с использованием модуля записи объектов, и разработчики, отмечая объект как сериализуемый, должны понимать последствия.  
+<span data-ttu-id="3fab4-114">Используемый выше <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> очень эффективен и генерирует компактный поток байтов.</span><span class="sxs-lookup"><span data-stu-id="3fab4-114">The <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> used above is very efficient and produces a compact byte stream.</span></span> <span data-ttu-id="3fab4-115">Все сериализуемые с использованием этого модуля форматирования объекты можно также десериализовать с его помощью, что делает его идеальным инструментом для сериализации объектов, которые будут десериализованы в платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3fab4-115">All objects serialized with this formatter can also be deserialized with it, which makes it an ideal tool for serializing objects that will be deserialized on the .NET Framework.</span></span> <span data-ttu-id="3fab4-116">Важно отметить, что во время десериализации объекта конструкторы не вызываются.</span><span class="sxs-lookup"><span data-stu-id="3fab4-116">It is important to note that constructors are not called when an object is deserialized.</span></span> <span data-ttu-id="3fab4-117">Это ограничение накладывается на десериализацию по причинам обеспечения производительности.</span><span class="sxs-lookup"><span data-stu-id="3fab4-117">This constraint is placed on deserialization for performance reasons.</span></span> <span data-ttu-id="3fab4-118">Однако при этом способе нарушаются некоторые обычные контракты, которые осуществляет среда выполнения с использованием модуля записи объектов, и разработчики, отмечая объект как сериализуемый, должны понимать последствия.</span><span class="sxs-lookup"><span data-stu-id="3fab4-118">However, this violates some of the usual contracts the runtime makes with the object writer, and developers should ensure that they understand the ramifications when marking an object as serializable.</span></span>  
   
-Если требуется обеспечение переносимости, используйте <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Просто замените **BinaryFormatter** в коде выше на **SoapFormatter** и вызовите **Serialize** и **Deserialize**, как и раньше. Результатом работы этого модуля форматирования в примере выше является следующее.  
+<span data-ttu-id="3fab4-119">Если требуется обеспечение переносимости, используйте <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.</span><span class="sxs-lookup"><span data-stu-id="3fab4-119">If portability is a requirement, use the <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> instead.</span></span> <span data-ttu-id="3fab4-120">Просто замените **BinaryFormatter** в коде выше на **SoapFormatter** и вызовите **Serialize** и **Deserialize**, как и раньше.</span><span class="sxs-lookup"><span data-stu-id="3fab4-120">Simply replace the **BinaryFormatter** in the code above with **SoapFormatter,** and call **Serialize** and **Deserialize** as before.</span></span> <span data-ttu-id="3fab4-121">Результатом работы этого модуля форматирования в примере выше является следующее.</span><span class="sxs-lookup"><span data-stu-id="3fab4-121">This formatter produces the following output for the example used above.</span></span>  
   
 ```xml  
 <SOAP-ENV:Envelope  
@@ -89,7 +87,7 @@ Console.WriteLine("str: {0}", obj.str);
 </SOAP-ENV:Envelope>  
 ```  
   
-Важно отметить, что атрибут [Serializable](xref:System.SerializableAttribute) не может быть унаследован. Если новый класс наследуется от `MyObject`, новый класс также должен быть отмечен атрибутом, иначе его сериализация невозможна. Например, при попытке сериализовать экземпляр класса (см. ниже) будет выдано исключение <xref:System.Runtime.Serialization.SerializationException>, информирующее о том, что тип `MyStuff` не отмечен как сериализуемый.  
+<span data-ttu-id="3fab4-122">Важно отметить, что атрибут [Serializable](xref:System.SerializableAttribute) не может быть унаследован.</span><span class="sxs-lookup"><span data-stu-id="3fab4-122">It's important to note that the [Serializable](xref:System.SerializableAttribute) attribute cannot be inherited.</span></span> <span data-ttu-id="3fab4-123">Если новый класс наследуется от `MyObject`, новый класс также должен быть отмечен атрибутом, иначе его сериализация невозможна.</span><span class="sxs-lookup"><span data-stu-id="3fab4-123">If you derive a new class from `MyObject`, the new class must be marked with the attribute as well, or it cannot be serialized.</span></span> <span data-ttu-id="3fab4-124">Например, при попытке сериализовать экземпляр класса (см. ниже) будет выдано исключение <xref:System.Runtime.Serialization.SerializationException>, информирующее о том, что тип `MyStuff` не отмечен как сериализуемый.</span><span class="sxs-lookup"><span data-stu-id="3fab4-124">For example, when you attempt to serialize an instance of the class below, you'll get a <xref:System.Runtime.Serialization.SerializationException> informing you that the `MyStuff` type is not marked as serializable.</span></span>  
   
 ```csharp  
 public class MyStuff : MyObject   
@@ -98,9 +96,8 @@ public class MyStuff : MyObject
 }  
 ```  
   
- Использование атрибута [Serializable](xref:System.SerializableAttribute) удобно, но у него есть свои ограничения, как это показано выше. См. раздел [Правила сериализации](serialization-guidelines.md), чтобы получить сведения о том, в каких случаях класс следует отмечать для сериализации. Сериализацию невозможно добавить в класс после его компиляции.  
+ <span data-ttu-id="3fab4-125">Использование атрибута [Serializable](xref:System.SerializableAttribute) удобно, но у него есть свои ограничения, как это показано выше.</span><span class="sxs-lookup"><span data-stu-id="3fab4-125">Using the [Serializable](xref:System.SerializableAttribute) attribute is convenient, but it has limitations as previously demonstrated.</span></span> <span data-ttu-id="3fab4-126">См. раздел [Правила сериализации](serialization-guidelines.md), чтобы получить сведения о том, в каких случаях класс следует отмечать для сериализации.</span><span class="sxs-lookup"><span data-stu-id="3fab4-126">Refer to the [Serialization Guidelines](serialization-guidelines.md) for information about when you should mark a class for serialization.</span></span> <span data-ttu-id="3fab4-127">Сериализацию невозможно добавить в класс после его компиляции.</span><span class="sxs-lookup"><span data-stu-id="3fab4-127">Serialization cannot be added to a class after it has been compiled.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Двоичная сериализация](binary-serialization.md)   
- [Сериализация XML и SOAP](xml-and-soap-serialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="3fab4-128">См. также</span><span class="sxs-lookup"><span data-stu-id="3fab4-128">See also</span></span>  
+ [<span data-ttu-id="3fab4-129">Двоичная сериализация</span><span class="sxs-lookup"><span data-stu-id="3fab4-129">Binary Serialization</span></span>](binary-serialization.md)  
+ [<span data-ttu-id="3fab4-130">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="3fab4-130">XML and SOAP Serialization</span></span>](xml-and-soap-serialization.md)

@@ -1,1 +1,1 @@
-C++/CLI
+<span data-ttu-id="ba0bf-101">C++/CLI</span><span class="sxs-lookup"><span data-stu-id="ba0bf-101">C++/CLI</span></span>

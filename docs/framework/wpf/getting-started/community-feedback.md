@@ -1,191 +1,194 @@
 ---
-title: "Отзывы и предложения сообщества WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "блоги для отзывов"
-  - "описания ошибок"
-  - "ресурсы сообщества"
-  - "Центр обратной связи"
-  - "форумы"
-  - "Центр обратной связи Майкрософт"
-  - "Центр обратной связи по продукту"
-  - "веб-дневники для отзывов"
+title: "Отзывы и предложения сообщества WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Feedback Center [WPF]
+- Microsoft Product Feedback Center [WPF]
+- community resources [WPF]
+- forums [WPF]
+- blogs for feedback [WPF]
+- weblogs for feedback [WPF]
+- Product Feedback Center [WPF]
+- bug descriptions [WPF]
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Отзывы и предложения сообщества WPF
-[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] предоставляет различные ресурсы сообщества, чтобы узнать, обсудить и предоставить отзыв о [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]. В число ресурсов входят блоги, созданные лидерами сообщества и участниками команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], форумы и Центр обратной связи по продукту [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)].  Каждый ресурс сообщества предлагает различный набор услуг.  Описание этих услуг в данном разделе включает в себя набор рекомендаций по использованию каждой услуги для обеспечения наилучшего ответа от сообщества в общем и от [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] в частности.  
+# <a name="wpf-community-feedback"></a><span data-ttu-id="59bb4-102">Отзывы и предложения сообщества WPF</span><span class="sxs-lookup"><span data-stu-id="59bb4-102">WPF Community Feedback</span></span>
+[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]<span data-ttu-id="59bb4-103"> предоставляет множество ресурсов сообщества для изучения, обсуждения и отправки отзывов о платформе [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], включая блоги членов команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и наиболее активных участников сообщества, форумы и Центр обратной связи по продукту [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-103"> exposes a variety of community resources for you to learn about, discuss, and provide feedback on [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], including blogs produced by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team members and community leaders, forums, and the [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] Product Feedback Center.</span></span> <span data-ttu-id="59bb4-104">Каждый ресурс сообщества предлагает различный набор услуг.</span><span class="sxs-lookup"><span data-stu-id="59bb4-104">Each community resource offers a different set of benefits.</span></span> <span data-ttu-id="59bb4-105">Описание этих услуг в данном разделе включает в себя набор рекомендаций по использованию каждой услуги для обеспечения наилучшего ответа от сообщества в общем и от [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] в частности.</span><span class="sxs-lookup"><span data-stu-id="59bb4-105">These benefits are described here, as are a set of best practices for using each to ensure the best response from the community at large and [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] in particular.</span></span>  
   
 > [!NOTE]
->  Не используйте ссылку **комментарии**, расположенную в нижней части каждой страницы для отправки отзыва о продукте.  Эти ссылки служат только для отзывов о документации.  
+>  <span data-ttu-id="59bb4-106">Не используйте ссылку **комментариев**, расположенную в нижней части каждой страницы для отправки отзыва о продукте.</span><span class="sxs-lookup"><span data-stu-id="59bb4-106">Do not use the **comments** link located at the bottom of each page to send product feedback.</span></span> <span data-ttu-id="59bb4-107">Эти ссылки служат только для отзывов о документации.</span><span class="sxs-lookup"><span data-stu-id="59bb4-107">These links are for documentation feedback only.</span></span>  
   
-   
+ 
   
 <a name="Blogs"></a>   
-## Блоги  
- Члены команды и лидеры сообщества[!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] являются авторами разнообразных [блогов](http://go.microsoft.com/fwlink/?LinkId=98852) которые описывают [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в целом или подмножества [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в частности.  Содержимое обычно варьируется от описаний разработки продукта, причин появления и концепций до подробного обсуждения определенных скриптов, проблем и [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].  Кроме того, можно обсудить интересующие сообщения или получить дополнительные сведения о них от профессионалов, специализирующихся на данной платформе.  
+## <a name="blogs"></a><span data-ttu-id="59bb4-108">Блоги</span><span class="sxs-lookup"><span data-stu-id="59bb4-108">Blogs</span></span>  
+ <span data-ttu-id="59bb4-109">Члены команды и лидеры сообщества [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] являются авторами разнообразных [блогов](http://go.microsoft.com/fwlink/?LinkId=98852), которые описывают [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в целом или подмножества [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в частности.</span><span class="sxs-lookup"><span data-stu-id="59bb4-109">[!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team members and community leaders author a variety of [blogs](http://go.microsoft.com/fwlink/?LinkId=98852) that target [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in general or subsets of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] specifically.</span></span> <span data-ttu-id="59bb4-110">Содержимое обычно варьируется от описаний разработки продукта, причин появления и концепций до подробного обсуждения определенных скриптов, проблем и [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-110">Content generally ranges from product developments, motivations, and philosophies, to detailed discussion of specific scenarios, issues, and [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].</span></span> <span data-ttu-id="59bb4-111">Кроме того, можно обсудить интересующие сообщения или получить дополнительные сведения о них от профессионалов, специализирующихся на данной платформе.</span><span class="sxs-lookup"><span data-stu-id="59bb4-111">Additionally, you can discuss or inquire further about posts that interest you with people who have the deepest understanding of the platform.</span></span>  
   
 <a name="Forums"></a>   
-## Форумы  
- [Форум WPF](http://go.microsoft.com/fwlink/?LinkID=187440) \(и [форум](http://go.microsoft.com/fwlink/?LinkId=98855) по [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64\) является основным ресурсом сообщества для обсуждения и разрешения вопросов.  Форумы облегчают обсуждение и разрешение проблем, предлагая набор функциональных возможностей, включающий следующие:  
+## <a name="forums"></a><span data-ttu-id="59bb4-112">Форумы</span><span class="sxs-lookup"><span data-stu-id="59bb4-112">Forums</span></span>  
+ <span data-ttu-id="59bb4-113">[Форум WPF](http://go.microsoft.com/fwlink/?LinkID=187440) (и [форум](http://go.microsoft.com/fwlink/?LinkId=98855) по [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64) является основным ресурсом сообщества для обсуждения и разрешения вопросов.</span><span class="sxs-lookup"><span data-stu-id="59bb4-113">The [WPF forum](http://go.microsoft.com/fwlink/?LinkID=187440) (and the [forum](http://go.microsoft.com/fwlink/?LinkId=98855) for [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64) is the primary community resource for discussing and resolving issues.</span></span> <span data-ttu-id="59bb4-114">Форумы облегчают обсуждение и разрешение проблем, предлагая набор функциональных возможностей, включающий следующие.</span><span class="sxs-lookup"><span data-stu-id="59bb4-114">Forums facilitate discussion and problem resolution by offering a comprehensive set of supporting features that include:</span></span>  
   
--   Поиск.  
+-   <span data-ttu-id="59bb4-115">Поиск.</span><span class="sxs-lookup"><span data-stu-id="59bb4-115">Searching.</span></span>  
   
--   Слежение за обсуждением.  
+-   <span data-ttu-id="59bb4-116">Слежение за обсуждением.</span><span class="sxs-lookup"><span data-stu-id="59bb4-116">Discussion tracking.</span></span>  
   
--   Расширенное форматирование текста и кода.  
+-   <span data-ttu-id="59bb4-117">Расширенное форматирование текста и кода.</span><span class="sxs-lookup"><span data-stu-id="59bb4-117">Rich formatting for text and code.</span></span>  
   
--   Интеграция с [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+-   <span data-ttu-id="59bb4-118">Интеграция с [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-118">[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] integration.</span></span>  
   
--   Привлечение членов MVP и участие в сообществах.  
+-   <span data-ttu-id="59bb4-119">Привлечение членов MVP и участие в сообществах.</span><span class="sxs-lookup"><span data-stu-id="59bb4-119">Most Valued Professional (MVP) and community involvement.</span></span>  
   
--   Наблюдение за тем, чтобы на сообщения были даны ответы в кратчайшее время.  
+-   <span data-ttu-id="59bb4-120">Наблюдение за тем, чтобы на сообщения были даны ответы в кратчайшее время.</span><span class="sxs-lookup"><span data-stu-id="59bb4-120">Monitoring to ensure posts are responded to in the quickest possible time.</span></span>  
   
- Обратите внимание: если вопрос связан с [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], то форум [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] — это самое лучшее место для его разрешения.  Например, вопрос может затрагивать средства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такие как [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859), и [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).  В таких случаях следует использовать соответствующие [форумы Expression Community](http://go.microsoft.com/fwlink/?LinkId=98861).  
+ <span data-ttu-id="59bb4-121">Обратите внимание: если вопрос связан с [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], то форум [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] может не оказаться самым лучшим местом для его разрешения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-121">Note that while an issue may be [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-related, the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum might not be the most appropriate place to raise it.</span></span> <span data-ttu-id="59bb4-122">Например, вопрос может затрагивать средства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], такие как [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859) и [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).</span><span class="sxs-lookup"><span data-stu-id="59bb4-122">For example, your issue might be specific to a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tool such as [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859), and [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).</span></span> <span data-ttu-id="59bb4-123">В таких случаях следует использовать соответствующие [форумы сообщества Expression Community](http://go.microsoft.com/fwlink/?LinkId=98861).</span><span class="sxs-lookup"><span data-stu-id="59bb4-123">In these cases, you should use the appropriate [Expression Community forums](http://go.microsoft.com/fwlink/?LinkId=98861).</span></span>  
   
-### Рекомендации по использованию форума  
- Следующие рекомендации помогут вам быстро найти вопросы, уже рассматривавшиеся на форуме [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Эти рекомендации применимы для всех форумов.  
+### <a name="forum-best-practices"></a><span data-ttu-id="59bb4-124">Рекомендации по использованию форума</span><span class="sxs-lookup"><span data-stu-id="59bb4-124">Forum Best Practices</span></span>  
+ <span data-ttu-id="59bb4-125">Следующие рекомендации помогут вам быстро найти вопросы, уже рассматривавшиеся на форуме [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-125">Using the following best practices help to address issues posted to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum in the quickest possible time.</span></span> <span data-ttu-id="59bb4-126">Эти рекомендации применимы для всех форумов.</span><span class="sxs-lookup"><span data-stu-id="59bb4-126">These practices are applicable to all forums.</span></span>  
   
-#### Пользуйтесь поиском по существующим сообщениям  
- Некоторые вопросы возникают достаточно часто, поэтому другие пользователи могли столкнуться с ними до вас.  Следовательно, вы можете быстро решить свою проблему или внести свой вклад в существующее обсуждение.  
+#### <a name="search-existing-posts"></a><span data-ttu-id="59bb4-127">Пользуйтесь поиском по существующим сообщениям</span><span class="sxs-lookup"><span data-stu-id="59bb4-127">Search Existing Posts</span></span>  
+ <span data-ttu-id="59bb4-128">Некоторые вопросы возникают достаточно часто, поэтому другие пользователи могли столкнуться с ними до вас.</span><span class="sxs-lookup"><span data-stu-id="59bb4-128">Some issues occur widely enough that others have faced them before you.</span></span> <span data-ttu-id="59bb4-129">Следовательно, вы можете быстро решить свою проблему или внести свой вклад в существующее обсуждение.</span><span class="sxs-lookup"><span data-stu-id="59bb4-129">Consequently, you can solve your problem quickly, or you can add your input to an existing discussion.</span></span>  
   
-#### Используйте осмысленные названия  
- Краткие и осмысленные названия облегчают поиск сообщений, а также позволяют другим членам сообщества форума [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определить, могут ли они решить вашу проблему.  
+#### <a name="use-meaningful-titles"></a><span data-ttu-id="59bb4-130">Используйте осмысленные названия</span><span class="sxs-lookup"><span data-stu-id="59bb4-130">Use Meaningful Titles</span></span>  
+ <span data-ttu-id="59bb4-131">Краткие и осмысленные названия облегчают поиск сообщений, а также позволяют другим членам сообщества форума [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] определить, могут ли они решить вашу проблему.</span><span class="sxs-lookup"><span data-stu-id="59bb4-131">Concise, meaningful titles improve the discoverability of your posts, and make it easier for other [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum community members to determine if they can solve your problem.</span></span>  
   
-#### Включайте соответствующее содержимое  
- Опишите свою проблему и предпринятые попытки ее решения.  По возможности включите фрагменты кода или простейший образец, который демонстрирует проблему.  Все эти сведения увеличивают вероятность быстрого ответа на вопрос.  
+#### <a name="include-appropriate-content"></a><span data-ttu-id="59bb4-132">Включайте соответствующее содержимое</span><span class="sxs-lookup"><span data-stu-id="59bb4-132">Include Appropriate Content</span></span>  
+ <span data-ttu-id="59bb4-133">Опишите свою проблему и предпринятые попытки ее решения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-133">You should describe the issue and how you’ve tried to work through it.</span></span> <span data-ttu-id="59bb4-134">По возможности включите фрагменты кода или простейший образец, который демонстрирует проблему.</span><span class="sxs-lookup"><span data-stu-id="59bb4-134">If possible, include supporting code snippets, or the simplest possible sample that demonstrates your issue.</span></span> <span data-ttu-id="59bb4-135">Все эти сведения увеличивают вероятность быстрого ответа на вопрос.</span><span class="sxs-lookup"><span data-stu-id="59bb4-135">All these details help to increase the chance your question will be answered quickly.</span></span>  
   
- Полный набор рекомендаций по форуму содержится в [сетевом доукменте](http://www.microsoft.com/wn3/locales/help/help_ru-ru.htm).  
+ <span data-ttu-id="59bb4-136">Полный набор рекомендаций по форуму содержится в [сетевом документе](http://www.microsoft.com/wn3/locales/help/help_en-us.htm).</span><span class="sxs-lookup"><span data-stu-id="59bb4-136">A complete set of forum best practices can be found [online](http://www.microsoft.com/wn3/locales/help/help_en-us.htm).</span></span>  
   
 <a name="Product_Feedback_Center"></a>   
-## Центр обратной связи по продукту  
- Иногда вопросы могут быть трудно разрешимыми или неразрешимыми.  Такие ситуации возникает из\-за ошибок в технологии, трудностей применения технологии в конкретных скриптах или отсутствия поддержки для конкретных скриптов.  Эта информация важна для [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] и может быть предоставлена через [Центр обратной связи по продукту](http://go.microsoft.com/fwlink/?LinkId=99381).  
+## <a name="product-feedback-center"></a><span data-ttu-id="59bb4-137">Центр обратной связи по продукту</span><span class="sxs-lookup"><span data-stu-id="59bb4-137">Product Feedback Center</span></span>  
+ <span data-ttu-id="59bb4-138">Иногда вопросы могут быть трудно разрешимыми или неразрешимыми.</span><span class="sxs-lookup"><span data-stu-id="59bb4-138">Issues can sometimes be difficult to resolve, or irresolvable.</span></span> <span data-ttu-id="59bb4-139">Такие ситуации возникают из-за ошибок в технологии, трудностей применения технологии в конкретных скриптах или отсутствия поддержки для конкретных скриптов.</span><span class="sxs-lookup"><span data-stu-id="59bb4-139">Such situations arise because of bugs in the technology, difficulties applying the technology to particular scenarios, or lack of support for particular scenarios.</span></span> <span data-ttu-id="59bb4-140">Эта информация важна для [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] и может быть предоставлена через [Центр обратной связи по продукту](http://go.microsoft.com/fwlink/?LinkId=99381).</span><span class="sxs-lookup"><span data-stu-id="59bb4-140">This information is important to [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)], and can be provided via the [Product Feedback Center](http://go.microsoft.com/fwlink/?LinkId=99381).</span></span>  
   
- Вопросы, отправленные в Центр обратной связи по продукту [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], передаются во внутреннюю базу данных команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Таким образом, это наиболее надежный способ отправить отзыв разработчику средства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Кроме того, можно оценивать и отслеживать предложения и ошибки путем голосования, которое поможет команде [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расположить вопросы в соответствии с их приоритетом.  
+ <span data-ttu-id="59bb4-141">Вопросы, отправленные в Центр обратной связи по продукту [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], передаются во внутреннюю базу данных команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-141">Items posted on the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Product Feedback Center are routed to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team's internal bug database.</span></span> <span data-ttu-id="59bb4-142">Таким образом, это наиболее надежный способ отправить отзыв разработчику средства [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-142">Consequently, it is the most reliable way to get your feedback to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] feature owner.</span></span> <span data-ttu-id="59bb4-143">Кроме того, можно оценивать и отслеживать предложения и ошибки путем голосования, которое поможет команде [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] расположить вопросы в соответствии с их приоритетом.</span><span class="sxs-lookup"><span data-stu-id="59bb4-143">In addition, you can validate and track suggestions and bugs as well as vote on them, which helps the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team to prioritize issues.</span></span>  
   
-### Рекомендации Центра обратной связи по продукту WPF  
- При отправке сообщения в Центр обратной связи по продукту [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] рекомендуется выполнить поиск по уже существующим сообщениям, указать осмысленное название и соответствующе содержимое, выполнив те же действия, как и для отправки сообщения на форум [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Ниже приведены дополнительные рекомендации, которые также следует применять.  
+### <a name="wpf-product-feedback-center-best-practices"></a><span data-ttu-id="59bb4-144">Рекомендации Центра обратной связи по продукту WPF</span><span class="sxs-lookup"><span data-stu-id="59bb4-144">WPF Product Feedback Center Best Practices</span></span>  
+ <span data-ttu-id="59bb4-145">При отправке сообщения в Центр обратной связи по продукту [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] рекомендуется выполнить поиск по уже существующим сообщениям, указать осмысленное название и соответствующее содержимое, выполнив те же действия, как и для отправки сообщения на форум [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-145">When posting to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Product Feedback Center, searching existing posts, providing a meaningful title and appropriate content are important best practices, just as they are for posting to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum.</span></span> <span data-ttu-id="59bb4-146">Ниже приведены дополнительные рекомендации, которые также следует применять.</span><span class="sxs-lookup"><span data-stu-id="59bb4-146">The following are additional best practices you should also employ.</span></span>  
   
-#### Пользуйтесь поиском по существующим сообщениям  
- Некоторые вопросы возникают достаточно часто, поэтому другие пользователи могли столкнуться с ними до вас.  Следовательно, вы можете быстро решить свою проблему или внести свой вклад в существующее обсуждение.  
+#### <a name="search-existing-posts"></a><span data-ttu-id="59bb4-147">Пользуйтесь поиском по существующим сообщениям</span><span class="sxs-lookup"><span data-stu-id="59bb4-147">Search Existing Posts</span></span>  
+ <span data-ttu-id="59bb4-148">Некоторые вопросы возникают достаточно часто, поэтому другие пользователи могли столкнуться с ними до вас.</span><span class="sxs-lookup"><span data-stu-id="59bb4-148">Some issues occur widely enough that others have faced them before you.</span></span> <span data-ttu-id="59bb4-149">Следовательно, вы можете быстро решить свою проблему или внести свой вклад в существующее обсуждение.</span><span class="sxs-lookup"><span data-stu-id="59bb4-149">Consequently, you can solve your problem quickly, or you can add your input to an existing discussion.</span></span>  
   
-#### Используйте осмысленные названия  
- Краткие и осмысленные названия увеличивают вероятность того, что ваш вопрос будет сразу отправлен в соответствующую команду [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Особенно это важно для такой технологии, как [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], так как она содержит множество взаимосвязанных функций.  
+#### <a name="use-meaningful-titles"></a><span data-ttu-id="59bb4-150">Используйте осмысленные названия</span><span class="sxs-lookup"><span data-stu-id="59bb4-150">Use Meaningful Titles</span></span>  
+ <span data-ttu-id="59bb4-151">Краткие и осмысленные названия увеличивают вероятность того, что ваш вопрос будет сразу отправлен в соответствующую команду [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-151">Concise, meaningful titles increase the chance that your issue is directed to the most appropriate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team in the shortest amount of time.</span></span> <span data-ttu-id="59bb4-152">Это особенно важно для такой технологии, как [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], так как она содержит множество взаимосвязанных функций.</span><span class="sxs-lookup"><span data-stu-id="59bb4-152">This is particularly important for a technology like [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], which contains many interrelated features.</span></span>  
   
-#### Опишите, как воспроизвести ошибку  
- При отправке сообщения об ошибке важно включить следующие сведения:  
+#### <a name="describe-how-to-reproduce-your-bug"></a><span data-ttu-id="59bb4-153">Опишите, как воспроизвести ошибку</span><span class="sxs-lookup"><span data-stu-id="59bb4-153">Describe How to Reproduce Your Bug</span></span>  
+ <span data-ttu-id="59bb4-154">При отправке сообщения об ошибке важно включить следующие сведения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-154">When you post about a bug, it is important to include the following where relevant:</span></span>  
   
--   Предоставить четкое описание ошибки.  
+-   <span data-ttu-id="59bb4-155">Предоставить четкое описание ошибки.</span><span class="sxs-lookup"><span data-stu-id="59bb4-155">Provide a clear description of the bug.</span></span>  
   
--   Использовать фрагменты программного кода для иллюстрации описания ошибки.  
+-   <span data-ttu-id="59bb4-156">Использовать фрагменты программного кода для иллюстрации описания ошибки.</span><span class="sxs-lookup"><span data-stu-id="59bb4-156">Use code snippets to support the bug description.</span></span>  
   
--   Предоставить последовательность шагов для воспроизведения ошибки.  
+-   <span data-ttu-id="59bb4-157">Предоставить последовательность шагов для воспроизведения ошибки.</span><span class="sxs-lookup"><span data-stu-id="59bb4-157">Provide a list of steps that demonstrate how to reproduce the bug.</span></span>  
   
--   Включить наименьший образец кода, воспроизводящий ошибку.  
+-   <span data-ttu-id="59bb4-158">Включить наименьший образец кода, воспроизводящий ошибку.</span><span class="sxs-lookup"><span data-stu-id="59bb4-158">Include the smallest possible code sample that reproduces the bug.</span></span>  
   
--   Указать, постоянно ли возникает ошибка.  
+-   <span data-ttu-id="59bb4-159">Указать, постоянно ли возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="59bb4-159">Mention whether the bug is consistently reproducible or not.</span></span>  
   
--   Включить информацию о соответствующем исключении.  
+-   <span data-ttu-id="59bb4-160">Включить информацию о соответствующем исключении.</span><span class="sxs-lookup"><span data-stu-id="59bb4-160">Include relevant exception information.</span></span>  
   
- Если ошибка связана с установкой или настройкой, приложите соответствующие журналы установки и снимки \(файлы с префиксом "dd\_", расположенные в папке %temp%\).  
+ <span data-ttu-id="59bb4-161">Если ошибка связана с установкой или настройкой, приложите соответствующие журналы установки и снимки (файлы с префиксом dd_, расположенные в папке %temp%).</span><span class="sxs-lookup"><span data-stu-id="59bb4-161">If the bug is install or setup related, attach the relevant install logs and snapshots (files prefixed with "dd_" that are located in your %temp% folder).</span></span>  
   
- Для ошибок компиляции или построения приложите журналы построения.  Настроить различные уровни детализации журналов в системе MSBuild можно с помощью параметра \/v: из командной строки или путем настройки соответствующего уровня из [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)], такой как [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+ <span data-ttu-id="59bb4-162">Для ошибок компиляции или построения приложите журналы построения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-162">For compile or build issues, attach the build logs.</span></span> <span data-ttu-id="59bb4-163">Настроить различные уровни детализации журналов в системе MSBuild можно с помощью параметра /v: из командной строки или путем настройки соответствующего уровня из [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)], такой как [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-163">The MSBuild system can be configured to supports logging with various verbosities by using the /v: switch from the command line or by configuring the appropriate level from an [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] like [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span></span>  
   
-#### Предоставьте информацию о среде  
- Информация о среде полезна для обеспечения контекста сообщения.  В частности важно указать операционную систему, семейство и архитектуру процессора, например "Windows XP SP2, Pentium III, x86".  
+#### <a name="provide-environment-information"></a><span data-ttu-id="59bb4-164">Предоставьте информацию о среде</span><span class="sxs-lookup"><span data-stu-id="59bb4-164">Provide Environment Information</span></span>  
+ <span data-ttu-id="59bb4-165">Информация о среде полезна для обеспечения контекста сообщения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-165">Background information can often be useful for adding context to your post.</span></span> <span data-ttu-id="59bb4-166">В частности, важно указать операционную систему, семейство и архитектуру процессора, например Windows XP SP2, Pentium III, x86.</span><span class="sxs-lookup"><span data-stu-id="59bb4-166">In particular, mention the operating system platform, processor family, and architecture, such as "Windows XP SP2, Pentium III, x86".</span></span>  
   
- Если отсылаемый вопрос связан с отрисовкой, следует по возможности включить сведения о видеокарте и драйвере.  Эта информация важна, поскольку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] является платформой представления.  
+ <span data-ttu-id="59bb4-167">Если отсылаемый вопрос связан с отрисовкой, следует по возможности включить сведения о видеокарте и драйвере.</span><span class="sxs-lookup"><span data-stu-id="59bb4-167">If the issue you are posting about is related to rendering, you should also include graphics card and driver details, if possible.</span></span> <span data-ttu-id="59bb4-168">Эта информация важна, поскольку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] является платформой представления.</span><span class="sxs-lookup"><span data-stu-id="59bb4-168">This information is important because [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] is a presentation framework.</span></span>  
   
-#### Предоставьте информацию о решении или проекте  
- Ошибки могут относиться к средствам, используемым при разработке и построении приложений и типов приложений.  Следовательно, может быть полезно указать:  
+#### <a name="provide-solution-or-project-information"></a><span data-ttu-id="59bb4-169">Предоставьте информацию о решении или проекте</span><span class="sxs-lookup"><span data-stu-id="59bb4-169">Provide Solution or Project Information</span></span>  
+ <span data-ttu-id="59bb4-170">Ошибки могут относиться к средствам, используемым при разработке и построении приложений и типов приложений.</span><span class="sxs-lookup"><span data-stu-id="59bb4-170">Bugs may pertain to the tools used to develop and build your applications and the types of applications you are building.</span></span> <span data-ttu-id="59bb4-171">Следовательно, может быть полезно указать следующее.</span><span class="sxs-lookup"><span data-stu-id="59bb4-171">Consequently, it can be useful to specify:</span></span>  
   
--   Тип приложения, для которого выполняется построение, например:  
+-   <span data-ttu-id="59bb4-172">Тип приложения, для которого выполняется построение.</span><span class="sxs-lookup"><span data-stu-id="59bb4-172">The type of application you are building, such as:</span></span>  
   
-    -   Приложение \(.exe\) или библиотека \(.dll\).  
+    -   <span data-ttu-id="59bb4-173">Приложение (.exe) или библиотека (.dll)</span><span class="sxs-lookup"><span data-stu-id="59bb4-173">Application (.exe) or library (.dll).</span></span>  
   
-    -   Приложение браузера [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] \(XBAP\).  
+    -   <span data-ttu-id="59bb4-174">Приложение браузера [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (XBAP)</span><span class="sxs-lookup"><span data-stu-id="59bb4-174">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] browser application (XBAP).</span></span>  
   
-    -   Свободное приложение [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+    -   <span data-ttu-id="59bb4-175">Свободное приложение [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59bb4-175">Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] application.</span></span>  
   
-    -   Автономные установленные приложения.  
+    -   <span data-ttu-id="59bb4-176">Автономные установленные приложения</span><span class="sxs-lookup"><span data-stu-id="59bb4-176">Standalone installed applications.</span></span>  
   
-    -   Автономные развертываемые ClickOnce\-приложения.  
+    -   <span data-ttu-id="59bb4-177">Автономные развертываемые ClickOnce-приложения</span><span class="sxs-lookup"><span data-stu-id="59bb4-177">Standalone ClickOnce-deployed applications.</span></span>  
   
--   Средство разработки, например:  
+-   <span data-ttu-id="59bb4-178">Средство разработки.</span><span class="sxs-lookup"><span data-stu-id="59bb4-178">The development tool, such as:</span></span>  
   
-    -   MSBuild.  
+    -   <span data-ttu-id="59bb4-179">MSBuild</span><span class="sxs-lookup"><span data-stu-id="59bb4-179">MSBuild.</span></span>  
   
-    -   Expression Graphic Designer.  
+    -   <span data-ttu-id="59bb4-180">Expression Graphic Designer</span><span class="sxs-lookup"><span data-stu-id="59bb4-180">Expression Graphic Designer.</span></span>  
   
-    -   Expression Interactive Designer.  
+    -   <span data-ttu-id="59bb4-181">Expression Interactive Designer</span><span class="sxs-lookup"><span data-stu-id="59bb4-181">Expression Interactive Designer.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+    -   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]<span data-ttu-id="59bb4-182">.</span><span class="sxs-lookup"><span data-stu-id="59bb4-182">.</span></span>  
   
--   Конфигурация решения, например:  
+-   <span data-ttu-id="59bb4-183">Конфигурация решения.</span><span class="sxs-lookup"><span data-stu-id="59bb4-183">The solution configuration, such as:</span></span>  
   
-    -   Решение.  
+    -   <span data-ttu-id="59bb4-184">Решение</span><span class="sxs-lookup"><span data-stu-id="59bb4-184">A solution.</span></span>  
   
-    -   Отдельный проект.  
+    -   <span data-ttu-id="59bb4-185">Отдельный проект</span><span class="sxs-lookup"><span data-stu-id="59bb4-185">A single project.</span></span>  
   
-    -   Решение с несколькими зависимыми проектами.  
+    -   <span data-ttu-id="59bb4-186">Решение с несколькими зависимыми проектами</span><span class="sxs-lookup"><span data-stu-id="59bb4-186">A solution with multiple dependent projects.</span></span>  
   
--   Имеет ли приложение ресурсы для конкретного языка или ресурсы, нейтральные для языка.  Например, указано ли свойство проекта `UICulture` или локализуемые метаданные для типов `Application`, `Page` и `Resource`?  
+-   <span data-ttu-id="59bb4-187">Имеет ли приложение ресурсы для конкретного языка или ресурсы, нейтральные для языка.</span><span class="sxs-lookup"><span data-stu-id="59bb4-187">Whether your application has language-specific or language-neutral resources.</span></span> <span data-ttu-id="59bb4-188">Например, указано ли свойство проекта `UICulture` или локализуемые метаданные для типов `Application`, `Page` и `Resource`?</span><span class="sxs-lookup"><span data-stu-id="59bb4-188">For example, did you specify the `UICulture` project property or localizable metadata for `Application`, `Page`, and `Resource` types?</span></span>  
   
--   Использован ли параметр нейтрального языка в файле AssemblyInfo.cs или AssemblyInfo.vb.  
+-   <span data-ttu-id="59bb4-189">Использован ли параметр нейтрального языка в файле AssemblyInfo.cs или AssemblyInfo.vb.</span><span class="sxs-lookup"><span data-stu-id="59bb4-189">Whether you used the neutral language setting in the AssemblyInfo.cs or AssemblyInfo.vb file.</span></span>  
   
-#### Предоставьте информацию о сценарии и влиянии  
- Сведения о в скриптах, которые обнаруживают ошибку, и ее влиянии очень важны для команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Это позволяет специалистам определить сроки и способы решения проблемы или найти приемлемый обходной путь.  
+#### <a name="provide-scenario-and-impact-information"></a><span data-ttu-id="59bb4-190">Предоставьте информацию о сценарии и влиянии</span><span class="sxs-lookup"><span data-stu-id="59bb4-190">Provide Scenario and Impact Information</span></span>  
+ <span data-ttu-id="59bb4-191">Сведения о сценариях, которые обнаруживают ошибку, и ее влиянии очень важны для команды [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Это позволяет специалистам определить сроки и способы решения проблемы или найти приемлемый обходной путь.</span><span class="sxs-lookup"><span data-stu-id="59bb4-191">Information about the scenario that manifests the bug and its impact is highly important to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team when it decides if, when, and how a problem should be fixed, or whether an acceptable workaround can be used instead.</span></span>  
   
- Ситуации сбоя и потери данных обычно имеют высокое влияние и, таким образом, для них проще всего назначить приоритет при решении проблемы.  Некоторые ошибки отображаются только в нечасто используемых скриптах, которые, однако, в некоторых случаях могут оказаться основными.  Предоставление дополнительной информации о сценарии и влиянии помогает команде [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сделать правильное решение.  
+ <span data-ttu-id="59bb4-192">Ситуации сбоя и потери данных обычно имеют высокое влияние, и таким образом, для них проще всего назначить приоритет при решении проблемы.</span><span class="sxs-lookup"><span data-stu-id="59bb4-192">Ordinarily, crash and data loss scenarios are high impact and, therefore, the easiest to prioritize.</span></span> <span data-ttu-id="59bb4-193">Некоторые ошибки отображаются только в нечасто используемых скриптах, которые, однако, в некоторых случаях могут оказаться основными.</span><span class="sxs-lookup"><span data-stu-id="59bb4-193">Some bugs, however, only show up in uncommon scenarios, which may also be mainline scenarios in some cases.</span></span> <span data-ttu-id="59bb4-194">Предоставление дополнительной информации о сценарии и влиянии помогает команде [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] сделать правильное решение.</span><span class="sxs-lookup"><span data-stu-id="59bb4-194">Providing context around scenario and impact helps the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team make the right decision.</span></span>  
   
 <a name="Windows_Presentation_Foundation_Community_Site"></a>   
-## Веб\-узел сообщества Windows Presentation Foundation  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживается [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [с помощью веб\-узла портала сообщества](http://go.microsoft.com/fwlink/?LinkId=99382), который обеспечивает единую точку входа в блоги, связанные с [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], форумы и другие ресурсы.  
+## <a name="windows-presentation-foundation-community-site"></a><span data-ttu-id="59bb4-195">Веб-узел сообщества Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="59bb4-195">Windows Presentation Foundation Community Site</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="59bb4-196"> поддерживается [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] с помощью [веб-узла портала сообщества](http://go.microsoft.com/fwlink/?LinkId=99382), обеспечивающего единую точку входа в блоги, связанные с [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], форумы и другие ресурсы.</span><span class="sxs-lookup"><span data-stu-id="59bb4-196"> is supported by [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] with a [community portal site](http://go.microsoft.com/fwlink/?LinkId=99382) that provides a single point of entry to [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-related blogs, forums, and other resources.</span></span>  
   
 <a name="MSDN_Community_Content"></a>   
-## Содержимое сообщества MSDN  
- В документации по [Windows Presentation Foundation \(WPF\)](../../../../docs/framework/wpf/index.md) представлен полный набор технических материалов, которые предназначены для основных сценариев, поддерживаемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Разумеется, в реальном мире разработчики сталкиваются с разнообразными интересными и необычными сценариями, а также получают сведения, которые могут пригодиться для сообщества разработчиков [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в целом.  
+## <a name="msdn-community-content"></a><span data-ttu-id="59bb4-197">Содержимое сообщества MSDN</span><span class="sxs-lookup"><span data-stu-id="59bb4-197">MSDN Community Content</span></span>  
+ <span data-ttu-id="59bb4-198">В документации по [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) представлен полный набор технических материалов, которые предназначены для основных сценариев, поддерживаемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59bb4-198">The [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) documentation provides a complete set of technical content that targets the core scenarios that are enabled by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span> <span data-ttu-id="59bb4-199">Разумеется, в реальном мире разработчики сталкиваются с разнообразными интересными и необычными сценариями, а также получают сведения, которые могут пригодиться для сообщества разработчиков [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в целом.</span><span class="sxs-lookup"><span data-stu-id="59bb4-199">Of course, developers in the real world encounter a wide variety of interesting and not-so-common scenarios and consequently learn things that could be of benefit to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] development community at large.</span></span>  
   
- Для совместного использования знаний и опыта сообщества [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в документацию добавлено содержимое сообщества MSDN, которое позволяет разработчикам добавлять и обновлять комментарии ко всем основным разделам, разделам справки, руководствам, инструкциям и примерам.  
+ <span data-ttu-id="59bb4-200">Для совместного использования знаний и опыта сообщества [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в документацию добавлено содержимое сообщества MSDN, которое позволяет разработчикам добавлять и обновлять комментарии ко всем основным разделам, разделам справки, руководствам, инструкциям и примерам.</span><span class="sxs-lookup"><span data-stu-id="59bb4-200">To enable developers to share their knowledge and experience with the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] community, the documentation has been augmented with MSDN Community Content, which allows developers to add and update comments on each conceptual, reference, how-to, tutorial, and sample topics.</span></span>  
   
- Преимуществом добавления сведений в содержимое сообщества MSDN является создание центрального, обновляемого и совместно используемого сетевого хранилища знаний [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] и сообщества, а также опыта, который расширяет преимущества документации в Интернете.  Кроме того, все содержимое проверяется, чтобы обеспечить ясность, корректность, адекватность и полезность предоставляемой информации.  
+ <span data-ttu-id="59bb4-201">Преимуществом добавления сведений в содержимое сообщества MSDN является создание центрального, обновляемого и совместно используемого сетевого хранилища знаний [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] и сообщества, а также опыта, который расширяет преимущества документации в Интернете.</span><span class="sxs-lookup"><span data-stu-id="59bb4-201">The benefit of adding information to MSDN Community Content is to provide a central, current, and shared repository of [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] and community knowledge and experience that extends the benefits of the online documentation.</span></span> <span data-ttu-id="59bb4-202">Кроме того, все содержимое проверяется, чтобы обеспечить ясность, корректность, адекватность и полезность предоставляемой информации.</span><span class="sxs-lookup"><span data-stu-id="59bb4-202">Furthermore, the content is moderated to ensure clear, correct, appropriate, and useful information is provided.</span></span>  
   
-### Какой тип содержимого нужно добавлять в содержимое сообщества MSDN?  
- Содержимое сообщества MSDN предназначено для сбора важной, полезной и адекватной информации, которая расширяет существующее содержимое MSDN.  Ошибки, отзывы, потоковые обсуждения и вопросы должны быть опубликованы с помощью соответствующих и более эффективных средств, описанных выше.  
+### <a name="what-type-of-content-should-be-added-to-msdn-community-content"></a><span data-ttu-id="59bb4-203">Какой тип содержимого нужно добавлять в содержимое сообщества MSDN?</span><span class="sxs-lookup"><span data-stu-id="59bb4-203">What Type of Content should be added to MSDN Community Content?</span></span>  
+ <span data-ttu-id="59bb4-204">Содержимое сообщества MSDN предназначено для сбора важной, полезной и адекватной информации, которая расширяет существующее содержимое MSDN.</span><span class="sxs-lookup"><span data-stu-id="59bb4-204">MSDN Community Content is designed to capture relevant, useful, and appropriate information that extends the existing MSDN content.</span></span> <span data-ttu-id="59bb4-205">Ошибки, отзывы, потоковые обсуждения и вопросы должны быть опубликованы с помощью соответствующих и более эффективных средств, описанных выше.</span><span class="sxs-lookup"><span data-stu-id="59bb4-205">Bugs, feedback, threaded discussions, and questions should be posted using the appropriate, and more effective, tools, described earlier.</span></span>  
   
-### Проверка содержимого сообщества MSDN  
- Содержимое сообщества MSDN проверяется, что гарантирует адекватность содержимого.  Согласно [Правилам модерации содержимого](http://go.microsoft.com/fwlink/?LinkId=98864) MSDN, следующие типы содержимого считаются неподходящими:  
+### <a name="msdn-community-content-moderation"></a><span data-ttu-id="59bb4-206">Проверка содержимого сообщества MSDN</span><span class="sxs-lookup"><span data-stu-id="59bb4-206">MSDN Community Content Moderation</span></span>  
+ <span data-ttu-id="59bb4-207">Содержимое сообщества MSDN проверяется, что гарантирует адекватность содержимого.</span><span class="sxs-lookup"><span data-stu-id="59bb4-207">The MSDN Community Content is moderated to ensure that the content is appropriate.</span></span> <span data-ttu-id="59bb4-208">Согласно [Правилам модерации содержимого MSDN](http://go.microsoft.com/fwlink/?LinkId=98864), следующие типы содержимого считаются неподходящими.</span><span class="sxs-lookup"><span data-stu-id="59bb4-208">As described by the MSDN [Content Moderation Guidelines](http://go.microsoft.com/fwlink/?LinkId=98864), the following types of content are considered inappropriate:</span></span>  
   
--   Содержимое, нарушающее [Регламент поведения](http://go.microsoft.com/fwlink/?LinkId=98865) сообщества MSDN  
+-   <span data-ttu-id="59bb4-209">Содержимое, нарушающее [Регламент поведения](http://go.microsoft.com/fwlink/?LinkId=98865) сообщества MSDN</span><span class="sxs-lookup"><span data-stu-id="59bb4-209">Content that violates the MSDN Community [Code of Conduct](http://go.microsoft.com/fwlink/?LinkId=98865)</span></span>  
   
--   Нерелевантное, непонятное и тестовое содержимое  
+-   <span data-ttu-id="59bb4-210">Нерелевантное, непонятное и тестовое содержимое</span><span class="sxs-lookup"><span data-stu-id="59bb4-210">Irrelevant, incomprehensible, and test content</span></span>  
   
--   Повторяющееся содержимое  
+-   <span data-ttu-id="59bb4-211">Повторяющееся содержимое</span><span class="sxs-lookup"><span data-stu-id="59bb4-211">Duplicate content</span></span>  
   
--   Спам  
+-   <span data-ttu-id="59bb4-212">Спам</span><span class="sxs-lookup"><span data-stu-id="59bb4-212">Spam</span></span>  
   
--   Отзывы о документации  
+-   <span data-ttu-id="59bb4-213">Отзывы о документации</span><span class="sxs-lookup"><span data-stu-id="59bb4-213">Documentation feedback</span></span>  
   
--   Сообщения об ошибках  
+-   <span data-ttu-id="59bb4-214">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="59bb4-214">Bug reports</span></span>  
   
--   Вопросы  
+-   <span data-ttu-id="59bb4-215">Вопросы</span><span class="sxs-lookup"><span data-stu-id="59bb4-215">Questions</span></span>  
   
- Модераторы будут обрабатывать эти типы содержимого в соответствии с правилам модерации содержимого сообщества MSDN.  
+ <span data-ttu-id="59bb4-216">Модераторы будут обрабатывать эти типы содержимого в соответствии с правилам модерации содержимого сообщества MSDN.</span><span class="sxs-lookup"><span data-stu-id="59bb4-216">Moderators will process these types of content according to the MSDN Community Content Moderation Guidelines.</span></span>  
   
-### Языковая поддержка содержимого сообщества MSDN  
- Содержимое сообщества MSDN доступно в версиях MSDN Online для английского \(США\) и португальского \(Бразилия\).  Предполагаются выпуски для японского, французского, немецкого, итальянского, испанского, корейского и упрощенного и традиционного китайского языка.  
+### <a name="msdn-community-content-language-support"></a><span data-ttu-id="59bb4-217">Языковая поддержка содержимого сообщества MSDN</span><span class="sxs-lookup"><span data-stu-id="59bb4-217">MSDN Community Content Language Support</span></span>  
+ <span data-ttu-id="59bb4-218">Содержимое сообщества MSDN доступно в версиях MSDN Online для английского (США) и португальского (Бразилия).</span><span class="sxs-lookup"><span data-stu-id="59bb4-218">MSDN Community Content is available on both the US English and Brazilian Portuguese versions of MSDN Online.</span></span> <span data-ttu-id="59bb4-219">Предполагаются выпуски для японского, французского, немецкого, итальянского, испанского, корейского и упрощенного и традиционного китайского языков.</span><span class="sxs-lookup"><span data-stu-id="59bb4-219">Future releases are being considered for Japanese, French, German, Italian, Spanish, Korean, and both Simplified and Traditional Chinese.</span></span>  
   
-### Часто задаваемые вопросы по содержимому сообщества MSDN  
- Более подробные сведения можно найти в разделе [часто задаваемых вопросов](http://go.microsoft.com/fwlink/?LinkId=98866) содержимого сообщества MSDN.
+### <a name="msdn-community-content-frequently-asked-questions"></a><span data-ttu-id="59bb4-220">Часто задаваемые вопросы по содержимому сообщества MSDN</span><span class="sxs-lookup"><span data-stu-id="59bb4-220">MSDN Community Content Frequently Asked Questions</span></span>  
+ <span data-ttu-id="59bb4-221">Более подробные сведения можно найти в разделе [часто задаваемых вопросов](http://go.microsoft.com/fwlink/?LinkId=98866) содержимого сообщества MSDN.</span><span class="sxs-lookup"><span data-stu-id="59bb4-221">Further information can be found in the MSDN Community Content [FAQ](http://go.microsoft.com/fwlink/?LinkId=98866).</span></span>

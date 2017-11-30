@@ -1,1 +1,1 @@
-Пользовательский интерфейс
+<span data-ttu-id="7e2bf-101">Пользовательский интерфейс</span><span class="sxs-lookup"><span data-stu-id="7e2bf-101">User interface (UI)</span></span>

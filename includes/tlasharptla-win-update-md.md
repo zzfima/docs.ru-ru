@@ -1,1 +1,1 @@
-Центр обновления Windows
+<span data-ttu-id="48c14-101">Центр обновления Windows</span><span class="sxs-lookup"><span data-stu-id="48c14-101">Microsoft Windows Update</span></span>

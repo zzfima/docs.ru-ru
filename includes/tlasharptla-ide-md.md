@@ -1,1 +1,1 @@
-Интегрированная среда разработки (IDE)
+<span data-ttu-id="832d2-101">Интегрированная среда разработки (IDE)</span><span class="sxs-lookup"><span data-stu-id="832d2-101">Integrated Development Environment (IDE)</span></span>

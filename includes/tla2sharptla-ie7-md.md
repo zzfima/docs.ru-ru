@@ -1,1 +1,1 @@
-Internet Explorer 7
+<span data-ttu-id="edfca-101">Internet Explorer 7</span><span class="sxs-lookup"><span data-stu-id="edfca-101">Internet Explorer 7</span></span>

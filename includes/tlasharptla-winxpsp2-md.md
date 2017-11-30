@@ -1,1 +1,1 @@
-Microsoft Windows XP с пакетом обновления 2 (SP2)
+<span data-ttu-id="f91ca-101">Microsoft Windows XP с пакетом обновления 2 (SP2)</span><span class="sxs-lookup"><span data-stu-id="f91ca-101">Microsoft Windows XP Service Pack 2 (SP2)</span></span>

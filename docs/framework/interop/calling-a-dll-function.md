@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - unmanaged functions
@@ -22,36 +16,34 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b676599513b923ae46d6ec27d7506435d9cbfcd2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 36f84796b9682411d7907cfc10d584d772ef00a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="calling-a-dll-function"></a>Вызов функции DLL
-Хотя вызов неуправляемых функций DLL почти идентичен вызову другого управляемого кода, все же существуют отличия, которые поначалу могут вызвать некоторые сложности в освоении функций DLL. В этом разделе представлены статьи, касающиеся некоторых особенностей вызовов.  
+# <a name="calling-a-dll-function"></a><span data-ttu-id="6fcaf-102">Вызов функции DLL</span><span class="sxs-lookup"><span data-stu-id="6fcaf-102">Calling a DLL Function</span></span>
+<span data-ttu-id="6fcaf-103">Хотя вызов неуправляемых функций DLL почти идентичен вызову другого управляемого кода, все же существуют отличия, которые поначалу могут вызвать некоторые сложности в освоении функций DLL.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-103">Although calling unmanaged DLL functions is nearly identical to calling other managed code, there are differences that can make DLL functions seem confusing at first.</span></span> <span data-ttu-id="6fcaf-104">В этом разделе представлены статьи, касающиеся некоторых особенностей вызовов.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-104">This section introduces topics that describe some of the unusual calling-related issues.</span></span>  
   
- Структуры, возвращаемые из вызовов неуправляемого кода, должны быть типами данных, имеющими одинаковые представления в управляемом и неуправляемом коде. Такие типы называются *непреобразуемыми типами*, так как они не требуют преобразования (см. раздел [Непреобразуемые и преобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)). Чтобы вызвать функцию с преобразуемой структурой в качестве ее возвращаемого типа, можно определить непреобразуемый вспомогательный тип того же размера, что и преобразуемый тип, и преобразовать данные после возвращения функции.  
+ <span data-ttu-id="6fcaf-105">Структуры, возвращаемые из вызовов неуправляемого кода, должны быть типами данных, имеющими одинаковые представления в управляемом и неуправляемом коде.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-105">Structures that are returned from platform invoke calls must be data types that have the same representation in managed and unmanaged code.</span></span> <span data-ttu-id="6fcaf-106">Такие типы называются *непреобразуемыми типами*, так как они не требуют преобразования (см. раздел [Непреобразуемые и преобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)).</span><span class="sxs-lookup"><span data-stu-id="6fcaf-106">Such types are called *blittable types* because they do not require conversion (see [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)).</span></span> <span data-ttu-id="6fcaf-107">Чтобы вызвать функцию с преобразуемой структурой в качестве ее возвращаемого типа, можно определить непреобразуемый вспомогательный тип того же размера, что и преобразуемый тип, и преобразовать данные после возвращения функции.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-107">To call a function that has a non-blittable structure as its return type, you can define a blittable helper type of the same size as the non-blittable type and convert the data after the function returns.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Передача структур](../../../docs/framework/interop/passing-structures.md)  
- Описываются вопросы передачи структур данных с предопределенной компоновкой.  
+## <a name="in-this-section"></a><span data-ttu-id="6fcaf-108">Содержание</span><span class="sxs-lookup"><span data-stu-id="6fcaf-108">In This Section</span></span>  
+ [<span data-ttu-id="6fcaf-109">Передача структур</span><span class="sxs-lookup"><span data-stu-id="6fcaf-109">Passing Structures</span></span>](../../../docs/framework/interop/passing-structures.md)  
+ <span data-ttu-id="6fcaf-110">Описываются вопросы передачи структур данных с предопределенной компоновкой.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-110">Identifies the issues of passing data structures with a predefined layout.</span></span>  
   
- [Функции обратного вызова](../../../docs/framework/interop/callback-functions.md)  
- Основные сведения о функциях обратного вызова.  
+ [<span data-ttu-id="6fcaf-111">Функции обратного вызова</span><span class="sxs-lookup"><span data-stu-id="6fcaf-111">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ <span data-ttu-id="6fcaf-112">Основные сведения о функциях обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-112">Provides basic information about callback functions.</span></span>  
   
- [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- Описывается реализация функций обратного вызова в управляемом коде.  
+ [<span data-ttu-id="6fcaf-113">Практическое руководство. Реализация функций обратного вызова</span><span class="sxs-lookup"><span data-stu-id="6fcaf-113">How to: Implement Callback Functions</span></span>](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
+ <span data-ttu-id="6fcaf-114">Описывается реализация функций обратного вызова в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-114">Describes how to implement callback functions in managed code.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- Описывает способ вызова неуправляемых функций DLL с помощью вызова платформы.  
+## <a name="related-sections"></a><span data-ttu-id="6fcaf-115">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="6fcaf-115">Related Sections</span></span>  
+ [<span data-ttu-id="6fcaf-116">Использование неуправляемых функций DLL</span><span class="sxs-lookup"><span data-stu-id="6fcaf-116">Consuming Unmanaged DLL Functions</span></span>](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ <span data-ttu-id="6fcaf-117">Описывает способ вызова неуправляемых функций DLL с помощью вызова платформы.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-117">Describes how to call unmanaged DLL functions using platform invoke.</span></span>  
   
- [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- Описывается способ объявления параметров метода и передачи аргументов в функции, экспортируемые неуправляемыми библиотеками.
-
+ [<span data-ttu-id="6fcaf-118">Маршалинг данных при вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="6fcaf-118">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ <span data-ttu-id="6fcaf-119">Описывается способ объявления параметров метода и передачи аргументов в функции, экспортируемые неуправляемыми библиотеками.</span><span class="sxs-lookup"><span data-stu-id="6fcaf-119">Describes how to declare method parameters and pass arguments to functions exported by unmanaged libraries.</span></span>

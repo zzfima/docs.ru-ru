@@ -1,1 +1,1 @@
-Каскадные таблицы стилей (CSS)
+<span data-ttu-id="ed49e-101">Каскадные таблицы стилей (CSS)</span><span class="sxs-lookup"><span data-stu-id="ed49e-101">Cascading Style Sheets (CSS)</span></span>

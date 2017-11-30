@@ -1,1 +1,1 @@
-пользовательские интерфейсы (UI)
+<span data-ttu-id="a82ba-101">пользовательские интерфейсы (UI)</span><span class="sxs-lookup"><span data-stu-id="a82ba-101">user interfaces (UIs)</span></span>

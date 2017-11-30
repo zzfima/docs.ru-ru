@@ -1,1 +1,1 @@
-вспомогательная технология
+<span data-ttu-id="d6639-101">вспомогательная технология</span><span class="sxs-lookup"><span data-stu-id="d6639-101">assistive technology</span></span>

@@ -1,76 +1,86 @@
 ---
-title: "&lt;audienceUris&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;audienceUris&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3ce884c19d205df4727dcce96ffdf34144ff1dd6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;audienceUris&gt;
-Задает набор URI, допустимые идентификаторы доверяющей стороне \(RP\).  Если областью действия для одного допустимую аудиторию URIs маркеров не будет принят.  
+# <a name="ltaudienceurisgt"></a><span data-ttu-id="c9164-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="c9164-102">&lt;audienceUris&gt;</span></span>
+<span data-ttu-id="c9164-103">Задает набор URI, допустимых идентификаторов проверяющей стороны (RP).</span><span class="sxs-lookup"><span data-stu-id="c9164-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="c9164-104">Маркеры не будут приниматься, если только они относятся к одному из разрешенных URI аудитории.</span><span class="sxs-lookup"><span data-stu-id="c9164-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="c9164-105">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="c9164-105">\<system.identityModel></span></span>  
+<span data-ttu-id="c9164-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c9164-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="c9164-107">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="c9164-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="c9164-108">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c9164-108">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="c9164-109">\<audienceUris ></span><span class="sxs-lookup"><span data-stu-id="c9164-109">\<audienceUris></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c9164-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c9164-110">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <audienceUris mode=xs:string>  
-          <add value=xs:string />  
-          <clear />  
-          <remove value=xs:string />  
-        </audienceUris>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <audienceUris mode=xs:string>  
+          <add value=xs:string />  
+          <clear />  
+          <remove value=xs:string />  
+        </audienceUris>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c9164-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="c9164-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="c9164-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="c9164-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="c9164-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c9164-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|mode|<xref:System.IdentityModel.Selectors.AudienceUriMode> Значение, которое определяет, применены ли ограничение аудитории для входящего маркера.  Возможные значения: «Всегда», «Никогда» и «BearerKeyOnly».  Значение по умолчанию — «Всегда».  Необязательный.|  
+|<span data-ttu-id="c9164-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="c9164-114">Attribute</span></span>|<span data-ttu-id="c9164-115">Описание</span><span class="sxs-lookup"><span data-stu-id="c9164-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="c9164-116">режим</span><span class="sxs-lookup"><span data-stu-id="c9164-116">mode</span></span>|<span data-ttu-id="c9164-117"><xref:System.IdentityModel.Selectors.AudienceUriMode> Значение, которое указывает, должно ли применяться ограничения аудитории входящий токен.</span><span class="sxs-lookup"><span data-stu-id="c9164-117">An <xref:System.IdentityModel.Selectors.AudienceUriMode> value that specifies whether the audience restriction should be applied to an incoming token.</span></span> <span data-ttu-id="c9164-118">Возможными значениями являются «Всегда», «Никогда» и «BearerKeyOnly».</span><span class="sxs-lookup"><span data-stu-id="c9164-118">The possible values are "Always", "Never", and "BearerKeyOnly".</span></span> <span data-ttu-id="c9164-119">Значение по умолчанию — «Always».</span><span class="sxs-lookup"><span data-stu-id="c9164-119">The default is "Always".</span></span> <span data-ttu-id="c9164-120">Необязательно.</span><span class="sxs-lookup"><span data-stu-id="c9164-120">Optional.</span></span>|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a><span data-ttu-id="c9164-121">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c9164-121">Child Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|`<add value=xs:string>`|Добавляет URI, заданного параметром `value` audienceUris коллекцию атрибутов.  Атрибут `value` является обязательным.  URI с учетом регистра.|  
-|`<clear>`|Очищает коллекцию audienceUris.  Все идентификаторы будут удалены из коллекции.|  
-|`<remove value=xs:string>`|Удаляет URI, заданного параметром `value` атрибут из коллекции audienceUris.  Атрибут `value` является обязательным.  URI с учетом регистра.|  
+|<span data-ttu-id="c9164-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="c9164-122">Element</span></span>|<span data-ttu-id="c9164-123">Описание</span><span class="sxs-lookup"><span data-stu-id="c9164-123">Description</span></span>|  
+|-------------|-----------------|  
+|`<add value=xs:string>`|<span data-ttu-id="c9164-124">Добавляет URI, указанный параметром `value` атрибут в коллекцию audienceUris.</span><span class="sxs-lookup"><span data-stu-id="c9164-124">Adds the URI specified by the `value` attribute to the audienceUris collection.</span></span> <span data-ttu-id="c9164-125">Атрибут `value` является обязательным.</span><span class="sxs-lookup"><span data-stu-id="c9164-125">The `value` attribute is required.</span></span> <span data-ttu-id="c9164-126">URI с учетом регистра.</span><span class="sxs-lookup"><span data-stu-id="c9164-126">The URI is case-sensitive.</span></span>|  
+|`<clear>`|<span data-ttu-id="c9164-127">Очищает коллекцию audienceUris.</span><span class="sxs-lookup"><span data-stu-id="c9164-127">Clears the audienceUris collection.</span></span> <span data-ttu-id="c9164-128">Все идентификаторы будут удалены из коллекции.</span><span class="sxs-lookup"><span data-stu-id="c9164-128">All identifiers are removed from the collection.</span></span>|  
+|`<remove value=xs:string>`|<span data-ttu-id="c9164-129">Удаляет URI, указанный параметром `value` атрибута из коллекции audienceUris.</span><span class="sxs-lookup"><span data-stu-id="c9164-129">Removes the URI specified by the `value` attribute from the audienceUris collection.</span></span> <span data-ttu-id="c9164-130">Атрибут `value` является обязательным.</span><span class="sxs-lookup"><span data-stu-id="c9164-130">The `value` attribute is required.</span></span> <span data-ttu-id="c9164-131">URI с учетом регистра.</span><span class="sxs-lookup"><span data-stu-id="c9164-131">The URI is case-sensitive.</span></span>|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="c9164-132">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="c9164-132">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Содержит настройки для коллекции безопасности обработчиков маркеров.|  
+|<span data-ttu-id="c9164-133">Элемент</span><span class="sxs-lookup"><span data-stu-id="c9164-133">Element</span></span>|<span data-ttu-id="c9164-134">Описание</span><span class="sxs-lookup"><span data-stu-id="c9164-134">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c9164-135">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c9164-135">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="c9164-136">Обеспечивает настройку для коллекции безопасности обработчиков маркеров.</span><span class="sxs-lookup"><span data-stu-id="c9164-136">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## Заметки  
- По умолчанию коллекция является пустой; Использование `<add>`, `<clear>`, и `<remove>` элементов для изменения коллекции.  <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>и <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> объектами Допустимы значения в аудитории URI коллекции для настройки любой аудитории ограничения URI в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектов.  
+## <a name="remarks"></a><span data-ttu-id="c9164-137">Примечания</span><span class="sxs-lookup"><span data-stu-id="c9164-137">Remarks</span></span>  
+ <span data-ttu-id="c9164-138">По умолчанию коллекция пуста; Используйте `<add>`, `<clear>`, и `<remove>` элементов для изменения коллекции.</span><span class="sxs-lookup"><span data-stu-id="c9164-138">By default, the collection is empty; use `<add>`, `<clear>`, and `<remove>` elements to modify the collection.</span></span> <span data-ttu-id="c9164-139"><xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>и <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> объекты используют значения в коллекции URI аудитории для настройки любых разрешено аудитории ограничения URI в <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> объектов.</span><span class="sxs-lookup"><span data-stu-id="c9164-139"><xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> and <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objects use the values in the audience URI collection to configure any allowed audience URI restrictions in <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objects.</span></span>  
   
- `<audienceUris>` Представленного элементом <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> класса.  Представляется отдельным URI, добавляются в коллекцию <xref:System.IdentityModel.Configuration.AudienceUriElement> класса.  
+ <span data-ttu-id="c9164-140">`<audienceUris>` Представлен <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> класса.</span><span class="sxs-lookup"><span data-stu-id="c9164-140">The `<audienceUris>` element is represented by the <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> class.</span></span> <span data-ttu-id="c9164-141">Представляется отдельным URI, добавляемый в коллекцию <xref:System.IdentityModel.Configuration.AudienceUriElement> класса.</span><span class="sxs-lookup"><span data-stu-id="c9164-141">An individual URI added to the collection is represented by the <xref:System.IdentityModel.Configuration.AudienceUriElement> class.</span></span>  
   
 > [!NOTE]
->  Использование `<audienceUris>` элемент как дочерний элемент [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по\-прежнему поддерживается для обратной совместимости.  Параметры на `<securityTokenHandlerConfiguration>` элементов заменяют на `<identityConfiguration>` элемент.  
+>  <span data-ttu-id="c9164-142">Использование `<audienceUris>` элемент как дочерний элемент элемента [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по-прежнему поддерживается для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="c9164-142">The use of the `<audienceUris>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="c9164-143">Параметры на `<securityTokenHandlerConfiguration>` элемент переопределяют на `<identityConfiguration>` элемент.</span><span class="sxs-lookup"><span data-stu-id="c9164-143">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## Пример  
- Следующий XML показано, как настроить приемлемых аудиторию URIs для приложения.  В этом примере настраивает одного URI.  Маркеры масштаба для данного URI будет принята, все остальные будут отклонены.  
+## <a name="example"></a><span data-ttu-id="c9164-144">Пример</span><span class="sxs-lookup"><span data-stu-id="c9164-144">Example</span></span>  
+ <span data-ttu-id="c9164-145">Следующий код XML показано, как настроить допустимый URI аудитории для приложения.</span><span class="sxs-lookup"><span data-stu-id="c9164-145">The following XML shows how to configure the acceptable audience URIs for an application.</span></span> <span data-ttu-id="c9164-146">В этом примере настраивается один URI.</span><span class="sxs-lookup"><span data-stu-id="c9164-146">This example configures a single URI.</span></span> <span data-ttu-id="c9164-147">Принимаются только токены, заданные для данного универсального кода Ресурса, все остальные будут отклонены.</span><span class="sxs-lookup"><span data-stu-id="c9164-147">Tokens scoped for this URI will be accepted, all others will be rejected.</span></span>  
   
-```  
+```xml  
 <audienceUris>  
   <add value="http://localhost:19851/"/>  
 </audienceUris>  

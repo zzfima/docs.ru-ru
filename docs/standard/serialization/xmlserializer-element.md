@@ -7,65 +7,59 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 963850f2ef05ec51c4a9548b77eadf12fcf978c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cadca32d5aa34d5cb6f9091f65c34c7cba603ff5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltxmlserializergt-element"></a>Элемент &lt;xmlSerializer&gt;
-Указывает, выполнена ли дополнительная проверка хода выполнения <xref:System.Xml.Serialization.XmlSerializer>.  
+# <a name="ltxmlserializergt-element"></a><span data-ttu-id="76b2b-102">Элемент &lt;xmlSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="76b2b-102">&lt;xmlSerializer&gt; Element</span></span>
+<span data-ttu-id="76b2b-103">Указывает, выполнена ли дополнительная проверка хода выполнения <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="76b2b-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
   
- \<configuration>  
-\<system.xml.serialization>  
+ <span data-ttu-id="76b2b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="76b2b-104">\<configuration></span></span>  
+<span data-ttu-id="76b2b-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="76b2b-105">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="76b2b-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="76b2b-106">Syntax</span></span>  
   
 ```xml  
 <xmlSerializer checkDeserializerAdvance = "true"|"false" />  
 ```  
   
-## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="76b2b-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="76b2b-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="76b2b-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="76b2b-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="76b2b-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="76b2b-109">Attributes</span></span>  
   
-|Атрибут|Описание|  
+|<span data-ttu-id="76b2b-110">Атрибут</span><span class="sxs-lookup"><span data-stu-id="76b2b-110">Attribute</span></span>|<span data-ttu-id="76b2b-111">Описание</span><span class="sxs-lookup"><span data-stu-id="76b2b-111">Description</span></span>|  
 |---------------|-----------------|  
-|**checkDeserializeAdvances**|Указывает, выполнена ли проверка хода выполнения <xref:System.Xml.Serialization.XmlSerializer>. Присвойте атрибуту значение "true" или "false". Значение по умолчанию - "true".|  
-|**useLegacySerializationGeneration**|Укажите, следует ли объекту <xref:System.Xml.Serialization.XmlSerializer> использовать установленную сериализацию прежней версии, которая создает сборки путем написания кода на C# в файле и компиляции его в сборку. Значение по умолчанию — **false**.|  
+|<span data-ttu-id="76b2b-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="76b2b-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="76b2b-113">Указывает, выполнена ли проверка хода выполнения <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="76b2b-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="76b2b-114">Присвойте атрибуту значение "true" или "false".</span><span class="sxs-lookup"><span data-stu-id="76b2b-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="76b2b-115">Значение по умолчанию - "true".</span><span class="sxs-lookup"><span data-stu-id="76b2b-115">The default is "true".</span></span>|  
+|<span data-ttu-id="76b2b-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="76b2b-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="76b2b-117">Укажите, следует ли объекту <xref:System.Xml.Serialization.XmlSerializer> использовать установленную сериализацию прежней версии, которая создает сборки путем написания кода на C# в файле и компиляции его в сборку.</span><span class="sxs-lookup"><span data-stu-id="76b2b-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="76b2b-118">Значение по умолчанию — **false**.</span><span class="sxs-lookup"><span data-stu-id="76b2b-118">The default is **false**.</span></span>|  
   
-### <a name="child-elements"></a>Дочерние элементы  
- Отсутствует.  
+### <a name="child-elements"></a><span data-ttu-id="76b2b-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="76b2b-119">Child Elements</span></span>  
+ <span data-ttu-id="76b2b-120">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="76b2b-120">None.</span></span>  
   
-### <a name="parent-elements"></a>Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="76b2b-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="76b2b-121">Parent Elements</span></span>  
   
-|Элемент|Описание|  
+|<span data-ttu-id="76b2b-122">Элемент</span><span class="sxs-lookup"><span data-stu-id="76b2b-122">Element</span></span>|<span data-ttu-id="76b2b-123">Описание</span><span class="sxs-lookup"><span data-stu-id="76b2b-123">Description</span></span>|  
 |-------------|-----------------|  
-|[Элемент \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)|Содержит параметры конфигурации для классов <xref:System.Xml.Serialization.XmlSerializer> и <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
+|[<span data-ttu-id="76b2b-124">Элемент \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="76b2b-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="76b2b-125">Содержит параметры конфигурации для классов <xref:System.Xml.Serialization.XmlSerializer> и <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="76b2b-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- По умолчанию <xref:System.Xml.Serialization.XmlSerializer> обеспечивает дополнительный уровень безопасности в отношении возможных атак типа "отказ в обслуживании" во время десериализации ненадежных данных. Такие атаки отслеживаются путем определения бесконечных циклов во время десериализации. Если обнаруживается такое состояние, создается исключение со следующим сообщением: "Произошла внутренняя ошибка: сбой десериализации при перемещении по базовому потоку".  
+## <a name="remarks"></a><span data-ttu-id="76b2b-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="76b2b-126">Remarks</span></span>  
+ <span data-ttu-id="76b2b-127">По умолчанию <xref:System.Xml.Serialization.XmlSerializer> обеспечивает дополнительный уровень безопасности в отношении возможных атак типа "отказ в обслуживании" во время десериализации ненадежных данных.</span><span class="sxs-lookup"><span data-stu-id="76b2b-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="76b2b-128">Такие атаки отслеживаются путем определения бесконечных циклов во время десериализации.</span><span class="sxs-lookup"><span data-stu-id="76b2b-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="76b2b-129">Если обнаруживается такое состояние, создается исключение со следующим сообщением: "Произошла внутренняя ошибка: сбой десериализации при перемещении по базовому потоку".</span><span class="sxs-lookup"><span data-stu-id="76b2b-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
   
- Такое сообщение еще не означает, что система подвергается атаке типа "отказ в обслуживании". В редких случаях механизм определения бесконечного цикла сообщает о ложном положительном результате, и выдается исключение для допустимых входящих сообщений. Если обнаружится, что некоторые допустимые сообщения приложения отклоняются из-за использования такого дополнительного уровня защиты, задайте атрибут **checkDeserializeAdvances** со значением false.  
+ <span data-ttu-id="76b2b-130">Такое сообщение еще не означает, что система подвергается атаке типа "отказ в обслуживании".</span><span class="sxs-lookup"><span data-stu-id="76b2b-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="76b2b-131">В редких случаях механизм определения бесконечного цикла сообщает о ложном положительном результате, и выдается исключение для допустимых входящих сообщений.</span><span class="sxs-lookup"><span data-stu-id="76b2b-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="76b2b-132">Если обнаружится, что некоторые допустимые сообщения приложения отклоняются из-за использования такого дополнительного уровня защиты, задайте атрибут **checkDeserializeAdvances** со значением false.</span><span class="sxs-lookup"><span data-stu-id="76b2b-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
   
-## <a name="example"></a>Пример  
- В приведенном ниже примере кода атрибут **checkDeserializeAdvances** задан как false.  
+## <a name="example"></a><span data-ttu-id="76b2b-133">Пример</span><span class="sxs-lookup"><span data-stu-id="76b2b-133">Example</span></span>  
+ <span data-ttu-id="76b2b-134">В приведенном ниже примере кода атрибут **checkDeserializeAdvances** задан как false.</span><span class="sxs-lookup"><span data-stu-id="76b2b-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +69,7 @@ ms.lasthandoff: 08/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Serialization.XmlSerializer>   
- [Элемент \<system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)   
- [Сериализация XML и SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-
+## <a name="see-also"></a><span data-ttu-id="76b2b-135">См. также</span><span class="sxs-lookup"><span data-stu-id="76b2b-135">See Also</span></span>  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [<span data-ttu-id="76b2b-136">Элемент \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="76b2b-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [<span data-ttu-id="76b2b-137">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="76b2b-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

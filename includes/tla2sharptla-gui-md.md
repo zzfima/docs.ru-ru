@@ -1,1 +1,1 @@
-Графический интерфейс (GUI)
+<span data-ttu-id="f1935-101">Графический интерфейс (GUI)</span><span class="sxs-lookup"><span data-stu-id="f1935-101">GUI</span></span>

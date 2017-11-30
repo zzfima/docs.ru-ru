@@ -1,49 +1,50 @@
 ---
-title: "Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "клавиши доступа, элемент управления для"
-  - "элементы управления, клавиши доступа"
-  - "элементы управления, обтекание текстом"
-  - "ключи, элемент управления для"
-  - "обтекание текстом"
-  - "обтекание текстом"
+title: "Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access keys [WPF], control for
+- controls [WPF], text wrapping
+- wrapping text [WPF]
+- keys [WPF], control for
+- controls [WPF], access keys
+- text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста
-В этом примере демонстрируется создание элемента управления, который имеет [клавишу доступа](GTMT) и поддерживает перенос текста.  В примере используется элемент управления <xref:System.Windows.Controls.Label> для демонстрации этих понятий.  
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a><span data-ttu-id="d5607-102">Практическое руководство. Создание элемента управления, имеющего клавишу доступа и поддерживающего перенос текста</span><span class="sxs-lookup"><span data-stu-id="d5607-102">How to: Create a Control That Has an Access Key and Text Wrapping</span></span>
+<span data-ttu-id="d5607-103">В этом примере показано, как создать элемент управления, который имеет клавишу доступа и поддерживает обтекание текстом.</span><span class="sxs-lookup"><span data-stu-id="d5607-103">This example shows how to create a control that has an access key and supports text wrapping.</span></span> <span data-ttu-id="d5607-104">В этом примере <xref:System.Windows.Controls.Label> управления для иллюстрации этих основных понятий.</span><span class="sxs-lookup"><span data-stu-id="d5607-104">The example uses a <xref:System.Windows.Controls.Label> control to illustrate these concepts.</span></span>  
   
-## Пример  
- **Добавление поддержки переноса текста в Label**  
+## <a name="example"></a><span data-ttu-id="d5607-105">Пример</span><span class="sxs-lookup"><span data-stu-id="d5607-105">Example</span></span>  
+ <span data-ttu-id="d5607-106">**Добавление обтекания текстом для метки**</span><span class="sxs-lookup"><span data-stu-id="d5607-106">**Add Text Wrapping to Your Label**</span></span>  
   
- Элемент управления <xref:System.Windows.Controls.Label> не поддерживает перенос текста.  Если вам требуется метка, которая содержит текст в несколько строк, вы можете разместить другой элемент, который поддерживает перенос текста и поместить элемент внутри метки.  В следующем примере показано использование <xref:System.Windows.Controls.TextBlock> для создания метки, которая содержит несколько строк текста.  
+ <span data-ttu-id="d5607-107"><xref:System.Windows.Controls.Label> Управления не поддерживает перенос текста.</span><span class="sxs-lookup"><span data-stu-id="d5607-107">The <xref:System.Windows.Controls.Label> control does not support text wrapping.</span></span> <span data-ttu-id="d5607-108">Если нужна метка, которая охватывает несколько строк, то можно вложить другой элемент, который поддерживает обтекание текстом, и поместить этот элемент внутрь метки.</span><span class="sxs-lookup"><span data-stu-id="d5607-108">If you need a label that wraps across multiple lines, you can nest another element that does support text wrapping and put the element inside the label.</span></span> <span data-ttu-id="d5607-109">В следующем примере показано, как использовать <xref:System.Windows.Controls.TextBlock> для создания метки, которая содержит несколько строк текста.</span><span class="sxs-lookup"><span data-stu-id="d5607-109">The following example shows how to use a <xref:System.Windows.Controls.TextBlock> to make a label that wraps several lines of text.</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
+ [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Добавление клавиши доступа и поддержки переноса текста в Label**  
+ <span data-ttu-id="d5607-110">**Добавление клавиши доступа и обтекания текстом в метку**</span><span class="sxs-lookup"><span data-stu-id="d5607-110">**Add an Access Key and Text Wrapping to Your Label**</span></span>  
   
- Если вам требуется <xref:System.Windows.Controls.Label>, который имеет клавишу доступа \(назначенную\), используйте элемент <xref:System.Windows.Controls.AccessText> который расположен внутри <xref:System.Windows.Controls.Label>.  
+ <span data-ttu-id="d5607-111">Если вам требуется <xref:System.Windows.Controls.Label> , содержащий ключ доступа (назначенную), используйте <xref:System.Windows.Controls.AccessText> элемент, находящийся внутри <xref:System.Windows.Controls.Label>.</span><span class="sxs-lookup"><span data-stu-id="d5607-111">If you need a <xref:System.Windows.Controls.Label> that has an access key (mnemonic), use the <xref:System.Windows.Controls.AccessText> element that is inside the <xref:System.Windows.Controls.Label>.</span></span>  
   
- Такие элементы управления, как <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander> и <xref:System.Windows.Controls.GroupBox> имеют шаблоны элементов управления по умолчанию.  Эти шаблоны содержат <xref:System.Windows.Controls.ContentPresenter>.  Одним из свойств, которое вы можете установить в <xref:System.Windows.Controls.ContentPresenter>, является <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>\= «true», которое вы можете использовать для задания клавиши доступа для элемента управления.  
+ <span data-ttu-id="d5607-112">Элементы управления, например <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, и <xref:System.Windows.Controls.GroupBox> есть шаблона элемента управления по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d5607-112">Controls such as <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, and <xref:System.Windows.Controls.GroupBox> have default control templates.</span></span> <span data-ttu-id="d5607-113">Эти шаблоны содержат <xref:System.Windows.Controls.ContentPresenter>.</span><span class="sxs-lookup"><span data-stu-id="d5607-113">These templates contain a <xref:System.Windows.Controls.ContentPresenter>.</span></span> <span data-ttu-id="d5607-114">Одно из свойств, которые можно установить на <xref:System.Windows.Controls.ContentPresenter> — <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>= «true», который можно использовать для указания клавиши доступа для элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d5607-114">One of the properties that you can set on the <xref:System.Windows.Controls.ContentPresenter> is <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>="true", which you can use to specify an access key for the control.</span></span>  
   
- Следующий пример показывает, как создать <xref:System.Windows.Controls.Label>, который имеет клавишу доступа и поддерживает перенос текста.  Чтобы включить перенос текста, пример устанавливает свойство <xref:System.Windows.Controls.AccessText.TextWrapping%2A> и используется знак подчеркивания для указания клавиши доступа.  \(Символ, который следует сразу за знаком подчеркивания, является клавишей доступа\).  
+ <span data-ttu-id="d5607-115">В следующем примере показано, как создать <xref:System.Windows.Controls.Label> , имеет клавишу доступа и поддерживает перенос текста.</span><span class="sxs-lookup"><span data-stu-id="d5607-115">The following example shows how to create a <xref:System.Windows.Controls.Label> that has an access key and supports text wrapping.</span></span> <span data-ttu-id="d5607-116">Чтобы включить перенос текста, в примере задается <xref:System.Windows.Controls.AccessText.TextWrapping%2A> свойства и используется знак подчеркивания для указания ключа доступа.</span><span class="sxs-lookup"><span data-stu-id="d5607-116">To enable text wrapping, the example sets the <xref:System.Windows.Controls.AccessText.TextWrapping%2A> property and uses an underline character to specify the access key.</span></span> <span data-ttu-id="d5607-117">(Символ, который следует сразу за символом подчеркивания, является клавишей доступа).</span><span class="sxs-lookup"><span data-stu-id="d5607-117">(The character that immediately follows the underline character is the access key.)</span></span>  
   
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
+ [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## См. также  
- [How to: Set the Target Property of a Label](http://msdn.microsoft.com/ru-ru/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a><span data-ttu-id="d5607-118">См. также</span><span class="sxs-lookup"><span data-stu-id="d5607-118">See Also</span></span>  
+ [<span data-ttu-id="d5607-119">Практическое руководство. Установка целевого свойства метки</span><span class="sxs-lookup"><span data-stu-id="d5607-119">How to: Set the Target Property of a Label</span></span>](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
