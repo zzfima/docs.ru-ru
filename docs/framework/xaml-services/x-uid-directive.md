@@ -1,54 +1,57 @@
 ---
-title: "x:Uid Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], localizable content attribute"
-  - "XAML [XAML Services], x:Uid attribute"
-  - "x:Uid attribute [XAML Services]"
-  - "Uid attribute [XAML Services]"
+title: "Директива x:Uid"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], localizable content attribute
+- XAML [XAML Services], x:Uid attribute
+- x:Uid attribute [XAML Services]
+- Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4d49e9630b481b2daf103feabd225dd5ef0c8ca2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# x:Uid Directive
-Предоставляет уникальный идентификатор для элементов разметки.  Во многих случаях этот уникальный идентификатор используется в процессах и средствах локализации XAML.  
+# <a name="xuid-directive"></a>Директива x:Uid
+Предоставляет уникальный идентификатор для элементов разметки. Во многих случаях этот уникальный идентификатор используется в процессах локализации XAML и средства.  
   
-## Использование атрибута XAML  
+## <a name="xaml-attribute-usage"></a>Использование атрибута XAML  
   
+```xaml  
+<object x:Uid="identifier"... />  
 ```  
-<object x:Uid="identifier"... />  
-```  
   
-## Значения XAML  
+## <a name="xaml-values"></a>Значения XAML  
   
 |||  
 |-|-|  
-|`identifier`|Созданная вручную или сформированная автоматически строка, которая должна быть уникальной в пределах файла при его интерпретации получателем `x:Uid`.|  
+|`identifier`|Созданная вручную или автоматически строка, должно быть уникальным в файле при интерпретируется с `x:Uid` потребителя.|  
   
-## Заметки  
- В \[MS\-XAML\] `x:Uid` определяется как директива.  Дополнительные сведения см. в разделе [\[MS\-XAML\] Раздел 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+## <a name="remarks"></a>Примечания  
+ В [MS-XAML] `x:Uid` определяется как директива. Дополнительные сведения см. в разделе [ \[MS-XAML\] раздел 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
- `x:Uid` обособлен от `x:Name`, как из\-за указанного сценария локализации XAML, и поэтому, что идентификаторы, используемые для локализации, не имеют зависимости от особенностей модели программирования `x:Name`.  Кроме того, `x:Name` управляется областью имен XAML; однако `x:Uid` не управляется никакой определенной в языке XAML концепцией принудительного применения уникальности.  В широком смысле от обработчиков XAML \(обработчики, которые не являются частью процесса локализации\) не ожидается принудительного обеспечения уникальности значений `x:Uid`.  Эту ответственность концептуально несет источник значений.  Требование уникальности значений `x:Uid` внутри одного источника XAML является обоснованным для потребителей значений, таких как выделенные процессы или инструменты глобализации.  Типичная модель уникальности предполагает, что значения `x:Uid` являются уникальными в закодированном XML файле, представляющем XAML.  
+ `x:Uid`является дискретным из `x:Name` оба из-за указанного сценария локализации XAML, а идентификаторы, используемые для локализации не имеют зависимости от особенностей модели программирования `x:Name`. Кроме того `x:Name` регулируется область имен XAML; Однако `x:Uid` не распространяется на любые языке XAML понятием ограничения уникальности. Обработчики XAML в широком смысле слова (процессоры, которые не являются частью процесса локализации) не требуются для обеспечения уникальности `x:Uid` значения. Эти задачи по существу источник значения. Требование уникальности из `x:Uid` значений в пределах одного источника XAML является обоснованным для потребителей значений, таких как процессы или инструменты выделенный глобализации. Это Типичная модель уникальности `x:Uid` значения должны быть уникальными в файле XML-кодировке, представляющий XAML.  
   
- Средства, которые обладают значительными знаниями определенной схемы XAML, могут применять `x:Uid` только для истинных локализуемых строк, а не во всех случаях, где значение строки текста встречается в разметке.  
+ Средства, которые имеют значительные знаний определенной схемы XAML можно выбрать область применения `x:Uid` только для true локализуемые строки, а не во всех случаях, где встречается строковое значение текста в разметке.  
   
- Платформы могут задать конкретное свойство в своей модели объекта как псевдоним для `x:Uid`, применив атрибут <xref:System.Windows.Markup.UidPropertyAttribute> к определяющему типу.  Если платформа определяет конкретное свойство, нельзя указать `x:Uid` и член с псевдонимом в одном объекте.  Если указаны `x:Uid` и член с псевдонимом, API служб XAML платформы .NET Framework в этом случае обычно выдает исключение <xref:System.Xaml.XamlDuplicateMemberException>.  
+ Платформы можно указать определенное свойство их объектной модели в качестве псевдонима для `x:Uid` путем применения атрибута <xref:System.Windows.Markup.UidPropertyAttribute> типу. Если структура указывает определенное свойство, не допускается указывать оба `x:Uid` и элемент с псевдонимом того же объекта. Если оба `x:Uid` и указаны член с псевдонимом, обычно вызывает API служб XAML .NET Framework <xref:System.Xaml.XamlDuplicateMemberException> для этого случая.  
   
-## Примечания об использовании WPF  
- Дополнительные сведения о роли `x:Uid` в процессе локализации WPF и в форме BAML языка XAML см. в разделе [Глобализация для WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
+ Дополнительные сведения о роли `x:Uid` процесс локализации WPF и форма BAML кода XAML см. раздел [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) или<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## См. также  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
- <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [Глобализация для WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ <xref:Microsoft.Build.Tasks.Windows.UidManager>  
+ [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

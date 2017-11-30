@@ -1,46 +1,44 @@
 ---
-title: "Метод доступа Get свойства &lt;имяСвойства&gt; недоступен | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc31103"
-  - "bc31103"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC31103"
+title: "&#39; Получить &#39; метод доступа свойства &#39; &lt;propertyname&gt;&#39; недоступен"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc31103
+- bc31103
+helpviewer_keywords: BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 167e040570af1fc78ce48f5e930e54981ba909ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Метод доступа Get свойства &lt;имяСвойства&gt; недоступен
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Инструкция пытается извлечь значение свойства, если у нее нет доступа к процедуре `Get` данного свойства.  
+# <a name="39get39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39; Получить &#39; метод доступа свойства &#39; &lt;propertyname&gt;&#39; недоступен
+Оператор пытается извлечь значение свойства, если он не имеет доступа к свойству `Get` процедуры.  
   
- Если [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md) имеет более ограниченный уровень доступа, чем [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md), то попытка прочитать значение свойства может завершиться ошибкой в следующих случаях:  
+ Если [оператор Get](../../../visual-basic/language-reference/statements/get-statement.md) помечается более строгий доступ уровня, чем его [оператор Property](../../../visual-basic/language-reference/statements/property-statement.md), попытка прочитать значение свойства может завершиться ошибкой в следующих случаях:  
   
--   Инструкция `Get` помечена как [Private](../../../visual-basic/language-reference/modifiers/private.md), а вызывающий код находится вне класса или структуры, в которой определено свойство.  
+-   `Get` Оператор помечен [закрытый](../../../visual-basic/language-reference/modifiers/private.md) и вызывающий код находится за пределами класса или структуры, в котором определено свойство.  
   
--   Инструкция `Get` помечена как [Protected](../../../visual-basic/language-reference/modifiers/protected.md) и вызывающий код находится ни в классе или структуры, в которой определено свойство, ни в производном классе.  
+-   `Get` Оператор помечен [Protected](../../../visual-basic/language-reference/modifiers/protected.md) и вызывающий код находится не в классе или структуре, в котором определено свойство, ни в производном классе.  
   
--   Инструкция `Get` помечена как [Friend](../../../visual-basic/language-reference/modifiers/friend.md), и вызывающий код находится в сборке, отличной от той, в которой определено свойство.  
+-   `Get` Оператор помечен [Friend](../../../visual-basic/language-reference/modifiers/friend.md) и вызывающий код не находится в той же сборке, в котором определено свойство.  
   
  **Идентификатор ошибки:** BC31103  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если есть возможность изменения исходного кода, определяющего свойство, рассмотрите возможность объявления процедуры `Get` с таким же уровнем доступа как само свойство.  
+-   Если вы управляете исходного кода, определяющего свойство, рассмотрите возможность объявления `Get` процедуру с тем же уровнем доступа, как и само свойство.  
   
--   Если нет такой возможности либо необходимо установить уровень доступа процедуры `Get` больше, чем у самого свойства, то попробуйте переместить инструкцию, которая считывает значение свойства в область кода, имеющего лучший доступ к свойству.  
+-   Если вы не управляете исходного кода, определяющего свойство или необходимо ограничить `Get` уровень доступа процедуры больше, чем к самому свойству, попробуйте переместить инструкцию, которая считывает значение свойства в область кода, который имеет более удобный доступ к свойство.  
   
-## См. также  
- [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
+## <a name="see-also"></a>См. также  
+ [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
  [Практическое руководство. Объявление свойства со смешанным уровнем доступа](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

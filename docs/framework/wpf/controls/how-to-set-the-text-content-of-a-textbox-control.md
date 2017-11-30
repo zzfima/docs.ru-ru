@@ -1,36 +1,42 @@
 ---
-title: "Практическое руководство. Установка текстового содержимого для элемента управления TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "текстовое содержимое, параметр"
-  - "TextBox - элемент управления, установка текстового содержимого"
+title: "Практическое руководство. Установка текстового содержимого для элемента управления TextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text content [WPF], setting
+- TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8da173fb91745f83aac2b4461a917c1fff6e9cb4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка текстового содержимого для элемента управления TextBox
-В этом примере описывается порядок использования свойства <xref:System.Windows.Controls.TextBox.Text%2A> для установки начального текстового содержимого элемента управления <xref:System.Windows.Controls.TextBox>.  
+# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Практическое руководство. Установка текстового содержимого для элемента управления TextBox
+В этом примере показано, как использовать <xref:System.Windows.Controls.TextBox.Text%2A> свойство для задания начального текстового содержимого элемента <xref:System.Windows.Controls.TextBox> элемента управления.  
   
- **Примечание.** Хотя в версии примера на [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] содержимое поля <xref:System.Windows.Controls.TextBox> каждой кнопки и можно заключать в теги`<TextBox.Text>`, это не обязательно, поскольку <xref:System.Windows.Controls.TextBox> применяет к свойству <xref:System.Windows.Controls.TextBox.Text%2A> атрибут <xref:System.Windows.Markup.ContentPropertyAttribute>.  Дополнительные сведения см. в разделе [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ **Примечание** хотя [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] использовать версию примера `<TextBox.Text>` теги каждой кнопки <xref:System.Windows.Controls.TextBox> содержимого, нет необходимости из-за <xref:System.Windows.Controls.TextBox> применяется <xref:System.Windows.Markup.ContentPropertyAttribute> для атрибута <xref:System.Windows.Controls.TextBox.Text%2A> свойство. Дополнительные сведения см. в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
-## Пример  
- [!code-xml[TextBox_MiscCode#_TextBoxSetTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]  
+## <a name="example"></a>Пример  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSetTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxsettextxaml)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-csharp[TextBox_MiscCode#_TextBoxSetText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textboxsettext)]
  [!code-vb[TextBox_MiscCode#_TextBoxSetText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textboxsettext)]  
   
-## См. также  
- [Общие сведения о TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
+## <a name="see-also"></a>См. также  
+ [Общие сведения о TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [Общие сведения о RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

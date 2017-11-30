@@ -1,23 +1,26 @@
 ---
-title: "Учитываются только первые восемь знаков имени пользовательского журнала | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
+title: "Учитываются только первые восемь знаков имени пользовательского журнала"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 323fbacb9d269de778fb1f624d225551283a44a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Учитываются только первые восемь знаков имени пользовательского журнала
+# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Учитываются только первые восемь знаков имени пользовательского журнала
 При проверке имен журналов событий на уникальность учитываются только первые восемь символов. Конфликт может возникнуть в результате совпадения первых восьми символов.  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Присвойте журналу событий имя, первые восемь символов которого уникальны.  
   
-## См. также  
- [How to: Create and Remove Custom Event Logs](http://msdn.microsoft.com/ru-ru/af9b7da0-80c7-46ac-b7f7-897063ddd503)   
- [Administering Event Logs](http://msdn.microsoft.com/ru-ru/35f53238-bdd2-417b-acd8-2fd9f7397f18)
+## <a name="see-also"></a>См. также  
+ [Как: создавать и удалять журналы событий.](http://msdn.microsoft.com/en-us/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
+ [Администрирование журналов событий](http://msdn.microsoft.com/en-us/35f53238-bdd2-417b-acd8-2fd9f7397f18)

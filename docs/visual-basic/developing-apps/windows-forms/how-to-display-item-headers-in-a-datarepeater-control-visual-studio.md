@@ -1,75 +1,74 @@
 ---
-title: "Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, заголовки элементов"
-  - "DataRepeater, индикаторы выделения"
+title: "Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- DataRepeater, item headers
+- DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Заголовок элемента в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> предоставляет визуальный индикатор при выборе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> имеет значение <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> \(значение по умолчанию\), заголовок элемента отображается слева от каждого элемента.  Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> имеет значение <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>, заголовок элемента отображается сверху от каждого элемента.  
+# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater (Visual Studio)
+Заголовок элемента в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления предоставляется визуальный индикатор, когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> выбран. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (по умолчанию), заголовок элемента отображается слева от каждого элемента. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, заголовок элемента отображается в верхней части каждого элемента.  
   
- При первоначальном выборе заголовок элемента отображается в цвете, определенном свойством <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A>, также отображается белый значок со стрелкой.  
+ При первоначальном выборе заголовок элемента отображается цветом, который задается параметром <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> отображаются свойства и белый значок со стрелкой.  
   
 > [!NOTE]
->  Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> имеет значение <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будет отображаться.  
+>  Если задать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> для <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будут видны.  
   
- Когда поле <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> находится в фокусе, цвет заголовка элемента изменяет цвет фона на <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> и цвет значка со стрелкой на черный.  Если данные изменены, в заголовке элемента отображается символ карандаша.  
+ Когда поле <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> находится в фокусе, цвет заголовка элемента изменяет <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> фоновый цвет и изменения значок со стрелкой в черный цвет. Если данные изменяются, в заголовке элементов отображается символ карандаша.  
   
- Ширина по умолчанию \(или высота, если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> установлено равным <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>\) заголовка элемента равна 15 пикселям.  Можно изменить ширину, используя свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>.  
-  
-> [!NOTE]
->  Если значение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> меньше 11, значки индикатора не отображаются в заголовке элемента.  
-  
- Можно скрыть заголовок элемента, установив значение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> равным **False**.  Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> установлено равным **False**, индикатором того, что элемент выделен, является пунктирная линия по периметру <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+ Ширина по умолчанию (или высоту при <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) элемента заголовка — 15 пикселей. Можно изменить, задав ширину <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойство.  
   
 > [!NOTE]
->  Можно предоставить свой собственный индикатор выделения, управляя свойством <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в событии <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+>  Если <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойству присвоено значение, которое меньше 11, не будут отображаться значки индикатора в заголовке элементов.  
   
-### Изменение внешнего вида заголовков элементов  
+ Заголовки элементов можно скрыть, установив <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> свойства **False**. Когда <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> равно **False**, единственное свидетельство того, что выбран элемент — пунктирная линия по периметру <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
   
-1.  В конструкторе Windows Forms выберите нижнюю область управляющего элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+> [!NOTE]
+>  Можно также предоставить свой собственный индикатор выделения, наблюдение за <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
-    > [!NOTE]
-    >  Следует выбрать нижнюю область элемента управления.  При выборе области шаблона элемента в окне "Свойства" появится другой набор свойств.  
+### <a name="to-change-the-appearance-of-item-headers"></a>Чтобы изменить внешний вид заголовков элементов  
   
-2.  В окне "Свойства" используйте свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> для изменения цвета текста в данном заголовке элемента.  
-  
-    > [!NOTE]
-    >  Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> имеет значение <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будет отображаться.  
-  
-3.  Используйте свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> для изменения ширины \(или высоты\) заголовков элементов.  
+1.  В конструкторе Windows Forms выберите нижнюю область этого <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
     > [!NOTE]
-    >  Если значение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> меньше 11, значки индикатора не отображаются в заголовке элемента.  
+    >  Необходимо выбрать Нижняя область элемента управления. При выборе области шаблона элемента иным набором свойств будет отображаться в окне «Свойства».  
   
-### Чтобы скрыть заголовки элементов  
-  
-1.  В конструкторе Windows Forms выберите нижнюю область управляющего элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+2.  В окне «Свойства» используйте <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> свойство для изменения цвета заголовков элементов.  
   
     > [!NOTE]
-    >  Следует выбрать нижнюю область элемента управления.  При выборе области шаблона элемента в окне "Свойства" появится другой набор свойств.  
+    >  Если задать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> для <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будут видны.  
   
-2.  В окне "Свойства" присвойте свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> значение **False**.  
+3.  Используйте <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойство для изменения ширины (или высоты) заголовков элементов.  
   
-     Когда выбран элемент<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, единственным индикатором этого является пунктирная линия по периметру <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+    > [!NOTE]
+    >  Если <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойству присвоено значение, которое меньше 11, не будут отображаться значки индикатора в заголовке элементов.  
   
-## См. также  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Изменение структуры элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
+### <a name="to-hide-item-headers"></a>Чтобы скрыть заголовки элементов  
+  
+1.  В конструкторе Windows Forms выберите нижнюю область этого <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
+  
+    > [!NOTE]
+    >  Необходимо выбрать Нижняя область элемента управления. При выборе области шаблона элемента иным набором свойств будет отображаться в окне «Свойства».  
+  
+2.  В окне свойств задайте <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> свойства **False**.  
+  
+     При создании записи в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> — флажок установлен, указывать только будет пунктирная линия по периметру <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+  
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Изменение структуры элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
  [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

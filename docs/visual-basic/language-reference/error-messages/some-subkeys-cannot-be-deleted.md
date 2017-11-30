@@ -1,31 +1,30 @@
 ---
-title: "Некоторые подразделы удалить нельзя | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "Некоторые подразделы удалить нельзя"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
 ms.assetid: 14562137-af43-4972-84c1-a380a90f7d6c
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1551170042ab12e3ec630d86c9c001ed5690dbd4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Некоторые подразделы удалить нельзя
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предпринята попытка удаления раздела реестра, но операция не удалась, поскольку некоторые разделы не могут быть удалены.  Обычно это связано с отсутствием соответствующих разрешений.  
+# <a name="some-subkeys-cannot-be-deleted"></a>Некоторые подразделы удалить нельзя
+Попытка удалить раздел реестра, но не удалось выполнить операцию, так как некоторые подразделы удалить нельзя. Обычно это происходит из-за отсутствия разрешений.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Убедитесь в наличии разрешений на удаление указанных подразделов.  
+-   Убедитесь в наличии достаточных разрешений для удаления указанных подразделов.  
   
-## См. также  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>   
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
+ <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
  <xref:System.Security.Permissions.RegistryPermission>

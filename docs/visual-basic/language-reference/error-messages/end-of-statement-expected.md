@@ -1,40 +1,38 @@
 ---
-title: "Ожидается окончание оператора | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30205"
-  - "vbc30205"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30205"
+title: "Ожидается окончание оператора"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30205
+- vbc30205
+helpviewer_keywords: BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4934952015cb4871bcd90cef982eab5425b1617f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ожидается окончание оператора
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Оператор является синтаксически завершенным, однако за элементом, завершающим оператор, следует дополнительный программный элемент.  В конце каждого оператора требуются признаки конца строки.  
+# <a name="end-of-statement-expected"></a>Ожидается окончание оператора
+Оператор является синтаксически завершенным, однако дополнительный программный элемент элементом, выполненную инструкцию. Признак конца строки является обязательным в конце каждой инструкции.
   
- Терминатор линии делит символы файла источника Visual Basic в линии.  Примеры терминаторов линии символ возврата каретки юникода \(&HD\), символ перевода строки юникода \(&HA\) и символ возврата каретки юникода, за которым следует символ перевода строки юникода.  Дополнительные сведения о терминаторах линии см. в разделе [Спецификация языка Visual Basic](../../../visual-basic/reference/language-specification.md).  
+ Признак конца строки делит символы исходным файлом Visual Basic на строки. Признаки конца строки приведены несколько Юникода каретки возвращаемого символа (& HD), Юникод перевода строки символов (& HA), и символ, за которым следует символ перевода строки Юникода возврата каретки Юникода. Дополнительные сведения о признаки конца строки см. в разделе [спецификация языка Visual Basic](../../../visual-basic/reference/language-specification/index.md).
   
- **Идентификатор ошибки:** BC30205  
+ **Идентификатор ошибки:** BC30205
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки
   
-1.  Проверьте, не помещены ли случайно два разных оператора на одну строку.  
+1.  Проверьте, если два разных оператора случайно помещенных в той же строке.
   
-2.  Вставьте признак конца строки после элемента, завершающего оператор.  
+2.  Вставьте признак конца строки после элемента, выполняемой инструкции.
   
-## См. также  
- [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)   
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
  [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)

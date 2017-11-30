@@ -1,31 +1,29 @@
 ---
-title: "Кроссплатформенная разработка с переносной библиотекой классов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Переносимая библиотека классов [.NET Framework]"
-  - "использование нескольких платформ"
-  - "несколько платформ, для различных версий"
+title: "Кроссплатформенная разработка с переносной библиотекой классов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Portable Class Library [.NET Framework]
+- targeting multiple platforms
+- multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: 95
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 95
+caps.latest.revision: "95"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Кроссплатформенная разработка с переносной библиотекой классов
+# <a name="cross-platform-development-with-the-portable-class-library"></a>Кроссплатформенная разработка с переносной библиотекой классов
 Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.  
   
  Переносимые библиотеки классов уменьшают временные и трудовые затраты на разработку и тестирования кода. Используйте такой тип проекта для создания переносимых сборок .NET Framework, а затем ссылайтесь на них из приложений, предназначенных для различных платформ, таких как Windows и Windows Phone.  
@@ -37,17 +35,17 @@ caps.handback.revision: 95
  Visual Studio предоставляет шаблоны, которые облегчают разработку с использованием переносимой библиотеки классов. В зависимости от используемой версии Visual Studio доступные шаблоны и меню могут отличаться от тех, что описаны в этой статье.  
   
 > [!WARNING]
->  [Visual Studio 2013 обновление 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) содержит обновленные шаблоны переносимой библиотеки классов. Если имеется более ранняя версия Visual Studio и Visual Studio 2013 установлен на том же компьютере, и вы установили обновление 2, изменения в **требуемая версия .NET Framework** будут применены к обеим версиям Visual Studio.  
+>  [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) включает обновления для шаблонов переносимой библиотеки классов. При наличии более ранней версии Visual Studio и Visual Studio 2013 установлен на том же компьютере, и вы установили обновление 2, чтобы изменения **требуемой версии .NET Framework** вариантов, которые будут применяться к обеим версиям Visual Studio.  
   
  Содержание раздела  
   
- [Поддержка Visual Studio](#vs_support)   
- [Создание проекта переносимой библиотеки классов](#create_pcl)   
- [Целевые параметры](#platforms)   
- [Изменение целевой платформы](#change_targets)   
- [Поддерживаемые функции](#features)   
- [Поддерживаемые типы и члены](#members)   
- [Отличия API в переносимой библиотеки классов](#API_diff)   
+ [Поддержка Visual Studio](#vs_support)  
+ [Создание проекта переносимой библиотеки классов](#create_pcl)  
+ [Target-параметры](#platforms)  
+ [Изменение целевой платформы](#change_targets)  
+ [Поддерживаемые функции](#features)  
+ [Поддерживаемые типы и члены](#members)  
+ [Отличия API в переносимой библиотеки классов](#API_diff)  
  [Использование переносимой библиотеки классов](#using)  
   
 <a name="vs_support"></a>   
@@ -60,14 +58,14 @@ caps.handback.revision: 95
 |Версии Visual Studio Express 2010|Нет.|  
 |Visual Studio 2012 Professional, Premium или Ultimate|Да. Техническая поддержка по телефону, установите [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Версии Visual Studio Express 2012|Нет.|  
-|Visual Studio 2013 Professional, Premium или Ultimate|Да. Для поддержки Windows Phone 8.1 установите [Visual Studio 2013 обновление 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 для Windows|Да, при установке [последнюю версию Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), включающая обновление 2, или добавить [Visual Studio 2013 обновление 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium или Ultimate|Да. Поддержка Windows Phone 8.1 установите [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio Express 2013 для Windows|Да, при установке [последнюю версию Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), которой включающая обновление 2, или добавьте [Visual Studio 2013 с обновлением 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Создание проекта переносимой библиотеки классов  
- Для создания переносимой библиотеки классов следует использовать один из шаблонов в Visual Studio. Создайте новый проект и в **новый проект** диалогового **шаблоны**, выберите целевой язык (C# или Visual Basic) и затем выберите один из целевых платформ. Другие платформы можно выбрать на следующем шаге.  
+ Для создания переносимой библиотеки классов следует использовать один из шаблонов в Visual Studio. Создайте новый проект и в **новый проект** диалогового **шаблоны**, выберите целевой язык (C# или Visual Basic) и выберите одну из платформ, вы будете работать. Другие платформы можно выбрать на следующем шаге.  
   
- В Visual Studio 2013 обновление 2, вы можете **библиотека классов (переносимая)** шаблон для выбранного языка и платформы, чтобы создать переносимую библиотеку классов. Этот шаблон отображается для следующих платформ:  
+ В Visual Studio 2013 с обновлением 2 вы можете **библиотека классов (переносимая)** шаблона для выбранного языка и платформы, чтобы создать переносимую библиотеку классов. Этот шаблон отображается для следующих платформ:  
   
 -   Приложения Магазина  
   
@@ -75,7 +73,7 @@ caps.handback.revision: 95
   
 -   Silverlight  
   
- Если вы хотите создать библиотеку для Windows Phone 8.1 и Windows 8.1 на языке C#, вы можете **приложения магазина**и нажмите кнопку **библиотека классов (переносимая для универсальных приложений)**.  
+ Если вы хотите создать библиотеку, предназначенные для Windows Phone 8.1 и Windows 8.1 на языке C#, вы можете **приложения магазина**, а затем выберите **библиотека классов (переносимая для универсальных приложений)**.  
   
  ![Переносимая библиотека классов для приложений магазина](../../../docs/standard/cross-platform/media/storeuniversalpcl.png "StoreUniversalPCL")  
   
@@ -87,21 +85,20 @@ caps.handback.revision: 95
   
  **Добавление переносимой библиотеки классов** откроется диалоговое окно, и можно выбрать дополнительные платформы. В зависимости от выбранных платформ могут отображаться предупреждения о совместимости.  
   
- ![Изменить диалоговое окно целевой платформы для VS2013](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
+ ![Изменение целевой платформы и диалоговое окно для VS2013](../../../docs/standard/cross-platform/media/clr-pcl-changeframeworks.png "CLR_PCL_ChangeFrameworks")  
 Диалоговое окно добавления переносимой библиотеки классов для Visual Studio 2013 с обновлением 2  
   
  Независимо от того, используете ли вы Visual Studio 2012 или Visual Studio 2013, вы можете выбрать платформы при создании проекта переносимой библиотеки классов или изменить целевые платформы в свойствах проекта после его создания.  
   
 <a name="platforms"></a>   
 ## <a name="target-options"></a>Доступные целевые платформы  
- При создании проекта переносимой библиотеки классов можно выбрать операционную систему и целевую версию .NET Framework. Если вы используете Visual Studio 2013 и установили обновление 2 или более поздней версии, вы можете **библиотека классов (переносимая для универсальных приложений)** шаблона для создания переносимой библиотеки классов, предназначенное для Windows 8.1 и Windows Phone 8.1. В следующей таблице показаны доступные целевые платформы, зависящие от используемой версии Visual Studio.  
+ При создании проекта переносимой библиотеки классов можно выбрать операционную систему и целевую версию .NET Framework. Если вы используете Visual Studio 2013 и установили обновление 2 или более поздней версии, вы можете **библиотека классов (переносимая для универсальных приложений)** шаблона для создания переносимой библиотеки классов, предназначенного для Windows 8.1 и Windows Phone 8.1. В следующей таблице показаны доступные целевые платформы, зависящие от используемой версии Visual Studio.  
   
-|||||  
-|-|-|-|-|  
 |Целевая платформа|Visual Studio 2012|Visual Studio 2013|Visual Studio 2013 с обновлением 2 или более поздняя версия|  
-|.NET Framework|-.NET framework 4 и более поздних версий<br /><br /> -.NET framework 4.0.3 и более поздние версии<br /><br /> -.NET framework 4.5|-.NET framework 4 и более поздних версий<br /><br /> -.NET framework 4.0.3 и более поздние версии<br /><br /> -.NET framework 4.5 и более поздние версии<br /><br /> -.NET framework 4.5.1|-.NET framework 4<br /><br /> -.NET framework 4.0.3<br /><br /> -.NET framework 4.5<br /><br /> -.NET framework 4.5.1|  
-|Windows Phone|-Windows Phone 7 и более поздние версии<br /><br /> -Windows Phone 7.5 и более поздних версий<br /><br /> -Windows Phone 8|-Windows Phone 8|-Windows Phone Silverlight 8<br /><br /> -Windows Phone Silverlight 8.1<br /><br /> Для поддержки среды выполнения Windows и XAML выберите:<br /><br /> -Windows Phone 8.1|  
-|Магазин Windows|-.NET приложений для магазина Windows|-Windows магазина (Windows 8) и более поздних версий<br /><br /> -Магазин Windows приложения (Windows 8.1)|-Windows 8<br /><br /> -Windows 8.1|  
+|-|-|-|-|  
+|.NET Framework|-.NET framework 4 и более поздних версий<br /><br /> -.NET framework 4.0.3 и более поздние версии<br /><br /> -.NET framework 4.5|-.NET framework 4 и более поздних версий<br /><br /> -.NET framework 4.0.3 и более поздние версии<br /><br /> -.NET framework 4.5 и более поздних версий<br /><br /> -.NET framework 4.5.1|-.NET framework 4<br /><br /> -.NET framework 4.0.3<br /><br /> -.NET framework 4.5<br /><br /> -.NET framework 4.5.1|  
+|Windows Phone|-Windows Phone 7 и более поздних версий<br /><br /> -Windows Phone 7.5 и более поздних версий<br /><br /> -Windows Phone 8|-Windows Phone 8|-Windows Phone Silverlight 8<br /><br /> -Windows Phone Silverlight 8.1<br /><br /> Для поддержки среды выполнения Windows и XAML выберите:<br /><br /> -Windows Phone 8.1|  
+|Магазин Windows|-.NET приложений для магазина Windows|— Приложения для магазина Windows (Windows 8) и более поздних версий<br /><br /> -Для магазина Windows (Windows 8.1)|— Windows 8<br /><br /> — Windows 8.1|  
 |-Silverlight|-Silverlight 4 и более поздних версий<br /><br /> -Silverlight 5|-Silverlight 5|-Silverlight 5|  
 |Xbox|-Xbox 360|Н/Д|Н/Д|  
   
@@ -109,16 +106,16 @@ caps.handback.revision: 95
 ## <a name="changing-targets"></a>Изменение целевой платформы  
  После выбора шаблона переносимой библиотеки классов платформы по умолчанию выбираются автоматически, но они зависят от установленной версии Visual Studio и ранее выбираемых платформ. Вы можете изменить платформы при создании переносимой библиотеки классов или после начала разработки библиотеки.  
   
- Если вы хотите изменить целевые платформы после создания проекта, в **обозревателе решений**, откройте контекстное меню для проекта переносимой библиотеки классов (не решение) и нажмите кнопку **свойства**. На странице свойств проекта **библиотеки** вкладке указаны платформы, на данный момент нацелен проект.  
+ Если вы хотите изменить целевые платформы после создания проекта, в **обозревателе решений**, откройте контекстное меню для проекта переносимой библиотеки классов (не решения) и нажмите кнопку **свойства** . На странице свойств проекта **библиотеки** вкладке указаны платформы сейчас направлен проект.  
   
  ![Свойства проекта](../../../docs/standard/cross-platform/media/portablelibrary-projectproperties.png "PortableLibrary_ProjectProperties")  
 Страница свойств переносимой библиотеки классов для Visual Studio 2013 с обновлением 2  
   
- Чтобы добавить или удалить целевые объекты, выберите **изменить** кнопки и затем установите или снимите соответствующие флажки.  
+ Чтобы добавить или удалить целевые объекты, выберите **изменений** кнопки и затем установите или снимите соответствующие флажки.  
   
  При изменении целевых платформ API-интерфейсы, доступные для разработки проекта, изменятся в соответствии с выбранными платформами. Visual Studio отображает ошибки и предупреждения после изменения целевых платформ.  
   
- Если вы хотите оценить переносимость сборки до внесения изменений в Visual Studio, можно использовать [анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Если вы хотите оценить переносимость сборки до можно внести изменения в Visual Studio, можно использовать [анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  Пункты меню зависят от используемой версии Visual Studio.  
   
@@ -151,11 +148,11 @@ caps.handback.revision: 95
 |XLINQ||✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|✓|  
   
  ➊ Требуется [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) пакета  
- ➋ Требуется [сжатия Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) пакета  
+ ➋ Требуется [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) пакета  
  ➌ Требуется [клиентских библиотек HTTP Майкрософт](http://www.nuget.org/packages/Microsoft.Net.Http) пакета  
   
 > [!WARNING]
->  Могут возникнуть ошибки при ссылке на [сжатия Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) и [клиентских библиотек HTTP Майкрософт](http://www.nuget.org/packages/Microsoft.Net.Http) пакетов из переносимой библиотеки, используемой приложением Windows Phone Silverlight 8.1. Дополнительные сведения см. в разделе [совместимость платформ и изменения для приложения Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Могут возникнуть ошибки при ссылке на [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) и [клиентских библиотек HTTP Майкрософт](http://www.nuget.org/packages/Microsoft.Net.Http) пакетов из переносимой библиотеки, используемой приложением Windows Phone Silverlight 8.1. Дополнительные сведения см. в разделе [совместимость платформ и критические изменения для приложений Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Поддерживаемые типы и члены  
@@ -171,12 +168,12 @@ caps.handback.revision: 95
   
  Например, переносимая библиотека классов содержит типы, связанные с пользовательским интерфейсом, только если в качестве целевых платформ выбраны Windows 8.1 и Windows Phone 8.1. Кроме того, столкнуться с ограничениями также можно при нацеливании на платформы (такие как Xbox, .NET Framework 4 и Windows Phone 7), выпущенные до выхода переносимой библиотеки классов. Через NuGet выпускаются пакеты .NET Framework, которые улучшает поддержку переносимой библиотеки классов для некоторых из более старых платформ. Дополнительные сведения и список пакетов NuGet см. в разделе [.NET Framework и выпуски по каналу](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Если член поддерживается в переносимой библиотеке классов и для выбранных целевых платформ, он будет показан в IntelliSense в вашем проекте. Кроме того, значок переносимой библиотеки классов ![поддерживается переносимой библиотекой](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") отображается в таблицах членов в [библиотеки классов .NET Framework](http://go.microsoft.com/fwlink/?LinkId=211358) рядом с поддерживаемыми членами. Например, в следующей таблице показано, что <xref:System.String.Chars%2A> свойство в <xref:System.String> класс поддерживается в переносимой библиотеки классов:  
+ Если член поддерживается в переносимой библиотеке классов и для выбранных целевых платформ, он будет показан в IntelliSense в вашем проекте. Кроме того, значок переносимой библиотеки классов ![поддерживается переносимой библиотекой](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") появится в таблицах членов в [библиотекиклассов.NETFramework](http://go.microsoft.com/fwlink/?LinkId=211358) рядом с поддерживаемыми членами. Например, в следующей таблице показано, что свойство <xref:System.String.Chars%2A> класса <xref:System.String> поддерживается в переносимой библиотеке классов:  
   
  ![Значок поддерживаемого члена](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Значок переносимой библиотеки классов  
   
- Можно также найти **сведения о версии** раздел справочника, посвященных примечанием, что тип или член поддерживается в проекте переносимой библиотеки классов:  
+ Можно также обратиться к **сведения о версии** раздела справки о для примечанием, что тип или член поддерживается проекта переносимой библиотеки классов:  
   
  ![Сведения о версии переносимой библиотеки](../../../docs/standard/cross-platform/media/plibversioninformation.png "PlibVersionInformation")  
 Пример сведений о версии  
@@ -197,11 +194,11 @@ caps.handback.revision: 95
  При создании приложения Магазина Windows или Windows Phone, которое ссылается на сборку переносимой библиотеки классов, все необходимые компоненты для развертывания приложения уже включены в пакет приложения, другие действия не требуются.  
   
 ### <a name="deploying-a-net-framework-app"></a>Развертывание приложения .NET Framework  
- При развертывании приложения .NET Framework, в котором имеется ссылка на сборку переносимой библиотеки классов, необходимо задать зависимость от нужной версии платформы .NET Framework. Задание этой зависимости обеспечивает установку нужной версии вместе с приложением. Если целевой платформы .NET Framework 4 или более поздней версии, на компьютере должна быть .NET Framework 4 с [обновление](http://go.microsoft.com/fwlink/?LinkId=210824), обновлением 4.0.3 для .NET Framework 4 или .NET Framework 4.5.  
+ При развертывании приложения .NET Framework, в котором имеется ссылка на сборку переносимой библиотеки классов, необходимо задать зависимость от нужной версии платформы .NET Framework. Задание этой зависимости обеспечивает установку нужной версии вместе с приложением. Если целевой платформы .NET Framework 4 или более поздней версии, на компьютере должен быть .NET Framework 4 с [обновление](http://go.microsoft.com/fwlink/?LinkId=210824), обновлением 4.0.3 для .NET Framework 4 или .NET Framework 4.5.  
   
--   Чтобы создать зависимость с развертыванием ClickOnce: В **обозревателе**, выберите узел проекта для проекта, которую требуется опубликовать. (Это проект, в котором имеется ссылка на проект переносимой библиотеки классов.) В строке меню выберите **проекта**, **свойства**и нажмите кнопку **публикации** вкладки. На **публикации** выберите **необходимых компонентов**. Отметьте требуемую версию платформы .NET Framework (или обновление платформы .NET Framework 4) как необходимый компонент.  
+-   Чтобы создать зависимость с развертыванием ClickOnce: В **обозревателе решений**, выберите узел проекта для проекта, необходимо опубликовать. (Это проект, в котором имеется ссылка на проект переносимой библиотеки классов.) В строке меню выберите **проекта**, **свойства**и нажмите кнопку **публикации** вкладки. На **публикации** выберите **необходимых компонентов**. Отметьте требуемую версию платформы .NET Framework (или обновление платформы .NET Framework 4) как необходимый компонент.  
   
--   Чтобы создать зависимость с проектом установки: В **обозревателе**, выберите проект установки. В строке меню выберите **проекта**, **свойства**, **необходимых компонентов**. Отметьте требуемую версию платформы .NET Framework как необходимый компонент.  
+-   Чтобы создать зависимость с проектом установки: В **обозревателе решений**, выберите проект установки. В строке меню выберите **проекта**, **свойства**, **необходимых компонентов**. Отметьте требуемую версию платформы .NET Framework как необходимый компонент.  
   
  Дополнительные сведения о развертывании приложений .NET Framework см. в разделе [руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
@@ -227,12 +224,11 @@ caps.handback.revision: 95
               style="visibility:hidden;height:0px;width:0px;border:0px">  
    </iframe>  
 </div>  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование переносимой библиотеки классов с MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)   
- [Ресурсы приложений для библиотек, предназначенных для нескольких платформ](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)   
- [Анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)   
- [Поддержка .NET framework для приложений для магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)   
- [Развертывание](../../../docs/framework/deployment/net-framework-and-applications.md)
+ [Использование переносимой библиотеки классов с MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [Ресурсы приложений для библиотек, предназначенных для нескольких платформ](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [Анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Развертывание](../../../docs/framework/deployment/net-framework-applications.md)

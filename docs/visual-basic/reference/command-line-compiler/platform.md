@@ -1,41 +1,24 @@
 ---
-title: "/ Platform (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: /platform (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6216ee056bc9dd8dd7dfd95b9d5a031880209370
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4d52ade26bc249625a77720fe05ad9c1ab58b04f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Указывает, на какой версии платформы среды CLR может запускаться выходной файл.  
@@ -55,7 +38,7 @@ ms.lasthandoff: 03/13/2017
 |`Itanium`|Компилирует сбору для запуска в 64-разрядной среде CLR на компьютере с процессором Itanium.|  
 |`arm`|Компилирует сбору для запуска на компьютере с процессором ARM.|  
 |`anycpu`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных версиях Windows и как 64-разрядное приложение в 64-разрядных версиях Windows. Этот флаг — значение по умолчанию.|  
-|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг действителен только для исполняемых файлов (.EXE), для него требуется [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)].|  
+|`anycpu32bitpreferred`|Компилирует сбору для запуска на любой платформе. Приложение будет выполняться как 32-разрядное приложение в 32-разрядных и 64-разрядных версиях Windows. Этот флаг действителен только для исполняемых файлов (.EXE), для него требуется [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## <a name="remarks"></a>Примечания  
  Используйте параметр `/platform`, чтобы указать процессор назначения для выходного файла.  
@@ -66,13 +49,13 @@ ms.lasthandoff: 03/13/2017
   
 -   Арифметика указателя, содержащая постоянные размеры.  
   
--   Неправильный платформенный вызов или объявления СОМ, использующие `Integer` для дескрипторов вместо <xref:System.IntPtr>.</xref:System.IntPtr>  
+-   Неверный вызов платформ или объявления СОМ, использующие дескрипторы `Integer` вместо <xref:System.IntPtr>.  
   
--   Приведение <xref:System.IntPtr>для `Integer`.</xref:System.IntPtr>  
+-   Приведение <xref:System.IntPtr> к `Integer`.  
   
 -   Использование вызов платформ или взаимодействия СОМ с компонентами, существующими не на всех платформах.  
   
- **/Platform** позволит устранить некоторые проблемы, если известно, что были внесены предположения об архитектуре, код будет выполняться на. В частности:  
+ **/Platform** позволит устранить некоторые проблемы, если известно, что были внесены предположения об архитектуре, код будет работать на. В частности:  
   
 -   Если целевой является 64-разрядная платформа, а приложение запущено на 32-разрядном компьютере, сообщение об ошибке появится гораздо раньше и будет более точным, чем сообщение об ошибке, которое появится без этого параметра.  
   
@@ -88,7 +71,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Исполняемые файлы, скомпилированные с параметром `/platform:anycpu32bitpreferred`, будут выполняться в 32-разрядной среде CLR.  
   
- Дополнительные сведения о разработке приложений для запуска на 64-разрядной версии Windows в разделе [64-разрядных приложений](https://msdn.microsoft.com/library/ms241064).  
+ Дополнительные сведения о том, как разрабатывать приложения для запуска в 64-разрядной версии Windows, см. в разделе [64-разрядных приложений](https://msdn.microsoft.com/library/ms241064).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Чтобы задать параметр /platform в среде разработки Visual Studio  
   
@@ -96,9 +79,9 @@ ms.lasthandoff: 03/13/2017
   
      Дополнительные сведения см. в разделе [NIB: управление свойства проекта с помощью конструктора проектов](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
-2.  На **компиляции** установите или снимите **предпочитать 32-разрядных** флажок, либо в **целевой ЦП** выберите значение.  
+2.  На **компиляции** установите или снимите **предпочитать 32-разрядных** флажок, либо в **целевой Процессор** выберите значение.  
   
-     Дополнительные сведения см. в разделе [компиляция, конструктор проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Дополнительные сведения см. в разделе [компиляция, конструктора проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование параметра компилятора `/platform`.  
@@ -108,6 +91,6 @@ vbc /platform:x86 myFile.vb
 ```  
   
 ## <a name="see-also"></a>См. также  
- [/ Target (Visual Basic)](target.md)   
- [Компилятор командной строки Visual Basic](index.md)   
+ [/ Target (Visual Basic)](target.md)  
+ [Компилятор Visual Basic с интерфейсом командной строки](index.md)  
  [Примеры командных строк компиляции](sample-compilation-command-lines.md)

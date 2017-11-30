@@ -1,43 +1,42 @@
 ---
-title: "Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "определение имен свойств [Visual Basic]"
-  - "анонимные типы [Visual Basic], определение имен и типов свойств"
-  - "определение типов свойств [Visual Basic]"
+title: "Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- inferring property names [Visual Basic]
+- anonymous types [Visual Basic], inferring property names and types
+- inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 66b9f8c0346f74ff631969bda122de7913a551c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов (Visual Basic)
 Анонимные типы не предоставляют механизм для прямого указания типов данных для свойств. Типы всех свойств определяются посредством вывода. В следующем примере типы `Name` и `Price` выводятся напрямую из значений, которые используются для их инициализации.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
   
  Анонимные типы также могут выводить имена и типы свойств из других источников. В последующих разделах представлен список ситуаций, где вывод возможен, и примеры обратных ситуаций.  
   
-## Успешный вывод  
+## <a name="successful-inference"></a>Успешный вывод  
   
-#### Анонимные типы могут выводить имена и типы свойств из следующих источников.  
+#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Анонимные типы могут выводить имена и типы свойств из следующих источников.  
   
--   Из имен переменных. Анонимный тип `anonProduct` будет иметь два свойства: `productName` и `productPrice`. Их типами данных будут типы исходных переменных, `String` и `Double` соответственно.  
+-   Из имен переменных. Анонимный тип `anonProduct` будет иметь два свойства: `productName` и `productPrice`. Их типами данных будут типы исходных переменных, `String` и `Double`соответственно.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
   
--   Из имен свойств или полей других объектов. Например, рассмотрим объект `car` типа `CarClass`, включающий свойства `Name` и `ID`. Чтобы создать новый экземпляр анонимного типа `car1` со свойствами `Name` и `ID`, которые инициализируются значениями из объекта `car`, можно написать следующее.  
+-   Из имен свойств или полей других объектов. Например, рассмотрим объект `car` типа `CarClass` , включающий свойства `Name` и `ID` . Чтобы создать новый экземпляр анонимного типа `car1`со свойствами `Name` и `ID` , которые инициализируются значениями из объекта `car` , можно написать следующее.  
   
      [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
   
@@ -49,7 +48,7 @@ caps.handback.revision: 19
   
      [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
   
-     Результирующий тип для `anon` будет иметь одно свойство `Book` c типом <xref:System.Collections.IEnumerable> \(XElement\).  
+     Результирующий тип для `anon` будет иметь одно свойство `Book`c типом <xref:System.Collections.IEnumerable>(XElement).  
   
 -   Из функции, которая не имеет параметров, например `SomeFunction` в следующем примере.  
   
@@ -61,9 +60,9 @@ caps.handback.revision: 19
   
      [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
   
-## Неудачный вывод  
+## <a name="inference-failures"></a>Неудачный вывод  
   
-#### Вывод имени завершится сбоем во многих случаях, в том числе в следующих.  
+#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Вывод имени завершится сбоем во многих случаях, в том числе в следующих.  
   
 -   Вывод является производным от вызова метода, конструктора или параметризованного свойства, для которого требуются аргументы. Предыдущее объявление `anon1` завершается сбоем, если `someFunction` имеет один или несколько аргументов.  
   
@@ -99,7 +98,7 @@ caps.handback.revision: 19
   
      [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_8.vb)]  
   
-     Обратите внимание, что изменение регистра \(изменение прописных букв на строчные и наоборот\) не делает имя уникальным.  
+     Обратите внимание, что изменение регистра (изменение прописных букв на строчные и наоборот) не делает имя уникальным.  
   
      `Dim price = 0`  
   
@@ -129,8 +128,8 @@ caps.handback.revision: 19
   
      [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
-## См. также  
- [Инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
+## <a name="see-also"></a>См. также  
+ [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [Key](../../../../visual-basic/language-reference/modifiers/key.md)

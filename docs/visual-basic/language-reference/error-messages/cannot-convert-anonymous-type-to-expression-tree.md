@@ -1,31 +1,29 @@
 ---
-title: "Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36548"
-  - "vbc36548"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36548"
+title: "Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36548
+- vbc36548
+helpviewer_keywords: BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c2cf8a40060359393807cfb648c46fef9ed853af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Компилятор не принимает преобразование анонимных типов к дереву выражений, если одно свойство анонимного типа используется для инициализации другого свойства анонимного типа.  Например, в следующем примере, `Prop1` является объявленной в списке инициализации и затем используется как начальное значение для `Prop2`.  
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля
+Компилятор не принимает преобразование анонимных в дерево выражения, если одно свойство анонимного типа используется для инициализации другого свойства анонимного типа. Например, в следующем коде `Prop1` объявлена в списке инициализации, а затем используется в качестве начального значения для `Prop2`.  
   
-```vb#  
+```vb  
 Module M2  
   
     Sub ExpressionExample(Of T)(ByVal x As Expressions.Expression(Of Func(Of T)))  
@@ -39,11 +37,11 @@ Module M2
 End Module  
 ```  
   
- **Идентификатор ошибки**: BC36548  
+ **Идентификатор ошибки:** BC36548  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Присвойте начальное значение для локальной переменной `Prop1`.  Присвойте начальные значения обеим переменным \(`Prop1` и `Prop2`\), как показано в следующем коде.  
+-   Присвойте начальное значение для `Prop1` локальной переменной. Назначьте этой переменной как `Prop1` и `Prop2`, как показано в следующем коде.  
   
     ```  
     Sub Main()  
@@ -54,7 +52,7 @@ End Module
     End Sub  
     ```  
   
-## См. также  
- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Деревья выражений](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)   
- [Практическое руководство. Использование деревьев выражений для построения динамических запросов](../Topic/How%20to:%20Use%20Expression%20Trees%20to%20Build%20Dynamic%20Queries%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Практическое руководство. Использование деревьев выражений для построения динамических запросов](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)

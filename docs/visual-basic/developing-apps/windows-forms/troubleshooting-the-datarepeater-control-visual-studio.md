@@ -1,74 +1,75 @@
 ---
-title: "Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, устранение неполадок"
+title: "Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В данном разделе перечислены типичные проблемы, которые могут произойти при работе с элементом управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+# <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>Устранение неполадок при использовании элемента управления DataRepeater (Visual Studio)
+В этом разделе перечислены распространенные проблемы, которые могут возникнуть при работе с <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления.  
   
-## Не происходят события клавиатуры и мыши для элемента управления DataRepeater  
- Некоторые события элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> такие, как события клавиатуры и мыши, не вызываются.  Это предусмотрено разработчиками.  Сам управляющий элемент <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> является контейнером для объектов <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> и к нему нельзя обратиться во время выполнения.  Элемент <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> не предоставляет события на этапе разработки.  Следовательно, щелчок по элементу или нажатие клавиши не вызовет события, если элемент находится в фокусе.  
+## <a name="datarepeater-keyboard-and-mouse-events-are-not-raised"></a>Не формируются событий мыши и клавиатуры DataRepeater  
+ Некоторые <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> события элементов управления, таких как события клавиатуры и мыши, не вызываются. Это сделано намеренно. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Сам элемент управления является контейнером для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> объектов и не доступен во время выполнения. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> Не предоставляет события во время разработки. Таким образом при выборе пункта меню или нажатие клавиши, когда элемент получает фокус не вызывают событие.  
   
- Исключение происходит, если свойство <xref:System.Windows.Forms.Control.Padding%2A> имеет большее значение, чем это позволено границами элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  В этом случае щелчок на предоставленном поле вызывает события мыши.  
+ Чтобы это исключение возникает, когда <xref:System.Windows.Forms.Control.Padding%2A> свойство имеет значение большого достаточно значение для предоставления края <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Таким образом щелкнув в предоставленном поле вызывает события мыши.  
   
- Чтобы устранить эту проблему, добавьте элемент управления <xref:System.Windows.Forms.Panel> в область <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> и затем добавьте остальные элементы управления в <xref:System.Windows.Forms.Panel>.  Можно добавить код в обработчик события элемента управления <xref:System.Windows.Forms.Panel> для событий мыши и клавиатуры.  
+ Чтобы устранить эту проблему, добавьте <xref:System.Windows.Forms.Panel> управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> раздел <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления, а затем добавьте остальные элементы управления, <xref:System.Windows.Forms.Panel>. Затем можно добавить код для <xref:System.Windows.Forms.Panel> элемента управления обработчики событий для события клавиатуры и мыши.  
   
-## Элемент управления DataRepeater частично скрыт навигатором привязки  
- При первоначальном добавлении элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> на форму и последующего добавления элементов управления с привязкой к данным из окна **Источники данных**, элемент управления <xref:System.Windows.Forms.BindingNavigator> может происходить над элементом управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Это известное ограничение окна **Источники данных** и оно согласуется с поведением остальных элементов управления, таких как элемент управления <xref:System.Windows.Forms.DataGridView>.  
+## <a name="the-datarepeater-is-partially-hidden-behind-the-binding-navigator"></a>Элемент управления DataRepeater частично скрыт навигатором привязки  
+ При первом добавлении <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления в форму, а затем добавьте элементы управления с привязкой к данным из **источники данных** окна, <xref:System.Windows.Forms.BindingNavigator> управления могут отображаться поверх <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Это известное ограничение **источники данных** окна и согласуется с поведением других элементов управления, таких как <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
- Можно также на этапе разработки поместить <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> ниже, чем элемент управления <xref:System.Windows.Forms.BindingNavigator> или добавить код аналогичный следующему коду в обработчик событий `Load`.  
+ Можно либо переместить <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> ниже, чем <xref:System.Windows.Forms.BindingNavigator> во время разработки, или же добавьте код, аналогичный следующему в `Load` обработчика событий.  
   
-```vb#  
+```vb  
 DataRepeater1.Top = ProductsBindingNavigator.Height  
 ```  
   
-```c#  
+```csharp  
 dataRepeater1.Top = productsBindingNavigator.Height;  
 ```  
   
-## Элементы управления отображаются некорректно во время выполнения  
- Некоторые элементы управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> могут отображаться во время выполнения не так, как ожидалось.  Процесс, использующийся для копирования элементов управления из <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> не может всегда определять свойства всех элементов управления.  Например, если добавить несвязанный элемент управления <xref:System.Windows.Forms.ListBox> в элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> на этапе разработки и заполнить его коллекцию <xref:System.Windows.Forms.ListBox.Items%2A> списком строк, <xref:System.Windows.Forms.ListBox> будет пустым все время выполнения.  Это происходит из\-за того, что в процессе клонирования нельзя учесть свойство <xref:System.Windows.Forms.ListBox.Items%2A>.  
+## <a name="controls-are-not-displayed-correctly-at-run-time"></a>Элементы управления отображаются правильно во время выполнения  
+ Некоторые элементы управления в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемент управления может не отображаться должным образом во время выполнения. Процесс, используемый для копирования элементов управления из <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> не всегда можно определить все свойства всех элементов управления. Например, если добавить несвязанный <xref:System.Windows.Forms.ListBox> управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> управления во время разработки и заполнить его <xref:System.Windows.Forms.ListBox.Items%2A> набор со списком строк, <xref:System.Windows.Forms.ListBox> будет пустым во время выполнения. Это, поскольку процесс клонирования не может учитывать <xref:System.Windows.Forms.ListBox.Items%2A> свойство.  
   
- Такие проблемы как эта можно устранить, восстановив потерянные свойства в событии <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>, которое возникает после того, как клонирование по умолчанию завершено.  В следующем примере показано восстановление коллекции <xref:System.Windows.Forms.ListBox.Items%2A> элемента управления <xref:System.Windows.Forms.ListBox> в обработчике событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>.  
+ Проблемы, например, это можно исправить, восстановив потерянные свойства в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> событие, возникающее после завершения клонирования по умолчанию. Ниже приведен пример, как исправить <xref:System.Windows.Forms.ListBox.Items%2A> коллекцию <xref:System.Windows.Forms.ListBox> управления в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> обработчика событий.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-csharp[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
  [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
-## Потерян символ выделения заголовка элемента  
- При изменении свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> заголовка элемента в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, выбор некоторых цветов может вызвать исчезновение символа выделения.  Изменение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> также может вызвать потерю символа выделения.  
+## <a name="the-selection-symbol-on-the-item-header-is-missing"></a>Отсутствует символ выделения заголовка элемента  
+ При изменении <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> свойство элемента заголовка в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления, некоторые цветов может вызвать исчезновение символа выделения. Изменение <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойство также может вызвать исчезновение символа выделения.  
   
- Цвет и размер символа выделения нельзя изменять.  
+ Нельзя изменить цвет и размер символа выделения.  
   
--   Если свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> имеет значение <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будет отображаться.  
+-   Если задать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> для <xref:System.Drawing.Color.White%2A>, при первоначальном выборе элемента символ выделения не будут видны.  
   
--   Если свойству <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> присвоено значение <xref:System.Drawing.Color.Black%2A>, то символ выделения не будет виден при выделении элемента управления, и в режиме редактирования не будет виден символ карандаша.  
+-   Если задать <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> для <xref:System.Drawing.Color.Black%2A>, символ выделения не будут видны при выборе элемента управления, и если элемент управления находится в режиме редактирования символ карандаша не будут видны.  
   
--   Если значение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> меньше 11, значки индикатора не отображаются в заголовке элемента.  
+-   Если <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> свойству присвоено значение, которое меньше 11, не будут отображаться значки индикатора в заголовке элементов.  
   
- Можно предоставить свои собственные заголовок элемента и символ выделения, используя элемент управления <xref:System.Windows.Forms.PictureBox> и управляя свойством <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в событии <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+ Можно предоставить собственную символ заголовок "и" Выбор элемента с помощью <xref:System.Windows.Forms.PictureBox> управление и мониторинг <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> свойство <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> событие <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> элемента управления. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
-## См. также  
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Изменение структуры элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)   
- [Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)   
- [Практическое руководство. Поиск данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Изменение структуры элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ [Практическое руководство. Поиск данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [Как: создать Главная и подчиненная формы с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)

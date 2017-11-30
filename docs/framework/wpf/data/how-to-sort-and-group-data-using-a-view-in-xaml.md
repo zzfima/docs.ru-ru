@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Сортировка и группировка данных с помощью представления в XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "привязка данных, группировка данных в представлениях XAML"
-  - "привязка данных, сортировка данных в представлениях XAML"
-  - "группировка данных в представлениях XAML"
-  - "сортировка данных в представлениях XAML"
-  - "представления, группирование данных"
-  - "представления, сортировка данных"
-  - "XAML, группировка данных в представлениях"
-  - "XAML, сортировка данных в представлениях"
+title: "Практическое руководство. Сортировка и группировка данных с помощью представления в XAML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], grouping data in views in XAML
+- XAML [WPF], sorting data in views
+- grouping data in views in XAML [WPF]
+- data binding [WPF], sorting data in views in XAML
+- sorting data in views in XAML [WPF]
+- XAML [WPF], grouping data in views
+- views [WPF], sorting data
+- views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c219def87e258a2c9fc1bf4f4867287e6156c59a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сортировка и группировка данных с помощью представления в XAML
-В этом примере демонстрируется создание представления коллекции данных в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Представления предоставляют возможность группировки, сортировки, фильтрации и категоризации текущего элемента.  
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Практическое руководство. Сортировка и группировка данных с помощью представления в XAML
+В этом примере показано, как создать представление набора данных в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Представления предоставляют функциональные возможности группирования, сортировки, фильтрации и понятие текущего элемента.  
   
-## Пример  
- В следующем примере статический ресурс *places* определяется как коллекция объектов *Place*, в которой каждый объект *Place* состоит из названия города и штата.  Префикс *src* обозначает пространство имен, в котором определяется источник данных *Places*.  Префикс *scm* сопоставляется с пространством имен `"clr-namespace:System.ComponentModel;assembly=WindowsBase"`, а префикс *dat* — с пространством имен `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.  
+## <a name="example"></a>Пример  
+ В следующем примере статический ресурс с именем *помещает* определяется как совокупность *месте* объектов, в котором каждый *месте* объект состоит из названия города и состояние. Префикс *src* пространство имен, где источник данных *местах* определен. Префикс *scm* сопоставляется `"clr-namespace:System.ComponentModel;assembly=WindowsBase"` и *dat* сопоставляется `"clr-namespace:System.Windows.Data;assembly=PresentationFramework"`.  
   
- В следующем примере создается представление коллекции данных, отсортированных по названию города и сгруппированных по штату.  
+ В следующем примере создается представление коллекции данных, отсортированных по названию города и сгруппированных по состоянию.  
   
- [!code-xml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
+ [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
- Представление может быть источником привязки, как в следующем примере.  
+ Представление может быть источником привязки, как показано в следующем примере:  
   
- [!code-xml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
+ [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
- Для привязки к данным XML, определенным в ресурсе <xref:System.Windows.Data.XmlDataProvider>, укажите перед именем XML символ @.  
+ Для привязки к данным XML, определенные в <xref:System.Windows.Data.XmlDataProvider> ресурсов, перед именем XML с символа @.  
   
- [!code-xml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
+ [!code-xaml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
- [!code-xml[CollectionViewSource#Attribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
+ [!code-xaml[CollectionViewSource#Attribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
-## См. также  
- <xref:System.Windows.Data.CollectionViewSource>   
- [Получение представления по умолчанию для коллекции данных](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Data.CollectionViewSource>  
+ [Получение представления по умолчанию для коллекции данных](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
+ [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

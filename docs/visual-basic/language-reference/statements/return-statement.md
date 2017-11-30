@@ -1,33 +1,31 @@
 ---
-title: "Оператор Return (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Return"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "поток управления, возврат управления выражениям"
-  - "выражения [Visual Basic], возврат управления"
-  - "Return - оператор"
-  - "Return - оператор, синтаксис"
+title: "Оператор Return (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Return
+helpviewer_keywords:
+- Return statement [Visual Basic], syntax
+- control flow [Visual Basic], returning control to expressions
+- Return statement [Visual Basic]
+- expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b66d16a249164b8989f05f10c785b97055bfde9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Return (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Возвращает управление коду, вызвавшему процедуру `Function`, `Sub` `Get`, `Set` или `Operator`.  
+# <a name="return-statement-visual-basic"></a>Оператор Return (Visual Basic)
+Возвращает элемент управления в код, который вызвал `Function`, `Sub`, `Get`, `Set`, или `Operator` процедуры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Return  
@@ -35,31 +33,31 @@ Return
 Return expression  
 ```  
   
-## Часть  
+## <a name="part"></a>Отделение  
  `expression`  
- Является обязательным в процедурах `Function`, `Get` и `Operator`.  Выражение, представляющее значение, возвращаемое вызывающему коду.  
+ Требуется в `Function`, `Get`, или `Operator` процедуры. Выражение, представляющее значение, возвращаемое вызывающему коду.  
   
-## Заметки  
- В процедуре `Sub` или `Set` оператор `Return` эквивалентен оператору `Exit Sub` или `Exit Property`, а `expression` не указывается.  
+## <a name="remarks"></a>Примечания  
+ В `Sub` или `Set` процедуре `Return` оператор эквивалентен `Exit Sub` или `Exit Property` инструкции, и `expression` не должен быть указан.  
   
- В процедуре `Function`, `Get` или `Operator` оператор `Return` должен включать `expression`, а `expression` должно определяться значением типа данных, преобразуемого в возвращаемый тип процедуры.  В процедурах `Function` и `Get` имеется альтернативный способ назначения выражения имени процедуры для использования в качестве возвращаемого значения, а также выполнения операторов `Exit Function` и `Exit Property`.  В процедуре `Operator` следует использовать `Return` `expression`.  
+ В `Function`, `Get`, или `Operator` процедуре `Return` инструкция должна включать `expression`, и `expression` должны иметь тип данных, которое можно преобразовать в тип возвращаемого значения процедуры. В `Function` или `Get` процедуры, также существует возможность назначения выражения имени процедуры для использования в качестве возвращаемого значения и последующего выполнения `Exit Function` или `Exit Property` инструкции. В `Operator` процедуру, необходимо использовать `Return``expression`.  
   
- Можно включить столько операторов `Return`, сколько необходимо в той же процедуре.  
+ Можно включить столько `Return` инструкций в той же процедуре соответствующим образом.  
   
 > [!NOTE]
->  Код в блоке `Finally` выполняется после того, как встретится оператор `Return` в блоке `Try` или `Catch` блок, но перед этим выполняется оператор `Return`.  A `Return` не удалось включить в выписку  `Finally` блок.  
+>  Код в `Finally` блок выполняется после `Return` инструкции в `Try` или `Catch` блок обнаружен, но перед этим `Return` выполняет инструкцию. Объект `Return` инструкции не могут быть включены в `Finally` блока.  
   
-## Пример  
- В следующем примере оператор `Return` используется несколько раз для возвращения из процедуры, если дальнейшие вычисления не нужны.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `Return` инструкции несколько раз, чтобы возвращать вызывающему коду, если процедуру не нужно ничего.  
   
  [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
-## См. также  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)   
- [Оператор Operator](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

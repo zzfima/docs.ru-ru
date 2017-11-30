@@ -1,34 +1,24 @@
 ---
-title: "Сохранение объекта в Visual Studio (Visual Basic) | Документация Майкрософт"
+title: "Сохранение объекта в Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-<a id="walkthrough-persisting-an-object-in-visual-studio-visual-basic" class="xliff"></a>
-# Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic)
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic)
 Несмотря на то, что во время разработки свойствам объекта можно задать значения по умолчанию, любые значения, введенные во время выполнения, будут потеряны при уничтожении объекта. С помощью сериализации можно сохранить данные объекта между экземплярами, что позволит сохранять значения и извлекать их при следующем создании экземпляра объекта.  
   
 > [!NOTE]
@@ -45,12 +35,10 @@ ms.lasthandoff: 05/22/2017
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-<a id="creating-the-loan-object" class="xliff"></a>
-## Создание объекта Loan  
+## <a name="creating-the-loan-object"></a>Создание объекта Loan  
  Первым шагом является создание класса `Loan` и тестового приложения, которое использует класс.  
   
-<a id="to-create-the-loan-class" class="xliff"></a>
-### Создание класса Loan  
+### <a name="to-create-the-loan-class"></a>Создание класса Loan  
   
 1.  Создайте проект библиотеки классов и назовите его LoanClass. Дополнительные сведения см. в разделе [Создание проектов и решений](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
@@ -96,8 +84,7 @@ ms.lasthandoff: 05/22/2017
   
  Также потребуется создать простое приложение, которое использует класс `Loan`.  
   
-<a id="to-create-a-test-application" class="xliff"></a>
-### Создание тестового приложения  
+### <a name="to-create-a-test-application"></a>Создание тестового приложения  
   
 1.  Чтобы добавить проект приложения Windows Forms в существующее решение, щелкните в меню **Файл** пункт **Добавить**, а затем **Новый проект**.  
   
@@ -144,12 +131,10 @@ ms.lasthandoff: 05/22/2017
   
  В реальной жизни процентная ставка время от времени меняется, но не при каждом запуске этого приложения. Чтобы не заставлять пользователя обновлять процентную ставку при каждом запуске приложения, рекомендуется сохранять самое последнее значение процентной ставки между экземплярами приложения. На следующем шаге для этого в класс Loan будет добавлена сериализация.  
   
-<a id="using-serialization-to-persist-the-object" class="xliff"></a>
-## Использование сериализации для хранения объекта  
+## <a name="using-serialization-to-persist-the-object"></a>Использование сериализации для хранения объекта  
  Чтобы сохранить значения для класса Loan, прежде всего необходимо отметить класс атрибутом `Serializable`.  
   
-<a id="to-mark-a-class-as-serializable" class="xliff"></a>
-### Отметка класса как сериализуемого  
+### <a name="to-mark-a-class-as-serializable"></a>Отметка класса как сериализуемого  
   
 -   Измените объявление класса для класса Loan следующим образом:  
   
@@ -160,8 +145,7 @@ ms.lasthandoff: 05/22/2017
   
  Атрибут `Serializable` сообщает компилятору, что все находящееся в классе может быть сохранено в файле. Поскольку событие `PropertyChanged` обрабатывается в объекте Windows Form, его невозможно сериализовать. Атрибут `NonSerialized` используется для пометки членов класса, которые не следует сохранять.  
   
-<a id="to-prevent-a-member-from-being-serialized" class="xliff"></a>
-### Предотвращение сериализации членов  
+### <a name="to-prevent-a-member-from-being-serialized"></a>Предотвращение сериализации членов  
   
 -   Измените объявление события `PropertyChanged` следующим образом:  
   
@@ -173,8 +157,7 @@ ms.lasthandoff: 05/22/2017
   
  Следующим шагом будет добавление кода сериализации в приложение LoanApp. Чтобы выполнить сериализацию класса и записать данные в файл, используйте пространства имен <xref:System.IO> и <xref:System.Xml.Serialization>. Во избежание ввода полных имен можно добавить ссылки на необходимые библиотеки классов.  
   
-<a id="to-add-references-to-namespaces" class="xliff"></a>
-### Добавление ссылок на пространства имен  
+### <a name="to-add-references-to-namespaces"></a>Добавление ссылок на пространства имен  
   
 -   Добавьте в начало файла `Form1` следующие инструкции:  
   
@@ -187,8 +170,7 @@ ms.lasthandoff: 05/22/2017
   
  Следующим шагом является добавление кода для десериализации объекта из файла при создании объекта.  
   
-<a id="to-deserialize-an-object" class="xliff"></a>
-### Десериализация объекта  
+### <a name="to-deserialize-an-object"></a>Десериализация объекта  
   
 1.  Добавьте в класс константу для имени файла сериализованных данных.  
   
@@ -222,8 +204,7 @@ ms.lasthandoff: 05/22/2017
   
  Далее необходимо добавить код для сохранения данных, введенных в текстовые поля класса `Loan`, а затем сериализовать класс в файл.  
   
-<a id="to-save-the-data-and-serialize-the-class" class="xliff"></a>
-### Сохранение данных и сериализация класса  
+### <a name="to-save-the-data-and-serialize-the-class"></a>Сохранение данных и сериализация класса  
   
 -   В процедуру события `Form1_FormClosing` добавьте следующий код:  
   
@@ -243,7 +224,6 @@ ms.lasthandoff: 05/22/2017
   
  Теперь можно снова собрать и запустить приложение. Первоначально в текстовых полях отображаются значения по умолчанию. Попробуйте изменить их и ввести имя в четвертое текстовое поле. Закройте приложение, а затем снова запустите его. Обратите внимание, что теперь в текстовых полях отображаются новые значения.  
   
-<a id="see-also" class="xliff"></a>
-## См. также  
- [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
+## <a name="see-also"></a>См. также  
+ [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)  
  [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)

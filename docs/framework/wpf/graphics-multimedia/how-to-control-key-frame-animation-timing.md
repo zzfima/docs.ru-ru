@@ -1,75 +1,81 @@
 ---
-title: "Практическое руководство. Распределение времени для анимации с ключевыми кадрами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ключевые кадры [WPF], учет времени"
-  - "учет времени при анимации по ключевым кадрам"
+title: "Практическое руководство. Распределение времени для анимации с ключевыми кадрами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- key frames [WPF], timing
+- timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bc3566cf25282749a09c5f2372cd1c81e3ce881
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Распределение времени для анимации с ключевыми кадрами
-В этом примере описывается порядок распределения времени полных кадров в анимации с полными кадрами.  Как и в других видах анимации, в анимации с полными кадрам используется свойство <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  Помимо определения продолжительности анимации, необходимо определить часть общего времени, выделяемую для каждого полного кадра.  Чтобы выделить время, определите объект <xref:System.Windows.Media.Animation.KeyTime> для каждого полного кадра в анимации.  
+# <a name="how-to-control-key-frame-animation-timing"></a>Практическое руководство. Распределение времени для анимации с ключевыми кадрами
+В этом примере показано, как управлять временем ключевых кадров в анимацию кадрам. Как и другие виды анимации, имеют кадрам <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство. Помимо указания продолжительности анимации, необходимо указать, какая часть длительности выделяется для каждого из его ключевых кадров. Чтобы выделить время, необходимо указать <xref:System.Windows.Media.Animation.KeyTime> для каждого ключевого кадра анимации.  
   
- Объект <xref:System.Windows.Media.Animation.KeyTime> для каждого полного кадра определяет время завершения полного кадра \(продолжительность воспроизведения полного кадра не указывается\).  Можно определить объект <xref:System.Windows.Media.Animation.KeyTime> в виде значения класса <xref:System.TimeSpan>, в виде процентного соотношения, а также в качестве специального значения свойства <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> или <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ <xref:System.Windows.Media.Animation.KeyTime> Для каждого полного кадра определяет время завершения полного кадра (продолжительность воспроизведения ключевого кадра не указывается). Можно указать <xref:System.Windows.Media.Animation.KeyTime> как <xref:System.TimeSpan> значение в процентах или в виде <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> или <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> особое значение.  
   
-## Пример  
- В следующем примере объект <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> используется для анимации движения прямоугольника по экрану.  Для свойств KeyTime полных кадров устанавливаются значения <xref:System.TimeSpan>.  
+## <a name="example"></a>Пример  
+ В следующем примере используется <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> для анимации прямоугольник по экрану. KeyTime ключевых кадров устанавливаются с помощью <xref:System.TimeSpan> значения.  
   
  [!code-csharp[keyframes_snip#KeyTimesTimeSpanExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimestimespanexample)]
  [!code-vb[keyframes_snip#KeyTimesTimeSpanExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimestimespanexample)]
- [!code-xml[keyframes_snip#KeyTimesTimeSpanExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimestimespanexample)]  
+ [!code-xaml[keyframes_snip#KeyTimesTimeSpanExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimestimespanexample)]  
   
- На следующем рисунке показаны моменты достижения значений каждого полного кадра.  
+ На следующем рисунке показано, при достижении значения каждого ключевого кадра.  
   
- ![Ключевые значения достигаются за 3, 4 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime1-timespan.png "graphicsmm\_keyframe\_keytime1\_timespan")  
+ ![Ключевые значения достигаются за 3, 4 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime1-timespan.png "graphicsmm_keyframe_keytime1_timespan")  
   
- В следующем примере описывается аналогичная анимация, в которой для свойств KeyTime полных кадров установлены значения в виде процентного соотношения.  
+ В следующем примере показано анимации, которая идентична, за исключением того, что KeyTime ключевых кадров устанавливаются с помощью значения в процентах.  
   
  [!code-csharp[keyframes_snip#KeyTimesPercentageExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimespercentageexample)]
  [!code-vb[keyframes_snip#KeyTimesPercentageExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimespercentageexample)]
- [!code-xml[keyframes_snip#KeyTimesPercentageExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespercentageexample)]  
+ [!code-xaml[keyframes_snip#KeyTimesPercentageExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespercentageexample)]  
   
- На следующем рисунке показаны моменты достижения значений каждого полного кадра.  
+ На следующем рисунке показано, при достижении значения каждого ключевого кадра.  
   
- ![Ключевые значения достигаются за 3, 4 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime2-percentage.png "graphicsmm\_keyframe\_keytime2\_percentage")  
+ ![Ключевые значения достигаются за 3, 4 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime2-percentage.png "graphicsmm_keyframe_keytime2_percentage")  
   
- В следующем примере используются значения KeyTime <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
+ В следующем примере используется <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ключевых значений времени.  
   
  [!code-csharp[keyframes_snip#KeyTimesUniformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimesuniformexample)]
  [!code-vb[keyframes_snip#KeyTimesUniformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimesuniformexample)]
- [!code-xml[keyframes_snip#KeyTimesUniformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimesuniformexample)]  
+ [!code-xaml[keyframes_snip#KeyTimesUniformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimesuniformexample)]  
   
- На следующем рисунке показаны моменты достижения значений каждого полного кадра.  
+ На следующем рисунке показано, при достижении значения каждого ключевого кадра.  
   
- ![Ключевые значение достигаются за 3,3; 6,6, и 9,9 секунды](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime3-uniform.png "graphicsmm\_keyframe\_keytime3\_uniform")  
+ ![Ключевые значения достигаются за 3,3; 6,6 и 9,9 секунды](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime3-uniform.png "graphicsmm_keyframe_keytime3_uniform")  
   
- В последнем примере используются значения KeyTime <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ В последнем примере используются <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ключевых значений времени.  
   
  [!code-csharp[keyframes_snip#KeyTimesPacedExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimespacedexample)]
  [!code-vb[keyframes_snip#KeyTimesPacedExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimespacedexample)]
- [!code-xml[keyframes_snip#KeyTimesPacedExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespacedexample)]  
+ [!code-xaml[keyframes_snip#KeyTimesPacedExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespacedexample)]  
   
- На следующем рисунке показаны моменты достижения значений каждого полного кадра.  
+ На следующем рисунке показано, при достижении значения каждого ключевого кадра.  
   
- ![Ключевые значения достигаются за 0, 5 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime4-paced.png "graphicsmm\_keyframe\_keytime4\_paced")  
+ ![Ключевые значения достигаются за 0, 5 и 10 секунд](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyframe-keytime4-paced.png "graphicsmm_keyframe_keytime4_paced")  
   
- В целях упрощения, в версиях кода этого примера используются локальные анимации, а не раскадровки, поскольку к одному свойству применяется только одна анимация. При необходимости можно изменить примеры для использования раскадровок.  Пример, в котором описывается объявление раскадровки в коде, см. в разделе [Анимация свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
+ Для простоты версии кода этого примера используются локальные анимации, не раскадровки, поскольку только одна анимация применяется к одному свойству, но может быть изменена примеры а. Пример, в котором описывается объявление раскадровки в коде см. в разделе [анимации свойства с помощью раскадровки](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  Дополнительные сведения об анимации с полными кадрами см. в разделе [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012). Дополнительные сведения об анимации см. в разделе [кадрами ключ](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
-## См. также  
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

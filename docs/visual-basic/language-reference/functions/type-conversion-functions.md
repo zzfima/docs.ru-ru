@@ -1,104 +1,103 @@
 ---
-title: "Функции преобразования типов (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CUShort"
-  - "vb.csng"
-  - "vb.CDate"
-  - "CByte"
-  - "CSng"
-  - "vb.CDec"
-  - "CBool"
-  - "CStr"
-  - "vb.CULng"
-  - "CDec"
-  - "CVErr"
-  - "CDbl"
-  - "CShort"
-  - "vb.CObj"
-  - "vb.CVErr"
-  - "CULng"
-  - "vb.cdbl"
-  - "vb.cbool"
-  - "CObj"
-  - "CDate"
-  - "CLng"
-  - "vb.cstr"
-  - "vb.cbyte"
-  - "vb.clng"
-  - "vb.CChar"
-  - "CUShort"
-  - "vb.CUInt"
-  - "vb.cint"
-  - "vb.CShort"
-  - "CInt"
-  - "CUInt"
-  - "CChar"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "банковское округление"
-  - "boolean - тип данных, преобразование"
-  - "Byte - тип данных, преобразование"
-  - "CBool - функция"
-  - "CByte - функция"
-  - "CChar - функция"
-  - "CDate - функция"
-  - "CDbl - функция"
-  - "CDec - функция"
-  - "Char - тип данных, преобразование"
-  - "CInt - функция"
-  - "CLng - функция"
-  - "преобразования, функции преобразования типов"
-  - "CSByte - функция"
-  - "CSng - функция"
-  - "CStr - функция"
-  - "CUInt - функция"
-  - "CULng - функция"
-  - "Currency - тип данных, функции преобразования"
-  - "CUShort - функция"
-  - "преобразование типов данных, функции для"
-  - "типы данных [Visual Basic], преобразование"
-  - "Date - тип данных, преобразование"
-  - "даты, преобразование"
-  - "Decimal - тип данных, преобразование"
-  - "Double - тип данных, преобразование"
-  - "числа двойной точности"
-  - "дроби"
-  - "Integer - тип данных, преобразование"
-  - "целые числа, функции преобразования типов"
-  - "Long - тип данных, преобразование"
-  - "числа, преобразование"
-  - "числа, округление"
-  - "возвращаемые значения, типы данных"
-  - "округление чисел, банковское округление"
-  - "округление чисел, преобразование типов"
-  - "Short - тип данных, преобразование"
-  - "Single - тип данных, преобразование"
-  - "числа одинарной точности, преобразование"
-  - "преобразование строк, функции преобразования"
-  - "String - тип данных, преобразование"
-  - "текст, преобразование"
-  - "значения времени, преобразование"
-  - "преобразование типов, функции для"
-  - "преобразование типов, Visual Basic в сравнении с .NET Framework"
+title: "Функции преобразования типов (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.CUShort
+- vb.csng
+- vb.CDate
+- CByte
+- CSng
+- vb.CDec
+- CBool
+- CStr
+- vb.CULng
+- CDec
+- CVErr
+- CDbl
+- CShort
+- vb.CObj
+- vb.CVErr
+- CULng
+- vb.cdbl
+- vb.cbool
+- CObj
+- CDate
+- CLng
+- vb.cstr
+- vb.cbyte
+- vb.clng
+- vb.CChar
+- CUShort
+- vb.CUInt
+- vb.cint
+- vb.CShort
+- CInt
+- CUInt
+- CChar
+helpviewer_keywords:
+- CDate function
+- CByte function
+- Integer data type [Visual Basic], converting
+- string conversion [Visual Basic], conversion functions
+- fractions
+- data types [Visual Basic], converting
+- text, converting
+- CDec function
+- Char data type [Visual Basic], converting
+- type conversion [Visual Basic], functions for
+- Single data type [Visual Basic], converting
+- numbers [Visual Basic], rounding
+- rounding numbers [Visual Basic], type conversion
+- CUShort function
+- Long data type [Visual Basic], converting
+- return values [Visual Basic], data types
+- single-precision numbers [Visual Basic], converting
+- data type conversion [Visual Basic], functions for
+- CStr function
+- times [Visual Basic], converting
+- CSng function
+- conversions [Visual Basic], type conversion functions
+- CBool function
+- CDbl function
+- CUInt function
+- Currency data type [Visual Basic], conversion functions
+- numbers [Visual Basic], converting
+- Double data type [Visual Basic], converting
+- CLng function
+- CSByte function
+- double-precision numbers
+- Decimal data type [Visual Basic], converting
+- Boolean data type [Visual Basic], converting
+- integers [Visual Basic], type conversion functions
+- dates [Visual Basic], converting
+- CULng function
+- CInt function
+- Date data type [Visual Basic], converting
+- Byte data type [Visual Basic], converting
+- String data type [Visual Basic], converting
+- CChar function
+- banker's rounding
+- Short data type [Visual Basic], converting
+- rounding numbers [Visual Basic], banker's rounding
+- type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Функции преобразования типов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Эти функции компилируются путем подстановки кода, т. е. код преобразования является частью кода, вычисляющего выражение.  В некоторых случаях отсутствует вызов процедуры для выполнения преобразований, что повышает производительность.  Каждая функция приводит выражение к определенному типу данных.  
+# <a name="type-conversion-functions-visual-basic"></a>Функции преобразования типов (Visual Basic)
+Эти функции являются скомпилированных встроенный, это означает, что код преобразования является частью кода, вычисляет выражение. Иногда отсутствует вызов процедуры для выполнения преобразований, что улучшает производительность. Каждая функция преобразует выражение к определенному типу данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 CBool(expression)  
@@ -119,163 +118,163 @@ CULng(expression)
 CUShort(expression)  
 ```  
   
-## Часть  
+## <a name="part"></a>Отделение  
  `expression`  
- Обязательный.  Любое выражение исходного типа данных.  
+ Обязательный. Любое выражение исходного типа данных.  
   
-## Тип данных возвращаемого значения.  
- Имя функции определяет возвращаемый тип, как показано в следующей таблице.  
+## <a name="return-value-data-type"></a>Тип данных возвращаемого значения  
+ Имя функции определяет тип данных значение, которое возвращается, как показано в следующей таблице.  
   
-|Имя функции|Возвращаемый тип данных.|Диапазон для аргумента `expression`|  
-|-----------------|------------------------------|-----------------------------------------|  
-|`CBool`|[Тип данных Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Любое допустимое `Char`, `String` или числовое выражение.|  
-|`CByte`|[Тип данных Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|от 0 до 255 \(без знака\); дробная часть округляется.<sup>1</sup>|  
-|`CChar`|[Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|Любое допустимое `Char` или `String` выражение; преобразуется только первый знак `String`; значение может быть от 0 до 65535 \(без знака\).|  
+|Имя функции|Тип возвращаемых данных|Диапазон `expression` аргумент|  
+|-------------------|----------------------|-------------------------------------|  
+|`CBool`|[Логический тип данных](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Любое допустимое `Char` или `String` или числовое выражение.|  
+|`CByte`|[Тип данных Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|от 0 до 255 (без знака); Дробная часть округляется. <sup>1</sup>|  
+|`CChar`|[Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)|Любое допустимое `Char` или `String` выражения; только первый символ `String` преобразуется; значение может быть от 0 до 65535 (без знака).|  
 |`CDate`|[Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|Любое допустимое представление даты и времени.|  
-|`CDbl`|[Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|от \-1.79769313486231570E\+308 до \-4.94065645841246544E\-324 для отрицательных значений; от 4.94065645841246544E\-324 до 1.79769313486231570E\+308 для положительных значений.|  
-|`CDec`|[Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|\+\/\-79228162514264337593543950335 для целых чисел, т.е. чисел без знаков после запятой.  Для чисел с 28 десятичными разрядами диапазоном является \+\/\-7.9228162514264337593543950335.  Наименьшее возможное ненулевое число это 0.0000000000000000000000000001 \(\+\/\-1E\-28\).|  
-|`CInt`|[Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|от \-2147483648 до 2147483647; дробная часть округляется.<sup>1</sup>|  
-|`CLng`|[Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|от \-9,223,372,036,854,775,808 до 9,223,372,036,854,775,807; дробная часть округляется.<sup>1</sup>|  
+|`CDbl`|[Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений; 4.94065645841246544E-324 до 1, 79769313486231570E + 308 для положительных значений.|  
+|`CDec`|[Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79228162514264337593543950335 для целых чисел, то есть числа без десятичных разрядов. Для чисел с 28 десятичных разрядов диапазон — от +/-7,9228162514264337593543950335. Наименьшее возможное ненулевое число это 0.0000000000000000000000000001 (+/-1E-28).|  
+|`CInt`|[Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|от -2147483648 до 2 147 483 647; Дробная часть округляется. <sup>1</sup>|  
+|`CLng`|[Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)|-9223372036854775808 до 9223372036854775807; Дробная часть округляется. <sup>1</sup>|  
 |`CObj`|[Тип данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|Любое допустимое выражение.|  
-|`CSByte`|[Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|от \-128 до 127; дробная часть округляется.<sup>1</sup>|  
-|`CShort`|[Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|от \-32768 до 32767; дробная часть округляется.<sup>1</sup>|  
-|`CSng`|[Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|\(От \-3,402823E\+38 до \-1,401298E\-45 для отрицательных значений; от 1,401298E\-45 до 3,402823E\+38 для положительных значений.|  
-|`CStr`|[Тип данных String](../../../visual-basic/language-reference/data-types/string-data-type.md)|Возвращаемые значения функции `CStr` зависят от аргумента `expression`.  Дополнительные сведения см. в разделе [Возвращаемые значения функции CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
-|`CUInt`|[Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|от 0 до 4,294,967,295 \(без знака\); дробная часть округляется.<sup>1</sup>|  
-|`CULng`|[Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|от 0 до 18446744073709551615 \(без знака\); дробная часть округляется.<sup>1</sup>|  
-|`CUShort`|[Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|от 0 до 65535 \(без знака\); дробная часть округляется.<sup>1</sup>|  
+|`CSByte`|[Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|от -128 до 127; Дробная часть округляется. <sup>1</sup>|  
+|`CShort`|[Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)|-32 768 до 32 767; Дробная часть округляется. <sup>1</sup>|  
+|`CSng`|[Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3, 402823E + 38 до - 1, 401298E-45 для отрицательных значений; 1, 401298E-45 до 3, 402823E + 38 для положительных значений.|  
+|`CStr`|[Тип данных String](../../../visual-basic/language-reference/data-types/string-data-type.md)|Возвращает для `CStr` зависят от `expression` аргумент. В разделе [возвращаемые значения функции CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).|  
+|`CUInt`|[Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|от 0 до 4 294 967 295 (без знака); Дробная часть округляется. <sup>1</sup>|  
+|`CULng`|[Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|от 0 до 18446744073709551615 (без знака); Дробная часть округляется. <sup>1</sup>|  
+|`CUShort`|[Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|от 0 до 65 535 (без знака); Дробная часть округляется. <sup>1</sup>|  
   
- <sup>1</sup> Дробные части могут быть подчиняться специальному типу округления под названием *банковское округление*.  См. примечания для дополнительных сведений.  
+ <sup>1</sup> дробных частей может быть причиной специальный тип округления вызываемой *банковское округление*. Дополнительные сведения в разделе «Примечания».  
   
-## Заметки  
- Как правило предпочтительнее использовать функции преобразования типа Visual Basic, чем методы .NET Framework, например `ToString()` в классе <xref:System.Convert> или в отдельном типе структуры или класса.  Функции языка Visual Basic предназначены для оптимального взаимодействия с Visual Basic, и они также сделают исходный код короче и облегчат его чтение.  Кроме того методы преобразования .NET Framework не всегда получают тот же результат, что функции Visual Basic, например при преобразовании `Boolean` к `Integer`.  Дополнительные сведения см. в разделе [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="remarks"></a>Примечания  
+ Как правило, следует использовать функции преобразования типов Visual Basic предпочтительнее, чем методы платформы .NET Framework например `ToString()`, либо на <xref:System.Convert> класса или класса или структуры отдельного типа. Функции языка Visual Basic предназначены для оптимального взаимодействия с Visual Basic, и они позволят исходный код короче и удобнее для чтения. Кроме того, методы преобразования .NET Framework не всегда производят те же результаты, как функции Visual Basic, например, при преобразовании `Boolean` для `Integer`. Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-## Поведение  
+## <a name="behavior"></a>Поведение  
   
--   **Приведение типа данных.** В общем случае, функции преобразования типов данных можно использовать для приведения результата некоторой операции к определенному типу данных вместо типа данных, получаемого по умолчанию.  Например, функция `CDec` используется для принудительного приведения результатов операций к десятичному типу в тех случаях, когда получаемые значения относятся к типу данных с одинарной точностью, двойной точностью или к целочисленному типу.  
+-   **Приведение типа.** Как правило функции преобразования типов данных можно использовать для присвоения результат операции имеет определенный тип данных, а не тип данных по умолчанию. Например, использовать `CDec` для принудительного десятичному в случаях, где одиночной точности, двойной точности или целочисленные арифметические операции обычно происходящим.  
   
--   **Сбой преобразования.** Если параметр `expression`, передаваемый в функцию, находится вне диапазона значений типа данных, в который преобразуется expression, возникает ошибка <xref:System.OverflowException>.  
+-   **Сбой преобразования.** Если `expression` передан функции находится вне диапазона типа данных, на который он преобразуется, <xref:System.OverflowException> происходит.  
   
--   **Дробная часть.** При преобразовании нецелого значения к целочисленному типу функции преобразования целых чисел \(`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng` и `CUShort`\) удаляют дробную часть и округляют значение до ближайшего целого числа.  
+-   **Дробная часть.** При преобразовании нецелочисленное значение целочисленного типа, функции преобразования целых чисел (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, и `CUShort`) Удаление Дробная часть и округляют значение до ближайшего целого числа.  
   
-     Если дробная часть равна точно 0,5, то функции преобразования целых чисел округлят его до ближайшего четного целого числа.  Например, 0,5 округляется до 0, а 1,5 и 2,5 округляются до 2.  Это иногда называется *банковским округлением*, и его целью является компенсация сдвигов, которые могут накапливаться при сложении многих таких чисел.  
+     Если дробная часть равна точно 0,5, функции преобразования целых чисел округления для ближайшего четного целого. Например 0,5 округляется до 0, а 1,5 и 2,5 округляются до 2. Это иногда называется *банковское округление*, и его целью является компенсация сдвигов, которые могут накапливаться при сложении многих таких чисел.  
   
-     `CInt` и `CLng` отличаются от функций <xref:Microsoft.VisualBasic.Conversion.Int%2A> и <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, которые вместо округления отсекают дробную часть числа.  Кроме того `Fix` и `Int` всегда возвращают значение того же типа данных, что и переданное значение.  
+     `CInt`и `CLng` отличаются от <xref:Microsoft.VisualBasic.Conversion.Int%2A> и <xref:Microsoft.VisualBasic.Conversion.Fix%2A> функций, которые усечение, а не округляют дробную часть числа. Кроме того `Fix` и `Int` всегда возвращают значение того же типа данных при передаче в.  
   
--   **Преобразования даты\/времени.** Функция <xref:Microsoft.VisualBasic.Information.IsDate%2A> используется для определения возможности преобразования значения в дату и время.  `CDate` распознает литералы даты и литералы времени, но не числовые значения.  Чтобы преобразовать значение `Date` Visual Basic 6.0 к  `Date` Visual Basic 2005 или более поздних версий, можно использовать метод <xref:System.DateTime.FromOADate%2A?displayProperty=fullName>.  
+-   **Дата и время преобразования.** Используйте <xref:Microsoft.VisualBasic.Information.IsDate%2A> функцию, чтобы определить, если значение можно преобразовать в дату и время. `CDate`распознает литералы даты и времени, но не числовые значения. Для преобразования Visual Basic 6.0 `Date` значение `Date` в языке Visual Basic 2005 или более поздней версии, можно использовать <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> метода.  
   
--   **Нейтральные значения даты\/времени.** [Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md) всегда содержит и дату, и время.  При преобразовании типов в Visual Basic *нейтральным значением* даты считается 1\/1\/1 \(1 января 1 года\), а нейтральным значением времени — 00:00:00 \(полночь\).  Если значение с типом `Date` преобразуется в строку, функция `CStr` не включает нейтральные значения в конечную строку.  Например, при преобразовании значения `#January 1, 0001 9:30:00#` в строку, будет возвращен результат "9:30:00"; дата отбрасывается.  При этом сведения о дате останутся в исходном значении `Date` и могут быть извлечены с помощью таких функций, как <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+-   **Нейтральные значения даты и времени.** [Тип данных Date](../../../visual-basic/language-reference/data-types/date-data-type.md) всегда содержит сведения о дате и времени. В целях преобразования типов Visual Basic рассматривает 1/1/0001 (1 января 1 года) быть *нейтральным значением* для даты и 00:00:00 (полночь) будет нейтральным значением времени. Если вы преобразуете `Date` значения в строку `CStr` включает нейтральные значения в результирующую строку. Например, если вы преобразуете `#January 1, 0001 9:30:00#` в строку, результат будет «9:30:00 AM»; дата отбрасывается. Тем не менее, сведения о дате по-прежнему присутствует в исходной коллекции `Date` значение и может быть восстановлен с помощью функции например <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> функции.  
   
--   **Учет языковых и региональных параметров.** Функции преобразования типов, включающие строки, выполняют преобразования на основе текущих языковых и региональных параметров для приложения.  Функция `CDate` распознает форматы даты согласно региональным параметрам системы.  Необходимо предоставить день, месяц и год в правильном порядке для имеющихся региональных настроек, в противном случае дата может интерпретироваться неправильно.  Полный формат даты не распознается, если он содержит строковое значение дня недели, например "Wednesday".  
+-   **Восприимчивость языка и региональных параметров.** Функции преобразования типов, включающие строки преобразований на основе текущих параметров языка и региональных параметров для приложения. Например `CDate` распознает форматы даты согласно региональным параметрам системы. Необходимо указать день, месяц и год в правильном порядке для языка или дата может интерпретироваться неправильно. Длинный формат даты не распознается, если он содержит строки день недели, например «Среда».  
   
-     Если требуется преобразовать в или из строкового представление значения в формате, отличном от задаваемого языка, то невозможно использовать функции преобразования типа Visual Basic.  Чтобы сделать это, используйте методы `ToString(IFormatProvider)` и `Parse(String, IFormatProvider)` для этих типов значений.  Например, используйте <xref:System.Double.Parse%2A?displayProperty=fullName> при преобразовании строки к `Double` и используйте <xref:System.Double.ToString%2A?displayProperty=fullName> при преобразовании значения из типа `Double` в строку.  
+     Если требуется преобразовать в или из строкового представления значения в формате, отличном от того, задаваемого языка, нельзя использовать функции преобразования типов Visual Basic. Чтобы сделать это, используйте `ToString(IFormatProvider)` и `Parse(String, IFormatProvider)` методы типа этого значения. Например, использовать <xref:System.Double.Parse%2A?displayProperty=nameWithType> при преобразовании строки в `Double`и использовать <xref:System.Double.ToString%2A?displayProperty=nameWithType> при преобразовании значения типа `Double` в строку.  
   
-## Функция CType  
- [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md) принимает второй аргумент `typename` и приводит `expression` к `typename`, где `typename` может быть любым типом данных, структурой, классом или интерфейсом, для которого существует допустимое преобразование.  
+## <a name="ctype-function"></a>CType Function  
+ [Функция CType](../../../visual-basic/language-reference/functions/ctype-function.md) получает в качестве второго аргумента `typename`и приводит `expression` для `typename`, где `typename` может быть любой тип данных, структуры, класса или интерфейса, для которого существует допустимое преобразование.  
   
- Для сравнения `CType` с другими зарезервированными словами преобразования типов см. [Оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) и [Оператор TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md).  
+ Сравнение `CType` с других ключевых слов преобразования типов, в разделе [оператор DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md) и [оператор TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
-## Пример использования функции CBool  
- В следующем примере для преобразования к `Boolean` используется функция `CBool`.  Если результатом вычисления выражения является ненулевое значение, то `CBool` возвращает `True`; в противном случае она возвращает `False`.  
+## <a name="cbool-example"></a>Пример использования функции CBool  
+ В следующем примере используется `CBool` функцию для преобразования выражений для `Boolean` значения. Если результатом выражения является ненулевое значение `CBool` возвращает `True`; в противном случае возвращается значение `False`.  
   
  [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
-## Пример использования функции CByte  
- В следующем примере для преобразования к `Byte` используется функция `CByte`.  
+## <a name="cbyte-example"></a>Пример использования функции CByte  
+ В следующем примере используется `CByte` функцию для преобразования выражения `Byte`.  
   
  [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
-## Пример использования функции CChar  
- В следующем примере для преобразования первого символа выражения `String` к типу `Char` используется функция `CChar`.  
+## <a name="cchar-example"></a>Пример использования функции CChar  
+ В следующем примере используется `CChar` функцию для преобразования первого символа `String` выражение `Char` типа.  
   
  [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
- Входным аргументом `CChar` должен быть тип данных `Char` или `String`.  Невозможно использовать функцию `CChar` для преобразования числа в символ, поскольку функция `CChar` не может принимать данные числовых типов.  В этом примере получается число, представляющее кодовую позицию \(код символа\), которое преобразуется в соответствующий символ.  Использует функцию <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> для получения строки цифр, `CInt` для преобразования строки к типу `Integer`, а `ChrW` для преобразования строки к типу `Char`.  
+ Входной аргумент для `CChar` должен иметь тип данных `Char` или `String`. Нельзя использовать `CChar` для преобразования числа в символ, поскольку `CChar` не может принимать числового типа данных. В следующем примере получается число, представляющее кодовую точку (код знака) и преобразует его в соответствующий символ. Она использует <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> функции для получения строки из цифр, `CInt` для преобразования строки в тип `Integer`, и `ChrW` для преобразования числа к типу `Char`.  
   
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
-## Пример использования функции CDate  
- В следующем примере для преобразования строк к `Date` используется функция `CDate`.  Как правило, не рекомендуется жестко кодировать дату и время в виде строк \(как показано в этом примере\).  Вместо этого используйте литералы даты и времени, например \#Feb 12, 1969\# и \#4:45:23 PM\#.  
+## <a name="cdate-example"></a>Пример использования функции CDate  
+ В следующем примере используется `CDate` функцию для преобразования строк для `Date` значения. В общем случае не рекомендуется жестко запрограммированные значения даты и время в виде строк (как показано в следующем примере). Используйте литералы даты и времени, например #Feb 12, &#1969; и # 4:45:23 PM #, вместо этого.  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
-## Пример использования алгоритма CDbl  
+## <a name="cdbl-example"></a>Пример использования функции CDbl  
  [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
-## Пример использования функции CDec  
- В следующем примере для преобразования числа к `Decimal` используется функция `CDec`.  
+## <a name="cdec-example"></a>Пример использования функции CDec  
+ В следующем примере используется `CDec` функцию для преобразования числовых значений для `Decimal`.  
   
  [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
-## Пример использования функции CInt  
- В следующем примере для преобразования значения к `Integer` используется функция `CInt`.  
+## <a name="cint-example"></a>Пример использования функции CInt  
+ В следующем примере используется `CInt` функции, чтобы преобразовать значение в `Integer`.  
   
  [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
-## Пример использования алгоритма CLng  
- В следующем примере для преобразования значения к `Long` используется функция `CLng`.  
+## <a name="clng-example"></a>Пример использования функции CLng  
+ В следующем примере используется `CLng` функцию для преобразования значения `Long`.  
   
  [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
-## Пример использования функции CObj  
- В следующем примере для преобразования числа к `Object` используется функция `CObj`.  Переменная `Object` содержит только 4\-байтовый указатель, указывающий на значение типа `Double`.  
+## <a name="cobj-example"></a>Пример использования функции CObj  
+ В следующем примере используется `CObj` функцию для преобразования числовых значений для `Object`. `Object` Переменная содержит только 4 байтовый указатель, указывающая на `Double` присвоенного значения.  
   
  [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
-## Пример использования функции CSByte  
- В следующем примере для преобразования числа к `SByte` используется функция `CSByte`.  
+## <a name="csbyte-example"></a>Пример использования функции CSByte  
+ В следующем примере используется `CSByte` функцию для преобразования числовых значений для `SByte`.  
   
  [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
-## Пример использования функции CShort  
- В следующем примере для преобразования числа к `Short` используется функция `CShort`.  
+## <a name="cshort-example"></a>Пример использования функции CShort  
+ В следующем примере используется `CShort` функцию для преобразования числовых значений для `Short`.  
   
  [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
-## Пример использования алгоритма CSng  
- В следующем примере для преобразования значения к `Single` используется функция `CSng`.  
+## <a name="csng-example"></a>Пример использования функции CSng  
+ В следующем примере используется `CSng` функцию для преобразования значения `Single`.  
   
  [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
-## Пример использования алгоритма CStr  
- В следующем примере для преобразования числа к `String` используется функция `CStr`.  
+## <a name="cstr-example"></a>Пример использования функции CStr  
+ В следующем примере используется `CStr` функцию для преобразования числовых значений для `String`.  
   
  [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
- В следующем примере для преобразования `Date` к `String` используется функция `CStr`.  
+ В следующем примере используется `CStr` функцию для преобразования `Date` значения `String` значения.  
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- Функция `CStr` всегда предоставляет значение с типом `Date` в стандартном кратком формате для текущих региональных параметров, например 6\/15\/2003 4:35:47 PM.  Однако `CStr` подавляет *нейтральные значения* 1\/1\/0001 для даты и 00:00:00 для времени.  
+ `CStr`всегда выводит `Date` значение в стандартном кратком формате для текущего языкового стандарта, например, «6/15/2003 4:35:47 PM». Тем не менее `CStr` подавляет *нейтральные значения* из 1/1/0001 00:00:00, время и даты.  
   
- Более подробно сведения о значениях, возвращаемых `CStr`, содержатся в разделе [Возвращаемые значения функции CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
+ Дополнительные сведения по значениям, возвращаемым методом `CStr`, в разделе [возвращаемые значения функции CStr](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md).  
   
-## Пример использования функции CUInt  
- В следующем примере для преобразования числа к `UInteger` используется функция `CUInt`.  
+## <a name="cuint-example"></a>Пример использования функции CUInt  
+ В следующем примере используется `CUInt` функцию для преобразования числовых значений для `UInteger`.  
   
  [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
-## Пример использования функции CULng  
- В следующем примере для преобразования числа к `ULong` используется функция `CULng`.  
+## <a name="culng-example"></a>Пример использования функции CULng  
+ В следующем примере используется `CULng` функцию для преобразования числовых значений для `ULong`.  
   
  [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
-## Пример использования функции CShort  
- В следующем примере для преобразования числа к `UShort` используется функция `CUShort`.  
+## <a name="cushort-example"></a>Пример CUShort  
+ В следующем примере используется `CUShort` функцию для преобразования числовых значений для `UShort`.  
   
  [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- <xref:Microsoft.VisualBasic.Strings.Format%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Str%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Val%2A>   
- [Функции преобразования](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Преобразование типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ <xref:Microsoft.VisualBasic.Strings.Format%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Oct%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Str%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
+ [Функции преобразования](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Преобразования типов в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

@@ -1,49 +1,55 @@
 ---
-title: "Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CompositionTarget - объекты, покадровая отрисовка"
-  - "покадровая отрисовка с помощью объектов CompositionTarget"
+title: "Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- CompositionTarget objects [WPF], rendering per frame
+- rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7616a418b9f2f6b175b925e4385322c42546e9bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
-Подсистема анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество возможностей для создания покадровой анимации.  Однако существуют сценарии применения, в которых необходим детальный контроль над покадровой отрисовкой.  Объект <xref:System.Windows.Media.CompositionTarget> предоставляет возможность создания пользовательской анимации на основе покадрового обратного вызова.  
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Практическое руководство. Визуализация каждого кадра с помощью CompositionTarget
+Подсистема анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество возможностей для создания анимации на основе кадров. Однако существуют сценарии приложений, в которых необходим детальный контроль отрисовки каждого кадра. <xref:System.Windows.Media.CompositionTarget> Объект предоставляет возможность создания пользовательской анимации на основе покадрового обратного вызова.  
   
- <xref:System.Windows.Media.CompositionTarget> является статическим классом, представляющим поверхность отображения, на которой отрисовывается приложение.  Событие <xref:System.Windows.Media.CompositionTarget.Rendering> возникает каждый раз при рисовании сцены приложения.  Частота кадров отрисовки задает количество отрисовок сцены в секунду.  
+ <xref:System.Windows.Media.CompositionTarget>является статическим классом, который представляет поверхность отображения, на котором рисуется приложения. <xref:System.Windows.Media.CompositionTarget.Rendering> Событие возникает каждый раз при рисовании сцены приложения. Частота кадров отрисовки — это количество отрисовок сцены за секунду.  
   
 > [!NOTE]
->  Полный пример кода с использованием <xref:System.Windows.Media.CompositionTarget> см. в разделе [Пример использования CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  
+>  Для примера полный исходный код с помощью <xref:System.Windows.Media.CompositionTarget>, в разделе [использование образца элементу CompositionTarget](http://go.microsoft.com/fwlink/?LinkID=160045).  
   
-## Пример  
- Событие <xref:System.Windows.Media.CompositionTarget.Rendering> активируется во время процесса отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  В следующем примере показана регистрация делегата <xref:System.EventHandler> в статическом методе <xref:System.Windows.Media.CompositionTarget.Rendering> для <xref:System.Windows.Media.CompositionTarget>.  
+## <a name="example"></a>Пример  
+ <xref:System.Windows.Media.CompositionTarget.Rendering> Событие запускается во время [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] процессе подготовки к просмотру. В следующем примере показано, как вы регистрируете <xref:System.EventHandler> делегатом статического <xref:System.Windows.Media.CompositionTarget.Rendering> метод <xref:System.Windows.Media.CompositionTarget>.  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
  [!code-vb[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
   
- Можно использовать собственный метод обработчика событий отрисовки для создания пользовательского графического содержимого.  Этот метод обработчика событий вызывается один раз за кадр.  Каждый раз, когда [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] маршалирует сохраненные данные отрисовки в [визуальном дереве](GTMT) через граф сцены, вызывается метод обработчика событий.  Кроме того, метод обработчика событий вызывается в случае, если изменения [визуального дерева](GTMT) принудительно обновляют граф сцены.  Обратите внимание, что метод обработчика событий вызывается после вычисления макета.  Однако можно изменить макет в методе обработчика событий, что означает повторное вычисление макета перед отрисовкой.  
+ Можно использовать собственный метод обработчика событий отрисовки для создания пользовательского графического содержимого. Метод обработчика событий вызывается один раз для каждого кадра. Каждый раз, когда [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] выполняет маршалинг сохраненных данных отрисовки в визуальном дереве через граф сцены композиции, вызывается метод обработчика событий. Кроме того, если изменения в визуальном дереве принудительно обновляют граф сцены композиции, метод обработчика событий также вызывается. Обратите внимание, что метод обработчика событий вызывается после вычисления макета. Однако можно изменить макет в методе обработчика событий, что означает повторное вычисление макета перед отрисовкой.  
   
- В следующем примере показано, как можно предоставить пользовательское рисование в методе обработчика событий <xref:System.Windows.Media.CompositionTarget>.  В этом случае цвет фона <xref:System.Windows.Controls.Canvas> рисуется значением цвета на основе координат указателя мыши.  Перемещение указателя мыши внутри <xref:System.Windows.Controls.Canvas> изменяет цвет его фона.  Кроме того, вычисляется средняя частота кадров на основе текущего значения прошедшего времени и общего числа визуализированных кадров.  
+ В следующем примере показано как можно предоставить пользовательское рисование <xref:System.Windows.Media.CompositionTarget> метод обработчика событий. В данном случае цвет фона <xref:System.Windows.Controls.Canvas> нарисован с помощью значения цветов на основе координат положения указателя мыши. При перемещении указателя мыши внутри <xref:System.Windows.Controls.Canvas>, ее изменения цвета фона. Кроме того вычисляется средняя частота кадров, на основе текущего значения прошедшего времени и общего числа отрисованных кадров.  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget2)]
  [!code-vb[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget2)]  
   
- Можно обнаружить, что пользовательское рисование выполняется с разными скоростями на разных компьютерах.  Это обусловлено тем, что пользовательское рисование зависит от частоты кадров.  В зависимости от используемой системы и рабочей нагрузки на эту систему число вызовов события <xref:System.Windows.Media.CompositionTarget.Rendering> в секунду может варьировать.  Сведения об определении аппаратных возможностей и производительности графического устройства, на котором выполняется приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], см. в разделе [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Может оказаться, что пользовательское рисование выполняется на разных компьютерах с разной скоростью. Это потому, что пользовательское рисование не является независимым от частоты кадров. В зависимости от используемой системы и рабочей нагрузки этой системы <xref:System.Windows.Media.CompositionTarget.Rendering> событий может быть вызван Разное количество раз в секунду. Дополнительные сведения об определении возможностей графического оборудования и производительности для устройства, которое запускает приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Уровни отрисовки графики](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
   
- Добавление или удаление делегата отрисовки <xref:System.EventHandler> во время срабатывания события будет отложено до завершения срабатывания события.  Это согласуется с порядком обработки событий на основе <xref:System.MulticastDelegate> в общеязыковой среде выполнения \(CLR\).  Также обратите внимание на то, что какой\-либо определенный порядок вызова событий отрисовки не гарантируется.  Если имеется несколько делегатов <xref:System.EventHandler>, зависимых от определенного порядка, следует вручную зарегистрировать одно событие <xref:System.Windows.Media.CompositionTarget.Rendering> и мультиплексировать делегаты в правильном порядке.  
+ Добавление или удаление визуализации <xref:System.EventHandler> делегата во время срабатывания события будет отложено до момента завершения события обработки. Это согласуется с тем, как <xref:System.MulticastDelegate>-событий на основе обрабатываются в Common Language Runtime (CLR). Также обратите внимание, что порядок вызова событий отрисовки не гарантируется. Если имеется несколько <xref:System.EventHandler> делегатов, которые зависят от определенного порядка, следует зарегистрировать один <xref:System.Windows.Media.CompositionTarget.Rendering> событий и мультиплексировать делегаты в правильном порядке.  
   
-## См. также  
- <xref:System.Windows.Media.CompositionTarget>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.CompositionTarget>  
  [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

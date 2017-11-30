@@ -1,42 +1,26 @@
 ---
-title: "Пошаговое руководство: Отображение данных в элементе управления DataRepeater (Visual Studio) | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Пошаговое руководство. Отображение данных в элементе управления DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 dev_langs:
-- VB
-helpviewer_keywords:
-- DataRepeater, walkthrough
+- csharp
+- vb
+helpviewer_keywords: DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 09f15c94c3d5a3387935c8d3f4758c0ecfd7cfcd
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 39c3b56404c981e674766354463e23aa349994cf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Пошаговое руководство. Отображение данных в элементе управления DataRepeater (Visual Studio)
-Это пошаговое руководство содержит базовый сценарий начало окончание для отображения связанных данных в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+Это пошаговое руководство содержит базовый сценарий для отображения связанных данных в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> от начала и до конца.  
   
 ## <a name="prerequisite"></a>Предварительные требования  
  В данном пошаговом руководстве требуется доступ к учебной базе данных Northwind.  
@@ -48,13 +32,13 @@ ms.lasthandoff: 03/13/2017
   
 -   Создание решения.  
   
--   Добавление <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+-   Добавление элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 -   Добавление источника данных.  
   
 -   Добавление элементов управления с привязкой к данным.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-a-datarepeater-solution"></a>Создание решения DataRepeater  
  На первом шаге создаются проект и решение.  
@@ -76,7 +60,7 @@ ms.lasthandoff: 03/13/2017
 6.  Выберите форму в конструкторе Windows Forms. В окне **Свойства** присвойте свойству **Размер** значение `800, 700`.  
   
 ## <a name="adding-a-datarepeater-control"></a>Добавление элемента управления DataRepeater  
- На этом этапе можно добавить <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>в форму элемент управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На этом шаге в форму добавляется элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 #### <a name="to-add-a-datarepeater-control"></a>Добавление элемента управления DataRepeater  
   
@@ -86,14 +70,14 @@ ms.lasthandoff: 03/13/2017
   
 2.  Перейдите на вкладку **Visual Basic PowerPacks** .  
   
-3.  Перетащите <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления **Form1**.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+3.  Перетащите элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> в форму **Form1**.  
   
 4.  В окне "Свойства" присвойте свойству **Расположение** значение `0, 25`.  
   
 5.  Установите значение свойства **Размер** равным `460, 600`.  
   
 ## <a name="adding-a-data-source"></a>Добавление источника данных  
- На этом шаге добавьте источник данных для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На этом шаге добавляется источник данных для элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 #### <a name="to-add-a-data-source"></a>Добавление источника данных  
   
@@ -109,7 +93,7 @@ ms.lasthandoff: 03/13/2017
   
          -или-  
   
-    -   Нажмите кнопку **Создать подключение** для создания подключения к данным. Дополнительные сведения см. в разделе [Практическое руководство: создание подключений к базам данных SQL Server](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
+    -   Нажмите кнопку **Создать подключение** для создания подключения к данным. Дополнительные сведения см. в разделе [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
   
 5.  Если базе данных требуется пароль, выберите параметр для включения конфиденциальных данных и щелкните **Далее**.  
   
@@ -125,7 +109,7 @@ ms.lasthandoff: 03/13/2017
      **NorthwindDataSet** добавляется в проект, и таблицы **Клиенты** и **Заказы** отображаются в окне **Источники данных** .  
   
 ## <a name="adding-data-bound-controls"></a>Добавление элементов управления с привязкой к данным  
- На этом шаге добавляются элементы управления с привязкой к данным <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На этом шаге элементы управления с привязкой к данным добавляются в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
   
 #### <a name="to-add-data-bound-controls"></a>Чтобы добавить элементы управления с привязкой к данным  
   
@@ -133,9 +117,9 @@ ms.lasthandoff: 03/13/2017
   
 2.  Измените тип удаления таблицы на **Сведения** , выбрав **Сведения** в раскрывающемся списке в узле таблицы.  
   
-3.  Выберите **клиентов** узел таблицы и перетащите его в область шаблона элемента (верхняя область) элемента <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+3.  Выберите узел таблицы **Клиенты** и перетащите его в область шаблона (верхняя часть) элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
-     A <xref:System.Windows.Forms.BindingNavigator>элемент управления добавляется на форму и **NorthwindDataSet**, **CustomersBindingSource**, **CustomersTableAdapter**, **TableAdapterManager**, и **CustomersBindingNavigator** компоненты добавляются в область компонентов.</xref:System.Windows.Forms.BindingNavigator>  
+     Элемент управления <xref:System.Windows.Forms.BindingNavigator> добавляется в форму, а компоненты **NorthwindDataSet**, **CustomersBindingSource**, **CustomersTableAdapter**, **TableAdapterManager**и **CustomersBindingNavigator** добавляются в область компонентов.  
   
 4.  Выберите все поля и их связанные подписи и разместите их у левого края области шаблона элемента.  
   
@@ -147,46 +131,46 @@ ms.lasthandoff: 03/13/2017
   
  Теперь у вас есть рабочее приложение, которое будет отображать повторяющийся список клиентов. Можно нажать клавишу F5, чтобы запустить приложение, изменить данные и добавить или удалить записи клиентов.  
   
- Следующим необязательным этапом, вы узнаете, как настроить <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На следующих необязательных этапах вы узнаете, как настроить элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 ## <a name="next-steps-optional"></a>Дальнейшие действия (необязательно)  
  Эта часть пошагового руководства состоит из четырех дополнительных задач.  
   
--   Изменение внешнего вида <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+-   Изменение внешнего вида элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 -   Запрет добавления или удаления записей пользователями.  
   
--   Добавление возможностей поиска в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+-   Добавление функции поиска в элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
--   Добавление таблицы основные и подробные <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+-   Добавление основной таблицы и таблицы сведений в элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 ## <a name="changing-the-appearance-of-the-datarepeater-control"></a>Изменение внешнего вида элемента управления DataRepeater  
- На этом этапе необязательно изменять `BackColor` из <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>элемента управления во время разработки.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Можно также добавить код для отображения столбцов с чередованием цвета и условного изменения `ForeColor` подписи.  
+ На этом необязательном шаге выполняется изменение `BackColor` элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> во время разработки. Можно также добавить код для отображения столбцов с чередованием цвета и условного изменения `ForeColor` подписи.  
   
 #### <a name="to-change-the-appearance-of-the-control"></a>Изменение внешнего вида элемента управления  
   
-1.  В конструкторе Windows Forms выберите основной регион (внизу) <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+1.  В конструкторе Windows Forms выберите основную (нижнюю) область элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 2.  В окне "Свойства" задайте свойству `BackColor` значение "Белый".  
   
-3.  Дважды щелкните файл <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, чтобы открыть редактор кода.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+3.  Дважды щелкните <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> , чтобы открыть редактор кода.  
   
 4.  В редакторе кода в раскрывающемся списке выберите **DrawItem**.  
   
-5.  В <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>обработчик события добавьте следующий код для альтернативного `BackColor`:</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
+5.  В обработчике событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> добавьте следующий код для изменения `BackColor`:  
   
-     [!code-cs[#1 VbPowerPacksDataRepeaterWalkthrough](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs) ] 
-     [!code-vb [VbPowerPacksDataRepeaterWalkthrough&#1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
+     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
   
-6.  В <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>обработчик события добавьте следующий код, чтобы изменить `ForeColor` метки в зависимости от условия:</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
+6.  В обработчике событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> добавьте следующий код для изменения `ForeColor` подписи в зависимости от условия:  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough&2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs) ] 
-     [!code-vb [VbPowerPacksDataRepeaterWalkthrough&#2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
+     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
   
 7.  Нажмите клавишу F5, чтобы запустить приложение и просмотреть настройки.  
   
 ## <a name="preventing-users-from-adding-or-deleting-records"></a>Запрет добавления или удаления записей пользователями  
- В это необязательный шаг, добавьте код, который запрещает пользователям добавлять или удалять записи в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На этом необязательном шаге добавляется код, который запрещает пользователям добавлять или удалять записи в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 #### <a name="to-prevent-users-from-adding-and-deleting-records"></a>Запрет добавления или удаления записей пользователями  
   
@@ -194,49 +178,49 @@ ms.lasthandoff: 03/13/2017
   
 2.  Добавьте следующий код в событие `Form_Load` :  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough&3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs) ] 
-     [!code-vb [VbPowerPacksDataRepeaterWalkthrough&#3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
+     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
   
 3.  В раскрывающемся списке "Имя класса" выберите **BindingNavigatorDeleteItem**. В раскрывающемся списке "Имя метода" выберите **EnabledChanged**.  
   
 4.  Добавьте следующий код в обработчик событий `BindingNavigatorDeleteItem_EnabledChanged` .  
   
-     [!code-cs[#4 VbPowerPacksDataRepeaterWalkthrough](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.cs) ] 
-     [!code-vb [VbPowerPacksDataRepeaterWalkthrough&#4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
+     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
   
     > [!NOTE]
-    >  Этот шаг необходим, так как <xref:System.Windows.Forms.BindingSource>позволит **DeleteItem** кнопку при каждом изменении текущей записи.</xref:System.Windows.Forms.BindingSource>  
+    >  Этот шаг необходим, так как <xref:System.Windows.Forms.BindingSource> будет активировать кнопку **DeleteItem** при каждом изменении текущей записи.  
   
 5.  Нажмите клавишу F5 для запуска приложения. Обратите внимание, что кнопка **DeleteItem** отключена и вы не можете удалять элементы с помощью клавиши DELETE.  
   
 ## <a name="adding-search-capability-to-the-datarepeater-control"></a>Добавление функции поиска в элемент управления DataRepeater  
- На этом этапе необязательно реализовать возможность поиска для значения в <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> При нахождении искомой строки элемент управления выбирает элемент, содержащий значение, и прокручивает элемент в представлении.  
+ На этом необязательном шаге реализуется возможность поиска значения в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> . При нахождении искомой строки элемент управления выбирает элемент, содержащий значение, и прокручивает элемент в представлении.  
   
 #### <a name="to-add-search-capability"></a>Добавление функции поиска  
   
-1.  Перетащите <xref:System.Windows.Forms.TextBox>управления из **элементов** в форму, которая содержит <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:System.Windows.Forms.TextBox>  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TextBox> с **панели элементов** в форму, содержащую элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
-     Расположите его под <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+     Расположите его под элементом управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 2.  В окне "Свойства" измените значение свойства **Имя** на **SearchTextBox**.  
   
-3.  Перетащите <xref:System.Windows.Forms.Button>управления из **элементов** в форму, которая содержит <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:System.Windows.Forms.Button> Расположите его под <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+3.  Перетащите элемент управления <xref:System.Windows.Forms.Button> с **панели элементов** в форму, содержащую элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> . Расположите его под элементом управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 4.  В окне "Свойства" измените значение свойства **Имя** на **SearchButton**. Задайте для свойства **Текст** значение **Поиск**.  
   
-5.  Дважды щелкните <xref:System.Windows.Forms.Button>управления, чтобы открыть редактор кода и добавьте следующий код в `SearchButton_Click` обработчик события.</xref:System.Windows.Forms.Button>  
+5.  Дважды щелкните элемент управления <xref:System.Windows.Forms.Button> , чтобы открыть редактор кода, и добавьте следующий код в обработчик событий `SearchButton_Click` :  
   
-     [!code-cs[#5 VbPowerPacksDataRepeaterWalkthrough](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs) ] 
-     [!code-vb [VbPowerPacksDataRepeaterWalkthrough&#5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
+     [!code-csharp[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
   
 6.  Нажмите клавишу F5 для запуска приложения. Введите код клиента в **SearchTextBox** и нажмите кнопку **Поиск** .  
   
 ## <a name="adding-a-master-and-detail-table-to-the-datarepeater"></a>Добавление основной таблицы и таблицы сведений в элемент управления DataRepeater  
- На данном необязательном этапе добавляется второй <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>элемента управления для отображения связанных заказов для каждого клиента.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ На этом необязательном шаге добавляется второй элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> для отображения связанных заказов для каждого клиента.  
   
 #### <a name="to-add-a-master-and-detail-table"></a>Добавление основной таблицы и таблицы сведений  
   
-1.  Перетащите второй <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления из **Visual Basic PowerPacks** вкладке **элементов** в форму.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+1.  Перетащите второй элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> с вкладки **Visual Basic PowerPacks** на **панели инструментов** в форму.  
   
 2.  В окне "Свойства" присвойте свойству **Расположение** значение `465, 25`.  
   
@@ -246,20 +230,20 @@ ms.lasthandoff: 03/13/2017
   
 5.  Измените тип удаления таблицы **Заказы** на "Сведения", выбрав **Сведения** в раскрывающемся списке в узле таблицы.  
   
-6.  Перетащите это **заказов** узел таблицы область шаблона элемента (верхняя область) второго <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+6.  Перетащите этот узел таблицы **Заказы** в область шаблона (верхняя часть) второго элемента управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
      Компоненты **OrdersBindingSource** и **OrdersTableAdapter** добавляются в область компонентов.  
   
-7.  Нажмите клавишу F5 для запуска приложения. При выборе каждого клиента в первом <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления, заказы для этого клиента отображаются во втором <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>управления.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+7.  Нажмите клавишу F5 для запуска приложения. При выборе каждого клиента в первом элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> заказы для этого клиента отображаются во втором элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Практическое руководство: отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: изменение макета элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: отображение заголовков элементов в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: поиск данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: создание Главная и подчиненная формы с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)   
- [Практическое руководство: изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Практическое руководство: отключение добавления и удаления элементов DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)   
+ [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Изменение структуры элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [Практическое руководство. Поиск данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [Как: создать Главная и подчиненная формы с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
+ [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
  [Устранение неполадок при использовании элемента управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

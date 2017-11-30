@@ -1,48 +1,46 @@
 ---
-title: "Protected (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Protected"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Protected - модификатор доступа"
-  - "сочетание ключевых слов Protected Friend"
-  - "Protected - ключевое слово"
-  - "Protected - ключевое слово, и Friend"
-  - "Protected - ключевое слово, синтаксис"
+title: Protected (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Protected
+helpviewer_keywords:
+- Protected Friend keyword combination
+- Protected keyword [Visual Basic], and Friend
+- Protected keyword [Visual Basic], syntax
+- Protected access modifier
+- Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d0cc7a0cb626a9ec8e2a0e47abc02e5268aed56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Protected (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает, что один или несколько объявленных элементов программирования доступны только из своего собственного класса или из производного класса.  
+# <a name="protected-visual-basic"></a>Protected (Visual Basic)
+Указывает, что один или несколько объявленных программных элементов доступны только из своего собственного класса или из производного класса.  
   
-## Заметки  
- В некоторых случаях элемент программирования, объявленный в классе, содержит конфиденциальные данные или ограниченный код, и поэтому к нему необходимо ограничить доступ.  Однако, если класс является наследуемым и предполагается в иерархии производных классов, то может потребоваться доступ к данным или коду для этих производных классов.  В таком случае необходимо, чтобы элемент был доступен как из базового класса, так и из всех производных классов.  Для ограничения доступа к элементу таким способом можно объявить его как `Protected`.  
+## <a name="remarks"></a>Примечания  
+ Иногда программный элемент объявлен в классе содержит конфиденциальные данные или ограниченный код, и вы хотите ограничить доступ к элементу. Однако если класс является наследуемым и предполагается в иерархии производных классов, возможно, необходимые для этих производных классов для доступа к данным или коду. В этом случае требуется, чтобы элемент был доступен как из базового класса, так и из всех производных классов. Чтобы ограничить доступ к элементу таким образом, можно объявить его с `Protected`.  
   
-## Правила  
+## <a name="rules"></a>Правила  
   
--   **Контекст объявления.** Можно использовать `Protected` только на уровне класса.  Это означает, что контекст объявления для элемента `Protected` должен быть классом и не может быть исходным файлом, пространством имен, структурой, модулем или процедурой.  
+-   **Контекст объявления.** Можно использовать `Protected` только на уровне класса. Это означает, что контекст объявления для `Protected` элемент должен быть классом и не может быть исходный файл, пространство имен, интерфейса, модуля, структуры или процедуры.  
   
--   **Комбинированные модификаторы.** Можно использовать модификатор `Protected` вместе с модификатором [Friend](../../../visual-basic/language-reference/modifiers/friend.md) в одном и том же объявлении.  Эта комбинация делает объявленные элементы доступными из любого места сборки, из собственного класса и из производных классов.  Можно указать `Protected Friend` только для элементов классов.  
+-   **Комбинированные модификаторы.** Можно использовать `Protected` модификатор вместе с [Friend](../../../visual-basic/language-reference/modifiers/friend.md) модификатор в объявлении. Эта комбинация делает объявленные элементы доступны из любой той же сборки, из собственного класса и из производных классов. Можно указать `Protected Friend` только для членов классов.  
   
-## Поведение  
+## <a name="behavior"></a>Поведение  
   
--   **Уровень доступа.** Весь код класса имеет доступ к элементам класса.  Код в любом классе, производном от базового класса, имеет доступ ко всем `Protected` элементам базового класса.  Это справедливо для всех поколений наследования.  Это означает, что класс может получить доступ к элементам `Protected` базового класса базового класса и т.д.  
+-   **Уровень доступа.** Весь код в классе можно получить доступ к его элементам. Код в любой класс, производный от базового класса можно получить доступ ко всем `Protected` элементы базового класса. Это справедливо для всех поколений наследования. Это означает, что класс может получить доступ к `Protected` элементы базового класса базового класса и т. д.  
   
-     Защищенный доступ не является надмножеством или подмножеством дружественного доступа.  
+     Защищенный доступ не является надмножеством или подмножеством дружественный доступ.  
   
--   **Модификаторы доступа..** Ключевые слова, указывающие уровень доступа, называются *access modifiers*.  Для получения сведений о сравнении модификаторов доступа см. раздел [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Модификаторы доступа.** Ключевые слова, указывающие уровень доступа, называются *модификаторы доступа*. Сравнение модификаторов доступа см. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Модификатор `Protected` можно использовать в следующих контекстах:  
   
@@ -70,11 +68,11 @@ caps.handback.revision: 16
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## См. также  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+## <a name="see-also"></a>См. также  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

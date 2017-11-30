@@ -1,97 +1,95 @@
 ---
-title: "Предложение From (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryFrom"
-  - "vb.QueryFromIn"
-  - "vb.QueryFromLet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "From - предложение"
-  - "From - оператор"
-  - "запросы [Visual Basic], От"
+title: "Предложение From (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryFrom
+- vb.QueryFromIn
+- vb.QueryFromLet
+helpviewer_keywords:
+- queries [Visual Basic], From
+- From clause [Visual Basic]
+- From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Предложение From (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает один или несколько переменных диапазонов и коллекцию для выполнения запроса.  
+# <a name="from-clause-visual-basic"></a>Предложение From (Visual Basic)
+Указывает один или несколько переменных диапазона и коллекции для запроса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`element`|Обязательный.  *range variable* используется для циклического просмотра элементов коллекции.  Переменная диапазона используется для ссылки на каждый член `collection`, когда запрос циклически просматривает `collection`.  Должно быть перечислимым типом.|  
-|`type`|Необязательный.  Тип `element`.  Если не указан `type`, тип `element` получается из `collection`.|  
-|`collection`|Обязательный.  Ссылка на коллекцию, которая будет запрашиваться.  Должно быть перечислимым типом.|  
+|---|---|  
+|`element`|Обязательный. Объект *переменной диапазона* используется для итерации элементов коллекции. Переменная диапазона используется для ссылки на каждый член `collection` как запрос осуществляет итерацию по `collection`. Должно быть перечислимым типом.|  
+|`type`|Необязательно. Тип параметра `element`. Если не `type` указан, тип `element` выводится из `collection`.|  
+|`collection`|Обязательный. Ссылается на коллекцию, которой будет отправлен запрос. Должно быть перечислимым типом.|  
   
-## Заметки  
- Предложение `From` используется для определения источника данных для запроса и переменных, которые используются для ссылок на элементы из исходной коллекции.  Эти переменные называются *range variables*.  Предложение `From` необходимо для запроса, за исключением случая, когда предложение `Aggregate` используется для идентификации запроса, возвращающего только сгруппированные результаты.  Дополнительные сведения см. в разделе [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a>Примечания  
+ `From` Предложение используется для определения источника данных для запроса и переменные, которые используются для ссылки на элемент исходной коллекции. Эти переменные называются *переменные диапазона*. `From` Предложение является обязательным для запроса, за исключением случаев `Aggregate` предложение используется для обнаружения, возвращает только агрегированными результаты запроса. Дополнительные сведения см. в разделе [предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Можно указать несколько предложений `From` в запросе для идентификации нескольких коллекций для объединения.  При указании нескольких коллекций, они воспринимаются, как независимые друг от друга, или можно объединить их, если они связаны.  Можно объединить коллекции неявно, с помощью предложения `Select` или явно используя предложения `Join` или `Group Join`.  В качестве альтернативы можно указать несколько переменных диапазонов и коллекций в одном предложении `From` с каждой связанной переменной диапазона и коллекции, разделенных между собой запятыми.  В следующем примере показаны оба параметра синтаксиса для предложения `From`.  
+ Можно указать несколько `From` предложения в запросе, чтобы определить несколько коллекций для объединения. При указании нескольких коллекций, они воспринимаются независимо друг от друга, или можно объединить их, если они относятся. Объединение коллекций неявно с помощью `Select` предложение, или явно с использованием `Join` или `Group Join` предложения. В качестве альтернативы можно указать несколько переменных диапазонов и коллекций в одном `From` вместе с каждой связанной переменной диапазона и коллекций, разделенных запятой от остальных. В следующем примере кода показано, как параметры синтаксиса для `From` предложения.  
   
  [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
- Предложение `From` определяет область запроса, которая аналогична области цикла `For`.  Таким образом, каждая переменная диапазона `element` в области запроса должна иметь уникальное имя.  Поскольку можно указать несколько предложений `From` для запроса, последующие предложения `From` могут обратиться к переменным диапазона в предложении `From` или они могут ссылаться на переменную диапазона в предыдущем предложении `From`.  Например, в следующем примере показано вложенное предложение `From`, где коллекция во втором предложении основана на свойстве переменной диапазона в первом предложении.  
+ `From` Предложение определяет область запроса, что похоже на область `For` цикла. Таким образом, каждый `element` переменная диапазона в область запроса должен иметь уникальное имя. Поскольку можно указать несколько `From` предложения запроса, последующие `From` предложений можно ссылаться на переменные диапазона в `From` предложения или они могут ссылаться на переменные диапазона при выполнении предыдущего `From` предложения. Например, в следующем примере показано во вложенной `From` предложение, где коллекция во втором предложении основана на свойстве переменной диапазона в первом предложении.  
   
  [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
- После каждого предложения `From` может следовать любая комбинация предложений дополнительных запросов для уточнения запроса.  Можно уточнить запрос следующими способами:  
+ Каждый `From` предложение может следовать любое сочетание предложений дополнительных запросов для уточнения запроса. Можно уточнить запрос следующими способами:  
   
--   Объединить несколько коллекций неявно с помощью предложений `From` и `Select` или явно с помощью предложений `Join` и `Group Join`.  
+-   Объединить несколько коллекций неявно с помощью `From` и `Select` предложений, или явно с использованием `Join` или `Group Join` предложения.  
   
--   Используйте предложение `Where` для фильтрации результатов запроса.  
+-   Используйте `Where` предложение для фильтрации результатов запроса.  
   
--   Отсортируйте результат с помощью предложения `Order By`.  
+-   Отсортировать результаты с помощью `Order By` предложения.  
   
--   Группирование аналогичных результатов с помощью предложения `Group By`.  
+-   Сгруппировать аналогичные результаты с помощью `Group By` предложения.  
   
--   Используйте предложение `Aggregate` для идентификации агрегатных функций для вычисления результата всего запроса.  
+-   Используйте `Aggregate` предложение для идентификации агрегатных функций для вычисления результата всего запроса.  
   
--   Используйте предложение `Let` для представления переменной итерации, значение которой определяется вместо выражения коллекции.  
+-   Используйте `Let` предложение для представления переменной итерации, значение которого определяется выражения, а не коллекцию.  
   
--   Чтобы игнорировать повторяющиеся результаты, используйте предложение `Distinct`.  
+-   Используйте `Distinct` предложений, чтобы игнорировать повторяющиеся результаты запроса.  
   
--   Укажите часть результата для возврата с помощью предложений `Skip`, `Take`, `Skip While` и `Take While`.  
+-   Определения частей результат, возвращаемый с помощью `Skip`, `Take`, `Skip While`, и `Take While` предложения.  
   
-## Пример  
- Следующее выражение запроса использует предложение `From` для объявления диапазона переменной `cust` для каждого объекта `Customer` в коллекции `customers`.  Предложение `Where` использует переменную диапазона для ограничения вывода для заказчиков из указанной области.  В результате запроса цикл `For Each` отображает имя компании для каждого заказчика.  
+## <a name="example"></a>Пример  
+ В следующем запросе используется выражение `From` предложение для объявления переменной диапазона `cust` для каждого `Customer` объекта в `customers` коллекции. `Where` Предложение использует переменную диапазона для ограничения выходных данных для клиентов из заданной области. `For Each` Цикл имя компании для каждого клиента в результатах запроса.  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## См. также  
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)   
- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Предложение Where](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
- [Предложение Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md)   
- [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Предложение Take](../../../visual-basic/language-reference/queries/take-clause.md)   
- [Предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
+## <a name="see-also"></a>См. также  
+ [Запросы](../../../visual-basic/language-reference/queries/queries.md)  
+ [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+ [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [Предложение Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Предложение Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [Предложение Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Предложение Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Предложение Order By](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md)  
+ [Предложение Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [Предложение Take](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [Предложение Skip While](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
  [Предложение Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)

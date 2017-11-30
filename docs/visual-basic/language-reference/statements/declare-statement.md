@@ -1,161 +1,159 @@
 ---
-title: "Оператор Declare | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Declare"
-  - "vb.Lib"
-  - "vb.Any"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Alias - ключевое слово"
-  - "API - интерфейсы, объявление функций API"
-  - "As - ключевое слово, в Declare - оператор"
-  - "декларации, внешние"
-  - "декларации, процедуры"
-  - "Declare - оператор"
-  - "объявление процедур, Declare - оператор"
-  - "библиотеки DLL, объявление процедур"
-  - "внешние ссылки, Visual Basic"
-  - "процедуры функций, объявление"
-  - "функции [Visual Basic], процедуры функций"
-  - "Lib - ключевое слово"
-  - "вызов неуправляемого кода, внешние ссылки Visual Basic"
-  - "процедуры, объявление"
-  - "процедуры, внешние"
-  - "Public - ключевое слово, Declare - оператор"
-  - "ресурсы [Visual Basic], объявление"
-  - "Sub - процедуры, декларации"
-  - "код Visual Basic, процедуры функций"
-  - "код Visual Basic, Sub - процедуры"
+title: Declare Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Declare
+- vb.Lib
+- vb.Any
+helpviewer_keywords:
+- Lib keyword [Visual Basic]
+- declaring procedures [Visual Basic], Declare statement
+- functions [Visual Basic], function procedures
+- declarations [Visual Basic], procedures
+- procedures [Visual Basic], declaration
+- procedures [Visual Basic], external
+- Alias keyword [Visual Basic]
+- external references [Visual Basic], Visual Basic
+- DLLs, declaring procedures
+- Declare statement [Visual Basic]
+- declarations [Visual Basic], external
+- Visual Basic code, Function procedures
+- As keyword [Visual Basic], in Declare statement
+- resources [Visual Basic], declaring
+- Public keyword [Visual Basic], Declare statement
+- platform invoke, Visual Basic external references
+- Sub procedures [Visual Basic], declarations
+- APIs, declaring API functions
+- Visual Basic code, Sub procedures
+- Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Declare
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="declare-statement"></a>Declare Statement
 Объявляет ссылку на процедуру, реализованную во внешнем файле.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
 ' -or-  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`attributelist`|Необязательный.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный.  Может принимать следующие значения:<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенный](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Необязательный.  См. раздел [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`charsetmodifier`|Необязательный.  Задает кодировку и информацию для поиска файла.  Может принимать следующие значения:<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) \(по умолчанию\)<br />-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
-|`Sub`|Необязательно, но требуется наличие `Sub` или `Function`.  Указывает на то, что внешняя процедура не возвращает значение.|  
-|`Function`|Необязательно, но требуется наличие `Sub` или `Function`.  Указывает на то, что внешняя процедура возвращает значение.|  
-|`name`|Обязательный.  Имя этой внешней ссылки.  Дополнительные сведения см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`Lib`|Обязательный.  Вводит предложение `Lib`, которое определяет внешний файл \(библиотека DLL или источник кода\), содержащий внешнюю процедуру.|  
-|`libname`|Обязательный.  Имя файла, который содержит объявляемую процедуру.|  
-|`Alias`|Необязательный.  Указывает, что объявляемая процедура не может быть идентифицирована в ее файле по имени, указанному в `name`.  Необходимо указать его идентификацию в `aliasname`.|  
-|`aliasname`|Является обязательным, если используется ключевое слово `Alias`.  Строка, идентифицирующая процедуру одним из двух способов:<br /><br /> Имя точки входа в процедуру в файле в кавычках \(`""`\)<br /><br /> \-или\-<br /><br /> Символ решетки \(`#`\), за которым следует целое число, указывающее порядковый номер точки входа в процедуру в файле|  
-|`parameterlist`|Требуется, если процедура принимает параметры.  Дополнительные сведения см. в разделе [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`returntype`|Требуется, если указана инструкция `Function`, а `Option Strict` имеет значение `On`.  Тип значения, возвращаемого процедурой.|  
+|---|---|  
+|`attributelist`|Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
+|`accessmodifier`|Необязательно. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`charsetmodifier`|Необязательно. Задает набор символов и файл поиска сведений. Ниже указаны доступные значения.<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (по умолчанию)<br />-   [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Авто](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`Sub`|Необязательно, но либо `Sub` или `Function` должны отображаться. Указывает, что внешняя процедура не возвращает значение.|  
+|`Function`|Необязательно, но либо `Sub` или `Function` должны отображаться. Указывает, что внешняя процедура возвращает значение.|  
+|`name`|Обязательный. Имя этой внешней ссылки. Дополнительные сведения см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`Lib`|Обязательный. Представляет `Lib` предложение, которое идентифицирует внешний файл (DLL или код ресурса), содержащий внешнюю процедуру.|  
+|`libname`|Обязательный. Имя файла, который содержит объявляемую процедуру.|  
+|`Alias`|Необязательно. Указывает, что объявляемая процедура не может определяться в его файле имя, указанное в `name`. Необходимо указать его идентификацию в `aliasname`.|  
+|`aliasname`|Является обязательным, если используется `Alias` ключевое слово. Строка, идентифицирующая процедуру одним из двух способов:<br /><br /> Имя точки входа в процедуру в файле в кавычках (`""`)<br /><br /> -или-<br /><br /> Знак решетки (`#`) за которым следует целое число, указывающее порядковый номер точки входа процедуры в его файле|  
+|`parameterlist`|Требуется, если процедура принимает параметры. В разделе [список параметров](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`returntype`|Обязателен, если `Function` указан и `Option Strict` — `On`. Тип данных значения, возвращаемого процедурой.|  
   
-## Заметки  
- Иногда необходимо вызвать процедуру, определенную в файле, \(таком как DLL или кодовый ресурс\) за пределами проекта.  После этого компилятор Visual Basic не имеет доступа к таким данным, как расположение процедуры, способ идентификации, последовательность вызова и возвращаемый тип, кодировка строк, необходимым для корректного вызова процедуры.  `Declare` создает ссылку на внешнюю процедуру и предоставляет необходимую информацию.  
+## <a name="remarks"></a>Примечания  
+ Иногда возникает необходимость вызове процедуры, определенной в файле за пределами проекта (например, DLL или код ресурса). При этом компилятор Visual Basic нет доступа к сведениям, необходимым для корректного вызова процедуры, например которой находится процедура, ее идентификатор, последовательность вызова и тип возвращаемого значения и строки набор символов, которые он использует. `Declare` Инструкция создает ссылку на внешнюю процедуру и предоставляет необходимую информацию.  
   
- Можно использовать зарезервированное слово `Declare` только на уровне модуля.  Это означает, что *контекст объявления* для внешней ссылки должен быть классом, структурой или модулем и не может быть исходным файлом, пространством имен, интерфейсом, процедурой или блоком.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Declare` можно использовать только на уровне модуля. Это означает *контекст объявления* для внешней ссылки должен быть классом, структурой или модуля и не может быть исходный файл, пространство имен, интерфейс, процедура или блок. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Внешние ссылки по умолчанию имеют уровень доступа [Public](../../../visual-basic/language-reference/modifiers/public.md).  Уровни доступа можно настроить с помощью модификаторов доступа.  
+ Внешние ссылки по умолчанию для [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа. Вы можете настроить уровни доступа с помощью модификаторов доступа.  
   
-## Правила  
+## <a name="rules"></a>Правила  
   
--   **Атрибуты.** Можно применить атрибуты к внешней ссылке.  Любой применяемый атрибут имеет силу только в проекте, а не во внешнем файле.  
+-   **Атрибуты.** Можно применить атрибуты к внешней ссылке. Любой применяемый атрибут действует только в проекте, но не во внешнем файле.  
   
--   **Модификаторы.** Внешние процедуры неявно являются [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  Нельзя использовать ключевое слово `Shared` при объявлении внешней ссылки и невозможно изменить ее статус общего доступа.  
+-   **Модификаторы.** Внешние процедуры являются неявно [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Нельзя использовать `Shared` ключевого слова при объявлении внешней ссылки и невозможно изменить ее статус общего доступа.  
   
-     Внешняя процедура не может участвовать в переопределении, реализовывать члены интерфейса или обрабатывать события.  Соответственно в операторе `Declare` нельзя использовать `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` или `Handles`.  
+     Внешнюю процедуру не может участвовать в переопределении, реализовывать члены интерфейса или обрабатывать события. Таким образом, нельзя использовать `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, или `Handles` ключевое слово в `Declare` инструкции.  
   
--   **Имя внешней процедуры.** Нет необходимости задавать этой внешней ссылке такое же имя \(в `name`\), как имя точки входа в процедуру во внешнем файле \(`aliasname`\).  Оператор `Alias` можно использовать для указания имени точки входа.  Это может быть полезно, если внешняя процедура имеет такое же имя, как зарезервированный модификатор Visual Basic, переменная, процедура или любой другой элемент программирования в той же самой области видимости.  
-  
-    > [!NOTE]
-    >  В большинстве DLL имена точек входа зависят от регистра.  
-  
--   **Номер внешней процедуры.** В качестве альтернативы можно использовать оператор `Alias` для указания порядкового номера точки входа в пределах таблицы экспорта внешнего файла.  Чтобы сделать это, начинайте `aliasname` со знака \(`#`\).  Это может быть полезно, если какой\-либо символ в имени внешней процедуры не допускается в Visual Basic, или внешний файл экспортирует процедуру без указания имени.  
-  
-## Правила типов данных  
-  
--   **Типы данных параметров.** Если `Option Strict` в значении `On`, то необходимо указать тип данных каждого параметра в `parameterlist`.  Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.  В пределах `parameterlist` используется оператор `As` для указания типа данных аргумента для передачи каждому параметру.  
+-   **Имя внешней процедуры.** Нет необходимости задавать этой внешней ссылке тем же именем (в `name`) в качестве имени точки входа процедуры во внешнем файле (`aliasname`). Можно использовать `Alias` предложение для указания имени точки входа. Это может быть полезно, если внешняя процедура имеет то же имя, что зарезервированный модификатор Visual Basic или переменной, процедура или любого другого элемента программирования в той же области.  
   
     > [!NOTE]
-    >  Если внешняя процедура была написана не для .NET Framework, то необходимо следить за соответствием типов данных.  Например, если объявляется внешняя ссылка на процедуру Visual Basic 6.0 с параметром `Integer` \(16 бит в Visual Basic 6.0\), то необходимо определить соответствующий аргумент как `Short` в инструкции `Declare`, поскольку этот тип представляет 16\-разрядное целое число в Visual Basic.  Подобным же образом `Long` имеет другую ширину данных в Visual Basic 6.0, и по другому реализуется тип `Date`.  
+    >  В большинстве DLL имена точек входа учитывается регистр.  
   
--   **Возвращаемый тип данных.** Если внешняя процедура является `Function`, и `Option Strict` в значении `On`, то необходимо указать тип данных значения, возвращаемого в вызывающий код.  Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.  
+-   **Номер внешней процедуры.** Кроме того, можно использовать `Alias` предложений, чтобы указать порядковый номер точки входа в пределах таблицы экспорта внешнего файла. Чтобы сделать это, следует начать `aliasname` со знака номера (`#`). Это полезно в том случае, если любой символ в имени внешней процедуры не допускается в Visual Basic, или внешний файл экспортирует процедуру без указания имени.  
+  
+## <a name="data-type-rules"></a>Правила типов данных  
+  
+-   **Типы данных параметров.** Если `Option Strict` — `On`, необходимо указать тип данных каждого параметра в `parameterlist`. Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса. В пределах `parameterlist`, используется `As` предложений, чтобы указать тип данных аргумента для передачи каждого параметра.  
   
     > [!NOTE]
-    >  Компилятор Visual Basic не проверяет совместимость типов данных с типами данных внешней процедуры.  Если имеется несоответствие, то общеязыковая среда выполнения создает исключение <xref:System.Runtime.InteropServices.MarshalDirectiveException> во время выполнения.  
+    >  Если внешняя процедура не была написана для платформы .NET Framework, необходимо соблюдать осторожность, соответствующие типы данных. Например, если объявляется внешняя ссылка на процедуру Visual Basic 6.0 с `Integer` параметра (16 бит в Visual Basic 6.0), необходимо определить соответствующий аргумент как `Short` в `Declare` инструкции, так как это 16 - целое число типа bit в Visual Basic. Аналогичным образом `Long` имеет другой размер в Visual Basic 6.0 и `Date` реализуется по-разному.  
   
--   **Типы данных по умолчанию.** Если `Option Strict` имеет значение `Off` и не указан тип данных параметра в `parameterlist`, то компилятор Visual Basic преобразует соответствующий аргумент к [Тип данных Object](../../../visual-basic/language-reference/data-types/object-data-type.md).  Аналогично, если не указан `returntype`, то компилятор устанавливает тип возвращаемых данных как `Object`.  
+-   **Тип данных возвращаемого значения.** Если внешняя процедура является `Function` и `Option Strict` — `On`, необходимо указать тип данных значения, возвращаемого в вызывающий код. Это может быть любой тип данных или имя перечисления, структуры, класса или интерфейса.  
   
     > [!NOTE]
-    >  Поскольку происходит работа с внешними процедурами, которые, возможно, были написаны на других платформах, опасно делать любые предположения о типах данных или оставлять их по умолчанию.  Гораздо безопаснее указывать тип данных каждого параметра и возвращаемого значения, если таковые имеются.  Это также улучшает удобочитаемость кода.  
+    >  Компилятор Visual Basic не проверяет, что типы данных совместимы с файлами внешней процедуры. Если имеется несоответствие, общеязыковая среда выполнения создает <xref:System.Runtime.InteropServices.MarshalDirectiveException> исключений во время выполнения.  
   
-## Поведение  
+-   **Типы данных по умолчанию.** Если `Option Strict` — `Off` и задают тип данных параметра в `parameterlist`, компилятор Visual Basic преобразует соответствующего аргумента в [тип данных объекта](../../../visual-basic/language-reference/data-types/object-data-type.md). Аналогично Если вы не укажете `returntype`, компилятор принимает тип возвращаемых данных для `Object`.  
   
--   **Область действия.** Область внешней ссылки \- ее класс, структура или модуль.  
+    > [!NOTE]
+    >  Поскольку вы имеете дело с внешней процедуре, которая может быть записана на другой платформе, его небезопасно делать никаких предположений о типах данных или оставлять их по умолчанию. Это гораздо более безопасной указать тип данных каждого параметра и возвращаемого значения, если таковые имеются. Это также повышает удобочитаемость кода.  
   
--   **Время существования.** Внешняя ссылка имеет такое же время жизни, как класс, структура или модуль, в котором она была объявлена.  
+## <a name="behavior"></a>Поведение  
   
--   **Вызов внешних процедур.** Вызов внешней процедуры производится таким же образом, как и вызов `Function` или `Sub` процедуры — с помощью использования ее в выражении, если она возвращает значение, или с помощью указания ее в [Оператор Call](../../../visual-basic/language-reference/statements/call-statement.md), если она не возвращает значения.  
+-   **Область действия.** Область действия его класса, структуры или модуля является внешней ссылкой.  
   
-     Аргументы передаются внешней процедуре точно в соответствии с `parameterlist` в инструкции `Declare`.  Не принимается во внимание, как параметры были изначально объявлены во внешнем файле.  Аналогично, если есть возвращаемое значение, то используется оно точно в соответствии с `returntype` инструкции `Declare`.  
+-   **Время существования.** Внешняя ссылка имеет то же время существования, как класс, структура или модуль, в котором она объявлена.  
   
--   **Кодировки.** Можно указать в `charsetmodifier`, как Visual Basic следует упаковывать строки, когда он вызывает внешнюю процедуру.  Модификатор `Ansi` указывает Visual Basic упаковывать все строки в значения ANSI, а модификатор `Unicode` \- в значения Юникода.  Модификатор `Auto` указывает Visual Basic упаковывать строки согласно правилам .NET Framework на основе внешней ссылки `name` или `aliasname`, если они указаны.  Значение по умолчанию — `Ansi`.  
+-   **Вызов внешних процедур.** Вызов внешней процедуры так же, как `Function` или `Sub` процедуры — с помощью его в выражении, если он возвращает значение, или путем задания его в [инструкции Call](../../../visual-basic/language-reference/statements/call-statement.md) , если он не возвращает значение.  
   
-     `charsetmodifier` также указывает, как Visual Basic должен искать внешнюю процедуру в его внешнем файле.  `Ansi` и `Unicode` указывают Visual Basic выполнять поиск без изменения имени в ходе поиска.  `Auto` указывает Visual Basic определить базовую кодировку платформы времени выполнения и, возможно, изменить имя внешней процедуры следующим образом:  
+     Передайте аргументы внешней процедуры точно в соответствии с `parameterlist` в `Declare` инструкции. Не учитывать как параметры были изначально объявлены во внешнем файле. Аналогичным образом, если возвращаемое значение отсутствует, использовать его точно в соответствии с `returntype` в `Declare` инструкции.  
   
-    -   На ANSI платформах, таких как Windows 95, Windows 98 или Windows Millennium Edition, сначала производится поиск внешней процедуры без изменения имени.  В случае неудачи в конец имени внешней процедуры добавляется "A", и осуществляется повторный поиск.  
+-   **Наборы знаков.** Можно указать в `charsetmodifier` как Visual Basic должен маршалировать строки при вызове внешней процедуры. `Ansi` Модификатор указывает Visual Basic маршалировать все строки в значения ANSI и `Unicode` модификатор направляет его в маршалировать все строки в значения Юникода. `Auto` Направляет модификатор Visual Basic для маршалинга строк в соответствии с .NET Framework правила на основе внешней ссылки `name`, или `aliasname` Если указано. Значение по умолчанию — `Ansi`.  
   
-    -   На Юникод платформе, таких как Windows NT, Windows 2000 или Windows XP, сначала производится поиск внешней процедуры без изменения имени.  В случае неудачи в конец имени внешней процедуры добавляется "W", и осуществляется повторный поиск.  
+     `charsetmodifier`также указывает, как Visual Basic следует искать внешней процедуры во внешнем файле. `Ansi`и `Unicode` оба направления Visual Basic для поиска без изменения имени во время поиска. `Auto`Указывает Visual Basic, чтобы определить базовый набор символов платформы во время выполнения и возможно, изменить имя внешней процедуры следующим образом:  
   
--   **Механизм.** Visual Basic использует механизм .NET Framework *платформозависимый вызов* \(PInvoke\) для разрешения и доступа к внешним процедурам.  Инструкция `Declare` и класс <xref:System.Runtime.InteropServices.DllImportAttribute> используют этот механизм автоматически и не нуждаются в любых знаниях о PInvoke.  Дополнительные сведения см. в разделе [Пошаговое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+    -   На платформе ANSI, таких как Windows 95, Windows 98 или Windows Millennium Edition сначала найдите внешнюю процедуру без изменения имени. В случае неудачи добавляется в конец имени внешней процедуры «A», и повторный поиск.  
+  
+    -   На платформе Юникода, например Windows NT, Windows 2000 или Windows XP сначала найдите внешнюю процедуру без изменения имени. Если это не удается добавить «W» в конец внешней процедуре имя и повторный поиск.  
+  
+-   **Механизм.** Visual Basic использует .NET Framework *неуправляемого* (PInvoke) механизм для разрешения и доступ к внешней процедуры. `Declare` Инструкции и <xref:System.Runtime.InteropServices.DllImportAttribute> класс оба используют этот механизм автоматически и не требуются сведения о PInvoke. Дополнительные сведения см. в разделе [Пошаговое руководство: вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Если внешняя процедура выполняется за пределами общеязыковой среды выполнения \(CLR\), то это *неуправляемый код*.  При вызове таких процедур, например функции Win32 API или метода COM, приложение может подвергаться угрозе безопасности.  Дополнительные сведения см. в разделе [Secure Coding Guidelines for Unmanaged Code](../Topic/Secure%20Coding%20Guidelines%20for%20Unmanaged%20Code.md).  
+>  Если внешняя процедура выполняется за пределами общеязыковой среды выполнения (CLR), это *неуправляемого кода*. При вызове процедуры, например функции Win32 API или метода COM, могут сделать ваше приложение к угрозам безопасности. Дополнительные сведения см. в разделе [правила написания безопасного кода для неуправляемого кода](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
-## Пример  
- В следующем примере объявляется внешняя ссылка на `Function`, которая возвращает имя текущего пользователя.  Затем вызывается внешняя процедура `GetUserNameA` как часть процедуры `getUser`.  
+## <a name="example"></a>Пример  
+ В следующем примере объявляется внешняя ссылка на `Function` процедуру, которая возвращает имя текущего пользователя. Затем он вызывает внешней процедуры `GetUserNameA` как часть `getUser` процедуры.  
   
  [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
-## Пример  
- <xref:System.Runtime.InteropServices.DllImportAttribute> предоставляет альтернативный способ использования функций в неуправляемом коде.  В следующем примере импортируемая функция объявляется без применения оператора `Declare`.  
+## <a name="example"></a>Пример  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Предоставляет альтернативный способ использования функций в неуправляемом коде. В следующем примере объявляется импортированной функции без использования `Declare` инструкции.  
   
  [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [Оператор Imports \(пространство имен .NET и тип\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Оператор Call](../../../visual-basic/language-reference/statements/call-statement.md)   
- [Пошаговое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Оператор Call](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
