@@ -1,70 +1,71 @@
 ---
-title: "Практическое руководство. Установка последовательности переходов в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TabStop"
-  - "TabIndex"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], установка последовательности табуляции"
-  - "последовательность вкладок, элементы управления в формах Windows"
-  - "элементы управления Windows Forms, установка последовательности табуляции"
-  - "Windows Forms, установка последовательности табуляции"
+title: "Практическое руководство. Установка последовательности переходов в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TabStop
+- TabIndex
+helpviewer_keywords:
+- tab order [Windows Forms], controls on Windows forms
+- Windows Forms controls, setting tab order
+- controls [Windows Forms], setting tab order
+- Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка последовательности переходов в формах Windows Forms
-Последовательностью переходов является последовательность, в которой пользователь передвигает фокус с одного элемента управления на другой с помощью клавиши TAB.  У каждой формы есть собственная последовательность перехода.  По умолчанию последовательность перехода аналогична последовательности создания элементов управления.  Нумерация в последовательности перехода начинается с нуля.  
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a><span data-ttu-id="49ef2-102">Практическое руководство. Установка последовательности переходов в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="49ef2-102">How to: Set the Tab Order on Windows Forms</span></span>
+<span data-ttu-id="49ef2-103">Последовательность табуляции — это порядок, в которой пользователь передвигает фокус с одного элемента управления на другой с помощью клавиши TAB.</span><span class="sxs-lookup"><span data-stu-id="49ef2-103">The tab order is the order in which a user moves focus from one control to another by pressing the TAB key.</span></span> <span data-ttu-id="49ef2-104">Каждая форма имеет свои собственные последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="49ef2-104">Each form has its own tab order.</span></span> <span data-ttu-id="49ef2-105">По умолчанию последовательности табуляции является таким же, как порядок создания элементов управления.</span><span class="sxs-lookup"><span data-stu-id="49ef2-105">By default, the tab order is the same as the order in which you created the controls.</span></span> <span data-ttu-id="49ef2-106">Последовательность перехода нумерация начинается с нуля.</span><span class="sxs-lookup"><span data-stu-id="49ef2-106">Tab-order numbering begins with zero.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="49ef2-107">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="49ef2-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="49ef2-108">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="49ef2-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="49ef2-109">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="49ef2-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы задать последовательность перехода элемента управления, выполните следующие действия:  
+### <a name="to-set-the-tab-order-of-a-control"></a><span data-ttu-id="49ef2-110">Чтобы задать последовательность перехода элемента управления</span><span class="sxs-lookup"><span data-stu-id="49ef2-110">To set the tab order of a control</span></span>  
   
-1.  В меню **Вид** выберите пункт **Последовательность перехода**.  
+1.  <span data-ttu-id="49ef2-111">На **представление** меню, нажмите кнопку **последовательности табуляции**.</span><span class="sxs-lookup"><span data-stu-id="49ef2-111">On the **View** menu, click **Tab Order**.</span></span>  
   
-     Это действие активирует режим выбора последовательности переходов в форме.  В левом верхнем углу каждого элемента управления отображается число, представляющее свойство <xref:System.Windows.Forms.Control.TabIndex%2A>.  
+     <span data-ttu-id="49ef2-112">Это активирует режим выбора последовательности переходов в форме.</span><span class="sxs-lookup"><span data-stu-id="49ef2-112">This activates the tab-order selection mode on the form.</span></span> <span data-ttu-id="49ef2-113">Число (представляющий <xref:System.Windows.Forms.Control.TabIndex%2A> свойство) отображается в левом верхнем углу каждого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="49ef2-113">A number (representing the <xref:System.Windows.Forms.Control.TabIndex%2A> property) appears in the upper-left corner of each control.</span></span>  
   
-2.  Последовательно щелкните элементы управления, чтобы установить необходимую последовательность перехода.  
-  
-    > [!NOTE]
-    >  Месту элемента управления в последовательности перехода может быть присвоено любое значение, большее или равное нулю.  Для дубликатов оценивается z\-порядок двух элементов управления, и элемент управления, находящийся сверху, становится первой вкладкой.  \(Z\-порядок — это наглядное расположение уровней элементов управления на различной глубине формы \(по оси z\).  Z\-порядок определяет элементы управления, стоящие впереди других элементов.\) Дополнительные сведения о z\-порядке см. в разделе [Многоуровневое расположение объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
-  
-3.  После окончания снова выберите пункт **Последовательность перехода** в меню **Вид**, чтобы выйти из режима выбора последовательности перехода.  
+2.  <span data-ttu-id="49ef2-114">Щелкните последовательно, чтобы установить нужные последовательности табуляции элементов управления.</span><span class="sxs-lookup"><span data-stu-id="49ef2-114">Click the controls sequentially to establish the tab order you want.</span></span>  
   
     > [!NOTE]
-    >  Элементы управления, которые не могут получить фокус, а также отключенные и невидимые элементы управления, не имеют свойства <xref:System.Windows.Forms.Control.TabIndex%2A> и не включаются в последовательность перехода.  При нажатии пользователем клавиши TAB эти элементы управления пропускаются.  
+    >  <span data-ttu-id="49ef2-115">Поместить элемент управления в последовательности перехода может быть присвоено любое значение больше или равно 0.</span><span class="sxs-lookup"><span data-stu-id="49ef2-115">A control's place within the tab order can be set to any value greater than or equal to 0.</span></span> <span data-ttu-id="49ef2-116">Для дубликатов оценивается z порядка двух элементов управления и элемент управления в верхней части является первой вкладкой.</span><span class="sxs-lookup"><span data-stu-id="49ef2-116">When duplicates occur, the z-order of the two controls is evaluated and the control on top is tabbed to first.</span></span> <span data-ttu-id="49ef2-117">(Z порядка является видимое расположение элементов управления на форме вдоль оси z формы [глубины].</span><span class="sxs-lookup"><span data-stu-id="49ef2-117">(The z-order is the visual layering of controls on a form along the form's z-axis [depth].</span></span> <span data-ttu-id="49ef2-118">Z порядок определяет, какие элементы управления располагаются перед другими элементами.) Дополнительные сведения о z порядке см. в разделе [иерархическое представление объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="49ef2-118">The z-order determines which controls are in front of other controls.) For more information on z-order, see [Layering Objects on Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).</span></span>  
   
- Кроме того, последовательность перехода может быть задана в окне "Свойства" с помощью свойства <xref:System.Windows.Forms.Control.TabIndex%2A>.  Свойство элемента управления <xref:System.Windows.Forms.Control.TabIndex%2A> определяет его положение в последовательности переходов.  По умолчанию свойство <xref:System.Windows.Forms.Control.TabIndex%2A> первого изображенного элемента управления имеет значение 0, свойство <xref:System.Windows.Forms.Control.TabIndex%2A> второго элемента имеет значение 1 и т. д.  
-  
- Кроме того, по умолчанию у элемента управления <xref:System.Windows.Forms.GroupBox> есть собственное значение свойства <xref:System.Windows.Forms.Control.TabIndex%2A>, являющееся целым числом.  Сам элемент управления <xref:System.Windows.Forms.GroupBox> не может быть в фокусе во время выполнения.  Поэтому каждый элемент управления внутри <xref:System.Windows.Forms.GroupBox> имеет свое десятичное значение свойства <xref:System.Windows.Forms.Control.TabIndex%2A>, начинающееся с .0.  Естественно, при увеличении значения свойства <xref:System.Windows.Forms.Control.TabIndex%2A> элемента управления <xref:System.Windows.Forms.GroupBox> элементы управления внутри него будут увеличиваться соответственно.  При изменении значения свойства <xref:System.Windows.Forms.Control.TabIndex%2A> с 5 на 6 значение свойства <xref:System.Windows.Forms.Control.TabIndex%2A> первого элемента в группе автоматически становится 6.0 и т. д.  
-  
- Наконец, любой элемент управления из множества элементов формы может быть пропущен в последовательности перехода.  Обычно при успешном нажатии клавиши TAB во время выполнения выделяется каждый элемент управления в последовательности перехода.  С помощью отключения свойства <xref:System.Windows.Forms.Control.TabStop%2A> можно сделать так, чтобы элемент управления не включался в последовательность перехода формы.  
-  
-#### Чтобы удалить элемент управления из последовательности перехода, выполните следующие действия:  
-  
-1.  В окне "Свойства" установите для свойства <xref:System.Windows.Forms.Control.TabStop%2A> элемента управления значение `false`.  
-  
-     Элемент управления, свойство <xref:System.Windows.Forms.Control.TabStop%2A> которого имеет значение `false`, сохраняет свое место в последовательности перехода, несмотря на то что этот элемент управления пропускается при переходе по элементам управления с помощью клавиши TAB.  
+3.  <span data-ttu-id="49ef2-119">После завершения нажмите кнопку **последовательности табуляции** на **представление** меню еще раз, чтобы выйти из режима выбора последовательности перехода.</span><span class="sxs-lookup"><span data-stu-id="49ef2-119">When you have finished, click **Tab Order** on the **View** menu again to leave tab order mode.</span></span>  
   
     > [!NOTE]
-    >  В группе переключателей во время выполнения присутствует одна позиция табуляции.  Свойству <xref:System.Windows.Forms.Control.TabStop%2A> выбранной клавиши \(клавиши, для свойства <xref:System.Windows.Forms.RadioButton.Checked%2A> которой задано значение `true`\) автоматически присваивается значение `true`, тогда как свойству <xref:System.Windows.Forms.Control.TabStop%2A> других клавиш присваивается значение `false`.  Дополнительные сведения о группировании элементов управления <xref:System.Windows.Forms.RadioButton> см. в разделе [Группировка элементов управления форм Windows Forms RadioButton по наборам функций](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  <span data-ttu-id="49ef2-120">Элементы управления, которые не удается получить фокус, а также отключенные и невидимые элементы управления, не имеют <xref:System.Windows.Forms.Control.TabIndex%2A> свойство и не включаются в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="49ef2-120">Controls that cannot get the focus, as well as disabled and invisible controls, do not have a <xref:System.Windows.Forms.Control.TabIndex%2A> property and are not included in the tab order.</span></span> <span data-ttu-id="49ef2-121">При нажатии клавиши TAB, эти элементы управления пропускаются.</span><span class="sxs-lookup"><span data-stu-id="49ef2-121">As a user presses the TAB key, these controls are skipped.</span></span>  
   
-## См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ <span data-ttu-id="49ef2-122">Кроме того, можно задать последовательность перехода в окно свойств с помощью <xref:System.Windows.Forms.Control.TabIndex%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="49ef2-122">Alternatively, tab order can be set in the Properties window using the <xref:System.Windows.Forms.Control.TabIndex%2A> property.</span></span> <span data-ttu-id="49ef2-123"><xref:System.Windows.Forms.Control.TabIndex%2A> Свойство элемента управления определяет, где он расположен в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="49ef2-123">The <xref:System.Windows.Forms.Control.TabIndex%2A> property of a control determines where it is positioned in the tab order.</span></span> <span data-ttu-id="49ef2-124">По умолчанию используется первый элемент управления рисуется <xref:System.Windows.Forms.Control.TabIndex%2A> значение 0, второй — <xref:System.Windows.Forms.Control.TabIndex%2A> 1 и т. д.</span><span class="sxs-lookup"><span data-stu-id="49ef2-124">By default, the first control drawn has a <xref:System.Windows.Forms.Control.TabIndex%2A> value of 0, the second has a <xref:System.Windows.Forms.Control.TabIndex%2A> of 1, and so on.</span></span>  
+  
+ <span data-ttu-id="49ef2-125">Кроме того, по умолчанию <xref:System.Windows.Forms.GroupBox> управления имеет свой собственный <xref:System.Windows.Forms.Control.TabIndex%2A> значение, которое является целым числом.</span><span class="sxs-lookup"><span data-stu-id="49ef2-125">Additionally, by default, a <xref:System.Windows.Forms.GroupBox> control has its own <xref:System.Windows.Forms.Control.TabIndex%2A> value, which is a whole number.</span></span> <span data-ttu-id="49ef2-126">Объект <xref:System.Windows.Forms.GroupBox> сам элемент управления не может иметь фокус во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="49ef2-126">A <xref:System.Windows.Forms.GroupBox> control itself cannot have focus at run time.</span></span> <span data-ttu-id="49ef2-127">Таким образом, каждый элемент управления внутри <xref:System.Windows.Forms.GroupBox> имеет свое десятичное <xref:System.Windows.Forms.Control.TabIndex%2A> значение, начинающееся с.0.</span><span class="sxs-lookup"><span data-stu-id="49ef2-127">Thus, each control within a <xref:System.Windows.Forms.GroupBox> has its own decimal <xref:System.Windows.Forms.Control.TabIndex%2A> value, beginning with .0.</span></span> <span data-ttu-id="49ef2-128">Естественно, как <xref:System.Windows.Forms.Control.TabIndex%2A> из <xref:System.Windows.Forms.GroupBox> управления увеличивается, элементы управления внутри него будут увеличиваться соответственно.</span><span class="sxs-lookup"><span data-stu-id="49ef2-128">Naturally, as the <xref:System.Windows.Forms.Control.TabIndex%2A> of a <xref:System.Windows.Forms.GroupBox> control is incremented, the controls within it will be incremented accordingly.</span></span> <span data-ttu-id="49ef2-129">Если вы изменили <xref:System.Windows.Forms.Control.TabIndex%2A> значение от 5 до 6, <xref:System.Windows.Forms.Control.TabIndex%2A> значение первого элемента в группе автоматически изменяется 6.0 и т. д.</span><span class="sxs-lookup"><span data-stu-id="49ef2-129">If you changed a <xref:System.Windows.Forms.Control.TabIndex%2A> value from 5 to 6, the <xref:System.Windows.Forms.Control.TabIndex%2A> value of the first control in its group automatically changes to 6.0, and so on.</span></span>  
+  
+ <span data-ttu-id="49ef2-130">Наконец любой элемент управления из множества элементов формы может быть пропущен в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="49ef2-130">Finally, any control of the many on your form can be skipped in the tab order.</span></span> <span data-ttu-id="49ef2-131">Как правило при нажатии клавиши TAB последовательно во время выполнения выделяется каждый элемент управления в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="49ef2-131">Usually, pressing TAB successively at run time selects each control in the tab order.</span></span> <span data-ttu-id="49ef2-132">Отключив <xref:System.Windows.Forms.Control.TabStop%2A> можно сделать элемент управления передается в последовательности перехода формы.</span><span class="sxs-lookup"><span data-stu-id="49ef2-132">By turning off the <xref:System.Windows.Forms.Control.TabStop%2A> property, you can make a control be passed over in the tab order of the form.</span></span>  
+  
+#### <a name="to-remove-a-control-from-the-tab-order"></a><span data-ttu-id="49ef2-133">Чтобы удалить элемент управления в последовательности табуляции</span><span class="sxs-lookup"><span data-stu-id="49ef2-133">To remove a control from the tab order</span></span>  
+  
+1.  <span data-ttu-id="49ef2-134">Задайте в качестве <xref:System.Windows.Forms.Control.TabStop%2A> свойства `false` в окне «Свойства».</span><span class="sxs-lookup"><span data-stu-id="49ef2-134">Set the control's <xref:System.Windows.Forms.Control.TabStop%2A> property to `false` in the Properties window.</span></span>  
+  
+     <span data-ttu-id="49ef2-135">Элемент управления типа <xref:System.Windows.Forms.Control.TabStop%2A> присвоено свойству `false` сохраняет свое место в последовательности перехода, несмотря на то, что этот элемент управления пропускается при переходе по элементам управления с помощью клавиши TAB.</span><span class="sxs-lookup"><span data-stu-id="49ef2-135">A control whose <xref:System.Windows.Forms.Control.TabStop%2A> property has been set to `false` still maintains its position in the tab order, even though the control is skipped when you cycle through the controls with the TAB key.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="49ef2-136">В переключателе есть одна позиция табуляции во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="49ef2-136">A radio button group has a single tab stop at run time.</span></span> <span data-ttu-id="49ef2-137">Выделенной кнопки (то есть кнопка с его <xref:System.Windows.Forms.RadioButton.Checked%2A> свойство `true`) имеет его <xref:System.Windows.Forms.Control.TabStop%2A> свойству автоматически присваивается `true`, тогда как другие кнопки их <xref:System.Windows.Forms.Control.TabStop%2A> свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="49ef2-137">The selected button (that is, the button with its <xref:System.Windows.Forms.RadioButton.Checked%2A> property set to `true`) has its <xref:System.Windows.Forms.Control.TabStop%2A> property automatically set to `true`, while the other buttons have their <xref:System.Windows.Forms.Control.TabStop%2A> property set to `false`.</span></span> <span data-ttu-id="49ef2-138">Дополнительные сведения о группировании <xref:System.Windows.Forms.RadioButton> элементов управления, в разделе [группирование Windows Forms элементов управления RadioButton как набор](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).</span><span class="sxs-lookup"><span data-stu-id="49ef2-138">For more information about grouping <xref:System.Windows.Forms.RadioButton> controls, see [Grouping Windows Forms RadioButton Controls to Function as a Set](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="49ef2-139">См. также</span><span class="sxs-lookup"><span data-stu-id="49ef2-139">See Also</span></span>  
+ [<span data-ttu-id="49ef2-140">Элементы управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="49ef2-140">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="49ef2-141">Упорядочение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="49ef2-141">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="49ef2-142">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="49ef2-142">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="49ef2-143">Функциональная классификация элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="49ef2-143">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

@@ -1,48 +1,53 @@
 ---
-title: "Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "формы, создание переменного размера"
-  - "макет [Windows Forms], изменение размеров"
-  - "TableLayoutPanel - элемент управления [Windows Forms]"
-  - "Windows Forms, изменяемого размера"
+title: "Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- TableLayoutPanel control [Windows Forms]
+- layout [Windows Forms], resizing
+- forms [Windows Forms], creating resizable
+- Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 51e844dc49f75e2f27ad5bbaf9176e71f6e3388a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять
-Удачно сконструированный макет должен реагировать на изменение размеров родительской формы.  Для согласованного изменения размера и положения элементов управления на макете формы при изменении размеров формы можно использовать элемент управления <xref:System.Windows.Forms.TableLayoutPanel>.  Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> также полезен в случаях, когда изменение содержимого элементов управления приводит к изменению макета.  Процесс, описанный в этой процедуре, можно выполнить в среде Visual Studio.  См. также [Пошаговое руководство. Создание в Windows Forms формы для ввода данных переменного размера](http://msdn.microsoft.com/library/991eahec\(v=vs.110\)).  
+# <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a><span data-ttu-id="67d03-102">Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять</span><span class="sxs-lookup"><span data-stu-id="67d03-102">How to: Create a Resizable Windows Form for Data Entry</span></span>
+<span data-ttu-id="67d03-103">Удачно сконструированный макет должен реагировать на изменение размеров родительской формы.</span><span class="sxs-lookup"><span data-stu-id="67d03-103">A good layout responds well to changes in the dimensions of its parent form.</span></span> <span data-ttu-id="67d03-104">Для согласованного изменения размера и положения элементов управления на макете формы при изменении размеров формы можно использовать элемент управления <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="67d03-104">You can use the <xref:System.Windows.Forms.TableLayoutPanel> control to arrange the layout of your form to resize and position your controls in a consistent way as the form's dimensions change.</span></span> <span data-ttu-id="67d03-105">Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> также полезен в случаях, когда изменение содержимого элементов управления приводит к изменению макета.</span><span class="sxs-lookup"><span data-stu-id="67d03-105">The <xref:System.Windows.Forms.TableLayoutPanel> control is also useful when changes in the contents of your controls cause changes in the layout.</span></span> <span data-ttu-id="67d03-106">Процесс, описанный в этой процедуре, можно выполнить в среде Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="67d03-106">The process covered in this procedure can be done within the Visual Studio environment.</span></span>  <span data-ttu-id="67d03-107">См. также [Пошаговое руководство. Создание в Windows Forms формы для ввода данных переменного размера](http://msdn.microsoft.com/library/991eahec\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="67d03-107">Also see [Walkthrough: Creating a Resizable Windows Form for Data Entry](http://msdn.microsoft.com/library/991eahec\(v=vs.110\)).</span></span>  
   
-## Пример  
- В следующем примере демонстрируется использование элемента управления <xref:System.Windows.Forms.TableLayoutPanel> для построения макета, который соответствующим образом меняется при изменении пользователем размера формы.  Он также демонстрирует, как макет учитывает будущую локализацию.  
+## <a name="example"></a><span data-ttu-id="67d03-108">Пример</span><span class="sxs-lookup"><span data-stu-id="67d03-108">Example</span></span>  
+ <span data-ttu-id="67d03-109">В следующем примере демонстрируется использование элемента управления <xref:System.Windows.Forms.TableLayoutPanel> для построения макета, который соответствующим образом меняется при изменении пользователем размера формы.</span><span class="sxs-lookup"><span data-stu-id="67d03-109">The following example demonstrates how to use a <xref:System.Windows.Forms.TableLayoutPanel> control to build a layout that responds well when the user resizes the form.</span></span> <span data-ttu-id="67d03-110">Он также демонстрирует, как макет учитывает будущую локализацию.</span><span class="sxs-lookup"><span data-stu-id="67d03-110">It also demonstrates a layout that responds well to localization.</span></span>  
   
  [!code-cpp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/cpp/basicdataentryform.cpp#1)]
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/CS/basicdataentryform.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/VB/basicdataentryform.vb#1)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="67d03-111">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="67d03-111">Compiling the Code</span></span>  
+ <span data-ttu-id="67d03-112">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="67d03-112">This example requires:</span></span>  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+-   <span data-ttu-id="67d03-113">ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="67d03-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) или [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Вы можете выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="67d03-114">Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="67d03-114">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="67d03-115">Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="67d03-115">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="67d03-116">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="67d03-116">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [Практическое руководство. Формирование макета формы Windows Forms с учетом будущей локализации](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)   
- [Официальные рекомендации для разработчиков и проектировщиков интерфейса пользователя Microsoft Windows. Redmond, WA: Microsoft Press, 1999 г. \(USBN: 0\-7356\-0566\-1\)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+## <a name="see-also"></a><span data-ttu-id="67d03-117">См. также</span><span class="sxs-lookup"><span data-stu-id="67d03-117">See Also</span></span>  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="67d03-118">Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="67d03-118">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="67d03-119">Практическое руководство. Формирование макета формы Windows Forms с учетом будущей локализации</span><span class="sxs-lookup"><span data-stu-id="67d03-119">How to: Design a Windows Forms Layout that Responds Well to Localization</span></span>](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [<span data-ttu-id="67d03-120">Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Redmond, WA: Microsoft Press, 1999 г. (USBN: 0-7356-0566-1)</span><span class="sxs-lookup"><span data-stu-id="67d03-120">Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)</span></span>](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)

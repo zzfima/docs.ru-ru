@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Анимация объекта с помощью ключевых кадров | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "анимация, объектов по ключевым кадрам"
-  - "ключевые кадры, анимация объектов"
+title: "Практическое руководство. Анимация объекта с помощью ключевых кадров"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], objects with key frames
+- key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71feb0ecef7a6356c95b843fbc2657ad2e4a7996
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Анимация объекта с помощью ключевых кадров
-В этом примере показана анимация объекта \(свойство <xref:System.Windows.Controls.Page.Background%2A> элемента управления <xref:System.Windows.Controls.Page>\) с помощью полных кадров.  
+# <a name="how-to-animate-an-object-by-using-key-frames"></a><span data-ttu-id="66c10-102">Практическое руководство. Анимация объекта с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="66c10-102">How to: Animate an Object by Using Key Frames</span></span>
+<span data-ttu-id="66c10-103">В этом примере показано, как анимация объекта, который в данном примере — <xref:System.Windows.Controls.Page.Background%2A> свойства <xref:System.Windows.Controls.Page> элемента управления с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="66c10-103">This example shows how to animate an object, which in this example is the <xref:System.Windows.Controls.Page.Background%2A> property of a <xref:System.Windows.Controls.Page> control, by using key frames.</span></span>  
   
-## Пример  
- В следующем примере используется класс <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> для анимации изменения цвета свойства <xref:System.Windows.Controls.Page.Background%2A> элемента управления <xref:System.Windows.Controls.Page>.  В этом примере через определенные интервалы времени изменяется цвет кисти фона.  Для создания трех различных полных кадров в этой анимации используется класс <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>.  Полные кадры используются для анимации следующим способом:  
+## <a name="example"></a><span data-ttu-id="66c10-104">Пример</span><span class="sxs-lookup"><span data-stu-id="66c10-104">Example</span></span>  
+ <span data-ttu-id="66c10-105">В следующем примере используется <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> изменяет класс анимация цвета для <xref:System.Windows.Controls.Page.Background%2A> свойства <xref:System.Windows.Controls.Page> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="66c10-105">The following example uses the <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> class to animate color changes for the <xref:System.Windows.Controls.Page.Background%2A> property of a <xref:System.Windows.Controls.Page> control.</span></span> <span data-ttu-id="66c10-106">Пример времени изменяется цвет кисти фона через регулярные интервалы.</span><span class="sxs-lookup"><span data-stu-id="66c10-106">The example animation changes to a different background brush at regular intervals.</span></span> <span data-ttu-id="66c10-107">Эта анимация использует <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> класса, чтобы создать три различных ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="66c10-107">This animation uses the <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> class to create three different key frames.</span></span> <span data-ttu-id="66c10-108">Анимация использует ключевые кадры следующим образом:</span><span class="sxs-lookup"><span data-stu-id="66c10-108">The animation uses key frames in the following manner:</span></span>  
   
-1.  В конце первой секунды происходит анимация экземпляра класса <xref:System.Windows.Media.LinearGradientBrush>.  В этой части примера к фоновому цвету применяется линейный градиент, определяющий переход цвета от желтого к оранжевому и к красному.  
+1.  <span data-ttu-id="66c10-109">В конце первой секунды происходит анимация экземпляра <xref:System.Windows.Media.LinearGradientBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="66c10-109">At the end of the first second, animates an instance of the <xref:System.Windows.Media.LinearGradientBrush> class.</span></span> <span data-ttu-id="66c10-110">В этом разделе примере применяется линейного градиента фоновый цвет, чтобы переход от желтого цвета на оранжевый, красный.</span><span class="sxs-lookup"><span data-stu-id="66c10-110">This section of the example applies a linear gradient to the background color so that the color transitions from yellow to orange to red.</span></span>  
   
-2.  В конце следующей секунды происходит анимация экземпляра класса <xref:System.Windows.Media.RadialGradientBrush>.  В этой части примера к фоновому цвету применяется радиальный градиент, определяющий переход цвета от белого к синему и к черному.  
+2.  <span data-ttu-id="66c10-111">В конце следующей секунды происходит анимация экземпляра <xref:System.Windows.Media.RadialGradientBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="66c10-111">At the end of the next second, animates an instance of the <xref:System.Windows.Media.RadialGradientBrush> class.</span></span> <span data-ttu-id="66c10-112">В этом разделе Пример применяется радиального градиента для цвета фона, чтобы переход от белого синего черного цвета.</span><span class="sxs-lookup"><span data-stu-id="66c10-112">This section of the example applies a radial gradient to the background color so that the color transitions from white to blue to black.</span></span>  
   
-3.  В конце третьей секунды происходит анимация экземпляра класса <xref:System.Windows.Media.DrawingBrush>.  В этой части примера к фону применяется шаблон шахматной доски.  
+3.  <span data-ttu-id="66c10-113">В конце третьей секунды происходит анимация экземпляра <xref:System.Windows.Media.DrawingBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="66c10-113">At the end of the third second, animates an instance of the <xref:System.Windows.Media.DrawingBrush> class.</span></span> <span data-ttu-id="66c10-114">В этом разделе примере применяется шаблон шахматной доски в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="66c10-114">This section of the example applies a checkerboard pattern to the background.</span></span>  
   
-4.  Анимация начинается еще раз и повторяется бесконечно.  
+4.  <span data-ttu-id="66c10-115">Анимация начинается снова и повторяется бесконечно.</span><span class="sxs-lookup"><span data-stu-id="66c10-115">The animation begins again and repeats indefinitely.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> является единственным типом полного кадра, который можно использовать с классом <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>.  Полные кадры, например <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>, создают внезапные изменения в значениях, т. е. в примере происходит внезапное изменение цвета.  
+>  <span data-ttu-id="66c10-116"><xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>представляет собой единственный тип ключевого кадра, который можно использовать с <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> класса.</span><span class="sxs-lookup"><span data-stu-id="66c10-116"><xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> is the only type of key frame that you can use with the <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> class.</span></span> <span data-ttu-id="66c10-117">Полные кадры, например <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> создают внезапные изменения в значениях, то есть, изменения цвета в этом примере происходит внезапное.</span><span class="sxs-lookup"><span data-stu-id="66c10-117">Key frames like <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> create sudden changes in values, that is, the color changes in this example occur suddenly.</span></span>  
   
- [!code-xml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   
- Полный пример см. на веб\-странице [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ <span data-ttu-id="66c10-118">Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).</span><span class="sxs-lookup"><span data-stu-id="66c10-118">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## См. также  
- <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>   
- <xref:System.Windows.Controls.Page.Background%2A>   
- <xref:System.Windows.Controls.Page>   
- <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>   
- <xref:System.Windows.Media.LinearGradientBrush>   
- <xref:System.Windows.Media.RadialGradientBrush>   
- <xref:System.Windows.Media.DrawingBrush>   
- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Практические руководства, посвященные анимации по полным кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="66c10-119">См. также</span><span class="sxs-lookup"><span data-stu-id="66c10-119">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>  
+ <xref:System.Windows.Controls.Page.Background%2A>  
+ <xref:System.Windows.Controls.Page>  
+ <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>  
+ <xref:System.Windows.Media.LinearGradientBrush>  
+ <xref:System.Windows.Media.RadialGradientBrush>  
+ <xref:System.Windows.Media.DrawingBrush>  
+ [<span data-ttu-id="66c10-120">Общие сведения об анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="66c10-120">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="66c10-121">Практические руководства, посвященные анимации по ключевым кадрам</span><span class="sxs-lookup"><span data-stu-id="66c10-121">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

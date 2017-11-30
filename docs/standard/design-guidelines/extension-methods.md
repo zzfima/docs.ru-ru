@@ -1,61 +1,59 @@
 ---
-title: "Методы расширения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Методы расширения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b7edc3420eabe4de20a2fe39f38ae5eee53b593c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Методы расширения
-Методы расширения — это функция языка, который позволяет статических методов, вызываемых с помощью синтаксиса вызова метода экземпляра. Эти методы необходимо выполнить по крайней мере один параметр, который представляет экземпляр, который является метод для выполнения операции.  
+# <a name="extension-methods"></a><span data-ttu-id="d47d0-102">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="d47d0-102">Extension Methods</span></span>
+<span data-ttu-id="d47d0-103">Методы расширения являются функция языка, позволяющая статических методов, вызываемых с помощью синтаксиса вызова метода экземпляра.</span><span class="sxs-lookup"><span data-stu-id="d47d0-103">Extension methods are a language feature that allows static methods to be called using instance method call syntax.</span></span> <span data-ttu-id="d47d0-104">Эти методы необходимо выполнить по крайней мере один параметр, который представляет экземпляр, который имеет метод для выполнения операций над.</span><span class="sxs-lookup"><span data-stu-id="d47d0-104">These methods must take at least one parameter, which represents the instance the method is to operate on.</span></span>  
   
- Класс, который определяет такие методы расширения упоминается как класса «спонсора», и они должны объявляться как статические. Чтобы использовать методы расширения, один необходимо импортировать пространство имен определения класса спонсора.  
+ <span data-ttu-id="d47d0-105">Класс, который определяет такие методы расширения называется «главным» класса, и они должны объявляться как статические.</span><span class="sxs-lookup"><span data-stu-id="d47d0-105">The class that defines such extension methods is referred to as the "sponsor" class, and it must be declared as static.</span></span> <span data-ttu-id="d47d0-106">Чтобы использовать методы расширения, один необходимо импортировать пространство имен определения класса главным.</span><span class="sxs-lookup"><span data-stu-id="d47d0-106">To use extension methods, one must import the namespace defining the sponsor class.</span></span>  
   
- **ИЗБЕЖАТЬ X** frivolously определяет методы расширения, особенно на типах, вы не владеете.  
+ <span data-ttu-id="d47d0-107">**X ИЗБЕГАЙТЕ** frivolously определяет методы расширения, особенно на типах, вы не являетесь его владельцем.</span><span class="sxs-lookup"><span data-stu-id="d47d0-107">**X AVOID** frivolously defining extension methods, especially on types you don’t own.</span></span>  
   
- Если у вас есть исходный код типа, рекомендуется использовать методы регулярных экземпляра. Если у вас нет, и требуется добавить метод, необходимо Будьте очень осторожным. Надлежащее использование методов расширения может загромождения интерфейсов API типов, которые не были спроектированы для обеспечения этих методов.  
+ <span data-ttu-id="d47d0-108">Если у вас есть исходный код типа, рекомендуется использовать методы регулярного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="d47d0-108">If you do own source code of a type, consider using regular instance methods instead.</span></span> <span data-ttu-id="d47d0-109">Если вы не являетесь его владельцем, а вы хотите добавить метод, следите за очень.</span><span class="sxs-lookup"><span data-stu-id="d47d0-109">If you don’t own, and you want to add a method, be very careful.</span></span> <span data-ttu-id="d47d0-110">Надлежащее использование методов расширения может стать загромождения API-интерфейсы типов, которые не были спроектированы для обеспечения этих методов.</span><span class="sxs-lookup"><span data-stu-id="d47d0-110">Liberal use of extension methods has the potential of cluttering APIs of types that were not designed to have these methods.</span></span>  
   
- **✓ Рассмотрите ВОЗМОЖНОСТЬ** использование методов расширения в любом из следующих сценариев:  
+ <span data-ttu-id="d47d0-111">**✓ Попробуйте** с помощью методов расширения в следующих сценариях:</span><span class="sxs-lookup"><span data-stu-id="d47d0-111">**✓ CONSIDER** using extension methods in any of the following scenarios:</span></span>  
   
--   Для обеспечения поддержки функции, относящиеся к каждой реализации интерфейса, если функциональность могут быть записаны в терминах основной интерфейс. Это вызвано конкретные реализации в противном случае не может быть назначен интерфейсов. Например `LINQ to Objects` операторы реализуются как методы расширения для всех <xref:System.Collections.Generic.IEnumerable%601> типов. Таким образом, любой `IEnumerable<>` реализацию LINQ\-включается автоматически.  
+-   <span data-ttu-id="d47d0-112">Для обеспечения поддержки функциональные возможности, относящиеся к каждой реализации интерфейса, если считается, что функциональные возможности могут быть написаны с точки зрения основной интерфейс.</span><span class="sxs-lookup"><span data-stu-id="d47d0-112">To provide helper functionality relevant to every implementation of an interface, if said functionality can be written in terms of the core interface.</span></span> <span data-ttu-id="d47d0-113">Это так, как конкретные реализации в противном случае значение не может быть назначен интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="d47d0-113">This is because concrete implementations cannot otherwise be assigned to interfaces.</span></span> <span data-ttu-id="d47d0-114">Например `LINQ to Objects` операторы реализуются как методы расширения для всех <xref:System.Collections.Generic.IEnumerable%601> типов.</span><span class="sxs-lookup"><span data-stu-id="d47d0-114">For example, the `LINQ to Objects` operators are implemented as extension methods for all <xref:System.Collections.Generic.IEnumerable%601> types.</span></span> <span data-ttu-id="d47d0-115">Таким образом, любой `IEnumerable<>` реализацию автоматически поддержкой LINQ.</span><span class="sxs-lookup"><span data-stu-id="d47d0-115">Thus, any `IEnumerable<>` implementation is automatically LINQ-enabled.</span></span>  
   
--   Когда метод экземпляра стало бы причиной зависимость для некоторого типа, но такая зависимость нарушит правила управления зависимостей. Например, зависимость от <xref:System.String> для <xref:System.Uri?displayProperty=fullName> вероятно, не является нежелательным и поэтому `String.ToUri()` возврат метода экземпляра `System.Uri` бы неправильный проектирования с точки зрения управления зависимостей. Метод статического расширения `Uri.ToUri(this string str)` Возврат `System.Uri` бы гораздо лучше конструктора.  
+-   <span data-ttu-id="d47d0-116">Если метод экземпляра стало бы причиной зависимость от какой-либо тип, но такая зависимость будет нарушена управления правилам зависимости.</span><span class="sxs-lookup"><span data-stu-id="d47d0-116">When an instance method would introduce a dependency on some type, but such a dependency would break dependency management rules.</span></span> <span data-ttu-id="d47d0-117">Например, зависимости <xref:System.String> для <xref:System.Uri?displayProperty=nameWithType> скорее всего, не является предпочтительным и поэтому `String.ToUri()` метод экземпляра, возвращающий `System.Uri` бы неправильный конструктора с точки зрения управления зависимостей.</span><span class="sxs-lookup"><span data-stu-id="d47d0-117">For example, a dependency from <xref:System.String> to <xref:System.Uri?displayProperty=nameWithType> is probably not desirable, and so `String.ToUri()` instance method returning `System.Uri` would be the wrong design from a dependency management perspective.</span></span> <span data-ttu-id="d47d0-118">Метод статического расширения `Uri.ToUri(this string str)` возврат `System.Uri` будет гораздо лучше конструктора.</span><span class="sxs-lookup"><span data-stu-id="d47d0-118">A static extension method `Uri.ToUri(this string str)` returning `System.Uri` would be a much better design.</span></span>  
   
- **ИЗБЕЖАТЬ X** определения методов расширения в <xref:System.Object?displayProperty=fullName>.  
+ <span data-ttu-id="d47d0-119">**X ИЗБЕГАЙТЕ** определения методов расширения в <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d47d0-119">**X AVOID** defining extension methods on <xref:System.Object?displayProperty=nameWithType>.</span></span>  
   
- Для пользователей Visual Basic не будет иметь возможность вызывать такие методы для ссылок на объекты, используя синтаксис методов расширения. VB не поддерживается вызов таких методов, поскольку в VB, объявление ссылку как объект заставляет все вызовы метода в его конце привязан \(фактический элемент с именем определяется во время выполнения\), во время привязки к методам расширения определяются во время компиляции \(раннее связывание\).  
+ <span data-ttu-id="d47d0-120">Для пользователей Visual Basic не будет иметь возможность вызывать такие методы для ссылки на объект, с помощью синтаксиса метода расширения.</span><span class="sxs-lookup"><span data-stu-id="d47d0-120">VB users will not be able to call such methods on object references using the extension method syntax.</span></span> <span data-ttu-id="d47d0-121">VB не поддерживает вызова таких методов, так как в VB, объявления ссылки, как объект заставляет все вызовы методов в его позднее привязываются (фактический член с именем определяется во время выполнения), во время привязки к методам расширения определяются во время компиляции (ранняя привязки).</span><span class="sxs-lookup"><span data-stu-id="d47d0-121">VB does not support calling such methods because, in VB, declaring a reference as Object forces all method invocations on it to be late bound (actual member called is determined at runtime), while bindings to extension methods are determined at compile-time (early bound).</span></span>  
   
- Обратите внимание, что правило применяется для других языков, где присутствует одно и то же поведение привязки и где методы расширения не поддерживаются.  
+ <span data-ttu-id="d47d0-122">Обратите внимание, что правило применяется в других языках, где имеется такое же поведение привязки или где методы расширения не поддерживаются.</span><span class="sxs-lookup"><span data-stu-id="d47d0-122">Note that the guideline applies to other languages where the same binding behavior is present, or where extension methods are not supported.</span></span>  
   
- **X не** поместить методы расширения в пространстве имен, расширенный тип применяется для добавления методов к интерфейсам, или для управления зависимостями.  
+ <span data-ttu-id="d47d0-123">**X не** размещения методов расширения в пространстве имен, расширенного типа, если он предназначен для добавления методов в интерфейсах или для управления зависимостями.</span><span class="sxs-lookup"><span data-stu-id="d47d0-123">**X DO NOT** put extension methods in the same namespace as the extended type unless it is for adding methods to interfaces or for dependency management.</span></span>  
   
- **ИЗБЕЖАТЬ X** определения двух или нескольких методов расширения с такой же сигнатурой, даже если они находятся в разных пространствах имен.  
+ <span data-ttu-id="d47d0-124">**X ИЗБЕГАЙТЕ** определение два или несколько методов расширения с такой же сигнатурой, даже если они находятся в разных пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="d47d0-124">**X AVOID** defining two or more extension methods with the same signature, even if they reside in different namespaces.</span></span>  
   
- **✓ Рассмотрите ВОЗМОЖНОСТЬ** определение методов расширения в пространстве имен, расширенный тип, если тип является интерфейсом, а методы расширения предназначены для использования в большинство или все случаи.  
+ <span data-ttu-id="d47d0-125">**✓ Попробуйте** определение методов расширения в пространстве имен, расширенный тип, если тип является интерфейсом и методы расширения предназначены для использования в большинство или все случаи.</span><span class="sxs-lookup"><span data-stu-id="d47d0-125">**✓ CONSIDER** defining extension methods in the same namespace as the extended type if the type is an interface and if the extension methods are meant to be used in most or all cases.</span></span>  
   
- **X не** определять методы расширения, реализации функции в пространствах имен, обычно связанные с другими компонентами. Вместо этого их определения в пространство имен, связанное с функцией, к которому они принадлежат.  
+ <span data-ttu-id="d47d0-126">**X не** определяет расширение методов реализации функции в пространствах имен, обычно связанные с другими компонентами.</span><span class="sxs-lookup"><span data-stu-id="d47d0-126">**X DO NOT** define extension methods implementing a feature in namespaces normally associated with other features.</span></span> <span data-ttu-id="d47d0-127">Вместо этого их определения в пространстве имен, связанного с данным компонентом, которому они принадлежат.</span><span class="sxs-lookup"><span data-stu-id="d47d0-127">Instead, define them in the namespace associated with the feature they belong to.</span></span>  
   
- **ИЗБЕЖАТЬ X** универсальных имен пространств имен, выделенных для методов расширения \(например, «расширения»\). Используйте описательное имя \(например, «маршрут»\) вместо.  
+ <span data-ttu-id="d47d0-128">**X ИЗБЕГАЙТЕ** универсального именования пространств имен, выделенных для методов расширения (например, «расширения»).</span><span class="sxs-lookup"><span data-stu-id="d47d0-128">**X AVOID** generic naming of namespaces dedicated to extension methods (e.g., "Extensions").</span></span> <span data-ttu-id="d47d0-129">Используйте описательное имя (например, «маршрут») вместо него.</span><span class="sxs-lookup"><span data-stu-id="d47d0-129">Use a descriptive name (e.g., "Routing") instead.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="d47d0-130">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="d47d0-130">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="d47d0-131">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="d47d0-131">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Рекомендации по разработке членов](../../../docs/standard/design-guidelines/member.md)   
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="d47d0-132">См. также</span><span class="sxs-lookup"><span data-stu-id="d47d0-132">See Also</span></span>  
+ [<span data-ttu-id="d47d0-133">Рекомендации по разработке членов</span><span class="sxs-lookup"><span data-stu-id="d47d0-133">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="d47d0-134">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="d47d0-134">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

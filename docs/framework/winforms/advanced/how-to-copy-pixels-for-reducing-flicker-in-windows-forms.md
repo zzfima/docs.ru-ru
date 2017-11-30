@@ -1,42 +1,46 @@
 ---
-title: "Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "перемещение набора битов"
-  - "bitblt"
-  - "мерцание"
-  - "мерцание, сокращение в Windows Forms"
-  - "графика, копирование"
-  - "графика, снижение мерцания"
-  - "пиксели, копирование"
+title: "Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitblt
+- graphics [Windows Forms], copying
+- flicker [Windows Forms], reducing in Windows Forms
+- graphics [Windows Forms], reducing flicker
+- pixels [Windows Forms], copying
+- flicker
+- bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ed463b41d3c2a51b0f9be3d4ddabfd2d54a3c07
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
-При создании простых анимированных изображений могут появиться мерцание или другие нежелательные визуальные эффекты.  Один из способов ограничения этих эффектов — применение к изображению процесса bitblt.  Функция Bitblt выполняет перемещение набора битов с информацией о цвете из исходного прямоугольника пикселей в конечный прямоугольник.  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a><span data-ttu-id="386e8-102">Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="386e8-102">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>
+<span data-ttu-id="386e8-103">При создании простых анимированных могут появиться мерцание или другие нежелательные визуальные эффекты.</span><span class="sxs-lookup"><span data-stu-id="386e8-103">When you animate a simple graphic, users can sometimes encounter flicker or other undesirable visual effects.</span></span> <span data-ttu-id="386e8-104">Ограничить эту проблему можно использовать процесс «bitblt» на рисунок.</span><span class="sxs-lookup"><span data-stu-id="386e8-104">One way to limit this problem is to use a "bitblt" process on the graphic.</span></span> <span data-ttu-id="386e8-105">BitBlt является «перемещение набора битов» данных о цвете из исходного прямоугольника пикселей в прямоугольник назначения пикселей.</span><span class="sxs-lookup"><span data-stu-id="386e8-105">Bitblt is the "bit-block transfer" of the color data from an origin rectangle of pixels to a destination rectangle of pixels.</span></span>  
   
- В Windows Forms для реализации функции bitblt используется метод <xref:System.Drawing.Graphics.CopyFromScreen%2A> класса <xref:System.Drawing.Graphics>.  В списке параметров метода указываются координаты исходной и конечной областей \(в виде точек\), размер копируемой области и графический объект, с помощью которого рисуется новая форма.  
+ <span data-ttu-id="386e8-106">С помощью Windows Forms bitblt достигается использованием <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод <xref:System.Drawing.Graphics> класса.</span><span class="sxs-lookup"><span data-stu-id="386e8-106">With Windows Forms, bitblt is accomplished using the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="386e8-107">В параметрах метода указания источника и назначения (в виде точек), размер копируемой области и графический объект, используемый для рисования новую фигуру.</span><span class="sxs-lookup"><span data-stu-id="386e8-107">In the parameters of the method, you specify the source and destination (as points), the size of the area to be copied, and the graphics object used to draw the new shape.</span></span>  
   
- В следующем примере рисование фигуры на форме происходит в обработчике события <xref:System.Windows.Forms.Control.Paint> этой формы.  После этого фигура копируется с помощью метода <xref:System.Drawing.Graphics.CopyFromScreen%2A>.  
+ <span data-ttu-id="386e8-108">В следующем примере рисование фигуры на форме в его <xref:System.Windows.Forms.Control.Paint> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="386e8-108">In the example below, a shape is drawn on the form in its <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="386e8-109">Затем <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод используется для копирования фигуры.</span><span class="sxs-lookup"><span data-stu-id="386e8-109">Then, the <xref:System.Drawing.Graphics.CopyFromScreen%2A> method is used to duplicate the shape.</span></span>  
   
 > [!NOTE]
->  Установка значения свойства <xref:System.Windows.Forms.Control.DoubleBuffered%2A> формы равным `true` включает двойную буферизацию для кода обработки графики в обработчике события <xref:System.Windows.Forms.Control.Paint>.  Хотя использование такого подхода в приведенном ниже коде не дает заметного выигрыша в производительности, о нем все равно стоит помнить при работе с кодом, управляющим более сложными графическими конструкциями.  
+>  <span data-ttu-id="386e8-110">Свойства формы <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true` сделает графическим интерфейсом кода в <xref:System.Windows.Forms.Control.Paint> событие быть двойная буферизация.</span><span class="sxs-lookup"><span data-stu-id="386e8-110">Setting the form's <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true` will make graphics-based code in the <xref:System.Windows.Forms.Control.Paint> event be double-buffered.</span></span> <span data-ttu-id="386e8-111">Пока это не будет иметь выигрыш в производительности заметно при использовании в приведенном ниже коде, ее стоит помнить при работе с кодом более сложных манипуляций с графикой.</span><span class="sxs-lookup"><span data-stu-id="386e8-111">While this will not have any discernable performance gains when using the code below, it is something to keep in mind when working with more complex graphics-manipulation code.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="386e8-112">Пример</span><span class="sxs-lookup"><span data-stu-id="386e8-112">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
@@ -50,7 +54,6 @@ Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _
         e.Graphics.CopyFromScreen(New Point(10, 10), New Point _  
              (100, 100), New Size(70, 70))  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -66,12 +69,12 @@ private void Form1_Paint(System.Object sender,
 }  
 ```  
   
-## Компиляция кода  
- Приведенный выше код выполняется в обработчике события <xref:System.Windows.Forms.Control.Paint> формы, поэтому изображение остается и после перерисовки формы.  По этой причине не стоит вызывать методы, связанные с графикой в обработчике события <xref:System.Windows.Forms.Form.Load>, поскольку нарисованные элементы не будут перерисовываться при изменении размера формы, или если форма будет закрыта другой формой.  
+## <a name="compiling-the-code"></a><span data-ttu-id="386e8-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="386e8-113">Compiling the Code</span></span>  
+ <span data-ttu-id="386e8-114">Приведенный выше код выполняется в форме <xref:System.Windows.Forms.Control.Paint> обработчик событий, чтобы графики сохраняются при обновлении формы.</span><span class="sxs-lookup"><span data-stu-id="386e8-114">The code above is run in the form's <xref:System.Windows.Forms.Control.Paint> event handler so that the graphics persist when the form is redrawn.</span></span> <span data-ttu-id="386e8-115">Таким образом, не вызывать методы, связанные с графикой в <xref:System.Windows.Forms.Form.Load> обработчика событий, так как не будет перерисовываться будет Если формы был изменен или скрыта другой формой.</span><span class="sxs-lookup"><span data-stu-id="386e8-115">As such, do not call graphics-related methods in the <xref:System.Windows.Forms.Form.Load> event handler, because the drawn content will not be redrawn if the form is resized or obscured by another form.</span></span>  
   
-## См. также  
- <xref:System.Drawing.CopyPixelOperation>   
- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=fullName>   
- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="386e8-116">См. также</span><span class="sxs-lookup"><span data-stu-id="386e8-116">See Also</span></span>  
+ <xref:System.Drawing.CopyPixelOperation>  
+ <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="386e8-117">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="386e8-117">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="386e8-118">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="386e8-118">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

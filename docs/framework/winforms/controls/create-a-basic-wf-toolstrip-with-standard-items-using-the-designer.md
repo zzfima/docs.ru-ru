@@ -1,45 +1,46 @@
 ---
-title: "Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели инструментов [Windows Forms], добавление элементов"
-  - "панели инструментов [Windows Forms], создание"
-  - "ToolStrip - элемент управления [Windows Forms], добавление стандартных элементов"
-  - "ToolStrip - элемент управления [Windows Forms], создание"
+title: "Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], creating
+- toolbars [Windows Forms], creating
+- toolbars [Windows Forms], adding items
+- ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fb3ed52ffc0a5f386a603c63a0d5bc0a72e040de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора
-В следующей процедуре демонстрируется создание <xref:System.Windows.Forms.ToolStrip> и добавление семи элементов управления <xref:System.Windows.Forms.ToolStripButton>, которые представляют собой типичные задачи.  
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a><span data-ttu-id="abd07-102">Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="abd07-102">How to: Create a Basic Windows Forms ToolStrip with Standard Items Using the Designer</span></span>
+<span data-ttu-id="abd07-103">Следующая процедура демонстрирует создание <xref:System.Windows.Forms.ToolStrip> и добавление семи <xref:System.Windows.Forms.ToolStripButton> элементов управления, которые представляют типичные задачи.</span><span class="sxs-lookup"><span data-stu-id="abd07-103">The following procedure demonstrates how to create a <xref:System.Windows.Forms.ToolStrip> and add seven <xref:System.Windows.Forms.ToolStripButton> controls that represent typical tasks.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параментры, выберите **Импорт и экспорт параметров** в меню **Сервис**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="abd07-104">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="abd07-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="abd07-105">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="abd07-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="abd07-106">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="abd07-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы добавить стандартные элементы в конструкторе  
+### <a name="to-add-standard-items-in-the-designer"></a><span data-ttu-id="abd07-107">Чтобы добавить стандартные элементы в конструкторе</span><span class="sxs-lookup"><span data-stu-id="abd07-107">To add standard items in the designer</span></span>  
   
-1.  Создайте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
+1.  <span data-ttu-id="abd07-108">Создание <xref:System.Windows.Forms.ToolStrip> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="abd07-108">Create a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
-2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip> щелкните стрелку быстрых действий, чтобы отобразить область задач **ToolStrip**.  
+2.  <span data-ttu-id="abd07-109">В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку запуска задачи для отображения **задач ToolStrip** области.</span><span class="sxs-lookup"><span data-stu-id="abd07-109">In the upper right corner of the <xref:System.Windows.Forms.ToolStrip>, click the smart task arrow to display the **ToolStrip Tasks** pane.</span></span>  
   
-3.  В области задач **ToolStrip** выберите **Вставить стандартные элементы**.  
+3.  <span data-ttu-id="abd07-110">В **задач ToolStrip** области, выберите **вставить стандартные элементы**.</span><span class="sxs-lookup"><span data-stu-id="abd07-110">In the **ToolStrip Tasks** pane, choose **Insert Standard Items**.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ToolStrip>   
- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)   
- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a><span data-ttu-id="abd07-111">См. также</span><span class="sxs-lookup"><span data-stu-id="abd07-111">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ [<span data-ttu-id="abd07-112">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abd07-112">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [<span data-ttu-id="abd07-113">Элемент управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abd07-113">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [<span data-ttu-id="abd07-114">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abd07-114">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [<span data-ttu-id="abd07-115">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="abd07-115">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

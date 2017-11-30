@@ -1,37 +1,41 @@
 ---
-title: "Практическое руководство. Разделение окна по горизонтали | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "SplitContainer - элемент управления [Windows Forms], горизонтальный разделитель"
-  - "окна разделителей, изменение ориентации разделителя"
-  - "окна разделителей, горизонтально"
-  - "окна, горизонтальное разделение"
+title: "Практическое руководство. Разделение окна по горизонтали"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], horizontal splitter
+- splitter windows [Windows Forms], changing splitter orientation
+- splitter windows [Windows Forms], horizontal
+- windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02133cc38221b23ea1e2b14bfd0bbcf1987ab532
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Разделение окна по горизонтали
-В следующем примере разделитель элемента управления <xref:System.Windows.Forms.SplitContainer> становится горизонтальным.  
+# <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="2a006-102">Практическое руководство. Разделение окна по горизонтали</span><span class="sxs-lookup"><span data-stu-id="2a006-102">How to: Split a Window Horizontally</span></span>
+<span data-ttu-id="2a006-103">В следующем примере кода создается разделитель <xref:System.Windows.Forms.SplitContainer> элемента управления по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="2a006-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
   
 > [!NOTE]
->  Свойство <xref:System.Windows.Forms.SplitContainer.Orientation%2A> элемента управления <xref:System.Windows.Forms.SplitContainer> определяет направление разделителя, а не самого элемента управления.  
+>  <span data-ttu-id="2a006-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> Свойство <xref:System.Windows.Forms.SplitContainer> управления определяет направление разделителя, а не самого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="2a006-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span>  
   
-### Разделение окна по горизонтали  
+### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="2a006-105">Разделение окна по горизонтали</span><span class="sxs-lookup"><span data-stu-id="2a006-105">To split a window horizontally</span></span>  
   
-1.  Внутри процедуры присвойте свойству <xref:System.Windows.Forms.SplitContainer.Orientation%2A> элемента управления <xref:System.Windows.Forms.SplitContainer> значение <xref:System.Windows.Forms.Orientation>.  
+1.  <span data-ttu-id="2a006-106">В процедуре, задайте <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойство <xref:System.Windows.Forms.SplitContainer> управления <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="2a006-106">Within a procedure, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -44,7 +48,6 @@ caps.handback.revision: 15
         splitContainer1.Orientation = Orientation.Horizontal  
         Controls.Add(splitContainer1)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -62,6 +65,6 @@ caps.handback.revision: 15
     }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.SplitContainer>   
- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2a006-107">См. также</span><span class="sxs-lookup"><span data-stu-id="2a006-107">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="2a006-108">Элемент управления SplitContainer</span><span class="sxs-lookup"><span data-stu-id="2a006-108">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

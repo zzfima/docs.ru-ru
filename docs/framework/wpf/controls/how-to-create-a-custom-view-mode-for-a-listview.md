@@ -1,54 +1,59 @@
 ---
-title: "Практическое руководство. Создание пользовательского режима представления для ListView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView - элементы управления, создание настраиваемого режима представления"
+title: "Практическое руководство. Создание пользовательского режима представления для ListView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c62bcb14f444490991b36dc21eb7676a67007906
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание пользовательского режима представления для ListView
-В этом примере демонстрируется создание пользовательского режима <xref:System.Windows.Controls.ListView.View%2A> для элемента управления <xref:System.Windows.Controls.ListView>.  
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a><span data-ttu-id="8154f-102">Практическое руководство. Создание пользовательского режима представления для ListView</span><span class="sxs-lookup"><span data-stu-id="8154f-102">How to: Create a Custom View Mode for a ListView</span></span>
+<span data-ttu-id="8154f-103">В этом примере показано, как создать настраиваемый <xref:System.Windows.Controls.ListView.View%2A> режим для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8154f-103">This example shows how to create a custom <xref:System.Windows.Controls.ListView.View%2A> mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## Пример  
- При создании пользовательского представления для элемента управления <xref:System.Windows.Controls.ListView> необходимо использовать класс <xref:System.Windows.Controls.ViewBase>.  В следующем примере показан режим представления с именем `PlainView`, который является производным от класса <xref:System.Windows.Controls.ViewBase>.  
+## <a name="example"></a><span data-ttu-id="8154f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="8154f-104">Example</span></span>  
+ <span data-ttu-id="8154f-105">Необходимо использовать <xref:System.Windows.Controls.ViewBase> класса при создании настраиваемого представления для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="8154f-105">You must use the <xref:System.Windows.Controls.ViewBase> class when you create a custom view for the <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="8154f-106">В следующем примере показан режим просмотра, который называется `PlainView`, который является производным от <xref:System.Windows.Controls.ViewBase> класса.</span><span class="sxs-lookup"><span data-stu-id="8154f-106">The following example shows a view mode that is called `PlainView`, which is derived from the <xref:System.Windows.Controls.ViewBase> class.</span></span>  
   
  [!code-csharp[ListViewCustomView#PlainView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
  [!code-vb[ListViewCustomView#PlainView](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
   
- Чтобы применить стиль к пользовательскому представлению, используйте класс <xref:System.Windows.Style>.  В следующем примере определяется <xref:System.Windows.Style> для режима представления `PlainView`.  В предыдущем примере этот стиль задан как значение свойства <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A>, которое определено для `PlainView`.  
+ <span data-ttu-id="8154f-107">Чтобы применить стиль к пользовательскому представлению, используйте <xref:System.Windows.Style> класса.</span><span class="sxs-lookup"><span data-stu-id="8154f-107">To apply a style to the custom view, use the <xref:System.Windows.Style> class.</span></span> <span data-ttu-id="8154f-108">В следующем примере определяется <xref:System.Windows.Style> для `PlainView` режим просмотра.</span><span class="sxs-lookup"><span data-stu-id="8154f-108">The following example defines a <xref:System.Windows.Style> for the `PlainView` view mode.</span></span> <span data-ttu-id="8154f-109">В предыдущем примере задан в качестве значения <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> свойство, которое определено для `PlainView`.</span><span class="sxs-lookup"><span data-stu-id="8154f-109">In the previous example, this style is set as the value of the <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> property that is defined for `PlainView`.</span></span>  
   
- [!code-xml[ListViewCustomView#PlainViewStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
+ [!code-xaml[ListViewCustomView#PlainViewStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
   
- Чтобы определить макет данных в режиме представления, определите объект <xref:System.Windows.DataTemplate>.  В следующем примере определяется <xref:System.Windows.DataTemplate>, который может использоваться для отображения данных в режиме представления `PlainView`.  
+ <span data-ttu-id="8154f-110">Чтобы определить макет данных в режиме представления, определите <xref:System.Windows.DataTemplate> объекта.</span><span class="sxs-lookup"><span data-stu-id="8154f-110">To define the layout of data in a custom view mode, define a <xref:System.Windows.DataTemplate> object.</span></span> <span data-ttu-id="8154f-111">В следующем примере определяется <xref:System.Windows.DataTemplate> может использоваться для отображения данных в `PlainView` режиме.</span><span class="sxs-lookup"><span data-stu-id="8154f-111">The following example defines a <xref:System.Windows.DataTemplate> that can be used to display data in the `PlainView` view mode.</span></span>  
   
- [!code-xml[ListViewCustomView#PlainViewDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
+ [!code-xaml[ListViewCustomView#PlainViewDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
   
- В следующем примере показано определение <xref:System.Windows.ResourceKey> для режима представления `PlainView`, который использует <xref:System.Windows.DataTemplate>, определенный в предыдущем примере.  
+ <span data-ttu-id="8154f-112">В следующем примере показан способ определения <xref:System.Windows.ResourceKey> для `PlainView` режим просмотра, который использует <xref:System.Windows.DataTemplate> , определенный в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="8154f-112">The following example shows how to define a <xref:System.Windows.ResourceKey> for the `PlainView` view mode that uses the <xref:System.Windows.DataTemplate> that is defined in the previous example.</span></span>  
   
- [!code-xml[ListViewCustomView#PlainViewtileView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
+ [!code-xaml[ListViewCustomView#PlainViewtileView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
   
- Элемент управления <xref:System.Windows.Controls.ListView> может использовать пользовательское представление, если в качестве значения свойства <xref:System.Windows.Controls.ListView.View%2A> указан ключ ресурса.  В следующем примере показано, как задать `PlainView` в качестве режима представления для <xref:System.Windows.Controls.ListView>.  
+ <span data-ttu-id="8154f-113">Объект <xref:System.Windows.Controls.ListView> управления можно использовать пользовательское представление, если задать <xref:System.Windows.Controls.ListView.View%2A> свойства ключа ресурса.</span><span class="sxs-lookup"><span data-stu-id="8154f-113">A <xref:System.Windows.Controls.ListView> control can use a custom view if you set the <xref:System.Windows.Controls.ListView.View%2A> property to the resource key.</span></span> <span data-ttu-id="8154f-114">В следующем примере показано, как указать `PlainView` в режиме отображения для <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="8154f-114">The following example shows how to specify `PlainView` as the view mode for a <xref:System.Windows.Controls.ListView>.</span></span>  
   
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Полный код примера см. в разделе [Пример "ListView with Multiple Views"](http://go.microsoft.com/fwlink/?LinkID=160013).  
+ <span data-ttu-id="8154f-115">Полный пример см. в разделе [ListView с несколькими представлениями пример](http://go.microsoft.com/fwlink/?LinkID=160013).</span><span class="sxs-lookup"><span data-stu-id="8154f-115">For the complete sample, see [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span></span>  
   
-## См. также  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Практические руководства](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Общие сведения о GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="8154f-116">См. также</span><span class="sxs-lookup"><span data-stu-id="8154f-116">See Also</span></span>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [<span data-ttu-id="8154f-117">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="8154f-117">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="8154f-118">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="8154f-118">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="8154f-119">Общие сведения о GridView</span><span class="sxs-lookup"><span data-stu-id="8154f-119">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

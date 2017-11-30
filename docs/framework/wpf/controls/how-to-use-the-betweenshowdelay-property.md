@@ -1,41 +1,44 @@
 ---
-title: "Практическое руководство. Использование свойства BetweenShowDelay | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BetweenShowDelay - свойство времени"
-  - "ToolTip - элемент управления, BetweenShowDelay - свойство времени"
+title: "Практическое руководство. Использование свойства BetweenShowDelay"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolTip control [WPF], BetweenShowDelay time property
+- BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dca6dc7c6238ef4accc921818090237d17ce1cbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование свойства BetweenShowDelay
-В данном примере демонстрируется использование свойства времени <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> таким образом, что подсказки отображаются быстро — с минимальными задержками или без них — при перемещении пользователем указателя мыши с одной подсказки непосредственно на другую.  
+# <a name="how-to-use-the-betweenshowdelay-property"></a><span data-ttu-id="81ca1-102">Практическое руководство. Использование свойства BetweenShowDelay</span><span class="sxs-lookup"><span data-stu-id="81ca1-102">How to: Use the BetweenShowDelay Property</span></span>
+<span data-ttu-id="81ca1-103">В этом примере показано, как использовать <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> свойства времени, чтобы подсказки отображаются быстро — с минимумом или совсем без задержки — при перемещении пользователем указателя мыши с одной подсказки непосредственно на другую.</span><span class="sxs-lookup"><span data-stu-id="81ca1-103">This example shows how to use the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> time property so that tooltips appear quickly—with little or no delay—when a user moves the mouse pointer from one tooltip directly to another.</span></span>  
   
-## Пример  
- В следующем примере значение свойства <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> равно одной секунде \(1000 миллисекунд\), а значение свойства <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> равно двум секундам \(2000 мс\) для подсказок обоих элементов управления <xref:System.Windows.Shapes.Ellipse>.  Если отображается подсказка одного из эллипсов и указатель мыши перемещается на другой эллипс в течение двух секунд и останавливается на нем, то подсказка второго эллипса отображается немедленно.  
+## <a name="example"></a><span data-ttu-id="81ca1-104">Пример</span><span class="sxs-lookup"><span data-stu-id="81ca1-104">Example</span></span>  
+ <span data-ttu-id="81ca1-105">В следующем примере <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> свойству одной секунды (1000 миллисекунд) и <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> задано равным двум секундам (2000 мс) для подсказок обоих <xref:System.Windows.Shapes.Ellipse> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="81ca1-105">In the following example, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> property is set to one second (1000 milliseconds) and the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> is set to two seconds (2000 milliseconds) for the tooltips of both <xref:System.Windows.Shapes.Ellipse> controls.</span></span> <span data-ttu-id="81ca1-106">Если отображается подсказка одного из эллипсов, затем наведите указатель мыши на другой эллипс в течение двух секунд и Пауза на нем подсказка второго эллипса отображается немедленно.</span><span class="sxs-lookup"><span data-stu-id="81ca1-106">If you display the tooltip for one of the ellipses and then move the mouse pointer to another ellipse within two seconds and pause on it, the tooltip of the second ellipse displays immediately.</span></span>  
   
- В любом из следующих скриптов применяется свойство <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, в результате чего подсказка для второго эллипса появится с задержкой в одну секунду:  
+ <span data-ttu-id="81ca1-107">В любом из следующих сценариев <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> применяется, чего подсказка для второго эллипса ожидания одной секунды до появления:</span><span class="sxs-lookup"><span data-stu-id="81ca1-107">In either of the following scenarios, the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> applies, which causes the tooltip for the second ellipse to wait one second before it appears:</span></span>  
   
--   Если время, затрачиваемое на перемещение на вторую кнопку, будет составлять более двух секунд.  
+-   <span data-ttu-id="81ca1-108">Если время, необходимое для перемещения вторая кнопка является более двух секунд.</span><span class="sxs-lookup"><span data-stu-id="81ca1-108">If the time it takes to move to the second button is more than two seconds.</span></span>  
   
--   Если подсказка не отображается в начале временного интервала для первого эллипса.  
+-   <span data-ttu-id="81ca1-109">Если подсказка не отображается в начале временного интервала для первого эллипса.</span><span class="sxs-lookup"><span data-stu-id="81ca1-109">If the tooltip is not visible at the beginning of the time interval for the first ellipse.</span></span>  
   
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
-[!code-xml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+[!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
-## См. также  
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipService>   
- [Практические руководства](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)   
- [Общие сведения о всплывающих подсказках](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+## <a name="see-also"></a><span data-ttu-id="81ca1-110">См. также</span><span class="sxs-lookup"><span data-stu-id="81ca1-110">See Also</span></span>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipService>  
+ [<span data-ttu-id="81ca1-111">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="81ca1-111">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [<span data-ttu-id="81ca1-112">Общие сведения о всплывающих подсказках</span><span class="sxs-lookup"><span data-stu-id="81ca1-112">ToolTip Overview</span></span>](../../../../docs/framework/wpf/controls/tooltip-overview.md)

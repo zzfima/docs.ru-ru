@@ -1,53 +1,54 @@
 ---
-title: "Application Settings Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "application settings [Windows Forms], attributes"
-  - "attributes [Windows Forms], application settings"
-  - "wrapper classes, application settings"
+title: "Атрибуты параметров приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], attributes
+- attributes [Windows Forms], application settings
+- wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Application Settings Attributes
-Архитектура параметров приложения обеспечивает целый ряд атрибутов, которые могут быть применены к классу\-оболочке параметров приложения или к отдельным свойствам этого класса.  Данные атрибуты проверяются во время выполнения инфраструктурой параметров приложения \(обычно поставщиком параметров\), чтобы настроить работу приложения в соответствии с указанными потребностям пользовательской программы\-оболочки.  
+# <a name="application-settings-attributes"></a><span data-ttu-id="70e4e-102">Атрибуты параметров приложения</span><span class="sxs-lookup"><span data-stu-id="70e4e-102">Application Settings Attributes</span></span>
+<span data-ttu-id="70e4e-103">Архитектура параметров приложения предоставляет множество атрибутов, которые могут быть применены к классу-оболочке параметров приложения или его отдельных свойств.</span><span class="sxs-lookup"><span data-stu-id="70e4e-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="70e4e-104">Эти атрибуты проверяются во время выполнения инфраструктурой параметров приложения, часто поставщиком параметров, чтобы адаптировать работу с указанными потребностям пользовательской оболочки.</span><span class="sxs-lookup"><span data-stu-id="70e4e-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  
   
- Ниже перечислены атрибуты, которые могут быть применены к классу\-оболочке параметров приложения, к отдельным свойствам этого класса или и к классу, и к свойствам.  По определению, к каждому свойству параметров должен быть применен только один атрибут области определения — **UserScopedSettingAttribute** или **ApplicationScopedSettingAttribute**.  
+ <span data-ttu-id="70e4e-105">В следующей таблице перечислены атрибуты, которые могут быть применены к классу-оболочке параметров приложения и отдельные свойства этого класса.</span><span class="sxs-lookup"><span data-stu-id="70e4e-105">The following table lists the attributes that can be applied to the application settings wrapper class, this class's individual properties, or both.</span></span> <span data-ttu-id="70e4e-106">По определению только одну область атрибут —**UserScopedSettingAttribute** или **ApplicationScopedSettingAttribute**— должен быть применен к каждой свойства параметров.</span><span class="sxs-lookup"><span data-stu-id="70e4e-106">By definition, only a single scope attribute—**UserScopedSettingAttribute** or **ApplicationScopedSettingAttribute**—must be applied to each and every settings property.</span></span>  
   
 > [!NOTE]
->  Для распознавания трех атрибутов, перечисленных далее, требуется только пользовательский поставщик параметров, производный от класса <xref:System.Configuration.SettingsProvider>: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute** и **DefaultSettingValueAttribute**.  
+>  <span data-ttu-id="70e4e-107">Настраиваемый поставщик параметров, производный от <xref:System.Configuration.SettingsProvider> класса, необходимо только, чтобы распознать следующие три атрибута: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, и **DefaultSettingValueAttribute**.</span><span class="sxs-lookup"><span data-stu-id="70e4e-107">A custom settings provider, derived from the <xref:System.Configuration.SettingsProvider> class, is only required to recognize the following three attributes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, and **DefaultSettingValueAttribute**.</span></span>  
   
-|Атрибут|Целевой объект|Описание|  
-|-------------|--------------------|--------------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Оба|Указывает короткое имя поставщика параметров, используемого для сохранения.<br /><br /> Если этот атрибут не задан, используется поставщик по умолчанию — <xref:System.Configuration.LocalFileSettingsProvider>.|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Оба|Определяет свойство как параметр с областью определения пользователя.|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Оба|Определяет свойство как параметр с областью определения приложения.|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|Свойство.|Указывает строку, которая может быть десериализована поставщиком в жестко заданное значение по умолчанию для этого свойства.<br /><br /> Для поставщика <xref:System.Configuration.LocalFileSettingsProvider> этот атрибут не требуется; поставщик переопределит любое значение, возвращаемое этим атрибутом, при наличии уже сохраненного значения.|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|Свойство.|Предоставляет описательные тесты для отдельных параметров, в основном используется средствами времени выполнения и разработки.|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|Класс|Содержит явное имя группы параметров.  Если этот атрибут отсутствует, класс <xref:System.Configuration.ApplicationSettingsBase> использует имя класса\-оболочки.|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|Класс|Предоставляет описательный тест для группы параметров, в основном используется средствами времени выполнения и разработки.|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Оба|Указывает ноль или более служб управляемости, которые должны предоставляться группе параметров или свойству.  Доступные службы описаны перечислением <xref:System.Configuration.SettingsManageability>.|  
-|<xref:System.Configuration.SpecialSettingAttribute>|Свойство.|Показывает, что параметр принадлежит к особой предопределенной категории, такой как строка подключения, и, в силу этого, должен обрабатываться поставщиком параметров особым образом.  Предопределенные категории для этого атрибута определены перечислением <xref:System.Configuration.SpecialSetting>.|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Оба|Задает предпочтительный механизм сериализации для группы параметров или свойства.  Доступные механизмы сериализации определены перечислением <xref:System.Configuration.SettingsSerializeAs>.|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Свойство.|Указывает, что поставщик параметров должен отключить всю функциональность обновления приложения для помеченного свойства.|  
+|<span data-ttu-id="70e4e-108">Атрибут</span><span class="sxs-lookup"><span data-stu-id="70e4e-108">Attribute</span></span>|<span data-ttu-id="70e4e-109">целевого объекта</span><span class="sxs-lookup"><span data-stu-id="70e4e-109">Target</span></span>|<span data-ttu-id="70e4e-110">Описание</span><span class="sxs-lookup"><span data-stu-id="70e4e-110">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<xref:System.Configuration.SettingsProviderAttribute>|<span data-ttu-id="70e4e-111">Оба значения</span><span class="sxs-lookup"><span data-stu-id="70e4e-111">Both</span></span>|<span data-ttu-id="70e4e-112">Указывает короткое имя поставщика параметров, используемого для сохранения.</span><span class="sxs-lookup"><span data-stu-id="70e4e-112">Specifies the short name of the settings provider to use for persistence.</span></span><br /><br /> <span data-ttu-id="70e4e-113">Если этот атрибут не задан, поставщик по умолчанию <xref:System.Configuration.LocalFileSettingsProvider>, подразумевается.</span><span class="sxs-lookup"><span data-stu-id="70e4e-113">If this attribute is not supplied, the default provider, <xref:System.Configuration.LocalFileSettingsProvider>, is assumed.</span></span>|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|<span data-ttu-id="70e4e-114">Оба значения</span><span class="sxs-lookup"><span data-stu-id="70e4e-114">Both</span></span>|<span data-ttu-id="70e4e-115">Определяет свойство как параметр области пользователя приложения.</span><span class="sxs-lookup"><span data-stu-id="70e4e-115">Defines a property as a user-scoped application setting.</span></span>|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|<span data-ttu-id="70e4e-116">Оба значения</span><span class="sxs-lookup"><span data-stu-id="70e4e-116">Both</span></span>|<span data-ttu-id="70e4e-117">Определяет свойство как параметр приложения для приложения.</span><span class="sxs-lookup"><span data-stu-id="70e4e-117">Defines a property as an application-scoped application setting.</span></span>|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|<span data-ttu-id="70e4e-118">Свойство</span><span class="sxs-lookup"><span data-stu-id="70e4e-118">Property</span></span>|<span data-ttu-id="70e4e-119">Задает строку, которая может быть десериализована поставщиком в жестко по умолчанию для этого свойства.</span><span class="sxs-lookup"><span data-stu-id="70e4e-119">Specifies a string that can be deserialized by the provider into the hard-coded default value for this property.</span></span><br /><br /> <span data-ttu-id="70e4e-120"><xref:System.Configuration.LocalFileSettingsProvider> Этот атрибут не требуется и переопределяет любое значение, если этот атрибут при наличии значение уже сохранен.</span><span class="sxs-lookup"><span data-stu-id="70e4e-120">The <xref:System.Configuration.LocalFileSettingsProvider> does not require this attribute, and will override any value provided by this attribute if there is a value already persisted.</span></span>|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|<span data-ttu-id="70e4e-121">Свойство</span><span class="sxs-lookup"><span data-stu-id="70e4e-121">Property</span></span>|<span data-ttu-id="70e4e-122">Предоставляет описательные тесты для отдельных параметров, в основном используется средствами во время выполнения и во время разработки.</span><span class="sxs-lookup"><span data-stu-id="70e4e-122">Provides the descriptive test for an individual setting, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|<span data-ttu-id="70e4e-123">Класс</span><span class="sxs-lookup"><span data-stu-id="70e4e-123">Class</span></span>|<span data-ttu-id="70e4e-124">Содержит явное имя группы параметров.</span><span class="sxs-lookup"><span data-stu-id="70e4e-124">Provides an explicit name for a settings group.</span></span> <span data-ttu-id="70e4e-125">Если этот атрибут отсутствует, <xref:System.Configuration.ApplicationSettingsBase> использует имя класса-оболочки.</span><span class="sxs-lookup"><span data-stu-id="70e4e-125">If this attribute is missing, <xref:System.Configuration.ApplicationSettingsBase> uses the wrapper class name.</span></span>|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|<span data-ttu-id="70e4e-126">Класс</span><span class="sxs-lookup"><span data-stu-id="70e4e-126">Class</span></span>|<span data-ttu-id="70e4e-127">Предоставляет описательный тест для группы параметров, в основном используется средствами во время выполнения и во время разработки.</span><span class="sxs-lookup"><span data-stu-id="70e4e-127">Provides the descriptive test for a settings group, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|<span data-ttu-id="70e4e-128">Оба значения</span><span class="sxs-lookup"><span data-stu-id="70e4e-128">Both</span></span>|<span data-ttu-id="70e4e-129">Указывает ноль или более служб управляемости, которые должны передаваться в группы параметров или свойства.</span><span class="sxs-lookup"><span data-stu-id="70e4e-129">Specifies zero or more manageability services that should be provided to the settings group or property.</span></span> <span data-ttu-id="70e4e-130">Описываются доступные службы <xref:System.Configuration.SettingsManageability> перечисления.</span><span class="sxs-lookup"><span data-stu-id="70e4e-130">The available services are described by the <xref:System.Configuration.SettingsManageability> enumeration.</span></span>|  
+|<xref:System.Configuration.SpecialSettingAttribute>|<span data-ttu-id="70e4e-131">Свойство</span><span class="sxs-lookup"><span data-stu-id="70e4e-131">Property</span></span>|<span data-ttu-id="70e4e-132">Указывает, что параметр принадлежит к особой предопределенной категории, такие как строка подключения, который предлагает специальную обработку поставщика параметров.</span><span class="sxs-lookup"><span data-stu-id="70e4e-132">Indicates that a setting belongs to a special, predefined category, such as a connection string, that suggests special processing by the settings provider.</span></span> <span data-ttu-id="70e4e-133">Стандартные категории для этого атрибута определяется <xref:System.Configuration.SpecialSetting> перечисления.</span><span class="sxs-lookup"><span data-stu-id="70e4e-133">The predefined categories for this attribute are defined by the <xref:System.Configuration.SpecialSetting> enumeration.</span></span>|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|<span data-ttu-id="70e4e-134">Оба значения</span><span class="sxs-lookup"><span data-stu-id="70e4e-134">Both</span></span>|<span data-ttu-id="70e4e-135">Задает предпочтительный механизм сериализации для группы параметров или свойства.</span><span class="sxs-lookup"><span data-stu-id="70e4e-135">Specifies a preferred serialization mechanism for a settings group or property.</span></span> <span data-ttu-id="70e4e-136">Доступные механизмы сериализации определяются <xref:System.Configuration.SettingsSerializeAs> перечисления.</span><span class="sxs-lookup"><span data-stu-id="70e4e-136">The available serialization mechanisms are defined by the <xref:System.Configuration.SettingsSerializeAs> enumeration.</span></span>|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|<span data-ttu-id="70e4e-137">Свойство</span><span class="sxs-lookup"><span data-stu-id="70e4e-137">Property</span></span>|<span data-ttu-id="70e4e-138">Указывает, что поставщик параметров должен отключить всю функциональность обновления приложения для помеченного свойства.</span><span class="sxs-lookup"><span data-stu-id="70e4e-138">Specifies that a settings provider should disable all application upgrade functionality for the marked property.</span></span>|  
   
- *Класс* указывает, что атрибут может быть применен только к классу\-оболочке параметров приложения.  *Свойство* указывает, что атрибут может быть применен только к свойствам параметров.  *Класс и его свойства* указывает, что атрибут может применяться на обоих уровнях.  
+ <span data-ttu-id="70e4e-139">*Класс* указывает, что атрибут может применяться только к классу-оболочке параметров приложения.</span><span class="sxs-lookup"><span data-stu-id="70e4e-139">*Class* indicates that the attribute can be applied only to an application settings wrapper class.</span></span> <span data-ttu-id="70e4e-140">*Свойство* указывает, что атрибут может быть применен только к свойствам параметров.</span><span class="sxs-lookup"><span data-stu-id="70e4e-140">*Property* indicates that the attribute can be applied only settings properties.</span></span> <span data-ttu-id="70e4e-141">*Оба* указывает, что атрибут может применяться на обоих уровнях.</span><span class="sxs-lookup"><span data-stu-id="70e4e-141">*Both* indicates that the attribute can be applied at either level.</span></span>  
   
-## См. также  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.SettingsProvider>   
- [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [How to: Create Application Settings](http://msdn.microsoft.com/ru-ru/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a><span data-ttu-id="70e4e-142">См. также</span><span class="sxs-lookup"><span data-stu-id="70e4e-142">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.SettingsProvider>  
+ [<span data-ttu-id="70e4e-143">Архитектура параметров приложения</span><span class="sxs-lookup"><span data-stu-id="70e4e-143">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="70e4e-144">Практическое руководство. Создание параметров приложения</span><span class="sxs-lookup"><span data-stu-id="70e4e-144">How to: Create Application Settings</span></span>](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)

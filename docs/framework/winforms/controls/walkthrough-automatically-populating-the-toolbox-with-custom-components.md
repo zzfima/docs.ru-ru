@@ -1,111 +1,112 @@
 ---
-title: "Пример. Автоматическое заполнение панели элементов пользовательскими компонентами | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские компоненты, добавление в панель элементов"
-  - "IToolboxService - интерфейс"
-  - "Панель элементов [Windows Forms], заполнение"
+title: "Пример. Автоматическое заполнение панели элементов пользовательскими компонентами"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IToolboxService interface
+- Toolbox [Windows Forms], populating
+- custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Автоматическое заполнение панели элементов пользовательскими компонентами
-Если компоненты определяются проектом в открытом в настоящее время решении, они будут автоматически отображаться в **панели элементов**, никаких дополнительных действий не требуется.  Также можно вручную заполнять **панель элементов** компонентами с помощью [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/ru-ru/bd07835f-18a8-433e-bccc-7141f65263bb), однако **панель элементов** учитывает элементы в результатах построения со всеми следующими характеристиками.  
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a><span data-ttu-id="167e9-102">Пример. Автоматическое заполнение панели элементов пользовательскими компонентами</span><span class="sxs-lookup"><span data-stu-id="167e9-102">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>
+<span data-ttu-id="167e9-103">Если компоненты определяются проектом в текущем открытом решении, они автоматически будут отображаться в **элементов**, с без дополнительных действий не требуется.</span><span class="sxs-lookup"><span data-stu-id="167e9-103">If your components are defined by a project in the currently open solution, they will automatically appear in the **Toolbox**, with no action required by you.</span></span> <span data-ttu-id="167e9-104">Можно также вручную заполнять **элементов** компонентами с помощью [выберите Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), но **элементов** принимает учетной записи элементов в вашем решении выходным данным построения со следующими характеристиками:</span><span class="sxs-lookup"><span data-stu-id="167e9-104">You can also manually populate the **Toolbox** with your custom components by using the [Choose Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), but the **Toolbox** takes account of items in your solution's build outputs with all the following characteristics:</span></span>  
   
--   Реализует метод <xref:System.ComponentModel.IComponent>.  
+-   <span data-ttu-id="167e9-105">Реализует <xref:System.ComponentModel.IComponent>;</span><span class="sxs-lookup"><span data-stu-id="167e9-105">Implements <xref:System.ComponentModel.IComponent>;</span></span>  
   
--   Не устанавливает <xref:System.ComponentModel.ToolboxItemAttribute> равным `false`.  
+-   <span data-ttu-id="167e9-106">Не поддерживает <xref:System.ComponentModel.ToolboxItemAttribute> значение `false`;</span><span class="sxs-lookup"><span data-stu-id="167e9-106">Does not have <xref:System.ComponentModel.ToolboxItemAttribute> set to `false`;</span></span>  
   
--   Не устанавливает <xref:System.ComponentModel.DesignTimeVisibleAttribute> равным `false`.  
-  
-> [!NOTE]
->  **Панель элементов** не отслеживает цепочки ссылок, поэтому в ней не будут показаны элементы, которые не были собраны проектом в вашем решении.  
-  
- В этом пошаговом руководстве демонстрируется автоматическое появление пользовательского компонента в **панели элементов** при создании компонента.  В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
-  
--   Создание проекта типа Windows Forms  
-  
--   Создание пользовательского компонента  
-  
--   Создание экземпляра пользовательского компонента  
-  
--   Выгрузка и повторная загрузка пользовательского компонента  
-  
- По завершении вы увидите, что в **панели элементов** есть только что созданный компонент.  
+-   <span data-ttu-id="167e9-107">Не поддерживает <xref:System.ComponentModel.DesignTimeVisibleAttribute> значение `false`.</span><span class="sxs-lookup"><span data-stu-id="167e9-107">Does not have <xref:System.ComponentModel.DesignTimeVisibleAttribute> set to `false`.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="167e9-108">**Элементов** отслеживает цепочки ссылок, поэтому не будут показаны элементы, которые не были собраны проектом в вашем решении.</span><span class="sxs-lookup"><span data-stu-id="167e9-108">The **Toolbox** does not follow reference chains, so it will not display items that are not built by a project in your solution.</span></span>  
   
-## Создание проекта  
- Для начала следует создать проект и подготовить форму.  
+ <span data-ttu-id="167e9-109">В этом пошаговом руководстве показано, как пользовательский компонент автоматически появится в **элементов** при компонента.</span><span class="sxs-lookup"><span data-stu-id="167e9-109">This walkthrough demonstrates how a custom component automatically appears in the **Toolbox** once the component is built.</span></span> <span data-ttu-id="167e9-110">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="167e9-110">Tasks illustrated in this walkthrough include:</span></span>  
   
-#### Создание проекта  
+-   <span data-ttu-id="167e9-111">Создание проекта Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="167e9-111">Creating a Windows Forms project.</span></span>  
   
-1.  Создайте проект приложения Windows под названием `ToolboxExample`.  
+-   <span data-ttu-id="167e9-112">Создание пользовательского компонента.</span><span class="sxs-lookup"><span data-stu-id="167e9-112">Creating a custom component.</span></span>  
   
-     Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   <span data-ttu-id="167e9-113">Создание экземпляра пользовательского компонента.</span><span class="sxs-lookup"><span data-stu-id="167e9-113">Creating an instance of a custom component.</span></span>  
   
-2.  Добавьте новый компонент в проект.  Назовите его `DemoComponent`.  
+-   <span data-ttu-id="167e9-114">Выгрузка и повторная загрузка пользовательского компонента.</span><span class="sxs-lookup"><span data-stu-id="167e9-114">Unloading and reloading a custom component.</span></span>  
   
-     Дополнительные сведения см. в разделе [NIB:How to: Add New Project Items](http://msdn.microsoft.com/ru-ru/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+ <span data-ttu-id="167e9-115">Когда вы закончите, вы увидите, что **элементов** заполняется только что созданный компонент.</span><span class="sxs-lookup"><span data-stu-id="167e9-115">When you are finished, you will see that the **Toolbox** is populated with a component that you have created.</span></span>  
   
-3.  Выполните построение проекта.  
+> [!NOTE]
+>  <span data-ttu-id="167e9-116">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="167e9-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="167e9-117">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="167e9-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="167e9-118">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="167e9-118">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-4.  В меню **Сервис** щелкните **Параметры**.  Щелкните **Общие** в разделе **Конструктор Windows Forms** и убедитесь, что параметр **AutoToolboxPopulate** имеет значение **True**.  
+## <a name="creating-the-project"></a><span data-ttu-id="167e9-119">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="167e9-119">Creating the Project</span></span>  
+ <span data-ttu-id="167e9-120">Первым шагом являются создание проекта и настройка формы.</span><span class="sxs-lookup"><span data-stu-id="167e9-120">The first step is to create the project and to set up the form.</span></span>  
   
-## Создание экземпляра пользовательского компонента  
- Далее необходимо создать экземпляр пользовательского компонента в форме.  Поскольку новый компонент автоматически учитывается в **панели элементов**, создать новый компонент так же просто, как и любой другой компонент или элемент управления.  
+#### <a name="to-create-the-project"></a><span data-ttu-id="167e9-121">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="167e9-121">To create the project</span></span>  
   
-#### Чтобы создать экземпляра пользовательского компонента, выполните следующие действия.  
+1.  <span data-ttu-id="167e9-122">Создайте проект приложения Windows с именем `ToolboxExample`.</span><span class="sxs-lookup"><span data-stu-id="167e9-122">Create a Windows-based application project called `ToolboxExample`.</span></span>  
   
-1.  Откройте форму проекта в **Конструкторе Windows Forms**.  
+     <span data-ttu-id="167e9-123">Для получения дополнительной информации см. [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="167e9-123">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  В **панели элементов** перейдите на новую вкладку под названием **ToolboxExample Components**.  
+2.  <span data-ttu-id="167e9-124">Добавьте новый компонент в проект.</span><span class="sxs-lookup"><span data-stu-id="167e9-124">Add a new component to the project.</span></span> <span data-ttu-id="167e9-125">Она вызывается `DemoComponent`.</span><span class="sxs-lookup"><span data-stu-id="167e9-125">Call it `DemoComponent`.</span></span>  
   
-     На этой вкладке вы увидите **DemoComponent**.  
+     <span data-ttu-id="167e9-126">Дополнительные сведения см. в разделе [NIB: Практическое: Добавление новых элементов проекта](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).</span><span class="sxs-lookup"><span data-stu-id="167e9-126">For more information, see [NIB:How to: Add New Project Items](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).</span></span>  
+  
+3.  <span data-ttu-id="167e9-127">Выполните построение проекта.</span><span class="sxs-lookup"><span data-stu-id="167e9-127">Build the project.</span></span>  
+  
+4.  <span data-ttu-id="167e9-128">Из **средства** меню, нажмите кнопку **параметры** элемента.</span><span class="sxs-lookup"><span data-stu-id="167e9-128">From the **Tools** menu, click the **Options** item.</span></span> <span data-ttu-id="167e9-129">Нажмите кнопку **Общие** под **конструктор Windows Forms** элемента и убедитесь, что **AutoToolboxPopulate** включен режим **True**.</span><span class="sxs-lookup"><span data-stu-id="167e9-129">Click **General** under the **Windows Forms Designer** item and ensure that the **AutoToolboxPopulate** option is set to **True**.</span></span>  
+  
+## <a name="creating-an-instance-of-a-custom-component"></a><span data-ttu-id="167e9-130">Создание экземпляра пользовательского компонента</span><span class="sxs-lookup"><span data-stu-id="167e9-130">Creating an Instance of a Custom Component</span></span>  
+ <span data-ttu-id="167e9-131">Следующим шагом является создание экземпляра пользовательского компонента в форме.</span><span class="sxs-lookup"><span data-stu-id="167e9-131">The next step is to create an instance of the custom component on the form.</span></span> <span data-ttu-id="167e9-132">Поскольку **элементов** автоматически учетные записи для нового компонента, это так же легко, как создание любого компонента или элемента управления.</span><span class="sxs-lookup"><span data-stu-id="167e9-132">Because the **Toolbox** automatically accounts for the new component, this is as easy as creating any other component or control.</span></span>  
+  
+#### <a name="to-create-an-instance-of-a-custom-component"></a><span data-ttu-id="167e9-133">Для создания экземпляра пользовательского компонента</span><span class="sxs-lookup"><span data-stu-id="167e9-133">To create an instance of a custom component</span></span>  
+  
+1.  <span data-ttu-id="167e9-134">Откройте форму проекта в **конструктор форм**.</span><span class="sxs-lookup"><span data-stu-id="167e9-134">Open the project's form in the **Forms Designer**.</span></span>  
+  
+2.  <span data-ttu-id="167e9-135">В **элементов**, щелкните вкладку новый вызывается **ToolboxExample компонентов**.</span><span class="sxs-lookup"><span data-stu-id="167e9-135">In the **Toolbox**, click the new tab called **ToolboxExample Components**.</span></span>  
+  
+     <span data-ttu-id="167e9-136">После выбора закладки, вы увидите **DemoComponent**.</span><span class="sxs-lookup"><span data-stu-id="167e9-136">Once you click the tab, you will see **DemoComponent**.</span></span>  
   
     > [!NOTE]
-    >  Для повышения производительности компоненты в автоматически заполняемой области **панели элементов** отображаются без нестандартных точечных рисунков, <xref:System.Drawing.ToolboxBitmapAttribute> не поддерживается.  Для отображения значка для пользовательского компонента в **панели элементов** используйте окно **Выберите элементы панели элементов** для загрузки вашего компонента.  
+    >  <span data-ttu-id="167e9-137">Из соображений производительности компонентов в области автоматически заполняемая **элементов** не отображать пользовательские растровые изображения и <xref:System.Drawing.ToolboxBitmapAttribute> не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="167e9-137">For performance reasons, components in the auto-populated area of the **Toolbox** do not display custom bitmaps, and the <xref:System.Drawing.ToolboxBitmapAttribute> is not supported.</span></span> <span data-ttu-id="167e9-138">Для отображения значка для пользовательского компонента в **элементов**, используйте **Выбор элементов панели элементов** диалогового загрузить компонент.</span><span class="sxs-lookup"><span data-stu-id="167e9-138">To display an icon for a custom component in the **Toolbox**, use the **Choose Toolbox Items** dialog box to load your component.</span></span>  
   
-3.  Перетащите компонент в форму.  
+3.  <span data-ttu-id="167e9-139">Перетащите компонент в форме.</span><span class="sxs-lookup"><span data-stu-id="167e9-139">Drag your component onto your form.</span></span>  
   
-     При этом экземпляр компонента создается и добавляется в **область компонентов**.  
+     <span data-ttu-id="167e9-140">Создается и добавляется в экземпляр компонента **область компонентов**.</span><span class="sxs-lookup"><span data-stu-id="167e9-140">An instance of the component is created and added to the **Component Tray**.</span></span>  
   
-## Выгрузка и повторная загрузка пользовательского компонента  
- В **панели элементов** отображаются компоненты каждого загруженного проекта, а при выгрузке проекта ссылки на компоненты проекта удаляются.  
+## <a name="unloading-and-reloading-a-custom-component"></a><span data-ttu-id="167e9-141">Выгрузка и повторная загрузка пользовательского компонента</span><span class="sxs-lookup"><span data-stu-id="167e9-141">Unloading and Reloading a Custom Component</span></span>  
+ <span data-ttu-id="167e9-142">**Элементов** принимает учетной записи компонентов в каждом загружен проект, а при выгрузке проекта ссылки на компоненты проекта удаляются.</span><span class="sxs-lookup"><span data-stu-id="167e9-142">The **Toolbox** takes account of the components in each loaded project, and when a project is unloaded, it removes references to the project's components.</span></span>  
   
-#### Чтобы поэкспериментировать с влиянием выгрузки и загрузки компонентов на Панель элементов, выполните следующие действия.  
+#### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a><span data-ttu-id="167e9-143">Чтобы поэкспериментировать с последствиями для выгрузки и загрузки компонентов на панель элементов</span><span class="sxs-lookup"><span data-stu-id="167e9-143">To experiment with the effect on the Toolbox of unloading and reloading components</span></span>  
   
-1.  Выгрузите проект из решения.  
+1.  <span data-ttu-id="167e9-144">Выгрузите проект из решения.</span><span class="sxs-lookup"><span data-stu-id="167e9-144">Unload the project from the solution.</span></span>  
   
-     Дополнительные сведения о выгрузке проектов см. в разделе [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/ru-ru/abc0155b-8fcb-4ffc-95b6-698518a7100b).  Нажмите кнопку **Да** для сохранения изменений.  
+     <span data-ttu-id="167e9-145">Дополнительные сведения о выгрузке проектов см. в разделе [NIB: Практическое: выгрузка и перезагрузка проектов](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b).</span><span class="sxs-lookup"><span data-stu-id="167e9-145">For more information about unloading projects, see [NIB:How to: Unload and Reload Projects](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b).</span></span> <span data-ttu-id="167e9-146">Если будет предложено сохранить, выберите **Да**.</span><span class="sxs-lookup"><span data-stu-id="167e9-146">If you are prompted to save, choose **Yes**.</span></span>  
   
-2.  В решение добавьте новый проект **Приложение Windows**.  Откройте форму в **конструкторе**.  
+2.  <span data-ttu-id="167e9-147">Добавьте новый **приложение Windows** проекта в решение.</span><span class="sxs-lookup"><span data-stu-id="167e9-147">Add a new **Windows Application** project to the solution.</span></span> <span data-ttu-id="167e9-148">Откройте форму в **конструктор**.</span><span class="sxs-lookup"><span data-stu-id="167e9-148">Open the form in the **Designer**.</span></span>  
   
-     Вкладка **ToolboxExample Components** из предыдущего проекта будет отсутствовать.  
+     <span data-ttu-id="167e9-149">**ToolboxExample компоненты** вкладку из предыдущего проекта теперь является исчезнут.</span><span class="sxs-lookup"><span data-stu-id="167e9-149">The **ToolboxExample Components** tab from the previous project is now gone.</span></span>  
   
-3.  Заново загрузите проект `ToolboxExample`.  
+3.  <span data-ttu-id="167e9-150">Перезагрузить `ToolboxExample` проекта.</span><span class="sxs-lookup"><span data-stu-id="167e9-150">Reload the `ToolboxExample` project.</span></span>  
   
-     Вкладка **ToolboxExample Components** появится снова.  
+     <span data-ttu-id="167e9-151">**Компоненты ToolboxExample** вкладке теперь отобразится.</span><span class="sxs-lookup"><span data-stu-id="167e9-151">The **ToolboxExample Components** tab now reappears.</span></span>  
   
-## Следующие действия  
- Это пошаговое руководство описывает отображение компонентов проектов в **панели элементов**, однако в **области элементов** также отображаются элементы управления.  Попробуйте поработать с вашими собственными элементами управления, добавляя и проекты с ними в решение и удаляя их.  
+## <a name="next-steps"></a><span data-ttu-id="167e9-152">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="167e9-152">Next Steps</span></span>  
+ <span data-ttu-id="167e9-153">В этом пошаговом руководстве показано, что **элементов** компонентов проекта, но **элементов** также является учетной записью принимает элементов управления.</span><span class="sxs-lookup"><span data-stu-id="167e9-153">This walkthrough demonstrates that the **Toolbox** takes account of a project's components, but the **Toolbox** is also takes account of controls.</span></span> <span data-ttu-id="167e9-154">Поэкспериментируйте с пользовательским элементам управления, добавляя и удаляя управления проектами в решении.</span><span class="sxs-lookup"><span data-stu-id="167e9-154">Experiment with your own custom controls by adding and removing control projects from your solution.</span></span>  
   
-## См. также  
- [General, Windows Forms Designer, Options Dialog Box](http://msdn.microsoft.com/ru-ru/8dd170af-72f0-4212-b04b-034ceee92834)   
- [How to: Manipulate Toolbox Tabs](http://msdn.microsoft.com/ru-ru/21285050-cadd-455a-b1f5-a2289a89c4db)   
- [Choose Toolbox Items Dialog Box \(Visual Studio\)](http://msdn.microsoft.com/ru-ru/bd07835f-18a8-433e-bccc-7141f65263bb)   
- [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="167e9-155">См. также</span><span class="sxs-lookup"><span data-stu-id="167e9-155">See Also</span></span>  
+ [<span data-ttu-id="167e9-156">Общие, конструктор Windows Forms, диалоговое окно «Параметры»</span><span class="sxs-lookup"><span data-stu-id="167e9-156">General, Windows Forms Designer, Options Dialog Box</span></span>](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [<span data-ttu-id="167e9-157">Практическое руководство. Управление вкладками панели элементов</span><span class="sxs-lookup"><span data-stu-id="167e9-157">How to: Manipulate Toolbox Tabs</span></span>](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [<span data-ttu-id="167e9-158">Диалоговое окно "Выбор элементов панели элементов" (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="167e9-158">Choose Toolbox Items Dialog Box (Visual Studio)</span></span>](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [<span data-ttu-id="167e9-159">Размещение элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="167e9-159">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

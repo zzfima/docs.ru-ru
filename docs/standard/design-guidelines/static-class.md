@@ -1,52 +1,50 @@
 ---
-title: "Разработка статичных классов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "правила разработки типов, статические классы"
-  - "Класс рекомендации по разработке библиотек [платформа .NET Framework] классы"
-  - "статические классы [платформа .NET Framework]"
-  - "статические классы [платформа .NET Framework]"
-  - "классы [платформа .NET Framework] рекомендации по проектированию"
-  - "правила разработки типов, классы"
+title: "Разработка статичных классов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type design guidelines, static classes
+- class library design guidelines [.NET Framework], classes
+- classes [.NET Framework], static
+- static classes [.NET Framework]
+- classes [.NET Framework], design guidelines
+- type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 28fe3756a2881e8f746616f8275b505b1a01eada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Разработка статичных классов
-Статический класс представляет собой класс, который содержит только статические члены \(Конечно, помимо экземпляр члены, унаследованные от <xref:System.Object?displayProperty=fullName> и возможно закрытый конструктор\). Некоторые языки предоставляют встроенную поддержку для статических классов. В C\# 2.0 и более поздних версиях при класс объявлен как статический, он запечатанный, абстрактный и нет членов экземпляра можно переопределить или объявлен.  
+# <a name="static-class-design"></a><span data-ttu-id="d915b-102">Разработка статичных классов</span><span class="sxs-lookup"><span data-stu-id="d915b-102">Static Class Design</span></span>
+<span data-ttu-id="d915b-103">Статический класс был определен как класс, который содержит только статические члены (Разумеется, помимо экземпляр члены, унаследованные от <xref:System.Object?displayProperty=nameWithType> и возможно закрытый конструктор).</span><span class="sxs-lookup"><span data-stu-id="d915b-103">A static class is defined as a class that contains only static members (of course besides the instance members inherited from <xref:System.Object?displayProperty=nameWithType> and possibly a private constructor).</span></span> <span data-ttu-id="d915b-104">Некоторые языки предоставляют встроенную поддержку для статических классов.</span><span class="sxs-lookup"><span data-stu-id="d915b-104">Some languages provide built-in support for static classes.</span></span> <span data-ttu-id="d915b-105">В C# 2.0 и более поздних версиях при объявлении класса статический Это запечатанный, абстрактный и нет членов экземпляра может быть переопределено или объявлен.</span><span class="sxs-lookup"><span data-stu-id="d915b-105">In C# 2.0 and later, when a class is declared to be static, it is sealed, abstract, and no instance members can be overridden or declared.</span></span>  
   
- Статические классы — это компромисс между чисто объектно ориентированного проектирования и простотой. Они часто используются для предоставления сочетания клавиш для других операций \(таких как <xref:System.IO.File?displayProperty=fullName>\), владельцы методы расширения или функции, для которого программа\-оболочка объектно ориентированных несанкционированному \(такие как <xref:System.Environment?displayProperty=fullName>\).  
+ <span data-ttu-id="d915b-106">Статические классы — это компромисс между чисто объектно ориентированный проект и простота.</span><span class="sxs-lookup"><span data-stu-id="d915b-106">Static classes are a compromise between pure object-oriented design and simplicity.</span></span> <span data-ttu-id="d915b-107">Они часто используются для предоставления ярлыки для других операций (таких как <xref:System.IO.File?displayProperty=nameWithType>), владельцы методы расширения, или функции, для которой полное объектно ориентированную оболочку несанкционированному (такие как <xref:System.Environment?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="d915b-107">They are commonly used to provide shortcuts to other operations (such as <xref:System.IO.File?displayProperty=nameWithType>), holders of extension methods, or functionality for which a full object-oriented wrapper is unwarranted (such as <xref:System.Environment?displayProperty=nameWithType>).</span></span>  
   
- **✓ сделать** реже пользоваться статических классов.  
+ <span data-ttu-id="d915b-108">**✓ СДЕЛАТЬ** статические классы предназначены для использования только в случае необходимости.</span><span class="sxs-lookup"><span data-stu-id="d915b-108">**✓ DO** use static classes sparingly.</span></span>  
   
- Статические классы следует использовать только в качестве вспомогательных классов для объектно\-ориентированной платформы.  
+ <span data-ttu-id="d915b-109">Статические классы должны использоваться только в качестве вспомогательных классов для объектно-ориентированной платформы.</span><span class="sxs-lookup"><span data-stu-id="d915b-109">Static classes should be used only as supporting classes for the object-oriented core of the framework.</span></span>  
   
- **X не** используйте статические классы как контейнер для всевозможных объектов.  
+ <span data-ttu-id="d915b-110">**X не** используйте статические классы как всевозможных объектов.</span><span class="sxs-lookup"><span data-stu-id="d915b-110">**X DO NOT** treat static classes as a miscellaneous bucket.</span></span>  
   
- **X не** объявления или переопределять члены экземпляра в статических классах.  
+ <span data-ttu-id="d915b-111">**X не** объявления или переопределять члены экземпляра в статических классах.</span><span class="sxs-lookup"><span data-stu-id="d915b-111">**X DO NOT** declare or override instance members in static classes.</span></span>  
   
- **✓ сделать** объявить статические классы как запечатанный, абстрактный и добавьте конструктор частных экземпляров, если язык программирования не предусмотрена встроенная поддержка статических классов.  
+ <span data-ttu-id="d915b-112">**✓ СДЕЛАТЬ** объявить как запечатанный, абстрактный статических классов и добавьте конструктор закрытого экземпляра, если язык программирования не предусмотрена встроенная поддержка статических классов.</span><span class="sxs-lookup"><span data-stu-id="d915b-112">**✓ DO** declare static classes as sealed, abstract, and add a private instance constructor if your programming language does not have built-in support for static classes.</span></span>  
   
- *Частей © 2005, 2009 корпорации Microsoft. Все права защищены.*  
+ <span data-ttu-id="d915b-113">*Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="d915b-113">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Воспроизведены разрешении Пирсон образования, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для повторного использования библиотеки .NET, второе издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс опубликованы 22 октября 2008 г., издательство Addison\-Wesley Professional как часть цикла разработки Microsoft Windows.*  
+ <span data-ttu-id="d915b-114">*Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="d915b-114">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## См. также  
- [Правила разработки типов](../../../docs/standard/design-guidelines/type.md)   
- [Рекомендации по проектированию Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="d915b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d915b-115">See Also</span></span>  
+ [<span data-ttu-id="d915b-116">Рекомендации по проектированию типа</span><span class="sxs-lookup"><span data-stu-id="d915b-116">Type Design Guidelines</span></span>](../../../docs/standard/design-guidelines/type.md)  
+ [<span data-ttu-id="d915b-117">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="d915b-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

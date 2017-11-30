@@ -1,94 +1,96 @@
 ---
-title: "Объединение сообщений в одну транзакцию | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пакетирование сообщений [WCF]"
+title: "Объединение сообщений в одну транзакцию"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Объединение сообщений в одну транзакцию
-Для обеспечения правильной и надежной доставки сообщений в приложениях с очередью используются транзакции.Однако транзакции являются очень ресурсоемкими операциями и могут очень сильно снизить пропускную способность при передаче сообщений.Одним из способов повышения пропускной способности при передаче сообщений является чтение и обработка приложением нескольких сообщений в одной транзакции.Компромисс заключается в балансе производительности и объема восстановления: так как количество сообщений в пакете возрастает, также возрастает объем работы по восстановлению, которую необходимо выполнить при откате транзакции.Важно отметить разницу между объединением сообщений в пакеты в транзакции и в сеансах.*Сеанс* — это группирование связанных сообщений, обрабатываемых одним приложением и фиксируемых как единый блок.Сеансы обычно используются, если группа связанных сообщений должна обрабатываться совместно.В качестве примера можно привести веб\-сайт интернет\-магазина.*Пакеты* используются для обработки нескольких несвязанных сообщений таким образом, чтобы повысить пропускную способность при передаче сообщений.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] сеансах см. в разделе [Группирование сообщений в очереди в рамках сеанса](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).Сообщения из пакета также обрабатываются одним приложением и фиксируются как единый блок, однако связь между сообщениями из пакета отсутствует.Объединение сообщений в пакеты внутри транзакции — это способ оптимизации, не влияющий на работу приложения.  
+# <a name="batching-messages-in-a-transaction"></a><span data-ttu-id="fc884-102">Объединение сообщений в одну транзакцию</span><span class="sxs-lookup"><span data-stu-id="fc884-102">Batching Messages in a Transaction</span></span>
+<span data-ttu-id="fc884-103">Для обеспечения правильной и надежной доставки сообщений в приложениях с очередью используются транзакции.</span><span class="sxs-lookup"><span data-stu-id="fc884-103">Queued applications use transactions to ensure correctness and reliable delivery of messages.</span></span> <span data-ttu-id="fc884-104">Однако транзакции являются очень ресурсоемкими операциями и могут очень сильно снизить пропускную способность при передаче сообщений.</span><span class="sxs-lookup"><span data-stu-id="fc884-104">Transactions, however, are expensive operations and can dramatically reduce message throughput.</span></span> <span data-ttu-id="fc884-105">Одним из способов повышения пропускной способности при передаче сообщений является чтение и обработка приложением нескольких сообщений в одной транзакции.</span><span class="sxs-lookup"><span data-stu-id="fc884-105">One way to improve message throughput is to have an application read and process multiple messages within a single transaction.</span></span> <span data-ttu-id="fc884-106">Компромисс заключается в балансе производительности и объема восстановления: так как количество сообщений в пакете возрастает, также возрастает объем работы по восстановлению, которую необходимо выполнить при откате транзакции.</span><span class="sxs-lookup"><span data-stu-id="fc884-106">The trade-off is between performance and recovery: as the number of messages in a batch increases, so does the amount of recovery work that required if transactions are rolled back.</span></span> <span data-ttu-id="fc884-107">Важно отметить разницу между объединением сообщений в пакеты в транзакции и в сеансах.</span><span class="sxs-lookup"><span data-stu-id="fc884-107">It is important to note the difference between batching messages in a transaction and sessions.</span></span> <span data-ttu-id="fc884-108">Объект *сеанса* — это группа связанных сообщений, обрабатываемых одним приложением и фиксируются как единый блок.</span><span class="sxs-lookup"><span data-stu-id="fc884-108">A *session* is a grouping of related messages that are processed by a single application and committed as a single unit.</span></span> <span data-ttu-id="fc884-109">Сеансы обычно используются, если группа связанных сообщений должна обрабатываться совместно.</span><span class="sxs-lookup"><span data-stu-id="fc884-109">Sessions are generally used when a group of related messages must be processed together.</span></span> <span data-ttu-id="fc884-110">В качестве примера можно привести веб-сайт интернет-магазина.</span><span class="sxs-lookup"><span data-stu-id="fc884-110">An example of this is an online shopping Web site.</span></span> <span data-ttu-id="fc884-111">*Пакеты* используются для обработки нескольких, несвязанных сообщений таким образом, сообщения, повышает пропускную способность.</span><span class="sxs-lookup"><span data-stu-id="fc884-111">*Batches* are used to process multiple, unrelated messages in a way that increases message throughput.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="fc884-112">сеансы, в разделе [группирования в очередь сообщений в сеансе](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span><span class="sxs-lookup"><span data-stu-id="fc884-112"> sessions, see [Grouping Queued Messages in a Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span></span> <span data-ttu-id="fc884-113">Сообщения из пакета также обрабатываются одним приложением и фиксируются как единый блок, однако связь между сообщениями из пакета отсутствует.</span><span class="sxs-lookup"><span data-stu-id="fc884-113">Messages in a batch are also processed by a single application and committed as a single unit, but there may be no relationship between the messages in the batch.</span></span> <span data-ttu-id="fc884-114">Объединение сообщений в пакеты внутри транзакции - это способ оптимизации, не влияющий на работу приложения.</span><span class="sxs-lookup"><span data-stu-id="fc884-114">Batching messages in a transaction is an optimization that does not change how the application runs.</span></span>  
   
-## Вход в пакетный режим  
- Пакетная обработка управляется поведением конечной точки <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.Добавление этого поведения конечной точки в конечную точку службы сообщает [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] о необходимости пакетной обработки сообщений в транзакции.Не все сообщения требуют транзакций, поэтому в пакет помещаются только сообщения, требующие транзакции, и для пакетной обработки рассматриваются только сообщения, переданные из операций со значениями `TransactionScopeRequired` \= `true` и `TransactionAutoComplete` \= `true`.Если все операции в контракте службы помечены значениями `TransactionScopeRequired` \= `false` и `TransactionAutoComplete` \= `false`, переход в режим пакетной обработки никогда не производится.  
+## <a name="entering-batching-mode"></a><span data-ttu-id="fc884-115">Вход в пакетный режим</span><span class="sxs-lookup"><span data-stu-id="fc884-115">Entering Batching Mode</span></span>  
+ <span data-ttu-id="fc884-116">Пакетная обработка управляется поведением конечной точки <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.</span><span class="sxs-lookup"><span data-stu-id="fc884-116">The <xref:System.ServiceModel.Description.TransactedBatchingBehavior> endpoint behavior controls batching.</span></span> <span data-ttu-id="fc884-117">Добавление этого поведения конечной точки в конечную точку службы сообщает [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] о необходимости пакетной обработки сообщений в транзакции.</span><span class="sxs-lookup"><span data-stu-id="fc884-117">Adding this endpoint behavior to a service endpoint tells [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to batch messages in a transaction.</span></span> <span data-ttu-id="fc884-118">Не все сообщения требуют транзакций, поэтому в пакет помещаются только сообщения, требующие транзакции, и только сообщения, переданные из операций, отмеченные `TransactionScopeRequired`  =  `true` и `TransactionAutoComplete`  =  `true` , считается для пакета.</span><span class="sxs-lookup"><span data-stu-id="fc884-118">Not all messages require a transaction, so only messages that require a transaction are placed in a batch, and only messages sent from operations marked with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true` are considered for a batch.</span></span> <span data-ttu-id="fc884-119">Если все операции в контракте службы, помечаются `TransactionScopeRequired`  =  `false` и `TransactionAutoComplete`  =  `false`, то никогда не вводилось пакетного режима.</span><span class="sxs-lookup"><span data-stu-id="fc884-119">If all operations on the service contract are marked with `TransactionScopeRequired` = `false` and `TransactionAutoComplete` = `false`, then batching mode is never entered.</span></span>  
   
-## Фиксация транзакции  
- Пакетная транзакция фиксируется на основе следующих параметров.  
+## <a name="committing-a-transaction"></a><span data-ttu-id="fc884-120">Фиксация транзакции</span><span class="sxs-lookup"><span data-stu-id="fc884-120">Committing a Transaction</span></span>  
+ <span data-ttu-id="fc884-121">Пакетная транзакция фиксируется на основе следующих параметров.</span><span class="sxs-lookup"><span data-stu-id="fc884-121">A batched transaction is committed based on the following:</span></span>  
   
--   `MaxBatchSize`.Свойство поведения <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.Это свойство определяет максимальное количество сообщений, помещаемых в пакет.При достижении этого количества производится фиксация пакета.Это значение не является строгим ограничением, возможна фиксация пакета до достижения этого количества сообщений.  
+-   <span data-ttu-id="fc884-122">`MaxBatchSize`.</span><span class="sxs-lookup"><span data-stu-id="fc884-122">`MaxBatchSize`.</span></span> <span data-ttu-id="fc884-123">Свойство поведения <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.</span><span class="sxs-lookup"><span data-stu-id="fc884-123">A property of the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> behavior.</span></span> <span data-ttu-id="fc884-124">Это свойство определяет максимальное количество сообщений, помещаемых в пакет.</span><span class="sxs-lookup"><span data-stu-id="fc884-124">This property determines the maximum number of messages that are placed into a batch.</span></span> <span data-ttu-id="fc884-125">При достижении этого количества производится фиксация пакета.</span><span class="sxs-lookup"><span data-stu-id="fc884-125">When this number is reached, the batch is committed.</span></span> <span data-ttu-id="fc884-126">Это значение не является строгим ограничением, возможна фиксация пакета до достижения этого количества сообщений.</span><span class="sxs-lookup"><span data-stu-id="fc884-126">This is value is not a strict limit, it is possible to commit a batch before receiving this number of messages.</span></span>  
   
--   `Transaction Timeout`.По истечении 80 процентов времени ожидания транзакции пакет фиксируется и создается новый пакет.Это означает, что если от времени, выделенного для завершения транзакции, осталось 20 процентов или менее, пакет фиксируется.  
+-   <span data-ttu-id="fc884-127">`Transaction Timeout`.</span><span class="sxs-lookup"><span data-stu-id="fc884-127">`Transaction Timeout`.</span></span> <span data-ttu-id="fc884-128">По истечении 80 процентов времени ожидания транзакции пакет фиксируется и создается новый пакет.</span><span class="sxs-lookup"><span data-stu-id="fc884-128">After 80 percent of the transaction's time-out has elapsed, the batch is committed and a new batch is created.</span></span> <span data-ttu-id="fc884-129">Это означает, что если от времени, выделенного для завершения транзакции, осталось 20 процентов или менее, пакет фиксируется.</span><span class="sxs-lookup"><span data-stu-id="fc884-129">This means that if 20 percent or less of the time given for a transaction to complete remains, the batch is committed.</span></span>  
   
--   `TransactionScopeRequired`.Если при обработке пакета сообщений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обнаруживает сообщение со значением `TransactionScopeRequired` \= `false`, пакет фиксируется и при получении первого сообщения со значениями `TransactionScopeRequired` \= `true` и `TransactionAutoComplete` \= `true` открывается новый пакет.  
+-   <span data-ttu-id="fc884-130">`TransactionScopeRequired`.</span><span class="sxs-lookup"><span data-stu-id="fc884-130">`TransactionScopeRequired`.</span></span> <span data-ttu-id="fc884-131">Если при обработке пакета сообщений, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] находит тот, который имеет `TransactionScopeRequired`  =  `false`, он фиксируется и открывается новый пакет при поступлении первого сообщения с `TransactionScopeRequired`  =  `true` и `TransactionAutoComplete` = `true`.</span><span class="sxs-lookup"><span data-stu-id="fc884-131">When processing a batch of messages, if [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finds one that has `TransactionScopeRequired` = `false`, it commits the batch and reopens a new batch on receipt of the first message with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true`.</span></span>  
   
--   Если в очереди больше нет сообщений, текущий пакет фиксируется, даже если еще не достигнуто значение `MaxBatchSize` и 80 процентов времени ожидания транзакции еще не истекли.  
+-   <span data-ttu-id="fc884-132">Если в очереди больше нет сообщений, текущий пакет фиксируется, даже если еще не достигнуто значение `MaxBatchSize` и 80 процентов времени ожидания транзакции еще не истекли.</span><span class="sxs-lookup"><span data-stu-id="fc884-132">If no more messages exist in the queue, then the current batch is committed, even if the `MaxBatchSize` has not been reached or 80 percent of the transaction's time-out has not elapsed.</span></span>  
   
-## Выход из пакетного режима  
- Если сообщение из пакета приводит к прерыванию транзакции, выполняются следующие шаги:  
+## <a name="leaving-batching-mode"></a><span data-ttu-id="fc884-133">Выход из пакетного режима</span><span class="sxs-lookup"><span data-stu-id="fc884-133">Leaving Batching Mode</span></span>  
+ <span data-ttu-id="fc884-134">Если сообщение из пакета приводит к прерыванию транзакции, выполняются следующие шаги:</span><span class="sxs-lookup"><span data-stu-id="fc884-134">If a message in a batch causes the transaction to abort, the following steps occur:</span></span>  
   
-1.  Производится откат всего пакета сообщений.  
+1.  <span data-ttu-id="fc884-135">Производится откат всего пакета сообщений.</span><span class="sxs-lookup"><span data-stu-id="fc884-135">The entire batch of messages is rolled back.</span></span>  
   
-2.  Сообщения считываются по одному до тех пор, пока количество сообщений не превысит удвоенного максимального размера пакета.  
+2.  <span data-ttu-id="fc884-136">Сообщения считываются по одному до тех пор, пока количество сообщений не превысит удвоенного максимального размера пакета.</span><span class="sxs-lookup"><span data-stu-id="fc884-136">Messages are read one at a time until the number of messages read exceeds twice the maximum batch size.</span></span>  
   
-3.  Производится повторный вход в пакетный режим.  
+3.  <span data-ttu-id="fc884-137">Производится повторный вход в пакетный режим.</span><span class="sxs-lookup"><span data-stu-id="fc884-137">Batch mode is re-entered.</span></span>  
   
-## Выбор размера пакета  
- Размер пакета зависит от приложения.Лучше всего определять оптимальный размер пакета для приложения эмпирическим путем.При выборе размера пакета важно выбирать размер в соответствии с фактической моделью развертывания приложения.Например, если при развертывании приложения требуются сервер SQL Server на удаленном компьютере и транзакции, охватывающие очередь и этот сервер SQL Server, то размер пакета лучше всего определять при работе именно в такой конфигурации.  
+## <a name="choosing-the-batch-size"></a><span data-ttu-id="fc884-138">Выбор размера пакета</span><span class="sxs-lookup"><span data-stu-id="fc884-138">Choosing the Batch Size</span></span>  
+ <span data-ttu-id="fc884-139">Размер пакета зависит от приложения.</span><span class="sxs-lookup"><span data-stu-id="fc884-139">The size of a batch is application-dependent.</span></span> <span data-ttu-id="fc884-140">Лучше всего определять оптимальный размер пакета для приложения эмпирическим путем.</span><span class="sxs-lookup"><span data-stu-id="fc884-140">The empirical method is the best way to arrive at an optimal batch size for the application.</span></span> <span data-ttu-id="fc884-141">При выборе размера пакета важно выбирать размер в соответствии с фактической моделью развертывания приложения.</span><span class="sxs-lookup"><span data-stu-id="fc884-141">It is important to remember when choosing a batch size to choose the size according to your application's actual deployment model.</span></span> <span data-ttu-id="fc884-142">Например, если при развертывании приложения требуются сервер SQL Server на удаленном компьютере и транзакции, охватывающие очередь и этот сервер SQL Server, то размер пакета лучше всего определять при работе именно в такой конфигурации.</span><span class="sxs-lookup"><span data-stu-id="fc884-142">For example, when deploying the application, if you need an SQL server on a remote machine and a transaction that spans the queue and the SQL server, then the batch size is best determined by running this exact configuration.</span></span>  
   
-## Параллелизм и пакетная обработка  
- Для увеличения пропускной способности возможна также параллельная обработка нескольких пакетов.Задав значение `ConcurrencyMode.Multiple` в атрибуте `ServiceBehaviorAttribute`, можно включить параллельную пакетную обработку.  
+## <a name="concurrency-and-batching"></a><span data-ttu-id="fc884-143">Параллелизм и пакетная обработка</span><span class="sxs-lookup"><span data-stu-id="fc884-143">Concurrency and Batching</span></span>  
+ <span data-ttu-id="fc884-144">Для увеличения пропускной способности возможна также параллельная обработка нескольких пакетов.</span><span class="sxs-lookup"><span data-stu-id="fc884-144">To increase throughput, you can also have many batches run concurrently.</span></span> <span data-ttu-id="fc884-145">Задав значение `ConcurrencyMode.Multiple` в атрибуте `ServiceBehaviorAttribute`, можно включить параллельную пакетную обработку.</span><span class="sxs-lookup"><span data-stu-id="fc884-145">By setting `ConcurrencyMode.Multiple` in `ServiceBehaviorAttribute`, you enable concurrent batching.</span></span>  
   
- *Регулирование службы* — это поведение службы, используемое для задания максимального количества параллельных вызовов, которые может принимать служба.При использовании с пакетной обработкой это означает количество параллельно обрабатываемых пакетов.Если регулирование службы не задано, по умолчанию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] максимальное количество параллельных вызовов равно 16.Таким образом, если поведение пакетной обработки было добавлено по умолчанию, одновременно может быть активно не более 16 пакетов.Лучше всего настроить регулирование службы и пакетную обработку на основе реальных объемов.Например, если очередь содержит 100 сообщений и требуются 20 пакетов, задавать значение 16 в качестве максимального количества параллельных вызовов бесполезно, так как, в зависимости от пропускной способности, могут быть активны 16 транзакций, что равносильно просто выключению пакетной обработки.Поэтому при тонкой настройке производительности либо выключите параллельную пакетную обработку, либо включите ее с правильным значением регулирования службы.  
+ <span data-ttu-id="fc884-146">*Регулирование службы* поведение службы, которое указывает, сколько максимальное количество одновременных вызовов можно сделать на стороне службы.</span><span class="sxs-lookup"><span data-stu-id="fc884-146">*Service throttling* is a service behavior that is used to indicate how many maximum concurrent calls can be made on the service.</span></span> <span data-ttu-id="fc884-147">При использовании с пакетной обработкой это означает количество параллельно обрабатываемых пакетов.</span><span class="sxs-lookup"><span data-stu-id="fc884-147">When used with batching, this is interpreted as how many concurrent batches can be run.</span></span> <span data-ttu-id="fc884-148">Если регулирование службы не задано, по умолчанию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] максимальное количество параллельных вызовов равно 16.</span><span class="sxs-lookup"><span data-stu-id="fc884-148">If the service throttling is not set, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] defaults the maximum concurrent calls to 16.</span></span> <span data-ttu-id="fc884-149">Таким образом, если поведение пакетной обработки было добавлено по умолчанию, одновременно может быть активно не более 16 пакетов.</span><span class="sxs-lookup"><span data-stu-id="fc884-149">Thus, if batching behavior were added by default, a maximum of 16 batches can be active at the same time.</span></span> <span data-ttu-id="fc884-150">Лучше всего настроить регулирование службы и пакетную обработку на основе реальных объемов.</span><span class="sxs-lookup"><span data-stu-id="fc884-150">It is best to tune the service throttling and batching based on your capacity.</span></span> <span data-ttu-id="fc884-151">Например, если очередь содержит 100 сообщений и требуются 20 пакетов, задавать значение 16 в качестве максимального количества параллельных вызовов бесполезно, так как, в зависимости от пропускной способности, могут быть активны 16 транзакций, что равносильно просто выключению пакетной обработки.</span><span class="sxs-lookup"><span data-stu-id="fc884-151">For example, if the queue has 100 messages and a batch of 20 is desired, having the maximum concurrent calls set to 16 is not useful because, depending on throughput, 16 transactions could be active, similar to not having batching turned on.</span></span> <span data-ttu-id="fc884-152">Поэтому при тонкой настройке производительности либо выключите параллельную пакетную обработку, либо включите ее с правильным значением регулирования службы.</span><span class="sxs-lookup"><span data-stu-id="fc884-152">Therefore, when fine-tuning for performance, either do not have concurrent batching or have concurrent batching with the correct service throttle size.</span></span>  
   
-## Пакетная обработка и несколько конечных точек  
- Конечная точка состоит из адреса и контракта.Могут существовать несколько конечных точек, совместно использующих одну привязку.Две конечные точки могут совместно использовать одну привязку и ожидать передачи данных по универсальному коду ресурса \(URI\) или адресу очереди.Если две конечные точки производят чтение из одной очереди и поведение пакетной обработки с транзакциями добавлено в обе конечные точки, возможно возникновение конфликта между заданными размерами пакетов.Этот конфликт устраняется реализацией пакетной обработки с использованием минимального размера пакета из заданных в двух поведениях пакетной обработки с транзакциями.Если в этом сценарии для одной конечной точки не задана пакетная обработка с транзакциями, пакетная обработка не будет использоваться в обеих конечных точках.  
+## <a name="batching-and-multiple-endpoints"></a><span data-ttu-id="fc884-153">Пакетная обработка и несколько конечных точек</span><span class="sxs-lookup"><span data-stu-id="fc884-153">Batching and Multiple Endpoints</span></span>  
+ <span data-ttu-id="fc884-154">Конечная точка состоит из адреса и контракта.</span><span class="sxs-lookup"><span data-stu-id="fc884-154">An endpoint is composed of an address and a contract.</span></span> <span data-ttu-id="fc884-155">Могут существовать несколько конечных точек, совместно использующих одну привязку.</span><span class="sxs-lookup"><span data-stu-id="fc884-155">There may be multiple endpoints that share the same binding.</span></span> <span data-ttu-id="fc884-156">Две конечные точки могут совместно использовать одну привязку и ожидать передачи данных по универсальному коду ресурса (URI) или адресу очереди.</span><span class="sxs-lookup"><span data-stu-id="fc884-156">It is possible for two endpoints to share the same binding and listen Uniform Resource Identifier (URI), or queue address.</span></span> <span data-ttu-id="fc884-157">Если две конечные точки производят чтение из одной очереди и поведение пакетной обработки с транзакциями добавлено в обе конечные точки, возможно возникновение конфликта между заданными размерами пакетов.</span><span class="sxs-lookup"><span data-stu-id="fc884-157">If two endpoints are reading from the same queue, and transacted batching behavior is added to both endpoints, a conflict in the batch sizes specified could arise.</span></span> <span data-ttu-id="fc884-158">Этот конфликт устраняется реализацией пакетной обработки с использованием минимального размера пакета из заданных в двух поведениях пакетной обработки с транзакциями.</span><span class="sxs-lookup"><span data-stu-id="fc884-158">This is resolved by implementing batching using the minimal batch size specified between the two transacted batching behaviors.</span></span> <span data-ttu-id="fc884-159">Если в этом сценарии для одной конечной точки не задана пакетная обработка с транзакциями, пакетная обработка не будет использоваться в обеих конечных точках.</span><span class="sxs-lookup"><span data-stu-id="fc884-159">In this scenario, if one of the endpoints does not specify transacted batching, then both endpoints would not use batching.</span></span>  
   
-## Пример  
- В следующем примере показано, как задать `TransactedBatchingBehavior` в файле конфигурации.  
+## <a name="example"></a><span data-ttu-id="fc884-160">Пример</span><span class="sxs-lookup"><span data-stu-id="fc884-160">Example</span></span>  
+ <span data-ttu-id="fc884-161">В следующем примере показано, как задать `TransactedBatchingBehavior` в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="fc884-161">The following example shows how to specify the `TransactedBatchingBehavior` in a configuration file.</span></span>  
   
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="TransactedBatchingBehavior"
+              maxBatchSize="100" />
+  </endpointBehaviors>
+</behaviors>
 ```  
-<behaviors>  
-      <endpointBehaviors>  
-        <behavior name="TransactedBatchingBehavior"  
-                  maxBatchSize="100"/>  
-      </endpointBehaviors>  
-    </behaviors>  
-```  
   
- В следующем примере показано, как задать <xref:System.ServiceModel.Description.TransactedBatchingBehavior> в коде.  
+ <span data-ttu-id="fc884-162">В следующем примере показано, как задать <xref:System.ServiceModel.Description.TransactedBatchingBehavior> в коде.</span><span class="sxs-lookup"><span data-stu-id="fc884-162">The following example shows how to specify the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> in code.</span></span>  
   
-```  
-using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
-{  
-     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");  
-                sep.Behaviors.Add(new TransactedBatchingBehavior(100));  
+```csharp
+using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
+{
+     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");
+     sep.Behaviors.Add(new TransactedBatchingBehavior(100));
+     
+     // Open the ServiceHost to create listeners and start listening for messages.
+    serviceHost.Open();
   
-     // Open the ServiceHost to create listeners and start listening for messages.  
-    serviceHost.Open();  
+    // The service can now be accessed.
+    Console.WriteLine("The service is ready.");
+    Console.WriteLine("Press <ENTER> to terminate service.");
+    Console.WriteLine();
+    Console.ReadLine();
   
-    // The service can now be accessed.  
-    Console.WriteLine("The service is ready.");  
-    Console.WriteLine("Press <ENTER> to terminate service.");  
-    Console.WriteLine();  
-    Console.ReadLine();  
-  
-   // Close the ServiceHostB to shut down the service.  
-    serviceHost.Close();  
+    // Close the ServiceHostB to shut down the service.
+    serviceHost.Close();
 }  
 ```  
   
-## См. также  
- [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="fc884-163">См. также</span><span class="sxs-lookup"><span data-stu-id="fc884-163">See Also</span></span>  
+ [<span data-ttu-id="fc884-164">Общие сведения об очередях</span><span class="sxs-lookup"><span data-stu-id="fc884-164">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [<span data-ttu-id="fc884-165">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="fc884-165">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

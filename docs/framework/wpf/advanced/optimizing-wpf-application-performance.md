@@ -1,71 +1,74 @@
 ---
-title: "Улучшение производительности приложений WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "оптимизация приложений"
-  - "отрисовка приложений, производительность"
-  - "приложения, оптимизация"
-  - "приложение WPF, оптимизация"
+title: "Улучшение производительности приложений WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application rendering [WPF], performance
+- application optimization [WPF]
+- applications [WPF], optimizing
+- WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-caps.latest.revision: 45
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 45
+caps.latest.revision: "45"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f9ea154bc7c7a20bcdd57e1f271a4010f50646de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Улучшение производительности приложений WPF
-Данный раздел предназначен для разработчиков приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], ищущих пути повышения производительности своих приложений.  Если вы разработчик и для вас новы [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], следует сначала ознакомиться с обеими платформами.  Этот раздел предполагает понимание принципов работы обеих платформ и написан для программистов, которые уже достаточно знают, чтобы создать и запустить приложение.  
+# <a name="optimizing-wpf-application-performance"></a><span data-ttu-id="4b595-102">Улучшение производительности приложений WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-102">Optimizing WPF Application Performance</span></span>
+<span data-ttu-id="4b595-103">Этот раздел предназначен в качестве справочника по [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разработчики приложений, которым нужны дополнительные способы повышения производительности своих приложений.</span><span class="sxs-lookup"><span data-stu-id="4b595-103">This section is intended as a reference for [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application developers who are looking for ways to improve the performance of their applications.</span></span> <span data-ttu-id="4b595-104">Если вы являетесь разработчиком, который является новой возможностью в [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], следует сначала ознакомиться с обеими платформами.</span><span class="sxs-lookup"><span data-stu-id="4b595-104">If you are a developer who is new to the [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], you should first familiarize yourself with both platforms.</span></span> <span data-ttu-id="4b595-105">Этот раздел предполагает понимание принципов работы обеих и предназначен для программистов, уже достаточно информации, чтобы получить работающую систему свои приложения.</span><span class="sxs-lookup"><span data-stu-id="4b595-105">This section assumes working knowledge of both, and is written for programmers who already know enough to get their applications up and running.</span></span>  
   
 > [!NOTE]
->  Данные о производительности в этом разделе основаны на приложениях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], выполняющихся на ПК с частотой 2,8 ГГц, 512 Мб оперативной памяти и видеокартой ATI Radeon 9700.  
+>  <span data-ttu-id="4b595-106">Данные о производительности в этом разделе основаны на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений, выполняющихся на 2,8 ГГц ПК с 512 МБ оперативной памяти и ATI Radeon 9700 видеокарте.</span><span class="sxs-lookup"><span data-stu-id="4b595-106">The performance data provided in this section are based on [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications running on a 2.8 GHz PC with 512 RAM and an ATI Radeon 9700 graphics card.</span></span>  
   
-## Содержание  
- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4b595-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="4b595-107">In This Section</span></span>  
+ [<span data-ttu-id="4b595-108">Планирование производительности приложения</span><span class="sxs-lookup"><span data-stu-id="4b595-108">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
   
- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="4b595-109">Использование преимуществ оборудования</span><span class="sxs-lookup"><span data-stu-id="4b595-109">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
   
- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="4b595-110">Разметка и разработка</span><span class="sxs-lookup"><span data-stu-id="4b595-110">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
   
- [двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="4b595-111">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="4b595-111">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
   
- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="4b595-112">Поведение объекта</span><span class="sxs-lookup"><span data-stu-id="4b595-112">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
   
- [Ресурсы приложения](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="4b595-113">Ресурсы приложений</span><span class="sxs-lookup"><span data-stu-id="4b595-113">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="4b595-114">Текст</span><span class="sxs-lookup"><span data-stu-id="4b595-114">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="4b595-115">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="4b595-115">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
- [Элементы управления](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)  
+ [<span data-ttu-id="4b595-116">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="4b595-116">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)  
   
- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
+ [<span data-ttu-id="4b595-117">Дополнительные рекомендации по повышению производительности</span><span class="sxs-lookup"><span data-stu-id="4b595-117">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
   
- [Время запуска приложения](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
+ [<span data-ttu-id="4b595-118">Время запуска приложения</span><span class="sxs-lookup"><span data-stu-id="4b595-118">Application Startup Time</span></span>](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
   
-## См. также  
- <xref:System.Windows.Media.RenderOptions>   
- <xref:System.Windows.Media.RenderCapability>   
- [Уровни графической отрисовки](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)   
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)   
- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)   
- [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)   
- [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Рисование форматированного текста](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)   
- [Оформление в WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)   
- [Советы и рекомендации по анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)   
- [Пошаговое руководство. Кэширование данных приложения WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a><span data-ttu-id="4b595-119">См. также</span><span class="sxs-lookup"><span data-stu-id="4b595-119">See Also</span></span>  
+ <xref:System.Windows.Media.RenderOptions>  
+ <xref:System.Windows.Media.RenderCapability>  
+ [<span data-ttu-id="4b595-120">Уровни графической отрисовки</span><span class="sxs-lookup"><span data-stu-id="4b595-120">Graphics Rendering Tiers</span></span>](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
+ [<span data-ttu-id="4b595-121">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-121">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="4b595-122">Макет</span><span class="sxs-lookup"><span data-stu-id="4b595-122">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+ [<span data-ttu-id="4b595-123">Деревья в WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-123">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [<span data-ttu-id="4b595-124">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="4b595-124">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="4b595-125">Использование объектов DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="4b595-125">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [<span data-ttu-id="4b595-126">Общие сведения о свойствах зависимости</span><span class="sxs-lookup"><span data-stu-id="4b595-126">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="4b595-127">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="4b595-127">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="4b595-128">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="4b595-128">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="4b595-129">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-129">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="4b595-130">Рисование форматированного текста</span><span class="sxs-lookup"><span data-stu-id="4b595-130">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
+ [<span data-ttu-id="4b595-131">Оформление в WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-131">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [<span data-ttu-id="4b595-132">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="4b595-132">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="4b595-133">Общие сведения о переходах</span><span class="sxs-lookup"><span data-stu-id="4b595-133">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="4b595-134">Советы и рекомендации по анимации</span><span class="sxs-lookup"><span data-stu-id="4b595-134">Animation Tips and Tricks</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)  
+ [<span data-ttu-id="4b595-135">Пошаговое руководство. Кэширование данных приложения WPF</span><span class="sxs-lookup"><span data-stu-id="4b595-135">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -1,114 +1,115 @@
 ---
-title: "Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "цвета, применение к элементам управления DataGrid"
-  - "столбцы [Windows Forms], DataGrid - элементы управления"
-  - "DataGrid - элемент управления [Windows Forms], основные стили"
-  - "DataGrid - элемент управления [Windows Forms], форматирование"
-  - "форматирование [Windows Forms]"
-  - "таблицы [Windows Forms], форматирование данных в элементе управления DataGrid"
+title: "Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid controls
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="f2122-102">Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="f2122-102">How to: Format the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="f2122-103">Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="f2122-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="f2122-104">Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="f2122-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- Выделение разными цветами различных частей элемента управления <xref:System.Windows.Forms.DataGrid> поможет облегчить чтение и понимание сведений.  Цветами можно выделять строки и столбцы.  Строки и столбцы можно также скрывать или отображать по необходимости.  
+ <span data-ttu-id="f2122-105">Выделение разными цветами различных частей <xref:System.Windows.Forms.DataGrid> управления позволяет облегчить чтение и понимание сведений.</span><span class="sxs-lookup"><span data-stu-id="f2122-105">Applying different colors to various parts of a <xref:System.Windows.Forms.DataGrid> control can help to make the information in it easier to read and interpret.</span></span> <span data-ttu-id="f2122-106">Цвет могут применяться к строкам и столбцам.</span><span class="sxs-lookup"><span data-stu-id="f2122-106">Color can be applied to rows and columns.</span></span> <span data-ttu-id="f2122-107">Строки и столбцы можно также скрывать или отображать по необходимости.</span><span class="sxs-lookup"><span data-stu-id="f2122-107">Rows and columns can also be hidden or shown at your discretion.</span></span>  
   
- Форматирование элемента управления <xref:System.Windows.Forms.DataGrid> состоит из трех основных этапов.  
+ <span data-ttu-id="f2122-108">Состоит из трех основных этапов форматирования <xref:System.Windows.Forms.DataGrid> управления:</span><span class="sxs-lookup"><span data-stu-id="f2122-108">There are three basic aspects of formatting the <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
--   Можно настроить свойства для создания стиля отображения данных по умолчанию.  
+-   <span data-ttu-id="f2122-109">Можно установить свойства, чтобы создать стиль по умолчанию, в котором отображаются данные.</span><span class="sxs-lookup"><span data-stu-id="f2122-109">You can set properties to establish a default style in which data is displayed.</span></span>  
   
--   На этой основе можно затем изменить способ представления определенных таблиц во время выполнения.  
+-   <span data-ttu-id="f2122-110">На этой основе можно настроить способ отображения некоторых таблицах во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f2122-110">From that base, you can then customize the way certain tables are displayed at run time.</span></span>  
   
--   Наконец, можно указать столбцы, отображаемые в сетке данных, а также цвета и другие параметры форматирования для них.  
+-   <span data-ttu-id="f2122-111">Наконец можно изменить столбцы, которые отображаются в сетке данных, а также цвета и другие элементы, которые отображается.</span><span class="sxs-lookup"><span data-stu-id="f2122-111">Finally, you can modify which columns are displayed in the data grid as well as the colors and other formatting that is shown.</span></span>  
   
- На первом этапе форматирования сетки данных можно задать свойства элемента управления <xref:System.Windows.Forms.DataGrid>.  Выбранные параметры цветов и форматирования составляют основу, в которую впоследствии можно вносить изменения, исходя из требований к отображению таблиц и столбцов.  
+ <span data-ttu-id="f2122-112">На первом этапе форматирования сетки данных можно задать свойства <xref:System.Windows.Forms.DataGrid> сам.</span><span class="sxs-lookup"><span data-stu-id="f2122-112">As an initial step in formatting a data grid, you can set the properties of the <xref:System.Windows.Forms.DataGrid> itself.</span></span> <span data-ttu-id="f2122-113">Эти параметры цветов и форматирования составляют основу, из которой затем можно внести изменения в зависимости от данных таблиц и столбцов, отображаемых.</span><span class="sxs-lookup"><span data-stu-id="f2122-113">These color and format choices form a base from which you can then make changes depending on the data tables and columns displayed.</span></span>  
   
- Для следующей процедуры требуется проект **Приложение Windows** с формой, содержащей элемент управления <xref:System.Windows.Forms.DataGrid>.  Сведения о создании такого проекта см. в разделах [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa) и [Практическое руководство. Добавление элементов управления в формы Windows Forms.](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  В [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] элемент управления <xref:System.Windows.Forms.DataGrid> по умолчанию не находится в **панели элементов**.  Дополнительные сведения см. в разделе [How to: Add Items to the Toolbox](http://msdn.microsoft.com/ru-ru/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ <span data-ttu-id="f2122-114">В следующей процедуре требуется **приложение Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f2122-114">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="f2122-115">Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="f2122-115">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="f2122-116">В [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> управления не находится в **элементов** по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f2122-116">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="f2122-117">Дополнительные сведения см. в разделе [как: Добавление элементов в область элементов](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span><span class="sxs-lookup"><span data-stu-id="f2122-117">For more information, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="f2122-118">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="f2122-118">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f2122-119">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="f2122-119">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f2122-120">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="f2122-120">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы создать стиль по умолчанию для элемента управления DataGrid  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a><span data-ttu-id="f2122-121">Чтобы создать стиль по умолчанию для элемента управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="f2122-121">To establish a default style for the DataGrid control</span></span>  
   
-1.  Выберите элемент управления <xref:System.Windows.Forms.DataGrid>.  
+1.  <span data-ttu-id="f2122-122">Выберите элемент управления <xref:System.Windows.Forms.DataGrid>.</span><span class="sxs-lookup"><span data-stu-id="f2122-122">Select the <xref:System.Windows.Forms.DataGrid> control.</span></span>  
   
-2.  В окне **Свойства** установите следующие свойства нужным образом.  
+2.  <span data-ttu-id="f2122-123">В **свойства** задайте следующие свойства, соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="f2122-123">In the **Properties** window, set the following properties, as appropriate.</span></span>  
   
-    |Свойство.|Описание|  
-    |---------------|--------------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Свойство `BackColor` определяет цвет четных строк сетки.  Если в свойстве <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> задан другой цвет, все остальные строки выделяются этим цветом \(строки 1, 3, 5 и так далее\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Фоновый цвет четных строк сетки \(строки 0, 2, 4, 6 и так далее\).|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Если свойства <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> определяют цвета строк сетки, то свойство <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> определяет цвет области, незанятой строками, которая видна, только когда сетка прокручена вниз или содержит небольшое количество строк.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Стиль границы сетки — одно из перечисляемых значений свойства <xref:System.Windows.Forms.BorderStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Фоновый цвет заголовка окна сетки, расположенного непосредственно над сеткой.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Шрифт заголовка в верхней части сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Фоновый цвет заголовка окна сетки.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|Шрифт текста в сетке.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Цвет шрифта, которым представлены данные в строках сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Цвет линий сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Стиль линий, разделяющих ячейки сетки — одно из перечисляемых значений свойства <xref:System.Windows.Forms.DataGridLineStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Фоновый цвет заголовков строк и столбцов.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Шрифт заголовков столбцов.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Цвет заголовков столбцов сетки, включая текст самих заголовков, а также знаки плюс \(\+\) и минус \(\-\), служащие для развертывания и свертывания строк при просмотре нескольких связанных таблиц.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Цвет текста всех ссылок в сетке данных, включая ссылки на дочерние таблицы, имя отношения и так далее.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Фоновый цвет родительских строк в дочерней таблице.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Цвет текста родительских строк в дочерней таблице.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Определяет, отображаются ли названия таблицы и столбцов в родительской строке с помощью перечисления <xref:System.Windows.Forms.DataGridParentRowsLabelStyle>.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Стандартная ширина \(в пикселях\) столбцов сетки.  Установите это свойство, прежде чем сбрасывать свойства <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(либо отдельно, либо с помощью метода <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\), иначе свойство не подействует.<br /><br /> Данное свойство не может иметь отрицательное значение.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Стандартная высота \(в пикселях\) строк сетки.  Установите это свойство, прежде чем сбрасывать свойства <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> \(либо отдельно, либо с помощью метода <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>\), иначе свойство не подействует.<br /><br /> Данное свойство не может иметь отрицательное значение.|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Ширина заголовков строк сетки.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Фоновый цвет выделенной строки или ячейки.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Цвет текста выделенной строки или ячейки.|  
+    |<span data-ttu-id="f2122-124">Свойство</span><span class="sxs-lookup"><span data-stu-id="f2122-124">Property</span></span>|<span data-ttu-id="f2122-125">Описание</span><span class="sxs-lookup"><span data-stu-id="f2122-125">Description</span></span>|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<span data-ttu-id="f2122-126">`BackColor` Свойство определяет цвет строк сетки с четными номерами.</span><span class="sxs-lookup"><span data-stu-id="f2122-126">The `BackColor` property defines the color of the even-numbered rows of the grid.</span></span> <span data-ttu-id="f2122-127">При задании <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> другой цвет, все остальные строки является свойство цветом (строки 1, 3, 5 и т. д.).</span><span class="sxs-lookup"><span data-stu-id="f2122-127">When you set the <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> property to a different color, every other row is set to this new color (rows 1, 3, 5, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|<span data-ttu-id="f2122-128">Цвет фона строк сетки с четными номерами (строки 0, 2, 4, 6 и т. д.).</span><span class="sxs-lookup"><span data-stu-id="f2122-128">The background color of the even-numbered rows of the grid (rows 0, 2, 4, 6, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<span data-ttu-id="f2122-129">В то время как <xref:System.Windows.Forms.DataGrid.BackColor%2A> и <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> свойства определяет цвет строк в сетке <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> свойство определяет цвет области за пределами области строк, которая видна только нижней сетке выполняется прокрутка или если только небольшое число строк содержащиеся в сетке.</span><span class="sxs-lookup"><span data-stu-id="f2122-129">Whereas the <xref:System.Windows.Forms.DataGrid.BackColor%2A> and <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> properties determines the color of rows in the grid, the <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> property determines the color of the area outside the row area, which is only visible when the grid is scrolled to the bottom, or if only a few rows are contained in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|<span data-ttu-id="f2122-130">Стиль границ сетки, один из <xref:System.Windows.Forms.BorderStyle> значений перечисления.</span><span class="sxs-lookup"><span data-stu-id="f2122-130">The grid's border style, one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|<span data-ttu-id="f2122-131">Цвет фона названия окна сетки, расположенного непосредственно над сеткой.</span><span class="sxs-lookup"><span data-stu-id="f2122-131">The background color of the grid's window caption which appears immediately above the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|<span data-ttu-id="f2122-132">Шрифт заголовка в верхней части сетки.</span><span class="sxs-lookup"><span data-stu-id="f2122-132">The font of the caption at the top of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|<span data-ttu-id="f2122-133">Цвет фона названия окна сетки.</span><span class="sxs-lookup"><span data-stu-id="f2122-133">The background color of the grid's window caption.</span></span>|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|<span data-ttu-id="f2122-134">Шрифт, используемый для отображения текста в сетке.</span><span class="sxs-lookup"><span data-stu-id="f2122-134">The font used to display the text in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|<span data-ttu-id="f2122-135">Цвет шрифта, которым данные в строках сетки данных.</span><span class="sxs-lookup"><span data-stu-id="f2122-135">The color of the font displayed by the data in the rows of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|<span data-ttu-id="f2122-136">Цвет линий сетки сетки данных.</span><span class="sxs-lookup"><span data-stu-id="f2122-136">The color of the grid lines of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<span data-ttu-id="f2122-137">Задает стиль линий, разделяющих ячейки сетки — одно из <xref:System.Windows.Forms.DataGridLineStyle> значений перечисления.</span><span class="sxs-lookup"><span data-stu-id="f2122-137">The style of the lines separating the cells of the grid, one of the <xref:System.Windows.Forms.DataGridLineStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|<span data-ttu-id="f2122-138">Цвет фона заголовков строк и столбцов.</span><span class="sxs-lookup"><span data-stu-id="f2122-138">The background color of row and column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|<span data-ttu-id="f2122-139">Шрифт, используемый для заголовков столбцов.</span><span class="sxs-lookup"><span data-stu-id="f2122-139">The font used for the column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|<span data-ttu-id="f2122-140">Основной цвет заголовков столбцов сетки, включая текст заголовка столбца и знак плюс (+) и минуса (-) глифы, которые можно разворачивать и сворачивать строки при нескольких связанных таблиц отображаются.</span><span class="sxs-lookup"><span data-stu-id="f2122-140">The foreground color of the grid's column headers, including the column header text and the plus sign (+) and minus sign (-) glyphs that expand and collapse rows when multiple related tables are displayed.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|<span data-ttu-id="f2122-141">Цвет текста всех ссылок в сетке данных, включая ссылки на дочерние таблицы, имя отношения и т. д.</span><span class="sxs-lookup"><span data-stu-id="f2122-141">The color of text of all the links in the data grid, including links to child tables, the relation name, and so on.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|<span data-ttu-id="f2122-142">В дочерней таблице это цвет фона родительских строк.</span><span class="sxs-lookup"><span data-stu-id="f2122-142">In a child table, this is the background color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|<span data-ttu-id="f2122-143">В дочерней таблице это основной цвет родительских строк.</span><span class="sxs-lookup"><span data-stu-id="f2122-143">In a child table, this is the foreground color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|<span data-ttu-id="f2122-144">Определяет, отображаются ли имена таблиц и столбцов в родительской строке с помощью параметра <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> перечисления.</span><span class="sxs-lookup"><span data-stu-id="f2122-144">Determines whether the table and column names are displayed in the parent row, by means of the <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumeration.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|<span data-ttu-id="f2122-145">Стандартная ширина (в пикселях) столбцов сетки.</span><span class="sxs-lookup"><span data-stu-id="f2122-145">The default width (in pixels) of columns in the grid.</span></span> <span data-ttu-id="f2122-146">Присвойте этому свойству перед сбросом <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойств (либо отдельно, либо с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод), или свойство не будет действовать.</span><span class="sxs-lookup"><span data-stu-id="f2122-146">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="f2122-147">Свойство не может быть присвоено значение меньше 0.</span><span class="sxs-lookup"><span data-stu-id="f2122-147">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|<span data-ttu-id="f2122-148">Высота строки (в пикселях) строки в сетке.</span><span class="sxs-lookup"><span data-stu-id="f2122-148">The row height (in pixels) of rows in the grid.</span></span> <span data-ttu-id="f2122-149">Присвойте этому свойству перед сбросом <xref:System.Windows.Forms.DataGrid.DataSource%2A> и <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойств (либо отдельно, либо с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод), или свойство не будет действовать.</span><span class="sxs-lookup"><span data-stu-id="f2122-149">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="f2122-150">Свойство не может быть присвоено значение меньше 0.</span><span class="sxs-lookup"><span data-stu-id="f2122-150">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|<span data-ttu-id="f2122-151">Ширина заголовков строк сетки.</span><span class="sxs-lookup"><span data-stu-id="f2122-151">The width of the row headers of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|<span data-ttu-id="f2122-152">При выборе строки или ячейки, это цвет фона.</span><span class="sxs-lookup"><span data-stu-id="f2122-152">When a row or cell is selected, this is the background color.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|<span data-ttu-id="f2122-153">При выборе строки или ячейки, это цвет переднего плана.</span><span class="sxs-lookup"><span data-stu-id="f2122-153">When a row or cell is selected, this is the foreground color.</span></span>|  
   
     > [!NOTE]
-    >  При настройке цветов элементов управления следует учесть, что выбор неудачных цветов \(например, красный и зеленый\) может затруднить работу с элементом управления.  Чтобы избежать этого, используйте цвета из палитры **Системные цвета**.  
+    >  <span data-ttu-id="f2122-154">При настройке цветов элементов управления, можно сделать элемент управления недоступен из-за выбор неудачных цветов (например, красный и зеленый).</span><span class="sxs-lookup"><span data-stu-id="f2122-154">When you are customizing the colors of controls, it is possible to make the control inaccessible due to poor color choice (for example, red and green).</span></span> <span data-ttu-id="f2122-155">Используйте цвета на **системных цветов** палитру цветов, чтобы избежать этой проблемы.</span><span class="sxs-lookup"><span data-stu-id="f2122-155">Use the colors available on the **System Colors** palette to avoid this issue.</span></span>  
   
-     Для следующей процедуры требуется элемент управления <xref:System.Windows.Forms.DataGrid>, связанный с таблицей данных.  Дополнительные сведения см. в разделе [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     <span data-ttu-id="f2122-156">В следующей процедуре требуется <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных.</span><span class="sxs-lookup"><span data-stu-id="f2122-156">The following procedure requires a <xref:System.Windows.Forms.DataGrid> control bound to a data table.</span></span> <span data-ttu-id="f2122-157">Дополнительные сведения см. в разделе [как: привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span><span class="sxs-lookup"><span data-stu-id="f2122-157">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
-### Чтобы задать стили таблицы и столбца таблицы данных во время проектирования  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a><span data-ttu-id="f2122-158">Чтобы задать стиль таблицы и столбца таблицы данных во время разработки</span><span class="sxs-lookup"><span data-stu-id="f2122-158">To set the table and column style of a data table at design time</span></span>  
   
-1.  Выберите элемент управления <xref:System.Windows.Forms.DataGrid> в форме.  
+1.  <span data-ttu-id="f2122-159">Выберите <xref:System.Windows.Forms.DataGrid> элемент управления в форме.</span><span class="sxs-lookup"><span data-stu-id="f2122-159">Select the <xref:System.Windows.Forms.DataGrid> control on your form.</span></span>  
   
-2.  В окне **Свойства** выберите свойство <xref:System.Windows.Forms.DataGrid.TableStyles%2A> и нажмите кнопку с **Многоточием** \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) рядом со свойством.  
+2.  <span data-ttu-id="f2122-160">В **свойства** выберите <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойство и нажмите кнопку **многоточие** (![экрана VisualStudioEllipsesButton] (../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) кнопки.</span><span class="sxs-lookup"><span data-stu-id="f2122-160">In the **Properties** window, select the <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property and click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button.</span></span>  
   
-3.  В окне **Редактор коллекции DataGridTableStyle** нажмите кнопку **Добавить**, чтобы добавить к коллекции стиль таблицы.  
+3.  <span data-ttu-id="f2122-161">В **редактор коллекции DataGridTableStyle** диалоговое окно, нажмите кнопку **добавить** Добавление стиля таблицы в коллекцию.</span><span class="sxs-lookup"><span data-stu-id="f2122-161">In the **DataGridTableStyle Collection Editor** dialog box, click **Add** to add a table style to the collection.</span></span>  
   
-     В диалоговом окне **Редактор коллекции DataGridTableStyle** можно добавлять и удалять стили таблиц, задавать свойства отображения и расположения, а также указывать имена сопоставления для стилей таблиц.  
+     <span data-ttu-id="f2122-162">С **редактор коллекции DataGridTableStyle**, можно добавить и удалить таблицы стилей, отображения набора и свойства макета и набор сопоставление имени для стилей таблиц.</span><span class="sxs-lookup"><span data-stu-id="f2122-162">With the **DataGridTableStyle Collection Editor**, you can add and remove table styles, set display and layout properties, and set the mapping name for the table styles.</span></span>  
   
-4.  Укажите в свойстве <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> имя сопоставления для каждого стиля таблицы.  
+4.  <span data-ttu-id="f2122-163">Задать <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойства имя сопоставления для каждого стиля таблицы.</span><span class="sxs-lookup"><span data-stu-id="f2122-163">Set the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property to the mapping name for each table style.</span></span>  
   
-     Имя сопоставления задает стиль таблицы.  
+     <span data-ttu-id="f2122-164">Имя сопоставления позволяет указать, какой стиль таблицы следует использовать в какой таблице.</span><span class="sxs-lookup"><span data-stu-id="f2122-164">The mapping name is used to specify which table style should be used with which table.</span></span>  
   
-5.  В окне **Редактор коллекции DataGridTableStyle** выберите свойство <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> и нажмите кнопку с многоточием \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\).  
+5.  <span data-ttu-id="f2122-165">В **редактор коллекции DataGridTableStyle**выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойство и нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).</span><span class="sxs-lookup"><span data-stu-id="f2122-165">In the **DataGridTableStyle Collection Editor**, select the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> property and click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).</span></span>  
   
-6.  В окне **Редактор коллекции DataGridColumnStyle** добавьте стили столбцов к созданному стилю таблицы.  
+6.  <span data-ttu-id="f2122-166">В **редактор коллекции DataGridColumnStyle** диалогового окна поле, добавьте стили столбцов в созданный стиль таблицы.</span><span class="sxs-lookup"><span data-stu-id="f2122-166">In the **DataGridColumnStyle Collection Editor** dialog box, add column styles to the table style you created.</span></span>  
   
-     В диалоговом окне **Редактор коллекции DataGridColumnStyle** можно добавлять и удалять стили столбцов, задавать свойства отображения и расположения, а также указывать имена сопоставления и строки форматирования для столбцов данных.  
+     <span data-ttu-id="f2122-167">С **редактор коллекции DataGridColumnStyle**, можно добавлять и удалять стили столбцов, задавать свойства отображения и макета и задайте имя сопоставления и строки форматирования для данных столбцов.</span><span class="sxs-lookup"><span data-stu-id="f2122-167">With the **DataGridColumnStyle Collection Editor**, you can add and remove column styles, set display and layout properties, and set the mapping name and formatting strings for the data columns.</span></span>  
   
     > [!NOTE]
-    >  Дополнительные сведения о строках форматирования см. в разделе [Типы форматирования](../../../../docs/standard/base-types/formatting-types.md).  
+    >  <span data-ttu-id="f2122-168">Дополнительные сведения о строках форматирования см. в разделе [типы форматирования](../../../../docs/standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="f2122-168">For more information about formatting strings, see [Formatting Types](../../../../docs/standard/base-types/formatting-types.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [Практическое руководство. Удаление или сокрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f2122-169">См. также</span><span class="sxs-lookup"><span data-stu-id="f2122-169">See Also</span></span>  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [<span data-ttu-id="f2122-170">Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f2122-170">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="f2122-171">Элемент управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="f2122-171">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

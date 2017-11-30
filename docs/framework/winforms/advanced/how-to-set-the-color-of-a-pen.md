@@ -1,45 +1,50 @@
 ---
-title: "Практическое руководство. Установка цвета фона для пера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "цветные перья"
-  - "перья, установка цвета"
+title: "Практическое руководство. Установка цвета фона для пера"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- pens [Windows Forms], setting color
+- colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 452e88b4b41a22cc78f73e120e49468e4f4dad56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка цвета фона для пера
-В этом примере для уже созданного объекта <xref:System.Drawing.Pen> задается цвет.  
+# <a name="how-to-set-the-color-of-a-pen"></a><span data-ttu-id="86cf5-102">Практическое руководство. Установка цвета фона для пера</span><span class="sxs-lookup"><span data-stu-id="86cf5-102">How to: Set the Color of a Pen</span></span>
+<span data-ttu-id="86cf5-103">В этом примере изменяется цвет существующем <xref:System.Drawing.Pen> объекта</span><span class="sxs-lookup"><span data-stu-id="86cf5-103">This example changes the color of a pre-existing <xref:System.Drawing.Pen> object</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="86cf5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="86cf5-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#9)]
  [!code-csharp[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#9)]
  [!code-vb[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#9)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a><span data-ttu-id="86cf5-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="86cf5-105">Compiling the Code</span></span>  
+ <span data-ttu-id="86cf5-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="86cf5-106">This example requires:</span></span>  
   
--   Объект <xref:System.Drawing.Pen> с именем `myPen`.  
+-   <span data-ttu-id="86cf5-107">Объект <xref:System.Drawing.Pen> объект с именем `myPen`.</span><span class="sxs-lookup"><span data-stu-id="86cf5-107">A <xref:System.Drawing.Pen> object named `myPen`.</span></span>  
   
-## Отказоустойчивость  
- После завершения использования объектов, которые потребляют ресурсы системы, например объектов <xref:System.Drawing.Pen>, необходимо вызвать для этих объектов метод <xref:System.Drawing.Pen.Dispose%2A>.  
+## <a name="robust-programming"></a><span data-ttu-id="86cf5-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="86cf5-108">Robust Programming</span></span>  
+ <span data-ttu-id="86cf5-109">Необходимо вызвать <xref:System.Drawing.Pen.Dispose%2A> на объекты, которые потребляют системные ресурсы (такие как <xref:System.Drawing.Pen> объекты) после завершения работы с ними.</span><span class="sxs-lookup"><span data-stu-id="86cf5-109">You should call <xref:System.Drawing.Pen.Dispose%2A> on objects that consume system resources (such as <xref:System.Drawing.Pen> objects) after you are finished using them.</span></span>  
   
-## См. также  
- <xref:System.Drawing.Pen>   
- [Приступая к программированию графики](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Практическое руководство. Создание пера](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [Перья, линии и прямоугольники в GDI\+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="86cf5-110">См. также</span><span class="sxs-lookup"><span data-stu-id="86cf5-110">See Also</span></span>  
+ <xref:System.Drawing.Pen>  
+ [<span data-ttu-id="86cf5-111">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="86cf5-111">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="86cf5-112">Практическое руководство. Создание пера</span><span class="sxs-lookup"><span data-stu-id="86cf5-112">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [<span data-ttu-id="86cf5-113">Рисование линий и фигур с помощью пера</span><span class="sxs-lookup"><span data-stu-id="86cf5-113">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="86cf5-114">Перья, линии и прямоугольники в GDI+</span><span class="sxs-lookup"><span data-stu-id="86cf5-114">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

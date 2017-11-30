@@ -1,39 +1,39 @@
 ---
-title: "Общие сведения об элементе управления LinkLabel (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Label - элемент управления [Windows Forms], об элементе управления Label"
-  - "LinkLabel - элемент управления [Windows Forms], сведения об элементе управления LinkLabel"
-  - "связи, LinkLabel - элемент управления"
+title: "Общие сведения об элементе управления LinkLabel (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LinkLabel
+helpviewer_keywords:
+- links [Windows Forms], LinkLabel control
+- Label control [Windows Forms], about Label control
+- LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0cb01c0fc5503a5bf16e1f191d87ae90907ec816
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления LinkLabel (Windows Forms)
-Элемент управления форм <xref:System.Windows.Forms.LinkLabel> позволяет добавлять ссылки в стиле веб в приложения форм Windows.  Элемент управления <xref:System.Windows.Forms.Label> может использоваться для тех же целей, что и элемент управления <xref:System.Windows.Forms.LinkLabel>; кроме того, имеется возможность задать часть текста в качестве ссылки на файл, папку или веб\-страницу.  
+# <a name="linklabel-control-overview-windows-forms"></a><span data-ttu-id="cd89a-102">Общие сведения об элементе управления LinkLabel (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="cd89a-102">LinkLabel Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="cd89a-103">Windows Forms <xref:System.Windows.Forms.LinkLabel> позволяет добавить веб-ссылок в приложениях Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="cd89a-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to add Web-style links to Windows Forms applications.</span></span> <span data-ttu-id="cd89a-104">Можно использовать <xref:System.Windows.Forms.LinkLabel> управления для всех элементов, можно использовать <xref:System.Windows.Forms.Label> элемента управления; в тексте можно задать как ссылка на файл, папку или веб-страницы.</span><span class="sxs-lookup"><span data-stu-id="cd89a-104">You can use the <xref:System.Windows.Forms.LinkLabel> control for everything that you can use the <xref:System.Windows.Forms.Label> control for; you also can set part of the text as a link to a file, folder, or Web page.</span></span>  
   
-## Возможные действия с элементом управления LinkLabel  
- В дополнение ко всем свойствам, методам и событиям элемента управления <xref:System.Windows.Forms.LinkLabel>, у элемента управления <xref:System.Windows.Forms.Label> имеются еще свойства для гиперссылок и цвета ссылок.  Свойство <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> определяет область текста, которая активирует ссылку.  Свойства <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> и <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> определяют цвета ссылки.  Событие <xref:System.Windows.Forms.LinkLabel.LinkClicked> определяет, что происходит при выборе текста ссылки.  
+## <a name="what-you-can-do-with-the-linklabel-control"></a><span data-ttu-id="cd89a-105">Что можно сделать с помощью элемента управления LinkLabel</span><span class="sxs-lookup"><span data-stu-id="cd89a-105">What You Can Do with the LinkLabel Control</span></span>  
+ <span data-ttu-id="cd89a-106">Помимо свойств, методов и событий <xref:System.Windows.Forms.Label> управления <xref:System.Windows.Forms.LinkLabel> элемент управления имеет свойства для гиперссылок и цвета ссылок.</span><span class="sxs-lookup"><span data-stu-id="cd89a-106">In addition to all the properties, methods, and events of the <xref:System.Windows.Forms.Label> control, the <xref:System.Windows.Forms.LinkLabel> control has properties for hyperlinks and link colors.</span></span> <span data-ttu-id="cd89a-107"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Свойство задает область текста, которая активирует ссылку.</span><span class="sxs-lookup"><span data-stu-id="cd89a-107">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property sets the area of the text that activates the link.</span></span> <span data-ttu-id="cd89a-108"><xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, И <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> свойства задать цвета ссылки.</span><span class="sxs-lookup"><span data-stu-id="cd89a-108">The <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, and <xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A> properties set the colors of the link.</span></span> <span data-ttu-id="cd89a-109"><xref:System.Windows.Forms.LinkLabel.LinkClicked> Событий определяет, что происходит при выборе текста ссылки.</span><span class="sxs-lookup"><span data-stu-id="cd89a-109">The <xref:System.Windows.Forms.LinkLabel.LinkClicked> event determines what happens when the link text is selected.</span></span>  
   
- Простейшее применение элемента управления <xref:System.Windows.Forms.LinkLabel> — отображение одиночной ссылки с использованием свойства <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, однако также возможно отображение нескольких гиперссылок с помощью свойства <xref:System.Windows.Forms.LinkLabel.Links%2A>.  Свойство <xref:System.Windows.Forms.LinkLabel.Links%2A> позволяет получить доступ к коллекции ссылок.  Кроме того, в свойстве <xref:System.Windows.Forms.LinkLabel.Link> можно определить данные для каждого отдельного объекта <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>.  Значение свойства <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> служит для хранения размещения отображаемого файла или адреса веб\-узла.  
+ <span data-ttu-id="cd89a-110">Простейшего использования <xref:System.Windows.Forms.LinkLabel> управления является отображение одну связь с помощью <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> свойство, но также может отображаться несколько гиперссылки с помощью <xref:System.Windows.Forms.LinkLabel.Links%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cd89a-110">The simplest use of the <xref:System.Windows.Forms.LinkLabel> control is to display a single link using the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property, but you can also display multiple hyperlinks using the <xref:System.Windows.Forms.LinkLabel.Links%2A> property.</span></span> <span data-ttu-id="cd89a-111"><xref:System.Windows.Forms.LinkLabel.Links%2A> Свойство позволяет получить доступ к коллекции ссылок.</span><span class="sxs-lookup"><span data-stu-id="cd89a-111">The <xref:System.Windows.Forms.LinkLabel.Links%2A> property enables you to access a collection of links.</span></span> <span data-ttu-id="cd89a-112">Можно также указать данные в <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> свойства каждого отдельного <xref:System.Windows.Forms.LinkLabel.Link> объекта.</span><span class="sxs-lookup"><span data-stu-id="cd89a-112">You can also specify data in the <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> property of each individual <xref:System.Windows.Forms.LinkLabel.Link> object.</span></span> <span data-ttu-id="cd89a-113">Значение <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> свойство может использоваться для хранения расположение файла для отображения или адрес веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="cd89a-113">The value of the <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> property can be used to store the location of a file to display or the address of a Web site.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.LinkLabel>   
- [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
- [Практическое руководство. Создание связи с объектом или веб\-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+## <a name="see-also"></a><span data-ttu-id="cd89a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="cd89a-114">See Also</span></span>  
+ <xref:System.Windows.Forms.LinkLabel>  
+ [<span data-ttu-id="cd89a-115">Общие сведения об элементе управления Label</span><span class="sxs-lookup"><span data-stu-id="cd89a-115">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [<span data-ttu-id="cd89a-116">Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cd89a-116">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ [<span data-ttu-id="cd89a-117">Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cd89a-117">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

@@ -1,71 +1,75 @@
 ---
-title: "How to: Add Data to the Clipboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Clipboard, copying data to"
-  - "data [Windows Forms], copying to Clipboard"
+title: "Практическое руководство. Добавление данных в буфер обмена"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47858af6d4e3dc5f29632c5a74f2431a2cc200b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Add Data to the Clipboard
-Класс <xref:System.Windows.Forms.Clipboard> предоставляет методы, которые можно использовать для взаимодействия с функцией буфера обмена операционной системы Windows.  Многие приложения используют буфер обмена в качестве временного хранилища данных.  Например, текстовые процессоры используют буфер обмена во время операций вырезания и вставки.  Буфер обмена также полезен для передачи данных из одного приложения в другое.  
+# <a name="how-to-add-data-to-the-clipboard"></a><span data-ttu-id="238aa-102">Практическое руководство. Добавление данных в буфер обмена</span><span class="sxs-lookup"><span data-stu-id="238aa-102">How to: Add Data to the Clipboard</span></span>
+<span data-ttu-id="238aa-103"><xref:System.Windows.Forms.Clipboard> Класс предоставляет методы, которые можно использовать для взаимодействия с компонентом буфер обмена операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="238aa-103">The <xref:System.Windows.Forms.Clipboard> class provides methods that you can use to interact with the Windows operating system Clipboard feature.</span></span> <span data-ttu-id="238aa-104">Многие приложения используют буфер обмена в качестве временного хранилища данных.</span><span class="sxs-lookup"><span data-stu-id="238aa-104">Many applications use the Clipboard as a temporary repository for data.</span></span> <span data-ttu-id="238aa-105">Например текстовые редакторы использовать буфер обмена во время операций вырезания и вставки.</span><span class="sxs-lookup"><span data-stu-id="238aa-105">For example, word processors use the Clipboard during cut-and-paste operations.</span></span> <span data-ttu-id="238aa-106">Буфер обмена также полезен для передачи данных из одного приложения в другое.</span><span class="sxs-lookup"><span data-stu-id="238aa-106">The Clipboard is also useful for transferring data from one application to another.</span></span>  
   
- При добавлении данных в буфер обмена можно указать формат данных таким образом, чтобы другие приложения могли распознать данные, если они могут использовать этот формат.  Можно также добавить данные в буфер обмена в нескольких различных форматах, чтобы увеличить количество других приложений, которые потенциально могут использовать данные.  
+ <span data-ttu-id="238aa-107">При добавлении данных в буфер обмена, чтобы другие приложения могли распознать данные, если они могут использовать этот формат можно указать формат данных.</span><span class="sxs-lookup"><span data-stu-id="238aa-107">When you add data to the Clipboard, you can indicate the data format so that other applications can recognize the data if they can use that format.</span></span> <span data-ttu-id="238aa-108">Можно также добавлять данные в буфер обмена в нескольких различных форматах, чтобы увеличить количество других приложений, которые потенциально могут использовать данные.</span><span class="sxs-lookup"><span data-stu-id="238aa-108">You can also add data to the Clipboard in multiple different formats to increase the number of other applications that can potentially use the data.</span></span>  
   
- Формат буфера обмена является строкой, которая определяет формат таким образом, чтобы приложение, использующее этот формат, могло получать связанные данные.  Класс <xref:System.Windows.Forms.DataFormats> предоставляет предварительно определенные имена форматов для использования.  Можно также использовать собственные имена форматов или использовать тип объекта в качестве его формата.  
+ <span data-ttu-id="238aa-109">Формат буфера обмена является строка, определяющая формат, чтобы приложение, использующее этот формат может получать связанные данные.</span><span class="sxs-lookup"><span data-stu-id="238aa-109">A Clipboard format is a string that identifies the format so that an application that uses that format can retrieve the associated data.</span></span> <span data-ttu-id="238aa-110"><xref:System.Windows.Forms.DataFormats> Класс предоставляет имена стандартных форматов для использования.</span><span class="sxs-lookup"><span data-stu-id="238aa-110">The <xref:System.Windows.Forms.DataFormats> class provides predefined format names for your use.</span></span> <span data-ttu-id="238aa-111">Можно также использовать собственные имена форматов или использовать тип объекта в качестве его формата.</span><span class="sxs-lookup"><span data-stu-id="238aa-111">You can also use your own format names or use the type of an object as its format.</span></span>  
   
- Чтобы добавить данные в буфер обмена в одном или нескольких форматах, используйте метод <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  Этому методу можно передать любой объект, но для добавления данных в нескольких форматах необходимо сначала добавить данные в отдельный объект, предназначенный для работы с несколькими форматами данных.  Обычно данные добавляются к объекту <xref:System.Windows.Forms.DataObject>, но можно использовать любой тип, реализующий интерфейс <xref:System.Windows.Forms.IDataObject>.  
+ <span data-ttu-id="238aa-112">Чтобы добавить данные в буфер обмена в один или несколько форматов, используйте <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="238aa-112">To add data to the Clipboard in one or multiple formats, use the <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> method.</span></span> <span data-ttu-id="238aa-113">Этот метод можно передать любой объект, но для добавления данных в нескольких форматах, необходимо добавить данные отдельный объект, предназначенный для работы с несколькими форматами.</span><span class="sxs-lookup"><span data-stu-id="238aa-113">You can pass any object to this method, but to add data in multiple formats, you must first add the data to a separate object designed to work with multiple formats.</span></span> <span data-ttu-id="238aa-114">Как правило, вы добавите данные не будут <xref:System.Windows.Forms.DataObject>, но можно использовать любой тип, реализующий <xref:System.Windows.Forms.IDataObject> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="238aa-114">Typically, you will add your data to a <xref:System.Windows.Forms.DataObject>, but you can use any type that implements the <xref:System.Windows.Forms.IDataObject> interface.</span></span>  
   
- В [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] можно добавить данные непосредственно в буфер обмена с помощью новых методов, позволяющих упростить основные задачи при работе с буфером обмена.  Используйте эти методы при работе с данными в одном общем формате, такими как текст.  
+ <span data-ttu-id="238aa-115">В [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], можно добавить данные непосредственно в буфер обмена с помощью новых методов, позволяющих упростить основные задачи в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="238aa-115">In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], you can add data directly to the Clipboard by using new methods designed to make basic Clipboard tasks easier.</span></span> <span data-ttu-id="238aa-116">Эти методы можно используйте при работе с данными в одном общем формате такие как текст.</span><span class="sxs-lookup"><span data-stu-id="238aa-116">Use these methods when you work with data in a single, common format such as text.</span></span>  
   
 > [!NOTE]
->  Все приложения Windows используют один буфер обмена.  Поэтому содержимое буфера обмена может изменяться при переходе к другому приложению.  
+>  <span data-ttu-id="238aa-117">Все приложения Windows используют один буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="238aa-117">All Windows-based applications share the Clipboard.</span></span> <span data-ttu-id="238aa-118">Таким образом содержимое могут быть изменены при переходе в другое приложение.</span><span class="sxs-lookup"><span data-stu-id="238aa-118">Therefore, the contents are subject to change when you switch to another application.</span></span>  
 >   
->  Класс <xref:System.Windows.Forms.Clipboard> может использоваться только в потоках в режиме однопотокового подразделения.  Чтобы использовать этот класс, убедитесь, что используемый метод `Main` помечен атрибутом <xref:System.STAThreadAttribute>.  
+>  <span data-ttu-id="238aa-119"><xref:System.Windows.Forms.Clipboard> Класс может использоваться только в потоках в режим однопотоковое подразделение (STA).</span><span class="sxs-lookup"><span data-stu-id="238aa-119">The <xref:System.Windows.Forms.Clipboard> class can only be used in threads set to single thread apartment (STA) mode.</span></span> <span data-ttu-id="238aa-120">Чтобы использовать этот класс, убедитесь, что ваш `Main` метод помечен атрибутом <xref:System.STAThreadAttribute> атрибута.</span><span class="sxs-lookup"><span data-stu-id="238aa-120">To use this class, ensure that your `Main` method is marked with the <xref:System.STAThreadAttribute> attribute.</span></span>  
 >   
->  Для помещения в буфер обмена объект должен быть сериализуемым.  Чтобы сделать тип сериализуемым, его необходимо пометить атрибутом <xref:System.SerializableAttribute>.  Если методу буфера обмена передается не сериализуемый объект, метод завершится неудачей без создания исключения.  Дополнительные сведений о сериализации см. в разделе <xref:System.Runtime.Serialization>.  
+>  <span data-ttu-id="238aa-121">Объект должен поддерживать сериализацию для помещения в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="238aa-121">An object must be serializable for it to be put on the Clipboard.</span></span> <span data-ttu-id="238aa-122">Чтобы сделать тип сериализуемым, его необходимо пометить <xref:System.SerializableAttribute> атрибута.</span><span class="sxs-lookup"><span data-stu-id="238aa-122">To make a type serializable, mark it with the <xref:System.SerializableAttribute> attribute.</span></span> <span data-ttu-id="238aa-123">Если методу буфера обмена передается несериализуемый объект, метод завершится с ошибкой без вызова исключения.</span><span class="sxs-lookup"><span data-stu-id="238aa-123">If you pass a non-serializable object to a Clipboard method, the method will fail without throwing an exception.</span></span> <span data-ttu-id="238aa-124">Дополнительные сведения о сериализации см. в разделе <xref:System.Runtime.Serialization>.</span><span class="sxs-lookup"><span data-stu-id="238aa-124">For more information about serialization, see <xref:System.Runtime.Serialization>.</span></span>  
   
-### Чтобы добавить данные в буфер обмена в одном общем формате, выполните следующие действия.  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a><span data-ttu-id="238aa-125">Чтобы добавить данные в буфер обмена в одном общем формате</span><span class="sxs-lookup"><span data-stu-id="238aa-125">To add data to the Clipboard in a single, common format</span></span>  
   
-1.  Используйте метод <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A> или <xref:System.Windows.Forms.Clipboard.SetText%2A>.  Эти методы доступны только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  <span data-ttu-id="238aa-126">Используйте <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, или <xref:System.Windows.Forms.Clipboard.SetText%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="238aa-126">Use the <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, or <xref:System.Windows.Forms.Clipboard.SetText%2A> method.</span></span> <span data-ttu-id="238aa-127">Эти методы доступны только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="238aa-127">These methods are available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### Чтобы добавить данные в буфер обмена в пользовательском формате, выполните следующие действия.  
+### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a><span data-ttu-id="238aa-128">Чтобы добавить данные в буфер обмена в пользовательском формате</span><span class="sxs-lookup"><span data-stu-id="238aa-128">To add data to the Clipboard in a custom format</span></span>  
   
-1.  Используйте метод <xref:System.Windows.Forms.Clipboard.SetData%2A> с именем пользовательского формата.  Этот метод доступен только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  <span data-ttu-id="238aa-129">Используйте <xref:System.Windows.Forms.Clipboard.SetData%2A> метод с именем пользовательского формата.</span><span class="sxs-lookup"><span data-stu-id="238aa-129">Use the <xref:System.Windows.Forms.Clipboard.SetData%2A> method with a custom format name.</span></span> <span data-ttu-id="238aa-130">Этот метод доступен только в [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="238aa-130">This method is available only in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span>  
   
-     Можно также использовать предварительно определенные имена форматов с помощью метода <xref:System.Windows.Forms.Clipboard.SetData%2A>.  Дополнительные сведения см. в разделе <xref:System.Windows.Forms.DataFormats>.  
+     <span data-ttu-id="238aa-131">Можно также использовать имена стандартных форматов с <xref:System.Windows.Forms.Clipboard.SetData%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="238aa-131">You can also use predefined format names with the <xref:System.Windows.Forms.Clipboard.SetData%2A> method.</span></span> <span data-ttu-id="238aa-132">Для получения дополнительной информации см. <xref:System.Windows.Forms.DataFormats>.</span><span class="sxs-lookup"><span data-stu-id="238aa-132">For more information, see <xref:System.Windows.Forms.DataFormats>.</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### Чтобы добавить данные в буфер обмена в нескольких форматах, выполните следующие действия.  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a><span data-ttu-id="238aa-133">Чтобы добавить данные в буфер обмена в нескольких форматах</span><span class="sxs-lookup"><span data-stu-id="238aa-133">To add data to the Clipboard in multiple formats</span></span>  
   
-1.  Используйте метод <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> и передайте ему объект <xref:System.Windows.Forms.DataObject>, содержащий данные.  Необходимо использовать этот метод для добавления данных в буфер обмена для более ранних версий, чем [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  <span data-ttu-id="238aa-134">Используйте <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> метод и передайте его в <xref:System.Windows.Forms.DataObject> , содержащий нужные данные.</span><span class="sxs-lookup"><span data-stu-id="238aa-134">Use the <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> method and pass in a <xref:System.Windows.Forms.DataObject> that contains your data.</span></span> <span data-ttu-id="238aa-135">Необходимо использовать этот метод для добавления данных в буфер обмена для версий более ранних, чем [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="238aa-135">You must use this method to add data to the Clipboard on versions earlier than [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span></span>  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## См. также  
- [Drag\-and\-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [How to: Retrieve Data from the Clipboard](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a><span data-ttu-id="238aa-136">См. также</span><span class="sxs-lookup"><span data-stu-id="238aa-136">See Also</span></span>  
+ [<span data-ttu-id="238aa-137">Операции перетаскивания и поддержка буфера обмена</span><span class="sxs-lookup"><span data-stu-id="238aa-137">Drag-and-Drop Operations and Clipboard Support</span></span>](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ [<span data-ttu-id="238aa-138">Практическое руководство. Извлечение данных из буфера обмена</span><span class="sxs-lookup"><span data-stu-id="238aa-138">How to: Retrieve Data from the Clipboard</span></span>](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

@@ -1,109 +1,112 @@
 ---
-title: "Как разместить службу WCF в управляемом приложении | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: "Практическое руководство. Размещение службы WCF в управляемом приложении"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: 42
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ca834c097f7e8cea14337fece651b2b3059d06b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как разместить службу WCF в управляемом приложении
-Для размещения службы внутри управляемого приложения внедрите код службы внутрь кода управляемого приложения, определите конечную точку для службы императивно в коде, декларативно с помощью конфигурации или посредством конечных точек по умолчанию, а затем создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.  
+# <a name="how-to-host-a-wcf-service-in-a-managed-application"></a><span data-ttu-id="111d0-102">Практическое руководство. Размещение службы WCF в управляемом приложении</span><span class="sxs-lookup"><span data-stu-id="111d0-102">How to: Host a WCF Service in a Managed Application</span></span>
+<span data-ttu-id="111d0-103">Для размещения службы внутри управляемого приложения внедрите код службы внутрь кода управляемого приложения, определите конечную точку для службы императивно в коде, декларативно с помощью конфигурации или посредством конечных точек по умолчанию, а затем создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="111d0-103">To host a service inside a managed application, embed the code for the service inside the managed application code, define an endpoint for the service either imperatively in code, declaratively through configuration, or using default endpoints, and then create an instance of <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- Чтобы начать принимать сообщения, вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> для <xref:System.ServiceModel.ServiceHost>.При этом создается и открывается прослушиватель для этой службы.Такое размещение службы часто называется "резидентным", так как управляемое приложение самостоятельно выполняет функции ведущего приложения.Чтобы закрыть службу, вызовите метод <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=fullName> для <xref:System.ServiceModel.ServiceHost>.  
+ <span data-ttu-id="111d0-104">Чтобы начать принимать сообщения, вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> для <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="111d0-104">To start receiving messages, call <xref:System.ServiceModel.ICommunicationObject.Open%2A> on <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="111d0-105">При этом создается и открывается прослушиватель для этой службы.</span><span class="sxs-lookup"><span data-stu-id="111d0-105">This creates and opens the listener for the service.</span></span> <span data-ttu-id="111d0-106">Такое размещение службы часто называется "резидентным", так как управляемое приложение самостоятельно выполняет функции ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="111d0-106">Hosting a service in this way is often referred to as "self-hosting" because the managed application is doing the hosting work itself.</span></span> <span data-ttu-id="111d0-107">Чтобы закрыть службу, вызовите метод <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> для <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="111d0-107">To close the service, call <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> on <xref:System.ServiceModel.ServiceHost>.</span></span>  
   
- Служба может также размещаться в управляемой службе Windows, в службах IIS или в службе активации процесса Windows \(WAS\).[!INCLUDE[crabout](../../../includes/crabout-md.md)] вариантах размещения службы см. в разделе [Размещение служб](../../../docs/framework/wcf/hosting-services.md).  
+ <span data-ttu-id="111d0-108">Служба может также размещаться в управляемой службе Windows, в службах IIS или в службе активации процесса Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="111d0-108">A service can also be hosted in a managed Windows service, in Internet Information Services (IIS), or in Windows Process Activation Service (WAS).</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="111d0-109">варианты для службы размещения, в разделе [размещение служб](../../../docs/framework/wcf/hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="111d0-109"> hosting options for a service, see [Hosting Services](../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
- Размещение служб в управляемом приложении — самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры.[!INCLUDE[crabout](../../../includes/crabout-md.md)] размещении службы в управляемых приложениях см. в разделе [Размещение в управляемом приложении](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ <span data-ttu-id="111d0-110">Размещение служб в управляемом приложении - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры.</span><span class="sxs-lookup"><span data-stu-id="111d0-110">Hosting a service in a managed application is the most flexible option because it requires the least infrastructure to deploy.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="111d0-111">Размещение служб в управляемых приложениях, в разделе [размещение в приложении управляемых](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).</span><span class="sxs-lookup"><span data-stu-id="111d0-111"> hosting services in managed applications, see [Hosting in a Managed Application](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).</span></span>  
   
- В следующей процедуре показано, как реализовать резидентную службу в консольном приложения.  
+ <span data-ttu-id="111d0-112">В следующей процедуре показано, как реализовать резидентную службу в консольном приложения.</span><span class="sxs-lookup"><span data-stu-id="111d0-112">The following procedure demonstrates how to implement a self-hosted service in a console application.</span></span>  
   
-### Создание резидентной службы  
+### <a name="to-create-a-self-hosted-service"></a><span data-ttu-id="111d0-113">Создание резидентной службы</span><span class="sxs-lookup"><span data-stu-id="111d0-113">To create a self-hosted service</span></span>  
   
-1.  Откройте среду [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и в меню **Файл** выберите пункт **Создать**, а затем выберите пункт **Проект**.  
+1.  <span data-ttu-id="111d0-114">Откройте [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и выберите **New**, **проекта...**  из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="111d0-114">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and select **New**, **Project...** from the **File** menu.</span></span>  
   
-2.  В списке **Установленные шаблоны** выберите пункты **Visual C\#**, **Windows** или **Visual Basic**, **Windows**.В зависимости от параметров [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] в узле **Другие языки** в списке **Установленные шаблоны** может присутствовать один из этих языков или оба языка.  
+2.  <span data-ttu-id="111d0-115">В **установленные шаблоны** выберите **Visual C#**, **Windows** или **Visual Basic**, **Windows**.</span><span class="sxs-lookup"><span data-stu-id="111d0-115">In the **Installed Templates** list, select **Visual C#**, **Windows** or **Visual Basic**, **Windows**.</span></span> <span data-ttu-id="111d0-116">В зависимости от вашей [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] параметры, одно или оба из них может находиться под узлом **другие языки** узел в **установленные шаблоны** списка.</span><span class="sxs-lookup"><span data-stu-id="111d0-116">Depending on your [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] settings, one or both of these may be under the **Other Languages** node in the **Installed Templates** list.</span></span>  
   
-3.  Выберите пункт **Консольное приложение** из списка **Windows**.Введите `SelfHost` в поле **Имя** и нажмите кнопку **ОК**.  
+3.  <span data-ttu-id="111d0-117">Выберите **консольное приложение** из **Windows** списка.</span><span class="sxs-lookup"><span data-stu-id="111d0-117">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="111d0-118">Тип `SelfHost` в **имя** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="111d0-118">Type `SelfHost` in the **Name** box and click **OK**.</span></span>  
   
-4.  Щелкните правой кнопкой мыши файл **SelfHost** в окне **Обозреватель решений** и выберите команду **Добавить ссылку**.Выберите сборку **System.ServiceModel** на вкладке **.NET** и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="111d0-119">Щелкните правой кнопкой мыши **SelfHost** в **обозревателе решений** и выберите **добавить ссылку...** . Выберите **System.ServiceModel** из **.NET** и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="111d0-119">Right-click **SelfHost** in **Solution Explorer** and select **Add Reference...**. Select **System.ServiceModel** from the **.NET** tab and click **OK**.</span></span>  
   
     > [!TIP]
-    >  Если окно **Обозреватель решений** не отображается, в меню **Вид** выберите пункт **Обозреватель решений**.  
+    >  <span data-ttu-id="111d0-120">Если **обозревателе решений** окно не отображается, выберите пункт **обозревателе решений** из **представление** меню.</span><span class="sxs-lookup"><span data-stu-id="111d0-120">If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.</span></span>  
   
-5.  Дважды щелкните файл **Program.cs** или **Module1.vb** в окне **Обозреватель решений**, чтобы открыть его в окне кода, если он еще не открыт.Добавьте следующие инструкции в начало файла.  
+5.  <span data-ttu-id="111d0-121">Дважды щелкните **Program.cs** или **Module1.vb** в **обозревателе решений** чтобы открыть его в окне кода, если он еще не открыт.</span><span class="sxs-lookup"><span data-stu-id="111d0-121">Double-click **Program.cs** or **Module1.vb** in **Solution Explorer** to open it in the code window if it is not already open.</span></span> <span data-ttu-id="111d0-122">Добавьте следующие инструкции в начало файла.</span><span class="sxs-lookup"><span data-stu-id="111d0-122">Add the following statements at the top of the file.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]  
   
-6.  Определите и реализуйте контракт службы.В этом примере определяется служба `HelloWorldService`, которая возвращает сообщение на основании входных данных, передаваемых службе.  
+6.  <span data-ttu-id="111d0-123">Определите и реализуйте контракт службы.</span><span class="sxs-lookup"><span data-stu-id="111d0-123">Define and implement a service contract.</span></span> <span data-ttu-id="111d0-124">В этом примере определяется служба `HelloWorldService`, которая возвращает сообщение на основании входных данных, передаваемых службе.</span><span class="sxs-lookup"><span data-stu-id="111d0-124">This example defines a `HelloWorldService` that returns a message based on the input to the service.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)] об определении и реализации интерфейса службы см. в разделах [Как определить контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="111d0-125">как определить и реализовать интерфейс службы см. в разделе [как: определение контракта службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) и [как: реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).</span><span class="sxs-lookup"><span data-stu-id="111d0-125"> how to define and implement a service interface, see [How to: Define a Service Contract](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) and [How to: Implement a Service Contract](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).</span></span>  
   
-7.  В начале метода `Main` создайте экземпляр класса <xref:System.Uri> с базовым адресом для службы.  
+7.  <span data-ttu-id="111d0-126">В начале метода `Main` создайте экземпляр класса <xref:System.Uri> с базовым адресом для службы.</span><span class="sxs-lookup"><span data-stu-id="111d0-126">At the top of the `Main` method, create an instance of the <xref:System.Uri> class with the base address for the service.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]  
   
-8.  Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>, передав <xref:System.Type>, представляющий тип службы, и универсальный код ресурса \(URI\) базового адреса в метод [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>.Включите публикацию метаданных и вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> в <xref:System.ServiceModel.ServiceHost>, чтобы инициализировать службу и подготовить ее к приему сообщений.  
+8.  <span data-ttu-id="111d0-127">Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>, передав <xref:System.Type>, представляющий тип службы, и универсальный код ресурса (URI) базового адреса в метод <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>.</span><span class="sxs-lookup"><span data-stu-id="111d0-127">Create an instance of the <xref:System.ServiceModel.ServiceHost> class, passing a <xref:System.Type> that represents the service type and the base address Uniform Resource Identifier (URI) to the <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>.</span></span> <span data-ttu-id="111d0-128">Включите публикацию метаданных и вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> в <xref:System.ServiceModel.ServiceHost>, чтобы инициализировать службу и подготовить ее к приему сообщений.</span><span class="sxs-lookup"><span data-stu-id="111d0-128">Enable metadata publishing, and then call the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method on the <xref:System.ServiceModel.ServiceHost> to initialize the service and prepare it to receive messages.</span></span>  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
+     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  В этом примере используются конечные точки по умолчанию, и для данной службы не требуется файл конфигурации.Если конечные точки не настроены, то среда выполнения создает одну конечную точку для каждого базового адреса в каждом контракте службы, реализованном в службе.[!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию см. в разделах [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  <span data-ttu-id="111d0-129">В этом примере используются конечные точки по умолчанию, и для данной службы не требуется файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="111d0-129">This example uses default endpoints, and no configuration file is required for this service.</span></span> <span data-ttu-id="111d0-130">Если конечные точки не настроены, то среда выполнения создает одну конечную точку для каждого базового адреса в каждом контракте службы, реализованном в службе.</span><span class="sxs-lookup"><span data-stu-id="111d0-130">If no endpoints are configured, then the runtime creates one endpoint for each base address for each service contract implemented by the service.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="111d0-131">конечные точки по умолчанию см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="111d0-131"> default endpoints, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-9. Чтобы построить решение, нажмите CTRL\+SHIFT\+B.  
+9. <span data-ttu-id="111d0-132">Чтобы построить решение, нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="111d0-132">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-### Проверка службы  
+### <a name="to-test-the-service"></a><span data-ttu-id="111d0-133">Проверка службы</span><span class="sxs-lookup"><span data-stu-id="111d0-133">To test the service</span></span>  
   
-1.  Нажмите клавиши Ctrl \+ F5, чтобы запустить службу.  
+1.  <span data-ttu-id="111d0-134">Нажмите клавиши Ctrl + F5, чтобы запустить службу.</span><span class="sxs-lookup"><span data-stu-id="111d0-134">Press Ctrl + F5 to run the service.</span></span>  
   
-2.  Откройте окно **WCF Test Client**.  
-  
-    > [!TIP]
-    >  Чтобы открыть **тестовый клиент WCF**, откройте командную строку [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] и введите **WcfTestClient.exe**.  
-  
-3.  Выберите команду **Add Service** из меню **File**.  
-  
-4.  Введите в поле адреса `http://localhost:8080/hello` и нажмите кнопку **ОК**.  
+2.  <span data-ttu-id="111d0-135">Откройте **тестовый клиент WCF**.</span><span class="sxs-lookup"><span data-stu-id="111d0-135">Open **WCF Test Client**.</span></span>  
   
     > [!TIP]
-    >  Убедитесь, что служба запущена. В противном случае проверка дает отрицательный результат на этом этапе.Если базовый адрес в коде был изменен, используйте на этом этапе измененный базовый адрес.  
+    >  <span data-ttu-id="111d0-136">Чтобы открыть **тестовый клиент WCF**откройте [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] командную строку и выполните **WcfTestClient.exe**.</span><span class="sxs-lookup"><span data-stu-id="111d0-136">To open **WCF Test Client**, open a [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] command prompt and execute **WcfTestClient.exe**.</span></span>  
   
-5.  Дважды щелкните элемент **SayHello** в узле **My Service Projects**.Введите имя в столбце **Value** в списке **Request** и нажмите кнопку **Invoke**.В списке **Response** появится ответное сообщение.  
+3.  <span data-ttu-id="111d0-137">Выберите **добавить службу...**  из **файл** меню.</span><span class="sxs-lookup"><span data-stu-id="111d0-137">Select **Add Service...** from the **File** menu.</span></span>  
   
-## Пример  
- В следующем примере создается объект <xref:System.ServiceModel.ServiceHost> для размещения службы типа `HelloWorldService`, затем вызывается метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> для <xref:System.ServiceModel.ServiceHost>.Базовый адрес предоставляется в коде, включена публикация метаданных и используются конечные точки по умолчанию.  
+4.  <span data-ttu-id="111d0-138">Тип `http://localhost:8080/hello` в адресной строке и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="111d0-138">Type `http://localhost:8080/hello` into the address box and click **OK**.</span></span>  
+  
+    > [!TIP]
+    >  <span data-ttu-id="111d0-139">Убедитесь, что служба запущена. В противном случае проверка дает отрицательный результат на этом этапе.</span><span class="sxs-lookup"><span data-stu-id="111d0-139">Make sure the service is running or else this step fails.</span></span> <span data-ttu-id="111d0-140">Если базовый адрес в коде был изменен, используйте на этом этапе измененный базовый адрес.</span><span class="sxs-lookup"><span data-stu-id="111d0-140">If you have changed the base address in the code, then use the modified base address in this step.</span></span>  
+  
+5.  <span data-ttu-id="111d0-141">Дважды щелкните **SayHello** под **Мои проекты служб** узла.</span><span class="sxs-lookup"><span data-stu-id="111d0-141">Double-click **SayHello** under the **My Service Projects** node.</span></span> <span data-ttu-id="111d0-142">Введите имя в **значение** столбца в **запроса** списке и нажмите кнопку **Invoke**.</span><span class="sxs-lookup"><span data-stu-id="111d0-142">Type your name into the **Value** column in the **Request** list, and click **Invoke**.</span></span> <span data-ttu-id="111d0-143">Появится ответное сообщение в **ответ** списка.</span><span class="sxs-lookup"><span data-stu-id="111d0-143">A reply message appears in the **Response** list.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="111d0-144">Пример</span><span class="sxs-lookup"><span data-stu-id="111d0-144">Example</span></span>  
+ <span data-ttu-id="111d0-145">В следующем примере создается объект <xref:System.ServiceModel.ServiceHost> для размещения службы типа `HelloWorldService`, затем вызывается метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> для <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="111d0-145">The following example creates a <xref:System.ServiceModel.ServiceHost> object to host a service of type `HelloWorldService`, and then calls the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method on <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="111d0-146">Базовый адрес предоставляется в коде, включена публикация метаданных и используются конечные точки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="111d0-146">A base address is provided in code, metadata publishing is enabled, and default endpoints are used.</span></span>  
   
  [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
  [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]  
   
-## См. также  
- <xref:System.Uri>   
- <xref:System.Configuration.ConfigurationManager.AppSettings%2A>   
- <xref:System.Configuration.ConfigurationManager>   
- [Как разместить службу WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)   
- [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)   
- [Размещение служб](../../../docs/framework/wcf/hosting-services.md)   
- [Как определить контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)   
- [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)   
- [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
- [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)   
- [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="111d0-147">См. также</span><span class="sxs-lookup"><span data-stu-id="111d0-147">See Also</span></span>  
+ <xref:System.Uri>  
+ <xref:System.Configuration.ConfigurationManager.AppSettings%2A>  
+ <xref:System.Configuration.ConfigurationManager>  
+ [<span data-ttu-id="111d0-148">Практическое руководство. Размещение службы WCF в IIS</span><span class="sxs-lookup"><span data-stu-id="111d0-148">How to: Host a WCF Service in IIS</span></span>](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [<span data-ttu-id="111d0-149">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="111d0-149">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)  
+ [<span data-ttu-id="111d0-150">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="111d0-150">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ [<span data-ttu-id="111d0-151">Практическое руководство. Определение контракта службы</span><span class="sxs-lookup"><span data-stu-id="111d0-151">How to: Define a Service Contract</span></span>](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [<span data-ttu-id="111d0-152">Практическое руководство. Реализация контракта службы</span><span class="sxs-lookup"><span data-stu-id="111d0-152">How to: Implement a Service Contract</span></span>](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [<span data-ttu-id="111d0-153">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="111d0-153">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+ [<span data-ttu-id="111d0-154">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="111d0-154">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="111d0-155">Привязки, предоставляемые системой</span><span class="sxs-lookup"><span data-stu-id="111d0-155">System-Provided Bindings</span></span>](../../../docs/framework/wcf/system-provided-bindings.md)

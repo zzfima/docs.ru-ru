@@ -1,41 +1,45 @@
 ---
-title: "Практическое руководство. Перебор установленных шрифтов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], шрифты"
-  - "шрифты, перечисление установленного"
+title: "Практическое руководство. Перебор установленных шрифтов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- fonts [Windows Forms], enumerating installed
+- examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bca536ed2f3e493e8d50fe8f1a0115327f1d8720
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Перебор установленных шрифтов
-Класс <xref:System.Drawing.Text.InstalledFontCollection> наследуется от абстрактного базового класса <xref:System.Drawing.Text.FontCollection>.  Объект <xref:System.Drawing.Text.InstalledFontCollection> служит для хранения перечисления шрифтов, установленных на компьютере.  Свойство <xref:System.Drawing.Text.FontCollection.Families%2A> объекта <xref:System.Drawing.Text.InstalledFontCollection> является массивом объектов <xref:System.Drawing.FontFamily>.  
+# <a name="how-to-enumerate-installed-fonts"></a><span data-ttu-id="d2024-102">Практическое руководство. Перебор установленных шрифтов</span><span class="sxs-lookup"><span data-stu-id="d2024-102">How to: Enumerate Installed Fonts</span></span>
+<span data-ttu-id="d2024-103"><xref:System.Drawing.Text.InstalledFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса.</span><span class="sxs-lookup"><span data-stu-id="d2024-103">The <xref:System.Drawing.Text.InstalledFontCollection> class inherits from the <xref:System.Drawing.Text.FontCollection> abstract base class.</span></span> <span data-ttu-id="d2024-104">Можно использовать <xref:System.Drawing.Text.InstalledFontCollection> объектов для перечисления шрифтов, установленных на компьютере.</span><span class="sxs-lookup"><span data-stu-id="d2024-104">You can use an <xref:System.Drawing.Text.InstalledFontCollection> object to enumerate the fonts installed on the computer.</span></span> <span data-ttu-id="d2024-105"><xref:System.Drawing.Text.FontCollection.Families%2A> Свойство <xref:System.Drawing.Text.InstalledFontCollection> объект представляет собой массив <xref:System.Drawing.FontFamily> объектов.</span><span class="sxs-lookup"><span data-stu-id="d2024-105">The <xref:System.Drawing.Text.FontCollection.Families%2A> property of an <xref:System.Drawing.Text.InstalledFontCollection> object is an array of <xref:System.Drawing.FontFamily> objects.</span></span>  
   
-## Пример  
- В следующем примере выводится список названий всех семейств шрифтов, установленных на компьютере.  Приведенный код извлекает свойство <xref:System.Drawing.FontFamily.Name%2A> каждого объекта <xref:System.Drawing.FontFamily>, содержащегося в массиве, возвращаемом свойством <xref:System.Drawing.Text.FontCollection.Families%2A>.  По мере извлечения имена семейств шрифтов объединяются в список имен, разделенных запятыми.  Затем метод <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics> рисует список имен, разделенных запятыми, в прямоугольнике.  
+## <a name="example"></a><span data-ttu-id="d2024-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d2024-106">Example</span></span>  
+ <span data-ttu-id="d2024-107">Приведенный ниже список имен семейств шрифтов, установленных на компьютере.</span><span class="sxs-lookup"><span data-stu-id="d2024-107">The following example lists the names of all the font families installed on the computer.</span></span> <span data-ttu-id="d2024-108">Этот код извлекает <xref:System.Drawing.FontFamily.Name%2A> каждого экземпляра <xref:System.Drawing.FontFamily> объект в массиве, возвращенном <xref:System.Drawing.Text.FontCollection.Families%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="d2024-108">The code retrieves the <xref:System.Drawing.FontFamily.Name%2A> property of each <xref:System.Drawing.FontFamily> object in the array returned by the <xref:System.Drawing.Text.FontCollection.Families%2A> property.</span></span> <span data-ttu-id="d2024-109">По мере извлечения имен семейств шрифтов объединяются в формы, разделенный запятыми список.</span><span class="sxs-lookup"><span data-stu-id="d2024-109">As the family names are retrieved, they are concatenated to form a comma-separated list.</span></span> <span data-ttu-id="d2024-110">Затем <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> класса рисует список разделенных запятыми, в прямоугольнике.</span><span class="sxs-lookup"><span data-stu-id="d2024-110">Then the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> class draws the comma-separated list in a rectangle.</span></span>  
   
- Результат выполнения этого кода будет аналогичен приведенному на следующем рисунке.  
+ <span data-ttu-id="d2024-111">Если вы выполните этот пример кода, выходные данные будут, как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="d2024-111">If you run the example code, the output will be similar to that shown in the following illustration.</span></span>  
   
- ![Установленные шрифты](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
+ <span data-ttu-id="d2024-112">![Установленные шрифты](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")</span><span class="sxs-lookup"><span data-stu-id="d2024-112">![Installed Fonts](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.FontsAndText#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.PaintEventHandler>.  Кроме того, нужно импортировать пространство имен <xref:System.Drawing.Text>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="d2024-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="d2024-113">Compiling the Code</span></span>  
+ <span data-ttu-id="d2024-114">Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.</span><span class="sxs-lookup"><span data-stu-id="d2024-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span> <span data-ttu-id="d2024-115">Кроме того, необходимо импортировать <xref:System.Drawing.Text> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="d2024-115">In addition, you should import the <xref:System.Drawing.Text> namespace.</span></span>  
   
-## См. также  
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a><span data-ttu-id="d2024-116">См. также</span><span class="sxs-lookup"><span data-stu-id="d2024-116">See Also</span></span>  
+ [<span data-ttu-id="d2024-117">Работами со шрифтами и текстом</span><span class="sxs-lookup"><span data-stu-id="d2024-117">Using Fonts and Text</span></span>](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

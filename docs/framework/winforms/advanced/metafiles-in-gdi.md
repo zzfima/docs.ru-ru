@@ -1,47 +1,51 @@
 ---
-title: "Метафайлы в GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, метафайлы"
-  - "изображения [Windows Forms], метафайлы"
-  - "метафайлы"
+title: "Метафайлы в GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], metafiles
+- GDI+, metafiles
+- metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b75ceb08df0454172a000d5d1ad15445f685ddf
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Метафайлы в GDI+
-В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] имеется класс <xref:System.Drawing.Imaging.Metafile>, позволяющий записывать и отображать метафайлы.  Метафайл, также называемый векторным рисунком, — это изображение, сохраненное в виде последовательности команд и параметров рисования.  Команды и параметры, сохраненные в объекте <xref:System.Drawing.Imaging.Metafile>, могут быть сохранены в памяти или записаны в файл или в поток.  
+# <a name="metafiles-in-gdi"></a><span data-ttu-id="59a9a-102">Метафайлы в GDI+</span><span class="sxs-lookup"><span data-stu-id="59a9a-102">Metafiles in GDI+</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="59a9a-103">предоставляет <xref:System.Drawing.Imaging.Metafile> класса, можно записывать и отображать метафайлы.</span><span class="sxs-lookup"><span data-stu-id="59a9a-103"> provides the <xref:System.Drawing.Imaging.Metafile> class so that you can record and display metafiles.</span></span> <span data-ttu-id="59a9a-104">Метафайл, также называемый векторным рисунком, — это изображение, сохраненное в виде последовательности команд и параметров рисования.</span><span class="sxs-lookup"><span data-stu-id="59a9a-104">A metafile, also called a vector image, is an image that is stored as a sequence of drawing commands and settings.</span></span> <span data-ttu-id="59a9a-105">Команды и параметры, сохраненные в <xref:System.Drawing.Imaging.Metafile> объекта можно хранить в памяти или сохранить файл или поток.</span><span class="sxs-lookup"><span data-stu-id="59a9a-105">The commands and settings recorded in a <xref:System.Drawing.Imaging.Metafile> object can be stored in memory or saved to a file or stream.</span></span>  
   
-## Форматы метафайлов  
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет отображать метафайлы, сохраненные в одном из перечисленных ниже форматов.  
+## <a name="metafile-formats"></a><span data-ttu-id="59a9a-106">Форматы метафайлов</span><span class="sxs-lookup"><span data-stu-id="59a9a-106">Metafile Formats</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="59a9a-107">позволяет отображать метафайлы, сохраненные в следующих форматах:</span><span class="sxs-lookup"><span data-stu-id="59a9a-107"> can display metafiles that have been stored in the following formats:</span></span>  
   
--   WMF \(Windows Metafile — метафайл Windows\)  
+-   <span data-ttu-id="59a9a-108">Метафайл Windows (WMF)</span><span class="sxs-lookup"><span data-stu-id="59a9a-108">Windows Metafile (WMF)</span></span>  
   
--   EMF \(Enhanced Metafile —расширенный метафайл\)  
+-   <span data-ttu-id="59a9a-109">EMF (Enhanced Metafile —расширенный метафайл)</span><span class="sxs-lookup"><span data-stu-id="59a9a-109">Enhanced Metafile (EMF)</span></span>  
   
--   EMF\+  
+-   <span data-ttu-id="59a9a-110">EMF +</span><span class="sxs-lookup"><span data-stu-id="59a9a-110">EMF+</span></span>  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] позволяет сохранять метафайлы в форматах EMF и EMF\+, но не в формате WMF.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="59a9a-111">позволяет сохранять метафайлы в форматах EMF и EMF +, но не в формате WMF.</span><span class="sxs-lookup"><span data-stu-id="59a9a-111"> can record metafiles in the EMF and EMF+ formats, but not in the WMF format.</span></span>  
   
- Формат EMF\+ является расширением формата EMF, позволяющим сохранять записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  Существует два варианта формата EMF\+: EMF\+ Only и EMF\+ Dual.  Метафайлы EMF\+ Only содержат только записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  Такие метафайлы могут отображаться интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], но не интерфейсом [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Метафайлы EMF\+ Dual содержат записи [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и записи [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Каждая запись [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] хранится в метафайле EMF\+ Dual вместе с альтернативной записью [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  Такие метафайлы могут отображаться как интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], так и интерфейсом [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ <span data-ttu-id="59a9a-112">EMF + является расширением формата EMF, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записи для сохранения.</span><span class="sxs-lookup"><span data-stu-id="59a9a-112">EMF+ is an extension to EMF that allows [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records to be stored.</span></span> <span data-ttu-id="59a9a-113">Существуют две разновидности на формат EMF +: EMF + только и EMF + Dual.</span><span class="sxs-lookup"><span data-stu-id="59a9a-113">There are two variations on the EMF+ format: EMF+ Only and EMF+ Dual.</span></span> <span data-ttu-id="59a9a-114">Метафайлы EMF + Only содержат только [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записей.</span><span class="sxs-lookup"><span data-stu-id="59a9a-114">EMF+ Only metafiles contain only [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] records.</span></span> <span data-ttu-id="59a9a-115">Такие метафайлы могут отображаться с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , но не по [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59a9a-115">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] but not by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span> <span data-ttu-id="59a9a-116">Метафайлы EMF + Dual содержат [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] записей.</span><span class="sxs-lookup"><span data-stu-id="59a9a-116">EMF+ Dual metafiles contain [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] and [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] records.</span></span> <span data-ttu-id="59a9a-117">Каждый [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] записей в двух EMF + метафайла, вместе с альтернативной [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] записи.</span><span class="sxs-lookup"><span data-stu-id="59a9a-117">Each [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] record in an EMF+ Dual metafile is paired with an alternate [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] record.</span></span> <span data-ttu-id="59a9a-118">Такие метафайлы могут отображаться с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] или [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59a9a-118">Such metafiles can be displayed by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] or by [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].</span></span>  
   
- Приведенный ниже пример демонстрирует отображение метафайла, ранее сохраненного в файле.  Метафайл отображается с привязкой его левого верхнего края к точке с координатами \(100, 100\).  
+ <span data-ttu-id="59a9a-119">В следующем примере отображается метафайла, который был ранее сохранен в файл.</span><span class="sxs-lookup"><span data-stu-id="59a9a-119">The following example displays a metafile that was previously saved as a file.</span></span> <span data-ttu-id="59a9a-120">Метафайл отображается с его верхнего левого угла в (100, 100).</span><span class="sxs-lookup"><span data-stu-id="59a9a-120">The metafile is displayed with its upper-left corner at (100, 100).</span></span>  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="59a9a-121">См. также</span><span class="sxs-lookup"><span data-stu-id="59a9a-121">See Also</span></span>  
+ [<span data-ttu-id="59a9a-122">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="59a9a-122">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

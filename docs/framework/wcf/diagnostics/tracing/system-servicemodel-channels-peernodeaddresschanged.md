@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.PeerNodeAddressChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PeerNodeAddressChanged
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 14bd4be6-1ff1-4df5-b89f-af7950f62ef4
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 699266dfd878762f88143660cd9b61e74e29a0fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PeerNodeAddressChanged
-Изменились один или более адресов PeerNode.  
+# <a name="systemservicemodelchannelspeernodeaddresschanged"></a><span data-ttu-id="97138-102">System.ServiceModel.Channels.PeerNodeAddressChanged</span><span class="sxs-lookup"><span data-stu-id="97138-102">System.ServiceModel.Channels.PeerNodeAddressChanged</span></span>
+<span data-ttu-id="97138-103">Изменились один или более адресов PeerNode.</span><span class="sxs-lookup"><span data-stu-id="97138-103">One or more of the PeerNode's addresses has changed.</span></span>  
   
-## Описание  
- Эта трассировка возникает при завершении обратного вызова уведомления об изменении адреса.  
+## <a name="description"></a><span data-ttu-id="97138-104">Описание</span><span class="sxs-lookup"><span data-stu-id="97138-104">Description</span></span>  
+ <span data-ttu-id="97138-105">Эта трассировка возникает при завершении обратного вызова уведомления об изменении адреса.</span><span class="sxs-lookup"><span data-stu-id="97138-105">This trace occurs at the conclusion of the address change notification callback.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="97138-106">См. также</span><span class="sxs-lookup"><span data-stu-id="97138-106">See Also</span></span>  
+ [<span data-ttu-id="97138-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="97138-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="97138-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="97138-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="97138-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="97138-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

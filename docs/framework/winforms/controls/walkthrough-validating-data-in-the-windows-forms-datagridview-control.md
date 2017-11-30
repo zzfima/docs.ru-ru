@@ -1,103 +1,107 @@
 ---
-title: "Пример. Проверка данных элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], проверка"
-  - "таблицы данных, проверка данных"
-  - "проверка данных, Windows Forms"
-  - "DataGridView - элемент управления [Windows Forms], проверка данных"
-  - "проверка данных, Windows Forms"
-  - "пошаговые руководства [Windows Forms], DataGridView - элемент управления"
+title: "Пример. Проверка данных элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating data [Windows Forms], Windows Forms
+- data [Windows Forms], validation
+- DataGridView control [Windows Forms], data validation
+- data grids [Windows Forms], validating data
+- data validation [Windows Forms], Windows Forms
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Проверка данных элемента управления DataGridView в Windows Forms
-При отображении функциональных возможностей ввода данных на экране для пользователя введенные в форму данные можно, как правило, проверить.  С помощью класса <xref:System.Windows.Forms.DataGridView> можно легко проверить данные, прежде чем они будут записаны в хранилище данных.  Для проверки данных можно обработать событие <xref:System.Windows.Forms.DataGridView.CellValidating>, вызываемое <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.  
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="6289c-102">Пример. Проверка данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6289c-102">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="6289c-103">При отображении функциональных возможностей ввода данных, пользователям необходимо часто проверки данных, введенных в форму.</span><span class="sxs-lookup"><span data-stu-id="6289c-103">When you display data entry functionality to users, you frequently have to validate the data entered into your form.</span></span> <span data-ttu-id="6289c-104"><xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный способ выполнять проверку перед данные передаются в хранилище данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-104">The <xref:System.Windows.Forms.DataGridView> class provides a convenient way to perform validation before data is committed to the data store.</span></span> <span data-ttu-id="6289c-105">Вы можете проверять данные, обрабатывая <xref:System.Windows.Forms.DataGridView.CellValidating> событие, которое вызывается <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.</span><span class="sxs-lookup"><span data-stu-id="6289c-105">You can validate data by handling the <xref:System.Windows.Forms.DataGridView.CellValidating> event, which is raised by the <xref:System.Windows.Forms.DataGridView> when the current cell changes.</span></span>  
   
- В этом пошаговом руководстве будут извлечены строки из таблицы `Customers` в примере базы данных "Northwind", которые затем будут выведены в элементе управления <xref:System.Windows.Forms.DataGridView>.  Когда пользователь изменяет ячейку в столбце `CompanyName` и пытается выйти из нее, обработчик событий <xref:System.Windows.Forms.DataGridView.CellValidating> проверяет новую строку наименования компании на наличие данных в ней; если значение в строке отсутствует, <xref:System.Windows.Forms.DataGridView>,  не позволяет курсору перемещаться их ячейки до тех пор, пока значение в ячейке не будет указано.  
+ <span data-ttu-id="6289c-106">В этом пошаговом руководстве будет извлекать строки из `Customers` таблицы в базе данных Northwind и отобразить их в <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6289c-106">In this walkthrough, you will retrieve rows from the `Customers` table in the Northwind sample database and display them in a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="6289c-107">При редактировании ячейки в `CompanyName` столбца и пытается оставить ячейку, <xref:System.Windows.Forms.DataGridView.CellValidating> обработчик событий проверяет новая строка названия компании, чтобы убедиться, что она не пуста; Если новое значение является пустой строкой, <xref:System.Windows.Forms.DataGridView> сделает невозможным курсору из ячейки до введения непустой строкой.</span><span class="sxs-lookup"><span data-stu-id="6289c-107">When a user edits a cell in the `CompanyName` column and tries to leave the cell, the <xref:System.Windows.Forms.DataGridView.CellValidating> event handler will examine new company name string to make sure it is not empty; if the new value is an empty string, the <xref:System.Windows.Forms.DataGridView> will prevent the user's cursor from leaving the cell until a non-empty string is entered.</span></span>  
   
- Чтобы скопировать весь текст кода из этой темы, см. раздел [Практическое руководство. Проверка данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="6289c-108">Скопируйте код из этой темы, в разделе [как: проверка данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-108">To copy the code in this topic as a single listing, see [How to: Validate Data in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## Обязательные компоненты  
- Для выполнения этого пошагового руководства потребуется следующее.  
+## <a name="prerequisites"></a><span data-ttu-id="6289c-109">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="6289c-109">Prerequisites</span></span>  
+ <span data-ttu-id="6289c-110">Для выполнения данного пошагового руководства требуется:</span><span class="sxs-lookup"><span data-stu-id="6289c-110">In order to complete this walkthrough, you will need:</span></span>  
   
--   Доступ к серверу с примером базы данных SQL Server под именем "Northwind".  
+-   <span data-ttu-id="6289c-111">Доступ к серверу с учебной базе данных "Борей" SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6289c-111">Access to a server that has the Northwind SQL Server sample database.</span></span>  
   
-## Создание формы  
+## <a name="creating-the-form"></a><span data-ttu-id="6289c-112">Создание формы</span><span class="sxs-lookup"><span data-stu-id="6289c-112">Creating the Form</span></span>  
   
-#### Проверка данных, введенных в элемент управления DataGridView  
+#### <a name="to-validate-data-entered-in-a-datagridview"></a><span data-ttu-id="6289c-113">Чтобы проверить данные, введенные в элементе управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="6289c-113">To validate data entered in a DataGridView</span></span>  
   
-1.  Создайте производный от <xref:System.Windows.Forms.Form> класс, который содержит элемент управления <xref:System.Windows.Forms.DataGridView> и компонент <xref:System.Windows.Forms.BindingSource>.  
+1.  <span data-ttu-id="6289c-114">Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента.</span><span class="sxs-lookup"><span data-stu-id="6289c-114">Create a class that derives from <xref:System.Windows.Forms.Form> and contains a <xref:System.Windows.Forms.DataGridView> control and a <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
-     В следующем примере кода представлена базовая реализация и включен метод `Main`.  
+     <span data-ttu-id="6289c-115">В следующем примере кода представлена базовая реализация и включает в себя `Main` метод.</span><span class="sxs-lookup"><span data-stu-id="6289c-115">The following code example provides basic initialization and includes a `Main` method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  Реализуйте метод в определении класса формы для обработки подробных сведений для подключения к базе данных.  
+2.  <span data-ttu-id="6289c-116">Реализуйте метод в определении класса формы для обработки сведения о подключении к базе данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-116">Implement a method in your form's class definition for handling the details of connecting to the database.</span></span>  
   
-     В этом примере кода используется метод `GetData` , возвращающий заполненный объект <xref:System.Data.DataTable>.  Переменной `connectionString` следует присвоить значение, подходящее для базы данных.  
+     <span data-ttu-id="6289c-117">Этот пример кода использует `GetData` метод, возвращающий заполненный <xref:System.Data.DataTable> объекта.</span><span class="sxs-lookup"><span data-stu-id="6289c-117">This code example uses a `GetData` method that returns a populated <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="6289c-118">Убедитесь, что значение `connectionString` переменной значение, соответствующее базе данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-118">Be sure that you set the `connectionString` variable to a value that is appropriate for your database.</span></span>  
   
     > [!IMPORTANT]
-    >  Хранение в строке подключения конфиденциальных сведений, таких как пароль, может привести к снижению уровня защиты приложения.  Использование проверки подлинности Windows \(также называемой встроенными средствами безопасности\) — более безопасный способ управления доступом к базе данных.  Дополнительные сведения см. в разделе [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+    >  <span data-ttu-id="6289c-119">Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения.</span><span class="sxs-lookup"><span data-stu-id="6289c-119">Storing sensitive information, such as a password, within the connection string can affect the security of your application.</span></span> <span data-ttu-id="6289c-120">Использование проверки подлинности Windows, также известные как встроенная безопасность является более безопасный способ управления доступом к базе данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-120">Using Windows Authentication, also known as integrated security, is a more secure way to control access to a database.</span></span> <span data-ttu-id="6289c-121">Дополнительные сведения см. в разделе [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-121">For more information, see [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Реализуйте обработчик для события <xref:System.Windows.Forms.Form.Load> формы, инициализирующий <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и устанавливающий привязку данных.  
+3.  <span data-ttu-id="6289c-122">Реализуйте обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и задает привязку данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-122">Implement a handler for your form's <xref:System.Windows.Forms.Form.Load> event that initializes the <xref:System.Windows.Forms.DataGridView> and <xref:System.Windows.Forms.BindingSource> and sets up the data binding.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Реализуйте обработчики для событий <xref:System.Windows.Forms.DataGridView.CellValidating> и <xref:System.Windows.Forms.DataGridView.CellEndEdit> элемента управления <xref:System.Windows.Forms.DataGridView>.  
+4.  <span data-ttu-id="6289c-123">Реализовать обработчики для <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CellValidating> и <xref:System.Windows.Forms.DataGridView.CellEndEdit> события.</span><span class="sxs-lookup"><span data-stu-id="6289c-123">Implement handlers for the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.CellValidating> and <xref:System.Windows.Forms.DataGridView.CellEndEdit> events.</span></span>  
   
-     В обработчике событий <xref:System.Windows.Forms.DataGridView.CellValidating> определяется, будет ли значение ячейки в столбце `CompanyName` пустым.  Если ячейка не проходит проверку, свойству <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> класса <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=fullName> необходимо присвоить значение `true`.  В этом случае элемент управления <xref:System.Windows.Forms.DataGridView> заставит курсор остаться в ячейке.  Свойству <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> в строке присвойте пояснительную строку.  В этом случае на экране появится значок ошибки с ToolTip с текстом ошибки.  В обработчике событий <xref:System.Windows.Forms.DataGridView.CellEndEdit> свойству <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> строки присвойте пустую строку.  Событие <xref:System.Windows.Forms.DataGridView.CellEndEdit> происходит только при выходе ячейки из режима редактирования, и если ячейка не проходит проверку, режим редактирования не отключается.  
+     <span data-ttu-id="6289c-124"><xref:System.Windows.Forms.DataGridView.CellValidating> Обработчик событий —, где можно определить, является ли значение ячейки в `CompanyName` столбец пуст.</span><span class="sxs-lookup"><span data-stu-id="6289c-124">The <xref:System.Windows.Forms.DataGridView.CellValidating> event handler is where you determine whether the value of a cell in the `CompanyName` column is empty.</span></span> <span data-ttu-id="6289c-125">Если значение ячейки не проходит проверку, задайте <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> свойство <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> класса `true`.</span><span class="sxs-lookup"><span data-stu-id="6289c-125">If the cell value fails validation, set the <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> property of the <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> class to `true`.</span></span> <span data-ttu-id="6289c-126">В результате <xref:System.Windows.Forms.DataGridView> элемента управления для предотвращения курсор остаться в ячейке.</span><span class="sxs-lookup"><span data-stu-id="6289c-126">This causes the <xref:System.Windows.Forms.DataGridView> control to prevent the cursor from leaving the cell.</span></span> <span data-ttu-id="6289c-127">Задать <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> пояснительного строку в строке.</span><span class="sxs-lookup"><span data-stu-id="6289c-127">Set the <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> property on the row to an explanatory string.</span></span> <span data-ttu-id="6289c-128">Это показывает значок ошибки с всплывающей подсказки, содержащей текст ошибки.</span><span class="sxs-lookup"><span data-stu-id="6289c-128">This displays an error icon with a ToolTip that contains the error text.</span></span> <span data-ttu-id="6289c-129">В <xref:System.Windows.Forms.DataGridView.CellEndEdit> задать обработчик событий <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> в строке на пустую строку.</span><span class="sxs-lookup"><span data-stu-id="6289c-129">In the <xref:System.Windows.Forms.DataGridView.CellEndEdit> event handler, set the <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> property on the row to the empty string.</span></span> <span data-ttu-id="6289c-130"><xref:System.Windows.Forms.DataGridView.CellEndEdit> Событие возникает, только когда ячейка выходит из режим редактирования, если она не проходит проверку.</span><span class="sxs-lookup"><span data-stu-id="6289c-130">The <xref:System.Windows.Forms.DataGridView.CellEndEdit> event occurs only when the cell exits edit mode, which it cannot do if it fails validation.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#20)]  
   
-## Тестирование приложения  
- Теперь можно проверить форму, чтобы убедиться, что она работает так, как ожидалось.  
+## <a name="testing-the-application"></a><span data-ttu-id="6289c-131">Тестирование приложения</span><span class="sxs-lookup"><span data-stu-id="6289c-131">Testing the Application</span></span>  
+ <span data-ttu-id="6289c-132">Теперь можно проверить форму, чтобы убедиться в том, что оно правильно работает.</span><span class="sxs-lookup"><span data-stu-id="6289c-132">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### Чтобы проверить форму, выполните следующие действия:  
+#### <a name="to-test-the-form"></a><span data-ttu-id="6289c-133">Чтобы проверить форму</span><span class="sxs-lookup"><span data-stu-id="6289c-133">To test the form</span></span>  
   
--   Скомпилируйте и запустите приложение.  
+-   <span data-ttu-id="6289c-134">Скомпилируйте и запустите приложение.</span><span class="sxs-lookup"><span data-stu-id="6289c-134">Compile and run the application.</span></span>  
   
-     Появится элемент управления <xref:System.Windows.Forms.DataGridView> с данными из таблицы `Customers`.  Если дважды щелкнуть ячейку в столбце `CompanyName`, значение можно будет изменить.  Если удалить все символы и нажать клавишу TAB для выхода из ячейки, <xref:System.Windows.Forms.DataGridView> не позволит выйти из нее.  Если в ячейку ввести непустое строковое значение, элемент управления <xref:System.Windows.Forms.DataGridView> позволит выйти из ячейки.  
+     <span data-ttu-id="6289c-135">Вы увидите <xref:System.Windows.Forms.DataGridView> с данными из `Customers` таблицы.</span><span class="sxs-lookup"><span data-stu-id="6289c-135">You will see a <xref:System.Windows.Forms.DataGridView> filled with data from the `Customers` table.</span></span> <span data-ttu-id="6289c-136">Если дважды щелкнуть ячейку в `CompanyName` столбца, можно изменить значение.</span><span class="sxs-lookup"><span data-stu-id="6289c-136">When you double-click a cell in the `CompanyName` column, you can edit the value.</span></span> <span data-ttu-id="6289c-137">Если удалить все символы и нажать клавишу TAB, чтобы выйти из ячейки, <xref:System.Windows.Forms.DataGridView> предотвращает выход.</span><span class="sxs-lookup"><span data-stu-id="6289c-137">If you delete all the characters and hit the TAB key to exit the cell, the <xref:System.Windows.Forms.DataGridView> prevents you from exiting.</span></span> <span data-ttu-id="6289c-138">При вводе непустой строкой в ячейке, <xref:System.Windows.Forms.DataGridView> управления служит для выхода из ячейки.</span><span class="sxs-lookup"><span data-stu-id="6289c-138">When you type a non-empty string into the cell, the <xref:System.Windows.Forms.DataGridView> control lets you exit the cell.</span></span>  
   
-## Следующие действия  
- Это приложение позволяет в общем понять возможности элемента управления <xref:System.Windows.Forms.DataGridView>.  Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно контролировать несколькими способами.  
+## <a name="next-steps"></a><span data-ttu-id="6289c-139">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="6289c-139">Next Steps</span></span>  
+ <span data-ttu-id="6289c-140">Это приложение позволяет основные <xref:System.Windows.Forms.DataGridView> возможности элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6289c-140">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="6289c-141">Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:</span><span class="sxs-lookup"><span data-stu-id="6289c-141">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>  
   
--   Изменение стилей границ и заголовка.  Дополнительные сведения см. в разделе [Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
+-   <span data-ttu-id="6289c-142">Изменение стилей границ и заголовка.</span><span class="sxs-lookup"><span data-stu-id="6289c-142">Change border and header styles.</span></span> <span data-ttu-id="6289c-143">Дополнительные сведения см. в разделе [как: изменения границ и стили линий сетки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-143">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>  
   
--   Разрешение или ограничение пользовательского ввода в элемент управления <xref:System.Windows.Forms.DataGridView>.  Дополнительные сведения см. в разделах [Практическое руководство. Запрет добавления и удаления строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md) и [Практическое руководство. Определение столбцов элемента управления DataGridView как доступных только для чтения в Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+-   <span data-ttu-id="6289c-144">Включения или отключения пользовательского ввода для <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6289c-144">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="6289c-145">Дополнительные сведения см. в разделе [как: запретить добавление и удаление строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), и [как: сделать столбцы только для чтения в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-145">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>  
   
--   Проверка ввода пользователя на наличие ошибок, связанных с базой данных.  Дополнительные сведения см. в разделе [Пример. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+-   <span data-ttu-id="6289c-146">Проверьте входные данные пользователя для ошибки, относящиеся к базе данных.</span><span class="sxs-lookup"><span data-stu-id="6289c-146">Check user input for database-related errors.</span></span> <span data-ttu-id="6289c-147">Дополнительные сведения см. в разделе [Пошаговое руководство: обработка ошибок, связанных с вводом данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-147">For more information, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
   
--   Обработка очень больших наборов данных в виртуальном режиме.  Дополнительные сведения см. в разделе [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+-   <span data-ttu-id="6289c-148">Обработка очень больших наборов данных в виртуальном режиме.</span><span class="sxs-lookup"><span data-stu-id="6289c-148">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="6289c-149">Дополнительные сведения см. в разделе [Пошаговое руководство: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-149">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
--   Настройка внешнего вида ячеек.  Дополнительные сведения см. в разделах [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [Практическое руководство. Настройка шрифтов и цветов в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
+-   <span data-ttu-id="6289c-150">Настройте внешний вид ячеек.</span><span class="sxs-lookup"><span data-stu-id="6289c-150">Customize the appearance of cells.</span></span> <span data-ttu-id="6289c-151">Дополнительные сведения см. в разделе [как: Настройка внешнего вида ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [как: набор шрифтов и цветов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="6289c-151">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Font and Color Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- [Ввод данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)   
- [Практическое руководство. Проверка данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)   
- [Пример. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)   
- [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a><span data-ttu-id="6289c-152">См. также</span><span class="sxs-lookup"><span data-stu-id="6289c-152">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="6289c-153">Ввод данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6289c-153">Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="6289c-154">Практическое руководство. Проверка данных элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6289c-154">How to: Validate Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="6289c-155">Пошаговое руководство. Обработка ошибок, связанных с вводом данных в элемент управления DataGridView, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6289c-155">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ [<span data-ttu-id="6289c-156">Защита сведений о подключении</span><span class="sxs-lookup"><span data-stu-id="6289c-156">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)

@@ -1,80 +1,80 @@
 ---
-title: "Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], управление"
-  - "Элемент управления BindingNavigator [Windows Forms], добавление кнопок"
+title: "Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], manipulating
+- BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms
-Элемент управления <xref:System.Windows.Forms.BindingNavigator> является специализированным элементом управления <xref:System.Windows.Forms.ToolStrip>, который предназначен для навигации и управления привязанными к данным элементами управления формы.  
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a><span data-ttu-id="1ec87-102">Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1ec87-102">How to: Add Load, Save, and Cancel Buttons to the Windows Forms BindingNavigator Control</span></span>
+<span data-ttu-id="1ec87-103"><xref:System.Windows.Forms.BindingNavigator> Управления является специализированным <xref:System.Windows.Forms.ToolStrip> элемент управления, который предназначен для навигации и управления элементами управления в форме, привязанных к данным.</span><span class="sxs-lookup"><span data-stu-id="1ec87-103">The <xref:System.Windows.Forms.BindingNavigator> control is a special-purpose <xref:System.Windows.Forms.ToolStrip> control that is intended for navigating and manipulating controls on your form that are bound to data.</span></span>  
   
- Так как это элемент управления <xref:System.Windows.Forms.ToolStrip>, компонент <xref:System.Windows.Forms.BindingNavigator> может быть легко изменен для включения дополнительных или альтернативных команд для пользователя.  
+ <span data-ttu-id="1ec87-104">Так как это <xref:System.Windows.Forms.ToolStrip> управления <xref:System.Windows.Forms.BindingNavigator> компонента можно легко изменить для включения дополнительных или альтернативных команд для пользователя.</span><span class="sxs-lookup"><span data-stu-id="1ec87-104">Because it is a <xref:System.Windows.Forms.ToolStrip> control, the <xref:System.Windows.Forms.BindingNavigator> component can be easily modified to include additional or alternative commands for the user.</span></span>  
   
- В следующей процедуре элемент управления <xref:System.Windows.Forms.TextBox> привязан к данным, а добавленный в форму элемент управления <xref:System.Windows.Forms.ToolStrip> дополнен кнопками загрузки, сохранения и отмены.  
+ <span data-ttu-id="1ec87-105">В следующей процедуре <xref:System.Windows.Forms.TextBox> элемент управления привязан к данным и <xref:System.Windows.Forms.ToolStrip> элемента управления, который добавляется в форму изменяются так, чтобы включить загрузки, сохранения и кнопки отмены.</span><span class="sxs-lookup"><span data-stu-id="1ec87-105">In the following procedure, a <xref:System.Windows.Forms.TextBox> control is bound to data, and the <xref:System.Windows.Forms.ToolStrip> control that is added to the form is modified to include load, save, and cancel buttons.</span></span>  
   
-### Чтобы добавить кнопки загрузки, сохранения и отмены в элемент BindingNavigator  
+### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a><span data-ttu-id="1ec87-106">Чтобы добавить нагрузки, сохранить и Отмена кнопки для компонента BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="1ec87-106">To add load, save, and cancel buttons to the BindingNavigator component</span></span>  
   
-1.  Добавьте элемент управления <xref:System.Windows.Forms.TextBox> на форму.  
+1.  <span data-ttu-id="1ec87-107">Добавьте элемент управления <xref:System.Windows.Forms.TextBox> в форму.</span><span class="sxs-lookup"><span data-stu-id="1ec87-107">Add a <xref:System.Windows.Forms.TextBox> control to your form.</span></span>  
   
-2.  Привяжите его к классу <xref:System.Windows.Forms.BindingSource>, который привязан к источнику данных.  Для этого примера класс <xref:System.Windows.Forms.BindingSource> привязан к базе данных.  
+2.  <span data-ttu-id="1ec87-108">Привяжите его к <xref:System.Windows.Forms.BindingSource>, который привязан к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="1ec87-108">Bind it to a <xref:System.Windows.Forms.BindingSource>, which is bound to a data source.</span></span> <span data-ttu-id="1ec87-109">В этом примере <xref:System.Windows.Forms.BindingSource> привязан к базе данных.</span><span class="sxs-lookup"><span data-stu-id="1ec87-109">For this example, the <xref:System.Windows.Forms.BindingSource> is bound to a database.</span></span>  
   
-3.  Когда таблица данных и адаптер таблиц будут сгенерированы, перетащите элемент управления <xref:System.Windows.Forms.BindingNavigator> на форму.  
+3.  <span data-ttu-id="1ec87-110">После создания набора данных и адаптер таблицы перетащите <xref:System.Windows.Forms.BindingNavigator> на форму элемент управления.</span><span class="sxs-lookup"><span data-stu-id="1ec87-110">After the dataset and table adapter are generated, drag a <xref:System.Windows.Forms.BindingNavigator> control to the form.</span></span>  
   
-4.  На форме, привязанной к элементам управления, присвойте свойству <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> элемента управления <xref:System.Windows.Forms.BindingNavigator> значение <xref:System.Windows.Forms.BindingSource>.  
+4.  <span data-ttu-id="1ec87-111">Задать <xref:System.Windows.Forms.BindingNavigator> элемента управления <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> свойства <xref:System.Windows.Forms.BindingSource> формы, который привязан к элементам управления.</span><span class="sxs-lookup"><span data-stu-id="1ec87-111">Set the <xref:System.Windows.Forms.BindingNavigator> control's <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> property to the <xref:System.Windows.Forms.BindingSource> on the form that is bound to the controls.</span></span>  
   
-5.  Выберите элемент управления <xref:System.Windows.Forms.BindingNavigator>.  
+5.  <span data-ttu-id="1ec87-112">Выберите элемент управления <xref:System.Windows.Forms.BindingNavigator>.</span><span class="sxs-lookup"><span data-stu-id="1ec87-112">Select the <xref:System.Windows.Forms.BindingNavigator> control.</span></span>  
   
-6.  Щелкните глиф смарт\-тега \(![Глиф смарт&#45;тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\), чтобы появилось диалоговое окно **Задачи BindingNavigator**, и выберите пункт **Изменение элементов**.  
+6.  <span data-ttu-id="1ec87-113">Щелкните глиф смарт-тега (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) таким образом **задачи BindingNavigator** диалоговое окно и выберите пункт **изменение элементов**.</span><span class="sxs-lookup"><span data-stu-id="1ec87-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) so the **BindingNavigator Tasks** dialog appears and select **Edit Items**.</span></span>  
   
-     Появится окно **Редактор коллекции элементов**.  
+     <span data-ttu-id="1ec87-114">**Редактор коллекции элементов** отображается.</span><span class="sxs-lookup"><span data-stu-id="1ec87-114">The **Items Collection Editor** appears.</span></span>  
   
-7.  В окне **Редактор коллекции элементов** выполните следующие действия:  
+7.  <span data-ttu-id="1ec87-115">В **редактор коллекции элементов**, выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="1ec87-115">In the **Items Collection Editor**, complete the following:</span></span>  
   
-    1.  Добавьте <xref:System.Windows.Forms.ToolStripSeparator> и три элемента <xref:System.Windows.Forms.ToolStripButton>, выбрав соответствующий тип элемента <xref:System.Windows.Forms.ToolStripItem> и нажав кнопку **Добавить**.  
+    1.  <span data-ttu-id="1ec87-116">Добавить <xref:System.Windows.Forms.ToolStripSeparator> и три <xref:System.Windows.Forms.ToolStripButton> элементы, выбрав соответствующий тип <xref:System.Windows.Forms.ToolStripItem> и щелкнув **добавить** кнопки.</span><span class="sxs-lookup"><span data-stu-id="1ec87-116">Add a <xref:System.Windows.Forms.ToolStripSeparator> and three <xref:System.Windows.Forms.ToolStripButton> items by selecting the appropriate type of <xref:System.Windows.Forms.ToolStripItem> and clicking the **Add** button.</span></span>  
   
-    2.  Присвойте свойству кнопок <xref:System.Windows.Forms.ToolStripItem.Name%2A> соответственно значения `` LoadButton, `` SaveButton `` и CancelButton.  
+    2.  <span data-ttu-id="1ec87-117">Задать <xref:System.Windows.Forms.ToolStripItem.Name%2A> свойства кнопки, чтобы**LoadButton**,**SaveButton**, и**CancelButton**соответственно.</span><span class="sxs-lookup"><span data-stu-id="1ec87-117">Set the <xref:System.Windows.Forms.ToolStripItem.Name%2A> property of the buttons to**LoadButton**,**SaveButton**, and**CancelButton**, respectively.</span></span>  
   
-    3.  Присвойте свойству кнопок <xref:System.Windows.Forms.ToolStripItem.Text%2A> значения `` Загрузить`,` Сохранить `` и Отмена.  
+    3.  <span data-ttu-id="1ec87-118">Задать <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства кнопки, чтобы**нагрузки** `,` **Сохранить**, и**отменить**.</span><span class="sxs-lookup"><span data-stu-id="1ec87-118">Set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of the buttons to**Load**`,` **Save**, and**Cancel**.</span></span>  
   
-    4.  Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> каждой кнопки значение `` Text.  Также можно присвоить этому свойству значение `` Image `` или `` ImageAndText `` и задать отображаемое изображение в свойстве <xref:System.Windows.Forms.ToolStripItem.Image%2A>.  
+    4.  <span data-ttu-id="1ec87-119">Задать <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> для каждой из кнопок, чтобы**текст**.</span><span class="sxs-lookup"><span data-stu-id="1ec87-119">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property for each of the buttons to**Text**.</span></span> <span data-ttu-id="1ec87-120">Кроме того, можно задать это свойство**изображения**или**ImageAndText**и задать изображение, отображаемое в <xref:System.Windows.Forms.ToolStripItem.Image%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="1ec87-120">Alternatively, you can set this property to**Image**or**ImageAndText**and set the image to be displayed in the <xref:System.Windows.Forms.ToolStripItem.Image%2A> property.</span></span>  
   
-    5.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно. Кнопки будут добавлены в класс <xref:System.Windows.Forms.ToolStrip>.  
+    5.  <span data-ttu-id="1ec87-121">Нажмите кнопку **ОК** чтобы закрыть диалоговое окно. Добавляются кнопки <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="1ec87-121">Click **OK** to close the dialog box.The buttons are added to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-8.  Щелкните форму правой кнопкой мыши и выберите команду **Просмотреть код**.  
+8.  <span data-ttu-id="1ec87-122">Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="1ec87-122">Right-click the form and choose **View Code**.</span></span>  
   
-9. В редакторе кода найдите строку, которая загружает данные в адаптер таблиц.  Этот код был сгенерирован при установки привязки данных в этапе 2.  Код должен иметь следующий вид: `TableAdapterName.Fill(DataSetName.TableName)`.  Наиболее вероятно, что он будет в событии формы <xref:System.Windows.Forms.Form.Load>.  
+9. <span data-ttu-id="1ec87-123">В редакторе кода найдите строку кода, которая загружает данные в адаптер таблицы.</span><span class="sxs-lookup"><span data-stu-id="1ec87-123">In the Code Editor, find the line of code that loads data into the table adapter.</span></span> <span data-ttu-id="1ec87-124">Этот код был создан при настройке привязки данных в шаге 2.</span><span class="sxs-lookup"><span data-stu-id="1ec87-124">This code was generated when you set up the data binding in step 2.</span></span> <span data-ttu-id="1ec87-125">Код должен быть примерно следующего содержания: `TableAdapterName.Fill(DataSetName.TableName)`.</span><span class="sxs-lookup"><span data-stu-id="1ec87-125">The code should be similar to the following: `TableAdapterName.Fill(DataSetName.TableName)`.</span></span> <span data-ttu-id="1ec87-126">Он будет большинство скорее всего, в форме <xref:System.Windows.Forms.Form.Load> событий.</span><span class="sxs-lookup"><span data-stu-id="1ec87-126">It will most likely be in the form's <xref:System.Windows.Forms.Form.Load> event.</span></span>  
   
-10. Создайте обработчик события <xref:System.Windows.Forms.ToolStripItem.Click> для кнопки `T:System.Windows.Forms.ToolStripButton` `` **Загрузить**, созданной ранее, и переместите этот код загрузки данных в обработчик.  
+10. <span data-ttu-id="1ec87-127">Создайте обработчик событий для <xref:System.Windows.Forms.ToolStripItem.Click> событие**нагрузки** <xref:System.Windows.Forms.ToolStripButton> созданной ранее и переместите этот код загрузки данных в нее.</span><span class="sxs-lookup"><span data-stu-id="1ec87-127">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the**Load**<xref:System.Windows.Forms.ToolStripButton> you created earlier and move this data-loading code into it.</span></span>  
   
-     Теперь код должен выглядеть примерно следующим образом.  
+     <span data-ttu-id="1ec87-128">Код должен выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="1ec87-128">Your code should now look similar to the following:</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub LoadButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoadButton.Click  
         TableAdapterName.Fill(DataSetName.TableName)  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void LoadButton_Click(System.Object sender,   
         System.EventArgs e)  
     {  
@@ -82,19 +82,15 @@ caps.handback.revision: 17
     }  
     ```  
   
-11. Создайте обработчик события <xref:System.Windows.Forms.ToolStripItem.Click> для кнопки <xref:System.Windows.Forms.ToolStripButton> `` **Сохранить**, созданной ранее, и напишите код для обновления данных в таблице, к которой привязан элемент управления.  
+11. <span data-ttu-id="1ec87-129">Создайте обработчик событий для <xref:System.Windows.Forms.ToolStripItem.Click> событие **Сохранить** <xref:System.Windows.Forms.ToolStripButton> созданную ранее, и напишите код для обновления данных в таблице элемент управления привязан к.</span><span class="sxs-lookup"><span data-stu-id="1ec87-129">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the **Save**<xref:System.Windows.Forms.ToolStripButton> you created earlier and write code to update the data within the table the control is bound to.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click  
         TableAdapterName.Update(DataSetName.TableName)  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void SaveButton_Click(System.Object sender,   
         System.EventArgs e)  
     {  
@@ -103,21 +99,17 @@ caps.handback.revision: 17
     ```  
   
     > [!NOTE]
-    >  В некоторых случаях компонент <xref:System.Windows.Forms.BindingNavigator> уже содержит кнопку `` **Сохранить**, но код, сгенерированный конструктором Windows Forms, при этом отсутствует.  В этом случае приведенный выше код можно поместить в <xref:System.Windows.Forms.ToolStripItem.Click> обработчик событий кнопки, вместо создания полностью новой кнопки <xref:System.Windows.Forms.ToolStrip>.  Однако кнопка по умолчанию отключена, так что свойству <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> кнопки необходимо присвоить значение `true`, чтобы кнопка работала правильно.  
+    >  <span data-ttu-id="1ec87-130">В некоторых случаях <xref:System.Windows.Forms.BindingNavigator> компонент уже будет иметь**Сохранить** кнопки, но код не будет были созданы с помощью конструктора Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="1ec87-130">In some cases, the <xref:System.Windows.Forms.BindingNavigator> component will already have a**Save** button, but no code will have been generated by the Windows Forms Designer.</span></span> <span data-ttu-id="1ec87-131">В этом случае можно поместить приведенного выше кода в <xref:System.Windows.Forms.ToolStripItem.Click> обработчик событий для кнопки, а не создавать полностью новой кнопки на <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="1ec87-131">In this case, you can place the preceding code in the <xref:System.Windows.Forms.ToolStripItem.Click> event handler for that button, rather than creating an entirely new button on the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="1ec87-132">Однако кнопка становится недоступной, по умолчанию, поэтому необходимо задать <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> свойства кнопки, чтобы `true` иметь кнопка работала правильно.</span><span class="sxs-lookup"><span data-stu-id="1ec87-132">However, the button is disabled by default, so you must set the <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> property of the button to `true` to have the button function correctly.</span></span>  
   
-12. Создайте обработчик события <xref:System.Windows.Forms.ToolStripItem.Click> для кнопки `` <xref:System.Windows.Forms.ToolStripButton> `` **Отмена**, созданной ранее, и напишите код для отмены любых изменений отображаемой записи данных.  
+12. <span data-ttu-id="1ec87-133">Создайте обработчик событий для <xref:System.Windows.Forms.ToolStripItem.Click> событие**отменить** <xref:System.Windows.Forms.ToolStripButton> созданной ранее и написать код для отмены любых изменений отображаемой записи данных.</span><span class="sxs-lookup"><span data-stu-id="1ec87-133">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the**Cancel**<xref:System.Windows.Forms.ToolStripButton> you created earlier and write code to cancel any changes to the data record that is displayed.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click  
         BindingSourceName.CancelEdit()  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void CancelButton_Click(System.Object sender, System.EventArgs e)  
     {  
         BindingSourceName.CancelEdit();  
@@ -125,11 +117,11 @@ caps.handback.revision: 17
     ```  
   
     > [!NOTE]
-    >  Метод <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> распространяется на строку данных.  Сохраните все изменения, сделанные при просмотре этой отдельной записи, до перехода к следующей записи.  
+    >  <span data-ttu-id="1ec87-134"><xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Метод распространяется на строку данных.</span><span class="sxs-lookup"><span data-stu-id="1ec87-134">The <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> method is scoped to the row of data.</span></span> <span data-ttu-id="1ec87-135">Сохраните все изменения, внесенные во время просмотра этой отдельной записи до перехода к следующей записи.</span><span class="sxs-lookup"><span data-stu-id="1ec87-135">Save any changes you make while viewing that individual record before navigating to the next record.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.BindingNavigator>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.ToolStrip>   
- [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [Общие сведения о компоненте BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1ec87-136">См. также</span><span class="sxs-lookup"><span data-stu-id="1ec87-136">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ [<span data-ttu-id="1ec87-137">Элемент управления BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="1ec87-137">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [<span data-ttu-id="1ec87-138">Общие сведения о компоненте BindingSource</span><span class="sxs-lookup"><span data-stu-id="1ec87-138">BindingSource Component Overview</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

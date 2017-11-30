@@ -1,40 +1,47 @@
 ---
-title: "Как создать настраиваемого участника отслеживания | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать настраиваемого участника отслеживания"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef647068e6ec757de391015f4959335c29038cfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как создать настраиваемого участника отслеживания
-Отслеживание рабочих процессов обеспечивает видимость состояния выполнения рабочего процесса.Среда выполнения рабочего процесса отправляет записи отслеживания, описывающие события жизненного цикла рабочего процесса, события жизненного цикла действия, возобновления закладок и сбои.Эти записи отслеживания используются участниками отслеживания.[!INCLUDE[wf](../../../includes/wf-md.md)] включает стандартного участника отслеживания, который пишет записи отслеживания в виде средства трассировки событий для Windows \(ETW\).Если это не отвечает заданным требованиям, то можно создать своего собственного участника отслеживания.На этом шаге учебника описывается, как создать настраиваемого участника отслеживания и профиль отслеживания, которые захватывают выходные данные действий `WriteLine`, чтобы их можно было показать пользователю.  
+# <a name="how-to-create-a-custom-tracking-participant"></a><span data-ttu-id="c558a-102">Как создать настраиваемого участника отслеживания</span><span class="sxs-lookup"><span data-stu-id="c558a-102">How to: Create a Custom Tracking Participant</span></span>
+<span data-ttu-id="c558a-103">Отслеживание рабочих процессов обеспечивает видимость состояния выполнения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="c558a-103">Workflow tracking provides visibility into the status of workflow execution.</span></span> <span data-ttu-id="c558a-104">Среда выполнения рабочего процесса отправляет записи отслеживания, описывающие события жизненного цикла рабочего процесса, события жизненного цикла действия, возобновления закладок и сбои.</span><span class="sxs-lookup"><span data-stu-id="c558a-104">The workflow runtime emits tracking records that describe workflow lifecycle events, activity lifecycle events, bookmark resumptions, and faults.</span></span> <span data-ttu-id="c558a-105">Эти записи отслеживания используются участниками отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c558a-105">These tracking records are consumed by tracking participants.</span></span> [!INCLUDE[wf](../../../includes/wf-md.md)]<span data-ttu-id="c558a-106"> включает стандартного участника отслеживания, который пишет записи отслеживания в виде средства трассировки событий для Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="c558a-106"> includes a standard tracking participant that writes tracking records as Event Tracing for Windows (ETW) events.</span></span> <span data-ttu-id="c558a-107">Если это не отвечает заданным требованиям, то можно создать своего собственного участника отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c558a-107">If that does not meet your requirements, you can also write a custom tracking participant.</span></span> <span data-ttu-id="c558a-108">На этом шаге учебника описывается, как создать настраиваемого участника отслеживания и профиль отслеживания, которые захватывают выходные данные действий `WriteLine`, чтобы их можно было показать пользователю.</span><span class="sxs-lookup"><span data-stu-id="c558a-108">This tutorial step describes how to create a custom tracking participant and tracking profile that capture the output of `WriteLine` activities so that they can be displayed to the user.</span></span>  
   
 > [!NOTE]
->  Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов.Для изучения этого раздела необходимо сначала пройти предыдущие шаги.Чтобы загрузить готовую версию из учебника или просмотреть пошаговое видео, см. учебник [Windows Workflow Foundation \(WF45\) — приступая к работе](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="c558a-109">Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов.</span><span class="sxs-lookup"><span data-stu-id="c558a-109">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="c558a-110">Для изучения этого раздела необходимо сначала пройти предыдущие шаги.</span><span class="sxs-lookup"><span data-stu-id="c558a-110">To complete this topic, you must first complete the previous topics.</span></span> <span data-ttu-id="c558a-111">Чтобы загрузить полную версию или просмотреть пошаговое видео учебника, см. [Windows Workflow Foundation (WF45) — учебник по началу работы](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="c558a-111">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## Содержание раздела  
+## <a name="in-this-topic"></a><span data-ttu-id="c558a-112">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="c558a-112">In this topic</span></span>  
   
--   [Создание пользовательского участника отслеживания](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
+-   [<span data-ttu-id="c558a-113">Для создания настраиваемого участника отслеживания</span><span class="sxs-lookup"><span data-stu-id="c558a-113">To create the custom tracking participant</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [Создание профиля отслеживания и регистрация участника отслеживания](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [<span data-ttu-id="c558a-114">Для создания профиля отслеживания и регистрация участника отслеживания</span><span class="sxs-lookup"><span data-stu-id="c558a-114">To create the tracking profile and register the tracking participant</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
--   [Отображение сведений об отслеживании](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
+-   [<span data-ttu-id="c558a-115">Чтобы отобразить информацию об отслеживании</span><span class="sxs-lookup"><span data-stu-id="c558a-115">To display the tracking information</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
--   [Сборка и запуск приложения](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="c558a-116">Построение и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="c558a-116">To build and run the application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a> Создание пользовательского участника отслеживания  
+###  <span data-ttu-id="c558a-117"><a name="BKMK_CustomTrackingParticipant"></a>Для создания настраиваемого участника отслеживания</span><span class="sxs-lookup"><span data-stu-id="c558a-117"><a name="BKMK_CustomTrackingParticipant"></a> To create the custom tracking participant</span></span>  
   
-1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в окне **Обозреватель решений** и выберите **Добавить** и **Класс**.В поле **Имя** введите `StatusTrackingParticipant` и нажмите кнопку **Добавить**.  
+1.  <span data-ttu-id="c558a-118">Щелкните правой кнопкой мыши **NumberGuessWorkflowHost** в **обозревателе решений** и выберите **добавить**, **класса**.</span><span class="sxs-lookup"><span data-stu-id="c558a-118">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**.</span></span> <span data-ttu-id="c558a-119">Тип `StatusTrackingParticipant` в **имя** и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="c558a-119">Type `StatusTrackingParticipant` into the **Name** box, and click **Add**.</span></span>  
   
-2.  Добавьте следующие инструкции `using` \(или `Imports`\) в начало файла с другими инструкциями `using` \(или `Imports`\).  
+2.  <span data-ttu-id="c558a-120">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="c558a-120">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -46,7 +53,7 @@ caps.handback.revision: 6
     using System.IO;  
     ```  
   
-3.  Измените класс `StatusTrackingParticipant` таким образом, чтобы он наследовался от класса `TrackingParticipant`.  
+3.  <span data-ttu-id="c558a-121">Измените класс `StatusTrackingParticipant` таким образом, чтобы он наследовался от класса `TrackingParticipant`.</span><span class="sxs-lookup"><span data-stu-id="c558a-121">Modify the `StatusTrackingParticipant` class so that it inherits from `TrackingParticipant`.</span></span>  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -61,7 +68,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-4.  Добавьте следующее переопределение метода `Track`.Существует несколько различных записей отслеживания.Нас интересуют только выходные данные действий `WriteLine`, которые содержатся в записях отслеживания действий.Если `TrackingRecord` является `ActivityTrackingRecord` для действия `WriteLine`, `Text` действия `WriteLine` добавляется в файл после `InstanceId` рабочего процесса.В этом руководстве файл сохраняется в текущей папке ведущего приложения.  
+4.  <span data-ttu-id="c558a-122">Добавьте следующее переопределение метода `Track`.</span><span class="sxs-lookup"><span data-stu-id="c558a-122">Add the following `Track` method override.</span></span> <span data-ttu-id="c558a-123">Существует несколько различных записей отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c558a-123">There are several different types of tracking records.</span></span> <span data-ttu-id="c558a-124">Нас интересуют только выходные данные действий `WriteLine`, которые содержатся в записях отслеживания действий.</span><span class="sxs-lookup"><span data-stu-id="c558a-124">We are interested in the output of `WriteLine` activities, which are contained in activity tracking records.</span></span> <span data-ttu-id="c558a-125">Если `TrackingRecord` является `ActivityTrackingRecord` для действия `WriteLine`, `Text` действия `WriteLine` добавляется в файл после `InstanceId` рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="c558a-125">If the `TrackingRecord` is an `ActivityTrackingRecord` for a `WriteLine` activity, the `Text` of the `WriteLine` is appended to a file named after the `InstanceId` of the workflow.</span></span> <span data-ttu-id="c558a-126">В этом руководстве файл сохраняется в текущей папке ведущего приложения.</span><span class="sxs-lookup"><span data-stu-id="c558a-126">In this tutorial, the file is saved to the current folder of the host application.</span></span>  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -104,13 +111,13 @@ caps.handback.revision: 6
     }  
     ```  
   
-     Если профиль отслеживания не указан, используется профиль по умолчанию.Если используется профиль отслеживания по умолчанию, записи отслеживания создаются для всех `ActivityStates`.Поскольку нам нужно получить текст только один раз в течение жизненного цикла действия `WriteLine`, мы извлекаем текст только из состояния `ActivityStates.Executing`.В разделе [Создание профиля отслеживания и регистрация участника отслеживания](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile) создается профиль отслеживания, который определяет, что создаются только записи отслеживания `WriteLine` `ActivityStates.Executing`.  
+     <span data-ttu-id="c558a-127">Если профиль отслеживания не указан, используется профиль по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c558a-127">When no tracking profile is specified, the default tracking profile is used.</span></span> <span data-ttu-id="c558a-128">Если используется профиль отслеживания по умолчанию, записи отслеживания создаются для всех `ActivityStates`.</span><span class="sxs-lookup"><span data-stu-id="c558a-128">When the default tracking profile is used, tracking records are emitted for all `ActivityStates`.</span></span> <span data-ttu-id="c558a-129">Поскольку нам нужно получить текст только один раз в течение жизненного цикла действия `WriteLine`, мы извлекаем текст только из состояния `ActivityStates.Executing`.</span><span class="sxs-lookup"><span data-stu-id="c558a-129">Because we only need to capture the text one time during the lifecycle of the `WriteLine` activity, we only extract the text from the `ActivityStates.Executing` state.</span></span> <span data-ttu-id="c558a-130">В [для создания профиля отслеживания и регистрация участника отслеживания](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), создается профиль отслеживания, указывает, что только `WriteLine` `ActivityStates.Executing` создаются записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c558a-130">In [To create the tracking profile and register the tracking participant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), a tracking profile is created that specifies that only `WriteLine` `ActivityStates.Executing` tracking records are emitted.</span></span>  
   
-###  <a name="BKMK_TrackingProfile"></a> Создание профиля отслеживания и регистрация участника отслеживания  
+###  <span data-ttu-id="c558a-131"><a name="BKMK_TrackingProfile"></a>Для создания профиля отслеживания и регистрация участника отслеживания</span><span class="sxs-lookup"><span data-stu-id="c558a-131"><a name="BKMK_TrackingProfile"></a> To create the tracking profile and register the tracking participant</span></span>  
   
-1.  Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите команду **Просмотреть код**.  
+1.  <span data-ttu-id="c558a-132">Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="c558a-132">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2.  Добавьте следующие инструкции `using` \(или `Imports`\) в начало файла с другими инструкциями `using` \(или `Imports`\).  
+2.  <span data-ttu-id="c558a-133">Добавьте следующие инструкции `using` (или `Imports`) в начало файла с другими инструкциями `using` (или `Imports`).</span><span class="sxs-lookup"><span data-stu-id="c558a-133">Add the following `using` (or `Imports`) statement at the top of the file with the other `using` (or `Imports`) statements.</span></span>  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -120,7 +127,7 @@ caps.handback.revision: 6
     using System.Activities.Tracking;  
     ```  
   
-3.  Добавьте следующий код в `ConfigureWorkflowApplication` сразу после кода, добавляющего `StringWriter` к расширениям рабочего процесса, и перед обработчиками жизненного цикла рабочего процесса.  
+3.  <span data-ttu-id="c558a-134">Добавьте следующий код в `ConfigureWorkflowApplication` сразу после кода, добавляющего `StringWriter` к расширениям рабочего процесса, и перед обработчиками жизненного цикла рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="c558a-134">Add the following code to `ConfigureWorkflowApplication` just after the code that adds the `StringWriter` to the workflow extensions and before the workflow lifecycle handlers.</span></span>  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -161,9 +168,9 @@ caps.handback.revision: 6
     wfApp.Extensions.Add(stp);  
     ```  
   
-     Этот профиль отслеживания указывает, что только записи состояния действий `WriteLine` в состоянии `Executing` отправляются пользовательскому участнику отслеживания.  
+     <span data-ttu-id="c558a-135">Этот профиль отслеживания указывает, что только записи состояния действий `WriteLine` в состоянии `Executing` отправляются пользовательскому участнику отслеживания.</span><span class="sxs-lookup"><span data-stu-id="c558a-135">This tracking profile specifies that only activity state records for `WriteLine` activities in the `Executing` state are emitted to the custom tracking participant.</span></span>  
   
-     После добавления кода запуск `ConfigureWorkflowApplication` будет выглядеть так, как показано в следующем примере.  
+     <span data-ttu-id="c558a-136">После добавления кода запуск `ConfigureWorkflowApplication` будет выглядеть так, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="c558a-136">After adding the code, the start of `ConfigureWorkflowApplication` will look like the following example.</span></span>  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -227,11 +234,11 @@ caps.handback.revision: 6
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> Отображение сведений об отслеживании  
+###  <span data-ttu-id="c558a-137"><a name="BKMK_DisplayTracking"></a>Чтобы отобразить информацию об отслеживании</span><span class="sxs-lookup"><span data-stu-id="c558a-137"><a name="BKMK_DisplayTracking"></a> To display the tracking information</span></span>  
   
-1.  Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите команду **Просмотреть код**.  
+1.  <span data-ttu-id="c558a-138">Щелкните правой кнопкой мыши **WorkflowHostForm** в **обозревателе решений** и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="c558a-138">Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.</span></span>  
   
-2.  В обработчике `InstanceId_SelectedIndexChanged` добавьте следующий код сразу после кода очистки окна состояния.  
+2.  <span data-ttu-id="c558a-139">В обработчике `InstanceId_SelectedIndexChanged` добавьте следующий код сразу после кода очистки окна состояния.</span><span class="sxs-lookup"><span data-stu-id="c558a-139">In the `InstanceId_SelectedIndexChanged` handler, add the following code immediately after the code that clears the status window.</span></span>  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -252,7 +259,7 @@ caps.handback.revision: 6
     }  
     ```  
   
-     Если новый рабочий процесс выбран в списке рабочих процессов, записи отслеживания для этого рабочего процесса загружаются и отображаются в окне состояния.Ниже приведен полный пример обработчика `InstanceId_SelectedIndexChanged`.  
+     <span data-ttu-id="c558a-140">Если новый рабочий процесс выбран в списке рабочих процессов, записи отслеживания для этого рабочего процесса загружаются и отображаются в окне состояния.</span><span class="sxs-lookup"><span data-stu-id="c558a-140">When a new workflow is selected in the workflow list, the tracking records for that workflow are loaded and displayed in the status window.</span></span> <span data-ttu-id="c558a-141">Ниже приведен полный пример обработчика `InstanceId_SelectedIndexChanged`.</span><span class="sxs-lookup"><span data-stu-id="c558a-141">The following example is the completed `InstanceId_SelectedIndexChanged` handler.</span></span>  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -320,32 +327,31 @@ caps.handback.revision: 6
             instance.Abandon();  
         }  
     }  
-  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Сборка и запуск приложения  
+###  <span data-ttu-id="c558a-142"><a name="BKMK_BuildAndRun"></a>Построение и запуск приложения</span><span class="sxs-lookup"><span data-stu-id="c558a-142"><a name="BKMK_BuildAndRun"></a> To build and run the application</span></span>  
   
-1.  Нажмите клавиши Ctrl\+Shift\+B, чтобы создать приложение.  
+1.  <span data-ttu-id="c558a-143">Нажмите клавиши Ctrl+Shift+B, чтобы создать приложение.</span><span class="sxs-lookup"><span data-stu-id="c558a-143">Press Ctrl+Shift+B to build the application.</span></span>  
   
-2.  Нажмите клавиши Ctrl\+F5, чтобы запустить приложение.  
+2.  <span data-ttu-id="c558a-144">Нажмите клавиши Ctrl+F5, чтобы запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="c558a-144">Press Ctrl+F5 to start the application.</span></span>  
   
-3.  Выберите диапазон для игры на угадывание и тип рабочего процесса, который необходимо запустить, затем нажмите кнопку **Новая игра**.Введите догадку в поле **Догадка** и нажмите кнопку **Продолжить**, чтобы отправить догадку.Обратите внимание, что состояние рабочего процесса отображается в окне состояния.Этот результат получен из действий `WriteLine`.Переключитесь на другой рабочий процесс, выбрав один из них в поле со списком **Идентификатор экземпляра рабочего процесса** и обратите внимание на то, что состояние текущего рабочего процесса значится как «удаляется».Переключитесь на предыдущий рабочий процесс и отметьте, что состояние восстановлено, как в следующем примере.  
+3.  <span data-ttu-id="c558a-145">Выберите диапазон для игры на угадывание и тип рабочего процесса для запуска и нажмите кнопку **новая игра**.</span><span class="sxs-lookup"><span data-stu-id="c558a-145">Select a range for the guessing game and the type of workflow to start, and click **New Game**.</span></span> <span data-ttu-id="c558a-146">Введите догадку в **предположение** и нажмите кнопку **Go** Чтобы отправить догадку.</span><span class="sxs-lookup"><span data-stu-id="c558a-146">Enter a guess in the **Guess** box and click **Go** to submit your guess.</span></span> <span data-ttu-id="c558a-147">Обратите внимание, что состояние рабочего процесса отображается в окне состояния.</span><span class="sxs-lookup"><span data-stu-id="c558a-147">Note that the status of the workflow is displayed in the status window.</span></span> <span data-ttu-id="c558a-148">Этот результат получен из действий `WriteLine`.</span><span class="sxs-lookup"><span data-stu-id="c558a-148">This output is captured from the `WriteLine` activities.</span></span> <span data-ttu-id="c558a-149">Переключитесь на другой рабочий процесс, выбрав один из **идентификатор экземпляра рабочего процесса** со списком и обратите внимание, что состояние текущего рабочего процесса удален.</span><span class="sxs-lookup"><span data-stu-id="c558a-149">Switch to a different workflow by selecting one from the **Workflow Instance Id** combo box and note that the status of the current workflow is removed.</span></span> <span data-ttu-id="c558a-150">Переключитесь на предыдущий рабочий процесс и отметьте, что состояние восстановлено, как в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="c558a-150">Switch back to the previous workflow and note that the status is restored, similar to the following example.</span></span>  
   
     > [!NOTE]
-    >  Если перейти к рабочему процессу, который был запущен до включения отслеживания, состояние не отображается.Но если вы вводите дополнительные предположения, их состояние сохраняется, поскольку теперь отслеживание включено.  
+    >  <span data-ttu-id="c558a-151">Если перейти к рабочему процессу, который был запущен до включения отслеживания, состояние не отображается.</span><span class="sxs-lookup"><span data-stu-id="c558a-151">If you switch to a workflow that was started before tracking was enabled no status is displayed.</span></span> <span data-ttu-id="c558a-152">Но если вы вводите дополнительные предположения, их состояние сохраняется, поскольку теперь отслеживание включено.</span><span class="sxs-lookup"><span data-stu-id="c558a-152">However if you make additional guesses, their status is saved because tracking is now enabled.</span></span>  
   
- **Введите число от 1 до 10**   
-**Загаданное число меньше.**   
-**Введите число от 1 до 10**    
+ <span data-ttu-id="c558a-153">**Введите число от 1 до 10**</span><span class="sxs-lookup"><span data-stu-id="c558a-153">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="c558a-154">**Функция слишком велика.** </span><span class="sxs-lookup"><span data-stu-id="c558a-154">**Your guess is too high.** </span></span>  
+<span data-ttu-id="c558a-155">**Введите число от 1 до 10**</span><span class="sxs-lookup"><span data-stu-id="c558a-155">**Please enter a number between 1 and 10**</span></span>    
     > [!NOTE]
-    >  Эти сведения полезны для определения диапазона случайного числа, но они не содержат никаких данных о предыдущих предположениях.Эти сведения представлены на следующем шаге, [Как разместить параллельно несколько версий рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  <span data-ttu-id="c558a-156">Эти сведения полезны для определения диапазона случайного числа, но они не содержат никаких данных о предыдущих предположениях.</span><span class="sxs-lookup"><span data-stu-id="c558a-156">This information is useful for determining the range of the random number, but it does not contain any information about what guesses have been previously made.</span></span> <span data-ttu-id="c558a-157">Эта информация находится в следующем шаге [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="c558a-157">This information is in the next step, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>  
   
-     Запишите идентификатор экземпляра рабочего процесса и доведите игру до конца.  
+     <span data-ttu-id="c558a-158">Запишите идентификатор экземпляра рабочего процесса и доведите игру до конца.</span><span class="sxs-lookup"><span data-stu-id="c558a-158">Make a note of the workflow instance id, and play the game through to its completion.</span></span>  
   
-4.  Откройте проводник Windows и перейдите в папку **NumberGuessWorkflowHost\\bin\\debug** \(или **bin\\release** в зависимости от параметров проекта\).Обратите внимание, что в дополнение к исполняемым файлам проекта существуют файлы с именами с идентификатором GUID.Определите файл, который соответствует идентификатору экземпляра рабочего процесса, завершенного на предыдущем шаге, и откройте его в Блокноте.Данные отслеживания содержат информацию, подобную следующим данным.  
+4.  <span data-ttu-id="c558a-159">Откройте проводник и перейдите к **NumberGuessWorkflowHost\bin\debug** папку (или **bin\release** в зависимости от параметров проекта).</span><span class="sxs-lookup"><span data-stu-id="c558a-159">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings).</span></span> <span data-ttu-id="c558a-160">Обратите внимание, что в дополнение к исполняемым файлам проекта существуют файлы с именами с идентификатором GUID.</span><span class="sxs-lookup"><span data-stu-id="c558a-160">Note that in addition to the project executable files there are files with guid filenames.</span></span> <span data-ttu-id="c558a-161">Определите файл, который соответствует идентификатору экземпляра рабочего процесса, завершенного на предыдущем шаге, и откройте его в Блокноте.</span><span class="sxs-lookup"><span data-stu-id="c558a-161">Identify the one that corresponds to the workflow instance id from the completed workflow in the previous step and open it in Notepad.</span></span> <span data-ttu-id="c558a-162">Данные отслеживания содержат информацию, подобную следующим данным.</span><span class="sxs-lookup"><span data-stu-id="c558a-162">The tracking information contains information similar to the following.</span></span>  
   
- **Введите число от 1 до 10**   
-**Загаданное число меньше.**   
-**Введите число от 1 до 10**   
-**Загаданное число меньше.**   
-**Введите число от 1 до 10**      В дополнение к отсутствию догадок пользователя эти данные отслеживания не содержат сведения о последнем предположении рабочего процесса.Это происходит потому, что данные отслеживания состоят только из выходных данных `WriteLine` рабочего процесса, а последнее отображаемое сообщение выдается из обработчика `Completed` после завершения рабочего процесса.На следующем шаге руководства \(см. [Как разместить параллельно несколько версий рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md)\) существующие действия `WriteLine` изменены для отображения догадок пользователя, а также добавлено дополнительное действие `WriteLine`, показывающее конечные результаты.После интеграции этих изменений в [Как разместить параллельно несколько версий рабочего процесса](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md) показано, как разместить несколько версий рабочих процессов одновременно.
+ <span data-ttu-id="c558a-163">**Введите число от 1 до 10**</span><span class="sxs-lookup"><span data-stu-id="c558a-163">**Please enter a number between 1 and 10**</span></span>  
+<span data-ttu-id="c558a-164">**Функция слишком велика.** </span><span class="sxs-lookup"><span data-stu-id="c558a-164">**Your guess is too high.** </span></span>  
+<span data-ttu-id="c558a-165">**Введите число от 1 до 10** </span><span class="sxs-lookup"><span data-stu-id="c558a-165">**Please enter a number between 1 and 10** </span></span>  
+<span data-ttu-id="c558a-166">**Функция слишком велика.** </span><span class="sxs-lookup"><span data-stu-id="c558a-166">**Your guess is too high.** </span></span>  
+<span data-ttu-id="c558a-167">**Введите число от 1 до 10** в дополнение к отсутствию догадок пользователя, эти данные отслеживания не содержит сведений о последнем предположении рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="c558a-167">**Please enter a number between 1 and 10**      In addition to the absence of the user's guesses, this tracking data does not contain information about the final guess of the workflow.</span></span> <span data-ttu-id="c558a-168">Это происходит потому, что данные отслеживания состоят только из выходных данных `WriteLine` рабочего процесса, а последнее отображаемое сообщение выдается из обработчика `Completed` после завершения рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="c558a-168">That is because the tracking information consists only of the `WriteLine` output from the workflow, and the final message that is displayed is done so from the `Completed` handler after the workflow completes.</span></span> <span data-ttu-id="c558a-169">В следующем шаге руководства [как: узла нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), существующий `WriteLine` действия будут изменены для отображения догадок пользователя и дополнительный `WriteLine` , добавляется действие Отображает окончательного результата.</span><span class="sxs-lookup"><span data-stu-id="c558a-169">In next step of the tutorial, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), the existing `WriteLine` activities are modified to display the user's guesses, and an additional `WriteLine` activity is added that displays the final results.</span></span> <span data-ttu-id="c558a-170">После этих изменений, интегрированы, [как: узел нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) показано, как разместить несколько версий рабочего процесса, в то же время.</span><span class="sxs-lookup"><span data-stu-id="c558a-170">After these changes are integrated, [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstrates how to host multiple versions of a workflow at the same time.</span></span>

@@ -1,75 +1,78 @@
 ---
-title: "How to: Respond to Font Scheme Changes in a Windows Forms Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, font scheme changes"
+title: "Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b2e53df114c491e99e13940ae47a4119bd8da46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Respond to Font Scheme Changes in a Windows Forms Application
-В операционных системах Windows пользователь может изменить параметры шрифтов на уровне системы, чтобы увеличить или уменьшить размер шрифта, отображаемого по умолчанию.  Изменение этих параметров шрифтов особенно важно для пользователей с нарушениями зрения, которые нуждаются в большом размере шрифта при чтении текста с экрана.  Приложение Windows Forms можно настроить так, чтобы при каждом изменении шрифтовой схемы, оно реагировало на эти изменения увеличением или уменьшением размера формы и всего содержащегося текста.  Если требуется, чтобы форма приспосабливалась к изменениям размера шрифта динамически, то можно добавить в форму соответствующий код.  
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a><span data-ttu-id="bcb42-102">Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bcb42-102">How to: Respond to Font Scheme Changes in a Windows Forms Application</span></span>
+<span data-ttu-id="bcb42-103">В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше.</span><span class="sxs-lookup"><span data-stu-id="bcb42-103">In the Windows operating systems, a user can change the system-wide font settings to make the default font appear larger or smaller.</span></span> <span data-ttu-id="bcb42-104">Изменение этих параметров шрифтов особенно важно для пользователей с нарушениями зрения и требуется больший тип для чтения текста на экране компьютера.</span><span class="sxs-lookup"><span data-stu-id="bcb42-104">Changing these font settings is critical for users who are visually impaired and require larger type to read the text on their screens.</span></span> <span data-ttu-id="bcb42-105">Можно настроить приложение Windows Forms реагировать на изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текста при каждом изменении шрифтовой схемы.</span><span class="sxs-lookup"><span data-stu-id="bcb42-105">You can adjust your Windows Forms application to react to these changes by increasing or decreasing the size of the form and all contained text whenever the font scheme changes.</span></span> <span data-ttu-id="bcb42-106">Если вы хотите формы в соответствии с изменением размеров шрифта динамически, можно добавить код в форму.</span><span class="sxs-lookup"><span data-stu-id="bcb42-106">If you want your form to accommodate changes in font sizes dynamically, you can add code to your form.</span></span>  
   
- Как правило, формами Windows Forms используется шрифт по умолчанию, который возвращается при вызове метода `GetStockObject(DEFAULT_GUI_FONT)` пространства имен <xref:Microsoft.Win32>.  Шрифт, возвращаемый при вызове этого метода, изменяется только при изменении разрешения экрана.  Как показано в следующей процедуре, ваш код должен изменить шрифт по умолчанию для <xref:System.Drawing.SystemFonts.IconTitleFont%2A> в ответ на изменение размера шрифта.  
+ <span data-ttu-id="bcb42-107">Как правило, шрифт по умолчанию, используемые в Windows Forms используется шрифт, возвращенных <xref:Microsoft.Win32> вызов пространства имен `GetStockObject(DEFAULT_GUI_FONT)`.</span><span class="sxs-lookup"><span data-stu-id="bcb42-107">Typically, the default font used by Windows Forms is the font returned by the <xref:Microsoft.Win32> namespace call to `GetStockObject(DEFAULT_GUI_FONT)`.</span></span> <span data-ttu-id="bcb42-108">Шрифт, возвращаемый при вызове этого метода изменяется только при изменении разрешения экрана.</span><span class="sxs-lookup"><span data-stu-id="bcb42-108">The font returned by this call only changes when the screen resolution changes.</span></span> <span data-ttu-id="bcb42-109">Как показано в следующей процедуре, ваш код должен изменить шрифт по умолчанию для <xref:System.Drawing.SystemFonts.IconTitleFont%2A> реагировать на изменения размера шрифта.</span><span class="sxs-lookup"><span data-stu-id="bcb42-109">As shown in the following procedure, your code must change the default font to <xref:System.Drawing.SystemFonts.IconTitleFont%2A> to respond to changes in font size.</span></span>  
   
-### Чтобы использовать шрифт рабочего стола и реагировать на изменения шрифтовой схемы, выполните следующие действия.  
+### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a><span data-ttu-id="bcb42-110">Чтобы использовать шрифт рабочего стола и реагировать на изменения схемы шрифтов</span><span class="sxs-lookup"><span data-stu-id="bcb42-110">To use the desktop font and respond to font scheme changes</span></span>  
   
-1.  Создайте форму и добавьте в нее требуемые элементы управления.  Дополнительные сведения см. в разделах [How to: Create a Windows Forms Application from the Command Line](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) и [Элементы управления для использования в формах Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).  
+1.  <span data-ttu-id="bcb42-111">Создайте форму и добавить элементы управления, которые вы хотите его.</span><span class="sxs-lookup"><span data-stu-id="bcb42-111">Create your form, and add the controls you want to it.</span></span> <span data-ttu-id="bcb42-112">Дополнительные сведения см. в разделе [как: Создание приложения Windows Forms из командной строки](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) и [элементы управления для использования в формах Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="bcb42-112">For more information, see [How to: Create a Windows Forms Application from the Command Line](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) and [Controls to Use on Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).</span></span>  
   
-2.  Добавьте в код ссылку на пространство имен <xref:Microsoft.Win32>.  
+2.  <span data-ttu-id="bcb42-113">Добавьте ссылку на <xref:Microsoft.Win32> пространства имен в код.</span><span class="sxs-lookup"><span data-stu-id="bcb42-113">Add a reference to the <xref:Microsoft.Win32> namespace to your code.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
      [!code-vb[WinFormsAutoScaling#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
-3.  Добавьте следующий код в конструктор формы для подключения необходимых обработчиков событий и изменения шрифта по умолчанию для данной формы.  
+3.  <span data-ttu-id="bcb42-114">Добавьте следующий код в конструктор формы для подключения необходимых обработчиков событий и изменить шрифт по умолчанию для данной формы.</span><span class="sxs-lookup"><span data-stu-id="bcb42-114">Add the following code to the constructor of your form to hook up required event handlers, and to change the default font in use for the form.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
      [!code-vb[WinFormsAutoScaling#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
-4.  Реализуйте обработчик события <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>, который приводит к автоматическому масштабированию формы при изменении категории <xref:Microsoft.Win32.UserPreferenceCategory>.  
+4.  <span data-ttu-id="bcb42-115">Реализуйте обработчик для <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> событие, которое приводит к автоматическому масштабированию формы при <xref:Microsoft.Win32.UserPreferenceCategory.Window> категории изменений.</span><span class="sxs-lookup"><span data-stu-id="bcb42-115">Implement a handler for the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event that causes the form to scale automatically when the <xref:Microsoft.Win32.UserPreferenceCategory.Window> category changes.</span></span>  
   
      [!code-csharp[WinFormsAutoScaling#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
      [!code-vb[WinFormsAutoScaling#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
-5.  Наконец, реализуйте обработчик события <xref:System.Windows.Forms.Form.FormClosing>, который отсоединяет обработчик событий <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
+5.  <span data-ttu-id="bcb42-116">Наконец, Реализуйте обработчик <xref:System.Windows.Forms.Form.FormClosing> событие, отсоединяет <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="bcb42-116">Finally, implement a handler for the <xref:System.Windows.Forms.Form.FormClosing> event that detaches the <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> event handler.</span></span>  
   
 > [!IMPORTANT]
->  Если не добавить этот код, произойдет утечка памяти.  
+>  <span data-ttu-id="bcb42-117">Если не добавить этот код вызовет утечка памяти.</span><span class="sxs-lookup"><span data-stu-id="bcb42-117">Failure to include this code will cause your application to leak memory.</span></span>  
   
  [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
  [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Скомпилируйте и запустите код.  
+1.  <span data-ttu-id="bcb42-118">Скомпилируйте и запустите код.</span><span class="sxs-lookup"><span data-stu-id="bcb42-118">Compile and run the code.</span></span>  
   
-### Чтобы вручную изменить шрифтовую схему в Windows XP, выполните следующие действия.  
+### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a><span data-ttu-id="bcb42-119">Чтобы вручную изменить схему шрифта в Windows XP</span><span class="sxs-lookup"><span data-stu-id="bcb42-119">To manually change the font scheme in Windows XP</span></span>  
   
-1.  Во время работы приложения Windows Forms щелкните правой кнопкой мыши рабочий стол Windows и выберите **Свойства** в контекстном меню.  
+1.  <span data-ttu-id="bcb42-120">Во время работы приложения Windows Forms, щелкните правой кнопкой мыши рабочий стол Windows и выберите **свойства** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="bcb42-120">While your Windows Forms application is running, right-click the Windows desktop and choose **Properties** from the shortcut menu.</span></span>  
   
-2.  В диалоговом окне **Свойства: Экран** перейдите на вкладку **Вид**.  
+2.  <span data-ttu-id="bcb42-121">В **свойства отображения** диалоговое окно, нажмите кнопку **внешний вид** вкладки.</span><span class="sxs-lookup"><span data-stu-id="bcb42-121">In the **Display Properties** dialog box, click the **Appearance** tab.</span></span>  
   
-3.  Из раскрывающегося списка **Размер шрифта** выберите новый размер шрифта.  
+3.  <span data-ttu-id="bcb42-122">Из **размер шрифта** раскрывающемся списке выберите новый размер шрифта.</span><span class="sxs-lookup"><span data-stu-id="bcb42-122">From the **Font Size** drop-down list box, select a new font size.</span></span>  
   
-     Обратите внимание, что форма теперь реагирует на изменения схемы шрифтов рабочего стола во время выполнения.  Когда пользователь переключается между значениями **Обычный**, **Крупный шрифт** и **Огромный шрифт**, форма изменяет шрифт и корректно масштабируется.  
+     <span data-ttu-id="bcb42-123">Обратите внимание, что форма теперь реагирует для запуска время изменения схемы шрифтов рабочего стола.</span><span class="sxs-lookup"><span data-stu-id="bcb42-123">You will notice that the form now reacts to run time changes in the desktop font scheme.</span></span> <span data-ttu-id="bcb42-124">Когда пользователь изменяет между **обычный**, **крупный шрифт**, и **Огромный шрифт**, форма изменяет шрифт и корректно масштабируется.</span><span class="sxs-lookup"><span data-stu-id="bcb42-124">When the user changes between **Normal**, **Large Fonts**, and **Extra Large Fonts**, the form changes font and scales correctly.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="bcb42-125">Пример</span><span class="sxs-lookup"><span data-stu-id="bcb42-125">Example</span></span>  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- Конструктор в этом примере кода содержит вызов метода `InitializeComponent`, который определен при создании нового проекта Windows Forms в Visual Studio.  Удалите эту строку кода при построении приложения из командной строки.  
+ <span data-ttu-id="bcb42-126">Конструктор в этом примере код содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bcb42-126">The constructer in this code example contains a call to `InitializeComponent`, which is defined when you create a new Windows Forms project in Visual Studio.</span></span> <span data-ttu-id="bcb42-127">Удалите эту строку кода при построении приложения в командной строке.</span><span class="sxs-lookup"><span data-stu-id="bcb42-127">Remove this line of code if you are building your application on the command line.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>   
- [Automatic Scaling in Windows Forms](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="bcb42-128">См. также</span><span class="sxs-lookup"><span data-stu-id="bcb42-128">See Also</span></span>  
+ <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
+ [<span data-ttu-id="bcb42-129">Автоматическое масштабирование в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bcb42-129">Automatic Scaling in Windows Forms</span></span>](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)

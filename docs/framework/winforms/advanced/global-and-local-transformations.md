@@ -1,71 +1,75 @@
 ---
-title: "Глобальные и локальные преобразования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "матрицы, использование преобразований"
-  - "преобразования, общие"
-  - "преобразования, локальные"
+title: "Глобальные и локальные преобразования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Глобальные и локальные преобразования
-Глобальными преобразованиями называются преобразования, которые применяются ко всем элементам, нарисованным с помощью данного объекта <xref:System.Drawing.Graphics>.  Локальным преобразованием называется преобразование, применяемое к определенному рисуемому элементу.  
+# <a name="global-and-local-transformations"></a><span data-ttu-id="2c326-102">Глобальные и локальные преобразования</span><span class="sxs-lookup"><span data-stu-id="2c326-102">Global and Local Transformations</span></span>
+<span data-ttu-id="2c326-103">Глобальные преобразования является преобразование, применяемое ко всем элементам, нарисованная с заданной <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="2c326-103">A global transformation is a transformation that applies to every item drawn by a given <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="2c326-104">В отличие от этого локального преобразования является преобразование, применяемое к конкретному элементу для отрисовки.</span><span class="sxs-lookup"><span data-stu-id="2c326-104">In contrast, a local transformation is a transformation that applies to a specific item to be drawn.</span></span>  
   
-## Глобальные преобразования  
- Чтобы создать глобальное преобразование, нужно создать объект <xref:System.Drawing.Graphics> и нужным образом изменить значение его свойства <xref:System.Drawing.Graphics.Transform%2A>.  Значением свойства <xref:System.Drawing.Graphics.Transform%2A> является объект <xref:System.Drawing.Drawing2D.Matrix>, который может содержать любую последовательность аффинных преобразований.  Преобразование, заданное свойством <xref:System.Drawing.Graphics.Transform%2A>, называется объемным преобразование.  Класс <xref:System.Drawing.Graphics> содержит несколько методов, осуществляющих составные объемные преобразования: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A> и <xref:System.Drawing.Graphics.TranslateTransform%2A>.  В приведенном ниже примере дважды демонстрируется рисование эллипса: один раз перед заданием объемных преобразований и один раз после.  Преобразование заключается в масштабировании вдоль оси Y с масштабным коэффициентом 0,5, после которого выполняется сдвиг на 50 единиц по оси X, а затем выполняется поворот на 30 градусов.  
+## <a name="global-transformations"></a><span data-ttu-id="2c326-105">Глобальные преобразования</span><span class="sxs-lookup"><span data-stu-id="2c326-105">Global Transformations</span></span>  
+ <span data-ttu-id="2c326-106">Чтобы создать глобальное преобразование, построить <xref:System.Drawing.Graphics> объекта, а затем управлять его <xref:System.Drawing.Graphics.Transform%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="2c326-106">To create a global transformation, construct a <xref:System.Drawing.Graphics> object, and then manipulate its <xref:System.Drawing.Graphics.Transform%2A> property.</span></span> <span data-ttu-id="2c326-107"><xref:System.Drawing.Graphics.Transform%2A> Свойство <xref:System.Drawing.Drawing2D.Matrix> объекта, поэтому он может содержать любую последовательность аффинных преобразований.</span><span class="sxs-lookup"><span data-stu-id="2c326-107">The <xref:System.Drawing.Graphics.Transform%2A> property is a <xref:System.Drawing.Drawing2D.Matrix> object, so it can hold any sequence of affine transformations.</span></span> <span data-ttu-id="2c326-108">Преобразование, заданное <xref:System.Drawing.Graphics.Transform%2A> свойство называется мировое преобразование.</span><span class="sxs-lookup"><span data-stu-id="2c326-108">The transformation stored in the <xref:System.Drawing.Graphics.Transform%2A> property is called the world transformation.</span></span> <span data-ttu-id="2c326-109"><xref:System.Drawing.Graphics> Класс предоставляет несколько методов для построения составного мировое преобразование: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, и <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span><span class="sxs-lookup"><span data-stu-id="2c326-109">The <xref:System.Drawing.Graphics> class provides several methods for building up a composite world transformation: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, and <xref:System.Drawing.Graphics.TranslateTransform%2A>.</span></span> <span data-ttu-id="2c326-110">В следующем примере рисуется эллипс дважды: один раз, прежде чем создавать мировое преобразование и один раз после.</span><span class="sxs-lookup"><span data-stu-id="2c326-110">The following example draws an ellipse twice: once before creating a world transformation and once after.</span></span> <span data-ttu-id="2c326-111">Преобразование сначала масштабируется с коэффициентом 0,5 по оси y, то преобразует 50 единиц по оси x и поворот на 30 градусов.</span><span class="sxs-lookup"><span data-stu-id="2c326-111">The transformation first scales by a factor of 0.5 in the y direction, then translates 50 units in the x direction, and then rotates 30 degrees.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- На приведенном ниже рисунке изображены использовавшиеся при задании преобразования матрицы.  
+ <span data-ttu-id="2c326-112">На следующем рисунке изображены матрицы преобразования.</span><span class="sxs-lookup"><span data-stu-id="2c326-112">The following illustration shows the matrices involved in the transformation.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.png "AboutGdip05\_art14")  
+ <span data-ttu-id="2c326-113">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span><span class="sxs-lookup"><span data-stu-id="2c326-113">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")</span></span>  
   
 > [!NOTE]
->  В приведенном выше примере поворот эллипса выполняется относительно расположенного в верхнем левом углу клиентской области начала координат.  Результат применения такого поворота отличается от поворота эллипса относительно его собственного центра.  
+>  <span data-ttu-id="2c326-114">В приведенном выше примере поворот эллипса выполняется относительно начала координат, который находится в левом верхнем углу области клиента.</span><span class="sxs-lookup"><span data-stu-id="2c326-114">In the preceding example, the ellipse is rotated about the origin of the coordinate system, which is at the upper-left corner of the client area.</span></span> <span data-ttu-id="2c326-115">Это позволяет создать другой результат, чем поворот эллипса относительно его собственного центра.</span><span class="sxs-lookup"><span data-stu-id="2c326-115">This produces a different result than rotating the ellipse about its own center.</span></span>  
   
-## Локальные преобразования  
- Локальным преобразованием называется преобразование, применяемое к определенному рисуемому элементу.  Например, объект <xref:System.Drawing.Drawing2D.GraphicsPath> содержит метод <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>, позволяющий выполнять преобразования над точками, задающими контур.  В приведенном ниже примере демонстрируется рисование прямоугольника без преобразования и рисование контура с применением поворота.  \(Предполагается, что объемные преобразования отсутствуют.\)  
+## <a name="local-transformations"></a><span data-ttu-id="2c326-116">Локальные преобразования</span><span class="sxs-lookup"><span data-stu-id="2c326-116">Local Transformations</span></span>  
+ <span data-ttu-id="2c326-117">Локальное преобразование применяется к конкретному элементу для отрисовки.</span><span class="sxs-lookup"><span data-stu-id="2c326-117">A local transformation applies to a specific item to be drawn.</span></span> <span data-ttu-id="2c326-118">Например <xref:System.Drawing.Drawing2D.GraphicsPath> объект имеет <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> метод, который предоставляет возможность преобразовать точки данных этому пути.</span><span class="sxs-lookup"><span data-stu-id="2c326-118">For example, a <xref:System.Drawing.Drawing2D.GraphicsPath> object has a <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> method that allows you to transform the data points of that path.</span></span> <span data-ttu-id="2c326-119">В следующем примере рисуется прямоугольник без преобразований и путь, содержащий преобразование поворота.</span><span class="sxs-lookup"><span data-stu-id="2c326-119">The following example draws a rectangle with no transformation and a path with a rotation transformation.</span></span> <span data-ttu-id="2c326-120">(Предполагается, что объемные преобразования отсутствуют.)</span><span class="sxs-lookup"><span data-stu-id="2c326-120">(Assume that there is no world transformation.)</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- Сочетание объемного преобразования и локального преобразования позволяет получать различные результаты.  Например, объемное преобразование можно использовать для изменения системы координат, а локальные преобразования можно использовать для вращения и масштабирования объектов, рисуемых в новой системе координат.  
+ <span data-ttu-id="2c326-121">Можно объединять мировое преобразование локального преобразования позволяет получать различные результаты.</span><span class="sxs-lookup"><span data-stu-id="2c326-121">You can combine the world transformation with local transformations to achieve a variety of results.</span></span> <span data-ttu-id="2c326-122">Например можно использовать мировое преобразование для изменения системы координат и использовать локальные преобразования для вращения и масштабирования объектов, рисуемых в новой системе координат.</span><span class="sxs-lookup"><span data-stu-id="2c326-122">For example, you can use the world transformation to revise the coordinate system and use local transformations to rotate and scale objects drawn on the new coordinate system.</span></span>  
   
- Предположим, что нужно задать систему координат с началом, удаленным на 200 пикселей от левого края и на 150 пикселей от верхнего края клиентской области.  Кроме того, предположим, что в качестве единицы измерения в этой системе координат должен использоваться пиксель, ось X должна быть направлена вправо, а ось Y — вверх.  Ось Y системы координат, заданной по умолчанию, направлена вниз, поэтому нужно выполнить отражение относительно горизонтальной оси.  На приведенном ниже рисунке показана матрица, задающая такое отражение.  
+ <span data-ttu-id="2c326-123">Предположим, что нужно задать систему координат с его происхождения 200 пикселей от левого края клиентской области и 150 пикселей от верхнего края клиентской области.</span><span class="sxs-lookup"><span data-stu-id="2c326-123">Suppose you want a coordinate system that has its origin 200 pixels from the left edge of the client area and 150 pixels from the top of the client area.</span></span> <span data-ttu-id="2c326-124">Кроме того Предположим, что в единицу измерения должна использоваться точка, ось x вправо, а ось y, указывающая вверх.</span><span class="sxs-lookup"><span data-stu-id="2c326-124">Furthermore, assume that you want the unit of measure to be the pixel, with the x-axis pointing to the right and the y-axis pointing up.</span></span> <span data-ttu-id="2c326-125">Система координат по умолчанию имеет ось y направлена вниз, поэтому нужно выполнить отражение относительно горизонтальной оси.</span><span class="sxs-lookup"><span data-stu-id="2c326-125">The default coordinate system has the y-axis pointing down, so you need to perform a reflection across the horizontal axis.</span></span> <span data-ttu-id="2c326-126">На следующем рисунке показана матрица такое отражение.</span><span class="sxs-lookup"><span data-stu-id="2c326-126">The following illustration shows the matrix of such a reflection.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ <span data-ttu-id="2c326-127">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span><span class="sxs-lookup"><span data-stu-id="2c326-127">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")</span></span>  
   
- Затем предположим, что нужно выполнить сдвиг на 200 единиц вправо и на 150 единиц вниз.  
+ <span data-ttu-id="2c326-128">Затем Предположим, что нужно выполнить сдвиг на 200 единиц вправо и на 150 единиц вниз.</span><span class="sxs-lookup"><span data-stu-id="2c326-128">Next, assume you need to perform a translation 200 units to the right and 150 units down.</span></span>  
   
- В приведенном ниже примере демонстрируется введение системы координат, описанное заданием объемного преобразования для объекта <xref:System.Drawing.Graphics>.  
+ <span data-ttu-id="2c326-129">Следующий пример устанавливает системы координат, описанное заданием мировое преобразование объекта <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="2c326-129">The following example establishes the coordinate system just described by setting the world transformation of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- Приведенный ниже код \(который должен следовать сразу после кода из примера, приведенного выше\) создает контур, состоящий из одного прямоугольника, нижний левый угол которого расположен в начале новой системы координат.  Прямоугольник заливается один раз без применения локальных преобразований и один раз с применением локального преобразования.  Локальное преобразование заключается в масштабировании по горизонтали с коэффициентом 2, после которого применяется поворот на 30 градусов.  
+ <span data-ttu-id="2c326-130">Следующий код (он размещен в конце предыдущего примера) создает путь, состоящий из одного прямоугольника, его левого нижнего угла в начале координат новой системы координат.</span><span class="sxs-lookup"><span data-stu-id="2c326-130">The following code (placed at the end of the preceding example) creates a path that consists of a single rectangle with its lower-left corner at the origin of the new coordinate system.</span></span> <span data-ttu-id="2c326-131">Прямоугольник заливается один раз без применения локальных преобразований и один раз с локального преобразования.</span><span class="sxs-lookup"><span data-stu-id="2c326-131">The rectangle is filled once with no local transformation and once with a local transformation.</span></span> <span data-ttu-id="2c326-132">Локальное преобразование заключается горизонтального масштабирования с коэффициентом 2, после которого поворот на 30 градусов.</span><span class="sxs-lookup"><span data-stu-id="2c326-132">The local transformation consists of a horizontal scaling by a factor of 2 followed by a 30-degree rotation.</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- На приведенном ниже рисунке изображена полученная новая система координат и два прямоугольника.  
+ <span data-ttu-id="2c326-133">Ниже показан новый системы координат и двух прямоугольников.</span><span class="sxs-lookup"><span data-stu-id="2c326-133">The following illustration shows the new coordinate system and the two rectangles.</span></span>  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ <span data-ttu-id="2c326-134">![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span><span class="sxs-lookup"><span data-stu-id="2c326-134">![Transformations](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")</span></span>  
   
-## См. также  
- [Системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Использование преобразований в управляемом GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="2c326-135">См. также</span><span class="sxs-lookup"><span data-stu-id="2c326-135">See Also</span></span>  
+ [<span data-ttu-id="2c326-136">Системы координат и преобразования</span><span class="sxs-lookup"><span data-stu-id="2c326-136">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="2c326-137">Использование преобразований в управляемом GDI+</span><span class="sxs-lookup"><span data-stu-id="2c326-137">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

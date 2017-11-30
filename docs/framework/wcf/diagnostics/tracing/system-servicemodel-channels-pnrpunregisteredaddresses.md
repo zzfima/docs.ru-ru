@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.PnrpUnregisteredAddresses | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PnrpUnregisteredAddresses
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e726ab32-6923-4fdb-b0ce-bdf2a299ed6a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 674c105fd90aad217948ad76e8960cd1700999bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PnrpUnregisteredAddresses
-Распознаватель Pnrp отменил регистрацию адресов локального узла.  
+# <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a><span data-ttu-id="d357d-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span><span class="sxs-lookup"><span data-stu-id="d357d-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span></span>
+<span data-ttu-id="d357d-103">Распознаватель Pnrp отменил регистрацию адресов локального узла.</span><span class="sxs-lookup"><span data-stu-id="d357d-103">The Pnrp Resolver has unregistered the local node's addresses.</span></span>  
   
-## Описание  
- Эта трассировка возникает после успешной отмены регистрации адресов локального узла службой PNRP.  
+## <a name="description"></a><span data-ttu-id="d357d-104">Описание</span><span class="sxs-lookup"><span data-stu-id="d357d-104">Description</span></span>  
+ <span data-ttu-id="d357d-105">Эта трассировка возникает после успешной отмены регистрации адресов локального узла службой PNRP.</span><span class="sxs-lookup"><span data-stu-id="d357d-105">This trace occurs after the PNRP service successfully unregisters the local node's addressses.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d357d-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d357d-106">See Also</span></span>  
+ [<span data-ttu-id="d357d-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="d357d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d357d-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="d357d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d357d-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="d357d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

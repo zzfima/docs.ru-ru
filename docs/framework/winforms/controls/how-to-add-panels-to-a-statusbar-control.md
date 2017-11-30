@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Добавление панелей в элемент управления StatusBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "панели, строки состояния"
-  - "строки состояния, добавление панелей"
-  - "StatusBar - элемент управления [Windows Forms], добавление панелей"
+title: "Практическое руководство. Добавление панелей в элемент управления StatusBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- panels [Windows Forms], status bars
+- status bars [Windows Forms], adding panels
+- StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b44b98aab49208bc53bbd48bca88ee72e9a5270d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление панелей в элемент управления StatusBar
+# <a name="how-to-add-panels-to-a-statusbar-control"></a><span data-ttu-id="7d56d-102">Практическое руководство. Добавление панелей в элемент управления StatusBar</span><span class="sxs-lookup"><span data-stu-id="7d56d-102">How to: Add Panels to a StatusBar Control</span></span>
 > [!IMPORTANT]
->  Элементы управления <xref:System.Windows.Forms.StatusStrip> и <xref:System.Windows.Forms.ToolStripStatusLabel> заменяют элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> и расширяют их функциональные возможности; однако при необходимости элементы управления <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> можно сохранить для обратной совместимости и использования в будущем.  
+>  <span data-ttu-id="7d56d-103"><xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> заменить элементы управления и добавить функциональные возможности в <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления можно сохранить для обратной совместимости и использования в будущем, если вы Выберите этот параметр.</span><span class="sxs-lookup"><span data-stu-id="7d56d-103">The <xref:System.Windows.Forms.StatusStrip> and <xref:System.Windows.Forms.ToolStripStatusLabel> controls replace and add functionality to the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls; however, the <xref:System.Windows.Forms.StatusBar> and <xref:System.Windows.Forms.StatusBarPanel> controls are retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Программируемая область элемента управления [Элемент управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) состоит из экземпляров класса <xref:System.Windows.Forms.StatusBarPanel>.  Они добавляются путем добавления к классу <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ <span data-ttu-id="7d56d-104">Программируемая область [управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) управления состоит из экземпляров <xref:System.Windows.Forms.StatusBarPanel> класса.</span><span class="sxs-lookup"><span data-stu-id="7d56d-104">The programmable area within a [StatusBar Control](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) control consists of instances of the <xref:System.Windows.Forms.StatusBarPanel> class.</span></span> <span data-ttu-id="7d56d-105">Они добавляются путем добавления к <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> класса.</span><span class="sxs-lookup"><span data-stu-id="7d56d-105">These are added through additions to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> class.</span></span>  
   
-### Добавление панелей в строку состояния  
+### <a name="to-add-panels-to-a-status-bar"></a><span data-ttu-id="7d56d-106">Чтобы добавить панели в строке состояния</span><span class="sxs-lookup"><span data-stu-id="7d56d-106">To add panels to a status bar</span></span>  
   
-1.  С помощью процедуры создайте панели строки состояния путем добавления их в коллекцию <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  Определите параметры свойств отдельных панелей с помощью индексов, передаваемых через свойство <xref:System.Windows.Forms.StatusBar.Panels%2A>.  
+1.  <span data-ttu-id="7d56d-107">С помощью процедуры создания панели строки состояния, добавив их в <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span><span class="sxs-lookup"><span data-stu-id="7d56d-107">In a procedure, create status-bar panels by adding them to the <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.</span></span> <span data-ttu-id="7d56d-108">Задайте значения свойств для отдельных панелей с помощью индексов, передаваемых через <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="7d56d-108">Specify property settings for individual panels by using its index passed through the <xref:System.Windows.Forms.StatusBar.Panels%2A> property.</span></span>  
   
-     В следующем примере кода в качестве местоположения значка выбрана папка **Мои документы**.  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.StatusBar>.  
+     <span data-ttu-id="7d56d-109">В следующем примере кода путь задан для находится значок **Мои документы** папки.</span><span class="sxs-lookup"><span data-stu-id="7d56d-109">In the following code example, the path set for the location of the icon is the **My Documents** folder.</span></span> <span data-ttu-id="7d56d-110">Это расположение используется, так как предполагается, что большинство компьютеров под управлением операционной системы Windows будет содержать эта папка.</span><span class="sxs-lookup"><span data-stu-id="7d56d-110">This location is used because you can assume that most computers running the Windows operating system will include this folder.</span></span> <span data-ttu-id="7d56d-111">Эта папка также позволяет уровень доступа к системе минимальной безопасно запустить приложение.</span><span class="sxs-lookup"><span data-stu-id="7d56d-111">Choosing this location also allows users with minimal system access levels to safely run the application.</span></span> <span data-ttu-id="7d56d-112">В следующем примере требуется форма с <xref:System.Windows.Forms.StatusBar> управления уже добавлен.</span><span class="sxs-lookup"><span data-stu-id="7d56d-112">The following example requires a form with a <xref:System.Windows.Forms.StatusBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  Индекс коллекции <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> начинается с нуля, что, соответственно, должно быть учтено в коде.  
+    >  <span data-ttu-id="7d56d-113"><xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> Является коллекция отсчитываемый от нуля, поэтому код должен продолжаться соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="7d56d-113">The <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -60,7 +65,6 @@ caps.handback.revision: 15
        & "\Icon.ico")  
        StatusBar1.ShowPanels = True  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -89,7 +93,6 @@ caps.handback.revision: 15
        + @"\Icon.ico");  
        statusBar1.ShowPanels = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -127,11 +130,11 @@ caps.handback.revision: 15
        }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Collection Editor Dialog Box](http://msdn.microsoft.com/ru-ru/53fb3aad-bffa-4da5-ac89-8438e6fc803c)   
- [Практическое руководство. Определение размера панелей строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)   
- [Пошаговое руководство. Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)   
- [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)   
- [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="7d56d-114">См. также</span><span class="sxs-lookup"><span data-stu-id="7d56d-114">See Also</span></span>  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [<span data-ttu-id="7d56d-115">Диалоговое окно редактора коллекции</span><span class="sxs-lookup"><span data-stu-id="7d56d-115">Collection Editor Dialog Box</span></span>](http://msdn.microsoft.com/en-us/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [<span data-ttu-id="7d56d-116">Практическое руководство. Определение размера панелей строки состояния</span><span class="sxs-lookup"><span data-stu-id="7d56d-116">How to: Set the Size of Status-Bar Panels</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ [<span data-ttu-id="7d56d-117">Пошаговое руководство. Обновление строки состояния во время выполнения</span><span class="sxs-lookup"><span data-stu-id="7d56d-117">Walkthrough: Updating Status Bar Information at Run Time</span></span>](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [<span data-ttu-id="7d56d-118">Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7d56d-118">How to: Determine Which Panel in the Windows Forms StatusBar Control Was Clicked</span></span>](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [<span data-ttu-id="7d56d-119">Общие сведения об элементе управления StatusBar</span><span class="sxs-lookup"><span data-stu-id="7d56d-119">StatusBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

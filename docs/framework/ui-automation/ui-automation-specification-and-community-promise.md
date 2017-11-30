@@ -1,24 +1,27 @@
 ---
-title: "UI Automation Specification and Community Promise | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
-caps.latest.revision: 5
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 9ce3dc97e27ab76024c989e1b7208d388312c6b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Specification and Community Promise
-Модель автоматизации пользовательского интерфейса обеспечивает программный доступ к большинству элементам интерфейса пользователя, включая вспомогательные технологические продукты, такие как средства чтения с экрана, для предоставления конечным пользователям данных о пользовательском интерфейсе и управления им другими средствами, отличными от стандартного ввода данных.  
+# <a name="ui-automation-specification-and-community-promise"></a><span data-ttu-id="a3a01-102">Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества</span><span class="sxs-lookup"><span data-stu-id="a3a01-102">UI Automation Specification and Community Promise</span></span>
+<span data-ttu-id="a3a01-103">Модели автоматизации пользовательского интерфейса предоставляет программный доступ к большинству элементов пользовательского интерфейса (UI) на рабочем столе Включение продуктов поддержки специальных возможностей, таких как средства чтения с экрана для предоставления сведений о пользовательском Интерфейсе для конечных пользователей и управлять средствами, отличными от стандартного ввода пользовательского интерфейса .</span><span class="sxs-lookup"><span data-stu-id="a3a01-103">UI Automation provides programmatic access to most user interface (UI) elements on the desktop, enabling assistive technology products such as screen readers to provide information about the UI to end users and to manipulate the UI by means other than standard input.</span></span>  
   
-## См. также  
- [UI Automation Specification](http://go.microsoft.com/fwlink/?LinkId=108541)   
- [UI Automation Community Promise](http://go.microsoft.com/fwlink/?LinkId=108542)
+## <a name="see-also"></a><span data-ttu-id="a3a01-104">См. также</span><span class="sxs-lookup"><span data-stu-id="a3a01-104">See Also</span></span>  
+ [<span data-ttu-id="a3a01-105">Спецификация модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a3a01-105">UI Automation Specification</span></span>](http://go.microsoft.com/fwlink/?LinkId=108541)  
+ [<span data-ttu-id="a3a01-106">Обязательство сообщества модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="a3a01-106">UI Automation Community Promise</span></span>](http://go.microsoft.com/fwlink/?LinkId=108542)

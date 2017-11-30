@@ -1,61 +1,64 @@
 ---
-title: "Оптимизация производительности: ресурсы приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ресурсы приложений, производительность"
-  - "кисти, производительность"
-  - "ресурсы, производительность"
-  - "совместное использование кистей без копирования"
-  - "общий доступ к ресурсам"
-  - "статические ресурсы"
+title: "Оптимизация производительности: ресурсы приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application resources [WPF], performance
+- resources [WPF], performance
+- static resources [WPF]
+- sharing resources [WPF]
+- brushes [WPF], performance
+- sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8ac462f3b49788fd909f9d9f4fc785db74704ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оптимизация производительности: ресурсы приложения
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет совместно использовать ресурсы приложения так, чтобы можно поддерживать единообразный вид или поведение с помощью элементов одинакового типа.  Данный раздел содержит несколько рекомендаций в этой области, которые помогут улучшить производительность приложений.  
+# <a name="optimizing-performance-application-resources"></a><span data-ttu-id="39674-102">Оптимизация производительности: ресурсы приложения</span><span class="sxs-lookup"><span data-stu-id="39674-102">Optimizing Performance: Application Resources</span></span>
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="39674-103">позволяет совместно использовать ресурсы приложения, чтобы можно поддерживать согласованный внешний вид или поведение с помощью элементов одинакового типа.</span><span class="sxs-lookup"><span data-stu-id="39674-103"> allows you to share application resources so that you can support a consistent look or behavior across similar-typed elements.</span></span> <span data-ttu-id="39674-104">Этот раздел содержит несколько рекомендаций в этой области, которые могут помочь повысить производительность приложений.</span><span class="sxs-lookup"><span data-stu-id="39674-104">This topic provides a few recommendations in this area that can help you improve the performance of your applications.</span></span>  
   
- Дополнительные сведения о ресурсах содержатся в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="39674-105">Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="39674-105">For more information on resources, see [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
-## Общий доступ к ресурсам  
- Если приложение использует пользовательские элементы управления и определяет ресурсы в объекте <xref:System.Windows.ResourceDictionary> \(или на узле ресурсов XAML\), рекомендуется определить ресурсы на уровне объекта <xref:System.Windows.Application> или <xref:System.Windows.Window> либо определить их в теме по умолчанию для пользовательских элементов управления.  Определение ресурсов в объекте <xref:System.Windows.ResourceDictionary> пользовательского элемента управления влияет на производительность каждого экземпляра этого элемента управления.  Например, при интенсивных действиях с кистью, требующих высокой производительности, определенных как часть определения ресурсов для нескольких экземпляров пользовательского элемента управления, значительно увеличивается рабочее множество приложения.  
+## <a name="sharing-resources"></a><span data-ttu-id="39674-106">Совместное использование ресурсов</span><span class="sxs-lookup"><span data-stu-id="39674-106">Sharing resources</span></span>  
+ <span data-ttu-id="39674-107">Если приложение использует пользовательские элементы управления и определяет ресурсы в <xref:System.Windows.ResourceDictionary> (или узле ресурсов XAML), рекомендуется определить ресурсы на <xref:System.Windows.Application> или <xref:System.Windows.Window> объекта уровень или указать их в тему по умолчанию для пользовательские элементы управления.</span><span class="sxs-lookup"><span data-stu-id="39674-107">If your application uses custom controls and defines resources in a <xref:System.Windows.ResourceDictionary> (or XAML Resources node), it is recommended that you either define the resources at the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or define them in the default theme for the custom controls.</span></span> <span data-ttu-id="39674-108">Определение ресурсов в пользовательский элемент управления <xref:System.Windows.ResourceDictionary> оказывает влияние на производительность для всех экземпляров этого элемента управления.</span><span class="sxs-lookup"><span data-stu-id="39674-108">Defining resources in a custom control's <xref:System.Windows.ResourceDictionary> imposes a performance impact for every instance of that control.</span></span> <span data-ttu-id="39674-109">Например при наличии кисти ресурсоемких операций, определенных как часть определения ресурсов для пользовательского элемента управления и несколько экземпляров элемента управления рабочего набора приложения увеличит значительно.</span><span class="sxs-lookup"><span data-stu-id="39674-109">For example, if you have performance-intensive brush operations defined as part of the resource definition of a custom control and many instances of the custom control, the application's working set will increase significantly.</span></span>  
   
- Чтобы проиллюстрировать это, рассмотрим следующее.  Предположим, что с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разрабатывается карточная игра.  Для большинства карточных игр необходимо 52 карты с 52 различными вариантами лицевой стороны.  Было решено реализовать пользовательский карточный элемент управления и определить 52 кисти \(для лицевой стороны каждой карты\) в ресурсах этого пользовательского элемента управления.  В главном приложении первоначально создается 52 экземпляра этого пользовательского карточного элемента управления.  Каждый экземпляр этого элемента управления создает 52 экземпляра объекта <xref:System.Windows.Media.Brush>, что в итоге дает 52 \* 52 объектов <xref:System.Windows.Media.Brush> в приложении.  Перемещая кисти из ресурсов этого элемента управления на уровень объекта <xref:System.Windows.Application> или <xref:System.Windows.Window> либо определяя их для пользовательского элемента управления в теме по умолчанию, можно уменьшить рабочее множество приложения, так как теперь 52 экземпляра пользовательского элемента управления совместно используют 52 кисти.  
+ <span data-ttu-id="39674-110">Чтобы проиллюстрировать это, рассмотрим следующее.</span><span class="sxs-lookup"><span data-stu-id="39674-110">To illustrate this point, consider the following.</span></span> <span data-ttu-id="39674-111">Предположим, что вы разрабатываете карты игры с использованием [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39674-111">Let's say you are developing a card game using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="39674-112">Для большинства карточных играх необходимо 52 карты с 52 различными вариантами лицевой стороны.</span><span class="sxs-lookup"><span data-stu-id="39674-112">For most card games, you need 52 cards with 52 different faces.</span></span> <span data-ttu-id="39674-113">Чтобы реализовать пользовательский элемент управления карты и определить 52 кисти (каждый из которых представляет лицевой стороны) в ресурсах пользовательского элемента управления карты.</span><span class="sxs-lookup"><span data-stu-id="39674-113">You decide to implement a card custom control and you define 52 brushes (each representing a card face) in the resources of your card custom control.</span></span> <span data-ttu-id="39674-114">В главном приложении первоначально создается 52 экземпляра пользовательского элемента управления карты.</span><span class="sxs-lookup"><span data-stu-id="39674-114">In your main application, you initially create 52 instances of this card custom control.</span></span> <span data-ttu-id="39674-115">Каждый экземпляр элемента управления создает 52 экземпляра <xref:System.Windows.Media.Brush> объектов, которые в итоге 52 * 52 дает <xref:System.Windows.Media.Brush> объектов в приложении.</span><span class="sxs-lookup"><span data-stu-id="39674-115">Each instance of the card custom control generates 52 instances of <xref:System.Windows.Media.Brush> objects, which gives you a total of 52 * 52 <xref:System.Windows.Media.Brush> objects in your application.</span></span> <span data-ttu-id="39674-116">Перемещая кисти из ресурсов пользовательского элемента управления для <xref:System.Windows.Application> или <xref:System.Windows.Window> уровень объекта или определения их в тему по умолчанию для пользовательского элемента управления, можно уменьшить рабочее множество приложения, так как теперь общего 52 кисти 52 экземпляра элемента управления карты.</span><span class="sxs-lookup"><span data-stu-id="39674-116">By moving the brushes out of the card custom control resources to the <xref:System.Windows.Application> or <xref:System.Windows.Window> object level, or defining them in the default theme for the custom control, you reduce the working set of the application, since you are now sharing the 52 brushes among 52 instances of the card control.</span></span>  
   
-## Общее использование кисти без копирования  
- Если имеется несколько элементов, использующих один объект <xref:System.Windows.Media.Brush>, определите кисть как ресурс и получите ссылку на него, вместо определения встроенной в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] кисти.  Этот метод создаст один экземпляр и повторно использует его, тогда как определение встроенной в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] кисти создает новый экземпляр для каждого элемента.  
+## <a name="sharing-a-brush-without-copying"></a><span data-ttu-id="39674-117">Общее использование кисти без копирования</span><span class="sxs-lookup"><span data-stu-id="39674-117">Sharing a Brush without Copying</span></span>  
+ <span data-ttu-id="39674-118">Если у вас есть несколько элементов, используя те же <xref:System.Windows.Media.Brush> объекта, определите кисть как ресурс и ссылки, но не определение встроенной кисти в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="39674-118">If you have multiple elements using the same <xref:System.Windows.Media.Brush> object, define the brush as a resource and reference it, rather than defining the brush inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].</span></span> <span data-ttu-id="39674-119">Этот метод создаст один экземпляр и повторно использует его, тогда как определение встроенной кисти в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] создает новый экземпляр для каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="39674-119">This method will create one instance and reuse it, whereas defining brushes inline in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] creates a new instance for each element.</span></span>  
   
- Это иллюстрируется в следующем примере разметки:  
+ <span data-ttu-id="39674-120">В следующем примере разметки показано:</span><span class="sxs-lookup"><span data-stu-id="39674-120">The following markup sample illustrates this point:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## Использование статических ресурсов, если это возможно  
- Статический ресурс предоставляет значение для любого атрибута свойства XAML с помощью поиска ссылки на уже определенный ресурс.  Механизм поиска этого ресурса аналогичен поиску во время компиляции.  
+## <a name="use-static-resources-when-possible"></a><span data-ttu-id="39674-121">Использование статических ресурсов, если это возможно</span><span class="sxs-lookup"><span data-stu-id="39674-121">Use Static Resources when Possible</span></span>  
+ <span data-ttu-id="39674-122">Статический ресурс предоставляет значение для любого атрибута свойства XAML путем поиска ссылки на уже определенный ресурс.</span><span class="sxs-lookup"><span data-stu-id="39674-122">A static resource provides a value for any XAML property attribute by looking up a reference to an already defined resource.</span></span> <span data-ttu-id="39674-123">Поведение подстановки для этого ресурса является аналогом во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="39674-123">Lookup behavior for that resource is analogous to compile-time lookup.</span></span>  
   
- С другой стороны, во время начальной компиляции динамический ресурс создаст временное выражение и, таким образом, поиск ресурсов отложится до тех пор, пока запрашиваемое значение ресурса не потребуется для создания объекта.  Поиск такого ресурса аналогичен поиску во время выполнения, что оказывает влияние на производительность.  Используйте статические ресурсы в приложении по мере возможности, а динамические — только по необходимости.  
+ <span data-ttu-id="39674-124">Динамический ресурс, с другой стороны, создаст временное выражение во время начальной компиляции и таким образом, отложит для ресурсов, пока значение запрошенного ресурса фактически требуется для создания объекта.</span><span class="sxs-lookup"><span data-stu-id="39674-124">A dynamic resource, on the other hand, will create a temporary expression during the initial compilation and thus defer lookup for resources until the requested resource value is actually required in order to construct an object.</span></span> <span data-ttu-id="39674-125">Поведение подстановки для этого ресурса является аналогом подстановки во время выполнения, который оказывает влияние на производительность.</span><span class="sxs-lookup"><span data-stu-id="39674-125">Lookup behavior for that resource is analogous to run-time lookup, which imposes a performance impact.</span></span> <span data-ttu-id="39674-126">Использование статических ресурсов, когда это возможно в приложении, с помощью динамического ресурсы только при необходимости.</span><span class="sxs-lookup"><span data-stu-id="39674-126">Use static resources whenever possible in your application, using dynamic resources only when necessary.</span></span>  
   
- В следующем примере разметки показано использование обоих типов ресурсов:  
+ <span data-ttu-id="39674-127">В следующем примере разметки показано использование обоих типов ресурсов:</span><span class="sxs-lookup"><span data-stu-id="39674-127">The following markup sample shows the use of both types of resources:</span></span>  
   
- [!code-xml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## См. также  
- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="39674-128">См. также</span><span class="sxs-lookup"><span data-stu-id="39674-128">See Also</span></span>  
+ [<span data-ttu-id="39674-129">Улучшение производительности приложений WPF</span><span class="sxs-lookup"><span data-stu-id="39674-129">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="39674-130">Планирование производительности приложения</span><span class="sxs-lookup"><span data-stu-id="39674-130">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="39674-131">Использование преимуществ оборудования</span><span class="sxs-lookup"><span data-stu-id="39674-131">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="39674-132">Разметка и разработка</span><span class="sxs-lookup"><span data-stu-id="39674-132">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="39674-133">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="39674-133">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="39674-134">Поведение объекта</span><span class="sxs-lookup"><span data-stu-id="39674-134">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="39674-135">Text</span><span class="sxs-lookup"><span data-stu-id="39674-135">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="39674-136">Привязка данных</span><span class="sxs-lookup"><span data-stu-id="39674-136">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="39674-137">Дополнительные рекомендации по повышению производительности</span><span class="sxs-lookup"><span data-stu-id="39674-137">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

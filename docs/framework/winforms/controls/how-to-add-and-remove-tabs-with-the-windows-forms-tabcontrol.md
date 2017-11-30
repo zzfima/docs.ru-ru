@@ -1,48 +1,51 @@
 ---
-title: "Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "страницы вкладок"
-  - "TabControl - элемент управления [Windows Forms], добавление и удаление вкладок"
-  - "TabPage - элемент управления"
-  - "вкладки, добавление на страницу"
-  - "вкладки, удаления из страниц"
+title: "Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tabs [Windows Forms], removing from pages
+- TabPage control
+- TabControl control [Windows Forms], adding and removing tabs
+- tabs [Windows Forms], adding to pages
+- tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7df8b785b2c05acbbec9c17e12e462d755d0cd3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms
-По умолчанию элемент управления <xref:System.Windows.Forms.TabControl> содержит два элемента управления <xref:System.Windows.Forms.TabPage>.  Доступ к этим вкладкам возможен посредством свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="b8336-102">Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b8336-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="b8336-103">По умолчанию <xref:System.Windows.Forms.TabControl> управления содержит два <xref:System.Windows.Forms.TabPage> элементов управления.</span><span class="sxs-lookup"><span data-stu-id="b8336-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="b8336-104">Получить доступ к этим вкладкам через <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b8336-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### Добавление вкладки программными средствами  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="b8336-105">Чтобы добавить вкладку программными средствами</span><span class="sxs-lookup"><span data-stu-id="b8336-105">To add a tab programmatically</span></span>  
   
--   Используйте метод <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+-   <span data-ttu-id="b8336-106">Используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b8336-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
     myTabPage.Text = "TabPage" & (TabControl1.TabPages.Count + 1)  
     TabControl1.TabPages.Add(myTabPage)  
-  
     ```  
   
     ```csharp  
     string title = "TabPage " + (tabControl1.TabCount + 1).ToString();  
     TabPage myTabPage = new TabPage(title);  
     tabControl1.TabPages.Add(myTabPage);  
-  
     ```  
   
     ```cpp  
@@ -52,20 +55,19 @@ caps.handback.revision: 16
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### Удаление вкладки программными средствами  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="b8336-107">Чтобы удалить вкладку программными средствами</span><span class="sxs-lookup"><span data-stu-id="b8336-107">To remove a tab programmatically</span></span>  
   
--   Для удаления выбранных вкладок используйте метод <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+-   <span data-ttu-id="b8336-108">Для удаления выбранных вкладок используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b8336-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     \-или\-  
+     <span data-ttu-id="b8336-109">-или-</span><span class="sxs-lookup"><span data-stu-id="b8336-109">-or-</span></span>  
   
--   Для удаления всех вкладок используйте метод <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> свойства <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
+-   <span data-ttu-id="b8336-110">Чтобы удалить все вкладки, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="b8336-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
     TabControl1.TabPages.Remove(TabControl1.SelectedTab)  
     ' Removes all the tabs:  
     TabControl1.TabPages.Clear()  
-  
     ```  
   
     ```csharp  
@@ -73,7 +75,6 @@ caps.handback.revision: 16
     tabControl1.TabPages.Remove(tabControl1.SelectedTab);  
     // Removes all the tabs:  
     tabControl1.TabPages.Clear();  
-  
     ```  
   
     ```cpp  
@@ -83,8 +84,8 @@ caps.handback.revision: 16
     tabControl1->TabPages->Clear();  
     ```  
   
-## См. также  
- [Общие сведения об элементе управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)   
- [Практическое руководство. Добавление элемента управления на вкладку](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)   
- [Практическое руководство. Блокировка доступа ко вкладкам](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)   
- [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="b8336-111">См. также</span><span class="sxs-lookup"><span data-stu-id="b8336-111">See Also</span></span>  
+ [<span data-ttu-id="b8336-112">Общие сведения об элементе управления TabControl</span><span class="sxs-lookup"><span data-stu-id="b8336-112">TabControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="b8336-113">Практическое руководство. Добавление элемента управления на вкладку</span><span class="sxs-lookup"><span data-stu-id="b8336-113">How to: Add a Control to a Tab Page</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [<span data-ttu-id="b8336-114">Практическое руководство. Блокировка доступа ко вкладкам</span><span class="sxs-lookup"><span data-stu-id="b8336-114">How to: Disable Tab Pages</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [<span data-ttu-id="b8336-115">Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b8336-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

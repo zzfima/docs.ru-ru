@@ -1,25 +1,31 @@
 ---
-title: "Параметры DataAdapter | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Параметры DataAdapter"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3e2670132bc6af1c914efa17cfbb98fd6577bd1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Параметры DataAdapter
-Класс <xref:System.Data.Common.DbDataAdapter> имеет четыре свойства, которые служат для получения данных из источника данных и обновления данных в нем: свойство <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> возвращает данные из источника данных, а свойства <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> и <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> используются для управления изменениями в источнике данных.  Свойство `SelectCommand` должно быть установлено до вызова метода `Fill` объекта `DataAdapter`.  Свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand` должны быть установлены до вызова метода `Update` объекта `DataAdapter` в зависимости от того, какие изменения были сделаны в данных в <xref:System.Data.DataTable>.  Например, если добавлены строки, свойство `InsertCommand` должно быть установлено перед вызовом метода `Update`.  Если метод `Update` обрабатывает вставленную, обновленную или удаленную строку, `DataAdapter` использует соответствующее свойство `Command` для обработки действия.  Текущие данные об измененной строке передаются в объект `Command` через коллекцию `Parameters`.  
+# <a name="dataadapter-parameters"></a><span data-ttu-id="8f2f7-102">Параметры DataAdapter</span><span class="sxs-lookup"><span data-stu-id="8f2f7-102">DataAdapter Parameters</span></span>
+<span data-ttu-id="8f2f7-103">Класс <xref:System.Data.Common.DbDataAdapter> имеет четыре свойства, которые служат для получения данных из источника данных и обновления данных в нем: свойство <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> возвращает данные из источника данных, а свойства <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> и <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> используются для управления изменениями в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-103">The <xref:System.Data.Common.DbDataAdapter> has four properties that are used to retrieve data from and update data to the data source: the <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> property returns data from the data source; and the <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, and <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> properties are used to manage changes at the data source.</span></span> <span data-ttu-id="8f2f7-104">Свойство `SelectCommand` должно быть установлено до вызова метода `Fill` объекта `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-104">The `SelectCommand` property must be set before you call the `Fill` method of the `DataAdapter`.</span></span> <span data-ttu-id="8f2f7-105">Свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand` должны быть установлены до вызова метода `Update` объекта `DataAdapter` в зависимости от того, какие изменения были сделаны в данных в <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-105">The `InsertCommand`, `UpdateCommand`, or `DeleteCommand` properties must be set before the `Update` method of the `DataAdapter` is called, depending on what changes were made to the data in the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="8f2f7-106">Например, если добавлены строки, свойство `InsertCommand` должно быть установлено перед вызовом метода `Update`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-106">For example, if rows have been added, the `InsertCommand` must be set before you call `Update`.</span></span> <span data-ttu-id="8f2f7-107">Если метод `Update` обрабатывает вставленную, обновленную или удаленную строку, `DataAdapter` использует соответствующее свойство `Command` для обработки действия.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-107">When `Update` is processing an inserted, updated, or deleted row, the `DataAdapter` uses the respective `Command` property to process the action.</span></span> <span data-ttu-id="8f2f7-108">Текущие данные об измененной строке передаются в объект `Command` через коллекцию `Parameters`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-108">Current information about the modified row is passed to the `Command` object through the `Parameters` collection.</span></span>  
   
- При обновлении строки в источнике данных вызывается инструкция UPDATE, которая использует уникальный идентификатор для идентификации строки обновляемой таблицы.  Уникальным идентификатором обычно является значение поля первичного ключа.  Инструкция UPDATE использует параметры, содержащие и уникальный идентификатор, и столбцы и обновляемые значения, как показано в следующей инструкции Transact\-SQL.  
+ <span data-ttu-id="8f2f7-109">При обновлении строки в источнике данных вызывается инструкция UPDATE, которая использует уникальный идентификатор для идентификации строки обновляемой таблицы.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-109">When you update a row at the data source, you call the UPDATE statement, which uses a unique identifier to identify the row in the table be updated.</span></span> <span data-ttu-id="8f2f7-110">Уникальным идентификатором обычно является значение поля первичного ключа.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-110">The unique identifier is typically the value of a primary key field.</span></span> <span data-ttu-id="8f2f7-111">Инструкция UPDATE использует параметры, содержащие и уникальный идентификатор, и столбцы и обновляемые значения, как показано в следующей инструкции Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-111">The UPDATE statement uses parameters that contain both the unique identifier and the columns and values to be updated, as shown in the following Transact-SQL statement.</span></span>  
   
 ```  
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -27,9 +33,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  Синтаксис местозаполнителей параметров зависит от источника данных.  В этом примере показаны местозаполнители для источника данных SQL Server.  Для параметров <xref:System.Data.OleDb> и <xref:System.Data.Odbc> в качестве местозаполнителей используйте вопросительный знак \(?\).  
+>  <span data-ttu-id="8f2f7-112">Синтаксис местозаполнителей параметров зависит от источника данных.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-112">The syntax for parameter placeholders depends on the data source.</span></span> <span data-ttu-id="8f2f7-113">В этом примере показаны местозаполнители для источника данных SQL Server.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-113">This example shows placeholders for a SQL Server data source.</span></span> <span data-ttu-id="8f2f7-114">Для параметров <xref:System.Data.OleDb> и <xref:System.Data.Odbc> в качестве местозаполнителей используйте вопросительный знак (?).</span><span class="sxs-lookup"><span data-stu-id="8f2f7-114">Use question mark (?) placeholders for <xref:System.Data.OleDb> and <xref:System.Data.Odbc> parameters.</span></span>  
   
- В этом примере на [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] поле `CompanyName` обновляется значением параметра `@CompanyName` для строки, в которой `CustomerID` равен значению параметра `@CustomerID```.  Параметры получают данные из измененной строки, используя свойство <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> объекта <xref:System.Data.SqlClient.SqlParameter>.  Далее представлены параметры для предыдущего образца инструкции UPDATE.  В коде предполагается, что переменная `adapter` представляет действительный объект <xref:System.Data.SqlClient.SqlDataAdapter>.  
+ <span data-ttu-id="8f2f7-115">В этом [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] примере `CompanyName` обновляется значение `@CompanyName` параметр для строки, где `CustomerID` равен значению `@CustomerID` параметра.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-115">In this [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] example, the `CompanyName` field is updated with the value of the `@CompanyName` parameter for the row where `CustomerID` equals the value of the `@CustomerID` parameter.</span></span> <span data-ttu-id="8f2f7-116">Параметры получают данные из измененной строки, используя <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> свойство <xref:System.Data.SqlClient.SqlParameter> объекта.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-116">The parameters retrieve information from the modified row using the <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> property of the <xref:System.Data.SqlClient.SqlParameter> object.</span></span> <span data-ttu-id="8f2f7-117">Далее представлены параметры для предыдущего образца инструкции UPDATE.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-117">The following are the parameters for the previous sample UPDATE statement.</span></span> <span data-ttu-id="8f2f7-118">В коде предполагается, что переменная `adapter` представляет действительный объект <xref:System.Data.SqlClient.SqlDataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-118">The code assumes that the variable `adapter` represents a valid <xref:System.Data.SqlClient.SqlDataAdapter> object.</span></span>  
   
 ```  
 adapter.Parameters.Add( _  
@@ -40,33 +46,33 @@ Dim parameter As SqlParameter = _
 parameter.SourceVersion = DataRowVersion.Original  
 ```  
   
- Метод `Add` коллекции `Parameters` принимает имя параметра, тип данных, размер \(если он применим к типу\) и имя <xref:System.Data.Common.DbParameter.SourceColumn%2A> из `DataTable`.  Обратите внимание, что <xref:System.Data.Common.DbParameter.SourceVersion%2A> параметра `@CustomerID` установлена в `Original`.  Это гарантирует, что существующая строка в источнике данных обновляется, если значение идентифицирующих столбцов изменилось в измененном <xref:System.Data.DataRow>.  В этом случае значение строки `Original` будет соответствовать текущему значению в источнике данных и значение строки `Current` будет содержать обновленное значение.  `SourceVersion` для параметра `@CompanyName` не установлена и использует значение по умолчанию строки `Current`.  
+ <span data-ttu-id="8f2f7-119">Метод `Add` коллекции `Parameters` принимает имя параметра, тип данных, размер (если он применим к типу) и имя <xref:System.Data.Common.DbParameter.SourceColumn%2A> из `DataTable`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-119">The `Add` method of the `Parameters` collection takes the name of the parameter, the data type, the size (if applicable to the type), and the name of the <xref:System.Data.Common.DbParameter.SourceColumn%2A> from the `DataTable`.</span></span> <span data-ttu-id="8f2f7-120">Обратите внимание, что <xref:System.Data.Common.DbParameter.SourceVersion%2A> параметра `@CustomerID` установлена в `Original`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-120">Notice that the <xref:System.Data.Common.DbParameter.SourceVersion%2A> of the `@CustomerID` parameter is set to `Original`.</span></span> <span data-ttu-id="8f2f7-121">Это гарантирует, что существующая строка в источнике данных обновляется, если значение идентифицирующих столбцов изменилось в измененном <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-121">This guarantees that the existing row in the data source is updated if the value of the identifying column or columns has been changed in the modified <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="8f2f7-122">В этом случае значение строки `Original` будет соответствовать текущему значению в источнике данных и значение строки `Current` будет содержать обновленное значение.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-122">In that case, the `Original` row value would match the current value at the data source, and the `Current` row value would contain the updated value.</span></span> <span data-ttu-id="8f2f7-123">`SourceVersion` для параметра `@CompanyName` не установлена и использует значение по умолчанию строки `Current`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-123">The `SourceVersion` for the `@CompanyName` parameter is not set and uses the default, `Current` row value.</span></span>  
   
 > [!NOTE]
->  Как для операций `Fill` объекта `DataAdapter`, так и для методов `Get` объекта `DataReader` тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] выводится из типа, возвращаемого поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  Выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и методы доступа для типов данных Microsoft SQL Server, OLE DB и ODBC описываются в разделе [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  <span data-ttu-id="8f2f7-124">Как для операций `Fill` объекта `DataAdapter`, так и для методов `Get` объекта `DataReader` тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] выводится из типа, возвращаемого поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8f2f7-124">For both the `Fill` operations of the `DataAdapter` and the `Get` methods of the `DataReader`, the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type is inferred from the type returned from the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] data provider.</span></span> <span data-ttu-id="8f2f7-125">Выводимый [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] типы и методы доступа для типов данных Microsoft SQL Server, OLE DB и ODBC, описаны в [сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).</span><span class="sxs-lookup"><span data-stu-id="8f2f7-125">The inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types and accessor methods for Microsoft SQL Server, OLE DB, and ODBC data types are described in [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).</span></span>  
   
-## Parameter.SourceColumn, Parameter.SourceVersion  
- `SourceColumn` и `SourceVersion` могут быть посланы как аргументы в конструктор `Parameter` или установлены как свойства существующих `Parameter`.  `SourceColumn` является именем <xref:System.Data.DataColumn> из <xref:System.Data.DataRow>, где значение `Parameter` будет получено.  `SourceVersion` задает версию `DataRow`, которую `DataAdapter` использует для получения значения.  
+## <a name="parametersourcecolumn-parametersourceversion"></a><span data-ttu-id="8f2f7-126">Parameter.SourceColumn, Parameter.SourceVersion</span><span class="sxs-lookup"><span data-stu-id="8f2f7-126">Parameter.SourceColumn, Parameter.SourceVersion</span></span>  
+ <span data-ttu-id="8f2f7-127">`SourceColumn` и `SourceVersion` могут быть посланы как аргументы в конструктор `Parameter` или установлены как свойства существующих `Parameter`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-127">The `SourceColumn` and `SourceVersion` may be passed as arguments to the `Parameter` constructor, or set as properties of an existing `Parameter`.</span></span> <span data-ttu-id="8f2f7-128">`SourceColumn` является именем <xref:System.Data.DataColumn> из <xref:System.Data.DataRow>, где значение `Parameter` будет получено.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-128">The `SourceColumn` is the name of the <xref:System.Data.DataColumn> from the <xref:System.Data.DataRow> where the value of the `Parameter` will be retrieved.</span></span> <span data-ttu-id="8f2f7-129">`SourceVersion` задает версию `DataRow`, которую `DataAdapter` использует для получения значения.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-129">The `SourceVersion` specifies the `DataRow` version that the `DataAdapter` uses to retrieve the value.</span></span>  
   
- В следующей таблице показаны значения перечисления <xref:System.Data.DataRowVersion>, доступные для использования с `SourceVersion`.  
+ <span data-ttu-id="8f2f7-130">В следующей таблице показаны значения перечисления <xref:System.Data.DataRowVersion>, доступные для использования с `SourceVersion`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-130">The following table shows the <xref:System.Data.DataRowVersion> enumeration values available for use with `SourceVersion`.</span></span>  
   
-|Перечисление DataRowVersion|Описание|  
-|---------------------------------|--------------|  
-|`Current`|Параметр использует текущее значение столбца.  Это значение по умолчанию.|  
-|`Default`|Параметр использует `DefaultValue` столбца.|  
-|`Original`|Параметр использует исходное значение столбца.|  
-|`Proposed`|Параметр использует предложенное значение.|  
+|<span data-ttu-id="8f2f7-131">Перечисление DataRowVersion</span><span class="sxs-lookup"><span data-stu-id="8f2f7-131">DataRowVersion Enumeration</span></span>|<span data-ttu-id="8f2f7-132">Описание</span><span class="sxs-lookup"><span data-stu-id="8f2f7-132">Description</span></span>|  
+|--------------------------------|-----------------|  
+|`Current`|<span data-ttu-id="8f2f7-133">Параметр использует текущее значение столбца.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-133">The parameter uses the current value of the column.</span></span> <span data-ttu-id="8f2f7-134">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-134">This is the default.</span></span>|  
+|`Default`|<span data-ttu-id="8f2f7-135">Параметр использует `DefaultValue` столбца.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-135">The parameter uses the `DefaultValue` of the column.</span></span>|  
+|`Original`|<span data-ttu-id="8f2f7-136">Параметр использует исходное значение столбца.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-136">The parameter uses the original value of the column.</span></span>|  
+|`Proposed`|<span data-ttu-id="8f2f7-137">Параметр использует предложенное значение.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-137">The parameter uses a proposed value.</span></span>|  
   
- В примере кода для `SqlClient` в следующем разделе определяется параметр для <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, в котором столбец `CustomerID` используется как `SourceColumn` для двух параметров: `@CustomerID` \(`SET CustomerID = @CustomerID`\) и `@OldCustomerID` \(`WHERE CustomerID = @OldCustomerID`\).  Параметр `@CustomerID` используется для обновления столбца **CustomerID** текущим значением в `DataRow`.  В результате используется `CustomerID` `SourceColumn` с `SourceVersion` для `Current`.  Параметр *@OldCustomerID* используется для идентификации текущей строки в источнике данных.  Так как в версии `Original` строки найдено значение, совпадающее со значением столбца, используется тот же `SourceColumn` \(`CustomerID`\) с `SourceVersion` для `Original`.  
+ <span data-ttu-id="8f2f7-138">В примере кода для `SqlClient` в следующем разделе определяется параметр для <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, в котором столбец `CustomerID` используется как `SourceColumn` для двух параметров: `@CustomerID` (`SET CustomerID = @CustomerID`) и `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`).</span><span class="sxs-lookup"><span data-stu-id="8f2f7-138">The `SqlClient` code example in the next section defines a parameter for an <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> in which the `CustomerID` column is used as a `SourceColumn` for two parameters: `@CustomerID` (`SET CustomerID = @CustomerID`), and `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`).</span></span> <span data-ttu-id="8f2f7-139">`@CustomerID` Параметр используется для обновления **CustomerID** текущее значение в столбце `DataRow`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-139">The `@CustomerID` parameter is used to update the **CustomerID** column to the current value in the `DataRow`.</span></span> <span data-ttu-id="8f2f7-140">В результате `CustomerID` `SourceColumn` с `SourceVersion` из `Current` используется.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-140">As a result, the `CustomerID` `SourceColumn` with a `SourceVersion` of `Current` is used.</span></span> <span data-ttu-id="8f2f7-141">*@OldCustomerID*  Параметр используется для идентификации текущей строки в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-141">The *@OldCustomerID* parameter is used to identify the current row in the data source.</span></span> <span data-ttu-id="8f2f7-142">Так как в версии `Original` строки найдено значение, совпадающее со значением столбца, используется тот же `SourceColumn` (`CustomerID`) с `SourceVersion` для `Original`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-142">Because the matching column value is found in the `Original` version of the row, the same `SourceColumn` (`CustomerID`) with a `SourceVersion` of `Original` is used.</span></span>  
   
-## Работа с параметрами SqlClient  
- Следующий пример демонстрирует, как создать <xref:System.Data.SqlClient.SqlDataAdapter> и установить <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> в <xref:System.Data.MissingSchemaAction>, чтобы получить из базы данных дополнительные сведения о схеме.  Устанавливаются свойства <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> и <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>, и соответствующие им объекты <xref:System.Data.SqlClient.SqlParameter> добавляются в коллекцию <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>.  Метод возвращает объект `SqlDataAdapter`.  
+## <a name="working-with-sqlclient-parameters"></a><span data-ttu-id="8f2f7-143">Работа с параметрами SqlClient</span><span class="sxs-lookup"><span data-stu-id="8f2f7-143">Working with SqlClient Parameters</span></span>  
+ <span data-ttu-id="8f2f7-144">Следующий пример демонстрирует, как создать <xref:System.Data.SqlClient.SqlDataAdapter> и установить <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> в <xref:System.Data.MissingSchemaAction.AddWithKey>, чтобы получить из базы данных дополнительные сведения о схеме.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-144">The following example demonstrates how to create a <xref:System.Data.SqlClient.SqlDataAdapter> and set the <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> to <xref:System.Data.MissingSchemaAction.AddWithKey> in order to retrieve additional schema information from the database.</span></span> <span data-ttu-id="8f2f7-145">Устанавливаются свойства <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> и <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>, и соответствующие им объекты <xref:System.Data.SqlClient.SqlParameter> добавляются в коллекцию <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-145">The <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, and <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> properties set and their corresponding <xref:System.Data.SqlClient.SqlParameter> objects added to the <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> collection.</span></span> <span data-ttu-id="8f2f7-146">Метод возвращает объект `SqlDataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-146">The method returns a `SqlDataAdapter` object.</span></span>  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
-## Местозаполнители параметров OleDb  
- Для объектов <xref:System.Data.OleDb.OleDbDataAdapter> и <xref:System.Data.Odbc.OdbcDataAdapter> для идентификации параметров необходимо использовать в качестве местозаполнителей вопросительные знаки \(?\).  
+## <a name="oledb-parameter-placeholders"></a><span data-ttu-id="8f2f7-147">Местозаполнители параметров OleDb</span><span class="sxs-lookup"><span data-stu-id="8f2f7-147">OleDb Parameter Placeholders</span></span>  
+ <span data-ttu-id="8f2f7-148">Для объектов <xref:System.Data.OleDb.OleDbDataAdapter> и <xref:System.Data.Odbc.OdbcDataAdapter> для идентификации параметров необходимо использовать в качестве местозаполнителей вопросительные знаки (?).</span><span class="sxs-lookup"><span data-stu-id="8f2f7-148">For the <xref:System.Data.OleDb.OleDbDataAdapter> and <xref:System.Data.Odbc.OdbcDataAdapter> objects, you must use question mark (?) placeholders to identify the parameters.</span></span>  
   
 ```vb  
 Dim selectSQL As String = _  
@@ -93,11 +99,11 @@ string updateSQL =
 string deleteSQL = "DELETE FROM Customers WHERE CustomerID = ?";  
 ```  
   
- Инструкции параметризованных запросов определяют, какие входные и выходные параметры должны создаваться.  Для создания параметра используйте метод `Parameters.Add` или конструктор `Parameter` для задания имени столбца, типа и размера данных.  Для внутренних типов данных, таких как `Integer`, нет необходимости включать размер, либо можно указать размер по умолчанию.  
+ <span data-ttu-id="8f2f7-149">Инструкции параметризованных запросов определяют, какие входные и выходные параметры должны создаваться.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-149">The parameterized query statements define which input and output parameters must be created.</span></span> <span data-ttu-id="8f2f7-150">Для создания параметра используйте метод `Parameters.Add` или конструктор `Parameter` для задания имени столбца, типа и размера данных.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-150">To create a parameter, use the `Parameters.Add` method or the `Parameter` constructor to specify the column name, data type, and size.</span></span> <span data-ttu-id="8f2f7-151">Для внутренних типов данных, таких как `Integer`, нет необходимости включать размер, либо можно указать размер по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-151">For intrinsic data types, such as `Integer`, you do not have to include the size, or you can specify the default size.</span></span>  
   
- В следующем примере кода создаются параметры для инструкции SQL, а затем заполняется `DataSet`.  
+ <span data-ttu-id="8f2f7-152">В следующем примере кода создаются параметры для инструкции SQL, а затем заполняется `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-152">The following code example creates the parameters for a SQL statement and then fills a `DataSet`.</span></span>  
   
-## Пример OleDb  
+## <a name="oledb-example"></a><span data-ttu-id="8f2f7-153">Пример OleDb</span><span class="sxs-lookup"><span data-stu-id="8f2f7-153">OleDb Example</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OleDbConnection object.  
@@ -114,7 +120,6 @@ selectCMD.Parameters.Add( _
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -134,7 +139,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");  
 ```  
   
-## Параметры Odbc  
+## <a name="odbc-parameters"></a><span data-ttu-id="8f2f7-154">Параметры Odbc</span><span class="sxs-lookup"><span data-stu-id="8f2f7-154">Odbc Parameters</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid OdbcConnection object.  
@@ -149,7 +154,6 @@ selectCMD.Parameters.Add("@City", OdbcType.VarChar, 15).Value = "London"
   
 Dim customers As DataSet = New DataSet  
 adapter.Fill(customers, "Customers")  
-  
 ```  
   
 ```csharp  
@@ -168,12 +172,12 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Если для параметра не указано имя, ему присваивается имя по умолчанию Parameter*N* с увеличивающимся целочисленным суффиксом N, начиная с имени «Parameter1».  Рекомендуется избегать практики именования в виде Parameter*N* при указании имени параметра, т. к. такое имя может конфликтовать с именем существующего параметра по умолчанию в `ParameterCollection`.  Если указанное имя уже существует, вызывается исключение.  
+>  <span data-ttu-id="8f2f7-155">Если для параметра не указано имя параметра, параметр присваивается имя по умолчанию параметра*N* *,* начиная с имени «Parameter1».</span><span class="sxs-lookup"><span data-stu-id="8f2f7-155">If a parameter name is not supplied for a parameter, the parameter is given an incremental default name of Parameter*N* *,* starting with "Parameter1".</span></span> <span data-ttu-id="8f2f7-156">Мы рекомендуем избегать параметр*N* соглашение об именах при указании имени параметра, потому что указываемое имя может конфликтовать с существующим именем параметра по умолчанию в `ParameterCollection`.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-156">We recommend that you avoid the Parameter*N* naming convention when you supply a parameter name, because the name that you supply might conflict with an existing default parameter name in the `ParameterCollection`.</span></span> <span data-ttu-id="8f2f7-157">Если указанное имя уже существует, вызывается исключение.</span><span class="sxs-lookup"><span data-stu-id="8f2f7-157">If the supplied name already exists, an exception is thrown.</span></span>  
   
-## См. также  
- [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Обновление источников данных с помощью объектов DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Изменение данных с помощью хранимых процедур](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8f2f7-158">См. также</span><span class="sxs-lookup"><span data-stu-id="8f2f7-158">See Also</span></span>  
+ [<span data-ttu-id="8f2f7-159">Объекты DataAdapter и DataReader</span><span class="sxs-lookup"><span data-stu-id="8f2f7-159">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="8f2f7-160">Команды и параметры</span><span class="sxs-lookup"><span data-stu-id="8f2f7-160">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="8f2f7-161">Обновление источников данных с объектами DataAdapter</span><span class="sxs-lookup"><span data-stu-id="8f2f7-161">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [<span data-ttu-id="8f2f7-162">Изменение данных с помощью хранимых процедур</span><span class="sxs-lookup"><span data-stu-id="8f2f7-162">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="8f2f7-163">Сопоставления типов данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="8f2f7-163">Data Type Mappings in ADO.NET</span></span>](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [<span data-ttu-id="8f2f7-164">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="8f2f7-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

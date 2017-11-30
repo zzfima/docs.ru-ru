@@ -1,52 +1,58 @@
 ---
-title: "Инициализация для элементов типа Object вне дерева объектов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы, инициализация"
-  - "инициализация элементов"
-  - "логическое дерево"
-  - "визуальное дерево"
+title: "Инициализация для элементов типа Object вне дерева объектов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- logical tree [WPF]
+- visual tree [WPF]
+- elements [WPF], initializing
+- initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a2a4dd10b664dc349b0c413d7abac03280f8fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Инициализация для элементов типа Object вне дерева объектов
-Некоторые аспекты инициализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] откладываются для процессов, которые обычно полагаются на то, что элемент подключен либо к [логическому дереву](GTMT) или [визуальному дерево](GTMT).  В этом разделе описываются действия, необходимые для инициализации элемента, который не подключен ни к одному из деревьев.  
+# <a name="initialization-for-object-elements-not-in-an-object-tree"></a><span data-ttu-id="75985-102">Инициализация для элементов типа Object вне дерева объектов</span><span class="sxs-lookup"><span data-stu-id="75985-102">Initialization for Object Elements Not in an Object Tree</span></span>
+<span data-ttu-id="75985-103">За некоторые аспекты инициализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] отвечают процессы, которые обычно предполагают, что элемент подключен либо к логическому, либо к визуальному дереву.</span><span class="sxs-lookup"><span data-stu-id="75985-103">Some aspects of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] initialization are deferred to processes that typically rely on that element being connected to either the logical tree or visual tree.</span></span> <span data-ttu-id="75985-104">В этом разделе описываются действия, необходимые для инициализации элемента, который не подключен ни к одному из деревьев.</span><span class="sxs-lookup"><span data-stu-id="75985-104">This topic describes the steps that may be necessary in order to initialize an element that is not connected to either tree.</span></span>  
   
-   
+ 
   
-## Элементы и логическое дерево  
- При создании экземпляра класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в коде следует иметь в виду, что несколько аспектов инициализации объекта для класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] преднамеренно не являются частью кода, выполняющегося при вызове конструктора класса.  Большая часть визуального представления элемента управления, особенно для класса элемента управления, не определяется конструктором.  Вместо этого визуальное представление определяется шаблоном элемента управления.  Шаблон может быть получен из различных источников, но наиболее часто он берется из тематических стилей.  Шаблоны фактически выполняют позднее связывание. Необходимый шаблон не присоединяется к элементу управления до тех пор, пока элемент управления не будет подготовлен для макета.  А элемент управления не готов для макета до тех пор, пока он не будет присоединен к логическому дереву, которое подключается к отрисовываемой поверхности в корневом элементе.  Это элемент корневого уровня, который инициирует отрисовку всех дочерних элементов, как определено в логическом дереве.  
+## <a name="elements-and-the-logical-tree"></a><span data-ttu-id="75985-105">Элементы и логическое дерево</span><span class="sxs-lookup"><span data-stu-id="75985-105">Elements and the Logical Tree</span></span>  
+ <span data-ttu-id="75985-106">При создании экземпляра класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в коде следует иметь в виду, что несколько аспектов инициализации объекта для класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] преднамеренно не являются частью кода, выполняющегося при вызове конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="75985-106">When you create an instance of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] class in code, you should be aware that several aspects of object initialization for a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] class are deliberately not a part of the code that is executed when calling the class constructor.</span></span> <span data-ttu-id="75985-107">Большая часть визуального представления элемента управления, особенно для класса элемента управления, не определяется конструктором.</span><span class="sxs-lookup"><span data-stu-id="75985-107">Particularly for a control class, most of the visual representation of that control is not defined by the constructor.</span></span> <span data-ttu-id="75985-108">Вместо этого визуальное представление определяется шаблоном элемента управления.</span><span class="sxs-lookup"><span data-stu-id="75985-108">Instead, the visual representation is defined by the control's template.</span></span> <span data-ttu-id="75985-109">Шаблон может быть получен из различных источников, но наиболее часто он берется из стилей темы.</span><span class="sxs-lookup"><span data-stu-id="75985-109">The template potentially comes from a variety of sources, but most often the template is obtained from theme styles.</span></span> <span data-ttu-id="75985-110">Шаблоны фактически выполняют позднее связывание. Необходимый шаблон не присоединяется к элементу управления до тех пор, пока элемент управления не будет подготовлен для макета.</span><span class="sxs-lookup"><span data-stu-id="75985-110">Templates are effectively late-binding; the necessary template is not attached to the control in question until the control is ready for layout.</span></span> <span data-ttu-id="75985-111">А элемент управления не готов для макета до тех пор, пока он не будет присоединен к логическому дереву, которое подключается к отрисовываемой поверхности в корневом элементе.</span><span class="sxs-lookup"><span data-stu-id="75985-111">And the control is not ready for layout until it is attached to a logical tree that connects to a rendering surface at the root.</span></span> <span data-ttu-id="75985-112">Именно элемент корневого уровня инициирует отрисовку всех дочерних элементов, как определено в логическом дереве.</span><span class="sxs-lookup"><span data-stu-id="75985-112">It is that root-level element that initiates the rendering of all of its child elements as defined in the logical tree.</span></span>  
   
- Визуальное дерево также участвует в этом процессе.  Элементы, которые с помощью шаблонов являются частью визуального дерева, также полностью не создаются до тех пор, пока не произойдет подключение.  
+ <span data-ttu-id="75985-113">Визуальное дерево также участвует в этом процессе.</span><span class="sxs-lookup"><span data-stu-id="75985-113">The visual tree also participates in this process.</span></span> <span data-ttu-id="75985-114">Элементы, которые являются частью визуального дерева посредством шаблонов, также полностью не создаются до тех пор, пока не произойдет подключение.</span><span class="sxs-lookup"><span data-stu-id="75985-114">Elements that are part of the visual tree through the templates are also not fully instantiated until connected.</span></span>  
   
- Последствием этого является то, что для определенных операций, зависящих от завершенных визуальных характеристик элемента, требуется выполнение дополнительных действий.  Примером является попытка получить визуальные характеристики класса, который был создан, но еще не присоединен к дереву.  Например, если необходимо вызвать <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> на <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и передаваемый визуальный элемент не подключен к дереву, то визуально этот элемент остается незавершенным, пока не будут выполнены дополнительные шаги инициализации.  
+ <span data-ttu-id="75985-115">Последствием этого является то, что для определенных операций, зависящих от завершенных визуальных характеристик элемента, требуется выполнение дополнительных действий.</span><span class="sxs-lookup"><span data-stu-id="75985-115">The consequences of this behavior are that certain operations that rely on the completed visual characteristics of an element require additional steps.</span></span> <span data-ttu-id="75985-116">Примером является попытка получить визуальные характеристики класса, который был создан, но еще не присоединен к дереву.</span><span class="sxs-lookup"><span data-stu-id="75985-116">An example is if you are attempting to get the visual characteristics of a class that was constructed but not yet attached to a tree.</span></span> <span data-ttu-id="75985-117">Для экземпляра Если вы хотите вызвать <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> на <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и визуальный элемент не подключен к дереву элемента не визуально завершена, пока не будут выполнены дополнительные шаги инициализации.</span><span class="sxs-lookup"><span data-stu-id="75985-117">For instance, if you want to call <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> on a <xref:System.Windows.Media.Imaging.RenderTargetBitmap> and the visual you are passing is an element not connected to a tree, that element is not visually complete until additional initialization steps are completed.</span></span>  
   
-### Использование BeginInit и EndInit для инициализации элемента  
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] интерфейс <xref:System.ComponentModel.ISupportInitialize> реализуют различные классы.  Для обозначения области кода, содержащей действия для инициализации \(такие как установка значений свойств, влияющих на отрисовку\), можно использовать методы <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> и <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> интерфейса.  После вызова <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> в последовательности система разметки может обработать элемент и начать поиск неявного стиля.  
+### <a name="using-begininit-and-endinit-to-initialize-the-element"></a><span data-ttu-id="75985-118">Использование BeginInit и EndInit для инициализации элемента</span><span class="sxs-lookup"><span data-stu-id="75985-118">Using BeginInit and EndInit to Initialize the Element</span></span>  
+ <span data-ttu-id="75985-119">Различные классы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] реализовать <xref:System.ComponentModel.ISupportInitialize> интерфейса.</span><span class="sxs-lookup"><span data-stu-id="75985-119">Various classes in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implement the <xref:System.ComponentModel.ISupportInitialize> interface.</span></span> <span data-ttu-id="75985-120">Вы используете <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> и <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> методы интерфейса для обозначения области кода, содержащей действия для инициализации (такие как установка значений свойств, влияющих на отрисовку).</span><span class="sxs-lookup"><span data-stu-id="75985-120">You use the <xref:System.ComponentModel.ISupportInitialize.BeginInit%2A> and <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> methods of the interface to denote a region in your code that contains initialization steps (such as setting property values that affect rendering).</span></span> <span data-ttu-id="75985-121">После <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> вызывается в последовательности, система макета может обработать элемент и начать поиск неявный стиль.</span><span class="sxs-lookup"><span data-stu-id="75985-121">After <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> is called in the sequence, the layout system can process the element and start looking for an implicit style.</span></span>  
   
- Если элемент, для которого устанавливаются свойства, является производным классом <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, то можно вызвать версии класса <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> вместо приведения к <xref:System.ComponentModel.ISupportInitialize>.  
+ <span data-ttu-id="75985-122">Если элемент установке свойств на <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> производного класса, то можно вызвать версии класса <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> вместо приведения к <xref:System.ComponentModel.ISupportInitialize>.</span><span class="sxs-lookup"><span data-stu-id="75985-122">If the element you are setting properties on is a <xref:System.Windows.FrameworkElement> or <xref:System.Windows.FrameworkContentElement> derived class, then you can call the class versions of <xref:System.Windows.FrameworkElement.BeginInit%2A> and <xref:System.Windows.FrameworkElement.EndInit%2A> rather than casting to <xref:System.ComponentModel.ISupportInitialize>.</span></span>  
   
-### Пример кода  
- В следующем примере представлен образец кода консольного приложения, использующего отрисовку [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] и <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=fullName> свободного файла [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для иллюстрации правильного размещения <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> относительно других вызовов [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], влияющих на отображение.  
+### <a name="sample-code"></a><span data-ttu-id="75985-123">Пример кода</span><span class="sxs-lookup"><span data-stu-id="75985-123">Sample Code</span></span>  
+ <span data-ttu-id="75985-124">Ниже приведен пример кода для консольного приложения, использующего отрисовки [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] и <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> свободного [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] показано правильное размещение файла <xref:System.Windows.FrameworkElement.BeginInit%2A> и <xref:System.Windows.FrameworkElement.EndInit%2A> вокруг других [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] вызовы Настройте свойства, которые влияют на отрисовку.</span><span class="sxs-lookup"><span data-stu-id="75985-124">The following example is sample code for a console application that uses rendering [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] and <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> of a loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file to illustrate the proper placement of <xref:System.Windows.FrameworkElement.BeginInit%2A> and <xref:System.Windows.FrameworkElement.EndInit%2A> around other [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] calls that adjust properties that affect rendering.</span></span>  
   
- В данном примере иллюстрируется только основная функция.  Функции `Rasterize` и `Save` \(не отображены\) являются служебными функциями, которые отвечают за обработку изображения и ввод\-вывод.  
+ <span data-ttu-id="75985-125">В этом примере иллюстрируется только основная функция.</span><span class="sxs-lookup"><span data-stu-id="75985-125">The example illustrates the main function only.</span></span> <span data-ttu-id="75985-126">Функции `Rasterize` и `Save` (не показаны) являются служебными функциями, которые отвечают за обработку изображения и ввод-вывод.</span><span class="sxs-lookup"><span data-stu-id="75985-126">The functions `Rasterize` and `Save` (not shown) are utility functions that take care of image processing and IO.</span></span>  
   
  [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
  [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
-## См. также  
- [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)   
- [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="75985-127">См. также</span><span class="sxs-lookup"><span data-stu-id="75985-127">See Also</span></span>  
+ [<span data-ttu-id="75985-128">Деревья в WPF</span><span class="sxs-lookup"><span data-stu-id="75985-128">Trees in WPF</span></span>](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [<span data-ttu-id="75985-129">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="75985-129">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="75985-130">Общие сведения о языке XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="75985-130">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

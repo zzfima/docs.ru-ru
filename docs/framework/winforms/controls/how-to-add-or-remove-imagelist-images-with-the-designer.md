@@ -1,52 +1,53 @@
 ---
-title: "Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ImageList - компонент [Windows Forms], добавление изображений"
-  - "ImageList - компонент [Windows Forms], удаление изображений"
-  - "изображения [Windows Forms], добавление в компонент ImageList"
+title: "Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ImageList component [Windows Forms], adding images
+- ImageList component [Windows Forms], removing images
+- images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71fa29fc36292bb6620ab458785abaabc749c38d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора
-Можно добавлять рисунки в компонент <xref:System.Windows.Forms.ImageList> несколькими способами.  Можно быстро добавлять рисунки с помощью смарт\-тега, связанного с <xref:System.Windows.Forms.ImageList>; при установке нескольких других свойств для <xref:System.Windows.Forms.ImageList> удобнее добавлять рисунки с помощью окна свойств.  Также можно добавлять рисунки с помощью кода.  Дополнительные сведения о добавлении рисунков с помощью кода см. в разделе [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  Компонент <xref:System.Windows.Forms.ImageList> обычно заполняется рисунками перед связыванием с каким\-либо элементом управления, но это не обязательно.  
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a><span data-ttu-id="3f561-102">Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="3f561-102">How to: Add or Remove ImageList Images with the Designer</span></span>
+<span data-ttu-id="3f561-103">Можно добавить изображения для <xref:System.Windows.Forms.ImageList> компонент несколькими различными способами.</span><span class="sxs-lookup"><span data-stu-id="3f561-103">You can add images to an <xref:System.Windows.Forms.ImageList> component several different ways.</span></span> <span data-ttu-id="3f561-104">Быстро добавлять рисунки с помощью смарт-тег, связанные с <xref:System.Windows.Forms.ImageList>, или при установке на несколько других свойств <xref:System.Windows.Forms.ImageList>, может оказаться удобнее добавлять изображения с помощью окна «Свойства».</span><span class="sxs-lookup"><span data-stu-id="3f561-104">You can add images very quickly by using the smart tag associated with the <xref:System.Windows.Forms.ImageList>, or if you are setting several other properties on the <xref:System.Windows.Forms.ImageList>, you may find it more convenient to add images with the Properties window.</span></span> <span data-ttu-id="3f561-105">Можно также добавлять изображения с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="3f561-105">You can also add images by using code.</span></span> <span data-ttu-id="3f561-106">Дополнительные сведения о добавлении изображений в коде см. в разделе [как: Добавление и удаление изображений с помощью компонента ImageList в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span><span class="sxs-lookup"><span data-stu-id="3f561-106">For more information about how to add images with code, see [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span> <span data-ttu-id="3f561-107">Обычно заполняется <xref:System.Windows.Forms.ImageList> компонент с изображениями, прежде чем он связан с элементом управления, но это не является обязательным.</span><span class="sxs-lookup"><span data-stu-id="3f561-107">Typically you populate the <xref:System.Windows.Forms.ImageList> component with images before it is associated with a control, but this is not required.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="3f561-108">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="3f561-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3f561-109">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="3f561-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3f561-110">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="3f561-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Для добавления и удаления рисунков с помощью окна свойств выполните следующие действия.  
+### <a name="to-add-or-remove-images-by-using-the-properties-window"></a><span data-ttu-id="3f561-111">Чтобы добавить или удалить изображения с помощью окна «Свойства»</span><span class="sxs-lookup"><span data-stu-id="3f561-111">To add or remove images by using the Properties window</span></span>  
   
-1.  Выберите компонент <xref:System.Windows.Forms.ImageList> или добавьте его в форму.  
+1.  <span data-ttu-id="3f561-112">Выберите <xref:System.Windows.Forms.ImageList> компонента, или добавьте его в форму.</span><span class="sxs-lookup"><span data-stu-id="3f561-112">Select the <xref:System.Windows.Forms.ImageList> component, or add one to the form.</span></span>  
   
-2.  В окне "Свойства" нажмите кнопку с многоточием \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) рядом со свойством <xref:System.Windows.Forms.ImageList.Images%2A>.  
+2.  <span data-ttu-id="3f561-113">В окне свойств нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) рядом с <xref:System.Windows.Forms.ImageList.Images%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="3f561-113">In the Properties window, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-3.  В окне **редактора коллекции рисунков** нажмите кнопку **Добавить** или **Удалить** для добавления рисунков в список или удаления их из него.  
+3.  <span data-ttu-id="3f561-114">В **редактор коллекции изображений**, нажмите кнопку **добавить** или **удалить** на добавление и удаление изображений из списка.</span><span class="sxs-lookup"><span data-stu-id="3f561-114">In the **Image Collection Editor**, click **Add** or **Remove** to add or remove images from the list.</span></span>  
   
-### Для добавления и удаления рисунков с помощью смарт\-тега выполните следующие действия.  
+### <a name="to-add-or-remove-images-using-the-smart-tag"></a><span data-ttu-id="3f561-115">Добавление и удаление изображений с помощью смарт-тег</span><span class="sxs-lookup"><span data-stu-id="3f561-115">To add or remove images using the smart tag</span></span>  
   
-1.  Выберите компонент <xref:System.Windows.Forms.ImageList> или добавьте его в форму.  
+1.  <span data-ttu-id="3f561-116">Выберите <xref:System.Windows.Forms.ImageList> компонента, или добавьте его в форму.</span><span class="sxs-lookup"><span data-stu-id="3f561-116">Select the <xref:System.Windows.Forms.ImageList> component, or add one to the form.</span></span>  
   
-2.  Щелкните значок смарт\-тега \(![Глиф смарт&#45;тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)  
+2.  <span data-ttu-id="3f561-117">Щелкните глиф смарт-тега (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))</span><span class="sxs-lookup"><span data-stu-id="3f561-117">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))</span></span>  
   
-3.  В диалоговом окне **Задачи списка рисунков** выберите **Выбрать рисунки**.  
+3.  <span data-ttu-id="3f561-118">В **задачи ImageList** выберите **выбрать рисунки**.</span><span class="sxs-lookup"><span data-stu-id="3f561-118">In the **ImageList Tasks** dialog box, select **Choose Images**.</span></span>  
   
-4.  В окне **редактора коллекции рисунков**  нажмите кнопку **Добавить** или **Удалить** для добавления рисунков в список или удаления их из него.  
+4.  <span data-ttu-id="3f561-119">В **редактор коллекции изображений** щелкните **добавить** или **удалить** на добавление и удаление изображений из списка.</span><span class="sxs-lookup"><span data-stu-id="3f561-119">In the **Images Collection Editor** click **Add** or **Remove** to add or remove images from the list.</span></span>  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Пошаговое руководство. Выполнение типичных задач с помощью смарт\-тегов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)   
- [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3f561-120">См. также</span><span class="sxs-lookup"><span data-stu-id="3f561-120">See Also</span></span>  
+ [<span data-ttu-id="3f561-121">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="3f561-121">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="3f561-122">Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3f561-122">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [<span data-ttu-id="3f561-123">Компонент ImageList</span><span class="sxs-lookup"><span data-stu-id="3f561-123">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

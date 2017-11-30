@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqStartingService | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqStartingService
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7248afaf-5ad9-4d7a-ba07-781a60a0ef9b
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9c6c79cf7e38c8bf3c26cff744523fec822a8edc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqStartingService
-System.ServiceModel.Channels.MsmqStartingService  
+# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="eec06-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="eec06-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
+<span data-ttu-id="eec06-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="eec06-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
   
-## Описание  
- Среда размещения запустила службу.  
+## <a name="description"></a><span data-ttu-id="eec06-104">Описание</span><span class="sxs-lookup"><span data-stu-id="eec06-104">Description</span></span>  
+ <span data-ttu-id="eec06-105">Среда размещения запустила службу.</span><span class="sxs-lookup"><span data-stu-id="eec06-105">The hosting environment started the service.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="eec06-106">См. также</span><span class="sxs-lookup"><span data-stu-id="eec06-106">See Also</span></span>  
+ [<span data-ttu-id="eec06-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="eec06-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="eec06-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="eec06-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="eec06-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="eec06-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

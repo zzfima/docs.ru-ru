@@ -1,46 +1,50 @@
 ---
-title: "Практическое руководство. Применение фонового потока для поиска файлов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], многопоточность"
-  - "пользовательские элементы управления [Windows Forms], примеры"
-  - "пример многопоточного элемента управления Windows Forms [Windows Forms]"
-  - "работа с потоками [Windows Forms], пользовательские элементы управления"
+title: "Практическое руководство. Применение фонового потока для поиска файлов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Multithreaded Windows Forms Control sample [Windows Forms]
+- custom controls [Windows Forms], multithreading
+- threading [Windows Forms], custom controls
+- custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9f23a99418d585f43348cd155bc65a3c3e73742b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение фонового потока для поиска файлов
-Компонент <xref:System.ComponentModel.BackgroundWorker> заменяет аналогичный код из пространства имен <xref:System.Threading> и расширяет его функциональные возможности; однако при необходимости исходное пространство имен <xref:System.Threading> можно сохранить для обеспечения обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a><span data-ttu-id="1dccb-102">Практическое руководство. Применение фонового потока для поиска файлов</span><span class="sxs-lookup"><span data-stu-id="1dccb-102">How to: Use a Background Thread to Search for Files</span></span>
+<span data-ttu-id="1dccb-103"><xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обеспечения обратной совместимости и использования в будущем при выборе.</span><span class="sxs-lookup"><span data-stu-id="1dccb-103">The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="1dccb-104">Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span><span class="sxs-lookup"><span data-stu-id="1dccb-104">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
   
- Формы Windows Forms используют модель однопотокового апартамента \(STA\), так как действуют на основе исходных окон Win32, которые наследуют потоковое подразделение.  Модель STA подразумевает, что окно может быть создано для любого потока, но не может переключать созданные потоки. Кроме того, все вызовы функций должны выполняться для потока создания.  Вне форм Windows Forms классы платформы .NET Framework используют свободную потоковую модель.  Дополнительные сведения о потоках в .NET Framework см. в разделе [Threading](../../../../docs/standard/threading/index.md).  
+ <span data-ttu-id="1dccb-105">Windows Forms использует модель однопотокового подразделения (STA), так как Windows Forms основана на исходных окон Win32, которые являются по своей природе однопотоковое подразделение.</span><span class="sxs-lookup"><span data-stu-id="1dccb-105">Windows Forms uses the single-threaded apartment (STA) model because Windows Forms is based on native Win32 windows that are inherently apartment-threaded.</span></span> <span data-ttu-id="1dccb-106">Модель STA подразумевает окна могут создаваться в любом потоке, но не может переключать созданные потоки, что все вызовы функции в должно выполняться с его создания потока.</span><span class="sxs-lookup"><span data-stu-id="1dccb-106">The STA model implies that a window can be created on any thread, but it cannot switch threads once created, and all function calls to it must occur on its creation thread.</span></span> <span data-ttu-id="1dccb-107">За пределами Windows Forms классы .NET Framework используют свободной потоковой модели.</span><span class="sxs-lookup"><span data-stu-id="1dccb-107">Outside Windows Forms, classes in the .NET Framework use the free threading model.</span></span> <span data-ttu-id="1dccb-108">Сведения о работе с потоками в платформе .NET Framework см. в разделе [потоки](../../../../docs/standard/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="1dccb-108">For information about threading in the .NET Framework, see [Threading](../../../../docs/standard/threading/index.md).</span></span>  
   
- Модель STA требует, чтобы все методы элемента управления, которые необходимо вызывать не из потока создания элемента управления, маршалировались в поток создания этого элемента управления \(и выполнение осуществлялось в нем же\).  Базовый класс <xref:System.Windows.Forms.Control> предоставляет для этих целей несколько методов \(<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A> и <xref:System.Windows.Forms.Control.EndInvoke%2A>\).  <xref:System.Windows.Forms.Control.Invoke%2A> осуществляет синхронные вызовы метода; <xref:System.Windows.Forms.Control.BeginInvoke%2A> осуществляет асинхронные вызовы метода.  
+ <span data-ttu-id="1dccb-109">Модель STA требует, что все методы управления, который необходимо вызывать не из должны маршалироваться (выполняется на) потока создания элемента управления.</span><span class="sxs-lookup"><span data-stu-id="1dccb-109">The STA model requires that any methods on a control that need to be called from outside the control's creation thread must be marshaled to (executed on) the control's creation thread.</span></span> <span data-ttu-id="1dccb-110">Базовый класс <xref:System.Windows.Forms.Control> предоставляет несколько методов (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, и <xref:System.Windows.Forms.Control.EndInvoke%2A>) для этой цели.</span><span class="sxs-lookup"><span data-stu-id="1dccb-110">The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose.</span></span> <span data-ttu-id="1dccb-111"><xref:System.Windows.Forms.Control.Invoke%2A>осуществляет синхронные вызовы метода; <xref:System.Windows.Forms.Control.BeginInvoke%2A> вызывает асинхронный метод.</span><span class="sxs-lookup"><span data-stu-id="1dccb-111"><xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.</span></span>  
   
- При использовании в элементе управления многопоточности для ресурсоемких задач пользовательский интерфейс может остаться работоспособным, если ресурсоемкие вычисления выполняются в фоновом потоке.  
+ <span data-ttu-id="1dccb-112">При использовании многопоточности для ресурсоемких задач элемента управления, пользовательский интерфейс может остаться работоспособным ресурсоемкие вычисления выполняется в фоновом потоке.</span><span class="sxs-lookup"><span data-stu-id="1dccb-112">If you use multithreading in your control for resource-intensive tasks, the user interface can remain responsive while a resource-intensive computation executes on a background thread.</span></span>  
   
- В следующем образце \(`DirectorySearcher`\) демонстрируется многопоточный элемент управления форм Windows Forms, использующий фоновый поток для рекурсивного поиска каталога с файлами, соответствующими заданной строке поиска, а затем выполняется заполнение списка результатами поиска.  Ниже приведены ключевые понятия, проиллюстрированные образцом.  
+ <span data-ttu-id="1dccb-113">Следующий пример (`DirectorySearcher`) показывает многопоточный элемент управления Windows Forms, использует фоновый поток для рекурсивного поиска каталога с файлами, соответствующими заданной строке поиска, а затем заполняет поле со списком с результатами поиска.</span><span class="sxs-lookup"><span data-stu-id="1dccb-113">The following sample (`DirectorySearcher`) shows a multithreaded Windows Forms control that uses a background thread to recursively search a directory for files matching a specified search string and then populates a list box with the search result.</span></span> <span data-ttu-id="1dccb-114">Ниже приведены основные понятия, показан в образце.</span><span class="sxs-lookup"><span data-stu-id="1dccb-114">The key concepts illustrated by the sample are as follows:</span></span>  
   
--   `DirectorySearcher` запускает новый поток для выполнения поиска.  Поток выполняет метод `ThreadProcedure`, возвращающий вызовы вспомогательного метода `RecurseDirectory` для выполнения фактического поиска и заполнения списка.  Однако заполнение списка требует выполнения вызова между потоками, как объяснено в следующих двух пунктах.  
+-   <span data-ttu-id="1dccb-115">`DirectorySearcher`начинает новый поток для выполнения поиска.</span><span class="sxs-lookup"><span data-stu-id="1dccb-115">`DirectorySearcher` starts a new thread to perform the search.</span></span> <span data-ttu-id="1dccb-116">Поток выполняет `ThreadProcedure` метод, который в свою очередь вызывает вспомогательный объект `RecurseDirectory` метод для выполнения фактического поиска и для заполнения списка.</span><span class="sxs-lookup"><span data-stu-id="1dccb-116">The thread executes the `ThreadProcedure` method that in turn calls the helper `RecurseDirectory` method to do the actual search and to populate the list box.</span></span> <span data-ttu-id="1dccb-117">Однако заполнение списка требует вызова между потоками, как описано в следующих двух пунктах.</span><span class="sxs-lookup"><span data-stu-id="1dccb-117">However, populating the list box requires a cross-thread call, as explained in the next two bulleted items.</span></span>  
   
--   `DirectorySearcher` определяет метод `AddFiles` для добавления файлов в список; однако, `RecurseDirectory` не может напрямую вызвать `AddFiles`, поскольку `AddFiles` может работать только в STA\-потоке, создавшем `DirectorySearcher`.  
+-   <span data-ttu-id="1dccb-118">`DirectorySearcher`Определяет `AddFiles` метод, чтобы добавить файлы к списку; Однако `RecurseDirectory` не может напрямую вызвать `AddFiles` из-за `AddFiles` может выполняться только в потоке STA, где создан `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="1dccb-118">`DirectorySearcher` defines the `AddFiles` method to add files to a list box; however, `RecurseDirectory` cannot directly invoke `AddFiles` because `AddFiles` can execute only in the STA thread that created `DirectorySearcher`.</span></span>  
   
--   Единственный способ для `RecurseDirectory` вызвать `AddFiles` — это использование вызова между потоками, другими словами, вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` в поток создания `DirectorySearcher`.  `RecurseDirectory` использует <xref:System.Windows.Forms.Control.BeginInvoke%2A>, что позволяет осуществлять вызовы асинхронным способом.  
+-   <span data-ttu-id="1dccb-119">Единственным способом `RecurseDirectory` можно вызвать `AddFiles` выполняется с помощью вызова между потоками, то есть путем вызова <xref:System.Windows.Forms.Control.Invoke%2A> или <xref:System.Windows.Forms.Control.BeginInvoke%2A> для маршалинга `AddFiles` для создания потока `DirectorySearcher`.</span><span class="sxs-lookup"><span data-stu-id="1dccb-119">The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`.</span></span> <span data-ttu-id="1dccb-120">`RecurseDirectory`использует <xref:System.Windows.Forms.Control.BeginInvoke%2A> , чтобы вызов может выполняться асинхронно.</span><span class="sxs-lookup"><span data-stu-id="1dccb-120">`RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.</span></span>  
   
--   Маршалинг метода требует эквивалент указателя функции или обратного вызова.  Это делается с помощью делегатов в .NET Framework.  <xref:System.Windows.Forms.Control.BeginInvoke%2A> принимает делегат в качестве аргумента.  Поэтому `DirectorySearcher` определяет этот делегат \(`FileListDelegate`\), привязывает `AddFiles` к экземпляру `FileListDelegate` в его конструкторе и передает этот экземпляр делегата элементу управления <xref:System.Windows.Forms.Control.BeginInvoke%2A>.  `DirectorySearcher` также определяет делегат события, маршалируемый после завершения поиска.  
+-   <span data-ttu-id="1dccb-121">Маршалинг метода требует эквивалент указателя функции или обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="1dccb-121">Marshaling a method requires the equivalent of a function pointer or callback.</span></span> <span data-ttu-id="1dccb-122">Это можно сделать с помощью делегаты в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1dccb-122">This is accomplished using delegates in the .NET Framework.</span></span> <span data-ttu-id="1dccb-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A>принимает делегат в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="1dccb-123"><xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument.</span></span> <span data-ttu-id="1dccb-124">`DirectorySearcher`Таким образом определяется делегат (`FileListDelegate`), привязывает `AddFiles` к экземпляру `FileListDelegate` в конструкторе и передает этот экземпляр делегата в <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span><span class="sxs-lookup"><span data-stu-id="1dccb-124">`DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>.</span></span> <span data-ttu-id="1dccb-125">`DirectorySearcher`также определяет делегат события, маршалируемый после завершения поиска.</span><span class="sxs-lookup"><span data-stu-id="1dccb-125">`DirectorySearcher` also defines an event delegate that is marshaled when the search is completed.</span></span>  
   
 ```vb  
 Option Strict  
@@ -287,7 +291,6 @@ Namespace Microsoft.Samples.DirectorySearcher
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -576,8 +579,8 @@ namespace Microsoft.Samples.DirectorySearcher
 }  
 ```  
   
-## Использование многопоточного элемента управления в форме  
- Следующий пример показывает, как многопоточный элемент управления `DirectorySearcher` может использоваться в форме.  
+## <a name="using-the-multithreaded-control-on-a-form"></a><span data-ttu-id="1dccb-126">С помощью многопоточного элемента управления на форме</span><span class="sxs-lookup"><span data-stu-id="1dccb-126">Using the Multithreaded Control on a Form</span></span>  
+ <span data-ttu-id="1dccb-127">В следующем примере показан способ многопоточный `DirectorySearcher` элемент управления может использоваться в форме.</span><span class="sxs-lookup"><span data-stu-id="1dccb-127">The following example shows how the multithreaded `DirectorySearcher` control can be used on a form.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -666,7 +669,6 @@ Namespace SampleUsage
       End Sub  
    End Class  
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -770,7 +772,7 @@ namespace SampleUsage
 }  
 ```  
   
-## См. также  
- <xref:System.ComponentModel.BackgroundWorker>   
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Event\-based Asynchronous Pattern Overview](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1dccb-128">См. также</span><span class="sxs-lookup"><span data-stu-id="1dccb-128">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ [<span data-ttu-id="1dccb-129">Разработка пользовательских элементов управления Windows Forms в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1dccb-129">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="1dccb-130">Обзор асинхронной модели, основанной на событиях</span><span class="sxs-lookup"><span data-stu-id="1dccb-130">Event-based Asynchronous Pattern Overview</span></span>](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

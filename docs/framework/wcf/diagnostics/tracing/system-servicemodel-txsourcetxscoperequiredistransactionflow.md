@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95063dc787e76faacdbdfd47e13f5600acf6999a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
-Заданная транзакция предназначена для заданной операции.  
+# <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a><span data-ttu-id="19afd-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow</span><span class="sxs-lookup"><span data-stu-id="19afd-102">System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow</span></span>
+<span data-ttu-id="19afd-103">Заданная транзакция предназначена для заданной операции.</span><span class="sxs-lookup"><span data-stu-id="19afd-103">The specified transaction was flowed to the specified operation.</span></span>  
   
-## Описание  
- Трассируется, если транзакция, доступная для пользовательского кода, поступила из внешнего источника.  
+## <a name="description"></a><span data-ttu-id="19afd-104">Описание</span><span class="sxs-lookup"><span data-stu-id="19afd-104">Description</span></span>  
+ <span data-ttu-id="19afd-105">Трассируется, если транзакция, доступная для пользовательского кода, поступила из внешнего источника.</span><span class="sxs-lookup"><span data-stu-id="19afd-105">Traced if the transaction made available to user code was flowed in from an external source.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="19afd-106">См. также</span><span class="sxs-lookup"><span data-stu-id="19afd-106">See Also</span></span>  
+ [<span data-ttu-id="19afd-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="19afd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="19afd-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="19afd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="19afd-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="19afd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

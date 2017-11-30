@@ -1,59 +1,65 @@
 ---
-title: "Как экспортировать утверждения пользовательской политики | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Экспорт утверждений пользовательской политики"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 466aecb5102332d3e246fd340e43b482d2c17a4c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как экспортировать утверждения пользовательской политики
-В утверждениях политики описываются возможности и требования конечной точки службы.Приложения\-службы могут использовать проверочные утверждения пользовательской политики в метаданных службы для передачи конечной точки, привязки или информации о настройке контракта клиентскому приложению.[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно использовать для экспорта проверочных утверждений в выражения политики, прикрепленные в привязках WSDL в конечной точке, операции или темах сообщений, в зависимости от передаваемых возможностей или требований.  
+# <a name="how-to-export-custom-policy-assertions"></a><span data-ttu-id="5a8fb-102">Практическое руководство. Экспорт утверждений пользовательской политики</span><span class="sxs-lookup"><span data-stu-id="5a8fb-102">How to: Export Custom Policy Assertions</span></span>
+<span data-ttu-id="5a8fb-103">В утверждениях политики описываются возможности и требования конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-103">Policy assertions describe the capabilities and requirements of a service endpoint.</span></span> <span data-ttu-id="5a8fb-104">Приложения-службы могут использовать проверочные утверждения пользовательской политики в метаданных службы для передачи конечной точки, привязки или информации о настройке контракта клиентскому приложению.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-104">Service applications can use custom policy assertions in service metadata to communicate endpoint, binding or contract customization information to the client application.</span></span> <span data-ttu-id="5a8fb-105">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно использовать для экспорта проверочных утверждений в выражения политики, прикрепленные в привязках WSDL в конечной точке, операции или темах сообщений, в зависимости от передаваемых возможностей или требований.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-105">You can use [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to export assertions in policy expressions attached in WSDL bindings at the endpoint, operation, or message subjects, depending upon the capabilities or requirements you are communicating.</span></span>  
   
- Специальные проверочные утверждения политики экспортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=fullName> на <xref:System.ServiceModel.Channels.BindingElement?displayProperty=fullName> и либо вставки элемента привязки непосредственно в привязку конечной точки службы, либо регистрации элемента привязки в файле конфигурации приложения.Реализация экспорта политики добавляет проверочное утверждение пользовательской политики как экземпляр <xref:System.Xml.XmlElement?displayProperty=fullName> в соответствующую коллекцию <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=fullName> в контексте <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=fullName>, переданный методу <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
+ <span data-ttu-id="5a8fb-106">Специальные проверочные утверждения политики экспортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> на <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> и либо вставки элемента привязки непосредственно в привязку конечной точки службы, либо регистрации элемента привязки в файле конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-106">Custom policy assertions are exported by implementing the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface on a <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> and either inserting the binding element directly into the binding of the service endpoint or by registering the binding element in your application configuration file.</span></span> <span data-ttu-id="5a8fb-107">Реализация экспорта политики добавляет проверочное утверждение пользовательской политики как экземпляр <xref:System.Xml.XmlElement?displayProperty=nameWithType> в соответствующую коллекцию <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> в контексте <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType>, переданный методу <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-107">Your policy export implementation should add your custom policy assertion as a <xref:System.Xml.XmlElement?displayProperty=nameWithType> instance to the appropriate <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> on the <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> passed into the <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> method.</span></span>  
   
- Кроме этого, необходимо проверить свойство <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> класса <xref:System.ServiceModel.Description.WsdlExporter> и экспортировать вложенные выражения и политики и атрибуты инфраструктуры политики в соответствующее пространство имен в зависимости от указанной версии политики.  
+ <span data-ttu-id="5a8fb-108">Кроме этого, необходимо проверить свойство <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> класса <xref:System.ServiceModel.Description.WsdlExporter> и экспортировать вложенные выражения и политики и атрибуты инфраструктуры политики в соответствующее пространство имен в зависимости от указанной версии политики.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-108">In addition you must check the <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> property of the <xref:System.ServiceModel.Description.WsdlExporter> class and export nested policy expressions and policy framework attributes in the correct namespace based on the policy version specified.</span></span>  
   
- Импорт проверочных утверждений пользовательской политики см. в <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=fullName> и [Как импортировать утверждения пользовательской политики](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).  
+ <span data-ttu-id="5a8fb-109">Чтобы импортировать утверждения пользовательской политики, см. <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> и [как: Импорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).</span><span class="sxs-lookup"><span data-stu-id="5a8fb-109">To import custom policy assertions, see <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> and [How to: Import Custom Policy Assertions](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md).</span></span>  
   
-### Экспорт проверочных утверждений пользовательской политики  
+### <a name="to-export-custom-policy-assertions"></a><span data-ttu-id="5a8fb-110">Экспорт проверочных утверждений пользовательской политики</span><span class="sxs-lookup"><span data-stu-id="5a8fb-110">To export custom policy assertions</span></span>  
   
-1.  Реализация интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=fullName> в <xref:System.ServiceModel.Channels.BindingElement?displayProperty=fullName>.В следующем коде показана реализация проверочного утверждения пользовательской политики на уровне привязки.  
+1.  <span data-ttu-id="5a8fb-111">Реализация интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> в <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-111">Implement the <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interface on a <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5a8fb-112">В следующем коде показана реализация проверочного утверждения пользовательской политики на уровне привязки.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-112">The following code example shows the implementation of a custom policy assertion at the binding level.</span></span>  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Элемент привязки вставляется в привязку конечной точки либо программно, либо при помощи файла конфигурации приложения.См. описанные ниже действия.  
+2.  <span data-ttu-id="5a8fb-113">Элемент привязки вставляется в привязку конечной точки либо программно, либо при помощи файла конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-113">Insert the binding element into the endpoint binding either programmatically or using an application configuration file.</span></span> <span data-ttu-id="5a8fb-114">См. описанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-114">See the following procedures.</span></span>  
   
-### Вставка элемента привязки при помощи файла конфигурации приложения  
+### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a><span data-ttu-id="5a8fb-115">Вставка элемента привязки при помощи файла конфигурации приложения</span><span class="sxs-lookup"><span data-stu-id="5a8fb-115">To insert a binding element using an application configuration file</span></span>  
   
-1.  Реализуйте <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=fullName> для элемента привязки проверочного утверждения пользовательской политики.  
+1.  <span data-ttu-id="5a8fb-116">Реализуйте <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> для элемента привязки проверочного утверждения пользовательской политики.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-116">Implement <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> for your custom policy assertion binding element.</span></span>  
   
-2.  Добавьте расширение элемента привязки в файл конфигурации с помощью элемента [\<bindingElementExtensions\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md).  
+2.  <span data-ttu-id="5a8fb-117">Добавить расширение элемента привязки в файле конфигурации с помощью [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) элемента.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-117">Add the binding element extension to the configuration file using the [\<bindingElementExtensions>](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) element.</span></span>  
   
-3.  Создайте специальную привязку с помощью <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>.  
+3.  <span data-ttu-id="5a8fb-118">Создайте специальную привязку с помощью <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-118">Build a custom binding using the <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.</span></span>  
   
-### Вставка элемента привязки программными средствами  
+### <a name="to-insert-a-binding-element-programmatically"></a><span data-ttu-id="5a8fb-119">Вставка элемента привязки программными средствами</span><span class="sxs-lookup"><span data-stu-id="5a8fb-119">To insert a binding element programmatically</span></span>  
   
-1.  Создайте новый элемент <xref:System.ServiceModel.Channels.BindingElement?displayProperty=fullName> и добавьте его в <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=fullName>.  
+1.  <span data-ttu-id="5a8fb-120">Создайте новый элемент <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> и добавьте его в <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-120">Create a new <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> and add it to a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.</span></span>  
   
-2.  Добавьте пользовательскую привязку, описанную на шаге 1,в новую конечную точку и добавьте эту новую конечную точку службы в <xref:System.ServiceModel.ServiceHost?displayProperty=fullName>, вызвав метод <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+2.  <span data-ttu-id="5a8fb-121">Добавьте пользовательскую привязку, описанную на шаге 1,</span><span class="sxs-lookup"><span data-stu-id="5a8fb-121">Add the custom binding from step 1.</span></span> <span data-ttu-id="5a8fb-122">в новую конечную точку и добавьте эту новую конечную точку службы в <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>, вызвав метод <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-122">to a new endpoint and add that new service endpoint to the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> by calling the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.</span></span>  
   
-3.  Откройте <xref:System.ServiceModel.ServiceHost>.В следующем коде показан пример создания специальной привязки и вставки элементов привязки программными средствами.  
+3.  <span data-ttu-id="5a8fb-123">Откройте <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-123">Open the <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="5a8fb-124">В следующем коде показан пример создания специальной привязки и вставки элементов привязки программными средствами.</span><span class="sxs-lookup"><span data-stu-id="5a8fb-124">The following code example shows the creation of a custom binding and the programmatic insertion of binding elements.</span></span>  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
-## См. также  
- <xref:System.ServiceModel.Description.IPolicyImportExtension>   
- <xref:System.ServiceModel.Description.IPolicyExportExtension>   
- [Как импортировать утверждения пользовательской политики](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+## <a name="see-also"></a><span data-ttu-id="5a8fb-125">См. также</span><span class="sxs-lookup"><span data-stu-id="5a8fb-125">See Also</span></span>  
+ <xref:System.ServiceModel.Description.IPolicyImportExtension>  
+ <xref:System.ServiceModel.Description.IPolicyExportExtension>  
+ [<span data-ttu-id="5a8fb-126">Как: импортировать утверждения пользовательской политики</span><span class="sxs-lookup"><span data-stu-id="5a8fb-126">How to: Import Custom Policy Assertions</span></span>](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

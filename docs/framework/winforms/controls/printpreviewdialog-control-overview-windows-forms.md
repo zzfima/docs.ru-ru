@@ -1,37 +1,36 @@
 ---
-title: "Общие сведения об элементе управления PrintPreviewDialog (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PrintPreviewDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "PrintPreviewDialog - элемент управления (использование конструктора), сведения о PrintPreviewDialog"
+title: "Общие сведения об элементе управления PrintPreviewDialog (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PrintPreviewDialog
+helpviewer_keywords: PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c898dc24c9a4418e3af45fce507e6befcf905a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления PrintPreviewDialog (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> — это стандартное диалоговое окно, используемое для просмотра объекта [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) в том виде, как он будет напечатан.  Он может использоваться в приложениях Windows в качестве готового решения, избавляя от необходимости создания собственного диалогового окна.  В нем имеются кнопки для печати, изменения масштаба, отображения одной или нескольких страниц, а также для закрытия диалогового окна.  
+# <a name="printpreviewdialog-control-overview-windows-forms"></a><span data-ttu-id="eadb7-102">Общие сведения об элементе управления PrintPreviewDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="eadb7-102">PrintPreviewDialog Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="eadb7-103">Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> управления является стандартным диалоговым окном, используемый для отображения как [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) будет выглядеть при печати.</span><span class="sxs-lookup"><span data-stu-id="eadb7-103">The Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> control is a pre-configured dialog box used to display how a [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) will appear when printed.</span></span> <span data-ttu-id="eadb7-104">Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового.</span><span class="sxs-lookup"><span data-stu-id="eadb7-104">Use it within your Windows-based application as a simple solution instead of configuring your own dialog box.</span></span> <span data-ttu-id="eadb7-105">Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.</span><span class="sxs-lookup"><span data-stu-id="eadb7-105">The control contains buttons for printing, zooming in, displaying one or multiple pages, and closing the dialog box.</span></span>  
   
-## Ключевые свойства и методы  
- Ключевым свойством этого элемента управления является свойство <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, определяющее документ, который требуется просмотреть.  Этот документ должен являться объектом <xref:System.Drawing.Printing.PrintDocument>.  Для отображения диалогового окна вызывается метод <xref:System.Windows.Forms.Form.ShowDialog%2A>.  Сглаживание служит для отображения текста без неровностей, однако оно может привести к замедлению отображения. Чтобы применить сглаживание, следует задать для свойства <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> значение `true`.  
+## <a name="key-properties-and-methods"></a><span data-ttu-id="eadb7-106">Ключевые свойства и методы</span><span class="sxs-lookup"><span data-stu-id="eadb7-106">Key Properties and Methods</span></span>  
+ <span data-ttu-id="eadb7-107">Ключевое свойство элемента управления <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, который задает документ для предварительного просмотра.</span><span class="sxs-lookup"><span data-stu-id="eadb7-107">The control's key property is <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, which sets the document to be previewed.</span></span> <span data-ttu-id="eadb7-108">Документ должен быть <xref:System.Drawing.Printing.PrintDocument> объекта.</span><span class="sxs-lookup"><span data-stu-id="eadb7-108">The document must be a <xref:System.Drawing.Printing.PrintDocument> object.</span></span> <span data-ttu-id="eadb7-109">Чтобы открыть диалоговое окно, необходимо вызвать его <xref:System.Windows.Forms.Form.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="eadb7-109">In order to display the dialog box, you must call its <xref:System.Windows.Forms.Form.ShowDialog%2A> method.</span></span> <span data-ttu-id="eadb7-110">Сглаживание можно увеличить гладкую текст, но оно может привести к замедлению отображения; Чтобы использовать его, установите <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="eadb7-110">Anti-aliasing can make the text appear smoother, but it can also make the display slower; to use it, set the <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> property to `true`.</span></span>  
   
- Доступ к некоторым свойствам можно получить с помощью элемента управления <xref:System.Windows.Forms.PrintPreviewControl>, содержащегося в компоненте <xref:System.Windows.Forms.PrintPreviewDialog>.  \(Компонент <xref:System.Windows.Forms.PrintPreviewControl> не требуется добавлять в форму; он автоматически включается в элемент управления <xref:System.Windows.Forms.PrintPreviewDialog> при добавлении диалогового окна в форму.\) Примерами свойств, доступных с помощью элемента управления <xref:System.Windows.Forms.PrintPreviewControl>, являются свойства <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> и <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>, которые определяют число страниц, отображающихся в элементе управления по вертикали или по горизонтали.  Чтобы получить доступ к свойству <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> воспользуйтесь свойством `PrintPreviewDialog1.PrintPreviewControl.Columns` в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], свойством `printPreviewDialog1.PrintPreviewControl.Columns` в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] или свойством `printPreviewDialog1->PrintPreviewControl->Columns` в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].  
+ <span data-ttu-id="eadb7-111">Некоторые свойства доступны через <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> содержит.</span><span class="sxs-lookup"><span data-stu-id="eadb7-111">Certain properties are available through the <xref:System.Windows.Forms.PrintPreviewControl> that the <xref:System.Windows.Forms.PrintPreviewDialog> contains.</span></span> <span data-ttu-id="eadb7-112">(Необходимо добавить это <xref:System.Windows.Forms.PrintPreviewControl> форме; он автоматически внутри <xref:System.Windows.Forms.PrintPreviewDialog> при добавлении диалогового окна в форму.) Примеры свойств, доступных через <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> и <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> свойства, которые определяют число страниц, отображаемых по горизонтали и вертикали в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="eadb7-112">(You do not have to add this <xref:System.Windows.Forms.PrintPreviewControl> to the form; it is automatically contained within the <xref:System.Windows.Forms.PrintPreviewDialog> when you add the dialog to your form.) Examples of properties available through the <xref:System.Windows.Forms.PrintPreviewControl> are the <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> and <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> properties, which determine the number of pages displayed horizontally and vertically on the control.</span></span> <span data-ttu-id="eadb7-113">Вы можете получить доступ к <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> свойство как `PrintPreviewDialog1.PrintPreviewControl.Columns` в [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], или `printPreviewDialog1->PrintPreviewControl->Columns` в [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].</span><span class="sxs-lookup"><span data-stu-id="eadb7-113">You can access the <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> property as `PrintPreviewDialog1.PrintPreviewControl.Columns` in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], or `printPreviewDialog1->PrintPreviewControl->Columns` in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.PrintPreviewDialog>   
- [Общие сведения об элементе управления PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)   
- [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="eadb7-114">См. также</span><span class="sxs-lookup"><span data-stu-id="eadb7-114">See Also</span></span>  
+ <xref:System.Windows.Forms.PrintPreviewDialog>  
+ [<span data-ttu-id="eadb7-115">Общие сведения об элементе управления PrintPreviewControl</span><span class="sxs-lookup"><span data-stu-id="eadb7-115">PrintPreviewControl Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
+ [<span data-ttu-id="eadb7-116">Элемент управления PrintPreviewDialog</span><span class="sxs-lookup"><span data-stu-id="eadb7-116">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [<span data-ttu-id="eadb7-117">Элементы управления и компоненты диалоговых окон</span><span class="sxs-lookup"><span data-stu-id="eadb7-117">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)

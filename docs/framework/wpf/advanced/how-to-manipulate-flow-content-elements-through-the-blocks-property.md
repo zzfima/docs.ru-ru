@@ -1,28 +1,34 @@
 ---
-title: "Практическое руководство. Управление элементами потокового содержимого через свойство Blocks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Blocks - свойство, управления элементами растягиваемого содержимого"
-  - "документы, управление элементами растягиваемого содержимого с помощью свойства Blocks"
-  - "элементы растягиваемого содержимого, управление с помощью свойства Blocks"
-  - "свойства, Blocks, управления элементами растягиваемого содержимого"
+title: "Практическое руководство. Управление элементами потокового содержимого через свойство Blocks"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], manipulating flow content elements through Blocks property
+- flow content elements [WPF], manipulating through Blocks property
+- properties [WPF], Blocks [WPF], manipulating flow content elements
+- Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Управление элементами потокового содержимого через свойство Blocks
-В этих примерах показаны некоторые наиболее распространенные операции, которые могут быть выполнены в элементах потока содержимого с помощью свойства **Blocks**.  Это свойство используется для добавления и удаления элементов в <xref:System.Windows.Documents.BlockCollection>.  К элементам потока содержимого, которые имеют свойство **Block**, относятся:  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a><span data-ttu-id="ddb8b-102">Практическое руководство. Управление элементами потокового содержимого через свойство Blocks</span><span class="sxs-lookup"><span data-stu-id="ddb8b-102">How to: Manipulate Flow Content Elements through the Blocks Property</span></span>
+<span data-ttu-id="ddb8b-103">Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут быть выполнены в элементах потока содержимого с помощью **блоки** свойство.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-103">These examples demonstrate some of the more common operations that can be performed on flow content elements through the **Blocks** property.</span></span> <span data-ttu-id="ddb8b-104">Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.BlockCollection>.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-104">This property is used to add and remove items from <xref:System.Windows.Documents.BlockCollection>.</span></span> <span data-ttu-id="ddb8b-105">Элементы содержимого на поток, эта функция **блоки** свойства включают:</span><span class="sxs-lookup"><span data-stu-id="ddb8b-105">Flow content elements that feature a **Blocks** property include:</span></span>  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -34,43 +40,43 @@ caps.handback.revision: 6
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- В этих примерах показано, как использовать <xref:System.Windows.Documents.Section> в качестве элемента потокового содержимого, но эти методы применяются ко всем элементам, в которых размещена коллекция элементов потокового содержимого.  
+ <span data-ttu-id="ddb8b-106">Для использования этих примерах <xref:System.Windows.Documents.Section> поток содержимого элемента, но эти методы применяются ко всем элементам, на которых размещена коллекция элемент содержимого потока.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-106">These examples happen to use <xref:System.Windows.Documents.Section> as the flow content element, but these techniques are applicable to all elements that host a flow content element collection.</span></span>  
   
-## Пример  
- В следующем примере создается новый <xref:System.Windows.Documents.Section> и затем используется метод **Add** для добавления нового абзаца в содержимое **Section**.  
+## <a name="example"></a><span data-ttu-id="ddb8b-107">Пример</span><span class="sxs-lookup"><span data-stu-id="ddb8b-107">Example</span></span>  
+ <span data-ttu-id="ddb8b-108">В следующем примере создается новый <xref:System.Windows.Documents.Section> , а затем использует **добавить** метод, чтобы добавить новый абзац в **раздел** содержимое.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-108">The following example creates a new <xref:System.Windows.Documents.Section> and then uses the **Add** method to add a new Paragraph to the **Section** contents.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksadd)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksadd)]  
   
-## Пример  
- В следующем примере создается новый элемент <xref:System.Windows.Documents.Paragraph>, который вставляется в начало объекта <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a><span data-ttu-id="ddb8b-109">Пример</span><span class="sxs-lookup"><span data-stu-id="ddb8b-109">Example</span></span>  
+ <span data-ttu-id="ddb8b-110">В следующем примере создается новый <xref:System.Windows.Documents.Paragraph> элемент и вставляет его в начале <xref:System.Windows.Documents.Section>.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-110">The following example creates a new <xref:System.Windows.Documents.Paragraph> element and inserts it at the beginning of the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksinsert)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksinsert)]  
   
-## Пример  
- В следующем примере извлекается число элементов <xref:System.Windows.Documents.Block> верхнего уровня, содержащихся в <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a><span data-ttu-id="ddb8b-111">Пример</span><span class="sxs-lookup"><span data-stu-id="ddb8b-111">Example</span></span>  
+ <span data-ttu-id="ddb8b-112">В следующем примере возвращается количество верхнего уровня <xref:System.Windows.Documents.Block> элементов, содержащихся в <xref:System.Windows.Documents.Section>.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-112">The following example gets the number of top-level <xref:System.Windows.Documents.Block> elements contained in the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblockscount)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
-## Пример  
- В следующем примере удаляется последний элемент <xref:System.Windows.Documents.Block> в объекте <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a><span data-ttu-id="ddb8b-113">Пример</span><span class="sxs-lookup"><span data-stu-id="ddb8b-113">Example</span></span>  
+ <span data-ttu-id="ddb8b-114">В следующем примере удаляется последний <xref:System.Windows.Documents.Block> элемент в <xref:System.Windows.Documents.Section>.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-114">The following example deletes the last <xref:System.Windows.Documents.Block> element in the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
-## Пример  
- В следующем примере удаляется все содержимое \(элементы <xref:System.Windows.Documents.Block>\) из объекта <xref:System.Windows.Documents.Section>.  
+## <a name="example"></a><span data-ttu-id="ddb8b-115">Пример</span><span class="sxs-lookup"><span data-stu-id="ddb8b-115">Example</span></span>  
+ <span data-ttu-id="ddb8b-116">В следующем примере удаляются все содержимое (<xref:System.Windows.Documents.Block> элементы) из <xref:System.Windows.Documents.Section>.</span><span class="sxs-lookup"><span data-stu-id="ddb8b-116">The following example clears all of the contents (<xref:System.Windows.Documents.Block> elements) from the <xref:System.Windows.Documents.Section>.</span></span>  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## См. также  
- <xref:System.Windows.Documents.BlockCollection>   
- <xref:System.Windows.Documents.InlineCollection>   
- <xref:System.Windows.Documents.ListItemCollection>   
- [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)   
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)   
- [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)   
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a><span data-ttu-id="ddb8b-117">См. также</span><span class="sxs-lookup"><span data-stu-id="ddb8b-117">See Also</span></span>  
+ <xref:System.Windows.Documents.BlockCollection>  
+ <xref:System.Windows.Documents.InlineCollection>  
+ <xref:System.Windows.Documents.ListItemCollection>  
+ [<span data-ttu-id="ddb8b-118">Общие сведения о документе нефиксированного формата</span><span class="sxs-lookup"><span data-stu-id="ddb8b-118">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="ddb8b-119">Управление группами строк таблицы пользователя с помощью свойства RowGroups</span><span class="sxs-lookup"><span data-stu-id="ddb8b-119">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="ddb8b-120">Управление столбцами таблицы с помощью свойства Columns</span><span class="sxs-lookup"><span data-stu-id="ddb8b-120">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="ddb8b-121">Управление группами строк таблицы пользователя с помощью свойства RowGroups</span><span class="sxs-lookup"><span data-stu-id="ddb8b-121">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

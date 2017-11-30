@@ -1,210 +1,213 @@
 ---
-title: "Сведения о политике конфиденциальности Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сведения о политике конфиденциальности [WCF]"
-  - "WCF, сведения о политике конфиденциальности"
-  - "Windows Communication Foundation, сведения о политике конфиденциальности"
+title: "Сведения о политике конфиденциальности Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, privacy information
+- WCF, privacy information
+- privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 53fc4be67fd3f6a7b2b8c914c11fb6540b28c199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Сведения о политике конфиденциальности Windows Communication Foundation
-Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей.  При создании приложения с использованием [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] версии 3.0 оно может повлиять на конфиденциальность информации конечных пользователей.  Например, приложение может явным образом собирать контактные данные пользователей или запрашивать\/отправлять информацию через Интернет на свой веб\-сайт.  Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.  
+# <a name="windows-communication-foundation-privacy-information"></a><span data-ttu-id="e5987-102">Сведения о политике конфиденциальности Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e5987-102">Windows Communication Foundation Privacy Information</span></span>
+<span data-ttu-id="e5987-103">Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей.</span><span class="sxs-lookup"><span data-stu-id="e5987-103">Microsoft is committed to protecting end-users' privacy.</span></span> <span data-ttu-id="e5987-104">При создании приложения с использованием [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] версии 3.0 оно может повлиять на конфиденциальность информации конечных пользователей.</span><span class="sxs-lookup"><span data-stu-id="e5987-104">When you build an application using [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], version 3.0, your application may impact your end-users' privacy.</span></span> <span data-ttu-id="e5987-105">Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт.</span><span class="sxs-lookup"><span data-stu-id="e5987-105">For example, your application may explicitly collect user contact information, or it may request or send information over the Internet to your Web site.</span></span> <span data-ttu-id="e5987-106">Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения.</span><span class="sxs-lookup"><span data-stu-id="e5987-106">If you embed Microsoft technology in your application, that technology may have its own behavior that might affect privacy.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-107"> отправляет информацию из приложения в корпорацию Майкрософт, только если это требуется разработчику или конечному пользователю.</span><span class="sxs-lookup"><span data-stu-id="e5987-107"> does not send any information to Microsoft from your application unless you or the end-user choose to send it to us.</span></span>  
   
-## Вкратце о WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] представляет собой распределенную среду обмена сообщениями, использующую платформу .NET Framework корпорации Майкрософт, которая позволяет разработчикам создавать распределенные приложения.  Сообщения, обмен которыми осуществляется между двумя приложениями, содержат информацию заголовка и тела сообщения.  
+## <a name="wcf-in-brief"></a><span data-ttu-id="e5987-108">Вкратце о WCF</span><span class="sxs-lookup"><span data-stu-id="e5987-108">WCF in Brief</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-109"> представляет собой распределенную среду обмена сообщениями, использующую платформу .NET Framework корпорации Майкрософт, которая позволяет разработчикам создавать распределенные приложения.</span><span class="sxs-lookup"><span data-stu-id="e5987-109"> is a distributed messaging framework using the Microsoft .NET Framework that allows developers to build distributed applications.</span></span> <span data-ttu-id="e5987-110">Сообщения, обмен которыми осуществляется между двумя приложениями, содержат информацию заголовка и тела сообщения.</span><span class="sxs-lookup"><span data-stu-id="e5987-110">Messages communicated between two applications contain header and body information.</span></span>  
   
- Заголовки могут содержать информацию о маршрутизации сообщений, безопасности, транзакциях, а также другие сведения в зависимости от служб, используемых приложением.  Как правило, по умолчанию выполняется шифрование сообщений.  Единственным исключением является использование привязки `BasicHttpBinding`, которая была создана для использования с небезопасными веб\-службами прежних версий.  Разработчик приложения отвечает за окончательную версию приложения.  Сообщения в теле SOAP содержат относящиеся к приложению данные. Однако такую информацию, как определенные приложением персональные данные, можно защитить с помощью шифрования [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] или функций обеспечения конфиденциальности.  В следующих разделах описаны функции, которые теоретически могут повлиять на конфиденциальность.  
+ <span data-ttu-id="e5987-111">Заголовки могут содержать информацию о маршрутизации сообщений, безопасности, транзакциях, а также другие сведения в зависимости от служб, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="e5987-111">Headers may contain message routing, security information, transactions, and more depending on the services used by the application.</span></span> <span data-ttu-id="e5987-112">Как правило, по умолчанию выполняется шифрование сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-112">Messages are typically encrypted by default.</span></span> <span data-ttu-id="e5987-113">Единственным исключением является использование привязки `BasicHttpBinding`, которая была создана для использования с небезопасными веб-службами прежних версий.</span><span class="sxs-lookup"><span data-stu-id="e5987-113">The one exception is when using the `BasicHttpBinding`, which was designed for use with non-secured, legacy Web services.</span></span> <span data-ttu-id="e5987-114">Разработчик приложения отвечает за окончательную версию приложения.</span><span class="sxs-lookup"><span data-stu-id="e5987-114">As the application designer, you are responsible for the final design.</span></span> <span data-ttu-id="e5987-115">Сообщения в теле SOAP содержат относящиеся к приложению данные. Однако такую информацию, как определенные приложением персональные данные, можно защитить с помощью шифрования [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] или функций обеспечения конфиденциальности.</span><span class="sxs-lookup"><span data-stu-id="e5987-115">Messages in the SOAP body contain application-specific data; however, this data, such as application-defined personal information, can be secured by using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] encryption or confidentiality features.</span></span> <span data-ttu-id="e5987-116">В следующих разделах описаны функции, которые теоретически могут повлиять на конфиденциальность.</span><span class="sxs-lookup"><span data-stu-id="e5987-116">The following sections describe the features that potentially impact privacy.</span></span>  
   
-## Обмен сообщениями  
- Каждое сообщение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] содержит заголовок адреса, в котором указано место назначения сообщения и место, в которое должен отправляться ответ.  
+## <a name="messaging"></a><span data-ttu-id="e5987-117">Обмен сообщениями</span><span class="sxs-lookup"><span data-stu-id="e5987-117">Messaging</span></span>  
+ <span data-ttu-id="e5987-118">Каждое сообщение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] содержит заголовок адреса, в котором указано место назначения сообщения и место, в которое должен отправляться ответ.</span><span class="sxs-lookup"><span data-stu-id="e5987-118">Each [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] message has an address header that specifies the message destination and where the reply should go.</span></span>  
   
- Компонент адреса конечной точки является универсальным кодом ресурса \(URI\), определяющим конечную точку.  Адрес может быть сетевым или логическим.  Адрес может содержать имя компьютера \(имя узла, полное доменное имя\) и IP\-адрес.  Адрес конечной точки также может содержать глобальный уникальный идентификатор \(GUID\) или коллекцию таких идентификаторов для временной адресации, используемой для распознавания каждого адреса.  Каждое сообщение содержит идентификатор сообщения, который является глобальным уникальным идентификатором.  Эта функция соответствует стандарту ссылок WS\-Addressing.  
+ <span data-ttu-id="e5987-119">Компонент адреса конечной точки является универсальным кодом ресурса (URI), определяющим конечную точку.</span><span class="sxs-lookup"><span data-stu-id="e5987-119">The address component of an endpoint address is a Uniform Resource Identifier (URI) that identifies the endpoint.</span></span> <span data-ttu-id="e5987-120">Адрес может быть сетевым или логическим.</span><span class="sxs-lookup"><span data-stu-id="e5987-120">The address can be a network address or a logical address.</span></span> <span data-ttu-id="e5987-121">Адрес может содержать имя компьютера (имя узла, полное доменное имя) и IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="e5987-121">The address may include machine name (hostname, fully qualified domain name) and an IP address.</span></span> <span data-ttu-id="e5987-122">Адрес конечной точки также может содержать глобальный уникальный идентификатор (GUID) или коллекцию таких идентификаторов для временной адресации, используемой для распознавания каждого адреса.</span><span class="sxs-lookup"><span data-stu-id="e5987-122">The endpoint address may also contain a globally unique identifier (GUID), or a collection of GUIDs for temporary addressing used to discern each address.</span></span> <span data-ttu-id="e5987-123">Каждое сообщение содержит идентификатор сообщения, который является глобальным уникальным идентификатором.</span><span class="sxs-lookup"><span data-stu-id="e5987-123">Each message contains a message ID that is a GUID.</span></span> <span data-ttu-id="e5987-124">Эта функция соответствует стандарту ссылок WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="e5987-124">This feature follows the WS-Addressing reference standard.</span></span>  
   
- На уровне обмена сообщениями [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] персональные данные на локальный компьютер не записываются.  Однако возможно их распространение на уровне сети, если разработчик создал службу, раскрывающую такую информацию \(например за счет указания имени пользователя в имени конечной точки или включения персональных данных в язык описания веб\-служб конечной точки, но не требуя при этом от клиентов использования HTTPS для доступа к WSDL\).  Кроме того, если разработчик запускает средство [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для конечной точки, раскрывающей персональные данные, в выходных данных средства может содержатся такая информация и выходной файл записывается на локальный жесткий диск.  
+ <span data-ttu-id="e5987-125">На уровне обмена сообщениями [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] персональные данные на локальный компьютер не записываются.</span><span class="sxs-lookup"><span data-stu-id="e5987-125">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaging layer does not write any personal information to the local machine.</span></span> <span data-ttu-id="e5987-126">Однако возможно их распространение на уровне сети, если разработчик создал службу, раскрывающую такую информацию (например за счет указания имени пользователя в имени конечной точки или включения персональных данных в язык описания веб-служб конечной точки, но не требуя при этом от клиентов использования HTTPS для доступа к WSDL).</span><span class="sxs-lookup"><span data-stu-id="e5987-126">However, it might propagate personal information at the network level if a service developer has created a service that exposes such information (for example, by using a person's name in an endpoint name, or including personal information in the endpoint's Web Services Description Language but not requiring clients to use https to access the WSDL).</span></span> <span data-ttu-id="e5987-127">Кроме того Если разработчик выполняет [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для конечной точки, предоставляющей личные данные, выходные данные программы может содержать данные, что и выходной файл будет записан локальный жесткий диск.</span><span class="sxs-lookup"><span data-stu-id="e5987-127">Also, if a developer runs the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool against an endpoint that exposes personal information, the tool's output could contain that information, and the output file is written to the local hard disk.</span></span>  
   
-## Размещение  
- Функция размещения в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] позволяет приложениям запускаться по запросу или включать совместное использование портов между несколькими приложениями.  Приложение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] может быть размещено в службах Internet Information Services \(IIS\) аналогично [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+## <a name="hosting"></a><span data-ttu-id="e5987-128">Размещение</span><span class="sxs-lookup"><span data-stu-id="e5987-128">Hosting</span></span>  
+ <span data-ttu-id="e5987-129">Функция размещения в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] позволяет приложениям запускаться по запросу или включать совместное использование портов между несколькими приложениями.</span><span class="sxs-lookup"><span data-stu-id="e5987-129">The hosting feature in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] allows applications to start on demand or to enable port sharing between multiple applications.</span></span> <span data-ttu-id="e5987-130">Приложение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] может быть размещено в службах Internet Information Services (IIS) аналогично [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-130">An [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application can be hosted in Internet Information Services (IIS), similar to [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span></span>  
   
- При размещении не раскрывается какая\-либо особая информация в сети, и данные не сохраняются на компьютере.  
+ <span data-ttu-id="e5987-131">При размещении не раскрывается какая-либо особая информация в сети, и данные не сохраняются на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e5987-131">Hosting does not expose any specific information on the network and it does not keep data on the machine.</span></span>  
   
-## Безопасность сообщений  
- Безопасность [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивает возможности безопасности для приложений для обмена сообщениями.  Предусмотренные функции безопасности включают в себя проверку подлинности и авторизацию.  
+## <a name="message-security"></a><span data-ttu-id="e5987-132">Безопасность сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-132">Message Security</span></span>  
+ <span data-ttu-id="e5987-133">Безопасность [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивает возможности безопасности для приложений для обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="e5987-133">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] security provides the security capabilities for messaging applications.</span></span> <span data-ttu-id="e5987-134">Предусмотренные функции безопасности включают в себя проверку подлинности и авторизацию.</span><span class="sxs-lookup"><span data-stu-id="e5987-134">The security functions provided include authentication and authorization.</span></span>  
   
- Проверка подлинности осуществляется путем передачи учетных данных между клиентами и службами.  Проверка подлинности может выполняться либо через безопасность на транспортном уровне, либо через безопасность на уровне сообщений SOAP следующим образом.  
+ <span data-ttu-id="e5987-135">Проверка подлинности осуществляется путем передачи учетных данных между клиентами и службами.</span><span class="sxs-lookup"><span data-stu-id="e5987-135">Authentication is performed by passing credentials between the clients and services.</span></span> <span data-ttu-id="e5987-136">Проверка подлинности может выполняться либо через безопасность на транспортном уровне, либо через безопасность на уровне сообщений SOAP следующим образом.</span><span class="sxs-lookup"><span data-stu-id="e5987-136">Authentication can be either through transport-level security or through SOAP message-level security, as follows:</span></span>  
   
--   При безопасности на уровне сообщений SOAP проверка подлинности осуществляется с помощью учетных данных, например имен пользователей\/паролей, сертификатов X.509, билетов Kerberos и маркеров SAML, каждый из которых может содержать персональные данные в зависимости от издателя.  
+-   <span data-ttu-id="e5987-137">При безопасности на уровне сообщений SOAP проверка подлинности осуществляется с помощью учетных данных, например имен пользователей/паролей, сертификатов X.509, билетов Kerberos и маркеров SAML, каждый из которых может содержать персональные данные в зависимости от издателя.</span><span class="sxs-lookup"><span data-stu-id="e5987-137">In SOAP message security, authentication is performed through credentials like username/passwords, X.509 certificates, Kerberos tickets, and SAML tokens, all of which might contain personal information, depending on the issuer.</span></span>  
   
--   С помощью безопасности транспорта проверка подлинности осуществляется посредством таких обычных механизмов проверки подлинности транспорта, как схемы проверки подлинности HTTP \(обычная, дайджест, Negotiate, Integrated Windows Authorization, NTLM, без проверки и анонимная\) и проверка подлинности на основе формы.  
+-   <span data-ttu-id="e5987-138">С помощью безопасности транспорта проверка подлинности осуществляется посредством таких обычных механизмов проверки подлинности транспорта, как схемы проверки подлинности HTTP (обычная, дайджест, Negotiate, Integrated Windows Authorization, NTLM, без проверки и анонимная) и проверка подлинности на основе формы.</span><span class="sxs-lookup"><span data-stu-id="e5987-138">Using transport security, authentication is done through traditional transport authentication mechanisms like HTTP authentication schemes (Basic, Digest, Negotiate, Integrated Windows Authorization, NTLM, None, and Anonymous), and form authentication.</span></span>  
   
- Результатом проверки подлинности может стать безопасный сеанс, осуществляемый между взаимодействующими конечными точками.  Сеанс определяется идентификатором GUID, который существует на протяжении всего времени существования сеанса безопасности.  В следующей таблице указано, что и где хранится.  
+ <span data-ttu-id="e5987-139">Результатом проверки подлинности может стать безопасный сеанс, осуществляемый между взаимодействующими конечными точками.</span><span class="sxs-lookup"><span data-stu-id="e5987-139">Authentication can result in a secure session established between the communicating endpoints.</span></span> <span data-ttu-id="e5987-140">Сеанс определяется идентификатором GUID, который существует на протяжении всего времени существования сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5987-140">The session is identified by a GUID that lasts the lifetime of the security session.</span></span> <span data-ttu-id="e5987-141">В следующей таблице указано, что и где хранится.</span><span class="sxs-lookup"><span data-stu-id="e5987-141">The following table shows what is kept and where.</span></span>  
   
-|Данные|Хранилище|  
-|------------|---------------|  
-|Учетные данные представления, например имена пользователей, сертификаты X.509, маркеры Kerberos и ссылки на учетные данные.|Стандартные механизмы управления учетными данными в Windows, например хранилище сертификатов Windows.|  
-|Информация о членстве пользователя, например имена пользователей и пароли.|Поставщики членства [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].|  
-|Данные идентификации о службе, используемой для проверки подлинности службы для клиентов.|Адрес конечной точки службы.|  
-|Сведения о вызывающем объекте.|Журналы аудита.|  
+|<span data-ttu-id="e5987-142">Данные</span><span class="sxs-lookup"><span data-stu-id="e5987-142">Data</span></span>|<span data-ttu-id="e5987-143">Хранилище</span><span class="sxs-lookup"><span data-stu-id="e5987-143">Storage</span></span>|  
+|----------|-------------|  
+|<span data-ttu-id="e5987-144">Учетные данные представления, например имена пользователей, сертификаты X.509, маркеры Kerberos и ссылки на учетные данные.</span><span class="sxs-lookup"><span data-stu-id="e5987-144">Presentation credentials, such as username, X.509 certificates, Kerberos tokens, and references to credentials.</span></span>|<span data-ttu-id="e5987-145">Стандартные механизмы управления учетными данными в Windows, например хранилище сертификатов Windows.</span><span class="sxs-lookup"><span data-stu-id="e5987-145">Standard Windows credential management mechanisms such as the Windows certificate store.</span></span>|  
+|<span data-ttu-id="e5987-146">Информация о членстве пользователя, например имена пользователей и пароли.</span><span class="sxs-lookup"><span data-stu-id="e5987-146">User membership information, such as usernames and passwords.</span></span>|<span data-ttu-id="e5987-147">Поставщики членства [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-147">[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] membership providers.</span></span>|  
+|<span data-ttu-id="e5987-148">Данные идентификации о службе, используемой для проверки подлинности службы для клиентов.</span><span class="sxs-lookup"><span data-stu-id="e5987-148">Identity information about the service used to authenticate the service to clients.</span></span>|<span data-ttu-id="e5987-149">Адрес конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="e5987-149">Endpoint address of the service.</span></span>|  
+|<span data-ttu-id="e5987-150">Сведения о вызывающем объекте.</span><span class="sxs-lookup"><span data-stu-id="e5987-150">Caller information.</span></span>|<span data-ttu-id="e5987-151">Журналы аудита.</span><span class="sxs-lookup"><span data-stu-id="e5987-151">Auditing logs.</span></span>|  
   
-## Аудит  
- Во время аудита регистрируются события успешной и неудачной проверки подлинности и авторизации.  В журналах аудита содержатся следующие данные: URI службы, URI действия и идентификация вызывающего объекта.  
+## <a name="auditing"></a><span data-ttu-id="e5987-152">Аудит</span><span class="sxs-lookup"><span data-stu-id="e5987-152">Auditing</span></span>  
+ <span data-ttu-id="e5987-153">Во время аудита регистрируются события успешной и неудачной проверки подлинности и авторизации.</span><span class="sxs-lookup"><span data-stu-id="e5987-153">Auditing records the success and failure of authentication and authorization events.</span></span> <span data-ttu-id="e5987-154">В журналах аудита содержатся следующие данные: URI службы, URI действия и идентификация вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="e5987-154">Auditing records contain the following data: service URI, action URI, and the caller's identification.</span></span>  
   
- Во время аудита также регистрируется событие, когда администратор изменяет конфигурацию ведения журнала сообщений \(включает или выключает\), поскольку при ведении журнала сообщений данные, относящиеся к приложению, могут указываться в заголовках и телах.  В [!INCLUDE[wxp](../../../includes/wxp-md.md)] запись вносится в журнал событий приложений.  В [!INCLUDE[wv](../../../includes/wv-md.md)] и [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] запись вносится в журнал событий безопасности.  
+ <span data-ttu-id="e5987-155">Во время аудита также регистрируется событие, когда администратор изменяет конфигурацию ведения журнала сообщений (включает или выключает), поскольку при ведении журнала сообщений данные, относящиеся к приложению, могут указываться в заголовках и телах.</span><span class="sxs-lookup"><span data-stu-id="e5987-155">Auditing also records when the administrator modifies the configuration of message logging (turning it on or off), because message logging may log application-specific data in headers and bodies.</span></span> <span data-ttu-id="e5987-156">В [!INCLUDE[wxp](../../../includes/wxp-md.md)] запись вносится в журнал событий приложений.</span><span class="sxs-lookup"><span data-stu-id="e5987-156">For [!INCLUDE[wxp](../../../includes/wxp-md.md)], a record is logged in the application event log.</span></span> <span data-ttu-id="e5987-157">В [!INCLUDE[wv](../../../includes/wv-md.md)] и [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] запись вносится в журнал событий безопасности.</span><span class="sxs-lookup"><span data-stu-id="e5987-157">For [!INCLUDE[wv](../../../includes/wv-md.md)] and [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], a record is logged in the security event log.</span></span>  
   
-## Транзакции  
- Функция транзакций обеспечивает транзакционные службы для приложения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+## <a name="transactions"></a><span data-ttu-id="e5987-158">Транзакции</span><span class="sxs-lookup"><span data-stu-id="e5987-158">Transactions</span></span>  
+ <span data-ttu-id="e5987-159">Функция транзакций обеспечивает транзакционные службы для приложения [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-159">The transactions feature provides transactional services to a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application.</span></span>  
   
- Заголовки транзакций, используемые при распространении транзакций, могут содержать идентификаторы транзакций или идентификаторы зачисления, которые являются идентификаторами GUID.  
+ <span data-ttu-id="e5987-160">Заголовки транзакций, используемые при распространении транзакций, могут содержать идентификаторы транзакций или идентификаторы зачисления, которые являются идентификаторами GUID.</span><span class="sxs-lookup"><span data-stu-id="e5987-160">Transaction headers used in transaction propagation may contain Transaction IDs or Enlistment IDs, which are GUIDs.</span></span>  
   
- Функция транзакций использует диспетчер транзакций координатора распределенных транзакций \(Майкрософт\) \(компонент Windows\) для управления состоянием транзакций.  По умолчанию взаимодействие между диспетчерами транзакций шифруется.  Диспетчеры транзакций могут вносить в журнал ссылки на конечные точки, идентификаторы транзакций и идентификаторы зачисления как часть их устойчивого состояния.  Время существования этого состояния определяется временем существования файла журнала диспетчера транзакций.  Этот журнал используется и обслуживается службой MSDTC.  
+ <span data-ttu-id="e5987-161">Функция транзакций использует диспетчер транзакций координатора распределенных транзакций (Майкрософт) (компонент Windows) для управления состоянием транзакций.</span><span class="sxs-lookup"><span data-stu-id="e5987-161">The Transactions feature uses the Microsoft Distributed Transaction Coordinator (MSDTC) Transaction Manager (a Windows component) to manage transaction state.</span></span> <span data-ttu-id="e5987-162">По умолчанию взаимодействие между диспетчерами транзакций шифруется.</span><span class="sxs-lookup"><span data-stu-id="e5987-162">By default, communications between Transactions Managers are encrypted.</span></span> <span data-ttu-id="e5987-163">Диспетчеры транзакций могут вносить в журнал ссылки на конечные точки, идентификаторы транзакций и идентификаторы зачисления как часть их устойчивого состояния.</span><span class="sxs-lookup"><span data-stu-id="e5987-163">Transaction Managers may log endpoint references, Transaction IDs, and Enlistment IDs as part of their durable state.</span></span> <span data-ttu-id="e5987-164">Время существования этого состояния определяется временем существования файла журнала диспетчера транзакций.</span><span class="sxs-lookup"><span data-stu-id="e5987-164">The lifetime of this state is determined by the lifetime of the Transaction Manager’s log file.</span></span> <span data-ttu-id="e5987-165">Этот журнал используется и обслуживается службой MSDTC.</span><span class="sxs-lookup"><span data-stu-id="e5987-165">The MSDTC service owns and maintains this log.</span></span>  
   
- Функция транзакций реализует стандарты транзакций WS\-Coordination и WS\-Atomic.  
+ <span data-ttu-id="e5987-166">Функция транзакций реализует стандарты транзакций WS-Coordination и WS-Atomic.</span><span class="sxs-lookup"><span data-stu-id="e5987-166">The Transactions feature implements the WS-Coordination and WS-Atomic Transaction standards.</span></span>  
   
-## Надежные сеансы  
- Надежные сеансы в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивают передачу сообщений в случае возникновения ошибок транспорта или посредника.  Они обеспечивают точную передачу сообщений даже при отключении базового транспорта \(например подключение TCP в беспроводной сети\) или потере сообщения \(удаление прокси\-сервером HTTP исходящего или входящего сообщения\).  Надежные сеансы также восстанавливают измененный порядок передачи сообщений \(что может произойти в случае многопутевой маршрутизации\), сохраняя порядок, в котором были отправлены сообщения.  
+## <a name="reliable-sessions"></a><span data-ttu-id="e5987-167">Надежные сеансы</span><span class="sxs-lookup"><span data-stu-id="e5987-167">Reliable Sessions</span></span>  
+ <span data-ttu-id="e5987-168">Надежные сеансы в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивают передачу сообщений в случае возникновения ошибок транспорта или посредника.</span><span class="sxs-lookup"><span data-stu-id="e5987-168">Reliable sessions in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provide the transfer of messages when transport or intermediary failures occur.</span></span> <span data-ttu-id="e5987-169">Они обеспечивают точную передачу сообщений даже при отключении базового транспорта (например подключение TCP в беспроводной сети) или потере сообщения (удаление прокси-сервером HTTP исходящего или входящего сообщения).</span><span class="sxs-lookup"><span data-stu-id="e5987-169">They provide an exactly-once transfer of messages even when the underlying transport disconnects (for example, a TCP connection on a wireless network) or loses a message (an HTTP proxy dropping an outgoing or incoming message).</span></span> <span data-ttu-id="e5987-170">Надежные сеансы также восстанавливают измененный порядок передачи сообщений (что может произойти в случае многопутевой маршрутизации), сохраняя порядок, в котором были отправлены сообщения.</span><span class="sxs-lookup"><span data-stu-id="e5987-170">Reliable sessions also recover message reordering (as may happen in the case of multipath routing), preserving the order in which the messages were sent.</span></span>  
   
- Надежные сеансы реализованы с использованием протокола WS\-ReliableMessaging \(WS\-RM\).  Они добавляют заголовки WS\-RM, содержащие информацию о сеансе, которая используется для определения всех сообщений, связанных с определенным надежным сеансом.  У каждого сеанса WS\-RM имеется идентификатор, являющийся идентификатором GUID.  
+ <span data-ttu-id="e5987-171">Надежные сеансы реализованы с использованием протокола WS-ReliableMessaging (WS-RM).</span><span class="sxs-lookup"><span data-stu-id="e5987-171">Reliable sessions are implemented using the WS-ReliableMessaging (WS-RM) protocol.</span></span> <span data-ttu-id="e5987-172">Они добавляют заголовки WS-RM, содержащие информацию о сеансе, которая используется для определения всех сообщений, связанных с определенным надежным сеансом.</span><span class="sxs-lookup"><span data-stu-id="e5987-172">They add WS-RM headers that contain session information, which is used to identify all messages associated with a particular reliable session.</span></span> <span data-ttu-id="e5987-173">У каждого сеанса WS-RM имеется идентификатор, являющийся идентификатором GUID.</span><span class="sxs-lookup"><span data-stu-id="e5987-173">Each WS-RM session has an identifier, which is a GUID.</span></span>  
   
- Персональные данные на компьютере конечного пользователя не сохраняются.  
+ <span data-ttu-id="e5987-174">Персональные данные на компьютере конечного пользователя не сохраняются.</span><span class="sxs-lookup"><span data-stu-id="e5987-174">No personal information is retained on the end-user's machine.</span></span>  
   
-## Очередь в каналах  
- В очередях хранятся сообщения отправляющего приложения от имени получающего приложения и позднее перенаправляющие эти сообщения получающему приложению.  Они обеспечивают передачу сообщений из отправляющих в получающие приложения, когда, например, получающее приложение служит посредником.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] обеспечивает поддержку организации очереди, используя как транспорт службу очередей сообщений \(Майкрософт\) \(MSMQ\).  
+## <a name="queued-channels"></a><span data-ttu-id="e5987-175">Очередь в каналах</span><span class="sxs-lookup"><span data-stu-id="e5987-175">Queued Channels</span></span>  
+ <span data-ttu-id="e5987-176">В очередях хранятся сообщения отправляющего приложения от имени получающего приложения и позднее перенаправляющие эти сообщения получающему приложению.</span><span class="sxs-lookup"><span data-stu-id="e5987-176">Queues store messages from a sending application on behalf of a receiving application and later forward these messages to the receiving application.</span></span> <span data-ttu-id="e5987-177">Они обеспечивают передачу сообщений из отправляющих в получающие приложения, когда, например, получающее приложение служит посредником.</span><span class="sxs-lookup"><span data-stu-id="e5987-177">They help ensure the transfer of messages from sending applications to receiving applications when, for example, the receiving application is transient.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-178"> обеспечивает поддержку организации очереди, используя как транспорт службу очередей сообщений (Майкрософт) (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="e5987-178"> provides support for queuing by using Microsoft Message Queuing (MSMQ) as a transport.</span></span>  
   
- Функция очереди в каналах не добавляет заголовки в сообщение.  Вместо этого она создает сообщение очереди сообщений с соответствующим набором свойств этого сообщения и вызывает методы очереди сообщений, чтобы разместить сообщение в очереди сообщений.  Очередь сообщений является необязательным компонентом в поставляемой ОС Windows.  
+ <span data-ttu-id="e5987-179">Функция очереди в каналах не добавляет заголовки в сообщение.</span><span class="sxs-lookup"><span data-stu-id="e5987-179">The queued channels feature does not add headers to a message.</span></span> <span data-ttu-id="e5987-180">Вместо этого она создает сообщение очереди сообщений с соответствующим набором свойств этого сообщения и вызывает методы очереди сообщений, чтобы разместить сообщение в очереди сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-180">Instead it creates a Message Queuing message with appropriate Message Queuing message properties set, and invokes Message Queuing methods to put the message in the Message Queuing queue.</span></span> <span data-ttu-id="e5987-181">Очередь сообщений является необязательным компонентом в поставляемой ОС Windows.</span><span class="sxs-lookup"><span data-stu-id="e5987-181">Message Queuing is an optional component that ships with Windows.</span></span>  
   
- Функция очереди в каналах не сохраняет информацию на компьютере конечного пользователя, поскольку она использует очередь сообщений в качестве инфраструктуры организации очередей.  
+ <span data-ttu-id="e5987-182">Функция очереди в каналах не сохраняет информацию на компьютере конечного пользователя, поскольку она использует очередь сообщений в качестве инфраструктуры организации очередей.</span><span class="sxs-lookup"><span data-stu-id="e5987-182">No information is retained on the end-user's machine by the queued channels feature, because it uses Message Queuing as the queuing infrastructure.</span></span>  
   
-## Интеграция с COM\+  
- Эта функция обеспечивает оболочку для существующей функциональности COM и COM\+ с целью создания служб, совместимых со службами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  В этой функции не используются специальные заголовки, и она не хранит данные на компьютере конечного пользователя.  
+## <a name="com-integration"></a><span data-ttu-id="e5987-183">Интеграция с COM+</span><span class="sxs-lookup"><span data-stu-id="e5987-183">COM+ Integration</span></span>  
+ <span data-ttu-id="e5987-184">Эта функция обеспечивает оболочку для существующей функциональности COM и COM+ с целью создания служб, совместимых со службами [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-184">This feature wraps existing COM and COM+ functionality to create services that are compatible with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="e5987-185">В этой функции не используются специальные заголовки, и она не хранит данные на компьютере конечного пользователя.</span><span class="sxs-lookup"><span data-stu-id="e5987-185">This feature does not use specific headers and it does not retain data on the end-user's machine.</span></span>  
   
-## Моникер служб COM  
- Он обеспечивает неуправляемую программу\-оболочку для стандартного клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  В этой функции по сети не передаются специальные заголовки, и она не хранит данные на компьютере.  
+## <a name="com-service-moniker"></a><span data-ttu-id="e5987-186">Моникер служб COM</span><span class="sxs-lookup"><span data-stu-id="e5987-186">COM Service Moniker</span></span>  
+ <span data-ttu-id="e5987-187">Он обеспечивает неуправляемую программу-оболочку для стандартного клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-187">This provides an unmanaged wrapper to a standard [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="e5987-188">В этой функции по сети не передаются специальные заголовки, и она не хранит данные на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e5987-188">This feature does not have specific headers on the wire nor does it persist data on the machine.</span></span>  
   
-## Одноранговый канал  
- Одноранговый канал позволяет разрабатывать многопользовательские приложения с помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Многопользовательский обмен сообщениями возникает в контексте сетки.  Сетки определяются именем, с которым узел может соединиться.  Каждый узел в одноранговом канале создает прослушиватель TCP на указанном пользователем порту и устанавливает подключения к другим узлам в сетке, чтобы обеспечить устойчивую работу.  Чтобы подключиться к другим узлам в сетке, узлы также обмениваются некоторыми данными, включая адрес прослушивателя и IP\-адреса компьютера, с другими узлами в сетке.  Сообщения, отправляемые по сетке, могут содержать сведения о безопасности, принадлежащие отправителю, с целью предотвращения спуфинга и подделки сообщений.  
+## <a name="peer-channel"></a><span data-ttu-id="e5987-189">Одноранговый канал</span><span class="sxs-lookup"><span data-stu-id="e5987-189">Peer Channel</span></span>  
+ <span data-ttu-id="e5987-190">Одноранговый канал позволяет разрабатывать многопользовательские приложения с помощью [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-190">A peer channel enables development of multiparty applications using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="e5987-191">Многопользовательский обмен сообщениями возникает в контексте сетки.</span><span class="sxs-lookup"><span data-stu-id="e5987-191">Multiparty messaging occurs in the context of a mesh.</span></span> <span data-ttu-id="e5987-192">Сетки определяются именем, с которым узел может соединиться.</span><span class="sxs-lookup"><span data-stu-id="e5987-192">Meshes are identified by a name that nodes can join.</span></span> <span data-ttu-id="e5987-193">Каждый узел в одноранговом канале создает прослушиватель TCP на указанном пользователем порту и устанавливает подключения к другим узлам в сетке, чтобы обеспечить устойчивую работу.</span><span class="sxs-lookup"><span data-stu-id="e5987-193">Each node in the peer channel creates a TCP listener at a user-specified port and establishes connections with other nodes in the mesh to ensure resiliency.</span></span> <span data-ttu-id="e5987-194">Чтобы подключиться к другим узлам в сетке, узлы также обмениваются некоторыми данными, включая адрес прослушивателя и IP-адреса компьютера, с другими узлами в сетке.</span><span class="sxs-lookup"><span data-stu-id="e5987-194">To connect to other nodes in the mesh, nodes also exchange some data, including the listener address and the machine's IP addresses, with other nodes in the mesh.</span></span> <span data-ttu-id="e5987-195">Сообщения, отправляемые по сетке, могут содержать сведения о безопасности, принадлежащие отправителю, с целью предотвращения спуфинга и подделки сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-195">Messages sent around in the mesh can contain security information that pertains to the sender to prevent message spoofing and tampering.</span></span>  
   
- Персональные данные на компьютере конечного пользователя не сохраняются.  
+ <span data-ttu-id="e5987-196">Персональные данные на компьютере конечного пользователя не сохраняются.</span><span class="sxs-lookup"><span data-stu-id="e5987-196">No personal information is stored on the end-user's machine.</span></span>  
   
-## Опыт работы ИТ\-специалистов  
+## <a name="it-professional-experience"></a><span data-ttu-id="e5987-197">Опыт работы ИТ-специалистов</span><span class="sxs-lookup"><span data-stu-id="e5987-197">IT Professional Experience</span></span>  
   
-### Трассировка  
- Функция диагностики инфраструктуры [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] заносит в журнал сообщения, которые проходят через транспортный уровень и уровень модели службы, а также действия и события, связанные с этими сообщениями.  Эта функция отключена по умолчанию.  Ее можно включить с помощью файла конфигурации приложения, а поведение трассировки можно изменить с помощью поставщика WMI [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] во время выполнения.  Во включенном состоянии инфраструктура трассировки выдает настроенным прослушивателям диагностическую трассировку, содержащую сообщения, действия и события обработки.  Формат и расположение выходных данных определяются выбранной администратором конфигурацией прослушивателя, однако, как правило, это файл в формате XML.  Администратор отвечает за настройку списка управления доступом \(ACL\) для файлов трассировки.  В частности, в случае размещения в системе Windows Activation System \(WAS\) администратор должен убедиться, что файлы не предоставляются с общедоступного виртуального корневого каталога, за исключением, если это сделано намеренно.  
+### <a name="tracing"></a><span data-ttu-id="e5987-198">Трассировка</span><span class="sxs-lookup"><span data-stu-id="e5987-198">Tracing</span></span>  
+ <span data-ttu-id="e5987-199">Функция диагностики инфраструктуры [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] заносит в журнал сообщения, которые проходят через транспортный уровень и уровень модели службы, а также действия и события, связанные с этими сообщениями.</span><span class="sxs-lookup"><span data-stu-id="e5987-199">The diagnostics feature of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure logs messages that pass through the transport and service model layers, and the activities and events associated with these messages.</span></span> <span data-ttu-id="e5987-200">Эта функция отключена по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e5987-200">This feature is turned off by default.</span></span> <span data-ttu-id="e5987-201">Ее можно включить с помощью файла конфигурации приложения, а поведение трассировки можно изменить с помощью поставщика WMI [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="e5987-201">It is enabled using the application’s configuration file and the tracing behavior may be modified using the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WMI provider at run time.</span></span> <span data-ttu-id="e5987-202">Во включенном состоянии инфраструктура трассировки выдает настроенным прослушивателям диагностическую трассировку, содержащую сообщения, действия и события обработки.</span><span class="sxs-lookup"><span data-stu-id="e5987-202">When enabled, the tracing infrastructure emits a diagnostic trace that contains messages, activities, and processing events to configured listeners.</span></span> <span data-ttu-id="e5987-203">Формат и расположение выходных данных определяются выбранной администратором конфигурацией прослушивателя, однако, как правило, это файл в формате XML.</span><span class="sxs-lookup"><span data-stu-id="e5987-203">The format and location of the output are determined by the administrator’s listener configuration choices, but is typically an XML formatted file.</span></span> <span data-ttu-id="e5987-204">Администратор отвечает за настройку списка управления доступом (ACL) для файлов трассировки.</span><span class="sxs-lookup"><span data-stu-id="e5987-204">The administrator is responsible for setting the access control list (ACL) on the trace files.</span></span> <span data-ttu-id="e5987-205">В частности, в случае размещения в системе Windows Activation System (WAS) администратор должен убедиться, что файлы не предоставляются с общедоступного виртуального корневого каталога, за исключением, если это сделано намеренно.</span><span class="sxs-lookup"><span data-stu-id="e5987-205">In particular, when hosted by Windows Activation System (WAS), the administrator should make sure the files are not served from the public virtual root directory if that is not desired.</span></span>  
   
- Существует два типа трассировки: ведение журналов сообщений и диагностическая трассировка модели служб, описание см. в следующем разделе.  Каждый тип настраивается через собственный источник трассировки: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> и <xref:System.ServiceModel>.  Оба этих источника трассировки для ведения журналов собирают данные, являющиеся локальными для приложения.  
+ <span data-ttu-id="e5987-206">Существует два типа трассировки: ведение журналов сообщений и диагностическая трассировка модели служб, описание см. в следующем разделе.</span><span class="sxs-lookup"><span data-stu-id="e5987-206">There are two types of tracing: Message logging and Service Model diagnostic tracing, described in the following section.</span></span> <span data-ttu-id="e5987-207">Каждый тип настраивается через собственный источник трассировки: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> и <xref:System.ServiceModel>.</span><span class="sxs-lookup"><span data-stu-id="e5987-207">Each type is configured through its own trace source: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> and <xref:System.ServiceModel>.</span></span> <span data-ttu-id="e5987-208">Оба этих источника трассировки для ведения журналов собирают данные, являющиеся локальными для приложения.</span><span class="sxs-lookup"><span data-stu-id="e5987-208">Both of these logging trace sources capture data that is local to the application.</span></span>  
   
-### Ведение журналов сообщений  
- Источник трассировки для ведения журнала сообщений \(<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>\) позволяет администратору вносить в журнал передаваемые в системе сообщения.  С помощью конфигурации пользователь может выбрать, следует ли вносить в журнал сообщения целиком или только их заголовки, либо вносить их в журнал на транспортном уровне или уровне модели службы, либо включать неправильно сформированные сообщения.  Кроме того, пользователь может настроить фильтрацию, чтобы ограничить внесение сообщений в журнал определенными типами.  
+### <a name="message-logging"></a><span data-ttu-id="e5987-209">Ведение журналов сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-209">Message Logging</span></span>  
+ <span data-ttu-id="e5987-210">Источник трассировки для ведения журнала сообщений (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) позволяет администратору вносить в журнал передаваемые в системе сообщения.</span><span class="sxs-lookup"><span data-stu-id="e5987-210">The message logging trace source (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) allows an administrator to log the messages that flow through the system.</span></span> <span data-ttu-id="e5987-211">С помощью конфигурации пользователь может выбрать, следует ли вносить в журнал сообщения целиком или только их заголовки, либо вносить их в журнал на транспортном уровне или уровне модели службы, либо включать неправильно сформированные сообщения.</span><span class="sxs-lookup"><span data-stu-id="e5987-211">Through configuration, the user may decide to log entire messages or message headers only, whether to log at the transport and/or service model layers, and whether to include malformed messages.</span></span> <span data-ttu-id="e5987-212">Кроме того, пользователь может настроить фильтрацию, чтобы ограничить внесение сообщений в журнал определенными типами.</span><span class="sxs-lookup"><span data-stu-id="e5987-212">Also, the user may configure filtering to restrict which messages are logged.</span></span>  
   
- По умолчанию ведение журнала сообщений отключено.  Администратор локального компьютера может запретить администратору на уровне приложения включение ведения журнала сообщений.  
+ <span data-ttu-id="e5987-213">По умолчанию ведение журнала сообщений отключено.</span><span class="sxs-lookup"><span data-stu-id="e5987-213">By default, message logging is disabled.</span></span> <span data-ttu-id="e5987-214">Администратор локального компьютера может запретить администратору на уровне приложения включение ведения журнала сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-214">The local machine administrator can prevent the application-level administrator from turning message logging on.</span></span>  
   
-#### Ведение журнала зашифрованных и расшифрованных сообщений  
- Зашифрованные или расшифрованные сообщения вносятся в журнал в соответствии со следующими условиями.  
+#### <a name="encrypted-and-decrypted-message-logging"></a><span data-ttu-id="e5987-215">Ведение журнала зашифрованных и расшифрованных сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-215">Encrypted and Decrypted Message Logging</span></span>  
+ <span data-ttu-id="e5987-216">Зашифрованные или расшифрованные сообщения вносятся в журнал в соответствии со следующими условиями.</span><span class="sxs-lookup"><span data-stu-id="e5987-216">Messages are logged, encrypted, or decrypted, as described in the following terms.</span></span>  
   
- Ведение журнала транспорта  
- Внесение в журнал сообщений, получаемых и отправляемых на транспортном уровне.  Эти сообщения содержат все заголовки и могут быть зашифрованы перед отправкой по сети и во время получения.  
+ <span data-ttu-id="e5987-217">Ведение журнала транспорта</span><span class="sxs-lookup"><span data-stu-id="e5987-217">Transport Logging</span></span>  
+ <span data-ttu-id="e5987-218">Внесение в журнал сообщений, получаемых и отправляемых на транспортном уровне.</span><span class="sxs-lookup"><span data-stu-id="e5987-218">Logs messages received and sent at the transport level.</span></span> <span data-ttu-id="e5987-219">Эти сообщения содержат все заголовки и могут быть зашифрованы перед отправкой по сети и во время получения.</span><span class="sxs-lookup"><span data-stu-id="e5987-219">These messages contain all headers, and may be encrypted before being sent on the wire and when being received.</span></span>  
   
- Если сообщения зашифрованы перед отправкой по сети и во время получения, они вносятся в журнал как зашифрованные.  Исключением является использование протокола безопасности \(HTTPS\): в этом случае они вносятся в журнал расшифрованными перед отправкой и после получения, даже если они зашифровываются в сети.  
+ <span data-ttu-id="e5987-220">Если сообщения зашифрованы перед отправкой по сети и во время получения, они вносятся в журнал как зашифрованные.</span><span class="sxs-lookup"><span data-stu-id="e5987-220">If messages are encrypted before being sent on the wire and when they are received, they are logged encrypted as well.</span></span> <span data-ttu-id="e5987-221">Исключением является использование протокола безопасности (HTTPS): в этом случае они вносятся в журнал расшифрованными перед отправкой и после получения, даже если они зашифровываются в сети.</span><span class="sxs-lookup"><span data-stu-id="e5987-221">An exception is when a security protocol is used (https): they are then logged decrypted before being sent and after being received even if they are encrypted on the wire.</span></span>  
   
- Ведение журнала служб  
- Внесение в журнал сообщений, полученных или отправленных на уровне модели служб, после обработки заголовка канала, непосредственно перед и после ввода пользовательского кода.  
+ <span data-ttu-id="e5987-222">Ведение журнала служб</span><span class="sxs-lookup"><span data-stu-id="e5987-222">Service Logging</span></span>  
+ <span data-ttu-id="e5987-223">Внесение в журнал сообщений, полученных или отправленных на уровне модели служб, после обработки заголовка канала, непосредственно перед и после ввода пользовательского кода.</span><span class="sxs-lookup"><span data-stu-id="e5987-223">Logs messages received or sent at the service model level, after channel header processing has occurred, just before and after entering user code.</span></span>  
   
- Сообщения, внесенные в журнал на этом уровне, расшифровываются, даже если они были защищены и зашифрованы в сети.  
+ <span data-ttu-id="e5987-224">Сообщения, внесенные в журнал на этом уровне, расшифровываются, даже если они были защищены и зашифрованы в сети.</span><span class="sxs-lookup"><span data-stu-id="e5987-224">Messages logged at this level are decrypted even if they were secured and encrypted on the wire.</span></span>  
   
- Ведение журнала неправильно сформированных сообщений  
- Внесение в журнал сообщений, которые инфраструктура [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] не может распознать или обработать.  
+ <span data-ttu-id="e5987-225">Ведение журнала неправильно сформированных сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-225">Malformed Message Logging</span></span>  
+ <span data-ttu-id="e5987-226">Внесение в журнал сообщений, которые инфраструктура [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] не может распознать или обработать.</span><span class="sxs-lookup"><span data-stu-id="e5987-226">Logs messages that the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure cannot understand or process.</span></span>  
   
- Сообщения вносятся в журнал «как есть», т.е. либо зашифрованными, либо расшифрованными.  
+ <span data-ttu-id="e5987-227">Сообщения вносятся в журнал «как есть», т.е. либо зашифрованными, либо расшифрованными.</span><span class="sxs-lookup"><span data-stu-id="e5987-227">Messages are logged as-is, that is, encrypted or not</span></span>  
   
- Когда сообщения вносятся в журнал в зашифрованной или незашифрованной форме, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] по умолчанию удаляет ключи безопасности и потенциально персональные данные из сообщений перед тем, как внести их в журнал.  В следующих разделах представлено описание, какая информация удаляется и когда.  Администратор компьютера и специалист, выполняющий развертывание приложения, должны предпринять ряд действий в отношении конфигурации, чтобы изменить поведение по умолчанию, связанное с внесением в журнал ключей и потенциально персональных данных.  
+ <span data-ttu-id="e5987-228">Когда сообщения вносятся в журнал в зашифрованной или незашифрованной форме, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] по умолчанию удаляет ключи безопасности и потенциально персональные данные из сообщений перед тем, как внести их в журнал.</span><span class="sxs-lookup"><span data-stu-id="e5987-228">When messages are logged in decrypted or unencrypted form, by default [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes security keys and potentially personal information from the messages before logging them.</span></span> <span data-ttu-id="e5987-229">В следующих разделах представлено описание, какая информация удаляется и когда.</span><span class="sxs-lookup"><span data-stu-id="e5987-229">The next sections describe what information is removed, and when.</span></span> <span data-ttu-id="e5987-230">Администратор компьютера и специалист, выполняющий развертывание приложения, должны предпринять ряд действий в отношении конфигурации, чтобы изменить поведение по умолчанию, связанное с внесением в журнал ключей и потенциально персональных данных.</span><span class="sxs-lookup"><span data-stu-id="e5987-230">The machine administrator and application deployer must both take certain configuration actions to change the default behavior to log keys and potentially personal information.</span></span>  
   
-#### Информация, удаленная из заголовков сообщений при внесении в журнал зашифрованных\/незашифрованных сообщений  
- Когда сообщения вносятся в журнал в зашифрованной или незашифрованной форме, ключи безопасности и потенциально персональные данные по умолчанию удаляются из заголовков и тел сообщений перед тем, как они будут внесены в журнал.  В следующем списке указано, что именно [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] считает ключами и потенциально персональными данными.  
+#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a><span data-ttu-id="e5987-231">Информация, удаленная из заголовков сообщений при внесении в журнал зашифрованных/незашифрованных сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-231">Information Removed from Message Headers When Logging Decrypted/Unencrypted Messages</span></span>  
+ <span data-ttu-id="e5987-232">Когда сообщения вносятся в журнал в зашифрованной или незашифрованной форме, ключи безопасности и потенциально персональные данные по умолчанию удаляются из заголовков и тел сообщений перед тем, как они будут внесены в журнал.</span><span class="sxs-lookup"><span data-stu-id="e5987-232">When messages are logged in decrypted/unencrypted form, security keys and potentially personal information are removed by default from message headers and message bodies before they are logged.</span></span> <span data-ttu-id="e5987-233">В следующем списке указано, что именно [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] считает ключами и потенциально персональными данными.</span><span class="sxs-lookup"><span data-stu-id="e5987-233">The following list shows what [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] considers keys and potentially personal information.</span></span>  
   
- Удаляемые ключи:  
+ <span data-ttu-id="e5987-234">Удаляемые ключи:</span><span class="sxs-lookup"><span data-stu-id="e5987-234">Keys that are removed:</span></span>  
   
- \- Для xmlns:wst\="http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/trust" и xmlns:wst\="http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust"  
+ <span data-ttu-id="e5987-235">\-Xmlns: WST = «http://schemas.xmlsoap.org/ws/2004/04/trust» и xmlns: WST = «http://schemas.xmlsoap.org/ws/2005/02/trust»</span><span class="sxs-lookup"><span data-stu-id="e5987-235">\- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"</span></span>  
   
- wst:BinarySecret  
+ <span data-ttu-id="e5987-236">wst:BinarySecret</span><span class="sxs-lookup"><span data-stu-id="e5987-236">wst:BinarySecret</span></span>  
   
- wst:Entropy  
+ <span data-ttu-id="e5987-237">wst:Entropy</span><span class="sxs-lookup"><span data-stu-id="e5987-237">wst:Entropy</span></span>  
   
- \- Для xmlns:wsse\="http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.1.xsd" и xmlns:wsse\="http:\/\/docs.oasis\-open.org\/wss\/2005\/xx\/oasis\-2005xx\-wss\-wssecurity\-secext\-1.1.xsd"  
+ <span data-ttu-id="e5987-238">\-Xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»</span><span class="sxs-lookup"><span data-stu-id="e5987-238">\- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span></span>  
   
- wsse:Password  
+ <span data-ttu-id="e5987-239">wsse:Password</span><span class="sxs-lookup"><span data-stu-id="e5987-239">wsse:Password</span></span>  
   
- wsse:Nonce  
+ <span data-ttu-id="e5987-240">wsse:Nonce</span><span class="sxs-lookup"><span data-stu-id="e5987-240">wsse:Nonce</span></span>  
   
- Удаляемые потенциально персональные данные:  
+ <span data-ttu-id="e5987-241">Удаляемые потенциально персональные данные:</span><span class="sxs-lookup"><span data-stu-id="e5987-241">Potentially personal information that is removed:</span></span>  
   
- \- Для xmlns:wsse\="http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.1.xsd" и xmlns:wsse\="http:\/\/docs.oasis\-open.org\/wss\/2005\/xx\/oasis\-2005xx\-wss\-wssecurity\-secext\-1.1.xsd"  
+ <span data-ttu-id="e5987-242">\-Xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» и xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»</span><span class="sxs-lookup"><span data-stu-id="e5987-242">\- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span></span>  
   
- wsse:Username  
+ <span data-ttu-id="e5987-243">wsse:Username</span><span class="sxs-lookup"><span data-stu-id="e5987-243">wsse:Username</span></span>  
   
- wsse:BinarySecurityToken  
+ <span data-ttu-id="e5987-244">wsse:BinarySecurityToken</span><span class="sxs-lookup"><span data-stu-id="e5987-244">wsse:BinarySecurityToken</span></span>  
   
- \- Для xmlns:saml\="urn:oasis:names:tc:SAML:1.0:assertion" удаляются элементы, выделенные полужирным шрифтом \(см. ниже\):  
+ <span data-ttu-id="e5987-245">\-Для xmlns:saml = «urn: oasis: имена: tc: SAML:1.0:assertion» удаляются элементы выделены полужирным шрифтом (см. ниже):</span><span class="sxs-lookup"><span data-stu-id="e5987-245">\- For xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" the items in bold (below) are removed:</span></span>  
   
- \<Assertion  
+ <span data-ttu-id="e5987-246">\<Утверждение</span><span class="sxs-lookup"><span data-stu-id="e5987-246">\<Assertion</span></span>  
   
- MajorVersion\="1"  
+ <span data-ttu-id="e5987-247">MajorVersion="1"</span><span class="sxs-lookup"><span data-stu-id="e5987-247">MajorVersion="1"</span></span>  
   
- MinorVersion\="1"  
+ <span data-ttu-id="e5987-248">MinorVersion="1"</span><span class="sxs-lookup"><span data-stu-id="e5987-248">MinorVersion="1"</span></span>  
   
- AssertionId\="\[ID\]"  
+ <span data-ttu-id="e5987-249">AssertionId="[ID]"</span><span class="sxs-lookup"><span data-stu-id="e5987-249">AssertionId="[ID]"</span></span>  
   
- Issuer\="\[string\]"  
+ <span data-ttu-id="e5987-250">Issuer="[string]"</span><span class="sxs-lookup"><span data-stu-id="e5987-250">Issuer="[string]"</span></span>  
   
- IssueInstant\="\[dateTime\]"  
+ <span data-ttu-id="e5987-251">IssueInstant="[dateTime]"</span><span class="sxs-lookup"><span data-stu-id="e5987-251">IssueInstant="[dateTime]"</span></span>  
   
- \>  
+ >  
   
- \<Conditions NotBefore\="\[dateTime\]" NotOnOrAfter\="\[dateTime\]"\>  
+ <span data-ttu-id="e5987-252">\<Условия NotBefore = «[dateTime]» NotOnOrAfter = «[dateTime]» ></span><span class="sxs-lookup"><span data-stu-id="e5987-252">\<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]"></span></span>  
   
- \<AudienceRestrictionCondition\>  
+ <span data-ttu-id="e5987-253">\<AudienceRestrictionCondition ></span><span class="sxs-lookup"><span data-stu-id="e5987-253">\<AudienceRestrictionCondition></span></span>  
   
- \<Audience\>\[uri\]\<\/Audience\>\+  
+ <span data-ttu-id="e5987-254">\<Аудитория > [uri]\</Audience > +</span><span class="sxs-lookup"><span data-stu-id="e5987-254">\<Audience>[uri]\</Audience>+</span></span>  
   
- \<\/AudienceRestrictionCondition\>\*  
+ <span data-ttu-id="e5987-255">\</ AudienceRestrictionCondition > *</span><span class="sxs-lookup"><span data-stu-id="e5987-255">\</AudienceRestrictionCondition>*</span></span>  
   
- \<DoNotCacheCondition \/\>\*  
+ <span data-ttu-id="e5987-256">\<DoNotCacheCondition-> *</span><span class="sxs-lookup"><span data-stu-id="e5987-256">\<DoNotCacheCondition />*</span></span>  
   
- \<\!\-\- abstract base type  
+ <span data-ttu-id="e5987-257"><\!— Абстрактный базовый тип</span><span class="sxs-lookup"><span data-stu-id="e5987-257"><\!-- abstract base type</span></span>  
   
- \<Condition \/\>\*  
+ <span data-ttu-id="e5987-258">\<Условие-> *</span><span class="sxs-lookup"><span data-stu-id="e5987-258">\<Condition />*</span></span>  
   
- \-\-\>  
+ -->  
   
- \<\/Conditions\>?  
+ <span data-ttu-id="e5987-259">\</ Условия >?</span><span class="sxs-lookup"><span data-stu-id="e5987-259">\</Conditions>?</span></span>  
   
- \<Advice\>  
+ <span data-ttu-id="e5987-260">\<Совет ></span><span class="sxs-lookup"><span data-stu-id="e5987-260">\<Advice></span></span>  
   
- \<AssertionIDReference\>\[ID\]\<\/AssertionIDReference\>\*  
+ <span data-ttu-id="e5987-261">\<AssertionIDReference > [ID]\</AssertionIDReference > *</span><span class="sxs-lookup"><span data-stu-id="e5987-261">\<AssertionIDReference>[ID]\</AssertionIDReference>*</span></span>  
   
- \<Assertion\>\[assertion\]\<\/Assertion\>\*  
+ <span data-ttu-id="e5987-262">\<Утверждение > [утверждение]\</Assertion > *</span><span class="sxs-lookup"><span data-stu-id="e5987-262">\<Assertion>[assertion]\</Assertion>*</span></span>  
   
- \[any\]\*  
+ <span data-ttu-id="e5987-263">[any]*</span><span class="sxs-lookup"><span data-stu-id="e5987-263">[any]*</span></span>  
   
- \<\/Advice\>?  
+ <span data-ttu-id="e5987-264">\</ Рекомендации >?</span><span class="sxs-lookup"><span data-stu-id="e5987-264">\</Advice>?</span></span>  
   
- \<\!\-\- Abstract base types  
+ <span data-ttu-id="e5987-265"><\!--Абстрактных базовых типов</span><span class="sxs-lookup"><span data-stu-id="e5987-265"><\!-- Abstract base types</span></span>  
   
- \<Statement \/\>\*  
+ <span data-ttu-id="e5987-266">\<Оператор-> *</span><span class="sxs-lookup"><span data-stu-id="e5987-266">\<Statement />*</span></span>  
   
- \<SubjectStatement\>  
+ <span data-ttu-id="e5987-267">\<SubjectStatement ></span><span class="sxs-lookup"><span data-stu-id="e5987-267">\<SubjectStatement></span></span>  
   
- \<Subject\>  
+ <span data-ttu-id="e5987-268">\<Тема ></span><span class="sxs-lookup"><span data-stu-id="e5987-268">\<Subject></span></span>  
   
  `<NameIdentifier`  
   
@@ -218,31 +221,31 @@ caps.handback.revision: 34
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation\>  
+ <span data-ttu-id="e5987-269">\<SubjectConfirmation ></span><span class="sxs-lookup"><span data-stu-id="e5987-269">\<SubjectConfirmation></span></span>  
   
- \<ConfirmationMethod\>\[anyUri\]\<\/ConfirmationMethod\>\+  
+ <span data-ttu-id="e5987-270">\<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +</span><span class="sxs-lookup"><span data-stu-id="e5987-270">\<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+</span></span>  
   
- \<SubjectConfirmationData\>\[any\]\<\/SubjectConfirmationData\>?  
+ <span data-ttu-id="e5987-271">\<SubjectConfirmationData > [any]\</SubjectConfirmationData >?</span><span class="sxs-lookup"><span data-stu-id="e5987-271">\<SubjectConfirmationData>[any]\</SubjectConfirmationData>?</span></span>  
   
- \<ds:KeyInfo\>...\<\/ds:KeyInfo\>?  
+ <span data-ttu-id="e5987-272">\<DS:KeyInfo >... \</ds:KeyInfo >?</span><span class="sxs-lookup"><span data-stu-id="e5987-272">\<ds:KeyInfo>...\</ds:KeyInfo>?</span></span>  
   
- \<\/SubjectConfirmation\>?  
+ <span data-ttu-id="e5987-273">\</ SubjectConfirmation >?</span><span class="sxs-lookup"><span data-stu-id="e5987-273">\</SubjectConfirmation>?</span></span>  
   
- \<\/Subject\>  
+ <span data-ttu-id="e5987-274">\</ Тема ></span><span class="sxs-lookup"><span data-stu-id="e5987-274">\</Subject></span></span>  
   
- \<\/SubjectStatement\>\*  
+ <span data-ttu-id="e5987-275">\</ SubjectStatement > *</span><span class="sxs-lookup"><span data-stu-id="e5987-275">\</SubjectStatement>*</span></span>  
   
- \-\-\>  
+ -->  
   
- \<AuthenticationStatement  
+ <span data-ttu-id="e5987-276">\<AuthenticationStatement</span><span class="sxs-lookup"><span data-stu-id="e5987-276">\<AuthenticationStatement</span></span>  
   
- AuthenticationMethod\="\[uri\]"  
+ <span data-ttu-id="e5987-277">AuthenticationMethod="[uri]"</span><span class="sxs-lookup"><span data-stu-id="e5987-277">AuthenticationMethod="[uri]"</span></span>  
   
- AuthenticationInstant\="\[dateTime\]"  
+ <span data-ttu-id="e5987-278">AuthenticationInstant="[dateTime]"</span><span class="sxs-lookup"><span data-stu-id="e5987-278">AuthenticationInstant="[dateTime]"</span></span>  
   
- \>  
+ >  
   
- \[Subject\]  
+ <span data-ttu-id="e5987-279">[Subject]</span><span class="sxs-lookup"><span data-stu-id="e5987-279">[Subject]</span></span>  
   
  `<SubjectLocality`  
   
@@ -252,162 +255,162 @@ caps.handback.revision: 34
   
  `/>?`  
   
- \<AuthorityBinding  
+ <span data-ttu-id="e5987-280"><AuthorityBinding</span><span class="sxs-lookup"><span data-stu-id="e5987-280"><AuthorityBinding</span></span>  
   
- AuthorityKind\="\[QName\]"  
+ <span data-ttu-id="e5987-281">AuthorityKind="[QName]"</span><span class="sxs-lookup"><span data-stu-id="e5987-281">AuthorityKind="[QName]"</span></span>  
   
- Location\="\[uri\]"  
+ <span data-ttu-id="e5987-282">Location="[uri]"</span><span class="sxs-lookup"><span data-stu-id="e5987-282">Location="[uri]"</span></span>  
   
- Binding\="\[uri\]"  
+ <span data-ttu-id="e5987-283">Binding="[uri]"</span><span class="sxs-lookup"><span data-stu-id="e5987-283">Binding="[uri]"</span></span>  
   
- \/\>\*  
+ />*  
   
- \<\/AuthenticationStatement\>\*  
+ <span data-ttu-id="e5987-284">\</ AuthenticationStatement > *</span><span class="sxs-lookup"><span data-stu-id="e5987-284">\</AuthenticationStatement>*</span></span>  
   
- \<AttributeStatement\>  
+ <span data-ttu-id="e5987-285">\<AttributeStatement ></span><span class="sxs-lookup"><span data-stu-id="e5987-285">\<AttributeStatement></span></span>  
   
- \[Subject\]  
+ <span data-ttu-id="e5987-286">[Subject]</span><span class="sxs-lookup"><span data-stu-id="e5987-286">[Subject]</span></span>  
   
- \<Attribute  
+ <span data-ttu-id="e5987-287">\<Атрибут</span><span class="sxs-lookup"><span data-stu-id="e5987-287">\<Attribute</span></span>  
   
- AttributeName\="\[string\]"  
+ <span data-ttu-id="e5987-288">AttributeName="[string]"</span><span class="sxs-lookup"><span data-stu-id="e5987-288">AttributeName="[string]"</span></span>  
   
- AttributeNamespace\="\[uri\]"  
+ <span data-ttu-id="e5987-289">AttributeNamespace="[uri]"</span><span class="sxs-lookup"><span data-stu-id="e5987-289">AttributeNamespace="[uri]"</span></span>  
   
- \>  
+ >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \<\/Attribute\>\+  
+ <span data-ttu-id="e5987-290">\</ Атрибут > +</span><span class="sxs-lookup"><span data-stu-id="e5987-290">\</Attribute>+</span></span>  
   
- \<\/AttributeStatement\>\*  
+ <span data-ttu-id="e5987-291">\</ AttributeStatement > *</span><span class="sxs-lookup"><span data-stu-id="e5987-291">\</AttributeStatement>*</span></span>  
   
- \<AuthorizationDecisionStatement  
+ <span data-ttu-id="e5987-292">\<AuthorizationDecisionStatement</span><span class="sxs-lookup"><span data-stu-id="e5987-292">\<AuthorizationDecisionStatement</span></span>  
   
- Resource\="\[uri\]"  
+ <span data-ttu-id="e5987-293">Resource="[uri]"</span><span class="sxs-lookup"><span data-stu-id="e5987-293">Resource="[uri]"</span></span>  
   
- Decision\="\[Permit&#124;Deny&#124;Indeterminate\]"  
+ <span data-ttu-id="e5987-294">Решение = "[разрешения &#124; запретить &#124; неопределенное]»</span><span class="sxs-lookup"><span data-stu-id="e5987-294">Decision="[Permit&#124;Deny&#124;Indeterminate]"</span></span>  
   
- \>  
+ >  
   
- \[Subject\]  
+ <span data-ttu-id="e5987-295">[Subject]</span><span class="sxs-lookup"><span data-stu-id="e5987-295">[Subject]</span></span>  
   
- \<Action Namespace\="\[uri\]"\>\[string\]\<\/Action\>\+  
+ <span data-ttu-id="e5987-296">\<Действие пространство имен = «[uri]» > [строка] \< /Action > +</span><span class="sxs-lookup"><span data-stu-id="e5987-296">\<Action Namespace="[uri]">[string]\</Action>+</span></span>  
   
- \<Evidence\>  
+ <span data-ttu-id="e5987-297">\<Свидетельство ></span><span class="sxs-lookup"><span data-stu-id="e5987-297">\<Evidence></span></span>  
   
- \<AssertionIDReference\>\[ID\]\<\/AssertionIDReference\>\+  
+ <span data-ttu-id="e5987-298">\<AssertionIDReference > [ID]\</AssertionIDReference > +</span><span class="sxs-lookup"><span data-stu-id="e5987-298">\<AssertionIDReference>[ID]\</AssertionIDReference>+</span></span>  
   
- \<Assertion\>\[assertion\]\<\/Assertion\>\+  
+ <span data-ttu-id="e5987-299">\<Утверждение > [утверждение]\</Assertion > +</span><span class="sxs-lookup"><span data-stu-id="e5987-299">\<Assertion>[assertion]\</Assertion>+</span></span>  
   
- \<\/Evidence\>?  
+ <span data-ttu-id="e5987-300">\</ Свидетельства >?</span><span class="sxs-lookup"><span data-stu-id="e5987-300">\</Evidence>?</span></span>  
   
- \<\/AuthorizationDecisionStatement\>\*  
+ <span data-ttu-id="e5987-301">\</ AuthorizationDecisionStatement > *</span><span class="sxs-lookup"><span data-stu-id="e5987-301">\</AuthorizationDecisionStatement>*</span></span>  
   
- \<\/Assertion\>  
+ <span data-ttu-id="e5987-302">\</ Утверждение ></span><span class="sxs-lookup"><span data-stu-id="e5987-302">\</Assertion></span></span>  
   
-#### Информация, удаленная из тел сообщений при внесении в журнал зашифрованных\/незашифрованных сообщений  
- Как упоминалось ранее, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] удаляет ключи и известные потенциально персональные данные из заголовков сообщений для внесенных в журнал расшифрованных\/незашифрованных сообщений.  Кроме этого, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] удаляет ключи и известные потенциально персональные данные из тел сообщений для элементов тел и действий, представленных в следующем списке, которые описывают сообщения о безопасности, участвующие в обмене ключами.  
+#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a><span data-ttu-id="e5987-303">Информация, удаленная из тел сообщений при внесении в журнал зашифрованных/незашифрованных сообщений</span><span class="sxs-lookup"><span data-stu-id="e5987-303">Information Removed from Message Bodies When Logging Decrypted/Unencrypted Messages</span></span>  
+ <span data-ttu-id="e5987-304">Как упоминалось ранее, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] удаляет ключи и известные потенциально персональные данные из заголовков сообщений для внесенных в журнал расшифрованных/незашифрованных сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-304">As previously described, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes keys and known potentially personal information from message headers for logged decrypted/unencrypted messages.</span></span> <span data-ttu-id="e5987-305">Кроме этого, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] удаляет ключи и известные потенциально персональные данные из тел сообщений для элементов тел и действий, представленных в следующем списке, которые описывают сообщения о безопасности, участвующие в обмене ключами.</span><span class="sxs-lookup"><span data-stu-id="e5987-305">In addition, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes keys and known potentially personal information from message bodies for the body elements and actions in the following list, which describe security messages involved in key exchange.</span></span>  
   
- Для следующих пространств имен:  
+ <span data-ttu-id="e5987-306">Для следующих пространств имен:</span><span class="sxs-lookup"><span data-stu-id="e5987-306">For the following namespaces:</span></span>  
   
- xmlns:wst\="http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/trust" и xmlns:wst\="http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust" \(например без доступных действий\)  
+ <span data-ttu-id="e5987-307">xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (например без доступных действий)</span><span class="sxs-lookup"><span data-stu-id="e5987-307">xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (for example, if no action available)</span></span>  
   
- Информация удаляется для элементов тел, участвующих в обмене ключами:  
+ <span data-ttu-id="e5987-308">Информация удаляется для элементов тел, участвующих в обмене ключами:</span><span class="sxs-lookup"><span data-stu-id="e5987-308">Information is removed for these body elements, which involve key exchange:</span></span>  
   
- wst:RequestSecurityToken  
+ <span data-ttu-id="e5987-309">wst:RequestSecurityToken</span><span class="sxs-lookup"><span data-stu-id="e5987-309">wst:RequestSecurityToken</span></span>  
   
- wst:RequestSecurityTokenResponse  
+ <span data-ttu-id="e5987-310">wst:RequestSecurityTokenResponse</span><span class="sxs-lookup"><span data-stu-id="e5987-310">wst:RequestSecurityTokenResponse</span></span>  
   
- wst:RequestSecurityTokenResponseCollection  
+ <span data-ttu-id="e5987-311">wst:RequestSecurityTokenResponseCollection</span><span class="sxs-lookup"><span data-stu-id="e5987-311">wst:RequestSecurityTokenResponseCollection</span></span>  
   
- Информация также удаляется для каждого из следующих действий:  
+ <span data-ttu-id="e5987-312">Информация также удаляется для каждого из следующих действий:</span><span class="sxs-lookup"><span data-stu-id="e5987-312">Information is also removed for each of the following Actions:</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Issue  
+ <span data-ttu-id="e5987-313">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue</span><span class="sxs-lookup"><span data-stu-id="e5987-313">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Issue  
+ <span data-ttu-id="e5987-314">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue</span><span class="sxs-lookup"><span data-stu-id="e5987-314">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Renew  
+ <span data-ttu-id="e5987-315">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew</span><span class="sxs-lookup"><span data-stu-id="e5987-315">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Renew  
+ <span data-ttu-id="e5987-316">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew</span><span class="sxs-lookup"><span data-stu-id="e5987-316">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Cancel  
+ <span data-ttu-id="e5987-317">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel</span><span class="sxs-lookup"><span data-stu-id="e5987-317">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Cancel  
+ <span data-ttu-id="e5987-318">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel</span><span class="sxs-lookup"><span data-stu-id="e5987-318">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Validate  
+ <span data-ttu-id="e5987-319">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate</span><span class="sxs-lookup"><span data-stu-id="e5987-319">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Validate  
+ <span data-ttu-id="e5987-320">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate</span><span class="sxs-lookup"><span data-stu-id="e5987-320">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT  
+ <span data-ttu-id="e5987-321">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT</span><span class="sxs-lookup"><span data-stu-id="e5987-321">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT  
+ <span data-ttu-id="e5987-322">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT</span><span class="sxs-lookup"><span data-stu-id="e5987-322">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Amend  
+ <span data-ttu-id="e5987-323">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend</span><span class="sxs-lookup"><span data-stu-id="e5987-323">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Amend  
+ <span data-ttu-id="e5987-324">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend</span><span class="sxs-lookup"><span data-stu-id="e5987-324">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Renew  
+ <span data-ttu-id="e5987-325">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew</span><span class="sxs-lookup"><span data-stu-id="e5987-325">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Renew  
+ <span data-ttu-id="e5987-326">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew</span><span class="sxs-lookup"><span data-stu-id="e5987-326">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Cancel  
+ <span data-ttu-id="e5987-327">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel</span><span class="sxs-lookup"><span data-stu-id="e5987-327">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Cancel  
+ <span data-ttu-id="e5987-328">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel</span><span class="sxs-lookup"><span data-stu-id="e5987-328">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RST\/SCT  
+ <span data-ttu-id="e5987-329">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT</span><span class="sxs-lookup"><span data-stu-id="e5987-329">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RSTR\/SCT  
+ <span data-ttu-id="e5987-330">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT</span><span class="sxs-lookup"><span data-stu-id="e5987-330">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RST\/SCT\-Amend  
+ <span data-ttu-id="e5987-331">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend</span><span class="sxs-lookup"><span data-stu-id="e5987-331">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RSTR\/SCT\-Amend  
+ <span data-ttu-id="e5987-332">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend</span><span class="sxs-lookup"><span data-stu-id="e5987-332">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend</span></span>  
   
-#### Информация не удаляется из данных заголовков и тел, относящихся к приложению  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] не отслеживает персональные данные в заголовках \(например строки запроса\) или телах \(например номер кредитной карты\), относящихся к приложению.  
+#### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a><span data-ttu-id="e5987-333">Информация не удаляется из данных заголовков и тел, относящихся к приложению</span><span class="sxs-lookup"><span data-stu-id="e5987-333">No Information Is Removed from Application-specific Headers and Body Data</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-334"> не отслеживает персональные данные в заголовках (например строки запроса) или телах (например номер кредитной карты), относящихся к приложению.</span><span class="sxs-lookup"><span data-stu-id="e5987-334"> does not track personal information in application-specific headers (for example, query strings) or body data (for example, credit card number).</span></span>  
   
- Когда включено ведение журнала сообщений, персональные данные в информации заголовков и тел, относящихся к приложению, могут отображаться в журналах.  И вновь, специалист, выполняющий развертывание приложения, отвечает за настройку элементов управления доступом для файлов конфигурации и журналов.  Он также может отключить ведение журнала, если отображение такой информации не требуется, или отфильтровать эту информацию из файлов журнала после ее внесения в журнал.  
+ <span data-ttu-id="e5987-335">Когда включено ведение журнала сообщений, персональные данные в информации заголовков и тел, относящихся к приложению, могут отображаться в журналах.</span><span class="sxs-lookup"><span data-stu-id="e5987-335">When message logging is on, personal information in application-specific headers and body information may be visible in the logs.</span></span> <span data-ttu-id="e5987-336">И вновь, специалист, выполняющий развертывание приложения, отвечает за настройку элементов управления доступом для файлов конфигурации и журналов.</span><span class="sxs-lookup"><span data-stu-id="e5987-336">Again, the application deployer is responsible for setting the ACLs on the configuration and log files.</span></span> <span data-ttu-id="e5987-337">Он также может отключить ведение журнала, если отображение такой информации не требуется, или отфильтровать эту информацию из файлов журнала после ее внесения в журнал.</span><span class="sxs-lookup"><span data-stu-id="e5987-337">He also can turn off logging if he does not want this information to be visible, or he may filter out this information from the log files after it is logged.</span></span>  
   
-### Трассировка модели службы  
- Источник трассировки модели службы \(<xref:System.ServiceModel>\) обеспечивает трассировку действий и событий, относящихся к обработке сообщений.  Эта функция использует диагностические возможности .NET Framework из <xref:System.Diagnostics>.  Аналогично свойству <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, ее расположение и элемент управления доступом настраиваются пользователем с помощью файлов конфигурации приложения на базе .NET Framework.  Как и при ведении журнала сообщений, расположение файла всегда настраивается при включении администратором трассировки. Таким образом, администратор управляет элементом управления доступом.  
+### <a name="service-model-tracing"></a><span data-ttu-id="e5987-338">Трассировка модели службы</span><span class="sxs-lookup"><span data-stu-id="e5987-338">Service Model Tracing</span></span>  
+ <span data-ttu-id="e5987-339">Источник трассировки модели службы (<xref:System.ServiceModel>) обеспечивает трассировку действий и событий, относящихся к обработке сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5987-339">The Service Model trace source (<xref:System.ServiceModel>) enables tracing of activities and events related to message processing.</span></span> <span data-ttu-id="e5987-340">Эта функция использует диагностические возможности .NET Framework из <xref:System.Diagnostics>.</span><span class="sxs-lookup"><span data-stu-id="e5987-340">This feature uses the .NET Framework diagnostic functionality from <xref:System.Diagnostics>.</span></span> <span data-ttu-id="e5987-341">Аналогично свойству <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, ее расположение и элемент управления доступом настраиваются пользователем с помощью файлов конфигурации приложения на базе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e5987-341">As with the <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> property, the location and its ACL are user-configurable using .NET Framework application configuration files.</span></span> <span data-ttu-id="e5987-342">Как и при ведении журнала сообщений, расположение файла всегда настраивается при включении администратором трассировки. Таким образом, администратор управляет элементом управления доступом.</span><span class="sxs-lookup"><span data-stu-id="e5987-342">As with message logging, the file location is always configured when the administrator enables tracing; thus, the administrator controls the ACL.</span></span>  
   
- Трассировки содержат заголовки сообщений, когда сообщения находятся в области действия.  Применяются аналогичные правила скрытия потенциально персональных данных в заголовках сообщений, описанные в предыдущем разделе: ранее определенные персональные данные по умолчанию удаляются из заголовков в трассировках.  Администратор компьютера и специалист, выполняющий развертывание приложения, должны изменить конфигурацию, чтобы вносить в журнал потенциально персональные сведения.  Однако персональные данные в заголовках, относящихся к приложению, вносятся в журнал в трассировках.  Специалист, выполняющий развертывание приложения, отвечает за настройку элементов управления доступом в файлах конфигурации и трассировки.  Он также может отключить трассировку, если отображение такой информации не требуется, или отфильтровать эту информацию из файлов трассировки после ее внесения в журнал.  
+ <span data-ttu-id="e5987-343">Трассировки содержат заголовки сообщений, когда сообщения находятся в области действия.</span><span class="sxs-lookup"><span data-stu-id="e5987-343">Traces contain message headers when a message is in scope.</span></span> <span data-ttu-id="e5987-344">Применяются аналогичные правила скрытия потенциально персональных данных в заголовках сообщений, описанные в предыдущем разделе: ранее определенные персональные данные по умолчанию удаляются из заголовков в трассировках.</span><span class="sxs-lookup"><span data-stu-id="e5987-344">The same rules for hiding potentially personal information in message headers in the previous section apply: the personal information previously identified is removed by default from the headers in traces.</span></span> <span data-ttu-id="e5987-345">Администратор компьютера и специалист, выполняющий развертывание приложения, должны изменить конфигурацию, чтобы вносить в журнал потенциально персональные сведения.</span><span class="sxs-lookup"><span data-stu-id="e5987-345">Both the machine administrator and the application deployer must modify the configuration in order to log potentially personal information.</span></span> <span data-ttu-id="e5987-346">Однако персональные данные в заголовках, относящихся к приложению, вносятся в журнал в трассировках.</span><span class="sxs-lookup"><span data-stu-id="e5987-346">However, personal information contained in application-specific headers is logged in traces.</span></span> <span data-ttu-id="e5987-347">Специалист, выполняющий развертывание приложения, отвечает за настройку элементов управления доступом в файлах конфигурации и трассировки.</span><span class="sxs-lookup"><span data-stu-id="e5987-347">The application deployer is responsible for setting the ACLs on the configuration and trace files.</span></span> <span data-ttu-id="e5987-348">Он также может отключить трассировку, если отображение такой информации не требуется, или отфильтровать эту информацию из файлов трассировки после ее внесения в журнал.</span><span class="sxs-lookup"><span data-stu-id="e5987-348">He also can turn off tracing if he does not want this information to be visible, or he can filter out this information from the trace files after it is logged.</span></span>  
   
- Являясь частью трассировки ServiceModel, уникальные идентификаторы \(называемые идентификаторами действий или, как правило, глобальными уникальными идентификаторами\) связывают различные действия друг с другом как поток сообщений, проходящий через разные области инфраструктуры.  
+ <span data-ttu-id="e5987-349">Являясь частью трассировки ServiceModel, уникальные идентификаторы (называемые идентификаторами действий или, как правило, глобальными уникальными идентификаторами) связывают различные действия друг с другом как поток сообщений, проходящий через разные области инфраструктуры.</span><span class="sxs-lookup"><span data-stu-id="e5987-349">As part of ServiceModel Tracing, Unique IDs (called Activity IDs, and typically a GUID) link different activities together as a message flows through different parts of the infrastructure.</span></span>  
   
-#### Пользовательские прослушиватели трассировки  
- Для ведения журнала сообщений и трассировки можно настроить пользовательский прослушиватель трассировки, который может отправлять трассировки и сообщения по сети \(например в удаленную базу данных\).  Специалист, выполняющий развертывание приложения, отвечает за настройку пользовательских прослушивателей или разрешение пользователям самостоятельно ее настраивать.  Он также отвечает за любые персональные данные, раскрытые в удаленном расположении, и за правильное применение элементов управления доступом к этому расположению.  
+#### <a name="custom-trace-listeners"></a><span data-ttu-id="e5987-350">Пользовательские прослушиватели трассировки</span><span class="sxs-lookup"><span data-stu-id="e5987-350">Custom Trace Listeners</span></span>  
+ <span data-ttu-id="e5987-351">Для ведения журнала сообщений и трассировки можно настроить пользовательский прослушиватель трассировки, который может отправлять трассировки и сообщения по сети (например в удаленную базу данных).</span><span class="sxs-lookup"><span data-stu-id="e5987-351">For both message logging and tracing, a custom trace listener can be configured, which can send traces and messages on the wire (for example, to a remote database).</span></span> <span data-ttu-id="e5987-352">Специалист, выполняющий развертывание приложения, отвечает за настройку пользовательских прослушивателей или разрешение пользователям самостоятельно ее настраивать.</span><span class="sxs-lookup"><span data-stu-id="e5987-352">The application deployer is responsible for configuring custom listeners or enabling users to do so.</span></span> <span data-ttu-id="e5987-353">Он также отвечает за любые персональные данные, раскрытые в удаленном расположении, и за правильное применение элементов управления доступом к этому расположению.</span><span class="sxs-lookup"><span data-stu-id="e5987-353">He is also responsible for any personal information exposed at the remote location, and for properly applying ACLs to this location.</span></span>  
   
-### Другие функции для ИТ\-специалистов  
- Для [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предусмотрен поставщик WMI, раскрывающий информацию о конфигурации инфраструктуры [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] через WMI \(поставляется с ОС Windows\).  По умолчанию интерфейс WMI доступен для администраторов.  
+### <a name="other-features-for-it-professionals"></a><span data-ttu-id="e5987-354">Другие функции для ИТ-специалистов</span><span class="sxs-lookup"><span data-stu-id="e5987-354">Other features for IT Professionals</span></span>  
+ <span data-ttu-id="e5987-355">Для [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предусмотрен поставщик WMI, раскрывающий информацию о конфигурации инфраструктуры [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] через WMI (поставляется с ОС Windows).</span><span class="sxs-lookup"><span data-stu-id="e5987-355">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] has a WMI provider that exposes the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure configuration information through WMI (shipped with Windows).</span></span> <span data-ttu-id="e5987-356">По умолчанию интерфейс WMI доступен для администраторов.</span><span class="sxs-lookup"><span data-stu-id="e5987-356">By default, the WMI interface is available to administrators.</span></span>  
   
- В конфигурации [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] используется механизм конфигурации .NET Framework.  Файлы конфигурации хранятся на компьютере.  Разработчик приложения и администратор создают файлы конфигурации и элемент правления доступом для каждого требования приложения.  Файл конфигурации может содержать адреса конечных точек и ссылки на сертификаты в хранилище сертификатов.  Сертификаты можно использовать, чтобы предоставить данные приложения для настройки различных свойств функций, используемых приложением.  
+ <span data-ttu-id="e5987-357">В конфигурации [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] используется механизм конфигурации .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e5987-357">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration uses the .NET Framework configuration mechanism.</span></span> <span data-ttu-id="e5987-358">Файлы конфигурации хранятся на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e5987-358">The configuration files are stored on the machine.</span></span> <span data-ttu-id="e5987-359">Разработчик приложения и администратор создают файлы конфигурации и элемент правления доступом для каждого требования приложения.</span><span class="sxs-lookup"><span data-stu-id="e5987-359">The application developer and the administrator create the configuration files and ACL for each of the application's requirements.</span></span> <span data-ttu-id="e5987-360">Файл конфигурации может содержать адреса конечных точек и ссылки на сертификаты в хранилище сертификатов.</span><span class="sxs-lookup"><span data-stu-id="e5987-360">A configuration file can contain endpoint addresses and links to certificates in the certificate store.</span></span> <span data-ttu-id="e5987-361">Сертификаты можно использовать, чтобы предоставить данные приложения для настройки различных свойств функций, используемых приложением.</span><span class="sxs-lookup"><span data-stu-id="e5987-361">The certificates can be used to provide application data to configure various properties of the features used by the application.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также использует функции дампа процесса .NET Framework путем вызова метода <xref:System.Environment.FailFast%2A>.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-362"> также использует функции дампа процесса .NET Framework путем вызова метода <xref:System.Environment.FailFast%2A>.</span><span class="sxs-lookup"><span data-stu-id="e5987-362"> also uses the .NET Framework process dump functionality by calling the <xref:System.Environment.FailFast%2A> method.</span></span>  
   
-### Профессиональные ИТ\-средства  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] также предоставляет следующие профессиональные ИТ\-средства, входящие в пакет Windows SDK.  
+### <a name="it-pro-tools"></a><span data-ttu-id="e5987-363">Профессиональные ИТ-средства</span><span class="sxs-lookup"><span data-stu-id="e5987-363">IT Pro Tools</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="e5987-364"> также предоставляет следующие профессиональные ИТ-средства, входящие в пакет Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="e5987-364"> also provides the following IT professional tools, which ship in the Windows SDK.</span></span>  
   
-#### SvcTraceViewer.exe  
- Средство просмотра отображает файлы трассировки [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Средство просмотра позволяет просмотреть информацию, содержащуюся в трассировках.  
+#### <a name="svctraceviewerexe"></a><span data-ttu-id="e5987-365">SvcTraceViewer.exe</span><span class="sxs-lookup"><span data-stu-id="e5987-365">SvcTraceViewer.exe</span></span>  
+ <span data-ttu-id="e5987-366">Средство просмотра отображает файлы трассировки [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-366">The viewer displays [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace files.</span></span> <span data-ttu-id="e5987-367">Средство просмотра позволяет просмотреть информацию, содержащуюся в трассировках.</span><span class="sxs-lookup"><span data-stu-id="e5987-367">The viewer shows whatever information is contained in the traces.</span></span>  
   
-#### SvcConfigEditor.exe  
- Редактор позволяет пользователям создавать и изменять файлы конфигурации [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Редактор показывает всю информацию, содержащуюся в файлах конфигурации.  Аналогичную задачу можно выполнить с помощью текстового редактора.  
+#### <a name="svcconfigeditorexe"></a><span data-ttu-id="e5987-368">SvcConfigEditor.exe</span><span class="sxs-lookup"><span data-stu-id="e5987-368">SvcConfigEditor.exe</span></span>  
+ <span data-ttu-id="e5987-369">Редактор позволяет пользователям создавать и изменять файлы конфигурации [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-369">The editor allows the user to create and edit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration files.</span></span> <span data-ttu-id="e5987-370">Редактор показывает всю информацию, содержащуюся в файлах конфигурации.</span><span class="sxs-lookup"><span data-stu-id="e5987-370">The editor shows whatever information is contained in the configuration files.</span></span> <span data-ttu-id="e5987-371">Аналогичную задачу можно выполнить с помощью текстового редактора.</span><span class="sxs-lookup"><span data-stu-id="e5987-371">The same task can be accomplished with a text editor.</span></span>  
   
-#### ServiceModel\_Reg  
- Это средство позволяет пользователю управлять установкой ServiceModel на компьютере.  Во время работы средство отображает сообщения о состоянии в окне консоли и, в процессе работы, может выводить информацию о конфигурации установки [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+#### <a name="servicemodelreg"></a><span data-ttu-id="e5987-372">ServiceModel_Reg</span><span class="sxs-lookup"><span data-stu-id="e5987-372">ServiceModel_Reg</span></span>  
+ <span data-ttu-id="e5987-373">Это средство позволяет пользователю управлять установкой ServiceModel на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e5987-373">This tool allows the user to manage ServiceModel installs on a machine.</span></span> <span data-ttu-id="e5987-374">Во время работы средство отображает сообщения о состоянии в окне консоли и, в процессе работы, может выводить информацию о конфигурации установки [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-374">The tool displays status messages in a console window when it runs and, in the process, may display information about the configuration of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation.</span></span>  
   
-#### WSATConfig.exe и WSATUI.dll  
- Эти средства позволяют ИТ\-специалистам настраивать поддержку сети WS\-AtomicTransaction с возможностью взаимодействия в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Средство отображает и позволяет пользователю изменять значения наиболее часто используемых параметров WS\-AtomicTransaction, хранящихся в реестре.  
+#### <a name="wsatconfigexe-and-wsatuidll"></a><span data-ttu-id="e5987-375">WSATConfig.exe и WSATUI.dll</span><span class="sxs-lookup"><span data-stu-id="e5987-375">WSATConfig.exe and WSATUI.dll</span></span>  
+ <span data-ttu-id="e5987-376">Эти средства позволяют ИТ-специалистам настраивать поддержку сети WS-AtomicTransaction с возможностью взаимодействия в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5987-376">These tools allow IT Professionals to configure interoperable WS-AtomicTransaction network support in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="e5987-377">Средство отображает и позволяет пользователю изменять значения наиболее часто используемых параметров WS-AtomicTransaction, хранящихся в реестре.</span><span class="sxs-lookup"><span data-stu-id="e5987-377">The tools display and allow the user to change the values of the most commonly used WS-AtomicTransaction settings stored in the registry.</span></span>  
   
-## Перекрестные функции  
- Следующие функции являются перекрестными.  Это означает, что их можно сочетать с любыми указанными выше функциями.  
+## <a name="cross-cutting-features"></a><span data-ttu-id="e5987-378">Перекрестные функции</span><span class="sxs-lookup"><span data-stu-id="e5987-378">Cross-cutting Features</span></span>  
+ <span data-ttu-id="e5987-379">Следующие функции являются перекрестными.</span><span class="sxs-lookup"><span data-stu-id="e5987-379">The following features are cross-cutting.</span></span> <span data-ttu-id="e5987-380">Это означает, что их можно сочетать с любыми указанными выше функциями.</span><span class="sxs-lookup"><span data-stu-id="e5987-380">That is, they can be composed with any of the preceding features.</span></span>  
   
-### Инфраструктура службы  
- Заголовки могут содержать идентификатор экземпляра, который представляет собой глобальный уникальный идентификатор, связывающий сообщение с экземпляром класса CLR.  
+### <a name="service-framework"></a><span data-ttu-id="e5987-381">Инфраструктура службы</span><span class="sxs-lookup"><span data-stu-id="e5987-381">Service Framework</span></span>  
+ <span data-ttu-id="e5987-382">Заголовки могут содержать идентификатор экземпляра, который представляет собой глобальный уникальный идентификатор, связывающий сообщение с экземпляром класса CLR.</span><span class="sxs-lookup"><span data-stu-id="e5987-382">Headers can contain an instance ID, which is a GUID that associates a message with an instance of a CLR class.</span></span>  
   
- Язык описания веб\-служб \(WSDL\) содержит определение порта.  У каждого порта имеется адрес конечной точки и привязка, представляющая службы, используемые приложением.  Предоставление WSDL можно отключить в конфигурации.  Информация на компьютере не сохраняется.  
+ <span data-ttu-id="e5987-383">Язык описания веб-служб (WSDL) содержит определение порта.</span><span class="sxs-lookup"><span data-stu-id="e5987-383">The Web Services Description Language (WSDL) contains a definition of the port.</span></span> <span data-ttu-id="e5987-384">У каждого порта имеется адрес конечной точки и привязка, представляющая службы, используемые приложением.</span><span class="sxs-lookup"><span data-stu-id="e5987-384">Each port has an endpoint address and a binding that represents the services used by the application.</span></span> <span data-ttu-id="e5987-385">Предоставление WSDL можно отключить в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="e5987-385">Exposing WSDL can be turned off using configuration.</span></span> <span data-ttu-id="e5987-386">Информация на компьютере не сохраняется.</span><span class="sxs-lookup"><span data-stu-id="e5987-386">No information is retained on the machine.</span></span>  
   
-## См. также  
- [Windows Communication Foundation](http://msdn.microsoft.com/ru-ru/fd327ade-0260-4c40-adbe-b74645ba3277)   
- [Безопасность](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="e5987-387">См. также</span><span class="sxs-lookup"><span data-stu-id="e5987-387">See Also</span></span>  
+ [<span data-ttu-id="e5987-388">Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e5987-388">Windows Communication Foundation</span></span>](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [<span data-ttu-id="e5987-389">Безопасность</span><span class="sxs-lookup"><span data-stu-id="e5987-389">Security</span></span>](../../../docs/framework/wcf/feature-details/security.md)

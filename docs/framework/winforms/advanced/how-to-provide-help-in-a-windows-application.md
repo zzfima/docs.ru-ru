@@ -1,71 +1,72 @@
 ---
-title: "Руководство: предоставление справки в приложении Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "формы, предоставление справки"
-  - "Справка, приложения Windows"
-  - "HelpProvider - компонент [Windows Forms]"
-  - "справка в формате HTML, Windows Forms"
-  - "приложения Windows, предоставление справки"
+title: "Руководство: предоставление справки в приложении Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help [Windows Forms], Windows applications
+- HTML Help [Windows Forms], Windows Forms
+- Windows applications [Windows Forms], providing Help
+- HelpProvider component [Windows Forms]
+- forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Руководство: предоставление справки в приложении Windows
-Можно использовать компонент <xref:System.Windows.Forms.HelpProvider> для присоединения разделов справки, содержащихся в файле справки, к определенным элементам управления в формах Windows Forms.  Файл справки может быть в формате HTML или HTMLHelp 1.x или более поздней версии.  
+# <a name="how-to-provide-help-in-a-windows-application"></a><span data-ttu-id="a2f29-102">Руководство: предоставление справки в приложении Windows</span><span class="sxs-lookup"><span data-stu-id="a2f29-102">How to: Provide Help in a Windows Application</span></span>
+<span data-ttu-id="a2f29-103">Можно использовать из <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a2f29-103">You can use of the <xref:System.Windows.Forms.HelpProvider> component to attach Help topics within a Help file to specific controls on Windows Forms.</span></span> <span data-ttu-id="a2f29-104">Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.</span><span class="sxs-lookup"><span data-stu-id="a2f29-104">The Help file can be either HTML or HTMLHelp 1.x or greater format.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="a2f29-105">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="a2f29-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a2f29-106">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="a2f29-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a2f29-107">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="a2f29-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы предоставить справку  
+### <a name="to-provide-help"></a><span data-ttu-id="a2f29-108">Предоставление справки</span><span class="sxs-lookup"><span data-stu-id="a2f29-108">To provide Help</span></span>  
   
-1.  Перетащите компонент <xref:System.Windows.Forms.HelpProvider> из **панели элементов** в форму.  
+1.  <span data-ttu-id="a2f29-109">Из **элементов**, перетащите <xref:System.Windows.Forms.HelpProvider> форму компонента.</span><span class="sxs-lookup"><span data-stu-id="a2f29-109">From the **Toolbox**, drag a <xref:System.Windows.Forms.HelpProvider> component to your form.</span></span>  
   
-     Компонент будет расположен в нижней части конструктора Windows Forms.  
+     <span data-ttu-id="a2f29-110">Компонент разместится в нижней части конструктора Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a2f29-110">The component will reside in the tray at the bottom of the Windows Forms Designer.</span></span>  
   
-2.  В окне **Свойства** задайте установите свойству <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> значение в виде CHM\-, COL\- или  HTM\-файла справки.  
+2.  <span data-ttu-id="a2f29-111">В **свойства** задайте <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойство на файл справки .chm, .col или htm.</span><span class="sxs-lookup"><span data-stu-id="a2f29-111">In the **Properties** window, set the <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> property to the .chm, .col, or .htm Help file.</span></span>  
   
-3.  Выберите другой элемент управления в форме и задайте его свойство [HelpKeyword](frlrfSystemWindowsFormsHelpProviderClassSetHelpKeywordTopic) в окне **Свойства**.  
+3.  <span data-ttu-id="a2f29-112">Выберите другой элемент управления на форму, а в **свойства** задайте <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="a2f29-112">Select another control you have on your form, and in the **Properties** window, set the <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> property.</span></span>  
   
-     Эта строка с помощью компонента <xref:System.Windows.Forms.HelpProvider> передается в имеющийся файл справки для вызова соответствующего раздела справки.  
+     <span data-ttu-id="a2f29-113">Это строка, передаваемая через <xref:System.Windows.Forms.HelpProvider> в файле справки для вызова соответствующего раздела справки.</span><span class="sxs-lookup"><span data-stu-id="a2f29-113">This is the string passed through the <xref:System.Windows.Forms.HelpProvider> component to your Help file to summon the appropriate Help topic.</span></span>  
   
-4.  В окне **Свойства** присвойте свойству [HelpNavigator](frlrfSystemWindowsFormsHelpProviderClassSetHelpNavigatorTopic) значение перечисления <xref:System.Windows.Forms.HelpNavigator>.  
+4.  <span data-ttu-id="a2f29-114">В **свойства** задайте <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> свойство в значение <xref:System.Windows.Forms.HelpNavigator> перечисления.</span><span class="sxs-lookup"><span data-stu-id="a2f29-114">In the **Properties** window, set the <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> property to a value of the <xref:System.Windows.Forms.HelpNavigator> enumeration.</span></span>  
   
-     Это определяет способ передачи свойства **HelpKeyword** в справочную систему.  В следующей таблице приведены возможные параметры и их описания.  
+     <span data-ttu-id="a2f29-115">Этот параметр определяет способ, которым свойство **HelpKeyword** передается в справочную систему.</span><span class="sxs-lookup"><span data-stu-id="a2f29-115">This determines the way in which the **HelpKeyword** property is passed to the Help system.</span></span> <span data-ttu-id="a2f29-116">В следующей таблице показаны возможные настройки и их описания.</span><span class="sxs-lookup"><span data-stu-id="a2f29-116">The following table shows the possible settings and their descriptions.</span></span>  
   
-    |Имя элемента|Описание|  
-    |------------------|--------------|  
-    |AssociateIndex|Указывает, что индекс для данного раздела выполняется в заданном URL.|  
-    |Find|Указывает, что отображается страница поиска заданного URL\-адреса.|  
-    |Указатель|Указывает, что отображается указатель заданного URL\-адреса.|  
-    |KeywordIndex|Указывает ключевое слово для поиска и действие для выполнения в заданном URL\-адресе.|  
-    |TableOfContents|Указывает, что отображается оглавление файла справки HTML 1.0.|  
-    |Раздел|Указывает, что отображается раздел, на который ссылается заданный URL\-адрес.|  
+    |<span data-ttu-id="a2f29-117">Имя элемента</span><span class="sxs-lookup"><span data-stu-id="a2f29-117">Member Name</span></span>|<span data-ttu-id="a2f29-118">Описание</span><span class="sxs-lookup"><span data-stu-id="a2f29-118">Description</span></span>|  
+    |-----------------|-----------------|  
+    |<span data-ttu-id="a2f29-119">AssociateIndex</span><span class="sxs-lookup"><span data-stu-id="a2f29-119">AssociateIndex</span></span>|<span data-ttu-id="a2f29-120">Указывает, что индекс для данного раздела выполняется в заданном URL-адресе.</span><span class="sxs-lookup"><span data-stu-id="a2f29-120">Specifies that the index for a specified topic is performed in the specified URL.</span></span>|  
+    |<span data-ttu-id="a2f29-121">Find</span><span class="sxs-lookup"><span data-stu-id="a2f29-121">Find</span></span>|<span data-ttu-id="a2f29-122">Указывает, что отображается страница поиска заданного URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="a2f29-122">Specifies that the search page of a specified URL is displayed.</span></span>|  
+    |<span data-ttu-id="a2f29-123">Индекс</span><span class="sxs-lookup"><span data-stu-id="a2f29-123">Index</span></span>|<span data-ttu-id="a2f29-124">Указывает, что отображается индекс заданного URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="a2f29-124">Specifies that the index of a specified URL is displayed.</span></span>|  
+    |<span data-ttu-id="a2f29-125">KeywordIndex</span><span class="sxs-lookup"><span data-stu-id="a2f29-125">KeywordIndex</span></span>|<span data-ttu-id="a2f29-126">Указывает ключевое слово для поиска и действие, выполняемое по указанному URL-адресу.</span><span class="sxs-lookup"><span data-stu-id="a2f29-126">Specifies a keyword to search for and the action to take in the specified URL.</span></span>|  
+    |<span data-ttu-id="a2f29-127">TableOfContents</span><span class="sxs-lookup"><span data-stu-id="a2f29-127">TableOfContents</span></span>|<span data-ttu-id="a2f29-128">Указывает, что отображается оглавление файла справки HTML 1.0.</span><span class="sxs-lookup"><span data-stu-id="a2f29-128">Specifies that the table of contents of the HTML 1.0 Help file is displayed.</span></span>|  
+    |<span data-ttu-id="a2f29-129">Раздел</span><span class="sxs-lookup"><span data-stu-id="a2f29-129">Topic</span></span>|<span data-ttu-id="a2f29-130">Указывает, что отображается раздел, на который ссылается указанный URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="a2f29-130">Specifies that the topic referenced by the specified URL is displayed.</span></span>|  
   
- Во время выполнения нажатие клавиши F1 при находящемся в фокусе элементе управления \(для которого заданы свойства **HelpKeyword** и **HelpNavigator**\) открывает файл справки, связанный с компонентом <xref:System.Windows.Forms.HelpProvider>.  
+ <span data-ttu-id="a2f29-131">Во время выполнения, нажав клавишу F1 при элемента управления, для которого заданы **HelpKeyword** и **HelpNavigator** свойства — имеет фокус откроется файл справки, связанный с этим <xref:System.Windows.Forms.HelpProvider> компонента.</span><span class="sxs-lookup"><span data-stu-id="a2f29-131">At run time, pressing F1 when the control—for which you have set the **HelpKeyword** and **HelpNavigator** properties—has focus will open the Help file you associated with that <xref:System.Windows.Forms.HelpProvider> component.</span></span>  
   
- В настоящее время свойство **HelpNamespace** поддерживает файлы справки в следующих трех форматах: HTMLHelp 1.x, HTMLHelp 2.0 и HTML.  Поэтому свойству **HelpNamespace** можно задать адрес http:\/\/ \(веб\-страница\).  Если сделать это, то это свойство открывает браузер по умолчанию на веб\-странице со строкой, указанной в свойстве **HelpKeyword** и использованной для привязки.  Привязка используется для перехода к определенной части HTML\-страницы.  
+ <span data-ttu-id="a2f29-132">В настоящее время свойство **HelpNamespace** поддерживает файлы справки в следующих трех форматах: HTMLHelp 1.x, HTMLHelp 2.0 и HTML.</span><span class="sxs-lookup"><span data-stu-id="a2f29-132">Currently, the **HelpNamespace** property supports Help files in the following three formats: HTMLHelp 1.x, HTMLHelp 2.0, and HTML.</span></span> <span data-ttu-id="a2f29-133">Таким образом, для свойства **HelpNamespace** можно задать адрес http://, например веб-страницу.</span><span class="sxs-lookup"><span data-stu-id="a2f29-133">Thus, you can set the **HelpNamespace** property to an http:// address, such as a Web page.</span></span> <span data-ttu-id="a2f29-134">Если это будет сделано, откроется браузер по умолчанию для веб-страницы со строкой, указанной в свойстве **HelpKeyword**, которая используется в качестве привязки.</span><span class="sxs-lookup"><span data-stu-id="a2f29-134">If this is done, it will open the default browser to the Web page with the string specified in the **HelpKeyword** property used as the anchor.</span></span> <span data-ttu-id="a2f29-135">Привязка используется для перехода к определенной части HTML-страницы.</span><span class="sxs-lookup"><span data-stu-id="a2f29-135">The anchor is used to jump to a specific part of an HTML page.</span></span>  
   
 > [!IMPORTANT]
->  Обязательно проверяйте любые сведения, посылаемые клиентом, перед их использованием в приложении.  Злоумышленники могут попытаться послать или вставить исполняемый скрипт, инструкции SQL или другой код.  Перед отображением данных, введенных пользователем, сохраните их в базе данных или проверьте, не содержат ли они потенциально небезопасные сведения.  При обычном способе проверки при получении данных от пользователя используется регулярное выражение для поиска ключевых слов, таких как "SCRIPT" .  
+>  <span data-ttu-id="a2f29-136">Обязательно проверьте все сведения, отправляемые с клиента, перед их использованием в приложении.</span><span class="sxs-lookup"><span data-stu-id="a2f29-136">Be careful to check any information that is sent from a client before using it in your application.</span></span> <span data-ttu-id="a2f29-137">Злоумышленники могут попытаться послать или вставить исполняемый сценарий, инструкции SQL или другой код.</span><span class="sxs-lookup"><span data-stu-id="a2f29-137">Malicious users might try to send or inject executable script, SQL statements, or other code.</span></span> <span data-ttu-id="a2f29-138">Перед отображением ввода пользователя, сохранением его в базе данных или работой с ним убедитесь, что он не содержит потенциально небезопасных сведений.</span><span class="sxs-lookup"><span data-stu-id="a2f29-138">Before you display a user's input, store it in a database, or work with it, check that it does not contain potentially unsafe information.</span></span> <span data-ttu-id="a2f29-139">Например, можно порекомендовать использование регулярного выражения для поиска ключевых слов, таких как SCRIPT, при получении данных от пользователя.</span><span class="sxs-lookup"><span data-stu-id="a2f29-139">A typical way to check is to use a regular expression to look for keywords such as "SCRIPT" when you receive input from a user.</span></span>  
   
- Следует помнить, что можно также использовать компонент <xref:System.Windows.Forms.HelpProvider> для отображения всплывающей справки, даже если он настроен на отображение файлов справки для элементов управления Windows Forms.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ <span data-ttu-id="a2f29-140">Можно также использовать <xref:System.Windows.Forms.HelpProvider> компонент для отображения всплывающей справки, даже если он настроен на отображение файлов справки для элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a2f29-140">You can also use the <xref:System.Windows.Forms.HelpProvider> component to show pop-up Help, even if you have it configured to display Help files for the controls on your Windows Forms.</span></span> <span data-ttu-id="a2f29-141">Дополнительные сведения см. в разделе [Практическое руководство. Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).</span><span class="sxs-lookup"><span data-stu-id="a2f29-141">For more information, see [How to: Display Pop-up Help](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).</span></span>  
   
-## См. также  
- [Практическое руководство. Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)   
- [Отображение справки по элементам управления с помощью всплывающих подсказок](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)   
- [Интеграция справки пользователя в формы Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)   
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="a2f29-142">См. также</span><span class="sxs-lookup"><span data-stu-id="a2f29-142">See Also</span></span>  
+ [<span data-ttu-id="a2f29-143">Практическое руководство. Отображение всплывающей справки</span><span class="sxs-lookup"><span data-stu-id="a2f29-143">How to: Display Pop-up Help</span></span>](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ [<span data-ttu-id="a2f29-144">Отображение справки по элементам управления с помощью подсказок</span><span class="sxs-lookup"><span data-stu-id="a2f29-144">Control Help Using ToolTips</span></span>](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [<span data-ttu-id="a2f29-145">Интеграция справки пользователя в формы Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a2f29-145">Integrating User Help in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [<span data-ttu-id="a2f29-146">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a2f29-146">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)

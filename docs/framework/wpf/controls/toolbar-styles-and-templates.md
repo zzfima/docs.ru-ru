@@ -1,67 +1,68 @@
 ---
-title: "Стили и шаблоны элемента ToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ToolBar"
-  - "части [WPF], ToolBar"
-  - "состояния [WPF], ToolBar"
-  - "стили [WPF], ToolBar"
-  - "шаблоны [WPF], ToolBar"
-  - "ToolBar [WPF], стили и шаблоны"
+title: "Стили и шаблоны элемента ToolBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], ToolBar
+- styles [WPF], ToolBar
+- ControlTemplate [WPF], ToolBar
+- parts [WPF], ToolBar
+- ToolBar [WPF], styles and templates
+- templates [WPF], ToolBar
 ms.assetid: bd875f46-4690-46f5-81e0-f11a9822484f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e153ff0fd89259dafedf6f8abb669090a944e91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили и шаблоны элемента ToolBar
-В этом разделе описываются стили и шаблоны для элемента управления <xref:System.Windows.Controls.ToolBar>.  Предусмотренный по умолчанию шаблон <xref:System.Windows.Controls.ControlTemplate> можно изменить, чтобы придать элементу управления уникальный внешний вид.  Дополнительные сведения см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="toolbar-styles-and-templates"></a><span data-ttu-id="9badb-102">Стили и шаблоны элемента ToolBar</span><span class="sxs-lookup"><span data-stu-id="9badb-102">ToolBar Styles and Templates</span></span>
+<span data-ttu-id="9badb-103">В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ToolBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9badb-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.ToolBar> control.</span></span> <span data-ttu-id="9badb-104">Можно изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> для предоставления уникального внешнего вида элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9badb-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="9badb-105">Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="9badb-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Части ToolBar  
- В следующей таблице перечислены именованные части элемента управления <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-parts"></a><span data-ttu-id="9badb-106">Элементы панели инструментов</span><span class="sxs-lookup"><span data-stu-id="9badb-106">ToolBar Parts</span></span>  
+ <span data-ttu-id="9badb-107">В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ToolBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9badb-107">The following table lists the named parts for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="9badb-108">Отделение</span><span class="sxs-lookup"><span data-stu-id="9badb-108">Part</span></span>|<span data-ttu-id="9badb-109">Тип</span><span class="sxs-lookup"><span data-stu-id="9badb-109">Type</span></span>|<span data-ttu-id="9badb-110">Описание</span><span class="sxs-lookup"><span data-stu-id="9badb-110">Description</span></span>|  
 |-|-|-|  
-|Часть|Тип|Описание|  
-|PART\_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|Объект, который содержит элементы управления в элементе управления <xref:System.Windows.Controls.ToolBar>.|  
-|PART\_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Объект, содержащий элементы управления, которые выходят за пределы области элемента управления <xref:System.Windows.Controls.ToolBar>.|  
+|<span data-ttu-id="9badb-111">PART_ToolBarPanel</span><span class="sxs-lookup"><span data-stu-id="9badb-111">PART_ToolBarPanel</span></span>|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|<span data-ttu-id="9badb-112">Объект, содержащий элементы управления на <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="9badb-112">The object that contains the controls on the <xref:System.Windows.Controls.ToolBar>.</span></span>|  
+|<span data-ttu-id="9badb-113">PART_ToolBarOverflowPanel</span><span class="sxs-lookup"><span data-stu-id="9badb-113">PART_ToolBarOverflowPanel</span></span>|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|<span data-ttu-id="9badb-114">Объект, содержащий элементы, находящиеся в области переполнения <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="9badb-114">The object that contains the controls that are in the overflow area of the <xref:System.Windows.Controls.ToolBar>.</span></span>|  
   
- При создании шаблона <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ToolBar> шаблон может содержать часть <xref:System.Windows.Controls.ItemsPresenter> в элементе управления <xref:System.Windows.Controls.ScrollViewer>.  \(Элемент управления <xref:System.Windows.Controls.ItemsPresenter> отображает каждый элемент в элементе управления <xref:System.Windows.Controls.ToolBar>; элемент управления <xref:System.Windows.Controls.ScrollViewer> обеспечивает прокрутку в элементе управления\).  Если элемент управления <xref:System.Windows.Controls.ItemsPresenter> не является непосредственным дочерним элементом элемента управления <xref:System.Windows.Controls.ScrollViewer>, необходимо присвоить элементу управления <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.  
+ <span data-ttu-id="9badb-115">При создании <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ToolBar>, шаблон может содержать <xref:System.Windows.Controls.ItemsPresenter> в <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="9badb-115">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ToolBar>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="9badb-116">( <xref:System.Windows.Controls.ItemsPresenter> Отображает каждый элемент в <xref:System.Windows.Controls.ToolBar>; <xref:System.Windows.Controls.ScrollViewer> разрешает прокрутку в элементе управления).</span><span class="sxs-lookup"><span data-stu-id="9badb-116">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.ToolBar>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="9badb-117">Если <xref:System.Windows.Controls.ItemsPresenter> не является прямым потомком <xref:System.Windows.Controls.ScrollViewer>, вы должны предоставить <xref:System.Windows.Controls.ItemsPresenter> имя `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="9badb-117">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
-## Состояния ToolBar  
- В следующей таблице перечислены визуальные состояния элемента управления <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-states"></a><span data-ttu-id="9badb-118">Панель инструментов состояния</span><span class="sxs-lookup"><span data-stu-id="9badb-118">ToolBar States</span></span>  
+ <span data-ttu-id="9badb-119">В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ToolBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9badb-119">The following table lists the visual states for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="9badb-120">Имя VisualState</span><span class="sxs-lookup"><span data-stu-id="9badb-120">VisualState Name</span></span>|<span data-ttu-id="9badb-121">Имя VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="9badb-121">VisualStateGroup Name</span></span>|<span data-ttu-id="9badb-122">Описание</span><span class="sxs-lookup"><span data-stu-id="9badb-122">Description</span></span>|  
 |-|-|-|  
-|Имя VisualState|Имя VisualStateGroup|Описание|  
-|Valid|ValidationStates|Элемент управления использует класс <xref:System.Windows.Controls.Validation>, и значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `false`.|  
-|InvalidFocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления имеет фокус.|  
-|InvalidUnfocused|ValidationStates|Значение присоединенного свойства <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> равно `true`, если элемент управления не имеет фокус.|  
+|<span data-ttu-id="9badb-123">Valid</span><span class="sxs-lookup"><span data-stu-id="9badb-123">Valid</span></span>|<span data-ttu-id="9badb-124">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="9badb-124">ValidationStates</span></span>|<span data-ttu-id="9badb-125">Элемент управления использует <xref:System.Windows.Controls.Validation> класса и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> вложенное свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="9badb-125">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="9badb-126">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="9badb-126">InvalidFocused</span></span>|<span data-ttu-id="9badb-127">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="9badb-127">ValidationStates</span></span>|<span data-ttu-id="9badb-128"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="9badb-128">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="9badb-129">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="9badb-129">InvalidUnfocused</span></span>|<span data-ttu-id="9badb-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="9badb-130">ValidationStates</span></span>|<span data-ttu-id="9badb-131"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Вложенное свойство `true` имеет элемент управления имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="9badb-131">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Пример шаблона ControlTemplate ToolBar  
- В следующем примере показано, как определить шаблон <xref:System.Windows.Controls.ControlTemplate> для элемента управления <xref:System.Windows.Controls.ToolBar>.  
+## <a name="toolbar-controltemplate-example"></a><span data-ttu-id="9badb-132">Пример шаблона элемента управления панель инструментов</span><span class="sxs-lookup"><span data-stu-id="9badb-132">ToolBar ControlTemplate Example</span></span>  
+ <span data-ttu-id="9badb-133">В следующем примере показан способ определения <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ToolBar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9badb-133">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.ToolBar> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
+ [!code-xaml[ControlTemplateExamples#ToolBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/toolbar.xaml#toolbar)]  
   
- В предыдущем примере используется один или несколько следующих ресурсов.  
+ <span data-ttu-id="9badb-134">В предыдущем примере используется один или несколько из следующих ресурсов.</span><span class="sxs-lookup"><span data-stu-id="9badb-134">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Полный пример см. на веб\-странице [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).  
+ <span data-ttu-id="9badb-135">Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="9badb-135">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## См. также  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Стили и шаблоны элемента Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="9badb-136">См. также</span><span class="sxs-lookup"><span data-stu-id="9badb-136">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="9badb-137">Стили и шаблоны элемента управления</span><span class="sxs-lookup"><span data-stu-id="9badb-137">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="9badb-138">Настройка элементов управления</span><span class="sxs-lookup"><span data-stu-id="9badb-138">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="9badb-139">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="9badb-139">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="9badb-140">Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="9badb-140">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

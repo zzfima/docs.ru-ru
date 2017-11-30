@@ -1,32 +1,36 @@
 ---
-title: "System Information and Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "domain names, retrieving"
-  - "SystemInformation class [Windows Forms]"
-  - "user names, retrieving"
-  - "system information [Windows Forms]"
+title: "Информация о системе и Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- domain names [Windows Forms], retrieving
+- SystemInformation class [Windows Forms]
+- user names [Windows Forms], retrieving
+- system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6657556ffb49c19e6ffc3ef5462de341a93112b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System Information and Windows Forms
-Иногда бывает необходимо собрать сведения о компьютере, на котором выполняется приложение, чтобы принять решения в коде.  Например, программа может содержать функцию, которая работает только при подключении к конкретному сетевому домену; в этом случае необходим способ определить наличие домена и отключить функцию, если домен отсутствует.  
+# <a name="system-information-and-windows-forms"></a><span data-ttu-id="9147b-102">Информация о системе и Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9147b-102">System Information and Windows Forms</span></span>
+<span data-ttu-id="9147b-103">Иногда бывает необходимо собрать сведения о компьютере, на котором приложение выполняется на для принятия решений в коде.</span><span class="sxs-lookup"><span data-stu-id="9147b-103">Sometimes it is necessary to gather information about the computer that your application is running on in order to make decisions in your code.</span></span> <span data-ttu-id="9147b-104">Например возможно, функция, которая применяется только при подключении к конкретному сетевому домену; в этом случае необходим способ для определения домена и отключить функцию, если домен не существует.</span><span class="sxs-lookup"><span data-stu-id="9147b-104">For example, you might have a function that is only applicable when connected to a particular network domain; in this case you would need a way to determine the domain and disable the function if the domain is not present.</span></span>  
   
- Приложения Windows Forms позволяют получить сведения о компьютере во время выполнения с помощью класса <xref:System.Windows.Forms.SystemInformation>.  В следующем примере показано использование класса <xref:System.Windows.Forms.SystemInformation> для получения свойств <xref:System.Windows.Forms.SystemInformation.UserName%2A> и <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:  
+ <span data-ttu-id="9147b-105">Можно использовать в приложениях Windows Forms <xref:System.Windows.Forms.SystemInformation> класс, чтобы определить количество сведения о компьютере во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="9147b-105">Windows Forms applications can use the <xref:System.Windows.Forms.SystemInformation> class to determine a number of things about a computer at run time.</span></span> <span data-ttu-id="9147b-106">В следующем примере показано использование <xref:System.Windows.Forms.SystemInformation> класса для извлечения <xref:System.Windows.Forms.SystemInformation.UserName%2A> и <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:</span><span class="sxs-lookup"><span data-stu-id="9147b-106">The following example demonstrates using the <xref:System.Windows.Forms.SystemInformation> class to retrieve the <xref:System.Windows.Forms.SystemInformation.UserName%2A> and <xref:System.Windows.Forms.SystemInformation.UserDomainName%2A>:</span></span>  
   
 ```vb  
 Dim User As String = Windows.Forms.SystemInformation.UserName  
@@ -34,7 +38,6 @@ Dim Domain As String = Windows.Forms.SystemInformation.UserDomainName
   
 MessageBox.Show("Good morning " & User & ". You are connected to " _  
 & Domain)  
-  
 ```  
   
 ```csharp  
@@ -45,10 +48,10 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
 + Domain)  
 ```  
   
- Все члены класса <xref:System.Windows.Forms.SystemInformation> доступны только для чтения; параметры пользователя изменить нельзя.  В классе определено более 100 членов, возвращающих самые разнообразные сведения — от числа мониторов, подключенного к компьютеру \(<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>\) до интервала между значками в проводнике Windows \(<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> и <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>\).  
+ <span data-ttu-id="9147b-107">Все члены <xref:System.Windows.Forms.SystemInformation> класса доступны только для чтения; невозможно изменить параметры пользователя.</span><span class="sxs-lookup"><span data-stu-id="9147b-107">All members of the <xref:System.Windows.Forms.SystemInformation> class are read-only; you cannot modify a user's settings.</span></span> <span data-ttu-id="9147b-108">Существует более 100 членов класса, возвращение сведений в любом из числа мониторов, подключенного к компьютеру (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) для интервала между значками в проводнике Windows (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> и <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).</span><span class="sxs-lookup"><span data-stu-id="9147b-108">There are over 100 members of the class, returning information on everything from the number of monitors attached to the computer (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) to the spacing of icons in Windows Explorer (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> and <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).</span></span>  
   
- Наиболее полезными членами класса <xref:System.Windows.Forms.SystemInformation> являются <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> и <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
+ <span data-ttu-id="9147b-109">Некоторые из наиболее полезными членами <xref:System.Windows.Forms.SystemInformation> класс включать <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, и <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.</span><span class="sxs-lookup"><span data-stu-id="9147b-109">Some of the more useful members of the <xref:System.Windows.Forms.SystemInformation> class include <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, and <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.SystemInformation>   
- [Power Management in Windows Forms](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9147b-110">См. также</span><span class="sxs-lookup"><span data-stu-id="9147b-110">See Also</span></span>  
+ <xref:System.Windows.Forms.SystemInformation>  
+ [<span data-ttu-id="9147b-111">Управление питанием в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9147b-111">Power Management in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)

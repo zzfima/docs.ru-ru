@@ -1,37 +1,38 @@
 ---
-title: "Структура интерфейса Graphics | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, использование управляемых интерфейсов"
-  - "графика, структура класса"
+title: "Структура интерфейса Graphics"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, using managed interface
+- graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Структура интерфейса Graphics
-Интерфейс управляемых классов [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур.  Класс <xref:System.Drawing.Graphics> является основой интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], этот класс непосредственно выполняет рисование прямых и кривых линий, геометрических фигур, вывод рисунков и текста.  
+# <a name="structure-of-the-graphics-interface"></a><span data-ttu-id="ff786-102">Структура интерфейса Graphics</span><span class="sxs-lookup"><span data-stu-id="ff786-102">Structure of the Graphics Interface</span></span>
+<span data-ttu-id="ff786-103">Интерфейс управляемых классов [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур.</span><span class="sxs-lookup"><span data-stu-id="ff786-103">The managed class interface to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contains about 60 classes, 50 enumerations, and 8 structures.</span></span> <span data-ttu-id="ff786-104"><xref:System.Drawing.Graphics> Класс является основой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] функциональные возможности; это класс, который фактически рисует линии, кривые, фигур, изображений и текста.</span><span class="sxs-lookup"><span data-stu-id="ff786-104">The <xref:System.Drawing.Graphics> class is at the core of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] functionality; it is the class that actually draws lines, curves, figures, images, and text.</span></span>  
   
-## Важные классы  
- Многие классы работают совместно с классом <xref:System.Drawing.Graphics>.  Например, метод <xref:System.Drawing.Graphics.DrawLine%2A> получает объект <xref:System.Drawing.Pen>, содержащий атрибуты рисуемой линии, такие как цвет, ширина, наличие или отсутствие пунктира и т. п.  Метод <xref:System.Drawing.Graphics.FillRectangle%2A> может получать указатель на объект <xref:System.Drawing.Drawing2D.LinearGradientBrush>, работающий совместно с объектом <xref:System.Drawing.Graphics> и реализующий заполнение прямоугольника постепенно меняющимся цветом.  Объекты <xref:System.Drawing.Font> и <xref:System.Drawing.StringFormat> определяют то, как объект <xref:System.Drawing.Graphics> выводит на экран текст.  Объект <xref:System.Drawing.Drawing2D.Matrix> обеспечивает выполнение различных действий по объемным преобразованиям объекта <xref:System.Drawing.Graphics>, которые используются для вращения, масштабирования и отражения рисунков.  
+## <a name="important-classes"></a><span data-ttu-id="ff786-105">Важные классы</span><span class="sxs-lookup"><span data-stu-id="ff786-105">Important Classes</span></span>  
+ <span data-ttu-id="ff786-106">Многие классы работают совместно с <xref:System.Drawing.Graphics> класса.</span><span class="sxs-lookup"><span data-stu-id="ff786-106">Many classes work together with the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="ff786-107">Например <xref:System.Drawing.Graphics.DrawLine%2A> метод получает <xref:System.Drawing.Pen> объекта, который хранит атрибуты рисуемой линии (цвет, ширину, стиль штриха и like).</span><span class="sxs-lookup"><span data-stu-id="ff786-107">For example, the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object, which holds attributes (color, width, dash style, and the like) of the line to be drawn.</span></span> <span data-ttu-id="ff786-108"><xref:System.Drawing.Graphics.FillRectangle%2A> Метод может получить указатель на <xref:System.Drawing.Drawing2D.LinearGradientBrush> объекта, который работает с <xref:System.Drawing.Graphics> объекта для заполнения прямоугольника постепенно изменения цвета.</span><span class="sxs-lookup"><span data-stu-id="ff786-108">The <xref:System.Drawing.Graphics.FillRectangle%2A> method can receive a pointer to a <xref:System.Drawing.Drawing2D.LinearGradientBrush> object, which works with the <xref:System.Drawing.Graphics> object to fill a rectangle with a gradually changing color.</span></span> <span data-ttu-id="ff786-109"><xref:System.Drawing.Font>и <xref:System.Drawing.StringFormat> объектов влияют на способ <xref:System.Drawing.Graphics> объект рисуется текст.</span><span class="sxs-lookup"><span data-stu-id="ff786-109"><xref:System.Drawing.Font> and <xref:System.Drawing.StringFormat> objects influence the way a <xref:System.Drawing.Graphics> object draws text.</span></span> <span data-ttu-id="ff786-110">Объект <xref:System.Drawing.Drawing2D.Matrix> объект хранит и управляет мировое преобразование объекта <xref:System.Drawing.Graphics> объекта, который используется для вращения, масштабирования и зеркальное отражение изображения.</span><span class="sxs-lookup"><span data-stu-id="ff786-110">A <xref:System.Drawing.Drawing2D.Matrix> object stores and manipulates the world transformation of a <xref:System.Drawing.Graphics> object, which is used to rotate, scale, and flip images.</span></span>  
   
- Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько структур, таких как <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point> и <xref:System.Drawing.Size>, которые используются для хранения графических данных.  Некоторые классы также используются, в основном, как структурированные типы данных.  Например, класс <xref:System.Drawing.Imaging.BitmapData> является вспомогательным хранилищем данных для класса <xref:System.Drawing.Bitmap>, а класс <xref:System.Drawing.Drawing2D.PathData> является вспомогательным хранилищем данных для класса <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ff786-111">предоставляет несколько структур (например, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point>, и <xref:System.Drawing.Size>) для хранения графических данных.</span><span class="sxs-lookup"><span data-stu-id="ff786-111"> provides several structures (for example, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point>, and <xref:System.Drawing.Size>) for organizing graphics data.</span></span> <span data-ttu-id="ff786-112">Кроме того некоторые классы служат в основном как структурированные типы данных.</span><span class="sxs-lookup"><span data-stu-id="ff786-112">Also, certain classes serve primarily as structured data types.</span></span> <span data-ttu-id="ff786-113">Например <xref:System.Drawing.Imaging.BitmapData> класс представляет вспомогательный класс для <xref:System.Drawing.Bitmap> класса и <xref:System.Drawing.Drawing2D.PathData> класс представляет вспомогательный класс для <xref:System.Drawing.Drawing2D.GraphicsPath> класса.</span><span class="sxs-lookup"><span data-stu-id="ff786-113">For example, the <xref:System.Drawing.Imaging.BitmapData> class is a helper for the <xref:System.Drawing.Bitmap> class, and the <xref:System.Drawing.Drawing2D.PathData> class is a helper for the <xref:System.Drawing.Drawing2D.GraphicsPath> class.</span></span>  
   
- В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определены несколько перечислений, которые являются коллекциями связанных констант.  Например, перечисление <xref:System.Drawing.Drawing2D.LineJoin> содержит элементы <xref:System.Drawing.Drawing2D.LineJoin>, <xref:System.Drawing.Drawing2D.LineJoin> и <xref:System.Drawing.Drawing2D.LineJoin>, определяющие стили соединения линий.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="ff786-114">определяет несколько перечислений, которые представляют собой наборы связанных констант.</span><span class="sxs-lookup"><span data-stu-id="ff786-114"> defines several enumerations, which are collections of related constants.</span></span> <span data-ttu-id="ff786-115">Например <xref:System.Drawing.Drawing2D.LineJoin> перечисление содержит элементы <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, и <xref:System.Drawing.Drawing2D.LineJoin.Round>, указывающие, стили, которые можно использовать для соединения двух строк.</span><span class="sxs-lookup"><span data-stu-id="ff786-115">For example, the <xref:System.Drawing.Drawing2D.LineJoin> enumeration contains the elements <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, and <xref:System.Drawing.Drawing2D.LineJoin.Round>, which specify styles that can be used to join two lines.</span></span>  
   
-## См. также  
- [Общие сведения о графике](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [Управляемый код GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
- [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a><span data-ttu-id="ff786-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ff786-116">See Also</span></span>  
+ [<span data-ttu-id="ff786-117">Общие сведения о графике</span><span class="sxs-lookup"><span data-stu-id="ff786-117">Graphics Overview</span></span>](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [<span data-ttu-id="ff786-118">Управляемый код GDI+</span><span class="sxs-lookup"><span data-stu-id="ff786-118">About GDI+ Managed Code</span></span>](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [<span data-ttu-id="ff786-119">Использование управляемых графических классов</span><span class="sxs-lookup"><span data-stu-id="ff786-119">Using Managed Graphics Classes</span></span>](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

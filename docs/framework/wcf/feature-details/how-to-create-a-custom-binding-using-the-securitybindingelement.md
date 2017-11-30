@@ -1,40 +1,45 @@
 ---
-title: "Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "безопасность [WCF], создание пользовательских привязок"
+title: "Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
-В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a><span data-ttu-id="1880d-102">Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-102">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>
+<span data-ttu-id="1880d-103">В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] предусмотрено несколько предоставляемых системой привязок, подлежащих настройке, однако не способных в полной мере обеспечить гибкость настройки всех параметров безопасности, поддерживаемых [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1880d-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] includes several system-provided bindings that can be configured but do not provide full flexibility when configuring all the security options that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] supports.</span></span> <span data-ttu-id="1880d-104">В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки.</span><span class="sxs-lookup"><span data-stu-id="1880d-104">This topic demonstrates how to create a custom binding directly from individual binding elements and highlights some of the security settings that can be specified when creating such a binding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1880d-105">создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="1880d-105"> creating custom bindings, see [Extending Bindings](../../../../docs/framework/wcf/extending/extending-bindings.md).</span></span>  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает <xref:System.ServiceModel.Channels.IDuplexSessionChannel> форму, который является по умолчанию используется формами каналов TCP канала транспорта, если <xref:System.ServiceModel.TransferMode> равен <xref:System.ServiceModel.TransferMode.Buffered>. Необходимо задать <xref:System.ServiceModel.TransferMode> для <xref:System.ServiceModel.TransferMode.Streamed> для использования <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.  
+>  <span data-ttu-id="1880d-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> не поддерживает форму канала <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, которая по умолчанию используется формами каналов TCP-транспорта, если свойство <xref:System.ServiceModel.TransferMode> имеет значение <xref:System.ServiceModel.TransferMode.Buffered>.</span><span class="sxs-lookup"><span data-stu-id="1880d-106"><xref:System.ServiceModel.Channels.SecurityBindingElement> does not support the <xref:System.ServiceModel.Channels.IDuplexSessionChannel> channel shape, which is the default channel shape use by the TCP transport when <xref:System.ServiceModel.TransferMode> is set to <xref:System.ServiceModel.TransferMode.Buffered>.</span></span> <span data-ttu-id="1880d-107">Необходимо задать свойству <xref:System.ServiceModel.TransferMode> значение <xref:System.ServiceModel.TransferMode.Streamed> для использования элемента <xref:System.ServiceModel.Channels.SecurityBindingElement> в этом сценарии.</span><span class="sxs-lookup"><span data-stu-id="1880d-107">You must set <xref:System.ServiceModel.TransferMode> to <xref:System.ServiceModel.TransferMode.Streamed> in order to use <xref:System.ServiceModel.Channels.SecurityBindingElement> in this scenario.</span></span>  
   
-## <a name="creating-a-custom-binding"></a>Создание пользовательской привязки  
- В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] все привязки состоят из *элементов привязки*. Каждый элемент привязки наследуется от <xref:System.ServiceModel.Channels.BindingElement> класса. В случае стандартных предоставляемых системой привязок элементы привязки уже созданы и настроены, хотя значения некоторых свойств можно изменить.  
+## <a name="creating-a-custom-binding"></a><span data-ttu-id="1880d-108">Создание пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="1880d-108">Creating a Custom Binding</span></span>  
+ <span data-ttu-id="1880d-109">В [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] все привязки состоят из *элементов привязки*.</span><span class="sxs-lookup"><span data-stu-id="1880d-109">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] all bindings are made up of *binding elements*.</span></span> <span data-ttu-id="1880d-110">Каждый элемент привязки наследуется от класса <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-110">Each binding element derives from the <xref:System.ServiceModel.Channels.BindingElement> class.</span></span> <span data-ttu-id="1880d-111">В случае стандартных предоставляемых системой привязок элементы привязки уже созданы и настроены, хотя значения некоторых свойств можно изменить.</span><span class="sxs-lookup"><span data-stu-id="1880d-111">For the standard system-provided bindings, the binding elements are created and configured for you, although you can customize some of the property settings.</span></span>  
   
- Напротив, для создания пользовательской привязки, элементы привязки создаются и настраиваются и <xref:System.ServiceModel.Channels.CustomBinding> создается из элементов привязки.  
+ <span data-ttu-id="1880d-112">В противоположность этому при создании пользовательской привязки потребуется создать и настроить элементы привязки и создать из этих элементов объект <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="1880d-112">In contrast, to create a custom binding, binding elements are created and configured and a <xref:System.ServiceModel.Channels.CustomBinding> is created from the binding elements.</span></span>  
   
- Чтобы сделать это, добавьте отдельные элементы привязки в коллекции, представленной экземпляром <xref:System.ServiceModel.Channels.BindingElementCollection> класса, а затем установите `Elements` свойства `CustomBinding` равным этому объекту. Добавлять элементы привязки необходимо в следующем порядке: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding и Transport. Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.  
+ <span data-ttu-id="1880d-113">Для этого необходимо добавить отдельные элементы привязки в коллекцию, представляемую экземпляром класса <xref:System.ServiceModel.Channels.BindingElementCollection>, а затем задать свойство `Elements` класса `CustomBinding` равным этому объекту.</span><span class="sxs-lookup"><span data-stu-id="1880d-113">To do this, you add the individual binding elements to a collection represented by an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class, and then set the `Elements` property of the `CustomBinding` equal to that object.</span></span> <span data-ttu-id="1880d-114">Добавлять элементы привязки необходимо в следующем порядке: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding и Transport.</span><span class="sxs-lookup"><span data-stu-id="1880d-114">You must add the binding elements in the following order: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, and Transport.</span></span> <span data-ttu-id="1880d-115">Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.</span><span class="sxs-lookup"><span data-stu-id="1880d-115">Note that not all the binding elements listed are required in every binding.</span></span>  
   
-## <a name="securitybindingelement"></a>SecurityBindingElement  
- Безопасность на уровне сообщений, которые являются производными от связаны три элемента привязки <xref:System.ServiceModel.Channels.SecurityBindingElement> класса. Эти три элемента называются <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, и <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> используется для обеспечения смешанного режима безопасности. Другие два элемента используются, когда безопасность обеспечивается уровнем сообщений.  
+## <a name="securitybindingelement"></a><span data-ttu-id="1880d-116">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-116">SecurityBindingElement</span></span>  
+ <span data-ttu-id="1880d-117">С безопасностью уровня сообщений связаны три элемента привязки; все они наследуются от класса <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-117">Three binding elements relate to message level security, all of which derive from the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="1880d-118">Эти три элемента называются <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> и <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-118">The three are <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, and <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span></span> <span data-ttu-id="1880d-119">Элемент <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> используется для обеспечения смешанного режима безопасности.</span><span class="sxs-lookup"><span data-stu-id="1880d-119">The <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> is used to provide Mixed mode security.</span></span> <span data-ttu-id="1880d-120">Другие два элемента используются, когда безопасность обеспечивается уровнем сообщений.</span><span class="sxs-lookup"><span data-stu-id="1880d-120">The other two elements are used when the message layer provides security.</span></span>  
   
- При обеспечении безопасности на транспортном уровне используются дополнительные классы:  
+ <span data-ttu-id="1880d-121">При обеспечении безопасности на транспортном уровне используются дополнительные классы:</span><span class="sxs-lookup"><span data-stu-id="1880d-121">Additional classes are used when transport level security is provided:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
@@ -42,78 +47,78 @@ caps.handback.revision: 19
   
 -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-## <a name="required-binding-elements"></a>Обязательные элементы привязки  
- Существует большое количество возможных элементов привязки, которые можно сочетать в одной привязке. При этом не все сочетания являются допустимыми. В этом разделе описываются обязательные элементы, которые должны присутствовать в привязке безопасности.  
+## <a name="required-binding-elements"></a><span data-ttu-id="1880d-122">Обязательные элементы привязки</span><span class="sxs-lookup"><span data-stu-id="1880d-122">Required Binding Elements</span></span>  
+ <span data-ttu-id="1880d-123">Существует большое количество возможных элементов привязки, которые можно сочетать в одной привязке.</span><span class="sxs-lookup"><span data-stu-id="1880d-123">There are a large number of possible binding elements that can be combined into a binding.</span></span> <span data-ttu-id="1880d-124">При этом не все сочетания являются допустимыми.</span><span class="sxs-lookup"><span data-stu-id="1880d-124">Not all of these combinations are valid.</span></span> <span data-ttu-id="1880d-125">В этом разделе описываются обязательные элементы, которые должны присутствовать в привязке безопасности.</span><span class="sxs-lookup"><span data-stu-id="1880d-125">This section describes the required elements that must be present in a security binding.</span></span>  
   
- Допустимые привязки безопасности зависят от многих факторов, в том числе:  
+ <span data-ttu-id="1880d-126">Допустимые привязки безопасности зависят от многих факторов, в том числе:</span><span class="sxs-lookup"><span data-stu-id="1880d-126">Valid security bindings depend on many factors, including the following:</span></span>  
   
--   режима безопасности;  
+-   <span data-ttu-id="1880d-127">режима безопасности;</span><span class="sxs-lookup"><span data-stu-id="1880d-127">Security mode.</span></span>  
   
--   транспортного протокола;  
+-   <span data-ttu-id="1880d-128">транспортного протокола;</span><span class="sxs-lookup"><span data-stu-id="1880d-128">Transport protocol.</span></span>  
   
--   шаблона обмена сообщениями (MEP), заданного в контракте.  
+-   <span data-ttu-id="1880d-129">шаблона обмена сообщениями (MEP), заданного в контракте.</span><span class="sxs-lookup"><span data-stu-id="1880d-129">The message exchange pattern (MEP) specified in the contract.</span></span>  
   
- В следующей таблице приведены допустимые конфигурации стека элементов привязки для каждого сочетания перечисленных выше факторов. Эти конфигурации представляют собой минимальные требования. В привязку можно добавлять дополнительные элементы, такие как элементы для кодирования сообщений, элементы для транзакций и другие.  
+ <span data-ttu-id="1880d-130">В следующей таблице приведены допустимые конфигурации стека элементов привязки для каждого сочетания перечисленных выше факторов.</span><span class="sxs-lookup"><span data-stu-id="1880d-130">The following table shows the valid binding element stack configurations for each combination of the preceding factors.</span></span> <span data-ttu-id="1880d-131">Эти конфигурации представляют собой минимальные требования.</span><span class="sxs-lookup"><span data-stu-id="1880d-131">Note that these are minimal requirements.</span></span> <span data-ttu-id="1880d-132">В привязку можно добавлять дополнительные элементы, такие как элементы для кодирования сообщений, элементы для транзакций и другие.</span><span class="sxs-lookup"><span data-stu-id="1880d-132">You can add additional binding elements to the binding, such as message encoding binding elements, transaction binding elements, and other binding elements.</span></span>  
   
-|Режим безопасности|Transport|Шаблон обмена сообщениями в контракте|Шаблон обмена сообщениями в контракте|Шаблон обмена сообщениями в контракте|  
+|<span data-ttu-id="1880d-133">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="1880d-133">Security Mode</span></span>|<span data-ttu-id="1880d-134">Transport</span><span class="sxs-lookup"><span data-stu-id="1880d-134">Transport</span></span>|<span data-ttu-id="1880d-135">Шаблон обмена сообщениями в контракте</span><span class="sxs-lookup"><span data-stu-id="1880d-135">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="1880d-136">Шаблон обмена сообщениями в контракте</span><span class="sxs-lookup"><span data-stu-id="1880d-136">Contract Message Exchange Pattern</span></span>|<span data-ttu-id="1880d-137">Шаблон обмена сообщениями в контракте</span><span class="sxs-lookup"><span data-stu-id="1880d-137">Contract Message Exchange Pattern</span></span>|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
 |||`Datagram`|`Request Reply`|`Duplex`|  
-|Transport|HTTPS||||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP||||  
-|||OneWayBindingElement|||  
-|||SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Сообщение|HTTP|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)|  
-|||||CompositeDuplexBindingElement|  
-|||OneWayBindingElement||OneWayBindingElement|  
-|||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||TCP|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Смешанный (транспорта с учетными данными сообщения)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
-|||OneWayBindingElement|||  
-|||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)|SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)|  
-|||OneWayBindingElement|||  
-|||SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|SSL или Windows StreamSecurityBindingElement|  
-|||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
+|<span data-ttu-id="1880d-138">Transport</span><span class="sxs-lookup"><span data-stu-id="1880d-138">Transport</span></span>|<span data-ttu-id="1880d-139">HTTPS</span><span class="sxs-lookup"><span data-stu-id="1880d-139">Https</span></span>||||  
+|||<span data-ttu-id="1880d-140">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-140">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="1880d-141">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-141">HttpsTransportBindingElement</span></span>|<span data-ttu-id="1880d-142">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-142">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="1880d-143">TCP</span><span class="sxs-lookup"><span data-stu-id="1880d-143">TCP</span></span>||||  
+|||<span data-ttu-id="1880d-144">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-144">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="1880d-145">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-145">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="1880d-146">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-146">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="1880d-147">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-147">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="1880d-148">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-148">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-149">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-149">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-150">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-150">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="1880d-151">Сообщение</span><span class="sxs-lookup"><span data-stu-id="1880d-151">Message</span></span>|<span data-ttu-id="1880d-152">HTTP</span><span class="sxs-lookup"><span data-stu-id="1880d-152">Http</span></span>|<span data-ttu-id="1880d-153">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-153">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="1880d-154">SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-154">SymmetricSecurityBindingElement</span></span>|<span data-ttu-id="1880d-155">SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="1880d-155">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||||<span data-ttu-id="1880d-156">CompositeDuplexBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-156">CompositeDuplexBindingElement</span></span>|  
+|||<span data-ttu-id="1880d-157">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-157">OneWayBindingElement</span></span>||<span data-ttu-id="1880d-158">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-158">OneWayBindingElement</span></span>|  
+|||<span data-ttu-id="1880d-159">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-159">HttpTransportBindingElement</span></span>|<span data-ttu-id="1880d-160">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-160">HttpTransportBindingElement</span></span>|<span data-ttu-id="1880d-161">HttpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-161">HttpTransportBindingElement</span></span>|  
+||<span data-ttu-id="1880d-162">TCP</span><span class="sxs-lookup"><span data-stu-id="1880d-162">Tcp</span></span>|<span data-ttu-id="1880d-163">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-163">SecurityBindingElement</span></span>|<span data-ttu-id="1880d-164">SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-164">SecurityBindingElement</span></span>|<span data-ttu-id="1880d-165">SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="1880d-165">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="1880d-166">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-166">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-167">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-167">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-168">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-168">TcpTransportBindingElement</span></span>|  
+|<span data-ttu-id="1880d-169">Смешанный (транспорта с учетными данными сообщения)</span><span class="sxs-lookup"><span data-stu-id="1880d-169">Mixed (transport with message credentials)</span></span>|<span data-ttu-id="1880d-170">HTTPS</span><span class="sxs-lookup"><span data-stu-id="1880d-170">Https</span></span>|<span data-ttu-id="1880d-171">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-171">TransportSecurityBindingElement</span></span>|<span data-ttu-id="1880d-172">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-172">TransportSecurityBindingElement</span></span>||  
+|||<span data-ttu-id="1880d-173">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-173">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="1880d-174">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-174">HttpsTransportBindingElement</span></span>|<span data-ttu-id="1880d-175">HttpsTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-175">HttpsTransportBindingElement</span></span>||  
+||<span data-ttu-id="1880d-176">TCP</span><span class="sxs-lookup"><span data-stu-id="1880d-176">TCP</span></span>|<span data-ttu-id="1880d-177">TransportSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-177">TransportSecurityBindingElement</span></span>|<span data-ttu-id="1880d-178">SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="1880d-178">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|<span data-ttu-id="1880d-179">SymmetricSecurityBindingElement (режим проверки подлинности = SecureConversation)</span><span class="sxs-lookup"><span data-stu-id="1880d-179">SymmetricSecurityBindingElement (authentication mode = SecureConversation)</span></span>|  
+|||<span data-ttu-id="1880d-180">OneWayBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-180">OneWayBindingElement</span></span>|||  
+|||<span data-ttu-id="1880d-181">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-181">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="1880d-182">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-182">SSL or Windows StreamSecurityBindingElement</span></span>|<span data-ttu-id="1880d-183">SSL или Windows StreamSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-183">SSL or Windows StreamSecurityBindingElement</span></span>|  
+|||<span data-ttu-id="1880d-184">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-184">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-185">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-185">TcpTransportBindingElement</span></span>|<span data-ttu-id="1880d-186">TcpTransportBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-186">TcpTransportBindingElement</span></span>|  
   
- Обратите внимание, что у элементов привязки безопасности имеется ряд настраиваемых параметров. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ <span data-ttu-id="1880d-187">Обратите внимание, что у элементов привязки безопасности имеется ряд настраиваемых параметров.</span><span class="sxs-lookup"><span data-stu-id="1880d-187">Note that there are many configurable settings on the SecurityBindingElements.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1880d-188">[Режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span><span class="sxs-lookup"><span data-stu-id="1880d-188"> [SecurityBindingElement Authentication Modes](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="1880d-189">[Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).</span><span class="sxs-lookup"><span data-stu-id="1880d-189"> [Secure Conversations and Secure Sessions](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).</span></span>  
   
-## <a name="procedures"></a>Процедуры  
+## <a name="procedures"></a><span data-ttu-id="1880d-190">Процедуры</span><span class="sxs-lookup"><span data-stu-id="1880d-190">Procedures</span></span>  
   
-#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Создание пользовательской привязки с использованием элемента SymmetricSecurityBindingElement  
+#### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a><span data-ttu-id="1880d-191">Создание пользовательской привязки с использованием элемента SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="1880d-191">To create a custom binding that uses a SymmetricSecurityBindingElement</span></span>  
   
-1.  Создайте экземпляр <xref:System.ServiceModel.Channels.BindingElementCollection> класс с именем `outputBec`.  
+1.  <span data-ttu-id="1880d-192">Создайте экземпляр класса <xref:System.ServiceModel.Channels.BindingElementCollection> с именем `outputBec`.</span><span class="sxs-lookup"><span data-stu-id="1880d-192">Create an instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class with the name `outputBec`.</span></span>  
   
-2.  Вызовите статический метод `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, который возвращает экземпляр <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> класса.  
+2.  <span data-ttu-id="1880d-193">Вызовите статический метод `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, который возвращает экземпляр класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-193">Call the static method `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, which returns an instance of the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> class.</span></span>  
   
-3.  Добавить <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в коллекцию (`outputBec`) путем вызова `Add` метод <xref:System.Collections.ObjectModel.Collection%601> из <xref:System.ServiceModel.Channels.BindingElement> класса.  
+3.  <span data-ttu-id="1880d-194">Добавьте объект <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в коллекцию (`outputBec`), вызвав метод `Add` класса <xref:System.Collections.ObjectModel.Collection%601> класса <xref:System.ServiceModel.Channels.BindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-194">Add the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> to the collection (`outputBec`) by calling the `Add` method of the <xref:System.Collections.ObjectModel.Collection%601> of <xref:System.ServiceModel.Channels.BindingElement> class.</span></span>  
   
-4.  Создайте экземпляр <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> и добавьте его к коллекции (`outputBec`). Этим задается кодирование, используемое привязкой.  
+4.  <span data-ttu-id="1880d-195">Создайте экземпляр класса <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> и добавьте его в коллекцию (`outputBec`).</span><span class="sxs-lookup"><span data-stu-id="1880d-195">Create an instance of the <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> class and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="1880d-196">Этим задается кодирование, используемое привязкой.</span><span class="sxs-lookup"><span data-stu-id="1880d-196">This specifies the encoding used by the binding.</span></span>  
   
-5.  Создание <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и добавьте его к коллекции (`outputBec`). Этим указывается, что привязка использует транспорт по протоколу HTTP.  
+5.  <span data-ttu-id="1880d-197">Создайте объект <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и добавьте его в коллекцию (`outputBec`).</span><span class="sxs-lookup"><span data-stu-id="1880d-197">Create a <xref:System.ServiceModel.Channels.HttpTransportBindingElement> and add it to the collection (`outputBec`).</span></span> <span data-ttu-id="1880d-198">Этим указывается, что привязка использует транспорт по протоколу HTTP.</span><span class="sxs-lookup"><span data-stu-id="1880d-198">This specifies that the binding uses the HTTP transport.</span></span>  
   
-6.  Создайте новую пользовательскую привязку, создавая экземпляр <xref:System.ServiceModel.Channels.CustomBinding> класса и передачи коллекции `outputBec` в конструктор.  
+6.  <span data-ttu-id="1880d-199">Создайте новую пользовательскую привязку путем создания экземпляра класса <xref:System.ServiceModel.Channels.CustomBinding> и передачи коллекции `outputBec` конструктору.</span><span class="sxs-lookup"><span data-stu-id="1880d-199">Create a new custom binding by creating an instance of the <xref:System.ServiceModel.Channels.CustomBinding> class and passing the collection `outputBec` to the constructor.</span></span>  
   
-7.  Полученный Пользовательская привязка обладает многими из характеристик стандартной <xref:System.ServiceModel.WSHttpBinding>. Она предусматривает безопасность уровня сообщений и учетные данные Windows (однако отключает безопасные сеансы), требует внештатного задания учетных данных службы и не шифрует подписи. Последним можно управлять только заданием <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> свойства, как показано в шаге 4. Другими двумя можно управлять с помощью параметров стандартной привязки.  
+7.  <span data-ttu-id="1880d-200">Полученная пользовательская привязка обладает многими из характеристик стандартной привязки <xref:System.ServiceModel.WSHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="1880d-200">The resulting custom binding shares many of the same characteristics as the standard <xref:System.ServiceModel.WSHttpBinding>.</span></span> <span data-ttu-id="1880d-201">Она предусматривает безопасность уровня сообщений и учетные данные Windows (однако отключает безопасные сеансы), требует внештатного задания учетных данных службы и не шифрует подписи.</span><span class="sxs-lookup"><span data-stu-id="1880d-201">It specifies message-level security and Windows credentials but disables secure sessions, requires that the service credential be specified out-of-band, and does not encrypt signatures.</span></span> <span data-ttu-id="1880d-202">Последним можно управлять, только если определить свойство <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, как показано на шаге 4.</span><span class="sxs-lookup"><span data-stu-id="1880d-202">The last can be controlled only by setting the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> property as shown in step 4.</span></span> <span data-ttu-id="1880d-203">Другими двумя можно управлять с помощью параметров стандартной привязки.</span><span class="sxs-lookup"><span data-stu-id="1880d-203">The other two can be controlled using settings on the standard binding.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="1880d-204">Пример</span><span class="sxs-lookup"><span data-stu-id="1880d-204">Example</span></span>  
   
-### <a name="description"></a>Описание  
- Следующий пример представляет собой полноценную функцию для создания пользовательской привязки, который использует <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+### <a name="description"></a><span data-ttu-id="1880d-205">Описание</span><span class="sxs-lookup"><span data-stu-id="1880d-205">Description</span></span>  
+ <span data-ttu-id="1880d-206">Следующий пример кода представляет собой полноценную функцию для создания пользовательской привязки с использованием класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="1880d-206">The following example provides a complete function to create a custom binding that uses a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span></span>  
   
-### <a name="code"></a>Код  
+### <a name="code"></a><span data-ttu-id="1880d-207">Код</span><span class="sxs-lookup"><span data-stu-id="1880d-207">Code</span></span>  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Предоставляемые системой привязки](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="1880d-208">См. также</span><span class="sxs-lookup"><span data-stu-id="1880d-208">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="1880d-209">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="1880d-209">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="1880d-210">Привязки, предоставляемые системой</span><span class="sxs-lookup"><span data-stu-id="1880d-210">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -1,63 +1,64 @@
 ---
-title: "Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], закрепление с помощью конструктора"
-  - "Dock - свойство, выравнивание элементов управления (c помощью конструктора)"
+title: "Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], docking using designer
+- Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 86134902a6645d2c9bf7bcef2cf93bf543d8c9bc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
-Можно выровнять элемент управления по границе формы с помощью свойства <xref:System.Windows.Forms.Control.Dock%2A>.  Это свойство определяет, в каком месте формы будет размещаться элемент управления.  Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать следующие значения.  
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a><span data-ttu-id="622cb-102">Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения</span><span class="sxs-lookup"><span data-stu-id="622cb-102">How to: Align a Control to the Edges of Forms at Design Time</span></span>
+<span data-ttu-id="622cb-103">Можно сделать элемент управления Выровнять по границе формы, задав <xref:System.Windows.Forms.Control.Dock%2A>.</span><span class="sxs-lookup"><span data-stu-id="622cb-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A>.</span></span> <span data-ttu-id="622cb-104">Это свойство определяет, в каком месте формы будет размещаться элемент управления.</span><span class="sxs-lookup"><span data-stu-id="622cb-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="622cb-105">Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.</span><span class="sxs-lookup"><span data-stu-id="622cb-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
   
-|Параметр|Влияние на элемент управления|  
-|--------------|-----------------------------------|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у нижнего края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Заполняет все свободное пространство формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у левого края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Не фиксирует элемент нигде, он отображается в месте, указанном в свойстве <xref:System.Windows.Forms.Control.Location%2A>.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у правого края формы.|  
-|<xref:System.Windows.Forms.DockStyle>|Фиксирует элемент управления у верхнего края формы.|  
+|<span data-ttu-id="622cb-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="622cb-106">Setting</span></span>|<span data-ttu-id="622cb-107">Влияние на элемент управления</span><span class="sxs-lookup"><span data-stu-id="622cb-107">Effect on your control</span></span>|  
+|-------------|----------------------------|  
+|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="622cb-108">Фиксирует элемент управления у нижнего края формы.</span><span class="sxs-lookup"><span data-stu-id="622cb-108">Docks to the bottom of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="622cb-109">Заполняет все свободное пространство формы.</span><span class="sxs-lookup"><span data-stu-id="622cb-109">Fills all remaining space in the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="622cb-110">Фиксирует элемент управления у левого края формы.</span><span class="sxs-lookup"><span data-stu-id="622cb-110">Docks to the left side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="622cb-111">Не фиксирует элемент нигде, он отображается в месте, указанном в его <xref:System.Windows.Forms.Control.Location%2A>.</span><span class="sxs-lookup"><span data-stu-id="622cb-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A>.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="622cb-112">Фиксирует элемент управления у правого края формы.</span><span class="sxs-lookup"><span data-stu-id="622cb-112">Docks to the right side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="622cb-113">Фиксирует элемент управления у верхнего края формы.</span><span class="sxs-lookup"><span data-stu-id="622cb-113">Docks to the top of the form.</span></span>|  
   
- Эти значения также могут быть заданы в коде.  Дополнительные сведения см. в разделе [Практическое руководство. Выравнивание элементов управления по границам формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
+ <span data-ttu-id="622cb-114">Эти значения можно также задать в коде.</span><span class="sxs-lookup"><span data-stu-id="622cb-114">These values can also be set in code.</span></span> <span data-ttu-id="622cb-115">Дополнительные сведения см. в разделе [как: выравнивание элементов управления на границы формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).</span><span class="sxs-lookup"><span data-stu-id="622cb-115">For more information, see [How to: Align a Control to the Edges of Forms](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="622cb-116">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="622cb-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="622cb-117">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="622cb-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="622cb-118">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="622cb-118">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы задать свойство "Dock" для элемента управления в режиме разработки  
+### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a><span data-ttu-id="622cb-119">Чтобы задать свойства Dock для элемента управления во время разработки</span><span class="sxs-lookup"><span data-stu-id="622cb-119">To set the Dock property for your control at design time</span></span>  
   
-1.  В конструкторе Windows Forms выберите ваш элемент управления.  
+1.  <span data-ttu-id="622cb-120">В конструкторе Windows Forms выберите элемент управления.</span><span class="sxs-lookup"><span data-stu-id="622cb-120">In the Windows Forms Designer, select your control.</span></span>  
   
-2.  В окне **Свойства** нажмите кнопку раскрывающегося списка рядом со свойством <xref:System.Windows.Forms.Control.Dock%2A>.  
+2.  <span data-ttu-id="622cb-121">В **свойства** окно, щелкните раскрывающийся список полю <xref:System.Windows.Forms.Control.Dock%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="622cb-121">In the **Properties** window, click the drop-down box next to the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span>  
   
-     Отобразится графический интерфейс с шестью возможными значениями свойства <xref:System.Windows.Forms.Control.Dock%2A>.  
+     <span data-ttu-id="622cb-122">Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.</span><span class="sxs-lookup"><span data-stu-id="622cb-122">A graphical interface representing the six possible <xref:System.Windows.Forms.Control.Dock%2A> settings is displayed.</span></span>  
   
-3.  Выберите соответствующее значение.  
+3.  <span data-ttu-id="622cb-123">Выберите соответствующий параметр.</span><span class="sxs-lookup"><span data-stu-id="622cb-123">Choose the appropriate setting.</span></span>  
   
-4.  Положение элемента управления будет зафиксировано в соответствии с выбранным значением.  
+4.  <span data-ttu-id="622cb-124">Элемент управления будет зафиксировано в соответствии с параметр.</span><span class="sxs-lookup"><span data-stu-id="622cb-124">Your control will now dock in the manner specified by the setting.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=fullName>   
- [Практическое руководство. Выравнивание элементов управления по границам формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Практическое руководство. Привязка элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+## <a name="see-also"></a><span data-ttu-id="622cb-125">См. также</span><span class="sxs-lookup"><span data-stu-id="622cb-125">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="622cb-126">Практическое руководство. Выравнивание элементов управления по границам формы</span><span class="sxs-lookup"><span data-stu-id="622cb-126">How to: Align a Control to the Edges of Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)  
+ [<span data-ttu-id="622cb-127">Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки</span><span class="sxs-lookup"><span data-stu-id="622cb-127">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="622cb-128">Практическое руководство. Привязка элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="622cb-128">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [<span data-ttu-id="622cb-129">Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="622cb-129">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [<span data-ttu-id="622cb-130">Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="622cb-130">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [<span data-ttu-id="622cb-131">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="622cb-131">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="622cb-132">Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="622cb-132">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [<span data-ttu-id="622cb-133">Создание элементов управления Windows Forms во время разработки</span><span class="sxs-lookup"><span data-stu-id="622cb-133">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

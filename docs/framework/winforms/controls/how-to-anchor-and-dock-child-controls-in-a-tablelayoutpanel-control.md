@@ -1,95 +1,98 @@
 ---
-title: "Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "дочерние элементы управления, привязка и закрепление"
-  - "элементы управления [Windows Forms], дочерний"
-  - "макет [Windows Forms], дочерние элементы управления"
-  - "TableLayoutPanel - элемент управления [Windows Forms], дочерние элементы управления"
+title: "Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock
+helpviewer_keywords:
+- layout [Windows Forms], child controls
+- controls [Windows Forms], child
+- child controls [Windows Forms], anchoring and docking
+- TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15a725f7a5a4b61f826756c4c3f0d2a20c8a5011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel
-Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a><span data-ttu-id="6e8a3-102">Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="6e8a3-102">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="6e8a3-103">Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-103">The <xref:System.Windows.Forms.TableLayoutPanel> control supports the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties in its child controls.</span></span>  
   
-### Выравнивание дочернего элемента управления в ячейке TableLayoutPanel  
+### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="6e8a3-104">Выравнивание дочернего элемента управления в ячейке TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="6e8a3-104">To align a child control in a TableLayoutPanel cell</span></span>  
   
-1.  Создайте элемент управления <xref:System.Windows.Forms.TableLayoutPanel> в форме.  
+1.  <span data-ttu-id="6e8a3-105">Создание элемента управления <xref:System.Windows.Forms.TableLayoutPanel> в форме.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-105">Create a <xref:System.Windows.Forms.TableLayoutPanel> control on your form.</span></span>  
   
-2.  Присвойте свойствам <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> и <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> элемента управления <xref:System.Windows.Forms.TableLayoutPanel> значение 1.  
+2.  <span data-ttu-id="6e8a3-106">Установите для параметра <xref:System.Windows.Forms.TableLayoutPanel> элемента управления <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> и <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> свойства **1**.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-106">Set the value of the <xref:System.Windows.Forms.TableLayoutPanel> control's <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> and <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> properties to **1**.</span></span>  
   
-3.  Создайте элемент управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>.  Элемент <xref:System.Windows.Forms.Button> расположен в левом верхнем углу ячейки.  
+3.  <span data-ttu-id="6e8a3-107">Создайте элемент управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-107">Create a <xref:System.Windows.Forms.Button> control in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="6e8a3-108">Элемент <xref:System.Windows.Forms.Button> расположен в левом верхнем углу ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-108">The <xref:System.Windows.Forms.Button> occupies the upper-left corner of the cell.</span></span>  
   
-4.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left`.  Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.  
-  
-    > [!NOTE]
-    >  Такое поведение отличается от поведения других контейнерных элементов управления.  Когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение<xref:System.Windows.Forms.Control.Anchor%2A>, дочерние элементы управления других контейнерных элементов управления не перемещаются, а расстояние между закрепленным элементом управления и границей родительского контейнера фиксируется.  
-  
-5.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Left`.  Элемент управления <xref:System.Windows.Forms.Button> займет левый верхний угол ячейки.  
-  
-6.  Повторите шаг 5 со значением `Top, Right`, чтобы переместить элемент управления <xref:System.Windows.Forms.Button> в правый верхний угол ячейки.  Повторите то же самое, используя значения `Bottom, Left` и `Bottom, Right`.  
-  
-### Растяжение дочернего элемента управления в ячейке TableLayoutPanel  
-  
-1.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left, Right`.  Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по ширине ячейки.  
+4.  <span data-ttu-id="6e8a3-109">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-109">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left`.</span></span> <span data-ttu-id="6e8a3-110">Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-110">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span>  
   
     > [!NOTE]
-    >  Такое поведение отличается от поведения других контейнерных элементов управления.  Размеры дочерних элементов управления других контейнерных элементов не изменяются, когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение `Left, Right` или `Top, Bottom`.  
+    >  <span data-ttu-id="6e8a3-111">Такое поведение отличается от поведения других контейнерных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-111">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="6e8a3-112">Когда свойству <xref:System.Windows.Forms.Control.Anchor%2A> присваивается значение<xref:System.Windows.Forms.Control.Anchor%2A>, дочерние элементы управления других контейнерных элементов управления не перемещаются, а расстояние между закрепленным элементом управления и границей родительского контейнера фиксируется.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-112">In other container controls, the child control does not move when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set, and the distance between the anchored control and the parent container's boundary is fixed at the time the <xref:System.Windows.Forms.Control.Anchor%2A> property is set.</span></span>  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom`.  Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по высоте ячейки.  
+5.  <span data-ttu-id="6e8a3-113">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Left`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-113">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Left`.</span></span> <span data-ttu-id="6e8a3-114">Элемент управления <xref:System.Windows.Forms.Button> займет левый верхний угол ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-114">The <xref:System.Windows.Forms.Button> control moves to occupy the top-left corner of the cell.</span></span>  
   
-3.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom, Left, Right`.  Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.  
+6.  <span data-ttu-id="6e8a3-115">Повторите шаг 5 со значением из `Top, Right` перемещение <xref:System.Windows.Forms.Button> элемента управления в правом верхнем углу ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-115">Repeat step 5 with a value of `Top, Right` to move the <xref:System.Windows.Forms.Button> control to the top-right corner of the cell.</span></span> <span data-ttu-id="6e8a3-116">Повторите процедуру, используя значения `Bottom, Left` и `Bottom, Right`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-116">Repeat with values of `Bottom, Left` and `Bottom, Right`.</span></span>  
   
-4.  Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `None`.  Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он расположится по центру ячейки.  
+### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="6e8a3-117">Растяжение дочернего элемента управления в ячейке TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="6e8a3-117">To stretch a child control in a TableLayoutPanel cell</span></span>  
   
-5.  Измените значение свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> на <xref:System.Windows.Forms.DockStyle>.  Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.  Ширина элемента управления <xref:System.Windows.Forms.Button> сохранится, а высота изменится для заполнения ячейки по вертикали.  
+1.  <span data-ttu-id="6e8a3-118">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Left, Right`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-118">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left, Right`.</span></span> <span data-ttu-id="6e8a3-119">Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по ширине ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-119">The <xref:System.Windows.Forms.Button> control is resized to stretch across the cell.</span></span>  
   
     > [!NOTE]
-    >  Другие контейнерные элементы управления обладают аналогичным поведением.  
+    >  <span data-ttu-id="6e8a3-120">Такое поведение отличается от поведения других контейнерных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-120">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="6e8a3-121">В других контейнерных элементов управления, дочерний элемент управления не изменяются, когда <xref:System.Windows.Forms.Control.Anchor%2A> свойству `Left, Right` или `Top, Bottom`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-121">In other container controls, the child control is not resized when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set to `Left, Right` or `Top, Bottom`.</span></span>  
   
-6.  Измените значение свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> на <xref:System.Windows.Forms.DockStyle>.  Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.  
+2.  <span data-ttu-id="6e8a3-122">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-122">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom`.</span></span> <span data-ttu-id="6e8a3-123">Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он растянется по высоте ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-123">The <xref:System.Windows.Forms.Button> control is resized to stretch from the top to the bottom of the cell.</span></span>  
   
-## Пример  
- На рисунке ниже показаны пять кнопок, прикрепленных в пяти отдельных ячейках <xref:System.Windows.Forms.TableLayoutPanel>.  
+3.  <span data-ttu-id="6e8a3-124">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `Top, Bottom, Left, Right`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-124">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom, Left, Right`.</span></span> <span data-ttu-id="6e8a3-125">Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-125">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.png "VS\_TLPanchor")  
+4.  <span data-ttu-id="6e8a3-126">Измените значение свойства <xref:System.Windows.Forms.Control.Anchor%2A> элемента управления <xref:System.Windows.Forms.Button> на `None`.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-126">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `None`.</span></span> <span data-ttu-id="6e8a3-127">Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он расположится по центру ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-127">The <xref:System.Windows.Forms.Button> control is resized and centered in the cell.</span></span>  
   
- На рисунке ниже показаны четыре кнопки, прикрепленные в углах четырех отдельных ячеек <xref:System.Windows.Forms.TableLayoutPanel>.  
+5.  <span data-ttu-id="6e8a3-128">Измените значение свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> на <xref:System.Windows.Forms.DockStyle.Left>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-128">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Left>.</span></span> <span data-ttu-id="6e8a3-129">Элемент управления <xref:System.Windows.Forms.Button> выровняется по левому краю ячейки.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-129">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span> <span data-ttu-id="6e8a3-130">Ширина элемента управления <xref:System.Windows.Forms.Button> сохранится, а высота изменится для заполнения ячейки по вертикали.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-130">The <xref:System.Windows.Forms.Button> control retains its width, but its height is resized to fill the cell vertically.</span></span>  
   
- ![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.png "VS\_TLPanchor2")  
+    > [!NOTE]
+    >  <span data-ttu-id="6e8a3-131">Другие контейнерные элементы управления обладают аналогичным поведением.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-131">This is the same behavior that occurs in other container controls.</span></span>  
   
- На рисунке ниже показаны три кнопки, растянутые в результате прикрепления в трех отдельных ячейках <xref:System.Windows.Forms.TableLayoutPanel>.  
+6.  <span data-ttu-id="6e8a3-132">Измените значение свойства <xref:System.Windows.Forms.Control.Dock%2A> элемента управления <xref:System.Windows.Forms.Button> на <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-132">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="6e8a3-133">Размер элемента управления <xref:System.Windows.Forms.Button> изменится, и он заполнит ячейку.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-133">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.png "VS\_TLPAnchor3")  
+## <a name="example"></a><span data-ttu-id="6e8a3-134">Пример</span><span class="sxs-lookup"><span data-stu-id="6e8a3-134">Example</span></span>  
+ <span data-ttu-id="6e8a3-135">На рисунке ниже показаны пять кнопок, прикрепленных в пяти отдельных ячейках <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-135">The following illustration shows five buttons anchored in five separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
   
- В примере кода ниже демонстрируются все сочетания значений свойств <xref:System.Windows.Forms.Control.Anchor%2A>, используемые для размещения элемента управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+ <span data-ttu-id="6e8a3-136">![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span><span class="sxs-lookup"><span data-stu-id="6e8a3-136">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span></span>  
+  
+ <span data-ttu-id="6e8a3-137">На рисунке ниже показаны четыре кнопки, прикрепленные в углах четырех отдельных ячеек <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-137">The following illustration shows four buttons anchored in the corners of four separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="6e8a3-138">![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span><span class="sxs-lookup"><span data-stu-id="6e8a3-138">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span></span>  
+  
+ <span data-ttu-id="6e8a3-139">На рисунке ниже показаны три кнопки, растянутые в результате прикрепления в трех отдельных ячейках <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-139">The following illustration shows three buttons stretched by anchoring in three separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="6e8a3-140">![Закрепление TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span><span class="sxs-lookup"><span data-stu-id="6e8a3-140">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span></span>  
+  
+ <span data-ttu-id="6e8a3-141">В примере кода ниже демонстрируются все сочетания значений свойств <xref:System.Windows.Forms.Control.Anchor%2A>, используемые для размещения элемента управления <xref:System.Windows.Forms.Button> в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-141">The following code example demonstrates all the combinations of <xref:System.Windows.Forms.Control.Anchor%2A> property values for a <xref:System.Windows.Forms.Button> control in a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6e8a3-142">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="6e8a3-142">Compiling the Code</span></span>  
+ <span data-ttu-id="6e8a3-143">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="6e8a3-143">This example requires:</span></span>  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+-   <span data-ttu-id="6e8a3-144">ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-144">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) или [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение скомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="6e8a3-145">Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="6e8a3-145">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="6e8a3-146">Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="6e8a3-146">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="6e8a3-147">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="6e8a3-147">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6e8a3-148">См. также</span><span class="sxs-lookup"><span data-stu-id="6e8a3-148">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="6e8a3-149">Элемент управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="6e8a3-149">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

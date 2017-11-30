@@ -1,85 +1,86 @@
 ---
-title: "Практическое руководство. Перемещение объектов ToolStripMenuItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пункты меню, вырезание и вставка"
-  - "пункты меню, перетаскивание"
-  - "пункты меню, перемещение"
-  - "меню, упорядочение элементов"
-  - "MenuStrip - элемент управления [Windows Forms], упорядочение элементов"
-  - "ToolStripMenuItem - элементы, вырезание и вставка"
-  - "ToolStripMenuItem - элементы, перетаскивание"
-  - "ToolStripMenuItem - элементы, перемещение"
+title: "Практическое руководство. Перемещение объектов ToolStripMenuItem"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], moving
+- menus [Windows Forms], arranging items
+- ToolStripMenuItems [Windows Forms], dragging and dropping
+- menu items [Windows Forms], moving
+- menu items [Windows Forms], cutting and pasting
+- menu items [Windows Forms], dragging and dropping
+- MenuStrip control [Windows Forms], arranging items
+- ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 342eeeb2d156488605f244da0112869a371dfa97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Перемещение объектов ToolStripMenuItem
-Во время разработки можно переместить все меню верхнего уровня вместе с элементами меню в другое место на <xref:System.Windows.Forms.MenuStrip>.  Также можно перемещать отдельные элементы между меню верхнего уровня и изменять положение элементов в меню.  
+# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="4bbef-102">Практическое руководство. Перемещение объектов ToolStripMenuItem</span><span class="sxs-lookup"><span data-stu-id="4bbef-102">How to: Move ToolStripMenuItems</span></span>
+<span data-ttu-id="4bbef-103">Во время разработки, можно переместить целиком меню верхнего уровня с пунктами меню в другое место на <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="4bbef-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="4bbef-104">Также можно перемещать отдельные элементы между меню верхнего уровня или изменять положение элементов в меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="4bbef-105">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="4bbef-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="4bbef-106">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="4bbef-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="4bbef-107">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="4bbef-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы переместить меню верхнего уровня вместе с элементами меню в другое расположение верхнего уровня  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="4bbef-108">Чтобы переместить меню верхнего уровня и пунктов меню в другое расположение верхнего уровня</span><span class="sxs-lookup"><span data-stu-id="4bbef-108">To move a top-level menu and its menu items to another top-level location</span></span>  
   
-1.  Щелкните перемещаемое меню левой кнопкой мыши и удерживайте ее нажатой.  
+1.  <span data-ttu-id="4bbef-109">Щелкните, удерживая нажатой левую кнопку мыши в меню, которое требуется переместить.</span><span class="sxs-lookup"><span data-stu-id="4bbef-109">Click and hold down the left mouse button on the menu that you want to move.</span></span>  
   
-2.  Перетащите точку вставки в меню верхнего уровня, расположенное до желаемого места расположения, и отпустите левую кнопку мыши.  
+2.  <span data-ttu-id="4bbef-110">Перетащите курсор в меню верхнего уровня, который находится перед новым предполагаемым расположением и отпустите кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="4bbef-110">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>  
   
-     Выбранное меню перемещается в положение справа от точки вставки.  
+     <span data-ttu-id="4bbef-111">Выбранное меню перемещается справа от курсора.</span><span class="sxs-lookup"><span data-stu-id="4bbef-111">The selected menu moves to the right of the insertion point.</span></span>  
   
-### Чтобы переместить меню верхнего уровня вместе с элементами меню в раскрывающееся меню  
+### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="4bbef-112">Чтобы переместить в расположение раскрывающегося меню верхнего уровня и пунктов меню</span><span class="sxs-lookup"><span data-stu-id="4bbef-112">To move a top-level menu and its menu items to a drop-down location</span></span>  
   
-1.  Щелкните меню, которое нужно переместить, и нажмите клавиши CTRL\+X, или щелкните меню правой кнопкой мыши и выберите из контекстного меню команду **Вырезать**.  
+1.  <span data-ttu-id="4bbef-113">Щелкните меню, которое требуется переместить и нажмите клавиши CTRL + X или щелкните меню правой кнопкой мыши и выберите **Вырезать** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-113">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>  
   
-2.  В меню назначения верхнего уровня щелкните элемент меню, находящийся выше желаемого места вставки, и нажмите CTRL\+V или щелкните правой кнопкой мыши элемент меню, находящийся выше желаемого места вставки и выберите из контекстного меню команду **Вставить**.  
+2.  <span data-ttu-id="4bbef-114">В целевом меню верхнего уровня щелкните элемент меню над новым предполагаемым расположением и нажмите клавиши CTRL + V или щелкните правой кнопкой мыши пункт меню над новым предполагаемым расположением и выберите **вставить** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-114">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>  
   
-     Вырезанное меню вставляется после выбранного элемента меню.  
+     <span data-ttu-id="4bbef-115">Вырезанное меню вставляется после выбранного пункта меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-115">The menu that you cut is inserted after the selected menu item.</span></span>  
   
-### Чтобы переместить элемент меню в пределах меню, используя редактор коллекции элементов  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="4bbef-116">Чтобы переместить элемент меню в пределах меню, используя редактор коллекции элементов</span><span class="sxs-lookup"><span data-stu-id="4bbef-116">To move a menu item within a menu using the Items Collection Editor</span></span>  
   
-1.  Щелкните правой кнопкой мыши меню, содержащее перемещаемый элемент меню.  
+1.  <span data-ttu-id="4bbef-117">Щелкните правой кнопкой мыши меню, содержащее пункт меню, который требуется переместить.</span><span class="sxs-lookup"><span data-stu-id="4bbef-117">Right-click the menu that contains the menu item you want to move.</span></span>  
   
-2.  Из контекстного меню выберите **Редактировать элементы раскрывающегося меню**.  
+2.  <span data-ttu-id="4bbef-118">В контекстном меню выберите **редактировать элементы раскрывающегося меню**.</span><span class="sxs-lookup"><span data-stu-id="4bbef-118">From the shortcut menu, choose **Edit DropDownItems**.</span></span>  
   
-3.  В **Редакторе коллекции элементов** щелкните перемещаемый элемент меню.  
+3.  <span data-ttu-id="4bbef-119">В **редактор коллекции элементов**, щелкните элемент меню, которую требуется переместить.</span><span class="sxs-lookup"><span data-stu-id="4bbef-119">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>  
   
-4.  Используйте клавиши со стрелками ВВЕРХ или ВНИЗ для перемещения по элементам меню.  
+4.  <span data-ttu-id="4bbef-120">Нажмите клавиши со стрелками вверх и вниз для перемещения элемента меню в меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-120">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>  
   
-5.  Нажмите кнопку **ОК**.  
+5.  <span data-ttu-id="4bbef-121">Нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="4bbef-121">Click **OK**.</span></span>  
   
-### Чтобы переместить элемент меню в пределах меню, используя клавиатуру  
+### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="4bbef-122">Чтобы переместить элемент меню в меню с помощью клавиатуры</span><span class="sxs-lookup"><span data-stu-id="4bbef-122">To move a menu item within a menu using the keyboard</span></span>  
   
-1.  Нажмите и удерживайте нажатой клавишу ALT.  
+1.  <span data-ttu-id="4bbef-123">Нажмите и удерживайте клавишу ALT.</span><span class="sxs-lookup"><span data-stu-id="4bbef-123">Press and hold down the ALT key.</span></span>  
   
-2.  Щелкните перемещаемый элемент меню левой кнопкой мыши и удерживайте ее нажатой.  
+2.  <span data-ttu-id="4bbef-124">Щелкните и удерживайте левую кнопку мыши на пункт меню, который требуется переместить.</span><span class="sxs-lookup"><span data-stu-id="4bbef-124">Click and hold the left mouse button on the menu item that you want to move.</span></span>  
   
-3.  Перетащите элемент меню в нужное место и отпустите левую кнопку мыши.  
+3.  <span data-ttu-id="4bbef-125">Перетащите элемент меню на новое место и отпустите кнопку мыши.</span><span class="sxs-lookup"><span data-stu-id="4bbef-125">Drag the menu item to the new location and release the left mouse button.</span></span>  
   
-### Чтобы переместить элемент меню в другое меню  
+### <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="4bbef-126">Чтобы переместить элемент меню в другое меню</span><span class="sxs-lookup"><span data-stu-id="4bbef-126">To move a menu item to another menu</span></span>  
   
-1.  Щелкните перемещаемый элемент меню и нажмите CTRL\+X или щелкните элемент меню правой кнопкой мыши и выберите из контекстного меню команду **Вырезать**.  
+1.  <span data-ttu-id="4bbef-127">Щелкните элемент меню, который требуется переместить и нажмите клавиши CTRL + X или щелкните правой кнопкой мыши пункт меню и выберите **Вырезать** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-127">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>  
   
-2.  Щелкните меню, которое должно содержать вырезанный элемент меню.  
+2.  <span data-ttu-id="4bbef-128">Щелкните меню, которое будет содержать вырезанный элемент меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-128">Left-click the menu that will contain the menu item that you cut.</span></span>  
   
-3.  Щелкните элемент меню, находящийся перед желаемым местом вставки, и нажмите CTRL\+V или щелкните правой кнопкой мыши элемент меню, находящийся перед новым желаемым расположением и выберите из контекстного меню команду **Вставить**.  
+3.  <span data-ttu-id="4bbef-129">Щелкните элемент меню, который находится перед новым предполагаемым расположением и нажмите клавиши CTRL + V или щелкните правой кнопкой мыши пункт меню, который находится перед новым предполагаемым расположением и выберите **вставить** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-129">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>  
   
-     Вырезанный элемент меню вставляется после выбранного элемента меню.  
+     <span data-ttu-id="4bbef-130">Вырезанный элемент меню вставляется после выбранного пункта меню.</span><span class="sxs-lookup"><span data-stu-id="4bbef-130">The menu item that you cut is inserted after the selected menu item.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="4bbef-131">См. также</span><span class="sxs-lookup"><span data-stu-id="4bbef-131">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [<span data-ttu-id="4bbef-132">Общие сведения об элементе управления MenuStrip</span><span class="sxs-lookup"><span data-stu-id="4bbef-132">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

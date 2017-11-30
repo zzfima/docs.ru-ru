@@ -1,67 +1,69 @@
 ---
-title: "Образец пакета шрифтов OpenType | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "шрифты, пакет шрифтов OpenType"
-  - "пакет шрифтов OpenType"
-  - "оформление, пакет шрифтов OpenType"
+title: "Образец пакета шрифтов OpenType"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OpenType font pack [WPF]
+- fonts [WPF], OpenType font pack
+- typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Образец пакета шрифтов OpenType
-В этой теме предоставляется обзор образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые поставляются с [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].  Шрифты образца поддерживают расширенные функции [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые могут использоваться приложениями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+# <a name="sample-opentype-font-pack"></a><span data-ttu-id="cd49b-102">Образец пакета шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="cd49b-102">Sample OpenType Font Pack</span></span>
+<span data-ttu-id="cd49b-103">В этом разделе рассматриваются образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые распространяются вместе с [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-103">This topic provides an overview of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that are distributed with the [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].</span></span> <span data-ttu-id="cd49b-104">Образцы шрифтов поддерживают расширенные функции [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые могут использоваться приложениями [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-104">The sample fonts support extended [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] features that can be used by [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-   
   
 <a name="overview"></a>   
-## Шрифты в пакете шрифтов OpenType  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] предоставляет набор образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые можно использовать при создании приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Образцы шрифтов поставляются под лицензией Ascender Corporation.  Эти шрифты реализуют только подмножество общих функций, заданное форматом [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  В следующей таблице перечислены имена образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+## <a name="fonts-in-the-opentype-font-pack"></a><span data-ttu-id="cd49b-105">Шрифты в пакете шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="cd49b-105">Fonts in the OpenType Font Pack</span></span>  
+ <span data-ttu-id="cd49b-106">[!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] предоставляет набор образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], которые можно использовать при создании приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-106">The [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] provides a set of sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts that you can use in creating [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="cd49b-107">Образцы шрифтов предоставляются по лицензии от Ascender Corporation.</span><span class="sxs-lookup"><span data-stu-id="cd49b-107">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="cd49b-108">Эти шрифты реализуют только подмножество общих функций, определенных в формате [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-108">These fonts implement only a subset of the total features defined by the [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] format.</span></span> <span data-ttu-id="cd49b-109">В следующей таблице приведены названия образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-109">The following table lists the names of the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span>  
   
-|**Имя**|**Файл**|  
-|-------------|--------------|  
-|Kootenay|Kooten.ttf|  
-|Lindsey|Linds.ttf|  
-|Miramonte|Miramo.ttf|  
-|Miramonte полужирный|Miramob.ttf|  
-|Pericles|Peric.ttf|  
-|Pericles ненасыщенный|Pericl.ttf|  
-|Pescadero|Pesca.ttf|  
-|Pescadero полужирный|Pescab.ttf|  
+|<span data-ttu-id="cd49b-110">**Имя**</span><span class="sxs-lookup"><span data-stu-id="cd49b-110">**Name**</span></span>|<span data-ttu-id="cd49b-111">**Файл**</span><span class="sxs-lookup"><span data-stu-id="cd49b-111">**File**</span></span>|  
+|--------------|--------------|  
+|<span data-ttu-id="cd49b-112">Kootenay</span><span class="sxs-lookup"><span data-stu-id="cd49b-112">Kootenay</span></span>|<span data-ttu-id="cd49b-113">Kooten.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-113">Kooten.ttf</span></span>|  
+|<span data-ttu-id="cd49b-114">Lindsey</span><span class="sxs-lookup"><span data-stu-id="cd49b-114">Lindsey</span></span>|<span data-ttu-id="cd49b-115">Linds.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-115">Linds.ttf</span></span>|  
+|<span data-ttu-id="cd49b-116">Miramonte</span><span class="sxs-lookup"><span data-stu-id="cd49b-116">Miramonte</span></span>|<span data-ttu-id="cd49b-117">Miramo.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-117">Miramo.ttf</span></span>|  
+|<span data-ttu-id="cd49b-118">Miramonte Bold</span><span class="sxs-lookup"><span data-stu-id="cd49b-118">Miramonte Bold</span></span>|<span data-ttu-id="cd49b-119">Miramob.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-119">Miramob.ttf</span></span>|  
+|<span data-ttu-id="cd49b-120">Pericles</span><span class="sxs-lookup"><span data-stu-id="cd49b-120">Pericles</span></span>|<span data-ttu-id="cd49b-121">Peric.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-121">Peric.ttf</span></span>|  
+|<span data-ttu-id="cd49b-122">Pericles Light</span><span class="sxs-lookup"><span data-stu-id="cd49b-122">Pericles Light</span></span>|<span data-ttu-id="cd49b-123">Pericl.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-123">Pericl.ttf</span></span>|  
+|<span data-ttu-id="cd49b-124">Pescadero</span><span class="sxs-lookup"><span data-stu-id="cd49b-124">Pescadero</span></span>|<span data-ttu-id="cd49b-125">Pesca.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-125">Pesca.ttf</span></span>|  
+|<span data-ttu-id="cd49b-126">Pescadero Bold</span><span class="sxs-lookup"><span data-stu-id="cd49b-126">Pescadero Bold</span></span>|<span data-ttu-id="cd49b-127">Pescab.ttf</span><span class="sxs-lookup"><span data-stu-id="cd49b-127">Pescab.ttf</span></span>|  
   
- На следующем рисунке показано, как выглядят образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ <span data-ttu-id="cd49b-128">На следующем рисунке показано, как выглядят образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd49b-128">The following illustration shows what the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts look like.</span></span>  
   
- ![Список имен шрифтов в примере пакета шрифтов](../../../../docs/framework/wpf/advanced/media/samplefontpack01.png "samplefontpack01")  
-Шрифты в пакете шрифтов OpenType  
+ <span data-ttu-id="cd49b-129">![Список имен шрифтов в примере пакета шрифтов](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span><span class="sxs-lookup"><span data-stu-id="cd49b-129">![List of font names in sample font pack](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")</span></span>  
+<span data-ttu-id="cd49b-130">Шрифты в пакете шрифтов OpenType</span><span class="sxs-lookup"><span data-stu-id="cd49b-130">Fonts in the OpenType Font Pack</span></span>  
   
- Образцы шрифтов поставляются под лицензией Ascender Corporation.  Ascender является поставщиком шрифтов.  Для получения лицензии на расширенные или пользовательские версии образцов шрифтов см. [веб\-сайт корпорации Ascender](http://go.microsoft.com/fwlink/?LinkId=182627).  
+ <span data-ttu-id="cd49b-131">Образцы шрифтов предоставляются по лицензии от Ascender Corporation.</span><span class="sxs-lookup"><span data-stu-id="cd49b-131">The sample fonts are supplied under license from Ascender Corporation.</span></span> <span data-ttu-id="cd49b-132">Ascender является поставщиком передовых решений для шрифтов.</span><span class="sxs-lookup"><span data-stu-id="cd49b-132">Ascender is a provider of advanced font products.</span></span> <span data-ttu-id="cd49b-133">Для лицензирования расширенных или настраиваемых версий образцов шрифтов см. [веб-сайт корпорации Ascender](http://go.microsoft.com/fwlink/?LinkId=182627).</span><span class="sxs-lookup"><span data-stu-id="cd49b-133">To license extended or custom versions of the sample fonts, see [Ascender Corporation's Web site](http://go.microsoft.com/fwlink/?LinkId=182627).</span></span>  
   
 > [!NOTE]
->  Ответственность разработчика состоит в том, чтобы гарантировать наличие требуемых лицензионных прав на любой шрифт, встраиваемый в приложение или распространяемый иными путями.  
+>  <span data-ttu-id="cd49b-134">Являясь разработчиком, вы несете ответственность за наличие у вас необходимых лицензионных прав на любой шрифт, который вы включаете в приложение или распространяете иным образом.</span><span class="sxs-lookup"><span data-stu-id="cd49b-134">As a developer it is your responsibility to ensure that you have the required license rights for any font you embed within an application or otherwise redistribute.</span></span>  
   
 <a name="installing_the_fonts"></a>   
-## Установка шрифтов  
- Имеется возможность установки образцов шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] в назначенный по умолчанию каталог шрифтов [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], **\\WINDOWS\\Fonts**.  Для установки этих шрифтов используется панель управления.  После установки шрифтов на компьютере они становятся доступны для всех приложений, которые ссылаются на шрифты [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] по умолчанию. Можно отобразить репрезентативный набор символов в нескольких размерах шрифта, дважды щелкнув файл шрифта.  На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.  
+## <a name="installing-the-fonts"></a><span data-ttu-id="cd49b-135">Установка шрифтов</span><span class="sxs-lookup"><span data-stu-id="cd49b-135">Installing the Fonts</span></span>  
+ <span data-ttu-id="cd49b-136">Можно установить образцы шрифтов [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] в каталог шрифтов по умолчанию [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], **\WINDOWS\Fonts**.</span><span class="sxs-lookup"><span data-stu-id="cd49b-136">You have the option of installing the sample [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts to the default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Fonts directory, **\WINDOWS\Fonts**.</span></span> <span data-ttu-id="cd49b-137">Для установки шрифтов используйте панель управления Fonts.</span><span class="sxs-lookup"><span data-stu-id="cd49b-137">Use the Fonts control panel to install the fonts.</span></span> <span data-ttu-id="cd49b-138">После установки шрифтов на вашем компьютере они будут доступны для всех приложений, которые ссылаются на шрифты [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="cd49b-138">Once these fonts are on your computer, they are accessible to all applications that reference default [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fonts.</span></span> <span data-ttu-id="cd49b-139">Можно отобразить характерный набор символов в нескольких размерах шрифта, дважды нажав файл шрифта.</span><span class="sxs-lookup"><span data-stu-id="cd49b-139">You can display a representative set of characters in several font sizes by doubling-clicking the font file.</span></span> <span data-ttu-id="cd49b-140">На следующем снимке экрана показан файл шрифта Lindsey, Linds.ttf.</span><span class="sxs-lookup"><span data-stu-id="cd49b-140">The following screenshot shows the Lindsey font file, Linds.ttf.</span></span>  
   
- ![Шрифт Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF\_04")  
-Отображение шрифта Lindsey  
+ <span data-ttu-id="cd49b-141">![Шрифт Lindsey &#40; OpenType &#41; ] (../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span><span class="sxs-lookup"><span data-stu-id="cd49b-141">![Lindsey font &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")</span></span>  
+<span data-ttu-id="cd49b-142">Отображение шрифта Lindsey</span><span class="sxs-lookup"><span data-stu-id="cd49b-142">Displaying the Lindsey font</span></span>  
   
 <a name="using_the_fonts"></a>   
-## Использование шрифтов  
- Есть два способа использования шрифтов в приложении.  Можно добавить шрифты в приложение в виде элементов содержимого проекта, которые не внедрены в сборку как ресурсы.  Кроме того, можно добавлять шрифты в приложение в виде элементов ресурсов проекта, которые внедрены в файлы сборки приложения.  Дополнительные сведения см. в разделе [Упаковка шрифтов с приложениями](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).  
+## <a name="using-the-fonts"></a><span data-ttu-id="cd49b-143">Использование шрифтов</span><span class="sxs-lookup"><span data-stu-id="cd49b-143">Using the Fonts</span></span>  
+ <span data-ttu-id="cd49b-144">Есть два способа использования шрифтов в вашем приложении.</span><span class="sxs-lookup"><span data-stu-id="cd49b-144">There are two ways that you can use fonts in your application.</span></span> <span data-ttu-id="cd49b-145">Можно добавить шрифты в приложение в виде элементов содержимого проекта, которые не внедряются в качестве ресурсов в сборку.</span><span class="sxs-lookup"><span data-stu-id="cd49b-145">You can add fonts to your application as project content items that are not embedded as resources within an assembly.</span></span> <span data-ttu-id="cd49b-146">Кроме того, можно добавить шрифты в приложение в виде элементов ресурсов проекта, которые внедряются в файлы сборки приложения.</span><span class="sxs-lookup"><span data-stu-id="cd49b-146">Alternatively, you can add fonts to your application as project resource items that are embedded within the application's assembly files.</span></span> <span data-ttu-id="cd49b-147">Дополнительные сведения см. в разделе [Упаковка шрифтов с приложениями](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span><span class="sxs-lookup"><span data-stu-id="cd49b-147">For more information, see [Packaging Fonts with Applications](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Documents.Typography>   
- [Возможности шрифта OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)   
- [Упаковка шрифтов с приложениями](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+## <a name="see-also"></a><span data-ttu-id="cd49b-148">См. также</span><span class="sxs-lookup"><span data-stu-id="cd49b-148">See Also</span></span>  
+ <xref:System.Windows.Documents.Typography>  
+ [<span data-ttu-id="cd49b-149">Возможности шрифта OpenType</span><span class="sxs-lookup"><span data-stu-id="cd49b-149">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="cd49b-150">Упаковка шрифтов с приложениями</span><span class="sxs-lookup"><span data-stu-id="cd49b-150">Packaging Fonts with Applications</span></span>](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

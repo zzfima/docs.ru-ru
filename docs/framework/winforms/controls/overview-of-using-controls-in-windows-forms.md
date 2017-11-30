@@ -1,38 +1,42 @@
 ---
-title: "Общие сведения об использовании элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms]"
-  - "пользовательские элементы управления [Windows Forms]"
-  - "Windows Forms, элементы управления"
+title: "Общие сведения об использовании элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об использовании элементов управления в формах Windows Forms
-В этом раздел описываются существенные элементы приложения Windows Forms и приводится простой пример, в котором используются элементы управления и обработка событий в приложении Windows Forms.  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="4f9db-102">Общие сведения об использовании элементов управления в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4f9db-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="4f9db-103">В этом разделе описываются основные элементы приложения Windows Forms и предоставляет простой пример, использующий элементы управления и обработка событий в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="4f9db-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## Простые приложения Windows Forms  
- Приложение Windows Forms состоит, как минимум, из следующих элементов.  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="4f9db-104">Приложения простой Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4f9db-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="4f9db-105">Как минимум приложение Windows Forms состоит из следующих элементов:</span><span class="sxs-lookup"><span data-stu-id="4f9db-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   Один или несколько классов, производных от класса <xref:System.Windows.Forms.Form?displayProperty=fullName>.  
+-   <span data-ttu-id="4f9db-106">Один или несколько классов, которые являются производными от <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4f9db-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   Метод `Main`, вызывающий метод `static` \(в Visual Basic — `shared`\) <xref:System.Windows.Forms.Application.Run%2A> и передающий ему экземпляр <xref:System.Windows.Forms.Form>.  Метод <xref:System.Windows.Forms.Application.Run%2A> обрабатывает сообщения, поступающие в приложение из операционной системы.  
+-   <span data-ttu-id="4f9db-107">Объект `Main` метода, который вызывает `static` (`shared` в Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> метод и передает <xref:System.Windows.Forms.Form> экземпляра к нему.</span><span class="sxs-lookup"><span data-stu-id="4f9db-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="4f9db-108"><xref:System.Windows.Forms.Application.Run%2A> Метод обрабатывает сообщения из операционной системы в приложение.</span><span class="sxs-lookup"><span data-stu-id="4f9db-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- В следующем примере кода демонстрируются основные элементы приложения Windows Forms.  
+ <span data-ttu-id="4f9db-109">В следующем примере кода показаны основные элементы приложения Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="4f9db-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## Использование элементов управления в приложениях Windows Forms  
- В следующем примере кода создается простейшее приложение, иллюстрирующее, как приложения Windows Forms используют элементы управления и обрабатывают события.  Пример состоит из трех кнопок на форме, каждая из которых изменяет цвет фона при щелчке мышью.  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="4f9db-110">Использование элементов управления в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4f9db-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="4f9db-111">В следующем примере кода показано простое приложение, которое показано, как приложения Windows Forms с помощью элементов управления и обработки событий.</span><span class="sxs-lookup"><span data-stu-id="4f9db-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="4f9db-112">Пример состоит из трех кнопок в форме. Каждая кнопка изменяет цвет фона при щелчке.</span><span class="sxs-lookup"><span data-stu-id="4f9db-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## См. также  
- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="4f9db-113">См. также</span><span class="sxs-lookup"><span data-stu-id="4f9db-113">See Also</span></span>  
+ [<span data-ttu-id="4f9db-114">Разработка пользовательских элементов управления Windows Forms в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4f9db-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="4f9db-115">Основы разработки элементов управления форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4f9db-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

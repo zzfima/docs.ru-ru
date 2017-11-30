@@ -1,44 +1,44 @@
 ---
-title: "Общие сведения об элементе управления RadioButton (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RadioButton"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "переключатели, сведения о переключателях"
-  - "переключатели, определение состояния"
-  - "RadioButton - элемент управления [Windows Forms], об элементе управления RadioButton"
-  - "RadioButton - элемент управления [Windows Forms], определение состояния"
+title: "Общие сведения об элементе управления RadioButton (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RadioButton
+helpviewer_keywords:
+- RadioButton control [Windows Forms], about RadioButton control
+- RadioButton control [Windows Forms], determining state
+- radio buttons [Windows Forms], determining state
+- radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления RadioButton (Windows Forms)
-Элементы управления Windows Forms <xref:System.Windows.Forms.RadioButton> \(переключатели\) обеспечивают выбор из двух или более взаимоисключающих вариантов.  Функции переключателей и флажков могут показаться схожими, но между ними есть важное отличие: в случае переключателя пользователь может выбрать лишь один вариант.  Напротив, флажков можно выбрать любое количество.  Определяя группу значений переключателя, разработчик формы предлагает пользователю набор вариантов, из которых может быть задан один и только один.  
+# <a name="radiobutton-control-overview-windows-forms"></a><span data-ttu-id="82a96-102">Общие сведения об элементе управления RadioButton (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="82a96-102">RadioButton Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="82a96-103">Windows Forms <xref:System.Windows.Forms.RadioButton> элементы управления представляют собой набор из двух или более взаимоисключающих вариантов для пользователя.</span><span class="sxs-lookup"><span data-stu-id="82a96-103">Windows Forms <xref:System.Windows.Forms.RadioButton> controls present a set of two or more mutually exclusive choices to the user.</span></span> <span data-ttu-id="82a96-104">Переключатели и флажки могут показаться работают так же, является важным отличием: когда пользователь выбирает переключатель, другие переключатели в той же группе, не могут быть выбраны также.</span><span class="sxs-lookup"><span data-stu-id="82a96-104">While radio buttons and check boxes may appear to function similarly, there is an important difference: when a user selects a radio button, the other radio buttons in the same group cannot be selected as well.</span></span> <span data-ttu-id="82a96-105">В отличие от этого можно выбрать любое число флажков.</span><span class="sxs-lookup"><span data-stu-id="82a96-105">In contrast, any number of check boxes can be selected.</span></span> <span data-ttu-id="82a96-106">Определение в переключателе информирует пользователя, «Вот набор вариантов, из которых можно выбрать только один».</span><span class="sxs-lookup"><span data-stu-id="82a96-106">Defining a radio button group tells the user, "Here is a set of choices from which you can choose one and only one."</span></span>  
   
-## Использование элемента управления  
- При щелчке элемента управления <xref:System.Windows.Forms.RadioButton>, его свойству <xref:System.Windows.Forms.RadioButton.Checked%2A> задается значение `true` и вызывается обработчик событий <xref:System.Windows.Forms.Control.Click>.  При изменении значения свойства <xref:System.Windows.Forms.RadioButton.Checked%2A> происходит событие <xref:System.Windows.Forms.RadioButton.CheckedChanged>.  Если свойство <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> имеет значение `true` \(принимается по умолчанию\), то при выборе одного значения переключателя остальные значения группы автоматически сбрасываются.  Обычно этому свойству присваивают значение `false` только в тех случаях, когда в коде предусмотрена проверка допустимости выбранного варианта переключателя.  Текст, связанный с этим элементом управления, задается свойством <xref:System.Windows.Forms.Control.Text%2A>, которое также может определять клавиши быстрого доступа.  Клавиша доступа позволяет пользователю щелкнуть другой элемент управления, используя сочетание клавиши ALT и заданной клавиши.  Дополнительные сведения см. в разделах [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) и [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+## <a name="using-the-control"></a><span data-ttu-id="82a96-107">С помощью элемента управления</span><span class="sxs-lookup"><span data-stu-id="82a96-107">Using the Control</span></span>  
+ <span data-ttu-id="82a96-108">При <xref:System.Windows.Forms.RadioButton> нажатии элемента управления, его <xref:System.Windows.Forms.RadioButton.Checked%2A> свойству `true` и <xref:System.Windows.Forms.Control.Click> вызывается обработчик события.</span><span class="sxs-lookup"><span data-stu-id="82a96-108">When a <xref:System.Windows.Forms.RadioButton> control is clicked, its <xref:System.Windows.Forms.RadioButton.Checked%2A> property is set to `true` and the <xref:System.Windows.Forms.Control.Click> event handler is called.</span></span> <span data-ttu-id="82a96-109"><xref:System.Windows.Forms.RadioButton.CheckedChanged> Событие возникает при значение <xref:System.Windows.Forms.RadioButton.Checked%2A> изменения свойств.</span><span class="sxs-lookup"><span data-stu-id="82a96-109">The <xref:System.Windows.Forms.RadioButton.CheckedChanged> event is raised when the value of the <xref:System.Windows.Forms.RadioButton.Checked%2A> property changes.</span></span> <span data-ttu-id="82a96-110">Если <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> свойству `true` (по умолчанию), если выбран переключатель все остальные группы автоматически очищается.</span><span class="sxs-lookup"><span data-stu-id="82a96-110">If the <xref:System.Windows.Forms.RadioButton.AutoCheck%2A> property is set to `true` (the default), when the radio button is selected all others in the group are automatically cleared.</span></span> <span data-ttu-id="82a96-111">Это свойство обычно является равным только `false` при использовании кода проверки для убедитесь, что этот переключатель представляет допустимый параметр.</span><span class="sxs-lookup"><span data-stu-id="82a96-111">This property is usually only set to `false` when validation code is used to make sure the radio button selected is an allowable option.</span></span> <span data-ttu-id="82a96-112">Текст, отображаемый в элементе управления устанавливается с <xref:System.Windows.Forms.Control.Text%2A> свойство, которое может содержать клавиши быстрого доступа.</span><span class="sxs-lookup"><span data-stu-id="82a96-112">The text displayed within the control is set with the <xref:System.Windows.Forms.Control.Text%2A> property, which can contain access key shortcuts.</span></span> <span data-ttu-id="82a96-113">Клавиша доступа позволяет пользователю «щелкните «элемент управления, нажав клавишу ALT, с помощью ключа доступа.</span><span class="sxs-lookup"><span data-stu-id="82a96-113">An access key enables a user to "click" the control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="82a96-114">Дополнительные сведения см. в разделе [как: Создание сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) и [как: значение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="82a96-114">For more information, see [How to: Create Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
- Элемент управления <xref:System.Windows.Forms.RadioButton> может выглядеть как кнопка команды, которая отображается как нажатая при выбранном значении переключателя, если свойство <xref:System.Windows.Forms.RadioButton.Appearance%2A> имеет значение <xref:System.Windows.Forms.Appearance>.  В переключателях можно также отображать рисунки с помощью свойств <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A>.  Дополнительные сведения см. в разделе [Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="82a96-115"><xref:System.Windows.Forms.RadioButton> Управления могут иметь внешний вид кнопки, которая отображается при выбранном Если <xref:System.Windows.Forms.RadioButton.Appearance%2A> свойству <xref:System.Windows.Forms.Appearance.Button>.</span><span class="sxs-lookup"><span data-stu-id="82a96-115">The <xref:System.Windows.Forms.RadioButton> control can appear like a command button, which appears to have been depressed if selected, if the <xref:System.Windows.Forms.RadioButton.Appearance%2A> property is set to <xref:System.Windows.Forms.Appearance.Button>.</span></span> <span data-ttu-id="82a96-116">Переключатели можно также отобразить образов с помощью <xref:System.Windows.Forms.ButtonBase.Image%2A> и <xref:System.Windows.Forms.ButtonBase.ImageList%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="82a96-116">Radio buttons can also display images using the <xref:System.Windows.Forms.ButtonBase.Image%2A> and <xref:System.Windows.Forms.ButtonBase.ImageList%2A> properties.</span></span> <span data-ttu-id="82a96-117">Дополнительные сведения см. в разделе [как: задать изображение, отображаемое элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="82a96-117">For more information, see [How to: Set the Image Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.RadioButton>   
- [Общие сведения об элементе управления Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)   
- [Общие сведения об элементе управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)   
- [Общие сведения об элементе управления CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)   
- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)   
- [Практическое руководство. Создание переключателя для выбора одной из нескольких установок на базе элементов управления RadioButton в Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)   
- [Элемент управления RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="82a96-118">См. также</span><span class="sxs-lookup"><span data-stu-id="82a96-118">See Also</span></span>  
+ <xref:System.Windows.Forms.RadioButton>  
+ [<span data-ttu-id="82a96-119">Общие сведения об элементе управления Panel</span><span class="sxs-lookup"><span data-stu-id="82a96-119">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [<span data-ttu-id="82a96-120">Общие сведения об элементе управления GroupBox</span><span class="sxs-lookup"><span data-stu-id="82a96-120">GroupBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="82a96-121">Общие сведения об элементе управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="82a96-121">CheckBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="82a96-122">Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82a96-122">How to: Create Access Keys for Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [<span data-ttu-id="82a96-123">Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82a96-123">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [<span data-ttu-id="82a96-124">Практическое руководство. Создание переключателя для выбора одной из нескольких установок на базе элементов управления RadioButton в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82a96-124">How to: Group Windows Forms RadioButton Controls to Function as a Set</span></span>](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [<span data-ttu-id="82a96-125">Элемент управления RadioButton</span><span class="sxs-lookup"><span data-stu-id="82a96-125">RadioButton Control</span></span>](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

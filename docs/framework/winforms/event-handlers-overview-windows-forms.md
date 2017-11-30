@@ -1,35 +1,39 @@
 ---
-title: "Event Handlers Overview (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, event handling"
-  - "event handling, Windows Forms"
-  - "event handlers, about event handlers"
+title: "Обзор обработчиков событий (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms, event handling
+- event handling [Windows Forms], Windows Forms
+- event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7353f3ab4513d8331b1d38cb01ad16c7d3cde165
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Event Handlers Overview (Windows Forms)
-Обработчик событий — это метод, связанный с событием.  При возникновении события выполняется код внутри обработчика событий.  В каждом обработчике событий существует два параметра, которые позволяют правильно обработать событие.  В следующем примере показан обработчик события <xref:System.Windows.Forms.Control.Click> для элемента управления <xref:System.Windows.Forms.Button>.  
+# <a name="event-handlers-overview-windows-forms"></a><span data-ttu-id="72236-102">Обзор обработчиков событий (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="72236-102">Event Handlers Overview (Windows Forms)</span></span>
+<span data-ttu-id="72236-103">Обработчик событий — метод, связанный с событием.</span><span class="sxs-lookup"><span data-stu-id="72236-103">An event handler is a method that is bound to an event.</span></span> <span data-ttu-id="72236-104">При возникновении события выполняется код в обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="72236-104">When the event is raised, the code within the event handler is executed.</span></span> <span data-ttu-id="72236-105">Каждый обработчик событий предоставляет два параметра, которые дают возможность правильно обработать событие.</span><span class="sxs-lookup"><span data-stu-id="72236-105">Each event handler provides two parameters that allow you to handle the event properly.</span></span> <span data-ttu-id="72236-106">В примере показан обработчик событий для <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий.</span><span class="sxs-lookup"><span data-stu-id="72236-106">The following example shows an event handler for a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
   
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -37,7 +41,6 @@ private void button1_Click(object sender, System.EventArgs e)
 {  
   
 }  
-  
 ```  
   
 ```cpp  
@@ -49,12 +52,12 @@ private:
   }  
 ```  
   
- Первый параметр,`sender`, предоставляет ссылку на объект, вызвавший событие.  Второй параметр, `e`, в примере передает объект, связанный с обрабатываемым событием.  С помощью ссылки на свойства объекта \(а также на его методы\) можно получить сведения, например, о расположении мыши в событиях, вызываемых с помощью мыши, или о данных, которые передаются в ходе событий, возникающих при перетаскивании.  
+ <span data-ttu-id="72236-107">Первый параметр`sender`, предоставляющий ссылку на объект, создавший событие.</span><span class="sxs-lookup"><span data-stu-id="72236-107">The first parameter,`sender`, provides a reference to the object that raised the event.</span></span> <span data-ttu-id="72236-108">Второй параметр `e`, в приведенном выше примере передает объект события, которое обрабатывается.</span><span class="sxs-lookup"><span data-stu-id="72236-108">The second parameter, `e`, in the example above, passes an object specific to the event that is being handled.</span></span> <span data-ttu-id="72236-109">С помощью ссылки на свойства объекта (и в некоторых случаях его методы), можно получить сведения, такие как расположение указателя мыши для событий мыши или данных, передаваемых в события перетаскивания и вставки.</span><span class="sxs-lookup"><span data-stu-id="72236-109">By referencing the object's properties (and, sometimes, its methods), you can obtain information such as the location of the mouse for mouse events or data being transferred in drag-and-drop events.</span></span>  
   
- Обычно каждое событие создает обработчик событий с разными типами объекта события для второго параметра.  Некоторые обработчики событий, например обработчики для событий <xref:System.Windows.Forms.Control.MouseDown> и <xref:System.Windows.Forms.Control.MouseUp>, имеют одинаковый тип объекта для второго параметра.  Для этих типов событий можно использовать один и тот же обработчик событий.  
+ <span data-ttu-id="72236-110">Обычно каждое событие создает обработчик событий с типом другой объект события для второго параметра.</span><span class="sxs-lookup"><span data-stu-id="72236-110">Typically each event produces an event handler with a different event-object type for the second parameter.</span></span> <span data-ttu-id="72236-111">Некоторые обработчики событий, такие как <xref:System.Windows.Forms.Control.MouseDown> и <xref:System.Windows.Forms.Control.MouseUp> события, имеют одинаковый тип объекта для второго параметра.</span><span class="sxs-lookup"><span data-stu-id="72236-111">Some event handlers, such as those for the <xref:System.Windows.Forms.Control.MouseDown> and <xref:System.Windows.Forms.Control.MouseUp> events, have the same object type for their second parameter.</span></span> <span data-ttu-id="72236-112">Для этих типов событий можно использовать один и тот же обработчик событий для обработки обоих событий.</span><span class="sxs-lookup"><span data-stu-id="72236-112">For these types of events, you can use the same event handler to handle both events.</span></span>  
   
- Можно также использовать один и тот же обработчик событий для обработки одного события для разных элементов управления.  Например, при наличии в форме группы элементов управления <xref:System.Windows.Forms.RadioButton> можно создать один обработчик для события <xref:System.Windows.Forms.Control.Click> и привязать событие <xref:System.Windows.Forms.Control.Click> каждого элемента управления к этому обработчику.  Дополнительные сведения см. в разделе [How to: Connect Multiple Events to a Single Event Handler in Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ <span data-ttu-id="72236-113">Также можно использовать один и тот же обработчик событий для обработки одного события для различных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="72236-113">You can also use the same event handler to handle the same event for different controls.</span></span> <span data-ttu-id="72236-114">Например, если существует группа <xref:System.Windows.Forms.RadioButton> элементов управления в форме, можно создать один обработчик событий для <xref:System.Windows.Forms.Control.Click> событий и каждого элемента управления <xref:System.Windows.Forms.Control.Click> привязки к одному обработчику событий.</span><span class="sxs-lookup"><span data-stu-id="72236-114">For example, if you have a group of <xref:System.Windows.Forms.RadioButton> controls on a form, you could create a single event handler for the <xref:System.Windows.Forms.Control.Click> event and have each control's <xref:System.Windows.Forms.Control.Click> event bound to the single event handler.</span></span> <span data-ttu-id="72236-115">Дополнительные сведения см. в разделе [как: подключение нескольких событий к одному обработчику событий в Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="72236-115">For more information, see [How to: Connect Multiple Events to a Single Event Handler in Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).</span></span>  
   
-## См. также  
- [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [Events Overview](../../../docs/framework/winforms/events-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="72236-116">См. также</span><span class="sxs-lookup"><span data-stu-id="72236-116">See Also</span></span>  
+ [<span data-ttu-id="72236-117">Создание обработчиков событий в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="72236-117">Creating Event Handlers in Windows Forms</span></span>](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [<span data-ttu-id="72236-118">Общие сведения о событиях</span><span class="sxs-lookup"><span data-stu-id="72236-118">Events Overview</span></span>](../../../docs/framework/winforms/events-overview-windows-forms.md)

@@ -1,51 +1,55 @@
 ---
-title: "Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "автоматическое масштабирование"
-  - "изображения [Windows Forms], повышение производительности"
-  - "изображения [Windows Forms], использование без автоматического масштабирования"
-  - "производительность, улучшение изображения"
+title: "Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
-Интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает автоматическое масштабирование выводимого на экран изображения, но этот процесс снижает производительность.  Для управления масштабом изображения можно также передавать методу <xref:System.Drawing.Graphics.DrawImage%2A> значения ширины и высоты прямоугольника назначения.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="0ae61-102">Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования</span><span class="sxs-lookup"><span data-stu-id="0ae61-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="0ae61-103">Автоматическое масштабирование образа при рисовании, снижает производительность.</span><span class="sxs-lookup"><span data-stu-id="0ae61-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="0ae61-104">Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0ae61-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
- Например, в показанном ниже вызове метода <xref:System.Drawing.Graphics.DrawImage%2A> указывается верхний левый угол с координатами \(50, 30\), а прямоугольник назначения не определяется.  
+ <span data-ttu-id="0ae61-105">Например, в следующем вызове <xref:System.Drawing.Graphics.DrawImage%2A> метод задает верхний левый угол (50, 30), но не указывает прямоугольника назначения.</span><span class="sxs-lookup"><span data-stu-id="0ae61-105">For example, the following call to the <xref:System.Drawing.Graphics.DrawImage%2A> method specifies an upper-left corner of (50, 30) but does not specify a destination rectangle.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- Хотя это простейший вариант метода <xref:System.Drawing.Graphics.DrawImage%2A>, если судить по количеству требуемых параметров, однако он необязательно является самым эффективным.  Если разрешение \(обычно 96 точек на дюйм\), используемое интерфейсом [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], отличается от разрешения, указанного в объекте <xref:System.Drawing.Image>, то метод <xref:System.Drawing.Graphics.DrawImage%2A> осуществляет масштабирование изображения.  Например, предположим, что объект <xref:System.Drawing.Image> имеет в ширину 216 пикселей, а хранящееся в этом объекте разрешение по горизонтали составляет 72 точки на дюйм.  Поскольку 216\/72 равно 3, метод <xref:System.Drawing.Graphics.DrawImage%2A> осуществляет масштабирование изображения таким образом, чтобы конечное изображение имело в ширину 3 дюйма при разрешении 96 точек на дюйм.  Таким образом, метод <xref:System.Drawing.Graphics.DrawImage%2A> выводит изображение шириной 96 x 3 \= 288 пикселей.  
+ <span data-ttu-id="0ae61-106">Хотя это простейший вариант <xref:System.Drawing.Graphics.DrawImage%2A> метод с точки зрения число обязательных аргументов, не обязательно будет наиболее эффективным.</span><span class="sxs-lookup"><span data-stu-id="0ae61-106">Although this is the easiest version of the <xref:System.Drawing.Graphics.DrawImage%2A> method in terms of the number of required arguments, it is not necessarily the most efficient.</span></span> <span data-ttu-id="0ae61-107">Если используется разрешение [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (обычно 96 точек на дюйм) отличается от разрешения, указанного в <xref:System.Drawing.Image> объекта, а затем <xref:System.Drawing.Graphics.DrawImage%2A> метод будет масштабирования изображения.</span><span class="sxs-lookup"><span data-stu-id="0ae61-107">If the resolution used by [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (usually 96 dots per inch) is different from the resolution stored in the <xref:System.Drawing.Image> object, then the <xref:System.Drawing.Graphics.DrawImage%2A> method will scale the image.</span></span> <span data-ttu-id="0ae61-108">Например, предположим, что <xref:System.Drawing.Image> объект имеет ширину 216 точек, а хранимые разрешение по горизонтали составляет 72 точек на дюйм.</span><span class="sxs-lookup"><span data-stu-id="0ae61-108">For example, suppose an <xref:System.Drawing.Image> object has a width of 216 pixels and a stored horizontal resolution value of 72 dots per inch.</span></span> <span data-ttu-id="0ae61-109">Поскольку 216/72 равно 3, <xref:System.Drawing.Graphics.DrawImage%2A> будет масштабирования изображения, чтобы его ширину 3 дюйма с разрешением 96 точек на дюйм.</span><span class="sxs-lookup"><span data-stu-id="0ae61-109">Because 216/72 is 3, <xref:System.Drawing.Graphics.DrawImage%2A> will scale the image so that it has a width of 3 inches at a resolution of 96 dots per inch.</span></span> <span data-ttu-id="0ae61-110">То есть <xref:System.Drawing.Graphics.DrawImage%2A> выводит изображение шириной 96 x 3 = 288 пикселей.</span><span class="sxs-lookup"><span data-stu-id="0ae61-110">That is, <xref:System.Drawing.Graphics.DrawImage%2A> will display an image that has a width of 96x3 = 288 pixels.</span></span>  
   
- Даже если экранное разрешение отличается от 96 точек на дюйм, вполне вероятно, что интерфейс [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] все равно осуществит масштабирование изображения, как если бы разрешение составляло 96 точек на дюйм.  Это происходит потому, что объект <xref:System.Drawing.Graphics> интерфейса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] связан с программной средой устройства и, когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] запрашивает экранное разрешение у программной среды устройства, результатом обычно является 96, независимо от фактического экранного разрешения.  Чтобы предотвратить автоматическое масштабирование, можно указать в параметрах метода <xref:System.Drawing.Graphics.DrawImage%2A> прямоугольник назначения.  
+ <span data-ttu-id="0ae61-111">Даже если разрешение экрана 96 точек на дюйм, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] будут, скорее всего, масштабирования изображения так, будто разрешение экрана 96 точек на дюйм.</span><span class="sxs-lookup"><span data-stu-id="0ae61-111">Even if your screen resolution is different from 96 dots per inch, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] will probably scale the image as if the screen resolution were 96 dots per inch.</span></span> <span data-ttu-id="0ae61-112">Причина этого заключается в [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> объект связан с контекста устройства и когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] контекст устройства для разрешения экрана, результат обычно является 96, независимо от фактического экранного разрешения запросов.</span><span class="sxs-lookup"><span data-stu-id="0ae61-112">That is because a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> object is associated with a device context, and when [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] queries the device context for the screen resolution, the result is usually 96, regardless of the actual screen resolution.</span></span> <span data-ttu-id="0ae61-113">Можно избежать автоматического масштабирования, указав в прямоугольник назначения в <xref:System.Drawing.Graphics.DrawImage%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="0ae61-113">You can avoid automatic scaling by specifying the destination rectangle in the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  
   
-## Пример  
- В следующем примере одно и то же изображение рисуется два раза.  В первом случае ширина и высота прямоугольника назначения не указываются и осуществляется автоматическое масштабирование изображения.  Во втором случае ширина и высота прямоугольника назначения задаются явным образом \(в пикселях\) равными соответственно ширине и высоте исходного изображения.  На приведенном ниже рисунке показано дважды выведенное на экран изображение.  
+## <a name="example"></a><span data-ttu-id="0ae61-114">Пример</span><span class="sxs-lookup"><span data-stu-id="0ae61-114">Example</span></span>  
+ <span data-ttu-id="0ae61-115">В следующем примере рисуется дважды для одного изображения.</span><span class="sxs-lookup"><span data-stu-id="0ae61-115">The following example draws the same image twice.</span></span> <span data-ttu-id="0ae61-116">В первом случае ширину и высоту прямоугольника назначения не указан, а изображение масштабируется автоматически.</span><span class="sxs-lookup"><span data-stu-id="0ae61-116">In the first case, the width and height of the destination rectangle are not specified, and the image is automatically scaled.</span></span> <span data-ttu-id="0ae61-117">Во втором случае ширину и высоту прямоугольника назначения (измеряется в пикселях) для указания совпадать с ширину и высоту исходного изображения.</span><span class="sxs-lookup"><span data-stu-id="0ae61-117">In the second case, the width and height (measured in pixels) of the destination rectangle are specified to be the same as the width and height of the original image.</span></span> <span data-ttu-id="0ae61-118">На следующем рисунке изображение, рисуемое дважды.</span><span class="sxs-lookup"><span data-stu-id="0ae61-118">The following illustration shows the image rendered twice.</span></span>  
   
- ![Масштабированная текстура](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ <span data-ttu-id="0ae61-119">![Масштабировать текстуры](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span><span class="sxs-lookup"><span data-stu-id="0ae61-119">![Scaled Texture](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  Не забудьте заменить путь и имя файла Replace Texture.jpg именем файла изображения в вашей системе.  
+## <a name="compiling-the-code"></a><span data-ttu-id="0ae61-120">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="0ae61-120">Compiling the Code</span></span>  
+ <span data-ttu-id="0ae61-121">Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="0ae61-121">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="0ae61-122">Замените Texture.jpg в вашей системе путь и имя образа.</span><span class="sxs-lookup"><span data-stu-id="0ae61-122">Replace Texture.jpg with an image name and path that are valid on your system.</span></span>  
   
-## См. также  
- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Работа с растровыми и векторными изображениями](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="0ae61-123">См. также</span><span class="sxs-lookup"><span data-stu-id="0ae61-123">See Also</span></span>  
+ [<span data-ttu-id="0ae61-124">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="0ae61-124">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="0ae61-125">Работа с растровыми и векторными изображениями, значками и метафайлами</span><span class="sxs-lookup"><span data-stu-id="0ae61-125">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

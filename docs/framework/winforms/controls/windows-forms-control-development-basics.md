@@ -1,46 +1,47 @@
 ---
-title: "Основы разработки элементов управления форм Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms], создание"
-  - "пользовательские элементы управления [Windows Forms], типы наследования"
-  - "основные понятия программирования, элементы управления Windows Forms"
+title: "Основы разработки элементов управления форм Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], derivation types
+- programming concepts [Windows Forms], Windows Forms controls
+- controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca2bac983e25ab7453230a6718fe7eaa98e82275
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Основы разработки элементов управления форм Windows Forms
-Элемент управления Windows Forms представляет собой класс, производный прямо или косвенно от класса <xref:System.Windows.Forms.Control?displayProperty=fullName>.  В следующем списке описываются основные сценарии разработки элементов управления Windows Forms.  
+# <a name="windows-forms-control-development-basics"></a><span data-ttu-id="b4187-102">Основы разработки элементов управления форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4187-102">Windows Forms Control Development Basics</span></span>
+<span data-ttu-id="b4187-103">Элемент управления Windows Forms — это класс, производный прямо или косвенно от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b4187-103">A Windows Forms control is a class that derives directly or indirectly from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b4187-104">Ниже описаны распространенные сценарии для разработки элементов управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="b4187-104">The following list describes common scenarios for developing Windows Forms controls:</span></span>  
   
--   Объединение существующих элементов управления для создания составного элемента управления.  
+-   <span data-ttu-id="b4187-105">Объединение существующих элементов управления для создания составного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="b4187-105">Combining existing controls to author a composite control.</span></span>  
   
-     Составные элементы управления инкапсулируют пользовательский интерфейс, который может быть использован повторно в качестве элемента управления.  Пример составного элемента управления — элемент управления, состоящий из поля редактирования и кнопки сброса.  Визуальные конструкторы предлагают широкие возможности поддержки создания составных элементов управления.  Чтобы создать составной элемент управления, сделайте его производным от <xref:System.Windows.Forms.UserControl?displayProperty=fullName>.  Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает клавиатурную маршрутизацию для дочерних элементов управления и позволяет им работать в группе.  Дополнительные сведения см. в разделе [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+     <span data-ttu-id="b4187-106">Составные элементы управления инкапсулируют пользовательский интерфейс, который можно использовать как элемент управления.</span><span class="sxs-lookup"><span data-stu-id="b4187-106">Composite controls encapsulate a user interface that can be reused as a control.</span></span> <span data-ttu-id="b4187-107">Пример составного элемента управления — элемент управления, который состоит из текстового поля и кнопки сброса.</span><span class="sxs-lookup"><span data-stu-id="b4187-107">An example of a composite control is a control that consists of a text box and a reset button.</span></span> <span data-ttu-id="b4187-108">Визуальные конструкторы предлагают широкие возможности поддержки создания составных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="b4187-108">Visual designers offer rich support for creating composite controls.</span></span> <span data-ttu-id="b4187-109">Для создания составного элемента управления, производный от <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b4187-109">To author a composite control, derive from <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b4187-110">Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает клавиатурную маршрутизацию для дочерних элементов управления и позволяет им работать в группе.</span><span class="sxs-lookup"><span data-stu-id="b4187-110">The base class <xref:System.Windows.Forms.UserControl> provides keyboard routing for child controls and enables child controls to work as a group.</span></span> <span data-ttu-id="b4187-111">Дополнительные сведения см. в разделе [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="b4187-111">For more information, see [Developing a Composite Windows Forms Control](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).</span></span>  
   
--   Расширение существующего элемента управления для его настройки или добавления новых функций.  
+-   <span data-ttu-id="b4187-112">Расширение существующего элемента управления для его настройки или для добавления новых функций.</span><span class="sxs-lookup"><span data-stu-id="b4187-112">Extending an existing control to customize it or to add to its functionality.</span></span>  
   
-     Кнопка, цвет которой не может изменяться, и кнопка, имеющая дополнительное свойство, которое отслеживает, сколько щелчков мышью было сделано по ней, — примеры расширенных элементов управления.  Можно настроить любой элемент управления Windows Forms при помощи создания от него производного элемента и переопределения или добавления свойств, методов и событий.  
+     <span data-ttu-id="b4187-113">Не может изменяться, цвет кнопки и кнопки, которая имеет дополнительное свойство, которое отслеживает, сколько раз была нажата являются примерами расширенных элементов управления.</span><span class="sxs-lookup"><span data-stu-id="b4187-113">A button whose color cannot be changed and a button that has an additional property that tracks how many times it has been clicked are examples of extended controls.</span></span> <span data-ttu-id="b4187-114">Любой элемент управления Windows Forms можно настроить путем создания класса, производного от него и переопределения или добавления свойств, методов и событий.</span><span class="sxs-lookup"><span data-stu-id="b4187-114">You can customize any Windows Forms control by deriving from it and overriding or adding properties, methods, and events.</span></span>  
   
--   Разработка элемента управления, который не объединяет и не расширяет существующие элементы управления.  
+-   <span data-ttu-id="b4187-115">Создание элемента управления, который объединяет и не расширяет существующие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="b4187-115">Authoring a control that does not combine or extend existing controls.</span></span>  
   
-     По этому сценарию элемент управления пользователя должен быть производным от базового класса <xref:System.Windows.Forms.Control>.  Можно также добавлять свойства, методы и события переопределения базового класса.  Чтобы приступить к работе, см. раздел [Руководство: Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+     <span data-ttu-id="b4187-116">В этом случае элемент управления следует наследовать от базового класса <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="b4187-116">In this scenario, derive your control from the base class <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="b4187-117">Можно добавить также а переопределять свойства, методы и события базового класса.</span><span class="sxs-lookup"><span data-stu-id="b4187-117">You can add as well as override properties, methods, and events of the base class.</span></span> <span data-ttu-id="b4187-118">Чтобы приступить к работе, см. [как: разработка простого элемента управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="b4187-118">To get started, see [How to: Develop a Simple Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).</span></span>  
   
- Базовый класс для элементов управления Windows Forms <xref:System.Windows.Forms.Control> предоставляет все необходимое для визуального отображения в клиентских приложениях Windows.  <xref:System.Windows.Forms.Control> обеспечивает обработку окон и обработку маршрутизации сообщений, а также обеспечивает события клавиатуры и мыши, как и многие другие события пользовательского интерфейса.  Он предоставляет дополнительные возможности построения макета формы и имеет специальные свойства для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A> и многие другие.  Кроме того, он обеспечивает безопасность, поддержку работы с потоками и взаимодействие с элементами управления ActiveX.  Благодаря такому разнообразию инфраструктуры, которое предоставляет базовый класс, разработать свой собственный элемент управления Windows Forms относительно просто.  
+ <span data-ttu-id="b4187-119">Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет все необходимое для визуального отображения в клиентских приложений Windows.</span><span class="sxs-lookup"><span data-stu-id="b4187-119">The base class for Windows Forms controls, <xref:System.Windows.Forms.Control>, provides the plumbing required for visual display in client-side Windows-based applications.</span></span> <span data-ttu-id="b4187-120"><xref:System.Windows.Forms.Control>предоставляет дескриптор окна, обработку маршрутизации сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также других пользователей.</span><span class="sxs-lookup"><span data-stu-id="b4187-120"><xref:System.Windows.Forms.Control> provides a window handle, handles message routing, and provides mouse and keyboard events as well as many other user interface events.</span></span> <span data-ttu-id="b4187-121">Он предоставляет дополнительный макет и имеет специальные свойства для визуального отображения, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие.</span><span class="sxs-lookup"><span data-stu-id="b4187-121">It provides advanced layout and has properties specific to visual display, such as <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, and many others.</span></span> <span data-ttu-id="b4187-122">Кроме того он обеспечивает безопасность, поддержка и взаимодействие с элементами управления ActiveX работы с потоками.</span><span class="sxs-lookup"><span data-stu-id="b4187-122">Additionally, it provides security, threading support, and interoperability with ActiveX controls.</span></span> <span data-ttu-id="b4187-123">Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.</span><span class="sxs-lookup"><span data-stu-id="b4187-123">Because so much of the infrastructure is provided by the base class, it is relatively easy to develop your own Windows Forms controls.</span></span>  
   
-## См. также  
- [Руководство: Разработка простого элемента управления форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
- [Разработка составного элемента Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)   
- [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)   
- [Создание собственных элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="b4187-124">См. также</span><span class="sxs-lookup"><span data-stu-id="b4187-124">See Also</span></span>  
+ [<span data-ttu-id="b4187-125">Практическое руководство. Разработка простого элемента управления форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4187-125">How to: Develop a Simple Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [<span data-ttu-id="b4187-126">Разработка составного элемента Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4187-126">Developing a Composite Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [<span data-ttu-id="b4187-127">Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4187-127">How to: Create a Windows Forms Control That Shows Progress</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)  
+ [<span data-ttu-id="b4187-128">Разновидности пользовательских элементов управления</span><span class="sxs-lookup"><span data-stu-id="b4187-128">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

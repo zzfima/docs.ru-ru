@@ -1,38 +1,41 @@
 ---
-title: "Практическое руководство. Настройка делений на ползунке | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TickBar"
-  - "Ползунок, создание с помощью TickBar"
+title: "Практическое руководство. Настройка делений на ползунке"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TickBar [WPF]
+- Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d266d85e10ca8e77cd32338096cf3a3b761c188
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Настройка делений на ползунке
-В этом примере показано, как создать <xref:System.Windows.Controls.Slider> элемента управления, содержащего деления.  
+# <a name="how-to-customize-the-ticks-on-a-slider"></a><span data-ttu-id="7dd34-102">Практическое руководство. Настройка делений на ползунке</span><span class="sxs-lookup"><span data-stu-id="7dd34-102">How to: Customize the Ticks on a Slider</span></span>
+<span data-ttu-id="7dd34-103">В этом примере показано, как создать <xref:System.Windows.Controls.Slider> элемента управления, содержащего деления.</span><span class="sxs-lookup"><span data-stu-id="7dd34-103">This example shows how to create a <xref:System.Windows.Controls.Slider> control that has tick marks.</span></span>  
   
-## <a name="example"></a>Пример  
- <xref:System.Windows.Controls.Primitives.TickBar> отображается при установке <xref:System.Windows.Controls.Slider.TickPlacement%2A> свойству значение, отличное от <xref:System.Windows.Controls.Primitives.TickPlacement>, которое является значением по умолчанию.  
+## <a name="example"></a><span data-ttu-id="7dd34-104">Пример</span><span class="sxs-lookup"><span data-stu-id="7dd34-104">Example</span></span>  
+ <span data-ttu-id="7dd34-105"><xref:System.Windows.Controls.Primitives.TickBar> Отображается при установке <xref:System.Windows.Controls.Slider.TickPlacement%2A> свойство в значение, отличное от <xref:System.Windows.Controls.Primitives.TickPlacement.None>, который является значением по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="7dd34-105">The <xref:System.Windows.Controls.Primitives.TickBar> displays when you set the <xref:System.Windows.Controls.Slider.TickPlacement%2A> property to a value other than <xref:System.Windows.Controls.Primitives.TickPlacement.None>, which is the default value.</span></span>  
   
- Следующий пример демонстрирует создание <xref:System.Windows.Controls.Slider> с <xref:System.Windows.Controls.Primitives.TickBar> отображает метки деления. <xref:System.Windows.Controls.Slider.TickPlacement%2A> и <xref:System.Windows.Controls.Slider.TickFrequency%2A> определяют расположение меток делений и интервал между ними. При перемещении <xref:System.Windows.Controls.Primitives.Thumb>, всплывающие подсказки отображают значение <xref:System.Windows.Controls.Slider>. <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> свойство определяет, где появляется подсказка. <xref:System.Windows.Controls.Primitives.Thumb> соответствуют движения расположение делений, так как <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> равен `true`.  
+ <span data-ttu-id="7dd34-106">В следующем примере показано, как создать <xref:System.Windows.Controls.Slider> с <xref:System.Windows.Controls.Primitives.TickBar> отображает метки деления.</span><span class="sxs-lookup"><span data-stu-id="7dd34-106">The following example shows how to create a <xref:System.Windows.Controls.Slider> with a <xref:System.Windows.Controls.Primitives.TickBar> that displays tick marks.</span></span> <span data-ttu-id="7dd34-107"><xref:System.Windows.Controls.Slider.TickPlacement%2A> И <xref:System.Windows.Controls.Slider.TickFrequency%2A> определяют расположение делений и интервал между ними.</span><span class="sxs-lookup"><span data-stu-id="7dd34-107">The <xref:System.Windows.Controls.Slider.TickPlacement%2A> and <xref:System.Windows.Controls.Slider.TickFrequency%2A> properties define the location of the tick marks and the interval between them.</span></span> <span data-ttu-id="7dd34-108">При перемещении <xref:System.Windows.Controls.Primitives.Thumb>, всплывающие подсказки отображают значение <xref:System.Windows.Controls.Slider>.</span><span class="sxs-lookup"><span data-stu-id="7dd34-108">When you move the <xref:System.Windows.Controls.Primitives.Thumb>, tooltips display the value of the <xref:System.Windows.Controls.Slider>.</span></span> <span data-ttu-id="7dd34-109"><xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> Свойство определяет, где появляется подсказка.</span><span class="sxs-lookup"><span data-stu-id="7dd34-109">The <xref:System.Windows.Controls.Slider.AutoToolTipPlacement%2A> property defines where the tooltips occur.</span></span> <span data-ttu-id="7dd34-110"><xref:System.Windows.Controls.Primitives.Thumb> Перемещений соответствуют расположение делений, так как <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> равно `true`.</span><span class="sxs-lookup"><span data-stu-id="7dd34-110">The <xref:System.Windows.Controls.Primitives.Thumb> movements correspond to the location of the tick marks because <xref:System.Windows.Controls.Slider.IsSnapToTickEnabled%2A> is set to `true`.</span></span>  
   
- В следующем примере показано, как использовать <xref:System.Windows.Controls.Slider.Ticks%2A> свойства для создания деления отметок вдоль <xref:System.Windows.Controls.Slider> через нерегулярные интервалы времени.  
+ <span data-ttu-id="7dd34-111">В следующем примере показано, как использовать <xref:System.Windows.Controls.Slider.Ticks%2A> свойства для создания метки вдоль деления <xref:System.Windows.Controls.Slider> через нерегулярные интервалы времени.</span><span class="sxs-lookup"><span data-stu-id="7dd34-111">The following example shows how to use the <xref:System.Windows.Controls.Slider.Ticks%2A> property to create tick marks along the <xref:System.Windows.Controls.Slider> at irregular intervals.</span></span>  
   
- [!code-xml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Controls.Slider>   
- <xref:System.Windows.Controls.Primitives.TickBar>   
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>   
- [Разделы руководства, посвященные ползунка](http://msdn.microsoft.com/ru-ru/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a><span data-ttu-id="7dd34-112">См. также</span><span class="sxs-lookup"><span data-stu-id="7dd34-112">See Also</span></span>  
+ <xref:System.Windows.Controls.Slider>  
+ <xref:System.Windows.Controls.Primitives.TickBar>  
+ <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
+ [<span data-ttu-id="7dd34-113">Практические руководства, посвященные элементу управления Slider</span><span class="sxs-lookup"><span data-stu-id="7dd34-113">Slider How-to Topics</span></span>](http://msdn.microsoft.com/en-us/534be86c-afb2-425d-8186-631278a9925e)

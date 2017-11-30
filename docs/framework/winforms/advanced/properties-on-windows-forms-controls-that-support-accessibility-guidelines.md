@@ -1,43 +1,44 @@
 ---
-title: "Свойства элементов управления Windows Forms, в которых соблюдены правила доступности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "специальные возможности, свойства элемента управления Windows Forms"
-  - "Windows Forms, свойства специальных возможностей элементов управления"
+title: "Свойства элементов управления Windows Forms, в которых соблюдены правила доступности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, accessibility properties of controls
+- accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Свойства элементов управления Windows Forms, в которых соблюдены правила доступности
-Элементы управления в стандартной панели элементов для форм Windows Forms следуют многим правилам доступности, включая демонстрацию фокуса для ввода с клавиатуры и элементов экрана.  
+# <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a><span data-ttu-id="e97e8-102">Свойства элементов управления Windows Forms, в которых соблюдены правила доступности</span><span class="sxs-lookup"><span data-stu-id="e97e8-102">Properties on Windows Forms Controls That Support Accessibility Guidelines</span></span>
+<span data-ttu-id="e97e8-103">Элементы управления на стандартной панели инструментов для Windows Forms поддерживают многие из специальных возможностей, включая демонстрацию фокуса клавиатуры и элементов экрана.</span><span class="sxs-lookup"><span data-stu-id="e97e8-103">Controls on the standard toolbox for Windows Forms support many of the accessibility guidelines, including exposing the keyboard focus and exposing the screen elements.</span></span>  
   
-## Планирование с учетом специальных возможностей  
- Свойства элементов управления, которые можно использовать для поддержки других правил доступности, перечислены в следующей таблице.  Кроме того, необходимо обеспечить доступ к возможностям программы с помощью меню.  
+## <a name="planning-ahead-for-accessibility"></a><span data-ttu-id="e97e8-104">Планирование для специальных возможностей</span><span class="sxs-lookup"><span data-stu-id="e97e8-104">Planning Ahead for Accessibility</span></span>  
+ <span data-ttu-id="e97e8-105">Свойства элементов управления можно использовать для поддержки других специальных возможностей, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="e97e8-105">The controls' properties can be used to support other accessibility guidelines as shown in the following table.</span></span> <span data-ttu-id="e97e8-106">Кроме того меню следует использовать для предоставления доступа к функциям программы.</span><span class="sxs-lookup"><span data-stu-id="e97e8-106">Additionally, you should use menus to provide access to program features.</span></span>  
   
-|Свойство элемента управления|Вопросы специальных возможностях|  
-|----------------------------------|--------------------------------------|  
-|AccessibleDescription|Описание передается в средства специальных возможностей, такие как средства чтения с экрана.  Специальные возможности — это программы и устройства, которые облегчают взаимодействие с компьютером пользователям с ограниченными возможностями.|  
-|AccessibleName|Имя, которое передается в средства специальных возможностей.|  
-|AccessibleRole|Описание использования элемента в пользовательском интерфейсе.|  
-|TabIndex|Определяет последовательность переходов между элементами управления в форме.  Для элементов управления, не имеющих внутренних меток, таких как текстовые поля, важно, чтобы присоединенная к элементу метка непосредственно предшествовала ему в последовательности переходов.|  
-|Текст|Для создания клавиши доступа используется знак "&".  Клавиши доступа обеспечивают документированный доступ с клавиатуры ко всем средствам.|  
-|Font Size|Если размер шрифта не является регулируемым, следует задавать для него значение 10 пунктов или выше.  После задания размера шрифта для формы этот размер будут иметь все элементы управления, добавляемые в форму.|  
-|Forecolor|Если для этого свойства задано значение по умолчанию, то в форме будут использоваться пользовательские настройки цвета.|  
-|Backcolor|Если для этого свойства задано значение по умолчанию, то в форме будут использоваться пользовательские настройки цвета.|  
-|BackgroundImage|Для удобства чтения текста оставляйте это свойство пустым.|  
+|<span data-ttu-id="e97e8-107">Свойство элемента управления</span><span class="sxs-lookup"><span data-stu-id="e97e8-107">Control Property</span></span>|<span data-ttu-id="e97e8-108">Соображения о специальных возможностях</span><span class="sxs-lookup"><span data-stu-id="e97e8-108">Considerations for Accessibility</span></span>|  
+|----------------------|--------------------------------------|  
+|<span data-ttu-id="e97e8-109">AccessibleDescription</span><span class="sxs-lookup"><span data-stu-id="e97e8-109">AccessibleDescription</span></span>|<span data-ttu-id="e97e8-110">Описание передается в средства специальных возможностей, таких как средства чтения с экрана.</span><span class="sxs-lookup"><span data-stu-id="e97e8-110">The description is reported to accessibility aids such as screen readers.</span></span> <span data-ttu-id="e97e8-111">Специальные возможности — это специализированные программы и устройства, помогающие людям с ограниченными возможностями эффективнее использовать компьютеры.</span><span class="sxs-lookup"><span data-stu-id="e97e8-111">Accessibility aids are specialized programs and devices that help people with disabilities use computers more effectively.</span></span>|  
+|<span data-ttu-id="e97e8-112">AccessibleName</span><span class="sxs-lookup"><span data-stu-id="e97e8-112">AccessibleName</span></span>|<span data-ttu-id="e97e8-113">Имя, которое будет сообщено доступа к специальным возможностям.</span><span class="sxs-lookup"><span data-stu-id="e97e8-113">The name that will be reported to the accessibility aids.</span></span>|  
+|<span data-ttu-id="e97e8-114">AccessibleRole</span><span class="sxs-lookup"><span data-stu-id="e97e8-114">AccessibleRole</span></span>|<span data-ttu-id="e97e8-115">Описание использования элемента в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="e97e8-115">Describes the use of the element in the user interface.</span></span>|  
+|<span data-ttu-id="e97e8-116">TabIndex</span><span class="sxs-lookup"><span data-stu-id="e97e8-116">TabIndex</span></span>|<span data-ttu-id="e97e8-117">Создает последовательность переходов по форме.</span><span class="sxs-lookup"><span data-stu-id="e97e8-117">Creates a sensible navigational path through the form.</span></span> <span data-ttu-id="e97e8-118">Очень важно для элементов управления, не имеющих внутренних меток, таких как текстовые поля, чтобы их связанных метка непосредственно предшествовала ему в последовательности табуляции.</span><span class="sxs-lookup"><span data-stu-id="e97e8-118">It is important for controls without intrinsic labels, such as text boxes, to have their associated label immediately precede them in the tab order.</span></span>|  
+|<span data-ttu-id="e97e8-119">Text</span><span class="sxs-lookup"><span data-stu-id="e97e8-119">Text</span></span>|<span data-ttu-id="e97e8-120">Используйте символ «&» для создания ключей доступа.</span><span class="sxs-lookup"><span data-stu-id="e97e8-120">Use the "&" character to create access keys.</span></span> <span data-ttu-id="e97e8-121">Клавиши доступа — часть, предоставляющая документированный доступ с клавиатуры к функциям.</span><span class="sxs-lookup"><span data-stu-id="e97e8-121">Using access keys is part of providing documented keyboard access to features.</span></span>|  
+|<span data-ttu-id="e97e8-122">Размер шрифта</span><span class="sxs-lookup"><span data-stu-id="e97e8-122">Font Size</span></span>|<span data-ttu-id="e97e8-123">Если размер шрифта не является регулируемым, затем оно должно задаваться 10 пунктов или выше.</span><span class="sxs-lookup"><span data-stu-id="e97e8-123">If the font size is not adjustable, then it should be set to 10 points or larger.</span></span> <span data-ttu-id="e97e8-124">После задания размера шрифта формы, все элементы управления, после добавления в форму будет иметь тот же размер.</span><span class="sxs-lookup"><span data-stu-id="e97e8-124">Once the form's font size is set, all the controls added to the form thereafter will have the same size.</span></span>|  
+|<span data-ttu-id="e97e8-125">Forecolor</span><span class="sxs-lookup"><span data-stu-id="e97e8-125">Forecolor</span></span>|<span data-ttu-id="e97e8-126">Если это свойство имеет значение по умолчанию, с пользовательскими настройками цвета будет использоваться в форме.</span><span class="sxs-lookup"><span data-stu-id="e97e8-126">If this property is set to the default, then the user's color preferences will be used on the form.</span></span>|  
+|<span data-ttu-id="e97e8-127">Backcolor</span><span class="sxs-lookup"><span data-stu-id="e97e8-127">Backcolor</span></span>|<span data-ttu-id="e97e8-128">Если это свойство имеет значение по умолчанию, с пользовательскими настройками цвета будет использоваться в форме.</span><span class="sxs-lookup"><span data-stu-id="e97e8-128">If this property is set to the default, then the user's color preferences will be used on the form.</span></span>|  
+|<span data-ttu-id="e97e8-129">BackgroundImage</span><span class="sxs-lookup"><span data-stu-id="e97e8-129">BackgroundImage</span></span>|<span data-ttu-id="e97e8-130">Не указывайте это свойство для удобства чтения текста.</span><span class="sxs-lookup"><span data-stu-id="e97e8-130">Leave this property blank to make text more readable.</span></span>|  
   
-## См. также  
- [Пошаговое руководство. Создание Windows\-приложения с поддержкой специальных возможностей](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+## <a name="see-also"></a><span data-ttu-id="e97e8-131">См. также</span><span class="sxs-lookup"><span data-stu-id="e97e8-131">See Also</span></span>  
+ [<span data-ttu-id="e97e8-132">Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей</span><span class="sxs-lookup"><span data-stu-id="e97e8-132">Walkthrough: Creating an Accessible Windows-based Application</span></span>](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

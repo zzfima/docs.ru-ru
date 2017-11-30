@@ -1,56 +1,62 @@
 ---
-title: "Безопасность сообщений при использовании клиентом учетных данных пользователя | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность сообщений при использовании клиентом учетных данных пользователя"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность сообщений при использовании клиентом учетных данных пользователя
-На следующем рисунке показано, как защищаются служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью безопасности на уровне сообщений.Служба проходит проверку подлинности с использованием сертификата X.509.Подлинность клиента проверяется с помощью имени и пароля пользователя.  
+# <a name="message-security-with-a-user-name-client"></a><span data-ttu-id="0e4ad-102">Безопасность сообщений при использовании клиентом учетных данных пользователя</span><span class="sxs-lookup"><span data-stu-id="0e4ad-102">Message Security with a User Name Client</span></span>
+<span data-ttu-id="0e4ad-103">На следующем рисунке показано, как защищаются служба и клиент [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] с помощью безопасности на уровне сообщений.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-103">The following illustration shows an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message-level security.</span></span> <span data-ttu-id="0e4ad-104">Служба проходит проверку подлинности с использованием сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-104">The service is authenticated with an X.509 certificate.</span></span> <span data-ttu-id="0e4ad-105">Подлинность клиента проверяется с помощью имени и пароля пользователя.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-105">The client authenticates using a user name and password.</span></span>  
   
- Пример приложения см. в разделе [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ <span data-ttu-id="0e4ad-106">Пример приложения см. в разделе [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md).</span><span class="sxs-lookup"><span data-stu-id="0e4ad-106">For a sample application, see [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md).</span></span>  
   
- ![Безопасность сообщений с использованием аутентификации имени пользователя](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61\-7e1d\-42f5\-b1af\-195bfee5b3c6")  
+ <span data-ttu-id="0e4ad-107">![Безопасность сообщений с использованием проверки подлинности имя пользователя](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span><span class="sxs-lookup"><span data-stu-id="0e4ad-107">![Message security using username authentication](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span></span>  
   
-|Характеристика|Описание|  
-|--------------------|--------------|  
-|Режим безопасности|Сообщение|  
-|Взаимодействие|Только [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
-|Проверка подлинности \(сервера\)|Первоначальное согласование возможно только после проверки подлинности сервера|  
-|Проверка подлинности \(клиента\)|Имя пользователя\/пароль|  
-|Целостность|Да, используется общий контекст безопасности|  
-|Конфиденциальность|Да, используется общий контекст безопасности|  
-|Транспорт|HTTP|  
-|Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="0e4ad-108">Характеристика</span><span class="sxs-lookup"><span data-stu-id="0e4ad-108">Characteristic</span></span>|<span data-ttu-id="0e4ad-109">Описание</span><span class="sxs-lookup"><span data-stu-id="0e4ad-109">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="0e4ad-110">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="0e4ad-110">Security Mode</span></span>|<span data-ttu-id="0e4ad-111">Сообщение</span><span class="sxs-lookup"><span data-stu-id="0e4ad-111">Message</span></span>|  
+|<span data-ttu-id="0e4ad-112">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="0e4ad-112">Interoperability</span></span>|<span data-ttu-id="0e4ad-113">Только [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e4ad-113">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only</span></span>|  
+|<span data-ttu-id="0e4ad-114">Проверка подлинности (сервера)</span><span class="sxs-lookup"><span data-stu-id="0e4ad-114">Authentication (Server)</span></span>|<span data-ttu-id="0e4ad-115">Первоначальное согласование возможно только после проверки подлинности сервера</span><span class="sxs-lookup"><span data-stu-id="0e4ad-115">Initial negotiation requires server authentication</span></span>|  
+|<span data-ttu-id="0e4ad-116">Проверка подлинности (клиента)</span><span class="sxs-lookup"><span data-stu-id="0e4ad-116">Authentication (Client)</span></span>|<span data-ttu-id="0e4ad-117">Имя пользователя/пароль</span><span class="sxs-lookup"><span data-stu-id="0e4ad-117">User name/password</span></span>|  
+|<span data-ttu-id="0e4ad-118">Целостность</span><span class="sxs-lookup"><span data-stu-id="0e4ad-118">Integrity</span></span>|<span data-ttu-id="0e4ad-119">Да, используется общий контекст безопасности</span><span class="sxs-lookup"><span data-stu-id="0e4ad-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="0e4ad-120">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="0e4ad-120">Confidentiality</span></span>|<span data-ttu-id="0e4ad-121">Да, используется общий контекст безопасности</span><span class="sxs-lookup"><span data-stu-id="0e4ad-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="0e4ad-122">Transport</span><span class="sxs-lookup"><span data-stu-id="0e4ad-122">Transport</span></span>|<span data-ttu-id="0e4ad-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="0e4ad-123">HTTP</span></span>|  
+|<span data-ttu-id="0e4ad-124">Привязка</span><span class="sxs-lookup"><span data-stu-id="0e4ad-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Служба  
- Предполагается, что представленные ниже код и конфигурация выполняются независимо.Выполните одно из следующих действий.  
+## <a name="service"></a><span data-ttu-id="0e4ad-125">Служба</span><span class="sxs-lookup"><span data-stu-id="0e4ad-125">Service</span></span>  
+ <span data-ttu-id="0e4ad-126">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="0e4ad-127">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-127">Do one of the following:</span></span>  
   
--   Создайте автономную службу, используя код без конфигурации.  
+-   <span data-ttu-id="0e4ad-128">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.  
+-   <span data-ttu-id="0e4ad-129">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Код  
- В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.  
+### <a name="code"></a><span data-ttu-id="0e4ad-130">Код</span><span class="sxs-lookup"><span data-stu-id="0e4ad-130">Code</span></span>  
+ <span data-ttu-id="0e4ad-131">В следующем коде показано, как создать конечную точку службы, которая использует безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-131">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### Конфигурация  
- Вместо кода можно использовать следующую конфигурацию:  
+### <a name="configuration"></a><span data-ttu-id="0e4ad-132">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="0e4ad-132">Configuration</span></span>  
+ <span data-ttu-id="0e4ad-133">Вместо кода можно использовать следующую конфигурацию:</span><span class="sxs-lookup"><span data-stu-id="0e4ad-133">The following configuration can be used instead of the code:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -90,18 +96,18 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## Клиент  
+## <a name="client"></a><span data-ttu-id="0e4ad-134">Клиент</span><span class="sxs-lookup"><span data-stu-id="0e4ad-134">Client</span></span>  
   
-### Код  
- Следующий код служит для создания клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.Указать имя пользователя и пароль можно только с помощью кода \(они не подлежат настройке\).Здесь не показан код, который возвращает имя пользователя и пароль, потому что это происходит на уровне приложения.Например, диалоговое окно Window Forms используется для запроса данных у пользователя.  
+### <a name="code"></a><span data-ttu-id="0e4ad-135">Код</span><span class="sxs-lookup"><span data-stu-id="0e4ad-135">Code</span></span>  
+ <span data-ttu-id="0e4ad-136">Следующий код служит для создания клиента.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-136">The following code creates the client.</span></span> <span data-ttu-id="0e4ad-137">Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-137">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="0e4ad-138">Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке).</span><span class="sxs-lookup"><span data-stu-id="0e4ad-138">The user name and password can only be specified using code (it is not configurable).</span></span> <span data-ttu-id="0e4ad-139">Здесь не показан код, который возвращает имя пользователя и пароль, потому что это происходит на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-139">The code to return the user name and password is not shown here because it must be done at the application level.</span></span> <span data-ttu-id="0e4ad-140">Например, диалоговое окно Windows Forms используется для того, чтобы запросить пользователя о данных.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-140">For example, use a Windows Forms dialog box to query the user for the data.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### Конфигурация  
- Следующий код служит для настройки клиента.Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.Указать имя пользователя и пароль можно только с помощью кода \(они не подлежат настройке\).  
+### <a name="configuration"></a><span data-ttu-id="0e4ad-141">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="0e4ad-141">Configuration</span></span>  
+ <span data-ttu-id="0e4ad-142">Следующий код служит для настройки клиента.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-142">The following code configures the client.</span></span> <span data-ttu-id="0e4ad-143">Привязка осуществляется к безопасности режима сообщений, и типу учетных данных клиента присваивается значение `UserName`.</span><span class="sxs-lookup"><span data-stu-id="0e4ad-143">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="0e4ad-144">Указать имя пользователя и пароль можно только с помощью кода (они не подлежат настройке).</span><span class="sxs-lookup"><span data-stu-id="0e4ad-144">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -129,9 +135,9 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md)   
- [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<удостоверение\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="0e4ad-145">См. также</span><span class="sxs-lookup"><span data-stu-id="0e4ad-145">See Also</span></span>  
+ [<span data-ttu-id="0e4ad-146">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="0e4ad-146">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="0e4ad-147">Имя пользователя для безопасности сообщений</span><span class="sxs-lookup"><span data-stu-id="0e4ad-147">Message Security User Name</span></span>](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [<span data-ttu-id="0e4ad-148">Службы идентификации и проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="0e4ad-148">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="0e4ad-149">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="0e4ad-149">\<identity></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [<span data-ttu-id="0e4ad-150">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="0e4ad-150">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

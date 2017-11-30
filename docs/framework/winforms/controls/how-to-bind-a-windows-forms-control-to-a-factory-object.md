@@ -1,50 +1,55 @@
 ---
-title: "Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource - компонент [Windows Forms], привязка к объекту фабрики"
-  - "BindingSource - компонент [Windows Forms], примеры"
-  - "элементы управления [Windows Forms], привязка"
-  - "объекты фабрики, привязка к"
+title: "Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [Windows Forms], binding
+- factory objects [Windows Forms], binding to
+- BindingSource component [Windows Forms], binding to a factory object
+- BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 21623987e9e3798488df6ed0e001a2baf54c3575
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms
-При создании элементов управления, взаимодействующих с данными, иногда требуется привязать элемент управления к объекту или методу, создающему другие объекты.  Такой объект или метод называется фабрикой.  Источник данных может быть, например, возвращаемым значением вызова метода, а не объектом в памяти или типом.  Можно привязать элемент управления к такому типу источника данных при условии, что источник возвращает коллекцию.  
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a><span data-ttu-id="4773a-102">Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4773a-102">How to: Bind a Windows Forms Control to a Factory Object</span></span>
+<span data-ttu-id="4773a-103">При создании элементов управления, взаимодействующих с данными, иногда требуется привязать элемент управления к объекту или методу, создающему другие объекты.</span><span class="sxs-lookup"><span data-stu-id="4773a-103">When you are building controls that interact with data, you will sometimes find it necessary to bind a control to an object or method that generates other objects.</span></span> <span data-ttu-id="4773a-104">Такой объект или метод называется фабрикой.</span><span class="sxs-lookup"><span data-stu-id="4773a-104">Such an object or method is called a factory.</span></span> <span data-ttu-id="4773a-105">Источник данных может быть, например, возвращаемым значением вызова метода, а не объектом в памяти или типом.</span><span class="sxs-lookup"><span data-stu-id="4773a-105">Your data source might be, for example, the return value from a method call, instead of an object in memory or a type.</span></span> <span data-ttu-id="4773a-106">Можно привязать элемент управления к такому типу источника данных при условии, что источник возвращает коллекцию.</span><span class="sxs-lookup"><span data-stu-id="4773a-106">You can bind a control to this kind of data source as long as the source returns a collection.</span></span>  
   
- Элемент управления можно легко привязать к объекту фабрики с помощью элемента управления <xref:System.Windows.Forms.BindingSource>.  
+ <span data-ttu-id="4773a-107">Элемент управления можно легко привязать к объекту фабрики с помощью элемента управления <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="4773a-107">You can easily bind a control to a factory object by using the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
   
-## Пример  
- В примере ниже показано, как связать элемент управления <xref:System.Windows.Forms.DataGridView> с методом фабрики с помощью элемента управления <xref:System.Windows.Forms.BindingSource>.  Метод фабрики называется `GetOrdersByCustomerId` и возвращает все заказы для данного клиента в базе данных Northwind.  
+## <a name="example"></a><span data-ttu-id="4773a-108">Пример</span><span class="sxs-lookup"><span data-stu-id="4773a-108">Example</span></span>  
+ <span data-ttu-id="4773a-109">В примере ниже показано, как связать элемент управления <xref:System.Windows.Forms.DataGridView> с методом фабрики с помощью элемента управления <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="4773a-109">The following example demonstrates how to bind a <xref:System.Windows.Forms.DataGridView> control to a factory method by using a <xref:System.Windows.Forms.BindingSource> control.</span></span> <span data-ttu-id="4773a-110">Метод фабрики называется `GetOrdersByCustomerId` и возвращает все заказы для данного клиента в базе данных Northwind.</span><span class="sxs-lookup"><span data-stu-id="4773a-110">The factory method is named `GetOrdersByCustomerId`, and it returns all the orders for a given customer in the Northwind database.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.BindToFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/VB/form1.vb#1)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="4773a-111">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4773a-111">Compiling the Code</span></span>  
+ <span data-ttu-id="4773a-112">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="4773a-112">This example requires:</span></span>  
   
--   ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.  
+-   <span data-ttu-id="4773a-113">ссылки на сборки System, System.Data, System.Drawing и System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="4773a-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) или [Построение из командной строки с помощью csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение скомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="4773a-114">Информацию о выполнении сборки этого примера из командной строки для [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] или [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] можно найти в разделе [Построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [Построение из командной строки с помощью файла csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="4773a-114">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="4773a-115">Чтобы выполнить сборку этого примера в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], можно также вставить код в новый проект.</span><span class="sxs-lookup"><span data-stu-id="4773a-115">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="4773a-116">См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="4773a-116">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.BindingNavigator>   
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.BindingSource>   
- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [Практическое руководство. Связывание элемента управления с типом в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+## <a name="see-also"></a><span data-ttu-id="4773a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="4773a-117">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.BindingSource>  
+ [<span data-ttu-id="4773a-118">Компонент BindingSource</span><span class="sxs-lookup"><span data-stu-id="4773a-118">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="4773a-119">Практическое руководство. Связывание элемента управления с типом в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4773a-119">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
