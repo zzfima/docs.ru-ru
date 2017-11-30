@@ -1,86 +1,78 @@
 ---
-title: "Многопоточность с помощью компонента BackgroundWorker (Visual Basic) | Документы Microsoft"
+title: "Многопоточность с помощью компонента BackgroundWorker (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Пошаговое руководство: Многопоточность с помощью компонента BackgroundWorker (Visual Basic)
-В этом пошаговом руководстве демонстрируется создание многопоточного приложения Windows Forms, которое выполняет поиск вхождений слова в текстовом файле. Демонстрируется следующее:  
+В этом пошаговом руководстве описывается создание многопоточного приложения Windows Forms, которое выполняет поиск заданного слова в текстовом файле. В нем демонстрируются:  
   
--   Определение класса с методом, который может быть вызван <xref:System.ComponentModel.BackgroundWorker>компонента.</xref:System.ComponentModel.BackgroundWorker>  
+-   Определение класса с методом, который может вызываться компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Обработка событий, вызванных <xref:System.ComponentModel.BackgroundWorker>компонента.</xref:System.ComponentModel.BackgroundWorker>  
+-   Обработка событий, вызываемых компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Запуск <xref:System.ComponentModel.BackgroundWorker>компонент для выполнения метода.</xref:System.ComponentModel.BackgroundWorker>  
+-   Запуск компонента <xref:System.ComponentModel.BackgroundWorker> для выполнения метода.  
   
--   Реализация `Cancel` кнопку, которая останавливает <xref:System.ComponentModel.BackgroundWorker>компонента.</xref:System.ComponentModel.BackgroundWorker>  
+-   Реализация кнопки `Cancel`, которая останавливает компонент <xref:System.ComponentModel.BackgroundWorker>.  
   
 ### <a name="to-create-the-user-interface"></a>Создание пользовательского интерфейса  
   
 1.  Откройте новый проект приложения Windows Forms Visual Basic и создайте форму с именем `Form1`.  
   
-2.  Добавьте две кнопки и четыре текстовых поля для `Form1`.  
+2.  Добавьте две кнопки и четыре текстовых поля в `Form1`.  
   
-3.  Присвойте имена объектам, как показано в следующей таблице.  
+3.  Присвойте им имена, как показано в следующей таблице.  
   
     |Объект|Свойство|Параметр|  
     |------------|--------------|-------------|  
-    |Первая кнопка|`Name`, `Text`|Запуск, запуск|  
-    |Вторая кнопка|`Name`, `Text`|"Отмена", "Отмена"|  
-    |Первое текстовое поле|`Name`, `Text`|SourceFile,»»|  
-    |Второе текстовое поле|`Name`, `Text`|CompareString,»»|  
-    |Третье текстовое поле|`Name`, `Text`|WordsCounted, «0»|  
-    |Четвертое текстовое поле|`Name`, `Text`|LinesCounted, «0»|  
+    |Первая кнопка|`Name`, `Text`|Пуск, Пуск|  
+    |Вторая кнопка|`Name`, `Text`|Отмена, Отмена|  
+    |Первое текстовое поле|`Name`, `Text`|SourceFile, ""|  
+    |Второе текстовое поле|`Name`, `Text`|CompareString, ""|  
+    |Третье текстовое поле|`Name`, `Text`|WordsCounted, "0"|  
+    |Четвертое текстовое поле|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  Добавьте метку рядом с каждым текстовым полем. Задать `Text` свойства для каждой метки, как показано в следующей таблице.  
+4.  Добавьте метку рядом с каждым текстовым полем. Задайте свойство `Text` для каждой метки, как показано в следующей таблице.  
   
     |Объект|Свойство|Параметр|  
     |------------|--------------|-------------|  
     |Первая метка|`Text`|Исходный файл|  
-    |Второй метки|`Text`|Строка для сравнения|  
-    |Третья надпись|`Text`|Совпадающих слов|  
-    |Четвертая надпись|`Text`|Строки инвентаризации|  
+    |Вторая метка|`Text`|Сравнение строк|  
+    |Третья метка|`Text`|Совпадающие слова|  
+    |Четвертая метка|`Text`|Число строк|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Чтобы создать компонент BackgroundWorker и подписаться на его события  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Создание компонента BackgroundWorker и подписка на его события  
   
-1.  Добавление <xref:System.ComponentModel.BackgroundWorker>из **компоненты** раздел **элементов** к форме.</xref:System.ComponentModel.BackgroundWorker> Он будет отображаться в области компонентов формы.  
+1.  Добавьте в форму компонент <xref:System.ComponentModel.BackgroundWorker> из раздела **Компоненты** в **панели элементов**. Он будет отображаться в области компонентов формы.  
   
 2.  Задайте следующие свойства для объекта BackgroundWorker1.  
   
     |Свойство|Параметр|  
     |--------------|-------------|  
     |`WorkerReportsProgress`|Да|  
-    |`WorkerSupportsCancellation`|Да|  
+    |`WorkerSupportsCancellation`|True|  
   
-### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Чтобы определить метод, который будет выполняться в отдельном потоке  
+### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Определение метода, который будет выполняться в отдельном потоке  
   
-1.  От **проекта** меню, выберите **добавить класс** Чтобы добавить класс в проект. **Add New Item** диалоговое окно.  
+1.  В меню **Проект** меню выберите пункт **Добавить класс**, чтобы добавить класс в проект. Откроется диалоговое окно **Добавление нового элемента**.  
   
-2.  Выберите **класса** из окна «Шаблоны» и введите `Words.vb` в поле имя.  
+2.  Выберите **Класс** в окне "Шаблоны" и введите `Words.vb` в поле имени.  
   
-3.  Нажмите кнопку **Добавить**. `Words` Отображаться класса.  
+3.  Нажмите кнопку **Добавить**. Отобразится класс `Words`.  
   
 4.  Добавьте следующий код в класс `Words` :  
   
@@ -173,7 +165,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-handle-events-from-the-thread"></a>Обработка событий из потока  
   
--   Добавьте следующие обработчики событий главную форму:  
+-   Добавьте в основную форму следующие обработчики событий:  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,7 +197,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Чтобы запустить и вызвать новый поток, который выполняется метод WordCount  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Запуск и вызов нового потока, выполняющего метод WordCount  
   
 1.  Добавьте в программу следующие процедуры:  
   
@@ -241,7 +233,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-2.  Вызов `StartThread` метод `Start` кнопки на форме:  
+2.  Вызовите метод `StartThread` из кнопки `Start` в вашей форме:  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Чтобы реализовать кнопку Cancel, которая останавливает поток.  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Реализация кнопки "Отмена", останавливающей поток  
   
--   Вызов `StopThread` процедуру `Click` обработчик событий для `Cancel` кнопки.  
+-   Вызовите процедуру `StopThread` из обработчика событий `Click` для кнопки `Cancel`.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -261,30 +253,30 @@ ms.lasthandoff: 03/13/2017
     ```  
   
 ## <a name="testing"></a>Тестирование  
- Теперь можно протестировать приложение, чтобы убедиться в том, что он работает правильно.  
+ Теперь вы можете протестировать приложение и убедиться в том, что оно работает правильно.  
   
 #### <a name="to-test-the-application"></a>Тестирование приложения  
   
 1.  Нажмите клавишу F5 для запуска приложения.  
   
-2.  При отображении формы, введите путь к файлу для файла, необходимо протестировать в `sourceFile` поле. Например предположим, что файл теста именем Test.txt, введите C:\Test.txt.  
+2.  В открывшейся форме введите путь к файлу, который нужно протестировать, в поле `sourceFile`. Например, если тестовый файл называется Test.txt, введите C:\Test.txt.  
   
-3.  В втором текстовом поле введите слово или фразу для поиска в текстовом файле приложения.  
+3.  Во втором текстовом поле введите слово или фразу для поиска приложения в текстовом файле.  
   
-4.  Нажмите кнопку `Start`. `LinesCounted` Кнопка должна немедленно начать увеличение счета. Приложение отображает сообщение «Завершения подсчета» после ее завершения.  
+4.  Нажмите кнопку `Start`. Значение на кнопке `LinesCounted` начнет увеличиваться незамедлительно. По завершении в приложении отобразится сообщение "Подсчет завершен".  
   
-#### <a name="to-test-the-cancel-button"></a>Чтобы проверить работу кнопки Cancel  
+#### <a name="to-test-the-cancel-button"></a>Тестирование кнопки "Отмена"  
   
-1.  Нажмите клавишу F5 для запуска приложения и введите файла и имя слово, как описано в предыдущей процедуре. Убедитесь, что выбранный файл достаточно велик, чтобы можно было отменить процедуру до ее завершения.  
+1.  Нажмите клавишу F5 для запуска приложения, а затем введите имя файла и слово для поиска, как описано в предыдущей процедуре. Убедитесь, что выбранный файл достаточно большой для того, чтобы процедуру можно было отменить до ее завершения.  
   
-2.  Щелкните `Start` кнопку, чтобы запустить приложение.  
+2.  Нажмите кнопку `Start`, чтобы запустить приложение.  
   
-3.  Нажмите кнопку `Cancel`. Приложение должно немедленно прекратить подсчет.  
+3.  Нажмите кнопку `Cancel`. Приложение должно незамедлительно прекратить подсчет.  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
- Это приложение содержит обработка некоторых основных ошибок. Он обнаруживает пустые строки поиска. Эту программу можно сделать более надежным, обработку других ошибок, например превышения максимального числа слов или строк, которые могут быть подсчитаны.  
+ Это приложение включает обработку некоторых основных ошибок. Оно выявляет пустые строки поиска. Программу можно сделать более надежной за счет обработки других ошибок, например, превышения максимального числа слов или строк, которые могут быть подсчитаны.  
   
 ## <a name="see-also"></a>См. также  
- [Работа с потоками (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Пошаговое руководство: Разработка простого многопоточного компонента с помощью Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) (Работа с потоками (Visual Basic))  
+ [Пошаговое руководство: Разработка простого многопоточного компонента с помощью Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Практическое руководство. Подписка и отмена подписки на события](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

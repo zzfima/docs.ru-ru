@@ -1,26 +1,22 @@
 ---
-title: "Рефакторинг в чистые функции (Visual Basic) | Документы Microsoft"
+title: "Рефакторинг в чистые функции (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Рефакторинг в чистые функции (Visual Basic)
 Важным аспектом чисто функциональных преобразований является освоение способов оптимизации существующего кода для получения чистых функций.  
@@ -62,7 +58,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Обратите внимание, что учитывается ли изменяемые данные `public` или `private` доступ, или `shared` член или члены экземпляров. Чистая функция не изменяет не относящиеся к ней данные.  
+ Обратите внимание, что нет никакой разницы, имеет ли изменяемые данные `public` или `private` доступ, или `shared` член или член экземпляра. Чистая функция не изменяет не относящиеся к ней данные.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Обычная функция, изменяющая аргумент  
  Более того, следующая версия той же функции представляет собой обычную функцию, поскольку изменяет содержимое своего параметра `sb`.  
@@ -81,7 +77,7 @@ Module Module1
 End Module  
 ```  
   
- Эта версия программы дает те же результаты, что и первая версия, поскольку `HypenatedConcat` функция изменила значение (состояние) своего первого параметра, вызвав <xref:System.Text.StringBuilder.Append%2A>функции-члена.</xref:System.Text.StringBuilder.Append%2A> Обратите внимание, что это изменение происходит несмотря на то, что функция `HypenatedConcat` использует передачу параметра по значению.  
+ Эта версия программы дает те же выходные данные, что и первая версия, поскольку функция `HypenatedConcat` изменила значение (состояние) своего первого параметра, вызвав функцию-член <xref:System.Text.StringBuilder.Append%2A>. Обратите внимание, что это изменение происходит несмотря на то, что функция `HypenatedConcat` использует передачу параметра по значению.  
   
 > [!IMPORTANT]
 >  Передача параметров по значению для ссылочных типов приводит к созданию копии ссылки на передаваемый объект. Эта копия все еще связана с теми же данными экземпляра, что и первоначальная ссылка (пока ссылочная переменная не будет присвоена новому объекту). Вызов по значению необязательно требуется функции для изменения параметра.  
@@ -110,8 +106,8 @@ End Module
 ## <a name="standard-query-operators"></a>Стандартные операторы запроса  
  Важной характеристикой стандартных операторов запросов является то, что они реализуются как чистые функции.  
   
- Дополнительные сведения см. в разделе [Обзор операторов стандартных запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Дополнительные сведения см. в разделе [стандартные Обзор операторов запросов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>См. также  
- [Введение в чисто функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [Сравнение функционального и Императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

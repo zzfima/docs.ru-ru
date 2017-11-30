@@ -1,30 +1,33 @@
 ---
-title: "Практическое руководство. Размещение службы WCF в WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Размещение службы WCF в WAS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3069dfbde9fedc0a0c89d8f55ba1adcc852d5c24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Размещение службы WCF в WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В настоящем разделе описаны основные этапы, требуемые для создания служб активации процесса Windows (также известных как WAS), размещенных в службе [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. WAS является службой активации нового процесса, представляющей собой обобщение функций Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы, отличные от HTTP, которые поддерживаются [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], например такие как TCP, именованные каналы и MSMQ.  
   
- Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]для установки и настройки WAS см. в разделе [Практическое руководство: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Установка и настройка WAS, в разделе [как: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  Активация WAS не поддерживается, если канал обработки запросов веб-сервера работает в классическом режиме. Чтобы использовать активацию WAS, канал обработки запросов веб-сервера необходимо перевести в интегрированный режим.  
   
- Если служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещается в WAS, стандартные привязки используются обычным способом. Тем не менее при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
+ Если служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещается в WAS, стандартные привязки используются обычным способом. Однако при использовании <xref:System.ServiceModel.NetTcpBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> для настройки служб, размещенных на WAS, ограничение должно быть удовлетворено. Если разные конечные точки используют один и тот же транспорт, параметры привязки должны соответствовать семи следующим свойствам:  
   
 -   ConnectionBufferSize  
   
@@ -40,9 +43,9 @@ caps.handback.revision: 25
   
 -   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
- В противном случае — конечной точки, которое инициализируется первой, всегда определяет значения этих свойств, а добавленные позже конечные точки throw <xref:System.ServiceModel.ServiceActivationException> , если они не совпадают с этими настройками.  
+ В противном случае, конечная точка, запущенная первой, всегда определяет значения этих параметров, а добавленные позже конечные точки, если они не совпадают с этими настройками, вызывают <xref:System.ServiceModel.ServiceActivationException>.  
   
- Копию исходного кода в этом примере см. в разделе [активации TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
+ Исходная копия в этом примере в разделе [активации TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Создание базовой службы, размещенной на WAS  
   
@@ -54,7 +57,7 @@ caps.handback.revision: 25
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Создайте файл Web.config, чтобы определить <xref:System.ServiceModel.NetTcpBinding> привязки для использования `CalculatorService` конечных точек.  
+3.  Создайте файл Web.config, чтобы определить привязку <xref:System.ServiceModel.NetTcpBinding> для использования конечными точками `CalculatorService`.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -95,9 +98,9 @@ caps.handback.revision: 25
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding> также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
+4.  Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding>, также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
   
-     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
+     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
 5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   
@@ -106,5 +109,5 @@ caps.handback.revision: 25
 6.  Скомпилируйте и запустите клиент.  
   
 ## <a name="see-also"></a>См. также  
- [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)   
- [Функции размещения фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [Функции размещения Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)

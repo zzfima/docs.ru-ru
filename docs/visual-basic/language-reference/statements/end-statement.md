@@ -1,69 +1,68 @@
 ---
-title: "Оператор End | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.End"
-  - "End"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "код, выход"
-  - "End - ключевое слово, End - операторы"
-  - "End - оператор"
-  - "выполнение, завершение"
-  - "выполнение, остановка"
-  - "файлы, закрытие"
-  - "завершение программы"
-  - "программы, выход"
+title: "Оператор End"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.End
+- End
+helpviewer_keywords:
+- execution [Visual Basic], ending
+- files [Visual Basic], closing
+- End keyword [Visual Basic], End statements
+- programs [Visual Basic], quitting
+- code, exiting
+- program termination
+- End statement [Visual Basic]
+- execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор End
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
+# <a name="end-statement"></a>Оператор End
 Немедленно прекращает выполнение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 End  
 ```  
   
-## Заметки  
- Оператор `End` можно поместить любое место в процедуре, чтобы заставить все приложение остановиться.  `End` закрывает все файлы, открытые оператором `Open` и очищает все переменные приложения.  Приложение закрывается, как только не останется других программ, поддерживающих ссылки на его объекты, и код программы не будет выполняться.  
+## <a name="remarks"></a>Примечания  
+ Можно поместить `End` инструкции в любом месте процедуры для принудительного завершения работы всего приложения. `End`Закрывает все файлы, открытые с `Open` инструкции и очищает все переменные приложения. Приложение закрывается сразу нет других программ, поддерживающих ссылки на его объекты, и его код не выполняются.  
   
 > [!NOTE]
->  Оператор `End` резко останавливает выполнение кода, и не вызывает метод `Dispose` или `Finalize`, или любой другой код Visual Basic.  Ссылки на объекты, хранящиеся в других программах, становятся недействительными.  Если оператор `End` оказывается внутри блока `Try` или `Catch`, управление не передается в соответствующий блок `Finally`.  
+>  `End` Инструкция немедленно прекращает выполнение кода и не вызывает `Dispose` или `Finalize` метода или любого другого кода в Visual Basic. Ссылки на объекты, хранящиеся в других программах, становятся недействительными. Если `End` встречается в `Try` или `Catch` в соответствующий блок управления не проходит `Finally` блока.  
   
- Оператор `Stop` приостанавливает выполнение, однако, в отличие от `End`, не закрывает файлы и не очищает переменные, если только не встречается в скомпилированном исполняемом файле \(с расширением EXE\).  
+ `Stop` Оператор приостанавливает выполнение, но в отличие от `End`, не закрывает файлы и не удаляет переменные, если только встречается в компилируемый исполняемый файл (.exe) файл.  
   
- Поскольку оператор `End` завершает приложение, не обращая внимания на какие\-либо ресурсы, которые могут быть открыты, следует попробовать аккуратно закрыть их перед его использованием.  Например, если в приложении имеются открытые формы, их следует закрыть перед передачей управления оператору `End`.  
+ Поскольку `End` завершает приложение, не обращая внимания к ресурсам, которые могут быть открыты, следует попытаться закрытия без ошибок, перед его использованием. Например, если приложение имеет открытые формы, их следует закрыть перед управления достигает `End` инструкции.  
   
- Не следует часто применять оператор `End`, только когда требуется немедленно прекратить выполнение приложения.  Обычные способы завершения процедуры \([Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) и [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)\) не только аккуратно завершают процедуру, но также дают вызывающему коду возможность безопасного закрытия приложения.  Для консольного приложения, например, можно просто использовать `Return` из процедуры `Main`.  
+ Следует использовать `End` только в случае необходимости и только при необходимости для немедленной остановки. Обычным способом, чтобы завершить процедуру ([оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) и [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md)) не только аккуратно закрыть процедуры, но также предоставить возможность закрытия аккуратно вызывающий код. В консольном приложении, например, можно просто `Return` из `Main` процедуры.  
   
 > [!IMPORTANT]
->  Оператор `End` вызывает метод <xref:System.Environment.Exit%2A> класса <xref:System.Environment> в пространстве имен <xref:System>.  <xref:System.Environment.Exit%2A> требует иметь разрешение `UnmanagedCode`.  Иначе создается исключение <xref:System.Security.SecurityException>.  
+>  `End` Инструкция вызывает <xref:System.Environment.Exit%2A> метод <xref:System.Environment> класса в <xref:System> пространства имен. <xref:System.Environment.Exit%2A>требует наличия `UnmanagedCode` разрешение. Если нет, <xref:System.Security.SecurityException> возникает ошибка.  
   
- Если после [Оператор End \<ключевое\_слово\>](../../../visual-basic/language-reference/statements/end-keyword-statement.md) указано ключевое слово, это означает конец определения соответствующей процедуры или блока.  Например, `End Function` завершает определение процедуры `Function`.  
+ Если за ним следует дополнительных ключевых слов, [окончания \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md) отделяет конец определения соответствующей процедуры или блока. Например `End Function` завершает определение `Function` процедуры.  
   
-## Пример  
- В приведенном ниже примере оператор `End` используется для завершения выполнения кода по требованию пользователя.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `End` инструкции для завершения выполнения по требованию пользователя.  
   
  [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
-## Примечания для разработчиков приложений смарт\-устройств  
- Этот оператор не поддерживается.  
+## <a name="smart-device-developer-notes"></a>Примечания для разработчиков интеллектуальных устройств  
+ Эта инструкция не поддерживается.  
   
-## См. также  
- <xref:System.Security.Permissions.SecurityPermissionFlag>   
- [Оператор Stop](../../../visual-basic/language-reference/statements/stop-statement.md)   
- [Оператор End \<ключевое\_слово\>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Security.Permissions.SecurityPermissionFlag>  
+ [Оператор Stop](../../../visual-basic/language-reference/statements/stop-statement.md)  
+ [Конец \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

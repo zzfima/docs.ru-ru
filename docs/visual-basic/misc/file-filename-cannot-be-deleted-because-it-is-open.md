@@ -1,26 +1,28 @@
 ---
-title: "Не удается удалить файл &quot;&lt;имя_файла&gt;&quot;, так как он открыт | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFileSystem_FileAlreadyOpen1"
+title: "Файл &#39; &lt;filename&gt;&#39; нельзя удалить, поскольку он открыт"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b96c13498286c914191fc5b944f80be5b1d05db3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Не удается удалить файл &quot;&lt;имя_файла&gt;&quot;, так как он открыт
+# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Файл &#39; &lt;filename&gt;&#39; нельзя удалить, поскольку он открыт
 Предпринята попытка удаления открытого файла.  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Закройте файл перед его удалением.  
   
-## См. также  
- [НЕ В СБОРКЕ. Функция FileClose](http://msdn.microsoft.com/ru-ru/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)   
- [Метод My.Computer.FileSystem.DeleteFile](http://msdn.microsoft.com/ru-ru/07637b38-bd99-49b1-8cc0-dc37cdb14dba)   
+## <a name="see-also"></a>См. также  
+ [НЕ в СБОРКЕ: Функция FileClose](http://msdn.microsoft.com/en-us/f307b39f-a996-4ff6-ab13-e0b05ea5ab91)  
+ [Метод My.Computer.FileSystem.DeleteFile](http://msdn.microsoft.com/en-us/07637b38-bd99-49b1-8cc0-dc37cdb14dba)  
  [Объект My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

@@ -1,89 +1,85 @@
 ---
-title: "Свойство значения XML (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.XmlPropertyExtensionValue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Value - свойство [Visual Basic]"
-  - "код Visual Basic, доступ к XML"
-  - "оси XML [Visual Basic], Значение"
-  - "XML Value - свойство [Visual Basic]"
+title: "Свойство значения XML (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.XmlPropertyExtensionValue
+helpviewer_keywords:
+- Value property [Visual Basic]
+- Visual Basic code, accessing XML
+- XML axis [Visual Basic], Value
+- XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6c52ac09e209d6e3f0cfd877a071cbbe3ab96f18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Свойство значения XML (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Предоставляет доступ к значению первого элемента из коллекции объектов <xref:System.Xml.Linq.XElement>.  
+# <a name="xml-value-property-visual-basic"></a>Свойство значения XML (Visual Basic)
+Предоставляет доступ к значению первого элемента из коллекции <xref:System.Xml.Linq.XElement> объектов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 object.Value  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`object`|Обязательный.  Коллекция объектов <xref:System.Xml.Linq.XElement>.|  
+|---|---|  
+|`object`|Обязательный. Коллекция объектов <xref:System.Xml.Linq.XElement>.|  
   
-## Возвращаемое значение  
- `String`, содержащая значение первого элемента коллекции, или `Nothing`, если коллекция пуста.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Объект `String` , содержащий значение первого элемента коллекции, или `Nothing` Если возвращается пустая коллекция.  
   
-## Заметки  
- Свойство <xref:System.Xml.Linq.XElement.Value%2A> упрощает доступ к значению первого элемента в коллекции объектов <xref:System.Xml.Linq.XElement>.  Это свойство сначала проверяет, содержит ли коллекция по крайней мере один объект.  Если коллекция пуста, это свойство возвращает `Nothing`.  В противном случае это свойство возвращает значение свойства <xref:System.Xml.Linq.XElement.Value%2A> первого элемента в коллекции.  
+## <a name="remarks"></a>Примечания  
+ <xref:System.Xml.Linq.XElement.Value%2A> Свойство позволяет легко обращаться к значению первого элемента в коллекции <xref:System.Xml.Linq.XElement> объектов. Это свойство сначала проверяет, содержит ли коллекция хотя бы один объект. Если коллекция пуста, это свойство возвращает `Nothing`. В противном случае это свойство возвращает значение <xref:System.Xml.Linq.XElement.Value%2A> свойства первого элемента в коллекции.  
   
 > [!NOTE]
->  При обращении к значению XML\-атрибута с помощью идентификатора '@', значение атрибута возвращается как `String` и не нужно явно задавать свойство <xref:System.Xml.Linq.XAttribute.Value%2A>.  
+>  При доступе к значение атрибута XML с помощью "@", значение атрибута возвращается идентификатор как `String` и вам не нужно явно указать <xref:System.Xml.Linq.XAttribute.Value%2A> свойство.  
   
- Можно использовать свойство индексатора расширения XML для доступа к другим элементам коллекции.  Дополнительные сведения см. в разделе [Свойство\-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Чтобы получить доступ к другим элементам в коллекции, можно использовать свойство-индексатор расширения XML. Дополнительные сведения см. в разделе [свойство-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
-## Наследование  
- Большинству пользователей не придется реализовывать <xref:System.Collections.Generic.IEnumerable%601>, следовательно, можно проигнорировать этот раздел.  
+## <a name="inheritance"></a>Наследование  
+ Большинство пользователей не будет реализовать <xref:System.Collections.Generic.IEnumerable%601>и поэтому может игнорировать в этом разделе.  
   
- Свойство <xref:System.Xml.Linq.XElement.Value%2A> является расширением свойства для типов, реализующих `IEnumerable(Of XElement)`.  Привязка этого расширенного свойства похожа на привязку методов расширения: если тип реализует один из интерфейсов и определяет свойство с именем "Value", это свойство имеет приоритет перед свойством расширения.  Другими словами, свойство <xref:System.Xml.Linq.XElement.Value%2A> можно переопределять при помощи определения нового свойства в классе, который реализует `IEnumerable(Of XElement)`.  
+ <xref:System.Xml.Linq.XElement.Value%2A> Свойство расширения для типов, реализующих `IEnumerable(Of XElement)`. Привязка этого расширенного свойства — как привязка методов расширения: Если тип реализует один из интерфейсов и определяет свойство с именем «Значение», это свойство имеет приоритет над свойством расширения. Другими словами, это <xref:System.Xml.Linq.XElement.Value%2A> свойство может быть переопределено, определив новое свойство в класс, реализующий `IEnumerable(Of XElement)`.  
   
-## Пример  
- В следующем примере показано использование свойства <xref:System.Xml.Linq.XElement.Value%2A> для доступа к первому узлу в коллекции объектов <xref:System.Xml.Linq.XElement>.  В примере используется свойство дочерней оси для получения коллекции всех дочерних узлов с именами `phone`, находящихся в объекте `contact`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать <xref:System.Xml.Linq.XElement.Value%2A> свойство для доступа к первым узлом в коллекцию <xref:System.Xml.Linq.XElement> объектов. В примере используется свойство дочерней оси для получения коллекции всех дочерних узлов с именем `phone` , находящихся в `contact` объекта.  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
- В этом коде отображается следующий текст:  
+ Этот пример кода отображает следующий текст:  
   
  `Phone number: 206-555-0144`  
   
-## Пример  
- В следующем примере показано получение значения XML\-атрибута из коллекции объектов <xref:System.Xml.Linq.XAttribute>.  В примере свойство атрибута оси применяется для отображения значения атрибута `type` для всех элементов `phone`.  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как получить значение атрибута XML из коллекции <xref:System.Xml.Linq.XAttribute> объектов. В примере используется свойство оси атрибута для отображения значения `type` атрибутов для всех `phone` элементов.  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
- В этом коде отображается следующий текст:  
+ Этот пример кода отображает следующий текст:  
   
  `home`  
   
  `work`  
   
-## См. также  
- <xref:System.Xml.Linq.XElement>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [XML\-литералы](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Свойство\-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)   
- [Свойство дочерней оси XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Xml.Linq.XElement>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ [Свойство индексатора расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
+ [Свойство дочерней оси XML](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
  [Свойство оси атрибута XML](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

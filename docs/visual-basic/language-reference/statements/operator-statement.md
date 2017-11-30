@@ -1,191 +1,189 @@
 ---
-title: "Оператор Operator | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.operator"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CType - функция, Operator - оператор"
-  - "Narrowing - ключевое слово, операторы преобразования"
-  - "перегрузка операторов"
-  - "процедуры операторов"
-  - "Operator - оператор"
-  - "операторы [Visual Basic]"
-  - "операторы [Visual Basic], перегрузка"
-  - "перегруженные операторы"
-  - "процедуры, оператор"
-  - "синтаксис, Процедуры операторов"
-  - "код Visual Basic, операторы"
-  - "Widening - ключевое слово, операторы преобразования"
+title: Operator Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.operator
+helpviewer_keywords:
+- operators [Visual Basic]
+- procedures [Visual Basic], operator
+- Narrowing keyword [Visual Basic], conversion operators
+- Visual Basic code, operators
+- Widening keyword [Visual Basic], conversion operators
+- syntax [Visual Basic], Operator procedures
+- operators [Visual Basic], overloading
+- overloaded operators [Visual Basic]
+- operator overloading
+- operator procedures
+- Operator statement [Visual Basic]
+- CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Operator
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет символ оператора, операнды и код, определяющие процедуру оператора с классом или структурой.  
+# <a name="operator-statement"></a>Operator Statement
+Объявляет символ оператора, операнды и код, которые определяют процедуру оператора для класса или структуры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]   
-Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]  
+[ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]   
+Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]  
     [ statements ]  
     [ statements ]  
-    Return returnvalue  
+    Return returnvalue  
     [ statements ]  
 End Operator  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `attrlist`  
- Необязательный.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `Public`  
- Обязательный.  Означает, что эта процедура оператора имеет доступ [Public](../../../visual-basic/language-reference/modifiers/public.md).  
+ Обязательный. Указывает, что эта процедура оператора [открытый](../../../visual-basic/language-reference/modifiers/public.md) доступа.  
   
  `Overloads`  
- Необязательный.  Дополнительные сведения см. в разделе [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ Необязательно. В разделе [перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
- Обязательный.  Указывает, что эта процедура оператора является процедурой [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
+ Обязательный. Указывает, что эта процедура оператора [Shared](../../../visual-basic/language-reference/modifiers/shared.md) процедуры.  
   
  `Shadows`  
- Необязательный.  Дополнительные сведения см. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Необязательно. В разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
- Требуется для оператора преобразования, если не указан `Narrowing`.  Указывает, что эта процедура оператора определяет преобразование [Widening](../../../visual-basic/language-reference/modifiers/widening.md).  См. раздел "Расширяющие и сужающие преобразования" на этой странице справки.  
+ Требуется для оператора преобразования, если не указать `Narrowing`. Указывает, что эта процедура оператора определяет [Widening](../../../visual-basic/language-reference/modifiers/widening.md) преобразования. В разделе «Расширяющие и сужающие преобразования» на этой странице справки.  
   
  `Narrowing`  
- Требуется для оператора преобразования, если не указан `Widening`.  Указывает, что эта процедура оператора определяет преобразование [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md).  См. раздел "Расширяющие и сужающие преобразования" на этой странице справки.  
+ Требуется для оператора преобразования, если не указать `Widening`. Указывает, что эта процедура оператора определяет [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) преобразования. В разделе «Расширяющие и сужающие преобразования» на этой странице справки.  
   
  `operatorsymbol`  
- Обязательный.  Символ или идентификатор оператора, который определяет эта процедура оператора.  
+ Обязательный. Символ или идентификатор оператора, который определяет Эта процедура оператора.  
   
  `operand1`  
- Обязательный.  Имя и тип одного операнда унарного оператора \(включая оператор преобразования\) или левого операнда бинарного оператора.  
+ Обязательный. Имя и тип одного операнда унарного оператора (включая оператор преобразования) или левого операнда бинарного оператора.  
   
  `operand2`  
- Требуется для бинарных операторов.  Имя и тип правого операнда бинарного оператора.  
+ Требуется для бинарных операторов. Имя и тип правого операнда бинарного оператора.  
   
- `operand1` and `operand2` имеют следующий синтаксис и составляющие:  
+ `operand1`и `operand2` имеет следующий синтаксис и компоненты:  
   
- `[ ByVal ] operandname [ As operandtype ]`  
+ `[ ByVal ] operandname [ As operandtype ]`  
   
-|Часть|Описание|  
-|-----------|--------------|  
+|Отделение|Описание|  
+|----------|-----------------|  
 |`ByVal`|Необязательно, но механизм передачи должен быть [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Обязательный.  Имя переменной, представляющей этот операнд.  См. раздел [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`operandtype`|Необязательно, если `Option Strict` не установлен в `On`.  Тип данных этого операнда.|  
+|`operandname`|Обязательный. Имя переменной, представляющей этот операнд. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`operandtype`|Необязательный Если `Option Strict` — `On`. Тип данных этого операнда.|  
   
  `type`  
- Необязательно, если `Option Strict` не установлен в `On`.  Тип данных значения, возвращаемый процедурой оператора.  
+ Необязательный Если `Option Strict` — `On`. Возвращает тип данных значения процедура оператора.  
   
  `statements`  
- Необязательный.  Блок операторов, который возвращает процедура оператора.  
+ Необязательно. Блок операторов, процедура оператора.  
   
  `returnvalue`  
- Обязательный.  Значение, которое процедура оператора возвращает в вызывающий код.  
+ Обязательный. Значение, которое процедура оператора возвращает в вызывающий код.  
   
  `End` `Operator`  
- Обязательный.  Завершает определение данной процедуры оператора.  
+ Обязательный. Завершает определение данной процедуры оператора.  
   
-## Заметки  
- `Operator` можно использовать только в классе или структуре.  Это означает, что *контекст объявления* для оператора не может быть исходным файлом, пространством имен, модулем, интерфейсом, процедурой или блоком.  Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+## <a name="remarks"></a>Примечания  
+ Можно использовать `Operator` только в классе или структуре. Это означает *контекст объявления* оператор не может быть исходный файл, пространство имен, модуля, интерфейса, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Все операторы должны быть `Public Shared`.  Нельзя указывать `ByRef` `Optional` или `ParamArray` ни для одно из операндов.  
+ Все операторы должны быть `Public Shared`. Нельзя указать `ByRef`, `Optional`, или `ParamArray` для любой из операндов.  
   
- Нельзя использовать символ оператора или идентификатор для хранения возвращаемого значения.  Оператор `Return` необходимо использовать и он должен задавать значение.  В любом месте процедуры может присутствовать любое количество операторов `Return`.  
+ Нельзя использовать символ оператора или идентификатор для хранения возвращаемого значения. Необходимо использовать `Return` оператор, который необходимо указать значение. Любое количество `Return` операторы могут использоваться в любом месте в процедуре.  
   
- Определение оператора таким образом называется *перегрузкой оператора* независимо от того, используется ли ключевое слово `Overloads`.  В следующей таблице перечислены операторы, которые можно определить.  
+ Определение оператора таким образом называется *перегрузка операторов*, независимо от того, имеется ли вы использовать `Overloads` ключевое слово. В приведенной ниже таблице перечислены операторы, которые можно определить.  
   
 |Тип|Операторы|  
-|---------|---------------|  
+|----------|---------------|  
 |Унарный|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
 |Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|Преобразование \(унарный\)|`CType`|  
+|Преобразование (унарный)|`CType`|  
   
- Обратите внимание, что оператор `=` в списке бинарных является оператором сравнения, а не оператором присваивания.  
+ Обратите внимание, что `=` в списке бинарных является оператором сравнения, не оператором присваивания.  
   
- При определении `CType` необходимо указать либо `Widening`, либо `Narrowing`.  
+ При определении `CType`, необходимо указать либо `Widening` или `Narrowing`.  
   
-## Совпадающие пары  
- Необходимо определить конкретные операторы в виде совпадающих пар.  Если определен один оператор такой пары, необходимо определить и другой.  Следующие пары являются соответствующими:  
+## <a name="matched-pairs"></a>Совпадающие пары  
+ Необходимо определить определенные операторы как пары. Если определен один оператор такой пары, необходимо определить другой. Ниже перечислены соответствующие пары.  
   
 -   `=` и `<>`.  
   
--   `>` и `<`.  
+-   `>` и `<`  
   
--   `>=` и `<=`.  
+-   `>=` и `<=`  
   
 -   `IsTrue` и `IsFalse`.  
   
-## Ограничения типа данных  
- Каждый определенный оператор должен включать класс или структуру, по которой он определяется.  Это значит, что класс или структура должны фигурировать как тип данных следующих:  
+## <a name="data-type-restrictions"></a>Ограничения типа данных  
+ Каждый оператор должен включать класса или структуры, в которой вы его определяете. Это означает, что класс или структура должно отображаться как тип данных из следующих:  
   
 -   Операнд унарного оператора.  
   
 -   По крайней мере один из операндов бинарного оператора.  
   
--   Или операнд или тип возвращаемого оператором преобразования значения.  
+-   Операнд или тип возвращаемого значения оператора преобразования.  
   
  Некоторые операторы имеют дополнительные ограничения типа данных, как показано ниже:  
   
--   Если определить операторы `IsTrue` и `IsFalse`, они должны о возвращать тип `Boolean`.  
+-   Если определить `IsTrue` и `IsFalse` операторов, они должны оба возвращать `Boolean` типа.  
   
--   Если определены операторы `<<` и `>>`, они оба должны задавать тип `Integer` для `operandtype` `operand2`.  
+-   Если определить `<<` и `>>` операторы, их необходимо указать `Integer` тип для `operandtype` из `operand2`.  
   
- Возвращаемый тип не должен в обязательном порядке соответствовать типу одного из операндов.  Например, такое оператор сравнения, как `=` или `<>`, может возвращать событие `Boolean` даже в том случае, если ни один операнд не имеет тип `Boolean`.  
+ Для соответствия типу одного из операндов имеет тип возвращаемого значения. Например, оператор сравнения, такие как `=` или `<>` может возвращать `Boolean` даже если оба операнда являются `Boolean`.  
   
-## Логические и побитовые операторы  
- Операторы `And`, `Or` `Not` и `Xor` могут выполнять в Visual Basic логические или побитовые операции.  Однако, если определить один из этих операторов на классе или структуре, можно определить только его побитовую операцию.  
+## <a name="logical-and-bitwise-operators"></a>Логические и битовые операторы  
+ `And`, `Or`, `Not`, И `Xor` операторы могут выполнять либо логические или битовые операции в Visual Basic. Тем не менее если определить один из этих операторов в классе или структуре, можно определить только его побитовую операцию.  
   
- Невозможно определить оператор `AndAlso` непосредственно оператором `Operator`.  Однако, можно использовать `AndAlso`, если выполнены следующие условия:  
+ Невозможно определить `AndAlso` оператор непосредственно с `Operator` инструкции. Тем не менее, можно использовать `AndAlso` Если выполнены следующие условия:  
   
--   Определен `And` на одинаковых типах операндов, которые требуется использовать для `AndAlso`.  
+-   Вы определили `And` с теми же типами операнд, который вы хотите использовать для `AndAlso`.  
   
--   Определение `And` возвращает тот же тип, как и класс или структура, на которой вы определили его.  
+-   Определение `And` возвращает совпадает с типом класса или структуры, на котором оно было настроено.  
   
--   Определен оператор `IsFalse` класса или структуры, на котором Вы определили `And`.  
+-   Вы определили `IsFalse` оператор в классе или структуре, на котором вы определили `And`.  
   
- Аналогично можно использовать `OrElse`, если определены `Or` на одних и тех же операндах с типом возвращаемого класса или структуры, и определено `IsTrue` на классе или структуре.  
+ Аналогично, можно использовать `OrElse` Если вы определили `Or` на теми же операндами определили с возвращаемым типом класса или структуры, и `IsTrue` для класса или структуры.  
   
-## Расширяющие и сужающие преобразования  
- *Расширяющее преобразование* всегда успешно во время выполнения, а в *сужающем преобразовании* во время выполнения может возникать сбой.  Дополнительные сведения см. в разделе [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions  
+ A *расширяющее преобразование* всегда успешно во время выполнения, хотя *сужающее преобразование* могут вызвать сбой во время выполнения. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- Если объявить процедуру преобразования `Widening`, ваш код процедуры не должен давать сбои.  Это означает следующее:  
+ При объявлении процедуры преобразования быть `Widening`, ваш код процедуры не должен давать сбои. Это означает следующее.  
   
--   Он должен всегда возвращать допустимое значение типа `type`.  
+-   Оно должно всегда возвращать допустимое значение типа `type`.  
   
 -   Он должен обрабатывать все возможные исключения и другие условия возникновения ошибок.  
   
--   Он должен обрабатывать любую ошибку, возвращаемую из любой процедуры, которую он вызывает.  
+-   Он должен обрабатывать любую ошибку, возвращаемую из любой процедуры, которые она вызывает.  
   
- Если есть вероятность того, что процедура преобразования может не завершиться или что она может вызвать необработанное исключение, необходимо объявить ее как `Narrowing`.  
+ Если есть вероятность того, что процедуры преобразования не может завершиться успешно, или что он может вызвать необработанное исключение, необходимо объявить ее `Narrowing`.  
   
-## Пример  
- В следующем примере кода с помощью оператора `Operator` определяется контур структуры, содержащей процедуры для операторов `And`, `Or`, `IsFalse` и `IsTrue`.  Операторы `And` и `Or` принимают по два операнда типа `abc` и возвращают значения типа `abc`.  Операторы `IsFalse` и `IsTrue` принимают по одному операнду типа `abc` и возвращают значения типа `Boolean`.  Эти определения позволяют вызывающему коду использовать `And` `AndAlso`, `Or` и `OrElse` с операндами типа `abc`.  
+## <a name="example"></a>Пример  
+ Следующий пример кода использует `Operator` инструкции для определения контура структуры, которая включает в себя процедуры оператора `And`, `Or`, `IsFalse`, и `IsTrue` операторы. `And`и `Or` каждый из которых принимает два операнда типа `abc` и тип возвращаемого значения `abc`. `IsFalse`и `IsTrue` каждый из которых принимает один операнд типа `abc` и возвращают `Boolean`. Эти определения позволяют вызывающий код, чтобы использовать `And`, `AndAlso`, `Or`, и `OrElse` с операндами типа `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## См. также  
- [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
- [Оператор IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Практическое руководство. Вызов процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
+ [Оператор IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)  
+ [Расширение](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
+ [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
+ [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [Практическое руководство. Вызов процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
  [Практическое руководство. Использование класса, в котором определяются операторы](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

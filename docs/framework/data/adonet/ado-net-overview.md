@@ -1,58 +1,61 @@
 ---
-title: "Общие сведения об ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Общие сведения о ADO.NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об ADO.NET
-ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC.  Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
+# <a name="adonet-overview"></a>Общие сведения о ADO.NET
+ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC. Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
   
- ADO.NET разделят доступ к данным и обработку данных на дискретные компоненты, которые могут использоваться отдельно или совместно.  ADO.NET включает поставщиков данных .NET Framework для соединения с базой данных, выполнения команд и получения результатов.  Эти результаты, помещенные в объект ADO.NET <xref:System.Data.DataSet>, обрабатываются непосредственно, чтобы они могли быть предоставлены пользователю нерегламентированным образом, объединенные с данными из многих источников или передаваемые между уровнями.  Объект `DataSet` также может независимо использоваться поставщиком данных .NET Framework для управления локальными для приложения данными или данными, источником которых является XML.  
+ ADO.NET разделят доступ к данным и обработку данных на дискретные компоненты, которые могут использоваться отдельно или совместно. ADO.NET включает поставщиков данных .NET Framework для соединения с базой данных, выполнения команд и получения результатов. Эти результаты, помещенные в объект ADO.NET <xref:System.Data.DataSet>, обрабатываются непосредственно, чтобы они могли быть предоставлены пользователю нерегламентированным образом, объединенные с данными из многих источников или передаваемые между уровнями. Объект `DataSet` также может независимо использоваться поставщиком данных .NET Framework для управления локальными для приложения данными или данными, источником которых является XML.  
   
- Классы ADO.NET имеются в System.Data.dll и интегрируются с классами XML, имеющимися в System.Xml.dll.  Сведения об образце кода, который соединяется с базой данных, получает из нее данные, а затем отображает эти данные в консоли, см. в разделе [Примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ Классы ADO.NET имеются в System.Data.dll и интегрируются с классами XML, имеющимися в System.Xml.dll. Пример кода, который подключается к базе данных получает данные из него, а затем отображаются в окне консоли, см. в разделе [примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
   
- Для разработчиков, которые пишут управляемый код, ADO.NET предоставляет функциональный набор, сходный с функциональным набором, который предоставляют объекты данных ActiveX \(ADO\) разработчикам моделей объектов собственных компонентов \(COM\).  Для доступа к данным в приложении .NET мы рекомендуем использовать ADO.NET, а не ADO.  
+ Для разработчиков, которые пишут управляемый код, ADO.NET предоставляет функциональный набор, сходный с функциональным набором, который предоставляют объекты данных ActiveX (ADO) разработчикам моделей объектов собственных компонентов (COM). Для доступа к данным в приложении .NET мы рекомендуем использовать ADO.NET, а не ADO.  
   
- ADO.NET предоставляет самый прямой способ доступа к данным в .NET Framework.  Сведения о более высоком уровне абстракции, который позволяет приложениям работать с концептуальной моделью, а не с базовой моделью хранения, см. в разделе [Платформа ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ ADO.NET предоставляет самый прямой способ доступа к данным в .NET Framework. Для более высокого уровня абстракции, который позволяет приложениям работать к концептуальной модели, а не базовой модели хранения, в разделе [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Заявление о конфиденциальности.** Сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не отличают личные данные пользователя от всех остальных данных.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные.  Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
+ **Заявление о конфиденциальности**: сборки System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll и System.Data.DataSetExtensions.dll не различать личных данных и неконфиденциальные данные пользователя.  Эти сборки не собирают, не хранят и не переносят пользовательские личные данные. Но приложения сторонних производителей могут собирать, хранить и переносить пользовательские личные данные с использованием этих сборок.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Архитектура ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Предоставляет общие сведения об архитектуре и компонентах ADO.NET.  
   
- [Рекомендации и параметры технологии ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
+ [Правила и возможности технологии ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
  Описываются продукты и технологии, входящие в состав платформы Entity Data Platform.  
   
  [LINQ и ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- Описывается реализация технологии LINQ \(Language\-Integrated Query\) в ADO.NET и приводятся ссылки на соответствующие разделы.  
+ Описывается реализация технологии LINQ (Language-Integrated Query) в ADO.NET и приводятся ссылки на соответствующие разделы.  
   
- [Поставщики данных .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Поставщики данных .NET framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Предоставляет общие сведения о конструкции поставщика данных .NET Framework и поставщиков данных .NET Framework, включенных при помощи ADO.NET.  
   
- [Объекты DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Наборы данных ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Предоставляет общие сведения о конструкции и компонентах `DataSet`.  
   
- [Параллельное выполнение в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [С одновременным выполнением в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  Рассматривает различия версий ADO.NET и их влияние на параллельное выполнение и совместимость приложений.  
   
  [Примеры кода ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
  Предоставляет образцы кода, который получает данные при помощи поставщиков данных ADO.NET.  
   
-## Связанные подразделы  
- [Новые возможности ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Представляет новые для [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] функции.  
   
  [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -61,10 +64,10 @@ ADO.NET предоставляет согласованный доступ к т
  [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Описывается сопоставление между типами данных .NET Framework и поставщиками данных .NET Framework.  
   
- [Получение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Описывает, как выполнять соединение с источником данных, получать и изменять данные.  К этому относятся `DataReaders` и `DataAdapters`.  
+ [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ Описывает, как выполнять соединение с источником данных, получать и изменять данные. К этому относятся `DataReaders` и `DataAdapters`.  
   
-## См. также  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [Доступ к данным в Visual Studio](../Topic/Accessing%20data%20in%20Visual%20Studio.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
+ [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

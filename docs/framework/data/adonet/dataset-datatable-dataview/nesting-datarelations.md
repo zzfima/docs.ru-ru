@@ -1,27 +1,33 @@
 ---
-title: "Вложенность объектов DataRelation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Вложение отношений DataRelation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Вложенность объектов DataRelation
-В реляционном представлении данных отдельные таблицы содержат строки, которые связаны друг с другом при помощи столбца или набора столбцов.  В ADO.NET <xref:System.Data.DataSet> связь между таблицами реализуется при помощи <xref:System.Data.DataRelation>.  При создании связи **DataRelation** связи столбцов типа «родитель\-потомок» управляются только через это отношение.  Таблицы и столбцы являются отдельными сущностями.  В иерархическом представлении данных, которое делает возможным XML, связи вида «родитель\-потомок» представлены родительскими элементами, которые содержат вложенные дочерние элементы.  
+# <a name="nesting-datarelations"></a>Вложение отношений DataRelation
+В реляционном представлении данных отдельные таблицы содержат строки, которые связаны друг с другом при помощи столбца или набора столбцов. В ADO.NET <xref:System.Data.DataSet> связь между таблицами реализуется при помощи <xref:System.Data.DataRelation>. При создании **DataRelation**, родительско дочерних отношений столбцов осуществляется только через это отношение. Таблицы и столбцы являются отдельными сущностями. В иерархическом представлении данных, которое делает возможным XML, связи вида «родитель-потомок» представлены родительскими элементами, которые содержат вложенные дочерние элементы.  
   
- Чтобы упростить вложенность дочерних объектов, когда набор **DataSet** синхронизируется с <xref:System.Xml.XmlDataDocument> или создается в виде XML\-данных с помощью **WriteXml**, отношение **DataRelation** предоставляет свойство **Nested**.  Когда свойству **Nested** отношения **DataRelation** задается значение **true**, дочерние строки связи вкладываются в родительский столбец, когда они написаны в виде XML\-данных или синхронизируются с **XmlDataDocument**.  По умолчанию свойству **Nested** отношения **DataRelation** задано значение **false**.  
+ Чтобы упростить вложенность дочерних объектов при **DataSet** синхронизируется с <xref:System.Xml.XmlDataDocument> или создается в виде XML-данных с помощью **WriteXml**, **DataRelation** предоставляет **Nested** свойство. Установка **Nested** свойство **DataRelation** для **true** , дочерние строки связи вкладываются в родительский столбец, когда записываются как XML-данных или синхронизировать с **XmlDataDocument**. **Nested** свойство **DataRelation** — **false**, по умолчанию.  
   
- Например, рассмотрим следующий набор **DataSet**.  
+ Например, рассмотрим следующие **набора данных**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Так как свойству **Nested** объекта **DataRelation** не задано значение **true** для данного **DataSet**, дочерние объекты не вкладываются в родительские элементы, когда этот **DataSet** представлен в виде XML\-данных.  Преобразование XML\-представления объекта **DataSet**, который содержит связанные объекты **DataSet** с невложенными связями данных, может привести к снижению производительности.  Рекомендуется вкладывать связи данных.  Чтобы сделать это, задайте свойству **Nested** значение **true**.  Затем в таблице стилей XSLT напишите код, в котором для поиска и преобразования данных используются иерархические нисходящие выражения запросов XPath.  
+ Так как **Nested** свойство **DataRelation** объекта не равно **true** для этого **набора данных**, дочерние объекты не являются вложенными в родительские элементы при этом **DataSet** представляется в виде XML-данных. Преобразование XML-представление **DataSet** , содержащий связанные **набора данных**с отношениями невложенных данных может привести к снижению производительности. Рекомендуется вкладывать связи данных. Чтобы сделать это, задайте **Nested** свойства **true**. Затем в таблице стилей XSLT напишите код, в котором для поиска и преобразования данных используются иерархические нисходящие выражения запросов XPath.  
   
- В следующем примере кода показан результат вызова **WriteXml** для **DataSet**.  
+ В следующем примере кода показан результат вызова **WriteXml** на **набора данных**.  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Обратите внимание, что элемент **Customers** и элементы **Orders** показаны как дочерние элементы одного уровня.  Если необходимо, чтобы элементы **Orders** отображались как дочерние элементы соответствующих родительских элементов, то свойству **Nested** объекта **DataRelation** нужно было бы задать значение **true** и добавить следующее:  
+ Обратите внимание, что **клиентов** элемент и **заказов** элементы показаны как дочерние элементы. Если вы хотите, чтобы **заказов** элементы отображались как дочерние элементы соответствующих родительских элементов, **Nested** свойство **DataRelation** должен быть установлен в **true** и добавить следующее:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- В следующем коде показано, как выглядит итоговый вывод, когда элементы **Orders** вложены в соответствующие родительские элементы.  
+ В следующем коде показано, как результат будет выглядеть, с **заказов** вложены в соответствующие родительские элементы.  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## См. также  
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Добавление объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Добавление отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

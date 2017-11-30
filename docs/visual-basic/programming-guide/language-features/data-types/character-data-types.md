@@ -1,74 +1,57 @@
 ---
-title: "Символьные типы данных (Visual Basic) | Документы Microsoft"
+title: "Символьные типы данных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data types [Visual Basic], character
-- String data type, character data types
+- String data type [Visual Basic], character data types
 - character data types [Visual Basic]
-- Char data type, character data types
+- Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ce600fe188c94593e4c07e37883ca11f90d9ae5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d1066444ba3a98f26fc2a35135a50b2954c6b992
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="character-data-types-visual-basic"></a>Символьные типы данных (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет *символьные типы данных* для работы с символами, печати и отображения. Хотя оба они работают с символами Юникода, `Char` содержит один символ, тогда как `String` содержит неопределенное число символов.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]предоставляет *символьные типы данных* работать с печатными отображаемую символами и. Оба они работают с символами Юникода, `Char` содержит один символ, в то время как `String` содержит неопределенное число символов.  
   
- Для таблицы, которая отображает сравнение side-by-side [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] типы данных в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Для таблицы, которая отображает сравнение side-by-side [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] типов данных в разделе [типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
-## <a name="char-type"></a>Тип char  
- `Char` Тип данных является символ Юникода (16-разрядная версия)&2; байта. Если переменная всегда хранит ровно один знак, объявите ее в качестве `Char`. Например:  
+## <a name="char-type"></a>Char-тип  
+ `Char` Тип данных — это отдельный символ Юникода (16-разрядная версия) 2 байта. Если переменная всегда хранит ровно один символ, он объявляется как `Char`. Пример:  
   
- [!code-vb[VbVbalrCharTypes&#1;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
- Каждое возможное значение в `Char` или `String` переменная *кодовой*, или код символа в кодировке Юникод. Символы Юникода включают базовый набор символов ASCII, различные другие буквы алфавита, знаки ударения, символы валют, дроби, диакритические знаки и математические и технические символы.  
+ Каждое возможное значение в `Char` или `String` переменная *кодовой*, или код символа в кодировке Юникод. Символы Юникода включают базовый набор символов ASCII, различные другие буквы алфавита, диакритические знаки, символы валют, дроби, диакритические знаки и математические и технические символы.  
   
 > [!NOTE]
->  Набор символов Юникода резервирует кодовые точки от D800 до DFFF (55296 до 55551) для *суррогатные пары*, который требуется два 16-разрядных значения и представляют одну кодовую точку. Объект `Char` переменная не может содержать суррогатную пару и `String` использует две позиции для хранения таких пар.  
+>  Набор символов Юникода резервирует кодовые точки от D800 до DFFF (55296 до 55551) для *суррогатной парой*, которых требуется два 16-разрядных значения и представляют одну кодовую точку. Объект `Char` переменная не может содержать суррогатную пару и `String` использует две позиции для хранения таких пар.  
   
  Дополнительные сведения см. в разделе [тип данных Char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
-## <a name="string-type"></a>Тип строки  
- `String` Тип данных представляет собой последовательность из нуля или более символов Юникода (16-разрядная версия)&2; байта. Если переменная может содержать неограниченное количество символов, он объявляется как `String`. Пример:  
+## <a name="string-type"></a>Тип String  
+ `String` Тип данных представляет собой последовательность ноль или более символов Юникода (16-разрядная версия) 2 байта. Если переменная может содержать неограниченное число знаков, объявите его как `String`. Пример:  
   
- [!code-vb[VbVbalrCharTypes&#2;](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   
- Дополнительные сведения см. в разделе [строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
+ Дополнительные сведения см. в разделе [строкового типа данных](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>См. также  
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Устранение неполадок типы данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

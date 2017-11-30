@@ -1,36 +1,42 @@
 ---
-title: "Переопределение идентификатора службы для проверки подлинности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Переопределение идентификатора службы для проверки подлинности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6a3125504326f2cb129fef6f1f3e01dba577f599
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Переопределение идентификатора службы для проверки подлинности
-Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации используется [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и наборы `clientCredentialType` атрибут для Windows.  
+# <a name="overriding-the-identity-of-a-service-for-authentication"></a>Переопределение идентификатора службы для проверки подлинности
+Как правило, нет необходимости задавать удостоверение в службе, поскольку выбор типа учетных данных клиента определяет тип удостоверения, предоставляемого в метаданных службы. Например, следующий код конфигурации используется [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и задает `clientCredentialType` атрибут Windows.  
   
   
   
- В следующем фрагменте WSDL (Web Services Description Language) показано удостоверение для ранее определенной конечной точки. В этом примере служба выполняется как резидентная служба под учетной записью определенного пользователя (username@contoso.com) , и поэтому удостоверение участника (UPN) пользователя содержит имя учетной записи. UPN также известно как имя для входа в систему в домене Windows.  
+ В следующем фрагменте WSDL (Web Services Description Language) показано удостоверение для ранее определенной конечной точки. В этом примере служба выполняется под резидентной службы с учетной записью определенного пользователя (username@contoso.com) и, следовательно, удостоверение пользователя имя участника (UPN) содержится имя учетной записи. UPN также известно как имя для входа в систему в домене Windows.  
   
   
   
- Образец приложения, демонстрирующий параметр удостоверения, в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]службы удостоверений см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Образец приложения, демонстрирующий удостоверение, в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]удостоверения службы см. в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Проверка подлинности Kerberos и удостоверение  
- По умолчанию, когда служба настроена для использования учетных данных Windows [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, содержащий [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) или [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент создается на языке WSDL. Если служба выполняется под `LocalSystem`, `LocalService`, или `NetworkService` учетной записи, имя участника (SPN) создается по умолчанию в виде службы `host/` \< *узла*настроек, так как эти учетные записи имеют доступ к данным компьютера имя участника-службы. Если служба выполняется под другой учетной записи, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создает имя участника-пользователя в виде *пользователя*>@<*domainName*`>`. Это происходит потому, что проверка подлинности Kerberos требует предоставления клиенту имени участника-пользователя или имени участника-службы для проверки подлинности службы.  
+ По умолчанию, когда служба настроена для использования учетных данных Windows [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемент, содержащий [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) или [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент создается в WSDL. Если служба выполняется под `LocalSystem`, `LocalService`, или `NetworkService` учетной записи, имя участника (SPN) создается по умолчанию в виде службы `host/` \< *hostname*> так как Эти учетные записи имеют доступ к данным компьютера имя участника-службы. Если служба выполняется под другой учетной записи, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создает имя участника-пользователя в виде \< *username*>@<*domainName*`>`. Это происходит потому, что проверка подлинности Kerberos требует предоставления клиенту имени участника-пользователя или имени участника-службы для проверки подлинности службы.  
   
- Также для регистрации дополнительного имени участника-службы с учетной записью службы в домене можно использовать средство Setspn.exe. В этом случае имя участника-службы можно использовать в качестве удостоверения службы. Чтобы загрузить это средство, см. раздел [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Средство просмотра [Обзор Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ Также для регистрации дополнительного имени участника-службы с учетной записью службы в домене можно использовать средство Setspn.exe. В этом случае имя участника-службы можно использовать в качестве удостоверения службы. Загрузить средство [инструмент из комплекта ресурсов Windows 2000: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]средство, в разделе [Общие сведения о Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Чтобы использовать тип учетных данных Windows без согласования, учетная запись пользователя службы должна иметь доступ к имени участника службы (SPN), зарегистрированному с доменом Active Directory. Это можно сделать следующими способами:  
@@ -39,7 +45,7 @@ caps.handback.revision: 9
   
 -   Запустите службу из любой учетной записи домена Active Directory. В данном случае с помощью служебного средства Setspn.exe необходимо установить имя участника-службы для этой учетной записи домена. Создав SPN для учетной записи службы, настройте [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на публикацию этого имени участника-службы в клиентах службы через ее метаданные (WSDL). Для этого нужно настроить удостоверение конечной точки для предоставляемой конечной точки в файле конфигурации приложения или в коде.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Имена участников-служб, протокола Kerberos и Active Directory, в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Имена участников-служб, протокол Kerberos и Active Directory в разделе [техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Если имя участника-службы или имя участника-пользователя равно пустой строке  
  Если задать имя участника-службы или имя участника-пользователя равным пустой строке, возможны разные варианты развития событий в зависимости от используемых уровня безопасности и режима проверки подлинности.  
@@ -54,7 +60,7 @@ caps.handback.revision: 9
   
 -   При использовании протокола Kerberos напрямую (этот процесс также известен как "одноступенчатая" проверка) происходит сбой проверки подлинности.  
   
-### <a name="using-the-identity-element-in-configuration"></a>С помощью <> \> в конфигурации  
+### <a name="using-the-identity-element-in-configuration"></a>С помощью \<identity > в конфигурации  
  Если изменить тип учетных данных клиента в привязке, ранее показанной сертификату Certificate`,` созданный WSDL будет содержать сериализованный сертификат X.509 в кодировке Base64, соответствующий значению удостоверения, как показано в следующем примере кода. Используется по умолчанию для всех типов учетных данных клиентов, за исключением Windows.  
   
   
@@ -70,5 +76,5 @@ caps.handback.revision: 9
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство: Создание пользовательских клиентских проверки удостоверения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)   
+ [Как: создать средство проверки удостоверения настраиваемые](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  [Службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

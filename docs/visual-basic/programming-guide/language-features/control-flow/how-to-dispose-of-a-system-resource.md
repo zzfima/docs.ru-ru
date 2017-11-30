@@ -1,41 +1,40 @@
 ---
-title: "Практическое руководство. Удаление системного ресурса (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ресурсы [Visual Basic], освобождение системных"
-  - "системные ресурсы"
-  - "системные ресурсы, освобождение"
-  - "Using - блок"
-  - "Using - оператор, освобождение системных ресурсов"
-  - "Using - оператор, Using...End Using"
-  - "код Visual Basic, поток управления"
+title: "Практическое руководство. Удаление системного ресурса (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Using statement [Visual Basic], disposing of system resources
+- Visual Basic code, control flow
+- system resources, disposing of
+- resources [Visual Basic], disposing of system
+- system resources
+- Using statement [Visual Basic], Using...End Using
+- Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5b5c65c9d123c6f481852eb249cb4d479a180c5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Удаление системного ресурса (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Блок `Using` можно использовать, чтобы гарантировать, что система удаляет ресурс, когда ваш код выходит из блока.  Это полезно при использовании ресурса системы, который занимает большой объем памяти, или который хотят использовать другие компоненты.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление системного ресурса (Visual Basic)
+Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, который потребляет большой объем памяти или другие компоненты также планируете использовать.  
   
-### Для удаления подключения базы данных, когда она завершает ваш код  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Чтобы освободить подключения к базе данных, когда она завершает ваш код  
   
-1.  Убедитесь, что в начале файла исходного кода \(в данном случае <xref:System.Data.SqlClient>\) включены соответствующие [Оператор Imports \(пространство имен .NET и тип\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения базы данных.  
+1.  Убедитесь, что включены соответствующие [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
   
-2.  Создайте блок `Using` с помощью `Using` и операторов `End Using`.  Внутри блока поместите код, который имеет дело с подключением базы данных.  
+2.  Создание `Using` блоке с `Using` и `End Using` инструкции. Внутри блока поместите код, который реагирует на подключение к базе данных.  
   
-3.  Объявите соединение и создайте его экземпляр как часть инструкции `Using`.  
+3.  Объявите соединение и создайте его экземпляр как часть `Using` инструкции.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -47,17 +46,17 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-     Система удаляет ресурс независимо от способа выхода из блоков, включая случай необработанного исключения.  
+     Система удаляет ресурс независимо от способа выхода из блоков, включая регистр необработанное исключение.  
   
-     Обратите внимание, что не удается получить доступ к `sqc` вне блока `Using`, поскольку ее область ограничена блоком.  
+     Обратите внимание, что не удается получить доступ к `sqc` из вне `Using` заблокировать, так как его область ограничена блока.  
   
-     Этот же метод можно использовать для системного ресурса, такого как дескриптор файла или программа\-оболочка COM.  Блок `Using` используется, если требуется оставить ресурс доступным для других компонентов после того, как вы завершили блок `Using`.  
+     Этот же способ можно использовать на системный ресурс, такие как дескриптор файла или оболочки COM. Вы используете `Using` заблокировать, если нужно чтобы оставить ресурс доступным для других компонентов после закрытия `Using` блока.  
   
-## См. также  
- <xref:System.Data.SqlClient.SqlConnection>   
- [Управление ходом выполнения](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Вложенные структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.SqlClient.SqlConnection>  
+ [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
+ [Вложенные структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  [Оператор Using](../../../../visual-basic/language-reference/statements/using-statement.md)

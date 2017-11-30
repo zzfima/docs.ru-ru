@@ -1,58 +1,56 @@
 ---
-title: "Оператор Call (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Call"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Call - оператор"
-  - "процедуры, Call - оператор"
-  - "процедуры, вызов"
+title: "Оператор Call (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Call
+helpviewer_keywords:
+- procedures [Visual Basic], Call statement
+- Call statement [Visual Basic]
+- procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c72450fd6f931f36f640d3e384a6fd38d57a7a23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Call (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Передает управление в процедуру `Function`, `Sub` или процедуру библиотеки динамической компоновки \(DLL\).  
+# <a name="call-statement-visual-basic"></a>Оператор Call (Visual Basic)
+Передает управление `Function`, `Sub`, или процедуре библиотеки динамической компоновки (DLL).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[ Call ] procedureName [ (argumentList) ]  
+[ Call ] procedureName [ (argumentList) ]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `procedureName`  
- Обязательный.  Имя вызываемой процедуры.  
+ Обязательный. Имя процедуры, которую необходимо вызвать.  
   
  `argumentList`  
- Необязательный.  Список переменных или выражений, передаваемых вызываемой процедуре.  Несколько аргументов разделяются запятыми.  При включении `argumentList` следует заключить его в скобки.  
+ Необязательно. Список переменных или выражений, представляющих аргументы, передаваемые в процедуру при ее вызове. Несколько аргументов разделяются запятыми. При включении `argumentList`, его необходимо заключить в круглые скобки.  
   
-## Заметки  
- Можно использовать ключевое слово `Call` при вызове процедуры.  Для большинства вызовов процедуры не требуется использовать ключевое слово this.  
+## <a name="remarks"></a>Примечания  
+ Можно использовать `Call` ключевое слово, при вызове процедуры. Для большинства вызовов процедур не должны использовать это ключевое слово.  
   
- Обычно используется ключевое слово `Call` если выражение с именем не начинается с идентификатором.  Не рекомендуется использование ключевого слова `Call` для другого.  
+ Как правило, используется `Call` ключевое слово, если вызван выражение не начинается с идентификатора. Использование `Call` ключевое слово для других целей не рекомендуется.  
   
- Если процедура возвращает значение, то оператор `Call` отбрасывает его.  
+ Если процедура возвращает значение, `Call` инструкции отбрасывает ее.  
   
-## Пример  
- Следующий код демонстрирует 2 примерам ключевого слова where `Call` необходимости для вызова процедуры.  В обоих примерах, выражение не начинается с идентификатором.  
+## <a name="example"></a>Пример  
+ В следующем коде показано два примера где `Call` ключевое слово не требуется для вызова процедуры. В обоих примерах вызываемой выражение не начинается с идентификатора.  
   
  [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
-## См. также  
- [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>См. также  
+ [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

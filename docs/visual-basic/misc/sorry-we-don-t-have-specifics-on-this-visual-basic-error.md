@@ -1,9 +1,8 @@
 ---
-title: "К сожалению, у нас нет подробные сведения об этой ошибке Visual Basic | Документы Microsoft"
-ms.date: 2015-07-20
+title: "К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке Visual Basic"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -3048,54 +3047,37 @@ f1_keywords:
 - bc31432
 - bc30233
 - bc30829
-dev_langs:
-- VB
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению у нас нет подробные сведения об этой ошибке Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы больше не &#39; t имеют подробные сведения об этой ошибке Visual Basic
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
   
  [Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Форум предназначен для вопросов по обновлению до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и работе с функциями взаимодействия.  
+ Форум предназначен для вопросов по обновлению до [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и работе с функциями взаимодействия.  
   
  [Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам.  
+ Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и соответствующим проблемам.  
   
  См. также:  
  [Дополнительные ресурсы для программистов, использующих Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)   
+ [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)  
  [Справочник по Visual Basic](../../visual-basic/reference/index.md)
