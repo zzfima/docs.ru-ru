@@ -1,86 +1,88 @@
 ---
-title: "Элемент &lt;remove&gt; для authenticationModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, remove - элемент"
-  - "<remove> - элемент, authenticationModules"
-  - "authenticationModules, remove - элемент"
-  - "remove - элемент, authenticationModules"
+title: "&lt;Удалить&gt; элемент для authenticationModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- remove element, authenticationModules
+- <authenticationModules>, remove element
+- <remove> element, authenticationModules
+- authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: eb8490241d4ec8a34a76aa6087c1f4d27d5cebb4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;remove&gt; для authenticationModules (параметры сети)
-Удаление модуля проверки подлинности из приложения.  
+# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;Удалить&gt; элемент для authenticationModules (параметры сети)
+Удаляет модуль проверки подлинности из приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<authenticationModules >  
+\<Удалите >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <remove   
-   name = "authentication module name"   
+```xml  
+<remove   
+   type="authentication module name"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|**name**|Имя удаляемого модуля проверки подлинности.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|**type**|Имя модуля проверки подлинности для удаления.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Модули, используемые для проверки подлинности сетевых запросов.|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
   
-## Заметки  
- Элемент `remove` вызывает удаление всех модулей проверки подлинности, определенных ранее в файле конфигурации или на более высоком уровне иерархии конфигурации.  
+## <a name="remarks"></a>Примечания  
+ `remove` Элемент удаляет модули проверки подлинности, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
- Значение атрибута `name` должно быть допустимым именем класса.  
+ Значение для `type` атрибут должен иметь допустимое имя класса.  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода показано удаление модуля проверки подлинности.  
+## <a name="example"></a>Пример  
+ В следующем примере удаляется модуля проверки подлинности.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
-      <remove name = "System.Net.NtlmClient" />  
+      <remove type="System.Net.NtlmClient" />  
     </authenticationModules>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

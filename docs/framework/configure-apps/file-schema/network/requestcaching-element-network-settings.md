@@ -1,91 +1,92 @@
 ---
-title: "Элемент &lt;requestCaching&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<requestCaching> - элемент"
-  - "requestCaching - элемент"
+title: "&lt;requestCaching&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching
+helpviewer_keywords:
+- requestCaching element
+- <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f2737e67fe1fe1e33b2600f448b02321f6ce1888
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;requestCaching&gt; (параметры сети)
-Управляет механизмом кэширования сетевых запросов.  
+# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; элемент (параметры сети)
+Определяет механизм кэширования для сетевых запросов.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<requestCaching >  
   
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
+      <requestCaching>  
+        isPrivateCache ="true|false"  
+        disableAllCaching="true|false"  
+        defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
+        unspecifiedMaximumAge= "d.hh.mm.ss">  
+          <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
+          <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
+      </requestCaching>
 ```  
   
-      <requestCaching  
-  isPrivateCache ="true|false"  
-  disableAllCaching="true|false"  
-  defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss""  
-  <defaultHttpCachePolicy> … </defaultHttpCachePolicy>  
-  <defaultFtpCachePolicy> … </defaultFtpCachePolicy>  
-/>  
-```  
-  
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`isPrivateCache`|Задание того, обеспечивает ли кэш изоляцию сведений различных пользователей.  Значение по умолчанию — `true`.  Для приложений среднего уровня это значение должно быть равно `false`.|  
-|`disableAllCaching`|Задание того, что кэширование отключено для всех веб\-откликов и не может быть переопределено программным способом.|  
-|`defaultPolicyLevel`|Одно из значений перечисления <xref:System.Net.Cache.RequestCacheLevel>.  Значение по умолчанию — `BypassCache`.|  
-|`unspecifiedMaximumAge`|Задание времени по умолчанию, по истечении которого содержимое помечается как устаревшее.|  
+|---------------|-----------------|  
+|`isPrivateCache`|Указывает, предоставляет ли кэш изоляцию сведений различных пользователей. Значение по умолчанию — `true`. Это значение должно быть `false` для приложений среднего уровня.|  
+|`disableAllCaching`|Указывает, что кэширование отключено для всех веб-откликов и не может быть переопределено программным способом.|  
+|`defaultPolicyLevel`|Одно из значений в перечислении <xref:System.Net.Cache.RequestCacheLevel>. Значение по умолчанию — `BypassCache`.|  
+|`unspecifiedMaximumAge`|Указывает время по умолчанию, после которого содержимое помечается как устаревшая.|  
   
-## Атрибут policyLevel  
+## <a name="policylevel-attribute"></a>Сохранить атрибут  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`Default`|Возвращение кэшируемого ресурса, если ресурс является новым, длина содержимого точна и присутствуют атрибуты истечения срока, модификации и длины содержания.|  
-|`BypassCache`|Возвращение ресурса с сервера.|  
-|`CacheOnly`|Возвращает кэшируемый ресурс, если длина содержания указана и соответствует размеру записи.|  
-|`CacheIfAvailable`|Возвращение кэшируемого ресурса, если указана длина содержания и она соответствует размеру записи, в противном случае ресурс загружается с сервера и возвращается вызывающему абоненту.|  
-|`Revalidate`|Возвращает кэшируемый ресурс, если метка времени кэшируемого ресурса совпадает с меткой времени ресурса на сервере, в противном случае ресурс загружается с сервера, сохраняется в кэше и возвращается вызывающему объекту.|  
-|`Reload`|Загрузка ресурса с сервера, сохранение его в кэше и возвращение ресурса вызывающему объекту.|  
-|`NoCacheNoStore`|Если кэшируемый ресурс существует, он удаляется.  Ресурс загружается с сервера и возвращается вызывающему абоненту.|  
-|`Revalidate`|Удовлетворение запроса с помощью кэшируемой копии ресурса, если метка времени ресурса совпадает с меткой времени ресурса на сервере, в противном случае ресурс загружается с сервера, представляется вызывающему объекту и сохраняется в кэше.|  
+|-----------|-----------------|  
+|`Default`|Возвращает кэшируемый ресурс, если ресурс является новым, длина содержимого точна и присутствуют истечения срока, изменения и атрибуты content-length.|  
+|`BypassCache`|Возвращает ресурс с сервера.|  
+|`CacheOnly`|Возвращает кэшируемый ресурс, если длина содержимого представлена и соответствует размеру записи.|  
+|`CacheIfAvailable`|Возвращает кэшируемый ресурс, если длина содержимого предоставляется и соответствует размеру записи; в противном случае ресурс загружается с сервера и возвращается вызывающему.|  
+|`Revalidate`|Возвращает кэшируемый ресурс, если метка времени кэшируемого ресурса совпадает с меткой времени ресурса на сервере. в противном случае ресурс загружается с сервера, хранящиеся в кэше и возвращается вызывающему объекту.|  
+|`Reload`|Загружает ресурс с сервера, сохраняется в кэше и возвращает ресурс вызывающему объекту.|  
+|`NoCacheNoStore`|Если кэшируемый ресурс существует, она удаляется. Ресурс загружается с сервера и возвращается вызывающему объекту.|  
+|`Revalidate`|Выполняет запрос, используя кэшированную копию ресурса, если метка времени совпадает с меткой времени ресурса на сервере. в противном случае ресурс загружается с сервера, представленных вызывающему объекту и хранится в кэше,|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Указывает, активна ли функция HTTP\-кэширования, и описывает политику кэширования по умолчанию.|  
-|[Элемент \<defaultFtpCachePolicy\> \(параметры сети\)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Указывает, активна ли функция FTP\-кэширования, и описывает политику кэширования по умолчанию.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры, определяющие способ подключения платформы .NET Framework к сети.|  
+|-------------|-----------------|  
+|[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.|  
+|[\<defaultFtpCachePolicy > Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Необязательный элемент.<br /><br /> Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.|  
   
-## Пример  
- В следующем примере кода показано, как выключить все кэширование.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-```  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как отключить кэширование всех.  
+  
+```xml  
 <configuration>  
   <system.net>  
     <requestCaching  
@@ -95,6 +96,6 @@ caps.handback.revision: 20
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.Cache?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.Cache?displayProperty=nameWithType>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

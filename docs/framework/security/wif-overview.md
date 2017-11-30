@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e23b0261625efb1e6da070e4b5f8334b1ef7488
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 312324553333427c08acf7ef3eb11059f2224d06
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Обзор Windows Identity Foundation 4.5
 Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Семейство Federated Identity состоит из трех компонентов: [служб федерации Active Directory®](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы контроля доступа (ACS) Microsoft Azure](http://go.microsoft.com/fwlink/?LinkID=247517) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  
@@ -49,5 +47,4 @@ Windows Identity Foundation 4.5 — это набор классов .NET Frame
   
 -   Расширенная аутентификация. Требования к аутентификации могут быть различными для разных ресурсов в пределах одного приложения. WIF предоставляет разработчикам возможность создания приложений, предъявляющих различные требования к аутентификации на разных этапах (например, первоначальный вход в систему будет выполняться с аутентификацией по имени пользователя или паролю, а затем будет применяться аутентификация по смарт-карте).  
   
- С помощью WIF вам будет гораздо проще реализовать преимущества модели удостоверений, основанных на утверждениях. Дополнительные сведения см. в [техническом документе по Windows Identity Foundation для разработчиков](http://go.microsoft.com/fwlink/?LinkId=122266).
-
+ С помощью WIF вам будет гораздо проще реализовать преимущества модели удостоверений, основанных на утверждениях. Дополнительные сведения см. в [техническом документе по Windows Identity Foundation для разработчиков](http://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf).

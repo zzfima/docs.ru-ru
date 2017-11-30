@@ -1,40 +1,43 @@
 ---
-title: "402 — StartSignpostEvent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 402 - StartSignpostEvent
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e5be126-765d-4ac9-88e7-008e9ef4f0e5
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c0cd786f78336be50ad2ef5447f74b92b2abbdc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 402 — StartSignpostEvent
-## Свойства  
+# <a name="402---startsignpostevent"></a>402 - StartSignpostEvent
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|402|  
-|Keywords|Устранение неполадок|  
-|Level|Information|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Ключевые слова|Устранение неполадок|  
+|Уровень|Сведения|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
- Это событие отмечает начало сквозного действия.В ней содержится имя действия.  
+## <a name="description"></a>Описание  
+ Это событие отмечает начало сквозного действия. В ней содержится имя действия.  
   
-## Message  
+## <a name="message"></a>Сообщение  
  Граница действия.  
   
-## Подробности  
+## <a name="details"></a>Подробные сведения  
   
 |Имя элемента данных|Тип элемента данных|Описание|  
-|-------------------------|-------------------------|--------------|  
+|--------------------|--------------------|-----------------|  
 |Расширенные данные|`xs:string`|Имя действия.|  
-|AppDomain|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|
+|Домен приложения|`xs:string`|Строка, возвращаемая AppDomain.CurrentDomain.FriendlyName.|

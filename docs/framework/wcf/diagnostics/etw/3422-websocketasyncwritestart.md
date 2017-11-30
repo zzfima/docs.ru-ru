@@ -1,35 +1,38 @@
 ---
-title: "3422 - WebSocketAsyncWriteStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3422 - WebSocketAsyncWriteStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d0c7ab4-9044-464b-b2dc-0b5e59a773aa
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3e892bd3d78e8fe2d4cbf25d1d75c2a4e6587063
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3422 - WebSocketAsyncWriteStart
-## Свойства  
+# <a name="3422---websocketasyncwritestart"></a>3422 - WebSocketAsyncWriteStart
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3422|  
 |Ключевые слова|HTTP|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие возникает, когда запущена асинхронная запись WebSocket.  
   
-## Сообщение  
- WebSocketId:%1 \- запись «%2» байт по адресу «%3».  
+## <a name="message"></a>Сообщение  
+ WebSocketId:%1 - запись «%2» байт по адресу «%3».  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

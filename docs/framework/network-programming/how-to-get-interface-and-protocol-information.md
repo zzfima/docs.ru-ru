@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Network
+helpviewer_keywords: Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 968727dbdc8897ebe3f88af2f7b7c28c481d8783
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Получение информации об интерфейсах и протоколах
+# <a name="how-to-get-interface-and-protocol-information"></a>Практическое руководство. Получение информации об интерфейсах и протоколах
 В этом примере показано, как считать статистику TCP сетевого интерфейса.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -84,8 +77,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.
-

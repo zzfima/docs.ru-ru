@@ -1,35 +1,38 @@
 ---
-title: "510 - ServiceHostOpenStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 510 - ServiceHostOpenStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3377246a-e74c-4d4c-9dda-36d21bd5a48f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5c6ac42a1d346e392087758767576645ded20bf0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 510 - ServiceHostOpenStop
-## Свойства  
+# <a name="510---servicehostopenstop"></a>510 - ServiceHostOpenStop
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|510|  
 |Ключевые слова|ServiceHost|  
 |Уровень|Сведения|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Канал|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается при завершении метода ServiceHost Open.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Метод ServiceHost Open завершен.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

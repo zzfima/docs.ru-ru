@@ -1,48 +1,51 @@
 ---
-title: "Внешние сопоставления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Внешнее сопоставление"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7a0650f444f901d37797ca81343f06cb566f8112
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Внешние сопоставления
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает *внешнее сопоставление* \- процесс, в котором отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной моделью.  Файл внешнего сопоставления имеет следующие преимущества.  
+# <a name="external-mapping"></a>Внешнее сопоставление
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]поддерживает *внешнего сопоставления*, по которому отдельный файл XML используется для указания сопоставления между моделью данных базы данных и объектной модели процесса. Файл внешнего сопоставления имеет следующие преимущества.  
   
--   Код сопоставления можно хранить вне кода приложения.  Этот подход уменьшает перегруженность кода приложения.  
+-   Код сопоставления можно хранить вне кода приложения. Этот подход уменьшает перегруженность кода приложения.  
   
--   Файл внешнего сопоставления можно считать подобным файлу конфигурации.  Например, можно изменить поведение приложения после предоставления двоичных файлов, просто выгрузив файл внешнего сопоставления.  
+-   Файл внешнего сопоставления можно считать подобным файлу конфигурации. Например, можно изменить поведение приложения после предоставления двоичных файлов, просто выгрузив файл внешнего сопоставления.  
   
-## Требования  
- Файл сопоставления должен быть XML\-файлом и проверен на соответствие файлу определения схемы \(XSD\) [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="requirements"></a>Требования  
+ Файл сопоставления должен быть XML-файла и проверен на соответствие [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] файл схемы определения (.xsd).  
   
  Действуют следующие правила.  
   
 -   Файл сопоставления должен быть файлом XML.  
   
--   Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML.  Для получения дополнительной информации см. [Как проверить DBML\-файлы и внешние файлы сопоставлений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+-   Файл сопоставления XML должен быть проверен на соответствие файлу определения схемы XML. Дополнительные сведения см. в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   Внешнее сопоставление переопределяет сопоставление на основе атрибутов.  Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления.  Данная модель работает, если класс включен в файл внешнего сопоставления.  
+-   Внешнее сопоставление переопределяет сопоставление на основе атрибутов. Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления. Данная модель работает, если класс включен в файл внешнего сопоставления.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает комбинированное использование двух типов сопоставлений \(на основе атрибутов и внешнее\).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает комбинированное использование двух типов сопоставлений (на основе атрибутов и внешнее).  
   
-## Файл определения схемы XML  
+## <a name="xml-schema-definition-file"></a>Файл определения схемы XML  
  Внешнее сопоставление в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] должно быть проверено на соответствие определению схемы XML.  
   
- Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML\-файла.  Дополнительные сведения см. в разделе [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Следует отличать этот файл определения схемы от файла определения схемы, который используется для проверки DBML-файла. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Пользователи [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] также найдут этот файл XSD в диалоговом окне схем XML под именем "LinqToSqlMapping.xsd".  Сведения о правильном использовании этого файла для проверки файла внешнего сопоставления см. в разделе [Как проверить DBML\-файлы и внешние файлы сопоставлений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Пользователи [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] также найдут этот файл XSD в диалоговом окне схем XML под именем "LinqToSqlMapping.xsd". Правильно использовать этот файл для проверки внешнего файла сопоставления, в разделе [как: проверка DBML- и внешних файлов сопоставления](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -148,7 +151,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## См. также  
- [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [Как сформировать модель объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a>См. также  
+ [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Как: создать модель объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;messageLogging&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 Данный элемент определяет параметры ведения журнала сообщений для Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<система. ServiceModel >  
+\<диагностические >  
+\<messageLogging >  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -74,9 +76,9 @@ caps.handback.revision: 16
   
  Фильтры XPath можно добавлять для внесения в журнал отдельных сообщений уровней транспорта и службы. Если не определено ни одного фильтра, в журнал вносятся все сообщения. Фильтры применяются только к заголовкам сообщений. Текст сообщения не обрабатывается. WCF игнорирует тело сообщения для повышения производительности. Если требуется применить фильтрацию по содержимому текста сообщения, можно создать пользовательский прослушиватель с фильтром, который будет выполнять эту задачу.  
   
- Чтобы включить трассировку сообщений, необходимо создать прослушиватель трассировки. Сам прослушиватель может быть любым прослушивателем, который работает с <xref:System.Diagnostics> архитектурой трассировки. В следующем примере показано создание подобного прослушивателя.  
+ Чтобы включить трассировку сообщений, необходимо создать прослушиватель трассировки. Сам прослушиватель может быть любым прослушивателем, который работает с архитектурой трассировки <xref:System.Diagnostics>. В следующем примере показано создание подобного прослушивателя.  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ caps.handback.revision: 16
   
 ## <a name="example"></a>Пример  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ caps.handback.revision: 16
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
- [Настройка ведения журнала сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
+ [Настройка ведения журналов сообщений](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

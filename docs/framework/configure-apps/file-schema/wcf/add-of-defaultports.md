@@ -1,53 +1,59 @@
 ---
-title: "&lt;add&gt; для &lt;defaultPorts&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;add&gt; для &lt;defaultPorts&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd487238ebe327a5f89b737fdf764d94f955a411
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;add&gt; для &lt;defaultPorts&gt;
+# <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;add&gt; для &lt;defaultPorts&gt;
 Конечная точка связи по умолчанию, которую прослушивает клиентское приложение.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<поведения >  
+\<serviceBehaviors >  
+\<поведение >  
+\<useRequestHeadersForMetadataAddress >  
+\<defaultPorts >  
+\<add>  
   
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
+<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
 ```  
   
-<useRequestHeadersForMetadataAddress>  
-   <defaultPorts>  
-      <add port="Integer" scheme="String" />  
-   </defaultPorts>  
-</useRequestHeadersForMetadataAddress>  
-```  
-  
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|порт|Целочисленное значение, определяющее номер COM\-порта по умолчанию.|  
-|scheme|Строка, в которой указана группа параметров протокола, связанных с COM\-портом.|  
+|---------------|-----------------|  
+|порт|Целочисленное значение, определяющее номер COM-порта по умолчанию.|  
+|scheme|Строка, в которой указана группа параметров протокола, связанных с COM-портом.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<defaultPorts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Коллекция портов по умолчанию со списком конечных точек связи по умолчанию, которые прослушивает клиентское приложение.|  
+|-------------|-----------------|  
+|[\<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Коллекция портов по умолчанию со списком конечных точек связи по умолчанию, которые прослушивает клиентское приложение.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.DefaultPortElement>

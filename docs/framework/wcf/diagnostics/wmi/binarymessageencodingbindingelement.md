@@ -1,25 +1,28 @@
 ---
-title: "BinaryMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: BinaryMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09d43ed76ef70f4478aa1029c254a7b1686a8d08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# BinaryMessageEncodingBindingElement
+# <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс BinaryMessageEncodingBindingElement не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс BinaryMessageEncodingBindingElement имеет следующие свойства.  
   
-## MaxReadPoolSize  
+## <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Целое число, определяющее количество сообщений, которые можно читать одновременно, не выделяя памяти для новых средств чтения.  
   
-## MaxSessionSize  
+## <a name="maxsessionsize"></a>MaxSessionSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
- Значение, указывающее максимальный размер буфера, используемого для кодирования \(в байтах\).  
+ Значение, указывающее максимальный размер буфера, используемого для кодирования (в байтах).  
   
-## MaxWritePoolSize  
+## <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Целое число, обозначающее количество сообщений, которые можно отправлять одновременно, не выделяя памяти для новых средств записи.  
   
-## ReaderQuotas  
+## <a name="readerquotas"></a>ReaderQuotas  
  Тип данных: XmlDictionaryReaderQuotas  
   
  Тип доступа: только для чтения  
   
  Квоты средств чтения.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

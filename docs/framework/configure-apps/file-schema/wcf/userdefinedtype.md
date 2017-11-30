@@ -1,28 +1,35 @@
 ---
-title: "&lt;userDefinedType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userDefinedType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0baac8dc6a9899261a490a257dbae0e7eb4d2ced
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;userDefinedType&gt;
-Представляет определяемый пользователем тип \(UDT\), подлежащий включению в контракт службы.  
+# <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
+Представляет определяемый пользователем тип (UDT), подлежащий включению в контракт службы.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<comContracts >  
+\<comContract >  
+\<userDefinedTypes >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <comContracts>  
   <comContract>  
       <userDefinedTypes>  
@@ -36,35 +43,35 @@ caps.handback.revision: 5
 </comContracts>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`name`|Необязательный атрибут, содержащий строку, которая задает отображаемое имя типа.  Не используется средой выполнения, но помогает читателю различать типы.|  
+|---------------|-----------------|  
+|`name`|Необязательный атрибут, содержащий строку, которая задает отображаемое имя типа. Не используется средой выполнения, но помогает читателю различать типы.|  
 |`TypeDefID`|Строка идентификатора GUID, которая идентифицирует конкретный тип UDT в зарегистрированной библиотеке типов.|  
-|`TypeLibID`|Срока глобального уникального идентификатора \(GUID\), которая является идентификатором для зарегистрированной библиотеки типов, определяющей тип.|  
+|`TypeLibID`|Срока глобального уникального идентификатора (GUID), которая является идентификатором для зарегистрированной библиотеки типов, определяющей тип.|  
 |`TypeLibVersion`|Срока, которая является идентификатором версии библиотеки типов, определяющей тип.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
+|-------------|-----------------|  
 |`userDefinedTypes`|Коллекция элементов `userDefinedType`.|  
   
-## Заметки  
- Среда выполнения интеграции СОМ\+ создает службы путем проверки библиотеки типов.  Если в компоненте СОМ\+ содержатся методы, которые служат для передачи VARIANT, система не в состоянии определить фактические типы для передачи до среды выполнения.  Поэтому при попытке передать пользовательский тип \(UDT\) в рамках VARIANT происходит сбой, поскольку данный тип не является известным типом для сериализации.  
+## <a name="remarks"></a>Примечания  
+ Среда выполнения интеграции СОМ+ создает службы путем проверки библиотеки типов. Если в компоненте СОМ+ содержатся методы, которые служат для передачи VARIANT, система не в состоянии определить фактические типы для передачи до среды выполнения. Поэтому при попытке передать пользовательский тип (UDT) в рамках VARIANT происходит сбой, поскольку данный тип не является известным типом для сериализации.  
   
- Для решения этой проблемы можно добавить пользовательские типы в файл конфигурации, чтобы их можно было включить как известные типы в соответствующий контракт службы.  Для этого необходимо однозначно определить пользовательский тип и контракты, то есть исходные интерфейсы СОМ, которые его используют.  
+ Для решения этой проблемы можно добавить пользовательские типы в файл конфигурации, чтобы их можно было включить как известные типы в соответствующий контракт службы. Для этого необходимо однозначно определить пользовательский тип и контракты, то есть исходные интерфейсы СОМ, которые его используют.  
   
- В следующем примере показано, как добавить два конкретных пользовательских типа в раздел \<`userDefinedTypes`\> файла конфигурации.  
+ В следующем примере показано, как добавить два конкретных пользовательских типа в раздел <`userDefinedTypes`> файла конфигурации.  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -94,10 +101,10 @@ caps.handback.revision: 5
   
  При запуске службы среда выполнения интеграции выполняет поиск по указанным типам и добавляет их в коллекции известных типов для заданных контрактов.  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>   
- <xref:System.ServiceModel.Configuration.ComUdtElementCollection>   
- <xref:System.ServiceModel.Configuration.ComUdtElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Интеграция с приложениями COM\+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Практическое руководство. Настройка параметров службы COM\+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
+ <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComUdtElement>  
+ [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [Интеграция с приложениями COM +](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Как: Настройка параметров службы COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

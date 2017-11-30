@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>Маршалинг взаимодействия
 <a name="top"></a> Маршалинг взаимодействия определяет, как данные передаются в аргументах и возвращаемых значениях методов между управляемой и неуправляемой памятью во время вызовов. Маршалинг взаимодействия — это процесс времени выполнения, выполняемый службой маршалинга среды CLR.  
@@ -88,7 +81,7 @@ ms.lasthandoff: 08/21/2017
  Если планируется экспортировать управляемый сервер, учтите, что клиент COM определяет подразделение сервера. Управляемый сервер, вызванный клиентом COM, инициализированным в многопотоковом подразделении, должен обеспечить потокобезопасность.  
   
 ### <a name="managed-clients-and-com-servers"></a>Управляемые клиенты и COM-серверы  
- По умолчанию для управляемого клиента используется многопотоковое подразделение, однако тип приложения клиента .NET может изменить эту настройку. Например, настройкой для подразделения клиента [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] является однопотоковое подразделение. Для проверки и изменения настройки подразделения для управляемого клиента можно использовать атрибут <xref:System.STAThreadAttribute?displayProperty=fullName>, атрибут <xref:System.MTAThreadAttribute?displayProperty=fullName>, свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> или свойство <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName>.  
+ По умолчанию для управляемого клиента используется многопотоковое подразделение, однако тип приложения клиента .NET может изменить эту настройку. Например, настройкой для подразделения клиента [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] является однопотоковое подразделение. Для проверки и изменения настройки подразделения для управляемого клиента можно использовать атрибут <xref:System.STAThreadAttribute?displayProperty=nameWithType>, атрибут <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> или свойство <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType>.  
   
  Автор компонента настраивает сходство потоков COM-сервера. В таблице ниже показаны сочетания параметров подразделения для клиентов .NET и COM-серверов. Для этих сочетаний также показаны итоговые требования к маршалингу.  
   
@@ -162,7 +155,7 @@ ms.lasthandoff: 08/21/2017
 |-----------|-----------------|  
 |[Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)|Описываются правила, используемые службой маршалинга взаимодействия для маршалинга данных.|  
 |[Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Описывается способ объявления параметров метода и передачи аргументов в функции, экспортируемые неуправляемыми библиотеками.|  
-|[Маршалинг данных с помощью COM- взаимодействия](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Описывается настройка оболочек COM для изменения характеристик маршалинга.|  
+|[Маршалинг с помощью COM- взаимодействия](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Описывается настройка оболочек COM для изменения характеристик маршалинга.|  
 |[Практическое руководство. Миграция DCOM с управляемым кодом в WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Описывается переход с модели DCOM на WCF.|  
 |[Практическое руководство. Сопоставление значений HRESULT и исключений](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Описывается, как сопоставить настраиваемые исключения со значениями HRESULT, и приводится полный перечень сопоставлений значений HRESULT с соответствующими классами исключений платформы .NET Framework.|  
 |[Взаимодействие с помощью универсальных типов](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Описываются действия, поддерживаемые при использовании универсальных типов для взаимодействия COM.|  
@@ -174,7 +167,6 @@ ms.lasthandoff: 08/21/2017
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Ссылки  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [К началу](#top)
-
